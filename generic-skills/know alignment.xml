@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>5</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="cleric">
+      <level>13</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="necromancer">
+      <level>22</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="paladin">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>10</weight>
+    </node>
+    <node name="warlock">
+      <level>29</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>22</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>detection</group>
+  <help type="SkillHelp">Это заклинание помогает увидеть характер того, на кого оно применяется. 
+  </help>
+  <mana>9</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>узнать натуру</nameRus>
+  <spell type="SPELL(KnowAlignment)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_room</target>
+    <type>none</type>
+  </spell>
+</skill>

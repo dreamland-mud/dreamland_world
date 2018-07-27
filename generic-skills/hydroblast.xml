@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="druid">
+      <level>45</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="ranger">
+      <level>50</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>50</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>control weather</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>30</weight>
+    </node>
+  </classes>
+  <dammsg>водяной кулак</dammsg>
+  <group>nature</group>
+  <help type="SkillHelp">Мощное заклинание, позволяет рейнджерам направить силы стихии воды против
+своего противника -- из частичек воды формируется кулак и бъет по жертве.
+Работает во время дождя и возле водоемов.
+  </help>
+  <mana>50</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>водяной удар</nameRus>
+  <spell type="SPELL(Hydroblast)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

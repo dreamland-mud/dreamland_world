@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>36</beats>
+  <classes>
+    <node name="cleric">
+      <level>55</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="necromancer">
+      <level>63</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>55</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>portal</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>45</weight>
+    </node>
+    <node name="warlock">
+      <level>60</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>60</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>transportation</group>
+  <help type="SkillHelp">Это двусторонние врата от произносящего заклинание к цели.
+Для их постороения также требуется дополнительный компонент.
+  </help>
+  <mana>150</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>нексус</nameRus>
+  <spell type="SPELL(Nexus)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_world</target>
+    <type>none</type>
+  </spell>
+</skill>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
+    <wearoff>Ты теряешь способность блокировать ментальный контакт.</wearoff>
+    <wearoffDispel>%1$^C1 теряет способность блокировать ментальный контакт.</wearoffDispel>
+  </affect>
+  <beats>18</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>22</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="cleric">
+      <level>35</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="necromancer">
+      <level>36</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>30</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>20</weight>
+    </node>
+    <node name="vampire">
+      <level>46</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="warlock">
+      <level>33</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>25</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>transportation</group>
+  <help type="SkillHelp">Заклинание &apos;mental block&apos; защитит персонажа от попыток войти с ним в
+ментальный контакт и переместить в другое место, т.е. призвать (summon).
+  </help>
+  <mana>50</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>false</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>ментальная блокада</nameRus>
+  <spell type="SPELL(MentalBlock)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_room</target>
+    <type>defensive</type>
+  </spell>
+</skill>

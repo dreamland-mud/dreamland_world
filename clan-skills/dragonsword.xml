@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <beats>12</beats>
+  <clans>
+    <node name="knight">
+      <level>25</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <mana>70</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <spell type="SPELL(Dragonsword)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>create_obj</target>
+    <type>none</type>
+  </spell>
+  <nameRus>оружие дракона</nameRus>
+  <help type="SkillHelp">
+Использование: cast &apos;dragonsword&apos; mace
+               cast &apos;dragonsword&apos; sword
+               cast &apos;dragonsword&apos; lance
+               cast &apos;dragonsword&apos; dagger
+
+Создать Святое Оружие Рыцаря. В зависимости от того, какое оружие нужно,
+можно создать булаву, меч, пику или нож.
+  </help>
+</skill>

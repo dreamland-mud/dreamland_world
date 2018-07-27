@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>18</beats>
+  <classes>
+    <node name="ninja">
+      <level>65</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>65</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>mastering pound</node>
+        <node>strangle</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>150</weight>
+    </node>
+  </classes>
+  <command type="SKILL(assassinate)">
+    <hint>(ниндзи) убить, свернув шею</hint>
+    <name>assassinate</name>
+    <order>player_only</order>
+    <position>stand</position>
+    <russian>
+      <node>свернуть</node>
+    </russian>
+  </command>
+  <dammsg mg="f">попытка убийства</dammsg>
+  <group>none</group>
+  <help type="SkillHelp">Только очень опытные ниндзя могут научиться убивать с одного удара. Эта
+неожиданная атака может быть произведена только на 100% здорового противника.
+Приближаясь со спины врага, очень быстрым движением ниндзя сворачивает ему
+голову, ломая при этом шею. 
+Чтобы использовать это умение, обе руки должны быть свободны.
+Шанс успешного убийства таким способом не очень велик.
+  </help>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>свернуть шею</nameRus>
+</skill>

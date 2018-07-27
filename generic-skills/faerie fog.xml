@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="druid">
+      <level>31</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="cleric">
+      <level>31</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>24</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>faerie fire</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>20</weight>
+    </node>
+    <node name="warlock">
+      <level>27</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>24</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>weather</group>
+  <help type="SkillHelp">Если произнести это заклинание в комнате, то невидимые, скрытые, 
+подкрадывающиеся и камуфлированные существа в ней проявятся.
+  </help>
+  <mana>12</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>туман фей</nameRus>
+  <raceBonuses>
+    <node name="faery">
+      <bonus>100</bonus>
+      <level>0</level>
+      <professional>false</professional>
+    </node>
+  </raceBonuses>
+  <spell type="SPELL(FaerieFog)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>people</target>
+    <type>none</type>
+  </spell>
+</skill>

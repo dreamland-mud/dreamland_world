@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты снова можешь превращаться в туман.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="vampire">
+      <level>55</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>transportation</group>
+  <help type="SkillHelp">Вампиры умеют покидать поле боя, рассеиваясь в облаках тумана.
+Приняв газообразную форму, вампир переносится в произвольное место, 
+находящееся в той же арии. 
+  </help>
+  <mana>80</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>газообразная форма</nameRus>
+  <spell type="SPELL(GaseousForm)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_self</target>
+    <type>none</type>
+  </spell>
+</skill>

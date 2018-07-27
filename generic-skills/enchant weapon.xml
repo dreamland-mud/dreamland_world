@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>24</beats>
+  <classes>
+    <node name="universal">
+      <level>17</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>20</weight>
+    </node>
+    <node name="warlock">
+      <level>17</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>33</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>enchantment</group>
+  <help type="SkillHelp">Это заклинание наделяет магическими силами оружие, улучшая {WHITroll {xи {WDAMroll{x.
+При повторном наложении заклинания на оружие возрастает шанс, что мощь
+заклинание выйдет из-под контроля, и оружие разрушится.
+
+Магическое улучшение оружия также увеличиваети уровень вещи на 1...и пути 
+обратно нет.
+  </help>
+  <mana>100</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>заколдовать оружие</nameRus>
+  <raceBonuses>
+    <node name="dwarf">
+      <bonus>100</bonus>
+      <level>0</level>
+      <professional>true</professional>
+    </node>
+    <node name="gnome">
+      <bonus>100</bonus>
+      <level>0</level>
+      <professional>true</professional>
+    </node>
+    <node name="svirfnebli">
+      <bonus>100</bonus>
+      <level>0</level>
+      <professional>true</professional>
+    </node>
+  </raceBonuses>
+  <spell type="SPELL(EnchantWeapon)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>obj_inv</target>
+    <type>none</type>
+  </spell>
+</skill>

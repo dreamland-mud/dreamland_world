@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <wearoff>Твое воодушевление проходит.</wearoff>
+  </affect>
+  <beats>24</beats>
+  <classes>
+    <node name="cleric">
+      <level>49</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>49</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>bless</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>35</weight>
+    </node>
+  </classes>
+  <group>benedictions</group>
+  <help type="SkillHelp">Это заклинание увеличивает точность попаданий и saves vs spell у тех,
+кто входит в группу использовавшего его.
+  </help>
+  <mana>75</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>воодушевление</nameRus>
+  <spell type="SPELL(Inspire)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>people</target>
+    <type>defensive</type>
+  </spell>
+</skill>

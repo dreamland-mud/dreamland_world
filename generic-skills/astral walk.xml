@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="universal">
+      <level>27</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>teleport</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>35</weight>
+    </node>
+    <node name="witch">
+      <level>27</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>transportation</group>
+  <help type="SkillHelp">%PAUSE%Звездный путь (astral walk) - это могущественное транспортное
+заклинание, открывающее магический портал между Вами и любым существом
+в мире. Через врата помимо Вас могут перенестись также ваше животное
+(pet), но не члены Вашей группы. Персонажи имеют некоторую сопротивляемость
+к astral walk, и полный имунитет, если они старше вас на 3 уровня.
+  В private, no_summon комнаты нельзя astral walk, и нельзя из если 
+комната no_recall, no_summon или private.
+  Если игрок не принадлежит вашему клану, и у него выставлено no_summon,
+то на него можно astral walk только в пределах одной арии, и на успешность
+заклинания влияет его save vs spell.
+  </help>
+  <mana>80</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>астральная прогулка</nameRus>
+  <spell type="GateSpell">
+    <casted>true</casted>
+    <gateShadow>true</gateShadow>
+    <gateViolent>false</gateViolent>
+    <levelDiff>3</levelDiff>
+    <msgGroupEnter></msgGroupEnter>
+    <msgGroupLeave></msgGroupLeave>
+    <msgRoomEnter>Яркая вспышка света озаряет все вокруг и появляется %1$C1!</msgRoomEnter>
+    <msgRoomLeave>Яркая вспышка света озаряет все вокруг и %1$C1 исчезает!</msgRoomLeave>
+    <msgSelfEnter>Пройдя множество миров, ты оказываешься рядом с %2$C5.</msgSelfEnter>
+    <msgSelfLeave></msgSelfLeave>
+    <position>fight</position>
+    <takeGroup>false</takeGroup>
+    <takePet>true</takePet>
+    <target>char_world</target>
+    <type>none</type>
+  </spell>
+</skill>

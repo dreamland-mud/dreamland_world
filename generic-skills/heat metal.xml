@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>18</beats>
+  <classes>
+    <node name="cleric">
+      <level>26</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>26</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>fireproof</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>30</weight>
+    </node>
+  </classes>
+  <dammsg>разогрев металла</dammsg>
+  <group>attack</group>
+  <help type="SkillHelp">Заклинание нагревает доспехи противника до высокой температуры, 
+заставляя его сбрасывать на землю горячий металл.
+Он не может нанести вред существам с имуннитетом к огню.
+Также от него можно защититься с помощью заклинания &apos;fireproof&apos;
+  </help>
+  <mana>25</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>разогрев металла</nameRus>
+  <spell type="SPELL(HeatMetal)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

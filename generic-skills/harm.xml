@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>29</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="cleric">
+      <level>26</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>26</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>cause critical</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>35</weight>
+    </node>
+  </classes>
+  <dammsg mg="n">заклинание вреда</dammsg>
+  <group>harmful</group>
+  <mana>35</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>вред</nameRus>
+  <spell type="SPELL(Harm)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

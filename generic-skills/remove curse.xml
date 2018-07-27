@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="cleric">
+      <level>32</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="paladin">
+      <level>13</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>13</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>25</weight>
+    </node>
+  </classes>
+  <group>curative</group>
+  <help type="SkillHelp">Это заклинание восстанавливает персонажа в глазах богов, снимая с него
+проклятие (Curse). Оно может также убирать проклятие и с объектов, но с 
+меньшей вероятностью. Хотя убирать проклятие с объектов в инвентаре легче 
+и вероятность &quot;снятия&quot; больше.
+  </help>
+  <mana>5</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>снять проклятие</nameRus>
+  <spell type="SPELL(RemoveCurse)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_room obj_inv obj_room</target>
+    <type>defensive</type>
+  </spell>
+</skill>

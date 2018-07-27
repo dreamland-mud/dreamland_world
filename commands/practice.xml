@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<Command>
+  <extra>keep_hide</extra>
+  <name>practice</name>
+  <position>sleep</position>
+  <russian>
+    <node>практиковать</node>
+  </russian>
+  <hint>список умений, практиковать умение</hint>
+  <help type="CommandHelp">
+%FMT%  *%CMD%* 
+Показать все умения и заклинания, которые ты успел сколько-нибудь постичь,
+и уровень их изучения.
+
+%FMT%  *%CMD%* *%ALL%*
+Показать все доступные тебе на данном уровне умения и заклинания,
+и уровень их изучения.
+
+%FMT%  *%CMD%* *(now,сейчас)*
+Эта команда предназначена для класса [(universal,универсал)] и показывает только
+те умения, которыми они могут пользоваться в данный момент, в соответствие с
+выбранным направлением развития. 
+
+%FMT%  *%CMD%* _умение или заклинание_
+Практиковать выбранное умение или заклинание.
+Уровень изучения варьируется от 1% (без изучения) до 50% или 75%,
+в зависимости от твоего класса и реморта (%H% [(remort,переродиться)]).
+Для того, чтоб практиковаться, тебе необходимо находится рядом с учителем.
+
+Чем выше уровень твоего интеллекта (int), тем меньше практик тебе 
+понадобится, чтобы выучить умение или заклинание. Чем выше твоя 
+мудрость (wis), тем больше практик ты будешь получать при переходе с
+уровня на уровень.
+
+Ты можешь практиковать доступные умения и заклинания у мастера, который
+специализируется на группе, к которой принадлежит данное умение или 
+заклинание. Ниже приведен список групп и соответствующих им мест для 
+тренировки:
+{g {sEAttack            {sRАтакующие         {x{G:{w Огромный чернокожий демон{D({wКамелот            {D){w
+{g {sEBeguiling         {sRМагия очарования  {x{G:{w Могущественный бихолдер  {D({wТалос              {D){w
+{g {sEBenedictions      {sRБлагословления    {x{G:{w Священник                {D({wМидгаард           {D){w
+{g {sECombat            {sRБоевая магия      {x{G:{w Боевой Волшебник         {D({wКаньон Стихий      {D){w 
+{g {sECurative          {sRИсцеление болезней{x{G:{w Государь паладинов       {D({wРезид. Редферна    {D){w
+{g {sEDefensive         {sRЗащитные умения   {x{G:{w Heimdall                 {D({wValhalla           {D){w
+{g {sEDraconian         {sRДраконья магия    {x{G:{w Повелители элементалов   {D({wКаньон Стихий      {D){w
+{g {sEEnchantment       {sRУлучшение         {x{G:{w the Enchanter            {D({wHigh Tower         {D){w
+{g {sEEnhancement       {sRУсиления          {x{G:{w Лекарь                   {D({wДолина Титанов     {D){w
+{g {sEFightmaster       {sRМастер боя        {x{G:{w Heimdall                 {D({wValhalla           {D){w
+{g {sEHealing           {sRЛечение           {x{G:{w Priestess of Ofcol       {D({wОфкол              {D){w
+{g {sEIllusion          {sRИллюзии           {x{G:{w Master Illusionist       {D({wHigh Tower         {D){w
+{g {sEMaladictions      {sRПроклятия         {x{G:{w Marshall Diana           {D({wОфкол              {D){w
+{g {sEMeditation        {sRМедитация         {x{G:{w Гиерофант                {D({wСвященная Роща     {D){w
+{g {sENecromancy        {sRНекромантия       {x{G:{w Necromancer&apos;s Guildmaster{D({wOld Midgaard       {D){w
+{g                   {G:{w Мизелак Лич Повелитель   {D({wБашня Лича         {D){w
+{g {sEProtective        {sRЗаклинания защиты {x{G:{w Gath the Healer          {D({wCity of Anon       {D){w
+{g {sETransportation    {sRПеремещения       {x{G:{w the Grand Mistress       {D({wHigh Tower         {D){w
+{g {sEVampiric          {sRВампиризм         {x{G:{w Vampire&apos;s Guildmaster    {D({wOld Midgaard       {D){w
+{g {sEWeaponsmaster     {sRМастер оружия     {x{G:{w Самурай - Мастер Оружия  {D({wНовый Талос        {D){w
+{g {sEWizard            {sRКолдун            {x{G:{w Колдун                   {D({wМидгаард           {D){w
+{g {sECreation          {sRСотворение        {x{G:{w Твой гильдмастер
+{g {sEDetection         {sRОбнаружение       {x{G:{w Твой гильдмастер
+{g {sEHarmful           {sRЗаклинания боли   {x{G:{w Твой гильдмастер
+{g {sEWeather           {sRПогода            {x{G:{w Твой гильдмастер
+{g {sENonerd            {sRРазное            {x{G:{w Твой гильдмастер
+{g {sEAncient languages {sRДревние языки     {x{G:{w Блуждающий монах         {D({wпо всему миру      {D){w
+{g {sECard pack         {sRКарточная колода  {x{G:{w Карточный шулер          {D({wКоролевство Зеркал {D){w
+
+Для того, чтобы выяснить к какой группе относится умение или заклинание,
+используй команду *(slook,умение)*.
+
+%SA% %H% [(glist,группаумений)], [(slook,умение)], [(skills,умения)], [(teach,учить)], [(guilds,гильдии)], [(forget,забыть)], [(remember,вспомнить)], [(attract,привлечь)]
+</help>
+</Command>

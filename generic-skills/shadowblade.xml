@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>24</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>32</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>32</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>sword</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>30</weight>
+    </node>
+  </classes>
+  <group>none</group>
+  <help type="SkillHelp">Создает оружие - призрачный клинок, который очень тесно связан
+со своим хозяином. Вооружиться им может только анти-паладин,
+и никто, кроме создателя, не может покинуть мир, имея его при себе.
+Во время битв, от соприкосновения с кровью, клинок постепенно
+становится все более острым, а также усиливает свои волшебные свойства.
+Однако предпочитает он для этих целей исключительно кровь добрых существ.
+
+За 300 квестовых единиц мастер гильдии анти-паладинов может совершить
+над клинком особый ритуал, после которого клинок будет невозможно принести
+в жертву и уничтожить заклинанием &apos;disintegrate&apos;.
+  </help>
+  <mana>200</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>призрачный клинок</nameRus>
+  <spell type="SPELL(ShadowBlade)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>ignore</target>
+    <type>none</type>
+  </spell>
+</skill>

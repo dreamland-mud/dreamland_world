@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="universal">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>10</weight>
+    </node>
+    <node name="warlock">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>illusion</group>
+  <help type="SkillHelp">Использование: cast ventriloquate &lt;speaker&gt; &lt;message&gt;
+
+Заклинание работает наподобие магического эха.
+В поле  &lt;speaker&gt; вводится любое имя (впоследствие отражается как существо,
+произносящее фразу). В поле &lt;message&gt; собственно фраза, которую должно 
+произнести. Жертва, у кого &quot;прошли&quot; {WSAVES{x узнает, что кто-то в комнате 
+занимается чревовещанием, хотя и не будет знать кто именно. А жертва, у кого 
+не &quot;прошли&quot; {WSAVES{x, будет думать, что фраза действительно была произнесена.
+  </help>
+  <mana>5</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>чревовещание</nameRus>
+  <spell type="SPELL(Ventriloquate)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>ignore</target>
+    <type>none</type>
+  </spell>
+</skill>

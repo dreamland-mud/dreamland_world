@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
+    <wearoff>Твои движения приобретают прежнюю быстроту и легкость.</wearoff>
+    <wearoffDispel>Движения %1$C2 становятся быстрее.</wearoffDispel>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="cleric">
+      <level>38</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="necromancer">
+      <level>29</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="paladin">
+      <level>28</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>23</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>20</weight>
+    </node>
+    <node name="vampire">
+      <level>28</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="warlock">
+      <level>23</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>28</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>maladictions</group>
+  <help type="SkillHelp">Заклинание замедляет твои движения.
+  </help>
+  <mana>30</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>замедление</nameRus>
+  <spell type="SPELL(Slow)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

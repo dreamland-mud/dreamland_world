@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Тигриная мощь покидает тебя, ускакивая в неизвестном направлении.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="ranger">
+      <level>66</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>66</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>30</weight>
+    </node>
+  </classes>
+  <command type="SKILL(tiger)">
+    <extra>keep_hide ghost</extra>
+    <hint>(рейнджеры) позвать мощь десяти тигров</hint>
+    <name>tiger</name>
+    <position>fight</position>
+    <russian>
+      <node>тигры</node>
+    </russian>
+  </command>
+  <group>none</group>
+  <hard>2</hard>
+  <help type="SkillHelp">Призывает силу десяти тигров, делая рейнджера более метким и опасным,
+но в то же время чуть более уязвимым.
+  </help>
+  <mana>50</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>тигриная мощь</nameRus>
+</skill>

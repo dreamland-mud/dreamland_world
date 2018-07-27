@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<Quest>
+    <priority>3</priority>
+    <shortDesc>Засады и похищения</shortDesc>
+    <markVnum>28100</markVnum>
+    <princeVnum>28100</princeVnum>
+    <banditVnum>28101</banditVnum>
+    <scenarios>
+	<node name="dragon" type="KidnapDragonScenario">
+	    <mark>
+		    <name>огнетушитель fire extinguisher</name>
+		    <shortDesc>огнетушител|ь|я|ю|ь|ем|е</shortDesc>
+		    <desc>Безопасная игрушка (extinguisher) маленького дракона лежит здесь.</desc>
+		    <wear table="wear_flags">hold</wear>
+		    <extra table="extra_flags">glow</extra>
+	    </mark>
+	    <kid>
+		    <name>драконенок hatchling dragon</name>
+		    <shortDesc>драконен|ок|ка|ку|ка|ком|ке</shortDesc>
+		    <longDesc>Хныкающий маленький дракончик (hatchling), похоже, потерялся..</longDesc>
+		    <desc>
+Обычный дракон, только кро-о-хотный.. Он недавно вылупился, и первый раз 
+оказался в совершенно незнакомом месте. Из ноздрей дракончика клубится дым, 
+что выдает в нем очень сильный испуг. Не стоит подходить близко, если у тебя 
+нет огнетушителя!
+                    </desc>
+		    <sex table="sex_table">male</sex>
+		    <race>dragon</race>
+	    </kid>
+	    <kings>
+		<node>2205</node>
+		<node>2243</node>
+		<node>2223</node>
+		<node>6112</node>
+		<node>6302</node>
+		<node>2016</node>
+		<node>13257</node>
+		<node>13211</node>
+		<node>13226</node>
+		<node>13247</node>
+		<node>13258</node>
+		<node>631</node>
+	    </kings>
+	    <bandit>
+		    <name>knight killer рыцарь убийца</name>
+		    <shortDesc>рыцар|ь|я|ю|я|ем|е-убийц|а|ы|е|у|ей|е драконов</shortDesc>
+		    <longDesc>Рыцарь (knight) в сверкающих доспехах зыркает в поисках дракона.</longDesc>
+		    <desc>
+Он гладко выбрит. Его латы сверкают на солнце. 
+Ничто не устоит перед его верой, честью и достоинством.
+Похоже, этот рыцарь уверен, что для борьбы со злом любые методы хороши.
+Например -- уничтожить зло, пока оно еще не в состоянии дать сдачи.
+		    </desc>
+		    <sex table="sex_table">male</sex>
+		    <race>human</race>
+		    <align>1000</align>
+	    </bandit>
+	</node>
+
+	<node name="bidon" type="KidnapBidonScenario">
+	    <mark>
+		    <name>бидончик can bidon</name>
+		    <shortDesc>бидончи|к|ка|ком|к|ком|ке</shortDesc>
+		    <desc>Пустой бидон (can) жаждет молока.</desc>
+		    <wear table="wear_flags">hold</wear>
+		    <extra table="extra_flags">hum</extra>
+	    </mark>
+	    <kid>
+		    <name>girl девочка дочка daughter дочурка</name>
+		    <shortDesc>мамин|а|ой|ой|у|ой|ой дочк|а|и|е|у|ой|е</shortDesc>
+		    <longDesc>Пышные белые банты и накрахмаленное платьице (girl) громко плачет.</longDesc>
+		    <desc>
+Перед тобой символ чистоты и непорочности. Она очень любит свою мамочку.
+Каждое утро, в 6 часов, она вприпрыжку бежит за молоком, звеня деньгами на дне 
+бидончика и напевая веселую песенку. Вокруг еще все спят, а она радуется
+солнышку и всех вокруг будит ее радостный звонкий голосок.
+Но сегодня она забыла бидончик дома, поэтому деньги пропила и никак не может 
+вспомнить дорогу домой.
+		    </desc>
+		    <sex table="sex_table">female</sex>
+	    </kid>
+	    <kings>
+		<node>1501</node>
+		<node>5304</node>
+		<node>14515</node>
+		<node>14517</node>
+		<node>14518</node>
+		<node>19006</node>
+		<node>19046</node>
+		<node>4703</node>
+		<node>10207</node>
+		<node>7522</node>
+		<node>7529</node>
+		<node>618</node>
+		<node>18065</node>
+		<node>5107</node>
+		<node>5108</node>
+	    </kings>
+	    <bandit>
+		    <name>бармалей barmaley bob marley</name>
+		    <shortDesc>Бармале|й|я|ю|я|м|е</shortDesc>
+		    <longDesc>Злобный Бармалей (Barmaley) ищет маленьких детей.</longDesc>
+		    <desc>
+Это огромный толстый мужик с красными глазами. Его кожа черна, как ночь.		    
+Он ОЧЕНЬ любит маленьких детей... с маслом.
+Его настоящее имя Боб Марлей. Среди похитителей детей он хорошо известен 
+под кличкой Бармалей. 
+		    </desc>
+		    <sex table="sex_table">male</sex>
+		    <race>human</race>
+	    </bandit>
+	</node>
+
+	<node name="urchin" type="KidnapUrchinScenario">
+	    <mark>
+		    <name>белый билет white ticket</name>
+		    <shortDesc>бел|ый|ого|ому|ый|ым|ом биле|т|та|ту|т|том|те</shortDesc>
+		    <desc>Вожделенная бумажка (white ticket) пылится здесь.</desc>
+		    <wear table="wear_flags">take hold</wear>
+		    <extra table="extra_flags"></extra>
+	    </mark>
+	    <kid>
+		    <name>сорванец urchin сын</name>
+		    <shortDesc>сорван|ец|ца|цу|ца|цом|це</shortDesc>
+		    <longDesc>Сорванец (urchin) пытается отыскать рекра Хаоса.</longDesc>
+		    <desc>
+Типичный подрезок призывного возраста. С первого взгляда
+понятно, что к строевой службе он годен. Высок, мускулист.
+Однако, шальной огонек в его глазах говорит о том, что их обладатель
+неприемлет муштру и любое проявление порядка и субординации.
+		    </desc>
+		    <sex table="sex_table">male</sex>
+	    </kid>
+	    <kings>
+		<node>1501</node>
+		<node>5304</node>
+		<node>14515</node>
+		<node>14517</node>
+		<node>14518</node>
+		<node>19006</node>
+		<node>19046</node>
+		<node>4703</node>
+		<node>10207</node>
+		<node>7522</node>
+		<node>7529</node>
+		<node>618</node>
+		<node>18065</node>
+		<node>5107</node>
+		<node>5108</node>
+	    </kings>
+	    <bandit>
+		    <name>воин warrior</name>
+		    <shortDesc>Свиреп|ый|ого|ому|ого|ым|ом вои|н|на|ну|на|ном|не</shortDesc>
+		    <longDesc>Свирепый войн (warrior) ищет, из кого бы сделать себе подобного.</longDesc>
+		    <desc>
+Ты видеш перед сабой  невысокково, мускулиставо человека.
+Несколько шрамов на его теле доказывают,
+что он не оставлЯл оружие с тех пор как родилсЯ.
+Он гатов помериться силами скаждым!
+		    </desc>
+		    <align>300</align>
+		    <race>human</race>
+	    </bandit>
+	</node>
+	<node name="urka" type="KidnapUrkaScenario">
+	    <refuges>
+		<node>5751</node>
+		<node>5755</node>
+		<node>29011</node>
+		<node>29012</node>
+		<node>29013</node>
+		<node>29014</node>
+		<node>29015</node>
+		<node>14752</node>
+		<node>14753</node>
+		<node>14755</node>
+		<node>14756</node>
+		<node>14757</node>
+		<node>8867</node>
+		<node>32046</node>
+		<node>32047</node>
+		<node>32048</node>
+		<node>32049</node>
+		<node>32050</node>
+		<node>32051</node>
+		<node>32054</node>
+		<node>32055</node>
+		<node>32057</node>
+		<node>32058</node>
+		<node>32059</node>
+		<node>32060</node>
+		<node>32061</node>
+		<node>32062</node>
+		<node>16328</node>
+		<node>16331</node>
+		<node>16332</node>
+		<node>16334</node>
+		<node>16335</node>
+		<node>16339</node>
+		<node>16340</node>
+		<node>16341</node>
+		<node>16343</node>
+		<node>16345</node>
+		<node>1538</node>
+		<node>1541</node>
+		<node>1542</node>
+		<node>1543</node>
+		<node>1544</node>
+		<node>1577</node>
+		<node>1578</node>
+		<node>1579</node>
+		<node>1580</node>
+		<node>1581</node>
+		<node>18043</node>
+		<node>18044</node>
+		<node>9696</node>
+		<node>9697</node>
+		<node>9698</node>
+		<node>9699</node>
+		<node>9700</node>
+		<node>9701</node>
+		<node>9702</node>
+		<node>9703</node>
+		<node>9704</node>
+		<node>9653</node>
+	    </refuges>
+	    <mark>
+		    <name>паспорт passport fake</name>
+		    <shortDesc>паспорт||а|у||ом|е</shortDesc>
+		    <desc>Поддельный паспорт (passport) лежит здесь.</desc>
+		    <wear table="wear_flags">hold</wear>
+		    <extra table="extra_flags">dark</extra>
+	    </mark>
+	    <kid>
+		    <name>урка urka</name>
+		    <shortDesc>урк|а|и|е|у|ой|е</shortDesc>
+		    <longDesc>Хмурый урка (urka) бросает на тебя недобрый взгляд.</longDesc>
+		    <desc>
+Мрачный тип. Глубоко посаженные мелкие глазки словно два клеща вцепились в
+тебя мертвой хваткой. Ты чувствуешь неприятный холодок, волной пробежавший
+по спине. "К такому не то что спиной поворачиваться опасно, но и от моргания
+лучше воздержаться" - мелькает мысль. Почувствовав твою неуверенность, этот
+тип ухмыляется жуткой улыбкой, от которой у всякого здравомыслящего существа
+появляется невиданная прыть в ногах.
+                    </desc>
+		    <sex table="sex_table">male</sex>
+	    </kid>
+	    <kings>
+		<node>14030</node>
+		<node>14028</node>
+		<node>13227</node>
+		<node>13229</node>
+		<node>2110</node>
+		<node>2103</node>
+		<node>31040</node>
+		<node>16100</node>
+		<node>16090</node>
+		<node>16098</node>
+		<node>16087</node>
+		<node>25004</node>
+		<node>10005</node>
+		<node>10006</node>
+		<node>11651</node>
+	    </kings>
+	    <bandit>
+		    <name>guard страж</name>
+		    <shortDesc>страж||а|у|а|ем|е| закона</shortDesc>
+		    <longDesc>Доблестный страж закона (guard) ищет клиентов для своего заведения.</longDesc>
+		    <desc>
+Типичная наглая морда в бронированном футляре размалеванном государственными
+гербами, на морде ну прямо крупными буквами написано "ну давай, съездий по
+мне и мы отметелим тебя всей казармой". Нос на этой морде очень занят, он
+вынюхивает следы преступности. Ты с ужасом замечаешь, что одна из ноздрей
+направлена в твою сторону, в голове калейдоскопом мелькают делишки которые
+ты сегодня успел натворить. Однако спокойствие, главное спокойствие и
+самоуверенность... нос отворачивается от тебя.
+		    </desc>
+		    <sex table="sex_table">male</sex>
+		    <race>human</race>
+		    <align>0</align>
+	    </bandit>
+	</node>
+	<node name="urka2" type="KidnapUrkaPoliteScenario">
+	    <refuges>
+		<node>5751</node>
+		<node>5755</node>
+		<node>29011</node>
+		<node>29012</node>
+		<node>29013</node>
+		<node>29014</node>
+		<node>29015</node>
+		<node>14752</node>
+		<node>14753</node>
+		<node>14755</node>
+		<node>14756</node>
+		<node>14757</node>
+		<node>8867</node>
+		<node>32046</node>
+		<node>32047</node>
+		<node>32048</node>
+		<node>32049</node>
+		<node>32050</node>
+		<node>32051</node>
+		<node>32054</node>
+		<node>32055</node>
+		<node>32057</node>
+		<node>32058</node>
+		<node>32059</node>
+		<node>32060</node>
+		<node>32061</node>
+		<node>32062</node>
+		<node>16328</node>
+		<node>16331</node>
+		<node>16332</node>
+		<node>16334</node>
+		<node>16335</node>
+		<node>16339</node>
+		<node>16340</node>
+		<node>16341</node>
+		<node>16343</node>
+		<node>16345</node>
+		<node>1538</node>
+		<node>1541</node>
+		<node>1542</node>
+		<node>1543</node>
+		<node>1544</node>
+		<node>1577</node>
+		<node>1578</node>
+		<node>1579</node>
+		<node>1580</node>
+		<node>1581</node>
+		<node>18043</node>
+		<node>18044</node>
+		<node>9696</node>
+		<node>9697</node>
+		<node>9698</node>
+		<node>9699</node>
+		<node>9700</node>
+		<node>9701</node>
+		<node>9702</node>
+		<node>9703</node>
+		<node>9704</node>
+		<node>9653</node>
+	    </refuges>
+	    <mark>
+		    <name>паспорт passport fake</name>
+		    <shortDesc>паспорт||а|у||ом|е</shortDesc>
+		    <desc>Поддельный паспорт (passport) лежит здесь.</desc>
+		    <wear table="wear_flags">hold</wear>
+		    <extra table="extra_flags">dark</extra>
+	    </mark>
+	    <kid>
+		    <name>урка urka</name>
+		    <shortDesc>урк|а|и|е|у|ой|е</shortDesc>
+		    <longDesc>Хмурый урка (urka) бросает на тебя недобрый взгляд.</longDesc>
+		    <desc>
+Мрачный тип. Глубоко посаженные мелкие глазки словно два клеща вцепились в
+тебя мертвой хваткой. Ты чувствуешь неприятный холодок, волной пробежавший
+по спине. "К такому не то что спиной поворачиваться опасно, но и от моргания
+лучше воздержаться" - мелькает мысль. Почувствовав твою неуверенность, этот
+тип ухмыляется жуткой улыбкой, от которой у всякого здравомыслящего существа
+появляется невиданная прыть в ногах.
+                    </desc>
+		    <sex table="sex_table">male</sex>
+	    </kid>
+	    <kings>
+		<node>13246</node>
+		<node>8705</node>
+		<node>14738</node>
+		<node>5006</node>
+		<node>2332</node>
+		<node>13252</node>
+		<node>5623</node>
+		<node>19034</node>
+		<node>19054</node>
+		<node>18063</node>
+	    </kings>
+	    <bandit>
+		    <name>guard страж</name>
+		    <shortDesc>страж||а|у|а|ем|е| закона</shortDesc>
+		    <longDesc>Доблестный страж закона (guard) ищет клиентов для своего заведения.</longDesc>
+		    <desc>
+Типичная наглая морда в бронированном футляре размалеванном государственными
+гербами, на морде ну прямо крупными буквами написано "ну давай, съездий по
+мне и мы отметелим тебя всей казармой". Нос на этой морде очень занят, он
+вынюхивает следы преступности. Ты с ужасом замечаешь, что одна из ноздрей
+направлена в твою сторону, в голове калейдоскопом мелькают делишки которые
+ты сегодня успел натворить. Однако спокойствие, главное спокойствие и
+самоуверенность... нос отворачивается от тебя.
+		    </desc>
+		    <sex table="sex_table">male</sex>
+		    <race>human</race>
+		    <align>0</align>
+	    </bandit>
+	</node>
+	<node name="cyclop" type="KidnapCyclopScenario">
+	    <mark>
+		    <name>детская лошадка качалка child rocking horse</name>
+		    <shortDesc>детск|ая|ой|ой|ую|ой|ой лошадк|а|и|е|у|ой|е - качалк|а|и|е|у|ой|е</shortDesc>
+		    <desc>Детская лошадка - качалка (rocking-horse) пустует здесь.</desc>
+	    </mark>
+	    <kid>
+		    <name>ребенок child kid</name>
+		    <shortDesc>жизнерадостн|ый|ого|ому|ого|ым|ом| ребен|ок|ка|ку|ка|ком|ке|</shortDesc>
+		    <longDesc>Жизнерадостный ребенок (kid) лучится здесь улыбками.</longDesc>
+		    <desc>
+Чрезвычайно активное живое существо, как молодой котенок готово бегать и
+прыгать за всяким солнечным лучиком. Обычное дело, что это существо упрыгало
+слишком далеко от дремлющей няни. Хватай его под мышку и скорее двигай
+отсюда, пока няня не проснулась.
+                    </desc>
+		    <sex table="sex_table">male</sex>
+		    <race>human</race>
+	    </kid>
+	    <kings>
+		<node>8303</node>
+		<node>8305</node>
+		<node>8313</node>
+		<node>2311</node>
+		<node>2310</node>
+		<node>2308</node>
+		<node>5751</node>
+		<node>5762</node>
+		<node>5763</node>
+		<node>30809</node>
+		<node>1607</node>
+		<node>9202</node>
+		<node>14735</node>
+		<node>14742</node>
+		<node>29131</node>
+		<node>1352</node>
+		<node>9107</node>
+		<node>211</node>
+		<node>272</node>
+		<node>273</node>
+		<node>274</node>
+		<node>275</node>
+		<node>1514</node>
+		<node>22009</node>
+		<node>8134</node>
+		<node>8115</node>
+	    </kings>
+	    <bandit>
+		    <name>supernanny nanny суперняня няня</name>
+		    <shortDesc>супернян|я|и|е|ю|ей|е</shortDesc>
+		    <longDesc>Вечно сонная няня (nanny) похоже сейчас в бодрствующем состоянии.</longDesc>
+		    <desc>
+Не стоит недооценивать эту вечно сонную няню. Она родом из спецподразделения
+супернянь, специально тренированных для наблюдения и контроля за излишне
+непоседливыми детьми, а также для их защиты. В список особых навыков входят
+вечная сонливость для притупления бдительности потенциальных похитителей
+детей, отличные боевые навыки включают в себя как рукопашный бой, так и
+владение всеми видами оружия, особое внимание уделено экзотическим видам
+(как-то табуретки, скалки и другой подручный материал). Каждая суперняня
+комплектуется персональным пейджером для моментальной связи с другими
+супернянями в случае невозможности самостоятельного контроля ситуации.
+		    </desc>
+		    <sex table="sex_table">female</sex>
+		    <race>human</race>
+		    <align>1000</align>
+	    </bandit>
+	    <refuges>
+		<node>1108</node>
+		<node>1106</node>
+		<node>1109</node>
+		<node>1104</node>
+		<node>1103</node>
+		<node>625</node>
+		<node>626</node>
+		<node>627</node>
+		<node>629</node>
+		<node>630</node>
+		<node>631</node>
+		<node>632</node>
+		<node>633</node>
+		<node>634</node>
+		<node>635</node>
+		<node>636</node>
+		<node>637</node>
+		<node>638</node>
+		<node>639</node>
+		<node>640</node>
+		<node>641</node>
+		<node>642</node>
+		<node>643</node>
+		<node>644</node>
+		<node>645</node>
+		<node>646</node>
+		<node>647</node>
+		<node>648</node>
+		<node>649</node>
+		<node>650</node>
+		<node>651</node>
+		<node>652</node>
+		<node>653</node>
+		<node>654</node>
+		<node>655</node>
+		<node>656</node>
+		<node>657</node>
+		<node>658</node>
+		<node>659</node>
+		<node>660</node>
+		<node>661</node>
+		<node>662</node>
+		<node>663</node>
+		<node>664</node>
+		<node>665</node>
+		<node>6602</node>
+		<node>6603</node>
+		<node>6604</node>
+		<node>6605</node>
+		<node>6608</node>
+		<node>6609</node>
+		<node>6610</node>
+		<node>6611</node>
+		<node>14537</node>
+		<node>14538</node>
+		<node>14539</node>
+		<node>14540</node>
+		<node>14541</node>
+		<node>14542</node>
+		<node>14543</node>
+		<node>14544</node>
+		<node>14545</node>
+		<node>14546</node>
+		<node>14547</node>
+		<node>14548</node>
+		<node>14549</node>
+		<node>1502</node>
+		<node>1503</node>
+		<node>1504</node>
+		<node>1505</node>
+		<node>1506</node>
+		<node>1507</node>
+		<node>1508</node>
+		<node>1509</node>
+		<node>1510</node>
+		<node>1511</node>
+		<node>1512</node>
+		<node>1513</node>
+		<node>29232</node>
+		<node>29245</node>
+		<node>29244</node>
+		<node>29243</node>
+		<node>29224</node>
+		<node>24102</node>
+		<node>24103</node>
+		<node>24104</node>
+		<node>24105</node>
+		<node>24106</node>
+		<node>24107</node>
+		<node>24108</node>
+		<node>24109</node>
+		<node>24110</node>
+		<node>24111</node>
+		<node>24112</node>
+		<node>24133</node>
+		<node>24137</node>
+		<node>24139</node>
+		<node>24141</node>
+		<node>24143</node>
+		<node>24145</node>
+		<node>31013</node>
+	    </refuges>
+	</node>
+    </scenarios>
+</Quest>

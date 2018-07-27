@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <clans>
+    <node name="ruler">
+      <level>1</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <command type="SKILL(wanted)">
+    <log>1</log>
+    <name>wanted</name>
+    <position>stand</position>
+    <russian>
+      <node>розыск</node>
+    </russian>
+    <hint>(правители) объявить нарушителя в розыск</hint>
+  </command>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <nameRus>розыск</nameRus>
+  <help type="SkillHelp">
+Синтаксис: wanted &lt;цель&gt; Y|N
+Объявить игрока вне закона. 
+Каждое объявление все закона уменьшает Реальную Законопослушность.
+  </help>
+</skill>

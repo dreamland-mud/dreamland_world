@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="cleric">
+      <level>11</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="ninja">
+      <level>9</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="paladin">
+      <level>7</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="samurai">
+      <level>20</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>7</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>cure light</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>25</weight>
+    </node>
+  </classes>
+  <group>curative</group>
+  <help type="SkillHelp">Это заклинание лечит слепоту, восстанавливая нормальное зрение.
+Однако грязь, попавшую в глаза, а также ожоги, оно не убирает.
+  </help>
+  <mana>5</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>лечить слепоту</nameRus>
+  <spell type="SPELL(CureBlindness)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_room</target>
+    <type>defensive</type>
+  </spell>
+</skill>

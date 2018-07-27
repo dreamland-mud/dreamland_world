@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Твои ноги болят не так сильно.</wearoff>
+  </affect>
+  <beats>18</beats>
+  <classes>
+    <node name="ninja">
+      <level>18</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="samurai">
+      <level>36</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>18</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>dirt kicking</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>30</weight>
+    </node>
+  </classes>
+  <command type="SKILL(caltraps)">
+    <hint>(самураи, ниндзи) бросить шипы под ноги</hint>
+    <name>caltraps</name>
+    <position>fight</position>
+    <russian>
+      <node>шипы</node>
+    </russian>
+  </command>
+  <dammsg mg="p">шипы</dammsg>
+  <group>none</group>
+  <help type="SkillHelp">Беря горстку маленьких шипов, ниндзя кидает их под ноги противнику.
+Повреждения от них невелики, но вот ловкость, попадания и урон
+значительно уменьшаются.
+  </help>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>шипы</nameRus>
+</skill>

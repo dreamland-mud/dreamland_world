@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Звон в ушах проходит и слух возвращается к тебе.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>42</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>42</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>40</weight>
+    </node>
+  </classes>
+  <group>none</group>
+  <help type="SkillHelp">Анти-паладины могут оглушать своих врагов так, что те становятся
+глухонемыми - ничего не слышат и не произносят. Следовательно и не
+колдуют.
+  </help>
+  <mana>40</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>глухота</nameRus>
+  <spell type="SPELL(Deafen)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

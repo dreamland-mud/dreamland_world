@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Появились охранники, готовые отозваться на твой зов.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <clans>
+    <node name="ruler">
+      <level>10</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <mana>75</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <spell type="SPELL(GuardCall)">
+    <castMobCount>2</castMobCount>
+    <casted>true</casted>
+    <maxMobCount>2</maxMobCount>
+    <mobVnum>11</mobVnum>
+    <msgCreateAttemptArea>Стража! Стража!</msgCreateAttemptArea>
+    <msgCreateAttemptRoom></msgCreateAttemptRoom>
+    <msgCreateAttemptSelf></msgCreateAttemptSelf>
+    <msgCreateRoom>Два охранника приходят на помощь %C3!</msgCreateRoom>
+    <msgCreateSelf>Два охранника приходят тебе на помощь!</msgCreateSelf>
+    <msgNotRecognizeRoom>%2$^C1 произносит, обращаясь к %1$C3 &apos;{gВы кто так%1$Gое|ой|ая? Предъявите документы!{x&apos;</msgNotRecognizeRoom>
+    <msgNotRecognizeSelf>%2$^C1 произносит &apos;{gВы кто так%1$Gое|ой|ая? Предъявите документы!{x&apos;</msgNotRecognizeSelf>
+    <msgReattachAttemptRoom>%1$^C1 зовет %2$C4 себе на помощь.</msgReattachAttemptRoom>
+    <msgReattachAttemptSelf>Ты зовешь %C4 себе на помощь!</msgReattachAttemptSelf>
+    <msgReattachRoom>%2$^C1 вытягивается в струнку.</msgReattachRoom>
+    <msgReattachSelf>%^C1 вытягивается в струнку.</msgReattachSelf>
+    <msgStillAffected>У тебя не хватает сил позвать сейчас на помощь.</msgStillAffected>
+    <msgTooManyMobiles>Охранник говорит тебе &apos;{gЧто? Я недостаточно хорош?{x&apos;</msgTooManyMobiles>
+    <position>fight</position>
+    <postaffectDuration>12</postaffectDuration>
+    <target>create_mob</target>
+    <type>none</type>
+  </spell>
+  <nameRus>вызов охранников</nameRus>
+  <help type="SkillHelp">
+Вызвать двух бравых стражников для расправы над провинившимся.
+См. также {W? перепризыв{x.
+  </help>
+</skill>

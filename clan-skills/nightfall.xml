@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты вновь можешь контролировать свет.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <clans>
+    <node name="invader">
+      <level>16</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <mana>50</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <spell type="SPELL(Nightfall)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>people</target>
+    <type>offensive</type>
+  </spell>
+  <nameRus>завеса тьмы</nameRus>
+  <help type="SkillHelp">
+Заклинание, уничтожающее все чужие светящиеся объекты в комнате.
+  </help>
+</skill>

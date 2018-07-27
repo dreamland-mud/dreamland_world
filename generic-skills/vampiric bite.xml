@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Рана на твоей шее затягивается.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="vampire">
+      <level>10</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <command type="SKILL(bite)">
+    <hint>(вампиры) укусить жертву за шею</hint>
+    <name>bite</name>
+    <order>player_only</order>
+    <position>stand</position>
+    <russian>
+      <node>кусать</node>
+    </russian>
+  </command>
+  <dammsg>укус вампира</dammsg>
+  <group>vampiric</group>
+  <help type="SkillHelp">Вампир кусает спящего. Если вампир очень голоден, он со всей силы
+впивается в горло жертвы, тем самым пробуждая ее ото сна и начиная битву.
+В противном случае, есть шанс не разбудить жертву, а сделать всего две 
+аккуратные дырочки, через которые потом можно пить кровь. 
+  </help>
+  <mob>
+    <bonus>20</bonus>
+    <dice>2</dice>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>укус вампира</nameRus>
+</skill>

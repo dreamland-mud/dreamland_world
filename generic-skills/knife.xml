@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>18</beats>
+  <classes>
+    <node name="thief">
+      <level>20</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>20</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>dagger</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>25</weight>
+    </node>
+  </classes>
+  <command type="SKILL(knife)">
+    <hint>(воры) пырнуть ножом</hint>
+    <name>knife</name>
+    <position>stand</position>
+    <russian>
+      <node>пырнуть</node>
+    </russian>
+  </command>
+  <dammsg>удар ножом</dammsg>
+  <group>none</group>
+  <help type="SkillHelp">Типичный воровской прием - пырнуть ножом или кинжалом. Атаковать можно
+только того, кто в данный момент не сражается. Повреждения от пырка,
+как правило, сильнее, чем от обычного удара.
+  </help>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>пырнуть ножом</nameRus>
+</skill>

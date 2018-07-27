@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты чувствуешь свою восприимчивость к заклинаниям.</wearoff>
+  </affect>
+  <beats>24</beats>
+  <classes>
+    <node name="ninja">
+      <level>20</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>40</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>concentrate</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>25</weight>
+    </node>
+  </classes>
+  <command type="SKILL(endure)">
+    <extra>keep_hide</extra>
+    <hint>(нинзи) повысить устойчивость к заклинаниям</hint>
+    <name>endure</name>
+    <position>stand</position>
+    <russian>
+      <node>выносливость</node>
+    </russian>
+  </command>
+  <group>none</group>
+  <help type="SkillHelp">Техника сопротивления магии и молитвам, основанная на медитации и самообладании.
+  </help>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>выносливость</nameRus>
+</skill>

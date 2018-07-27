@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<Command>
+  <extra>keep_hide ghost</extra>
+  <level>106</level>
+  <log>1</log>
+  <name>set</name>
+  <position>dead</position>
+  <hint>установить параметры предметам и персонажам</hint>
+  <help type="CommandHelp">
+%FMT%  *set mob* _%MOB%_ _field_ _value_
+%FFF%  *set obj* _%OBJ%_ _field_ _value_
+%FFF%  *set room* _number_ _field_ _value_
+%FFF%  *set skill* _%CHAR%_ _name_ _rating_
+%FFF%  *set skill* _%CHAR%_ *all* _rating_
+
+Команда *set* используется для изменения числовых значений различных структур
+данных. Введите *set* _тип_ без аргументов для получения списка опций.
+
+Ввод *set skill all* (только для игроков) изменит персонажу все умения 
+исходя из заданного значения. Используй *string* для изменения описаний
+объектов и мобов.
+
+Для дополнительной информации по *set obj* - %H% [set obj].
+
+%SA% %H% [string], [stat]
+</help>
+</Command>

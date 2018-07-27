@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>24</beats>
+  <classes>
+    <node name="cleric">
+      <level>48</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="paladin">
+      <level>38</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>38</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>wrath</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>30</weight>
+    </node>
+  </classes>
+  <dammsg mg="f">божественная кара</dammsg>
+  <group>benedictions</group>
+  <help type="SkillHelp">Божественное слово сорвавшись с уст клерика делает его сильнее. 
+Но, если в душе твоей нет добра, произнесенное слово обернется 
+против тебя. Слово действует не только на его произносящего, но
+и на персонажей стоящих с ним в одной комнате. Соответственно,
+благословляя добрых, оно наносит вред и проклинает злых.
+  </help>
+  <mana>200</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>святое слово</nameRus>
+  <spell type="SPELL(HolyWord)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>people</target>
+    <type>offensive</type>
+  </spell>
+</skill>

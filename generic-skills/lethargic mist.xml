@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="AFFECT(LethargicMist)">
+  </affect>
+  <beats>24</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>62</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>52</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>slow</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>30</weight>
+    </node>
+    <node name="warlock">
+      <level>56</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>52</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>maladictions</group>
+  <help type="SkillHelp">Это заклинание позволяет заполнить определенную комнату 
+летаргическим туманом, замедляющим движения.
+  </help>
+  <mana>200</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>летаргический туман</nameRus>
+  <spell type="SPELL(LethargicMist)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

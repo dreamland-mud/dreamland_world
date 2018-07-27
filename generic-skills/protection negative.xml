@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты беззащит%1$Gно|ен|на перед своими атаками.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="necromancer">
+      <level>15</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>15</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>35</weight>
+    </node>
+  </classes>
+  <group>protective</group>
+  <mana>20</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>защита от негативного</nameRus>
+  <spell type="SPELL(ProtectionNegative)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_self</target>
+    <type>defensive</type>
+  </spell>
+</skill>

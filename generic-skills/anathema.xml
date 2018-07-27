@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты чувствуешь, что Боги прощают тебя.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="paladin">
+      <level>65</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>65</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>wrath</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>35</weight>
+    </node>
+  </classes>
+  <group>maladictions</group>
+  <help type="SkillHelp">Паладин может наслать божественное проклятие на своего противника (&apos;{yanathema{x&apos;),
+это плохо отразится на всех умениях проклятого и на силе его заклинаний.
+С другой стороны, его самого и собратьев по оружию боги могут благословить (&apos;{ybenediction{x&apos;),
+улучшая точность удара и защиту от заклинаний.
+  </help>
+  <mana>80</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>анафема</nameRus>
+  <spell type="SPELL(Anathema)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
+    <wearoff>Ты беззащит%1$Gно|ен|на перед {Yдобром{x.</wearoff>
+    <wearoffDispel>%1$^C1 теряет защиту от сил добра.</wearoffDispel>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>13</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="cleric">
+      <level>9</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="necromancer">
+      <level>17</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>15</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>detect good</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>30</weight>
+    </node>
+    <node name="vampire">
+      <level>27</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="warlock">
+      <level>22</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>22</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>protective</group>
+  <help type="SkillHelp">Заклинание, защищающее от добрых сил.
+  </help>
+  <mana>5</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>защита от добра</nameRus>
+  <spell type="SPELL(ProtectionGood)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_self</target>
+    <type>defensive</type>
+  </spell>
+</skill>

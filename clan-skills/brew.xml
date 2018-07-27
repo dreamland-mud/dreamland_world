@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты снова можешь заняться алхимией.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <clans>
+    <node name="shalafi">
+      <level>23</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <mana>25</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <spell type="SPELL(Brew)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>obj_inv</target>
+    <type>none</type>
+  </spell>
+  <nameRus>варка зелий</nameRus>
+  <help type="SkillHelp">
+Синтаксис: cast &apos;brew&apos; &lt;item&gt;
+С помощью этого заклинатия можно превратить ключ (key), мусор (trash) или
+сокровище (treasure) в магическое зелье. Для приготовления еще понадобится
+пустая бутылка (vial) и немного удачи. Зарание предугадать, что за зелье
+получится, нельзя.
+  </help>
+</skill>

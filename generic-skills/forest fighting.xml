@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="druid">
+      <level>50</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="ranger">
+      <level>45</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>45</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>third attack</node>
+        <node>ambush</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>40</weight>
+    </node>
+  </classes>
+  <command type="SKILL(forest)">
+    <hint>(рейнджеры) задать стиль лесного боя</hint>
+    <name>forest</name>
+    <position>fight</position>
+    <russian>
+      <node>лес</node>
+    </russian>
+  </command>
+  <group>fightmaster</group>
+  <hard>7</hard>
+  <help type="SkillHelp">Опытный рейнджер может использовать в бою свои знания о природе. 
+Выбор forest attack делает его более сильным, а forest defence -
+более защищенным во время сражений в лесах и горах.
+forest normal возвращает персонажа в обычное состояние.
+  </help>
+  <mana>50</mana>
+  <mob>
+    <bonus>10</bonus>
+    <dice>1</dice>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>лесной бой</nameRus>
+</skill>

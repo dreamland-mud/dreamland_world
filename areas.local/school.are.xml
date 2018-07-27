@@ -1,0 +1,3050 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<area>
+  <areadata>
+    <authors>Hatchet</authors>
+    <credits>MUD School</credits>
+    <flags>popular</flags>
+    <levelHigh>5</levelHigh>
+    <levelLow>1</levelLow>
+    <name>MUD Школа</name>
+    <security>9</security>
+    <speedwalk>2nu</speedwalk>
+    <vnumHigh>3799</vnumHigh>
+    <vnumLow>3700</vnumLow>
+  </areadata>
+  <helps>
+    <node keyword="MUDSCHOOL SCHOOL ШКОЛА" level="0">Место, куда попадает человек, чтобы получить первые знания о Мире э8).
+Вход - вверх от Храма Лео в Мидгаарде.          
+</node>
+  </helps>
+  <mobiles>
+    <node name="3700">
+      <ac bash="-15" exotic="-15" pierce="-15" slash="-15"/>
+      <act add="npc sentinel stay_area cleric warrior nopurge notrack"/>
+      <aff add="sanctuary"/>
+      <alignment>1000</alignment>
+      <dam_type>beating</dam_type>
+      <damage>2d4+30</damage>
+      <default_pos>stand</default_pos>
+      <description>Он большой и строгий. Не вздумай шутить с ним!
+</description>
+      <detection add="evil"/>
+      <hit>1d1+999</hit>
+      <hitroll>10</hitroll>
+      <imm add="summon charm spell weapon"/>
+      <level>30</level>
+      <long_descr>Хранитель знаний (acolyte) приглашает тебя в MUD Школу.
+</long_descr>
+      <mana>1d1+999</mana>
+      <material>0</material>
+      <off add="area_attack bash disarm dodge fast kick parry trip"/>
+      <player_name>acolyte cleric хранитель</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>хранител|ь|я|ю|я|ем|е знаний</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="3701">
+      <ac bash="-15" exotic="-15" pierce="-15" slash="-15"/>
+      <act add="npc sentinel stay_area notrack"/>
+      <dam_type>digestion</dam_type>
+      <damage>1d1+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Он  большой  и  плохой. Ты не захочешь сражаться с ним, если он не будет
+привязан.  Приготовься  уловить  удачный момент, чтоб сбежать то него!!!
+Если не захочешь убегать, тогда приготовься к худшему...
+</description>
+      <detection add="evil"/>
+      <form add="poison blob cold_blood"/>
+      <hit>1d1+49</hit>
+      <hitroll>-5</hitroll>
+      <imm add="summon charm"/>
+      <level>5</level>
+      <long_descr>Пузырь (blob) стоит тут, пытаясь проглотить тебя.
+</long_descr>
+      <mana>1d1+99</mana>
+      <material>0</material>
+      <off add="area_attack trip"/>
+      <player_name>blob пузырь</player_name>
+      <race>unique</race>
+      <res add="spell weapon"/>
+      <sex>male</sex>
+      <short_descr>пузыр|ь|я|ю|я|ем|е</short_descr>
+      <size>large</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="3702">
+      <ac bash="10" exotic="10" pierce="10" slash="10"/>
+      <act add="npc sentinel stay_area notrack"/>
+      <dam_type>claw</dam_type>
+      <damage>1d2+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Он  выглядит  довольно  устрашающе,  но  ты совершенно уверен в том, что
+убьешь его, ведь он привязан, а ты нет!
+</description>
+      <hit>1d1+7</hit>
+      <level>1</level>
+      <long_descr>Монстр (monster) стоит здесь, привязанный к клетке.
+</long_descr>
+      <mana>1d1+99</mana>
+      <material>0</material>
+      <player_name>monster монстр</player_name>
+      <race>school monster</race>
+      <sex>male</sex>
+      <short_descr>монст|р|ра|ру|ра|ром|ре</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>10</wealth>
+    </node>
+    <node name="3703">
+      <ac bash="10" exotic="10" pierce="10" slash="10"/>
+      <act add="npc sentinel stay_area notrack"/>
+      <dam_type>claw</dam_type>
+      <damage>1d2+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Он  выглядит  довольно  жалко,  и ты совершенно уверен в том, что убьешь
+его, тем более, что он привязан, а ты нет!
+</description>
+      <hit>1d1+7</hit>
+      <level>1</level>
+      <long_descr>Трусливый монстр (monster) стоит здесь, привязанный к клетке.
+</long_descr>
+      <mana>1d1+99</mana>
+      <material>0</material>
+      <off add="crush"/>
+      <player_name>monster wimpy монстр</player_name>
+      <race>school monster</race>
+      <sex>male</sex>
+      <short_descr>труслив|ый|ого|ому|ого|ым|ом монст|р|ра|ру|ра|ром|ре</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>10</wealth>
+    </node>
+    <node name="3704">
+      <ac bash="10" exotic="10" pierce="10" slash="10"/>
+      <act add="npc sentinel aggressive notrack"/>
+      <dam_type>claw</dam_type>
+      <damage>1d3+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Он  выглядит  довольно  устрашающе,  но  ты совершенно уверен в том, что
+убьешь его, ведь он привязан, а ты нет!
+</description>
+      <hit>1d1+7</hit>
+      <level>1</level>
+      <long_descr>Агрессивный монстр (monster) стоит здесь, привязанный к клетке.
+</long_descr>
+      <mana>1d1+99</mana>
+      <material>0</material>
+      <off add="disarm parry"/>
+      <player_name>monster aggressive монстр</player_name>
+      <race>school monster</race>
+      <sex>male</sex>
+      <short_descr>агрессивн|ый|ого|ому|ого|ым|ом монст|р|ра|ру|ра|ром|ре</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>10</wealth>
+    </node>
+    <node name="3705">
+      <ac bash="10" exotic="10" pierce="10" slash="10"/>
+      <act add="npc sentinel aggressive notrack"/>
+      <dam_type>claw</dam_type>
+      <damage>1d2+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Он  выглядит  довольно  устрашающе,  но  ты совершенно уверен в том, что
+убьешь его, ведь он привязан, а ты нет!
+</description>
+      <hit>1d1+7</hit>
+      <level>1</level>
+      <long_descr>Трусливый монстр (monster) привязан здесь.
+</long_descr>
+      <mana>1d1+99</mana>
+      <material>0</material>
+      <off add="kick_dirt"/>
+      <player_name>monster wimpy монстр</player_name>
+      <race>school monster</race>
+      <sex>male</sex>
+      <short_descr>труслив|ый|ого|ому|ого|ым|ом монст|р|ра|ру|ра|ром|ре</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>10</wealth>
+    </node>
+    <node name="3706">
+      <ac bash="8" exotic="10" pierce="8" slash="8"/>
+      <act add="npc sentinel notrack"/>
+      <aff add="infrared"/>
+      <dam_type>claw</dam_type>
+      <damage>1d4+1</damage>
+      <default_pos>stand</default_pos>
+      <description>Оно  выглядит  устрашающе  и  у  тебя могут возникнуть проблемы, если ты
+захочешь убить его, но если победишь - тебя ожидает приз!!!
+</description>
+      <detection add="dark_vision"/>
+      <hit>2d2+20</hit>
+      <hitroll>1</hitroll>
+      <level>2</level>
+      <long_descr>Большое чудовище (creature) неуклюже поворачивается к тебе.
+</long_descr>
+      <mana>1d1+99</mana>
+      <material>0</material>
+      <off add="dodge trip"/>
+      <player_name>creature чудовище</player_name>
+      <race>school monster</race>
+      <sex>either</sex>
+      <short_descr>больш|ое|ого|ому|ое|им|ом чудовищ|е|а|у|е|ем|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>25</wealth>
+    </node>
+    <node name="3707">
+      <ac bash="-15" exotic="-15" pierce="-15" slash="-15"/>
+      <act add="npc sentinel cleric warrior nopurge notrack"/>
+      <aff add="sanctuary"/>
+      <alignment>1000</alignment>
+      <dam_type>beating</dam_type>
+      <damage>2d4+30</damage>
+      <default_pos>stand</default_pos>
+      <description>Он большой и грозный. Не шути с ним!
+</description>
+      <detection add="evil"/>
+      <hit>1d1+999</hit>
+      <hitroll>10</hitroll>
+      <imm add="summon charm spell weapon"/>
+      <level>30</level>
+      <long_descr>Адепт (adept) могущественного Лео стоит тут,
+{x  ..наблюдая за твоими действиями.
+</long_descr>
+      <mana>1d1+999</mana>
+      <material>0</material>
+      <off add="area_attack bash disarm dodge fast kick parry trip"/>
+      <player_name>adept cleric адепт</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>адеп|т|та|ту|та|том|те</short_descr>
+      <size>medium</size>
+      <spec>spec_cast_adept</spec>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="3708">
+      <ac bash="-15" exotic="-15" pierce="-15" slash="-15"/>
+      <act add="npc sentinel cleric warrior nopurge notrack"/>
+      <aff add="sanctuary"/>
+      <alignment>1000</alignment>
+      <dam_type>beating</dam_type>
+      <damage>2d4+30</damage>
+      <default_pos>stand</default_pos>
+      <description>Он большой и грозный. Не шути с ним!
+</description>
+      <detection add="evil"/>
+      <hit>1d1+999</hit>
+      <hitroll>10</hitroll>
+      <imm add="summon charm spell weapon"/>
+      <level>30</level>
+      <long_descr>Адепт (adept) бога Разера стоит тут, улыбаясь тебе.
+</long_descr>
+      <mana>1d1+999</mana>
+      <material>0</material>
+      <off add="area_attack bash disarm dodge fast kick parry trip"/>
+      <player_name>adept адепт</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>адеп|т|та|ту|та|том|те</short_descr>
+      <size>medium</size>
+      <spec>spec_cast_adept</spec>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="3709">
+      <ac bash="10" exotic="10" pierce="10" slash="10"/>
+      <act add="npc stay_area wimpy noalign"/>
+      <alignment>100</alignment>
+      <dam_type>bite</dam_type>
+      <damage>1d3+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Кролик с испугом смотрит на тебя. Он совершенно беззащитен!
+</description>
+      <hit>1d1+10</hit>
+      <level>1</level>
+      <long_descr>Кролик (rabbit) резво прыгает здесь.
+</long_descr>
+      <mana>1d1+99</mana>
+      <material>0</material>
+      <player_name>rabbit кролик</player_name>
+      <race>rabbit</race>
+      <sex>male</sex>
+      <short_descr>кроли|к|ка|ку|ка|ком|ке</short_descr>
+      <size>tiny</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="3710">
+      <ac bash="8" exotic="10" pierce="8" slash="8"/>
+      <act add="npc stay_area noalign"/>
+      <alignment>-100</alignment>
+      <dam_type>bite</dam_type>
+      <damage>1d4+1</damage>
+      <default_pos>stand</default_pos>
+      <description>Она весело смотрит на тебя, пытаясь укусить за ногу.
+</description>
+      <hit>2d2+20</hit>
+      <level>2</level>
+      <long_descr>Ящерица (lizard) бегает у твоих ног.
+</long_descr>
+      <mana>1d1+99</mana>
+      <material>0</material>
+      <off add="assist_race"/>
+      <player_name>lizard ящерица</player_name>
+      <race>lizard</race>
+      <sex>female</sex>
+      <short_descr>ящериц|а|ы|е|у|ей|е</short_descr>
+      <size>small</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="3711">
+      <ac bash="7" exotic="9" pierce="7" slash="7"/>
+      <act add="npc stay_area noalign"/>
+      <dam_type>charge</dam_type>
+      <damage>1d6+1</damage>
+      <default_pos>stand</default_pos>
+      <description>Он хрюкает на тебя.
+</description>
+      <hit>3d3+30</hit>
+      <hitroll>1</hitroll>
+      <level>3</level>
+      <long_descr>Кабан (boar) пытается сбить тебя с ног.
+</long_descr>
+      <mana>1d1+99</mana>
+      <material>0</material>
+      <off add="bash berserk dodge assist_race"/>
+      <player_name>boar кабан</player_name>
+      <race>pig</race>
+      <sex>male</sex>
+      <short_descr>каба|н|на|ну|на|ном|не</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="3712">
+      <ac bash="8" exotic="10" pierce="8" slash="8"/>
+      <act add="npc stay_area wimpy noalign"/>
+      <alignment>100</alignment>
+      <dam_type>bite</dam_type>
+      <damage>1d3+1</damage>
+      <default_pos>stand</default_pos>
+      <description>Ее пушистый мех выглядит дорогим.
+</description>
+      <hit>1d1+12</hit>
+      <hitroll>1</hitroll>
+      <level>1</level>
+      <long_descr>Лиса (fox) стоит здесь и хитро смотрит на тебя.
+</long_descr>
+      <mana>1d1+99</mana>
+      <material>0</material>
+      <off add="trip assist_race"/>
+      <player_name>fox лиса</player_name>
+      <race>fox</race>
+      <sex>female</sex>
+      <short_descr>лис|а|ы|е|у|ой|се</short_descr>
+      <size>small</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="3713">
+      <ac bash="10" exotic="10" pierce="10" slash="10"/>
+      <act add="npc stay_area noalign"/>
+      <dam_type>digestion</dam_type>
+      <damage>1d1+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Она выглядит слишком слизкой.
+</description>
+      <form add="edible animal crustacean cold_blood"/>
+      <hit>1d1+0</hit>
+      <long_descr>Улитка (snail) пытается поскорее отползти с твоего пути.
+</long_descr>
+      <mana>1d1+99</mana>
+      <material>0</material>
+      <parts add="head guts feet eyestalks"/>
+      <player_name>snail улитка</player_name>
+      <race>unique</race>
+      <sex>female</sex>
+      <short_descr>улитк|а|и|е|у|ой|е</short_descr>
+      <size>tiny</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="3714">
+      <ac bash="5" exotic="8" pierce="5" slash="5"/>
+      <act add="npc aggressive warrior"/>
+      <dam_type>bite</dam_type>
+      <damage>1d6+3</damage>
+      <default_pos>stand</default_pos>
+      <description>Оно выглядит довольно диким. Тебе лучше поскорее убежать от него.
+</description>
+      <detection add="dark_vision"/>
+      <hit>5d5+55</hit>
+      <hitroll>1</hitroll>
+      <level>5</level>
+      <long_descr>Чудовище (beast) пытается съесть тебя.
+</long_descr>
+      <mana>1d1+99</mana>
+      <material>0</material>
+      <off add="disarm parry tail"/>
+      <player_name>beast чудовище</player_name>
+      <race>school monster</race>
+      <res add="fire cold"/>
+      <sex>either</sex>
+      <short_descr>чудовищ|е|а|у|е|ем|е</short_descr>
+      <size>large</size>
+      <spec>spec_fido</spec>
+      <start_pos>stand</start_pos>
+      <wealth>50</wealth>
+    </node>
+    <node name="3715">
+      <ac bash="5" exotic="7" pierce="6" slash="6"/>
+      <act add="npc stay_area noalign"/>
+      <dam_type>claw</dam_type>
+      <damage>1d6+2</damage>
+      <default_pos>stand</default_pos>
+      <description>Медведь намного больше тебя! Он был бы не прочь оставить тебя без головы.
+</description>
+      <hit>4d4+44</hit>
+      <hitroll>1</hitroll>
+      <level>4</level>
+      <long_descr>Медведь (bear) стоит тут и рычит на тебя.
+</long_descr>
+      <mana>1d1+99</mana>
+      <material>0</material>
+      <off add="bash assist_race"/>
+      <player_name>bear медведь</player_name>
+      <race>bear</race>
+      <sex>male</sex>
+      <short_descr>медвед|ь|я|ю|я|ем|е</short_descr>
+      <size>large</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="3716">
+      <ac bash="7" exotic="10" pierce="7" slash="7"/>
+      <act add="npc stay_area noalign"/>
+      <dam_type>bite</dam_type>
+      <damage>1d6+2</damage>
+      <default_pos>stand</default_pos>
+      <description>Ему не нравится, когда его беспокоят.
+</description>
+      <hit>4d4+44</hit>
+      <level>4</level>
+      <long_descr>Волк (wolf) стоит здесь и рычит на тебя.
+</long_descr>
+      <mana>1d1+99</mana>
+      <material>0</material>
+      <off add="trip assist_race"/>
+      <player_name>wolf волк</player_name>
+      <race>wolf</race>
+      <sex>male</sex>
+      <short_descr>вол|к|ка|ку|ка|ком|ке</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="3717">
+      <ac bash="-15" exotic="-15" pierce="-15" slash="-15"/>
+      <act add="npc sentinel scavenger cleric warrior nopurge"/>
+      <aff add="sanctuary"/>
+      <alignment>1000</alignment>
+      <behavior type="ShopTrader">
+        <buys>light container drink food gem jewelry</buys>
+        <closeHour>23</closeHour>
+        <openHour>0</openHour>
+        <profitBuy>100</profitBuy>
+        <profitSell>100</profitSell>
+      </behavior>
+      <dam_type>beating</dam_type>
+      <damage>2d4+30</damage>
+      <default_pos>stand</default_pos>
+      <description>Он большой и грозный. Не шути с ним!
+</description>
+      <detection add="evil"/>
+      <hit>1d1+999</hit>
+      <hitroll>10</hitroll>
+      <imm add="summon charm spell weapon"/>
+      <level>30</level>
+      <long_descr>Адепт бога Тирны (adept) улыбаясь стоит тут и продает тебе вещи.
+</long_descr>
+      <mana>1d1+999</mana>
+      <material>0</material>
+      <off add="area_attack bash disarm dodge fast kick parry trip"/>
+      <player_name>adept cleric адепт</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>адеп|т|та|ту|та|том|те Тирны</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="3718">
+      <ac bash="-15" exotic="-15" pierce="-15" slash="-15"/>
+      <act add="npc sentinel scavenger cleric warrior nopurge"/>
+      <aff add="sanctuary"/>
+      <alignment>1000</alignment>
+      <behavior type="Trainer">
+      </behavior>
+      <dam_type>beating</dam_type>
+      <damage>2d4+30</damage>
+      <default_pos>stand</default_pos>
+      <description>Он большой и грозный. Не шути с ним!
+Он может тебя заденаить ;]
+</description>
+      <detection add="evil"/>
+      <hit>1d1+999</hit>
+      <hitroll>10</hitroll>
+      <imm add="summon charm spell weapon"/>
+      <level>30</level>
+      <long_descr>Адепт (adept) сумасшедшего Дворкина стоит здесь, тренируя юных студентов.
+</long_descr>
+      <mana>1d1+999</mana>
+      <material>0</material>
+      <off add="area_attack bash disarm dodge fast kick parry trip"/>
+      <player_name>adept cleric адепт</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>адеп|т|та|ту|та|том|те Дворкина</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="3719">
+      <ac bash="-15" exotic="-15" pierce="-15" slash="-15"/>
+      <act add="npc sentinel scavenger practice cleric warrior nopurge"/>
+      <aff add="sanctuary"/>
+      <alignment>1000</alignment>
+      <dam_type>beating</dam_type>
+      <damage>2d4+30</damage>
+      <default_pos>stand</default_pos>
+      <description>Он большой и грозный. Не шути с ним!
+Он может включить тебя в plugins.
+</description>
+      <detection add="evil magic hidden"/>
+      <hit>1d1+999</hit>
+      <hitroll>10</hitroll>
+      <imm add="summon charm spell weapon"/>
+      <level>30</level>
+      <long_descr>Адепт (adept) бога NoFate готов помочь тебе попрактиковаться.
+</long_descr>
+      <mana>1d1+999</mana>
+      <material>0</material>
+      <off add="area_attack bash disarm dodge fast kick parry trip"/>
+      <player_name>adept cleric адепт</player_name>
+      <practicer>wizard combat protective none illusion defensive weaponsmaster harmful healing fightmaster </practicer>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>адеп|т|та|ту|та|том|те</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="3720">
+      <ac bash="8" exotic="10" pierce="8" slash="8"/>
+      <act add="npc sentinel notrack"/>
+      <aff add="infrared"/>
+      <dam_type>claw</dam_type>
+      <damage>1d6+1</damage>
+      <default_pos>stand</default_pos>
+      <description>Это ужасное создание - твое последнее испытание в этой школе. Убей его и
+диплом будет твоим.
+</description>
+      <hit>2d4+30</hit>
+      <hitroll>1</hitroll>
+      <level>3</level>
+      <long_descr>Перед тобой стоит ужасное чудовище (diploma beast), держа диплом 
+об окончании MUD Школы!
+</long_descr>
+      <mana>1d1+99</mana>
+      <material>0</material>
+      <off add="disarm dodge trip"/>
+      <player_name>diploma beast чудовище</player_name>
+      <race>school monster</race>
+      <sex>either</sex>
+      <short_descr>чудовищ|е|а|у|е|ем|е с дипломом</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>30</wealth>
+    </node>
+  </mobiles>
+  <objects>
+    <node name="3700">
+      <affects>
+        <node>
+          <apply to="hitroll">1</apply>
+        </node>
+      </affects>
+      <behavior type="SubissueWeapon">
+      </behavior>
+      <cost>50</cost>
+      <description>Тренировочная булава (mace) лежит здесь.</description>
+      <extraDescr>
+        <node keyword="mace булава">Ты видишь булаву хорошего оружейника, но явно сделанную
+на малобюджетный заказ.
+На боку ее надпись: Сделано в DreamLand.
+</node>
+      </extraDescr>
+      <extra_flags>melt_drop</extra_flags>
+      <gender>f</gender>
+      <level>1</level>
+      <material>bronze</material>
+      <name>mace sub merc булава</name>
+      <short_descr>тренировочн|ая|ой|ой|ую|ой|ой булав|а|ы|е|у|ой|е</short_descr>
+      <type name="weapon">
+        <diceNumber>1</diceNumber>
+        <diceType>6</diceType>
+        <weapClass>mace</weapClass>
+        <weapType>pound</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>60</weight>
+    </node>
+    <node name="3701">
+      <affects>
+        <node>
+          <apply to="hitroll">1</apply>
+        </node>
+      </affects>
+      <behavior type="SubissueWeapon">
+      </behavior>
+      <cost>50</cost>
+      <description>Тренировочный кинжал (dagger) лежит здесь.</description>
+      <extraDescr>
+        <node keyword="dagger кинжал">Ты видишь кинжал хорошего оружейника, но явно сделанный
+на малобюджетный заказ.
+На рукояти его надпись: Сделано в DreamLand.
+</node>
+      </extraDescr>
+      <extra_flags>melt_drop</extra_flags>
+      <gender>m</gender>
+      <material>bronze</material>
+      <name>dagger sub merc кинжал</name>
+      <short_descr>тренировочн|ый|ого|ому|ый|ым|ом кинжа|л|ла|лу|л|лом|ле</short_descr>
+      <type name="weapon">
+        <diceNumber>1</diceNumber>
+        <diceType>4</diceType>
+        <weapClass>dagger</weapClass>
+        <weapType>pierce</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="3702">
+      <affects>
+        <node>
+          <apply to="hitroll">1</apply>
+        </node>
+      </affects>
+      <behavior type="SubissueWeapon">
+      </behavior>
+      <cost>50</cost>
+      <description>Тренировочный меч (sword) лежит здесь.</description>
+      <extraDescr>
+        <node keyword="sword меч">Ты видишь меч хорошего оружейника, но явно сделанный
+на малобюджетный заказ.
+На рукояти его надпись: Сделано в DreamLand.
+</node>
+      </extraDescr>
+      <extra_flags>melt_drop</extra_flags>
+      <gender>m</gender>
+      <level>1</level>
+      <material>bronze</material>
+      <name>sword sub merc меч</name>
+      <short_descr>тренировочн|ый|ого|ому|ый|ым|ом ме|ч|ча|чу|ч|чом|че</short_descr>
+      <type name="weapon">
+        <diceNumber>1</diceNumber>
+        <diceType>6</diceType>
+        <weapClass>sword</weapClass>
+        <weapType>slash</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>30</weight>
+    </node>
+    <node name="3703">
+      <cost>44</cost>
+      <description>Тренировочный жилет (vest) лежит здесь.</description>
+      <extraDescr>
+        <node keyword="vest жилет">Ты видишь жилет работы добротного ремесленика, но явно сделанный
+на малобюджетный заказ.
+Сбоку выжжена надпись: Сделано в DreamLand.
+</node>
+      </extraDescr>
+      <extra_flags>melt_drop</extra_flags>
+      <gender>m</gender>
+      <material>leather</material>
+      <name>vest sub merc жилет</name>
+      <short_descr>тренировочн|ый|ого|ому|ый|ым|ом жиле|т|та|ту|т|том|те</short_descr>
+      <type name="armor">
+        <ac bash="1" exotic="0" pierce="1" slash="1"/>
+      </type>
+      <wear_flags>take wear_body</wear_flags>
+      <weight>50</weight>
+    </node>
+    <node name="3704">
+      <cost>48</cost>
+      <description>Тренировочный щит (shield) лежит здесь.</description>
+      <extraDescr>
+        <node keyword="shield щит">Ты видишь щит работы хорошего оружейника, но явно сделанный
+на малобюджетный заказ.
+С тыльной стороны выжжена надпись: Сделано в DreamLand.
+</node>
+      </extraDescr>
+      <extra_flags>melt_drop</extra_flags>
+      <gender>m</gender>
+      <material>wood</material>
+      <name>shield sub merc щит</name>
+      <short_descr>тренировочн|ый|ого|ому|ый|ым|ом щи|т|та|ту|т|том|те</short_descr>
+      <type name="armor">
+        <ac bash="1" exotic="0" pierce="1" slash="1"/>
+      </type>
+      <wear_flags>take wear_shield</wear_flags>
+      <weight>30</weight>
+    </node>
+    <node name="3705">
+      <cost>22</cost>
+      <description>Тренировочный ошейник (collar) лежит здесь.</description>
+      <extraDescr>
+        <node keyword="collar ошейник">Ты видишь ошейник работы добротного ремесленика, но явно сделанный
+на малобюджетный заказ.
+Сбоку выжжена надпись: Сделано в DreamLand.
+</node>
+      </extraDescr>
+      <extra_flags>melt_drop</extra_flags>
+      <gender>m</gender>
+      <material>cloth</material>
+      <name>collar sub merc ошейник</name>
+      <short_descr>тренировочн|ый|ого|ому|ый|ым|ом ошейни|к|ка|ку|к|ком|ке</short_descr>
+      <type name="armor">
+        <ac bash="1" exotic="0" pierce="1" slash="1"/>
+        <reserved0>1</reserved0>
+      </type>
+      <wear_flags>take wear_neck</wear_flags>
+      <weight>40</weight>
+    </node>
+    <node name="3706">
+      <cost>22</cost>
+      <description>Тренировочный шлем (helmet) лежит здесь.</description>
+      <extraDescr>
+        <node keyword="helmet шлем">Ты видишь шлем работы умелого оружейника, но явно сделанный
+на малобюджетный заказ.
+На нем выжжена надпись: Сделано в DreamLand.
+</node>
+      </extraDescr>
+      <extra_flags>melt_drop</extra_flags>
+      <gender>m</gender>
+      <material>leather</material>
+      <name>helmet sub merc шлем</name>
+      <short_descr>тренировочн|ый|ого|ому|ый|ым|ом шле|м|ма|му|м|мом|ме</short_descr>
+      <type name="armor">
+        <ac bash="1" exotic="0" pierce="1" slash="1"/>
+      </type>
+      <wear_flags>take wear_head</wear_flags>
+      <weight>30</weight>
+    </node>
+    <node name="3707">
+      <cost>22</cost>
+      <description>Тренировочные поножи (leggings) лежат здесь.</description>
+      <extraDescr>
+        <node keyword="leggings поножи">Перед тобой поножи работы умелого оружейника, но явно сделанные
+на малобюджетный заказ.
+На них выжжена надпись: Сделано в DreamLand.
+</node>
+      </extraDescr>
+      <extra_flags>melt_drop</extra_flags>
+      <gender>p</gender>
+      <material>leather</material>
+      <name>leggings sub merc поножи</name>
+      <short_descr>тренировочн|ые|ых|ым|ые|ыми|ых понож|и|ей|ам|и|ами|ах</short_descr>
+      <type name="armor">
+        <ac bash="1" exotic="0" pierce="1" slash="1"/>
+      </type>
+      <wear_flags>take wear_legs</wear_flags>
+      <weight>30</weight>
+    </node>
+    <node name="3708">
+      <cost>22</cost>
+      <description>Тренировочные ботинки (boots) лежат здесь.</description>
+      <extraDescr>
+        <node keyword="boots ботинки">Ты видишь ботинки работы умелого ремесленника, но явно сделанные
+на малобюджетный заказ.
+На каждом из них надпись: Сделано в DreamLand.
+</node>
+      </extraDescr>
+      <extra_flags>melt_drop</extra_flags>
+      <gender>p</gender>
+      <material>leather</material>
+      <name>boots sub merc ботинки</name>
+      <short_descr>тренировочн|ые|ых|ым|ые|ыми|ых ботин|ки|ок|кам|ки|ками|ках</short_descr>
+      <type name="armor">
+        <ac bash="1" exotic="0" pierce="1" slash="1"/>
+      </type>
+      <wear_flags>take wear_feet</wear_flags>
+      <weight>30</weight>
+    </node>
+    <node name="3709">
+      <cost>22</cost>
+      <description>Тренировочные перчатки (gloves) лежат здесь.</description>
+      <extraDescr>
+        <node keyword="gloves перчатки">Ты видишь перчатки работы умелого ремесленника, но явно сделанные
+на малобюджетный заказ.
+На каждой из них надпись: Сделано в DreamLand.
+</node>
+      </extraDescr>
+      <extra_flags>melt_drop</extra_flags>
+      <gender>p</gender>
+      <material>leather</material>
+      <name>gloves sub merc перчатки</name>
+      <short_descr>тренировочн|ые|ых|ым|ые|ыми|ых перчат|ки|ок|кам|ки|ками|ках</short_descr>
+      <type name="armor">
+        <ac bash="1" exotic="0" pierce="1" slash="1"/>
+      </type>
+      <wear_flags>take wear_hands</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="3710">
+      <cost>22</cost>
+      <description>Пара тренировочных рукавов (sleeves) лежит здесь.</description>
+      <extraDescr>
+        <node keyword="sleeves рукава">Ты видишь рукава работы умелого ремесленника, но явно сделанные
+на малобюджетный заказ.
+На каждом из них надпись: Сделано в DreamLand.
+</node>
+      </extraDescr>
+      <extra_flags>melt_drop</extra_flags>
+      <gender>f</gender>
+      <material>leather</material>
+      <name>sleeves sub merc пара рукавов</name>
+      <short_descr>пар|а|ы|е|у|ой|е тренировочных рукавов</short_descr>
+      <type name="armor">
+        <ac bash="1" exotic="0" pierce="1" slash="1"/>
+      </type>
+      <wear_flags>take wear_arms</wear_flags>
+      <weight>20</weight>
+    </node>
+    <node name="3711">
+      <cost>22</cost>
+      <description>Тренировочная накидка (cape) лежит здесь.</description>
+      <extraDescr>
+        <node keyword="cape накидка">Ты видишь накидку работы умелого ремесленника, но явно сделанную
+на малобюджетный заказ.
+На ней надпись: Сделано в DreamLand.
+</node>
+      </extraDescr>
+      <extra_flags>melt_drop</extra_flags>
+      <gender>f</gender>
+      <material>cloth</material>
+      <name>cape sub merc накидка</name>
+      <short_descr>тренировочн|ая|ой|ой|ую|ой|ой накидк|а|и|е|у|ой|ке</short_descr>
+      <type name="armor">
+        <ac bash="1" exotic="0" pierce="1" slash="1"/>
+      </type>
+      <wear_flags>take wear_about</wear_flags>
+      <weight>20</weight>
+    </node>
+    <node name="3712">
+      <cost>22</cost>
+      <description>Тренировочный пояс (belt) лежит здесь.</description>
+      <extraDescr>
+        <node keyword="belt пояс">Ты видишь пояс работы умелого ремесленника, но явно сделанный
+на малобюджетный заказ.
+На нем надпись: Сделано в DreamLand.
+</node>
+      </extraDescr>
+      <extra_flags>melt_drop</extra_flags>
+      <gender>m</gender>
+      <material>leather</material>
+      <name>belt sub merc пояс</name>
+      <short_descr>тренировочн|ый|ого|ому|ый|ым|ом поя|с|са|су|с|сом|се</short_descr>
+      <type name="armor">
+        <ac bash="1" exotic="0" pierce="1" slash="1"/>
+      </type>
+      <wear_flags>take wear_waist</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="3713">
+      <cost>28</cost>
+      <description>Тренировочный нарукавник (bracer) лежит здесь.</description>
+      <extraDescr>
+        <node keyword="bracer нарукавник">Ты видишь нарукавник работы умелого ремесленника, но явно сделанный
+на малобюджетный заказ.
+На нем надпись: Сделано в DreamLand.
+</node>
+      </extraDescr>
+      <extra_flags>melt_drop</extra_flags>
+      <gender>m</gender>
+      <material>bronze</material>
+      <name>bracer sub merc нарукавник</name>
+      <short_descr>тренировочн|ый|ого|ому|ый|ым|ом нарукавни|к|ка|ку|к|ком|ке</short_descr>
+      <type name="armor">
+        <ac bash="1" exotic="0" pierce="0" slash="1"/>
+      </type>
+      <wear_flags>take wear_wrist</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="3714">
+      <description>Кто-то обронил здесь очень нужный ключ (key)!</description>
+      <extra_flags>rot_death</extra_flags>
+      <gender>m</gender>
+      <material>brass</material>
+      <name>key ключ</name>
+      <short_descr>клю|ч|ча|чу|ч|чом|че</short_descr>
+      <type name="key">
+        <rotGround>1</rotGround>
+        <rotInv>1</rotInv>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="3715">
+      <affects>
+        <node>
+          <apply to="wis">1</apply>
+        </node>
+        <node>
+          <apply to="con">1</apply>
+        </node>
+      </affects>
+      <cost>340</cost>
+      <description>Диплом (diploma) об окончании MUD школы забыт здесь.</description>
+      <extraDescr>
+        <node keyword="diploma диплом">Этот документ подтверждает окончание тобой MUD школы.
+Кроме того, он оказывает магическое воздействие, если носить ео в руках!
+
+Merc Industries
+</node>
+      </extraDescr>
+      <extra_flags>melt_drop</extra_flags>
+      <gender>m</gender>
+      <material>vellum</material>
+      <name>diploma диплом</name>
+      <short_descr>дипло|м|ма|му|м|мом|ме об окончании MUD школы</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take hold</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="3716">
+      <affects>
+        <node>
+          <apply to="ac">-1</apply>
+        </node>
+        <node>
+          <apply to="saves">-1</apply>
+        </node>
+      </affects>
+      <cost>80</cost>
+      <description>Медный фонарь (banner) оставлен здесь.</description>
+      <extraDescr>
+        <node keyword="banner фонарь">Фонарь работы лучших мастеров DreamLand сделан, чтобы освещать твой путь!
+</node>
+      </extraDescr>
+      <extra_flags>glow</extra_flags>
+      <gender>m</gender>
+      <material>cloth</material>
+      <name>banner merc фонарь</name>
+      <short_descr>медн|ый|ого|ому|ый|ым|ом фонар|ь|я|ю|ь|ем|е</short_descr>
+      <type name="light">
+        <v2>200</v2>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>20</weight>
+    </node>
+    <node name="3717">
+      <affects>
+        <node>
+          <apply to="hitroll">1</apply>
+        </node>
+      </affects>
+      <behavior type="SubissueWeapon">
+      </behavior>
+      <cost>11</cost>
+      <description>Тренировочное копье (spear) лебыто здесь.</description>
+      <extraDescr>
+        <node keyword="spear копье">Копье работы лучших мастеров с надписью: Сделано в DreamLand.
+</node>
+      </extraDescr>
+      <extra_flags>melt_drop</extra_flags>
+      <gender>n</gender>
+      <level>1</level>
+      <material>wood</material>
+      <name>spear sub merc копье</name>
+      <short_descr>тренировочн|ое|ого|ому|ое|ым|ом копь|е|я|ю|е|ем|е</short_descr>
+      <type name="weapon">
+        <diceNumber>1</diceNumber>
+        <diceType>6</diceType>
+        <weapClass>spear</weapClass>
+        <weapType>thrust</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>50</weight>
+    </node>
+    <node name="3718">
+      <affects>
+        <node>
+          <apply to="hitroll">2</apply>
+        </node>
+        <node>
+          <apply to="damroll">1</apply>
+        </node>
+      </affects>
+      <behavior type="SubissueWeapon">
+      </behavior>
+      <cost>90</cost>
+      <description>Тренировочный посох (staff) забыт здесь.</description>
+      <extraDescr>
+        <node keyword="staff посох">Посох работы лучших мастеров с надписью: Сделано в DreamLand.
+</node>
+      </extraDescr>
+      <extra_flags>melt_drop</extra_flags>
+      <gender>m</gender>
+      <level>1</level>
+      <material>wood</material>
+      <name>staff sub merc посох</name>
+      <short_descr>тренировочн|ый|ого|ому|ый|ым|ом посо|х|ха|ху|х|хом|хе</short_descr>
+      <type name="weapon">
+        <diceNumber>1</diceNumber>
+        <diceType>5</diceType>
+        <specType>two_hands</specType>
+        <weapClass>spear</weapClass>
+        <weapType>pound</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>40</weight>
+    </node>
+    <node name="3719">
+      <affects>
+        <node>
+          <apply to="hitroll">1</apply>
+        </node>
+      </affects>
+      <behavior type="SubissueWeapon">
+      </behavior>
+      <cost>50</cost>
+      <description>Тренировочный топор (axe) забыт здесь.</description>
+      <extraDescr>
+        <node keyword="axe топор">Топор работы лучших мастеров с надписью: Сделано в DreamLand.
+</node>
+      </extraDescr>
+      <extra_flags>melt_drop</extra_flags>
+      <gender>m</gender>
+      <level>1</level>
+      <material>bronze</material>
+      <name>axe sub merc топор</name>
+      <short_descr>тренировочн|ый|ого|ому|ый|ым|ом топо|р|ра|ру|р|ром|ре</short_descr>
+      <type name="weapon">
+        <diceNumber>1</diceNumber>
+        <diceType>6</diceType>
+        <weapClass>axe</weapClass>
+        <weapType>chop</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>50</weight>
+    </node>
+    <node name="3720">
+      <affects>
+        <node>
+          <apply to="damroll">1</apply>
+        </node>
+      </affects>
+      <behavior type="SubissueWeapon">
+      </behavior>
+      <cost>50</cost>
+      <description>Тренировочный цеп (flail) забыт здесь.</description>
+      <extraDescr>
+        <node keyword="flail цеп">Цеп работы лучших мастеров с надписью: Сделано в DreamLand.
+</node>
+      </extraDescr>
+      <extra_flags>melt_drop</extra_flags>
+      <gender>m</gender>
+      <level>1</level>
+      <material>bronze</material>
+      <name>flail sub merc цеп</name>
+      <short_descr>тренировочн|ый|ого|ому|ый|ым|ом це|п|па|пу|п|пом|пе</short_descr>
+      <type name="weapon">
+        <diceNumber>1</diceNumber>
+        <diceType>5</diceType>
+        <weapClass>flail</weapClass>
+        <weapType>crush</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>50</weight>
+    </node>
+    <node name="3721">
+      <affects>
+        <node>
+          <apply to="hitroll">2</apply>
+        </node>
+      </affects>
+      <behavior type="SubissueWeapon">
+      </behavior>
+      <cost>50</cost>
+      <description>Тренировочная плетка (whip) забыта здесь.</description>
+      <extraDescr>
+        <node keyword="whip плеть">Плеть работы лучших мастеров с надписью: Сделано в DreamLand.
+</node>
+      </extraDescr>
+      <extra_flags>melt_drop</extra_flags>
+      <gender>f</gender>
+      <level>1</level>
+      <material>leather</material>
+      <name>whip sub merc плетка</name>
+      <short_descr>тренировочн|ая|ой|ой|ую|ой|ой плетк|а|и|е|у|ой|е</short_descr>
+      <type name="weapon">
+        <diceNumber>2</diceNumber>
+        <diceType>2</diceType>
+        <weapClass>whip</weapClass>
+        <weapType>whip</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>20</weight>
+    </node>
+    <node name="3722">
+      <affects>
+        <node>
+          <apply to="damroll">1</apply>
+        </node>
+      </affects>
+      <behavior type="SubissueWeapon">
+      </behavior>
+      <cost>43</cost>
+      <description>Тренировочная алебарда (glaive).
+</description>
+      <extraDescr>
+        <node keyword="glaive алебарда">Алебарда работы лучших мастеров с надписью: Сделано в DreamLand.
+</node>
+      </extraDescr>
+      <extra_flags>melt_drop</extra_flags>
+      <gender>f</gender>
+      <level>1</level>
+      <material>wood</material>
+      <name>glaive sub merc алебарда</name>
+      <short_descr>тренировочн|ая|ой|ой|ую|ой|ой алебард|а|ы|е|у|ой|е</short_descr>
+      <type name="weapon">
+        <diceNumber>1</diceNumber>
+        <diceType>7</diceType>
+        <specType>two_hands</specType>
+        <weapClass>polearm</weapClass>
+        <weapType>slash</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>80</weight>
+    </node>
+    <node name="3723">
+      <affects>
+        <node>
+          <apply to="damroll">1</apply>
+        </node>
+      </affects>
+      <behavior type="SubissueWeapon">
+      </behavior>
+      <cost>43</cost>
+      <description>Тренировочный лук (bow) забыт здесь.</description>
+      <extraDescr>
+        <node keyword="bow лук">Лук работы лучших мастеров с надписью: Сделано в DreamLand.
+</node>
+      </extraDescr>
+      <extra_flags>melt_drop</extra_flags>
+      <gender>m</gender>
+      <level>1</level>
+      <material>wood</material>
+      <name>bow sub merc лук</name>
+      <short_descr>тренировочн|ый|ого|ому|ый|ым|ом лу|к|ка|ку|к|ком|ке</short_descr>
+      <type name="weapon">
+        <diceNumber>1</diceNumber>
+        <diceType>7</diceType>
+        <specType>two_hands</specType>
+        <weapClass>bow</weapClass>
+        <weapType>none</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>80</weight>
+    </node>
+    <node name="3724">
+      <affects>
+        <node>
+          <apply to="damroll">1</apply>
+        </node>
+      </affects>
+      <behavior type="SubissueWeapon">
+      </behavior>
+      <cost>43</cost>
+      <description>Тренировочная пика (lance) забыта здесь.</description>
+      <extraDescr>
+        <node keyword="lance пика">Пика работы лучших мастеров с надписью: Сделано в DreamLand.
+</node>
+      </extraDescr>
+      <extra_flags>melt_drop</extra_flags>
+      <gender>f</gender>
+      <level>1</level>
+      <material>iron</material>
+      <name>lance sub merc пика</name>
+      <short_descr>тренировочн|ая|ой|ой|ую|ой|ой пик|а|и|е|у|ой|е</short_descr>
+      <type name="weapon">
+        <diceNumber>1</diceNumber>
+        <diceType>7</diceType>
+        <specType>two_hands</specType>
+        <weapClass>lance</weapClass>
+        <weapType>none</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>80</weight>
+    </node>
+    <node name="3725">
+      <affects>
+        <node>
+          <apply to="wis">1</apply>
+        </node>
+      </affects>
+      <cost>20</cost>
+      <description>Книга новичка (book) оставлена тут.</description>
+      <extraDescr>
+        <node keyword="book книга">Небольшая книга в кожаном переплете. Смахивая рукой пыль, ты видишь 
+золотое тиснение:
+
+                     {Y-= D R E A M   L A N D =-
+
+                          Крупицы мастерства{x
+
+
+
+Чуть ниже мелким шрифтом добавлено:
+  В  этой  книге  собраны  основные  команды и некоторые советы, которые
+  помогут тебе покорить этот мир.
+
+
+  Чтобы прочитать следующие страницы, набери &quot;read page1&quot;,&quot;read page2&quot;,
+                          &quot;read page3&quot;, и т.д..
+</node>
+        <node keyword="page1">.
+ Основной движущей силой этого мира являются, как не странно, не деньги,
+а  единицы опыта (exp). Ибо только получив необходимое количество опыта,
+ты сможешь перейти на следующий уровень.
+
+  Единицы опыта (exp)  можно получить в основном в сражениях. То есть, в
+бою у врага можно отобрать его жизнь (получив за это какое-то количество
+опыта), деньги, экипировку и т.д. (если они у него есть).
+
+  Но! Все это может отобрать у тебя противник, если он окажется сильнее,
+проворнее  и умнее тебя. В этом мире твоими противниками могут быть, как
+компьютерные  монстры,  так  и  персонажи других игроков. Увидеть список
+персонажей,  которые в данный момент в игре, можно командой &quot;WHO&quot;. Рядом
+с  именами  персонажей,  которые  могут  быть твоими противниками, будет
+значок {R&quot;(PK)&quot;{x.
+
+
+На следующей странице описано, как настроить параметры твоего персонажа.
+Для перехода на следующую страницу, набери &quot;read page2&quot;. 
+</node>
+        <node keyword="page2">.  Чтобы увидеть текущие настройки своего персонажа,  набери &quot;{CAUTO{x&quot;. 
+Все  эти   переключатели   включаются   и  выключаются повторным набором
+команды. Например  &quot;{CCOLOR{x&quot;  включает  вывод  на  экран  информации в
+цвете, а повторный ввод команды &quot;{CCOLOR{x&quot; выключает цвет.
+
+&quot;{RAUTOASSIST{x&quot; -  позволяет твоему персонажу автоматически помогать игрокам
+                                                          твоей группы в бою.
+&quot;{RAUTOEXIT{x&quot;   -  включает отображение видимых выходов из комнаты.
+
+&quot;{RAUTOGOLD{x&quot;   -  автоматически забирает деньги из трупов поверженных тобой
+                                                                      врагов.
+&quot;{RAUTOLOOT{x&quot;   -  автоматически забирает вещи из трупов поверженных тобой 
+                                                                    врагов.
+&quot;{RAUTOSAC{x&quot;    -  автоматически жертвует Богам труп поверженного тобой врага.
+                    
+&quot;{RAUTOSPLIT{x&quot;  -  автоматически делит деньги из трупов поверженных тобой 
+                                        врагов между игроками твоей группы.
+
+Продолжение на следующей странице.
+Для перехода на следующую страницу, набери &quot;read page3&quot;. 
+</node>
+        <node keyword="page3">&quot;{RREPLAY{x&quot; - позволяет просматривать все сказанное тебе другими 
+                  игроками, после окончания сражения.
+
+&quot;{RNOTELNET{x&quot; и &quot;{RNOIAC{x&quot; - позволяют настроить отображение символов в 
+                               зависимости используемого тобой терминала.
+Например,  при  игре  под  клиентом zMUD  для Win95, чтобы видеть русскую
+букву &quot;YA&quot;, оба переключателя необходимо установить в состояние &quot;ВЫКЛ.&quot;
+        
+-------------------------------------------------------------------------------
+  Когда  ты  впервые  попадаешь  в  этот мир,  то получаешь  минимальный 
+комплект  экипировки. Если, по каким либо причинам, ты потерял что-либо,
+восстановить  первоначальный  комплект можно командой &quot;{COUTFIT{x&quot;. Этой
+командой  ты  можешь пользоваться только до 5 уровня и восстановить вещи
+добытые или купленные тобой невозможно.
+  В случае твоей смерти, до 10 уровня, твой труп вместе с тобой попадает
+к лекарю. Забрать все вещи из трупа можно командой &quot;{CGET ALL CORPSE{x&quot;.
+После  10  уровня  труп  остается  на месте сражения. Если же ты хочешь,
+чтобы  труп  по прежнему попадал в комнату к лекарю, то  тебе необходимо
+купить страховку, которая продается у лекаря.
+
+Продолжение на следующей странице.
+Для перехода на следующую страницу, набери &quot;read page4&quot;. 
+</node>
+        <node keyword="page4">. Лекарь  также может  тебя вылечить  от  многих болезней,  восстановить
+уровень  жизни и энергии, чтобы увидеть полный список всего того, что он
+умеет, набери &quot;{CHEAL{x&quot; в комнате с лекарем.
+-------------------------------------------------------------------------------
+   В некоторых городах установлены порталы, ведущие в Храм Лео(Мидгаард).
+Для того, чтобы воспользоваться им используй команду &quot;{CENTER PORTAL{x&quot;.
+   Во всех больших городах есть Квестор(Questor), который выдает игрокам
+персональные   задания   ({CHELP   QUEST{x).  Выполняя  эти  задания  ты
+зарабатываешь квестовые единицы. Набрав достаточное количество квестовых
+единиц  можно  приобрести различные элитные вещи, список которых Квестор
+тебе покажет по команде &quot;{CQUEST LIST{x&quot;.
+   Например,   информационный   пейджер   позволит   тебе   пользоваться
+информационным каналом. По нему передаются сообщения о появлении и уходе
+игроков,   а   также   о   переходе  игроков  на  следующий  уровень.  А
+приобретенная  у  Квестора кредитная карточка позволит тебе пользоваться
+банковской системой не только в банках, а в любом месте Мира.
+   Остальные вещи в не меньшей мере заслуживают твоего внимания.
+-------------------------------------------------------------------------------
+   В этой книге описана лишь малая доля того, что пригодится тебе в игре. 
+Остальной опыт ты будешь приобретать в далеких походах и тяжелых кровавых 
+схватках.  
+                         {CУдачи тебе идущий!{x
+
+</node>
+        <node keyword="page5">.     На этой странице ждут твоих советов другие, идущие за тобой!
+
+
+
+</node>
+        <node keyword="page6">.     На этой странице ждут твоих советов другие, идущие за тобой!
+
+
+
+
+</node>
+        <node keyword="page7">.     На этой странице ждут твоих советов другие, идущие за тобой!
+
+
+
+
+</node>
+        <node keyword="page8">.     На этой странице ждут твоих советов другие, идущие за тобой!
+
+
+
+
+</node>
+      </extraDescr>
+      <gender>f</gender>
+      <material>leather</material>
+      <name>book книга</name>
+      <short_descr>книг|а|и|е|у|ой|е новичка</short_descr>
+      <type name="trash">
+      </type>
+      <wear_flags>take hold</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="3726">
+      <condition>90</condition>
+      <description>Светящийся портал (portal) ведущий в Зону Новичков.</description>
+      <extra_flags>glow hum</extra_flags>
+      <gender>m</gender>
+      <material>energy</material>
+      <name>portal портал</name>
+      <short_descr>порта|л|ла|лу|л|лом|ле</short_descr>
+      <type name="portal">
+        <charges>9999</charges>
+        <portalFlags>normal_exit</portalFlags>
+        <target>18600</target>
+      </type>
+    </node>
+  </objects>
+  <rooms>
+    <node name="3700">
+      <description>Это вход в MUD Школу. Иди на север, чтоб попасть в MUD Школу. Если ты уже
+прошел школу и хочешь попасть на арену - иди на юг.
+
+   Вывеска на дверях Школы гласит:{R&quot;НЕ СМЕЙ ПЕРЕСЕКАТЬ ЭТИ ДВЕРИ,
+                                       ЕСЛИ ТЫ ДОСТИГ 5 УРОВНЯ!{x&quot;
+</description>
+      <exits>
+        <node name="down">
+          <description>Ты видишь Храм Лео.
+</description>
+          <target>3001</target>
+        </node>
+        <node name="east">
+          <description>Ты видишь вход в Музей.
+</description>
+          <target>400</target>
+        </node>
+        <node name="north">
+          <description>Ты видишь вход в здание MUD Школы.
+</description>
+          <target>3757</target>
+        </node>
+        <node name="south">
+          <description>Ты видишь дверь, за которой находится Арена MUD Школы.
+</description>
+          <flags>isdoor closed</flags>
+          <keyword>door дверь</keyword>
+          <target>3744</target>
+        </node>
+      </exits>
+      <flags>no_mob indoors</flags>
+      <name>Вход в MUD Школу</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3701">
+      <description>Ты находишься в квадратной белой комнате. Стены пусты и без окон. Мягкий
+белый  свет  льется  с  потолка.  На стене имеется знак (sign). Выходы - на
+запад и юг. Маленькая табличка (plaque) висит на стене.
+</description>
+      <exits>
+        <node name="south">
+          <description>Ты видишь выход в другую комнату.
+</description>
+          <target>3757</target>
+        </node>
+        <node name="west">
+          <description>Ты видишь выход в другую комнату.
+</description>
+          <target>3702</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="sign знак">Время проверить обмундирование!
+Набери &quot;{Y{lRэкипировка{lEEQUIPMENT{x&quot; и увидишь то, что ты используешь в данный момент.
+Сейчас у тебя есть не так много вещей. По мере прохождения МУД Школы ты найдешь
+себе более полный набор обмундирования.
+
+Подобрать предметы с земли поможет команда &quot;{Y{lRвзять{lEGET{x {lRпредмет{lEitem{x&quot;.
+Надеть часть доспехов или вооружиться оружием - наберите &quot;{Y{lRнадеть{lEWEAR{x {lRпредмет{lEitem{x&quot;.
+Чтобы надеть, держать и вооружиться всем, что у тебя есть - &quot;{Y{lRнадеть все{lEWEAR ALL{x&quot;.
+Чтобы снять что-то из обмундирования - &quot;{Y{lRснять{lEREMOVE{x {lRпредмет{lEitem{x&quot;.
+И наконец, чтоб увидеть все что ты несешь - &quot;{Y{lRинвентарь{lEINVENTORY{x&quot;.
+
+Когда будешь готов продолжать обучение - иди на запад.
+</node>
+        <node keyword="plaque табличка">This zone (Mud School) is created by Hatchet for any Merc Mud.
+Copyright 1992, 1993.
+
+Эта зона (MUD школа) создана Хатчетом для всех миров на основе Merc.
+(c) 1992, 1993.
+</node>
+      </extraDescr>
+      <flags>no_mob indoors newbies_only</flags>
+      <name>Комната в MUD Школе</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="3700"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="3702">
+      <description>Ты находишься в квадратной белой комнате. Стены пусты и без окон. Мягкий
+белый свет льется с потолка. Выходы ведут во ВСЕХ направлениях. Конечно же,
+на стене имеется знак (sign).
+</description>
+      <exits>
+        <node name="down">
+          <description>Ты видишь комнату.
+</description>
+          <target>3707</target>
+        </node>
+        <node name="east">
+          <description>Ты видишь комнату.
+</description>
+          <target>3701</target>
+        </node>
+        <node name="north">
+          <description>Ты видишь комнату на севере, которая приведет тебя к следующей
+ступени обучения.
+</description>
+          <target>3703</target>
+        </node>
+        <node name="south">
+          <description>Ты видишь комнату.
+</description>
+          <target>3705</target>
+        </node>
+        <node name="up">
+          <description>Ты видишь комнату.
+</description>
+          <target>3708</target>
+        </node>
+        <node name="west">
+          <description>Ты видишь комнату.
+</description>
+          <target>3704</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="sign знак">Эта  комната  для тренировки умения двигаться  в различных направлениях.
+Направления   по которым ты сможешь попасть в другие комнаты: 
+    {lRсевер, юг, восток, запад, вверх, вниз{lEnorth, south, east, west, up, down{x
+Конечно, не во всех комнатах присутствуют все эти выходы.
+
+   Чтоб увидеть реальные выходы из комнаты набери: &quot;{Y{lRвыходы{lEEXITS{x&quot;.
+
+   Иногда двери просто закрыты,  закрыты на ключ  или секретны. Внимательно
+изучай описания комнат или пробуй ходить в различные направления, натыкаясь
+на двери.
+
+   Попробуй походить в различные стороны. Когда закончишь, иди на {Y{lRсевер{lENORTH{x.
+</node>
+      </extraDescr>
+      <flags>no_mob indoors newbies_only</flags>
+      <name>Центральная комната</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3703">
+      <description>Ты находишься в квадратной белой комнате. Стены комнаты пусты, без окон.
+Мягкий  белый  свет льется с потолка. Конечно на стене имеется знак (sign).
+Выходы лежат на север и юг.
+</description>
+      <exits>
+        <node name="north">
+          <description>Ты видишь следующий этап Школы.
+</description>
+          <target>3709</target>
+        </node>
+        <node name="south">
+          <description>Ты видишь центральную комнату.
+</description>
+          <target>3702</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="sign знак">Раз уж ты здесь, давай продолжать уроки. По команде {Y{lRсчет{lESCORE{x 
+можно увидеть всю информацию о себе.  Сделай это прямо сейчас.
+На  более высоких уровнях  &quot;{Y{lRсчет{lESCORE{x&quot; покажет большее количество информации.
+</node>
+      </extraDescr>
+      <flags>no_mob indoors newbies_only</flags>
+      <name>Комната в MUD Школе</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3704">
+      <description>Ты находишься в квадратной белой комнате. Стены пусты и без окон. Мягкий
+белый  свет  льется  с  потолка. На стене имеется знак (sign). Единственный
+выход ведет на восток.
+</description>
+      <exits>
+        <node name="east">
+          <description>Ты видишь центральную комнату.
+</description>
+          <target>3702</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="sign знак">Иди на восток (east) в центральную комнату.
+</node>
+      </extraDescr>
+      <flags>no_mob indoors newbies_only</flags>
+      <name>Комната в MUD Школе</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3705">
+      <description>Ты находишься в квадратной белой комнате. Стены пусты и без окон. Мягкий
+белый  свет  льется  с потолка. На стене имеется знак (sign). Единственный
+выход ведет на север.
+</description>
+      <exits>
+        <node name="north">
+          <description>Ты видишь центральную комнату.
+</description>
+          <target>3702</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="sign знак">Иди на север (north) в центральную комнату.
+</node>
+      </extraDescr>
+      <flags>no_mob indoors newbies_only</flags>
+      <name>Комната в MUD Школе</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3707">
+      <description>Ты находишься в квадратной белой комнате. Стены пусты и без окон. Мягкий
+белый  свет  льется  с  потолка. На стене имеется знак (sign). Единственный
+выход ведет наверх.
+</description>
+      <exits>
+        <node name="up">
+          <description>Ты видишь центральную комнату.
+</description>
+          <target>3702</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="sign">Иди наверх (up) в центральную комнату.
+</node>
+      </extraDescr>
+      <flags>no_mob indoors newbies_only</flags>
+      <name>Комната в MUD Школе</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3708">
+      <description>Ты находишься в квадратной белой комнате. Стены пусты и без окон. Мягкий
+белый  свет  льется  с  потолка. На стене имеется знак (sign). Единственный
+выход ведет вниз.
+</description>
+      <exits>
+        <node name="down">
+          <description>Ты видишь центральную комнату.
+</description>
+          <target>3702</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="sign знак">Иди вниз (down) в центральную комнату.
+</node>
+      </extraDescr>
+      <flags>no_mob indoors newbies_only</flags>
+      <name>Комната в MUD Школе</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3709">
+      <description>Ты находишься в квадратной белой комнате. Стены пусты и без окон. Мягкий
+белый  свет льется с потолка. На стене имеется знак (sign). Выходы ведут на
+запад и вниз.
+</description>
+      <exits>
+        <node name="down">
+          <description>Ты видишь Клетку.
+</description>
+          <target>3710</target>
+        </node>
+        <node name="west">
+          <description>Ты видишь следующий этап Школы.
+</description>
+          <target>3711</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="sign знак">Добро пожаловать в комнату тренировки навыков сражения.
+
+   Первый урок  -  узнать,  с кем биться.  Используй команду  &quot;{Y{lRшансы{lECONSIDER{x&quot;, 
+чтобы  сравнить собственные силы с силами монстра. Избегай драться против
+монстров, которые легко могут тебя убить.
+
+   Второй урок - научиться  вовремя убегать  из  сражения.  Внизу в комнате
+сидит монстр. Он слишком силен для тебя, но он не будет тебя убивать. Иди
+&quot;{lRвниз{lEDOWN{x&quot; отсюда, сравни свои силы с его, а потом попробуй
+убить его: &quot;{Y{lRубить{lEKILL{x&quot;. Чтобы убежать от него, набери &quot;{Y{lRсбежать{lEFLEE{x&quot;.
+
+   С помощью команды {Y{lRтрусость{lEWIMPY{x можно настроить автоматическое
+убегание из боя. Наберите {lR? трусость{lEHELP WIMPY{x и выясните подробности.
+
+   Сбежав от монстра, ты снова попадешь в эту же комнату. После этого иди в
+следующую комнату для обучения - на запад.
+</node>
+      </extraDescr>
+      <flags>no_mob indoors newbies_only</flags>
+      <name>Комната в MUD Школе</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3710">
+      <description>Ты стоишь  в  вонючей клетке.  Странно - стены все еще чисты!  Ты видишь 
+знак (sign) здесь. Единственный выход - наверх.
+</description>
+      <exits>
+        <node name="up">
+          <description>Ты видишь безопасное место.
+</description>
+          <target>3709</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="sign знак">Помни, не сражайся с пузырем (blob) до конца!  Просто набери &quot;{lRубить пузырь{lEKILL
+BLOB{x&quot;, начни драться и набирай &quot;{lRсбежать{lEFLEE{x&quot;, пока не убежишь наружу.
+</node>
+      </extraDescr>
+      <flags>indoors newbies_only</flags>
+      <name>Клетка с Пузырем</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="3701"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="3711">
+      <description>Ты находишься в квадратной белой комнате. Стены пусты и без окон. Мягкий
+белый свет льется с потолка. На стене имеется знак (sign).
+</description>
+      <exits>
+        <node name="down">
+          <description>Ты видишь зал сражений.
+</description>
+          <target>3712</target>
+        </node>
+        <node name="east">
+          <description>Ты видишь следующий этап Школы.
+</description>
+          <target>3709</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="sign знак">Добро пожаловать! Ты добралися до следующего этапа обучения. Перед тем, 
+как идти дальше, отдохни и почитай  &quot;Книгу Новичка&quot;.  Для этого используй 
+команду &quot;{Y{lRчитать книга{lELOOK BOOK{x&quot;.             
+   Теперь  ты готов сражаться против настоящих монстров, до конца!  Убей
+всех монстров, так как у каждого из них найдется полезная тебе экипировка.
+   Для этого сначала иди вниз. Удачи!
+</node>
+      </extraDescr>
+      <flags>no_mob indoors newbies_only</flags>
+      <name>Комната в MUD Школе</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3712">
+      <description>Ты находишься в комнате с клетками. Вокруг тебя - 4 клетки. Мягкий белый
+свет  льется  с  потолка.  Конечно же на стене имеется большой знак (sign).
+Выходы ведут во все направлениях и вниз.
+</description>
+      <exits>
+        <node name="down">
+          <description>Ты видишь следующий этап Школы.
+</description>
+          <target>3717</target>
+        </node>
+        <node name="east">
+          <description>Внутри ты видишь дикого монстра!
+</description>
+          <target>3716</target>
+        </node>
+        <node name="north">
+          <description>Внутри ты видишь агрессивного монстра!
+</description>
+          <target>3713</target>
+        </node>
+        <node name="south">
+          <description>Внутри ты видишь трусливого монстра!
+</description>
+          <target>3715</target>
+        </node>
+        <node name="west">
+          <description>Внутри ты видишь агрессивного, но трусливого монстра!
+</description>
+          <target>3714</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="sign знак">Добро пожаловать  в  Комнату  с  Клетками.  Адепты  MUD Школы поймали 
+несколько  монстров и поместили их в клетки, чтобы тебе было удобней тренироваться.
+В четырех клетках - четыре монстра различных типов. Убей их всех!
+
+   После убийства каждого монстра, забери все обмундирование с их трупов
+командой  &quot;{Y{lRвзять все труп{lEGET ALL CORPSE{x&quot;.  После этого  ты  сможешь  использовать  команду
+&quot;{Y{lRнадеть все{lEWEAR ALL{x&quot;, чтобы одеть недавно захваченные трофеи.
+
+   Когда ты заберешь  все из  трупа,  набери  &quot;{Y{lRжертвовать труп{lESACRIFICE CORPSE{x&quot;,  чтобы
+принести его в жертву богам. Боги вознаградят тебя за это!
+   
+   В перерывах между сражениями можно отдыхать или спать, тогда здоровье
+(hit points) будет восстанавливаться лучше. Когда ты спишь ({Y{lRспать{lESLEEP{x), здоровье
+восстанавливается быстрее, чем при отдыхе сидя (команда {Y{lRотдыхать{lEREST{x), но
+при этом ты не видишь и не слышишь, что происходит вокруг.
+</node>
+      </extraDescr>
+      <flags>no_mob indoors newbies_only</flags>
+      <name>Комната с Клетками</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="3707"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="3713">
+      <description>Ты находишься в клетке.  Повсюду запекшаяся кровь.  Уборщики должно быть 
+очень небрежны здесь! На стене имеется знак (sign). 
+   Единственный выход - на юг.
+</description>
+      <exits>
+        <node name="south">
+          <description>Ты видишь Комнату с клетками.
+</description>
+          <target>3712</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="sign знак">В  этой  комнате  находится трусливый монстр. Быстро убей его и выйди!
+Помни о добыче и жертвуй труп!
+</node>
+      </extraDescr>
+      <flags>indoors newbies_only</flags>
+      <name>Клетка</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="3704"/>
+        <equip to="legs" vnum="3707"/>
+        <equip to="waist" vnum="3712"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="3714">
+      <description>Ты находишься в клетке.  Повсюду запекшаяся кровь.  Уборщики должно быть
+очень небрежны  здесь!  На  стене  имеется  знак  (sign). 
+   Единственный выход - на восток.
+</description>
+      <exits>
+        <node name="east">
+          <description>Ты видишь Комнату с клетками.
+</description>
+          <target>3712</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="sign знак">В  этой  комнате  находится  трусливый монстр. Быстро убей его и выйди!
+Помни о добыче и жертвуй труп!
+</node>
+      </extraDescr>
+      <flags>indoors newbies_only</flags>
+      <name>Клетка</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="3705"/>
+        <equip to="feet" vnum="3708"/>
+        <equip to="wrist_l" vnum="3713"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="3715">
+      <description>Ты находишься в клетке.  Повсюду запекшаяся кровь.  Уборщики должно быть
+очень небрежны  здесь!  На  стене  имеется  знак  (sign). 
+   Единственный выход - на север.
+</description>
+      <exits>
+        <node name="north">
+          <description>Ты видишь Комнату с клетками.
+</description>
+          <target>3712</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="sign знак">В  этой  комнате  находится  трусливый монстр. Быстро убей его и выйди!
+Помни о добыче и жертвуй труп!
+</node>
+      </extraDescr>
+      <flags>indoors newbies_only</flags>
+      <name>Клетка</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="3703"/>
+        <equip to="head" vnum="3706"/>
+        <equip to="about" vnum="3711"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="3716">
+      <description>Ты находишься в клетке.  Повсюду запекшаяся кровь.  Уборщики должно быть
+очень небрежны  здесь!  На  стене  имеется  знак  (sign). 
+   Единственный выход - на запад.
+</description>
+      <exits>
+        <node name="west">
+          <description>Ты видишь Комнату с клетками.
+</description>
+          <target>3712</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="sign знак">В  этой  комнате  находится  трусливый монстр. Быстро убей его и выйди!
+Помни о добыче и жертвуй труп!
+</node>
+      </extraDescr>
+      <flags>indoors newbies_only</flags>
+      <name>Клетка</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="3702"/>
+        <equip to="neck_1" vnum="3705"/>
+        <equip to="neck_2" vnum="3705"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="3717">
+      <description>Ты находишься в квадратной белой комнате. Стены пусты и без окон. Мягкий
+белый  свет  льется с потолка. На стене имеется знак (sign). Попробуй найти
+выход сам!
+</description>
+      <exits>
+        <node name="east">
+          <description>Ты видишь следующую станцию Школы.
+</description>
+          <flags>isdoor closed</flags>
+          <keyword>door</keyword>
+          <target>3719</target>
+        </node>
+        <node name="south">
+          <description>Ты видишь Магазин.
+</description>
+          <target>3718</target>
+        </node>
+        <node name="up">
+          <description>Ты видишь Комнату с клетками.
+</description>
+          <target>3712</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="sign знак">Сейчас  ты, наверное, проголодался  и  очень  хочешь пить.  Настало время
+запастись  продовольствием! На юге находится Магазин. В магазине  тебе 
+понадобятся следующие команды:
+
+    &quot;{Y{lRкупить{lEBUY{x&quot;  - Купить товар
+    &quot;{Y{lRсписок{lELIST{x&quot; - Просмотреть список товаров и их стоимости
+
+   После  того,  как  ты  купишь себе еду и питье, используй команды:
+    &quot;{Y{lRесть{lEEAT{x&quot;   -  сьесть что-либо и 
+    &quot;{Y{lRпить{lEDRINK{x&quot; -  выпить что-либо.
+
+   После этого найди следующий выход самостоятельно.
+</node>
+      </extraDescr>
+      <flags>no_mob indoors newbies_only</flags>
+      <name>Комната в MUD Школе</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3718">
+      <description>Ты находишься в узкой комнате. Всюду на полках - товары и пакеты. Мягкий
+белый  свет  льется  с  потолка. На стене имеется знак (sign). Единственный
+выход лежит на севере.
+</description>
+      <exits>
+        <node name="north">
+          <description>Ты видишь только выход отсюда.
+</description>
+          <target>3717</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="sign знак">Знак гласит:
+
+        {lRкупить{lEbuy   {x    - купить товар у продавца.
+        {lRсписок{lElist  {x    - продавец покажет тебе, что есть для продажи.
+        {lRцена {lEvalue{x     - продавец скажет, за сколько он возьмет у тебя товар.
+        {lRпродать{lEsell   {x   - продать товар продавцу.
+</node>
+      </extraDescr>
+      <flags>indoors newbies_only</flags>
+      <name>Магазин в MUD Школе</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="3717"/>
+        <give vnum="3138"/>
+        <give vnum="3011"/>
+        <give vnum="3031"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="3719">
+      <description>Ты находишься в квадратной белой комнате. Стены пусты и без окон. Мягкий
+белый  свет  льется  с  потолка.  На стене имеется знак (sign). Выходы - на
+север и запад. Дверь (door) - на востоке.
+</description>
+      <exits>
+        <node name="east">
+          <description>Ты видишь следующий этап Школы.
+</description>
+          <flags>isdoor closed locked</flags>
+          <key>3714</key>
+          <keyword>door дверь</keyword>
+          <target>3721</target>
+        </node>
+        <node name="north">
+          <description>Ты видишь темную комнату.
+</description>
+          <target>3720</target>
+        </node>
+        <node name="west">
+          <description>Ты видишь комнату из которой пришел.
+</description>
+          <flags>isdoor closed</flags>
+          <keyword>door дверь</keyword>
+          <target>3717</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="sign знак">На севере - темная комната.  Я надеюсь, что у тебя уже есть фонарь!  Если 
+нет, тебе придется вернуться в Магазин и купить его.
+
+   В комнате  -  монстр с ключом,  который тебе нужен для того, чтоб открыть
+следующую  дверь.  После  победы  над монстром забери  ключ из его трупа и
+возвращайся  сюда,  открой  дверь,  используя  команды:
+&quot;{Y{lRотпереть восток{lEUNLOCK EAST{x&quot;, &quot;{Y{lRоткрыть восток{lEOPEN EAST{x&quot;  и иди дальше на восток.
+</node>
+      </extraDescr>
+      <flags>no_mob indoors newbies_only</flags>
+      <name>Комната в MUD Школе</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3720">
+      <description>Эта комната  была затемнена умышленно,  чтобы  тебе пришлось использовать
+источник  света  для  продолжения  пути. Стены, конечно, совершенно пусты и
+белы. Единственный выход на юг.
+</description>
+      <exits>
+        <node name="south">
+          <description>Ты видишь комнату из которой пришел.
+</description>
+          <target>3719</target>
+        </node>
+      </exits>
+      <flags>dark indoors newbies_only</flags>
+      <name>Темная Комната</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="3706"/>
+        <equip to="hands" vnum="3709"/>
+        <equip to="arms" vnum="3710"/>
+        <equip to="hold" vnum="3714"/>
+        <equip to="wrist_l" vnum="3713"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="3721">
+      <description>Это очень светлая комната  с  мраморным пьедесталом в центре. Около него
+стоит  фигура,  одетая в серебряные одежды.  Все стены увешаны гобеленами и
+ты  неимоверно  счастлив, что оказался здесь. На стене имеется большой знак
+(sign). Выход из комнаты - через ворота на севере.
+</description>
+      <exits>
+        <node name="north">
+          <description>Впереди ты видишь Арену.
+</description>
+          <flags>isdoor closed</flags>
+          <keyword>gate ворота</keyword>
+          <target>3722</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="sign знак">Ты прошел все ступени обучения в MUD Школе! Теперь попробуй получи диплом
+об окончании нашей школы... если сможешь конечно!
+
+   Иди на север, там  находится  Арена.  Там  ты  найдешь множество монстров,
+но не нападай на других игроков!
+
+   Если ты захочешь вернуться в Храм, используй команду &quot;{R{lRвозврат{lERECALL{x&quot;.
+
+   Покинуть игру можно по команде {lRконец{lEQUIT{x.
+
+   Если тебе в течении игры понадобится больше информации - пользуйся командой &quot;{lRсправка{lEHELP{x&quot;.
+Если  ты  замечаешь  неисправности  в  работе  игры,  используй &apos;{lRошибка{lEBUG{x&apos;, чтоб
+проинформировать об этом Богов. Все пожелания направляйте используя &apos;{lRписьмо{lENOTE{x&apos;,
+&apos;{lRидея{lEIDEA{x&apos;, или &apos;{lRопечатка{lETYPO{x&apos;.
+
+   Удачи тебе!!!
+</node>
+      </extraDescr>
+      <flags>indoors newbies_only</flags>
+      <name>Последняя Комната MUD Школы!</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="3720"/>
+        <equip to="hold" vnum="3715"/>
+        <mob limit="1" maxHere="1" vnum="3708"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="3722">
+      <description>Ты находишься  на  Арене.  Помни, если  ты хочешь  выйти отсюда - просто
+поднимись  наверх.  Арена  настолько огромна, что потолок еле виден. И тебе
+все время кажется, что Боги незримо наблюдают за тобой!
+</description>
+      <exits>
+        <node name="east">
+          <target>3725</target>
+        </node>
+        <node name="north">
+          <target>3729</target>
+        </node>
+        <node name="up">
+          <description>Ты видишь ВЫХОД.
+</description>
+          <target>3760</target>
+        </node>
+        <node name="west">
+          <target>3723</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Южная Стена Арены</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3723">
+      <description>Ты находишься  на  Арене.  Помни, если  ты хочешь  выйти отсюда - просто
+поднимись  наверх.  Арена  настолько огромна, что потолок еле виден. И тебе
+все время кажется, что Боги незримо наблюдают за тобой!
+</description>
+      <exits>
+        <node name="east">
+          <target>3722</target>
+        </node>
+        <node name="north">
+          <target>3728</target>
+        </node>
+        <node name="up">
+          <description>Ты видишь ВЫХОД.
+</description>
+          <target>3760</target>
+        </node>
+        <node name="west">
+          <target>3724</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Южная Стена Арены</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3724">
+      <description>Ты находишься  на  Арене.  Помни, если  ты хочешь  выйти отсюда - просто
+поднимись  наверх.  Арена  настолько огромна, что потолок еле виден. И тебе
+все время кажется, что Боги незримо наблюдают за тобой!
+</description>
+      <exits>
+        <node name="east">
+          <target>3723</target>
+        </node>
+        <node name="north">
+          <target>3727</target>
+        </node>
+        <node name="up">
+          <description>Ты видишь ВЫХОД.
+</description>
+          <target>3760</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Юго-Западный Угол Арены</name>
+      <resets>
+        <mob limit="5" maxHere="5" vnum="3713"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="3725">
+      <description>Ты находишься  на  Арене.  Помни, если  ты хочешь  выйти отсюда - просто
+поднимись  наверх.  Арена  настолько огромна, что потолок еле виден. И тебе
+все время кажется, что Боги незримо наблюдают за тобой!
+</description>
+      <exits>
+        <node name="east">
+          <target>3726</target>
+        </node>
+        <node name="north">
+          <target>3730</target>
+        </node>
+        <node name="up">
+          <description>Ты видишь ВЫХОД.
+</description>
+          <target>3760</target>
+        </node>
+        <node name="west">
+          <target>3722</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Южная Стена Арены</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3726">
+      <description>Ты находишься  на  Арене.  Помни, если  ты хочешь  выйти отсюда - просто
+поднимись  наверх.  Арена  настолько огромна, что потолок еле виден. И тебе
+все время кажется, что Боги незримо наблюдают за тобой!
+</description>
+      <exits>
+        <node name="north">
+          <target>3731</target>
+        </node>
+        <node name="up">
+          <description>Ты видишь ВЫХОД.
+</description>
+          <target>3760</target>
+        </node>
+        <node name="west">
+          <target>3725</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Юго-Восточный Угол Арены</name>
+      <resets>
+        <mob limit="3" maxHere="3" vnum="3712"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="3727">
+      <description>Ты находишься  на  Арене.  Помни, если  ты хочешь  выйти отсюда - просто
+поднимись  наверх.  Арена  настолько огромна, что потолок еле виден. И тебе
+все время кажется, что Боги незримо наблюдают за тобой!
+</description>
+      <exits>
+        <node name="east">
+          <target>3728</target>
+        </node>
+        <node name="north">
+          <target>3732</target>
+        </node>
+        <node name="south">
+          <target>3724</target>
+        </node>
+        <node name="up">
+          <description>Ты видишь ВЫХОД.
+</description>
+          <target>3760</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Западная Стена Арены</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3728">
+      <description>Ты находишься  на  Арене.  Помни, если  ты хочешь  выйти отсюда - просто
+поднимись  наверх.  Арена  настолько огромна, что потолок еле виден. И тебе
+все время кажется, что Боги незримо наблюдают за тобой!
+</description>
+      <exits>
+        <node name="east">
+          <target>3729</target>
+        </node>
+        <node name="north">
+          <target>3733</target>
+        </node>
+        <node name="south">
+          <target>3723</target>
+        </node>
+        <node name="up">
+          <description>Ты видишь ВЫХОД.
+</description>
+          <target>3760</target>
+        </node>
+        <node name="west">
+          <target>3727</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Арена</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3729">
+      <description>Ты находишься  на  Арене.  Помни, если  ты хочешь  выйти отсюда - просто
+поднимись  наверх.  Арена  настолько огромна, что потолок еле виден. И тебе
+все время кажется, что Боги незримо наблюдают за тобой!
+</description>
+      <exits>
+        <node name="east">
+          <target>3730</target>
+        </node>
+        <node name="north">
+          <target>3734</target>
+        </node>
+        <node name="south">
+          <target>3722</target>
+        </node>
+        <node name="up">
+          <description>Ты видишь ВЫХОД.
+</description>
+          <target>3760</target>
+        </node>
+        <node name="west">
+          <target>3728</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Арена</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3730">
+      <description>Ты находишься  на  Арене.  Помни, если  ты хочешь  выйти отсюда - просто
+поднимись  наверх.  Арена  настолько огромна, что потолок еле виден. И тебе
+все время кажется, что Боги незримо наблюдают за тобой!
+</description>
+      <exits>
+        <node name="east">
+          <target>3731</target>
+        </node>
+        <node name="north">
+          <target>3735</target>
+        </node>
+        <node name="south">
+          <target>3725</target>
+        </node>
+        <node name="up">
+          <description>Ты видишь ВЫХОД.
+</description>
+          <target>3760</target>
+        </node>
+        <node name="west">
+          <target>3729</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Арена</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3731">
+      <description>Ты находишься  на  Арене.  Помни, если  ты хочешь  выйти отсюда - просто
+поднимись  наверх.  Арена  настолько огромна, что потолок еле виден. И тебе
+все время кажется, что Боги незримо наблюдают за тобой!
+</description>
+      <exits>
+        <node name="north">
+          <target>3736</target>
+        </node>
+        <node name="south">
+          <target>3726</target>
+        </node>
+        <node name="up">
+          <description>Ты видишь ВЫХОД.
+</description>
+          <target>3760</target>
+        </node>
+        <node name="west">
+          <target>3730</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Восточная Стена Арены</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3732">
+      <description>Ты находишься  на  Арене.  Помни, если  ты хочешь  выйти отсюда - просто
+поднимись  наверх.  Арена  настолько огромна, что потолок еле виден. И тебе
+все время кажется, что Боги незримо наблюдают за тобой!
+</description>
+      <exits>
+        <node name="east">
+          <target>3733</target>
+        </node>
+        <node name="north">
+          <target>3737</target>
+        </node>
+        <node name="south">
+          <target>3727</target>
+        </node>
+        <node name="up">
+          <description>Ты видишь ВЫХОД.
+</description>
+          <target>3760</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Западная Стена Арены</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3733">
+      <description>Ты находишься  на  Арене.  Помни, если  ты хочешь  выйти отсюда - просто
+поднимись  наверх.  Арена  настолько огромна, что потолок еле виден. И тебе
+все время кажется, что Боги незримо наблюдают за тобой!
+</description>
+      <exits>
+        <node name="east">
+          <target>3734</target>
+        </node>
+        <node name="north">
+          <target>3738</target>
+        </node>
+        <node name="south">
+          <target>3728</target>
+        </node>
+        <node name="up">
+          <description>Ты видишь ВЫХОД.
+</description>
+          <target>3760</target>
+        </node>
+        <node name="west">
+          <target>3732</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Арена</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3734">
+      <description>Ты находишься  на  Арене.  Помни, если  ты хочешь  выйти отсюда - просто
+поднимись  наверх.  Арена  настолько огромна, что потолок еле виден. И тебе
+все  время  кажется,  что  Боги незримо наблюдают за тобой! Ты видишь здесь
+большой знак (BIG SIGN).
+</description>
+      <exits>
+        <node name="down">
+          <description>Ты видишь темное мрачное подземелье.
+</description>
+          <flags>isdoor closed</flags>
+          <keyword>grate ворота</keyword>
+          <target>3748</target>
+        </node>
+        <node name="east">
+          <target>3735</target>
+        </node>
+        <node name="north">
+          <target>3739</target>
+        </node>
+        <node name="south">
+          <target>3729</target>
+        </node>
+        <node name="up">
+          <description>Ты видишь ВЫХОД.
+</description>
+          <target>3760</target>
+        </node>
+        <node name="west">
+          <target>3733</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="sign знак">Только  очень  смелые  или  недостаточно  осторожные  отважатся спуститься в
+Подземелье.  И  знай, что внизу водятся агрессивные монстры и оттуда не так
+легко выйти обратно.
+</node>
+      </extraDescr>
+      <flags>indoors</flags>
+      <name>Центр Арены</name>
+      <resets>
+        <mob limit="4" maxHere="4" vnum="3709"/>
+        <drop vnum="3726"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="3735">
+      <description>Ты находишься  на  Арене.  Помни, если  ты хочешь  выйти отсюда - просто
+поднимись  наверх.  Арена  настолько огромна, что потолок еле виден. И тебе
+все время кажется, что Боги незримо наблюдают за тобой!
+</description>
+      <exits>
+        <node name="east">
+          <target>3736</target>
+        </node>
+        <node name="north">
+          <target>3740</target>
+        </node>
+        <node name="south">
+          <target>3730</target>
+        </node>
+        <node name="up">
+          <description>Ты видишь ВЫХОД.
+</description>
+          <target>3760</target>
+        </node>
+        <node name="west">
+          <target>3734</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Арена</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3736">
+      <description>Ты находишься  на  Арене.  Помни, если  ты хочешь  выйти отсюда - просто
+поднимись  наверх.  Арена  настолько огромна, что потолок еле виден. И тебе
+все время кажется, что Боги незримо наблюдают за тобой!
+</description>
+      <exits>
+        <node name="north">
+          <target>3741</target>
+        </node>
+        <node name="south">
+          <target>3731</target>
+        </node>
+        <node name="up">
+          <description>Ты видишь ВЫХОД.
+</description>
+          <target>3760</target>
+        </node>
+        <node name="west">
+          <target>3735</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Восточная Стена Арены</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3737">
+      <description>Ты находишься  на  Арене.  Помни, если  ты хочешь  выйти отсюда - просто
+поднимись  наверх.  Арена  настолько огромна, что потолок еле виден. И тебе
+все время кажется, что Боги незримо наблюдают за тобой!
+</description>
+      <exits>
+        <node name="east">
+          <target>3738</target>
+        </node>
+        <node name="north">
+          <target>3742</target>
+        </node>
+        <node name="south">
+          <target>3732</target>
+        </node>
+        <node name="up">
+          <description>Ты видишь ВЫХОД.
+</description>
+          <target>3760</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Западная Стена Арены</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3738">
+      <description>Ты находишься  на  Арене.  Помни, если  ты хочешь  выйти отсюда - просто
+поднимись  наверх.  Арена  настолько огромна, что потолок еле виден. И тебе
+все время кажется, что Боги незримо наблюдают за тобой!
+</description>
+      <exits>
+        <node name="east">
+          <target>3739</target>
+        </node>
+        <node name="north">
+          <target>3743</target>
+        </node>
+        <node name="south">
+          <target>3733</target>
+        </node>
+        <node name="up">
+          <description>Ты видишь ВЫХОД.
+</description>
+          <target>3760</target>
+        </node>
+        <node name="west">
+          <target>3737</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Арена</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3739">
+      <description>Ты находишься  на  Арене.  Помни, если  ты хочешь  выйти отсюда - просто
+поднимись  наверх.  Арена  настолько огромна, что потолок еле виден. И тебе
+все время кажется, что Боги незримо наблюдают за тобой!
+</description>
+      <exits>
+        <node name="east">
+          <target>3740</target>
+        </node>
+        <node name="north">
+          <target>3744</target>
+        </node>
+        <node name="south">
+          <target>3734</target>
+        </node>
+        <node name="up">
+          <description>Ты видишь ВЫХОД.
+</description>
+          <target>3760</target>
+        </node>
+        <node name="west">
+          <target>3738</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Арена</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3740">
+      <description>Ты находишься  на  Арене.  Помни, если  ты хочешь  выйти отсюда - просто
+поднимись  наверх.  Арена  настолько огромна, что потолок еле виден. И тебе
+все время кажется, что Боги незримо наблюдают за тобой!
+</description>
+      <exits>
+        <node name="east">
+          <target>3741</target>
+        </node>
+        <node name="north">
+          <target>3745</target>
+        </node>
+        <node name="south">
+          <target>3735</target>
+        </node>
+        <node name="up">
+          <description>Ты видишь ВЫХОД.
+</description>
+          <target>3760</target>
+        </node>
+        <node name="west">
+          <target>3739</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Арена</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3741">
+      <description>Ты находишься  на  Арене.  Помни, если  ты хочешь  выйти отсюда - просто
+поднимись  наверх.  Арена  настолько огромна, что потолок еле виден. И тебе
+все время кажется, что Боги незримо наблюдают за тобой!
+</description>
+      <exits>
+        <node name="north">
+          <target>3746</target>
+        </node>
+        <node name="south">
+          <target>3736</target>
+        </node>
+        <node name="up">
+          <description>Ты видишь ВЫХОД.
+</description>
+          <target>3760</target>
+        </node>
+        <node name="west">
+          <target>3740</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Восточная Стена Арены</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3742">
+      <description>Ты находишься  на  Арене.  Помни, если  ты хочешь  выйти отсюда - просто
+поднимись  наверх.  Арена  настолько огромна, что потолок еле виден. И тебе
+все время кажется, что Боги незримо наблюдают за тобой!
+</description>
+      <exits>
+        <node name="east">
+          <target>3743</target>
+        </node>
+        <node name="south">
+          <target>3737</target>
+        </node>
+        <node name="up">
+          <description>Ты видишь ВЫХОД.
+</description>
+          <target>3760</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Северно-Западный Угол Арены</name>
+      <resets>
+        <mob limit="3" maxHere="3" vnum="3710"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="3743">
+      <description>Ты находишься  на  Арене.  Помни, если  ты хочешь  выйти отсюда - просто
+поднимись  наверх.  Арена  настолько огромна, что потолок еле виден. И тебе
+все время кажется, что Боги незримо наблюдают за тобой!
+</description>
+      <exits>
+        <node name="east">
+          <target>3744</target>
+        </node>
+        <node name="south">
+          <target>3738</target>
+        </node>
+        <node name="up">
+          <description>Ты видишь ВЫХОД.
+</description>
+          <target>3760</target>
+        </node>
+        <node name="west">
+          <target>3742</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Северная Стена Арены</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3744">
+      <description>Ты находишься  на  Арене.  Помни, если  ты хочешь  выйти отсюда - просто
+поднимись  наверх.  Арена  настолько огромна, что потолок еле виден. И тебе
+все время кажется, что Боги незримо наблюдают за тобой!
+</description>
+      <exits>
+        <node name="east">
+          <target>3745</target>
+        </node>
+        <node name="south">
+          <target>3739</target>
+        </node>
+        <node name="up">
+          <description>Ты видишь ВЫХОД.
+</description>
+          <target>3760</target>
+        </node>
+        <node name="west">
+          <target>3743</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Северная Стена Арены</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3745">
+      <description>Ты находишься  на  Арене.  Помни, если  ты хочешь  выйти отсюда - просто
+поднимись  наверх.  Арена  настолько огромна, что потолок еле виден. И тебе
+все время кажется, что Боги незримо наблюдают за тобой!
+</description>
+      <exits>
+        <node name="east">
+          <target>3746</target>
+        </node>
+        <node name="south">
+          <target>3740</target>
+        </node>
+        <node name="up">
+          <description>Ты видишь ВЫХОД.
+</description>
+          <target>3760</target>
+        </node>
+        <node name="west">
+          <target>3744</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Северная Стена Арены</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3746">
+      <description>Ты находишься  на  Арене.  Помни, если  ты хочешь  выйти отсюда - просто
+поднимись  наверх.  Арена  настолько огромна, что потолок еле виден. И тебе
+все время кажется, что Боги незримо наблюдают за тобой!
+</description>
+      <exits>
+        <node name="south">
+          <target>3741</target>
+        </node>
+        <node name="up">
+          <description>Ты видишь ВЫХОД.
+</description>
+          <target>3760</target>
+        </node>
+        <node name="west">
+          <target>3745</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Северо-Восточный Угол Арены</name>
+      <resets>
+        <mob limit="3" maxHere="3" vnum="3711"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="3748">
+      <description>Ты  находишься  в  центре большой комнаты.  Тусклый свет, идущий сверху, 
+слабо  освещает  пол,  который  полностью  покрыт  слизью.  Тебе становится
+страшно,  когда  ты  понимаешь  КУДА  ТЫ  ПОПАЛ...   Выходы  лежат  во всех
+направлениях, но тебе хочется лишь одного - вернуться обратно наверх!!!
+</description>
+      <exits>
+        <node name="east">
+          <description>Ты видишь восточную стену.
+</description>
+          <target>3753</target>
+        </node>
+        <node name="north">
+          <description>Ты видишь Северную стену.
+</description>
+          <target>3750</target>
+        </node>
+        <node name="south">
+          <description>Ты видишь южную стену.
+</description>
+          <target>3755</target>
+        </node>
+        <node name="up">
+          <description>Ты видишь самое безопасное место!
+</description>
+          <flags>isdoor closed</flags>
+          <keyword>grate ворота</keyword>
+          <target>3734</target>
+        </node>
+        <node name="west">
+          <description>Ты видишь западную стену.
+</description>
+          <target>3752</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Центр Подземелья</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3749">
+      <description>Ты находишься у стены подземелья. Здесь абсолютно темно... Нет ни одного
+окна и поэтому пахнет довольно скверно.
+</description>
+      <exits>
+        <node name="east">
+          <description>Ты видишь северную стену.
+</description>
+          <target>3750</target>
+        </node>
+        <node name="south">
+          <description>Ты видишь южную стену.
+</description>
+          <target>3752</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Северо-Западный Угол Подземелья</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="3714"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="3750">
+      <description>Ты находишься у стены подземелья. Здесь абсолютно темно... Нет ни одного
+окна и поэтому пахнет довольно скверно.
+</description>
+      <exits>
+        <node name="east">
+          <description>Ты видишь северо-восточный угол.
+</description>
+          <target>3751</target>
+        </node>
+        <node name="south">
+          <description>Ты видишь центр подземелья.
+</description>
+          <target>3748</target>
+        </node>
+        <node name="west">
+          <description>Ты видишь северо-запвдный угол.
+</description>
+          <target>3749</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Северная Стена Подземелья</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3751">
+      <description>Ты находишься у стены подземелья. Здесь абсолютно темно... Нет ни одного
+окна и поэтому пахнет довольно скверно.
+</description>
+      <exits>
+        <node name="south">
+          <description>Ты видишь восточную стену.
+</description>
+          <target>3753</target>
+        </node>
+        <node name="west">
+          <description>Ты видишь северную стену.
+</description>
+          <target>3750</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Северо-Восточный Угол Подземелья</name>
+      <resets>
+        <mob limit="2" maxHere="2" vnum="3715"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="3752">
+      <description>Ты находишься у стены подземелья. Здесь абсолютно темно... Нет ни одного
+окна и поэтому пахнет довольно скверно.
+</description>
+      <exits>
+        <node name="east">
+          <description>Ты видишь центр подземелья.
+</description>
+          <target>3748</target>
+        </node>
+        <node name="north">
+          <description>Ты видишь северо-западный угол.
+</description>
+          <target>3749</target>
+        </node>
+        <node name="south">
+          <description>Ты видишь юго-западный угол.
+</description>
+          <target>3754</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Западная Стена Подземелья</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3753">
+      <description>Ты находишься у стены подземелья. Здесь абсолютно темно... Нет ни одного
+окна и поэтому пахнет довольно скверно.
+</description>
+      <exits>
+        <node name="north">
+          <description>Ты видишь северо-восточный угол.
+</description>
+          <target>3751</target>
+        </node>
+        <node name="south">
+          <description>Ты видишь юго-восточный угол.
+</description>
+          <target>3756</target>
+        </node>
+        <node name="west">
+          <description>Ты видишь центр подземелья.
+</description>
+          <target>3748</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Восточная Стена Подземелья</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3754">
+      <description>Ты находишься у стены подземелья. Здесь абсолютно темно... Нет ни одного
+окна и поэтому пахнет довольно скверно.
+</description>
+      <exits>
+        <node name="east">
+          <description>Ты видишь южную стену.
+</description>
+          <target>3755</target>
+        </node>
+        <node name="north">
+          <description>Ты видишь северную стену.
+</description>
+          <target>3752</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Юго-Западный Угол Подземелья</name>
+      <resets>
+        <mob limit="2" maxHere="2" vnum="3716"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="3755">
+      <description>Ты находишься у стены подземелья. Здесь абсолютно темно... Нет ни одного
+окна и поэтому пахнет довольно скверно.
+</description>
+      <exits>
+        <node name="east">
+          <description>Ты видишь юго-восточный угол.
+</description>
+          <target>3756</target>
+        </node>
+        <node name="north">
+          <description>Ты видишь центр подземелья.
+</description>
+          <target>3748</target>
+        </node>
+        <node name="west">
+          <description>Ты видишь юго-западный угол.
+</description>
+          <target>3754</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Южная Стена Подземелья</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3756">
+      <description>Ты находишься у стены подземелья. Здесь абсолютно темно... Нет ни одного
+окна и поэтому пахнет довольно скверно.
+</description>
+      <exits>
+        <node name="north">
+          <description>Ты видишь восточную стену.
+</description>
+          <target>3753</target>
+        </node>
+        <node name="west">
+          <description>Ты видишь южную стену.
+</description>
+          <target>3755</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Юго-Восточный Угол Подземелья</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3757">
+      <description>Ты  находишься  в  комнате  MUD Школы.  Стены комнаты увешаны портретами 
+героев - выпускников MUD Школы.  На западе находится  Тренировочная Комната 
+Дворкина,   а  на  востоке  -  Комната  Гильдий NoFate. На севере комната
+следующего этапа обучения. На стене висит вывеска (sign).
+   Используй команду &quot;{R{lRчитать знак{lELOOK SIGN{x&quot;, чтобы читать вывески.
+</description>
+      <exits>
+        <node name="east">
+          <description>Ты видишь Комнату Гильдий NoFate. Зайди туда и потренируй свои умения.
+</description>
+          <target>3759</target>
+        </node>
+        <node name="north">
+          <description>Ты видишь следующий этап MUD Школы.
+</description>
+          <target>3701</target>
+        </node>
+        <node name="south">
+          <description>Ты видишь вход в Школу.
+</description>
+          <target>3700</target>
+        </node>
+        <node name="west">
+          <description>Ты  видишь  Тренировочную  Комнату Дворкина.  Зайди  туда и потренируй свои
+параметры.
+</description>
+          <target>3758</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="sign знак">Для того,  чтоб увидеть  свои параметры,  используй  &quot;{Y{lRсчет{lESCORE{x&quot;. Ты можешь
+повышать   свои   параметры   в   Тренировочной  комнате  Дваркина,  которая
+расположена на западе. Для того, чтобы тренировать навыки и заклинания,
+иди  на  восток.  Если  тебя это  не  интересует, иди дальше на север, к
+следующей ступени обучения.
+
+  Если ты - новый персонаж, лучше сначала иди на &apos;{lRзапад{lEWEST{x&apos; отсюда,
+тренировать способности, затем продолжи путь на &apos;{lRсевер{lENORTH{x&apos;.
+</node>
+      </extraDescr>
+      <flags>no_mob indoors newbies_only</flags>
+      <name>Комната в MUD Школе</name>
+      <sector>city</sector>
+    </node>
+    <node name="3758">
+      <description>Ты находишься в большой  Тренировочной комнате. Она заполнена множеством
+приспособлений  и  инструментов  для  физических  и  умственных тренировок.
+Комната наполнена магией и запахом пота.
+   На стене висит знак (sign). 
+</description>
+      <exits>
+        <node name="east">
+          <description>Ты видишь комнату из которой ты вошел и куда тебе предстоит выйти.
+</description>
+          <target>3757</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="sign знак">Добро  пожаловать  в  Тренировочную Комнату Дворкина.  Здесь  ты  можешь
+тренировать  своои параметры.  Чтобы  тренироваться,  тебе необходимо иметь
+достаточное   количество   тренировочных  сессий.  Чтобы  выяснить  сколько
+тренировочных  сессий  у  тебя есть,  набери &quot;{Y{lRтренировать{lETRAIN{x&quot;,
+находясь  в  этой  комнате.
+
+   Для того,  чтобы тренировать  определенный параметр своего персонажа, 
+набери  &quot;{lRтренировать парам{lETRAIN param{x&quot;, где {lRпарам{lEparam{x - название параметра. 
+   Для получения более полной информации используйте &quot;{lR? тренировать{lEHELP TRAIN{x&quot;.
+</node>
+      </extraDescr>
+      <flags>no_mob indoors newbies_only</flags>
+      <name>Тренировочная Комната Дворкина</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="3718"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="3759">
+      <description>Ты находишься в большой комнате, заполненной оружием, книгами, и большим
+количеством  боевых  манекенов, многие из которых порезаны и пронзены много
+раз,  другие  просто  сгорели.  Комната заполнена запахом пота и магической
+аурой.
+  На стене - конечно же знак (sign).
+</description>
+      <exits>
+        <node name="west">
+          <description>Ты видишь комнату, из которой ты вошел, и куда тебе предстоит выйти.
+</description>
+          <target>3757</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="sign знак">Тебя приветсвует  Комната Гильдий NoFate.  Здесь ты сможешь  выучить твои
+умения и заклинания.
+   Чтобы  выяснить,  какие  умения  и  заклинания ты можешь сейчас выучить,
+и сколько  у тебя для этого имеется практик,  набери &quot;{Y{lRпрак все{lEPRACTICE ALL{x&quot;.  Для того,
+чтобы   практиковаться   в   определенном   умении   -  набери  &quot;{lRпрак умение{lEPRACTICE
+&lt;skill&gt;{x&quot;,  где &lt;{lRумение{lEskill{x&gt; - желаемое умение или заклинание.
+   Обучение повышает твое владение умением (заклинанием) до определенного максимума.
+Когда ты обучишься всему, что пожелаешь - иди на запад.
+</node>
+      </extraDescr>
+      <flags>no_mob indoors newbies_only</flags>
+      <name>Комната Гильдий NoFate</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="3719"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="3760">
+      <description>Ты находишься в безопасной комнате, в которой никогда не бывает монстров,
+которые  гуляют  по  Арене.  Ты  можешь здесь отдохнуть,  а если поднимешься
+наверх - то попадешь в Храм Лео.
+</description>
+      <exits>
+        <node name="up">
+          <description>Ты видишь Храм Лео.
+</description>
+          <target>3001</target>
+        </node>
+      </exits>
+      <flags>no_mob indoors</flags>
+      <name>Безопасная Комната</name>
+      <sector>inside</sector>
+    </node>
+  </rooms>
+</area>

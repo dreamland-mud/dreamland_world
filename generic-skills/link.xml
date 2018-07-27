@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>18</beats>
+  <classes>
+    <node name="necromancer">
+      <level>33</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>31</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>trance</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>15</weight>
+    </node>
+    <node name="warlock">
+      <level>33</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>31</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>meditation</group>
+  <help type="SkillHelp">Умение ведьм и колдунов. Всю свою энергию можно передать тому персонажу, на 
+которого произнесено заклинание.
+  </help>
+  <mana>125</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>связь</nameRus>
+  <spell type="SPELL(Link)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_room</target>
+    <type>defensive</type>
+  </spell>
+</skill>

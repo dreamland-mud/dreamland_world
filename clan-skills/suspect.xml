@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <affect type="AFFECT(Suspect)">
+    <wearoff>Твоя повестка рассыпается в пыль.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <clans>
+    <node name="ruler">
+      <level>10</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <command type="SKILL(suspect)">
+    <log>1</log>
+    <name>suspect</name>
+    <position>rest</position>
+    <russian>
+      <node>повестка</node>
+    </russian>
+    <hint>(правители) послать повестку в суд</hint>
+  </command>
+  <mana>75</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <nameRus>повестка</nameRus>
+  <help type="SkillHelp">
+Умение послать игроку повестку в суд.
+
+Синтаксис: suspect &lt;цель&gt;         - проверить наличие повестки
+           suspect &lt;цель&gt; &lt;время&gt; - послать повестку
+           suspect &lt;цель&gt; off     - отменить повестку
+
+Игроку посылается повестка, до истечения срока которой он не может
+покинуть Мир.
+  </help>
+</skill>

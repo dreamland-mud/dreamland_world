@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="cleric">
+      <level>2</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>2</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>10</weight>
+    </node>
+  </classes>
+  <dammsg mg="n">заклинание</dammsg>
+  <group>harmful</group>
+  <mana>15</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>легкие раны</nameRus>
+  <spell type="SPELL(CauseLight)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

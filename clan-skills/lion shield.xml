@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты можешь создать еще один щит Льва.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <clans>
+    <node name="lion">
+      <level>24</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <dammsg>львиный щит</dammsg>
+  <mana>200</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <spell type="SPELL(LionShield)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>create_obj</target>
+    <type>none</type>
+  </spell>
+  <nameRus>щит льва</nameRus>
+  <help type="SkillHelp">
+Создает великолепный щит, по форме напоминающий голову Льва.
+Через определенное время щит распадается.
+  </help>
+</skill>

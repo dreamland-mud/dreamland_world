@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>50</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="cleric">
+      <level>22</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="necromancer">
+      <level>30</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>22</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>20</weight>
+    </node>
+    <node name="warlock">
+      <level>24</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>24</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>transportation</group>
+  <help type="SkillHelp">Это заклинание &quot;призывает&quot; существо или игрока в комнату, где находится 
+призыватель.
+НЕмогут быть призванными:
+- дерущиеся мобы/игроки,
+- те, кто включил nosummon,
+- те, кто находятся в NORECALL или NOSUMMON комнате
+- мобы, на которых дано задание Квестором.
+  </help>
+  <mana>50</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>false</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>призыв</nameRus>
+  <spell type="SummonSpell">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_world</target>
+    <type>none</type>
+  </spell>
+</skill>

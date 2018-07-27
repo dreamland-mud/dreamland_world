@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="AFFECT(CharmPerson)">
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
+    <wearoff>Твоя очарованность кем-то исчезает.</wearoff>
+    <wearoffDispel>%1$^C1 обретает свободу.</wearoffDispel>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>38</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>40</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>sleep</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>50</weight>
+    </node>
+    <node name="warlock">
+      <level>35</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>30</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>beguiling</group>
+  <help type="SkillHelp">Это заклинание, если удается, заставляет жертву следовать за тобой и исполнять
+твои приказы. Используй команду ORDER для отдачи приказов.
+
+Ты несешь ответственность за действия &quot;очарованной&quot; тобой жертвы. Напротив,
+все, кто атакует &quot;очарованную&quot; тобой жертву, рассматриваются, как атакующие
+тебя самого.
+  </help>
+  <mana>5</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>очарование</nameRus>
+  <spell type="SPELL(CharmPerson)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

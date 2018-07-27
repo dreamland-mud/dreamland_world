@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Твоя нервная система приходит в порядок.</wearoff>
+  </affect>
+  <beats>18</beats>
+  <classes>
+    <node name="ninja">
+      <level>29</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>29</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>20</weight>
+    </node>
+  </classes>
+  <command type="SKILL(nerve)">
+    <hint>(ниндзи) ослабить, передавив нервы</hint>
+    <name>nerve</name>
+    <position>fight</position>
+    <russian>
+      <node>нервы</node>
+    </russian>
+  </command>
+  <group>none</group>
+  <help type="SkillHelp">Хорошо обученый, знающий технику Шиа-Цу ниндзя, способен ослабить
+противника на 3 очка силы за каждый нажим в течение боя.
+  </help>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>нервы</nameRus>
+</skill>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoffObj>Холодная дымка, покрывавшая %1$O4, исчезает.</wearoffObj>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>30</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>30</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>enchant weapon</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>50</weight>
+    </node>
+  </classes>
+  <group>enchantment</group>
+  <help type="SkillHelp">&apos;Прикосновение зимы&apos;, или &apos;winters touch&apos; - заклинание, отдающее оружие
+во власть холода. Помимо обычного урона, такое оружие будет также обмораживать
+жертву, пронизывая ее холодом до костей и ослабляя.
+  </help>
+  <mana>150</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>прикосновение зимы</nameRus>
+  <spell type="SPELL(WintersTouch)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>obj_inv obj_equip</target>
+    <type>none</type>
+  </spell>
+</skill>

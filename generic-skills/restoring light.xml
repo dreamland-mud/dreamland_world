@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>24</beats>
+  <classes>
+    <node name="cleric">
+      <level>71</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>71</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>heal</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>40</weight>
+    </node>
+  </classes>
+  <group>benedictions</group>
+  <mana>50</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>луч восстановления</nameRus>
+  <spell type="SPELL(RestoringLight)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_room</target>
+    <type>defensive</type>
+  </spell>
+</skill>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты вновь можешь лечить.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="necromancer">
+      <level>43</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>43</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>50</weight>
+    </node>
+  </classes>
+  <group>healing</group>
+  <help type="SkillHelp">Некроманты и нежить могут прибегнуть к помощи этого заклинания, чтобы
+излечить свои раны. Однако использовать его они могут далеко не так часто, как
+клерики или паладины - свои лечащие молитвы.
+  </help>
+  <mana>100</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>лечить нежить</nameRus>
+  <spell type="SPELL(Assist)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_room</target>
+    <type>defensive</type>
+  </spell>
+</skill>

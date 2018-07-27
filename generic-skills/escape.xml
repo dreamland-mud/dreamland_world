@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>24</beats>
+  <classes>
+    <node name="ninja">
+      <level>55</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="thief">
+      <level>45</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>45</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>50</weight>
+    </node>
+  </classes>
+  <command type="SKILL(escape)">
+    <hint>(воры, ниндзи) сбежать из боя по направлению</hint>
+    <name>escape</name>
+    <position>fight</position>
+    <russian>
+      <node>побег</node>
+    </russian>
+  </command>
+  <group>none</group>
+  <help type="SkillHelp">
+%FMT%  *(escape,побег)* _направление_
+
+Опытные мошенники обладают навыком побега из боя в нужную им сторону.
+
+%SA% %H% [(flee,сбежать)]
+</help>  
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>побег</nameRus>
+</skill>

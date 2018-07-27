@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
+    <wearoff>Твоя защищенность от воздействия высоких температур понижается.</wearoff>
+    <wearoffDispel>%1$^C1 теряет защиту от огня.</wearoffDispel>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="cleric">
+      <level>39</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="necromancer">
+      <level>48</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>39</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>fireproof</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>30</weight>
+    </node>
+    <node name="warlock">
+      <level>46</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>46</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>protective</group>
+  <help type="SkillHelp">Это заклинание дает тебе защиту от огненных (fire) атак.
+  </help>
+  <mana>5</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>защита от тепла</nameRus>
+  <spell type="SPELL(ProtectionHeat)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_self</target>
+    <type>defensive</type>
+  </spell>
+</skill>

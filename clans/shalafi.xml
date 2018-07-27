@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<Clan type="DefaultClan">
+  <channel>true</channel>
+  <color>B</color>
+  <deities>
+    <node>Mihail</node>
+    <node>Kind</node>
+  </deities>
+  <diplomacy>true</diplomacy>
+  <dispersed>false</dispersed>
+  <enemies>
+    <node>battlerager</node>
+  </enemies>
+  <hidden>false</hidden>
+  <induct>
+    <node allow="false">
+      <node invert="false" type="XMLPCEthosPredicate">chaotic</node>
+    </node>
+    <node allow="false">
+      <node invert="true" type="XMLPCClassPredicate">warlock</node>
+      <node invert="true" type="XMLPCClassPredicate">witch</node>
+      <node invert="true" type="XMLPCClassPredicate">universal</node>
+      <node invert="true" type="XMLPCClassPredicate">necromancer</node>
+    </node>
+  </induct>
+  <leader>8</leader>
+  <longName>the Masters of the Arcane Arts</longName>
+  <membership type="ClanMembership">
+    <minLevel>10</minLevel>
+    <mode>verify</mode>
+    <removable>true</removable>
+    <removeBy>exile</removeBy>
+    <removeSelf>outsider</removeSelf>
+  </membership>
+  <monument>{YПугало огородное из костей {B%1$#C2{Y, сделанное {R%2$#C5{Y и одетое в магический колпак, стоит здесь.{x</monument>
+  <padName>{B  SHALAFI  {x</padName>
+  <recallVnum>5712</recallVnum>
+  <recruiter>7</recruiter>
+  <shortName>SHALAFI</shortName>
+  <titles type="ClanTitlesByLevel">
+    <node>
+      <female>одаренная</female>
+      <male>одаренный</male>
+    </node>
+    <node>
+      <female>искательница</female>
+      <male>искатель</male>
+    </node>
+    <node>
+      <female>библиотекарь</female>
+      <male>библиотекарь</male>
+    </node>
+    <node>
+      <female>астролог</female>
+      <male>астролог</male>
+    </node>
+    <node>
+      <female>ясновидящая</female>
+      <male>ясновидящий</male>
+    </node>
+    <node>
+      <female>заклинательница</female>
+      <male>заклинатель</male>
+    </node>
+    <node>
+      <female>наставница</female>
+      <male>наставник</male>
+    </node>
+    <node>
+      <female>повелительница магии</female>
+      <male>повелитель магии</male>
+    </node>
+    <node>
+      <female>верховный маг</female>
+      <male>верховный маг</male>
+    </node>
+  </titles>
+</Clan>

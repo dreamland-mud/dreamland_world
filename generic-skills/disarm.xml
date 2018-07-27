@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>18</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>21</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="ninja">
+      <level>23</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="paladin">
+      <level>20</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="ranger">
+      <level>21</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="samurai">
+      <level>21</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="thief">
+      <level>28</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>20</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>20</weight>
+    </node>
+    <node name="warrior">
+      <level>20</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <command type="SKILL(disarm)">
+    <hint>(воинские профессии) обезоружить противника</hint>
+    <name>disarm</name>
+    <order>player_only</order>
+    <position>fight</position>
+    <russian>
+      <node>обезоружить</node>
+    </russian>
+  </command>
+  <group>weaponsmaster</group>
+  <help type="SkillHelp">Обезоружив врага, ты лишаешь его возможности наносить тебе удары оружием.
+Противник начинает хуже отражать твои атаки. Умение обезоруживания завист
+также и от навыков владения оружием противника.
+  </help>
+  <mob>
+    <bonus>20</bonus>
+    <dice>3</dice>
+    <forbidden>false</forbidden>
+    <offense>disarm</offense>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>обезоружить</nameRus>
+</skill>

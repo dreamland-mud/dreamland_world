@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
+    <wearoff>Теперь окружающие видят тебя.</wearoff>
+    <wearoffDispel>%1$^C1 появляется из ниоткуда.</wearoffDispel>
+    <wearoffObj>%1$^O1 становится видимым для окружающих.</wearoffObj>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>9</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>9</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>detect invis</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>20</weight>
+    </node>
+    <node name="warlock">
+      <level>13</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>10</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>illusion</group>
+  <help type="SkillHelp">Это заклинание делает цель невидимой. Невидимые существа проявляются,
+когда атакуют. Это заклинание может быть так же наложено на объекты, делая 
+их тоже невидимыми.
+  </help>
+  <mana>5</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>невидимость</nameRus>
+  <spell type="SPELL(Invisibility)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_room obj_inv obj_room</target>
+    <type>defensive</type>
+  </spell>
+</skill>

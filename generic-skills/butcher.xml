@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <classes>
+    <node name="ranger">
+      <level>13</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>13</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>10</weight>
+    </node>
+  </classes>
+  <command type="SKILL(butcher)">
+    <hint>(рейнджеры) срезать бифштексы с трупа</hint>
+    <name>butcher</name>
+    <position>stand</position>
+    <russian>
+      <node>разделать</node>
+    </russian>
+  </command>
+  <group>none</group>
+  <help type="SkillHelp">Butcher срезает с любого трупа 1-4 съедобных бифштекса.
+  </help>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>разделать</nameRus>
+</skill>

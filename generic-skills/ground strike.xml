@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>18</beats>
+  <classes>
+    <node name="ranger">
+      <level>60</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>60</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>forest fighting</node>
+        <node>enhanced damage</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>80</weight>
+    </node>
+  </classes>
+  <group>none</group>
+  <hard>4</hard>
+  <help type="SkillHelp">Опытные рейнджеры могут заставить трястись землю под ногами противника,
+увеличивая тем самым наносимые повреждения, ослепляя жертву и тд.
+Это пассивное умение, и работает только в дикой местности (леса, поля,
+холмы, горы). 
+  </help>
+  <mob>
+    <bonus>10</bonus>
+    <dice>1</dice>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>удар земли</nameRus>
+</skill>

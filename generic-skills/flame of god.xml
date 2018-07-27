@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>%1$^O1 больше не пылает священным огнем.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="paladin">
+      <level>57</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>57</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>bless weapon</node>
+        <node>flamestrike</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>40</weight>
+    </node>
+  </classes>
+  <group>enchantment</group>
+  <help type="SkillHelp">Стараниями паладина в оружии может на некоторое время загореться священный
+огонь (&apos;{yflame of god{x&apos;), что придаст оружию некоторую специфику..
+  </help>
+  <mana>150</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>божественный огонь</nameRus>
+  <spell type="SPELL(FlameOfGod)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>obj_inv obj_equip</target>
+    <type>none</type>
+  </spell>
+</skill>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <wearoff>Заклинания вновь имеют полную силу против тебя.</wearoff>
+  </affect>
+  <beats>24</beats>
+  <classes>
+    <node name="necromancer">
+      <level>69</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>68</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>shielding</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>40</weight>
+    </node>
+    <node name="warlock">
+      <level>73</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>68</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>protective</group>
+  <help type="SkillHelp">Это заклинание дает тебе защиту от заклинаний и повреждений, наносимых
+экзотическим оружием (exotic weapon).
+  </help>
+  <mana>200</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>отпор заклятий</nameRus>
+  <spell type="SPELL(SpellResistance)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_self</target>
+    <type>defensive</type>
+  </spell>
+</skill>

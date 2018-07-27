@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <beats>12</beats>
+  <clans>
+    <node name="ruler">
+      <level>10</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <mana>50</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <spell type="SPELL(RulerBadge)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_self</target>
+    <type>none</type>
+  </spell>
+  <nameRus>символ правителя</nameRus>
+  <help type="SkillHelp">
+Повесить на шею символ Rulers. С баджиком, Рулер начинает замечть скрытых(hide)
+и невидимых персонажей. Используя баджик, Рулер может отводить сдвинутых с места
+спецмобов на места их постоянного проживания. Любой такой моб последует за
+Рулером, если он предьявит свой символ хранителя:
+    {yuse badge {D&lt;{wимя моба{D&gt;{x
+Если же моб засел в чужой гильдии, Рулер можете подойти к ее дверям и позвать:
+    {yshout {D&lt;{wимя моба{D&gt;{w, следуйте за мной!
+Следование прекращается по прибытию на место прописки. Если по дороге случилось
+что-то экстренное, Рулер может прекратить сопровождение, обычным способом
+(nuke или nofol).  Узнать место прописки поможет &apos;know persone&apos;.
+  </help>
+</skill>

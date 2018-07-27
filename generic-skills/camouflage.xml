@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>24</beats>
+  <classes>
+    <node name="druid">
+      <level>4</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="ranger">
+      <level>4</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>4</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>25</weight>
+    </node>
+  </classes>
+  <command type="SKILL(camouflage)">
+    <hint>(рейнджеры) спрятаться в кустах</hint>
+    <name>camouflage</name>
+    <position>stand</position>
+    <russian>
+      <node>камуфляж</node>
+    </russian>
+  </command>
+  <group>none</group>
+  <help type="SkillHelp">Камуфляж позволяет персонажу прятаться в лесу, поле или горах.
+  </help>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>камуфляж</nameRus>
+  <raceBonuses>
+    <node name="satyr">
+      <bonus>100</bonus>
+      <level>0</level>
+      <professional>true</professional>
+    </node>
+  </raceBonuses>
+</skill>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
+    <wearoff>Ты становишься слабее.</wearoff>
+    <wearoffDispel>%1$^C1 становится слабее.</wearoffDispel>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="cleric">
+      <level>39</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="necromancer">
+      <level>28</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>20</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>20</weight>
+    </node>
+    <node name="warlock">
+      <level>30</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>20</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>enhancement</group>
+  <help type="SkillHelp">После этого заклинания ты станешь намного сильнее.
+  </help>
+  <mana>20</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>гигантская сила</nameRus>
+  <spell type="SPELL(GiantStrength)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_room</target>
+    <type>defensive</type>
+  </spell>
+</skill>

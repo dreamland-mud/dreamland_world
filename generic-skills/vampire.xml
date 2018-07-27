@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="VampireSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Кровожадность проходит и ты вновь обретаешь человеческий облик.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="vampire">
+      <level>10</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <command type="SKILL(vampire)">
+    <hint>(вампиры) превратиться в вампира</hint>
+    <name>vampire</name>
+    <position>fight</position>
+    <russian>
+      <node>вампир</node>
+    </russian>
+  </command>
+  <group>vampiric</group>
+  <mana>100</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>вампиризм</nameRus>
+</skill>

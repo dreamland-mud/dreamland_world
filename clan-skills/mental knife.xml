@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Боль в твоих мозгах исчезает.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <clans>
+    <node name="shalafi">
+      <level>35</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <dammsg>mental knife</dammsg>
+  <mana>70</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <spell type="SPELL(MentalKnife)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_room</target>
+    <type>offensive</type>
+  </spell>
+  <nameRus>ментальный нож</nameRus>
+  <help type="SkillHelp">
+Атакующее заклинание, поражающее разум противника ментальным ударом. При
+этом у противника иногда происходит разлад логического мышления. Очень
+хорошо работает против игроков, как существ мыслящих.
+  </help>
+</skill>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
+    <wearoff>Священная аура вокруг тебя исчезает.</wearoff>
+    <wearoffDispel>Священная аура вокруг %1$C2 исчезает.</wearoffDispel>
+  </affect>
+  <beats>24</beats>
+  <classes>
+    <node name="paladin">
+      <level>80</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>80</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>bless</node>
+        <node>holy word</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>40</weight>
+    </node>
+  </classes>
+  <group>benedictions</group>
+  <help type="SkillHelp">Паладин может наслать божественное проклятие на своего противника (&apos;{yanathema{x&apos;),
+это плохо отразится на всех умениях проклятого и на силе его заклинаний.
+С другой стороны, его самого и собратьев по оружию боги могут благословить (&apos;{ybenediction{x&apos;),
+улучшая точность удара и защиту от заклинаний.
+  </help>
+  <mana>25</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>благость</nameRus>
+  <spell type="SPELL(Benediction)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_room</target>
+    <type>defensive</type>
+  </spell>
+</skill>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты перестаешь чувствовать мертвецов.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="necromancer">
+      <level>13</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>13</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>10</weight>
+    </node>
+  </classes>
+  <group>detection</group>
+  <mana>5</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>обнаружить нежить</nameRus>
+  <spell type="SPELL(DetectUndead)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_self</target>
+    <type>defensive</type>
+  </spell>
+</skill>

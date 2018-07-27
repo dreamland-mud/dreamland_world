@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="thief">
+      <level>12</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>12</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>peek</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>50</weight>
+    </node>
+  </classes>
+  <command type="SKILL(steal)">
+    <hint>(воры) украсть у кого-то вещь или деньги</hint>
+    <name>steal</name>
+    <position>stand</position>
+    <russian>
+      <node>украсть</node>
+    </russian>
+  </command>
+  <group>none</group>
+  <hard>2</hard>
+  <help type="SkillHelp">При помощи этой команды можно попытаться украсть деньги или вещь у
+персонажа, монстра и даже в магазине! Однако остерегайся охранников,
+стоящих рядом. За кражу в охраняемых законом зонах существуют наказания.
+  </help>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>воровство</nameRus>
+  <raceBonuses>
+    <node name="kender">
+      <bonus>100</bonus>
+      <level>0</level>
+      <professional>true</professional>
+    </node>
+    <node name="satyr">
+      <bonus>100</bonus>
+      <level>0</level>
+      <professional>true</professional>
+    </node>
+  </raceBonuses>
+</skill>

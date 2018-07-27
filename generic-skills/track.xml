@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="ranger">
+      <level>39</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>39</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>20</weight>
+    </node>
+  </classes>
+  <command type="SKILL(track)">
+    <hint>(рейнджеры) идти по чьим-то следам</hint>
+    <name>track</name>
+    <position>stand</position>
+    <russian>
+      <node>выследить</node>
+    </russian>
+  </command>
+  <group>none</group>
+  <help type="SkillHelp">
+%FMT%  *(track,выследить)* _имя_
+
+Рейнджеры умеют выслеживать противника по незаметным обычному глазу следам,
+который тот оставляет на местности. Челобаки делают то же самое, пользуясь
+хорошо развитым обонянием. 
+</help>
+  <mob>
+    <bonus>100</bonus>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>false</professional>
+  </mob>
+  <nameRus>выслеживание</nameRus>
+  <raceBonuses>
+    <node name="mawg">
+      <bonus>100</bonus>
+      <level>1</level>
+      <professional>false</professional>
+    </node>
+  </raceBonuses>
+</skill>

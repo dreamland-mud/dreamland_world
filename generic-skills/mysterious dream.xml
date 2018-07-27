@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="AFFECT(MysteriousDream)">
+  </affect>
+  <beats>24</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>35</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="necromancer">
+      <level>27</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>27</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>sleep</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>25</weight>
+    </node>
+    <node name="warlock">
+      <level>49</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>49</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>beguiling</group>
+  <help type="SkillHelp">Это заклинание позволяет наложить заклинание сна на определенную 
+комнату. Каждый, кто зайдет туда, погрузится в глубокий сон.
+  </help>
+  <mana>200</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>таинственный сон</nameRus>
+  <spell type="SPELL(MysteriousDream)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

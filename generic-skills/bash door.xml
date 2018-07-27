@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>18</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="ninja">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="paladin">
+      <level>6</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="ranger">
+      <level>3</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="samurai">
+      <level>11</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>1</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>bash</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>15</weight>
+    </node>
+    <node name="vampire">
+      <level>11</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="warrior">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <command type="SKILL(bashdoor)">
+    <hint>(воинские профессии) выбить дверь</hint>
+    <name>bashdoor</name>
+    <position>fight</position>
+    <russian>
+      <node>выбить</node>
+    </russian>
+  </command>
+  <dammsg>удар об дверь</dammsg>
+  <group>fightmaster</group>
+  <help type="SkillHelp">
+%FMT%  *(bashdoor,выбить)* _направление_  
+
+Умение вышибать собой двери. Если попытка не удалась, вышибатель получает 
+повреждения и падает на пол. Затем он вынужден вставать и начинать все заново.
+</help>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>выбить дверь</nameRus>
+</skill>

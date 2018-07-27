@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Твои отражения постепенно исчезают.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <clans>
+    <node name="chaos">
+      <level>15</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <mana>40</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <spell type="SPELL(Mirror)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_room</target>
+    <type>defensive</type>
+  </spell>
+  <nameRus>зеркала</nameRus>
+  <help type="SkillHelp">
+Создать рядом с тобой твои отражения. Количество тебя сбивает с толку твоего
+неопытного противника.  
+  </help>
+</skill>

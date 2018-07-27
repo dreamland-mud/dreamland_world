@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты остаешься без святой защиты.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <clans>
+    <node name="knight">
+      <level>10</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <mana>20</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <spell type="SPELL(HolyArmor)">
+    <casted>true</casted>
+    <position>rest</position>
+    <target>char_self</target>
+    <type>defensive</type>
+  </spell>
+  <nameRus>священная броня</nameRus>
+  <help type="SkillHelp">
+Святая защита, понижает твой клаcс защиты (ac).
+  </help>
+</skill>

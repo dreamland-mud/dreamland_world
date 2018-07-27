@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
+    <wearoff>Ты вновь ощущаешь свое тело здоровым.</wearoff>
+    <wearoffDispel>%1$^C1 выглядит здоровее.</wearoffDispel>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="necromancer">
+      <level>63</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>63</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>mind wrack</node>
+        <node>protection negative</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>30</weight>
+    </node>
+  </classes>
+  <group>maladictions</group>
+  <help type="SkillHelp">Гниение, наложенное с помощью этого заклинания, мешает нормальному
+восстановлению здоровья у жертвы. 
+Аналогичный эффект дает стрела, воткнутая в тело.
+  </help>
+  <mana>100</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>гниение</nameRus>
+  <spell type="SPELL(Corruption)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

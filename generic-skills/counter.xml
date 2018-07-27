@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <classes>
+    <node name="paladin">
+      <level>35</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="samurai">
+      <level>28</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>28</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>parry</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>30</weight>
+    </node>
+    <node name="warrior">
+      <level>28</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>fightmaster</group>
+  <help type="SkillHelp">Пассивное умение использовать первую атаку врага против него же,
+увеличивая ее в двое. 
+</help>
+  <mob>
+    <bonus>10</bonus>
+    <dice>1</dice>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>обратить атаку</nameRus>
+</skill>

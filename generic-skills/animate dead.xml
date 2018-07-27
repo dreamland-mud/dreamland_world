@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Магическая Сила, позволяющая оживлять трупы, возвращается к тебе.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="necromancer">
+      <level>38</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>38</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>detect undead</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>30</weight>
+    </node>
+    <node name="vampire">
+      <level>42</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>necromancy</group>
+  <help type="SkillHelp">Зомби, оживленное с помощью этого заклинания, будет служить 
+своему новому хозяину до смерти.
+  </help>
+  <mana>50</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>оживление мертвеца</nameRus>
+  <spell type="SPELL(AnimateDead)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_room obj_inv obj_room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

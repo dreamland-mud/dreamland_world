@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>36</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>20</level>
+      <maximum>100</maximum>
+      <rating>2</rating>
+    </node>
+    <node name="druid">
+      <level>22</level>
+      <maximum>100</maximum>
+      <rating>2</rating>
+    </node>
+    <node name="ninja">
+      <level>19</level>
+      <maximum>100</maximum>
+      <rating>2</rating>
+    </node>
+    <node name="paladin">
+      <level>19</level>
+      <maximum>100</maximum>
+      <rating>2</rating>
+    </node>
+    <node name="ranger">
+      <level>18</level>
+      <maximum>100</maximum>
+      <rating>2</rating>
+    </node>
+    <node name="samurai">
+      <level>22</level>
+      <maximum>100</maximum>
+      <rating>2</rating>
+    </node>
+    <node name="thief">
+      <level>13</level>
+      <maximum>100</maximum>
+      <rating>2</rating>
+    </node>
+    <node name="universal">
+      <level>13</level>
+      <maximum>100</maximum>
+      <rating>2</rating>
+      <weight>10</weight>
+    </node>
+    <node name="vampire">
+      <level>20</level>
+      <maximum>100</maximum>
+      <rating>2</rating>
+    </node>
+    <node name="warrior">
+      <level>21</level>
+      <maximum>100</maximum>
+      <rating>2</rating>
+    </node>
+  </classes>
+  <command type="SKILL(lore)">
+    <extra>undig</extra>
+    <hint>узнать из легенд о свойствах предмета</hint>
+    <name>lore</name>
+    <position>rest</position>
+    <russian>
+      <node>легенды</node>
+    </russian>
+  </command>
+  <group>none</group>
+  <hard>7</hard>
+  <help type="SkillHelp">LORE - это использование твоих знаний мифов и легенд, позволяющее получить 
+информацию о предмете. Чем старательнее ты практикуешься в этом умении, 
+тем больше будешь узнавать.
+  </help>
+  <mana>30</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>легенды</nameRus>
+  <raceBonuses>
+    <node name="kender">
+      <bonus>100</bonus>
+      <level>0</level>
+      <professional>true</professional>
+    </node>
+    <node name="svirfnebli">
+      <bonus>100</bonus>
+      <level>0</level>
+      <professional>true</professional>
+    </node>
+  </raceBonuses>
+</skill>

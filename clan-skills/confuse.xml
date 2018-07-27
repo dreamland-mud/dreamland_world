@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты забываешь о недавнем обмане.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <clans>
+    <node name="chaos">
+      <level>20</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <mana>20</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <spell type="SPELL(Confuse)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_room</target>
+    <type>offensive</type>
+  </spell>
+  <nameRus>сбить с толку</nameRus>
+  <help type="SkillHelp">
+Тот, на кого произнесено это заклинание, начисто теряет способность 
+ориентации, и его попытки двигаться целенаправленно заведомо обречены 
+на провал.
+  </help>
+</skill>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты вновь можешь призвать на помошь волка.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <clans>
+    <node name="hunter">
+      <level>20</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <mana>100</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <spell type="SPELL(Wolf)">
+    <castMobCount>1</castMobCount>
+    <casted>true</casted>
+    <maxMobCount>1</maxMobCount>
+    <mobVnum>20</mobVnum>
+    <msgCreateAttemptArea></msgCreateAttemptArea>
+    <msgCreateAttemptRoom>%^C1 пытается вызвать волка.</msgCreateAttemptRoom>
+    <msgCreateAttemptSelf>Ты пытаешься вызвать волка.</msgCreateAttemptSelf>
+    <msgCreateRoom>На зов %C2 приходит волк!</msgCreateRoom>
+    <msgCreateSelf>Волк приходит на твой зов!</msgCreateSelf>
+    <msgNotRecognizeRoom>%2$^C1 обнюхивает %1$C4 и, не признав, отворачивается.</msgNotRecognizeRoom>
+    <msgNotRecognizeSelf>%2$^C1 обнюхивает тебя и, не признав, отворачивается.</msgNotRecognizeSelf>
+    <msgReattachAttemptRoom>%1$^C1 подзывает %2$1C4 к себе.</msgReattachAttemptRoom>
+    <msgReattachAttemptSelf>Ты подзываешь %C4 к себе.</msgReattachAttemptSelf>
+    <msgReattachRoom>%2$^C1 обнюхивает %1$C4 и садится у ног.</msgReattachRoom>
+    <msgReattachSelf>%^C1 обнюхивает тебя и садится у твоих ног.</msgReattachSelf>
+    <msgStillAffected>У тебя не хватает сил призвать сейчас волка.</msgStillAffected>
+    <msgTooManyMobiles>Ты не сможешь контролировать двух волков!</msgTooManyMobiles>
+    <position>stand</position>
+    <postaffectDuration>24</postaffectDuration>
+    <target>create_mob</target>
+    <type>none</type>
+  </spell>
+  <nameRus>волк</nameRus>
+  <help type="SkillHelp">
+Призывает злобного волка тебе в помощь.
+См. также {W? перепризыв{x.
+  </help>
+</skill>

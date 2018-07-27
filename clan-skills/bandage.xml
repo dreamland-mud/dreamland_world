@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Повязка спадает с тебя.</wearoff>
+  </affect>
+  <clans>
+    <node name="battlerager">
+      <level>23</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <command type="SKILL(bandage)">
+    <name>bandage</name>
+    <position>fight</position>
+    <russian>
+      <node>повязка</node>
+    </russian>
+    <hint>(клан ярости) наложить лечебную повязку</hint>
+  </command>
+  <hard>2</hard>
+  <mob>
+    <bonus>40</bonus>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <nameRus>повязка</nameRus>
+  <help type="SkillHelp">
+Перевязать свои раны для их скорейшего заживления.
+  </help>
+</skill>

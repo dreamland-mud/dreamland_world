@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <beats>12</beats>
+  <clans>
+    <node name="shalafi">
+      <level>29</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <mana>150</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <spell type="GateSpell">
+    <casted>true</casted>
+    <gateShadow>true</gateShadow>
+    <gateViolent>true</gateViolent>
+    <levelDiff>10</levelDiff>
+    <msgGroupEnter></msgGroupEnter>
+    <msgGroupLeave>%3$^C1 произносит магическое заклинание, воздух становится вязким
+и слегка дрожит. Окружающий мир приобретает новые формы.</msgGroupLeave>
+    <msgRoomEnter>Ты замечаешь лёгкое колебание пространства и появляется %1$C1.</msgRoomEnter>
+    <msgRoomLeave>Внезапная вспышка ослепительного света поглощает %3$C4 и %3$P2 спутников!</msgRoomLeave>
+    <msgSelfEnter></msgSelfEnter>
+    <msgSelfLeave>Произнеся магическое заклинание, ты ощущаешь, как воздух становится вязким
+и слегка дрожит. Окружающий мир приобретает новые формы и очертания.</msgSelfLeave>
+    <position>stand</position>
+    <takeGroup>true</takeGroup>
+    <takePet>true</takePet>
+    <target>char_world</target>
+    <type>none</type>
+  </spell>
+  <nameRus>тессеракт</nameRus>
+  <help type="SkillHelp">
+Заклинание, переносящее тебя вместе со всей группой к цели. Целью может быть
+моб или чар. Некоторые мобы не могут быть выбраны целью переноса, также нельзя
+перенестись в norecall зону.
+  </help>
+</skill>

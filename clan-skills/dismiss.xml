@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <clans>
+    <node name="ruler">
+      <level>10</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>false</needItem>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <command type="SKILL(dismiss)">
+    <extra>keep_hide</extra>
+    <log>1</log>
+    <name>dismiss</name>
+    <position>stand</position>
+    <russian>
+      <node>отстранить</node>
+    </russian>
+    <hint>(правители) забрать клановые привилегии</hint>
+  </command>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <nameRus>отстранение</nameRus>
+  <help type="SkillHelp">%PAUSE%
+Отстранить Рулера от ведения дел.
+
+Синтаксис: dismiss &lt;цель&gt; - проверить, отстранен Рулер или нет
+           dismiss &lt;цель&gt; place [&lt;время&gt;] - отстранить
+           dismiss &lt;цель&gt; remove - вернуть Рулера на место.
+
+Отстраненный Рулер не может многого делать.
+Команда учитывает клановый уровень отстраняющего и отстраняемого.
+  </help>
+</skill>

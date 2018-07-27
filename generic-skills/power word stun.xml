@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
+    <wearoff>Ты снова можешь двигаться.</wearoff>
+  </affect>
+  <beats>24</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>62</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>62</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>60</weight>
+    </node>
+  </classes>
+  <group>none</group>
+  <help type="SkillHelp">Опытные анти-паладины могут ошеломить противника с помощью заклинания. 
+На некоторое время жертва парализована - она ничего не может сделать.
+  </help>
+  <mana>200</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>слово ошеломления</nameRus>
+  <spell type="SPELL(PowerWordStun)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

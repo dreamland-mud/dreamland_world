@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="paladin">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="samurai">
+      <level>23</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>10</weight>
+    </node>
+    <node name="warrior">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <command type="SKILL(rescue)">
+    <hint>(воинские профессии) спасти из битвы, ловушки</hint>
+    <name>rescue</name>
+    <position>fight</position>
+    <russian>
+      <node>спасти</node>
+    </russian>
+  </command>
+  <group>defensive</group>
+  <help type="SkillHelp">Друг познается в беде. Если твой друг воин, он может спасти тебя, 
+прикрыв своим телом. Это умение позволяет защитить более слабого
+от нанесения телесных повреждений. Научившись этому умению и ты 
+сможешь кого-нибудь спасти.
+
+Спасти кого-либо из ловушки можно, даже не обладая специальными навыками.
+  </help>
+  <mob>
+    <bonus>40</bonus>
+    <dice>1</dice>
+    <forbidden>false</forbidden>
+    <offense>rescue</offense>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>спасти</nameRus>
+</skill>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <command type="SKILL(suck)">
+    <hint>(вампиры) высосать кровь из шеи</hint>
+    <name>suck</name>
+    <order>player_only</order>
+    <position>stand</position>
+    <russian>
+      <node>сосать</node>
+    </russian>
+  </command>
+  <group>none</group>
+  <help type="SkillHelp">Пить кровь из уже укушенной спящей жертвы. Каждый глоток утоляет жажду
+крови, однако чем меньше эта жажда, тем больше шанс разбудить жертву 
+и самому попасть под удар.
+  </help>
+  <hidden>true</hidden>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>сосание</nameRus>
+</skill>

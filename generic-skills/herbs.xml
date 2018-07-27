@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты чувствуешь, что можно собирать травы.</wearoff>
+  </affect>
+  <beats>30</beats>
+  <classes>
+    <node name="ranger">
+      <level>18</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>18</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>25</weight>
+    </node>
+  </classes>
+  <command type="SKILL(herbs)">
+    <hint>(рейнджеры) найти лечебные травы</hint>
+    <name>herbs</name>
+    <position>stand</position>
+    <russian>
+      <node>травы</node>
+    </russian>
+  </command>
+  <group>none</group>
+  <help type="SkillHelp">Herbs позволяет персонажу собирать в лесу травы, обладающие целительной
+силой, и дает возможность лечить травами других, излечивая даже чуму.
+  </help>
+  <mob>
+    <bonus>10</bonus>
+    <dice>2</dice>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>травы</nameRus>
+</skill>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты чувствуешь желание вознести молитву Богам.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="paladin">
+      <level>10</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>10</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>10</weight>
+    </node>
+  </classes>
+  <group>benedictions</group>
+  <help type="SkillHelp">Помолившись своим Богам, паладин получает божественную защиту, а если Боги
+в настроении - к ней может добавиться одно из защитных заклинаний божественной
+силы, или, если паладин молился во время битвы - гнев Богов может обрушиться
+на его противника.
+Молитва - занятие утомительное и истощающее, к тому же, очень легко разгневать
+Богов - либо по случайности, либо молясь много раз подряд. Первое проявление
+божественного гнева - слабость, а если продолжать упорствовать - Боги насылают
+нездоровый сон, чтобы не доставали.
+  </help>
+  <mana>5</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>молитва</nameRus>
+  <spell type="SPELL(Prayer)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>ignore</target>
+    <type>none</type>
+  </spell>
+</skill>

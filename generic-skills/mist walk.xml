@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="vampire">
+      <level>47</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>transportation</group>
+  <help type="SkillHelp">%PAUSE%Туманный путь (mist walk) - это могущественное транспортное
+заклинание, открывающее магический портал между Вами и любым существом
+в мире. Через врата помимо Вас могут перенестись также ваше животное
+(pet), но не члены Вашей группы. Персонажи имеют некоторую сопротивляемость
+к mist walk, и полный имунитет, если они старше вас на 3 уровня.
+  В private, no_summon комнаты нельзя mist walk, и нельзя из если 
+комната no_recall, no_summon или private.
+  Если игрок не принадлежит вашему клану, и у него выставлено no_summon,
+то на него можно mist walk только в пределах одной арии, и на успешность
+заклинания влияет его save vs spell.
+  </help>
+  <mana>80</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>туманный путь</nameRus>
+  <spell type="GateSpell">
+    <casted>true</casted>
+    <gateShadow>true</gateShadow>
+    <gateViolent>false</gateViolent>
+    <levelDiff>3</levelDiff>
+    <msgGroupEnter></msgGroupEnter>
+    <msgGroupLeave></msgGroupLeave>
+    <msgRoomEnter>Из внезапно возникшего перед тобой туманного облачка появляется %1$C1!</msgRoomEnter>
+    <msgRoomLeave>%1$^C1 превращается в мерцающий туман и исчезает!</msgRoomLeave>
+    <msgSelfEnter></msgSelfEnter>
+    <msgSelfLeave>Ты превращаешься в туманное облачко и плывешь к цели.</msgSelfLeave>
+    <position>fight</position>
+    <takeGroup>false</takeGroup>
+    <takePet>true</takePet>
+    <target>char_world</target>
+    <type>none</type>
+  </spell>
+</skill>

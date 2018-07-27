@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты обретаешь самостоятельность.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="vampire">
+      <level>30</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>beguiling</group>
+  <help type="SkillHelp">Это заклинание, если удается, заставляет жертву следовать за тобой и исполнять
+твои приказы. Используй команду ORDER для отдачи приказов.
+
+Заклинание зависит от твоего пола. Следует пробовать его на жертвах с полом
+противоположным твоему.
+
+Ты несешь ответственность за действия &quot;очарованной&quot; тобой жертвы. Напротив,
+все, кто атакует &quot;очарованную&quot; тобой жертву, рассматриваются, как атакующие
+тебя самого.
+  </help>
+  <mana>5</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>пленить</nameRus>
+  <spell type="SPELL(AttractOther)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>56</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>55</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>flamestrike</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>45</weight>
+    </node>
+    <node name="warlock">
+      <level>56</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>55</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <dammsg>огненный шар</dammsg>
+  <group>combat</group>
+  <mana>25</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>огненный шар</nameRus>
+  <spell type="SPELL(Fireball)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

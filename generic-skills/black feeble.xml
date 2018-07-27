@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Шепот проклятий вокруг тебя утихает.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>70</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>70</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>power word stun</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>30</weight>
+    </node>
+  </classes>
+  <group>maladictions</group>
+  <help type="SkillHelp">Леденящий душу шепот проклятий окружает анти-паладина, образуя защитную
+ауру. Любого, кто соприкоснется с этой аурой (своим оружием или рукой),
+может поразить черная немощь: все тело на короткое время охватит паралич,
+а ударившая рука отнимется и станет не в силах удержать оружие.
+  </help>
+  <mana>100</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>черная немощь</nameRus>
+  <spell type="SPELL(BlackFeeble)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_self</target>
+    <type>defensive</type>
+  </spell>
+</skill>

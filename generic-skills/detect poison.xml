@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="cleric">
+      <level>39</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="necromancer">
+      <level>21</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="samurai">
+      <level>39</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>21</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>10</weight>
+    </node>
+    <node name="vampire">
+      <level>31</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="warlock">
+      <level>35</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>35</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>detection</group>
+  <help type="SkillHelp">Это заклинание обнаруживает наличие яда в еде и питье.
+  </help>
+  <mana>5</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>обнаружить яд</nameRus>
+  <spell type="SPELL(DetectPoison)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>obj_inv obj_room</target>
+    <type>none</type>
+  </spell>
+</skill>

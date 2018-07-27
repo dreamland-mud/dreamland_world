@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <beats>36</beats>
+  <clans>
+    <node name="lion">
+      <level>20</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <command type="SKILL(claw)">
+    <name>claw</name>
+    <position>fight</position>
+    <russian>
+      <node>когти</node>
+    </russian>
+    <hint>(львы) рассечь врага когтями</hint>
+  </command>
+  <dammsg>claw</dammsg>
+  <mana>200</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <nameRus>когти</nameRus>
+  <help type="SkillHelp">
+Позволяет во время боя выпустить когти Льва и ударить ими противника.
+Очень мощное средство с одним только недостатком - удар настолько силен,
+что приходится после него садиться.
+Особенность: когда льву становится очень плохо,
+удары когтями получаются наиболее ужасающие.
+  </help>
+</skill>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <classes>
+    <node name="anti-paladin">
+      <level>3</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="cleric">
+      <level>33</level>
+      <maximum>100</maximum>
+      <rating>2</rating>
+    </node>
+    <node name="ninja">
+      <level>16</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="paladin">
+      <level>6</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="ranger">
+      <level>15</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="samurai">
+      <level>8</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="thief">
+      <level>25</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>3</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>20</weight>
+    </node>
+    <node name="vampire">
+      <level>14</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="warrior">
+      <level>3</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <command type="SKILL(enhanceddamage)">
+    <name>enhanceddamage</name>
+    <interp>false</interp>
+  </command>
+  <group>fightmaster</group>
+  <hard>6</hard>
+  <help type="SkillHelp">Умение находить в обороне противника слабые места и наносить ему более 
+опасные удары.
+  </help>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>повышенный урон</nameRus>
+  <raceBonuses>
+    <node name="cloud giant">
+      <bonus>100</bonus>
+      <level>0</level>
+      <professional>true</professional>
+    </node>
+    <node name="fire giant">
+      <bonus>100</bonus>
+      <level>0</level>
+      <professional>true</professional>
+    </node>
+    <node name="frost giant">
+      <bonus>100</bonus>
+      <level>0</level>
+      <professional>true</professional>
+    </node>
+    <node name="storm giant">
+      <bonus>100</bonus>
+      <level>0</level>
+      <professional>true</professional>
+    </node>
+  </raceBonuses>
+</skill>

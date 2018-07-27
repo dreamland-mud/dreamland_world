@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <classes>
+    <node name="anti-paladin">
+      <clanAntiBonuses>
+        <node name="shalafi">
+          <clanName></clanName>
+        </node>
+      </clanAntiBonuses>
+      <level>48</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="ninja">
+      <level>33</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="paladin">
+      <level>48</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="ranger">
+      <level>23</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="samurai">
+      <level>24</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>23</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>60</weight>
+    </node>
+    <node name="warrior">
+      <level>23</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <command type="SKILL(second)">
+    <aliases>
+      <node>dual</node>
+    </aliases>
+    <extra>undig</extra>
+    <hint>вооружиться вторичным оружием</hint>
+    <name>second</name>
+    <position>rest</position>
+    <russian>
+      <node>второе</node>
+      <node>вторичное</node>
+    </russian>
+  </command>
+  <group>weaponsmaster</group>
+  <hard>2</hard>
+  <help type="SkillHelp">Всем воинским профессиям доступен навык сражения со вторым оружием (или, 
+в случае рукопашного боя, с использованием обоих рук). Каждый раунд оно
+наносит удары также как и первое, однако вторая, третья (и так далее)
+атаки проходят реже. То, насколько часто удастся нанести эти атаки,
+сильно зависит от приверженности профессии к данному виду оружия. Так,
+рейнджеры умело орудуют вторым посохом, самураи - мечом, паладины - 
+алебадрой и так далее.
+Когда используется вторичное оружие, невозможно носить щит и зажимать
+что-либо в руке.
+  </help>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>второе оружие</nameRus>
+</skill>

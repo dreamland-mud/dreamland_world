@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
+    <wearoff>{WБелая аура{x вокруг тебя исчезает.</wearoff>
+    <wearoffDispel>{WБелая аура{x, окружавшая %1$C4, исчезает.</wearoffDispel>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="cleric">
+      <level>29</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="paladin">
+      <level>27</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>27</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>armor</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>50</weight>
+    </node>
+  </classes>
+  <group>protective</group>
+  <help type="SkillHelp">Заклинание sanctuary помещает тебя под защиту святилища, образуя вокруг тела
+белую ауру, каковая уменьшает принятые повреждения от любой атаки пополам. 
+Но, говорят, что существует такая техника боя, которая проходит в 
+независимости от того, находится ли существо под защитой святилища или нет.
+  </help>
+  <mana>75</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>защита святилища</nameRus>
+  <spell type="SPELL(Sanctuary)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_room</target>
+    <type>defensive</type>
+  </spell>
+</skill>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
+    <wearoff>Ты чувствуешь себя беззащитнее перед {Rзлом{x.</wearoff>
+    <wearoffDispel>%1$^C1 теряет защиту от сил зла.</wearoffDispel>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="cleric">
+      <level>9</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="paladin">
+      <level>11</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>15</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>detect evil</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>30</weight>
+    </node>
+    <node name="warlock">
+      <level>22</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>22</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>protective</group>
+  <help type="SkillHelp">Заклинание, защищающее от злых сил.
+  </help>
+  <mana>5</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>защита от зла</nameRus>
+  <spell type="SPELL(ProtectionEvil)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_self</target>
+    <type>defensive</type>
+  </spell>
+</skill>

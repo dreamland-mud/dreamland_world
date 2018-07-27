@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>18</beats>
+  <classes>
+    <node name="ninja">
+      <level>58</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="samurai">
+      <level>62</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>58</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>enhanced damage</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>100</weight>
+    </node>
+  </classes>
+  <group>none</group>
+  <hard>4</hard>
+  <help type="SkillHelp">%PAUSE%Работает автоматически.
+Существуют следующие варианты прохождения:
+  * Врагу наносится значительное повреждение.
+  * Врагу наносится большое повреждение, и он может быть ослеплен твоей атакой.
+  * Врагу может быть нанесен сверхмощный удар.
+</help>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>критический удар</nameRus>
+</skill>

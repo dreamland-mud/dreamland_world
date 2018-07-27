@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="RaceAptitude">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Камень с твоей кожи осыпается пылью.</wearoff>
+  </affect>
+  <beats>18</beats>
+  <group>protective</group>
+  <mana>12</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <nameRus>слиться с камнями</nameRus>
+  <races>
+    <node name="rockseer">
+      <level>20</level>
+    </node>
+  </races>
+  <spell type="SPELL(MeldIntoStone)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_self</target>
+    <type>defensive</type>
+  </spell>
+</skill>

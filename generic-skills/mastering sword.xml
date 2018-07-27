@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <classes>
+    <node name="samurai">
+      <level>61</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>61</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>sword</node>
+        <node>enhanced damage</node>
+        <node>third attack</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>80</weight>
+    </node>
+  </classes>
+  <group>weaponsmaster</group>
+  <hard>6</hard>
+  <help type="SkillHelp">Совершенствуясь, самурай познает тайны владения мечом.
+После этого меч самурая наносит намного более опасные повреждения.
+  </help>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>мастер меча</nameRus>
+</skill>

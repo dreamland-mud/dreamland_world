@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <beats>12</beats>
+  <clans>
+    <node name="ruler">
+      <level>10</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <command type="SKILL(fine)">
+    <log>1</log>
+    <name>fine</name>
+    <position>stand</position>
+    <russian>
+      <node>штраф</node>
+    </russian>
+    <hint>(правители) оштрафовать нарушителя</hint>
+  </command>
+  <mana>75</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <nameRus>штраф</nameRus>
+  <help type="SkillHelp">%PAUSE%
+Умение наложить штраф на игрока. Взымается в золоте.
+
+Синтаксис: fine &lt;цель&gt; &lt;сумма&gt; [&lt;получатель&gt;]
+
+У игрока отнимается указанная сумма в золотых монетах, если он
+конечно у него есть. Если чар присутствует перед Рулером и
+находится в кандалах, то сумма взимается у него. В случае нехватки
+наличных средств, или в случае невозможности изьять сумму
+непосредственно у игрока, сумма взымается со счета игрока.
+  </help>
+</skill>

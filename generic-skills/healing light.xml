@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="AFFECT(HealingLight)">
+    <wearoff>Излечивающий свет в комнате гаснет.</wearoff>
+  </affect>
+  <beats>24</beats>
+  <classes>
+    <node name="cleric">
+      <level>41</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>41</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>heal</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>35</weight>
+    </node>
+  </classes>
+  <group>benedictions</group>
+  <mana>200</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>целебный свет</nameRus>
+  <spell type="SPELL(HealingLight)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>room</target>
+    <type>defensive</type>
+  </spell>
+</skill>

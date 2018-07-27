@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>18</beats>
+  <classes>
+    <node name="universal">
+      <level>50</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>20</weight>
+    </node>
+    <node name="warrior">
+      <level>50</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <command type="SKILL(smithing)">
+    <hint>(воины) отремонтировать вещь</hint>
+    <name>smithing</name>
+    <position>rest</position>
+    <russian>
+      <node>ремонт</node>
+    </russian>
+  </command>
+  <group>none</group>
+  <hard>6</hard>
+  <help type="SkillHelp">{CSmithing{x, подобно {CMend{x, с помощью которого ты можешь 
+восстанавливать поврежденные предметы. При этом в руках надо держать 
+молот (hammer). Стоит поискать этот инструмент у гномов (dwarven area).
+  </help>
+  <mana>10</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>ремонт</nameRus>
+</skill>

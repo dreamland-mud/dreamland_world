@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
+    <wearoff>Розовая аура вокруг тебя исчезает.</wearoff>
+    <wearoffDispel>{MРозовая аура{x, окружавшая %1$C4, исчезает.</wearoffDispel>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="druid">
+      <level>11</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="cleric">
+      <level>6</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="ninja">
+      <level>8</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>11</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>control weather</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>15</weight>
+    </node>
+    <node name="warlock">
+      <level>15</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>11</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>weather</group>
+  <help type="SkillHelp">Это заклинание увеличивает (делает хуже) АС (Класс Брони) у жертвы, создая
+вокруг нее розовую ауру. На каждый уровень колдующего, АС жертвы будет падать 
+на 2. 
+Кроме того, жертва не может скрыться, когда светится.
+  </help>
+  <mana>5</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>огонь фей</nameRus>
+  <raceBonuses>
+    <node name="faery">
+      <bonus>100</bonus>
+      <level>0</level>
+      <professional>false</professional>
+    </node>
+  </raceBonuses>
+  <spell type="SPELL(FaerieFire)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

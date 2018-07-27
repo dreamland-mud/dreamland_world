@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>24</beats>
+  <classes>
+    <node name="universal">
+      <level>29</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>20</weight>
+    </node>
+    <node name="warlock">
+      <level>29</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>29</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>enchantment</group>
+  <help type="SkillHelp">Заклинание для восстановления истощившейся магической силы посохов и жезлов.
+Перезаряжать один и тот же жезл можно только один раз.
+  </help>
+  <mana>60</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>перезарядка</nameRus>
+  <spell type="SPELL(Recharge)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>obj_inv</target>
+    <type>none</type>
+  </spell>
+</skill>

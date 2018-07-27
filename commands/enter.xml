@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<Command>
+  <aliases>
+    <node>leave</node>
+    <node>go</node>
+  </aliases>
+  <extra>ghost</extra>
+  <name>enter</name>
+  <order>allow_ruler</order>
+  <position>stand</position>
+  <russian>
+    <node>войти</node>
+    <node>покинуть</node>
+  </russian>
+  <hint>войти в портал</hint>
+  <help type="CommandHelp" keyword="portal портал">
+%FMT%  *%CMD%* _портал_  
+
+Войти в портал, который ведет неведомо куда. В большинстве храмов домашних
+городов (hometowns) установлены надежные порталы в Храм Лео, в них можно
+войти по слуху, даже будучи слепым. Помимо этого, существуют временные порталы,
+созданные с помощью заклинаний (%H% [(portal,портал)], [(nexus,нексус)]), рандомные порталы,
+блуждающие порталы, и другие.
+
+%SA% %H% [(walk,идти)]
+  </help>
+</Command>

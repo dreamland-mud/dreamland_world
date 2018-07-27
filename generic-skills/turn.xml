@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты вновь можешь обратить противника в бегство.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="paladin">
+      <level>60</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>60</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>ray of truth</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>60</weight>
+    </node>
+  </classes>
+  <dammsg>ослепительный луч света</dammsg>
+  <group>none</group>
+  <help type="SkillHelp">Это заклинание (данное паладину богами для их праведной миссии) 
+святой энергии, заставляющее всех злых тварей в ужасе бежать от него.
+  </help>
+  <mana>50</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>обратить в бегство</nameRus>
+  <spell type="SPELL(Turn)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>people</target>
+    <type>offensive</type>
+  </spell>
+</skill>

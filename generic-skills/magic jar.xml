@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="necromancer">
+      <level>68</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>68</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>insanity</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>70</weight>
+    </node>
+  </classes>
+  <group>beguiling</group>
+  <help type="SkillHelp">С помошью этого заклинания некромант может поймать дух жертвы. И таким 
+образом жертва не получает опыта и не может покинуть игру.
+ Не забудь иметь при себе пустой сосуд (vial), чтобы загнать туда дух.
+  </help>
+  <mana>20</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>волшебный сосуд</nameRus>
+  <spell type="SPELL(MagicJar)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

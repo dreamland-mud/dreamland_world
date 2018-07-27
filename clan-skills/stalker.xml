@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты снова можешь призвать охотника за головами.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <clans>
+    <node name="ruler">
+      <level>10</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <mana>100</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <spell type="SPELL(Stalker)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_world</target>
+    <type>none</type>
+  </spell>
+  <nameRus>сталкер</nameRus>
+  <help type="SkillHelp">
+Синтаксис: cast &apos;stalker&apos; &lt;цель&gt;
+Послать за объявленным вне закона моба. Причем очень настырного - по всему
+миру ищет, а как найдет - вламывает.
+  </help>
+</skill>

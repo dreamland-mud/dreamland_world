@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<area>
+  <areadata>
+    <authors>Cotton</authors>
+    <credits>Горючие материалы</credits>
+    <flags>added wizlock noquest hidden</flags>
+    <levelHigh>100</levelHigh>
+    <levelLow>1</levelLow>
+    <name>Горючие материалы</name>
+    <resetMessage></resetMessage>
+    <security>9</security>
+    <translator>None</translator>
+    <vnumHigh>39099</vnumHigh>
+    <vnumLow>39001</vnumLow>
+  </areadata>
+  <mobiles>
+    <node name="39004">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel stay_area nosteal nodemand"/>
+      <aff add="swim"/>
+      <dam_type>bite</dam_type>
+      <damage>10d20+20</damage>
+      <default_pos>rest</default_pos>
+      <description>Сатир наполовину скрыт в воде, но даже по верхней его части можно
+судить о его немытости. Его шерсть вся в комочках, она пепельного
+цвета. Но даже в таком виде сатир очень мил и обаятелен.
+</description>
+      <detection add="invis"/>
+      <hit>1d1+9999</hit>
+      <hitroll>120</hitroll>
+      <imm add="summon charm poison disease"/>
+      <level>100</level>
+      <long_descr>{gГрязный сатир ждет, чтобы кто-то потер ему спинку.{x
+</long_descr>
+      <mana>1d1+999</mana>
+      <material>none</material>
+      <player_name>грязный сатир dirty satyr</player_name>
+      <race>satyr</race>
+      <sex>male</sex>
+      <short_descr>{Dгрязн|ый|ого|ому|ого|ым|ом сати|р{x|ра{x|ру{x|ра{x|ром{x|ре{x</short_descr>
+      <size>medium</size>
+      <start_pos>rest</start_pos>
+      <wealth>1</wealth>
+    </node>
+  </mobiles>
+  <objects>
+    <node name="39001">
+      <description>{1{RПыл{rаю{Rщий к{rос{Rтер {2(fire) согревает тебя своим теплом.{x</description>
+      <extra_flags>nosac</extra_flags>
+      <gender>m</gender>
+      <level>20</level>
+      <material>fire</material>
+      <name>flame костер fire огонь</name>
+      <short_descr>{Rпыл{rаю{Rщ|ий|его|ему|ий|им|ем к{rо{Rст|{Rер{x|{Rра{x|{Rру{x|{Rер{x|{Rром{x|{Rре{x</short_descr>
+      <smell>Пахнет палеными волосами из носа!</smell>
+      <type name="container">
+        <capacity>300</capacity>
+        <flags>put_on2 nested</flags>
+        <maxWeight>300</maxWeight>
+        <weightMult>0</weightMult>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>1</weight>
+    </node>
+    <node name="39002">
+      <affects>
+        <node>
+          <apply to="dex">1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="cha">-1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
+      <description>От когда-то бушующего пламени осталась всего маленькая горсть пепла (ash).</description>
+      <extra_flags>melt_drop</extra_flags>
+      <gender>f</gender>
+      <level>1</level>
+      <material>ash</material>
+      <name>ash горсть пепел trash</name>
+      <short_descr>{Dгорс|{Dть|{Dти|{Dте|{Dть|{Dтью|{Dти пепла{x</short_descr>
+      <type name="trash">
+      </type>
+      <wear_flags>take hold</wear_flags>
+    </node>
+    <node name="39005">
+      <cost>1000</cost>
+      <description>Что-то тихо плещется в резном бочонке с сатиром в виде краника.</description>
+      <extra_flags>burn_proof</extra_flags>
+      <gender>m</gender>
+      <level>1</level>
+      <material>metal wood</material>
+      <name>бездонный бочонок фавна fawn barrel</name>
+      <short_descr>{Wбез{xдо{yнн{D|ый{x|ого{x|ому{x|ый{x|ым{x|ом{x {gб{Gо{gчон|ок|ка|ку|ок|ком|ке {GФ{gа{Gвна{x</short_descr>
+      <type name="fountain">
+        <left>1000</left>
+        <liquid>amontillado</liquid>
+        <total>1000</total>
+      </type>
+      <wear_flags>take hold</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="39006">
+      <cost>1000</cost>
+      <description>Странный аппарат (thing) с непонятным тебе назначением парит в воздухе.</description>
+      <extraDescr>
+        <node keyword="аппарат thing remote bonker удаленная шлемостучалка">Сбоку аппарата ты видишь прикрученную табличку. Текст на ней гласит:
+{x
+{YЛичная {MУда{mл{Mенная ш{mл{Mемостуча{mл{Mка{x. {YИнструкцию по использованию.{x
+{YПозволяет использовать магию портала и новейшие технологии для стучания{x
+{Yпо шлему на расстоянии.{x
+{YПоведения аппарата:{x
+{Y- один короткий писк - аппарат разряжен.{x
+{Y- один длинный писк - аппарат снова готов к использованию.{x
+{Y- два коротких писка - аппарат еще не готов к использованию.{x
+{Y- три коротких писка - неизвестная цель.{x
+</node>
+      </extraDescr>
+      <extra_flags>water_stand magic nosac</extra_flags>
+      <gender>f</gender>
+      <level>1</level>
+      <material>chaos</material>
+      <name>аппарат thing remote bonker удаленная шлемостучалка</name>
+      <short_descr>{Mуда{mл{Mенн|ая|ой|ой|ую|ой|ой ш{mл{Mемостуча{mл{Mк|а{x|и{x|е{x|у{x|ой{x|е{x</short_descr>
+      <type name="jewelry">
+      </type>
+      <wear_flags>take hold</wear_flags>
+      <weight>1</weight>
+    </node>
+    <node name="39007">
+      <description>{WМатериализованная мечта сатира (dream) витает в воздухе.{x</description>
+      <extraDescr>
+        <node keyword="materialized dream satyr материализованная мечта сатира">От мечты отдает пивом и развратом. Среди всех прочих ощущений явно ты выделяешь
+одно. Сатир мечтает о чем-то теплом и вкусном. Оно манит его давно, очень давно.
+Мечта закована в что-то деревяное и металлическое. Еще ты ощущаешь путь к мечте.
+Она ведет на север. Через поля и долины...
+Внезапно мечта расплывается и от нее опять веет пивом и развратом.
+</node>
+      </extraDescr>
+      <extra_flags>magic</extra_flags>
+      <gender>f</gender>
+      <level>1</level>
+      <material>dream</material>
+      <name>materialized dream satyr материализованная мечта сатира</name>
+      <short_descr>{Wматериализованн|ая|ой|ой|ую|ой|ой мечт|а{x|ы{x|е{x|у{x|ой{x|е{x</short_descr>
+      <type name="trash">
+      </type>
+      <wear_flags>take wear_about</wear_flags>
+    </node>
+  </objects>
+  <rooms>
+    <node name="39001">
+      <flags>no_mob</flags>
+      <name>Жерло</name>
+      <sector>inside</sector>
+    </node>
+  </rooms>
+</area>

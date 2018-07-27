@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Желание учиться покидает тебя.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="cleric">
+      <level>35</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="necromancer">
+      <level>35</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>35</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>40</weight>
+      <always>true</always>
+    </node>
+    <node name="warlock">
+      <level>35</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>35</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>enhancement</group>
+  <help type="SkillHelp">Заклинание &apos;learning&apos; позволяет лучше сосредоточиться на учебе. При улучшении
+умений будет начисляться больше опыта.
+  </help>
+  <mana>200</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>обучаемость</nameRus>
+  <spell type="SPELL(Learning)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_room</target>
+    <type>defensive</type>
+  </spell>
+</skill>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="thief">
+      <level>17</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>20</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>35</weight>
+    </node>
+  </classes>
+  <command type="SKILL(pick)">
+    <hint>(воры) взломать запертый замок</hint>
+    <name>pick</name>
+    <order>thief_only</order>
+    <position>rest</position>
+    <russian>
+      <node>взломать</node>
+      <node>вскрыть</node>
+    </russian>
+  </command>
+  <group>none</group>
+  <hard>2</hard>
+  <help keyword="picklock" type="SkillHelp">
+%FMT%  *(pick,взломать)* _замок_ _отмычка_
+%FFF%  *(pick,взломать)* _замок_ _кольцо ключей_*:*_отмычка_
+
+Воры могут вскрывать замки различных конструкций, при наличии соответствующей
+отмычки. Для защиты от воровского произвола изобретались все новые и новые
+модели замков, и на сегодняшний день их известно восемь. Но искусство взломщика
+тоже не стояло на месте - к каждой модели существует своя отмычка, а особо 
+одаренные изготовили даже универсальные отмычки от всех замков. Самые знаменитые
+взломщики обитают в Новом Талосе, UnderDark и Ааракокране, также этим талантом
+славятся представители расы кендеров.
+
+%SA% %H% [(key forgery,подделка ключей)], [(golden eye,глаз-алмаз)]
+</help>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>взлом замка</nameRus>
+  <raceBonuses>
+    <node name="duergar">
+      <bonus>100</bonus>
+      <level>0</level>
+      <professional>true</professional>
+    </node>
+    <node name="kender">
+      <bonus>100</bonus>
+      <level>0</level>
+      <professional>true</professional>
+    </node>
+  </raceBonuses>
+</skill>

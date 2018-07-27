@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты чувствуешь себя более величаво.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <clans>
+    <node name="chaos">
+      <level>33</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <mana>500</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <spell type="SPELL(Disgrace)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_room</target>
+    <type>offensive</type>
+  </spell>
+  <nameRus>скомпрометировать</nameRus>
+  <help type="SkillHelp">
+Заклинание, делающее из игрока нечто такое, что по сравнению с ним самый
+уродливый троль будет выглядеть красавцем.  
+  </help>
+</skill>

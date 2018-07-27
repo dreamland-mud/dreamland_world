@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты чувствуешь, как жизнь возвращается к тебе.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="samurai">
+      <level>25</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>25</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>10</weight>
+    </node>
+  </classes>
+  <command type="SKILL(harakiri)">
+    <hint>(самураи) сделать харакири</hint>
+    <name>harakiri</name>
+    <position>rest</position>
+    <russian>
+      <node>харакири</node>
+    </russian>
+  </command>
+  <group>none</group>
+  <hard>2</hard>
+  <help type="SkillHelp">Самурай может избежать позора совершив самоубийство. 
+Самурай вспарывает себе живот (очки жизни, маны и движения падают до 1), 
+после чего помощник (кайсяку) одним ударом сносит самураю голову.
+  </help>
+  <mana>50</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>харакири</nameRus>
+</skill>

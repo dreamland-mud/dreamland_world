@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Твой пульс замедляется.</wearoff>
+  </affect>
+  <beats>24</beats>
+  <classes>
+    <node name="samurai">
+      <level>20</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>18</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>30</weight>
+    </node>
+    <node name="warrior">
+      <level>18</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <command type="SKILL(berserk)">
+    <hint>(воины, самураи) впасть в берсерк</hint>
+    <name>berserk</name>
+    <position>fight</position>
+    <russian>
+      <node>ярость</node>
+    </russian>
+  </command>
+  <group>fightmaster</group>
+  <hard>2</hard>
+  <help type="SkillHelp">Умелые и бесстрашные воины могут приводить себя во время боя в состояние
+крайнего помешательства и буйства, именуемое &quot;боевая ярость&quot;. Они 
+становятся более сильными, но и более уязвимыми для врага. 
+  </help>
+  <mana>50</mana>
+  <mob>
+    <dice>3</dice>
+    <forbidden>false</forbidden>
+    <offense>berserk</offense>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>берсерк</nameRus>
+  <raceBonuses>
+    <node name="duergar">
+      <bonus>100</bonus>
+      <level>0</level>
+      <professional>true</professional>
+    </node>
+    <node name="dwarf">
+      <bonus>100</bonus>
+      <level>0</level>
+      <professional>true</professional>
+    </node>
+  </raceBonuses>
+</skill>

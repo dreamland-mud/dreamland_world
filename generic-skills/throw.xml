@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>18</beats>
+  <classes>
+    <node name="ninja">
+      <level>25</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="samurai">
+      <level>37</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>18</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>trip</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>35</weight>
+    </node>
+  </classes>
+  <command type="SKILL(throwdown)">
+    <extra>hidden</extra>
+    <hint>(самураи, ниндзи) опрокинуть приемом на пол</hint>
+    <name>throwdown</name>
+    <position>fight</position>
+  </command>
+  <dammsg>бросок</dammsg>
+  <group>none</group>
+  <help type="SkillHelp">Используя искусство Наге Ваза (техника броска), ниндзя могут бросить
+противника на землю.
+  </help>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>бросок</nameRus>
+</skill>

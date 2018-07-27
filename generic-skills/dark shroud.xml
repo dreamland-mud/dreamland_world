@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
+    <wearoff>{DТемная аура{x вокруг тебя исчезает.</wearoff>
+    <wearoffDispel>{DТемная аура{x, окружавшая %1$C4, исчезает.</wearoffDispel>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>30</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="necromancer">
+      <level>21</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>30</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>armor</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>40</weight>
+    </node>
+    <node name="vampire">
+      <level>50</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>protective</group>
+  <help type="SkillHelp">Антипаладины пытались изучить заклинание sanctuary, но у них получается 
+только более слабая защита - {DТемная аура{x.
+  </help>
+  <mana>75</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>темная аура</nameRus>
+  <spell type="SPELL(DarkShroud)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_room</target>
+    <type>defensive</type>
+  </spell>
+</skill>

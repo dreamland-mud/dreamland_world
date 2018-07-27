@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>45</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="cleric">
+      <level>43</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="necromancer">
+      <level>24</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>24</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>detect magic</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>40</weight>
+    </node>
+    <node name="vampire">
+      <level>24</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="warlock">
+      <level>41</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>36</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>protective</group>
+  <help type="SkillHelp">Оба этих каста убирают эффекты заклинаний с жертвы. {CDispel Affects{x -
+менее эффективно и считается атакой. {CCancellation{x используется только на 
+союзниках, но намного эффективнее и не считается атакующим заклинанием. К
+сожалению, эти заклинания не различают &quot;хороших&quot; и &quot;плохих&quot; эффектов на цели,
+и &quot;сносят&quot; их все.
+
+Шанс удачного рассеивания магии и молитв зависит от уровня заклинания. 
+Постоянные заклинания (например - {CSanctuary{x у моба) намного тяжелее снять.
+Не все заклинания могут быть &quot;рассеяны&quot;, примеры - яд, чума.
+  </help>
+  <mana>15</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>снятие воздействий</nameRus>
+  <spell type="SPELL(DispelAffects)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

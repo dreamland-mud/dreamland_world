@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты больше не видишь состояния других.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="cleric">
+      <level>10</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="paladin">
+      <level>10</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>10</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>10</weight>
+    </node>
+  </classes>
+  <group>detection</group>
+  <help type="SkillHelp">Эта молитва позволяет клерикам при взгляде на кого-то увидеть его болезни, 
+негативные воздейстия и проклятия.
+  </help>
+  <mana>5</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>диагностика</nameRus>
+  <spell type="SPELL(Observation)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_self</target>
+    <type>defensive</type>
+  </spell>
+</skill>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <beats>12</beats>
+  <clans>
+    <node name="ruler">
+      <level>10</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <command type="SKILL(confiscate)">
+    <log>1</log>
+    <name>confiscate</name>
+    <position>stand</position>
+    <russian>
+      <node>конфисковать</node>
+    </russian>
+    <hint>(правители) конфисковать у нарушителя предмет</hint>
+  </command>
+  <mana>75</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <nameRus>конфисковать</nameRus>
+  <help type="SkillHelp">
+Умение конфисковывать вещи у игроков.
+
+Синтаксис: confiscate &lt;цель&gt; &lt;%&gt;
+
+У игрока отнимается указанный процент вещей, находящихся в
+инвентаре, за исключением квестовых.
+  </help>
+</skill>

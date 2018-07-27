@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<Command>
+  <extra>keep_hide ghost</extra>
+  <level>108</level>
+  <log>1</log>
+  <name>newlock</name>
+  <position>dead</position>
+  <hint>запретить создание новых персонажей</hint>
+  <help type="CommandHelp" ref="wizlock">
+%FMT%  *%CMD%*
+%FFF%  *wizlock*
+
+Wizlock и newlock блокируют попытки входа в MUD. Wizlock блокирует
+вход не-богов (т.е. с уровнем &lt; 102), исключение делается для игроков,
+потерявших соединение, и пытающихся зайти опять. Newlock блокирует
+только создание новых персонажей, это типичная мера против спама(spam).
+Wizlock лучше избегать, а введение newlock должно быть предварительно
+сообщено путем внутренней почты.
+
+Боги должны иметь уровень не меньше Supreme для перевода игры в режим wizlock.
+</help>
+</Command>

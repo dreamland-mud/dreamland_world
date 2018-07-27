@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>24</beats>
+  <classes>
+    <node name="paladin">
+      <level>55</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>55</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>bless</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>30</weight>
+    </node>
+  </classes>
+  <group>enchantment</group>
+  <help type="SkillHelp">Благословив свое оружие заклинанием &apos;{ybless weapon{x&apos;, паладин превращает
+его в поистине мощный инструмент в сражении со злом.
+  </help>
+  <mana>100</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>благословить оружие</nameRus>
+  <spell type="SPELL(BlessWeapon)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>obj_inv obj_equip</target>
+    <type>none</type>
+  </spell>
+</skill>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>24</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>55</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>55</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>enhanced damage</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>80</weight>
+    </node>
+  </classes>
+  <command type="SKILL(cleave)">
+    <hint>(анти-паладины) рассечь противника надвое</hint>
+    <name>cleave</name>
+    <order>player_only</order>
+    <position>stand</position>
+    <russian>
+      <node>расколоть</node>
+      <node>рассечь</node>
+    </russian>
+  </command>
+  <dammsg mg="f">рассечка</dammsg>
+  <group>none</group>
+  <help type="SkillHelp">Нападение, подобное backstab, но не такое сильное. 
+Имеется шанс, что жертва будет немедленно убита.
+  </help>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>рассечь</nameRus>
+</skill>

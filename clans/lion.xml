@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<Clan type="DefaultClan">
+  <channel>true</channel>
+  <color>g</color>
+  <deities>
+    <node>Corwin</node>
+    <node>Cradya</node>
+  </deities>
+  <diplomacy>true</diplomacy>
+  <dispersed>false</dispersed>
+  <enemies>
+    <node>hunter</node>
+  </enemies>
+  <hidden>false</hidden>
+  <induct>
+    <node allow="false">
+      <node invert="false" type="XMLPCAlignPredicate">evil</node>
+    </node>
+    <node allow="true">
+      <node invert="false" type="XMLPCClassPredicate">ranger</node>
+    </node>
+    <node allow="true">
+      <node invert="true" type="XMLPCClassPredicate">ninja</node>
+      <node invert="true" type="XMLPCClassPredicate">thief</node>
+      <node invert="true" type="XMLPCRacePredicate">dwarf</node>
+      <node invert="true" type="XMLPCRacePredicate">svirfnebli</node>
+      <node invert="true" type="XMLPCRacePredicate">gnome</node>
+    </node>
+    <node allow="false">
+    </node>
+  </induct>
+  <leader>8</leader>
+  <longName>the Leaders of Forests</longName>
+  <membership type="ClanMembership">
+    <minLevel>10</minLevel>
+    <mode>verify</mode>
+    <removable>true</removable>
+    <removeBy>exile</removeBy>
+    <removeSelf>outsider</removeSelf>
+  </membership>
+  <monument>{YЖутко воняющ%1$Gее|ий|ая {g%1$#C1{Y примота%1$Gно|н|на собственными кишками к толстому дубу. На коре выцарапано: {R%2$#C1{x.</monument>
+  <padName>{g   LION    {x</padName>
+  <recallVnum>504</recallVnum>
+  <recruiter>7</recruiter>
+  <shortName>LION</shortName>
+  <titles type="ClanTitlesByLevel">
+    <node>
+      <female>коготь</female>
+      <male>клык</male>
+    </node>
+    <node>
+      <female>кошка</female>
+      <male>преследующий</male>
+    </node>
+    <node>
+      <female>ярость</female>
+      <male>хищник</male>
+    </node>
+    <node>
+      <female>львенок</female>
+      <male>львенок</male>
+    </node>
+    <node>
+      <female>химера</female>
+      <male>сфинкс</male>
+    </node>
+    <node>
+      <female>амазонка</female>
+      <male>воин</male>
+    </node>
+    <node>
+      <female>львица</female>
+      <male>лев</male>
+    </node>
+    <node>
+      <female>видящая</female>
+      <male>видящий</male>
+    </node>
+    <node>
+      <female>валькирия</female>
+      <male>владыка</male>
+    </node>
+  </titles>
+</Clan>

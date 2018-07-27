@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="thief">
+      <level>11</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>11</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>sneak</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>50</weight>
+    </node>
+  </classes>
+  <command type="SKILL(backstab)">
+    <aliases>
+      <node>bs</node>
+    </aliases>
+    <hint>(воры) ударить ножом в спину</hint>
+    <name>backstab</name>
+    <order>thief_only</order>
+    <position>stand</position>
+    <russian>
+      <node>зарезать</node>
+      <node>вспину</node>
+    </russian>
+  </command>
+  <dammsg>удар в спину</dammsg>
+  <group>none</group>
+  <help type="SkillHelp">BACKSTAB (удар в спину) - любимая атака воров. Может быть выполнен любым
+колющим оружием. Опытные и заматеревшие воры могут быстро наносить второй 
+удар вслед за первым.
+BS является синонимом для BACKSTAB.
+  </help>
+  <mob>
+    <bonus>20</bonus>
+    <dice>2</dice>
+    <forbidden>false</forbidden>
+    <offense>backstab</offense>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>удар в спину</nameRus>
+</skill>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="RaceAptitude">
+  <beats>12</beats>
+  <command type="SKILL(searchstones)">
+    <extra>hidden</extra>
+    <name>searchstones</name>
+    <position>stand</position>
+  </command>
+  <group>none</group>
+  <hard>1</hard>
+  <help type="SkillHelp">Хоббиты метко швыряются камнями, но, конечно же, не так далеко как можно
+выстрелить из лука. Подходящие для метания камни они умеют находить прямо
+под ногами. Для броска найденный камень надо зажать в руке.
+
+Швырнуть камень:
+    throw stone &lt;направление&gt; &lt;жертва&gt;
+
+Отыскать камни:
+    search stones
+  </help>
+  <mana>10</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>false</ordered>
+  </mob>
+  <nameRus>искать камни</nameRus>
+  <races>
+    <node name="hobbit">
+      <level>25</level>
+    </node>
+  </races>
+</skill>

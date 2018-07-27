@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Здоровье, приданное тебе магией, исчезает прочь.</wearoff>
+  </affect>
+  <beats>24</beats>
+  <clans>
+    <node name="shalafi">
+      <level>10</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <mana>200</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <spell type="SPELL(Transform)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_self</target>
+    <type>defensive</type>
+  </spell>
+  <nameRus>преобразиться</nameRus>
+  <help type="SkillHelp">
+Заклинание, позволяющее нарастить немного мяса на хилое тело мага.
+Количество HP при этом естественно увеличивается, но вот проворность падает.
+  </help>
+</skill>

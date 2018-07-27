@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <affect type="AFFECT(Prevent)">
+    <wearoff>Ты вновь чувствуешь себя беззащитн$gым|ым|ой перед охотничьими ловушками.</wearoff>
+  </affect>
+  <beats>18</beats>
+  <clans>
+    <node name="lion">
+      <level>25</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <dammsg>Prevent</dammsg>
+  <mana>200</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <spell type="SPELL(Prevent)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_self room</target>
+    <type>defensive</type>
+  </spell>
+  <nameRus>предотвращение</nameRus>
+  <help type="SkillHelp">
+Синтаксис: cast &apos;prevent&apos;
+           cast &apos;prevent&apos; self
+Убитые Охотники слишком часто возвращались на место своей смерти
+неправдоподобно быстро. Маги Львов расследовали обстоятельства
+такого возвращения и научились ставить защиту.
+Выяснилось однако, что с помощью этой магии также можно защитить 
+местность от практически всех охотничьих ловушек, а также защитить 
+себя, уменьшив шанс попадания в такие ловушки.
+  </help>
+</skill>

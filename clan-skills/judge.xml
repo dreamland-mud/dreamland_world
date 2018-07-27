@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <clans>
+    <node name="ruler">
+      <level>1</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <command type="SKILL(judge)">
+    <extra>keep_hide</extra>
+    <log>1</log>
+    <name>judge</name>
+    <position>rest</position>
+    <russian>
+      <node>судить</node>
+    </russian>
+    <hint>(правители) установить заслуги перед законом</hint>
+  </command>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <nameRus>судить</nameRus>
+  <help type="SkillHelp">%PAUSE%
+Синтаксис: judge &lt;цель&gt;
+Узнать алигмент и характер игрока.
+
+Синтаксис: judge &lt;цель&gt; [+]/-&lt;значение&gt;
+Изменить значение Реальной Законопослушности игрока.
+  </help>
+</skill>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<Command>
+  <extra>keep_hide ghost</extra>
+  <level>105</level>
+  <log>1</log>
+  <name>force</name>
+  <position>dead</position>
+  <hint>заставить персонажа выполнить команду</hint>
+  <help type="CommandHelp">
+%FMT%  *%CMD%* _%CHAR%_ _команда_
+Срабатывает так, будто персонаж сам ввел указанную команду.
+
+%FMT%  *%CMD%* *all* _команда_
+Форсирует выполнение указанной команды для всех игроков.
+Типичное использование *force all save*.
+
+Боги ниже 107го уровня могут использовать эту команду только на мобов
+и не могут заставлять всех.
+</help>
+</Command>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты чувствуешь, что к тебе возвращается сила призывать.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <clans>
+    <node name="invader">
+      <level>25</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <mana>75</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <spell type="SPELL(Nightwalker)">
+    <castMobCount>1</castMobCount>
+    <casted>true</casted>
+    <maxMobCount>1</maxMobCount>
+    <mobVnum>14</mobVnum>
+    <msgCreateAttemptArea></msgCreateAttemptArea>
+    <msgCreateAttemptRoom>%^C1 пытается призвать Найтволкера.</msgCreateAttemptRoom>
+    <msgCreateAttemptSelf>Ты пытаешься призвать Найтволкера.</msgCreateAttemptSelf>
+    <msgCreateRoom>Из тени к %1$C3 приходит Найтволкер!
+Найтволкер преклоняет колени перед %1$C5.</msgCreateRoom>
+    <msgCreateSelf>Из тени на твой зов приходит Найтволкер!
+Найтволкер преклоняет перед тобой колени.</msgCreateSelf>
+    <msgNotRecognizeRoom>%2$^C1 смеется в лицо %1$C3.</msgNotRecognizeRoom>
+    <msgNotRecognizeSelf>%2$^C1 смеется тебе в лицо.</msgNotRecognizeSelf>
+    <msgReattachAttemptRoom>%1$^C1 повелительным жестом подзывает к себе %2$C4.</msgReattachAttemptRoom>
+    <msgReattachAttemptSelf>Повелительным жестом ты подзываешь к себе %C4.</msgReattachAttemptSelf>
+    <msgReattachRoom>%2$^C1 преклоняет колени перед %1$C5.</msgReattachRoom>
+    <msgReattachSelf>%^C1 преклоняет перед тобой колени.</msgReattachSelf>
+    <msgStillAffected>Твоих сил недостаточно, чтобы призвать Найтволкера.</msgStillAffected>
+    <msgTooManyMobiles>Ты не сможешь справиться с ДВУМЯ Найтволкерами!</msgTooManyMobiles>
+    <position>fight</position>
+    <postaffectDuration>24</postaffectDuration>
+    <target>create_mob</target>
+    <type>none</type>
+  </spell>
+  <nameRus>ночной скиталец</nameRus>
+  <help type="SkillHelp">
+Вызывает создание тьмы тебе на помощь.
+  </help>
+</skill>

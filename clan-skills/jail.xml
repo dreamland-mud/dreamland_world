@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <affect type="AFFECT(Jail)">
+    <wearoff>Ты вспоминаешь стук судейского молоточка...</wearoff>
+  </affect>
+  <clans>
+    <node name="ruler">
+      <level>10</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <command type="SKILL(jail)">
+    <log>1</log>
+    <name>jail</name>
+    <position>stand</position>
+    <russian>
+      <node>тюрьма</node>
+    </russian>
+    <hint>(правители) посадить нарушителя за решетку</hint>
+  </command>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <nameRus>тюрьма</nameRus>
+  <help type="SkillHelp">%PAUSE%
+Определить срок заключения нарушителю закона.
+
+Синтаксис: jail &lt;цель&gt; - проверить срок заключения
+           jail &lt;цель&gt; place [&lt;время&gt;] - установить срок заключения
+           jail &lt;цель&gt; remove - аннулировать срок заключения
+
+Указанному игроку устанавливается срок заключения, после отбытия которого
+он автоматически освобождается из тюрьмы. Если игрок был в кандалах, то
+его расковывают.
+  </help>
+</skill>

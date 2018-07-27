@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <classes>
+    <node name="necromancer">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>20</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>40</weight>
+    </node>
+    <node name="warlock">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <command type="SKILL(blink)">
+    <extra>keep_hide</extra>
+    <hint>(магические профессии) уклоняться, мерцая</hint>
+    <name>blink</name>
+    <position>fight</position>
+    <russian>
+      <node>мерцание</node>
+    </russian>
+  </command>
+  <group>none</group>
+  <hard>6</hard>
+  <help type="SkillHelp">
+%FMT% *(blink,мерцание)*  показывает, мерцаешь ты или нет      
+        *(blink,мерцание)* *%ON%*  включает мерцание
+        *(blink,мерцание)* *%OFF%* выключает мерцание
+
+Они наполовину здесь, а наполовину как бы и нет - вот что значит
+&quot;мерцающие&quot; Варлок или Ведьма. Это ни что иное, как простая магическая 
+уловка против  атак оружием. Каждое мерцание &quot;истощает&quot; мага минимум на 1 
+очко магической энергии.
+</help>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>мерцание</nameRus>
+  <raceBonuses>
+    <node name="faery">
+      <bonus>100</bonus>
+      <level>0</level>
+      <professional>true</professional>
+    </node>
+  </raceBonuses>
+</skill>

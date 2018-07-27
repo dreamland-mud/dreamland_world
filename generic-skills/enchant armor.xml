@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>24</beats>
+  <classes>
+    <node name="cleric">
+      <level>30</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="paladin">
+      <level>30</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>26</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>enchant weapon</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>15</weight>
+    </node>
+    <node name="witch">
+      <level>26</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>enchantment</group>
+  <help type="SkillHelp">{CEnchant Armor{x наделяет броню мощным защитным волшебством. Броня
+более склонна к разрушению, чем оружие, поэтому и от заклинания она
+может быстро сломаться. 
+Каждое удачное улучшение увеличивает класс брони на 1 или 2, поднимая 
+при этом уровень вещи.
+
+Говорят, что если сильный клерик или ведьма накладывает это заклинание 
+на мощную броню, ее свойства могут поменяться...
+  </help>
+  <mana>100</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>заколдовать броню</nameRus>
+  <raceBonuses>
+    <node name="gnome">
+      <bonus>100</bonus>
+      <level>0</level>
+      <professional>true</professional>
+    </node>
+  </raceBonuses>
+  <spell type="SPELL(EnchantArmor)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>obj_inv</target>
+    <type>none</type>
+  </spell>
+</skill>

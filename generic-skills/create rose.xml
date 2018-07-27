@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="necromancer">
+      <level>26</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="paladin">
+      <level>20</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>16</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>10</weight>
+    </node>
+    <node name="vampire">
+      <level>26</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="warlock">
+      <level>16</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>26</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>creation</group>
+  <help type="SkillHelp">Акт творения. Ты можешь создать прекрасную розу. И подарить ее.
+  </help>
+  <mana>30</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>сотворить розу</nameRus>
+  <spell type="SPELL(CreateRose)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>create_obj</target>
+    <type>none</type>
+  </spell>
+</skill>

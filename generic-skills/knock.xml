@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>24</beats>
+  <classes>
+    <node name="necromancer">
+      <level>62</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>56</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>40</weight>
+    </node>
+    <node name="warlock">
+      <level>64</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>56</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>none</group>
+  <help type="SkillHelp">%PAUSE%{CKnock{x, как и умение {Cpick{x, помогает открывать замки, не имея ключа.
+Это заклинание не работает против {Wno_pass {xдверей.
+  </help>
+  <mana>20</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>тук-тук</nameRus>
+  <spell type="SPELL(Knock)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>ignore</target>
+    <type>none</type>
+  </spell>
+</skill>

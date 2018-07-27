@@ -1,0 +1,2626 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<area>
+  <areadata>
+    <authors>Diku</authors>
+    <credits>Limbo</credits>
+    <flags>noquest hidden</flags>
+    <levelHigh>110</levelHigh>
+    <levelLow>1</levelLow>
+    <name>Лимбо</name>
+    <resetMessage></resetMessage>
+    <security>9</security>
+    <vnumHigh>199</vnumHigh>
+    <vnumLow>0</vnumLow>
+  </areadata>
+  <mobiles>
+    <node name="10">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc outdoors"/>
+      <aff add="infrared sneak haste"/>
+      <dam_type>slash</dam_type>
+      <damage>5d3+15</damage>
+      <default_pos>stand</default_pos>
+      <description>Страдающая от своего низкого положения, тень жаждет подмять под себя %s... 
+Лучше не стой у неё на пути!
+</description>
+      <detection add="dark_vision"/>
+      <hit>0d0+0</hit>
+      <imm add="sound"/>
+      <long_descr>Тень (shadow) %s здесь.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>0</material>
+      <off add="disarm dodge trip"/>
+      <player_name>тень shadow %s</player_name>
+      <race>human</race>
+      <res add="fire"/>
+      <sex>male</sex>
+      <short_descr>тен|ь|и|и|ь|ью|и %s</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <vuln add="cold holy"/>
+    </node>
+    <node name="11">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc warrior noalign"/>
+      <aff add="infrared protect_evil haste"/>
+      <alignment>1000</alignment>
+      <behavior type="RulerSpecialGuard">
+      </behavior>
+      <dam_type>punch</dam_type>
+      <damage>5d5+10</damage>
+      <default_pos>stand</default_pos>
+      <description>Очень, очень сердитый!
+</description>
+      <hit>16d15+320</hit>
+      <hitroll>3</hitroll>
+      <level>20</level>
+      <long_descr>Красный от ярости страж особого назначения (guard) стоит здесь.
+</long_descr>
+      <mana>1d1+141</mana>
+      <material>0</material>
+      <off add="assist_align assist_guard"/>
+      <player_name>special guard особого назначения страж</player_name>
+      <race>human</race>
+      <res add="summon charm"/>
+      <sex>male</sex>
+      <short_descr>страж||а|у|а|ем|е особого назначения</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <vuln add="negative"/>
+    </node>
+    <node name="12">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc noalign"/>
+      <behavior type="RangerCreature">
+      </behavior>
+      <dam_type>claw</dam_type>
+      <damage>3d10+12</damage>
+      <default_pos>stand</default_pos>
+      <description>Ты не видишь ничего особенного на нем.
+</description>
+      <hit>1d1+1</hit>
+      <hitroll>1</hitroll>
+      <long_descr>Огромный и сильный медведь (bear) внимательно наблюдает за тобой.
+</long_descr>
+      <mana>1d1+1</mana>
+      <material>0</material>
+      <off add="trip"/>
+      <player_name>bear медведь</player_name>
+      <race>bear</race>
+      <sex>either</sex>
+      <short_descr>медвед|ь|я|ю|я|ем|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="13">
+      <ac bash="-15" exotic="-15" pierce="-15" slash="-15"/>
+      <act add="npc sentinel mage"/>
+      <aff add="infrared"/>
+      <alignment>-1000</alignment>
+      <behavior type="ShalafiDemon">
+      </behavior>
+      <dam_type>slash</dam_type>
+      <damage>2d4+20</damage>
+      <default_pos>stand</default_pos>
+      <description>{rОгненный демон{x стоит здесь в {rязыках пламени{x. Он страшно разозлен тем,
+что  его призвали.  Тело демона покрывает  {rкрасная{x, чешуйчатая  кожа,
+две головы с пастями,  усыпанными острейшими зубами повернуты в твою
+сторону. Его  руки заканчиваются острыми когтями, похожими на лезвия.
+Узкие {Rкрасные глаза{x горят как {rугли{x.
+</description>
+      <detection add="dark_vision"/>
+      <hit>1d1+1</hit>
+      <level>40</level>
+      <long_descr>{1{rКрасный огненный демон{2 (fiery demon) выглядит очень недружелюбно.{x
+</long_descr>
+      <mana>1d1+1</mana>
+      <material>0</material>
+      <off add="dodge fast kick"/>
+      <player_name>fiery red demon огненный демон</player_name>
+      <race>demon</race>
+      <sex>male</sex>
+      <short_descr>{rогненн|ый|ого|ому|ого|ым|ом демон|{x|а{x|у{x|а{x|ом{x|е{x</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="14">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc undead warrior"/>
+      <aff add="infrared"/>
+      <alignment>-750</alignment>
+      <behavior type="ClanSummonedCreature">
+      </behavior>
+      <dam_type>punch</dam_type>
+      <damage>5d3+20</damage>
+      <default_pos>stand</default_pos>
+      <description>Призванная {Dночная тень{x выглядит ужасно. Её налитые кровью глаза 
+прожигают тебя насквозь. 
+</description>
+      <detection add="invis hidden"/>
+      <hit>16d15+240</hit>
+      <hitroll>3</hitroll>
+      <level>20</level>
+      <long_descr>{DНочная тень{x (nightwalker) бесшумно бродит вокруг.
+</long_descr>
+      <mana>1d1+152</mana>
+      <material>0</material>
+      <off add="berserk disarm kick_dirt"/>
+      <player_name>nightwalker ночная тень</player_name>
+      <race>human</race>
+      <res add="summon charm slash"/>
+      <sex>male</sex>
+      <short_descr>{Dночн|ая|ой|ой|ую|ой|ой тен|ь{x|и{x|и{x|ь{x|ью{x|и{x</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <vuln add="negative"/>
+    </node>
+    <node name="15">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc warrior"/>
+      <aff add="sanctuary infrared protect_evil pass_door haste"/>
+      <alignment>1000</alignment>
+      <behavior type="Stalker">
+      </behavior>
+      <dam_type>slash</dam_type>
+      <damage>4d9+15</damage>
+      <default_pos>stand</default_pos>
+      <description>Очень, очень злобный!
+</description>
+      <detection add="hidden"/>
+      <hit>16d15+160</hit>
+      <hitroll>3</hitroll>
+      <level>20</level>
+      <long_descr>Красный от ярости сталкер (stalker) стоит здесь!
+</long_descr>
+      <mana>1d1+149</mana>
+      <material>0</material>
+      <off add="assist_align assist_guard"/>
+      <player_name>stalker сталкер</player_name>
+      <race>storm giant</race>
+      <res add="summon charm"/>
+      <sex>male</sex>
+      <short_descr>сталкер||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <vuln add="negative"/>
+    </node>
+    <node name="16">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc warrior"/>
+      <aff add="sanctuary infrared protect_evil haste"/>
+      <alignment>1000</alignment>
+      <behavior type="ClanSummonedCreature">
+      </behavior>
+      <dam_type>slash</dam_type>
+      <damage>3d10+12</damage>
+      <default_pos>stand</default_pos>
+      <description>Этот благородный оруженосец доблестно и верно служит своему мастеру.
+</description>
+      <detection add="hidden"/>
+      <hit>16d15+160</hit>
+      <hitroll>3</hitroll>
+      <level>20</level>
+      <long_descr>Оруженосец (squire) стоит здесь с улыбкой на лице.
+</long_descr>
+      <mana>1d1+149</mana>
+      <material>0</material>
+      <off add="disarm trip"/>
+      <player_name>squire оруженосец</player_name>
+      <race>human</race>
+      <res add="summon charm"/>
+      <sex>male</sex>
+      <short_descr>оруженосец||а|у|а|ем|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <vuln add="negative"/>
+    </node>
+    <node name="17">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel"/>
+      <dam_type>none</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Ты в упор рассматриваешь свою удивлённую физиономию.
+</description>
+      <hit>0d0+0</hit>
+      <imm add="poison"/>
+      <long_descr>Это всего лишь чьё-то зеркальное отражение (mirror).
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>0</material>
+      <off add="disarm dodge trip"/>
+      <player_name>mirror отражение</player_name>
+      <race>human</race>
+      <res add="fire"/>
+      <sex>male</sex>
+      <short_descr>отражен|ие|ия|ию|ие|ием|ии</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <vuln add="cold holy"/>
+    </node>
+    <node name="18">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc"/>
+      <dam_type>pound</dam_type>
+      <damage>3d10+12</damage>
+      <default_pos>stand</default_pos>
+      <description>Пренеприятнейшее зрелище, однако!
+Ну да ничего - скоро умрет окончательно.
+</description>
+      <hit>1d1+1</hit>
+      <hitroll>1</hitroll>
+      <long_descr>Оживленный труп (corpse) %s стоит, слегка покачиваясь.
+</long_descr>
+      <mana>1d1+1</mana>
+      <material>0</material>
+      <off add="trip"/>
+      <player_name>undead оживленный %s</player_name>
+      <race>undead</race>
+      <sex>male</sex>
+      <short_descr>оживленн|ый|ого|ому|ый|ым|ом труп||а|у||ом|е %s</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="19">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc noalign"/>
+      <behavior type="RangerCreature">
+      </behavior>
+      <dam_type>claw</dam_type>
+      <damage>3d10+12</damage>
+      <default_pos>stand</default_pos>
+      <description>Ты не видишь ничего особенного на нем.
+</description>
+      <hit>1d1+1</hit>
+      <hitroll>1</hitroll>
+      <long_descr>Охотничий лев (lion) притаился здесь.
+</long_descr>
+      <mana>1d1+1</mana>
+      <material>0</material>
+      <off add="trip"/>
+      <player_name>lion лев охотничий</player_name>
+      <race>lion</race>
+      <sex>either</sex>
+      <short_descr>л|ев|ьва|ьву|ьва|ьвом|ьве</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="20">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc"/>
+      <behavior type="ClanSummonedCreature">
+      </behavior>
+      <dam_type>claw</dam_type>
+      <damage>3d10+12</damage>
+      <default_pos>stand</default_pos>
+      <description>Ты видишь, как огромный волк подстерегает очередную добычу. Когда ты
+подходишь ближе, волк начинает рычать на тебя и обнажает клыки, с которых
+капает кровь.  И только тогда ты замечаешь на шее у волка ошейник с клеймом
+{YНаемников{x.  Интересно, на кого они здесь охотятся?  - думаешь ты за
+секунду до того, как неведомый голос произносит: &quot;Фас его!&quot;  И зубы волка
+смыкаются на твоей шее...
+</description>
+      <hit>1d1+1</hit>
+      <hitroll>1</hitroll>
+      <long_descr>Кровожадный волк (wolf) терзает зубами свою добычу.
+</long_descr>
+      <mana>1d1+1</mana>
+      <material>0</material>
+      <off add="trip"/>
+      <player_name>wolf волк</player_name>
+      <race>wolf</race>
+      <sex>male</sex>
+      <short_descr>волк||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="21">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc warrior"/>
+      <aff add="haste"/>
+      <behavior type="NecroCreature">
+      </behavior>
+      <dam_type>crush</dam_type>
+      <damage>3d10+12</damage>
+      <default_pos>stand</default_pos>
+      <description>Кто-то потрудился вдохнуть жизнь в этого голема, похоже, слепленного из какой-то особой глины.
+</description>
+      <hit>1d1+1</hit>
+      <hitroll>1</hitroll>
+      <long_descr>Малый голем (lesser golem) ожидает распоряжений хозяина.
+</long_descr>
+      <mana>1d1+1</mana>
+      <material>0</material>
+      <off add="disarm dodge crush"/>
+      <player_name>golem lesser малый голем</player_name>
+      <race>golem</race>
+      <sex>either</sex>
+      <short_descr>мал|ый|ого|ому|ого|ым|ом голем||а|у|а|ом|е</short_descr>
+      <size>small</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="22">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc warrior"/>
+      <aff add="haste"/>
+      <behavior type="NecroCreature">
+      </behavior>
+      <dam_type>crush</dam_type>
+      <damage>3d10+12</damage>
+      <default_pos>stand</default_pos>
+      <description>Большой каменный голем нависает над тобой. Кажется, ему не составит труда оторвать
+твою голову от тела.
+</description>
+      <hit>1d1+1</hit>
+      <hitroll>1</hitroll>
+      <long_descr>Каменный голем (stone golem) готов разорвать на части врагов своего хозяина.
+</long_descr>
+      <mana>1d1+1</mana>
+      <material>0</material>
+      <off add="disarm dodge crush"/>
+      <player_name>golem stone каменный голем</player_name>
+      <race>golem</race>
+      <sex>either</sex>
+      <short_descr>каменн|ый|ого|ому|ого|ым|ом голем||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="23">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc warrior"/>
+      <aff add="haste"/>
+      <behavior type="NecroCreature">
+      </behavior>
+      <dam_type>crush</dam_type>
+      <damage>3d10+12</damage>
+      <default_pos>stand</default_pos>
+      <description>Гигантская железная статуя возвышается над тобой. Чем дольше ты смотришь на статую, тем сильнее 
+кажется, что она вот-вот начнёт двигаться. С трудом избавившись от навязчивого ощущения, ты внезапно ловишь
+на себе пристальный взгляд статуи! 
+</description>
+      <hit>1d1+1</hit>
+      <hitroll>1</hitroll>
+      <long_descr>Гигантский железный голем (iron golem) ожидает приказов своего хозяина.
+</long_descr>
+      <mana>1d1+1</mana>
+      <material>0</material>
+      <off add="disarm dodge crush"/>
+      <player_name>golem iron железный голем</player_name>
+      <race>golem</race>
+      <sex>either</sex>
+      <short_descr>железн|ый|ого|ому|ого|ым|ом голем||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="24">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc warrior"/>
+      <aff add="haste"/>
+      <behavior type="AdamantiteGolem">
+      </behavior>
+      <dam_type>crush</dam_type>
+      <damage>3d10+12</damage>
+      <default_pos>stand</default_pos>
+      <description>Выкованный из тёмного металла голем выглядит сильным и прочным, но несколько
+туповатым.
+</description>
+      <hit>1d1+1</hit>
+      <hitroll>1</hitroll>
+      <long_descr>Адамантитовый голем (adamantite golem) внушает страх.
+</long_descr>
+      <mana>1d1+1</mana>
+      <material>0</material>
+      <off add="disarm dodge crush"/>
+      <player_name>golem adamantite адамантитовый голем</player_name>
+      <race>golem</race>
+      <sex>either</sex>
+      <short_descr>адамантитов|ый|ого|ому|ый|ым|ом голем||а|у|а|ом|е</short_descr>
+      <size>large</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="25">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc"/>
+      <dam_type>claw</dam_type>
+      <damage>3d10+12</damage>
+      <default_pos>stand</default_pos>
+      <description>Ты не видишь ничего особенного в нем.
+</description>
+      <detection add="invis"/>
+      <hit>1d1+1</hit>
+      <hitroll>1</hitroll>
+      <long_descr>Благородный лев (lion) стоит здесь.
+</long_descr>
+      <mana>1d1+1</mana>
+      <material>0</material>
+      <off add="trip"/>
+      <player_name>lion лев</player_name>
+      <race>lion</race>
+      <sex>male</sex>
+      <short_descr>л|ев|ьва|ьву|ьва|ьвом|ьве</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="26">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel undead"/>
+      <behavior type="NecroCreature">
+      </behavior>
+      <dam_type>claw</dam_type>
+      <damage>3d10+12</damage>
+      <default_pos>stand</default_pos>
+      <description>Ты видишь НЕЧТО.
+</description>
+      <form add="edible animal mammal"/>
+      <hit>1d1+1</hit>
+      <hitroll>1</hitroll>
+      <imm add="negative"/>
+      <long_descr>Тёмная призванная тень (shadow) застыла здесь.
+</long_descr>
+      <mana>1d1+1</mana>
+      <material>0</material>
+      <off add="dodge fast trip"/>
+      <parts add="head legs heart brains guts feet ear eye tail claws fangs"/>
+      <player_name>shadow summonned тень призванная</player_name>
+      <race>unique</race>
+      <res add="weapon"/>
+      <sex>male</sex>
+      <short_descr>призванн|ая|ой|ой|ую|ой|ой тен|ь|и|и|ь|ью|и</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="27">
+      <ac bash="-65" exotic="-25" pierce="-65" slash="-65"/>
+      <act add="npc sentinel practice nopurge notrack"/>
+      <aff add="sanctuary protect_evil"/>
+      <alignment>900</alignment>
+      <dam_type>beating</dam_type>
+      <damage>6d10+45</damage>
+      <default_pos>stand</default_pos>
+      <description>Божественные силы вызвали к жизни это неуклюжее созданье.
+</description>
+      <hit>20d10+18800</hit>
+      <hitroll>10</hitroll>
+      <imm add="summon charm"/>
+      <level>60</level>
+      <long_descr>Тестовый моб (test) бессильно и понуро стоит здесь.
+</long_descr>
+      <mana>1d1+999</mana>
+      <material>0</material>
+      <off add="bash berserk dodge"/>
+      <player_name>test mob</player_name>
+      <race>human</race>
+      <res add="spell weapon"/>
+      <sex>male</sex>
+      <short_descr>тестов|ый|ого|ому|ого|ым|ом моб||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>500</wealth>
+    </node>
+    <node name="28">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc noalign"/>
+      <aff add="infrared haste"/>
+      <behavior type="ClanSummonedCreature">
+      </behavior>
+      <dam_type>claw</dam_type>
+      <damage>3d10+12</damage>
+      <default_pos>stand</default_pos>
+      <description>Большая гибкая кошка, черная как ночь и опасная как острие клинка.
+</description>
+      <detection add="dark_vision acute_vision"/>
+      <hit>1d1+1</hit>
+      <hitroll>2</hitroll>
+      <long_descr>Пантера (panther) сидит, ожидая удобного случая для помощи собратьям.
+</long_descr>
+      <mana>1d1+1</mana>
+      <material>0</material>
+      <off add="tail trip"/>
+      <player_name>пантера panther</player_name>
+      <race>cat</race>
+      <sex>female</sex>
+      <short_descr>пантер|а|ы|е|у|ой|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="30">
+      <ac bash="-1000" exotic="0" pierce="-1000" slash="-1000"/>
+      <act add="npc sentinel mage"/>
+      <alignment>-1000</alignment>
+      <behavior type="RemortWitch">
+        <services>
+          <node type="HealthRemortBonus">
+            <amount>50</amount>
+            <gender>neutral</gender>
+            <price type="LifePrice">
+              <points>5</points>
+            </price>
+            <shortDescr>здоровь|е|я|ю|е|ем|е</shortDescr>
+            <aliases>
+              <node>hp</node>
+              <node>hit</node>
+              <node>hitpoints</node>
+            </aliases>
+          </node>
+          <node type="ManaRemortBonus">
+            <amount>100</amount>
+            <gender>female</gender>
+            <price type="LifePrice">
+              <points>5</points>
+            </price>
+            <shortDescr>ман|а|ы|е|у|ой|е</shortDescr>
+            <aliases>
+              <node>mana</node>
+            </aliases>
+          </node>
+          <node type="LevelRemortBonus">
+            <amount>1</amount>
+            <gender>either</gender>
+            <price type="LifePrice">
+              <points>10</points>
+            </price>
+            <shortDescr>плюс один уров|ень|ня|ню|ень|нем|не</shortDescr>
+            <aliases>
+              <node>level</node>
+              <node>уровень</node>
+            </aliases>
+          </node>
+          <node type="PretitleRemortBonus">
+            <gender>either</gender>
+            <price type="LifePrice">
+              <points>20</points>
+            </price>
+            <shortDescr>цветн|ой|ого|ому|ой|ым|ом претиту|л|ла|лу|л|лом|ле</shortDescr>
+            <aliases>
+              <node>pretitle</node>
+              <node>претитул</node>
+            </aliases>
+          </node>
+          <node type="StatRemortBonus">
+            <amount>1</amount>
+            <stat>str</stat>
+            <gender>female</gender>
+            <price type="LifePrice">
+              <points>10</points>
+            </price>
+            <aliases>
+              <node>strength</node>
+            </aliases>
+          </node>
+          <node type="StatRemortBonus">
+            <amount>1</amount>
+            <stat>int</stat>
+            <gender>male</gender>
+            <price type="LifePrice">
+              <points>10</points>
+            </price>
+            <aliases>
+              <node>ум</node>
+              <node>intellect</node>
+              <node>intelligence</node>
+            </aliases>
+          </node>
+          <node type="StatRemortBonus">
+            <amount>1</amount>
+            <stat>wis</stat>
+            <gender>female</gender>
+            <price type="LifePrice">
+              <points>10</points>
+            </price>
+            <aliases>
+              <node>wisdom</node>
+            </aliases>
+          </node>
+          <node type="StatRemortBonus">
+            <amount>1</amount>
+            <stat>dex</stat>
+            <gender>female</gender>
+            <price type="LifePrice">
+              <points>10</points>
+            </price>
+            <aliases>
+              <node>dexterity</node>
+            </aliases>
+          </node>
+          <node type="StatRemortBonus">
+            <amount>1</amount>
+            <stat>con</stat>
+            <gender>neutral</gender>
+            <price type="LifePrice">
+              <points>10</points>
+            </price>
+            <aliases>
+              <node>const</node>
+              <node>constitution</node>
+            </aliases>
+          </node>
+        </services>
+      </behavior>
+      <dam_type>slap</dam_type>
+      <damage>100d100+1000</damage>
+      <default_pos>stand</default_pos>
+      <description>Сморщенная горбатая старуха.  Ее лицо покрывают бородавки, из-под
+красного платка торчит седая коса до пола.  Одна нога у нее явно костяная. 
+Наемник, которому она в свое время отказалась оплатить услуги, убил ее и
+занял ее избушку.  Однако бабка заключила договор с Богами, и они нашли для
+нее работу и пристанище здесь, на полпути между жизнью и смертью.  Ее работа
+состоит в том, чтобы выдавать плату за прожитую жизнь каждому, кто решил
+родиться заново.  
+</description>
+      <detection add="imp_invis fade invis hidden sneak acute_vision"/>
+      <hit>100d100+1000</hit>
+      <level>120</level>
+      <long_descr>Баба Яга (Jaga) улыбается тебе однозубой улыбкой.
+</long_descr>
+      <mana>100d100+1000</mana>
+      <material>none</material>
+      <player_name>jaga яга баба baba</player_name>
+      <race>unique</race>
+      <sex>female</sex>
+      <short_descr>Баб|а|ы|е|у|ой|е Яг|а|и|е|у|ой|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="5">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc"/>
+      <aff del="flying"/>
+      <dam_type>none</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Тебя глючит!
+</description>
+      <hit>0d0+0</hit>
+      <imm add="poison disease drowning"/>
+      <long_descr>Глюк (gluk) притаился здесь.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <player_name>gluk глюк</player_name>
+      <race>arial</race>
+      <res add="poison negative energy disease"/>
+      <sex>either</sex>
+      <short_descr>глюк||а|у||ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <vuln add="holy drowning light silver"/>
+    </node>
+    <node name="6">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel warrior noalign"/>
+      <behavior type="BeerElementalBehavior">
+      </behavior>
+      <dam_type>pound</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <hit>0d0+0</hit>
+      <imm add="summon charm poison disease"/>
+      <long_descr>Огромный пивной элементал (elemental) переливается в пенных брызгах.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <off add="fast crush"/>
+      <player_name>beer elemental пивной элементал</player_name>
+      <race>unique</race>
+      <res add="weapon bash pierce slash wood silver iron"/>
+      <sex>male</sex>
+      <short_descr>пивн|ой|ого|ому|ого|ым|ом элементал||а|у|а|ом|е</short_descr>
+      <size>huge</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="7">
+      <ac bash="-1000" exotic="0" pierce="-1000" slash="-1000"/>
+      <act add="npc sentinel mage"/>
+      <alignment>-1000</alignment>
+      <dam_type>slap</dam_type>
+      <damage>100d100+1000</damage>
+      <default_pos>stand</default_pos>
+      <description>Лица сидящего за столом человека тебе разглядеть не удается - в круг
+света попадает лишь кончик седой бороды и вышитые рукава халата.
+</description>
+      <detection add="imp_invis fade invis hidden sneak acute_vision"/>
+      <hit>100d100+1000</hit>
+      <level>120</level>
+      <long_descr>Седой старик (oldman) склонился над Книгой Имен.
+</long_descr>
+      <mana>100d100+1000</mana>
+      <material>none</material>
+      <player_name>архивариус archivarius oldman старик</player_name>
+      <race>elf</race>
+      <sex>male</sex>
+      <short_descr>архивариус||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="8">
+      <ac bash="-1000" exotic="0" pierce="-1000" slash="-1000"/>
+      <act add="npc sentinel mage"/>
+      <alignment>-1000</alignment>
+      <dam_type>punch</dam_type>
+      <damage>100d100+1000</damage>
+      <default_pos>stand</default_pos>
+      <description>Этот сатир довольно упитан и обладает солидным пивным брюшком - не &apos;от&apos; пива,
+а &apos;для&apos; пива. Он одет в зеленый комбинезон со множеством карманов.
+</description>
+      <detection add="imp_invis fade invis hidden sneak acute_vision"/>
+      <hit>100d100+1000</hit>
+      <level>120</level>
+      <long_descr>Сатир (satyr) сидит задрав копыта на тумбу.
+</long_descr>
+      <mana>100d100+1000</mana>
+      <material>none</material>
+      <player_name>satyr сатир</player_name>
+      <race>satyr</race>
+      <sex>male</sex>
+      <short_descr>сатир||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+  </mobiles>
+  <objects>
+    <node name="1">
+      <description>Одна несчастная серебряная монета (coin).</description>
+      <gender>f</gender>
+      <material>silver</material>
+      <name>серебро монета coin silver gcash</name>
+      <short_descr>серебрян|ая|ой|ой|ую|ой|ой монет|а|ы|е|у|ой|е</short_descr>
+      <type name="money">
+        <gold>0</gold>
+        <silver>1</silver>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="10">
+      <condition>25</condition>
+      <description>Труп (corpse) %s лежит здесь.</description>
+      <gender>m</gender>
+      <material>flesh</material>
+      <name>труп corpse</name>
+      <short_descr>труп||а|у||ом|е %s</short_descr>
+      <type name="npc_corpse">
+        <v3>1</v3>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>1000</weight>
+    </node>
+    <node name="100">
+      <condition>90</condition>
+      <description>Банковский аппарат (teller machine, atm) установлен здесь.</description>
+      <extraDescr>
+        <node keyword="atm teller machine">Маленькая табличка на аппарате гласит:
+
+{YИспользуй команды &apos;BALANCE&apos; 
+                  &apos;WITHDRAW &lt;сумма gold|silver&gt;&apos;
+                  &apos;DEPOSIT &lt;сумма gold|silver&gt;&apos;
+
+
+{x                          Компания -=Обдиралов и сын=-                                       
+</node>
+      </extraDescr>
+      <gender>m</gender>
+      <material>iron</material>
+      <name>аппарат atm teller mashine</name>
+      <short_descr>банковск|ий|ого|ому|ий|им|ом аппарат||а|у||ом|е</short_descr>
+      <type name="furniture">
+        <flags>stand_on sit_on rest_on sleep_on</flags>
+        <maxPeople>3</maxPeople>
+        <maxWeight>2000</maxWeight>
+      </type>
+    </node>
+    <node name="101">
+      <behavior type="CreditCard">
+      </behavior>
+      <condition>90</condition>
+      <description>Кредитная карточка (credit card) оставлена здесь.</description>
+      <extraDescr>
+        <node keyword="credit card">На маленькой пластиковой карточке отпечатано золотыми буквами:
+
+{YИспользуй команды &apos;BALANCE&apos; 
+                  &apos;WITHDRAW &lt;сумма gold|silver&gt;&apos;
+                  &apos;DEPOSIT &lt;сумма gold|silver&gt;&apos;
+
+
+{x                        Компания -=Обдиралов и сын=-  
+</node>
+      </extraDescr>
+      <extra_flags>nopurge</extra_flags>
+      <gender>f</gender>
+      <material>plastic</material>
+      <name>кредит карточка credit card</name>
+      <short_descr>кредитн|ая|ой|ой|ую|ой|ой карточк|а|и|е|у|ой|е</short_descr>
+      <type name="furniture">
+        <maxPeople>3</maxPeople>
+        <maxWeight>20</maxWeight>
+      </type>
+      <wear_flags>take</wear_flags>
+    </node>
+    <node name="102">
+      <behavior type="QuestReward">
+      </behavior>
+      <condition>90</condition>
+      <description>Хрустальный шар (orb) с таинственным существом внутри лежит здесь.</description>
+      <extraDescr>
+        <node keyword="orb ball pager хрустальный шар">Небольшой  хрустальный  шар  с  таинственным  существом  внутри.   Существо,
+сидящее   в  шаре,  имеет невероятно большие, слегка покрытые редкой  белесой
+шерстью   ушки,  маленькие  печальные глазки и пасть, занимающую чуть  ли не
+всю его  физиономию.  Его  ушки  подрагивают  при малейшем шорохе,  а  губки
+непрестанно  шевелятся, издавая  еле  слышное неразборчивое бормотание.  Эти
+существа непрестанно пересказывают все происходящее своим собратьям, разнося
+новости  с  неимоверной  быстротой  по  всей Стране  Грез. Время от  времени
+существо   отрывается   от  своей  молитвы  и  мягким,  бархатным   голоском
+произносит полученное сообщение.
+</node>
+      </extraDescr>
+      <extra_flags>nopurge</extra_flags>
+      <gender>m</gender>
+      <material>crystal</material>
+      <name>orb crystal ball хрустальный шар</name>
+      <short_descr>хрустальн|ый|ого|ому|ый|ым|ом шар||а|у||ом|е</short_descr>
+      <type name="furniture">
+        <maxPeople>3</maxPeople>
+        <maxWeight>20</maxWeight>
+      </type>
+      <wear_flags>take</wear_flags>
+    </node>
+    <node name="103">
+      <behavior type="QuestBag">
+      </behavior>
+      <cost>15000</cost>
+      <description>Огромная Сумка (BAG) лежит здесь, излучая могущество.</description>
+      <extra_flags>glow nodrop nopurge nosac nolocate burn_proof nouncurse nosell noenchant</extra_flags>
+      <gender>f</gender>
+      <level>20</level>
+      <material>platinum</material>
+      <name>сумка bag hero big</name>
+      <short_descr>%s Сумк|а|и|е|у|ой|е %s</short_descr>
+      <type name="container">
+        <capacity>1000</capacity>
+        <flags>closeable pickproof</flags>
+        <maxWeight>1000</maxWeight>
+        <weightMult>25</weightMult>
+      </type>
+      <wear_flags>take no_sac wear_float</wear_flags>
+      <weight>25</weight>
+    </node>
+    <node name="104">
+      <description>-</description>
+      <extra_flags>deleted</extra_flags>
+      <gender>m</gender>
+      <material>-</material>
+      <name>-</name>
+      <short_descr>-</short_descr>
+      <type name="weapon">
+        <diceNumber>0</diceNumber>
+        <diceType>0</diceType>
+        <weapClass>exotic</weapClass>
+        <weapType>none</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+    </node>
+    <node name="105">
+      <condition>90</condition>
+      <extraDescr>
+        <node keyword="monument"></node>
+      </extraDescr>
+      <gender>m</gender>
+      <material>wood</material>
+      <name>monument памятник %s %s</name>
+      <short_descr>памятник||а|у||ом|е %s от %s</short_descr>
+      <type name="furniture">
+        <flags>stand_on sit_on rest_on sleep_on</flags>
+        <maxPeople>3</maxPeople>
+        <maxWeight>2000</maxWeight>
+      </type>
+    </node>
+    <node name="106">
+      <behavior type="QuestReward">
+      </behavior>
+      <description>{1{YР{Bе{Gс{Rт{Cр{Mи{Bн{Cг{x {rк{yу{gп{bо{mн{2 (restring) лежит здесь.{x</description>
+      <extra_flags>hum nopurge burn_proof</extra_flags>
+      <gender>m</gender>
+      <material>gold</material>
+      <name>restring coupon цветной рестринг купон</name>
+      <short_descr>{YР{Bе{Gс{Rт{Cр{Mи{Bн{Cг {rк{yу{gп{bо{mн{x||{cа{x|{cу{x||{cо{gм{x|{cе{x</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take hold</wear_flags>
+    </node>
+    <node name="107">
+      <description>Чьи-то подковы (horseshoe) забыты здесь.</description>
+      <extra_flags>noremove nouncurse nosell</extra_flags>
+      <gender>m</gender>
+      <material>iron</material>
+      <name>horseshoe подковы подкова</name>
+      <short_descr>железны|е|х|м|е|ми|х подко|вы|в|вам|вы|вами|вах</short_descr>
+      <type name="armor">
+        <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      </type>
+      <wear_flags>take wear_hooves</wear_flags>
+      <weight>400</weight>
+    </node>
+    <node name="108">
+      <description>Рестринг купон (coupon) лежит здесь.</description>
+      <extra_flags>hum nopurge burn_proof</extra_flags>
+      <gender>m</gender>
+      <material>gold</material>
+      <name>restring coupon colourless бесцветный рестринг купон</name>
+      <short_descr>рестринг купон||а|у||ом|е</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take hold</wear_flags>
+    </node>
+    <node name="109">
+      <behavior type="OwnerCoupon">
+      </behavior>
+      <description>Купон владельца (owner) лежит здесь.</description>
+      <extra_flags>hum nopurge nosac burn_proof</extra_flags>
+      <gender>m</gender>
+      <material>paper</material>
+      <name>owner talon купон талон coupon владельца</name>
+      <short_descr>купон||а|у||ом|е владельца</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take</wear_flags>
+    </node>
+    <node name="11">
+      <condition>25</condition>
+      <description>Труп (corpse) %s лежит здесь.</description>
+      <extra_flags>nopurge</extra_flags>
+      <gender>m</gender>
+      <material>flesh</material>
+      <name>труп corpse</name>
+      <short_descr>труп||а|у||ом|е %s</short_descr>
+      <type name="pc_corpse">
+        <v3>1</v3>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>1000</weight>
+    </node>
+    <node name="110">
+      <behavior type="HunterPitTrap">
+        <activeDescription>Тщательно замаскированная охотничья яма (pit) ждет гостей.</activeDescription>
+      </behavior>
+      <description>Яма (pit) вырыта здесь.</description>
+      <extra_flags>noident</extra_flags>
+      <gender>f</gender>
+      <material>soil</material>
+      <name>pit яма</name>
+      <short_descr>охотнич|ья|ей|ьей|ью|ей|ей ям|а|ы|е|у|ой|е</short_descr>
+      <type name="trash">
+      </type>
+    </node>
+    <node name="111">
+      <behavior type="HunterShovel">
+      </behavior>
+      <cost>50000</cost>
+      <description>{1Воткнутая в землю лопата (fold spade) {YНаемников{2 выглядит очень подозрительно.{x</description>
+      <extraDescr>
+        <node keyword="fold spade лопата складная">Удобная, крепкая лопата со складывающейся ручкой.
+</node>
+      </extraDescr>
+      <gender>f</gender>
+      <level>10</level>
+      <material>wood,steel</material>
+      <name>fold spade лопата складная</name>
+      <short_descr>складн|ая|ой|ой|ую|ой|ой лопат|а|ы|е|у|ой|е</short_descr>
+      <type name="weapon">
+        <diceNumber>3</diceNumber>
+        <diceType>3</diceType>
+        <weapClass>exotic</weapClass>
+        <weapType>slash</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="112">
+      <behavior type="HunterBeaconTrap">
+        <activeDescription>{1Замаскированный в ветвях слегка мигает маячок (marker) {YНаемников{2.{x</activeDescription>
+      </behavior>
+      <cost>5000</cost>
+      <description>Сигнальный маячок (marker) Наемников оставлен здесь.</description>
+      <extraDescr>
+        <node keyword="метка marker маячок beacon">Этими метками {YНаемники{x огораживают территорию, чтобы узнать о приближении врагов.
+</node>
+      </extraDescr>
+      <gender>m</gender>
+      <level>10</level>
+      <material>metal</material>
+      <name>метка marker маячок beacon</name>
+      <short_descr>сигнальн|ая|ую|ой|ую|ой|ой метк|а|и|е|у|ой|е</short_descr>
+      <type name="trash">
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>3</weight>
+    </node>
+    <node name="113">
+      <behavior type="HunterPitSteaks">
+      </behavior>
+      <cost>10000</cost>
+      <description>Колья с зазубринами (denticulated pegs) выглядят очень грозно, даже лежа на земле.</description>
+      <extraDescr>
+        <node keyword="denticulated pegs колья зазубренные">Если этот кол вопьется в тебя, то вытащить его можно только с куском своего мяса.
+</node>
+      </extraDescr>
+      <gender>m</gender>
+      <level>80</level>
+      <material>metal</material>
+      <name>denticulated pegs колья зазубренные</name>
+      <short_descr>зазубренн|ые|ых|ым|ые|ыми|ых коль|я|ев|ям|я|ями|ях</short_descr>
+      <type name="trash">
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>5</weight>
+    </node>
+    <node name="114">
+      <behavior type="HunterPitSteaks">
+      </behavior>
+      <cost>15000</cost>
+      <description>Мутная пленка яда блестит на кольях (poison pegs) для ловушек.</description>
+      <extraDescr>
+        <node keyword="poison pegs колья ядовитые">Каждый колышек вымазан ядом рогатой жабы. Если им оцарапаться, то мучительная смерть обеспечена.
+</node>
+      </extraDescr>
+      <gender>m</gender>
+      <level>100</level>
+      <material>wood</material>
+      <name>poison pegs колья ядовитые</name>
+      <short_descr>ядовит|ые|ых|ым|ые|ыми|ых коль|я|ев|ям|я|ями|ях</short_descr>
+      <type name="weapon">
+        <diceNumber>20</diceNumber>
+        <diceType>20</diceType>
+        <specType>poison</specType>
+        <weapClass>exotic</weapClass>
+        <weapType>pierce</weapType>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>5</weight>
+    </node>
+    <node name="115">
+      <affects>
+        <node>
+          <apply to="move">-500</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">-30</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
+      <behavior type="HunterSnareTrap">
+        <activeDescription>Двухпружинный мощный медвежий капкан (bear trap) установлен здесь.</activeDescription>
+      </behavior>
+      <cost>12000</cost>
+      <description>Двухпружинный мощный медвежий капкан (bear trap) лежит здесь.</description>
+      <extraDescr>
+        <node keyword="bear trap капкан медвежий">Систем и типов капканов довольно много. Едва ли не лучшие и, во всяком случае,
+наиболее употребительные из них - это капканы  с дужками,  подразделяющиеся на
+однопружинные для мелкого зверя и двухпружинные,  применяемые на  зверей более
+крупных. Наиболее часто встречающиеся формы дуг - полукруглая и прямоугольная.
+Большинство капканов имеет тарелочку. Наступив на нее или ткнув в  нее мордой,
+зверь приводит в действие механизм насторожки.
+</node>
+      </extraDescr>
+      <gender>m</gender>
+      <level>100</level>
+      <material>metal</material>
+      <name>bear trap капкан медвежий</name>
+      <short_descr>медвеж|ий|ьего|ьему|ий|ьим|ьем капкан||а|у||ом|е</short_descr>
+      <type name="armor">
+        <ac bash="100" exotic="100" pierce="100" slash="100"/>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="116">
+      <affects>
+        <node>
+          <apply to="hitroll">-20</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="move">-400</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
+      <behavior type="HunterSnareTrap">
+        <activeDescription>Волчий капкан (wolf trap), с усеянными шипами дужками, установлен здесь.</activeDescription>
+      </behavior>
+      <cost>10000</cost>
+      <description>Волчий капкан (wolf trap), с усеянными шипами дужками, оставлен здесь.</description>
+      <extraDescr>
+        <node keyword="wolf trap капкан волчий">Систем и типов капканов довольно много. Едва ли не лучшие и, во всяком случае,
+наиболее употребительные из них - это капканы  с дужками,  подразделяющиеся на
+однопружинные для мелкого зверя и двухпружинные,  применяемые на  зверей более
+крупных. Наиболее часто встречающиеся формы дуг - полукруглая и прямоугольная.
+Большинство капканов имеет тарелочку. Наступив на нее или ткнув в  нее мордой,
+зверь приводит в действие механизм насторожки.
+</node>
+      </extraDescr>
+      <gender>m</gender>
+      <level>80</level>
+      <material>metal</material>
+      <name>wolf trap капкан волчий</name>
+      <short_descr>волч|ий|ьего|ьему|ий|ьим|ьем капкан||а|у||ом|е</short_descr>
+      <type name="armor">
+        <ac bash="80" exotic="80" pierce="80" slash="80"/>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="117">
+      <affects>
+        <node>
+          <apply to="move">-300</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">-10</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
+      <behavior type="HunterSnareTrap">
+        <activeDescription>Заячий капкан (hare trap) лежит, присыпанный листьями.</activeDescription>
+      </behavior>
+      <cost>8000</cost>
+      <description>Заячий капкан (hare trap) лежит тут.</description>
+      <extraDescr>
+        <node keyword="hare trap капкан заячий">Систем и типов капканов довольно много. Едва ли не лучшие и, во всяком случае,
+наиболее употребительные из них - это капканы  с дужками,  подразделяющиеся на
+однопружинные для мелкого зверя и двухпружинные,  применяемые на  зверей более
+крупных. Наиболее часто встречающиеся формы дуг - полукруглая и прямоугольная.
+Большинство капканов имеет тарелочку. Наступив на нее или ткнув в  нее мордой,
+зверь приводит в действие механизм насторожки.
+</node>
+      </extraDescr>
+      <gender>m</gender>
+      <level>59</level>
+      <material>metal</material>
+      <name>hare trap капкан заячий</name>
+      <short_descr>заяч|ий|ьего|ьему|ий|ьим|ьем капкан||а|у||ом|е</short_descr>
+      <type name="armor">
+        <ac bash="50" exotic="50" pierce="50" slash="50"/>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>8</weight>
+    </node>
+    <node name="118">
+      <description>Камень (stone) лежит на земле.</description>
+      <gender>m</gender>
+      <level>1</level>
+      <material>stone</material>
+      <name>stone камень</name>
+      <short_descr>кам|ень|ня|ню|ень|нем|не</short_descr>
+      <type name="weapon">
+        <diceNumber>0</diceNumber>
+        <diceType>0</diceType>
+        <weapClass>stone</weapClass>
+        <weapType>crush</weapType>
+      </type>
+      <wear_flags>take hold</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="119">
+      <affects>
+        <node>
+          <apply to="ac">-12</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
+      <behavior type="QuestGirth">
+      </behavior>
+      <condition>90</condition>
+      <cost>100000</cost>
+      <description>Огромный пояс (girth), увешанный брелоками, лежит здесь, излучая могущество.</description>
+      <extra_flags>glow bless nopurge nolocate burn_proof nosell noenchant</extra_flags>
+      <gender>m</gender>
+      <level>21</level>
+      <material>platinum</material>
+      <name>girth hero пояс героя keyring брелок</name>
+      <short_descr>пояс||а|у||ом|е с брелоками</short_descr>
+      <type name="keyring">
+        <maxKeys>1000</maxKeys>
+      </type>
+      <wear_flags>take wear_waist no_sac</wear_flags>
+      <weight>300</weight>
+    </node>
+    <node name="12">
+      <condition>25</condition>
+      <description>Отрубленная голова (head) %s лежит здесь.</description>
+      <extra_flags>had_timer</extra_flags>
+      <gender>f</gender>
+      <material>meat</material>
+      <name>голова head</name>
+      <short_descr>голов|а|ы|е|у|ой|е %s</short_descr>
+      <type name="trash">
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>50</weight>
+    </node>
+    <node name="13">
+      <condition>25</condition>
+      <description>Вырванное сердце (heart) %s лежит здесь.</description>
+      <extra_flags>had_timer</extra_flags>
+      <gender>n</gender>
+      <material>meat</material>
+      <name>сердце heart</name>
+      <short_descr>сердц|е|а|у|е|ем|е %s</short_descr>
+      <type name="food">
+        <foodHours>16</foodHours>
+        <fullHours>16</fullHours>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>20</weight>
+    </node>
+    <node name="14">
+      <condition>25</condition>
+      <description>Оторванная рука (arm) %s лежит здесь.</description>
+      <extra_flags>had_timer</extra_flags>
+      <gender>f</gender>
+      <material>meat</material>
+      <name>рука arm</name>
+      <short_descr>рук|а|и|е|у|ой|е %s</short_descr>
+      <type name="food">
+        <foodHours>20</foodHours>
+        <fullHours>20</fullHours>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>50</weight>
+    </node>
+    <node name="15">
+      <condition>25</condition>
+      <description>Отрезанная нога (leg) %s лежит здесь.</description>
+      <extra_flags>had_timer</extra_flags>
+      <gender>f</gender>
+      <material>meat</material>
+      <name>нога leg</name>
+      <short_descr>ног|а|и|е|у|ой|е %s</short_descr>
+      <type name="food">
+        <foodHours>20</foodHours>
+        <fullHours>20</fullHours>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>50</weight>
+    </node>
+    <node name="16">
+      <condition>25</condition>
+      <description>Куча внутренностей (entrails) %s лежит здесь.</description>
+      <extra_flags>had_timer</extra_flags>
+      <gender>p</gender>
+      <material>meat</material>
+      <name>внутренности guts entrails</name>
+      <short_descr>внутренност|и|ей|ям|и|ями|ях %s</short_descr>
+      <type name="food">
+        <foodHours>5</foodHours>
+        <fullHours>5</fullHours>
+        <poisoned>true</poisoned>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>20</weight>
+    </node>
+    <node name="17">
+      <condition>25</condition>
+      <description>Куча мозгов (brains) %s лежит здесь.</description>
+      <extra_flags>had_timer</extra_flags>
+      <gender>p</gender>
+      <material>meat</material>
+      <name>мозги brains brain</name>
+      <short_descr>мозг|и|ов|ам|и|ами|ах %s</short_descr>
+      <type name="food">
+        <foodHours>10</foodHours>
+        <fullHours>10</fullHours>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>20</weight>
+    </node>
+    <node name="18">
+      <description>Манна (manna) упала сюда с небес.</description>
+      <gender>f</gender>
+      <material>food</material>
+      <name>манна небесная manna heavenly</name>
+      <short_descr>манн|а|ы|е|у|ой|е небесн|ая|ой|ой|ую|ой|ой</short_descr>
+      <type name="food">
+        <foodHours>8</foodHours>
+        <fullHours>8</fullHours>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="19">
+      <description>Пробка (cork) валяется тут.</description>
+      <gender>f</gender>
+      <material>cork</material>
+      <name>cork пробка</name>
+      <short_descr>пробк|а|и|е|у|ой|е</short_descr>
+      <type name="trash">
+      </type>
+      <wear_flags>take</wear_flags>
+    </node>
+    <node name="199">
+      <description>(no description)</description>
+      <extra_flags>deleted</extra_flags>
+      <gender>m</gender>
+      <material>none</material>
+      <name>no name</name>
+      <short_descr>(no short description)</short_descr>
+      <type name="trash">
+      </type>
+    </node>
+    <node name="2">
+      <description>Одна золотая монета (coin).</description>
+      <gender>f</gender>
+      <material>gold</material>
+      <name>золото монета coin gold gcash</name>
+      <short_descr>золот|ая|ой|ой|ую|ой|ой монет|а|ы|е|у|ой|е</short_descr>
+      <type name="money">
+        <gold>1</gold>
+        <silver>0</silver>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="20">
+      <description>Вкусный магический гриб (mushroom) здесь.</description>
+      <gender>m</gender>
+      <material>food</material>
+      <name>гриб mushroom</name>
+      <short_descr>магическ|ий|ого|ому|ий|им|ом гриб||а|у||ом|е</short_descr>
+      <type name="food">
+        <foodHours>8</foodHours>
+        <fullHours>8</fullHours>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="21">
+      <description>Светящийся шар (ball) мерцает в воздухе.</description>
+      <extra_flags>glow</extra_flags>
+      <gender>m</gender>
+      <material>energy</material>
+      <name>шар ball light</name>
+      <short_descr>светящ|ийся|егося|емуся|ийся|имся|емся шар||а|у||ом|е</short_descr>
+      <type name="light">
+        <v2>-1</v2>
+      </type>
+      <wear_flags>take</wear_flags>
+    </node>
+    <node name="22">
+      <description>Магический родник (spring) пробивается сквозь землю здесь.</description>
+      <extra_flags>water_stand</extra_flags>
+      <gender>m</gender>
+      <material>water</material>
+      <name>родник spring</name>
+      <short_descr>магическ|ий|ого|ому|ий|им|ом родник||а|у||ом|е</short_descr>
+      <type name="fountain">
+        <left>100000</left>
+        <liquid>water</liquid>
+        <total>100000</total>
+      </type>
+    </node>
+    <node name="23">
+      <description>Черный летающий диск (disc) медленно вращается в воздухе.</description>
+      <extra_flags>noremove rot_death melt_drop burn_proof nouncurse</extra_flags>
+      <gender>m</gender>
+      <material>energy</material>
+      <name>диск disc disk floating black</name>
+      <short_descr>летающ|ий|его|ему|ий|им|ем диск||а|у||ом|е</short_descr>
+      <type name="container">
+        <capacity>0</capacity>
+        <flags>put_on</flags>
+        <weightMult>0</weightMult>
+      </type>
+      <wear_flags>take wear_float</wear_flags>
+    </node>
+    <node name="24">
+      <description>Священный родник (spring) пробивается сквозь землю здесь.</description>
+      <extra_flags>water_stand bless</extra_flags>
+      <gender>m</gender>
+      <material>water</material>
+      <name>родник spring</name>
+      <short_descr>священн|ый|ого|ому|ый|ым|ом родник||а|у||ом|е</short_descr>
+      <type name="fountain">
+        <left>100000</left>
+        <liquid>water</liquid>
+        <total>100000</total>
+      </type>
+    </node>
+    <node name="25">
+      <description>Мерцающий магический портал (portal) здесь, ведущий в неизвестность.</description>
+      <extra_flags>magic nopurge nolocate</extra_flags>
+      <gender>m</gender>
+      <material>shadow</material>
+      <name>врата портал gate portal</name>
+      <short_descr>магическ|ий|ого|ому|ий|им|ом портал||а|у||ом|е</short_descr>
+      <type name="portal">
+        <charges>0</charges>
+      </type>
+    </node>
+    <node name="26">
+      <affects>
+        <node>
+          <apply to="cha">1</apply>
+        </node>
+        <node>
+          <apply to="hit">35</apply>
+        </node>
+      </affects>
+      <behavior type="BattleragerPoncho">
+      </behavior>
+      <description>Пончо (poncho) из кожи %s лежит здесь.</description>
+      <extra_flags>had_timer</extra_flags>
+      <gender>n</gender>
+      <material>flesh</material>
+      <name>пончо poncho</name>
+      <short_descr>пончо из кожи %s</short_descr>
+      <type name="armor">
+        <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      </type>
+      <wear_flags>take wear_about</wear_flags>
+      <weight>60</weight>
+    </node>
+    <node name="27">
+      <description>Бифштекс (steak) из %s.</description>
+      <gender>m</gender>
+      <material>meat</material>
+      <name>бифштекс steak</name>
+      <short_descr>бифштекс||а|у||ом|е из %s</short_descr>
+      <type name="food">
+        <foodHours>25</foodHours>
+        <fullHours>25</fullHours>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>20</weight>
+    </node>
+    <node name="28">
+      <behavior type="RangerStaff">
+      </behavior>
+      <description>Посох (staff) рейнджера лежит на земле.</description>
+      <extra_flags>glow</extra_flags>
+      <gender>m</gender>
+      <material>ebony</material>
+      <name>посох ranger staff</name>
+      <short_descr>посох||а|у||ом|е рейнджера</short_descr>
+      <type name="weapon">
+        <diceNumber>0</diceNumber>
+        <diceType>0</diceType>
+        <weapClass>spear</weapClass>
+        <weapType>pierce</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>160</weight>
+    </node>
+    <node name="29">
+      <behavior type="ShadowBlade">
+      </behavior>
+      <cost>50000</cost>
+      <description>Тени (shadow) на земле приобрели форму клинка.</description>
+      <extra_flags>dark evil anti_good anti_neutral nosell noenchant</extra_flags>
+      <gender>m</gender>
+      <material>ether</material>
+      <name>shadow blade призрачный клинок</name>
+      <short_descr>призрачн|ый|ого|ому|ый|ым|ом клин|ок|ка|ку|ок|ком|ке</short_descr>
+      <type name="weapon">
+        <diceNumber>11</diceNumber>
+        <diceType>0</diceType>
+        <specType>sharp</specType>
+        <weapClass>sword</weapClass>
+        <weapType>slash</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+    </node>
+    <node name="3">
+      <description>Куча золотых монет (coins).</description>
+      <gender>m</gender>
+      <material>gold</material>
+      <name>золото монет coins gold gcash</name>
+      <short_descr>%d золотых монет</short_descr>
+      <type name="money">
+        <gold>0</gold>
+        <silver>0</silver>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="30">
+      <description>Пустышка валяется здесь</description>
+      <gender>f</gender>
+      <name>dummy object пустышка</name>
+      <short_descr>пустышк|а|и|е|у|ой|е</short_descr>
+      <type name="">
+      </type>
+    </node>
+    <node name="31">
+      <behavior type="SpellBook">
+      </behavior>
+      <description>Книга (spellbook), с записанными в ней заклинаниями, лежит здесь.</description>
+      <gender>f</gender>
+      <material>paper</material>
+      <name>книга заклинаний book spellbook</name>
+      <short_descr>книг|а|и|е|у|ой|е заклинаний</short_descr>
+      <type name="spellbook">
+        <quality>0</quality>
+        <total>0</total>
+        <used>0</used>
+      </type>
+      <wear_flags>take</wear_flags>
+    </node>
+    <node name="32">
+      <description>Свиток (scroll), с записанной на нем магической формулой, лежит здесь.</description>
+      <gender>m</gender>
+      <material>paper</material>
+      <name>свиток формула магическая scroll formula magic</name>
+      <short_descr>свит|ок|ка|ку|ок|ком|ке с магической формулой</short_descr>
+      <type name="">
+      </type>
+      <wear_flags>take</wear_flags>
+    </node>
+    <node name="33">
+      <cost>10000</cost>
+      <description>Щит (lion shield), формой повторяющий голову льва, лежит здесь.</description>
+      <extra_flags>bless nosac had_timer burn_proof nouncurse</extra_flags>
+      <gender>m</gender>
+      <material>steel</material>
+      <name>lion shield львиный щит льва</name>
+      <short_descr>щит||а|у||ом|е льва</short_descr>
+      <type name="armor">
+        <ac bash="8" exotic="3" pierce="8" slash="8"/>
+      </type>
+      <wear_flags>take wear_shield</wear_flags>
+      <weight>80</weight>
+    </node>
+    <node name="34">
+      <description>Священный портал (portal) здесь, ведущий в неизвестность.</description>
+      <extra_flags>bless nopurge nolocate</extra_flags>
+      <gender>m</gender>
+      <material>shadow</material>
+      <name>врата портал gate portal</name>
+      <short_descr>священн|ый|ого|ому|ый|ым|ом портал||а|у||ом|е</short_descr>
+      <type name="portal">
+        <charges>0</charges>
+      </type>
+    </node>
+    <node name="35">
+      <description>Кусок плохо пропеченного хлеба (bread) покрытый зеленью лежит здесь.</description>
+      <gender>m</gender>
+      <material>food</material>
+      <name>piece bread кусок хлеба</name>
+      <short_descr>кус|ок|ка|ку|ок|ком|ке заплесневелого хлеба</short_descr>
+      <type name="food">
+        <foodHours>12</foodHours>
+        <fullHours>12</fullHours>
+      </type>
+      <wear_flags>take</wear_flags>
+    </node>
+    <node name="36">
+      <description>Ключ (spring) чистой родниковой воды пробивается сквозь землю.</description>
+      <extra_flags>water_stand</extra_flags>
+      <gender>m</gender>
+      <material>water</material>
+      <name>родник spring ключ</name>
+      <short_descr>ключ||а|у||ом|е</short_descr>
+      <type name="fountain">
+        <left>100000</left>
+        <liquid>water</liquid>
+        <total>100000</total>
+      </type>
+    </node>
+    <node name="37">
+      <behavior type="DruidStaff">
+      </behavior>
+      <description>Посох (staff) друида лежит на земле.</description>
+      <extraDescr>
+        <node keyword="посох друида druid staff">Этот посох высечен из цельного куска дерева и имеет длину около полутора метров.
+Его поверхность покрыта охранными рунами и узорами.
+</node>
+      </extraDescr>
+      <gender>m</gender>
+      <material>ebony</material>
+      <name>посох друида druid staff</name>
+      <short_descr>посох||а|у||ом|е друида</short_descr>
+      <type name="weapon">
+        <diceNumber>0</diceNumber>
+        <diceType>0</diceType>
+        <weapClass>spear</weapClass>
+        <weapType>pound</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>160</weight>
+    </node>
+    <node name="4">
+      <description>Куча серебряных монет (coins).</description>
+      <gender>m</gender>
+      <material>silver</material>
+      <name>серебро монет coins silver gcash</name>
+      <short_descr>%d серебряных монет</short_descr>
+      <type name="money">
+        <gold>0</gold>
+        <silver>0</silver>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="42">
+      <cost>10</cost>
+      <description>Пузырек (vial) из-под зелья оставлен здесь.</description>
+      <extraDescr>
+        <node keyword="vial пузырек">Это стеклянный пузырек для магических снадобий.
+</node>
+      </extraDescr>
+      <gender>m</gender>
+      <material>glass</material>
+      <name>vial potion пузырек</name>
+      <short_descr>пузырек||а|у||ом|е из-под зелья</short_descr>
+      <type name="drink">
+        <liquid>water</liquid>
+        <total>5</total>
+      </type>
+      <wear_flags>take hold</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="43">
+      <description>Небольшой сосуд с серебряным снадобьем (potion) оставлен здесь.</description>
+      <gender>n</gender>
+      <material>glass</material>
+      <name>снадобье potion silver</name>
+      <short_descr>серебрян|ое|ого|ому|ое|им|ом снадобь|е|я|ю|е|ем|е</short_descr>
+      <type name="potion">
+        <level>1</level>
+        <spell0>detect invis</spell0>
+      </type>
+      <wear_flags>take hold</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="44">
+      <description>Небольшой сосуд с золотым снадобьем (potion) оставлен здесь.</description>
+      <gender>n</gender>
+      <material>glass</material>
+      <name>снадобье potion golden</name>
+      <short_descr>золот|ое|ого|ому|ое|им|ом снадобь|е|я|ю|е|ем|е</short_descr>
+      <type name="potion">
+        <level>1</level>
+        <spell0>frenzy</spell0>
+      </type>
+      <wear_flags>take hold</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="45">
+      <description>Небольшой сосуд с бурлящим снадобьем (potion) оставлен здесь.</description>
+      <gender>n</gender>
+      <material>glass</material>
+      <name>снадобье potion swirling</name>
+      <short_descr>бурлящ|ее|его|ему|ее|им|ем снадобь|е|я|ю|е|ем|е</short_descr>
+      <type name="potion">
+        <level>1</level>
+        <spell0>bless</spell0>
+      </type>
+      <wear_flags>take hold</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="5">
+      <description>Куча монет (coins).</description>
+      <gender>m</gender>
+      <material>gold</material>
+      <name>монет серебро золоко coins silver gold gcash</name>
+      <short_descr>%d серебряных и %d золотых монет</short_descr>
+      <type name="money">
+        <gold>0</gold>
+        <silver>0</silver>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="50">
+      <behavior type="ReligionTattoo">
+      </behavior>
+      <description>Божественная сила татуировки (tattoo) кружится в воздухе.</description>
+      <extra_flags>glow nolocate melt_drop burn_proof</extra_flags>
+      <gender>f</gender>
+      <material>energy</material>
+      <name>татуировка tattoo %s</name>
+      <short_descr>татуировк|а|и|е|у|ой|е с изображением %s</short_descr>
+      <type name="tattoo">
+        <v2>-1</v2>
+      </type>
+      <wear_flags>take wear_tattoo</wear_flags>
+    </node>
+    <node name="51">
+      <behavior type="ReligionTattoo">
+      </behavior>
+      <description>Божественная сила татуировки (tattoo) кружится в воздухе.</description>
+      <extra_flags>glow nolocate melt_drop burn_proof</extra_flags>
+      <gender>f</gender>
+      <material>energy</material>
+      <name>татуировка tattoo atum-ra</name>
+      <short_descr>татуировк|а|и|е|у|ой|е с изображением Atum-Ra</short_descr>
+      <type name="tattoo">
+        <v2>-1</v2>
+      </type>
+      <wear_flags>take wear_tattoo</wear_flags>
+    </node>
+    <node name="52">
+      <behavior type="ReligionTattoo">
+      </behavior>
+      <description>Божественная сила татуировки (tattoo) кружится в воздухе.</description>
+      <extra_flags>glow nolocate melt_drop burn_proof</extra_flags>
+      <gender>f</gender>
+      <material>energy</material>
+      <name>татуировка tattoo zeus</name>
+      <short_descr>татуировк|а|и|е|у|ой|е с изображением Zeus</short_descr>
+      <type name="tattoo">
+        <v2>-1</v2>
+      </type>
+      <wear_flags>take wear_tattoo</wear_flags>
+    </node>
+    <node name="53">
+      <behavior type="ReligionTattoo">
+      </behavior>
+      <description>Божественная сила татуировки (tattoo) кружится в воздухе.</description>
+      <extra_flags>glow nolocate melt_drop burn_proof</extra_flags>
+      <gender>f</gender>
+      <material>energy</material>
+      <name>татуировка tattoo siebele</name>
+      <short_descr>татуировк|а|и|е|у|ой|е с изображением Siebele</short_descr>
+      <type name="tattoo">
+        <v2>-1</v2>
+      </type>
+      <wear_flags>take wear_tattoo</wear_flags>
+    </node>
+    <node name="54">
+      <behavior type="ReligionTattoo">
+      </behavior>
+      <description>Божественная сила татуировки (tattoo) кружится в воздухе.</description>
+      <extra_flags>glow nolocate melt_drop burn_proof</extra_flags>
+      <gender>f</gender>
+      <material>energy</material>
+      <name>татуировка tattoo shamash</name>
+      <short_descr>татуировк|а|и|е|у|ой|е с изображением Shamash</short_descr>
+      <type name="tattoo">
+        <v2>-1</v2>
+      </type>
+      <wear_flags>take wear_tattoo</wear_flags>
+    </node>
+    <node name="55">
+      <behavior type="ReligionTattoo">
+      </behavior>
+      <description>Божественная сила татуировки (tattoo) кружится в воздухе.</description>
+      <extra_flags>glow nolocate melt_drop burn_proof</extra_flags>
+      <gender>f</gender>
+      <material>energy</material>
+      <name>татуировка tattoo ahura mazda</name>
+      <short_descr>татуировк|а|и|е|у|ой|е с изображением Ahuramazda</short_descr>
+      <type name="tattoo">
+        <v2>-1</v2>
+      </type>
+      <wear_flags>take wear_tattoo</wear_flags>
+    </node>
+    <node name="56">
+      <behavior type="ReligionTattoo">
+      </behavior>
+      <description>Божественная сила татуировки (tattoo) кружится в воздухе.</description>
+      <extra_flags>glow nolocate melt_drop burn_proof</extra_flags>
+      <gender>f</gender>
+      <material>energy</material>
+      <name>татуировка tattoo ehrumen</name>
+      <short_descr>татуировк|а|и|е|у|ой|е с изображением Ehrumen</short_descr>
+      <type name="tattoo">
+        <v2>-1</v2>
+      </type>
+      <wear_flags>take wear_tattoo</wear_flags>
+    </node>
+    <node name="57">
+      <behavior type="ReligionTattoo">
+      </behavior>
+      <description>Божественная сила татуировки (tattoo) кружится в воздухе.</description>
+      <extra_flags>glow nolocate melt_drop burn_proof</extra_flags>
+      <gender>f</gender>
+      <material>energy</material>
+      <name>татуировка tattoo deimos</name>
+      <short_descr>татуировк|а|и|е|у|ой|е с изображением Deimos</short_descr>
+      <type name="tattoo">
+        <v2>-1</v2>
+      </type>
+      <wear_flags>take wear_tattoo</wear_flags>
+    </node>
+    <node name="58">
+      <behavior type="ReligionTattoo">
+      </behavior>
+      <description>Божественная сила татуировки (tattoo) кружится в воздухе.</description>
+      <extra_flags>glow nolocate melt_drop burn_proof</extra_flags>
+      <gender>f</gender>
+      <material>energy</material>
+      <name>татуировка tattoo phobos</name>
+      <short_descr>татуировк|а|и|е|у|ой|е с изображением Phobos</short_descr>
+      <type name="tattoo">
+        <v2>-1</v2>
+      </type>
+      <wear_flags>take wear_tattoo</wear_flags>
+    </node>
+    <node name="59">
+      <behavior type="ReligionTattoo">
+      </behavior>
+      <description>Божественная сила татуировки (tattoo) кружится в воздухе.</description>
+      <extra_flags>glow nolocate melt_drop burn_proof</extra_flags>
+      <gender>f</gender>
+      <material>energy</material>
+      <name>татуировка tattoo odin</name>
+      <short_descr>татуировк|а|и|е|у|ой|е с изображением Odin</short_descr>
+      <type name="tattoo">
+        <v2>-1</v2>
+      </type>
+      <wear_flags>take wear_tattoo</wear_flags>
+    </node>
+    <node name="6">
+      <cost>10</cost>
+      <description>{1%s стрела {2(arrow) лежит на земле.</description>
+      <gender>f</gender>
+      <level>1</level>
+      <material>wood</material>
+      <name>%s arrow стрела</name>
+      <short_descr>%s стрел|а{x|ы{x|е{x|у{x|ой{x|е{x</short_descr>
+      <type name="weapon">
+        <diceNumber>1</diceNumber>
+        <diceType>1</diceType>
+        <weapClass>arrow</weapClass>
+        <weapType>pierce</weapType>
+      </type>
+      <wear_flags>take hold</wear_flags>
+      <weight>5</weight>
+    </node>
+    <node name="60">
+      <behavior type="ReligionTattoo">
+      </behavior>
+      <description>Божественная сила татуировки (tattoo) кружится в воздухе.</description>
+      <extra_flags>glow nolocate melt_drop burn_proof</extra_flags>
+      <gender>f</gender>
+      <material>energy</material>
+      <name>татуировка tattoo teshub</name>
+      <short_descr>татуировк|а|и|е|у|ой|е с изображением Teshub</short_descr>
+      <type name="tattoo">
+        <v2>-1</v2>
+      </type>
+      <wear_flags>take wear_tattoo</wear_flags>
+    </node>
+    <node name="61">
+      <behavior type="ReligionTattoo">
+      </behavior>
+      <description>Божественная сила татуировки (tattoo) кружится в воздухе.</description>
+      <extra_flags>glow nolocate melt_drop burn_proof</extra_flags>
+      <gender>f</gender>
+      <material>energy</material>
+      <name>татуировка tattoo ares</name>
+      <short_descr>татуировк|а|и|е|у|ой|е с изображением Ares</short_descr>
+      <type name="tattoo">
+        <v2>-1</v2>
+      </type>
+      <wear_flags>take wear_tattoo</wear_flags>
+    </node>
+    <node name="62">
+      <behavior type="ReligionTattoo">
+      </behavior>
+      <description>Божественная сила татуировки (tattoo) кружится в воздухе.</description>
+      <extra_flags>glow nolocate melt_drop burn_proof</extra_flags>
+      <gender>f</gender>
+      <material>energy</material>
+      <name>татуировка tattoo goktengri</name>
+      <short_descr>татуировк|а|и|е|у|ой|е с изображением Goktengri</short_descr>
+      <type name="tattoo">
+        <v2>-1</v2>
+      </type>
+      <wear_flags>take wear_tattoo</wear_flags>
+    </node>
+    <node name="63">
+      <behavior type="ReligionTattoo">
+      </behavior>
+      <description>Божественная сила татуировки (tattoo) кружится в воздухе.</description>
+      <extra_flags>glow nolocate melt_drop burn_proof</extra_flags>
+      <gender>f</gender>
+      <material>energy</material>
+      <name>татуировка tattoo hera</name>
+      <short_descr>татуировк|а|и|е|у|ой|е с изображением Hera</short_descr>
+      <type name="tattoo">
+        <v2>-1</v2>
+      </type>
+      <wear_flags>take wear_tattoo</wear_flags>
+    </node>
+    <node name="64">
+      <behavior type="ReligionTattoo">
+      </behavior>
+      <description>Божественная сила татуировки (tattoo) кружится в воздухе.</description>
+      <extra_flags>glow nolocate melt_drop burn_proof</extra_flags>
+      <gender>f</gender>
+      <material>energy</material>
+      <name>татуировка tattoo venus</name>
+      <short_descr>татуировк|а|и|е|у|ой|е с изображением Venus</short_descr>
+      <type name="tattoo">
+        <v2>-1</v2>
+      </type>
+      <wear_flags>take wear_tattoo</wear_flags>
+    </node>
+    <node name="65">
+      <behavior type="ReligionTattoo">
+      </behavior>
+      <description>Божественная сила татуировки (tattoo) кружится в воздухе.</description>
+      <extra_flags>glow nolocate melt_drop burn_proof</extra_flags>
+      <gender>f</gender>
+      <material>energy</material>
+      <name>татуировка tattoo seth</name>
+      <short_descr>татуировк|а|и|е|у|ой|е с изображением Seth</short_descr>
+      <type name="tattoo">
+        <v2>-1</v2>
+      </type>
+      <wear_flags>take wear_tattoo</wear_flags>
+    </node>
+    <node name="66">
+      <behavior type="ReligionTattoo">
+      </behavior>
+      <description>Божественная сила татуировки (tattoo) кружится в воздухе.</description>
+      <extra_flags>glow nolocate melt_drop burn_proof</extra_flags>
+      <gender>f</gender>
+      <material>energy</material>
+      <name>татуировка tattoo enki</name>
+      <short_descr>татуировк|а|и|е|у|ой|е с изображением Enki</short_descr>
+      <type name="tattoo">
+        <v2>-1</v2>
+      </type>
+      <wear_flags>take wear_tattoo</wear_flags>
+    </node>
+    <node name="67">
+      <behavior type="ReligionTattoo">
+      </behavior>
+      <description>Божественная сила татуировки (tattoo) кружится в воздухе.</description>
+      <extra_flags>glow nolocate melt_drop burn_proof</extra_flags>
+      <gender>f</gender>
+      <material>energy</material>
+      <name>татуировка tattoo eros</name>
+      <short_descr>татуировк|а|и|е|у|ой|е с изображением Eros</short_descr>
+      <type name="tattoo">
+        <v2>-1</v2>
+      </type>
+      <wear_flags>take wear_tattoo</wear_flags>
+    </node>
+    <node name="68">
+      <description>Божественная сила татуировки (tattoo) парит в воздухе.</description>
+      <extra_flags>nolocate melt_drop burn_proof</extra_flags>
+      <gender>f</gender>
+      <material>energy</material>
+      <name>татуировка джа tattoo jah</name>
+      <short_descr>{gЛадон|ь|и|и|ь|ью|и Джа{x</short_descr>
+      <type name="tattoo">
+      </type>
+      <wear_flags>take wear_tattoo</wear_flags>
+    </node>
+    <node name="69">
+      <description>Божественная сила татуировки (tattoo) парит в воздухе.</description>
+      <extra_flags>nolocate melt_drop burn_proof</extra_flags>
+      <gender>f</gender>
+      <material>energy</material>
+      <name>tattoo татуировка hoofed goddess</name>
+      <short_descr>татуировк|а|и|е|у|ой|е с изображением копытной богини</short_descr>
+      <type name="tattoo">
+      </type>
+      <wear_flags>take wear_tattoo</wear_flags>
+    </node>
+    <node name="7">
+      <cost>10</cost>
+      <description>Деревянный лук (bow) лежит здесь.</description>
+      <gender>m</gender>
+      <level>1</level>
+      <material>wood</material>
+      <name>wooden bow лук</name>
+      <short_descr>деревянн|ый|ого|ому|ый|ым|ом лук||а|у||ом|е</short_descr>
+      <type name="weapon">
+        <diceNumber>1</diceNumber>
+        <diceType>1</diceType>
+        <weapClass>bow</weapClass>
+        <weapType>blast</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>5</weight>
+    </node>
+    <node name="70">
+      <affects>
+        <node>
+          <bits table="detect_flags">imp_invis invis hidden</bits>
+        </node>
+      </affects>
+      <description>Серебряный символ (badge) забыт здесь.</description>
+      <extra_flags>noremove nopurge rot_death nolocate sell_extract nouncurse</extra_flags>
+      <gender>m</gender>
+      <level>50</level>
+      <material>silver</material>
+      <name>символ badge</name>
+      <short_descr>серебрян|ый|ого|ому|ый|ым|ом символ||а|у||ом|е Хранителя Закона</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take wear_neck</wear_flags>
+      <weight>4</weight>
+    </node>
+    <node name="71">
+      <cost>10000</cost>
+      <description>Малый щит (shield) правителя забыт здесь.</description>
+      <extra_flags>bless nosac had_timer burn_proof nouncurse</extra_flags>
+      <gender>m</gender>
+      <material>steel</material>
+      <name>щит buckler ruler shield</name>
+      <short_descr>мал|ый|ого|ому|ый|ым|ом щит||а|у||ом|е правителя</short_descr>
+      <type name="armor">
+        <ac bash="8" exotic="3" pierce="8" slash="8"/>
+      </type>
+      <wear_flags>take wear_shield</wear_flags>
+      <weight>200</weight>
+    </node>
+    <node name="72">
+      <cost>15000</cost>
+      <description>Большой щит (shield) правителя забыт здесь.</description>
+      <extra_flags>bless nosac had_timer burn_proof nouncurse</extra_flags>
+      <gender>m</gender>
+      <material>steel</material>
+      <name>щит great ruler shield</name>
+      <short_descr>больш|ой|ого|ому|ой|им|ом щит||а|у||ом|е правителя</short_descr>
+      <type name="armor">
+        <ac bash="20" exotic="10" pierce="20" slash="20"/>
+      </type>
+      <wear_flags>take wear_shield</wear_flags>
+      <weight>300</weight>
+    </node>
+    <node name="73">
+      <affects>
+        <node>
+          <apply to="damroll">4</apply>
+        </node>
+        <node>
+          <apply to="hitroll">3</apply>
+        </node>
+        <node>
+          <apply to="ac">-10</apply>
+        </node>
+      </affects>
+      <cost>20000</cost>
+      <description>Усиленный щит (shield) правителя забыт здесь.</description>
+      <extra_flags>bless nosac had_timer burn_proof nouncurse</extra_flags>
+      <gender>m</gender>
+      <material>steel</material>
+      <name>kite ruler shield усиленный щит правителя</name>
+      <short_descr>усиленн|ый|ого|ому|ый|ым|ом щит||а|у||ом|е правителя</short_descr>
+      <type name="armor">
+        <ac bash="20" exotic="10" pierce="20" slash="20"/>
+      </type>
+      <wear_flags>take wear_shield</wear_flags>
+      <weight>310</weight>
+    </node>
+    <node name="74">
+      <cost>20000</cost>
+      <description>Осадный щит (shield) правителя забыт здесь.</description>
+      <extra_flags>bless nosac had_timer burn_proof nouncurse</extra_flags>
+      <gender>m</gender>
+      <material>steel</material>
+      <name>tower ruler shield осадный щит правителя</name>
+      <short_descr>осадн|ый|ого|ому|ый|ым|ом щит||а|у||ом|е правителя</short_descr>
+      <type name="armor">
+        <ac bash="30" exotic="20" pierce="30" slash="30"/>
+      </type>
+      <wear_flags>take wear_shield</wear_flags>
+      <weight>240</weight>
+    </node>
+    <node name="75">
+      <description>{wЛужа (pool) {1%s{2 разлита здесь.{x</description>
+      <gender>f</gender>
+      <material>none</material>
+      <name>pool лужа</name>
+      <short_descr>луж|а|и|е|у|ей|е %s</short_descr>
+      <type name="furniture">
+        <flags>sit_in rest_in sleep_in</flags>
+        <maxPeople>0</maxPeople>
+        <maxWeight>0</maxWeight>
+      </type>
+    </node>
+    <node name="8">
+      <description>{x</description>
+      <extraDescr>
+        <node keyword="wall стена">Стена покрыта толстым слоем копоти, сквозь которую проступают глубокие
+царапины. Штукатурка местами отвалилась, однако, если приглядеться, все еще
+можно различить контуры скалистого берега, нескольких птиц и сооружение,
+напоминающее маяк. Рисунок сделан быстрой уверенной рукой профессионала.
+Несмотря на плачевное состояние изображения, от него веет силой.
+</node>
+      </extraDescr>
+      <extra_flags>nolocate nofind noident</extra_flags>
+      <gender>f</gender>
+      <material>stone</material>
+      <name>wall стена</name>
+      <short_descr>стен|а|ы|е|у|ой|е</short_descr>
+      <type name="furniture">
+        <heal>0</heal>
+        <mana>0</mana>
+        <maxPeople>0</maxPeople>
+        <maxWeight>0</maxWeight>
+      </type>
+    </node>
+    <node name="80">
+      <behavior type="KnightWeapon">
+      </behavior>
+      <description>{1{YЗолотой кинжал (dagger){2 оставлен здесь.</description>
+      <extra_flags>glow bless rot_death nolocate had_timer sell_extract</extra_flags>
+      <gender>m</gender>
+      <level>20</level>
+      <material>gold</material>
+      <name>golden dagger кинжал золотой</name>
+      <short_descr>{Yзолот|ой|ого|ому|ой|ым|ом кинжал|{x|а{x|у{x|{x|ом{x|е{x</short_descr>
+      <type name="weapon">
+        <diceNumber>11</diceNumber>
+        <diceType>1</diceType>
+        <specType>sharp</specType>
+        <weapClass>dagger</weapClass>
+        <weapType>none</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>80</weight>
+    </node>
+    <node name="81">
+      <behavior type="KnightWeapon">
+      </behavior>
+      <description>{1{YЗолотая булава (mace){2 оставлена здесь.</description>
+      <extra_flags>glow bless rot_death nolocate had_timer sell_extract</extra_flags>
+      <gender>f</gender>
+      <level>20</level>
+      <material>gold</material>
+      <name>golden mace булава золотая</name>
+      <short_descr>{Yзолот|ая|ой|ой|ую|ой|ой булав|а{x|ы{x|е{x|у{x|ой{x|е{х</short_descr>
+      <type name="weapon">
+        <diceNumber>11</diceNumber>
+        <diceType>1</diceType>
+        <weapClass>mace</weapClass>
+        <weapType>none</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>200</weight>
+    </node>
+    <node name="82">
+      <affects>
+        <node>
+          <apply to="cha">2</apply>
+        </node>
+        <node>
+          <apply to="damroll">5</apply>
+        </node>
+        <node>
+          <apply to="hitroll">5</apply>
+        </node>
+      </affects>
+      <cost>10000</cost>
+      <description>{1{Yзолотая кираса (Dragonplate){2 лежит здесь.</description>
+      <extra_flags>bless had_timer burn_proof</extra_flags>
+      <gender>f</gender>
+      <material>gold</material>
+      <name>кираса golden dragonplate plate</name>
+      <short_descr>{Yзолот|ая|ой|ой|ую|ой|ой кирас|а{x|ы{x|е{x|у{x|ой{x|е{x</short_descr>
+      <type name="armor">
+        <ac bash="30" exotic="30" pierce="30" slash="30"/>
+      </type>
+      <wear_flags>take wear_body</wear_flags>
+      <weight>250</weight>
+    </node>
+    <node name="83">
+      <behavior type="KnightWeapon">
+      </behavior>
+      <description>{1{YЗолотой меч (sword){2 оставлен здесь.</description>
+      <extra_flags>glow bless rot_death nolocate had_timer sell_extract</extra_flags>
+      <gender>m</gender>
+      <level>20</level>
+      <material>gold</material>
+      <name>golden sword меч золотой</name>
+      <short_descr>{Yзолот|ой|ого|ому|ой|ым|ом меч|{x|а{x|у{x|{x|ом{x|е{x</short_descr>
+      <type name="weapon">
+        <diceNumber>11</diceNumber>
+        <diceType>1</diceType>
+        <specType>sharp</specType>
+        <weapClass>sword</weapClass>
+        <weapType>none</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>80</weight>
+    </node>
+    <node name="87">
+      <affects>
+        <node>
+          <apply to="cha">2</apply>
+        </node>
+      </affects>
+      <behavior type="ChaosBlade">
+      </behavior>
+      <description>{1{MКлинок (blade) Хаоса{2 оставлен здесь.</description>
+      <extra_flags>glow bless rot_death nolocate had_timer sell_extract</extra_flags>
+      <gender>m</gender>
+      <level>20</level>
+      <material>gold</material>
+      <name>клинок chaos blade</name>
+      <short_descr>{Mклин|ок|ка|ку|ок|ком|ке Хаоса{x</short_descr>
+      <type name="weapon">
+        <diceNumber>8</diceNumber>
+        <diceType>1</diceType>
+        <specType>sharp</specType>
+        <weapClass>dagger</weapClass>
+        <weapType>pierce</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>100</weight>
+    </node>
+    <node name="89">
+      <description>Мистический зеленый камень (stone) парит в воздухе.</description>
+      <extra_flags>glow nolocate melt_drop had_timer burn_proof</extra_flags>
+      <gender>m</gender>
+      <material>stone</material>
+      <name>камень kassandra stone кассандра</name>
+      <short_descr>кассандр|а|ы|е|у|ой|е</short_descr>
+      <type name="treasure">
+        <v2>-1</v2>
+      </type>
+      <wear_flags>take hold</wear_flags>
+    </node>
+    <node name="9">
+      <description>На земле ты замечаешь свежевыкопанную могилу (grave).</description>
+      <extra_flags>nopurge nosac burn_proof noident nosavedrop</extra_flags>
+      <gender>f</gender>
+      <material>soil</material>
+      <name>grave могила</name>
+      <short_descr>могил|а|ы|е|у|ой|е</short_descr>
+      <type name="trash">
+      </type>
+    </node>
+    <node name="90">
+      <cost>100</cost>
+      <description>Белое шёлковое платье (dress) лежит здесь.</description>
+      <extraDescr>
+        <node keyword="dress платье">Это платье изготовлено портным для охранника, который после долгих
+лет лет тяжелой службы охраняет удалившегося от дел лорда.
+</node>
+      </extraDescr>
+      <gender>n</gender>
+      <level>1</level>
+      <material>silk</material>
+      <name>dress платье</name>
+      <short_descr>плать|е|я|ю|е|ем|е</short_descr>
+      <type name="armor">
+        <ac bash="1" exotic="1" pierce="1" slash="1"/>
+        <reserved0>1</reserved0>
+      </type>
+      <wear_flags>take wear_body</wear_flags>
+      <weight>90</weight>
+    </node>
+    <node name="91">
+      <condition>90</condition>
+      <cost>1000</cost>
+      <description>Маленький коврик (rug) с турецким рисунком лежит сдесь.</description>
+      <gender>m</gender>
+      <level>18</level>
+      <material>wool</material>
+      <name>коврик turkish rug</name>
+      <short_descr>коврик||а|у||ом|е с турецким рисунком</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take hold</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="92">
+      <behavior type="EnergyShield">
+      </behavior>
+      <cost>10000</cost>
+      <description>Энергетический щит (shield) оставлен здесь.</description>
+      <extraDescr>
+        <node keyword="shield щит энергетический">Энергетический щит, защищающий от %s.
+</node>
+      </extraDescr>
+      <extra_flags>rot_death melt_drop burn_proof</extra_flags>
+      <gender>m</gender>
+      <material>energy</material>
+      <name>shield щит энергетический</name>
+      <short_descr>энергетическ|ий|ого|ому|ий|им|ом щит||а|у||ом|е</short_descr>
+      <type name="armor">
+        <ac bash="20" exotic="20" pierce="20" slash="20"/>
+        <reserved0>2</reserved0>
+      </type>
+      <wear_flags>take wear_shield</wear_flags>
+      <weight>250</weight>
+    </node>
+    <node name="93">
+      <behavior type="MagicJar">
+      </behavior>
+      <condition>25</condition>
+      <description>Сосуд (jar), содержащий душу %s, лежит здесь.</description>
+      <extraDescr>
+        <node keyword="дух душа">Этот сосуд содержит душу %s.
+</node>
+      </extraDescr>
+      <extra_flags>nolocate burn_proof</extra_flags>
+      <gender>f</gender>
+      <material>glass</material>
+      <name>%s дух душа сосуд jar</name>
+      <short_descr>душ|а|и|е|у|ой|е %s</short_descr>
+      <type name="treasure">
+        <v3>1</v3>
+      </type>
+      <wear_flags>take hold</wear_flags>
+    </node>
+    <node name="94">
+      <behavior type="QuestGirth">
+      </behavior>
+      <condition>90</condition>
+      <cost>100000</cost>
+      <description>Огромный пояс (GIRTH) лежит здесь, излучая могущество.</description>
+      <extra_flags>glow bless nopurge nolocate burn_proof nosell noenchant</extra_flags>
+      <gender>m</gender>
+      <level>21</level>
+      <material>platinum</material>
+      <name>пояс girth hero</name>
+      <short_descr>%s Пояс||а|у||ом|е %s</short_descr>
+      <type name="armor">
+        <ac bash="12" exotic="9" pierce="12" slash="12"/>
+        <reserved0>2</reserved0>
+      </type>
+      <wear_flags>take wear_waist no_sac</wear_flags>
+      <weight>300</weight>
+    </node>
+    <node name="95">
+      <behavior type="QuestRing">
+      </behavior>
+      <condition>90</condition>
+      <cost>100000</cost>
+      <description>Огромное кольцо (RING) лежит здесь, излучая могущество.</description>
+      <extra_flags>glow bless nopurge nolocate burn_proof nosell noenchant</extra_flags>
+      <gender>n</gender>
+      <level>21</level>
+      <material>platinum</material>
+      <name>кольцо ring hero</name>
+      <short_descr>%s Кольц|о|а|у|о|ом|е %s</short_descr>
+      <type name="armor">
+        <ac bash="12" exotic="9" pierce="12" slash="12"/>
+        <reserved0>1</reserved0>
+      </type>
+      <wear_flags>take wear_finger no_sac</wear_flags>
+      <weight>300</weight>
+    </node>
+    <node name="96">
+      <behavior type="QuestWeapon">
+      </behavior>
+      <condition>90</condition>
+      <cost>100000</cost>
+      <description>Сверкающее оружие (WEAPON) лежит здесь, излучая могущество.</description>
+      <extra_flags>glow nodrop bless nopurge nolocate burn_proof nouncurse nosell noenchant</extra_flags>
+      <gender>n</gender>
+      <level>21</level>
+      <material>platinum</material>
+      <name>оружие weapon hero</name>
+      <short_descr>%s Оружи|е|я|ю|е|ем|и %s</short_descr>
+      <type name="weapon">
+        <diceNumber>10</diceNumber>
+        <diceType>4</diceType>
+        <specType>sharp</specType>
+        <weapClass>exotic</weapClass>
+        <weapType>slash</weapType>
+      </type>
+      <wear_flags>take wield no_sac</wear_flags>
+      <weight>100</weight>
+    </node>
+    <node name="97">
+      <behavior type="StaffBehavior">
+      </behavior>
+      <description>Квестовый предмет парит в воздухе.</description>
+      <extraDescr>
+        <node keyword="quest квест">Имя &apos;%s&apos; выгравировано на посохе.
+</node>
+      </extraDescr>
+      <extra_flags>glow nopurge nosac nolocate burn_proof</extra_flags>
+      <gender>m</gender>
+      <material>energy</material>
+      <name>quest mandrake квест мандрагоровый посох</name>
+      <short_descr>квестов|ый|ого|ому|ый|ым|ом посох||а|у||ом|е из мандрагоры</short_descr>
+      <type name="treasure">
+        <v2>-1</v2>
+      </type>
+      <wear_flags>take wear_tattoo</wear_flags>
+    </node>
+    <node name="98">
+      <behavior type="Katana">
+      </behavior>
+      <description>Меч (sword) Катана забыт здесь.</description>
+      <extraDescr>
+        <node keyword="katana катана меч">Надпись на клинке гласит : &apos;собственность %s&apos;.
+Несмотря на кажущуюся простоту, катана поражает своей красотой, 
+эффективностью и завершенностью. Это смертоносное оружие. 
+</node>
+      </extraDescr>
+      <extra_flags>nosell</extra_flags>
+      <gender>m</gender>
+      <level>15</level>
+      <material>iron</material>
+      <name>катана меч sword katana</name>
+      <short_descr>Катан|а|ы|е|у|ой|е</short_descr>
+      <type name="weapon">
+        <diceNumber>10</diceNumber>
+        <diceType>1</diceType>
+        <specType>sharp</specType>
+        <weapClass>sword</weapClass>
+        <weapType>slash</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>60</weight>
+    </node>
+    <node name="99">
+      <behavior type="KnightWeapon">
+      </behavior>
+      <description>{1{YЗолотая пика (lance){2 оставлена здесь.</description>
+      <extra_flags>glow bless rot_death nolocate had_timer sell_extract</extra_flags>
+      <gender>f</gender>
+      <level>20</level>
+      <material>gold</material>
+      <name>golden lance пика золотая</name>
+      <short_descr>{Yзолот|ая|ой|ой|ую|ой|ой пик|а{x|и{x|е{x|у{x|ой{x|е{x</short_descr>
+      <type name="weapon">
+        <diceNumber>10</diceNumber>
+        <diceType>1</diceType>
+        <specType>sharp</specType>
+        <weapClass>lance</weapClass>
+        <weapType>none</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>80</weight>
+    </node>
+  </objects>
+  <rooms>
+    <node name="1">
+      <description>Ты паришь за пределами реальности.
+</description>
+      <flags>no_mob indoors</flags>
+      <name>The Void</name>
+      <sector>city</sector>
+    </node>
+    <node name="10">
+      <description>Стены из холодного сырого заплесневелого камня... Ни одного окошка...
+Забльована пiдлога... Всюду грязь и шныряют крысы. Откуда им тут взяться?
+Вокруг не видно ни единой щели,  чтобы  даже  проскользнуть  таракану...
+Здесь даже нет дверей! Вся  обстановка  состоит  из  нар,  сделанных  из
+прогнившего дерева, бочки с тухлой водой и ящика с  зеленым  от  плесени
+хлебом. Ты задумываешься: а откуда берется эта вода и хлеб?
+</description>
+      <flags>dark no_mob indoors nodamage safe no_recall nowhere nosummon</flags>
+      <name>Тюрьма Земли Снов</name>
+      <resets>
+        <drop vnum="35"/>
+        <drop vnum="35"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="2">
+      <description>Ты плывёшь в бесформенной пустоте, оторванный ото всех ощущений физического
+мира, окружённый пульсирующими сгустками света, постепенно растворяющимися в почти полную
+темноту без единого намёка на полутень.
+   Предупреждение &quot;Не кантовать&quot; пришпилено прямо посреди ничего.
+</description>
+      <exits>
+        <node name="up">
+          <target>3001</target>
+        </node>
+      </exits>
+      <flags>indoors noquit</flags>
+      <name>Limbo</name>
+      <sector>city</sector>
+    </node>
+    <node name="3">
+      <description>Ты оглЯдываешьсЯ и видишь, что находишьсЯ в  комнате, выжженой внутри
+скалы какой-то коллосальной энергией. Ты понимаешь, что это мастерская.
+В углу стоит {RО{MГ{mР{rО{RМ{MН{mЫ{rЙ {RГ{MО{mР{rН{x (forge), пышуший жаром.
+</description>
+      <extraDescr>
+        <node keyword="forge">Он сложен из потемневшего камня, и жар в нем поддерживается двумя
+огромными мехами, которые сжимаются сами собой.
+</node>
+      </extraDescr>
+      <flags>no_vanish no_mob indoors gods_only</flags>
+      <name>Горное жилище</name>
+      <sector>inside</sector>
+    </node>
+    <node name="4">
+      <description>Стены из холодного сырого заплесневелого камня... Ни одного окошка...
+Забльована пiдлога... Всюду грязь и шныряют крысы. Откуда им тут взяться?
+Вокруг не видно ни единой щели,  чтобы  даже  проскользнуть  таракану...
+Здесь даже нет дверей! Вся  обстановка  состоит  из  нар,  сделанных  из
+прогнившего дерева, бочки с тухлой водой и ящика с  зеленым  от  плесени
+хлебом. Ты задумываешься: а откуда берется эта вода и хлеб?
+</description>
+      <flags>dark no_mob indoors nodamage safe no_recall nowhere nosummon</flags>
+      <healRate>50</healRate>
+      <manaRate>50</manaRate>
+      <name>Тюрьма Земли Снов</name>
+      <resets>
+        <drop vnum="8"/>
+        <drop vnum="35"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="5">
+      <flags>no_vanish no_mob indoors nowhere noquit</flags>
+      <healRate>400</healRate>
+      <manaRate>400</manaRate>
+      <name>Grave</name>
+      <sector>inside</sector>
+    </node>
+    <node name="6">
+      <description>Ты находишься в избе на курьих ножках, стоящей на краю мироздания: одна
+куриная нога -- в мире мертвых, другая -- в мире живых.  Маленькие оконца
+затянуты бычьим пузырем, а за ним - хаос, страх и завывания демонов. 
+Пол-избы занимает печь, на которой бабка в свободное время греет свои старые
+кости.  Оглядываясь в поисках хоть чего-нибудь, что объяснило бы, зачем ты сюда
+попал, ты замечаешь медную табличку (plaque), украшающую одну из бревенчатых
+стен избушки.  
+</description>
+      <extraDescr>
+        <node keyword="plaque табличка">/-----------------------------------------------------------------------------\
+|                                                                             |
+| Каждая прожитая тобой жизнь имеет цену. Цену имеют и те вещи, которые хочет |
+| тебе сейчас отдать Яга. Обычно за одну жизнь можно попросить у нее одну из  |
+| вещей, например, плюс один параметр или плюс один уровень. Цветной претитул |
+| оценивается двумя жизнями, а здоровье (50 очков), мана (100) или скилпоинты |
+| (500) стоят полжизни.                                                       |
+| Общаться с бабой Ягой нетрудно, просто говори ей, чего ты хочешь: например  |
+| &quot;хочу здоровье&quot; или (если передумаешь что-то брать) &quot;возвращаю силу&quot;.       |
+| Бабка поймет и по-английски, скажем, &quot;i want con&quot;, &quot;take dex&quot;.              |
+| Посмотреть, что уже приобретено, можно командой mlt (она пригодится тебе    |
+| и в дальнейшей жизни). Полезно также изучить help remort.                   |
+| Когда у бабки в руках ничего не останется, и ты будешь доволен выбором,     |
+| скажи ей &quot;basta&quot; (&quot;хватит&quot;) и она тебя отпустит. После этого дороги назад   |
+| не будет, так что не торопись покидать избушку.                             |
+|                                                                             |
+\-----------------------------------------------------------------------------/
+</node>
+      </extraDescr>
+      <flags>no_vanish no_mob indoors nodamage safe no_recall nowhere nosummon</flags>
+      <healRate>50</healRate>
+      <manaRate>50</manaRate>
+      <name>Избушка</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="30"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="7">
+      <description>Окружающую тебя темноту нарушает лишь тусклый желтоватый круг света,
+исходящий от настольной лампы. На столе ты различаешь массивную книгу в
+толстом и тяжелом переплете: ее первые страницы уже успели истлеть, а 
+последние еще совсем свежие. Рядом с книгой стоит чернильница с гусиным
+пером. 
+</description>
+      <flags>no_vanish no_mob indoors nowhere dumb</flags>
+      <name>Помещение всемирного архива</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="7"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="8">
+      <description>.Звуки тысячи лопат окружают тебя. Повсюду горы кирпичей и котлованы земли -
+здесь идет большая стройка. У входа на стройплощадку висит огромный плакат:
+{x           {yСтройплощадка {YDreamLand{y -  ВХОД СТРОГО ПО ПРОПУСКАМ{x
+{x     {yАдрес мира этого мира: {Ydreamland.rocks 9000{y. Если вы зашли сюда по ошибке -{x
+{x     {yвам туда. А если хотите стать строителем - обращайтесь к богам.{x
+Тут же у входа установлена тумба, за которой сидит сатир с ворохом листочков
+бумаги в руках. Он деловито сверяет по ним предьявленные пропуска. Часть 
+листочков он держит вверх ногами.
+</description>
+      <flags>no_vanish no_mob indoors nowhere dumb</flags>
+      <name>Проходная</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="8"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="9">
+      <description>Сюда попадают все заблудшие души и сваливаются все ненужные предметы,
+которые фенеры забыли переместить на положенное место.
+</description>
+      <flags>no_vanish no_mob nodamage safe no_recall nowhere nosummon dumb</flags>
+      <name>Склад фенера</name>
+      <sector>inside</sector>
+    </node>
+  </rooms>
+</area>

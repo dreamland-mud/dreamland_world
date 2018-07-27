@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
+    <wearoff>Ты обретаешь плотность тела.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="cleric">
+      <level>32</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="necromancer">
+      <level>27</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="samurai">
+      <level>24</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>24</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>25</weight>
+    </node>
+    <node name="warlock">
+      <level>24</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>24</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>transportation</group>
+  <help type="SkillHelp">Ты становишься полупрозрачным, что позволяет проходить через закрытые двери.
+Есть двери, препятствующие этому заклинанию. 
+  </help>
+  <mana>20</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>прохождение преград</nameRus>
+  <raceAffect>pass_door</raceAffect>
+  <spell type="SPELL(PassDoor)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_self</target>
+    <type>defensive</type>
+  </spell>
+</skill>

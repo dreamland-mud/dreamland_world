@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Призрачная мантия, окутывавшая тебя, тает.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <clans>
+    <node name="invader">
+      <level>10</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <mana>10</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <spell type="SPELL(ShadowCloak)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_room</target>
+    <type>defensive</type>
+  </spell>
+  <nameRus>призрачная мантия</nameRus>
+  <help type="SkillHelp">
+Плащ тьмы, понижающий твой клас защиты (ac).
+  </help>
+</skill>

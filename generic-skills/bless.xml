@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
+    <wearoff>Ты больше не чувствуешь божественного благословления.</wearoff>
+    <wearoffDispel>%1$^C1 теряет божественное благословление.</wearoffDispel>
+    <wearoffObj>Священная аура вокруг %1$O2 исчезает.</wearoffObj>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="cleric">
+      <level>14</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="paladin">
+      <level>14</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>14</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>30</weight>
+    </node>
+  </classes>
+  <group>benedictions</group>
+  <help type="SkillHelp">Это заклинание увеличивает hit roll и предохраняет от заклинаний по 1
+единице на каждые 8 уровней произносящего его. Заклинание также можно
+использовать  для временного благословения объекта (например оружия,
+для большей эффективности против демонических созданий).
+
+Также благословленные объекты лучше защищают вас от заклинаний.
+  </help>
+  <mana>5</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>благословление</nameRus>
+  <spell type="SPELL(Bless)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_room obj_inv obj_room</target>
+    <type>defensive</type>
+  </spell>
+</skill>

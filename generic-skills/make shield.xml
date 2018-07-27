@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>24</beats>
+  <classes>
+    <node name="universal">
+      <level>73</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>enchant armor</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>20</weight>
+    </node>
+    <node name="warlock">
+      <level>68</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>73</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>none</group>
+  <help type="SkillHelp">Использование: cast &apos;make shield&apos; cold
+Использование: cast &apos;make shield&apos; fire 
+
+Зная это заклинание ты можешь создавать щит против атак огнем и холодом, 
+который сделает тебя устойчивей к ним.
+  </help>
+  <mana>200</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>false</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>создать щит</nameRus>
+  <spell type="SPELL(MakeShield)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>create_obj</target>
+    <type>none</type>
+  </spell>
+</skill>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты вытираешь пыль из своих глаз.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>3</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="ninja">
+      <level>3</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="ranger">
+      <level>5</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="thief">
+      <level>3</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>3</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>30</weight>
+    </node>
+    <node name="warrior">
+      <level>8</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <command type="SKILL(dirt)">
+    <hint>(воинские профессии) ослепить врага грязью</hint>
+    <name>dirt</name>
+    <order>fight_only</order>
+    <position>fight</position>
+    <russian>
+      <node>грязь</node>
+    </russian>
+  </command>
+  <dammsg>бросок грязью</dammsg>
+  <group>fightmaster</group>
+  <hard>2</hard>
+  <help type="SkillHelp">Во время боя можно ослепить врага, кинув ему в глаза горсть земли. 
+Ослепленный противник хуже отклоняет твои атаки.
+  </help>
+  <mob>
+    <bonus>20</bonus>
+    <dice>3</dice>
+    <forbidden>false</forbidden>
+    <offense>kick_dirt</offense>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>бросок грязью</nameRus>
+</skill>

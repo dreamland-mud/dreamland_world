@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <beats>6</beats>
+  <clans>
+    <node name="hunter">
+      <level>13</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <command type="SKILL(hunt)">
+    <name>hunt</name>
+    <position>stand</position>
+    <russian>
+      <node>охотиться</node>
+    </russian>
+    <hint>(охотники) идти по следу жертвы</hint>
+  </command>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <nameRus>охотиться</nameRus>
+  <help type="SkillHelp">
+Использование: hunt &gt;цель&lt;
+Указывает направление, в котором находится твоя жертва. У молодых охотников
+действует только в пределах зоны, а при развитом умении &apos;world find&apos; - по всему миру.
+  </help>
+</skill>

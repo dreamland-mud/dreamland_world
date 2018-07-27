@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты снова можешь читать по лицам.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <clans>
+    <node name="ruler">
+      <level>10</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <mana>75</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <spell type="SPELL(KnowPersone)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_room</target>
+    <type>none</type>
+  </spell>
+  <nameRus>опознание личности</nameRus>
+  <help type="SkillHelp">
+При использовании на Хаосита, это заклинание откроет его истинную
+личину, или укажет, чье это зеркало.
+При использовании на спецмоба покажет его место прописки.
+  </help>
+</skill>

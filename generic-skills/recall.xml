@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты вновь можешь молиться о возвращении в Храм.</wearoff>
+  </affect>
+  <beats>24</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="cleric">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="necromancer">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="ninja">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="paladin">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="ranger">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="samurai">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="thief">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>5</weight>
+    </node>
+    <node name="vampire">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="warlock">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="warrior">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <command type="SKILL(recall)">
+    <aliases>
+      <node>/</node>
+    </aliases>
+    <hint>попросить богов о перемещении в храм</hint>
+    <name>recall</name>
+    <order>allow_ruler</order>
+    <position>fight</position>
+    <russian>
+      <node>возврат</node>
+      <node>вернуться</node>
+    </russian>
+  </command>
+  <group>none</group>
+  <hard>6</hard>
+  <help type="SkillHelp">
+*(Recall,Возврат)* возносит молитвы к Богам с просьбами транспортировать тебя с твоего
+текущего положения в твой родной город.
+&apos;/&apos; - синоним для *(recall,возврат)*.
+
+Удачный возврат забирает половину единиц движения.
+
+Эта молитва не сработает в некоторых проклятых комнатах и ариях. Ею не может
+пользоваться персонаж, подверженный проклятию или находящийся в возбужденном
+состоянии (VIOLENT).
+
+То, услышат ли вас Боги, сильно зависит от уровня опытности (%H% [(selfrate,опытность)]).
+  </help>
+  <mob>
+    <bonus>40</bonus>
+    <dice>1</dice>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>false</professional>
+  </mob>
+  <nameRus>возврат</nameRus>
+</skill>

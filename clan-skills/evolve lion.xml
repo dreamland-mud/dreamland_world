@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Теперь ты снова можешь стать львом.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <clans>
+    <node name="lion">
+      <level>18</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <mana>50</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <spell type="SPELL(EvolveLion)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_self</target>
+    <type>defensive</type>
+  </spell>
+  <nameRus>превращение во льва</nameRus>
+  <help type="SkillHelp">
+Делает тебя значительно сильнее и повышает твое здоровье.
+Но расплачиваться за это приходится уменьшением проворства.
+  </help>
+</skill>

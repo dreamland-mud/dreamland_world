@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<Command>
+  <extra>keep_hide ghost spellout</extra>
+  <level>109</level>
+  <log>1</log>
+  <name>reboot</name>
+  <position>dead</position>
+  <hint>перезагрузить мир</hint>
+  <help type="CommandHelp" ref="shutdown">
+%FMT%  *%CMD%* *now* 
+Перезагрузить mud-сервер немедленно.
+
+%FMT%  *%CMD%* _тиков_ 
+Перезагрузить mud-сервер через указанное количество тиков.
+Каждый 10й, а начиная с 5го - каждый следующий тик - Хассан и 
+Валькирия будут громкими воплями предупреждать о грядущем ребуте.
+
+%FMT%  *%CMD%* *cancel*
+Отменить перезагрузку.
+
+%FMT%  *%CMD%* *status*
+Посмотреть сколько тиков осталось до перезагрузки.
+           
+%FMT%  *shutdown*
+Завершает работу сервера и создает в текущем каталоге файл shutdown.txt,
+наличие которого не позволит миру загрузиться снова.
+</help>
+</Command>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>24</beats>
+  <classes>
+    <node name="cleric">
+      <level>41</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="paladin">
+      <level>53</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>41</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>bless</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>35</weight>
+    </node>
+  </classes>
+  <group>benedictions</group>
+  <help type="SkillHelp">Это заклинание освобождает комнату от наложенных на нее проклятия,
+чумы, яда, сонного или летаргического тумана.
+  </help>
+  <mana>200</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>освятить землю</nameRus>
+  <spell type="SPELL(SanctifyLands)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>room</target>
+    <type>defensive</type>
+  </spell>
+</skill>

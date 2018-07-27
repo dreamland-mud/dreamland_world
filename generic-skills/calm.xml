@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
+    <wearoff>Твое миролюбивое настроение исчезает.</wearoff>
+    <wearoffDispel>%1$^C1 выглядит менее миролюбиво.</wearoffDispel>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="cleric">
+      <level>26</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="paladin">
+      <level>63</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="samurai">
+      <level>60</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>26</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>35</weight>
+    </node>
+  </classes>
+  <group>benedictions</group>
+  <help type="SkillHelp">Заклинание успокаивающее дерущихся, только если они еще не в ярости.
+Одно из наиболее полезных заклинаний мастеров-клериков.
+  </help>
+  <mana>30</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>спокойствие</nameRus>
+  <spell type="SPELL(Calm)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>people</target>
+    <type>none</type>
+  </spell>
+</skill>

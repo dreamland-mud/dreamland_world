@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <classes>
+    <node name="cleric">
+      <level>15</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="necromancer">
+      <level>21</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>14</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>meditation</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>40</weight>
+    </node>
+    <node name="vampire">
+      <level>21</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="warlock">
+      <level>14</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>14</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>meditation</group>
+  <hard>20</hard>
+  <help type="SkillHelp">Умение, схожее с Meditation и Fast Healing.  
+Эта способность концетрироваться помогает варлокам и клерикам
+очень быстро восстанавливать свою энергию.
+  </help>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>транс</nameRus>
+  <raceBonuses>
+    <node name="troll">
+      <bonus>100</bonus>
+      <level>0</level>
+      <professional>true</professional>
+    </node>
+  </raceBonuses>
+</skill>

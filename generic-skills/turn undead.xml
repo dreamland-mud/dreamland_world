@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="paladin">
+      <level>40</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>40</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>dispel evil</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>20</weight>
+    </node>
+  </classes>
+  <dammsg mg="f">попытка изгнания нежити</dammsg>
+  <group>benedictions</group>
+  <help type="SkillHelp">Всякой нечисти (големам, андедам) следует быть на чеку - паладин может
+причинить ей серьезный вред и обратить в бегство, начертив в воздухе
+священный символ (заклинание &apos;{yturn undead{x&apos;), либо вообще стереть с
+лица земли (&apos;{ybanishment{x&apos;).
+  </help>
+  <mana>10</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>обратить нежить</nameRus>
+  <spell type="SPELL(TurnUndead)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>people</target>
+    <type>offensive</type>
+  </spell>
+</skill>

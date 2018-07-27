@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="AFFECT(LightningShield)">
+    <wearoff>Ты вновь можешь закрыть щитом все вокруг себя.</wearoff>
+  </affect>
+  <beats>24</beats>
+  <classes>
+    <node name="necromancer">
+      <level>41</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>41</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>lightning bolt</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>40</weight>
+    </node>
+    <node name="witch">
+      <level>41</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <dammsg>щит молний</dammsg>
+  <group>none</group>
+  <help type="SkillHelp">Могущественные некроманты и ведьмы умеют ставить щит, защищающий их (если они 
+спят - будящий) от каких-нибудь персонажей заходящих в комнату.
+  </help>
+  <mana>150</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>щит молний</nameRus>
+  <spell type="SPELL(LightningShield)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

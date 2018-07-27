@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>18</beats>
+  <classes>
+    <node name="thief">
+      <level>49</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>49</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>pick lock</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>35</weight>
+    </node>
+  </classes>
+  <command type="SKILL(forge)">
+    <hint>(воры) создать дубликат ключа или отмычку</hint>
+    <name>forge</name>
+    <order>player_only thief_only</order>
+    <position>rest</position>
+    <russian>
+      <node>подделать</node>
+    </russian>
+  </command>
+  <group>none</group>
+  <hard>1</hard>
+  <help type="SkillHelp">
+%FMT%  *(forge,подделать)* _дверь, портал или контейнер_  
+
+Опытные воры могут превратить специальную заготовку в отмычку для модели 
+указанного замка. Такие отмычки, как правило, лучшего качества, чем можно найти
+по миру, и обладают особым свойством запоминать все замки, которые им удалось
+успешно открыть. 
+
+
+%FMT%  *(forge,подделать)* _ключ_
+
+Из заготовок также можно изготовить дубликат уже существующего ключа.
+Такой дубликат не рассыпется со временем.
+
+Заготовки можно отыскать там же, где и отмычки (%H% [(pick lock,взлом замка)]).
+  </help>
+  <mana>200</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>подделка ключей</nameRus>
+</skill>

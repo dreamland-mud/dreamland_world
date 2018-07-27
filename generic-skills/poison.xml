@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="AFFECT(Poison)">
+    <wearoff>Твое отравление проходит.</wearoff>
+    <wearoffDispel>%1$^C1 выглядит намного лучше.</wearoffDispel>
+    <wearoffObj>Яд, отравлявший %1$O4, исчезает.</wearoffObj>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>15</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="cleric">
+      <level>22</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="necromancer">
+      <level>23</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>15</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>20</weight>
+    </node>
+    <node name="warlock">
+      <level>27</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>27</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <dammsg mg="n">отравление</dammsg>
+  <group>maladictions</group>
+  <help type="SkillHelp">Это заклинание уменьшает силу жертвы на 2. 
+Восстановление жизненной энергии и маны также проходит медленнее 
+под действием яда.  Эффект заклинания может суммироваться.
+Отравить можно еду, питье и оружие (аналог: {CEnvenom{x - &apos;help envenom&apos;), но 
+эффективность заклинания резко уменьшается. Рана, нанесенная отравленным
+оружием может привести к заражению ядом. 
+  </help>
+  <mana>10</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>яд</nameRus>
+  <spell type="SPELL(Poison)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_room obj_inv obj_room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

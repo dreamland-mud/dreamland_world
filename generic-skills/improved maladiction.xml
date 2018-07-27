@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <classes>
+    <node name="anti-paladin">
+      <level>30</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="necromancer">
+      <level>35</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>35</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>meditation</node>
+        <node>slow</node>
+        <node>weaken</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>20</weight>
+    </node>
+  </classes>
+  <group>none</group>
+  <help type="SkillHelp">Умение &apos;improved maladiction&apos; повышает уровень всех проклятий (всех заклинаний
+из группы maladiction).
+  </help>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>улучшенное проклятие</nameRus>
+</skill>

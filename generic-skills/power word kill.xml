@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Твоя стойкость возвращается к тебе.</wearoff>
+  </affect>
+  <beats>18</beats>
+  <classes>
+    <node name="necromancer">
+      <level>78</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>78</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>corruption</node>
+        <node>power word stun</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>70</weight>
+    </node>
+  </classes>
+  <dammsg mg="n">слово смерти</dammsg>
+  <group>none</group>
+  <help type="SkillHelp">Древние и опытные некроманты могут убить противника одним заклинанием. 
+Единственный путь спастись от такой смерти - {Wsaves vs. spell{x.
+  </help>
+  <mana>500</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>слово смерти</nameRus>
+  <spell type="SPELL(PowerWordKill)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

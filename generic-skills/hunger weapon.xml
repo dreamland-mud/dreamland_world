@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoffObj>%1$^O1 больше не жаждет чужой жизни.</wearoffObj>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="vampire">
+      <level>20</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>enchantment</group>
+  <help type="SkillHelp">Вампир может передать оружию часть своей вампирской силы. 
+Через некоторое время эффект исчезает.
+  </help>
+  <mana>150</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>голодное оружие</nameRus>
+  <spell type="SPELL(HungerWeapon)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>obj_inv obj_equip</target>
+    <type>none</type>
+  </spell>
+</skill>

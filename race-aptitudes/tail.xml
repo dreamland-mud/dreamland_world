@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="RaceAptitude">
+  <beats>18</beats>
+  <command type="SKILL(tail)">
+    <hint>(хвостатые расы) нанести удар хвостом</hint>
+    <name>tail</name>
+    <order>fight_only</order>
+    <position>fight</position>
+    <russian>
+      <node>хвост</node>
+    </russian>
+  </command>
+  <dammsg>хвост</dammsg>
+  <group>fightmaster</group>
+  <help type="SkillHelp">Пользоваться этим умением могут лишь существа имеющие хвост. 
+Персонажами из хвостатых являются только фелары. Процент попадания 
+им по жертве очень мал, но если получается - повреждение велико.
+  </help>
+  <mob>
+    <bonus>10</bonus>
+    <dice>3</dice>
+    <forbidden>false</forbidden>
+    <offense>tail</offense>
+    <ordered>true</ordered>
+  </mob>
+  <nameRus>хвост</nameRus>
+  <races>
+    <node name="felar">
+      <level>1</level>
+    </node>
+  </races>
+</skill>

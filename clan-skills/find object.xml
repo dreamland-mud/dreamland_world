@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <beats>18</beats>
+  <clans>
+    <node name="hunter">
+      <level>25</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <mana>20</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <spell type="SPELL(FindObject)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>ignore</target>
+    <type>none</type>
+  </spell>
+  <nameRus>найти предмет</nameRus>
+  <help type="SkillHelp">
+Узнать местоположение объекта. Ищет даже nolocate объекты.
+  </help>
+</skill>

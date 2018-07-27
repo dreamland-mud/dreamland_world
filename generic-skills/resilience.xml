@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты чувствуешь, что у тебя вновь могут отбирать здоровье и энергию.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="paladin">
+      <level>56</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>56</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>30</weight>
+    </node>
+  </classes>
+  <group>protective</group>
+  <help type="SkillHelp">Защитные молитвы паладинов, подготавливающие его к схватке со злом и нечистью:
+{yresilience{x делает его более устойчивым к энергетическим атакам, а 
+{yfortitude{x дарует сопротивляемость к холоду и негативным атакам.
+  </help>
+  <mana>50</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>устойчивость</nameRus>
+  <spell type="SPELL(Resilience)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_self</target>
+    <type>defensive</type>
+  </spell>
+</skill>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
+    <wearoff>Твой гнев проходит.</wearoff>
+    <wearoffDispel>Дикий огонь в глазах %1$C2 гаснет.</wearoffDispel>
+  </affect>
+  <beats>24</beats>
+  <classes>
+    <node name="cleric">
+      <level>34</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>34</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>35</weight>
+    </node>
+  </classes>
+  <group>benedictions</group>
+  <help type="SkillHelp">Пробуждая в тебе ярость, это заклинание делает тебя опаснее. Но ты 
+становишься  и  более  уязвимым,  поскольку  не  заботишься о своей 
+безопасности.
+  </help>
+  <mana>30</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>неистовство</nameRus>
+  <spell type="SPELL(Frenzy)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_room</target>
+    <type>defensive</type>
+  </spell>
+</skill>

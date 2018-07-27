@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>24</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>39</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>39</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>30</weight>
+    </node>
+  </classes>
+  <group>none</group>
+  <help type="SkillHelp">Призывает призрачный клинок к хозяину из любой точки мира.
+  </help>
+  <mana>200</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>возврат призрачного клинка</nameRus>
+  <spell type="SPELL(RecallShadowBlade)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>ignore</target>
+    <type>none</type>
+  </spell>
+</skill>

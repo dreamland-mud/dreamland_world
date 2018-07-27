@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
+    <wearoff>Твои движения становятся медленнее.</wearoff>
+    <wearoffDispel>Движения %1$C2 становятся не такими быстрыми.</wearoffDispel>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="universal">
+      <level>24</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>30</weight>
+    </node>
+    <node name="warlock">
+      <level>24</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>24</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>enhancement</group>
+  <help type="SkillHelp">Заклинание делает твои движения быстрее. Это полезно в битве. Однако
+организм повышает свой метаболизм, и восстанавливает силы медленнее.
+  </help>
+  <mana>30</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>ускорение</nameRus>
+  <spell type="SPELL(Haste)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_room</target>
+    <type>defensive</type>
+  </spell>
+</skill>

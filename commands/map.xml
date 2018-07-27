@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<Command>
+  <extra>keep_hide ghost</extra>
+  <name>map</name>
+  <position>rest</position>
+  <russian>
+    <node>карта</node>
+  </russian>
+  <hint>схематическая карта местности</hint>
+  <help type="CommandHelp" keyword="automap автокарта">
+%FMT%  *%CMD%*
+
+%PAUSE%
+Рисует набросок карты, на которой указывается ваше текущее положение
+и те места, куда можно из него попасть. Карта плоская, т.е. направления 
+up и down не рисуются. 
+
+Легенда:
+ {R*{x	текущая позиция
+ {G"{x	поле                            {g@{x	лес
+ {G^{x	холмы				{y^{x	горы
+ {B-{x	неглубокий водоем	  	{b-{x	глубокий водоем
+ {C:{x	воздух				{Y={x	пустыня
+ {W%{x	внутри помещения                {W#{x	город   
+ 
+ {DX{x или {yo{x:  неопределенный тип местности           
+  </help>
+</Command>

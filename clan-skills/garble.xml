@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты снова обретаешь дар речи.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <clans>
+    <node name="chaos">
+      <level>10</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <mana>30</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <spell type="SPELL(Garble)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_room</target>
+    <type>offensive</type>
+  </spell>
+  <nameRus>спутать язык</nameRus>
+  <help type="SkillHelp">
+Поделится частицей Хаоса с языком противника, в результате чего язык его
+заплетается, и сказать он ничего толком не может.
+  </help>
+</skill>

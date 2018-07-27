@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="AFFECT(DeadlyVenom)">
+  </affect>
+  <beats>24</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>58</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>58</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>poison</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>30</weight>
+    </node>
+  </classes>
+  <group>maladictions</group>
+  <help type="SkillHelp">Это заклинание позволяет анти-паладинам отравить комнату смертельным 
+ядом. Колдовство не причинит никакого вреда игроку вне твоего PK range.
+  </help>
+  <mana>200</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>смертельный яд</nameRus>
+  <spell type="SPELL(DeadlyVenom)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

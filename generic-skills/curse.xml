@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <wearoff>Проклятие исчезает.</wearoff>
+    <wearoffDispel>Проклятие вокруг %1$C2 исчезает.</wearoffDispel>
+    <wearoffObj>Зловещая аура вокруг %1$O2 исчезает.</wearoffObj>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>18</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="cleric">
+      <level>33</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="necromancer">
+      <level>34</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>18</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>20</weight>
+    </node>
+    <node name="vampire">
+      <level>44</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="warlock">
+      <level>31</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>23</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <dammsg mg="n">проклятие</dammsg>
+  <group>maladictions</group>
+  <help type="SkillHelp">Это заклинание понижает hitroll и saves vs. spells у жертвы.
+Оно также представляет жертву в дурном свете перед богом - нельзя 
+пользоваться RECALL. {YCurse {xможет быть использовано чтобы заполнить
+инвентарь Темной Мощью. Например: такое оружие будет делать
+больше повреждений добрым противникам.
+
+Этим заклинанием можно также &quot;заговаривать&quot; вещи. Колдовство &quot;вдыхает&quot;
+Зло в вещь. Но есть и такие заклинания, которые препятствуют этому.
+  </help>
+  <mana>20</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>проклятие</nameRus>
+  <spell type="SPELL(Curse)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_room obj_inv obj_room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

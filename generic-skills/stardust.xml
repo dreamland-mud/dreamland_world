@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
+    <wearoff>{WЗ{wве{Wзд{wная {Wп{wыль вокруг тебя рассеивается.</wearoff>
+    <wearoffDispel>{WЗ{wве{Wзд{wная {Wп{wыль вокруг %1$C2 рассеивается.</wearoffDispel>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="universal">
+      <level>36</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>armor</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>50</weight>
+    </node>
+    <node name="warlock">
+      <level>36</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>36</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>protective</group>
+  <help type="SkillHelp">Звездная пыль осыпает колдуна, волшебным образом уменьшая вдвое все принятые
+повреждения.
+  </help>
+  <mana>75</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>звездная пыль</nameRus>
+  <spell type="SPELL(Stardust)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_room</target>
+    <type>defensive</type>
+  </spell>
+</skill>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты опять можешь концентрироваться для следующих битв.</wearoff>
+  </affect>
+  <beats>18</beats>
+  <classes>
+    <node name="samurai">
+      <level>65</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>25</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>35</weight>
+    </node>
+    <node name="warrior">
+      <level>59</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <command type="SKILL(concentrate)">
+    <hint>(воины, самураи) сосредоточиться перед битвой</hint>
+    <name>concentrate</name>
+    <position>stand</position>
+    <russian>
+      <node>сосредоточиться</node>
+    </russian>
+  </command>
+  <group>fightmaster</group>
+  <hard>2</hard>
+  <help type="SkillHelp">Приготовление к битве, обдумывание военной стратегии увеличит твои
+шансы в бою с врагом, сделает тебя сильнее духом и телом.
+ Умение увеличивает твой {Wdamroll{x и {Whitroll{x.
+  </help>
+  <mana>50</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>сосредоточиться</nameRus>
+</skill>

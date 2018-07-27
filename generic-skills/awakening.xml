@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="paladin">
+      <level>32</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>32</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>remove curse</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>30</weight>
+    </node>
+  </classes>
+  <group>curative</group>
+  <help type="SkillHelp">Боги дают паладину силу будить спящих нездоровым сном (&apos;{yawakening{x&apos;). Однако,
+заклинания сна на пациенте должны быть не сильнее, чем само заклинание пробуждения.
+  </help>
+  <mana>20</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>пробуждение</nameRus>
+  <spell type="SPELL(Awakening)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_room</target>
+    <type>defensive</type>
+  </spell>
+</skill>

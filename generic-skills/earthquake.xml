@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="cleric">
+      <level>19</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="druid">
+      <level>21</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>19</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>10</weight>
+    </node>
+  </classes>
+  <dammsg mg="n">землятрясение</dammsg>
+  <group>attack</group>
+  <help type="SkillHelp">Землетрясение - очень мощное заклинание, причиняющее большие повреждения всем,
+кто находится в комнате. В результате на тебя могут напасть даже те существа, 
+которые сохраняли спокойствие.
+  </help>
+  <mana>15</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>землятрясение</nameRus>
+  <spell type="SPELL(Earthquake)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>people</target>
+    <type>offensive</type>
+  </spell>
+</skill>

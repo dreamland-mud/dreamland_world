@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Твои движения становятся свободнее.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="druid">
+      <level>25</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="ranger">
+      <level>26</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>26</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>30</weight>
+    </node>
+  </classes>
+  <dammsg>колючий терновник</dammsg>
+  <group>nature</group>
+  <help type="SkillHelp">
+%FMT%  *%CAST%* *%SKILL%* _%CHAR%_
+
+Это заклинание позволяет окружить противника колючим терновником, сковывая
+его движения и нанося повреждения. Данное заклинание может использоваться
+только там, где могут произрастать растения.
+
+
+%FMT%  *%CAST%* *%SKILL%* _%OBJ%_
+
+Опутывает терновником могилу, тревожа тех, кто в ней лежит и заставляя
+их выбраться наружу.
+  </help>
+  <mana>40</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>опутать терновником</nameRus>
+  <spell type="SPELL(Entangle)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_room obj_room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

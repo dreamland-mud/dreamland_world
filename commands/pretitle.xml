@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<Command>
+  <extra>keep_hide ghost</extra>
+  <name>pretitle</name>
+  <position>dead</position>
+  <russian>
+    <node>предтитул</node>
+    <node>претитул</node>
+  </russian>
+  <hint>придумать себе претитул</hint>
+  <help type="CommandHelp">
+%FMT%  *%CMD%* _строка_
+%FFF%  *%CMD%* *(rus,рус)* _строка_
+
+Претитул - короткая надпись, которая будет предшествовать твоему имени.
+С опцией *(rus,рус)* будет установлен русский претитул, его увидят те,
+у кого включен *(config runames,режим русимена)*.
+
+
+%FMT%  *%CMD%* *(clear,очистить)*
+
+Очищает оба претитула, и русский, и английский.
+
+%SA% %H% [(title,титул)]
+</help>
+</Command>

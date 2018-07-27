@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Стая летучих мышей улетает прочь.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="vampire">
+      <level>60</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>protective</group>
+  <help type="SkillHelp">Во время боя вампиры могут призвать на помощь стаю летучих мышей. Прибывшая
+на зов стая облаком окружает вампира, мешая по нему попасть.
+  </help>
+  <mana>100</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>летучие мыши</nameRus>
+  <spell type="SPELL(BatSworm)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_self</target>
+    <type>defensive</type>
+  </spell>
+</skill>

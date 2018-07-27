@@ -1,0 +1,4224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<area>
+  <areadata>
+    <authors>Ruffina</authors>
+    <credits>Quest</credits>
+    <flags>noquest hidden</flags>
+    <levelHigh>100</levelHigh>
+    <levelLow>1</levelLow>
+    <name>Quest</name>
+    <resetMessage></resetMessage>
+    <security>9</security>
+    <vnumHigh>28799</vnumHigh>
+    <vnumLow>28000</vnumLow>
+  </areadata>
+  <mobiles>
+    <node name="28000">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel noeye nowhere warrior nopurge notrack"/>
+      <aff add="berserk regeneration"/>
+      <alignment>-1100</alignment>
+      <behavior type="GangChef">
+      </behavior>
+      <dam_type>crush</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Все ганстеры, которых ты встречал до этого, амбалы, убийцы, насильники,
+маньяки - просто детские сказочки по сравнению с этим типом. 
+Весь криминальный мир подчиняется одному движению его пальцев.
+Хочешь действительно ХОРОШИЙ совет?
+Уноси ноги!
+</description>
+      <detection add="imp_invis fade invis hidden"/>
+      <form del="sentient"/>
+      <hit>0d0+0</hit>
+      <imm add="summon charm"/>
+      <long_descr>Злобно оскалившаяся фигура Шефа (Chef) возвышается над тобой. 
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <off add="bash berserk disarm dodge kick kick_dirt parry trip crush"/>
+      <player_name>Chef шеф</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>шеф||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="28001">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel noeye nowhere nodemand warrior nopurge"/>
+      <aff add="berserk"/>
+      <alignment>-1100</alignment>
+      <behavior type="GangMember">
+      </behavior>
+      <dam_type>crush</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Ну очень похож на бандита. Такой тип продаст родную мать и глазом не моргнув.
+Похоже, ты видел эту гнусную харю в разделе &quot;Их разыскивают Рулеры&quot;. 
+</description>
+      <detection add="imp_invis fade invis hidden"/>
+      <form del="sentient"/>
+      <hit>0d0+0</hit>
+      <hitroll>9</hitroll>
+      <imm add="summon charm"/>
+      <long_descr>Жуткого вида бандюга (gangster) шарится здесь.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <off add="disarm dodge parry assist_vnum"/>
+      <parts del="heart"/>
+      <player_name>gangster бандит гангстер</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>гангстер||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28004">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel noeye cleric"/>
+      <alignment>500</alignment>
+      <behavior type="Poliglot">
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>10d10+1000</damage>
+      <default_pos>stand</default_pos>
+      <description>{x     Не  смотря  на видимую  щуплость, сутулость  и невысокий  рост, сквозь
+каждое  движение  сквозит  мощь,  лучшая  характеристика которой  - вековая
+мудрость.  Кажется  сам  воздух  колеблется,  опасаясь  коснуться  пыльного
+балахона. Поровнявшись  с этой  фигурой, ты  невольно вглядываешься  в тень
+капюшона, ожидая  увидеть пару  горящих холодным  огнем древней  мудрости и
+одержимости  глаз  на надменном,  испрещенном морщинами  лице, напоминающим
+пергамент. Однако внезапно встречаешься с живым взглядом изумленных зеленых
+глаз  на  фоне  мягкого  овала  лица,  покрытого  веснушками.  Похоже,  она
+шокирована этой встречей не менее тебя, потому по инерции  сделав несколько
+шагов, вдруг споткнулась, и к твоим ногам упала сумка, которую до этого эта
+особа  прижимала  к  груди. Сумка  раскрылась, и  ее содержимое  - тетради,
+учебники и  свитки -  вывалились наружу.  Несколько конспектов  при падении
+раскрылось  и  тебе  стали  видны  ровные строчки  замысловатых иероглифов,
+начертаных  с  потрясающей  аккуратностью,  что  несколько  контрастирует с
+изобилием  наивных  картинок  на  полях.  Отойдя  от  шока,  леди бросилась
+подбирать свой багаж. Капюшон при этом откинулся и явил свету  яркую корону
+медно-змеиных  волос.  Упаковав все  обратно в  сумку, девушка  поднялась с
+колен и, опустив глаза вниз, проговорила &quot;я прошу прощения&quot;. Будь эта фраза
+сколь угодно длинной, тебе  бы все  равно не  удалось определить  акцент ее
+странно-изысканной речи; однако самое удивительное было в низком мелодичном
+голосе  -  тебя  словно  ударило  молнией,  затем огромной  морской волной,
+испепелило огнем, и в довершение обратило в камень пронизывающим холодом.
+</description>
+      <form del="edible sentient biped mammal"/>
+      <hit>13d13+20000</hit>
+      <hitroll>1000</hitroll>
+      <imm add="summon charm"/>
+      <level>100</level>
+      <long_descr>Сутулая фигура (monk) в балахоне с капюшоном проходит мимо, что-то бормоча.
+</long_descr>
+      <mana>13d13+20000</mana>
+      <material>none</material>
+      <parts del="head arms legs heart brains guts hands feet fingers ear eye"/>
+      <player_name>monk wandering блуждающий монах</player_name>
+      <race>human</race>
+      <sex>female</sex>
+      <short_descr>блуждающ|ий|его|ему|его|им|ем монах||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28010">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nowhere nodemand cleric warrior nopurge nosavedrop"/>
+      <aff add="berserk"/>
+      <alignment>-1100</alignment>
+      <behavior type="Fanatic">
+      </behavior>
+      <dam_type>crush</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <detection add="imp_invis fade invis hidden"/>
+      <form del="sentient"/>
+      <hit>0d0+0</hit>
+      <hitroll>9</hitroll>
+      <imm add="summon charm"/>
+      <long_descr>Религиозный фанатик (fanatic) стремится взорвать все вокруг.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <off add="disarm dodge parry"/>
+      <parts del="heart"/>
+      <player_name>фанатик fanatic</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>фанати|к|ка|ку|ка|ком|ке</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28011">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc noeye"/>
+      <dam_type>none</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <hit>1d1+1</hit>
+      <imm add="summon charm drowning"/>
+      <long_descr>Страшная злостная бага (bug) искривляет здесь пространство.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <player_name>bug бага</player_name>
+      <race>unique</race>
+      <sex>female</sex>
+      <short_descr>баг|а|и|е|у|ой|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28012">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc noeye"/>
+      <dam_type>none</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <hit>1d1+1</hit>
+      <imm add="summon charm drowning"/>
+      <long_descr>Крашащая бага (bug) острыми зубами подгрызает основы мироздания.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <player_name>crash bug крашащая бага</player_name>
+      <race>unique</race>
+      <sex>female</sex>
+      <short_descr>крашащ|ая|ей|ей|ую|ей|ей баг|а|и|е|у|ой|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28013">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc noeye"/>
+      <dam_type>none</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <hit>1d1+1</hit>
+      <imm add="summon charm drowning"/>
+      <long_descr>Ксерящая бага (bug) размножается делением здесь.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <player_name>xerox bug ксерящая бага</player_name>
+      <race>unique</race>
+      <sex>female</sex>
+      <short_descr>ксерящ|ая|ей|ей|ую|ей|ей баг|а|и|е|у|ой|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28014">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc noeye"/>
+      <behavior type="InvasionMob">
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <hit>1d1+1</hit>
+      <imm add="summon charm"/>
+      <long_descr>Огромная зеленая саранча (locust) жует здесь что-то.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <player_name>locust саранча</player_name>
+      <race>insect</race>
+      <sex>female</sex>
+      <short_descr>зелен|ая|ой|ой|ую|ой|ой саранч|а|и|е|у|ой|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28015">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc noeye"/>
+      <behavior type="InvasionMob">
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <hit>1d1+1</hit>
+      <imm add="summon charm"/>
+      <long_descr>Серо-желто-зеленая саранча (locust) объедает очередное растение.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <player_name>locust саранча</player_name>
+      <race>insect</race>
+      <sex>female</sex>
+      <short_descr>саранч|а|и|е|у|ей|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28016">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc noeye"/>
+      <behavior type="InvasionMob">
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <hit>1d1+1</hit>
+      <imm add="summon charm"/>
+      <long_descr>Стайка саранчи (locust) делает тут свое маленькое дело.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <player_name>locust саранча</player_name>
+      <race>insect</race>
+      <sex>female</sex>
+      <short_descr>стайк|а|и|е|у|ой|е саранчи</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28017">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc noeye"/>
+      <behavior type="InvasionBubblesMob">
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Мыльный пузырь с круглыми от удивления и растерянности глазами,  держит  в
+руках карту Мидгаарда, непонятно чем она может ему помочь здесь, тем более
+держит он ее вверх тормашками.
+</description>
+      <hit>1d1+1</hit>
+      <imm add="summon charm"/>
+      <long_descr>Совсем юный пузырь (bubble) кружится в воздухе.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <player_name>newbie bubble пузырь</player_name>
+      <race>unique</race>
+      <sex>male</sex>
+      <short_descr>пузыр|ь|я|ю|я|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28018">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc noeye"/>
+      <behavior type="InvasionBubblesMob">
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Мыльный пузырь идеально-правильной формы. Он даже  чем-то  похож  на  куб.
+Движется он строго по прямой, направление движения пузыря меняется строго
+под прямым углом после строго равных пройденых отрезков.
+</description>
+      <hit>1d1+1</hit>
+      <imm add="summon charm"/>
+      <long_descr>{1Пузырь ({wbubble{2) идеально-правильной формы кружится в воздухе.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <player_name>ruler bubble пузырь</player_name>
+      <race>unique</race>
+      <sex>male</sex>
+      <short_descr>пузыр|ь|я|ю|я|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28019">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc noeye"/>
+      <behavior type="InvasionBubblesMob">
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Темный мыльный пузырь излучающий зло зыркает вокруг  маленькими  пылающими
+красным глазами.
+</description>
+      <hit>1d1+1</hit>
+      <imm add="summon charm"/>
+      <long_descr>{1Темный пузырь ({Dbubble{2) кружится в воздухе.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <player_name>invader bubble пузырь</player_name>
+      <race>unique</race>
+      <sex>male</sex>
+      <short_descr>{Dпузыр|ь{x|я{x|ю{x|я{x|ом{x|е{x</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28020">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc noeye"/>
+      <behavior type="InvasionBubblesMob">
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Мыльный пузырь постоянно меняет форму, размер, цвет, и направление движения.
+</description>
+      <hit>1d1+1</hit>
+      <imm add="summon charm"/>
+      <long_descr>{1Пузырь ({Mbubble{2) меняющий форму кружится в воздухе.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <player_name>chaos bubble пузырь</player_name>
+      <race>unique</race>
+      <sex>male</sex>
+      <short_descr>{Mпузыр|ь{x|я{x|ю{x|я{x|ом{x|е{x</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28021">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc noeye"/>
+      <behavior type="InvasionBubblesMob">
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Раздутый мыльный окруженный магической защитой  пузырь  пытается  выглядеть
+очень умным. Почему-то тебе кажется, что на самом деле он в два раза меньше
+чем выглядит. Да и пожалуй на столько же глупее.
+</description>
+      <hit>1d1+1</hit>
+      <imm add="summon charm"/>
+      <long_descr>{1Огромный синий пузырь ({Bbubble{2) кружится в воздухе.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <player_name>shalafi bubble пузырь</player_name>
+      <race>unique</race>
+      <sex>male</sex>
+      <short_descr>{Bпузыр|ь{x|я{x|ю{x|я{x|ом{x|е{x</short_descr>
+      <size>huge</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28022">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc noeye"/>
+      <behavior type="InvasionBubblesMob">
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Красный мыльный пузырь целиком закован в доспехи. Непонятно одно - как он
+вообще способен передвигаться.
+</description>
+      <hit>1d1+1</hit>
+      <imm add="summon charm"/>
+      <long_descr>{1Красный пузырь ({Rbubble{2) закованный в доспехи кружится в воздухе.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <player_name>battlerager bubble пузырь</player_name>
+      <race>unique</race>
+      <sex>male</sex>
+      <short_descr>{Rпузыр|ь{x|я{x|ю{x|я{x|ом{x|е{x</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28023">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc noeye"/>
+      <behavior type="InvasionBubblesMob">
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Белый матовый пузырь излучает яркий свет вокруг себя. Тебе даже кажется что
+он не просто белый, а белый и пушистый.
+</description>
+      <hit>1d1+1</hit>
+      <imm add="summon charm"/>
+      <long_descr>{1Белый матовый пузырь ({Wbubble{2) излучающий свет кружится в воздухе.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <player_name>knight bubble пузырь</player_name>
+      <race>unique</race>
+      <sex>male</sex>
+      <short_descr>{Wпузыр|ь{x|я{x|ю{x|я{x|ом{x|е{x</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28024">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc noeye"/>
+      <behavior type="InvasionBubblesMob">
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Зеленый мыльный пузырь весь покрытый листьями кружится перед тобой. 
+Выглядит он вполне мирно, но зачем ему тогда маскироваться?!
+</description>
+      <hit>1d1+1</hit>
+      <imm add="summon charm"/>
+      <long_descr>{1Зеленый пузырь ({gbubble{2) покрытый листьями кружится в воздухе.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <player_name>lion bubble пузырь</player_name>
+      <race>unique</race>
+      <sex>male</sex>
+      <short_descr>{gпузыр|ь{x|я{x|ю{x|я{x|ом{x|е{x</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28025">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc noeye"/>
+      <behavior type="InvasionBubblesMob">
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Желтый мыльный пузырь ожидает здесь клиента бубня что-то про расценки. 
+Разглядывая пузырь ты замечаешь что желтый он, из-за того, что покрыт 
+ровным слоем золотой пыли. Чтож золото не помешает и тебе.
+</description>
+      <hit>1d1+1</hit>
+      <imm add="summon charm"/>
+      <long_descr>{1Желтый пузырь ({Ybubble{2) ожидающий клиента кружится в воздухе.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <player_name>hunter bubble пузырь</player_name>
+      <race>unique</race>
+      <sex>male</sex>
+      <short_descr>{Yпузыр|ь{x|я{x|ю{x|я{x|ом{x|е{x</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28026">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc noeye"/>
+      <behavior type="InvasionBubblesMob">
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Одинокий мыльный пузырь пытается остается в стороне от присутствующих, 
+но не упускает возможности принять участие в происходящем вокруг.
+Может он не одинокий пузырь, а пузырь-одиночка?
+</description>
+      <hit>1d1+1</hit>
+      <imm add="summon charm"/>
+      <long_descr>{1Одинокий пузырь ({Cbubble{2) кружится в воздухе.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <player_name>outsider bubble пузырь</player_name>
+      <race>unique</race>
+      <sex>male</sex>
+      <short_descr>{Cпузыр|ь{x|я{x|ю{x|я{x|ом{x|е{x</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28027">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc noeye"/>
+      <behavior type="InvasionBubblesMob">
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Мыльный пузырь изгнанный с небес выглядит немного расстроенным, но похоже
+он не теряет надежды раздобыть где-нибудь 1000 QP для возвращения.
+</description>
+      <hit>1d1+1</hit>
+      <imm add="summon charm"/>
+      <long_descr>{1Пузырь ({ybubble{2) изгнанный с небес кружится в воздухе.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <player_name>exile bubble пузырь</player_name>
+      <race>unique</race>
+      <sex>male</sex>
+      <short_descr>{yпузыр|ь{x|я{x|ю{x|я{x|ом{x|е{x</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28028">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc noeye"/>
+      <behavior type="InvasionBubblesMob">
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Призрак мыльного пузыря колышется на ветру. Выглядит он то ли хмурым, то ли
+пьяным. И уж точно он что-то знает!!!  Как  жаль,  что  призраки  не  могут
+общаться со смертными!!
+</description>
+      <hit>1d1+1</hit>
+      <imm add="summon charm"/>
+      <long_descr>{1Призрак пузыря ({Dbubble{2) кружится в воздухе.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <player_name>ghost bubble пузырь</player_name>
+      <race>unique</race>
+      <sex>male</sex>
+      <short_descr>{Dпузыр|ь{x|я{x|ю{x|я{x|ом{x|е{x</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28029">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc noeye"/>
+      <behavior type="InvasionBubblesMob">
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Мыльный пузырь переливающийся всеми цветами радуги весело  кружится  вокруг
+тебя гонясь за стайкой багов. Похоже ему нет ни до кого дела. Кроме пожалуй
+багов, которые пытаются от него спрятаться. Хрум!!! И еще одной багой стало
+меньше.
+</description>
+      <hit>1d1+1</hit>
+      <imm add="summon charm"/>
+      <long_descr>{1Пузырь ({Yb{gu{Mb{Bb{Rl{Ce{2) переливающийся всеми цветами радуги кружится в воздухе.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <player_name>immortal bubble пузырь</player_name>
+      <race>unique</race>
+      <sex>male</sex>
+      <short_descr>{Yп{gу{Mз{Bы{Rр{C|ь{x|я{x|ю{x|я{x|о{Wм{x|е{x</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28030">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc noeye"/>
+      <behavior type="FlamesBurner">
+        <instrument>28034</instrument>
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>С детства ненавидит природу и все живое. Или просто пироман?
+</description>
+      <hit>1d1+1</hit>
+      <imm add="summon charm"/>
+      <long_descr>Злобный поджигатель (firestarter) балуется спичками.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <player_name>xflamesburner поджигатель firestarter incendiary</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>поджигател|ь|я|ю|я|ем|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28031">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc noeye"/>
+      <behavior type="FlamesBurner">
+        <instrument>28034</instrument>
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Этот тип так же опасен для природы, как и поджигатель.
+</description>
+      <hit>1d1+1</hit>
+      <imm add="summon charm"/>
+      <long_descr>Подстрекатель (instigator) подливает масла в огонь.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <player_name>xflamesburner подстрекатель instigator</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>подстрекател|ь|я|ю|я|ем|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28032">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc noeye"/>
+      <behavior type="FlamesFireman">
+        <instrument>28033</instrument>
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Этот человек выглядит растерянным. Местные власти отрядили его сюда
+для борьбы с пожарами, но он явно не справляется со своими обязанностями.
+Пожалуй, стоит предложить ему свою помощь?
+</description>
+      <hit>1d1+1</hit>
+      <imm add="summon charm"/>
+      <long_descr>Огнеборец (firefighter) пытается сдержать наступление огня.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <player_name>xflamesfireman firefighter огнеборец</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>огнебор|ец|ца|цу|ца|цем|це</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28033">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc noeye"/>
+      <behavior type="InvasionMob">
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Глыба льда медленно движется в твою сторону.
+Она огромна, от нее так и веет ледяным дыханием.
+В айсберге ты замечаешь замерзших животных и много
+разных растений.
+</description>
+      <hit>1d1+1</hit>
+      <imm add="summon charm"/>
+      <long_descr>Огромный айсберг (iceberg) возвышается над тобой.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <player_name>айсберг iceberg</player_name>
+      <race>unique</race>
+      <sex>neutral</sex>
+      <short_descr>огромн|ый|ого|ому|ый|ым|ом айсберг||а|у||ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28034">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc noeye"/>
+      <behavior type="InvasionMob">
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Кусочек льда когда-то откололся от айсберга и теперь одиноко тает на земле. 
+От него все еще веет холодом, и ты начинаешь замерзать.
+</description>
+      <hit>1d1+1</hit>
+      <imm add="summon charm"/>
+      <long_descr>Отколовшаяся льдина (ice) находится здесь.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <player_name>льдина ice</player_name>
+      <race>unique</race>
+      <sex>neutral</sex>
+      <short_descr>отколовш|аяся|ейся|ейся|уюся|ейся|ейся льдин|а|ы|е|у|ой|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28035">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc noeye"/>
+      <behavior type="InvasionMob">
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Сосулька грозно висит у тебя над головой.
+Она понемногу тает и капельки воды падают тебе на плечи.
+Еще чуть-чуть, и она сама упадет на тебя!
+</description>
+      <hit>1d1+1</hit>
+      <imm add="summon charm"/>
+      <long_descr>Сосулька (icicle) капает на тебя холодной водой.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <player_name>сосулька icicle</player_name>
+      <race>unique</race>
+      <sex>neutral</sex>
+      <short_descr>капающ|ая|ей|ей|ую|ей|ей сосульк|а|и|е|у|ой|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28036">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc noeye"/>
+      <behavior type="InvasionMob">
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Белый мяч с черными полосками выглядит красиво.
+На нем видна эмблема футбольной организации СИФА.
+Также на мяче заметны его параметры:
+диаметр..............40 см
+вес..................0.8 кг
+прочность............тип 4
+Ты подкидываешь его в воздух - он стремительно падает на землю.
+</description>
+      <hit>1d1+1</hit>
+      <imm add="summon charm"/>
+      <long_descr>Футбольный мяч (ball) с эмблемой СИФА валяется на земле.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <player_name>мяч ball</player_name>
+      <race>unique</race>
+      <sex>neutral</sex>
+      <short_descr>футбольн|ый|ого|ому|ый|ым|ом мяч||а|у||ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28037">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc noeye"/>
+      <behavior type="InvasionMob">
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Мяч выглядит страшновато. Его краски облезли, линии потерлись. 
+От аббревиатуры осталось лишь .И.А
+Скорее всего, мяч неудачно приземлился и где-то порвался.
+Скоро он сдуется сам по себе.
+</description>
+      <hit>1d1+1</hit>
+      <imm add="summon charm"/>
+      <long_descr>Наполовину сдувшийся мяч (ball) уныло лежит на полу.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <player_name>сдувшийся мяч ball</player_name>
+      <race>unique</race>
+      <sex>neutral</sex>
+      <short_descr>сдувш|ийся|егося|емуся|ийся|имся|емся мяч||а|у||ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28098">
+      <ac bash="-10" exotic="-10" pierce="-10" slash="-10"/>
+      <act add="npc sentinel noeye"/>
+      <dam_type>none</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Весельчак и балагур Дуралей Дуралеич безостановочно хохмит, отпускает шутки
+(иногда не совсем пристойные).
+Данный субъект очень остр на язык. Завидив тебя он буквально несколькими
+фразами на твой счет заставляет весь присутствующий народ хохотать, держась
+за животы. Улыбка не сходит с его лица, прищур глаз, острый бегающий взгляд,
+немного взъерошенная голова... и еще куча мелких деталей его внешности не
+поддается описанию. Вдруг он бросается тебя обнимать и ты тут же слышешь
+взрыв хохата окружающих. Обернувшись ты змечаешь пришпиленный ОГРОМНОЙ булавкой
+к твоей заднице {yобезьянний хвост{x.
+</description>
+      <form del="edible sentient biped mammal"/>
+      <hit>100d100+1000</hit>
+      <level>50</level>
+      <long_descr>Дуралей Дуралеич хитро тебе подмигивает.
+</long_descr>
+      <mana>100d100+1000</mana>
+      <material>none</material>
+      <parts del="head arms legs heart brains guts hands feet fingers ear eye"/>
+      <player_name>дуралей дуралеич fool foolich</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>{YДурале|й|я|ю|я|ем|е Дуралеич|{x|a{x|у{x|а{x|ем{x|е{x</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28099">
+      <ac bash="-1000" exotic="-1000" pierce="-1000" slash="-1000"/>
+      <act add="npc sentinel stay_area nosteal nodemand warrior notrack"/>
+      <dam_type>none</dam_type>
+      <damage>1d1+100000</damage>
+      <default_pos>stand</default_pos>
+      <description>{x  Это пожилой человек, с морщинистым лицом и густыми седыми волосами.
+{xНесмотря на свой возраст, в нем все еще чувствуется огромная жизненная сила.
+{xНа нем одет добротный кожанный доспех, за спину закинут большой дубовый лук,
+{xна поясе за ремень заткнут внушительных размеров охотничий разделочный нож.
+{xЗавершает боевую экипировку копье в полтора человеческих роста со стальным
+{xнаконечником.
+{x  Старик, заметив твое присутствие, переступает с ноги на ногу, опирается на
+{xкопье и произносит:
+{G     &quot;Приветствую тебя воин. Я рад что ты решил помочь старику.
+{G     Я прожил много лет и познал много секретов природы,
+{G     я встречался с огромным количеством людей. Многие из них
+{G     были очень образованы, многие в мастерстве владели разными
+{G     профессиями. Сейчас я готов поделиться с Вами секретом создания
+{G     особых накидок. Но для этого Вам необходимо будет выполнить мои
+{G     задания и собрать все нужные компоненты!
+{G     Так как заданий довольно много, то я всех их выписал на пергамент.
+{G     Так что попросив его у меня, ты сможешь ознакомиться со всем списком.
+{G     Но помни, что ты не один и возможно какое-то из заданий
+{G     кто-то уже выполнил до тебя.&quot;{x
+</description>
+      <detection add="imp_invis fade invis hidden sneak acute_vision"/>
+      <form del="edible sentient biped mammal"/>
+      <hit>1d1+100000</hit>
+      <hitroll>10000</hitroll>
+      <imm add="summon charm spell weapon bash pierce slash fire cold lightning acid poison negative holy energy mental disease drowning light sound wood silver iron"/>
+      <level>120</level>
+      <long_descr>{GПожилой воин-зверолов (warrior) дремлет облокотившись о стену.{x
+</long_descr>
+      <mana>1d1+100000</mana>
+      <material>none</material>
+      <off add="area_attack bash berserk disarm dodge kick kick_dirt parry trip"/>
+      <parts del="head arms legs heart brains guts hands feet fingers ear eye"/>
+      <player_name>воин зверолов warrior beasthunter</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>{GВои|н|на|ну|на|ном|не-звероло|в{x|ва{x|ву{x|ва{x|вом{x|ве{x</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28100">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel"/>
+      <dam_type>none</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <hit>0d0+0</hit>
+      <imm add="summon charm"/>
+      <long_descr>(no long)
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <player_name>xkqprince</player_name>
+      <race>none</race>
+      <sex>male</sex>
+      <short_descr>(no short)</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28101">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel thief"/>
+      <alignment>-1000</alignment>
+      <dam_type>none</dam_type>
+      <damage>1d1+1</damage>
+      <default_pos>stand</default_pos>
+      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <hit>20d34+1000</hit>
+      <imm add="summon charm"/>
+      <long_descr>(no long)
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <off add="bash berserk disarm dodge fast kick kick_dirt parry trip crush"/>
+      <player_name>xkqbandit</player_name>
+      <race>none</race>
+      <sex>male</sex>
+      <short_descr>(no short)</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28300">
+      <ac bash="8" exotic="12" pierce="9" slash="9"/>
+      <act add="npc sentinel noalign notrack"/>
+      <aff add="infrared pass_door swim"/>
+      <dam_type>thrust</dam_type>
+      <damage>1d3+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Очаровательный черный барашек внимательно рассматривает тебя черными
+глазами-бусинками и на его морде расплывается похотливая ухмылка.
+Всем своим видом овец показывает желание плодиться и размножаться.
+</description>
+      <detection add="dark_vision"/>
+      <hit>1d5+1000</hit>
+      <hitroll>10</hitroll>
+      <imm add="summon charm"/>
+      <level>1</level>
+      <long_descr>Черный барашек (Sven) настойчиво старается подойти к тебе с тыльной стороны.
+</long_descr>
+      <mana>2d3+83</mana>
+      <material>none</material>
+      <player_name>sven свен ram баран барашек</player_name>
+      <race>hoofed</race>
+      <sex>male</sex>
+      <short_descr>Свен||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28301">
+      <ac bash="-10" exotic="1" pierce="-10" slash="-10"/>
+      <act add="npc sentinel warrior notrack"/>
+      <aff add="infrared pass_door swim"/>
+      <dam_type>bite</dam_type>
+      <damage>4d6+10</damage>
+      <default_pos>stand</default_pos>
+      <description>Непонятно, что она вообще различает за клочьями шерсти, свисающими ей
+прямо на глаза. Нос и уши собаки находятся в постоянном движении, выискивая,
+куда же подевался этот похотливый паршивец Свен. 
+В перерывах между охотой собака не прочь полакомиться косточкой.
+</description>
+      <hit>5d11+911</hit>
+      <hitroll>1</hitroll>
+      <imm add="summon charm"/>
+      <level>30</level>
+      <long_descr>Лохматая пастушья собака (Wotan) вынюхивает след черного барана.
+</long_descr>
+      <mana>28d5+451</mana>
+      <material>none</material>
+      <player_name>dog wotan собака вотан</player_name>
+      <race>dog</race>
+      <sex>male</sex>
+      <short_descr>Вотан||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <smell>Пахнет мокрой псиной, отвратительно просто.</smell>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28302">
+      <ac bash="-8" exotic="2" pierce="-8" slash="-8"/>
+      <act add="npc sentinel notrack"/>
+      <aff add="pass_door swim"/>
+      <alignment>400</alignment>
+      <dam_type>slap</dam_type>
+      <damage>2d8+7</damage>
+      <default_pos>stand</default_pos>
+      <description>Нормальная внучка нормального дедушки. С детства проводит много времени
+среди овец, чему овцы не сильно-то и рады. 
+Обожает тискать все, что под руку подвернется. Начиная от овец и барашков,
+и заканчивая игрушечными мишками гризли. Хотя, глядя на нее, невольно
+задумываешься: зачем гризли?.. так задушит.
+</description>
+      <hit>5d9+559</hit>
+      <imm add="summon charm"/>
+      <level>25</level>
+      <long_descr>Маленькая девочка (Bromse) весело скачет на одной ножке.
+</long_descr>
+      <mana>24d7+425</mana>
+      <material>none</material>
+      <player_name>girl grandchild bromse девочка внучка бромсе</player_name>
+      <race>human</race>
+      <sex>female</sex>
+      <short_descr>Бромсе</short_descr>
+      <size>medium</size>
+      <spec>spec_poison</spec>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28304">
+      <ac bash="-16" exotic="0" pierce="-16" slash="-16"/>
+      <act add="npc sentinel notrack"/>
+      <dam_type>hooves</dam_type>
+      <damage>6d6+17</damage>
+      <default_pos>stand</default_pos>
+      <description>Белая кудрявая овца бродит по полянке в поисках сочной травы и 
+захватывающих приключений.
+</description>
+      <hit>24d17+3188</hit>
+      <hitroll>1</hitroll>
+      <imm add="summon charm"/>
+      <level>45</level>
+      <long_descr>Белая овца (sheep) что-то жует.
+</long_descr>
+      <mana>57d8+735</mana>
+      <material>none</material>
+      <player_name>sheep овца</player_name>
+      <race>hoofed</race>
+      <sex>female</sex>
+      <short_descr>овц|а|ы|е|у|ой|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28500">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <behavior type="ValentineLover">
+        <lover type="XMLInteger">28501</lover>
+        <room type="XMLInteger">12085</room>
+        <msg1 type="XMLVector">
+          <node type="XMLString">$c1 мнется с копыта на копыто.</node>
+          <node type="XMLString">$c1 с надеждой смотрит на тебя и произносит: &apos;{gПередай моей любимой девушке... этот вот листочек из учебника хирургии, который она искала.{x&apos;</node>
+        </msg1>
+        <msg2 type="XMLVector">
+          <node type="XMLString">$c1 скачет от радости, как козленок.</node>
+          <node type="XMLString">$c1 произносит: &apos;{gУра! Ты наш$Gло|ел|ла мою дорогую Бидж. Передай ей от меня вот это.{x&apos;</node>
+        </msg2>
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>30d10+30000</damage>
+      <default_pos>stand</default_pos>
+      <description>Перед тобой тонкий, мускулистый и жилистый сатир, одетый в холщовую
+рубашку со множеством карманов и в шорты из домотканой материи.  За плечами
+болтается солдатский рюкзак.  Темные волосы покрывают грудь и ноги,
+спускаясь ниже колен, которые имеют какой-то странный изгиб.  
+Из-под густой шевелюры застенчиво выглядывают рожки.
+</description>
+      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <hit>30d10+30000</hit>
+      <level>100</level>
+      <long_descr>Юный и красивый сатир (Stephan) приглядывает за зверюшками здесь.
+</long_descr>
+      <mana>30d10+30000</mana>
+      <material>none</material>
+      <player_name>stephann стефан</player_name>
+      <race>satyr</race>
+      <sex>male</sex>
+      <short_descr>Стефа|н|на|ну|на|ном|не</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28501">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <behavior type="ValentineLover">
+        <lover type="XMLInteger">28500</lover>
+        <room type="XMLInteger">8207</room>
+        <msg1 type="XMLVector">
+          <node type="XMLString">$c1 орет тебе: &apos;{gЭй ты! Учебник не находи$Gло|л|ла?{x&apos;</node>
+          <node type="XMLString">$c1 произносит &apos;{gА сатира такого молодого виде$Gло|л|ла?{x&apos;</node>
+          <node type="XMLString">$c1 произносит &apos;{gЕсли увидишь - отдай ему вот эту записку!{x&apos;</node>
+        </msg1>
+        <msg2 type="XMLVector">
+          <node type="XMLString">$c1 счастливо улыбается.</node>
+          <node type="XMLString">$c1 произносит &apos;{gЗначит, жив козлик.{x&apos;</node>
+          <node type="XMLString">$c1 произносит &apos;{gПередай ему еще пару шпаргалок.{x&apos;</node>
+        </msg2>
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>30d10+30000</damage>
+      <default_pos>stand</default_pos>
+      <description>Это невысокая полненькая девушка с темными волосами и натруженными руками
+хирурга.  Она чуть пошатывается на ветру от усталости, ее глаза слипаются. 
+Она одета в теплую кофту, плотную махеровую юбку, на шее - странный амулет. 
+В целом - типичный ветеринар из далекого села.  
+</description>
+      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <hit>30d10+30000</hit>
+      <level>100</level>
+      <long_descr>Ветеринарша Бидж (Bidge) высматривает очередную зверушку, чтобы ПОМОЧЬ ей!
+</long_descr>
+      <mana>30d10+30000</mana>
+      <material>none</material>
+      <player_name>bidge бидж</player_name>
+      <race>human</race>
+      <sex>female</sex>
+      <short_descr>Бидж</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28502">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <behavior type="ValentineLover">
+        <lover type="XMLInteger">28503</lover>
+        <room type="XMLInteger">32045</room>
+        <msg1 type="XMLVector">
+          <node type="XMLString">$c1 пошатываясь приближается к тебе и заговорщическим тоном орет на ухо: &apos;{g.Команда готова и ждет только моего сигнала.{x&apos;</node>
+          <node type="XMLString">$c1 произносит &apos;{gПередай бумажку на корабль - подарю золотой медальончик!{x&apos;</node>
+        </msg1>
+        <msg2 type="XMLVector">
+          <node type="XMLString">$c1 произносит &apos;{gЭти пьянчуги еще не забыли своего капитана?{x&apos;</node>
+          <node type="XMLString">$c1 произносит &apos;{gПередай бумажку на корабль - подарю золотой медальончик!{x&apos;</node>
+        </msg2>
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>30d10+30000</damage>
+      <default_pos>stand</default_pos>
+      <description>Это донельзя странный пират.  У него длинные дрэды, подведенные глаза,
+куча самых немыслимых побрякушек на груди и в волосах.  Вместе с тем,
+настораживает его репутация - как самого отчаянного и смекалистого наглеца. 
+Он полупьяно мурлычет что - то приятным бархатистым голосом, а потом,
+обернувшись к тебе, говорит: &quot;Корабль..  Черная Жемчужина - это не просто
+паруса, палуба - это свобода.&quot;  И ты замечаешь тоску в его карих глазах.  
+</description>
+      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <hit>30d10+30000</hit>
+      <level>100</level>
+      <long_descr>Капитан Джек Воробей (Jack Sparrow) мотает срок в тюрьме.
+</long_descr>
+      <mana>30d10+30000</mana>
+      <material>none</material>
+      <player_name>jack sparrow джек воробей</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>Дже|к|ка|ку|ка|ком|ке-вороб|ей|ья|ью|ья|ьем|ье</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28503">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <behavior type="ValentineLover">
+        <lover type="XMLInteger">28502</lover>
+        <room type="XMLInteger">17231</room>
+        <msg1 type="XMLVector">
+          <node type="XMLString">С корабля в твою сторону доносятся пьяные крики: &apos;{gЭй, ты!!! Джека виде$Gло|л|ла? Как так какого Джека! Нашего! А? Нет? ДА? Ну передай ему весточку!{x&apos;</node>
+        </msg1>
+        <msg2 type="XMLVector">
+          <node type="XMLString">Ты слышишь пьяный голос: &apos;{gЭй, ты!!! Виде$Gло|л|ла нашего Джека? Передай ему эту карту - мы будем ждать его в условленном месте!{x&apos;</node>
+          <node type="XMLString">С корабля доносятся радостные вопли.</node>
+        </msg2>
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>30d10+30000</damage>
+      <default_pos>stand</default_pos>
+      <description>Твой восхищенный взгляд медленно скользит по идеальной линии носа и кормы
+этого прекрасного судна.  Паруса черного шелка легко трепещут на ветерке. 
+Мачты вздымаются вверх идеальными иглами.  Только одного штриха не хватает
+этой идиллии - капитана.  И она терпеливо ждет его.  
+</description>
+      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <hit>30d10+30000</hit>
+      <level>100</level>
+      <long_descr>Роскошный черный корабль (black pearl) тихо дрейфует в лазурном море.
+</long_descr>
+      <mana>30d10+30000</mana>
+      <material>none</material>
+      <player_name>black pearl черная жемчужина</player_name>
+      <race>unique</race>
+      <sex>female</sex>
+      <short_descr>Черн|ая|ой|ую|ую|ой|ой Жемчужи|на|ны|не|ну|ной|не</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28504">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <behavior type="ValentineLover">
+        <lover type="XMLInteger">28505</lover>
+        <room type="XMLInteger">609</room>
+        <msg1 type="XMLVector">
+          <node type="XMLString">Славушка, грохнув об стол кружкой пива, вещает тебе: &apos;{gИк! Где моя М..метанушка? Паря, мне без нее так плохо! Вот! Иии.к! Возьми передай ей!{x&apos;</node>
+          <node type="XMLString">Славушка горько плачет.</node>
+        </msg1>
+        <msg2 type="XMLVector">
+          <node type="XMLString">Славушка, вытирая слезы радости с глаз, вопит: &apos;{gТы нашел ее!{x&apos;</node>
+          <node type="XMLString">Славушка произносит &apos;{gНа, отнеси ей.{x&apos;</node>
+        </msg2>
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>30d10+30000</damage>
+      <default_pos>stand</default_pos>
+      <description>ПРОЧЬ ОТСЮДА!  За что такое наказание упало на несчастный ДЛ?  Этот
+страшный ...  Хм..  Чудовище.  Так вот этот...  чудовище...  известен также
+под именами Фюрер Камарильо Бисер.  Он навалял немало дров в тихом мире
+легендарной Руси.  Наглый до безобразия и такой же юморной бабник и студент.
+Очевидно, он надирается здесь из-за очередных недоразумений со своей
+прекрасной мавкой - полуденницей Метанкой.  
+</description>
+      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <hit>30d10+30000</hit>
+      <long_descr>Полуголый молодой мужик (Mstislav) вовсю распивает пивеццо здесь.
+</long_descr>
+      <mana>30d10+30000</mana>
+      <material>none</material>
+      <player_name>mstislav biser мстистлав бисеров</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>Мстисла|в|ва|ву|ва|вом|ве Бисеро|в|ва|ву|ва|вым|ве</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28505">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <behavior type="ValentineLover">
+        <lover type="XMLInteger">28504</lover>
+        <room type="XMLInteger">19138</room>
+        <msg1 type="XMLVector">
+          <node type="XMLString">$c1 эротично потягивается и шепчет тебе: &apos;{gНайди моего любимого оболтуса Мстиславушку.{x&apos;</node>
+          <node type="XMLString">$c1 произносит &apos;{gПередай ему валентинку и скажи - я его все еще люблю!{x&apos;</node>
+        </msg1>
+        <msg2 type="XMLVector">
+          <node type="XMLString">$c1 эротично потягивается и шепчет тебе: &apos;{gТы воистину великий герой, если нашел этого оболтуса.{x&apos;</node>
+          <node type="XMLString">$c1 произносит &apos;{gПередай ему валентинку и скажи - я его все еще люблю!{x&apos;</node>
+        </msg2>
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>30d10+30000</damage>
+      <default_pos>stand</default_pos>
+      <description>Это воистину обворожительная и симпатичная нечисть. Большие глаза цвета спелой 
+бирюзы, пушистые ресницы, длинные золотистые кудряшки до пояса, грубо обрезанные
+чьей-то зверской секирой. А фигурка! От одного вида ее точеной фигурки у любого 
+парня закружится голова! 110-55-90! Ты любуешься этой прекрасной невинной 
+мавкой, не замечая, как медовая дрема окутывает тебя и убаюкивает.
+</description>
+      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <hit>30d10+30000</hit>
+      <level>100</level>
+      <long_descr>Метанка (Metanca) объедается сладким медом на пасеке, сладкоежка!
+</long_descr>
+      <mana>30d10+30000</mana>
+      <material>none</material>
+      <player_name>метанка metanka mentanca</player_name>
+      <race>human</race>
+      <sex>female</sex>
+      <short_descr>Метанк|а|и|е|у|ой|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28506">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <behavior type="ValentineLover">
+        <lover type="XMLInteger">28507</lover>
+        <room type="XMLInteger">1126</room>
+        <msg1 type="XMLVector">
+          <node type="XMLString">$c1 задумчиво теребит в руках цветок эланора.</node>
+          <node type="XMLString">$c1 говорит тебе: &apos;{gНайди ее, доблестный витязь. Мою Ундомиэль.{x&apos;</node>
+          <node type="XMLString">$c1 говорит тебе: &apos;{gПередай ей это как знак того, что мое сердце стремится к ней.{x&apos;</node>
+        </msg1>
+        <msg2 type="XMLVector">
+          <node type="XMLString">$c1 говорит тебе: &apos;{gСпасибо тебе, доблестный витязь, за весточку от моей Ундомиэль.{x&apos;</node>
+          <node type="XMLString">$c1 говорит тебе: &apos;{gПередай ей это как знак того, что мое сердце стремится к ней.{x&apos;</node>
+        </msg2>
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>30d10+30000</damage>
+      <default_pos>stand</default_pos>
+      <description>Перед тобой суровый и величавый человек, напоминающий тебе королей древности.
+У него обветренное лицо, пронзительно-серые глаза и темные волосы до плеч. 
+На плечах - неизменный в странствиях болотный плащ. Ни свиты, ни роскошных 
+одеяний... Он приехал навестить старинных друзей - хоббитов. Но, похоже, в этот 
+день он скучает по своей королеве.
+</description>
+      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <hit>30d10+30000</hit>
+      <level>100</level>
+      <long_descr>Арагорн (Aragorn) гостит у друзей-хоббитов здесь.
+</long_descr>
+      <mana>30d10+30000</mana>
+      <material>none</material>
+      <player_name>aragorn арагорн</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>Арагор|н|на|ну|на|ном|не</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28507">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <behavior type="ValentineLover">
+        <lover type="XMLInteger">28506</lover>
+        <room type="XMLInteger">7834</room>
+        <msg1 type="XMLVector">
+          <node type="XMLString">$c1 поправляет прядь волос над острым эльфийским ухом.</node>
+          <node type="XMLString">$c1 говорит тебе: &apos;{gНайди моего Элессара и скажи ему, что я люблю его.{x&apos;</node>
+          <node type="XMLString">$c1 говорит тебе: &apos;{gОтнеси ему этот листок и да будет с ним благословение Варды!{x&apos;</node>
+        </msg1>
+        <msg2 type="XMLVector">
+          <node type="XMLString">$c1 улыбается тебе.</node>
+          <node type="XMLString">$c1 говорит тебе: &apos;{gСкажи Элессару - я люблю его. Отнеси ему этот листок и да будет с ним благословение Варды!{x&apos;</node>
+        </msg2>
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>30d10+30000</damage>
+      <default_pos>stand</default_pos>
+      <description>Она прекрасна - настолько, что люди говорят, в ней ожила красота Лучиень.
+Изморозь седины не серебрит ее волосы и лицо ее - юношески свежее, как будто 
+она только что умылась росой. Чистым блеском предрассветных звезд лучатся ее
+светло-серые глаза, но в них таится зрелая мудрость, а еще - тоска по мужу.
+</description>
+      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <hit>30d10+30000</hit>
+      <level>100</level>
+      <long_descr>Арвен (Arwen) отдыхает в кругу далеких родственников.
+</long_descr>
+      <mana>30d10+30000</mana>
+      <material>none</material>
+      <player_name>arwen арвен</player_name>
+      <race>elf</race>
+      <sex>female</sex>
+      <short_descr>Арвен</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28508">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <behavior type="ValentineLover">
+        <lover type="XMLInteger">28509</lover>
+        <room type="XMLInteger">2353</room>
+        <msg1 type="XMLVector">
+          <node type="XMLString">$c1, грозно насупясь, смотрит на тебя.</node>
+          <node type="XMLString">$c1 произносит &apos;{gБудешь посланцем?{x&apos;</node>
+          <node type="XMLString">$c1 произносит &apos;{gДеве Сигрун{x&apos;</node>
+          <node type="XMLString">$c1 произносит &apos;{gОт меня поклонись{x&apos;</node>
+          <node type="XMLString">$c1 произносит &apos;{gИ этот зарок{x&apos;</node>
+          <node type="XMLString">$c1 произносит &apos;{gЛюбви передай.{x&apos;</node>
+        </msg1>
+        <msg2 type="XMLVector">
+          <node type="XMLString">$c1, грозно насупясь, смотрит на тебя.</node>
+          <node type="XMLString">$c1 произносит &apos;{gТы, что ль, посланец!{x&apos;</node>
+          <node type="XMLString">$c1 произносит &apos;{gЧто-то с отдышкой!{x&apos;</node>
+          <node type="XMLString">$c1 произносит &apos;{gКоль добежишь{x&apos;</node>
+          <node type="XMLString">$c1 произносит &apos;{gДеве моей{x&apos;</node>
+          <node type="XMLString">$c1 произносит &apos;{gПривет передавай.{x&apos;</node>
+        </msg2>
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>30d10+30000</damage>
+      <default_pos>stand</default_pos>
+      <description>Сигмунда сын
+В кольчуге стоит
+День лишь ему,
+Но время приспело!
+Взор его зорок -
+Взор воителя,
+Друг он волкам,
+Будет нам праздник!
+
+(для полного счастья ему не хватает только одной полногрудой валькирии)
+</description>
+      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <hit>30d10+30000</hit>
+      <level>100</level>
+      <long_descr>Хельги (Helgi) прокладывает лыжню в глубоком снегу.
+</long_descr>
+      <mana>30d10+30000</mana>
+      <material>none</material>
+      <player_name>хельги helgi</player_name>
+      <race>unique</race>
+      <sex>male</sex>
+      <short_descr>Хельги</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28509">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <behavior type="ValentineLover">
+        <lover type="XMLInteger">28508</lover>
+        <room type="XMLInteger">7912</room>
+        <msg1 type="XMLVector">
+          <node type="XMLString">$c1 кокетливо смотрит на тебя, потом мрачнеет.</node>
+          <node type="XMLString">$c1 произносит: &apos;{gВиде$Gло|л|ла ли конунга?{x&apos;.</node>
+          <node type="XMLString">$c1 произносит: &apos;{gГде-то в снегах.{x&apos;.</node>
+          <node type="XMLString">$c1 произносит: &apos;{gНадобно письма.{x&apos;.</node>
+          <node type="XMLString">$c1 произносит: &apos;{gЕму передать.{x&apos;.</node>
+        </msg1>
+        <msg2 type="XMLVector">
+          <node type="XMLString">$c1 кокетливо смотрит на тебя.</node>
+          <node type="XMLString">$c1 произносит: &apos;{gДолго бежа$Gло|л|ла?{x&apos;.</node>
+          <node type="XMLString">$c1 произносит: &apos;{gВиде$Gло|л|ла конунга?{x&apos;.</node>
+          <node type="XMLString">$c1 произносит: &apos;{gВот хорошо!{x&apos;.</node>
+          <node type="XMLString">$c1 произносит: &apos;{gНадобно письма.{x&apos;.</node>
+          <node type="XMLString">$c1 произносит: &apos;{gЕму передать.{x&apos;.</node>
+        </msg2>
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>30d10+30000</damage>
+      <default_pos>stand</default_pos>
+      <description>Дива тут нет,
+Что грохочет основа -
+Конунга дочь
+Жернов вращает;
+Носилась она
+Над облаками,
+Сражаться могла,
+Как смелые викинги,
+Прежде чем Хельги
+В плен ее взял.
+</description>
+      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <hit>30d10+30000</hit>
+      <level>100</level>
+      <long_descr>Сигрун (Sigrun) начищает свой двуручник и проверяет ремешки на доспехах.
+</long_descr>
+      <mana>30d10+30000</mana>
+      <material>none</material>
+      <player_name>сигрун sigrun</player_name>
+      <race>unique</race>
+      <sex>female</sex>
+      <short_descr>Сигрун</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28510">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <behavior type="ValentineLover">
+        <lover type="XMLInteger">28511</lover>
+        <room type="XMLInteger">11837</room>
+        <msg1 type="XMLVector">
+          <node type="XMLString">$c1 напевает что-то, бряцая на лире, и не обращает внимания на тебя.</node>
+          <node type="XMLString">$c1 смотрит на тебя грустным взглядом и говорит: &apos;{gВолею судеб нас Боги врозь развели с Эвридикой.{x&apos;</node>
+          <node type="XMLString">$c1 произносит: &apos;{gБудешь ли смелым и сможешь песню отдать ей скорее?{x&apos;</node>
+        </msg1>
+        <msg2 type="XMLVector">
+          <node type="XMLString">$c1 наяривает на арфе веселую джигу.{x&apos;</node>
+          <node type="XMLString">$c1 произносит: &apos;{gПриятную весть ты прине$Gсло|сла|с мне, посланец!{x&apos;</node>
+          <node type="XMLString">$c1 произносит: &apos;{gЛюбимой моей от меня передай эту песню!{x&apos;</node>
+        </msg2>
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>30d10+30000</damage>
+      <default_pos>stand</default_pos>
+      <description>Вопреки общепринятому мнению, что певец должен быть бледным и с взором горящим,
+Орфей красив, как и положено полубожественному герою. Легкая туника накинута на
+могучую атлетическую фигуру, почти не скрывая всех частей тела, на вьющихся 
+золотых кудрях - лавровый венок, в руках - неизменная лира.
+</description>
+      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <hit>30d10+30000</hit>
+      <level>100</level>
+      <long_descr>Орфей (Orpheus) нашел себе применение именно здесь.
+</long_descr>
+      <mana>30d10+30000</mana>
+      <material>none</material>
+      <player_name>орфей orpheus orfey</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>Орфе|й|я|ю|я|ем|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28511">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <behavior type="ValentineLover">
+        <lover type="XMLInteger">28510</lover>
+        <room type="XMLInteger">10418</room>
+        <msg1 type="XMLVector">
+          <node type="XMLString">$c1 все еще никак не может привыкнуть к мрачной обстановке Ада, поэтому сначала пугается тебя.</node>
+          <node type="XMLString">$c1, увидев, что ты все же с поверхности, говорит: &apos;{gВолею судеб расстались с милым певцом так недавно!{x&apos;</node>
+          <node type="XMLString">$c1 произносит &apos;{gМожешь сказать, что тоскую, весточку дать ему в руки?{x&apos;</node>
+        </msg1>
+        <msg2 type="XMLVector">
+          <node type="XMLString">$c1 произносит &apos;{gЗвуки мелодии томной счастьем наполнили сердце.{x&apos;</node>
+          <node type="XMLString">$c1 произносит &apos;{gМожешь сказать, что тоскую, весточку дать ему в руки?{x&apos;</node>
+        </msg2>
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>30d10+30000</damage>
+      <default_pos>stand</default_pos>
+      <description>Грустная, с нездоровым цветом лица девушка сидит на одном из камней. У нее 
+чудные волосы цвета воронова крыла и черные глаза. Одета она в длинный пеплос, 
+волосы перехвачены белой лентой. У нее тонкие ладошки и ступни, будто она 
+голодала не один месяц.
+</description>
+      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <hit>30d10+30000</hit>
+      <level>100</level>
+      <long_descr>Эвридика (Eurydice) грустит в этом богами забытом месте.
+</long_descr>
+      <mana>30d10+30000</mana>
+      <material>none</material>
+      <player_name>эвридика eurydice</player_name>
+      <race>human</race>
+      <sex>female</sex>
+      <short_descr>Эвридик|а|и|е|у|ой|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28512">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <behavior type="ValentineLover">
+        <lover type="XMLInteger">28513</lover>
+        <room type="XMLInteger">7639</room>
+        <msg1 type="XMLVector">
+          <node type="XMLString">$c1 одной рукой отбивается от обступивших его врагов.</node>
+          <node type="XMLString">$c1 говорит тебе &apos;{gНайди Киру и быстро - одна нога здесь, другая там - отнеси ей вот эту весточку.{x&apos;</node>
+          <node type="XMLString">$c1 говорит тебе &apos;{gЯ сказал БЫСТРО!{x&apos;</node>
+        </msg1>
+        <msg2 type="XMLVector">
+          <node type="XMLString">$c1 одной рукой отбивается от обступивших его врагов.</node>
+          <node type="XMLString">$c1 говорит тебе &apos;{gНашел Киру? Быстро - одна нога здесь, другая там - отнеси ей вот эту весточку.{x&apos;</node>
+          <node type="XMLString">$c1 говорит тебе &apos;{gЯ сказал БЫСТРО!{x&apos;</node>
+        </msg2>
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>30d10+30000</damage>
+      <default_pos>stand</default_pos>
+      <description>Истинный дворянин, во всех смыслах этого слова.  Два коротких меча в
+руках, несколько ножен с ножами под плащом, не считая перевязи. 
+Естественно, в этом мире надо быть готовым ко всему.  Серые глаза смотрят на
+тебя холодно, но изучающе.  Многочисленные кошельки с золотом сами по себе
+говорят о знатности и богатстве рода.  Волосы перехвачены тонким золотым
+обручем с кристаллом.  Странно, чем-то этот парень тебе нравится.  Наверное,
+своей уверенностью и честностью.  
+</description>
+      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <hit>30d10+30000</hit>
+      <level>100</level>
+      <long_descr>Румата (Rumata) Эсторский, кажется, ввязался в очередную драку здесь.
+</long_descr>
+      <mana>30d10+30000</mana>
+      <material>none</material>
+      <player_name>румата rumata</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>Румат|а|ы|е|у|ой|е Эсторск|ий|ого|ому|ого|им|ом</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28513">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <behavior type="ValentineLover">
+        <lover type="XMLInteger">28512</lover>
+        <room type="XMLInteger">10244</room>
+        <msg1 type="XMLVector">
+          <node type="XMLString">$c1 с надеждой смотрит на тебя.</node>
+          <node type="XMLString">$c1 произносит &apos;{gПопытайся найти моего любимого, Румату{x&apos;</node>
+          <node type="XMLString">$c1 произносит &apos;{gСкажи ему, чтобы не волновался! Я его так жду! Передай ему записку от меня!{x&apos;</node>
+        </msg1>
+        <msg2 type="XMLVector">
+          <node type="XMLString">$c1 хлопает тебе в ладоши!</node>
+          <node type="XMLString">$c1 восклицает: &apos;{gЗамечательно! Ты нашел его! Он жив!{x&apos;</node>
+          <node type="XMLString">$c1 произносит &apos;{gСкажи ему, чтобы не волновался! Я его так жду! Передай ему записку от меня!{x&apos;</node>
+        </msg2>
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>30d10+30000</damage>
+      <default_pos>stand</default_pos>
+      <description>Наконец-то эта девушка чувствует себя в безопасности! Из дома ее выгнал родной 
+отец - за то, что выучилась грамоте, и, к тому же, она рыженькая - значит 
+ведьма! У нее красивые ясные глаза, тонкие рыжие волосы и открытый, чуть 
+испуганный взгляд. При виде тебя она откладывает книгу, которую с интересом 
+читала у окна.
+</description>
+      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <hit>30d10+30000</hit>
+      <level>100</level>
+      <long_descr>Кира (Kira) отдыхает после всех ужасов, которые ей пришлось пережить.
+</long_descr>
+      <mana>30d10+30000</mana>
+      <material>none</material>
+      <player_name>кира kira cyra chira kyra</player_name>
+      <race>human</race>
+      <sex>female</sex>
+      <short_descr>Кир|а|ы|е|у|ой|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28514">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <behavior type="ValentineLover">
+        <lover type="XMLInteger">28515</lover>
+        <room type="XMLInteger">8163</room>
+        <msg1 type="XMLVector">
+          <node type="XMLString">$c1 кидается к тебе и обнимает тебя за колени.</node>
+          <node type="XMLString">$c1 произносит &apos;{gТеперь мне не страшно одному в тумане!!! А лошадку ты не виде$Gло|л|ла?{x&apos;</node>
+          <node type="XMLString">$c1 произносит &apos;{gЕсли увидишь - передай ей, что я ее очень жду!{x&apos;</node>
+          <node type="XMLString">$c1 произносит &apos;{gОтдай ей - я вот тут нашел какую-то красивую тряпочку...{x&apos;</node>
+        </msg1>
+        <msg2 type="XMLVector">
+          <node type="XMLString">$c1 кидается к тебе и обнимает тебя за колени.</node>
+          <node type="XMLString">$c1 произносит &apos;{gТеперь мне не страшно одному в тумане!!! А лошадку ты не виде$Gло|л|ла?{x&apos;</node>
+          <node type="XMLString">$c1 произносит &apos;{gВиде$Gло|л|ла? Передай ей, что я ее очень жду!{x&apos;</node>
+          <node type="XMLString">$c1 произносит &apos;{gОтдай ей - я вот тут нашел какую-то красивую тряпочку...{x&apos;</node>
+        </msg2>
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>30d10+30000</damage>
+      <default_pos>stand</default_pos>
+      <description>Маленький забавный ежик знаком тебе с детства. Во-первых бедняга заблудился 
+в тумане, который явно выше его роста. Во-вторых он ищет.. Ну ты сам знаешь, 
+кого он ищет. На иголках - тусклый осиновый лист червонного золота. 
+Маленький носик судорожно дергается в надежде уловить знакомые запахи. 
+Маленькое тельце шарахается от любого звука... *cry*
+</description>
+      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <hit>30d10+30000</hit>
+      <level>100</level>
+      <long_descr>Ежик (hedgehog) одиноко скитается в тумане.
+</long_descr>
+      <mana>30d10+30000</mana>
+      <material>none</material>
+      <player_name>ежик еж hedge hedgehog</player_name>
+      <race>hedgehog</race>
+      <sex>male</sex>
+      <short_descr>Ежи|к|ка|ку|ка|ком|ке</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28515">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <behavior type="ValentineLover">
+        <lover type="XMLInteger">28514</lover>
+        <room type="XMLInteger">17309</room>
+        <msg1 type="XMLVector">
+          <node type="XMLString">$c1, довольно хрумкая яблоком, говорит тебе: &apos;{gНайди-ка ежика!{x&apos;</node>
+          <node type="XMLString">$c1 произносит &apos;{gСкажи ему, что как только туман спадет - обязательно к нему прискачу.{x&apos;</node>
+          <node type="XMLString">$c1 ржет.</node>
+          <node type="XMLString">$c1 произносит: &apos;{gИ отдай ему вот это.{x&apos;</node>
+        </msg1>
+        <msg2 type="XMLVector">
+          <node type="XMLString">$c1, довольно хрумкая яблоком, говорит тебе: &apos;{gА! От ежика!{x&apos;</node>
+          <node type="XMLString">$c1 произносит &apos;{gЯ очень рада, что он жив-здоров. Как только туман спадет - обязательно к нему прискачу.{x&apos;</node>
+          <node type="XMLString">$c1 ржет.</node>
+          <node type="XMLString">$c1 произносит: &apos;{gА пока - отдай ему вот это.{x&apos;</node>
+        </msg2>
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>30d10+30000</damage>
+      <default_pos>stand</default_pos>
+      <description>Толстая и довольная лошадка тоже заблудилась в тумане. Похоже, она ищет.. 
+ну ты сам знаешь, кого она ищет... Во время поисков она не преминет цапнуть 
+яблоко с травы и с довольным видом зажевать его. У нее толстые серые бочка в 
+яблоки и длинная грива.
+</description>
+      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <hit>30d10+30000</hit>
+      <level>100</level>
+      <long_descr>Лошадка (horsey) гуляет по влажному лугу.
+</long_descr>
+      <mana>30d10+30000</mana>
+      <material>none</material>
+      <player_name>лошадь лошадка horse horsey</player_name>
+      <race>horse</race>
+      <sex>female</sex>
+      <short_descr>Лошадк|а|и|е|у|ой|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28516">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <behavior type="ValentineLover">
+        <lover type="XMLInteger">28517</lover>
+        <room type="XMLInteger">29361</room>
+        <msg1 type="XMLVector">
+          <node type="XMLString">$c1 пристально смотрит на тебя.</node>
+          <node type="XMLString">$c1 произносит &apos;{gПопробуй найти Миру. Я не могу покинуть сейчас это помещение.{x&apos;</node>
+          <node type="XMLString">$c1 произносит &apos;{gПередай ей вот это письмо и скажи, что я приду ночью.{x&apos;</node>
+        </msg1>
+        <msg2 type="XMLVector">
+          <node type="XMLString">$c1 гипнотически смотрит на тебя, хотя и не без некоторого презрения, потом на его лице внезапно появляется выражение непередаваемой нежности.</node>
+          <node type="XMLString">$c1 произносит: &apos;{gТы все-таки наш$Gло|ел|ла ее. Я не могу выйти отсюда - там бегает слишком много этих, как их..{x&apos;</node>
+          <node type="XMLString">$c1 морщит лоб.</node>
+          <node type="XMLString">$c1 произносит: &apos;{g Ах, да.. священников с крестами. Передай ей вот это письмо и скажи, что я приду ночью.{x&apos;</node>
+        </msg2>
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>30d10+30000</damage>
+      <default_pos>stand</default_pos>
+      <description>Кровожадный (что поделать - румынская кровь), но вместе с тем несчастный 
+граф все еще не может забыть свою возлюбленную княжну. Невысокий, слегка 
+смахивающий на цыганского барона вампир - сходство, правда, только внешнее. 
+У него длинные волнистые каштановые волосы - любая девушка позавидует, хорошо 
+развитая мускулатура (а вы что думали - двуручником махать) и обаятельная улыбка
+(если не считать клыков, впрочем, некоторым нравится). Он держится вельможно, 
+то есть одновременно свободно и гордо.
+</description>
+      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <hit>30d10+30000</hit>
+      <level>100</level>
+      <long_descr>Дракула (Dracula) коротает день за преферансом.
+</long_descr>
+      <mana>30d10+30000</mana>
+      <material>none</material>
+      <player_name>dracula дракула</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>Дракул|а|ы|е|у|ой|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28517">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <behavior type="ValentineLover">
+        <lover type="XMLInteger">28516</lover>
+        <room type="XMLInteger">14541</room>
+        <msg1 type="XMLVector">
+          <node type="XMLString">$c1 бросается к тебе, на лице ее написаны тревога и беспокойство.</node>
+          <node type="XMLString">$c1 произносит &apos;{gНе видел ли ты графа? Я так волнуюсь - не попался ли он в руки инквизиторов или рыцарей?{x&apos;</node>
+          <node type="XMLString">$c1 произносит &apos;{gВот, отдай ему письмо, пожалуйста.{x&apos;</node>
+        </msg1>
+        <msg2 type="XMLVector">
+          <node type="XMLString">$c1 бросается к тебе, на лице ее написаны тревога и беспокойство.</node>
+          <node type="XMLString">$c1 произносит &apos;{gГде он? Не попался ли в руки инквизиторов или рыцарей? Не убили его? Не проткнули осиновым колом?{x&apos;</node>
+          <node type="XMLString">$c1 чуть успокаивается.</node>
+          <node type="XMLString">$c1 произносит &apos;{gВот, отдай ему письмо, пожалуйста.{x&apos;</node>
+        </msg2>
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>30d10+30000</damage>
+      <default_pos>stand</default_pos>
+      <description>Хрупкая на вид, но обладающая недюжинной силой воли и терпением подруга 
+кровожадного графа. Она изящна, невысокого роста и необычайно грациозна. 
+Одежда ее простая, но в то же время очень ей к лицу. У нее темные глаза и 
+прямые черные волосы. На шее виднеются две дырочки от укуса, но это 
+в наше время уже никого не смущает.
+</description>
+      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <hit>30d10+30000</hit>
+      <level>100</level>
+      <long_descr>Мира (Mira) не находит себе места от беспокойства.
+</long_descr>
+      <mana>30d10+30000</mana>
+      <material>none</material>
+      <player_name>mira мира</player_name>
+      <race>human</race>
+      <sex>female</sex>
+      <short_descr>Мир|а|ы|е|у|ой|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28519">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <behavior type="ValentineLover">
+        <lover type="XMLInteger">28520</lover>
+        <room type="XMLInteger">9687</room>
+        <msg1 type="XMLVector">
+          <node type="XMLString">$c1 скромно и с почтением обращается к тебе: &apos;{gНет мне ни сна, ни покоя, ни отдыха.{x&apos;</node>
+          <node type="XMLString">$c1 произносит &apos;{gУже столько лет нет вестей от моего любимого.{x&apos;</node>
+          <node type="XMLString">$c1 произносит &apos;{gМожет, ты найдешь его в дальних странствиях, бедуин?{x&apos;</node>
+          <node type="XMLString">$c1 произносит &apos;{gТогда отдай ему этот свиток  и скажи: Лейла помнит его!{x&apos;</node>
+        </msg1>
+        <msg2 type="XMLVector">
+          <node type="XMLString">$c1 произносит &apos;{gКак радостно через столько лет получить весточку от моего любимого.{x&apos;</node>
+          <node type="XMLString">$c1 произносит &apos;{gОтдай ему этот свиток  и скажи: Лейла помнит его!{x&apos;</node>
+        </msg2>
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>1d1+30000</damage>
+      <default_pos>stand</default_pos>
+      <description>Темноглазая и чернобровая восточная красавица, с тонким станом и восхитите
+льными пятками, поскольку только их и видно из-под паранджи.
+</description>
+      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <form del="edible sentient biped mammal"/>
+      <hit>1d1+30000</hit>
+      <long_descr>Лейла (Leyla) тоскует и чахнет здесь.
+</long_descr>
+      <mana>1d1+30000</mana>
+      <material>none</material>
+      <parts del="head arms legs heart brains guts hands feet fingers ear eye"/>
+      <player_name>лейла leyla leila</player_name>
+      <race>human</race>
+      <sex>female</sex>
+      <short_descr>Лейл|а|ы|е|у|ой|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28520">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <behavior type="ValentineLover">
+        <lover type="XMLInteger">28519</lover>
+        <room type="XMLInteger">5027</room>
+        <msg1 type="XMLVector">
+          <node type="XMLString">$c1 с трудом подходит к тебе и говорит &apos;{gМоя возлюбленная так далеко от меня. Не смею надеяться на встречу с ней.{x&apos;</node>
+          <node type="XMLString">$c1 произносит: &apos;{gМожет быть, ты отнесешь этот свиток ей и да будет благословлено твое благородство!{x&apos;</node>
+        </msg1>
+        <msg2 type="XMLVector">
+          <node type="XMLString">$c1 с трудом подходит к тебе и говорит: &apos;{gТы дал мне надежду, странник! Моя возлюбленная помнит обо мне! Не смею надеяться на встречу с ней.{x&apos;</node>
+          <node type="XMLString">$c1 произносит: &apos;{gМожет быть, ты отнесешь этот свиток ей и да будет благословлено твое благородство!{x&apos;</node>
+        </msg2>
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>1d1+30000</damage>
+      <default_pos>stand</default_pos>
+      <description>Трудно поверить, что этот человек когда-то был прекрасен как бог.  С тех
+пор как его любимую насильно отдали замуж за богача, он живет здесь, в
+пустыне, общаясь лишь со зверями да птицами.  Он иссох, зачах и загорел до
+черноты.  Но тоска иссушила его больше, чем солнце.
+</description>
+      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <form del="edible sentient biped mammal"/>
+      <hit>1d1+30000</hit>
+      <long_descr>Меджнун (Medjnun) общается со зверьми и животными в пустыне.
+</long_descr>
+      <mana>1d1+30000</mana>
+      <material>none</material>
+      <parts del="head arms legs heart brains guts hands feet fingers ear eye"/>
+      <player_name>меджнун medgnun medjnun</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>Меджну|н|а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28521">
+      <ac bash="-1000" exotic="-1000" pierce="-1000" slash="-1000"/>
+      <act add="npc notrack" del="undead"/>
+      <aff add="curse slow" del="flying"/>
+      <dam_type>none</dam_type>
+      <damage>1d1+100000</damage>
+      <default_pos>stand</default_pos>
+      <description>Мрачная полупрозрачная фигура затравленно озирается по стронам, в поисках хотя бы искорки, способной осветить его темную дорогу.
+</description>
+      <hit>1d1+100000</hit>
+      <hitroll>10000</hitroll>
+      <imm add="summon charm spell weapon bash pierce slash fire cold lightning acid holy energy mental light sound wood silver iron"/>
+      <level>120</level>
+      <long_descr>Джек (Jack) бестелесным призраком бродит по темным дорогам.
+</long_descr>
+      <mana>1d1+100000</mana>
+      <material>none</material>
+      <off del="fade"/>
+      <player_name>jack джек</player_name>
+      <race>ghost</race>
+      <sex>male</sex>
+      <short_descr>Джек||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <vuln del="holy"/>
+    </node>
+    <node name="28530">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc noeye notrack"/>
+      <aff add="sanctuary"/>
+      <dam_type>slap</dam_type>
+      <damage>100d100+10000</damage>
+      <default_pos>stand</default_pos>
+      <description>В приступе инфантильной ярости, это чудное создание раскидало
+все свои стрелы по миру, не желая более заниматься своими
+прямыми обязанностями. На пухлом личике застыло выражение
+капризного упрямства. Все эти амурские игрушки ему порядком
+надоели! Он мечтает о настоящем луке со стрелами, из которого
+можно поразить не только сердце, но и другие части тела.
+</description>
+      <detection add="imp_invis fade evil invis magic hidden good sneak acute_vision"/>
+      <hit>100d100+10000</hit>
+      <hitroll>10000</hitroll>
+      <imm add="summon charm"/>
+      <level>120</level>
+      <long_descr>Румяный и толстенький купидон (cupidon) капризничает здесь. Отвратительно!
+</long_descr>
+      <mana>100d100+10000</mana>
+      <material>none</material>
+      <player_name>амур купидон amour cupidon</player_name>
+      <race>unique</race>
+      <sex>male</sex>
+      <short_descr>купидо|н|на|ну|на|ном|не</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28531">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel noeye notrack"/>
+      <dam_type>claw</dam_type>
+      <damage>100d100+10000</damage>
+      <default_pos>stand</default_pos>
+      <description>Черный,  с  кожистыми крыльями и длинным хвостом,  похожий  на  огромную
+летучую  мышь. Грудь демона горбом выдается вперед. Когда он напрягает
+мышцы, по этому горбу прокатывается волна - он весь состоит из мускулов.
+Две широких мышцы соединяются впереди, расходясь к предплечьям. На лапах
+его - около десятка устрашающих когтей.
+ 
+</description>
+      <hit>100d100+10000</hit>
+      <hitroll>10000</hitroll>
+      <imm add="summon charm"/>
+      <level>120</level>
+      <long_descr>Демон (demon) сражается с Ангелом.
+</long_descr>
+      <mana>100d100+10000</mana>
+      <material>none</material>
+      <player_name>demon демон</player_name>
+      <race>demon</race>
+      <sex>male</sex>
+      <short_descr>{DДемо|н{x|на{x|ну{x|на{x|ном{x|не{x</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28532">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel noeye notrack"/>
+      <dam_type>divine</dam_type>
+      <damage>100d100+10000</damage>
+      <default_pos>stand</default_pos>
+      <description>Белая, покрытая тонким пухом, с крыльями, как у птицы, чувствует себя
+в воздухе немного неуверенно, пытаясь дотянуться кончиками крыльев до
+своего противника.
+</description>
+      <hit>100d100+10000</hit>
+      <hitroll>10000</hitroll>
+      <imm add="summon charm"/>
+      <level>120</level>
+      <long_descr>Ангел (angel) сражается с Демоном.
+</long_descr>
+      <mana>100d100+10000</mana>
+      <material>none</material>
+      <player_name>angel ангел</player_name>
+      <race>angel</race>
+      <sex>female</sex>
+      <short_descr>{WАнге|л{x|ла{x|лу{x|ла{x|лом{x|ле{x</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28600">
+      <ac bash="-300" exotic="-300" pierce="-300" slash="-300"/>
+      <act add="npc sentinel stay_area nosteal nowhere nopurge nosavedrop notrack" del="undead"/>
+      <aff add="pass_door"/>
+      <behavior type="Ghost">
+      </behavior>
+      <dam_type>wrath</dam_type>
+      <damage>30d20+500</damage>
+      <default_pos>stand</default_pos>
+      <description>Полупрозрачное существо светится изнутри осознанием праздника.
+{x           {W&quot;{DH{Wappy {DH{Walloween{D!{W&quot;{x
+</description>
+      <detection add="imp_invis fade invis hidden sneak life acute_vision"/>
+      <hit>29998d1+2</hit>
+      <hitroll>10</hitroll>
+      <imm add="summon charm spell weapon bash pierce fire lightning acid holy energy mental light sound wood silver iron"/>
+      <level>140</level>
+      <long_descr>Призрак (ghost) жалобно воет здесь.
+</long_descr>
+      <mana>500d10+2000</mana>
+      <material>none</material>
+      <off add="berserk" del="fade"/>
+      <player_name>призрак ghost</player_name>
+      <race>ghost</race>
+      <res del="weapon"/>
+      <sex>male</sex>
+      <short_descr>{xПризрак||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <vuln del="holy"/>
+    </node>
+    <node name="28601">
+      <ac bash="-600" exotic="-600" pierce="-600" slash="-600"/>
+      <act add="npc sentinel stay_area nosteal nowhere nopurge nosavedrop notrack"/>
+      <aff add="sanctuary protect_evil protect_good"/>
+      <behavior type="GrandMother">
+      </behavior>
+      <dam_type>slap</dam_type>
+      <damage>30d20+500</damage>
+      <default_pos>stand</default_pos>
+      <description>Вылитая ведьма: нос крючком и глаза - такие добрые-добрые.
+</description>
+      <detection add="imp_invis fade invis hidden sneak life"/>
+      <form del="edible sentient biped mammal"/>
+      <group>13200</group>
+      <hit>29998d1+2</hit>
+      <imm add="summon charm weapon bash pierce fire lightning acid poison negative holy energy disease drowning light sound wood silver iron"/>
+      <level>140</level>
+      <long_descr>Бабушка (grandmother) покойничка чертит на земле праздничную пентаграмму.
+</long_descr>
+      <mana>500d10+2000</mana>
+      <material>none</material>
+      <off add="kick"/>
+      <parts del="head arms legs heart brains guts hands feet fingers ear eye"/>
+      <player_name>grandmother бабушка покойничка призрака</player_name>
+      <race>human</race>
+      <sex>female</sex>
+      <short_descr>Бабушк|а|и|е|у|ой|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28602">
+      <ac bash="-400" exotic="-400" pierce="-400" slash="-400"/>
+      <act add="npc sentinel stay_area nosteal nowhere nopurge nosavedrop notrack"/>
+      <aff add="swim"/>
+      <behavior type="HalfMermaid">
+      </behavior>
+      <dam_type>slime</dam_type>
+      <damage>30d20+500</damage>
+      <default_pos>stand</default_pos>
+      <description>Красивая девица с большой грудью и еще большим большим чешуйчатым хвостом.
+Она любит воду в любых ее проявлениях. Даже просто грязевые ванны...
+</description>
+      <detection add="imp_invis fade invis hidden sneak life"/>
+      <form add="edible animal"/>
+      <hit>29998d1+2</hit>
+      <imm add="summon charm weapon bash pierce fire lightning acid poison negative holy energy disease drowning light sound wood silver iron"/>
+      <level>140</level>
+      <long_descr>Хвостатая дочь ведьмы (наверняка тоже ведьма (hag)) плавает здесь.
+</long_descr>
+      <mana>500d10+2000</mana>
+      <material>none</material>
+      <off add="tail"/>
+      <parts add="head legs heart brains guts eye tail"/>
+      <player_name>hag witch halfmermaid полурусалка ведьма</player_name>
+      <race>unique</race>
+      <res add="drowning"/>
+      <sex>female</sex>
+      <short_descr>полурусалк|а|и|е|у|ой|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28603">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nosteal nowhere nodemand warrior nopurge nosavedrop"/>
+      <aff add="infrared regeneration"/>
+      <alignment>-500</alignment>
+      <behavior type="EvilSpirit">
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>0d0+500</damage>
+      <default_pos>stand</default_pos>
+      <description>В канун этого праздника всякая нечисть вылазит под свет луны или солнца.
+
+Маленький и очень симпатичный.
+Кто бы мог подумать, что из него всякая гадость вырастет?
+</description>
+      <detection add="imp_invis fade invis hidden"/>
+      <hit>0d0+0</hit>
+      <imm add="summon charm"/>
+      <long_descr>Маленький монстрик (monster) еще даже без рогов бродит здесь.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <off add="disarm dodge parry assist_vnum"/>
+      <player_name>hornless monster безрогий монстрик</player_name>
+      <race>unique</race>
+      <sex>male</sex>
+      <short_descr>безрог|ий|ого|ому|ого|им|ом монстрик||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28604">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nosteal nowhere nodemand warrior nopurge nosavedrop"/>
+      <aff add="infrared regeneration"/>
+      <alignment>-800</alignment>
+      <behavior type="EvilSpirit">
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>0d0+500</damage>
+      <default_pos>stand</default_pos>
+      <description>В канун этого праздника всякая нечисть вылазит под свет луны или солнца.
+</description>
+      <detection add="imp_invis fade invis hidden"/>
+      <hit>0d0+0</hit>
+      <imm add="summon charm"/>
+      <long_descr>Монстр (monster) с витым рогом посреди лба глупо ухмыляется тебе.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <off add="disarm dodge parry assist_vnum"/>
+      <parts add="horns"/>
+      <player_name>horned monster рогатый монстр</player_name>
+      <race>unique</race>
+      <res add="negative"/>
+      <sex>male</sex>
+      <short_descr>рогат|ый|ого|ому|ый|ым|ом монстр||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <vuln add="holy"/>
+    </node>
+    <node name="28605">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nosteal nowhere nodemand warrior nopurge nosavedrop"/>
+      <aff add="infrared regeneration"/>
+      <behavior type="EvilSpirit">
+      </behavior>
+      <dam_type>drain</dam_type>
+      <damage>0d0+500</damage>
+      <default_pos>stand</default_pos>
+      <description>В канун этого праздника всякая нечисть вылазит под свет луны или солнца.
+</description>
+      <detection add="imp_invis fade invis hidden"/>
+      <hit>0d0+0</hit>
+      <imm add="summon charm"/>
+      <long_descr>Злобноухмыляющийся монстр (monster) с большими оленьими рогами проходит мимо.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <off add="disarm dodge kick parry assist_vnum"/>
+      <parts add="horns"/>
+      <player_name>twohorned monster двурогий монстр</player_name>
+      <race>unique</race>
+      <res add="negative"/>
+      <sex>male</sex>
+      <short_descr>двурог|ий|ого|ому|ого|им|ом монстр||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <vuln add="holy"/>
+    </node>
+    <node name="28606">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nosteal nowhere nodemand warrior nopurge nosavedrop"/>
+      <aff add="infrared regeneration"/>
+      <alignment>-900</alignment>
+      <behavior type="EvilSpirit">
+      </behavior>
+      <dam_type>claw</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>В канун этого праздника всякая нечисть вылазит под свет луны или солнца.
+</description>
+      <detection add="imp_invis fade invis hidden"/>
+      <hit>0d0+0</hit>
+      <imm add="summon charm"/>
+      <long_descr>Кроме рогов и копыт у этого отвратительного монстра (monster) еще есть и клыки.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <off add="disarm dodge kick parry assist_vnum"/>
+      <parts add="claws horns"/>
+      <player_name>hoofed horned monster монстр рогатый копытный</player_name>
+      <race>unique</race>
+      <res add="negative"/>
+      <sex>male</sex>
+      <short_descr>монстр||а|у|а|ом|е с рогами и копытами</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <vuln add="holy"/>
+    </node>
+    <node name="28607">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nosteal nowhere nodemand mage nopurge nosavedrop"/>
+      <aff add="infrared regeneration"/>
+      <alignment>-1000</alignment>
+      <behavior type="EvilSpirit">
+      </behavior>
+      <dam_type>slime</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>В канун этого праздника всякая нечисть вылазит под свет луны или солнца.
+
+Молодая женщина одета в черное платье. Светлые волосы собраны в пушистый 
+хвост - чтобы, упав в котел, не испортили зелья.
+</description>
+      <detection add="imp_invis fade invis hidden"/>
+      <form del="edible sentient biped mammal"/>
+      <hit>0d0+0</hit>
+      <imm add="summon charm"/>
+      <long_descr>Мертвенно-бледная ведьма (witch) готовит вредоносное заклинание к празднику.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <off add="dodge fast parry assist_vnum"/>
+      <parts del="head arms legs heart brains guts hands feet fingers ear eye"/>
+      <player_name>horrible witch ужасная ведьма</player_name>
+      <race>human</race>
+      <res add="negative"/>
+      <sex>female</sex>
+      <short_descr>ужасн|ая|ой|ой|ую|ой|ой ведьм|а|ы|е|у|ой|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <vuln add="holy"/>
+    </node>
+    <node name="28608">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nosteal nowhere nodemand warrior nopurge nosavedrop"/>
+      <aff add="infrared regeneration"/>
+      <alignment>-1000</alignment>
+      <behavior type="EvilSpirit">
+      </behavior>
+      <dam_type>bite</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>В канун этого праздника всякая нечисть вылазит под свет луны или солнца.
+</description>
+      <detection add="imp_invis fade invis hidden"/>
+      <hit>0d0+0</hit>
+      <imm add="summon charm"/>
+      <long_descr>Маленький чертенок (imp) готовить большую КАПОСТЬ!
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <off add="disarm dodge kick_dirt parry assist_vnum"/>
+      <parts add="tail horns"/>
+      <player_name>imp чертенок</player_name>
+      <race>unique</race>
+      <res add="negative"/>
+      <sex>male</sex>
+      <short_descr>чертен|ок|ка|ку|ка|ком|ке</short_descr>
+      <size>small</size>
+      <start_pos>stand</start_pos>
+      <vuln add="holy"/>
+    </node>
+    <node name="28609">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nosteal nowhere nodemand warrior nopurge nosavedrop"/>
+      <aff add="infrared regeneration"/>
+      <alignment>-1000</alignment>
+      <behavior type="EvilSpirit">
+      </behavior>
+      <dam_type>stab</dam_type>
+      <damage>0d0+500</damage>
+      <default_pos>stand</default_pos>
+      <description>В канун этого праздника всякая нечисть вылазит под свет луны или солнца.
+</description>
+      <detection add="imp_invis fade invis hidden"/>
+      <hit>0d0+0</hit>
+      <imm add="summon charm"/>
+      <long_descr>Серокожий демон (demon) готов насадить тебя на острые вилы.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <off add="disarm dodge kick_dirt parry assist_vnum"/>
+      <parts add="tail horns"/>
+      <player_name>demon демон</player_name>
+      <race>unique</race>
+      <res add="negative"/>
+      <sex>either</sex>
+      <short_descr>демон||а|у|а|ом|е с вилами</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <vuln add="holy"/>
+    </node>
+    <node name="28610">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nosteal nowhere nodemand warrior nopurge nosavedrop"/>
+      <aff add="regeneration"/>
+      <alignment>-500</alignment>
+      <behavior type="EvilSpirit">
+      </behavior>
+      <dam_type>chop</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>В канун этого праздника всякая нечисть вылазит под свет луны или солнца.
+</description>
+      <detection add="imp_invis fade invis hidden"/>
+      <hit>0d0+0</hit>
+      <imm add="summon charm"/>
+      <long_descr>Богато одетый гоблин (goblin) с явно дурными намерениями приближается к тебе.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <off add="disarm dodge kick_dirt parry assist_vnum"/>
+      <player_name>apprentice goblin king претендент гоблин король</player_name>
+      <race>goblin</race>
+      <res add="negative"/>
+      <sex>male</sex>
+      <short_descr>претендент||а|у|а|ом|е на трон Короля Гоблинов</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <vuln add="holy"/>
+    </node>
+    <node name="28611">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nosteal nowhere nodemand mage nopurge nosavedrop"/>
+      <aff add="infrared regeneration" del="flying"/>
+      <alignment>-1000</alignment>
+      <behavior type="EvilSpirit">
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>0d0+500</damage>
+      <default_pos>stand</default_pos>
+      <description>В канун этого праздника всякая нечисть вылазит под свет луны или солнца.
+</description>
+      <detection add="imp_invis fade"/>
+      <hit>0d0+0</hit>
+      <imm add="summon charm"/>
+      <long_descr>Отвратительного вида виверна (wyvern) выглядит потерянной.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <off add="disarm kick_dirt parry assist_vnum"/>
+      <player_name>wyvern ведьмоспутник виверна</player_name>
+      <race>wyvern</race>
+      <res add="negative"/>
+      <sex>female</sex>
+      <short_descr>ведьмоспутник||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <vuln add="holy"/>
+    </node>
+    <node name="28612">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nosteal nowhere nodemand mage nopurge nosavedrop"/>
+      <aff add="infrared regeneration"/>
+      <alignment>-800</alignment>
+      <behavior type="EvilSpirit">
+      </behavior>
+      <dam_type>claw</dam_type>
+      <damage>0d0+500</damage>
+      <default_pos>stand</default_pos>
+      <description>В канун этого праздника всякая нечисть вылазит под свет луны или солнца.
+</description>
+      <detection add="imp_invis fade invis hidden"/>
+      <hit>0d0+0</hit>
+      <imm add="summon charm"/>
+      <long_descr>Большая черная кошка (cat) презрительно шипит при виде тебя.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <off add="disarm kick_dirt parry assist_vnum"/>
+      <player_name>black cat черная кошка</player_name>
+      <race>cat</race>
+      <res add="negative"/>
+      <sex>female</sex>
+      <short_descr>черн|ая|ой|ой|ую|ой|ой кошк|а|и|е|у|ой|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <vuln add="holy"/>
+    </node>
+    <node name="28613">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nosteal nowhere nodemand nopurge nosavedrop" del="undead"/>
+      <aff add="infrared pass_door regeneration" del="flying"/>
+      <behavior type="EvilSpirit">
+      </behavior>
+      <dam_type>drain</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>В канун этого праздника всякая нечисть вылазит под свет луны или солнца.
+</description>
+      <detection add="imp_invis fade invis hidden"/>
+      <hit>0d0+0</hit>
+      <imm add="summon charm"/>
+      <long_descr>Замотанное по уши в простыню привидение (ghost) внезапно появляется ниоткуда.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <off add="disarm dodge parry assist_vnum"/>
+      <player_name>white ghost приведение белое</player_name>
+      <race>ghost</race>
+      <res add="negative"/>
+      <sex>either</sex>
+      <short_descr>привидени|е|я|ю|е|ем|и в белой простыне</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28614">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nosteal nowhere nodemand nopurge nosavedrop"/>
+      <aff add="infrared protect_good regeneration"/>
+      <alignment>-1000</alignment>
+      <behavior type="EvilSpirit">
+      </behavior>
+      <dam_type>flbite</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>В канун этого праздника всякая нечисть вылазит под свет луны или солнца.
+
+Еще кровь на рогах не обсохла, а туда же лезет - в дьяволы
+</description>
+      <detection add="imp_invis fade invis hidden"/>
+      <hit>0d0+0</hit>
+      <imm add="summon charm"/>
+      <long_descr>Дьяволенок (devil) по-хозяйски осматривает все вокруг.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <off add="disarm dodge kick_dirt parry assist_vnum"/>
+      <parts add="tail horns"/>
+      <player_name>newbie devil начинающий дьяволенок</player_name>
+      <race>unique</race>
+      <res add="negative"/>
+      <sex>male</sex>
+      <short_descr>начинающ|ий|его|ему|его|им|ем дьяволен|ок|ка|ку|ка|ком|ке</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <vuln add="holy"/>
+    </node>
+    <node name="28615">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nosteal nowhere nodemand nopurge nosavedrop"/>
+      <aff add="infrared regeneration"/>
+      <alignment>-1000</alignment>
+      <behavior type="EvilSpirit">
+      </behavior>
+      <dam_type>sting</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>В канун этого праздника всякая нечисть вылазит под свет луны или солнца.
+
+Чешуя его слабо поблескивает, тогда как глаза горят адским пламенем.
+Вряди его огромные клыки, торчащие изо рта - признак особого дружелюбия.
+</description>
+      <detection add="imp_invis fade invis hidden"/>
+      <hit>0d0+0</hit>
+      <imm add="summon charm"/>
+      <long_descr>Маленький сын Змия (snake) с острыми клыками задумчиво смотрит на тебя. 
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <off add="disarm dodge parry assist_vnum"/>
+      <player_name>snake змееныш</player_name>
+      <race>snake</race>
+      <res add="negative"/>
+      <sex>male</sex>
+      <short_descr>змееныш||а|у|а|ем|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <vuln add="holy"/>
+    </node>
+    <node name="28616">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nosteal nowhere nodemand warrior nopurge nosavedrop"/>
+      <aff add="regeneration"/>
+      <alignment>-900</alignment>
+      <behavior type="EvilSpirit">
+      </behavior>
+      <dam_type>acbite</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>В канун этого праздника всякая нечисть вылазит под свет луны или солнца.
+</description>
+      <detection add="imp_invis fade invis hidden"/>
+      <hit>0d0+0</hit>
+      <imm add="summon charm"/>
+      <long_descr>Крошечный желтый дракончик (dragon) с тремя головами парит в воздухе.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <off add="parry assist_vnum"/>
+      <player_name>threehead dragon трехголовый дракончик</player_name>
+      <race>faerie dragon</race>
+      <res add="negative"/>
+      <sex>male</sex>
+      <short_descr>трехголов|ый|ого|ому|ого|ым|ом дракончик||а|у|а|ом|е</short_descr>
+      <size>small</size>
+      <spec>spec_breath_any</spec>
+      <start_pos>stand</start_pos>
+      <vuln add="holy"/>
+    </node>
+    <node name="28617">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nosteal nowhere nodemand warrior nopurge nosavedrop"/>
+      <aff add="infrared regeneration"/>
+      <alignment>-1000</alignment>
+      <behavior type="EvilSpirit">
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>0d0+40</damage>
+      <default_pos>stand</default_pos>
+      <description>В канун этого праздника всякая нечисть вылазит под свет луны или солнца.
+</description>
+      <detection add="imp_invis fade invis hidden"/>
+      <hit>0d0+0</hit>
+      <imm add="summon charm"/>
+      <long_descr>Омерзительный леприкон (leprechaun) тащит куда-то горшок с золотом.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <off add="disarm dodge kick_dirt parry assist_vnum"/>
+      <player_name>leprechaun леприкон</player_name>
+      <race>unique</race>
+      <res add="negative"/>
+      <sex>male</sex>
+      <short_descr>леприкон||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <vuln add="holy"/>
+      <wealth>1000</wealth>
+    </node>
+    <node name="28618">
+      <ac bash="0" exotic="0" pierce="0" slash="0"/>
+      <act add="npc sentinel nosteal nowhere nodemand mage nopurge nosavedrop"/>
+      <aff add="infrared regeneration"/>
+      <behavior type="EvilSpirit">
+      </behavior>
+      <dam_type>pierce</dam_type>
+      <damage>0d0+0</damage>
+      <default_pos>stand</default_pos>
+      <description>В канун этого праздника всякая нечисть вылазит под свет луны или солнца.
+</description>
+      <detection add="imp_invis fade invis hidden"/>
+      <hit>0d0+0</hit>
+      <imm add="summon charm"/>
+      <long_descr>Фея (faery) подозрительной наружности изучает тебя.
+</long_descr>
+      <mana>0d0+0</mana>
+      <material>none</material>
+      <off add="disarm dodge kick_dirt parry assist_vnum"/>
+      <player_name>faery serial killer фея маньяк убийца</player_name>
+      <race>faery</race>
+      <res add="negative"/>
+      <sex>female</sex>
+      <short_descr>фе|я|и|е|ю|ей|е-маньяк||а|у|а|ом|е-убийц|а|ы|е|у|ей|е</short_descr>
+      <size>small</size>
+      <spec>spec_nasty</spec>
+      <start_pos>stand</start_pos>
+      <vuln add="holy"/>
+    </node>
+    <node name="28619">
+      <ac bash="-100" exotic="-100" pierce="-100" slash="-100"/>
+      <act add="npc sentinel stay_area nosteal nowhere nopurge nosavedrop notrack"/>
+      <aff add="sanctuary"/>
+      <alignment>1000</alignment>
+      <behavior type="SaintSpirit">
+        <roomVnum type="XMLInteger">8637</roomVnum>
+        <objVnum type="XMLInteger">28605</objVnum>
+        <hint type="XMLString">$c1 говорит тебе &apos;{GОн небось сейчас слушает джигу в церкви или отплясывает танец Морриса с местными жителями.{x&apos;</hint>
+      </behavior>
+      <dam_type>wrath</dam_type>
+      <damage>20d15+95</damage>
+      <default_pos>stand</default_pos>
+      <description>Они спустились с неба всего на несколько дней.
+Чтобы помочь.
+И вознаградить...
+
+У Патрика длинные рыжие волосы, веселые глаза цвета эльфийского клевера
+и очень заразительная улыбка. Непонятно, как он попал под паровой каток
+канонизации. Может потому, что тоже - не любит змей?
+</description>
+      <detection add="imp_invis fade invis hidden"/>
+      <form del="edible sentient biped mammal"/>
+      <hit>50d10+28000</hit>
+      <imm add="summon charm"/>
+      <level>120</level>
+      <long_descr>Святой Патрик (Patrick) перелистывает книгу о змеях.
+</long_descr>
+      <mana>10d10+10203</mana>
+      <material>none</material>
+      <parts del="head arms legs heart brains guts hands feet fingers ear eye"/>
+      <player_name>saint patrick святой патрик</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>свят|ой|ого|ому|ого|ым|ом Патрик||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28620">
+      <ac bash="-100" exotic="-100" pierce="-100" slash="-100"/>
+      <act add="npc sentinel stay_area nosteal nowhere nopurge nosavedrop notrack"/>
+      <aff add="sanctuary"/>
+      <alignment>1000</alignment>
+      <behavior type="SaintSpirit">
+        <roomVnum type="XMLInteger">9331</roomVnum>
+        <objVnum type="XMLInteger">28606</objVnum>
+        <hint type="XMLString">$c1 говорит тебе &apos;{GОн стоит там, где сияют звезды.{x&apos;</hint>
+      </behavior>
+      <dam_type>wrath</dam_type>
+      <damage>20d15+95</damage>
+      <default_pos>stand</default_pos>
+      <description>Они спустились с неба всего на несколько дней.
+Чтобы помочь.
+И вознаградить...
+
+По виду и не скажешь, что насадитель моногамии - уж больно морда хитрая.
+Хотя, видел с утра свою - чуть в обморок от ужаса не упал.
+Единственное, что спасло - с похмелья не сразу понял, что это зеркало...
+</description>
+      <detection add="imp_invis fade invis hidden"/>
+      <hit>50d10+28000</hit>
+      <imm add="summon charm"/>
+      <level>120</level>
+      <long_descr>Святой Валентин (Valentine) вырезает из цветной бумаги валентинчики.
+</long_descr>
+      <mana>10d10+10203</mana>
+      <material>none</material>
+      <player_name>saint valentine святой валентин</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>свят|ой|ого|ому|ого|ым|ом Валентин||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28621">
+      <ac bash="-100" exotic="-100" pierce="-100" slash="-100"/>
+      <act add="npc sentinel stay_area nosteal nowhere nopurge nosavedrop notrack"/>
+      <aff add="sanctuary"/>
+      <alignment>1000</alignment>
+      <behavior type="SaintSpirit">
+        <roomVnum type="XMLInteger">12305</roomVnum>
+        <objVnum type="XMLInteger">28607</objVnum>
+        <hint type="XMLString">$c1 говорит тебе &apos;{GИщи его в затопленном городе.{x&apos;</hint>
+      </behavior>
+      <dam_type>wrath</dam_type>
+      <damage>20d15+95</damage>
+      <default_pos>stand</default_pos>
+      <description>Они спустились с неба всего на несколько дней.
+Чтобы помочь.
+И вознаградить...
+
+По морям, по волнам - седня здесь завтра там.
+Одежда просолена морем, кожа покрыта толстым слоем загара.
+Глаза святого очень светлого серого света, с намеком на мечтательность.
+Эээх, романтика! Где мои семнадцать лет по окончанию MUD-школы?
+</description>
+      <detection add="imp_invis fade invis hidden"/>
+      <hit>50d10+28000</hit>
+      <imm add="summon charm"/>
+      <level>120</level>
+      <long_descr>Святой Христофор (Christopher) поглощен страницами &quot;Вокруг света за 80 дней&quot;.
+</long_descr>
+      <mana>10d10+10203</mana>
+      <material>none</material>
+      <player_name>saint christopher святой христофор</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>свят|ой|ого|ому|ого|ым|ом Христофор||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28622">
+      <ac bash="-100" exotic="-100" pierce="-100" slash="-100"/>
+      <act add="npc sentinel stay_area nosteal nowhere nopurge nosavedrop notrack"/>
+      <aff add="sanctuary"/>
+      <alignment>1000</alignment>
+      <behavior type="SaintSpirit">
+        <roomVnum type="XMLInteger">4303</roomVnum>
+        <objVnum type="XMLInteger">28608</objVnum>
+        <hint type="XMLString">$c1 говорит тебе &apos;{GОн находится в месте, где вершится Правосудие.{x&apos;</hint>
+      </behavior>
+      <dam_type>wrath</dam_type>
+      <damage>20d15+95</damage>
+      <default_pos>stand</default_pos>
+      <description>Они спустились с неба всего на несколько дней.
+Чтобы помочь.
+И вознаградить...
+
+В сердце твоем зарождается сомнение - помочь они спустились или 
+книжечки почитать?
+</description>
+      <detection add="imp_invis fade invis hidden"/>
+      <form del="edible sentient biped mammal"/>
+      <hit>50d10+28000</hit>
+      <imm add="summon charm"/>
+      <level>120</level>
+      <long_descr>В руках у св. Иоанна (John) беляевская &quot;Голова профессора Доуэля&quot;.
+</long_descr>
+      <mana>10d10+10203</mana>
+      <material>none</material>
+      <parts del="head arms legs heart brains guts hands feet fingers ear eye"/>
+      <player_name>saint john святой иоанн</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>свят|ой|ого|ому|ого|ым|ом Иоанн||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28623">
+      <ac bash="-100" exotic="-100" pierce="-100" slash="-100"/>
+      <act add="npc sentinel stay_area nosteal nowhere nopurge nosavedrop notrack"/>
+      <aff add="sanctuary"/>
+      <alignment>1000</alignment>
+      <behavior type="SaintSpirit">
+        <roomVnum type="XMLInteger">289</roomVnum>
+        <objVnum type="XMLInteger">28614</objVnum>
+        <hint type="XMLString">$c1 говорит тебе &apos;{GОн остановился в собственной часовне.{x&apos;</hint>
+      </behavior>
+      <dam_type>wrath</dam_type>
+      <damage>20d15+95</damage>
+      <default_pos>stand</default_pos>
+      <description>Они спустились с неба всего на несколько дней.
+Чтобы помочь.
+И вознаградить...
+
+Чем бы святой не тешился, лишь бы в солдатики не игрался...
+</description>
+      <detection add="imp_invis fade invis hidden"/>
+      <form del="edible sentient biped mammal"/>
+      <hit>50d10+28000</hit>
+      <imm add="summon charm"/>
+      <long_descr>Похоже, св. Себастьян (Sebastian) - поклонник Хеммингуэя.
+</long_descr>
+      <mana>10d10+10203</mana>
+      <material>none</material>
+      <parts del="head arms legs heart brains guts hands feet fingers ear eye"/>
+      <player_name>saint sebastian святой себастьян</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>свят|ой|ого|ому|ого|ым|ом Себастьян||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28624">
+      <ac bash="-100" exotic="-100" pierce="-100" slash="-100"/>
+      <act add="npc sentinel stay_area nosteal nowhere nopurge nosavedrop notrack"/>
+      <aff add="sanctuary"/>
+      <alignment>1000</alignment>
+      <behavior type="SaintSpirit">
+        <roomVnum type="XMLInteger">672</roomVnum>
+        <objVnum type="XMLInteger">28609</objVnum>
+        <hint type="XMLString">$c1 говорит тебе &apos;{GДумается мне, что остановился в храме города, где цитадель желтого метала поднимается в небо.{x&apos;</hint>
+      </behavior>
+      <dam_type>wrath</dam_type>
+      <damage>20d15+95</damage>
+      <default_pos>stand</default_pos>
+      <description>Они спустились с неба всего на несколько дней.
+Чтобы помочь.
+И вознаградить...
+
+Либо меломан, либо просто про ужасы читать любит. 
+Посоветуй ему что-нибудь из С. Кинга?
+</description>
+      <detection add="imp_invis fade invis hidden"/>
+      <form del="edible sentient biped mammal"/>
+      <hit>50d10+28000</hit>
+      <imm add="summon charm"/>
+      <long_descr>Святой Гавриил (Gabriel) читает книгу с названием &quot;Подвиг юного барабанщика&quot;.
+</long_descr>
+      <mana>10d10+10203</mana>
+      <material>none</material>
+      <parts del="head arms legs heart brains guts hands feet fingers ear eye"/>
+      <player_name>saint gabriel святой гавриил</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>свят|ой|ого|ому|ого|ым|ом Гавриил||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28625">
+      <ac bash="-100" exotic="-100" pierce="-100" slash="-100"/>
+      <act add="npc sentinel stay_area nosteal nowhere nopurge nosavedrop notrack"/>
+      <aff add="sanctuary"/>
+      <alignment>1000</alignment>
+      <behavior type="SaintSpirit">
+        <roomVnum type="XMLInteger">1854</roomVnum>
+        <objVnum type="XMLInteger">28610</objVnum>
+        <hint type="XMLString">$c1 говорит тебе &apos;{GИщи его там, где стена из золота соседствует с живым деревом.{x&apos;</hint>
+      </behavior>
+      <dam_type>wrath</dam_type>
+      <damage>20d15+95</damage>
+      <default_pos>stand</default_pos>
+      <description>Они спустились с неба всего на несколько дней.
+Чтобы помочь.
+И вознаградить...
+
+Еще один наш человек!
+Нос немного красноват, но разве в святом главное нос?!
+Клевета!
+</description>
+      <detection add="imp_invis fade invis hidden"/>
+      <hit>50d10+28000</hit>
+      <imm add="summon charm"/>
+      <level>120</level>
+      <long_descr>Св. Мартин сидит возле алтаря, зажав в руке бутылку &quot;Золотой Осени&quot;.
+</long_descr>
+      <mana>10d10+10203</mana>
+      <material>none</material>
+      <player_name>saint martin святой мартин</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>свят|ой|ого|ому|ого|ым|ом Мартин||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28626">
+      <ac bash="-100" exotic="-100" pierce="-100" slash="-100"/>
+      <act add="npc sentinel stay_area nosteal nowhere nopurge nosavedrop notrack"/>
+      <aff add="sanctuary"/>
+      <alignment>1000</alignment>
+      <behavior type="SaintSpirit">
+        <roomVnum type="XMLInteger">19158</roomVnum>
+        <objVnum type="XMLInteger">28611</objVnum>
+        <hint type="XMLString">$c1 говорит тебе &apos;{GНайдешь его пройдя через пламя печи.{x&apos;</hint>
+      </behavior>
+      <dam_type>wrath</dam_type>
+      <damage>20d15+95</damage>
+      <default_pos>stand</default_pos>
+      <description>Они спустились с неба всего на несколько дней.
+Чтобы помочь.
+И вознаградить...
+
+Синеокий атлетического святой ненадолго отложивший копье, чтобы насладиться
+современной фантастикой. 
+Оно того стоит.
+Вот дочитает и вновь пойдет всяких чудищ изничтожать. Таких фанатов
+лучше в Мире не держать. Расист.
+</description>
+      <detection add="imp_invis fade invis hidden"/>
+      <hit>50d10+28000</hit>
+      <imm add="summon charm"/>
+      <level>120</level>
+      <long_descr>Отложив копье, святой Георгий (George) перечитывает &quot;Дракона и Джорджа&quot;.
+</long_descr>
+      <mana>10d10+10203</mana>
+      <material>none</material>
+      <player_name>saint george святой георгий</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>свят|ой|ого|ому|ого|ым|ом Георги|й|я|ю|я|ем|и</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28627">
+      <ac bash="-100" exotic="-100" pierce="-100" slash="-100"/>
+      <act add="npc sentinel stay_area nosteal nowhere nopurge nosavedrop notrack"/>
+      <aff add="sanctuary"/>
+      <alignment>1000</alignment>
+      <behavior type="SaintSpirit">
+        <roomVnum type="XMLInteger">3170</roomVnum>
+        <objVnum type="XMLInteger">28612</objVnum>
+        <hint type="XMLString">$c1 говорит тебе &apos;{GНайдешь его в Храме для тех, кто считает себя самыми умными.{x&apos;</hint>
+      </behavior>
+      <dam_type>wrath</dam_type>
+      <damage>20d15+95</damage>
+      <default_pos>stand</default_pos>
+      <description>Они спустились с неба всего на несколько дней.
+Чтобы помочь.
+И вознаградить...
+
+Преклонных лет белобородый дедушка с немного сумасшедшими глазами.
+Руки слегка трясутся. Наверное, земная гравитация плохо действует на святых...
+</description>
+      <detection add="imp_invis fade invis hidden"/>
+      <hit>50d10+28000</hit>
+      <imm add="summon charm"/>
+      <level>120</level>
+      <long_descr>Нос св. Вита (Vitus) погружен в &quot;Психические особенности больных эпилепсией.&quot;
+</long_descr>
+      <mana>10d10+10203</mana>
+      <material>none</material>
+      <player_name>saint vitus святой вит</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>свят|ой|ого|ому|ого|ым|ом Вит||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28628">
+      <ac bash="-100" exotic="-100" pierce="-100" slash="-100"/>
+      <act add="npc sentinel stay_area nosteal nowhere nopurge nosavedrop notrack"/>
+      <aff add="sanctuary"/>
+      <alignment>1000</alignment>
+      <behavior type="SaintSpirit">
+        <roomVnum type="XMLInteger">7593</roomVnum>
+        <objVnum type="XMLInteger">28615</objVnum>
+        <hint type="XMLString">$c1 говорит тебе &apos;{GОн обосновался в одном из храмов города, где живут ласточки.{x&apos;</hint>
+      </behavior>
+      <dam_type>wrath</dam_type>
+      <damage>20d15+95</damage>
+      <default_pos>stand</default_pos>
+      <description>Они спустились с неба всего на несколько дней.
+Чтобы помочь.
+И вознаградить...
+
+Хоть один нормальный половозрелый индивидуум!
+Ты уж, грешным делом, начал подумывать, уж не организовали ли святые банду
+по ограблению библиотек!
+</description>
+      <detection add="imp_invis fade invis hidden"/>
+      <hit>50d10+28000</hit>
+      <imm add="summon charm"/>
+      <level>120</level>
+      <long_descr>Устав от дискуссий, св. Августин (Augustin) посвящает время созерцательству.
+</long_descr>
+      <mana>10d10+10203</mana>
+      <material>none</material>
+      <player_name>saint augustin святой августин</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>свят|ой|ого|ому|ого|ым|ом Августин||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28629">
+      <ac bash="-100" exotic="-100" pierce="-100" slash="-100"/>
+      <act add="npc sentinel stay_area nosteal nowhere nopurge nosavedrop notrack"/>
+      <aff add="sanctuary"/>
+      <alignment>1000</alignment>
+      <behavior type="SaintSpirit">
+        <roomVnum type="XMLInteger">5250</roomVnum>
+        <objVnum type="XMLInteger">28616</objVnum>
+        <hint type="XMLString">$c1 говорит тебе &apos;{GИщи город там где странные существа играют на золотых арфах.{x&apos;</hint>
+      </behavior>
+      <dam_type>wrath</dam_type>
+      <damage>20d15+95</damage>
+      <default_pos>stand</default_pos>
+      <description>Они спустились с неба всего на несколько дней.
+Чтобы помочь.
+И вознаградить...
+
+Это сероглазый мужчина с окладистой белой бородой и ухоженными руками.
+Будет заблуждением считать его неженкой.
+
+Много одней отдав делам церкви, он решил ловлей и обезвреживанием
+опасных зверей.
+Теперь вот опять вернулся к глубинному изучению теории.
+</description>
+      <detection add="imp_invis fade invis hidden"/>
+      <form del="edible sentient biped mammal"/>
+      <hit>50d10+28000</hit>
+      <imm add="summon charm"/>
+      <level>120</level>
+      <long_descr>Борец с монстрами, св. Сильвестр (Silvester) изучает TSR-й &quot;Монстрятник&quot;.
+</long_descr>
+      <mana>10d10+10203</mana>
+      <material>none</material>
+      <parts del="head arms legs heart brains guts hands feet fingers ear eye"/>
+      <player_name>saint silvester святой сильвестр</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>свят|ой|ого|ому|ого|ым|ом Сильвестр||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28630">
+      <ac bash="-100" exotic="-100" pierce="-100" slash="-100"/>
+      <act add="npc sentinel stay_area nosteal nowhere nopurge nosavedrop notrack"/>
+      <aff add="sanctuary"/>
+      <alignment>1000</alignment>
+      <behavior type="SaintSpirit">
+        <roomVnum type="XMLInteger">1049</roomVnum>
+        <objVnum type="XMLInteger">28619</objVnum>
+        <hint type="XMLString">$c1 говорит тебе &apos;{GОн гостит у местной Богини.{x&apos;</hint>
+      </behavior>
+      <dam_type>wrath</dam_type>
+      <damage>20d15+95</damage>
+      <default_pos>stand</default_pos>
+      <description>Они спустились с неба всего на несколько дней.
+Чтобы помочь.
+И вознаградить...
+
+Симпатичный юноша с проказливой улыбкой.
+Такому не окажешь большей любезности, чем разрешение сделать кому-нибудь
+приятный подарок.
+</description>
+      <detection add="imp_invis fade invis hidden"/>
+      <form del="edible sentient biped mammal"/>
+      <hit>50d10+28000</hit>
+      <imm add="summon charm"/>
+      <level>120</level>
+      <long_descr>Св.Стефан (Stephan), отложив книгу, возится с лентами и оберточной бумагой.
+</long_descr>
+      <mana>10d10+10203</mana>
+      <material>none</material>
+      <parts del="head arms legs heart brains guts hands feet fingers ear eye"/>
+      <player_name>stephann стефан saint святой</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>свят|ой|ого|ому|ого|ым|ом Стефан||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28631">
+      <ac bash="-100" exotic="-100" pierce="-100" slash="-100"/>
+      <act add="npc sentinel stay_area nosteal nowhere nopurge nosavedrop notrack"/>
+      <aff add="sanctuary"/>
+      <alignment>1000</alignment>
+      <behavior type="SaintSpirit">
+        <roomVnum type="XMLInteger">31000</roomVnum>
+        <objVnum type="XMLInteger">28617</objVnum>
+        <hint type="XMLString">$c1 говорит тебе &apos;{GИщи его в городе где много гильдий и баров.{x&apos;</hint>
+      </behavior>
+      <dam_type>wrath</dam_type>
+      <damage>20d15+95</damage>
+      <default_pos>stand</default_pos>
+      <description>Они спустились с неба всего на несколько дней.
+Чтобы помочь.
+И вознаградить...
+
+Хранящий пьяниц. Без комментариев. Истинно святой человек.
+Сам, кстати, не злоупотребляет.
+Согласно христианским заповедям все раздает ближним. 
+</description>
+      <detection add="imp_invis fade invis hidden"/>
+      <form del="edible sentient biped mammal"/>
+      <hit>50d10+28000</hit>
+      <imm add="summon charm"/>
+      <level>120</level>
+      <long_descr>В руках у св. Вонифация (Bonifacio) списки общества &quot;Анонимные алкоголики&quot;.
+</long_descr>
+      <mana>10d10+10203</mana>
+      <material>none</material>
+      <parts del="head arms legs heart brains guts hands feet fingers ear eye"/>
+      <player_name>saint bonifacio святой вонифаций</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>свят|ой|ого|ому|ого|ым|ом Вонифаци|й|я|ю|я|ем|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="28632">
+      <ac bash="-100" exotic="-100" pierce="-100" slash="-100"/>
+      <act add="npc sentinel stay_area nosteal nowhere nopurge nosavedrop notrack"/>
+      <aff add="sanctuary"/>
+      <alignment>1000</alignment>
+      <behavior type="SaintSpirit">
+        <roomVnum type="XMLInteger">3068</roomVnum>
+        <objVnum type="XMLInteger">28618</objVnum>
+        <hint type="XMLString">$c1 говорит тебе &apos;{GХрам из серо-зеленого мрамора. Ищи его там.{x&apos;</hint>
+      </behavior>
+      <dam_type>wrath</dam_type>
+      <damage>20d15+95</damage>
+      <default_pos>stand</default_pos>
+      <description>Они спустились с неба всего на несколько дней.
+Чтобы помочь.
+И вознаградить...
+
+Похоже, дядя знает толк в развлечениях.
+А на досуге и почитать приятно.
+</description>
+      <detection add="imp_invis fade invis hidden"/>
+      <hit>50d10+28000</hit>
+      <imm add="summon charm"/>
+      <level>120</level>
+      <long_descr>Св. Вальпург (Valpurg) углублен в чтение книги Густава Майнринка.
+</long_descr>
+      <mana>10d10+10203</mana>
+      <material>none</material>
+      <player_name>saint valpurg святой вальпург</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>свят|ой|ого|ому|ого|ым|ом Вальпург||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+  </mobiles>
+  <objects>
+    <node name="28000">
+      <behavior type="GangKey">
+      </behavior>
+      <description>Ржавый ключ (key) валяется здесь. Похоже, им отпирают что-то важное!</description>
+      <extra_flags>hum nosac nolocate nofind nosell noident nosavedrop</extra_flags>
+      <gender>m</gender>
+      <material>steel</material>
+      <name>rusty key ржавый ключ</name>
+      <short_descr>ржав|ый|ого|ому|ый|ым|ом ключ||а|у||ом|е</short_descr>
+      <type name="key">
+        <rotGround>0</rotGround>
+        <rotInv>0</rotInv>
+      </type>
+      <wear_flags>take</wear_flags>
+    </node>
+    <node name="28001">
+      <behavior type="GangPortal">
+      </behavior>
+      <description>Ты видишь ржавую крышку канализационного люка (hatch).</description>
+      <extraDescr>
+        <node keyword="hatch люк портал portal">Вокруг заметны следы множества ног. Видимо, у спелеологов вечеринка намечается. 
+</node>
+      </extraDescr>
+      <gender>m</gender>
+      <material>iron</material>
+      <name>hatch люк портал portal</name>
+      <short_descr>люк||а|у||ом|е</short_descr>
+      <type name="portal">
+        <charges>0</charges>
+        <portalFlags>nocurse</portalFlags>
+        <target>28000</target>
+      </type>
+    </node>
+    <node name="28002">
+      <behavior type="GangPortal">
+      </behavior>
+      <description>На земле ты замечаешь ход (entrance), тщательно замаскированный ветками.</description>
+      <extraDescr>
+        <node keyword="ход портал portal entrance">Вокруг заметны следы множества ног, лап, копыт. Похоже, танцевальная площадка
+местного зверья.
+</node>
+      </extraDescr>
+      <gender>m</gender>
+      <material>wood</material>
+      <name>вход entrance портал portal</name>
+      <short_descr>вход||а|у||ом|е</short_descr>
+      <type name="portal">
+        <charges>0</charges>
+        <portalFlags>nocurse</portalFlags>
+        <target>28000</target>
+      </type>
+    </node>
+    <node name="28010">
+      <behavior type="FanBomb">
+      </behavior>
+      <description>Бомба (bomb) лежит здесь и зловеще тикает.</description>
+      <extra_flags>hum nosell noident</extra_flags>
+      <gender>m</gender>
+      <material>steel</material>
+      <name>bomb бомба</name>
+      <short_descr>бомб|а|ы|е|у|ой|е</short_descr>
+      <type name="trash">
+      </type>
+      <wear_flags>take</wear_flags>
+    </node>
+    <node name="28011">
+      <description>Маленький кусочек радуги (rainbow) лежит здесь.</description>
+      <extra_flags>nolocate nofind nosell noident nosavedrop</extra_flags>
+      <gender>m</gender>
+      <limit>100</limit>
+      <material>rainbow</material>
+      <name>rainbow piece кусочек радуги</name>
+      <short_descr>кусоч|ек|ка|ку|ек|ком|ке радуги</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="28012">
+      <description>(no description)</description>
+      <extra_flags>glow nosac nolocate nofind</extra_flags>
+      <gender>m</gender>
+      <material>flame</material>
+      <name>no name</name>
+      <short_descr>(no short description)</short_descr>
+      <type name="trash">
+      </type>
+    </node>
+    <node name="28013">
+      <description>Искушение поддаться греху (sin) охватывает тебя.</description>
+      <extra_flags>nolocate nofind nosell noident nosavedrop</extra_flags>
+      <gender>m</gender>
+      <material>soul</material>
+      <name>sin deadly смертный грех</name>
+      <short_descr>смертн|ый|ого|ому|ый|ым|ом грех||а|у||ом|е</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take</wear_flags>
+    </node>
+    <node name="28020">
+      <description>Пожелтевший от времени свиток (scroll) валяется в пыли.</description>
+      <extraDescr>
+        <node keyword="scroll свиток">{y        __________________________________________________________________{D_
+{y      /                                                                 /  {D\
+{y     |                                                                 {y|{D____|
+{y     |  {WС{xей свиток содержит наставления тому, кто хочет взрастить      {y|
+{y     |  {xволшебный папоротник. Благодаря своей магической природе,      {y|
+{y     |  {xпри должном уходе, расцветает он уже на четвертые сутки        {y|
+{y     |  {xровно в полночь.                                               {y|
+{y     |                                                                 |
+{y     |  {WП{xапоротники суть вельми прихотливые растения.                  {y|
+{y     |  {xСажают их темной ночью, в лесу или в поле.                     {y|
+{y     |  {xВ росте увеличиваются они лишь в полночь.                      {y|
+{y     |  {xОни очень любят влагу, однако надлежит помнить, что            {y|
+{y     |  {xрастение не должно находиться в воде больше половины времени.  {y|
+{y    ________________________________________________________________   |
+{y  /                                                                /   |
+{y  \________________________________________________________________\__/
+{x
+</node>
+      </extraDescr>
+      <gender>m</gender>
+      <material>paper</material>
+      <name>scroll свиток</name>
+      <short_descr>{Yстар|ый|ого|ому|ый|ым|ом {yсвит|ок|ка|ку|ок|ком|ке {Wпергамента{x</short_descr>
+      <type name="trash">
+      </type>
+      <wear_flags>take</wear_flags>
+    </node>
+    <node name="28021">
+      <description>Ты с трудом замечаешь на земле крохотную спору (seed) папоротника.</description>
+      <extra_flags>nolocate nofind noident</extra_flags>
+      <gender>m</gender>
+      <limit>100</limit>
+      <material>grass</material>
+      <name>seed зерно семя</name>
+      <short_descr>{yзернышк|о|а|у|о|ом|е {Gп{gапоротника{x</short_descr>
+      <type name="trash">
+      </type>
+      <wear_flags>take</wear_flags>
+    </node>
+    <node name="28022">
+      <description>Похоже, это сгнившее растение (rotten plant) слишком часто поливали.</description>
+      <gender>m</gender>
+      <material>plant</material>
+      <name>rotten plant сгнившее растение</name>
+      <short_descr>{x({cВоняет{x) {gсгнивш|ее|его|ему|ее|им|ем {Gрастен|ие|ия|ию|ие|ием|ии{x</short_descr>
+      <type name="food">
+        <foodHours>20</foodHours>
+        <fullHours>5</fullHours>
+        <poisoned>true</poisoned>
+      </type>
+      <wear_flags>take</wear_flags>
+    </node>
+    <node name="28023">
+      <description>Высохшее от недостаточного полива растение (plant) торчит из земли.</description>
+      <gender>m</gender>
+      <material>plant</material>
+      <name>dryed plant высохшее растение</name>
+      <short_descr>{Dвысохш|ее|его|ему|ее|им|ее {yрастен|ие{x|ия{x|ию{x|ие{x|ием{x|ии{x</short_descr>
+      <type name="trash">
+      </type>
+      <wear_flags>take</wear_flags>
+    </node>
+    <node name="28024">
+      <description>Цветок папоротника (fern flower) завораживает твой взгляд.</description>
+      <extra_flags>glow nosac nolocate nofind burn_proof</extra_flags>
+      <gender>m</gender>
+      <material>plant</material>
+      <name>flower fern цветок папоротника</name>
+      <short_descr>{Wц{Mв{Wет|о{Mк|ка|ку|ок|ком|ке {Mпап{Wо{Mро{Wт{Mника{x</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take</wear_flags>
+    </node>
+    <node name="28025">
+      <description>X</description>
+      <extra_flags>hum nopurge nosac nolocate nofind burn_proof</extra_flags>
+      <gender>m</gender>
+      <material>air</material>
+      <name>x</name>
+      <short_descr>x</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take</wear_flags>
+    </node>
+    <node name="28030">
+      <behavior type="FlamesBurningObject">
+      </behavior>
+      <description>Язычок пламени (fire) лижет тебе пятку.</description>
+      <extraDescr>
+        <node keyword="fire пламя">Тушить их надо, пока они маленькие!
+</node>
+      </extraDescr>
+      <extra_flags>glow nosac nolocate nofind noident</extra_flags>
+      <gender>m</gender>
+      <material>fire</material>
+      <name>xflamesburningobj fire язычок пламени</name>
+      <short_descr>языч|ок|ка|ку|ок|ком|ке пламени</short_descr>
+      <type name="trash">
+      </type>
+      <weight>10</weight>
+    </node>
+    <node name="28031">
+      <behavior type="FlamesBurningObject">
+      </behavior>
+      <description>Огненная стена (firewall) пожирает все подряд.</description>
+      <extraDescr>
+        <node keyword="firewall стена">Обычный firewall, которых ты видел массу на своем веку..
+</node>
+      </extraDescr>
+      <extra_flags>glow nosac nolocate nofind noident</extra_flags>
+      <gender>m</gender>
+      <material>fire</material>
+      <name>xflamesburningobj firewall стена огня</name>
+      <short_descr>огненн|ая|ой|ой|ую|ой|ой стен|а|ы|е|у|ой|е</short_descr>
+      <type name="trash">
+      </type>
+      <weight>10</weight>
+    </node>
+    <node name="28032">
+      <behavior type="FlamesBurningObject">
+      </behavior>
+      <description>Дымящаяся колода (log) вот-вот займется.</description>
+      <extra_flags>nosac nolocate nofind noident</extra_flags>
+      <gender>f</gender>
+      <material>wood</material>
+      <name>xflamesburningobj fire log дымящаяся колода</name>
+      <short_descr>дымящ|аяся|ейся|ейся|уюся|ейся|ейся колод|а|ы|е|у|ой|е</short_descr>
+      <type name="trash">
+      </type>
+      <weight>10</weight>
+    </node>
+    <node name="28033">
+      <behavior type="FlamesExtinguisher">
+      </behavior>
+      <description>Огнетушитель (fire extinguisher) так и распирает от пены.</description>
+      <extraDescr>
+        <node keyword="fire extinguisher огнетушитель">Он так и ждет, чтобы его против чего-нибудь ИСПОЛЬЗОВАЛИ.
+</node>
+      </extraDescr>
+      <extra_flags>nolocate nofind noident nosavedrop</extra_flags>
+      <gender>m</gender>
+      <material>steel</material>
+      <name>xflamesinstrument fire extinguisher огнетушитель</name>
+      <short_descr>огнетушител|ь|я|ю|ь|ем|е</short_descr>
+      <type name="trash">
+      </type>
+      <wear_flags>take hold</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="28034">
+      <behavior type="FlamesMatches">
+      </behavior>
+      <description>Спички (matches) детям не игрушка, но ты ведь не ребенок?</description>
+      <extraDescr>
+        <node keyword="box matches коробок спичек">Спички так и ждут, чтобы их против чего-нибудь ИСПОЛЬЗОВАЛИ.
+</node>
+      </extraDescr>
+      <extra_flags>nolocate nofind noident nosavedrop</extra_flags>
+      <gender>m</gender>
+      <material>wood</material>
+      <name>xflamesinstrument box matches коробок спичек</name>
+      <short_descr>короб|ок|ка|ку|ок|ком|ке спичек</short_descr>
+      <type name="trash">
+      </type>
+      <wear_flags>take hold</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="28035">
+      <behavior type="FlamesDryObject">
+      </behavior>
+      <description>Охапка (pile) сухой листвы вспыхнет при малейшей возможности.</description>
+      <extra_flags>nosac nolocate nofind noident</extra_flags>
+      <gender>m</gender>
+      <material>wood</material>
+      <name>xflamesdryobj ворох pile охапка</name>
+      <short_descr>ворох||а|у||ом|е сухих листьев</short_descr>
+      <type name="trash">
+      </type>
+      <weight>10</weight>
+    </node>
+    <node name="28036">
+      <behavior type="FlamesDryObject">
+      </behavior>
+      <description>Вязанка (faggot) хвороста ждет своего поджигателя.</description>
+      <extra_flags>nosac nolocate nofind noident</extra_flags>
+      <gender>m</gender>
+      <material>wood</material>
+      <name>xflamesdryobj вязанка faggot</name>
+      <short_descr>вязанк|а|и|е|у|ой|е хвороста</short_descr>
+      <type name="trash">
+      </type>
+      <weight>10</weight>
+    </node>
+    <node name="28037">
+      <behavior type="FlamesDryObject">
+      </behavior>
+      <description>Внушительных размеров бревно (log) готово погибнуть в пламени костра.</description>
+      <extraDescr>
+        <node keyword="бревно log">Ты смотришь на бревно.
+
+Бревно смотрит на тебя!
+</node>
+      </extraDescr>
+      <extra_flags>nosac nolocate nofind noident</extra_flags>
+      <gender>m</gender>
+      <material>wood</material>
+      <name>xflamesdryobj бревно log</name>
+      <short_descr>бревн|о|а|у|о|ом|е</short_descr>
+      <type name="trash">
+      </type>
+      <weight>10</weight>
+    </node>
+    <node name="28098">
+      <description>{yОбезьянний хвост как будто растет тут из-под земли.{x</description>
+      <extra_flags>nopurge nosac nolocate nofind nosell noident</extra_flags>
+      <gender>m</gender>
+      <level>1</level>
+      <material>fur</material>
+      <name>monkey tail обезьянний хвост</name>
+      <short_descr>{yОбезьянн|ий|ьего|иму|ий|им|ем хвост|{x|а{x|у{x|{x|ом{x|е{x</short_descr>
+      <type name="trash">
+      </type>
+      <wear_flags>take hold</wear_flags>
+    </node>
+    <node name="28100">
+      <description>(no description)</description>
+      <extra_flags>nopurge nosac nosell nosavedrop</extra_flags>
+      <gender>m</gender>
+      <material>nothingness</material>
+      <name>xkqmark</name>
+      <short_descr>(no short)</short_descr>
+      <type name="trash">
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>50</weight>
+    </node>
+    <node name="28101">
+      <description>Прочный кованый сундук (chest) хранит чьи-то сокровища.</description>
+      <extra_flags>nosac nolocate nofind burn_proof</extra_flags>
+      <gender>m</gender>
+      <material>wood</material>
+      <name>chest сундук xsqchest</name>
+      <short_descr>сунду|к|ка|ку|к|ком|ке</short_descr>
+      <type name="container">
+        <capacity>100</capacity>
+        <flags>closeable pickproof closed locked</flags>
+        <key>28102</key>
+        <maxWeight>100</maxWeight>
+        <weightMult>1</weightMult>
+      </type>
+      <wear_flags>no_sac</wear_flags>
+    </node>
+    <node name="28102">
+      <description>Отмычка (lockpick) валяется на земле.</description>
+      <extra_flags>nosac nolocate nofind nosell</extra_flags>
+      <gender>f</gender>
+      <material>steel</material>
+      <name>отмычка lockpick key ключ xsqkey</name>
+      <short_descr>отмычк|а|и|е|у|ой|е</short_descr>
+      <type name="key">
+        <rotGround>0</rotGround>
+        <rotInv>1</rotInv>
+      </type>
+      <wear_flags>take no_sac</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="28103">
+      <description>Обшарпанный деревянный ящик (crate) наполовину врыт в землю.</description>
+      <extra_flags>nosac nolocate nofind burn_proof</extra_flags>
+      <gender>m</gender>
+      <material>wood</material>
+      <name>crate ящик деревянный wooden xsqchest</name>
+      <short_descr>деревянн|ый|ого|ому|ый|ым|ом ящи|к|ка|ку|к|ком|ке</short_descr>
+      <type name="container">
+        <capacity>100</capacity>
+        <flags>closeable closed locked</flags>
+        <key>28104</key>
+        <maxWeight>100</maxWeight>
+        <weightMult>1</weightMult>
+      </type>
+      <wear_flags>no_sac</wear_flags>
+    </node>
+    <node name="28104">
+      <description>Ржавый и погнутый ключ (key) валяется здесь.</description>
+      <extra_flags>hum nosac nolocate nofind nosell</extra_flags>
+      <gender>m</gender>
+      <material>steel</material>
+      <name>key ключ xsqkey</name>
+      <short_descr>погнут|ый|ого|ому|ый|ым|ом клю|ч|ча|чу|ч|чом|че</short_descr>
+      <type name="key">
+        <rotGround>0</rotGround>
+        <rotInv>1</rotInv>
+      </type>
+      <wear_flags>take no_sac</wear_flags>
+    </node>
+    <node name="28105">
+      <description>Шкатулка (box) с грубо вырезанным орнаментом стоит на земле.</description>
+      <extra_flags>nosac nolocate nofind burn_proof</extra_flags>
+      <gender>m</gender>
+      <material>stone</material>
+      <name>шкатулка box xsqchest</name>
+      <short_descr>шкатул|ка|ки|ке|ку|кой|ке</short_descr>
+      <type name="container">
+        <capacity>100</capacity>
+        <flags>closeable closed locked</flags>
+        <key>28106</key>
+        <maxWeight>100</maxWeight>
+        <weightMult>1</weightMult>
+      </type>
+      <wear_flags>no_sac</wear_flags>
+    </node>
+    <node name="28106">
+      <description>Серебряный ключик (key) тускло поблескивает с земли.</description>
+      <extra_flags>glow nolocate nofind nosell</extra_flags>
+      <gender>m</gender>
+      <material>none</material>
+      <name>silver key серебрянный ключ xsqkey</name>
+      <short_descr>серебрян|ый|ого|ому|ый|ым|ом клю|ч|ча|чу|ч|чом|че</short_descr>
+      <type name="key">
+        <rotGround>0</rotGround>
+        <rotInv>1</rotInv>
+      </type>
+      <wear_flags>take</wear_flags>
+    </node>
+    <node name="28107">
+      <description>(no description)</description>
+      <extra_flags>nopurge nosac nolocate burn_proof nosell</extra_flags>
+      <gender>m</gender>
+      <material>nothingness</material>
+      <name>xqstaff</name>
+      <short_descr>(no short description)</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take</wear_flags>
+    </node>
+    <node name="28108">
+      <description>(no description)</description>
+      <extra_flags>nopurge nosac burn_proof nosell noident</extra_flags>
+      <gender>m</gender>
+      <material>nothingness</material>
+      <name>xlq</name>
+      <short_descr>(no short description)</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take</wear_flags>
+    </node>
+    <node name="28109">
+      <cost>10000</cost>
+      <description>Свернутый в рулон свиток (scroll) излучает таинственную энергию.</description>
+      <extra_flags>bless burn_proof</extra_flags>
+      <gender>m</gender>
+      <material>parchment</material>
+      <name>scroll свиток</name>
+      <short_descr>свит|ок|ка|ку|ок|ком|ке познания</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take</wear_flags>
+    </node>
+    <node name="28110">
+      <behavior type="PostmanMailItem">
+      </behavior>
+      <description>(no description)</description>
+      <extra_flags>nopurge nosac burn_proof nosell noident</extra_flags>
+      <gender>m</gender>
+      <material>paper</material>
+      <short_descr>(no short description)</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take</wear_flags>
+    </node>
+    <node name="28200">
+      <description>Игральная карта (card) с замысловатым рисунком на рубашке.</description>
+      <extra_flags>nolocate nofind</extra_flags>
+      <gender>m</gender>
+      <material>paper</material>
+      <name>card карта %s</name>
+      <short_descr>карт|а|ы|е|у|ой|е с изображением %s</short_descr>
+      <type name="trash">
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>3</weight>
+    </node>
+    <node name="28201">
+      <description>Колода карт (pack) пылится здесь.</description>
+      <extra_flags>nolocate nofind</extra_flags>
+      <gender>f</gender>
+      <material>paper</material>
+      <name>pack колода</name>
+      <short_descr>колод|а|ы|е|у|ой|е карт</short_descr>
+      <type name="trash">
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>5</weight>
+    </node>
+    <node name="28202">
+      <description>Какой-то шулер обронил здесь рукава (sleeves).</description>
+      <gender>m</gender>
+      <material>cloth</material>
+      <name>sleeves shark рукава шулера</name>
+      <short_descr>широк|ие|их|им|ие|ими|их рукав|а|ов|ам|а|ами|ах шулера</short_descr>
+      <type name="container">
+        <capacity>5</capacity>
+        <maxWeight>1000</maxWeight>
+      </type>
+      <wear_flags>take wear_arms</wear_flags>
+      <weight>30</weight>
+    </node>
+    <node name="28300">
+      <cost>3</cost>
+      <description>Любимая игрушка Бромсе (teddy bear) валяется в пыли.</description>
+      <gender>m</gender>
+      <material>cloth</material>
+      <name>teddy bear grizzly плюшевый мишка гризли</name>
+      <short_descr>плюшев|ый|ого|ому|ого|ым|ом мишк|а|и|е|у|ой|е гризли</short_descr>
+      <type name="trash">
+      </type>
+      <wear_flags>take hold</wear_flags>
+      <weight>2</weight>
+    </node>
+    <node name="28301">
+      <description>Огромная аппетитная кость (bone) - любимое лакомство пастушьих собак.</description>
+      <gender>f</gender>
+      <material>bone</material>
+      <name>dog bone собачья кость</name>
+      <short_descr>аппетитн|ая|ой|ой|ую|ой|ой кост|ь|и|и|ь|ью|и</short_descr>
+      <type name="food">
+        <foodHours>20</foodHours>
+        <fullHours>20</fullHours>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>4</weight>
+    </node>
+    <node name="28302">
+      <description>Цветок (flower) с пестрыми лепестками привлекает овец своим ароматом.</description>
+      <gender>m</gender>
+      <material>grass</material>
+      <name>flower fragrant ароматный цветок</name>
+      <short_descr>ароматн|ый|ого|ому|ый|ым|ом цвет|ок|ка|ку|ок|ком|ке</short_descr>
+      <smell>Аромат этого цветка местным овцам заменяет любой шанель.</smell>
+      <type name="food">
+        <foodHours>5</foodHours>
+        <fullHours>5</fullHours>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>1</weight>
+    </node>
+    <node name="28303">
+      <description>Пятнистый гриб (mushroom) подозрительно пахнет с земли.</description>
+      <gender>m</gender>
+      <material>plant</material>
+      <name>mushroom smelly вонючий гриб</name>
+      <short_descr>вонюч|ий|его|ему|ий|им|ем гриб||а|у||ом|е</short_descr>
+      <smell>Ты будешь пахнуть точно также, если съешь его.</smell>
+      <type name="food">
+        <foodHours>1</foodHours>
+        <fullHours>1</fullHours>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>1</weight>
+    </node>
+    <node name="28304">
+      <cost>100</cost>
+      <description>Таблетка (pill) с буквочкой &quot;V&quot; хочет помочь твоим бараньим подвигам.</description>
+      <gender>f</gender>
+      <material>food</material>
+      <name>pill haste таблетка ускоритель</name>
+      <short_descr>ускоряющ|ая|ей|ей|ую|ей|ей таблетк|а|и|е|у|ой|е</short_descr>
+      <type name="food">
+        <foodHours>1</foodHours>
+        <fullHours>1</fullHours>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>1</weight>
+    </node>
+    <node name="28305">
+      <description>Из трактира за дверью-вертушкой (door) доносится блеяние и веселая музыка.</description>
+      <extra_flags>hum</extra_flags>
+      <gender>f</gender>
+      <material>iron</material>
+      <name>revolving door дверь вертушка</name>
+      <short_descr>двер|ь|и|и|ь|ью|и-вертушк|а|и|е|у|ой|е</short_descr>
+      <type name="portal">
+        <charges>0</charges>
+        <portalFlags>nocurse</portalFlags>
+        <target>28300</target>
+      </type>
+      <weight>1000</weight>
+    </node>
+    <node name="28306">
+      <description>Небольшая дверца (door) ведет наружу, навстречу приключениям.</description>
+      <gender>f</gender>
+      <material>wood</material>
+      <name>door little маленькая дверца</name>
+      <short_descr>дверц|а|ы|е|у|ей|е</short_descr>
+      <type name="portal">
+        <charges>0</charges>
+        <portalFlags>nocurse</portalFlags>
+        <target>3502</target>
+      </type>
+      <weight>30</weight>
+    </node>
+    <node name="28307">
+      <affects>
+        <node>
+          <apply to="hitroll">11</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="damroll">11</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hit">120</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="saves">-10</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="mana">150</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
+      <cost>70000</cost>
+      <description>Золотые бараньи кудряшки (fleece) подозрительно подрагивают на земле.</description>
+      <extra_flags>glow nopurge nosac burn_proof noenchant</extra_flags>
+      <gender>n</gender>
+      <level>100</level>
+      <material>platinum</material>
+      <name>fleece golden руно золотое</name>
+      <short_descr>{Yзоло{yт{Y|ое|ого|ому|ое|ым|ом {Wр{wу{Wн|о{x|а{x|у{x|о{x|ом{x|е{x</short_descr>
+      <type name="armor">
+        <ac bash="50" exotic="45" pierce="50" slash="50"/>
+      </type>
+      <wear_flags>take wear_about</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="28308">
+      <affects>
+        <node>
+          <apply to="mana">120</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="saves">-8</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hit">100</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="damroll">10</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">10</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
+      <cost>50000</cost>
+      <description>Серебряные бараньи кудряшки (fleece) подозрительно подрагивают на земле.</description>
+      <extra_flags>glow nopurge nosac burn_proof noenchant</extra_flags>
+      <gender>n</gender>
+      <level>10</level>
+      <material>platinum</material>
+      <name>fleece silver руно серебряное</name>
+      <short_descr>{Wс{wе{Wр{wе{Wбр{wян{W|о{wе|ого|ому|ое|ым|ом {Wр{wу{Wн|о{x|а{x|у{x|о{x|ом{x|е{x</short_descr>
+      <type name="armor">
+        <ac bash="40" exotic="35" pierce="40" slash="40"/>
+      </type>
+      <wear_flags>take wear_about</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="28309">
+      <affects>
+        <node>
+          <apply to="saves">-6</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hit">60</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="damroll">7</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">6</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
+      <cost>40000</cost>
+      <description>Медные бараньи кудряшки (fleece) подозрительно подрагивают на земле.</description>
+      <extra_flags>glow nopurge nosac burn_proof noenchant</extra_flags>
+      <gender>n</gender>
+      <level>69</level>
+      <material>platinum</material>
+      <name>fleece copper руно медное</name>
+      <short_descr>{yмед{Yн{y|ое|ого|ому|ое|ым|ом {Wр{wу{Wн|о{x|а{x|у{x|о{x|ом{x|е{x</short_descr>
+      <type name="armor">
+        <ac bash="30" exotic="25" pierce="30" slash="30"/>
+      </type>
+      <wear_flags>take wear_about</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="28310">
+      <affects>
+        <node>
+          <apply to="hitroll">2</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="damroll">2</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="saves">-5</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
+      <cost>30</cost>
+      <description>Воздушный шар (balloon) парит в воздухе.</description>
+      <extra_flags>glow</extra_flags>
+      <gender>m</gender>
+      <level>1</level>
+      <material>rubber</material>
+      <name>balloon воздушный шарик</name>
+      <short_descr>{Mвозду{mш{Mн|ый|ого|ому|ый|ым|ом {cша{Cр{cик|{x|а{x|у{x|{x|ом{x|е{x</short_descr>
+      <smell>Пахнет паленой резиной.</smell>
+      <type name="light">
+        <v2>-1</v2>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>1</weight>
+    </node>
+    <node name="28500">
+      <description>Половинка чьего-то сердца (heart) валяется здесь.</description>
+      <extra_flags>glow nopurge nosac nolocate nofind nosell noident</extra_flags>
+      <gender>m</gender>
+      <material>flesh</material>
+      <name>heart halfheart half сердечко сердце половина %s</name>
+      <short_descr>половинк|а|у|е|у|ой|е сердца</short_descr>
+      <type name="trash">
+      </type>
+      <wear_flags>take</wear_flags>
+    </node>
+    <node name="28501">
+      <behavior type="ValentinePrise">
+      </behavior>
+      <description>Чье-то бьющееся сердце (heart) валяется здесь.</description>
+      <extra_flags>glow bless nopurge nosac nolocate burn_proof nosell noident</extra_flags>
+      <gender>n</gender>
+      <material>platinum</material>
+      <name>valentine prise валентинчик приз heart сердце</name>
+      <short_descr>{Rс{rердц|е{x|а{x|у{x|е{x|ем{x|е{x</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take wear_neck</wear_flags>
+    </node>
+    <node name="28521">
+      <description>Тыква (pumpkin), продырявленная в нескольких местах, валяется на земле.</description>
+      <extra_flags>dark nosac nolocate nofind</extra_flags>
+      <gender>m</gender>
+      <material>food</material>
+      <name>pumpkin тыква</name>
+      <short_descr>{Dдыряв|ая|ой|ой|ую|ой|ой {yтыкв|а{x|ы{x|е{x|у{x|ой{x|е{x</short_descr>
+      <type name="container">
+        <capacity>100</capacity>
+        <maxWeight>100</maxWeight>
+      </type>
+      <wear_flags>take</wear_flags>
+    </node>
+    <node name="28522">
+      <description>{cУ{Dг{rо{Rл{rе{Dк{x (ember) тускло мерцает с земли.</description>
+      <extra_flags>nosac nolocate nofind</extra_flags>
+      <gender>m</gender>
+      <material>energy</material>
+      <name>ember уголек</name>
+      <short_descr>{cу{Dг{rо{Rл{r|е{Dк{x|ь{Dка{x|ь{Dку{x|е{Dк{x|ь{Dком{x|ь{Dке{x</short_descr>
+      <type name="trash">
+      </type>
+      <wear_flags>take</wear_flags>
+    </node>
+    <node name="28530">
+      <affects>
+        <node>
+          <bits table="affect_flags">flying</bits>
+        </node>
+      </affects>
+      <description>Пара нежно-белых крыльев (wings) трепещет в воздухе.</description>
+      <extra_flags>bless nolocate nofind noident</extra_flags>
+      <gender>m</gender>
+      <material>feather</material>
+      <name>крылья wings амура amour</name>
+      <short_descr>{Wкрыль|я|ев|ям|я|ями|ях амура{x</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take wear_arms</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="28531">
+      <description>Волшебная стрела (arrow) воткнута в землю.</description>
+      <extra_flags>nolocate nofind</extra_flags>
+      <gender>f</gender>
+      <material>lovepoison</material>
+      <name>arrow стрела amour амура</name>
+      <short_descr>{D&gt;&gt;&gt;-{rстрел|а|ы|е|у|ой|е-{Rамура{W-&gt;{x</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take hold</wear_flags>
+    </node>
+    <node name="28532">
+      <description>Волшебный лук (bow) оставлен здесь.</description>
+      <extra_flags>hum nolocate nofind</extra_flags>
+      <gender>m</gender>
+      <material>energy</material>
+      <name>лук bow амура amour</name>
+      <short_descr>{Wлу|к|ка|ку|к|ком|ке {Rамура{x</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take wield</wear_flags>
+    </node>
+    <node name="28600">
+      <description>Маленькая симпатичная тыквочка (pumpkin) лежит здесь.</description>
+      <extraDescr>
+        <node keyword="pumpkin тыква тыквочка">{GНе забудь поздравить всех с праздником{W!{x
+{x           {DH{ra{Dp{rp{Dy {rH{Dallow{ree{Dn{r!{x
+</node>
+      </extraDescr>
+      <extra_flags>glow dark evil nopurge nolocate nofind nosell noident</extra_flags>
+      <gender>m</gender>
+      <level>1</level>
+      <material>plant</material>
+      <name>pumpkin тыквочка</name>
+      <short_descr>тыквочк|а|и|е|у|ой|е</short_descr>
+      <type name="food">
+        <foodHours>5</foodHours>
+        <fullHours>5</fullHours>
+        <poisoned>true</poisoned>
+      </type>
+      <wear_flags>take no_sac</wear_flags>
+    </node>
+    <node name="28602">
+      <affects>
+        <node>
+          <apply to="damroll">10</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">10</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <bits table="affect_flags">pass_door</bits>
+        </node>
+        <node>
+          <bits table="affect_flags">sanctuary</bits>
+        </node>
+        <node>
+          <bits table="affect_flags">regeneration</bits>
+        </node>
+      </affects>
+      <behavior type="Talisman">
+      </behavior>
+      <description>Талисман (talisman) дающий владельцу защиту от враждебных магических сил.{/ Или что-то типа того...</description>
+      <extra_flags>dark evil anti_good anti_evil anti_neutral nolocate nofind nouncurse nosell</extra_flags>
+      <gender>m</gender>
+      <level>1</level>
+      <material>darkness</material>
+      <name>talisman талисман</name>
+      <short_descr>{Wт{wа{Dл{Wи{wс{Wм{Dа{wн|{x|а{x|у{x|{x|ом{x|е{x</short_descr>
+      <type name="armor">
+        <ac bash="100" exotic="100" pierce="100" slash="100"/>
+      </type>
+      <wear_flags>take wear_neck no_sac</wear_flags>
+    </node>
+    <node name="28604">
+      <description>{DБольшая тыква с кривой улыбкой и пылающими {Rя{rрк{Rи{rм {Rогнем {Dглазами.{x{/</description>
+      <extraDescr>
+        <node keyword="pumpkin тыква">{x          {RH{rA{RP{rPY {RH{rA{RLL{rOW{RE{rE{RN{r!{x
+</node>
+      </extraDescr>
+      <gender>m</gender>
+      <level>1</level>
+      <material>plant</material>
+      <name>pumpkin тыква</name>
+      <short_descr>больш|ая|ой|ой|ую|ой|ой хеллоунск|ая|ой|ой|ую|ой|ой тыкв|а|ы|е|у|ой|е</short_descr>
+      <type name="furniture">
+        <flags>sit_on rest_on</flags>
+        <heal>-100</heal>
+        <mana>-100</mana>
+        <maxPeople>10</maxPeople>
+        <maxWeight>1000</maxWeight>
+      </type>
+      <weight>1000</weight>
+    </node>
+    <node name="28605">
+      <description>Обезвоженное тело (corpse) змеи (почти мумия) лежит здесь.</description>
+      <extraDescr>
+        <node keyword="dry corpse snake сушенный труп змеи">При виде этой вещи тебя охватывает необъяснимое омерзение.
+</node>
+      </extraDescr>
+      <extra_flags>evil nolocate nofind burn_proof nouncurse noident</extra_flags>
+      <gender>m</gender>
+      <level>1</level>
+      <material>corpse</material>
+      <name>dry corpse snake сушенный труп змеи</name>
+      <short_descr>сушенн|ый|ого|ому|ый|ым|ом труп||а|у||ом|е змеи</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take no_sac</wear_flags>
+    </node>
+    <node name="28606">
+      <description>Окровавленное сердце (heart) еще пульсирует на земле.</description>
+      <extraDescr>
+        <node keyword="heart вырванное сердце">При виде этой вещи тебя охватывает необъяснимое омерзение.
+</node>
+      </extraDescr>
+      <extra_flags>evil nolocate nofind burn_proof nouncurse noident</extra_flags>
+      <gender>n</gender>
+      <level>1</level>
+      <material>flesh</material>
+      <name>heart вырванное сердце</name>
+      <short_descr>вырванн|ое|ого|ому|ое|ым|ом сердц|е|а|у|е|ем|е</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take no_sac</wear_flags>
+    </node>
+    <node name="28607">
+      <description>Раньше бесстрашно плававший по волнам корабль (ship) лежит на боку здесь.</description>
+      <extraDescr>
+        <node keyword="little ship маленький кораблик">При виде этой вещи тебя охватывает необъяснимое омерзение.
+</node>
+      </extraDescr>
+      <extra_flags>evil nolocate nofind burn_proof nouncurse noident</extra_flags>
+      <gender>m</gender>
+      <level>1</level>
+      <material>wood</material>
+      <name>little ship маленький кораблик</name>
+      <short_descr>маленьк|ий|ого|ому|ий|им|ом кораблик||а|у||ом|е, пронзенный иголками</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take no_sac</wear_flags>
+    </node>
+    <node name="28608">
+      <description>Отделенная от тела голова (head) смотрит в небо пустыми глазницами.</description>
+      <extraDescr>
+        <node keyword="head отрубленная голова">При виде этой вещи тебя охватывает необъяснимое омерзение.
+</node>
+      </extraDescr>
+      <extra_flags>evil nolocate nofind burn_proof nouncurse noident</extra_flags>
+      <gender>f</gender>
+      <level>1</level>
+      <material>flesh</material>
+      <name>head отрубленная голова</name>
+      <short_descr>отрубленн|ая|ой|ой|ую|ой|ой голов|а|ы|е|у|ой|е</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take no_sac</wear_flags>
+    </node>
+    <node name="28609">
+      <description>Барабан (drum) с разорванной в клочья мембраной лежит здесь.</description>
+      <extraDescr>
+        <node keyword="drum поломанный барабан">При виде этой вещи тебя охватывает необъяснимое омерзение.
+</node>
+      </extraDescr>
+      <extra_flags>evil nolocate nofind burn_proof nouncurse noident</extra_flags>
+      <gender>m</gender>
+      <level>1</level>
+      <material>wood</material>
+      <name>drum поломанный барабан</name>
+      <short_descr>поломанн|ый|ого|ому|ый|ым|ом барабан||а|у||ом|е</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take no_sac</wear_flags>
+    </node>
+    <node name="28610">
+      <affects>
+        <node>
+          <bits table="affect_flags">corruption</bits>
+        </node>
+      </affects>
+      <description>Коричневое от гнили яблоко (apple) кишит червями здесь.</description>
+      <extraDescr>
+        <node keyword="rotting apple гнилое яблоко">При виде этой вещи тебя охватывает необъяснимое омерзение.
+</node>
+      </extraDescr>
+      <extra_flags>evil nolocate nofind burn_proof nouncurse noident</extra_flags>
+      <gender>n</gender>
+      <level>1</level>
+      <material>fruit</material>
+      <name>rotting apple гнилое яблоко</name>
+      <short_descr>гнил|ое|ого|ому|ое|ым|ом яблок|о|а|у|о|ом|е</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take hold no_sac</wear_flags>
+    </node>
+    <node name="28611">
+      <description>Покрытый слизью и мухами язык (tongue) валяется здесь.</description>
+      <extraDescr>
+        <node keyword="dragon tongue драконьий язык">При виде этой вещи тебя охватывает необъяснимое омерзение.
+</node>
+      </extraDescr>
+      <extra_flags>evil nolocate nofind burn_proof nouncurse noident</extra_flags>
+      <gender>m</gender>
+      <level>1</level>
+      <material>flesh</material>
+      <name>dragon tongue драконьий язык</name>
+      <short_descr>драконь|ий|его|ему|ий|им|ем язык||а|у||ом|е</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take no_sac</wear_flags>
+    </node>
+    <node name="28612">
+      <description>Из сопла балончика (can) вырывается зеленая вонючая пена.</description>
+      <extraDescr>
+        <node keyword="баллончик пеной">При виде этой вещи тебя охватывает необъяснимое омерзение.
+</node>
+      </extraDescr>
+      <extra_flags>evil nolocate nofind burn_proof nouncurse noident deleted</extra_flags>
+      <gender>m</gender>
+      <level>1</level>
+      <material>metall</material>
+      <name>foam container баллончик пеной</name>
+      <short_descr>балончик||а|у||ом|е с пеной</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take no_sac</wear_flags>
+    </node>
+    <node name="28613">
+      <description>Почти невесомое крылышко (bat) оторвано от летучей мыши и брошено здесь.</description>
+      <extraDescr>
+        <node keyword="wing bat крылышко летучей мыши">При виде этой вещи тебя охватывает необъяснимое омерзение.
+</node>
+      </extraDescr>
+      <extra_flags>evil nolocate nofind burn_proof nouncurse noident</extra_flags>
+      <gender>m</gender>
+      <level>1</level>
+      <material>flesh</material>
+      <name>wing bat крылышко летучей мыши</name>
+      <short_descr>крылышк|о|а|у|о|ом|е летучей мыши</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take no_sac</wear_flags>
+    </node>
+    <node name="28614">
+      <description>Награда (reward) за храбрость выданная посмертно лежит здесь.</description>
+      <extraDescr>
+        <node keyword="reward medallion посмертная медаль славу">При виде этой вещи тебя охватывает необъяснимое омерзение.
+</node>
+      </extraDescr>
+      <extra_flags>evil nolocate nofind burn_proof nouncurse noident</extra_flags>
+      <gender>m</gender>
+      <level>1</level>
+      <material>brass</material>
+      <name>reward medallion посмертная медаль славу</name>
+      <short_descr>{1{x({DПосмертно{x) {2медал|ь|и|и|ь|ью|и славы</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take no_sac</wear_flags>
+    </node>
+    <node name="28615">
+      <description>Книжка (book) изображающая плохо одетых (хорошо раздетых) существ лежит тут.</description>
+      <extraDescr>
+        <node keyword="book picture книжка картинками">При виде этой вещи тебя охватывает необъяснимое омерзение.
+</node>
+      </extraDescr>
+      <extra_flags>evil nolocate nofind burn_proof nouncurse noident</extra_flags>
+      <gender>m</gender>
+      <level>1</level>
+      <material>paper</material>
+      <name>book picture книжка картинками</name>
+      <short_descr>книжк|а|и|е|у|ой|е с любопытными картинками</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take no_sac</wear_flags>
+    </node>
+    <node name="28616">
+      <description>Ошейник (collar), покрытый острыми шипами снаружи и изнутри, лежит здесь.</description>
+      <extraDescr>
+        <node keyword="spiked collar ошейник шипованный">При виде этой вещи тебя охватывает необъяснимое омерзение.
+</node>
+      </extraDescr>
+      <extra_flags>evil nolocate nofind burn_proof nouncurse noident</extra_flags>
+      <gender>m</gender>
+      <level>1</level>
+      <material>leather</material>
+      <name>spiked collar ошейник шипованный</name>
+      <short_descr>ошейник||а|у||ом|е с шипами</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take no_sac</wear_flags>
+    </node>
+    <node name="28617">
+      <description>Незаменимая в хозяйстве вещь - аппарат для производства водки (vodka).</description>
+      <extraDescr>
+        <node keyword="vodka apparat самогонный аппарат">При виде этой вещи тебя охватывает необъяснимое омерзение.
+</node>
+      </extraDescr>
+      <extra_flags>evil nolocate nofind burn_proof nouncurse noident</extra_flags>
+      <gender>m</gender>
+      <level>1</level>
+      <material>iron</material>
+      <name>vodka apparat самогонный аппарат</name>
+      <short_descr>самогонн|ый|ого|ому|ый|ым|ом аппарат||а|у||ом|е</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take no_sac</wear_flags>
+    </node>
+    <node name="28618">
+      <description>Старый, облезший веник (broom) валяется здесь.</description>
+      <extraDescr>
+        <node keyword="broom веник">При виде этой вещи тебя охватывает необъяснимое омерзение.
+</node>
+      </extraDescr>
+      <extra_flags>evil nolocate nofind burn_proof nouncurse noident</extra_flags>
+      <gender>m</gender>
+      <level>1</level>
+      <material>wood</material>
+      <name>broom веник</name>
+      <short_descr>веник||а|у||ом|е</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take hold no_sac</wear_flags>
+    </node>
+    <node name="28619">
+      <description>Сдувшаяся тряпочка воздушного шарика (balloon) валяется здесь.
+</description>
+      <extraDescr>
+        <node keyword="broken balloon лопнувший воздушный шарик">При виде этой вещи тебя охватывает необъяснимое омерзение.
+</node>
+      </extraDescr>
+      <extra_flags>evil nolocate nofind burn_proof nouncurse noident</extra_flags>
+      <gender>m</gender>
+      <level>1</level>
+      <material>paper</material>
+      <name>broken balloon лопнувший воздушный шарик</name>
+      <short_descr>лопнувш|ий|его|кму|ий|им|ем воздушн|ый|ого|ому|ый|ым|ом шарик||а|у||ом|е</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take no_sac</wear_flags>
+    </node>
+  </objects>
+  <rooms>
+    <node name="28000">
+      <description>Ты стоишь в грязной заплесневелой комнате. Пахнет двухнедельным перегаром,
+потом, носками и табаком. Посреди комнаты стол, за столом восседает Шеф.
+Он курит сигару. Рядом околачиваются несколько амбалов недружелюбного вида.
+</description>
+      <flags>dark no_vanish no_mob indoors nowhere nosummon noquit</flags>
+      <healRate>0</healRate>
+      <manaRate>0</manaRate>
+      <name>Логово</name>
+      <sector>inside</sector>
+    </node>
+    <node name="28001">
+      <description>Зачем ты здесь? Тебя никто сюда не звал. Вали-вали, давай...
+</description>
+      <flags>no_vanish no_mob nowhere nosummon noquit</flags>
+      <healRate>0</healRate>
+      <manaRate>0</manaRate>
+      <name>Явно не туда попали</name>
+      <sector>inside</sector>
+    </node>
+    <node name="28002">
+      <flags>no_vanish no_mob imp_only</flags>
+      <name>Зеленая Лужайка</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="28004"/>
+      </resets>
+      <sector>field</sector>
+    </node>
+    <node name="28300">
+      <description>Полутемное помещение трактира уставлено  круглыми деревянными  столиками. В
+самом  центре,   на  освещенном   дрожащими  зелеными   огоньками  подиуме,
+разворачивается феерическое действо овечьего стриптиза. За  столиками сидят
+черные  кудрявые  барашки.  Они  потягивают  напитки  из высоких  бокалов и
+изредка переблеиваются между собой, обсуждая происходящее на  сцене. Острое
+чувство зависти к их беззаботной бараньей  жизни внезапно  охватывает тебя.
+Хочется отставить все заботы  и присоединиться  к их  стаду.. Ведь  это так
+просто - достаточно всего лишь произнести заветное &apos;I want to be Sven!&apos;.
+</description>
+      <flags>no_vanish no_mob indoors safe nosummon noquit</flags>
+      <name>Трактир &quot;Овечий Хвостик&quot;</name>
+      <sector>inside</sector>
+    </node>
+  </rooms>
+</area>

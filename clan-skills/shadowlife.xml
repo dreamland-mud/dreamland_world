@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты вновь можешь управлять тенями.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <clans>
+    <node name="invader">
+      <level>30</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <mana>80</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <spell type="SPELL(Shadowlife)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_room</target>
+    <type>offensive</type>
+  </spell>
+  <nameRus>оживить тень</nameRus>
+  <help type="SkillHelp">
+Заклинание, позволяющее вдохнуть жизнь в   часть души твоего врага, которая
+вступит в бой за обладание телом, в котором она томилась в заключении.
+  </help>
+</skill>

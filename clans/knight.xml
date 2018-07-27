@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<Clan type="DefaultClan">
+  <channel>true</channel>
+  <color>W</color>
+  <deities>
+    <node>Corwin</node>
+    <node>Razer</node>
+  </deities>
+  <diplomacy>true</diplomacy>
+  <dispersed>false</dispersed>
+  <enemies>
+    <node>invader</node>
+  </enemies>
+  <hidden>false</hidden>
+  <induct>
+    <node allow="false">
+      <node invert="false" type="XMLPCEthosPredicate">chaotic</node>
+    </node>
+    <node allow="false">
+      <node invert="true" type="XMLPCAlignPredicate">good</node>
+    </node>
+    <node allow="false">
+      <node invert="true" type="XMLPCClassPredicate">paladin</node>
+      <node invert="true" type="XMLPCClassPredicate">warrior</node>
+      <node invert="true" type="XMLPCClassPredicate">samurai</node>
+      <node invert="true" type="XMLPCClassPredicate">ninja</node>
+      <node invert="true" type="XMLPCClassPredicate">ranger</node>
+      <node invert="true" type="XMLPCClassPredicate">warlock</node>
+      <node invert="true" type="XMLPCClassPredicate">witch</node>
+      <node invert="true" type="XMLPCClassPredicate">universal</node>
+      <node invert="true" type="XMLPCClassPredicate">cleric</node>
+    </node>
+  </induct>
+  <leader>8</leader>
+  <longName>the Knights of Dream Land</longName>
+  <membership type="ClanMembership">
+    <minLevel>10</minLevel>
+    <mode>verify</mode>
+    <removable>true</removable>
+    <removeBy>exile</removeBy>
+    <removeSelf>outsider</removeSelf>
+  </membership>
+  <monument>{YДерево стоит здесь, на котором висит, подвешенн%1$Gое|ый|ая за пятку, {W%1$#C1{Y от руки {R%2$#C2{x.</monument>
+  <padName>{W  KNIGHT   {x</padName>
+  <recallVnum>524</recallVnum>
+  <recruiter>7</recruiter>
+  <shortName>KNIGHT</shortName>
+  <titles type="ClanTitlesByLevel">
+    <node>
+      <female>ученик</female>
+      <male>ученик</male>
+    </node>
+    <node>
+      <female>оруженосец</female>
+      <male>оруженосец</male>
+    </node>
+    <node>
+      <female>посвященная</female>
+      <male>посвященный</male>
+    </node>
+    <node>
+      <female>сестра</female>
+      <male>брат</male>
+    </node>
+    <node>
+      <female>графиня</female>
+      <male>граф</male>
+    </node>
+    <node>
+      <female>герцогиня</female>
+      <male>герцог</male>
+    </node>
+    <node>
+      <female>леди</female>
+      <male>лорд</male>
+    </node>
+    <node>
+      <female>миледи</female>
+      <male>кардинал</male>
+    </node>
+    <node>
+      <female>Королева</female>
+      <male>Король</male>
+    </node>
+  </titles>
+
+  <orgs type="ClanOrgs">
+    <name mg="m">орден||а|у||ом|е</name>
+    <node name="dawn" type="KnightOrder">
+      <name>dawn</name>
+      <classes>warlock witch cleric paladin</classes>
+      <titles>
+        <node>
+          <female>ученик</female>
+          <male>ученик</male>
+        </node>
+        <node>
+          <female>послушница</female>
+          <male>послушник</male>
+        </node>
+        <node>
+          <female>аколит</female>
+          <male>аколит</male>
+        </node>
+        <node>
+          <female>посвященная</female>
+          <male>посвященный</male>
+        </node>
+        <node>
+          <female>познающая</female>
+          <male>познающий</male>
+        </node>
+        <node>
+          <female>адепт</female>
+          <male>адепт</male>
+        </node>
+        <node>
+          <female>Жрица</female>
+          <male>Архимаг</male>
+        </node>
+        <node>
+          <female>Изгоняющая Зло</female>
+          <male>Изгоняющий Зло</male>
+        </node>
+        <node>
+          <female>Королева</female>
+          <male>Король</male>
+        </node>
+      </titles>
+      <shortDescr>Орден Зари</shortDescr>
+    </node>
+    <node name="light" type="KnightOrder">
+      <name>light</name>
+      <classes>cleric paladin</classes>
+      <titles>
+        <node>
+          <female>ученик</female>
+          <male>ученик</male>
+        </node>
+        <node>
+          <female>посвященная</female>
+          <male>посвященный</male>
+        </node>
+        <node>
+          <female>врачевательница</female>
+          <male>лекарь</male>
+        </node>
+        <node>
+          <female>целительница</female>
+          <male>целитель</male>
+        </node>
+        <node>
+          <female>настоятель</female>
+          <male>настоятель</male>
+        </node>
+        <node>
+          <female>проповедница</female>
+          <male>проповедник</male>
+        </node>
+        <node>
+          <female>Пророк</female>
+          <male>Пророк</male>
+        </node>
+        <node>
+          <female>Несущая Свет</female>
+          <male>Несущий Свет</male>
+        </node>
+        <node>
+          <female>Королева</female>
+          <male>Король</male>
+        </node>
+      </titles>
+      <shortDescr>Орден Света</shortDescr>
+    </node>
+    <node name="power" type="KnightOrder">
+      <name>power</name>
+      <classes>warrior ninja ranger samurai paladin</classes>
+      <titles>
+        <node>
+          <female>ученик</female>
+          <male>ученик</male>
+        </node>
+        <node>
+          <female>оруженосец</female>
+          <male>оруженосец</male>
+        </node>
+        <node>
+          <female>воительница</female>
+          <male>воин</male>
+        </node>
+        <node>
+          <female>ветеран</female>
+          <male>ветеран</male>
+        </node>
+        <node>
+          <female>мастер</female>
+          <male>мастер</male>
+        </node>
+        <node>
+          <female>наставница</female>
+          <male>наставник</male>
+        </node>
+        <node>
+          <female>Элита</female>
+          <male>Элита</male>
+        </node>
+        <node>
+          <female>Карающая Зло</female>
+          <male>Карающий Зло</male>
+        </node>
+        <node>
+          <female>Королева</female>
+          <male>Король</male>
+        </node>
+      </titles>
+      <shortDescr>Орден Силы</shortDescr>
+    </node>
+  </orgs>
+</Clan>

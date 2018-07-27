@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="cleric">
+      <level>35</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="paladin">
+      <level>51</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>35</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>teleport</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>25</weight>
+    </node>
+  </classes>
+  <group>transportation</group>
+  <help type="SkillHelp">%PAUSE%Полет за Солнцем (solar flight) - это могущественное транспортное
+заклинание, открывающее портал между Вами и любым существом в мире.
+Через этот портал можете пройти только Вы - Ваше животное и члены
+Вашей группы остаются на месте. Персонажи имеют некоторую сопротивляемость
+к solar flight, и полный имунитет, если они старше вас на 1 уровень.
+  В private, no_summon комнаты нельзя solar flight, и нельзя из если 
+комната no_recall, no_summon или private.
+  Если игрок не принадлежит вашему клану, и у него выставлено no_summon,
+то на него можно solar flight только в пределах одной арии, и на успешность
+заклинания влияет его save vs spell.
+Полет за Солнцем работает только в дневное время.
+  </help>
+  <mana>80</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>солнечный полет</nameRus>
+  <spell type="SPELL(SolarFlight)">
+    <casted>true</casted>
+    <gateShadow>true</gateShadow>
+    <gateViolent>false</gateViolent>
+    <levelDiff>1</levelDiff>
+    <msgGroupEnter></msgGroupEnter>
+    <msgGroupLeave></msgGroupLeave>
+    <msgRoomEnter>Появление %1$C2 сопровождается ослепительной вспышкой света!</msgRoomEnter>
+    <msgRoomLeave>%1$^C1 исчезает в ослепительной вспышке света!</msgRoomLeave>
+    <msgSelfEnter></msgSelfEnter>
+    <msgSelfLeave>Ты исчезаешь в ослепительной вспышке света!</msgSelfLeave>
+    <position>fight</position>
+    <takeGroup>false</takeGroup>
+    <takePet>false</takePet>
+    <target>char_world</target>
+    <type>none</type>
+  </spell>
+</skill>

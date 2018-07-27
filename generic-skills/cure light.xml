@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>11</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="cleric">
+      <level>2</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="druid">
+      <level>2</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="ninja">
+      <level>9</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="paladin">
+      <level>5</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="samurai">
+      <level>10</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>4</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>15</weight>
+    </node>
+  </classes>
+  <group>healing</group>
+  <mana>10</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>лечить легкие раны</nameRus>
+  <spell type="SPELL(CureLight)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_room</target>
+    <type>defensive</type>
+  </spell>
+</skill>

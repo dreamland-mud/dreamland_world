@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты перестаешь чувствовать жизнь рядом с собой.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="vampire">
+      <level>13</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <command type="SKILL(sense)">
+    <hint>(вампиры) чувствовать присутствие жизни</hint>
+    <name>sense</name>
+    <position>rest</position>
+    <russian>
+      <node>чувствовать</node>
+    </russian>
+  </command>
+  <group>none</group>
+  <help type="SkillHelp">Вампиры способны учуять присутствие жизненных форм даже в абсолютной темноте.
+  </help>
+  <mana>20</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>чувствовать жизнь</nameRus>
+</skill>

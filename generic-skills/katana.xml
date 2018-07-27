@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты вновь можешь создать катану.</wearoff>
+  </affect>
+  <beats>24</beats>
+  <classes>
+    <node name="samurai">
+      <level>72</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>72</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>smithing</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>20</weight>
+    </node>
+  </classes>
+  <command type="SKILL(katana)">
+    <hint>(самураи) изготовить катану из бруска железа</hint>
+    <name>katana</name>
+    <position>stand</position>
+    <russian>
+      <node>катана</node>
+    </russian>
+  </command>
+  <group>none</group>
+  <help type="SkillHelp">Достигнувший определенного жизненного опыта самурай может сделать
+специальный меч - катану (katana).
+ Этот меч - душа самурая, его честь, которую ни в коем случае нельзя
+замарать. Потерявший свой меч самурай обречен на вечный позор перед 
+самим собой и другими самураями.
+  </help>
+  <mana>300</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>катана</nameRus>
+</skill>

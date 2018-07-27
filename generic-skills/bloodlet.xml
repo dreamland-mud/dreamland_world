@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Рана на твоей руке затягивается.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="vampire">
+      <level>15</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <command type="SKILL(bloodlet)">
+    <aliases>
+      <node>blet</node>
+    </aliases>
+    <hint>(вампиры) пустить себе кровь, разжигая жажду</hint>
+    <name>bloodlet</name>
+    <position>stand</position>
+    <russian>
+      <node>кровопускание</node>
+    </russian>
+  </command>
+  <group>vampiric</group>
+  <help type="SkillHelp">Находясь в форме человека (human), вампир может намеренно вызвать в себе 
+жажду крови. Для этого необходимо нанести себе небольшую рану, и вид
+капающей крови возбудит жажду. Однако необходимо обладать достаточным
+опытом в этом умении, иначе есть шанс повредить себя слишком сильно
+и жажда станет неконтролируемой.
+  </help>
+  <mana>50</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>кровопускание</nameRus>
+</skill>

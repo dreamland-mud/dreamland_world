@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<Help type="HelpContainer">
+    <node type="Help" keyword="GOD IMMORT IMMORTAL WIZ WIZARD" level="-1">&apos;Immortal&apos; (often, simply, &apos;immort&apos;) refers to players who have reached
+the highest attainable levels in the game.  Here, anyone of level 102
+or higher is an &apos;immortal.&apos;  Immortals are capable of exceeding the
+usual game rules, in more drastic and pervasive ways as levels increase;
+examples range from teleportation and invisibility to mortal sight to
+creation of objects, removal of a player&apos;s privileges (channels,
+ability to move, or even ability to log in), and ability to promote
+players to immortality.
+
+Since immortals can wreak havoc with game balance, they are (ideally)
+a carefully-chosen and policed group.  An absolute rule of immortal
+behavior is that no immortal can aid or assist any player without
+explicit permission from the higher ranks; in other words, please
+don&apos;t ask an immortal to help you kill a mob, gather EQ, etc, or
+you&apos;ll likely be either politely or rudely refused, or referred to
+this file.
+
+The duties of immortals, and even the very reasons for their existence,
+are topics of continual and heated debate in various MUD forums, and are
+fraught with misconceptions, poor examples, and outrageous hypocrisies. :)
+</node>
+    <node type="Help" keyword="IMOTD" level="102">.%PAUSE%
+
+     - Лаской-с.  Единственным  способом,  который  возможен  в
+обращении с живым существом. Террором ничего  поделать нельзя с
+животным, на какой  бы ступени развития  оно ни стояло.  Это  я
+утверждал, утверждаю  и  буду  утверждать. Они напрасно думают,
+что террор им поможет. Нет-с, нет-с, не поможет, какой бы он ни
+был:  белый,  красный  и  даже  коричневый!  Террор  совершенно
+парализует нервную  систему. // Булгаков, &quot;Собачье сердце&quot;
+
+[Нажмите Return для продолжения]
+</node>
+    <node type="Help" keyword="COMMANDMENTS 'GOD RULES' GODS LAWS" level="102">.%PAUSE%
+               Уголовный кодекс Бессмертного Dream Land.
+                    -=Для внутреннего пользования=-
+
+1.НЕ УБИВАТЬ СМЕРТНЫХ ни в каком виде, в том числе с помощью перемещения или
+  призывания их в одну комнату с агрессивным монстром.
+
+2. Запрещается любая помощь своим смертным персонажам.
+  Исключение составляют -кодеры-, но созданный ими чар должен использоваться
+  ТОЛЬКО для тестирования и удаляться сразу после окончания теста.
+
+3.ЗАПРЕЩЕНО распространять любую информацию, полученную благодаря Вашим
+  особым возможностям. 
+
+4.НЕ РАЗРЕШАЕТСЯ перемещать/призывать монстров к смертным и 
+  наоборот. У смертных имеются ноги для передвижения, и если 
+  кто-то желает убить монстра он может легко добраться до него сам.
+
+5.ЗАПРЕЩЕНО использовать reboot, в том числе и &quot;краш&quot; сервера при 
+  помощи использования ошибок программы.
+
+7.ЗАПРЕЩАЕТСЯ раздача экипировки, изменение статов чаров, разглашение 
+  информации. Вам не нужно заниматься поддерживанием своей репутации перед
+  смертными таким образом. Исключение составляет восстановление потерянных 
+  в результате ошибок программы вещей.
+
+8.Насчет Миссий и Заданий: Это все более или менее замечательно, НО вы никогда
+  не должны создавать в качестве награды сверхсильных артефактов способных 
+  сильно дисбалансировать персонажа, а тем более менять параметры самого 
+  персонажа. Сами задания должны подталкивать игроков изучать мир и искать
+  нестандартные решения поставленных задач, а не сводится к беготне друг
+  за другом вокруг фонтана в Мидгарде. (за квест на убийство персонажа,
+  Бессмертный будет удален без предупреждения и права аппеляции)
+
+9.ЗАПРЕЩЕНО подвергать сомнению решения высших Бессмертных в ситуациях, 
+  когда они парализовали или отключили каналы связи от какого-либо смертного.
+  Не пытайтесь восстановить привилегии таких смертных. Они заслуженно наказаны.
+  Ваше решение может быть изменено высшим Бессмертным в любую сторону -
+  усиления или отмены наказания. Прислушивайтесь к мнению -кодеров-, они 
+  имеют особые привелегии, связанные с решаемыми ими задачами.
+
+10.За любыми карательными действиями, Бессмертный обязан написать penalty
+  с подробным описанием ситуации, вызвавшей данную акцию.
+
+11.Вы здесь не для того, чтобы повелевать смертными, а для помощи им. 
+  Однако смертные должны соблюдать установленные правила (help rules)
+  и наблюдение за этим также возложено на ваши плечи. 
+
+</node>
+    <node type="Help" keyword="'SET OBJ'" level="106">
+Команда используется для изменения параметров объекта, который находится где-либо в Мире.
+
+%FMT%   *set obj* _%OBJ%_ _поле_ _значение_
+
+Поля: value0 value1 value2 value3 value4 (v0-v4)
+      cost extra level material owner timer
+      wear weight personal
+%PAUSE%
+Расшифровка:
+  cost     : Стоимость объекта в серебрянных монетах;
+  extra    : Дополнительные флаги объекта ({W*{x);
+  level    : Уровень объекта;
+  material : Материал, из которого изготовлен объект ({W**{x);
+  owner    : Владелец объекта ( поле критически важно для квестовых вещей
+             а так-же для объектов, которым присвоены обжпроги на
+             подъем именных объектов ) ({W***{x);
+  timer    : Назначить объекту время жизни в тиках;
+  v0 - v4  : Специфические поля, значение определяется типом объекта;
+  wear     : Флаги на одевание объекта ({W*{x);
+  weight   : Вес объекта в фунтах.
+  personal : Сделать предмет личной вещью (%H% [owner])
+
+{W*{x - Флаги можно устанавливать как числовыми значениями, так и
+    символьными. Примеры :
+  value = 1     - установить флаг объекта равным 1;
+  value = +1    - установить флаг объекта равным 1;
+  value = -1    - установить флаг объекта равным -1;
+  value = A     - установить флаг объекта равным A;
+  value = +A    - добавить к флагу объекта флаг A;
+  value = -A    - убрать у флага объекта флаг A;
+  value = +AB-C - добавить к флагу объекта флаги AB и убрать флаг C ( такие
+               многорежимные флаги ОБЯЗАТЕЛЬНО должны начинаться с + или -).
+
+{YОписание флагов объектов - {Whelp flags{x
+{YОписание параметров {xv0{Y-{xv4{Y - {Whelp parameters{x
+
+{W**{x - Желательно английское значение ( по крайней мере пока ), к тому же
+     которое встречается в ариях.
+
+{W***{x - Имя должно быть указано с заглавной буквы. Скажем для чара Teelak
+      owner надо устанавливать Teelak.
+</node>
+    <node type="Help" keyword="'FLAGS ФЛАГИ'" level="106">%PAUSE%Флаги объектов, доступные в {CДЛ{x:
+
+{WWEAR FLAGS{x:     {WEXTRA FLAGS{x:
+TAKE    A       GLOW         A
+FINGER  B       HUM          B
+NECK    C       DARK         C
+BODY    D       WATER_STAND  D
+HEAD    E       EVIL         E
+LEGS    F       INVIS        F
+FEET    G       MAGIC        G
+HANDS   H       NODROP       H
+ARMS    I       BLESS        I
+SHIELD  J       ANTI_GOOD    J
+ABOUT   K       ANTI_EVIL    K
+WAIST   L       ANTI_NEUTRAL L
+WRIST   M       NOREMOVE     M
+WIELD   N       INVENTORY    N
+HOLD    O       NOPURGE      O
+FLOAT   Q       ROT_DEATH    P
+TATTOO  R       VIS_DEATH    Q
+FACE    S       NONMETAL     S
+                NOLOCATE     T
+NO_SACRIFICE P  MELT_DROP    U
+                HAD_TIMER    V
+                SELL_EXTRACT W
+                NOFIND       X
+                BURN_PROOF   Y
+                NOUNCURSE    Z
+                NOSELL       a
+                NOIDENT      b
+
+</node>
+    <node type="Help" keyword="'PARAMETERS ПАРАМЕТРЫ'" level="106">%PAUSE%{CДля оружия{x:
+v0 - класс оружия: EXOTIC 0, SWORD 1, DAGGER 2, SPEAR 3, MACE 4,
+     AXE 5, FLAIL 6, WHIP 7, POLEARM 8, BOW 9, ARROW 10, LANCE 11.
+v1-v2 - повреждение от оружия по формуле v1 d v2
+v3 - вид повреждений, наносимых оружием ({Whelp damage types{x).
+v4 - флаги оружия:
+  FLAMING   A
+  FROST     B
+  VAMPIRIC  C
+  SHARP     D
+  VORPAL    E
+  TWO_HANDS F
+  SHOCKING  G
+  POISON    H
+  HOLY      I
+  KATANA    J
+
+{CДля мебели{x:
+v0 - количество персонажей, которые могут одновременно использовать
+v1 - вес
+v2 - флаги :
+  STAND_AT A
+  STAND_ON B
+  STAND_IN C
+  SIT_AT   D
+  SIT_ON   E
+  SIT_IN   F
+  REST_AT  G
+  REST_ON  H
+  REST_IN  I
+  SLEEP_AT J
+  SLEEP_ON K
+  SLEEP_IN L
+  PUT_AT   M
+  PUT_ON   N
+  PUT_IN   O
+  PUT_INSIDE P
+v3 - ресторинг ХП в %
+v4 - ресторинг маны в %
+
+{CДля порталов{x:
+v0 - счетчик вхождений, после которых портал исчезнет
+v1 - флаги входа в портал:
+  ISDOOR    A
+  CLOSED    B
+  LOCKED    C
+  PICKPROOF F
+v2 - флаги портала:
+  NORMAL_EXIT A
+  NOCURSE     B
+  GOWITH      C
+  BUGGY       D
+  RANDOM      E
+v3 - VNUM комнаты, куда ведет портал (либо -1 для одноразово-рандомного).
+
+{CДля контейнеров{x:
+v0 - максимальный вес ВСЕХ вещей в контейнере.
+v1 - флаги контейнера:
+  CLOSEABLE A
+  PICKPROOF B
+  CLOSED    C
+  LOCKED    D
+  PUT_ON    E (взять СО стола)
+  FOR_ARROW F
+  PUT_ON2   E (взять С полки)
+v2 - VNUM ключа для контейнера. Ключем может служить {CЛЮБОЙ{x предмет!
+v3 - максимальный вес ВЕЩИ, которую можно положить в контейнер
+v4 - Процент, который остается от веса вещей, положенных в контейнер.
+</node>
+    <node type="Help" keyword="'DAMAGE TYPES'" level="106">Типы повреждений, наносимых оружием:
+
+NONE      0
+SLICE     1
+STAB      2
+SLASH     3
+WHIP      4
+CLAW      5
+BLAST     6
+POUND     7
+CRUSH     8
+GREP      9
+BITE      10
+PIERCE    11
+SUCTION   12
+BEATING   13
+DIGESTION 14
+CHARGE    15
+SLAP      16
+PUNCH     17
+WRATH     18
+MAGIC     19
+DIVINE    20
+CLEAVE    21
+SCRATCH   22
+PECK      23
+PECKB     24
+CHOP      25
+STING     26
+SMASH     27
+SHBITE    28
+FLBITE    29
+FRBITE    30
+ACBITE    31
+CHOMP     32
+DRAIN     33
+THRUST    34
+SLIME     35
+SHOCK     36
+THWACK    37
+FLAME     38
+CHILL     39
+</node>
+    <node type="Help" keyword="ACTFLAGS" level="106">%PAUSE%ACT Flags:
+IS_NPC        A (выставляется автоматически)
+SENTINEL      B (не ходит случайным образом)
+SCAVENGER     C (подбирает то, что валяется на полу)
+AGGRESSIVE    F (агрессивные мобы)
+STAY_AREA     G (возвращаются в родную арию)
+WIMPY         H (трусливые)
+NOSTEAL       M (у моба ничего нельзя украсть)
+NOWHERE       N (моба не видно по WHERE)
+UNDEAD        O	
+CLERIC        Q
+MAGE          R
+THIEF         S
+WARRIOR       T
+NOALIGN       U
+NOPURGE       V (моб не удаляется командой PURGE)
+OUTDOORS      W (большие мобы, которые не проходят в двери)
+INDOORS       Y (наоборот мобы, которые не выходят на улицу)
+RIDEABLE      Z (моба можно оседлат)
+NOTRACK       e ( не следует за нападющим, но не подвержен range-атакам)
+
+</node>
+    <node type="Help" keyword="OFFFLAGS" level="106">%PAUSE%OFF Flags:
+AREA_ATTACK    A
+BACKSTAB       B
+BASH           C
+BERSERK        D
+DISARM         E
+DODGE          F
+FADE           G
+FAST           H
+KICK           I
+KICK_DIRT      J
+PARRY          K
+RESCUE         L
+TAIL           M
+TRIP           N
+CRUSH          O
+ASSIST_ALL     P
+ASSIST_ALIGN   Q
+ASSIST_RACE    R
+ASSIST_PLAYERS S
+ASSIST_GUARD   T
+ASSIST_VNUM    U
+
+</node>
+    <node type="Help" keyword="IMMFLAGS" level="106">Immune, Resistane, Vulnerable Flags:
+SUMMON    A
+CHARM     B
+MAGIC     C
+WEAPON    D
+BASH      E
+PIERCE    F
+SLASH     G
+FIRE      H
+COLD      I
+LIGHTNING J
+ACID      K
+POISON    L
+NEGATIVE  M
+HOLY      N
+ENERGY    O
+MENTAL    P
+DISEASE   Q
+DROWNING  R
+LIGHT     S
+SOUND     T
+WOOD      X
+SILVER    Y
+IRON      Z
+
+</node>
+    <node type="Help" keyword="NOEMOTE NOSHOUT NOTELL" level="105">Синтаксис: noemote   &lt;character&gt;
+           noshout   &lt;character&gt;
+           notell    &lt;character&gt;
+
+Команды noemote, noshout, и notell используются для запрещения игроку
+пользоваться командами emote, shout и tell соответственно. Такой
+персонаж также не слышит чужих tell и shout.
+
+</node>
+    <node type="Help" keyword="NOCHANNEL NOPOST" level="105">Синтаксис: nochannel &lt;игрок&gt;
+           nochannel &lt;игрок&gt; &lt;время&gt;
+           nochannel &lt;игрок&gt; off
+
+Команда nochannel препятствует ее жертве использовать любые каналы в игре
+(gossip, music). Nochannel особенно результативна при оскорбительных
+выражения и спаме на публичных каналах.
+
+Команда nopost запрещает отправку любых сообщений. Синтаксис аналогичен nochannel.
+
+Nochannel &lt;игрок&gt; показывает статус игрока.
+Nochannel &lt;игрок&gt; &lt;время&gt; устанавливает отключение каналов данному игроку
+на заданное время. (10 min, 3 hour, 8 day, forever)
+Nochannel &lt;игрок&gt; off снимает наложенный запрет.
+
+</node>
+    <node type="Help" keyword="PURGE" level="106">Синтаксис: purge
+           purge &lt;character&gt;
+
+Команда purge используется для очищения мира. Без аргументов она
+уничтожает все NPC&apos;s и объекты в текущей комнате. Purge с аргументом
+удаляет персонажа из любого места мира.
+
+Purge не дает возможности избавится от PC&apos;s, объектов или мобов с
+установленным флагом NOPURGE (например яма для пожертвований, фонтан, Хассан).
+Мобы могут быть удалены, если указать их по имени.
+
+</node>
+    <node type="Help" keyword="RESTORE" level="106">Синтаксис: restore
+           restore &lt;character&gt;
+           restore room
+           restore all
+
+Restore восстанавливает полностью здоровье (hp), ману (mana) и движение (mv) у
+указанного персонажа. При этом также лечатся повреждения ядом, болезни
+и слепота.
+
+Restore room (или restore без аргументов) восстанавливает всех игроков в 
+комнате, restore all делает то же для всех игроков вообще. Restore all
+может быть использована только Создателями или лицами, их замещающими.
+Команда Restore должна использоваться бережливо и не на всех.
+
+</node>
+    <node type="Help" keyword="SLAY" level="107">Синтаксис: slay &lt;character&gt;
+
+Slay убивает указанного персонажа малой кровью, без попытки сопротивления
+с его стороны. 
+
+</node>
+    <node type="Help" keyword="TELEPORT TRANSFER" level="105">Синтаксис: transfer &lt;character&gt;
+           transfer all
+           transfer &lt;character&gt; &lt;location&gt;
+           transfer all         &lt;location&gt;
+
+Transfer перемещает указанного персонажа или всех персонажей вообще
+в ваше текущее местонахождение (по умолчанию) или в указанное место.
+Перемещение всех почти не применяется, так как 100 игроков, помещенных
+в одну комнату, вызовут ужасные последствия при медленной связи.
+Teleport - это синоним для transfer.
+
+</node>
+    <node type="Help" keyword="ECHO GECHO PECHO" level="104">Синтаксис: echo  &lt;message&gt;
+           gecho &lt;message&gt;
+           pecho &lt;character&gt; &lt;message&gt;
+           zecho &lt;message&gt;
+
+Эти команды выполняют сходные действия. Echo посылает сообщение всем
+игрокам в комнате, в которой вы находитесь, без указания конкретного.
+Zecho делает то же, но для всей игроков в текущей зоне.
+Gecho делает то же, но для всех игроков в игре, а pecho посылает
+сообщение указанному игроку. Любой Бог высокого уровня будет видеть
+строку перед вашим сообщением, информирующую его (или ее) о том, что
+это echo.
+
+</node>
+    <node type="Help" keyword="HOLYLIGHT WIZINVIS" level="102">Синтаксис: holylight
+           wizinvis &lt;level&gt;
+
+Holylight дает возможность видеть каждого (почти) персонажа и моба в игре.
+Без этого вы будете видеть как простой смертный.
+
+Wizinvis сделает вас невидимым для всех игроков ниже указанного уровня.
+По умолчанию &lt;level&gt; равен 102.
+
+</node>
+    <node type="Help" keyword="VNUM" level="106">Синтаксис: vnum &lt;name&gt;
+           vnum &lt;obj | mob&gt; &lt;name&gt;
+
+Vnum находит все объекты и мобов с указанными именами, и выводит на экран.
+Vnum obj и vnum mob используется для ограничения поиска. Vnum очень полезна
+при загрузке объектов.  Смотрите также load.
+
+</node>
+    <node type="Help" keyword="STAT" level="103">Синтаксис: stat &lt;name&gt;
+           stat mob  &lt;name&gt;
+           stat obj  &lt;name&gt;
+           stat room &lt;number&gt;
+
+Команда stat дает детальную информацию об объекте, мобе или комнате в игре.
+Без аргумента класса команда возвратит объект (если найден), моба (если
+объекта нет, а моб есть), или комнаты (если задан номер). Stat room без
+аргумента даст информацию о комнате, в которой вы находитесь. Stat может
+быть использован для поиска комнаты для goto.
+(смотрите также goto, transfer)
+
+</node>
+    <node type="Help" keyword="PEACE" level="105">Синтаксис: peace
+
+Peace заставляет всех персонажей в комнате остановить бой. Она также
+снимает бит AGGRESSIVE с мобов.
+
+</node>
+    <node type="Help" keyword="POOFIN POOFOUT" level="102">Синтаксис: poofin  &lt;message&gt;
+Синтаксис: poofout &lt;message&gt;
+
+Стандартное сообщение для goto это &apos;arrives in a swirling mist&apos; и 
+&apos;leaves in a swirling mist&apos;. Вы можете заменить эти сообщения на любые
+другие, используя эти команды. Аргумент &lt;message&gt; должен включать в 
+себя ваше имя.
+
+Poofin и poofout показываются только тем, кто может вас видеть.
+(смотри также goto)
+
+</node>
+    <node type="Help" keyword="PROTECT" level="109">Синтаксис: protect &lt;character&gt;
+
+Protect используется для защиты персонажа от нежелательного отслеживаниЯ.
+О снятии статуса защиты будет сообщено персонажу.
+
+</node>
+    <node type="Help" keyword="SNOOP" level="105">Snoop показывает вам полную копию входного и выходного потока любого игрока,
+у которого есть связь с миром.
+Вы можете подсматривать действия более чем одного игрока в одно и то же время.
+Попытайтесь не нарушать конфиденциальность.
+Для отмены команды Snoop, выполните ее на свой персонаж.
+
+</node>
+    <node type="Help" keyword="RETURN SWITCH" level="104">Синтаксис: switch &lt;character&gt;
+           return
+
+Switch переносит вас в тело другого персонажа (в монстра, в которого
+еще не вселился никто из ваших коллег).
+
+Return возвращает вас в ваше собственное тело.
+
+</node>
+    <node type="Help" keyword=": IMMTALK" level="102">Синтаксис: immtalk &lt;message&gt;
+           immtalk
+
+Immtalk посылает сообщение всем бессмертным.
+: - синоним для immtalk.
+Использование этой команды без аргументов отключает тебя от immortal channel
+(или подключает тебя обратно).
+
+</node>
+    <node type="Help" keyword="WIZNET" level="102">Синтаксис: wiznet 
+           wiznet show
+           wiznet status
+           wiznet &lt;field&gt;
+
+Wiznet - это вид почтового сервиса для имморталов, сообщающий важные события
+подсоединенным к нему имморталам. Просто Wiznet включает(отключает) канал,
+wiznet show показывает все изменяемые флаги (здесь не описаны),wiznet status
+показывает текущие установки, wiznet &lt;field&gt; устанавливает(снимает) флаг.
+Событие само себя поясняет, если это не так, сначала поиграйте с ним.
+С более высоким уровнем доступно большее количество событий.
+
+</node>
+    <node type="Help" keyword="WIZHELP" level="102">Синтаксис: wizhelp
+
+Wizhelp показывает список всех твоих immortal команд.
+
+</node>
+    <node type="Help" keyword="OLDRACETABLE" level="110">{WНазвание    {C   +    {c   -   {WОПЫТ Х-р ДОПОЛНЕНИЯ{x
+------------------------------------------------------
+{WHuman       {C None   {c None   {W 0   {x-{x  обычная раса
+{WElf         {CInt,Dex {cStr,Con {W500  {YG{x  добрые,&quot;sword&quot;,&quot;bow&quot;,&quot;arrow&quot;
+{WHalf-Elf    {CInt,Dex {cStr,Con {W200  {x-{x  полулюди, полуэльфы
+{WDark-Elf    {CInt,Dex {cStr,Con {W500  {DE{x  злые,&quot;meditation&quot;,&quot;spell craft&quot;
+{WRockseer    {CInt,Dex {cStr,Con {W500  {xN{x  нейтралы,&quot;wand&quot;,&quot;meld into stone&quot;
+{WDwarf       {CWis,Con {c  Dex   {W250  {x-{x  &quot;axe&quot;,&quot;berserk&quot;,&quot;enchant weapon&quot;
+{WSvirfneblin {C  Wis   {c  Int   {W250  {xN{x  &quot;axe&quot;,&quot;lore&quot;,&quot;identify&quot;,&quot;enchant weapon&quot;
+{WDuergar     {CStr,Con {cInt,Wis {W250  {DE{x  &quot;axe&quot;,&quot;berserk&quot;,&quot;pick lock&quot;
+{WArial       {CInt,Dex {cStr,Con {W250  {x-{x  flying,&quot;spell craft&quot;
+{WGnome       {CInt,Wis {cStr,Con {W300  {xN{x  &quot;identify&quot;,&quot;enchant weapon, armor&quot;
+{WStorm Giant {CStr,Con {cWis,Dex {W600  {YG{x  добрые,&quot;mace&quot;,&quot;bash&quot;,&quot;enhanced damage&quot;
+{WCloud Giant {CStr,Con {cInt,Dex {W500  {xN{x  нейтралы,&quot;mace&quot;,&quot;bash&quot;,&quot;enhanced damage&quot;
+{WFire Giant  {CStr,Con {cInt,Dex {W500  {DE{x  злые,&quot;mace&quot;,&quot;bash&quot;,&quot;enhanced damage&quot;
+{WFrost Giant {CStr,Con {cInt,Dex {W500  {DE{x  злые,&quot;mace&quot;,&quot;bash&quot;,&quot;enhanced damage&quot;
+{WFelar       {CDex,Con {cStr,Int {W250  {x-{x  &quot;hand to hand&quot;,&quot;hand block&quot;
+{WGithyanki   {CInt,Dex {cWis,Con {W250  {DE{x  злые,&quot;sword&quot;,&quot;dagger&quot;
+{WSatyr       {C  Dex   {c  Int   {W250  {xN{x  нейтрал,&quot;camouflage&quot;,&quot;ambush&quot;,&quot;steal&quot;
+{WTroll       {CStr,Con {cInt,Dex {W400  {DE{x  злые, regenerate,&quot;mace&quot;,&quot;fast healing&quot;
+{WUrukhai     {CStr,Con {cInt,Wis {W1200 {DE{x  злые, dagger, mace, axe, spear
+{WKender      {C  Dex   {cStr,Con {W600  {x-{x  steal, pick lock, peek, lore
+{WFaery       {CInt,Wis {cStr,Con {W250  {x-{x  faerie fire, faerie fog, blink
+{WDrow	      {CDex   {c  Con   {W700  {DE{x  злые, sword, hide
+{WCentaur     {CStr,Con {cInt,Dex {W400  {x-{x  незлые, kick, bow, double kick, rear kick
+{WHobbit      {CDex,Con {cStr     {W500  {x-{x  незлые, sneak, search and throw stones
+
+Какой вы расы (используйте help &lt;раса&gt; для большей информации) ?
+</node>
+</Help>

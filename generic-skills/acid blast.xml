@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="necromancer">
+      <level>63</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>63</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>acid arrow</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>70</weight>
+    </node>
+    <node name="warlock">
+      <level>63</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>63</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <dammsg mg="f">струя кислоты</dammsg>
+  <group>combat</group>
+  <mana>40</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>струя кислоты</nameRus>
+  <spell type="SPELL(AcidBlast)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

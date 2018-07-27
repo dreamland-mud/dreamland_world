@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>18</beats>
+  <classes>
+    <node name="universal">
+      <level>40</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>bash</node>
+        <node>enhanced damage</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>30</weight>
+    </node>
+    <node name="warrior">
+      <level>40</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <command type="SKILL(smash)">
+    <hint>(воины) нанести мощный удар всем телом</hint>
+    <name>smash</name>
+    <order>player_only</order>
+    <position>fight</position>
+    <russian>
+      <node>толкнуть</node>
+    </russian>
+  </command>
+  <dammsg>мощный удар</dammsg>
+  <group>fightmaster</group>
+  <help type="SkillHelp">Smash - мощный, сбивающий с ног удар корпусом. Доступен только воинам. 
+Во многом похож на bash.
+  </help>
+  <mob>
+    <bonus>10</bonus>
+    <dice>3</dice>
+    <forbidden>false</forbidden>
+    <offense>bash</offense>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>толчок</nameRus>
+</skill>

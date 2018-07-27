@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="thief">
+      <level>15</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>15</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>25</weight>
+    </node>
+  </classes>
+  <command type="SKILL(envenom)">
+    <extra>keep_hide</extra>
+    <hint>(воры) обмакнуть лезвие ножа в яд</hint>
+    <name>envenom</name>
+    <position>rest</position>
+    <russian>
+      <node>отравить</node>
+    </russian>
+  </command>
+  <group>none</group>
+  <hard>4</hard>
+  <help type="SkillHelp">Это умение используется ворами, предпочитающими побеждать не силой 
+и умением, а предательством. С другой стороны, можно сказать, что это 
+умение, с помощью которого умные избавляют мир от глуцов. Отравить можно 
+еду, питье или оружие. Тогда как отравленная еда или вода - не более чем 
+неудобство, отравленное оружие представляет собой серьезную проблему. Но 
+яд с поверхности клинка испаряется очень быстро.
+  </help>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>отравить</nameRus>
+</skill>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="SleepAffectHandler">
+    <wearoff>Боль от удара по голове проходит.</wearoff>
+  </affect>
+  <beats>8</beats>
+  <classes>
+    <node name="thief">
+      <level>30</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>30</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>sneak</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>50</weight>
+    </node>
+  </classes>
+  <command type="SKILL(blackjack)">
+    <hint>(воры) ударить тяжелым мешочком по голове</hint>
+    <name>blackjack</name>
+    <order>player_only</order>
+    <position>stand</position>
+    <russian>
+      <node>оглушить</node>
+      <node>мешочек</node>
+    </russian>
+  </command>
+  <dammsg>удар мешочком</dammsg>
+  <group>none</group>
+  <help type="SkillHelp">Удар маленьким тяжелым мешочком по голове - и твое тело непослушно стекает
+на землю. Это излюбленный прием воров.
+  </help>
+  <mob>
+    <bonus>20</bonus>
+    <dice>2</dice>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>оглушить</nameRus>
+</skill>

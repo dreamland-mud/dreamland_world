@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>24</beats>
+  <classes>
+    <node name="samurai">
+      <level>42</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>42</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>25</weight>
+    </node>
+  </classes>
+  <command type="SKILL(enchant)">
+    <hint>(самураи) заточить меч</hint>
+    <name>enchant</name>
+    <position>rest</position>
+    <russian>
+      <node>заточить</node>
+    </russian>
+  </command>
+  <group>none</group>
+  <hard>4</hard>
+  <help type="SkillHelp">Опытный самурай может улучшать мечи, увеличивая при этом их damroll и hitroll.
+  </help>
+  <mana>100</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>заточить меч</nameRus>
+</skill>

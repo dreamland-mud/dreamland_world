@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Сопротивляемость покидает тебя.</wearoff>
+  </affect>
+  <beats>24</beats>
+  <clans>
+    <node name="battlerager">
+      <level>12</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <command type="SKILL(resistance)">
+    <name>resistance</name>
+    <position>fight</position>
+    <russian>
+      <node>сопротивляемость</node>
+    </russian>
+    <hint>(клан ярости) повысить сопротивляемость в бою</hint>
+  </command>
+  <mana>50</mana>
+  <mob>
+    <bonus>40</bonus>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <nameRus>сопротивляемость</nameRus>
+  <help type="SkillHelp">
+В два раза ослабляет вред, наносимый физическими повреждениями, молитвами и
+выдохами драконов. Не защищает от магических атак (за исключением заклинания
+клана Шалафи 'mental knife').
+  </help>
+</skill>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="ranger">
+      <level>32</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>none</group>
+  <help type="SkillHelp">Ranger staff создает посох, чья сила зависит от уровня кастующего.
+Носить его могут только рейнджеры.
+  </help>
+  <mana>75</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>посох рейнджера</nameRus>
+  <spell type="SPELL(RangerStaff)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>create_obj</target>
+    <type>none</type>
+  </spell>
+</skill>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="ranger">
+      <level>10</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="samurai">
+      <level>20</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>12</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>30</weight>
+    </node>
+    <node name="warrior">
+      <level>44</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <command type="SKILL(shoot)">
+    <hint>(рейнджеры) выстрелить из лука</hint>
+    <name>shoot</name>
+    <order>player_only</order>
+    <position>stand</position>
+    <russian>
+      <node>стрелять</node>
+    </russian>
+  </command>
+  <dammsg>лук</dammsg>
+  <group>weaponsmaster</group>
+  <hard>5</hard>
+  <help type="SkillHelp">
+%FMT%  *%CMD%* _%DIR%_ _%CHAR%_
+
+  Посылает стрелу в противника, находящегося в соседней комнате.
+Для использования этого умения необходимо вооружиться луком(bow)
+и взять в руки колчан (quiver) со стрелами. В колчан помещается
+50 стрел.
+
+%SA% %H% [(make bow,изготовить лук)], [(make arrow,изготовить стрелу)].
+  </help>
+  <mob>
+    <bonus>40</bonus>
+    <dice>3</dice>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>false</professional>
+  </mob>
+  <nameRus>лук</nameRus>
+  <raceBonuses>
+    <node name="centaur">
+      <bonus>100</bonus>
+      <level>0</level>
+      <professional>true</professional>
+    </node>
+    <node name="elf">
+      <bonus>100</bonus>
+      <level>0</level>
+      <professional>true</professional>
+    </node>
+  </raceBonuses>
+</skill>

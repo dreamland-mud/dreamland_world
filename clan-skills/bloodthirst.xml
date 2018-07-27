@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Твоя жажда крови проходит.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <clans>
+    <node name="battlerager">
+      <level>15</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <command type="SKILL(bloodthirst)">
+    <name>bloodthirst</name>
+    <position>fight</position>
+    <russian>
+      <node>жаждакрови</node>
+    </russian>
+    <hint>(клан ярости) разжечь в себе жажду крови</hint>
+  </command>
+  <hard>2</hard>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <nameRus>жажда крови</nameRus>
+  <help type="SkillHelp">
+{rЖажда крови{x. Ты готов пролить море крови твоих врагов, и вообще всех, кто
+встретится у тебя на пути. Увеличивает урон, наносимый противнику. Приходит
+лишь во время боя.
+  </help>
+</skill>

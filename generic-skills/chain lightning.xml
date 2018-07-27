@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="necromancer">
+      <level>33</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>33</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>lightning bolt</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>35</weight>
+    </node>
+    <node name="vampire">
+      <level>33</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="warlock">
+      <level>33</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>33</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <dammsg>электрический разряд</dammsg>
+  <group>combat</group>
+  <help type="SkillHelp">Электрический разряд начинает метаться по комнате, повреждая противников.
+А так же всех и вся подвернувшихся под горячую...ммм...молнию.
+Лучше использовать на группу монстров.
+  </help>
+  <mana>25</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>цепная молния</nameRus>
+  <spell type="SPELL(ChainLightning)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

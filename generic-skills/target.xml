@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="samurai">
+      <level>40</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>40</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>parry</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>20</weight>
+    </node>
+  </classes>
+  <command type="SKILL(target)">
+    <hint>(самураи) переключить цель в битве</hint>
+    <name>target</name>
+    <position>fight</position>
+    <russian>
+      <node>цель</node>
+    </russian>
+  </command>
+  <group>none</group>
+  <help type="SkillHelp">Если самурай дерется с группой врагов, он может атаковать кого-либо из них
+выборочно.
+  </help>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>выбор цели</nameRus>
+</skill>

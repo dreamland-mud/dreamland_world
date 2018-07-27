@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты вновь можешь излечивать других.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="paladin">
+      <level>63</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>63</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>heal</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>10</weight>
+    </node>
+  </classes>
+  <command type="SKILL(layhands)">
+    <hint>(паладины) лечить наложением рук</hint>
+    <name>layhands</name>
+    <position>rest</position>
+    <russian>
+      <node>возложить</node>
+    </russian>
+  </command>
+  <group>healing</group>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>наложение рук</nameRus>
+</skill>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>9</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="cleric">
+      <level>12</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="ninja">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="paladin">
+      <level>12</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="ranger">
+      <level>8</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="samurai">
+      <level>2</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="thief">
+      <level>14</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>15</weight>
+    </node>
+    <node name="vampire">
+      <level>4</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="warlock">
+      <level>13</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="warrior">
+      <level>5</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <command type="SKILL(kick)">
+    <hint>пнуть ногой или копытом</hint>
+    <name>kick</name>
+    <order>fight_only</order>
+    <position>fight</position>
+    <russian>
+      <node>пнуть</node>
+    </russian>
+  </command>
+  <dammsg>пинок</dammsg>
+  <group>fightmaster</group>
+  <help type="SkillHelp">Удары ногами (kick) позволяют получить дополнительную атаку в бою. 
+Однако, после неудачного удара, боец может потерять равновесие.
+Сатиры и кентавры, благодаря своим сильным копытам, наносят серьезные 
+поверждения этим видом атаки.
+  </help>
+  <mob>
+    <bonus>10</bonus>
+    <dice>3</dice>
+    <forbidden>false</forbidden>
+    <offense>kick</offense>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>пинок</nameRus>
+  <raceBonuses>
+    <node name="centaur">
+      <bonus>100</bonus>
+      <level>0</level>
+      <professional>true</professional>
+    </node>
+  </raceBonuses>
+</skill>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>У тебя снова появились силы позвать медведей.</wearoff>
+  </affect>
+  <classes>
+    <node name="ranger">
+      <level>31</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>31</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>30</weight>
+    </node>
+  </classes>
+  <command type="SKILL(bearcall)">
+    <hint>(рейнджеры) позвать двух медведей на помощь</hint>
+    <name>bearcall</name>
+    <position>fight</position>
+    <russian>
+      <node>медведи</node>
+    </russian>
+  </command>
+  <group>none</group>
+  <help type="SkillHelp">Bear call вызывает 2 сильных медведей тебе в помощь.
+Понятное дело медведи выйдут к тебе только в лесу. Кричать медведям
+в городе - бесполезно.
+См. также {W? перепризыв{x.
+  </help>
+  <mana>125</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>вызов медведей</nameRus>
+  <spell type="SPELL(BearCall)">
+    <castMobCount>2</castMobCount>
+    <casted>false</casted>
+    <maxMobCount>2</maxMobCount>
+    <mobVnum>12</mobVnum>
+    <msgCreateAttemptArea></msgCreateAttemptArea>
+    <msgCreateAttemptRoom>%^C1 издает медвежий клич.</msgCreateAttemptRoom>
+    <msgCreateAttemptSelf>Ты издаешь медвежий клич.</msgCreateAttemptSelf>
+    <msgCreateRoom>Два медведя приходят на помощь %C3!</msgCreateRoom>
+    <msgCreateSelf>Два медведя приходят тебе на помощь!</msgCreateSelf>
+    <msgNotRecognizeRoom>%2$^C1 лениво почесывается, даже не глядя на %1$C4.</msgNotRecognizeRoom>
+    <msgNotRecognizeSelf>%2$^C1 лениво почесывается, даже не глядя в твою сторону.</msgNotRecognizeSelf>
+    <msgReattachAttemptRoom>%1$^C1 подманивает %2$C4.</msgReattachAttemptRoom>
+    <msgReattachAttemptSelf>Ты подманиваешь %C4.</msgReattachAttemptSelf>
+    <msgReattachRoom>%2$^C1 вразвалочку подходит к %1$C3 и жмакает в медвежьих объятьях!</msgReattachRoom>
+    <msgReattachSelf>%^C1 вразвалочку подходит к тебе и жмакает в медвежьих объятьях!</msgReattachSelf>
+    <msgStillAffected>Ты не можешь найти в себе силы справиться с большим количеством медведей.</msgStillAffected>
+    <msgTooManyMobiles>А что не так с теми медведями, которые у тебя уже есть?</msgTooManyMobiles>
+    <position>fight</position>
+    <postaffectDuration>24</postaffectDuration>
+    <target>create_mob</target>
+    <type>none</type>
+  </spell>
+</skill>

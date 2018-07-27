@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты вновь можешь вызвать оруженосца.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <clans>
+    <node name="knight">
+      <level>25</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <mana>100</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <spell type="SPELL(Squire)">
+    <castMobCount>1</castMobCount>
+    <casted>true</casted>
+    <maxMobCount>1</maxMobCount>
+    <mobVnum>16</mobVnum>
+    <msgCreateAttemptArea></msgCreateAttemptArea>
+    <msgCreateAttemptRoom>%^C1 пытается вызвать оруженосца.</msgCreateAttemptRoom>
+    <msgCreateAttemptSelf>Ты пытаешься вызвать оруженосца.</msgCreateAttemptSelf>
+    <msgCreateRoom>Из ниоткуда появляется оруженосец!</msgCreateRoom>
+    <msgCreateSelf>Из ниоткуда появляется оруженосец!</msgCreateSelf>
+    <msgNotRecognizeRoom>%2$^C1 произносит, обращаясь к %1$C3 &apos;{gУвы, я никогда не бы%2$Gло|л|ла Вашим оруженосцем.{x&apos;</msgNotRecognizeRoom>
+    <msgNotRecognizeSelf>%2$^C1 произносит &apos;{gУвы, я никогда не бы%2$Gло|л|ла Вашим оруженосцем.{x&apos;</msgNotRecognizeSelf>
+    <msgReattachAttemptRoom>%1$^C1 призывает %2$C4 вновь служить под %1$P2 знаменами.</msgReattachAttemptRoom>
+    <msgReattachAttemptSelf>Ты призываешь %C4 вновь служить под твоими знаменами.</msgReattachAttemptSelf>
+    <msgReattachRoom>%2$^C1 вытягивается по стойке смирно, готов%2$Gое|ый|ая выполнять приказы.</msgReattachRoom>
+    <msgReattachSelf>%1$^C1 вытягивается по стойке смирно, готов%1$Gое|ый|ая выполнять приказы.</msgReattachSelf>
+    <msgStillAffected>Сейчас ты не можешь командовать другим оруженосцем.</msgStillAffected>
+    <msgTooManyMobiles>Два оруженосца - это больше, чем тебе необходимо!</msgTooManyMobiles>
+    <position>stand</position>
+    <postaffectDuration>24</postaffectDuration>
+    <target>create_mob</target>
+    <type>none</type>
+  </spell>
+  <nameRus>оруженосец</nameRus>
+  <help type="SkillHelp">
+Призвать оруженосца.
+См. также {W? перепризыв{x.
+  </help>
+</skill>

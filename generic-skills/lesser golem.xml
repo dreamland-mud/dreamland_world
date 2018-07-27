@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты чувствуешь в себе силы к созданию голема.</wearoff>
+  </affect>
+  <beats>32</beats>
+  <classes>
+    <node name="necromancer">
+      <level>25</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>25</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>20</weight>
+    </node>
+  </classes>
+  <group>necromancy</group>
+  <mana>200</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>малый голем</nameRus>
+  <spell type="SPELL(LesserGolem)">
+    <castMobCount>1</castMobCount>
+    <casted>true</casted>
+    <maxMobCount>3</maxMobCount>
+    <mobVnum>21</mobVnum>
+    <msgCreateAttemptArea></msgCreateAttemptArea>
+    <msgCreateAttemptRoom>%^C1 пытается создать малого голема.</msgCreateAttemptRoom>
+    <msgCreateAttemptSelf>Ты пытаешься создать малого голема.</msgCreateAttemptSelf>
+    <msgCreateRoom>%^C1 создает малого голема!</msgCreateRoom>
+    <msgCreateSelf>Ты создаешь малого голема!</msgCreateSelf>
+    <msgNotRecognizeRoom>%2$^C1 отказывается повиноваться %1$C3.</msgNotRecognizeRoom>
+    <msgNotRecognizeSelf>%2$^C1 отказывается повиноваться тебе.</msgNotRecognizeSelf>
+    <msgReattachAttemptRoom>%1$^C1 приказывает %2$C3 вновь следовать за %1$P5.</msgReattachAttemptRoom>
+    <msgReattachAttemptSelf>Ты приказываешь %C3 вновь следовать за тобой.</msgReattachAttemptSelf>
+    <msgReattachRoom>%2$^C1 подчиняется приказу %1$C2.</msgReattachRoom>
+    <msgReattachSelf>%^C1 подчиняется твоему приказу.</msgReattachSelf>
+    <msgStillAffected>У тебя не хватает сил создать сейчас другого голема.</msgStillAffected>
+    <msgTooManyMobiles>Ты не сможешь управлять большим количеством големов!</msgTooManyMobiles>
+    <position>stand</position>
+    <postaffectDuration>24</postaffectDuration>
+    <target>create_mob</target>
+    <type>none</type>
+  </spell>
+</skill>

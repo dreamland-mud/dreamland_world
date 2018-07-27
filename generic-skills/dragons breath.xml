@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты чувствуешь себя здоровее.</wearoff>
+  </affect>
+  <beats>24</beats>
+  <classes>
+    <node name="universal">
+      <level>61</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>poison</node>
+        <node>acid arrow</node>
+        <node>chill touch</node>
+        <node>chain lightning</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>30</weight>
+    </node>
+    <node name="warlock">
+      <level>61</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>61</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <dammsg mg="n">дыхание драконов</dammsg>
+  <group>draconian</group>
+  <help type="SkillHelp">Высокоопытные варлоки могут применять заклинание дыхания драконов в своих 
+целях, например &apos;fire breath&apos;, &apos;lightning breath&apos;. Но полностью эта 
+могущественная магия им не подвластна и поэтому Лорд Драконов приходит 
+им на помощь.
+  </help>
+  <mana>200</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>дыхание драконов</nameRus>
+  <spell type="SPELL(DragonsBreath)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

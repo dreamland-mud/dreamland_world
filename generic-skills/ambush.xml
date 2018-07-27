@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="ranger">
+      <level>17</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>17</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>camouflage</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>40</weight>
+    </node>
+  </classes>
+  <command type="SKILL(ambush)">
+    <hint>(рейнджер) напасть из засады</hint>
+    <name>ambush</name>
+    <order>player_only</order>
+    <position>stand</position>
+    <russian>
+      <node>засада</node>
+    </russian>
+  </command>
+  <dammsg mg="f">атака из засады</dammsg>
+  <group>none</group>
+  <help type="SkillHelp">Камуфлированный персонаж может напасть на кого-либо из засады, но только
+в том случае, если жертва его не видит.
+  </help>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>засада</nameRus>
+  <raceBonuses>
+    <node name="satyr">
+      <bonus>100</bonus>
+      <level>0</level>
+      <professional>true</professional>
+    </node>
+  </raceBonuses>
+</skill>

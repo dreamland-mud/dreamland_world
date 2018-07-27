@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>18</beats>
+  <classes>
+    <node name="ninja">
+      <level>18</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>18</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>40</weight>
+    </node>
+  </classes>
+  <command type="SKILL(vanish)">
+    <hint>(ниндзи) скрыться в облаке дыма</hint>
+    <name>vanish</name>
+    <position>fight</position>
+    <russian>
+      <node>исчезнуть</node>
+    </russian>
+  </command>
+  <group>none</group>
+  <help type="SkillHelp">Доставая маленьких шарик из кармана, ниндзя бросает его на землю. Шарик
+начинает дымиться, и когда дым рассеивается, ниндзи уже нет!
+Это умение телепортирует тебя в случайную комнату в этой же зоне.
+Однако в некоторые комнаты таким образом невозможно попасть.
+  </help>
+  <mana>25</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>исчезновение</nameRus>
+</skill>

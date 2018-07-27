@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты вновь можешь призвать пантер себе на помощь!</wearoff>
+  </affect>
+  <beats>12</beats>
+  <clans>
+    <node name="lion">
+      <level>15</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <dammsg>пантеры</dammsg>
+  <mana>100</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <spell type="SPELL(Panthers)">
+    <castMobCount>2</castMobCount>
+    <casted>true</casted>
+    <maxMobCount>2</maxMobCount>
+    <mobVnum>28</mobVnum>
+    <msgCreateAttemptArea></msgCreateAttemptArea>
+    <msgCreateAttemptRoom>%^C1 пытается призвать пантер.</msgCreateAttemptRoom>
+    <msgCreateAttemptSelf>Ты пытаешься призвать пантер.</msgCreateAttemptSelf>
+    <msgCreateRoom>Из ниоткуда появляются две пантеры и отвешивают поклон!</msgCreateRoom>
+    <msgCreateSelf>Появляются две пантеры и кланяются тебе!</msgCreateSelf>
+    <msgNotRecognizeRoom>%2$^C1 даже ухом не пове%2$Gло|л|ла в %1$P2 сторону.</msgNotRecognizeRoom>
+    <msgNotRecognizeSelf>%2$^C1 даже ухом не пове%2$Gло|л|ла в твою сторону.</msgNotRecognizeSelf>
+    <msgReattachAttemptRoom>%1$^C1 подзывает %2$C4 к себе, кис-кис.</msgReattachAttemptRoom>
+    <msgReattachAttemptSelf>Ты подзываешь %C4 к себе, кис-кис.</msgReattachAttemptSelf>
+    <msgReattachRoom>%2$^C1 трется об %1$C4 и мурлыкает.</msgReattachRoom>
+    <msgReattachSelf>%^C1 трется о твои ноги и мурлыкает.</msgReattachSelf>
+    <msgStillAffected>У тебя не хватает опыта, чтобы контролировать большее количество пантер.</msgStillAffected>
+    <msgTooManyMobiles>У тебя не хватает опыта, чтобы контролировать большее количество пантер.</msgTooManyMobiles>
+    <position>stand</position>
+    <postaffectDuration>24</postaffectDuration>
+    <target>create_mob</target>
+    <type>none</type>
+  </spell>
+  <nameRus>пантеры</nameRus>
+  <help type="SkillHelp">
+Призывает тебе в помощь двух пантер.
+См. также {W? перепризыв{x.
+  </help>
+</skill>

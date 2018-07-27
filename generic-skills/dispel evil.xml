@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="cleric">
+      <level>27</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="paladin">
+      <level>35</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>27</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>detect evil</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>20</weight>
+    </node>
+    <node name="warlock">
+      <level>55</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <dammsg mg="n">изгнание зла</dammsg>
+  <group>attack</group>
+  <help type="SkillHelp">Гнев Богов, вызванный этим заклинанием обрушивается всей своей мощью на
+злую жертву. Нечистым сердцем, которые применяют это заклинание, тоже
+следует опасаться за свою жизнь...
+  </help>
+  <mana>15</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>изгнать зло</nameRus>
+  <spell type="SPELL(DispelEvil)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="cleric">
+      <level>37</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="paladin">
+      <level>45</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>37</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>wrath</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>40</weight>
+    </node>
+  </classes>
+  <dammsg>луч истины</dammsg>
+  <group>benedictions</group>
+  <help type="SkillHelp">Луч истины обрушенный клериком на врага очень опасен, если враг злой.
+Опять же если в душе твоей нет добра, если ты сам злой клерик, добра 
+от заклинания не жди.
+
+Паладины ОЧЕНЬ искусны в вызове луча истины.
+  </help>
+  <mana>20</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>луч истины</nameRus>
+  <spell type="SPELL(RayOfTruth)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

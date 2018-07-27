@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="AFFECT(WitchCurse)">
+    <wearoff>Проклятие ведьм покинуло тебя.</wearoff>
+  </affect>
+  <beats>24</beats>
+  <classes>
+    <node name="universal">
+      <level>81</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>corruption</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>100</weight>
+    </node>
+    <node name="witch">
+      <level>81</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <group>none</group>
+  <help type="SkillHelp">%PAUSE%Проклятие ведьм. Ведьма произнесшая заклинание отдает небольшую частицу 
+своей жизни для того, чтобы произнести его.
+У жертвы с каждым тиком начинает уменьшаться максимальное количество hp.
+1-й тик = -(level нападающего) hp
+2-й тик -(level)*2 
+3-й тик -(level)*4
+и так далее.
+Однако жертве проклятия может повезти.
+Как только количество hp становится отрицательным эффект заклинания 
+рассеивается и существует шанс спастись...
+  </help>
+  <mana>150</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>ведьминское проклятие</nameRus>
+  <spell type="SPELL(WitchCurse)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

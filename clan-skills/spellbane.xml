@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты осознаешь свою уязвимость к магии.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <clans>
+    <node name="battlerager">
+      <level>10</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <command type="SKILL(spellbane)">
+    <name>spellbane</name>
+    <position>fight</position>
+    <russian>
+      <node>спелбан</node>
+    </russian>
+    <hint>(клан ярости) отражать магические заклинания</hint>
+  </command>
+  <dammsg>spellbane</dammsg>
+  <hard>5</hard>
+  <mob>
+    <bonus>70</bonus>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <nameRus>отражение магии</nameRus>
+  <help type="SkillHelp">
+Проклятие клана {RBattleragers{x, наложенное на них магами, но обернувшееся
+против них. Запрещает использование магии члену клана, но в то же время
+отклоняет практически всю магию, направленную на него. Защищает от призыва
+(summon). Бессильно против ментальных атак. 
+
+Spellbane блокирует все защитные молитвы, направленные на члена клана (однако
+не защитит от атакующих молитв).
+Защитные заклинания, направленные на члена клана, будут отклонены всегда,
+а заклинания, произнесенные кем-то рядом, будут отражены -- с возможными
+повреждениями для колдуна. 
+Атакующие заклинания, чьей жертвой стал тот, с кем сражается член клана,
+также будут отражены - с сильными повреждениями для кастующего.
+  </help>
+</skill>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="cleric">
+      <level>60</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>60</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>50</weight>
+    </node>
+  </classes>
+  <dammsg mg="f">стена лезвий</dammsg>
+  <group>attack</group>
+  <help type="SkillHelp">Вокруг использовавшего это заклинание появляется множество острых
+лезвий, которые, кружась вокруг него, болезненно ранят противника,
+сбивая его с ног.
+  </help>
+  <mana>50</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>стена лезвий</nameRus>
+  <spell type="SPELL(BladeBarrier)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

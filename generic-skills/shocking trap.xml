@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="AFFECT(ShockingTrap)">
+    <wearoff>Теперь ты вновь можешь наполнять комнаты силовыми волнами.</wearoff>
+  </affect>
+  <beats>24</beats>
+  <classes>
+    <node name="necromancer">
+      <level>37</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>37</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>lightning bolt</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>25</weight>
+    </node>
+    <node name="warlock">
+      <level>40</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>37</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <dammsg mg="f">электрическая ловушка</dammsg>
+  <group>none</group>
+  <help type="SkillHelp">Некроманты, ведьмы и варлоки могут соорудить магическую ловушку.
+  </help>
+  <mana>150</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>электрическая ловушка</nameRus>
+  <spell type="SPELL(ShockingTrap)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

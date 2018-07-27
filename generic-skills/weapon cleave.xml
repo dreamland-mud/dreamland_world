@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>24</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>34</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="ninja">
+      <level>35</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="paladin">
+      <level>34</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="ranger">
+      <level>38</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="samurai">
+      <level>29</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="thief">
+      <level>37</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>29</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>enhanced damage</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>20</weight>
+    </node>
+    <node name="vampire">
+      <level>44</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="warrior">
+      <level>29</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <command type="SKILL(weapon)">
+    <hint>(воинские профессии) расколоть оружие</hint>
+    <name>weapon</name>
+    <position>fight</position>
+    <russian>
+      <node>оружие</node>
+    </russian>
+  </command>
+  <group>weaponsmaster</group>
+  <help type="SkillHelp">Профессиональные воины умеют ломать оружие противника на части, используя
+при этом меч или топор. Естественно, топоры имеют больше шансов на успех,
+чем мечи. И также не следует забывать, что попытка безнадежна, если у
+оппонента оружие, сделанное из титана или платины. 
+О лимитном и разговора нет.
+  </help>
+  <mana>200</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>расколоть оружие</nameRus>
+</skill>

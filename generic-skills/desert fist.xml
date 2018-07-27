@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="cleric">
+      <level>58</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>58</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>control weather</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>40</weight>
+    </node>
+  </classes>
+  <dammsg>кулак пустыни</dammsg>
+  <group>none</group>
+  <help type="SkillHelp">Это заклинание действует в горах, холмах и пустыне (везде, где есть
+пыль или песок) и наносит повреждения жертве. Существует вероятность,
+что жертва будет ослеплена.
+  </help>
+  <mana>50</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>кулак пустыни</nameRus>
+  <spell type="SPELL(DesertFist)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты опять можешь разбросать группу по отдаленным уголкам мира.</wearoff>
+  </affect>
+  <beats>24</beats>
+  <clans>
+    <node name="chaos">
+      <level>20</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <mana>100</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <spell type="SPELL(Disperse)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>people</target>
+    <type>offensive</type>
+  </spell>
+  <nameRus>разбросать</nameRus>
+  <help type="SkillHelp">
+Заклинание, разбрасывающее всех игроков и мобов, находящихся в комнате, по
+всему миру. Общее количество тех, кого ты можешь куда-то отправить, зависит
+от твоего опыта.
+  </help>
+</skill>

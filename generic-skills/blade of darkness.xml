@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoffObj>%1$^O1 возвращается из мира теней.</wearoffObj>
+  </affect>
+  <beats>24</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>77</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>77</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>enchant weapon</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>50</weight>
+    </node>
+  </classes>
+  <group>none</group>
+  <help type="SkillHelp">На время окутывает клинок темнотой, тем самым наполовину погружая
+его в мир теней. Удары таким клинком невозможно спарировать или 
+кросс-блокировать -- он проходит сквозь оружие противника. Однако, 
+на священное (holy) оружие противника это не распространяется.
+  </help>
+  <mana>200</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>клинок тьмы</nameRus>
+  <spell type="SPELL(BladeOfDarkness)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>obj_inv obj_equip</target>
+    <type>none</type>
+  </spell>
+</skill>

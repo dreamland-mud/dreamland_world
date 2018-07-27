@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <beats>12</beats>
+  <clans>
+    <node name="ruler">
+      <level>10</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <mana>60</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <spell type="SPELL(ShieldOfRuler)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>create_obj</target>
+    <type>none</type>
+  </spell>
+  <nameRus>щит правителя</nameRus>
+  <help type="SkillHelp">
+Создать щит Рулера.
+  </help>
+</skill>

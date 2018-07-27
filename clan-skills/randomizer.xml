@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <affect type="AFFECT(Randomizer)">
+    <wearoff>Ты снова можешь использовать Магические Силы Хаоса.</wearoff>
+  </affect>
+  <beats>24</beats>
+  <clans>
+    <node name="chaos">
+      <level>28</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <mana>200</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <spell type="SPELL(Randomizer)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>room</target>
+    <type>offensive</type>
+  </spell>
+  <nameRus>рандомайзер</nameRus>
+  <help type="SkillHelp">
+Вносит частичку хаоса в порядок дорог.
+Выходы из комнаты, где произнесено заклинания, на некоторое время 
+перепутываются и ведут не туда, куда обычно.
+  </help>
+</skill>

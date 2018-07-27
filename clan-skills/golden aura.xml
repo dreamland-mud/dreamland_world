@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="ClanSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>{YЗолотая аура{x, окружавшая тебя, исчезает.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <clans>
+    <node name="knight">
+      <level>10</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <mana>25</mana>
+  <mob>
+    <forbidden>true</forbidden>
+    <ordered>true</ordered>
+  </mob>
+  <spell type="SPELL(GoldenAura)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>people</target>
+    <type>defensive</type>
+  </spell>
+  <nameRus>золотая аура</nameRus>
+  <help type="SkillHelp">
+Золотая аура, дающая Рыцарю силу для борьбы со Злом.
+  </help>
+</skill>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Кора с твоей кожи исчезает.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="druid">
+      <level>33</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="ranger">
+      <level>33</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>33</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>protection cold</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>30</weight>
+    </node>
+  </classes>
+  <group>none</group>
+  <help type="SkillHelp">Bark skin это защитное заклинание, покрывающее твою кожу прочной корой.
+  </help>
+  <mana>40</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>кора на коже</nameRus>
+  <spell type="SPELL(BarkSkin)">
+    <casted>true</casted>
+    <position>stand</position>
+    <target>char_self</target>
+    <type>defensive</type>
+  </spell>
+</skill>

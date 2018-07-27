@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<Command>
+  <aliases>
+    <node>hit</node>
+  </aliases>
+  <extra>keep_hide ghost</extra>
+  <name>kill</name>
+  <order>player_only</order>
+  <position>fight</position>
+  <russian>
+    <node>убить</node>
+    <node>ударить</node>
+  </russian>
+  <hint>атаковать кого-либо</hint>
+  <help type="CommandHelp" ref="murder">
+%FMT%  *(kill,убить)* _персонаж_
+Атаковать какое-либо существо, но не другого игрока.
+В случае успешной атаки начнется сражение.
+
+%FMT%  *(murder,порешить)* _персонаж_
+Атаковать игрока, который находится в твоем диапазоне PK.
+
+%SA% %H% [(PK,ПК)]
+</help>  
+</Command>

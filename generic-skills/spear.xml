@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="anti-paladin">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="druid">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>2</rating>
+    </node>
+    <node name="ninja">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="ranger">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="samurai">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="thief">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+      <weight>30</weight>
+    </node>
+    <node name="vampire">
+      <level>8</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="warrior">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <command type="SKILL(throwspear)">
+    <extra>hidden</extra>
+    <hint>метнуть копье</hint>
+    <name>throwspear</name>
+    <position>stand</position>
+  </command>
+  <dammsg mg="n">копье</dammsg>
+  <group>weaponsmaster</group>
+  <hard>5</hard>
+  <help type="SkillHelp">
+%FMT% *(throw,метнуть)* _копье_ _направление_ _жертва_
+
+Владеющие копьями могут весьма успешно метать их.
+  </help>
+  <mob>
+    <bonus>40</bonus>
+    <dice>3</dice>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>false</professional>
+  </mob>
+  <nameRus>копье</nameRus>
+  <raceBonuses>
+    <node name="urukhai">
+      <bonus>100</bonus>
+      <level>0</level>
+      <professional>true</professional>
+    </node>
+  </raceBonuses>
+</skill>

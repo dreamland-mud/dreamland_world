@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<Command>
+  <extra>keep_hide ghost afk</extra>
+  <name>alias</name>
+  <position>dead</position>
+  <russian>
+    <node>синоним</node>
+    <node>алиас</node>
+    <node>псевдоним</node>
+  </russian>
+  <hint>задать синоним для команд</hint>
+  <help type="CommandHelp" ref="unalias">
+Команда *%CMD%* служит для сокращения длинных или составных команд. 
+Сокращенная команда не может  содержать  других  сокращений, но  
+может генерировать  несколько  команд, если их перечислить через *|*.
+
+%FMT%  *%CMD%*  
+Показывает список всех твоих синонимов.
+
+%FMT%  *%CMD%* _слово_
+Показывает синоним для этого слова, если таковой имеется.
+
+%FMT%  *%CMD%* _слово_ _подстановка_
+Создает новый синоним.
+
+%FMT%  *%CMD%* *(flush,очистить)*
+Удаляет все синонимы.
+
+%FMT%  *(unalias,несиноним)* _слово_
+Удаляет ненужный синоним.
+
+Слово во введенной строке  будет  заменено,  только  если  оно стоит 
+в самом начале. Команды *%CMD%* и *(unalias,несиноним)* нельзя присвоить синонимам.
+ 
+Примеры:
+%CMD% {lRвт взять все труп{lEgc get all corpse{lx
+-- после этого, написание {lRвт{lEgc{lx будет эквивалентно {lRвзять все труп{lEget all corpse{lx
+%CMD% {lRмолн колд &apos;удар молнии&apos;{lElb cast &apos;lightning bolt&apos;{lx
+-- {lRмолн орк{lElb orc{lx будет расшифровано как {lRколд &apos;удар молнии&apos; орк{lEcast &apos;lightning bolt&apos; orc{lx
+%CMD% {lRобед откр сумка || взять пирог сумка || есть пирог || закрыть сумка{lEdinner open bag || take pie bag | eat pie | close bag{lx
+-- при вводе {lRобед{lEdinner{lx будут последовательно выполнены эти четыре команды.
+
+%SA% %H% [(command separator,разделитель команд)]
+</help>
+</Command>

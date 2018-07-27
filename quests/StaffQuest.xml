@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="KOI8-R"?>
+<Quest>
+    <priority>1</priority>
+    <shortDesc>Поиск королевских вещей</shortDesc>
+    <objVnum>28107</objVnum>
+    <scenarios>
+	<node name="sceptre" type="StaffScenario">
+	    <name>скипетр sceptre</name>
+	    <shortDesc>королевск|ий|ого|ому|ий|им|ом скипетр||а|у||ом|е</shortDesc>
+	    <desc>Королевский скипетр (sceptre) лежит здесь, излучая желание вернуться к владельцу.</desc>
+	</node>
+	<node name="chest" type="StaffScenario">
+	    <name>treasure chest сундук драгоценностями</name>
+	    <shortDesc>сундук||а|у||ом|е с драгоценностями</shortDesc>
+	    <desc>Сундук (chest) хранит королевские сокровища.</desc>
+	</node>
+	<node name="leg" type="StaffScenario">
+	    <msg>Неизвестные вандалы открутили {Wножку{G от королевского {Wтрона{G!</msg>
+	    <name>ножка leg трона throne</name>
+	    <shortDesc>ножк|а|и|е|у|ой|е от трона</shortDesc>
+	    <desc>Ножка (leg) трона скучает здесь по своим трем соседкам.</desc>
+	    <wear table="wear_flags">wear_wield</wear>
+	</node>
+	<node name="wig" type="StaffScenario">
+	    <msg>Прямо из королевской спальни был украден {Wпарик королевы{G!</msg>
+	    <name>парик wig</name>
+	    <shortDesc>парик||а|у||ом|е королевы</shortDesc>
+	    <desc>На земле ты замечаешь фрагмент королевской прически (wig).</desc>
+	    <wear table="wear_flags">wear_head</wear>
+	</node>
+	<node name="pendant" type="StaffScenario">
+	    <msg>На балу с наряда королевы были срезаны {Wбриллиантовые подвески{G!</msg>
+	    <name>подвески pendant diamond</name>
+	    <shortDesc>бриллиантовы|е|х|м|е|ми|х подвес|ки|ок|кам|ки|ками|ках королевы</shortDesc>
+	    <desc>Драгоценные королевские подвески (pendant) лежат здесь.</desc>
+	    <wear table="wear_flags">wear_body</wear>
+	</node>
+    </scenarios>
+</Quest>

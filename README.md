@@ -1,2 +1,1 @@
-# dreamland_world
-DreamLand MUD: configuration files and helps
+DreamLand MUD: all configuration files, and some areas for local dev

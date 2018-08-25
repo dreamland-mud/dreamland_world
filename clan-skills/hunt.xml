@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="ClanSkill">
   <beats>6</beats>
   <clans>
@@ -7,25 +7,26 @@
       <maxLevel>100</maxLevel>
       <maximum>100</maximum>
       <needItem>true</needItem>
+      <needPractice>true</needPractice>
       <rating>1</rating>
     </node>
   </clans>
   <command type="SKILL(hunt)">
+    <hint>(п╬я┘п╬я┌п╫п╦п╨п╦) п╦п╢я┌п╦ п©п╬ я│п╩п╣п╢я┐ п╤п╣я─я┌п╡я▀</hint>
     <name>hunt</name>
     <position>stand</position>
     <russian>
-      <node>охотиться</node>
+      <node>п╬я┘п╬я┌п╦я┌я▄я│я▐</node>
     </russian>
-    <hint>(охотники) идти по следу жертвы</hint>
   </command>
+  <dammsg></dammsg>
+  <help level="-1" type="SkillHelp">п≤я│п©п╬п╩я▄п╥п╬п╡п╟п╫п╦п╣: hunt &gt;я├п╣п╩я▄&lt;
+пёп╨п╟п╥я▀п╡п╟п╣я┌ п╫п╟п©я─п╟п╡п╩п╣п╫п╦п╣, п╡ п╨п╬я┌п╬я─п╬п╪ п╫п╟я┘п╬п╢п╦я┌я│я▐ я┌п╡п╬я▐ п╤п╣я─я┌п╡п╟. пё п╪п╬п╩п╬п╢я▀я┘ п╬я┘п╬я┌п╫п╦п╨п╬п╡
+п╢п╣п╧я│я┌п╡я┐п╣я┌ я┌п╬п╩я▄п╨п╬ п╡ п©я─п╣п╢п╣п╩п╟я┘ п╥п╬п╫я▀, п╟ п©я─п╦ я─п╟п╥п╡п╦я┌п╬п╪ я┐п╪п╣п╫п╦п╦ &apos;world find&apos; - п©п╬ п╡я│п╣п╪я┐ п╪п╦я─я┐.
+  </help>
   <mob>
     <forbidden>true</forbidden>
     <ordered>true</ordered>
   </mob>
-  <nameRus>охотиться</nameRus>
-  <help type="SkillHelp">
-Использование: hunt &gt;цель&lt;
-Указывает направление, в котором находится твоя жертва. У молодых охотников
-действует только в пределах зоны, а при развитом умении &apos;world find&apos; - по всему миру.
-  </help>
+  <nameRus>п╬я┘п╬я┌п╦я┌я▄я│я▐</nameRus>
 </skill>

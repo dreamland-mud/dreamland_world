@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
-    <wearoff>Ты опять можешь концентрироваться для следующих битв.</wearoff>
+    <wearoff>п╒я▀ п╬п©я▐я┌я▄ п╪п╬п╤п╣я┬я▄ п╨п╬п╫я├п╣п╫я┌я─п╦я─п╬п╡п╟я┌я▄я│я▐ п╢п╩я▐ я│п╩п╣п╢я┐я▌я┴п╦я┘ п╠п╦я┌п╡.</wearoff>
   </affect>
   <beats>18</beats>
   <classes>
@@ -23,18 +23,19 @@
     </node>
   </classes>
   <command type="SKILL(concentrate)">
-    <hint>(воины, самураи) сосредоточиться перед битвой</hint>
+    <hint>(п╡п╬п╦п╫я▀, я│п╟п╪я┐я─п╟п╦) я│п╬я│я─п╣п╢п╬я┌п╬я┤п╦я┌я▄я│я▐ п©п╣я─п╣п╢ п╠п╦я┌п╡п╬п╧</hint>
     <name>concentrate</name>
     <position>stand</position>
     <russian>
-      <node>сосредоточиться</node>
+      <node>я│п╬я│я─п╣п╢п╬я┌п╬я┤п╦я┌я▄я│я▐</node>
     </russian>
   </command>
+  <dammsg></dammsg>
   <group>fightmaster</group>
   <hard>2</hard>
-  <help type="SkillHelp">Приготовление к битве, обдумывание военной стратегии увеличит твои
-шансы в бою с врагом, сделает тебя сильнее духом и телом.
- Умение увеличивает твой {Wdamroll{x и {Whitroll{x.
+  <help level="-1" type="SkillHelp">п÷я─п╦пЁп╬я┌п╬п╡п╩п╣п╫п╦п╣ п╨ п╠п╦я┌п╡п╣, п╬п╠п╢я┐п╪я▀п╡п╟п╫п╦п╣ п╡п╬п╣п╫п╫п╬п╧ я│я┌я─п╟я┌п╣пЁп╦п╦ я┐п╡п╣п╩п╦я┤п╦я┌ я┌п╡п╬п╦
+я┬п╟п╫я│я▀ п╡ п╠п╬я▌ я│ п╡я─п╟пЁп╬п╪, я│п╢п╣п╩п╟п╣я┌ я┌п╣п╠я▐ я│п╦п╩я▄п╫п╣п╣ п╢я┐я┘п╬п╪ п╦ я┌п╣п╩п╬п╪.
+ пёп╪п╣п╫п╦п╣ я┐п╡п╣п╩п╦я┤п╦п╡п╟п╣я┌ я┌п╡п╬п╧ {Wdamroll{x п╦ {Whitroll{x.
   </help>
   <mana>50</mana>
   <mob>
@@ -42,5 +43,5 @@
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>сосредоточиться</nameRus>
+  <nameRus>я│п╬я│я─п╣п╢п╬я┌п╬я┤п╦я┌я▄я│я▐</nameRus>
 </skill>

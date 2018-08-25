@@ -1,22 +1,136 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Language>
-  <nameRus>аркади</nameRus>
-
-  <description type="CommandHelp">{WArcadian{x ({Wаркади{x) - язык, на котором когда-то говорило копытное население Аркадии. 
-Все, что вы когда-либо хотели знать об эффектах алкоголя, но стеснялись попробовать на себе.
-
-%SA% %H% [(ancient languages,древние языки)], {W{lRумение{lEslook{x {lRаркади{lEarcadi{x.
-</description>
-  <hint>изречь на аркади</hint>    
-    
   <beats>12</beats>
-  <minAlign>0</minAlign>
-  <maxAlign>1000</maxAlign>
-  <races>
-    <node name="satyr">
-      <level>10</level>
-      <maximum>100</maximum>
+  <classes>
+    <node name="other">
+      <level>102</level>
+      <maximum>0</maximum>
     </node>
+  </classes>
+  <description level="-1" type="CommandHelp">{WArcadian{x ({Wп╟я─п╨п╟п╢п╦{x) - я▐п╥я▀п╨, п╫п╟ п╨п╬я┌п╬я─п╬п╪ п╨п╬пЁп╢п╟-я┌п╬ пЁп╬п╡п╬я─п╦п╩п╬ п╨п╬п©я▀я┌п╫п╬п╣ п╫п╟я│п╣п╩п╣п╫п╦п╣ п░я─п╨п╟п╢п╦п╦. 
+п▓я│п╣, я┤я┌п╬ п╡я▀ п╨п╬пЁп╢п╟-п╩п╦п╠п╬ я┘п╬я┌п╣п╩п╦ п╥п╫п╟я┌я▄ п╬п╠ я█я└я└п╣п╨я┌п╟я┘ п╟п╩п╨п╬пЁп╬п╩я▐, п╫п╬ я│я┌п╣я│п╫я▐п╩п╦я│я▄ п©п╬п©я─п╬п╠п╬п╡п╟я┌я▄ п╫п╟ я│п╣п╠п╣.
+
+%SA% %H% [(ancient languages,п╢я─п╣п╡п╫п╦п╣ я▐п╥я▀п╨п╦)], {W{lRя┐п╪п╣п╫п╦п╣{lEslook{x {lRп╟я─п╨п╟п╢п╦{lEarcadi{x.
+</description>
+  <effects>
+    <node name="beer_armor" type="BeerArmorWE">
+      <frequency>3</frequency>
+      <global>true</global>
+      <meaning>я┌п╬п╩я│я┌п╬п╨п╬п╤п╣я│я┌|я▄|п╦|п╦|я▄|я▄я▌|п╦</meaning>
+      <minEffectiveVolume>75</minEffectiveVolume>
+      <object>true</object>
+    </node>
+    <node name="beer_elemental" type="BeerElementalWE">
+      <frequency>2</frequency>
+      <global>true</global>
+      <meaning>п╡я▀п╥п╬п╡||п╟|я┐||п╬п╪|п╣ п©п╦п╡п╫п╬пЁп╬ я█п╩п╣п╪п╣п╫я┌п╟п╩я▐</meaning>
+      <minEffectiveVolume>100</minEffectiveVolume>
+      <object>true</object>
+    </node>
+    <node name="water2beer" type="WaterToBeerWE">
+      <frequency>2</frequency>
+      <global>true</global>
+      <meaning>п©я─п╣п╡я─п╟я┴п╣п╫п╦|п╣|я▐|я▌|п╣|п╣п╪|п╦ п╡п╬п╢я▀ п╡ п©п╦п╡п╬</meaning>
+      <object>true</object>
+    </node>
+    <node name="water2wine" type="WaterToWineWE">
+      <frequency>2</frequency>
+      <global>true</global>
+      <meaning>п©я─п╣п╡я─п╟я┴п╣п╫п╦|п╣|я▐|я▌|п╣|п╣п╪|п╦ п╡п╬п╢я▀ п╡ п╡п╦п╫п╬</meaning>
+      <object>true</object>
+    </node>
+    <node name="wine_awake" type="WineAwakeWE">
+      <frequency>1</frequency>
+      <global>true</global>
+      <meaning>п╦п╥пЁп╬я┌п╬п╡п╩п╣п╫п╦|п╣|я▐|я▌|п╣|п╣п╪|п╦ п╠п╬п╢я─я▐я┴п╣пЁп╬ п╫п╟п©п╦я┌п╨п╟</meaning>
+      <minEffectiveVolume>100</minEffectiveVolume>
+      <object>true</object>
+    </node>
+    <node name="wine_calm" type="WineCalmWE">
+      <frequency>1</frequency>
+      <global>true</global>
+      <meaning>п╦п╥пЁп╬я┌п╬п╡п╩п╣п╫п╦|п╣|я▐|я▌|п╣|п╣п╪|п╦ я┐я│п©п╬п╨п╬п╦я┌п╣п╩я▄п╫п╬пЁп╬ п╫п╟п©п╦я┌п╨п╟</meaning>
+      <minEffectiveVolume>100</minEffectiveVolume>
+      <object>true</object>
+    </node>
+    <node name="wine_refresh" type="WineRefreshWE">
+      <frequency>3</frequency>
+      <global>true</global>
+      <meaning>п╦п╥пЁп╬я┌п╬п╡п╩п╣п╫п╦|п╣|я▐|я▌|п╣|п╣п╪|п╦ п╬я│п╡п╣п╤п╟я▌я┴п╣пЁп╬ п╫п╟п©п╦я┌п╨п╟</meaning>
+      <minEffectiveVolume>0</minEffectiveVolume>
+      <object>true</object>
+    </node>
+    <node name="wine_sleep" type="WineSleepWE">
+      <frequency>1</frequency>
+      <global>true</global>
+      <meaning>п╦п╥пЁп╬я┌п╬п╡п╩п╣п╫п╦|п╣|я▐|я▌|п╣|п╣п╪|п╦ я│п╫п╬я┌п╡п╬я─п╫п╬пЁп╬</meaning>
+      <minEffectiveVolume>100</minEffectiveVolume>
+      <object>true</object>
+    </node>
+  </effects>
+  <endings>
+    <node>os</node>
+    <node>a</node>
+    <node>is</node>
+    <node>us</node>
+    <node>i</node>
+    <node>ita</node>
+    <node>enos</node>
+    <node>eni</node>
+    <node>eno</node>
+    <node>ena</node>
+    <node>edes</node>
+    <node>allon</node>
+    <node>es</node>
+    <node>otero</node>
+    <node>itera</node>
+    <node>otera</node>
+    <node>ika</node>
+    <node>ikan</node>
+    <node>ume</node>
+    <node>usa</node>
+    <node>isa</node>
+    <node>usame</node>
+    <node>isame</node>
+    <node>isan</node>
+    <node>esan</node>
+    <node>ate</node>
+    <node>ite</node>
+    <node>ete</node>
+    <node>azo</node>
+    <node>izo</node>
+    <node>izes</node>
+    <node>ero</node>
+    <node>eres</node>
+    <node>eri</node>
+    <node>erume</node>
+    <node>erate</node>
+    <node>eran</node>
+  </endings>
+  <hint>п╦п╥я─п╣я┤я▄ п╫п╟ п╟я─п╨п╟п╢п╦</hint>
+  <maxAlign>1000</maxAlign>
+  <minAlign>0</minAlign>
+  <nameRus>п╟я─п╨п╟п╢п╦</nameRus>
+  <prefixes>
+    <node>anti</node>
+    <node>ante</node>
+    <node>para</node>
+    <node>pano</node>
+    <node>kato</node>
+    <node>ane</node>
+    <node>kate</node>
+    <node>pros</node>
+    <node>ano</node>
+    <node>mesa</node>
+    <node>idio</node>
+    <node>apo</node>
+    <node>epi</node>
+    <node>e</node>
+    <node>i</node>
+    <node>a</node>
+    <node>misi</node>
+  </prefixes>
+  <races>
     <node name="centaur">
       <level>10</level>
       <maximum>100</maximum>
@@ -25,167 +139,55 @@
       <level>20</level>
       <maximum>50</maximum>
     </node>
+    <node name="satyr">
+      <level>10</level>
+      <maximum>100</maximum>
+    </node>
   </races>
-  <classes>
-    <node name="other">
-      <level>102</level>
-      <maximum>0</maximum>
-    </node>
-  </classes>
-  <effects>
-    <node name="water2wine" type="WaterToWineWE">
-	<meaning>превращени|е|я|ю|е|ем|и воды в вино</meaning>
-	<frequency>2</frequency>
-	<object>true</object>
-    </node>
-    <node name="water2beer" type="WaterToBeerWE">
-	<meaning>превращени|е|я|ю|е|ем|и воды в пиво</meaning>
-	<frequency>2</frequency>
-	<object>true</object>
-    </node>
-    <node name="wine_refresh" type="WineRefreshWE">
-	<meaning>изготовлени|е|я|ю|е|ем|и освежающего напитка</meaning>
-	<frequency>3</frequency>
-	<object>true</object>
-    </node>
-    <node name="wine_sleep" type="WineSleepWE">
-	<meaning>изготовлени|е|я|ю|е|ем|и снотворного</meaning>
-	<frequency>1</frequency>
-	<object>true</object>
-	<minEffectiveVolume>100</minEffectiveVolume>
-    </node>
-    <node name="wine_awake" type="WineAwakeWE">
-	<meaning>изготовлени|е|я|ю|е|ем|и бодрящего напитка</meaning>
-	<frequency>1</frequency>
-	<object>true</object>
-	<minEffectiveVolume>100</minEffectiveVolume>
-    </node>
-    <node name="wine_calm" type="WineCalmWE">
-	<meaning>изготовлени|е|я|ю|е|ем|и успокоительного напитка</meaning>
-	<frequency>1</frequency>
-	<object>true</object>
-	<minEffectiveVolume>100</minEffectiveVolume>
-    </node>
-    <node name="beer_armor" type="BeerArmorWE">
-	<meaning>толстокожест|ь|и|и|ь|ью|и</meaning>
-	<frequency>3</frequency>
-	<object>true</object>
-	<minEffectiveVolume>75</minEffectiveVolume>
-    </node>
-    <node name="beer_elemental" type="BeerElementalWE">
-	<meaning>вызов||а|у||ом|е пивного элементаля</meaning>
-	<frequency>2</frequency>
-	<object>true</object>
-	<minEffectiveVolume>100</minEffectiveVolume>
-    </node>
-  </effects>
-
-  <endings>
-     <node>os</node>
-     <node>a</node>
-     <node>is</node>
-     <node>us</node>
-     <node>i</node>
-     <node>ita</node>
-     <node>enos</node>
-     <node>eni</node>
-     <node>eno</node>
-     <node>ena</node>
-     <node>edes</node>
-     <node>allon</node>
-     <node>es</node>
-     <node>otero</node>
-     <node>itera</node>
-     <node>otera</node>
-     <node>ika</node>
-     <node>ikan</node>
-     <node>ume</node>
-     <node>usa</node>
-     <node>isa</node>
-     <node>usame</node>
-     <node>isame</node>
-     <node>isan</node>
-     <node>esan</node>
-     <node>ate</node>
-     <node>ite</node>
-     <node>ete</node>
-     <node>azo</node>
-     <node>izo</node>
-     <node>izes</node>
-     <node>ero</node>
-     <node>eres</node>
-     <node>eri</node>
-     <node>erume</node>
-     <node>erate</node>
-     <node>eran</node>
-  </endings>
-  
-  <prefixes>
-     <node>anti</node>
-     <node>ante</node>
-     <node>para</node>
-     <node>pano</node>
-     <node>kato</node>
-     <node>ane</node>
-     <node>kate</node>
-     <node>pros</node>
-     <node>ano</node>
-     <node>mesa</node>
-     <node>idio</node>
-     <node>apo</node>
-     <node>epi</node>
-     <node>e</node>
-     <node>i</node>
-     <node>a</node>
-     <node>misi</node>
-  </prefixes>
-
   <roots>
-     <node>mal</node>
-     <node>kal</node>
-     <node>pal</node>
-     <node>pan</node>
-     <node>keft</node>
-     <node>skept</node>
-     <node>lept</node>
-     <node>troh</node>
-     <node>treh</node>
-     <node>vreh</node>
-     <node>vroh</node>
-     <node>ksen</node>
-     <node>pul</node>
-     <node>tel</node>
-     <node>telef</node>
-     <node>teleft</node>
-     <node>psilot</node>
-     <node>ksil</node>
-     <node>telion</node>
-     <node>kar</node>
-     <node>kser</node>
-     <node>laven</node>
-     <node>kapn</node>
-     <node>spit</node>
-     <node>viast</node>
-     <node>gram</node>
-     <node>kalen</node>
-     <node>dulev</node>
-     <node>kimith</node>
-     <node>kifim</node>
-     <node>kafom</node>
-     <node>dips</node>
-     <node>pen</node>
-     <node>pin</node>
-     <node>pid</node>
-     <node>ped</node>
-     <node>diav</node>
-     <node>kit</node>
-     <node>trog</node>
-     <node>lin</node>
-     <node>tragud</node>
-     <node>horev</node>
-     <node>fil</node>
-     <node>gap</node>
+    <node>mal</node>
+    <node>kal</node>
+    <node>pal</node>
+    <node>pan</node>
+    <node>keft</node>
+    <node>skept</node>
+    <node>lept</node>
+    <node>troh</node>
+    <node>treh</node>
+    <node>vreh</node>
+    <node>vroh</node>
+    <node>ksen</node>
+    <node>pul</node>
+    <node>tel</node>
+    <node>telef</node>
+    <node>teleft</node>
+    <node>psilot</node>
+    <node>ksil</node>
+    <node>telion</node>
+    <node>kar</node>
+    <node>kser</node>
+    <node>laven</node>
+    <node>kapn</node>
+    <node>spit</node>
+    <node>viast</node>
+    <node>gram</node>
+    <node>kalen</node>
+    <node>dulev</node>
+    <node>kimith</node>
+    <node>kifim</node>
+    <node>kafom</node>
+    <node>dips</node>
+    <node>pen</node>
+    <node>pin</node>
+    <node>pid</node>
+    <node>ped</node>
+    <node>diav</node>
+    <node>kit</node>
+    <node>trog</node>
+    <node>lin</node>
+    <node>tragud</node>
+    <node>horev</node>
+    <node>fil</node>
+    <node>gap</node>
   </roots>
- 
 </Language>
-

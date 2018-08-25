@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
-    <wearoff>Желание учиться покидает тебя.</wearoff>
+    <wearoff>п√п╣п╩п╟п╫п╦п╣ я┐я┤п╦я┌я▄я│я▐ п©п╬п╨п╦п╢п╟п╣я┌ я┌п╣п╠я▐.</wearoff>
   </affect>
   <beats>12</beats>
   <classes>
@@ -16,11 +16,11 @@
       <rating>1</rating>
     </node>
     <node name="universal">
+      <always>true</always>
       <level>35</level>
       <maximum>100</maximum>
       <rating>1</rating>
       <weight>40</weight>
-      <always>true</always>
     </node>
     <node name="warlock">
       <level>35</level>
@@ -33,9 +33,10 @@
       <rating>1</rating>
     </node>
   </classes>
+  <dammsg></dammsg>
   <group>enhancement</group>
-  <help type="SkillHelp">Заклинание &apos;learning&apos; позволяет лучше сосредоточиться на учебе. При улучшении
-умений будет начисляться больше опыта.
+  <help level="-1" type="SkillHelp">п≈п╟п╨п╩п╦п╫п╟п╫п╦п╣ &apos;learning&apos; п©п╬п╥п╡п╬п╩я▐п╣я┌ п╩я┐я┤я┬п╣ я│п╬я│я─п╣п╢п╬я┌п╬я┤п╦я┌я▄я│я▐ п╫п╟ я┐я┤п╣п╠п╣. п÷я─п╦ я┐п╩я┐я┤я┬п╣п╫п╦п╦
+я┐п╪п╣п╫п╦п╧ п╠я┐п╢п╣я┌ п╫п╟я┤п╦я│п╩я▐я┌я▄я│я▐ п╠п╬п╩я▄я┬п╣ п╬п©я▀я┌п╟.
   </help>
   <mana>200</mana>
   <mob>
@@ -43,7 +44,7 @@
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>обучаемость</nameRus>
+  <nameRus>п╬п╠я┐я┤п╟п╣п╪п╬я│я┌я▄</nameRus>
   <spell type="SPELL(Learning)">
     <casted>true</casted>
     <position>stand</position>

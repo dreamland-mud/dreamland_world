@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <beats>12</beats>
   <classes>
@@ -25,26 +25,25 @@
     </node>
   </classes>
   <command type="SKILL(shoot)">
-    <hint>(рейнджеры) выстрелить из лука</hint>
+    <hint>(я─п╣п╧п╫п╢п╤п╣я─я▀) п╡я▀я│я┌я─п╣п╩п╦я┌я▄ п╦п╥ п╩я┐п╨п╟</hint>
     <name>shoot</name>
     <order>player_only</order>
     <position>stand</position>
     <russian>
-      <node>стрелять</node>
+      <node>я│я┌я─п╣п╩я▐я┌я▄</node>
     </russian>
   </command>
-  <dammsg>лук</dammsg>
+  <dammsg>п╩я┐п╨</dammsg>
   <group>weaponsmaster</group>
   <hard>5</hard>
-  <help type="SkillHelp">
-%FMT%  *%CMD%* _%DIR%_ _%CHAR%_
+  <help level="-1" type="SkillHelp">%FMT%  *%CMD%* _%DIR%_ _%CHAR%_
 
-  Посылает стрелу в противника, находящегося в соседней комнате.
-Для использования этого умения необходимо вооружиться луком(bow)
-и взять в руки колчан (quiver) со стрелами. В колчан помещается
-50 стрел.
+  п÷п╬я│я▀п╩п╟п╣я┌ я│я┌я─п╣п╩я┐ п╡ п©я─п╬я┌п╦п╡п╫п╦п╨п╟, п╫п╟я┘п╬п╢я▐я┴п╣пЁп╬я│я▐ п╡ я│п╬я│п╣п╢п╫п╣п╧ п╨п╬п╪п╫п╟я┌п╣.
+п■п╩я▐ п╦я│п©п╬п╩я▄п╥п╬п╡п╟п╫п╦я▐ я█я┌п╬пЁп╬ я┐п╪п╣п╫п╦я▐ п╫п╣п╬п╠я┘п╬п╢п╦п╪п╬ п╡п╬п╬я─я┐п╤п╦я┌я▄я│я▐ п╩я┐п╨п╬п╪(bow)
+п╦ п╡п╥я▐я┌я▄ п╡ я─я┐п╨п╦ п╨п╬п╩я┤п╟п╫ (quiver) я│п╬ я│я┌я─п╣п╩п╟п╪п╦. п▓ п╨п╬п╩я┤п╟п╫ п©п╬п╪п╣я┴п╟п╣я┌я│я▐
+50 я│я┌я─п╣п╩.
 
-%SA% %H% [(make bow,изготовить лук)], [(make arrow,изготовить стрелу)].
+%SA% %H% [(make bow,п╦п╥пЁп╬я┌п╬п╡п╦я┌я▄ п╩я┐п╨)], [(make arrow,п╦п╥пЁп╬я┌п╬п╡п╦я┌я▄ я│я┌я─п╣п╩я┐)].
   </help>
   <mob>
     <bonus>40</bonus>
@@ -53,7 +52,7 @@
     <ordered>true</ordered>
     <professional>false</professional>
   </mob>
-  <nameRus>лук</nameRus>
+  <nameRus>п╩я┐п╨</nameRus>
   <raceBonuses>
     <node name="centaur">
       <bonus>100</bonus>

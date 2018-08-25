@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="ClanSkill">
   <clans>
     <node name="ruler">
@@ -6,26 +6,27 @@
       <maxLevel>100</maxLevel>
       <maximum>100</maximum>
       <needItem>true</needItem>
+      <needPractice>true</needPractice>
       <rating>1</rating>
     </node>
   </clans>
   <command type="SKILL(wanted)">
+    <hint>(п©я─п╟п╡п╦я┌п╣п╩п╦) п╬п╠я┼я▐п╡п╦я┌я▄ п╫п╟я─я┐я┬п╦я┌п╣п╩я▐ п╡ я─п╬п╥я▀я│п╨</hint>
     <log>1</log>
     <name>wanted</name>
     <position>stand</position>
     <russian>
-      <node>розыск</node>
+      <node>я─п╬п╥я▀я│п╨</node>
     </russian>
-    <hint>(правители) объявить нарушителя в розыск</hint>
   </command>
+  <dammsg></dammsg>
+  <help level="-1" type="SkillHelp">п║п╦п╫я┌п╟п╨я│п╦я│: wanted &lt;я├п╣п╩я▄&gt; Y|N
+п·п╠я┼я▐п╡п╦я┌я▄ п╦пЁя─п╬п╨п╟ п╡п╫п╣ п╥п╟п╨п╬п╫п╟. 
+п п╟п╤п╢п╬п╣ п╬п╠я┼я▐п╡п╩п╣п╫п╦п╣ п╡я│п╣ п╥п╟п╨п╬п╫п╟ я┐п╪п╣п╫я▄я┬п╟п╣я┌ п═п╣п╟п╩я▄п╫я┐я▌ п≈п╟п╨п╬п╫п╬п©п╬я│п╩я┐я┬п╫п╬я│я┌я▄.
+  </help>
   <mob>
     <forbidden>true</forbidden>
     <ordered>true</ordered>
   </mob>
-  <nameRus>розыск</nameRus>
-  <help type="SkillHelp">
-Синтаксис: wanted &lt;цель&gt; Y|N
-Объявить игрока вне закона. 
-Каждое объявление все закона уменьшает Реальную Законопослушность.
-  </help>
+  <nameRus>я─п╬п╥я▀я│п╨</nameRus>
 </skill>

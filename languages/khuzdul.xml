@@ -1,111 +1,112 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Language>
-  <nameRus>куздул||а|у||ом|е</nameRus>
-  <nameRusNoCase>куздул</nameRusNoCase>
   <beats>12</beats>
-  <description type="CommandHelp">{WKhuzdul{x ({Wкхуздул{x) - древнее наречие дварфов, хранящее отголоски старинных битв
-и былой славы. Давно исчезли могущественные кланы, подземные дворцы
-и глубокие шахты, забылось и само наречие. Немногие обрывки слов,
-дожившие до наших дней, хранят в себе знания древних кузнецов,
-умевших создать оружие невиданной силы или с легкостью починить доспех.
-А те слова, что когда-то служили частью боевых кличей и девизов, до сих 
-пор способны разжечь пламя боевой ярости в любом, произносящем их вслух.
-
-%SA% %H% [(ancient languages,древние языки)], {W{lRумение{lEslook{x {lRкуздул{lEkhuzdul{x.
-</description>
-
-  <hint>изречь на куздуле</hint>    
-  <minAlign>-1000</minAlign>
-  <maxAlign>1000</maxAlign>
-  <races>
-    <node name="dwarf">
-      <level>10</level>
-      <maximum>100</maximum>
-    </node>
-    <node name="duergar">
-      <level>15</level>
-      <maximum>75</maximum>
-    </node>
-    <node name="other">
-      <level>20</level>
-      <maximum>50</maximum>
-    </node>
-  </races>
   <classes>
     <node name="other">
       <level>102</level>
       <maximum>0</maximum>
     </node>
   </classes>
+  <description level="-1" type="CommandHelp">{WKhuzdul{x ({Wп╨я┘я┐п╥п╢я┐п╩{x) - п╢я─п╣п╡п╫п╣п╣ п╫п╟я─п╣я┤п╦п╣ п╢п╡п╟я─я└п╬п╡, я┘я─п╟п╫я▐я┴п╣п╣ п╬я┌пЁп╬п╩п╬я│п╨п╦ я│я┌п╟я─п╦п╫п╫я▀я┘ п╠п╦я┌п╡
+п╦ п╠я▀п╩п╬п╧ я│п╩п╟п╡я▀. п■п╟п╡п╫п╬ п╦я│я┤п╣п╥п╩п╦ п╪п╬пЁя┐я┴п╣я│я┌п╡п╣п╫п╫я▀п╣ п╨п╩п╟п╫я▀, п©п╬п╢п╥п╣п╪п╫я▀п╣ п╢п╡п╬я─я├я▀
+п╦ пЁп╩я┐п╠п╬п╨п╦п╣ я┬п╟я┘я┌я▀, п╥п╟п╠я▀п╩п╬я│я▄ п╦ я│п╟п╪п╬ п╫п╟я─п╣я┤п╦п╣. п²п╣п╪п╫п╬пЁп╦п╣ п╬п╠я─я▀п╡п╨п╦ я│п╩п╬п╡,
+п╢п╬п╤п╦п╡я┬п╦п╣ п╢п╬ п╫п╟я┬п╦я┘ п╢п╫п╣п╧, я┘я─п╟п╫я▐я┌ п╡ я│п╣п╠п╣ п╥п╫п╟п╫п╦я▐ п╢я─п╣п╡п╫п╦я┘ п╨я┐п╥п╫п╣я├п╬п╡,
+я┐п╪п╣п╡я┬п╦я┘ я│п╬п╥п╢п╟я┌я▄ п╬я─я┐п╤п╦п╣ п╫п╣п╡п╦п╢п╟п╫п╫п╬п╧ я│п╦п╩я▀ п╦п╩п╦ я│ п╩п╣пЁп╨п╬я│я┌я▄я▌ п©п╬я┤п╦п╫п╦я┌я▄ п╢п╬я│п©п╣я┘.
+п░ я┌п╣ я│п╩п╬п╡п╟, я┤я┌п╬ п╨п╬пЁп╢п╟-я┌п╬ я│п╩я┐п╤п╦п╩п╦ я┤п╟я│я┌я▄я▌ п╠п╬п╣п╡я▀я┘ п╨п╩п╦я┤п╣п╧ п╦ п╢п╣п╡п╦п╥п╬п╡, п╢п╬ я│п╦я┘ 
+п©п╬я─ я│п©п╬я│п╬п╠п╫я▀ я─п╟п╥п╤п╣я┤я▄ п©п╩п╟п╪я▐ п╠п╬п╣п╡п╬п╧ я▐я─п╬я│я┌п╦ п╡ п╩я▌п╠п╬п╪, п©я─п╬п╦п╥п╫п╬я│я▐я┴п╣п╪ п╦я┘ п╡я│п╩я┐я┘.
 
-  
+%SA% %H% [(ancient languages,п╢я─п╣п╡п╫п╦п╣ я▐п╥я▀п╨п╦)], {W{lRя┐п╪п╣п╫п╦п╣{lEslook{x {lRп╨я┐п╥п╢я┐п╩{lEkhuzdul{x.
+</description>
   <effects>
-    <node name="enchant" type="EnchantWeaponWE">
-        <meaning>оружейн|ое|ого|ому|ое|ым|ом закляти|е|я|ю|е|ем|и</meaning>
-        <frequency>1</frequency>
-    </node>
     <node name="berserk" type="BerserkWE">
-	<meaning>древн|яя|ей|ей|юю|ей|ей ярост|ь|и|и|ь|ью|и</meaning>
-	<frequency>3</frequency>
+      <frequency>3</frequency>
+      <global>true</global>
+      <meaning>п╢я─п╣п╡п╫|я▐я▐|п╣п╧|п╣п╧|я▌я▌|п╣п╧|п╣п╧ я▐я─п╬я│я┌|я▄|п╦|п╦|я▄|я▄я▌|п╦</meaning>
+      <object>false</object>
+    </node>
+    <node name="enchant" type="EnchantWeaponWE">
+      <frequency>1</frequency>
+      <global>true</global>
+      <meaning>п╬я─я┐п╤п╣п╧п╫|п╬п╣|п╬пЁп╬|п╬п╪я┐|п╬п╣|я▀п╪|п╬п╪ п╥п╟п╨п╩я▐я┌п╦|п╣|я▐|я▌|п╣|п╣п╪|п╦</meaning>
+      <object>false</object>
     </node>
     <node name="mend" type="MendingWE">
-	<meaning>починк|а|и|е|у|ой|е доспехов</meaning>
-	<frequency>4</frequency>
+      <frequency>4</frequency>
+      <global>true</global>
+      <meaning>п©п╬я┤п╦п╫п╨|п╟|п╦|п╣|я┐|п╬п╧|п╣ п╢п╬я│п©п╣я┘п╬п╡</meaning>
+      <object>false</object>
     </node>
   </effects>
-
-  <radicals>
-     <node>bnd</node>
-     <node>brz</node>
-     <node>brk</node>
-     <node>bzn</node>
-     <node>bzr</node>
-     <node>gbl</node>
-     <node>glb</node>
-     <node>gml</node>
-     <node>gnd</node>
-     <node>gTl</node>
-     <node>flk</node>
-     <node>kbl</node>
-     <node>Kld</node>
-     <node>mbr</node>
-     <node>nlk</node>
-     <node>nrg</node>
-     <node>rbr</node>
-     <node>rKs</node>
-     <node>sgn</node>
-     <node>STr</node>
-     <node>tmn</node>
-     <node>Trk</node>
-     <node>trg</node>
-     <node>zbd</node>
-     <node>zbr</node>
-     <node>zgl</node>
-     <node>zGl</node>
-     <node>zhr</node>
-     <node>zrb</node>
-     <node>zrk</node>
-     <node>zrm</node>
-  </radicals>
-
+  <hint>п╦п╥я─п╣я┤я▄ п╫п╟ п╨я┐п╥п╢я┐п╩п╣</hint>
+  <maxAlign>1000</maxAlign>
+  <minAlign>-1000</minAlign>
+  <nameRus>п╨я┐п╥п╢я┐п╩||п╟|я┐||п╬п╪|п╣</nameRus>
+  <nameRusNoCase>п╨я┐п╥п╢я┐п╩</nameRusNoCase>
   <patterns>
-     <node>1a23un</node>
-     <node>a1a2a3</node>
-     <node>1u23ul</node>
-     <node>1a2a3</node>
-     <node>1i2i3</node>
-     <node>ma1a23</node>
-     <node>1u23</node>
-     <node>1a2u3</node>
-     <node>i12a3</node>
-     <node>1i2a3</node>
-     <node>1u2u3</node>
-     <node>e1e2o3</node>
-     <node>1u23u</node>
-     <node>a12a3</node>
-     <node>1a23</node>
-     <node>u12a3</node>
-     <node>1e2a3</node>
-     <node>1e2e3</node>
-   </patterns>
+    <node>1a23un</node>
+    <node>a1a2a3</node>
+    <node>1u23ul</node>
+    <node>1a2a3</node>
+    <node>1i2i3</node>
+    <node>ma1a23</node>
+    <node>1u23</node>
+    <node>1a2u3</node>
+    <node>i12a3</node>
+    <node>1i2a3</node>
+    <node>1u2u3</node>
+    <node>e1e2o3</node>
+    <node>1u23u</node>
+    <node>a12a3</node>
+    <node>1a23</node>
+    <node>u12a3</node>
+    <node>1e2a3</node>
+    <node>1e2e3</node>
+  </patterns>
+  <races>
+    <node name="duergar">
+      <level>15</level>
+      <maximum>75</maximum>
+    </node>
+    <node name="dwarf">
+      <level>10</level>
+      <maximum>100</maximum>
+    </node>
+    <node name="other">
+      <level>20</level>
+      <maximum>50</maximum>
+    </node>
+  </races>
+  <radicals>
+    <node>bnd</node>
+    <node>brz</node>
+    <node>brk</node>
+    <node>bzn</node>
+    <node>bzr</node>
+    <node>gbl</node>
+    <node>glb</node>
+    <node>gml</node>
+    <node>gnd</node>
+    <node>gTl</node>
+    <node>flk</node>
+    <node>kbl</node>
+    <node>Kld</node>
+    <node>mbr</node>
+    <node>nlk</node>
+    <node>nrg</node>
+    <node>rbr</node>
+    <node>rKs</node>
+    <node>sgn</node>
+    <node>STr</node>
+    <node>tmn</node>
+    <node>Trk</node>
+    <node>trg</node>
+    <node>zbd</node>
+    <node>zbr</node>
+    <node>zgl</node>
+    <node>zGl</node>
+    <node>zhr</node>
+    <node>zrb</node>
+    <node>zrk</node>
+    <node>zrm</node>
+  </radicals>
 </Language>

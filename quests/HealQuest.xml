@@ -1,63 +1,63 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Quest>
-    <priority>2</priority>
-    <shortDesc>Лечение болезней</shortDesc>
-    <scenarios>
-	<node name="weaken" type="HealScenario">
-	    <malady>weaken</malady>
-	    <remedies>
-		<node>giant strength</node>
-	    </remedies>
-	    <bit table="affect_flags">weaken</bit>
-	    <profession>cleric mage necromancer</profession>
-	</node>
-	<node name="poison" type="HealScenario">
-	    <malady>poison</malady>
-	    <remedies>
-		<node>cure poison</node>
-		<node>restoring light</node>
-	    </remedies>
-	    <bit table="affect_flags">poison</bit>
-	    <immune>poison</immune>
-	    <profession>cleric</profession>
-	</node>
-	<node name="plague" type="HealScenario">
-	    <malady>plague</malady>
-	    <remedies>
-		<node>cure disease</node>
-		<node>restoring light</node>
-	    </remedies>
-	    <bit table="affect_flags">plague</bit>
-	    <immune>disease</immune>
-	    <profession>cleric</profession>
-	</node>
-	<node name="blindness" type="HealScenario">
-	    <malady>blindness</malady>
-	    <remedies>
-		<node>cure blindness</node>
-		<node>restoring light</node>
-	    </remedies>
-	    <bit table="affect_flags">blind</bit>
-	    <obvious>true</obvious>
-	    <profession>cleric mage necromancer</profession>
-	</node>
-	<node name="curse" type="HealScenario">
-	    <malady>curse</malady>
-	    <remedies>
-		<node>remove curse</node>
-		<node>restoring light</node>
-	    </remedies>
-	    <bit table="affect_flags">curse</bit>
-	    <immune>negative</immune>
-	    <profession>cleric mage necromancer undead</profession>
-	</node>
-	<node name="fear" type="HealScenario">
-	    <malady>fear</malady>
-	    <remedies>
-		<node>remove fear</node>
-	    </remedies>
-	    <bit table="detect_flags">fear</bit>
-	    <profession>cleric mage necromancer</profession>
-	</node>
-    </scenarios>
+  <priority>2</priority>
+  <scenarios>
+    <node name="blindness" type="HealScenario">
+      <bit table="affect_flags">blind</bit>
+      <malady>blindness</malady>
+      <obvious>true</obvious>
+      <profession>necromancer cleric mage</profession>
+      <remedies>
+        <node>cure blindness</node>
+        <node>restoring light</node>
+      </remedies>
+    </node>
+    <node name="curse" type="HealScenario">
+      <bit table="affect_flags">curse</bit>
+      <immune>negative</immune>
+      <malady>curse</malady>
+      <profession>necromancer undead cleric mage</profession>
+      <remedies>
+        <node>remove curse</node>
+        <node>restoring light</node>
+      </remedies>
+    </node>
+    <node name="fear" type="HealScenario">
+      <bit table="detect_flags">fear</bit>
+      <malady>fear</malady>
+      <profession>necromancer cleric mage</profession>
+      <remedies>
+        <node>remove fear</node>
+      </remedies>
+    </node>
+    <node name="plague" type="HealScenario">
+      <bit table="affect_flags">plague</bit>
+      <immune>disease</immune>
+      <malady>plague</malady>
+      <profession>cleric</profession>
+      <remedies>
+        <node>cure disease</node>
+        <node>restoring light</node>
+      </remedies>
+    </node>
+    <node name="poison" type="HealScenario">
+      <bit table="affect_flags">poison</bit>
+      <immune>poison</immune>
+      <malady>poison</malady>
+      <profession>cleric</profession>
+      <remedies>
+        <node>cure poison</node>
+        <node>restoring light</node>
+      </remedies>
+    </node>
+    <node name="weaken" type="HealScenario">
+      <bit table="affect_flags">weaken</bit>
+      <malady>weaken</malady>
+      <profession>necromancer cleric mage</profession>
+      <remedies>
+        <node>giant strength</node>
+      </remedies>
+    </node>
+  </scenarios>
+  <shortDesc>п⌡п╣я┤п╣п╫п╦п╣ п╠п╬п╩п╣п╥п╫п╣п╧</shortDesc>
 </Quest>

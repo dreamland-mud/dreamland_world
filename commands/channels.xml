@@ -1,8 +1,9 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Command>
   <channels>
     <node type="WorldChannel">
       <extra>keep_hide ghost</extra>
+      <hint>п╡я▀п╢п╟я┌я▄ я│п╬п╬п╠я┴п╣п╫п╦п╣ п╫п╟ п╡п╣я│я▄ п╪п╦я─</hint>
       <level>106</level>
       <log>1</log>
       <msgOther>%2$s</msgOther>
@@ -12,10 +13,10 @@
       <position>dead</position>
       <positionOther>dead</positionOther>
       <trustSpeak>106</trustSpeak>
-      <hint>выдать сообщение на весь мир</hint>
     </node>
     <node type="PersonalChannel">
       <extra>keep_hide ghost</extra>
+      <hint>п╡я▀п╢п╟я┌я▄ я│п╬п╬п╠я┴п╣п╫п╦п╣ п╩п╦я┤п╫п╬ п╨п╬п╪я┐-я┌п╬</hint>
       <level>106</level>
       <log>1</log>
       <msgChar>personal&gt; %2$s</msgChar>
@@ -26,10 +27,10 @@
       <position>dead</position>
       <positionOther>dead</positionOther>
       <trustSpeak>106</trustSpeak>
-      <hint>выдать сообщение лично кому-то</hint>
     </node>
     <node type="RoomChannel">
       <extra>keep_hide ghost</extra>
+      <hint>п╡я▀п╢п╟я┌я▄ я│п╬п╬п╠я┴п╣п╫п╦я▐ п╡я│п╣п╪ п╡ п╨п╬п╪п╫п╟я┌п╣</hint>
       <level>104</level>
       <log>1</log>
       <msgOther>%2$s</msgOther>
@@ -39,10 +40,10 @@
       <position>dead</position>
       <positionOther>dead</positionOther>
       <trustSpeak>104</trustSpeak>
-      <hint>выдать сообщения всем в комнате</hint>
     </node>
     <node type="AreaChannel">
       <extra>keep_hide ghost</extra>
+      <hint>п╡я▀п╢п╟я┌я▄ я│п╬п╬п╠я┴п╣п╫п╦п╣ п╡я│п╣п╪ п╡ п╟я─п╦п╦</hint>
       <level>106</level>
       <log>1</log>
       <msgOther>%2$s</msgOther>
@@ -52,16 +53,16 @@
       <position>dead</position>
       <positionOther>dead</positionOther>
       <trustSpeak>106</trustSpeak>
-      <hint>выдать сообщение всем в арии</hint>
     </node>
     <node type="WorldChannel">
       <aliases>
         <node>:</node>
       </aliases>
       <extra>keep_hide ghost</extra>
+      <hint>п╬п╠я┴п╣п╫п╦п╣ я│ п╨п╬п╩п╩п╣пЁп╟п╪п╦ п©п╬ п╬п╠п╩п╟п╨я┐</hint>
       <ignore>true</ignore>
       <level>102</level>
-      <msgOff>Ты больше не слышишь воплей Бессмертных.</msgOff>
+      <msgOff>п╒я▀ п╠п╬п╩я▄я┬п╣ п╫п╣ я│п╩я▀я┬п╦я┬я▄ п╡п╬п©п╩п╣п╧ п▒п╣я│я│п╪п╣я─я┌п╫я▀я┘.</msgOff>
       <msgOn>Immortal channel is now ON</msgOn>
       <msgOther>{C[{Y%1$C1{C]{x: {C%2$s{x</msgOther>
       <msgSelf>{C[{Y%1$C1{C]{x: {C%2$s{x</msgSelf>
@@ -69,12 +70,11 @@
       <off>nowiz</off>
       <position>dead</position>
       <positionOther>dead</positionOther>
+      <russian>
+        <node>п╦п╪п╪п╨п╟п╫п╟п╩</node>
+      </russian>
       <trustHear>102</trustHear>
       <trustSpeak>102</trustSpeak>
-      <hint>общение с коллегами по облаку</hint>
-      <russian>
-	<node>иммканал</node>
-      </russian>
     </node>
     <node type="WorldChannel">
       <aliases>
@@ -82,9 +82,10 @@
         <node>ctalk</node>
       </aliases>
       <extra>keep_hide ghost</extra>
+      <hint>п╬п╠я┴п╣п╫п╦п╣ я│ п╨п╬п╢п╣я─п╟п╪п╦</hint>
       <level>110</level>
-      <msgOff>Кодерский базар выключен.</msgOff>
-      <msgOn>Кодерский базар включен.</msgOn>
+      <msgOff>п п╬п╢п╣я─я│п╨п╦п╧ п╠п╟п╥п╟я─ п╡я▀п╨п╩я▌я┤п╣п╫.</msgOff>
+      <msgOn>п п╬п╢п╣я─я│п╨п╦п╧ п╠п╟п╥п╟я─ п╡п╨п╩я▌я┤п╣п╫.</msgOn>
       <msgOther>{C[{c%1$#C1{C]: {c%2$s{x</msgOther>
       <msgSelf>{C[{c%1$#C1{C]: {c%2$s{x</msgSelf>
       <name>codertalk</name>
@@ -92,11 +93,10 @@
       <position>dead</position>
       <positionOther>dead</positionOther>
       <russian>
-	<node>кодерканал</node>
+        <node>п╨п╬п╢п╣я─п╨п╟п╫п╟п╩</node>
       </russian>
       <trustHear>110</trustHear>
       <trustSpeak>110</trustSpeak>
-      <hint>общение с кодерами</hint>
     </node>
     <node type="SpeechChannel">
       <aliases>
@@ -105,58 +105,63 @@
       <deafen>true</deafen>
       <deafenOther>true</deafenOther>
       <dig>true</dig>
-      <extra>important ghost manacles nanny</extra>
+      <extra>ghost manacles nanny important</extra>
       <garble>true</garble>
+      <help level="-1" refby="channels" type="CommandHelp">
+      </help>
+      <hint>п©я─п╬п╦п╥п╫п╣я│я┌п╦ я─п╣п©п╩п╦п╨я┐ п╡я│п╩я┐я┘</hint>
       <ignore>true</ignore>
-      <msgOther>%1$^C1 произнос%1$nит|ят &apos;{g%2$s{x&apos;</msgOther>
-      <msgSelf>Ты произносишь &apos;{g%2$s{x&apos;</msgSelf>
-      <msgSelfNoarg>Произнести что?</msgSelfNoarg>
+      <msgOther>%1$^C1 п©я─п╬п╦п╥п╫п╬я│%1$nп╦я┌|я▐я┌ &apos;{g%2$s{x&apos;</msgOther>
+      <msgSelf>п╒я▀ п©я─п╬п╦п╥п╫п╬я│п╦я┬я▄ &apos;{g%2$s{x&apos;</msgSelf>
+      <msgSelfNoarg>п÷я─п╬п╦п╥п╫п╣я│я┌п╦ я┤я┌п╬?</msgSelfNoarg>
       <name>say</name>
       <position>rest</position>
       <positionOther>rest</positionOther>
-      <translate>true</translate>
       <russian>
-	<node>сказать</node>
+        <node>я│п╨п╟п╥п╟я┌я▄</node>
       </russian>
-      <hint>произнести реплику вслух</hint>
-      <help type="CommandHelp" refby="channels"></help>
+      <translate>true</translate>
     </node>
     <node type="WorldChannel">
       <confirmed>true</confirmed>
       <extra>manacles</extra>
       <garble>true</garble>
+      <help level="-1" refby="channels" type="CommandHelp">
+      </help>
+      <hint>пЁя─п╬п╪п╨п╬ п©я─п╬п╨я─п╦я┤п╟я┌я▄ п╫п╟ п╡п╣я│я▄ п╪п╦я─</hint>
       <ignore>true</ignore>
       <isolate>true</isolate>
-      <msgOff>Канал gossip теперь выключен.</msgOff>
-      <msgOn>Канал gossip теперь включен.</msgOn>
-      <msgOther>%1$^C1 громко крич%1$nит|ат &apos;{R%2$s{x&apos;</msgOther>
-      <msgSelf>Ты громко кричишь &apos;{R%2$s{x&apos;</msgSelf>
+      <msgOff>п п╟п╫п╟п╩ gossip я┌п╣п©п╣я─я▄ п╡я▀п╨п╩я▌я┤п╣п╫.</msgOff>
+      <msgOn>п п╟п╫п╟п╩ gossip я┌п╣п©п╣я─я▄ п╡п╨п╩я▌я┤п╣п╫.</msgOn>
+      <msgOther>%1$^C1 пЁя─п╬п╪п╨п╬ п╨я─п╦я┤%1$nп╦я┌|п╟я┌ &apos;{R%2$s{x&apos;</msgOther>
+      <msgSelf>п╒я▀ пЁя─п╬п╪п╨п╬ п╨я─п╦я┤п╦я┬я▄ &apos;{R%2$s{x&apos;</msgSelf>
       <name>gossip</name>
       <nochannel>true</nochannel>
       <off>nogossip</off>
       <position>rest</position>
       <positionOther>sleep</positionOther>
       <quiet>true</quiet>
+      <russian>
+        <node>п╨я─п╦я┤п╟я┌я▄</node>
+        <node>п╬я─п╟я┌я▄</node>
+        <node>пЁп╨я─п╦я┤п╟я┌я▄</node>
+      </russian>
       <soap>true</soap>
       <translate>true</translate>
-      <russian>
-	<node>кричать</node>
-	<node>орать</node>
-	<node>гкричать</node>
-      </russian>
-      <hint>громко прокричать на весь мир</hint>
-      <help type="CommandHelp" refby="channels"></help>
     </node>
     <node type="WorldChannel">
       <aliases>
         <node>.</node>
       </aliases>
-      <extra>important manacles</extra>
+      <extra>manacles important</extra>
       <garble>true</garble>
+      <help level="-1" refby="channels" type="CommandHelp">
+      </help>
+      <hint>п╠п╬п╩я┌п╟я┌я▄ п╬ я┤п╣п╪-я┌п╬ п╫п╟ п╡п╣я│я▄ п╪п╦я─</hint>
       <ignore>true</ignore>
       <isolate>true</isolate>
-      <msgOff>Канал InChar теперь выключен.</msgOff>
-      <msgOn>Канал InChar теперь включен.</msgOn>
+      <msgOff>п п╟п╫п╟п╩ InChar я┌п╣п©п╣я─я▄ п╡я▀п╨п╩я▌я┤п╣п╫.</msgOff>
+      <msgOn>п п╟п╫п╟п╩ InChar я┌п╣п©п╣я─я▄ п╡п╨п╩я▌я┤п╣п╫.</msgOn>
       <msgOther>{Y[{Gic{Y]{W %1$^C1{x : &apos;{M%2$s{x&apos;</msgOther>
       <msgOtherMild>{Y[{Gic{Y]{W %1$^C1{x : &apos;{g%2$s{x&apos;</msgOtherMild>
       <msgSelf>{Y[{Gic{Y]{x &apos;{M%2$s{x&apos;</msgSelf>
@@ -168,16 +173,15 @@
       <position>rest</position>
       <positionOther>sleep</positionOther>
       <quiet>true</quiet>
+      <russian>
+        <node>п╠п╬п╩я┌п╟я┌я▄</node>
+      </russian>
       <soap>true</soap>
       <translate>true</translate>
-      <russian>
-	<node>болтать</node>
-      </russian>
-      <hint>болтать о чем-то на весь мир</hint>
-      <help type="CommandHelp" refby="channels"></help>
     </node>
     <node type="WorldChannel">
       <extra>keep_hide ghost</extra>
+      <hint>я│я▌п╢п╟ п╠п╬пЁп╦ я│п╬п╬п╠я┴п╟я▌я┌ п╬ п╠п╬п╤п╣я│я┌п╡п╣п╫п╫я▀я┘ п╥п╟п╢п╟п╫п╦я▐я┘</hint>
       <msgOther>{Y[{cQuest Info{Y]{x &apos;{G%2$s{x&apos;</msgOther>
       <msgSelf>{Y[{cQuest Info{Y]{x &apos;{G%2$s{x&apos;</msgSelf>
       <name>qinfo</name>
@@ -186,38 +190,41 @@
       <position>sleep</position>
       <positionOther>dead</positionOther>
       <quiet>true</quiet>
-      <trustSpeak>102</trustSpeak>
       <russian>
-	<node>квестканал</node>
+        <node>п╨п╡п╣я│я┌п╨п╟п╫п╟п╩</node>
       </russian>
-      <hint>сюда боги сообщают о божественных заданиях</hint>
+      <trustSpeak>102</trustSpeak>
     </node>
     <node type="WorldChannel">
       <extra>keep_hide ghost</extra>
+      <help level="-1" refby="channels" type="CommandHelp">
+      </help>
+      <hint>п©п╬п╥п╢я─п╟п╡п╦я┌я▄ п╨п╬пЁп╬-я┌п╬ п╫п╟ п╡п╣я│я▄ п╪п╦я─</hint>
       <ignore>true</ignore>
       <isolate>true</isolate>
-      <msgOther>%1$^C1 поздравляет &apos;{M%2$s{x&apos;</msgOther>
-      <msgSelf>Ты поздравляешь &apos;{M%2$s{x&apos;</msgSelf>
+      <msgOther>%1$^C1 п©п╬п╥п╢я─п╟п╡п╩я▐п╣я┌ &apos;{M%2$s{x&apos;</msgOther>
+      <msgSelf>п╒я▀ п©п╬п╥п╢я─п╟п╡п╩я▐п╣я┬я▄ &apos;{M%2$s{x&apos;</msgSelf>
       <name>grats</name>
       <nochannel>true</nochannel>
       <off>nograts</off>
       <position>rest</position>
       <positionOther>sleep</positionOther>
       <quiet>true</quiet>
+      <russian>
+        <node>п©п╬п╥п╢я─п╟п╡п╦я┌я▄</node>
+      </russian>
       <soap>true</soap>
       <translate>true</translate>
-      <russian>
-	<node>поздравить</node>
-      </russian>
-      <hint>поздравить кого-то на весь мир</hint>
-      <help type="CommandHelp" refby="channels"></help>
     </node>
     <node type="WorldChannel">
       <extra>keep_hide ghost</extra>
+      <help level="-1" refby="channels" type="CommandHelp">
+      </help>
+      <hint>я│п©п╣я┌я▄ п©п╣я│п╫я▌ п╫п╟ п╡п╣я│я▄ п╪п╦я─</hint>
       <ignore>true</ignore>
       <isolate>true</isolate>
-      <msgOther>%1$^C1 {CП{MО{GЕ{RТ{x:&apos;{c%2$s{x&apos;</msgOther>
-      <msgSelf>Ты {CП{MО{GЕ{RШ{CЬ{x: &apos;{c%2$s{x&apos;</msgSelf>
+      <msgOther>%1$^C1 {Cп÷{Mп·{Gп∙{Rп╒{x:&apos;{c%2$s{x&apos;</msgOther>
+      <msgSelf>п╒я▀ {Cп÷{Mп·{Gп∙{Rп╗{Cп╛{x: &apos;{c%2$s{x&apos;</msgSelf>
       <name>music</name>
       <nochannel>true</nochannel>
       <nomob>true</nomob>
@@ -225,14 +232,12 @@
       <position>rest</position>
       <positionOther>sleep</positionOther>
       <quiet>true</quiet>
+      <russian>
+        <node>п©п╣я┌я▄</node>
+        <node>п╪я┐п╥п╦я├п╦я─п╬п╡п╟я┌я▄</node>
+      </russian>
       <soap>true</soap>
       <translate>true</translate>
-      <russian>
-        <node>петь</node>
-        <node>музицировать</node>
-      </russian>
-      <hint>спеть песню на весь мир</hint>
-      <help type="CommandHelp" refby="channels"></help>
     </node>
     <node type="AreaChannel">
       <deafen>true</deafen>
@@ -240,23 +245,24 @@
       <dig>true</dig>
       <extra>ghost manacles</extra>
       <garble>true</garble>
+      <help level="-1" refby="channels" type="CommandHelp">
+      </help>
+      <hint>п©я─п╬п╫п╥п╦я┌п╣п╩я▄п╫п╬ п╨я─п╦я┤п╟я┌я▄ п╫п╟ п╡я│я▌ п╟я─п╦я▌</hint>
       <ignore>true</ignore>
       <isolate>true</isolate>
-      <msgOther>%1$^C1 пронзительно крич%1$nит|ат &apos;{Y%2$s{x&apos;</msgOther>
-      <msgSelf>Ты пронзительно кричишь &apos;{Y%2$s{x&apos;</msgSelf>
-      <msgSelfNoarg>Пронзительно крикнуть что?</msgSelfNoarg>
+      <msgOther>%1$^C1 п©я─п╬п╫п╥п╦я┌п╣п╩я▄п╫п╬ п╨я─п╦я┤%1$nп╦я┌|п╟я┌ &apos;{Y%2$s{x&apos;</msgOther>
+      <msgSelf>п╒я▀ п©я─п╬п╫п╥п╦я┌п╣п╩я▄п╫п╬ п╨я─п╦я┤п╦я┬я▄ &apos;{Y%2$s{x&apos;</msgSelf>
+      <msgSelfNoarg>п÷я─п╬п╫п╥п╦я┌п╣п╩я▄п╫п╬ п╨я─п╦п╨п╫я┐я┌я▄ я┤я┌п╬?</msgSelfNoarg>
       <name>yell</name>
       <position>rest</position>
       <positionOther>sleep</positionOther>
       <quiet>true</quiet>
+      <russian>
+        <node>п╡п╬п©п╦я┌я▄</node>
+        <node>п©п╨я─п╦я┤п╟я┌я▄</node>
+      </russian>
       <soap>true</soap>
       <translate>true</translate>
-      <russian>
-	<node>вопить</node>
-	<node>пкричать</node>
-      </russian>
-      <hint>пронзительно кричать на всю арию</hint>
-      <help type="CommandHelp" refby="channels"></help>
     </node>
     <node type="AreaChannel">
       <deafen>true</deafen>
@@ -264,52 +270,52 @@
       <dig>true</dig>
       <extra>ghost manacles</extra>
       <garble>true</garble>
+      <help level="-1" refby="channels" type="CommandHelp">
+      </help>
+      <hint>п╨я─п╦п╨п╫я┐я┌я▄ п╫п╟ п╡я│я▌ п╟я─п╦я▌</hint>
       <isolate>true</isolate>
       <level>1</level>
-      <msgOther>%1$^C1 крич%1$nит|ат &apos;{w%2$s{x&apos;</msgOther>
-      <msgSelf>Ты кричишь &apos;{w%2$s{x&apos;</msgSelf>
-      <msgSelfNoarg>Крикнуть что?</msgSelfNoarg>
+      <msgOther>%1$^C1 п╨я─п╦я┤%1$nп╦я┌|п╟я┌ &apos;{w%2$s{x&apos;</msgOther>
+      <msgSelf>п╒я▀ п╨я─п╦я┤п╦я┬я▄ &apos;{w%2$s{x&apos;</msgSelf>
+      <msgSelfNoarg>п я─п╦п╨п╫я┐я┌я▄ я┤я┌п╬?</msgSelfNoarg>
       <name>shout</name>
       <position>rest</position>
       <positionOther>dead</positionOther>
+      <russian>
+        <node>п╡п╬п╥пЁп╩п╟я│</node>
+      </russian>
       <soap>true</soap>
       <translate>true</translate>
-      <russian>
-	<node>возглас</node>
-      </russian>
-      <hint>крикнуть на всю арию</hint>
-      <help type="CommandHelp" refby="channels"></help>
     </node>
     <node type="WorldChannel">
       <aliases>
         <node>appeal</node>
       </aliases>
       <extra>keep_hide ghost manacles</extra>
-      <msgNochan>Боги не желают слышать твои молитвы.</msgNochan>
-      <msgOther>{C%1$#^C1 умоляет о помощи: {W%2$s{x</msgOther>
-      <msgOtherNoarg>{C%1$#^C1 умоляет о помощи.{x</msgOtherNoarg>
-      <msgSelf>Ты умоляешь Богов о помощи!</msgSelf>
+      <help level="-1" type="CommandHelp">п╜я┌п╟ п╨п╬п╪п╟п╫п╢п╟ п╦я│п©п╬п╩я▄п╥я┐п╣я┌я│я▐ п╢п╩я▐ п©п╬я│я▀п╩п╨п╦ я│п╬п╬п╠я┴п╣п╫п╦я▐ п▒п╣я│я│п╪п╣я─я┌п╫я▀п╪, п╨п╬я┌п╬я─я▀п╣ 
+п╫п╟я┘п╬п╢я▐я┌я│я▐ п╡ п╪п╦я─п╣ п╡ п╢п╟п╫п╫я▀п╧ п╪п╬п╪п╣п╫я┌ п╡я─п╣п╪п╣п╫п╦. п∙я│п╩п╦ я┌п╣п╠п╣ п╫п╣п╬п╠я┘п╬п╢п╦п╪п╬ п©п╬пЁп╬п╡п╬я─п╦я┌я▄
+я│ п╨п╬п╫п╨я─п╣я┌п╫я▀п╪ п▒п╬пЁп╬п╪, п╡п©п╦я┬п╦ п╣пЁп╬ п╦п╪я▐ п╡ я│п╬п╬п╠я┴п╣п╫п╦п╣, я┌я▀ п╪п╬п╤п╣я┬я▄ п╢п╟п╤п╣ п©я─п╬я│я┌п╬ 
+п╡п╬п╥п╥п╡п╟я┌я▄ п╨ п╫п╣п╪я┐ п©п╬ п╦п╪п╣п╫п╦.
+
+п²п∙ п≈п⌡п·пёп÷п·п╒п═п∙п▒п⌡п╞п≥ п╜п╒п·п≥ п÷п═п≤п▓п≤п⌡п∙п⌠п≤п∙п≥! п≤п╫п╟я┤п╣ п▒п╬пЁп╦ я─п╟п╥п╬п╥п╩я▐я┌я│я▐ п╦ п©п╬п╧п╢я┐я┌ п╨п╩п╬я┤п╨п╦
+п©п╬ п╥п╟п╨п╬я┐п╩п╬я┤п╨п╟п╪...
+      </help>
+      <hint>п╡п╬п╥п╥п╡п╟я┌я▄ п╨ п╠п╬пЁп╟п╪</hint>
+      <msgNochan>п▒п╬пЁп╦ п╫п╣ п╤п╣п╩п╟я▌я┌ я│п╩я▀я┬п╟я┌я▄ я┌п╡п╬п╦ п╪п╬п╩п╦я┌п╡я▀.</msgNochan>
+      <msgOther>{C%1$#^C1 я┐п╪п╬п╩я▐п╣я┌ п╬ п©п╬п╪п╬я┴п╦: {W%2$s{x</msgOther>
+      <msgOtherNoarg>{C%1$#^C1 я┐п╪п╬п╩я▐п╣я┌ п╬ п©п╬п╪п╬я┴п╦.{x</msgOtherNoarg>
+      <msgSelf>п╒я▀ я┐п╪п╬п╩я▐п╣я┬я▄ п▒п╬пЁп╬п╡ п╬ п©п╬п╪п╬я┴п╦!</msgSelf>
       <name>pray</name>
       <nochannel>true</nochannel>
       <nomob>true</nomob>
       <off>nowiz</off>
       <position>dead</position>
       <positionOther>dead</positionOther>
-      <trustHear>102</trustHear>
       <russian>
-        <node>молиться</node>
-	<node>воззвать</node>
+        <node>п╪п╬п╩п╦я┌я▄я│я▐</node>
+        <node>п╡п╬п╥п╥п╡п╟я┌я▄</node>
       </russian>
-      <hint>воззвать к богам</hint>
-      <help type="CommandHelp">
-Эта команда используется для посылки сообщения Бессмертным, которые 
-находятся в мире в данный момент времени. Если тебе необходимо поговорить
-с конкретным Богом, впиши его имя в сообщение, ты можешь даже просто 
-воззвать к нему по имени.
-
-НЕ ЗЛОУПОТРЕБЛЯЙ ЭТОЙ ПРИВИЛЕГИЕЙ! Иначе Боги разозлятся и пойдут клочки
-по закоулочкам...
-      </help>
+      <trustHear>102</trustHear>
     </node>
     <node type="EmoteChannel">
       <aliases>
@@ -317,92 +323,94 @@
       </aliases>
       <extra>ghost nanny</extra>
       <garble>true</garble>
+      <help level="-1" type="CommandHelp">%FMT%  *%CMD%* _я│я┌я─п╬п╨п╟_
+п≤я│п©п╬п╩я▄п╥я┐п╣я┌я│я▐ п╢п╩я▐ п╡я▀я─п╟п╤п╣п╫п╦п╣ я█п╪п╬я├п╦п╧ п╦п╩п╦ п╢п╣п╧я│я┌п╡п╦п╧. п≈п╟п©я▐я┌п╟я▐ *,* - я│п╦п╫п╬п╫п╦п╪ я█я┌п╬п╧ п╨п╬п╪п╟п╫п╢я▀.
+пёп╨п╟п╥п╟п╫п╫п╟я▐ я│я┌я─п╬п╨п╟ п╬я┌п╬п╠я─п╟п╥п╦я┌я│я▐ п╡я│п╣п╪ п╬п╨я─я┐п╤п╟я▌я┴п╦п╪, п╨п╟п╨ п╢п╣п╧я│я┌п╡п╦п╣, п╡я▀п©п╬п╩п╫п╣п╫п╫п╬п╣ я┌п╡п╬п╦п╪
+п©п╣я─я│п╬п╫п╟п╤п╣п╪. 
+
+%SA% %H% [(socials,я│п╬я├п╦п╟п╩я▀)], [(mysocial,п╪п╬п╧я│п╬я├п╦п╟п╩)]
+      </help>
+      <hint>п╡я▀я─п╟п╥п╦я┌я▄ п╨п╟п╨я┐я▌-я┌п╬ я█п╪п╬я├п╦я▌</hint>
+      <log>2</log>
       <msgOther>%1$^C1 %2$s{x</msgOther>
       <msgSelf>%1$^C1 %2$s{x</msgSelf>
-      <msgSelfNoarg>Какие именно эмоции тебя обуревают?</msgSelfNoarg>
+      <msgSelfNoarg>п п╟п╨п╦п╣ п╦п╪п╣п╫п╫п╬ я█п╪п╬я├п╦п╦ я┌п╣п╠я▐ п╬п╠я┐я─п╣п╡п╟я▌я┌?</msgSelfNoarg>
       <name>emote</name>
-      <log>2</log>
       <position>rest</position>
       <positionOther>rest</positionOther>
       <russian>
-        <node>эмоция</node>
+        <node>я█п╪п╬я├п╦я▐</node>
       </russian>
-      <hint>выразить какую-то эмоцию</hint>
-      <help type="CommandHelp">
-%FMT%  *%CMD%* _строка_
-Используется для выражение эмоций или действий. Запятая *,* - синоним этой команды.
-Указанная строка отобразится всем окружающим, как действие, выполненное твоим
-персонажем. 
-
-%SA% %H% [(socials,социалы)], [(mysocial,мойсоциал)]
-      </help>
     </node>
     <node type="RaceChannel">
       <aliases>
         <node>racetalk</node>
       </aliases>
       <extra>keep_hide ghost manacles</extra>
+      <help level="-1" type="CommandHelp">п п╟п╫п╟п╩ *(rtalk,я─п╟я│пЁп╬п╡п╬я─)* п©я─п╣п╢п╫п╟п╥п╫п╟я┤п╣п╫ п╢п╩я▐ п╬п╠я┴п╣п╫п╦я▐ я│ п©я─п╣п╢я│я┌п╟п╡п╦я┌п╣п╩я▐п╪п╦ я│п╡п╬п╣п╧ я─п╟я│я▀.
+п∙пЁп╬ я│п╩я▀я┬п╟я┌ я┌п╬п╩я▄п╨п╬ п╡п╟я┬п╦ я│п╬п©п╩п╣п╪п╣п╫п╫п╦п╨п╦ п╦ п▒п╬пЁп╦.
+      </help>
+      <hint>п╬п╠я┴п╣п╫п╦п╣ я│ я│п╬п╠я─п╟я┌я▄я▐п╪п╦ п©п╬ я─п╟я│п╣</hint>
       <ignore>true</ignore>
       <isolate>true</isolate>
-      <msgOff>Ты больше не слышишь расовых разговоров.</msgOff>
-      <msgOn>Теперь ты слышишь расовые разговоры.</msgOn>
-      <msgOther>%1$^C1 говор%1$nит|ят %2$N3 &apos;{g%3$s{x&apos;</msgOther>
-      <msgSelf>Ты говоришь %2$N3 &apos;{g%3$s{x&apos;</msgSelf>
+      <msgOff>п╒я▀ п╠п╬п╩я▄я┬п╣ п╫п╣ я│п╩я▀я┬п╦я┬я▄ я─п╟я│п╬п╡я▀я┘ я─п╟п╥пЁп╬п╡п╬я─п╬п╡.</msgOff>
+      <msgOn>п╒п╣п©п╣я─я▄ я┌я▀ я│п╩я▀я┬п╦я┬я▄ я─п╟я│п╬п╡я▀п╣ я─п╟п╥пЁп╬п╡п╬я─я▀.</msgOn>
+      <msgOther>%1$^C1 пЁп╬п╡п╬я─%1$nп╦я┌|я▐я┌ %2$N3 &apos;{g%3$s{x&apos;</msgOther>
+      <msgSelf>п╒я▀ пЁп╬п╡п╬я─п╦я┬я▄ %2$N3 &apos;{g%3$s{x&apos;</msgSelf>
       <name>rtalk</name>
       <nochannel>true</nochannel>
       <off>noracetalk</off>
       <position>rest</position>
       <positionOther>dead</positionOther>
       <quiet>true</quiet>
+      <russian>
+        <node>я─п╟я│пЁп╬п╡п╬я─п╦я┌я▄</node>
+        <node>я─пЁп╬п╡п╬я─п╦я┌я▄</node>
+      </russian>
       <soap>true</soap>
       <translate>true</translate>
-      <russian>
-        <node>расговорить</node>
-        <node>рговорить</node>
-      </russian>
-      <hint>общение с собратьями по расе</hint>
-      <help type="CommandHelp">
-Канал *(rtalk,расговор)* предназначен для общения с представителями своей расы.
-Его слышат только ваши соплеменники и Боги.
-      </help>
     </node>
     <node type="TellChannel">
       <deafen>true</deafen>
-      <extra>important keep_hide ghost manacles</extra>
+      <extra>keep_hide ghost manacles important</extra>
+      <help level="-1" refby="channels" type="CommandHelp">
+      </help>
+      <hint>я│п╨п╟п╥п╟я┌я▄ я─п╣п©п╩п╦п╨я┐ п╩п╦я┤п╫п╬ п©п╣я─я│п╬п╫п╟п╤я┐</hint>
       <ignore>true</ignore>
-      <msgAuto>Ты говоришь себе &apos;{G%2$s{x&apos;</msgAuto>
-      <msgChar>Ты говоришь %3$C3 &apos;{G%2$s{x&apos;</msgChar>
-      <msgNoArg>Говорить кому и что?</msgNoArg>
-      <msgNoName>Говорить кому и что?</msgNoName>
-      <msgVict>%1$^C1 говор%1$nит|ят тебе &apos;{G%2$s{x&apos;</msgVict>
+      <msgAuto>п╒я▀ пЁп╬п╡п╬я─п╦я┬я▄ я│п╣п╠п╣ &apos;{G%2$s{x&apos;</msgAuto>
+      <msgChar>п╒я▀ пЁп╬п╡п╬я─п╦я┬я▄ %3$C3 &apos;{G%2$s{x&apos;</msgChar>
+      <msgNoArg>п⌠п╬п╡п╬я─п╦я┌я▄ п╨п╬п╪я┐ п╦ я┤я┌п╬?</msgNoArg>
+      <msgNoName>п⌠п╬п╡п╬я─п╦я┌я▄ п╨п╬п╪я┐ п╦ я┤я┌п╬?</msgNoName>
+      <msgVict>%1$^C1 пЁп╬п╡п╬я─%1$nп╦я┌|я▐я┌ я┌п╣п╠п╣ &apos;{G%2$s{x&apos;</msgVict>
       <name>tell</name>
       <position>rest</position>
       <positionOther>rest</positionOther>
+      <russian>
+        <node>пЁп╬п╡п╬я─п╦я┌я▄</node>
+      </russian>
       <storeAFK>true</storeAFK>
       <storeDisco>true</storeDisco>
       <storeFight>true</storeFight>
-      <russian>
-        <node>говорить</node>
-      </russian>
-      <hint>сказать реплику лично персонажу</hint>
-      <help type="CommandHelp" refby="channels"></help>
     </node>
     <node type="PageChannel">
       <aliases>
         <node>orb</node>
       </aliases>
       <extra>keep_hide ghost</extra>
+      <help level="-1" refby="channels" type="CommandHelp">
+      </help>
+      <hint>п╬я┌п©я─п╟п╡п╦я┌я▄ я│п╬п╬п╠я┴п╣п╫п╦п╣ я┤п╣я─п╣п╥ я┘я─я┐я│я┌п╟п╩я▄п╫я▀п╧ я┬п╟я─</hint>
       <isolate>true</isolate>
-      <msgAuto>Существо из Хрустального Шара вздыхает, думая о том, как тебе одиноко.</msgAuto>
-      <msgChar>Твое сообщение отправлено.</msgChar>
-      <msgNoArg>Послать какое сообщение?</msgNoArg>
-      <msgNoName>Послать сообщение кому?</msgNoName>
-      <msgNochan>Существо из Хрустального Шара отказывается передавать твое сообщение</msgNochan>
-      <msgOther>{*{CТихий голос из %4$O2: {WСообщение от %1$C1 для всех:
+      <msgAuto>п║я┐я┴п╣я│я┌п╡п╬ п╦п╥ п╔я─я┐я│я┌п╟п╩я▄п╫п╬пЁп╬ п╗п╟я─п╟ п╡п╥п╢я▀я┘п╟п╣я┌, п╢я┐п╪п╟я▐ п╬ я┌п╬п╪, п╨п╟п╨ я┌п╣п╠п╣ п╬п╢п╦п╫п╬п╨п╬.</msgAuto>
+      <msgChar>п╒п╡п╬п╣ я│п╬п╬п╠я┴п╣п╫п╦п╣ п╬я┌п©я─п╟п╡п╩п╣п╫п╬.</msgChar>
+      <msgNoArg>п÷п╬я│п╩п╟я┌я▄ п╨п╟п╨п╬п╣ я│п╬п╬п╠я┴п╣п╫п╦п╣?</msgNoArg>
+      <msgNoName>п÷п╬я│п╩п╟я┌я▄ я│п╬п╬п╠я┴п╣п╫п╦п╣ п╨п╬п╪я┐?</msgNoName>
+      <msgNochan>п║я┐я┴п╣я│я┌п╡п╬ п╦п╥ п╔я─я┐я│я┌п╟п╩я▄п╫п╬пЁп╬ п╗п╟я─п╟ п╬я┌п╨п╟п╥я▀п╡п╟п╣я┌я│я▐ п©п╣я─п╣п╢п╟п╡п╟я┌я▄ я┌п╡п╬п╣ я│п╬п╬п╠я┴п╣п╫п╦п╣</msgNochan>
+      <msgOther>{*{Cп╒п╦я┘п╦п╧ пЁп╬п╩п╬я│ п╦п╥ %4$O2: {Wп║п╬п╬п╠я┴п╣п╫п╦п╣ п╬я┌ %1$C1 п╢п╩я▐ п╡я│п╣я┘:
 [%2$s{W]{x</msgOther>
-      <msgSelf>Твое сообщение отправлено всем, имеющим хрустальный шар.</msgSelf>
-      <msgSelfNoarg>Какое сообщение ты хочешь отправить?</msgSelfNoarg>
-      <msgVict>{CТихий голос из %4$O2: {*{WСообщение от %1$C1 для тебя:
+      <msgSelf>п╒п╡п╬п╣ я│п╬п╬п╠я┴п╣п╫п╦п╣ п╬я┌п©я─п╟п╡п╩п╣п╫п╬ п╡я│п╣п╪, п╦п╪п╣я▌я┴п╦п╪ я┘я─я┐я│я┌п╟п╩я▄п╫я▀п╧ я┬п╟я─.</msgSelf>
+      <msgSelfNoarg>п п╟п╨п╬п╣ я│п╬п╬п╠я┴п╣п╫п╦п╣ я┌я▀ я┘п╬я┤п╣я┬я▄ п╬я┌п©я─п╟п╡п╦я┌я▄?</msgSelfNoarg>
+      <msgVict>{Cп╒п╦я┘п╦п╧ пЁп╬п╩п╬я│ п╦п╥ %4$O2: {*{Wп║п╬п╬п╠я┴п╣п╫п╦п╣ п╬я┌ %1$C1 п╢п╩я▐ я┌п╣п╠я▐:
 [%2$s{W]{x</msgVict>
       <name>page</name>
       <nochannel>true</nochannel>
@@ -410,37 +418,43 @@
       <position>rest</position>
       <positionOther>sleep</positionOther>
       <quiet>true</quiet>
-      <soap>true</soap>
       <russian>
-        <node>шар</node>
+        <node>я┬п╟я─</node>
       </russian>
-      <hint>отправить сообщение через хрустальный шар</hint>
-      <help type="CommandHelp" refby="channels"></help>
+      <soap>true</soap>
     </node>
     <node type="ReplyChannel">
       <deafen>true</deafen>
       <extra>keep_hide ghost manacles</extra>
+      <help level="-1" refby="channels" type="CommandHelp">
+      </help>
+      <hint>п©п╬я│п╩п╟я┌я▄ я─п╣п©п╩п╦п╨я┐ п╡ п╬я┌п╡п╣я┌ п╫п╟ я┤п╣п╧-я┌п╬ tell</hint>
       <ignore>true</ignore>
-      <msgAuto>Ты говоришь себе &apos;{G%2$s{x&apos;</msgAuto>
-      <msgChar>Ты говоришь %3$C3 &apos;{G%2$s{x&apos;</msgChar>
-      <msgNoArg>Ответить что?</msgNoArg>
-      <msgVict>%1$^C1 говор%1$nит|ят тебе &apos;{G%2$s{x&apos;</msgVict>
+      <msgAuto>п╒я▀ пЁп╬п╡п╬я─п╦я┬я▄ я│п╣п╠п╣ &apos;{G%2$s{x&apos;</msgAuto>
+      <msgChar>п╒я▀ пЁп╬п╡п╬я─п╦я┬я▄ %3$C3 &apos;{G%2$s{x&apos;</msgChar>
+      <msgNoArg>п·я┌п╡п╣я┌п╦я┌я▄ я┤я┌п╬?</msgNoArg>
+      <msgVict>%1$^C1 пЁп╬п╡п╬я─%1$nп╦я┌|я▐я┌ я┌п╣п╠п╣ &apos;{G%2$s{x&apos;</msgVict>
       <name>reply</name>
       <position>rest</position>
       <positionOther>rest</positionOther>
+      <russian>
+        <node>п╬я┌п╡п╣я┌п╦я┌я▄</node>
+        <node>п╡п╬я┌п╡п╣я┌</node>
+        <node>я─п╣п©п╩п╦п╨п╟</node>
+      </russian>
       <storeAFK>true</storeAFK>
       <storeDisco>true</storeDisco>
       <storeFight>true</storeFight>
-      <russian>
-        <node>ответить</node>
-        <node>вответ</node>
-        <node>реплика</node>
-      </russian>
-      <hint>послать реплику в ответ на чей-то tell</hint>
-      <help type="CommandHelp" refby="channels"></help>
     </node>
     <node type="WorldChannel">
       <extra>keep_hide manacles</extra>
+      <help level="-1" type="CommandHelp">п▒п╬п╩я▄я┬п╦п╫я│я┌п╡п╬ п╨п╟п╫п╟п╩п╬п╡ п©я─п╣п╢п╫п╟п╥п╫п╟я┤п╣п╫п╬ я┌п╬п╩я▄п╨п╬ п╢п╩я▐ я─п╟п╥пЁп╬п╡п╬я─п╬п╡ п╬я┌ п╦п╪п╣п╫п╦
+п©п╣я─я│п╬п╫п╟п╤п╟. п∙я│п╩п╦ п╫п╣п╬п╠я┘п╬п╢п╦п╪п╬ я│п╨п╟п╥п╟я┌я▄ я┤я┌п╬-я┌п╬ п╡п╫п╣ я│п╡п╬п╣п╧ я─п╬п╩п╦ п╦п╩п╦ п╬п╠я│я┐п╢п╦я┌я▄
+я─п╩ (real life), п╦я│п©п╬п╩я▄п╥я┐п╧я┌п╣ п╨п╟п╫п╟п╩ *(ooc,я┌я─п╣п©)*. п≤п╪п╣п╫п╫п╬ п╥п╢п╣я│я▄ п╫п╟п╢п╬ п╬п╠я│я┐п╤п╢п╟я┌я▄
+п╩п╟пЁп╦, п©п╦п╫пЁп╦, п©я─п╬п╠п╩п╣п╪я▀ я│п╬ я│п╡я▐п╥я▄я▌ п╦ п©я─п╬я┤п╦п╣ п╫п╣ п╬я┌п╫п╬я│я▐я┴п╦п╣я│я▐ п╨ п╪п╦я─я┐ п╡п╣я┴п╦.
+п≤п╥п╠п╣пЁп╟п╧я┌п╣ п©п╬я│я▀п╩п╟я┌я▄ я│п╬п╬п╠я┴п╣п╫п╦я▐ п╡ п╫п╣п©я─п╟п╡п╦п╩я▄п╫я▀п╧ п╨п╟п╫п╟п╩.
+       </help>
+      <hint>я┌я─п╣п© п╡п╫п╣ я│п╡п╬п╣п╧ я─п╬п╩п╦, п╬я┌ п╦п╪п╣п╫п╦ п╦пЁя─п╬п╨п╟</hint>
       <ignore>true</ignore>
       <isolate>true</isolate>
       <msgOther>{Y[{Rooc{Y]{W %1$#^C1{x : &apos;{C%2$s{x&apos;</msgOther>
@@ -454,69 +468,60 @@
       <position>dead</position>
       <positionOther>dead</positionOther>
       <quiet>true</quiet>
-      <soap>true</soap>
       <russian>
-        <node>трепаться</node>
-        <node>внероли</node>
-        <node>ооц</node>
-        <node>оос</node>
+        <node>я┌я─п╣п©п╟я┌я▄я│я▐</node>
+        <node>п╡п╫п╣я─п╬п╩п╦</node>
+        <node>п╬п╬я├</node>
+        <node>п╬п╬я│</node>
       </russian>
-      <hint>треп вне своей роли, от имени игрока</hint>
-      <help type="CommandHelp">
-Большинство каналов предназначено только для разговоров от имени
-персонажа. Если необходимо сказать что-то вне своей роли или обсудить
-рл (real life), используйте канал *(ooc,треп)*. Именно здесь надо обсуждать
-лаги, пинги, проблемы со связью и прочие не относящиеся к миру вещи.
-Избегайте посылать сообщения в неправильный канал.
-       </help>
+      <soap>true</soap>
     </node>
   </channels>
   <extra>keep_hide ghost afk</extra>
+  <help keyword="communication п╬п╠я┴п╣п╫п╦п╣" level="-1" ref="gossip grats ic music page reply say shout tell yell" type="CommandHelp">п п╬п╪п╟п╫п╢п╟ *(channels,п╨п╟п╫п╟п╩я▀)* п©п╬п╨п╟п╥я▀п╡п╟п╣я┌ я│п©п╦я│п╬п╨ п╡я│п╣я┘ п╢п╬я│я┌я┐п©п╫я▀я┘ п╨п╟п╫п╟п╩п╬п╡ п╦ п╦я┘ я│п╬я│я┌п╬я▐п╫п╦п╣
+(п▓п п⌡/п▓п╚п п⌡). п╒п╟п╨п╤п╣ п╬я┌п╬п╠я─п╟п╤п╟п╣я┌я│я▐ я─п╣п╤п╦п╪ пЁп╩я┐я┘п╬я┌я▀ (deaf) п╦ я┌п╦я┬п╦п╫я▀ (quiet).
+
+п═п╟п╥п╫п╬п╡п╦п╢п╫п╬я│я┌п╦ п╨п╟п╫п╟п╩п╬п╡:
+=п⌠п╩п╬п╠п╟п╩я▄п╫я▀п╣=: я─п╟п╥пЁп╬п╡п╬я─я▀ п╡ я┌п╟п╨п╦я┘ п╨п╟п╫п╟п╩п╟я┘ я│п╩я▀я┬п╫я▀ п╫п╟ п╡п╣я│я▄ п╪п╦я─.
+*(gossip   ,п╬я─п╟я┌я▄    )*- я┌п╡п╬п╧ пЁя─п╬п╪п╨п╦п╧ п╡п╬п©п╩я▄ я┐я│п╩я▀я┬п╟я┌ п╡я│п╣ п╫п╣пЁп╩я┐я┘п╦п╣ п©п╣я─я│п╬п╫п╟п╤п╦.
+*(ic       ,п╠п╬п╩я┌п╟я┌я▄  )*- я│п╟п╪я▀п╧ п©п╬п©я┐п╩я▐я─п╫я▀п╧ п╨п╟п╫п╟п╩ п╢п╩я▐ я─п╟п╥п╫п╬п╧ п╠п╬п╩я┌п╬п╡п╫п╦, я┌п╬я┤п╨п╟ *.* - п╣пЁп╬ я│п╦п╫п╬п╫п╦п╪
+*(music    ,п©п╣я┌я▄     )*- п╦я│п©п╬п╩я▄п╥я┐п╧ п╣пЁп╬, п╣я│п╩п╦ п╢я┐я┬п╟ п©п╬п╣я┌.
+*(grats    ,п©п╬п╥п╢я─п╟п╡  )*- п╡ я█я┌п╬п╪ п╨п╟п╫п╟п╩п╣ п╪п╬п╤п╫п╬ п©п╬п╥п╢я─п╟п╡п╦я┌я▄ п╨п╬пЁп╬-я┌п╬
+*(orb all  ,я┬п╟я─ п╡я│п╣  )*- я│я┐я┴п╣я│я┌п╡п╬ п╦п╥ я┌п╡п╬п╣пЁп╬ я┘я─я┐я│я┌п╟п╩я▄п╫п╬пЁп╬ я┬п╟я─п╟ п©п╣я─п╣п╢п╟я│я┌ я│п╬п╬п╠я┴п╣п╫п╦я▐
+           п╡ п╢я─я┐пЁп╦п╣ я┘я─я┐я│я┌п╟п╩я▄п╫я▀п╣ я┬п╟я─я▀ п©п╬ п╡я│п╣п╪я┐ п╪п╦я─я┐ 
+*(cb       ,п╨п╨       )*- п╡ я█я┌п╬п╪ п╨п╟п╫п╟п╩п╣ п╬п╠я┴п╟я▌я┌я│я▐ я│ я│п╬п╨п╩п╟п╫п╬п╡п╦п╨п╟п╪п╦ (%H% [(cb,п╨п╨)])
+*(rtalk    ,я─п╟я│пЁп╬п╡п╬я─ )*- п╨п╟п╫п╟п╩ п╢п╩я▐ п╬п╠я┴п╣п╫п╦я▐ я│ я│п╬п©п╩п╣п╪п╣п╫п╫п╦п╨п╟п╪п╦ (%H% [(rtalk,я─п╟я│пЁп╬п╡п╬я─)])
+*(gtell    ,пЁпЁп╬п╡п╬я─п╦я┌я▄)*- п╬п╠я┴п╣п╫п╦п╣ я│п╬ я│п╡п╬п╣п╧ пЁя─я┐п©п©п╬п╧ (%H% [(gtell,пЁпЁп╬п╡п╬я─п╦я┌я▄)])
+*(pray     ,п╡п╬п╥п╥п╡п╟я┌я▄ )*- п╡п╬п╥п╥п╡п╟я┌я▄ я│ п╠п╬пЁп╟п╪ я│ п©я─п╬я│я▄п╠п╬п╧ п╬ п©п╬п╪п╬я┴п╦ (%H% [(pray,п╡п╬п╥п╥п╡п╟я┌я▄)])
+*(auction  ,п╟я┐п╨я├п╦п╬п╫  )*- я│п╬п╬п╠я┴п╣п╫п╦я▐ п╟я┐п╨я├п╦п╬п╫п╟, я─п╣п╨п╩п╟п╪п╟ я│п╡п╬п╣пЁп╬ я┌п╬п╡п╟я─п╟ (%H% [(auction,п╟я┐п╨я├п╦п╬п╫)])
+*(ooc      ,я┌я─п╣п©     )*- п╨п╟п╫п╟п╩ п╢п╩я▐ п╡п╫п╣я─п╬п╩п╣п╡п╬пЁп╬ п╬п╠я┴п╣п╫п╦я▐ (%H% [(ooc,я┌я─п╣п©)])
+
+=п░я─п╦п╧п╫я▀п╣=: п╡п╬п©п╩п╦ я│п╩я▀я┬п╫я▀ п╡я│п╣п╪ п╡ п©я─п╣п╢п╣п╩п╟я┘ п╬п╢п╫п╬п╧ п╟я─п╦п╦.
+*(yell     ,п╡п╬п©п╦я┌я▄   )*- п©я─п╬п╫п╥п╦я┌п╣п╩я▄п╫я▀п╧ п╨я─п╦п╨ п╫п╟ п╡я│я▌ п╟я─п╦я▌
+*(shout    ,п╡п╬п╥пЁп╩п╟я│  )*- я┌п╬п╤п╣ п╨я─п╦п╨, п╫п╬ я│п╩я▀я┬п╫я▀п╧ п╢п╟п╤п╣ п╡ я─п╣п╤п╦п╪п╣ п©п╬п╩п╫п╬п╧ я┌п╦я┬п╦п╫я▀ (quiet)
+
+=п÷я─п╦п╡п╟я┌п╫я▀п╣=: п╦я│п©п╬п╩я▄п╥я┐я▌я┌я│я▐ п╢п╩я▐ п╬п╠я┴п╣п╫п╦я▐ п╪п╣п╤п╢я┐ п╢п╡я┐п╪я▐ п©п╣я─я│п╬п╫п╟п╤п╟п╪п╦.
+*(tell,пЁп╬п╡п╬я─п╦я┌я▄)* _п©п╣я─я│п╬п╫п╟п╤_ _я─п╣п©п╩п╦п╨п╟_ 
+         - я│п╨п╟п╥п╟я┌я▄ я┤я┌п╬-я┌п╬ п╨п╬п╫п╨я─п╣я┌п╫п╬п╪я┐ п©п╣я─я│п╬п╫п╟п╤я┐, п╣я│п╩п╦ п╬п╫, п╨п╬п╫п╣я┤п╫п╬, п╫п╣ я│п©п╦я┌.
+*(reply    ,п╡п╬я┌п╡п╣я┌   )*- п©п╬я│я▀п╩п╟п╣я┌ я│п╬п╬п╠я┴п╣п╫п╦п╣ п©п╬я│п╩п╣п╢п╫п╣п╪я┐, п╨я┌п╬ пЁп╬п╡п╬я─п╦п╩ я┌п╣п╠п╣ я┤я┌п╬-я┌п╬ п©я─п╦п╡п╟я┌п╬п╪;
+           я┌п╟п╨ п╪п╬п╤п╫п╬ п╬я┌п╡п╣я┤п╟я┌я▄ п╫п╣п╡п╦п╢п╦п╪я▀п╪ я│п╬п╠п╣я│п╣п╢п╫п╦п╨п╟п╪ п╦ п╠п╬пЁп╟п╪.
+*(orb,я┬п╟я─)* _п©п╣я─я│п╬п╫п╟п╤_ _я─п╣п©п╩п╦п╨п╟_ 
+         - я│я┐я┴п╣я│я┌п╡п╬ п╦п╥ я┌п╡п╬п╣пЁп╬ я┘я─я┐я│я┌п╟п╩я▄п╫п╬пЁп╬ я┬п╟я─п╟ п©п╣я─п╣п╢п╟я│я┌ п╩п╦я┤п╫п╬п╣ я│п╬п╬п╠я┴п╣п╫п╦п╣
+	   я┌п╟п╨п╬п╪я┐ п╤п╣ я│я┐я┴п╣я│я┌п╡я┐ п╡ я┬п╟я─п╣ п╟п╢я─п╣я│п╟я┌п╟, п╣я│п╩п╦ п╬п╫ я┐ п╫п╣пЁп╬, п╨п╬п╫п╣я┤п╫п╬ п╤п╣, п╣я│я┌я▄.
+*(mtalk    ,пЁя│п╣п╪я▄п╣   )*- п╨п╟п╫п╟п╩ п╬п╠я┴п╣п╫п╦я▐ я│ я│я┐п©я─я┐пЁп╬п╧ (%H% [(mtalk,пЁя│п╣п╪я▄п╣)])
+
+=п⌡п╬п╨п╟п╩я▄п╫я▀п╣=: я│п╬п╬п╠я┴п╣п╫п╦я▐ п╡п╦п╢п╫я▀ я┌п╬п╩я▄п╨п╬ я┌п╣п╪, п╨я┌п╬ я─я▐п╢п╬п╪.
+*(say      ,я│п╨п╟п╥п╟я┌я▄  )*- п©я─п╬п╦п╥п╫п╣я│я┌п╦ я└я─п╟п╥я┐ п╡я│п╩я┐я┘, п╣п╣ я┐п╡п╦п╢я▐я┌ п╡я│п╣, п╨я┌п╬ п╫п╟я┘п╬п╢п╦я┌я│я▐ я─я▐п╢п╬п╪ я│ я┌п╬п╠п╬п╧.
+           п╬п╢п╦п╫п╟я─п╫п╟я▐ п╨п╟п╡я▀я┤п╨п╟ *&apos;* - я│п╦п╫п╬п╫п╦п╪ п╢п╩я▐ say
+*(emote    ,я█п╪п╬я├п╦я▐   )*- п╡я▀я─п╟п╥п╦я┌я▄ я█п╪п╬я├п╦я▌ п╦п╩п╦ п╢п╣п╧я│я┌п╡п╦п╣ (%H% [(emote,я█п╪п╬я├п╦я▐)])
+
+п▓п╬ п╡я─п╣п╪я▐ п╬п╠я┴п╣п╫п╦я▐ п©я─п╦п╢п╣я─п╤п╦п╡п╟п╧я┌п╣я│я▄ п©я─п╟п╡п╦п╩ п©п╬п╡п╣п╢п╣п╫п╦я▐ п╡ п╫п╟я┬п╣п╪ п╪п╦я─п╣ (*(rules,п©я─п╟п╡п╦п╩п╟)*). 
+%SA% %H% [(deaf,пЁп╩я┐я┘п╬п╧)], [(quiet,я┌п╦я┬п╦п╫п╟)], [(twit,п╤п╟п╠п╟)], [(socials,я│п╬я├п╦п╟п╩я▀)], [(mysocial,п╪п╬п╧я│п╬я├п╦п╟п╩)]
+  </help>
+  <hint>я│п©п╦я│п╬п╨ п╦ я│п╬я│я┌п╬я▐п╫п╦п╣ п╡я│п╣я┘ п╨п╟п╫п╟п╩п╬п╡</hint>
   <name>channels</name>
   <position>dead</position>
   <russian>
-    <node>каналы</node>
+    <node>п╨п╟п╫п╟п╩я▀</node>
   </russian>
-  <hint>список и состояние всех каналов</hint>
- <help type="CommandHelp"  keyword="communication общение" ref="gossip ic music page grats yell shout tell reply say">
-Команда *(channels,каналы)* показывает список всех доступных каналов и их состояние
-(ВКЛ/ВЫКЛ). Также отображается режим глухоты (deaf) и тишины (quiet).
-
-Разновидности каналов:
-=Глобальные=: разговоры в таких каналах слышны на весь мир.
-*(gossip   ,орать    )*- твой громкий вопль услышат все неглухие персонажи.
-*(ic       ,болтать  )*- самый популярный канал для разной болтовни, точка *.* - его синоним
-*(music    ,петь     )*- используй его, если душа поет.
-*(grats    ,поздрав  )*- в этом канале можно поздравить кого-то
-*(orb all  ,шар все  )*- существо из твоего хрустального шара передаст сообщения
-           в другие хрустальные шары по всему миру 
-*(cb       ,кк       )*- в этом канале общаются с соклановиками (%H% [(cb,кк)])
-*(rtalk    ,расговор )*- канал для общения с соплеменниками (%H% [(rtalk,расговор)])
-*(gtell    ,гговорить)*- общение со своей группой (%H% [(gtell,гговорить)])
-*(pray     ,воззвать )*- воззвать с богам с просьбой о помощи (%H% [(pray,воззвать)])
-*(auction  ,аукцион  )*- сообщения аукциона, реклама своего товара (%H% [(auction,аукцион)])
-*(ooc      ,треп     )*- канал для внеролевого общения (%H% [(ooc,треп)])
-
-=Арийные=: вопли слышны всем в пределах одной арии.
-*(yell     ,вопить   )*- пронзительный крик на всю арию
-*(shout    ,возглас  )*- тоже крик, но слышный даже в режиме полной тишины (quiet)
-
-=Приватные=: используются для общения между двумя персонажами.
-*(tell,говорить)* _персонаж_ _реплика_ 
-         - сказать что-то конкретному персонажу, если он, конечно, не спит.
-*(reply    ,вответ   )*- посылает сообщение последнему, кто говорил тебе что-то приватом;
-           так можно отвечать невидимым собеседникам и богам.
-*(orb,шар)* _персонаж_ _реплика_ 
-         - существо из твоего хрустального шара передаст личное сообщение
-	   такому же существу в шаре адресата, если он у него, конечно же, есть.
-*(mtalk    ,гсемье   )*- канал общения с супругой (%H% [(mtalk,гсемье)])
-
-=Локальные=: сообщения видны только тем, кто рядом.
-*(say      ,сказать  )*- произнести фразу вслух, ее увидят все, кто находится рядом с тобой.
-           одинарная кавычка *&apos;* - синоним для say
-*(emote    ,эмоция   )*- выразить эмоцию или действие (%H% [(emote,эмоция)])
-
-Во время общения придерживайтесь правил поведения в нашем мире (*(rules,правила)*). 
-%SA% %H% [(deaf,глухой)], [(quiet,тишина)], [(twit,жаба)], [(socials,социалы)], [(mysocial,мойсоциал)]
-  </help>
 </Command>

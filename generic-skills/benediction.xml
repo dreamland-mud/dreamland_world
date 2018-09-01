@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
     <cancelled>true</cancelled>
     <dispelled>true</dispelled>
-    <wearoff>Священная аура вокруг тебя исчезает.</wearoff>
-    <wearoffDispel>Священная аура вокруг %1$C2 исчезает.</wearoffDispel>
+    <wearoff>п║п╡я▐я┴п╣п╫п╫п╟я▐ п╟я┐я─п╟ п╡п╬п╨я─я┐пЁ я┌п╣п╠я▐ п╦я│я┤п╣п╥п╟п╣я┌.</wearoff>
+    <wearoffDispel>п║п╡я▐я┴п╣п╫п╫п╟я▐ п╟я┐я─п╟ п╡п╬п╨я─я┐пЁ %1$C2 п╦я│я┤п╣п╥п╟п╣я┌.</wearoffDispel>
   </affect>
   <beats>24</beats>
   <classes>
@@ -24,11 +24,12 @@
       <weight>40</weight>
     </node>
   </classes>
+  <dammsg></dammsg>
   <group>benedictions</group>
-  <help type="SkillHelp">Паладин может наслать божественное проклятие на своего противника (&apos;{yanathema{x&apos;),
-это плохо отразится на всех умениях проклятого и на силе его заклинаний.
-С другой стороны, его самого и собратьев по оружию боги могут благословить (&apos;{ybenediction{x&apos;),
-улучшая точность удара и защиту от заклинаний.
+  <help level="-1" type="SkillHelp">п÷п╟п╩п╟п╢п╦п╫ п╪п╬п╤п╣я┌ п╫п╟я│п╩п╟я┌я▄ п╠п╬п╤п╣я│я┌п╡п╣п╫п╫п╬п╣ п©я─п╬п╨п╩я▐я┌п╦п╣ п╫п╟ я│п╡п╬п╣пЁп╬ п©я─п╬я┌п╦п╡п╫п╦п╨п╟ (&apos;{yanathema{x&apos;),
+я█я┌п╬ п©п╩п╬я┘п╬ п╬я┌я─п╟п╥п╦я┌я│я▐ п╫п╟ п╡я│п╣я┘ я┐п╪п╣п╫п╦я▐я┘ п©я─п╬п╨п╩я▐я┌п╬пЁп╬ п╦ п╫п╟ я│п╦п╩п╣ п╣пЁп╬ п╥п╟п╨п╩п╦п╫п╟п╫п╦п╧.
+п║ п╢я─я┐пЁп╬п╧ я│я┌п╬я─п╬п╫я▀, п╣пЁп╬ я│п╟п╪п╬пЁп╬ п╦ я│п╬п╠я─п╟я┌я▄п╣п╡ п©п╬ п╬я─я┐п╤п╦я▌ п╠п╬пЁп╦ п╪п╬пЁя┐я┌ п╠п╩п╟пЁп╬я│п╩п╬п╡п╦я┌я▄ (&apos;{ybenediction{x&apos;),
+я┐п╩я┐я┤я┬п╟я▐ я┌п╬я┤п╫п╬я│я┌я▄ я┐п╢п╟я─п╟ п╦ п╥п╟я┴п╦я┌я┐ п╬я┌ п╥п╟п╨п╩п╦п╫п╟п╫п╦п╧.
   </help>
   <mana>25</mana>
   <mob>
@@ -36,7 +37,7 @@
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>благость</nameRus>
+  <nameRus>п╠п╩п╟пЁп╬я│я┌я▄</nameRus>
   <spell type="SPELL(Benediction)">
     <casted>true</casted>
     <position>stand</position>

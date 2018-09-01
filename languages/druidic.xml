@@ -1,25 +1,6 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Language>
-  <nameRus>друидическ|ий|ого|ому|ий|им|ом</nameRus>
-  <nameRusNoCase>друидический</nameRusNoCase>
-  <description type="CommandHelp">{WDruidic{x ({Wдруидический{x) - старинное тайное наречие друидов. 
-Его секреты тщательно охраняют. Это средство, с помощью которого один друид
-безошибочно узнает другого. Тайные слова на этом языке помогают вызывать духов
-животных и изготавливать различные зелья и приманки.
-
-%SA% %H% [(ancient languages,древние языки)], {W{lRумение{lEslook{x {lRдруидический{lEdruidic{x.
-</description>
-    
-  <hint>изречь на языке друидов</hint>    
   <beats>12</beats>
-  <minAlign>-300</minAlign>
-  <maxAlign>300</maxAlign>
-  <races>
-    <node name="other">
-      <level>102</level>
-      <maximum>0</maximum>
-    </node>
-  </races>
   <classes>
     <node name="druid">
       <level>10</level>
@@ -30,10 +11,26 @@
       <maximum>100</maximum>
     </node>
   </classes>
-  
+  <description level="-1" type="CommandHelp">{WDruidic{x ({Wп╢я─я┐п╦п╢п╦я┤п╣я│п╨п╦п╧{x) - я│я┌п╟я─п╦п╫п╫п╬п╣ я┌п╟п╧п╫п╬п╣ п╫п╟я─п╣я┤п╦п╣ п╢я─я┐п╦п╢п╬п╡. 
+п∙пЁп╬ я│п╣п╨я─п╣я┌я▀ я┌я┴п╟я┌п╣п╩я▄п╫п╬ п╬я┘я─п╟п╫я▐я▌я┌. п╜я┌п╬ я│я─п╣п╢я│я┌п╡п╬, я│ п©п╬п╪п╬я┴я▄я▌ п╨п╬я┌п╬я─п╬пЁп╬ п╬п╢п╦п╫ п╢я─я┐п╦п╢
+п╠п╣п╥п╬я┬п╦п╠п╬я┤п╫п╬ я┐п╥п╫п╟п╣я┌ п╢я─я┐пЁп╬пЁп╬. п╒п╟п╧п╫я▀п╣ я│п╩п╬п╡п╟ п╫п╟ я█я┌п╬п╪ я▐п╥я▀п╨п╣ п©п╬п╪п╬пЁп╟я▌я┌ п╡я▀п╥я▀п╡п╟я┌я▄ п╢я┐я┘п╬п╡
+п╤п╦п╡п╬я┌п╫я▀я┘ п╦ п╦п╥пЁп╬я┌п╟п╡п╩п╦п╡п╟я┌я▄ я─п╟п╥п╩п╦я┤п╫я▀п╣ п╥п╣п╩я▄я▐ п╦ п©я─п╦п╪п╟п╫п╨п╦.
+
+%SA% %H% [(ancient languages,п╢я─п╣п╡п╫п╦п╣ я▐п╥я▀п╨п╦)], {W{lRя┐п╪п╣п╫п╦п╣{lEslook{x {lRп╢я─я┐п╦п╢п╦я┤п╣я│п╨п╦п╧{lEdruidic{x.
+</description>
   <effects>
   </effects>
-
+  <hint>п╦п╥я─п╣я┤я▄ п╫п╟ я▐п╥я▀п╨п╣ п╢я─я┐п╦п╢п╬п╡</hint>
+  <maxAlign>300</maxAlign>
+  <minAlign>-300</minAlign>
+  <nameRus>п╢я─я┐п╦п╢п╦я┤п╣я│п╨|п╦п╧|п╬пЁп╬|п╬п╪я┐|п╦п╧|п╦п╪|п╬п╪</nameRus>
+  <nameRusNoCase>п╢я─я┐п╦п╢п╦я┤п╣я│п╨п╦п╧</nameRusNoCase>
+  <races>
+    <node name="other">
+      <level>102</level>
+      <maximum>0</maximum>
+    </node>
+  </races>
   <roots>
     <node>lurabog</node>
     <node>larabog</node>

@@ -1,25 +1,24 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Command>
   <aliases>
     <node>hit</node>
   </aliases>
-  <extra>important keep_hide ghost</extra>
+  <extra>keep_hide ghost important</extra>
+  <help level="-1" ref="murder" type="CommandHelp">%FMT%  *(kill,я┐п╠п╦я┌я▄)* _п©п╣я─я│п╬п╫п╟п╤_
+п░я┌п╟п╨п╬п╡п╟я┌я▄ п╨п╟п╨п╬п╣-п╩п╦п╠п╬ я│я┐я┴п╣я│я┌п╡п╬, п╫п╬ п╫п╣ п╢я─я┐пЁп╬пЁп╬ п╦пЁя─п╬п╨п╟.
+п▓ я│п╩я┐я┤п╟п╣ я┐я│п©п╣я┬п╫п╬п╧ п╟я┌п╟п╨п╦ п╫п╟я┤п╫п╣я┌я│я▐ я│я─п╟п╤п╣п╫п╦п╣.
+
+%FMT%  *(murder,п©п╬я─п╣я┬п╦я┌я▄)* _п©п╣я─я│п╬п╫п╟п╤_
+п░я┌п╟п╨п╬п╡п╟я┌я▄ п╦пЁя─п╬п╨п╟, п╨п╬я┌п╬я─я▀п╧ п╫п╟я┘п╬п╢п╦я┌я│я▐ п╡ я┌п╡п╬п╣п╪ п╢п╦п╟п©п╟п╥п╬п╫п╣ PK.
+
+%SA% %H% [(PK,п÷п )]
+</help>
+  <hint>п╟я┌п╟п╨п╬п╡п╟я┌я▄ п╨п╬пЁп╬-п╩п╦п╠п╬</hint>
   <name>kill</name>
   <order>player_only</order>
   <position>fight</position>
   <russian>
-    <node>убить</node>
-    <node>ударить</node>
+    <node>я┐п╠п╦я┌я▄</node>
+    <node>я┐п╢п╟я─п╦я┌я▄</node>
   </russian>
-  <hint>атаковать кого-либо</hint>
-  <help type="CommandHelp" ref="murder">
-%FMT%  *(kill,убить)* _персонаж_
-Атаковать какое-либо существо, но не другого игрока.
-В случае успешной атаки начнется сражение.
-
-%FMT%  *(murder,порешить)* _персонаж_
-Атаковать игрока, который находится в твоем диапазоне PK.
-
-%SA% %H% [(PK,ПК)]
-</help>  
 </Command>

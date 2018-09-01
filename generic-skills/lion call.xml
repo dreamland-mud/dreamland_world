@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
-    <wearoff>Ты снова чувствуешь в себе силы призывать львов.</wearoff>
+    <wearoff>п╒я▀ я│п╫п╬п╡п╟ я┤я┐п╡я│я┌п╡я┐п╣я┬я▄ п╡ я│п╣п╠п╣ я│п╦п╩я▀ п©я─п╦п╥я▀п╡п╟я┌я▄ п╩я▄п╡п╬п╡.</wearoff>
   </affect>
   <beats>12</beats>
   <classes>
@@ -21,17 +21,17 @@
     </node>
   </classes>
   <command type="SKILL(lioncall)">
-    <hint>(рейнджеры) позвать двух львов на помощь</hint>
+    <hint>(я─п╣п╧п╫п╢п╤п╣я─я▀) п©п╬п╥п╡п╟я┌я▄ п╢п╡я┐я┘ п╩я▄п╡п╬п╡ п╫п╟ п©п╬п╪п╬я┴я▄</hint>
     <name>lioncall</name>
     <position>fight</position>
     <russian>
-      <node>львы</node>
+      <node>п╩я▄п╡я▀</node>
     </russian>
   </command>
-  <group>none</group>
-  <help type="SkillHelp">Lioncall, подобно bear call, вызывает 2 львов тебе на помощь.
-Опять же, работает только в лесу.
-См. также {W? перепризыв{x.
+  <dammsg></dammsg>
+  <help level="-1" type="SkillHelp">Lioncall, п©п╬п╢п╬п╠п╫п╬ bear call, п╡я▀п╥я▀п╡п╟п╣я┌ 2 п╩я▄п╡п╬п╡ я┌п╣п╠п╣ п╫п╟ п©п╬п╪п╬я┴я▄.
+п·п©я▐я┌я▄ п╤п╣, я─п╟п╠п╬я┌п╟п╣я┌ я┌п╬п╩я▄п╨п╬ п╡ п╩п╣я│я┐.
+п║п╪. я┌п╟п╨п╤п╣ {W? п©п╣я─п╣п©я─п╦п╥я▀п╡{x.
   </help>
   <mana>125</mana>
   <mob>
@@ -39,25 +39,25 @@
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>вызов львов</nameRus>
+  <nameRus>п╡я▀п╥п╬п╡ п╩я▄п╡п╬п╡</nameRus>
   <spell type="SPELL(LionCall)">
     <castMobCount>2</castMobCount>
     <casted>false</casted>
     <maxMobCount>2</maxMobCount>
     <mobVnum>19</mobVnum>
     <msgCreateAttemptArea></msgCreateAttemptArea>
-    <msgCreateAttemptRoom>%^C1 издает львиный клич.</msgCreateAttemptRoom>
-    <msgCreateAttemptSelf>Ты издаешь львиный клич.</msgCreateAttemptSelf>
-    <msgCreateRoom>Два льва приходят на помощь %C3!</msgCreateRoom>
-    <msgCreateSelf>Два льва приходят тебе на помощь!</msgCreateSelf>
-    <msgNotRecognizeRoom>%2$^C1 зевает на %1$C4.</msgNotRecognizeRoom>
-    <msgNotRecognizeSelf>%2$^C1 зевает на тебя, показывая зубы.</msgNotRecognizeSelf>
-    <msgReattachAttemptRoom>%1$^C1 подманивает %2$C4.</msgReattachAttemptRoom>
-    <msgReattachAttemptSelf>Ты подманиваешь %C4.</msgReattachAttemptSelf>
-    <msgReattachRoom>%2$^C1 подходит к %1$C3 и усаживатся рядом.</msgReattachRoom>
-    <msgReattachSelf>%^C1 подходит к тебе и усаживается рядом.</msgReattachSelf>
-    <msgStillAffected>Ты не можешь найти в себе силы справиться с большим количеством львов.</msgStillAffected>
-    <msgTooManyMobiles>А что не так с теми львами, которые у тебя уже есть?</msgTooManyMobiles>
+    <msgCreateAttemptRoom>%^C1 п╦п╥п╢п╟п╣я┌ п╩я▄п╡п╦п╫я▀п╧ п╨п╩п╦я┤.</msgCreateAttemptRoom>
+    <msgCreateAttemptSelf>п╒я▀ п╦п╥п╢п╟п╣я┬я▄ п╩я▄п╡п╦п╫я▀п╧ п╨п╩п╦я┤.</msgCreateAttemptSelf>
+    <msgCreateRoom>п■п╡п╟ п╩я▄п╡п╟ п©я─п╦я┘п╬п╢я▐я┌ п╫п╟ п©п╬п╪п╬я┴я▄ %C3!</msgCreateRoom>
+    <msgCreateSelf>п■п╡п╟ п╩я▄п╡п╟ п©я─п╦я┘п╬п╢я▐я┌ я┌п╣п╠п╣ п╫п╟ п©п╬п╪п╬я┴я▄!</msgCreateSelf>
+    <msgNotRecognizeRoom>%2$^C1 п╥п╣п╡п╟п╣я┌ п╫п╟ %1$C4.</msgNotRecognizeRoom>
+    <msgNotRecognizeSelf>%2$^C1 п╥п╣п╡п╟п╣я┌ п╫п╟ я┌п╣п╠я▐, п©п╬п╨п╟п╥я▀п╡п╟я▐ п╥я┐п╠я▀.</msgNotRecognizeSelf>
+    <msgReattachAttemptRoom>%1$^C1 п©п╬п╢п╪п╟п╫п╦п╡п╟п╣я┌ %2$C4.</msgReattachAttemptRoom>
+    <msgReattachAttemptSelf>п╒я▀ п©п╬п╢п╪п╟п╫п╦п╡п╟п╣я┬я▄ %C4.</msgReattachAttemptSelf>
+    <msgReattachRoom>%2$^C1 п©п╬п╢я┘п╬п╢п╦я┌ п╨ %1$C3 п╦ я┐я│п╟п╤п╦п╡п╟я┌я│я▐ я─я▐п╢п╬п╪.</msgReattachRoom>
+    <msgReattachSelf>%^C1 п©п╬п╢я┘п╬п╢п╦я┌ п╨ я┌п╣п╠п╣ п╦ я┐я│п╟п╤п╦п╡п╟п╣я┌я│я▐ я─я▐п╢п╬п╪.</msgReattachSelf>
+    <msgStillAffected>п╒я▀ п╫п╣ п╪п╬п╤п╣я┬я▄ п╫п╟п╧я┌п╦ п╡ я│п╣п╠п╣ я│п╦п╩я▀ я│п©я─п╟п╡п╦я┌я▄я│я▐ я│ п╠п╬п╩я▄я┬п╦п╪ п╨п╬п╩п╦я┤п╣я│я┌п╡п╬п╪ п╩я▄п╡п╬п╡.</msgStillAffected>
+    <msgTooManyMobiles>п░ я┤я┌п╬ п╫п╣ я┌п╟п╨ я│ я┌п╣п╪п╦ п╩я▄п╡п╟п╪п╦, п╨п╬я┌п╬я─я▀п╣ я┐ я┌п╣п╠я▐ я┐п╤п╣ п╣я│я┌я▄?</msgTooManyMobiles>
     <position>fight</position>
     <postaffectDuration>24</postaffectDuration>
     <target>create_mob</target>

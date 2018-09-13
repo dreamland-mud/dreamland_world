@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты можешь помочь еще кому-нибудь.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="cleric">
+      <level>53</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="universal">
+      <level>53</level>
+      <maximum>100</maximum>
+      <parentNames>
+        <node>heal</node>
+      </parentNames>
+      <rating>1</rating>
+      <weight>50</weight>
+    </node>
+  </classes>
+  <dammsg></dammsg>
+  <group>healing</group>
+  <mana>100</mana>
+  <mob>
+    <forbidden>false</forbidden>
+    <ordered>true</ordered>
+    <professional>true</professional>
+  </mob>
+  <nameRus>помощь</nameRus>
+  <spell type="SPELL(Aid)">
+    <casted>true</casted>
+    <position>fight</position>
+    <target>char_room</target>
+    <type>defensive</type>
+  </spell>
+</skill>

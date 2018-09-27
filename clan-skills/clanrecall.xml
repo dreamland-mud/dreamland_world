@@ -15,7 +15,7 @@
     </node>
     <node name="chaos">
       <level>10</level>
-      <maxLevel>16</maxLevel>
+      <maxLevel>100</maxLevel>
       <maximum>100</maximum>
       <needItem>true</needItem>
       <needPractice>true</needPractice>
@@ -23,7 +23,7 @@
     </node>
     <node name="flowers">
       <level>10</level>
-      <maxLevel>16</maxLevel>
+      <maxLevel>100</maxLevel>
       <maximum>100</maximum>
       <needItem>true</needItem>
       <needPractice>true</needPractice>
@@ -31,7 +31,7 @@
     </node>
     <node name="ghost">
       <level>10</level>
-      <maxLevel>16</maxLevel>
+      <maxLevel>100</maxLevel>
       <maximum>100</maximum>
       <needItem>true</needItem>
       <needPractice>true</needPractice>
@@ -39,7 +39,7 @@
     </node>
     <node name="hunter">
       <level>10</level>
-      <maxLevel>16</maxLevel>
+      <maxLevel>100</maxLevel>
       <maximum>100</maximum>
       <needItem>true</needItem>
       <needPractice>true</needPractice>
@@ -47,7 +47,7 @@
     </node>
     <node name="invader">
       <level>10</level>
-      <maxLevel>16</maxLevel>
+      <maxLevel>100</maxLevel>
       <maximum>100</maximum>
       <needItem>true</needItem>
       <needPractice>true</needPractice>
@@ -55,7 +55,7 @@
     </node>
     <node name="knight">
       <level>10</level>
-      <maxLevel>16</maxLevel>
+      <maxLevel>100</maxLevel>
       <maximum>100</maximum>
       <needItem>true</needItem>
       <needPractice>true</needPractice>
@@ -63,7 +63,7 @@
     </node>
     <node name="lion">
       <level>10</level>
-      <maxLevel>16</maxLevel>
+      <maxLevel>100</maxLevel>
       <maximum>100</maximum>
       <needItem>true</needItem>
       <needPractice>true</needPractice>
@@ -71,7 +71,7 @@
     </node>
     <node name="outsider">
       <level>5</level>
-      <maxLevel>16</maxLevel>
+      <maxLevel>100</maxLevel>
       <maximum>100</maximum>
       <needItem>true</needItem>
       <needPractice>true</needPractice>
@@ -79,7 +79,7 @@
     </node>
     <node name="ruler">
       <level>10</level>
-      <maxLevel>16</maxLevel>
+      <maxLevel>100</maxLevel>
       <maximum>100</maximum>
       <needItem>true</needItem>
       <needPractice>true</needPractice>
@@ -87,7 +87,7 @@
     </node>
     <node name="shalafi">
       <level>10</level>
-      <maxLevel>16</maxLevel>
+      <maxLevel>100</maxLevel>
       <maximum>100</maximum>
       <needItem>true</needItem>
       <needPractice>true</needPractice>
@@ -108,6 +108,16 @@
   </command>
   <dammsg></dammsg>
   <hard>6</hard>
+  <help level="-1" type="SkillHelp">
+%FMT% *%CMD%*
+
+Попросить богов о перемещении в клан. Просить можно не часто, и до следующей
+попытки придется какое-то время подождать. Время ожидания растет с уровнем и
+видно по команде *(affects,эффекты)*. Возврат в клан не сработает, если ты находишься
+под адреналином от недавнего сражения с другими игроками (VIOLENT).
+
+%SA% %H% [(word of recall,слово возврата)]
+  </help>
   <mob>
     <forbidden>true</forbidden>
     <ordered>true</ordered>

@@ -1,0 +1,3335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<area>
+  <areadata>
+    <authors>Diku</authors>
+    <credits>Haon Dor</credits>
+    <levelHigh>10</levelHigh>
+    <levelLow>5</levelLow>
+    <name>Леса Королевства Хаон</name>
+    <security>9</security>
+    <speedwalk>5w</speedwalk>
+    <translator>Tirna</translator>
+    <vnumHigh>6199</vnumHigh>
+    <vnumLow>6000</vnumLow>
+  </areadata>
+  <mobiles>
+    <node name="6000">
+      <ac bash="4" exotic="9" pierce="4" slash="4"/>
+      <act add="npc stay_area"/>
+      <alignment>350</alignment>
+      <dam_type>chop</dam_type>
+      <damage>1d7+1</damage>
+      <default_pos>stand</default_pos>
+      <description>Он шести футов ростом и выглядит очень сильным, мускулы так и ходят под
+его клетчатой рубашкой. Всю жизнь он занимается тяжелой работой дровосека
+и  его характер - характер одного из самых мирных людей, ведущего простую
+рабочую жизнь.
+</description>
+      <hit>2d7+71</hit>
+      <level>6</level>
+      <long_descr>Джон Дровосек (John Lumberjack) ищет подходящие деревья для рубки.
+</long_descr>
+      <mana>3d9+100</mana>
+      <material>0</material>
+      <off add="disarm dodge trip assist_vnum"/>
+      <player_name>john lumberjack джон дровосек</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>Джон||а|у|а|ом|е Дровосек||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>2</wealth>
+    </node>
+    <node name="6002">
+      <ac bash="3" exotic="9" pierce="3" slash="3"/>
+      <act add="npc aggressive stay_area"/>
+      <alignment>-50</alignment>
+      <dam_type>claw</dam_type>
+      <damage>1d7+2</damage>
+      <default_pos>stand</default_pos>
+      <description>Этот бурый медведь - злобное животное  с огромными  когтями и очень
+острыми клыками. Он совсем не похож на прелестные маленькие статуэтки
+из магазина игрушек, на которых он выглядит очень добрым.
+</description>
+      <hit>2d7+96</hit>
+      <level>8</level>
+      <long_descr>Здоровенный бурый медведь (bear) выглядит очень голодным.
+</long_descr>
+      <mana>4d9+100</mana>
+      <material>0</material>
+      <off add="dodge trip assist_race"/>
+      <player_name>bear медведь бер</player_name>
+      <race>bear</race>
+      <sex>male</sex>
+      <short_descr>бур|ый|ого|ому|ого|ым|ом медвед|ь|я|ю|я|ем|е</short_descr>
+      <size>medium</size>
+      <start_pos>sleep</start_pos>
+    </node>
+    <node name="6003">
+      <ac bash="7" exotic="10" pierce="7" slash="7"/>
+      <act add="npc aggressive stay_area"/>
+      <alignment>-150</alignment>
+      <dam_type>bite</dam_type>
+      <damage>1d6+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Это маленькое, пушистое создание с длинными ушами и большими лапами
+больно  страшной  болезнью  - заячьим бешенством,  которая превратила
+беспомощного и невинного  зверька в  свирепого  кровожадного монстра.
+</description>
+      <hit>2d6+35</hit>
+      <level>3</level>
+      <long_descr>Свирепый заяц (rabbit) пожирает тебя взглядом.
+</long_descr>
+      <mana>1d9+100</mana>
+      <material>0</material>
+      <off add="disarm trip assist_race"/>
+      <player_name>rabbit заяц</player_name>
+      <race>rabbit</race>
+      <sex>male</sex>
+      <short_descr>свиреп|ый|ого|ому|ого|ым|ом за|яц|йца|йцу|йца|йцом|йце</short_descr>
+      <size>medium</size>
+      <start_pos>sleep</start_pos>
+    </node>
+    <node name="6004">
+      <ac bash="8" exotic="10" pierce="8" slash="8"/>
+      <act add="npc sentinel stay_area"/>
+      <alignment>350</alignment>
+      <dam_type>scratch</dam_type>
+      <damage>1d5+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Это грациозное создание на длинных стройных ногах с интересом
+смотрит на тебя своими огромными карими глазами.
+</description>
+      <hit>2d7+21</hit>
+      <level>2</level>
+      <long_descr>Лань (deer) мирно щиплет травку.
+</long_descr>
+      <mana>1d9+100</mana>
+      <material>0</material>
+      <off add="disarm dodge trip assist_vnum"/>
+      <player_name>deer лань</player_name>
+      <race>human</race>
+      <sex>female</sex>
+      <short_descr>лесн|ая|ой|ой|ую|ой|ой лан|ь|и|и|ь|ью|и</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="6005">
+      <ac bash="8" exotic="10" pierce="8" slash="8"/>
+      <act add="npc stay_area"/>
+      <alignment>-50</alignment>
+      <dam_type>bite</dam_type>
+      <damage>1d5+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Это большая лисица с прекрасным рыжим мехом и длинным пушистым хвостом.
+</description>
+      <hit>2d7+21</hit>
+      <level>2</level>
+      <long_descr>Рыжая лисица (fox) бесшумно крадется, надеясь поймать себе кролика.
+</long_descr>
+      <mana>1d9+100</mana>
+      <material>0</material>
+      <off add="disarm trip assist_race"/>
+      <player_name>fox лиса лисица</player_name>
+      <race>fox</race>
+      <sex>female</sex>
+      <short_descr>рыж|ая|ей|ей|ую|ей|ей лисиц|а|ы|е|у|ей|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="6026">
+      <ac bash="-1000" exotic="0" pierce="-1000" slash="-1000"/>
+      <act add="npc sentinel noeye nowhere mage notrack"/>
+      <aff add="infrared"/>
+      <alignment>-1000</alignment>
+      <behavior type="Koschey">
+        <services>
+          <node type="PretitleRemortBonus">
+            <gender>either</gender>
+            <price type="VictoryPrice">
+              <count>1000</count>
+            </price>
+            <shortDescr>претиту|л|ла|лу|л|лом|ле заморск|ий|ого|ому|ий|им|ом красочн|ый|ого|ому|ый|ым|ом</shortDescr>
+            <aliases>
+              <node>pretitle</node>
+              <node>претитул</node>
+            </aliases>
+          </node>
+          <node type="StatRemortBonus">
+            <amount>1</amount>
+            <stat>str</stat>
+            <gender>either</gender>
+            <shortDescr>силушк|а|и|е|у|ой|е богатырск|ая|ой|ой|ую|ой|ой</shortDescr>
+            <price type="VictoryPrice">
+              <count>500</count>
+            </price>
+          </node>
+          <node type="StatRemortBonus">
+            <amount>1</amount>
+            <stat>int</stat>
+            <gender>either</gender>
+            <shortDescr>смекалк|а|и|е|у|ой|е</shortDescr>
+            <price type="VictoryPrice">
+              <count>500</count>
+            </price>
+          </node>
+          <node type="StatRemortBonus">
+            <amount>1</amount>
+            <stat>wis</stat>
+            <gender>either</gender>
+            <shortDescr>мудрост|ь|и|и|ь|ью|и змиев|а|ой|ой|у|ой|ой</shortDescr>
+            <price type="VictoryPrice">
+              <count>500</count>
+            </price>
+          </node>
+          <node type="StatRemortBonus">
+            <amount>1</amount>
+            <stat>dex</stat>
+            <shortDescr>проворств|о|а|у|о|ом|е</shortDescr>
+            <gender>either</gender>
+            <price type="VictoryPrice">
+              <count>500</count>
+            </price>
+          </node>
+          <node type="StatRemortBonus">
+            <amount>1</amount>
+            <stat>con</stat>
+            <shortDescr>кряжистост|ь|и|и|ь|ью|и</shortDescr>
+            <gender>either</gender>
+            <price type="VictoryPrice">
+              <count>500</count>
+            </price>
+          </node>
+          <node type="HealthRemortBonus">
+            <amount>100</amount>
+            <gender>either</gender>
+            <price type="VictoryPrice">
+              <count>500</count>
+            </price>
+            <shortDescr>здоровь|е|я|ю|е|ем|е невиданн|ое|ого|ому|ое|ым|ом</shortDescr>
+            <aliases>
+              <node>hp</node>
+              <node>hit</node>
+              <node>hitpoints</node>
+            </aliases>
+          </node>
+          <node type="ManaRemortBonus">
+            <amount>200</amount>
+            <gender>either</gender>
+            <price type="VictoryPrice">
+              <count>500</count>
+            </price>
+            <shortDescr>ман|а|ы|е|у|ой|е</shortDescr>
+            <aliases>
+              <node>mana</node>
+            </aliases>
+          </node>
+          <node type="LevelRemortBonus">
+            <amount>1</amount>
+            <gender>either</gender>
+            <price type="VictoryPrice">
+              <count>500</count>
+            </price>
+            <shortDescr>уров|ень|ня|ню|ень|нем|не лишн|ий|его|ему|ий|им|ем</shortDescr>
+            <aliases>
+              <node>level</node>
+              <node>уровень</node>
+            </aliases>
+          </node>
+        </services>
+      </behavior>
+      <dam_type>cleave</dam_type>
+      <damage>100d100+1000</damage>
+      <default_pos>stand</default_pos>
+      <description>Невероятно костлявый старикашка со  сморщенной сухой  кожей и  горящими глазами
+полностью поглощен шахматной партией. Отвлекается он на тебя с большой неохотой
+и откровенной неприязнью,  торопясь поскорее  вернуться к  прерванному занятию.
+Этот старик прожил всего одну, но невероятно долгую жизнь, найдя  где-то секрет
+бессмертия. Поговаривают, что  Баба Яга  - его  давняя пассия.  Скопив огромное
+количество  всевозможных  материальных  благ,  Кощей утратил  к ним  интерес, а
+пещеру  свою  не  разгромождает  то  ли  из-за  лени,  то  ли   из-за  простого
+скупердяйства. Единственное, к  чему он  питает страсть  (хотя и  старается это
+скрыть) -- это чужая слава и победы. Взамен он готов отдать весьма ценные вещи.
+Если ты, конечно, готов заплатить его цену.
+</description>
+      <detection add="imp_invis fade invis hidden sneak acute_vision"/>
+      <hit>100d100+1000</hit>
+      <hitroll>100</hitroll>
+      <level>120</level>
+      <long_descr>Кощей (koschey) играет сам с собой в шахматы.
+</long_descr>
+      <mana>100d100+1000</mana>
+      <material>none</material>
+      <player_name>кащей koschey кощей</player_name>
+      <race>unique</race>
+      <sex>male</sex>
+      <short_descr>Коще|й|я|ю|я|ем|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <vuln add="pierce"/>
+      <wealth>100000</wealth>
+    </node>
+    <node name="6100">
+      <ac bash="5" exotic="9" pierce="5" slash="5"/>
+      <act add="npc aggressive stay_area"/>
+      <alignment>-350</alignment>
+      <dam_type>frbite</dam_type>
+      <damage>1d6+1</damage>
+      <default_pos>stand</default_pos>
+      <description>Это исключительно большой волк с густой черной шерстью. Слюна так и
+капает с его длинных белых клыков.  Он очень голоден и весьма опасен.
+</description>
+      <hit>2d6+60</hit>
+      <level>5</level>
+      <long_descr>Злобный волколак (warg) смотрит на тебя голодными глазами.
+</long_descr>
+      <mana>2d9+100</mana>
+      <material>0</material>
+      <off add="disarm dodge trip assist_vnum"/>
+      <player_name>warg vicious волколак оборотень</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>злобн|ый|ого|ому|ого|ым|ом волколак||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="6101">
+      <ac bash="5" exotic="9" pierce="5" slash="5"/>
+      <act add="npc aggressive stay_area"/>
+      <alignment>-350</alignment>
+      <dam_type>frbite</dam_type>
+      <damage>1d6+1</damage>
+      <default_pos>stand</default_pos>
+      <description>Это исключительно большой волк с густой черной шерстью. Слюна так и
+капает с его длинных белых клыков.  Он очень голоден и весьма опасен.
+</description>
+      <hit>2d6+60</hit>
+      <level>5</level>
+      <long_descr>Беспощадный волколак (warg) смотрит на тебя голодными глазами.
+</long_descr>
+      <mana>2d9+100</mana>
+      <material>0</material>
+      <off add="disarm dodge trip assist_vnum"/>
+      <player_name>warg ferocious волколак оборотень</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>беспощадн|ый|ого|ому|ого|ым|ом волколак||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="6102">
+      <ac bash="7" exotic="10" pierce="7" slash="7"/>
+      <act add="npc aggressive stay_area"/>
+      <alignment>-150</alignment>
+      <dam_type>bite</dam_type>
+      <damage>1d6+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Большой серый волк, облизываясь, с интересом смотрит на тебя.
+</description>
+      <hit>2d6+35</hit>
+      <level>3</level>
+      <long_descr>Большой серый волк (wolf) поглядывает на тебя в поисках пищи.
+</long_descr>
+      <mana>1d9+100</mana>
+      <material>0</material>
+      <off add="disarm trip assist_race"/>
+      <player_name>grey gray wolf волк серый</player_name>
+      <race>wolf</race>
+      <sex>male</sex>
+      <short_descr>больш|ой|ого|ому|ого|ым|ом сер|ый|ого|ому|ого|ым|ом волк||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="6103">
+      <ac bash="7" exotic="10" pierce="7" slash="7"/>
+      <act add="npc aggressive stay_area"/>
+      <alignment>-150</alignment>
+      <dam_type>bite</dam_type>
+      <damage>1d6+0</damage>
+      <default_pos>stand</default_pos>
+      <description>Большой черный волк, облизываясь, с интересом смотрит на тебя.
+</description>
+      <hit>2d6+35</hit>
+      <level>3</level>
+      <long_descr>Большой черный волк (wolf) поглядывает на тебя в поисках пищи.
+</long_descr>
+      <mana>1d9+100</mana>
+      <material>0</material>
+      <off add="disarm trip assist_race"/>
+      <player_name>wolf black волк черный</player_name>
+      <race>wolf</race>
+      <sex>male</sex>
+      <short_descr>больш|ой|ого|ому|ого|ым|ом черн|ый|ого|ому|ого|ым|ом волк||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="6112">
+      <ac bash="-27" exotic="-10" pierce="-27" slash="-27"/>
+      <act add="npc sentinel aggressive stay_area"/>
+      <alignment>-1000</alignment>
+      <dam_type>none</dam_type>
+      <damage>2d40+20</damage>
+      <default_pos>stand</default_pos>
+      <description>Этот гигантский крылатый змей покрыт темно-зеленой чешуей, которая
+защищает почти всю его огромную тушу. Многочисленные дырки в его больших
+крыльях  могли бы рассказать тебе о многих боях также, как и трещины на
+рогах, растущих  у  него  на  голове. Его  узкие зеленые  глаза светятся
+яростью. Из его ноздрей вырывается дым - это настоящий Дракон.
+</description>
+      <hit>5d10+1550</hit>
+      <hitroll>50</hitroll>
+      <level>45</level>
+      <long_descr>Громадный зеленый дракон (green dragon) разлегся здесь.
+</long_descr>
+      <mana>12d9+400</mana>
+      <material>0</material>
+      <off add="disarm dodge trip assist_race"/>
+      <player_name>dragon green дракон змей зеленый</player_name>
+      <race>dragon</race>
+      <sex>male</sex>
+      <short_descr>громадн|ый|ого|ому|ого|ым|ому зелен|ый|ого|ому|ого|ым|ом дракон||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <spec>spec_breath_gas</spec>
+      <start_pos>stand</start_pos>
+      <wealth>2500</wealth>
+    </node>
+    <node name="6115">
+      <ac bash="1" exotic="8" pierce="1" slash="1"/>
+      <act add="npc scavenger wimpy"/>
+      <aff add="invisible sneak"/>
+      <alignment>1000</alignment>
+      <dam_type>none</dam_type>
+      <damage>2d4+2</damage>
+      <default_pos>stand</default_pos>
+      <description>Это маленькое существо всего лишь три фута ростом. У него буйные
+спутанные каштановые  волосы и длинная спутанная борода. Он одет в
+рваное  коричнево-зеленое тряпье  и выглядит абсолютно счастливым.
+</description>
+      <hit>2d7+121</hit>
+      <level>10</level>
+      <long_descr>Шагугх (brownie), местный леший, маячит перед тобой.
+</long_descr>
+      <mana>5d9+100</mana>
+      <material>0</material>
+      <off add="disarm dodge trip assist_vnum"/>
+      <player_name>shargugh brownie леший шагугх</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>Шагугх||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>50</wealth>
+    </node>
+    <node name="6116">
+      <ac bash="-3" exotic="6" pierce="-3" slash="-3"/>
+      <act add="npc sentinel scavenger aggressive cleric"/>
+      <dam_type>none</dam_type>
+      <damage>2d6+4</damage>
+      <default_pos>stand</default_pos>
+      <description>Этот друид очень стар. Тебе хотелось бы видеть в нем святого, но ясно
+что это твой злейший враг.
+</description>
+      <hit>3d9+258</hit>
+      <level>17</level>
+      <long_descr>Старый друид (elder druid) выглядит очень растроенным твоим появлением.
+</long_descr>
+      <mana>17d9+100</mana>
+      <material>0</material>
+      <off add="disarm kick parry assist_vnum"/>
+      <player_name>elder druid старик друид</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>стар|ый|ого|ому|ого|ым|ом друид||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>250</wealth>
+    </node>
+    <node name="6117">
+      <ac bash="-90" exotic="-70" pierce="-90" slash="-90"/>
+      <act add="npc sentinel practice mage nopurge"/>
+      <alignment>1000</alignment>
+      <dam_type>chop</dam_type>
+      <damage>6d18+24</damage>
+      <default_pos>stand</default_pos>
+      <description>Это старый, но еще сильный рейнджер. Немного листьев и сухих веток
+висит на его одежде для большего камуфляжа.
+</description>
+      <hit>1d1+24999</hit>
+      <imm add="summon charm weapon"/>
+      <level>66</level>
+      <long_descr>Мастер (guildmaster) твоей гильдии стоит тут.
+</long_descr>
+      <mana>1d1+999</mana>
+      <material>0</material>
+      <off add="dodge fade"/>
+      <player_name>guildmaster master мастер гильдия</player_name>
+      <practicer>harmful weather creation detection none </practicer>
+      <race>human</race>
+      <res add="spell"/>
+      <sex>male</sex>
+      <short_descr>мастер||а|у|а|ом|е гильдии</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
+  </mobiles>
+  <objects>
+    <node name="6000">
+      <affects>
+        <node>
+          <apply to="hitroll">-4</apply>
+        </node>
+      </affects>
+      <cost>820</cost>
+      <description>Тяжелый топор дровосека (axe) лежит здесь.</description>
+      <extraDescr>
+        <node keyword="axe lumber топор">Этот тяжелый топор дровосеки используют для рубки деревьев.
+</node>
+      </extraDescr>
+      <gender>m</gender>
+      <level>8</level>
+      <material>iron</material>
+      <name>axe lumber two-handed топор двуручный</name>
+      <short_descr>топор||а|у||ом|е дровосека</short_descr>
+      <type name="weapon">
+        <diceNumber>3</diceNumber>
+        <diceType>6</diceType>
+        <specType>two_hands</specType>
+        <weapClass>axe</weapClass>
+        <weapType>chop</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>100</weight>
+    </node>
+    <node name="6001">
+      <cost>610</cost>
+      <description>Пестрая рубаха (shirt) лежит здесь.</description>
+      <extraDescr>
+        <node keyword="shirt рубаха рубашка">Эта огромная пестрая рубаха сшита из грубой ткани.
+</node>
+      </extraDescr>
+      <gender>m</gender>
+      <level>3</level>
+      <material>cloth</material>
+      <name>shirt рубаха рубашка</name>
+      <short_descr>пестр|ая|ой|ой|ую|ой|ой рубах|а|и|е|у|ой|е</short_descr>
+      <type name="armor">
+        <ac bash="3" exotic="0" pierce="3" slash="3"/>
+      </type>
+      <wear_flags>take wear_body</wear_flags>
+      <weight>20</weight>
+    </node>
+    <node name="6002">
+      <cost>310</cost>
+      <description>Пара кожанных ботинок (boots) лежит здесь.</description>
+      <extraDescr>
+        <node keyword="boots ботинки">Ботинки сделаны из грубой кожи, многократно промасленной, что-бы
+сделать ботинки непромокаемыми. Они выглядят поношенными, но еще
+вполне пригодны к использованию.
+</node>
+      </extraDescr>
+      <gender>p</gender>
+      <level>3</level>
+      <material>leather</material>
+      <name>boots ботинки</name>
+      <short_descr>кожанн|ые|ых|ым|ые|ыми|ых ботин|ки|ок|кам|ки|ками|ках</short_descr>
+      <type name="armor">
+        <ac bash="3" exotic="0" pierce="3" slash="3"/>
+      </type>
+      <wear_flags>take wear_feet</wear_flags>
+      <weight>40</weight>
+    </node>
+    <node name="6003">
+      <description>Очаг (fireplace), сложенный из камней, устроен напротив восточной стены.</description>
+      <extraDescr>
+        <node keyword="fireplace очаг камин печь">Очаг сложен из камней различных форм и размеров, скрепленных между
+собой известкой.  Дымоход, уходящий  в низкий потолок этой лачуги,
+устроен точно так же.
+</node>
+      </extraDescr>
+      <gender>m</gender>
+      <material>stone</material>
+      <name>fireplace очаг камин печь</name>
+      <short_descr>очаг||а|у||ом|е</short_descr>
+      <type name="container">
+        <capacity>200</capacity>
+        <maxWeight>200</maxWeight>
+      </type>
+    </node>
+    <node name="6005">
+      <cost>100</cost>
+      <description>Деревянный сундук (chest) стоит в углу.</description>
+      <extraDescr>
+        <node keyword="chest сундук ларь ларец">Этот основательный сундук собран из небольших крепких досок, которые
+удерживаются вместе шипами. На нем висит обыкновенный латунный ключ.
+</node>
+      </extraDescr>
+      <gender>m</gender>
+      <material>wood</material>
+      <name>chest сундук ларь ларец</name>
+      <short_descr>деревянн|ый|ого|ому|ый|ым|ом сундук||а|у||ом|е</short_descr>
+      <type name="container">
+        <capacity>100</capacity>
+        <flags>closeable closed locked</flags>
+        <key>6006</key>
+        <maxWeight>20</maxWeight>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>400</weight>
+    </node>
+    <node name="6006">
+      <description>Маленький латунный ключ (key) позабыт кем-то здесь.</description>
+      <extraDescr>
+        <node keyword="key ключ латунный">Это маленький простой латунный ключ, без всяких украшений и надписей.
+</node>
+      </extraDescr>
+      <gender>m</gender>
+      <material>brass</material>
+      <name>key ключ латунный</name>
+      <short_descr>маленьк|ий|ого|ому|ий|им|ом латунн|ый|ого|ому|ый|ым|ом ключ||а|у||ом|е</short_descr>
+      <type name="key">
+        <rotGround>1</rotGround>
+        <rotInv>1</rotInv>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="6007">
+      <description>Несколько серебряных монет (coins) кучкой лежат на полу.</description>
+      <extraDescr>
+        <node keyword="coins монеты">Кажется среди них есть и золотой ! А они всегда в цене.
+</node>
+      </extraDescr>
+      <gender>f</gender>
+      <material>silver</material>
+      <name>coins silver монеты серебро</name>
+      <short_descr>кучк|а|и|е|у|ой|е серебряных монет</short_descr>
+      <type name="money">
+        <gold>1</gold>
+        <silver>89</silver>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="6010">
+      <description>Несколько ягод ежевики (blackberries) растет на кусте неподалеку.</description>
+      <extraDescr>
+        <node keyword="blackberries ежевика ягоды">Они выглядят очень аппетитно.
+</node>
+      </extraDescr>
+      <gender>m</gender>
+      <material>food</material>
+      <name>blackberries ежевика ягоды</name>
+      <short_descr>ягод|ы||ая|ы|ами|ах ежевики</short_descr>
+      <type name="food">
+        <foodHours>3</foodHours>
+        <fullHours>3</fullHours>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="6011">
+      <description>Маленький гриб (mushroom) растет неподалеку.</description>
+      <extraDescr>
+        <node keyword="mushroom гриб">Это маленькая, но очень вкусная вещь.
+</node>
+      </extraDescr>
+      <gender>m</gender>
+      <material>food</material>
+      <name>mushroom гриб</name>
+      <short_descr>гриб||а|у||ом|е</short_descr>
+      <type name="food">
+        <foodHours>6</foodHours>
+        <fullHours>6</fullHours>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="6013">
+      <cost>20</cost>
+      <description>Бочонок с водой (barrel) оставлен здесь.</description>
+      <gender>m</gender>
+      <material>wood</material>
+      <name>water barrel вода бочонок</name>
+      <short_descr>бочон|ок|ка|ку|ок|ком|ке</short_descr>
+      <type name="drink">
+        <left>256</left>
+        <liquid>water</liquid>
+        <total>256</total>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>200</weight>
+    </node>
+    <node name="6102">
+      <description>Гигантское дерево (tree) перекрывает путь на запад.</description>
+      <extraDescr>
+        <node keyword="tree дерево">Это гигантское дерево  растет, должно  быть, уже  тысячу лет. Его кора
+растрескалась и имеет серый цвет, на ней видны многочисленные царапины
+и отметины от когтей животных. На западной части  ствола видна большая
+трещина, находящаяся невысоко над землей.
+</node>
+        <node keyword="opening трещина дыра дупло">Трещина слишком узка, что бы в нее пролезть, но сквозь нее видно, что
+изнутри это дерево пустое.
+</node>
+      </extraDescr>
+      <gender>n</gender>
+      <material>wood</material>
+      <name>tree opening дерево трещина</name>
+      <short_descr>гигантск|ое|ого|ому|ое|им|ом дерев|о|а|у|о|ом|е</short_descr>
+      <type name="portal">
+        <charges>0</charges>
+        <portalFlags>normal_exit nocurse</portalFlags>
+        <target>1877</target>
+      </type>
+    </node>
+    <node name="6103">
+      <description>Длинная серая ветка (branch) покоится на земле.</description>
+      <gender>f</gender>
+      <material>wood</material>
+      <name>branch ветка сук</name>
+      <short_descr>длинн|ая|ой|ой|ую|ой|ой сер|ая|ой|ой|ую|ой|ой ветк|а|и|е|у|ой|е</short_descr>
+      <type name="light">
+        <v2>25</v2>
+      </type>
+      <wear_flags>take hold</wear_flags>
+      <weight>200</weight>
+    </node>
+    <node name="6104">
+      <affects>
+        <node>
+          <apply to="hitroll">-2</apply>
+        </node>
+      </affects>
+      <cost>290</cost>
+      <description>Длинная серая ветка (branch) покоится на земле.</description>
+      <gender>f</gender>
+      <level>6</level>
+      <material>wood</material>
+      <name>branch ветка сук</name>
+      <short_descr>длинн|ая|ой|ой|ую|ой|ой сер|ая|ой|ой|ую|ой|ой ветк|а|и|е|у|ой|е</short_descr>
+      <type name="weapon">
+        <diceNumber>5</diceNumber>
+        <diceType>2</diceType>
+        <weapClass>mace</weapClass>
+        <weapType>pound</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>300</weight>
+    </node>
+    <node name="6105">
+      <description>Длинная серая ветка (branch) покоится на земле.</description>
+      <gender>f</gender>
+      <material>wood</material>
+      <name>branch ветка сук</name>
+      <short_descr>длинн|ая|ой|ой|ую|ой|ой сер|ая|ой|ой|ую|ой|ой ветк|а|и|е|у|ой|е</short_descr>
+      <type name="trash">
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>400</weight>
+    </node>
+    <node name="6106">
+      <description>Большая поганка (toadstool) растет неподалеку.</description>
+      <extraDescr>
+        <node keyword="toadstool поганка гриб">Этот большой, коричневый гриб весит  около пяти  фунтов. Его  шляпка
+покрыта  тонким слоем прозрачной слизи, источающей слабый гнилостный
+запах. Тебе приходилось едать деликатесы и получше.
+</node>
+      </extraDescr>
+      <gender>m</gender>
+      <material>wood</material>
+      <name>toadstool поганка гриб</name>
+      <short_descr>поганк|а|и|е|у|ой|е</short_descr>
+      <type name="food">
+        <foodHours>12</foodHours>
+        <fullHours>12</fullHours>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>50</weight>
+    </node>
+    <node name="6107">
+      <description>Большая поганка (toadstool) растет неподалеку.</description>
+      <extraDescr>
+        <node keyword="toadstool поганка гриб">Этот большой, коричневый гриб весит  около пяти  фунтов. Его  шляпка
+вся в маленьких белых пятнышках и покрыта сверху тонким слоем слизи,
+который  источает слабый  гнилостный запах. Это  не  самый лучший из
+деликатесов, с которыми тебе приходилось встречаться.
+</node>
+      </extraDescr>
+      <gender>m</gender>
+      <material>wood</material>
+      <name>toadstool поганка гриб</name>
+      <short_descr>поганк|а|и|е|у|ой|е</short_descr>
+      <type name="food">
+        <foodHours>12</foodHours>
+        <fullHours>12</fullHours>
+        <poisoned>true</poisoned>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>50</weight>
+    </node>
+    <node name="6110">
+      <cost>350</cost>
+      <description>Золотистое снадобье (yellow potion) позабыто здесь.</description>
+      <extraDescr>
+        <node keyword="potion yellow золотистое желтое снадобье">У него насыщенный золотистый цвет и оно имеет крепкий специфический
+запах.
+</node>
+      </extraDescr>
+      <gender>n</gender>
+      <level>4</level>
+      <material>glass</material>
+      <name>potion yellow золотистое желтое снадобье</name>
+      <short_descr>золотист|ое|ого|ому|ое|ым|ом снадоб|ье|ья|ью|ье|ьем|ье</short_descr>
+      <type name="potion">
+        <level>9</level>
+        <spell0>giant strength</spell0>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>20</weight>
+    </node>
+    <node name="6111">
+      <cost>1760</cost>
+      <description>Большой круглый щит (shield) оставлен здесь.</description>
+      <extraDescr>
+        <node keyword="shield large щит большой">Он сделан из твердого дерева, укрепленного толстыми железными полосками.
+</node>
+      </extraDescr>
+      <gender>m</gender>
+      <level>15</level>
+      <material>wood</material>
+      <name>shield large щит большой</name>
+      <short_descr>больш|ой|ого|ому|ой|им|ом кругл|ый|ого|ому|ый|ым|ом щит||а|у||ом|е</short_descr>
+      <type name="armor">
+        <ac bash="6" exotic="3" pierce="6" slash="6"/>
+      </type>
+      <wear_flags>take wear_shield</wear_flags>
+      <weight>150</weight>
+    </node>
+    <node name="6112">
+      <cost>1050</cost>
+      <description>Железный венец (crown) покоится на земле.</description>
+      <extraDescr>
+        <node keyword="crown iron венец железо">Этот тяжелый венец был выкован из чистого железа по людским меркам.
+</node>
+      </extraDescr>
+      <gender>m</gender>
+      <level>15</level>
+      <material>iron</material>
+      <name>crown iron венец железо</name>
+      <short_descr>железн|ый|ого|ому|ый|ым|ом вен|ец|ца|цу|ец|цом|це</short_descr>
+      <type name="armor">
+        <ac bash="6" exotic="0" pierce="6" slash="6"/>
+      </type>
+      <wear_flags>take wear_head</wear_flags>
+      <weight>100</weight>
+    </node>
+    <node name="6114">
+      <cost>50</cost>
+      <description>Железное кольцо (ring) позабыто здесь.</description>
+      <extraDescr>
+        <node keyword="ring iron кольцо железо">Это тяжелое кольцо выковано из чистого железа и на нем не  видно ни
+украшений, ни узоров. Похоже, оно подойдет на руку только человеку.
+</node>
+      </extraDescr>
+      <gender>n</gender>
+      <material>iron</material>
+      <name>ring iron кольцо железо</name>
+      <short_descr>железн|ое|ого|ому|ое|ым|ом кольц|о|а|у|о|ом|е</short_descr>
+      <type name="jewelry">
+      </type>
+      <wear_flags>take wear_finger</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="6155">
+      <cost>250</cost>
+      <description>Булава, под названием &quot;Утренняя Звезда&quot; (morning star), лежит в пыли.</description>
+      <gender>f</gender>
+      <level>15</level>
+      <material>wood, iron</material>
+      <name>morning-star star morning булава утро звезда</name>
+      <short_descr>булав|а|ы|е|у|ой|е &quot;Утренняя Звезда&quot;</short_descr>
+      <type name="weapon">
+        <diceNumber>3</diceNumber>
+        <diceType>8</diceType>
+        <weapClass>mace</weapClass>
+        <weapType>crush</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>100</weight>
+    </node>
+  </objects>
+  <rooms>
+    <node name="6000">
+      <description>Ты стоишь  на  восточном краю  огромного леса. На востоке от тебя
+находятся Западные Врата стольного града Мидгарда, а на запад ведет
+узкая тропинка (trail), уводящая тебя в глубь леса. Темная дорожка ведет на
+север.
+</description>
+      <exits>
+        <node name="east">
+          <description>На востоке от тебя Западные Врата города Мидгарда.
+</description>
+          <target>3052</target>
+        </node>
+        <node name="north">
+          <description>Ты видишь темную дорожку, уводящую тебя на север.
+</description>
+          <target>1100</target>
+        </node>
+        <node name="west">
+          <description>Узкая лесная тропа петляет между деревьев, уводя тебя на запад.
+</description>
+          <target>6001</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="trail тропа">Лесная тропа петляет между деревьями (trees) на восток.
+</node>
+        <node keyword="forest tree trees дерево деревья">Эти деревья очень тонки и  сразу видно, что они  растут недолго - эта
+часть леса очень молода. На одном из деревьев грубыми буквами на коре
+вырезано &quot;Haon-Dor&quot;, что означает &quot;Королевство Хаон&quot;.
+</node>
+      </extraDescr>
+      <flags>no_mob</flags>
+      <name>Край леса</name>
+      <sector>field</sector>
+    </node>
+    <node name="6001">
+      <description>Ты на тропинке, идущей сквозь лес. На востоке виднеется край
+леса, а  на западе  тропинка (trail) ведет  тебя дальше  в глубь леса.
+</description>
+      <exits>
+        <node name="east">
+          <description>Конец торной дороги.
+</description>
+          <target>6000</target>
+        </node>
+        <node name="west">
+          <description>Узкая лесная тропа бежит на запад между деревьями.
+</description>
+          <target>6002</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="trail">Лесная тропка петляет с востока на запад между деревьями (trees).
+</node>
+        <node keyword="tree trees дерево деревья">Деревья здесь очен молоды и чисты, в них вовсю кишит жизнь. Множество
+видов птиц, насекомых и различных мелких животных (animals) мелькает повсюду.
+</node>
+        <node keyword="birds insects animals птицы насекомые животные">Очень милые маленькие создания вовсю наслаждаются жизнью.
+</node>
+      </extraDescr>
+      <name>Тропинка в редколесье</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6002">
+      <description>Ты стоишь на узкой тропинке (trail), ведущей на восток и запад сквозь лес. На
+западе лес понемногу  становится гуще. Маленькая  лесная дорожка уходит
+на юг. Маленькая дорожка поднимается вверх, в темный лес.
+</description>
+      <exits>
+        <node name="east">
+          <description>Тропа идет на восток между молодыми деревьями.
+</description>
+          <target>6001</target>
+        </node>
+        <node name="south">
+          <description>Маленькая дорожка идет на юг между молодыми деревьями.
+</description>
+          <target>6011</target>
+        </node>
+        <node name="up">
+          <description>Пересечение тропинок в темном лесу.
+</description>
+          <target>7556</target>
+        </node>
+        <node name="west">
+          <description>Узкая лесная тропа уходит на запад, в густой лес.
+</description>
+          <target>6003</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="path paths дорога дорожка">Эта узкая дорожка наверное протоптана животными, живущими в этом лесу.
+</node>
+        <node keyword="trail тропа тропинка">Лесная тропинка петляет с востока на запад между деревьев (trees).
+</node>
+        <node keyword="tree trees дерево деревья">Юные стройные деревья выглядят прекрасно, их молодые зеленые листья
+тихо качаются и шелестят на ветру.
+</node>
+      </extraDescr>
+      <name>Тропинка в редколесье</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6003">
+      <description>Ты на тропинке (trail),  идущей сквозь чащу леса на восток и запад. К востоку
+лес становится  значительно реже. Небольшая  тропинка спускается  вниз,
+в темный лес.
+</description>
+      <exits>
+        <node name="down">
+          <description>Пересечение тропинок в темном лесу.
+</description>
+          <target>7556</target>
+        </node>
+        <node name="east">
+          <description>Тропинка идет на восток, в молодую часть леса.
+</description>
+          <target>6002</target>
+        </node>
+        <node name="west">
+          <description>Узкая тропинка бежит на запад сквозь густой лес.
+</description>
+          <target>6004</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="trail тропа тропинка">Лесная тропинка почти не видна среди этих массивных стволов (trees).
+</node>
+        <node keyword="tree trees дерево деревья">Густые кроны взрослых деревьев почти полностью закрывают небо,
+оставляя твоему взору только маленькие кусочки синевы.
+</node>
+      </extraDescr>
+      <name>Тропинка в чаще леса</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6004">
+      <description>Ты на тропинке (trail), идущей сквозь чащу леса на восток и запад. На западе
+лес  состоит из  таких больших деревьев (trees), что их кроны закрывают свет 
+и внизу царит  абсолютный  мрак.  Маленькая дорожка (path) идет сквозь деревья
+на юг.
+</description>
+      <exits>
+        <node name="east">
+          <description>Тропинка идет на восток в густом лесу.
+</description>
+          <target>6003</target>
+        </node>
+        <node name="south">
+          <description>Маленькая дорожка ведет тебя на юг сквозь деревья.
+</description>
+          <target>6005</target>
+        </node>
+        <node name="west">
+          <description>Узкая тропа пропадает между гигантскими деревьями.
+</description>
+          <target>6100</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="path paths дорожка дорожки дорога дороги">Узкая дорожка протоптана в животными, живущими в лесу.
+</node>
+        <node keyword="trail тропа тропинка">Лесная тропинка почти не видна среди этих массивных стволов.
+</node>
+        <node keyword="tree trees дерево деревья">Кроны старых деревьев полностью закрывают от тебя солнце.
+</node>
+      </extraDescr>
+      <name>Тропинка в чаще леса</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6005">
+      <description>Ты на небольшой дорожке, идущей сквозь чащу леса. Кроны старых деревьев (trees)
+закрывают  свет и под ними в лесу царит волшебный сумрак. Дорожка (path) идет на
+север и юг.
+</description>
+      <exits>
+        <node name="north">
+          <description>Маленькая дорожка идет на север между деревьев.
+</description>
+          <target>6004</target>
+        </node>
+        <node name="south">
+          <description>Маленькая дорожка идет на юг между деревьев.
+</description>
+          <target>6006</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="path paths дорога дорожка дорожки">Узкая дорожка протоптана в животными, живущими в лесу.
+</node>
+        <node keyword="tree trees дерево деревья">Тебя окружают преимущественно старые дубы и буки.
+</node>
+      </extraDescr>
+      <name>Небольшая дорожка в чаще леса</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6006">
+      <description>Ты на небольшой дорожке (path), идущей сквозь чащу леса. Кроны старых деревьев
+(trees) закрывают  свет и под ними в лесу царит волшебный сумрак. Дорожка идет 
+на север и восток.
+</description>
+      <exits>
+        <node name="east">
+          <description>Маленькая дорожка идет на восток между деревьями.
+</description>
+          <target>6007</target>
+        </node>
+        <node name="north">
+          <description>Маленькая дорожка идет на север между деревьями.
+</description>
+          <target>6005</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="path paths дорога дорожка дорожки">Узкая дорожка протоптана в животными, живущими в лесу.
+</node>
+        <node keyword="tree trees дерево деревья">Тебя окружают преимущественно старые дубы и буки.
+</node>
+      </extraDescr>
+      <name>Небольшая дорожка в чаще леса</name>
+      <resets>
+        <drop vnum="6011"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="6007">
+      <description>Ты на небольшой дорожке (path), идущей сквозь чащу леса. Кроны старых 
+деревьев (trees) закрывают  свет и под  ними в лесу  царит волшебный сумрак. 
+К востоку лес становится значительно реже. Дороги ведут на восток, запад и юг.
+</description>
+      <exits>
+        <node name="east">
+          <description>На востоке, кажется, виднеется просвет между деревьями.
+</description>
+          <target>6008</target>
+        </node>
+        <node name="north">
+          <description>Ты видишь тропинку.
+</description>
+          <target>6024</target>
+        </node>
+        <node name="south">
+          <description>Маленькая дорожка между деревьями бежит на юг.
+</description>
+          <target>6012</target>
+        </node>
+        <node name="west">
+          <description>Маленькая дорога бежть на запад между деревьями.
+</description>
+          <target>6006</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="path paths дорога дорожка дорожки">Узкая дорожка протоптана в животными, живущими в лесу.
+</node>
+        <node keyword="tree trees дерево деревья">Тебя окружают преимущественно старые дубы и буки.
+</node>
+      </extraDescr>
+      <name>Развилка в чаще леса</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6008">
+      <description>Ты стоишь на лесной просеке. Множество свежих пней (stumps) разнообразнейших
+размеров торчит  из  земли, здоровенные  бревна (logs)  аккуратно  уложены в
+большие штабеля, поддерживаемые вбитыми в землю кольями (stakes). Дороги (paths)
+ведут на север, восток и запад.
+</description>
+      <exits>
+        <node name="east">
+          <description>Небольшая дорожка ведет сквозь деревья на восток.
+</description>
+          <target>6009</target>
+        </node>
+        <node name="north">
+          <description>Небольшая дорожка ведет сквозь деревья на север.
+</description>
+          <target>6011</target>
+        </node>
+        <node name="south">
+          <target>6156</target>
+        </node>
+        <node name="west">
+          <description>Небольшая дорожка ведет сквозь деревья на запад.
+</description>
+          <target>6007</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="log logs деревья ствол стволы бревна бревно">Тут  лежат срубленные  деревья. Их стволы ровно  обтесаны и  распилены
+на  куски одинаковой  длины. Они  выглядят очень  тяжелыми, а судя по
+соку, который еще сочится из них, срубили их очень недавно.
+</node>
+        <node keyword="path paths дорога дорожка дорожки">Узкая дорожка протоптана в животными, живущими в лесу.
+</node>
+        <node keyword="stake stakes кол колья">Колья удерживают бревна в штабелях, иначе они раскатятся.
+</node>
+        <node keyword="stump stumps пень пни">Пней здесь  намного больше, чем  бревен, а некоторые из  них даже мхом
+покрылись от старости.
+</node>
+        <node keyword="tree trees дерево деревья">Тебя окружают преимущественно старые дубы и буки.
+</node>
+      </extraDescr>
+      <name>Просека</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6009">
+      <description>Ты находишься возле небольшой избушки (cabin), полностью построенной из
+бревен. На севере перед тобой деревянная дверь, небольшие дорожки (paths)
+идут на запад и юг между деревьев (trees).
+</description>
+      <exits>
+        <node name="north">
+          <description>Деревянная дверь очень прочна, но на ней нет и намека на замок.
+</description>
+          <flags>isdoor closed</flags>
+          <keyword>door wooden дверь</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>6010</target>
+        </node>
+        <node name="south">
+          <description>Маленькая дорожка ведет тебя на юг сквозь густой лес.
+</description>
+          <target>6014</target>
+        </node>
+        <node name="west">
+          <description>Маленькая дорожка ведет тебя на запад сквозь редкий лес.
+</description>
+          <target>6008</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="cabin logs изба избушка сруб бревна бревно">Изба выглядит очень примитивно, но зато она очень удобна, а окружающие
+ее стройные деревья создают тут просто идиллическую картину. Сама изба
+построена из бревен. Один каллиграф даже надпись сделал :
+
+(*** It&apos;s a cabin built from logs.  Wooden logs, not system logs. ***)
+</node>
+        <node keyword="path paths дорога дорожка дорожки">Похоже тот, кто живет в избушке, часто ходит этой дорожкой.
+</node>
+        <node keyword="tree trees дерево деревья">Окружающие тебя деревья  очень молоды - не больше сотни лет  или около
+того.
+</node>
+      </extraDescr>
+      <name>Возле лесной избушки</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="6000"/>
+        <equip to="wield" vnum="6000"/>
+        <equip to="body" vnum="6001"/>
+        <equip to="feet" vnum="6002"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="6010">
+      <description>Ты стоишь внутри маленькой избушки, полностью сделанной из бревен.
+Она очень мала - в ней всего одна комната, очень бедно обставленная,
+в ней есть  только самое необходимое из домашней утвари - стол (table), 
+стул (chair) и кровать (bed). Все стены изрезаны странными черточками 
+и знаками.
+</description>
+      <exits>
+        <node name="south">
+          <description>Деревянная дверь открывается на юг.
+</description>
+          <flags>isdoor</flags>
+          <keyword>door wooden дверь</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>6009</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="bed кровать">Ты видел за свою жизнь кровати и получше.
+</node>
+        <node keyword="chair стул">Он сделан из дуба и выглядит очень прочным.
+</node>
+        <node keyword="table стол">Этот тяжелый стол стоит как-то криво.
+</node>
+        <node keyword="walls стена знак черта">{x ________________________________________________________
+|                                                        |
+|                                                        |
+|                                [9] [A]                 |
+|                                 |   |                  |
+|                          *------*---*                  |
+|                          |         /                   |
+|                          |     [B]/                    | 
+|                          |      |/                     |
+|                          * [K]--*                      |
+|                          |      |                      |
+|           [8]            |     [D]                     |
+|            |             |      |                      |
+|       [7]--*--*          |     [C]            [I]  [J] |
+|              /           |                    /     |  |
+|          *--*------*     *--*--*--*--*----*--*--*--[0] |
+|                    |     |     |     |   /   |         |
+|                    *--*--*     *     * [I]   * [L]     |
+|                    |     |     |     |       |  |      |
+| [1]   [3]          *     *--*--*     *----*--*--*      |
+|  |     |           |        |             |  |  |      |
+|  *--*--*        *--*--*  *--*--*          | [E] |      |
+|  |  |           |     |  |     |          |     |      |
+| [2] *---*---*---*  *--*--*     *          *--*--*--*   |
+|                 |  |           |          |        |   |
+|                 *--*--*     *--*     [F]--*--* [G] *   |
+|                 |  |  |                      |  |  |   |
+|                [4][5][6]                     *--*--*   |
+|                                                    |   |
+|                                                   [H]  |
+|________________________________________________________|
+|                                                        |
+| 0 - Вход в Леса             B - Курган Горы Смерти     |
+| 1 - Выход в Тенистую Рощу   C - Бездна                 |
+| 2 - Выход в Лихолесье       D - Храм друидов           |
+| 3 - Пещера Зеленого Дракона E - Гильдия рейнджеров     |
+| 4 - Выход на Старую Топь    F - Берлога                |
+| 5 - Река                    G - Полянка                |
+| 6 - Вход в логово  троллей  H - Выход на Остров Дракири|
+| 7 - Логово Паучьей Королевы I - Большой Герихельм      |
+| 8 - Выход в Арахнос         J - Дорожка в Шир          |
+| 9 - Долина Титанов          K - Трельские пещеры       |
+| A - Логово Ciquala          L - Избушка                |
+|________________________________________________________|
+</node>
+      </extraDescr>
+      <flags>indoors</flags>
+      <name>В избушке</name>
+      <resets>
+        <drop vnum="6003"/>
+        <drop vnum="6005"/>
+        <put in="6005" limit="1" maxHere="1" vnum="6007"/>
+        <put in="6003" limit="1" maxHere="1" vnum="6006"/>
+        <drop vnum="6013"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="6011">
+      <description>Ты на небольшой дороге, ведущей через лес. Окружающие деревья (trees) высокие
+и тонкие. Дорога (path) идет на север и юг.
+</description>
+      <exits>
+        <node name="north">
+          <description>Дорога идет на север сквозь поросль молодых деревьев.
+</description>
+          <target>6002</target>
+        </node>
+        <node name="south">
+          <description>Дорога идет на юг сквозь поросль молодых деревьев.
+</description>
+          <target>6008</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="path paths дорога дорожка дорожки">Узкая дорожка протоптана в животными, живущими в лесу.
+</node>
+        <node keyword="tree trees дерево деревья">Окружающие тебя деревья  очень молоды - не больше сотни лет  или около
+того.
+</node>
+      </extraDescr>
+      <name>Небольшая дорога через редколесье</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6012">
+      <description>Ты на небольшой дорожке, идущей сквозь чащу леса. Кроны старых деревьев 
+закрывают  свет и под  ними в лесу  царит волшебный  сумрак. Дорожка идет
+на север, восток и юг.
+</description>
+      <exits>
+        <node name="east">
+          <description>Маленькая дорожка бежит на восток между деревьями.
+</description>
+          <target>6013</target>
+        </node>
+        <node name="north">
+          <description>Маленькая дорожка бежит на север между деревьями.
+</description>
+          <target>6007</target>
+        </node>
+        <node name="south">
+          <description>Маленькая дорожка бежит на юг между деревьями.
+</description>
+          <target>6021</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="path paths дорога дорожка дорожки">Узкая дорожка протоптана в животными, живущими в лесу.
+</node>
+        <node keyword="tree trees дерево деревья">Тебя окружают преимущественно старые дубы и буки.
+</node>
+      </extraDescr>
+      <name>Развилка в чаще леса</name>
+      <resets>
+        <mob limit="5" maxHere="2" vnum="6003"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="6013">
+      <description>Ты на небольшой дорожке, идущей сквозь чащу леса. Кроны старых деревьев 
+закрывают  свет и под  ними в лесу  царит волшебный  сумрак. Дорожка идет
+на восток и запад.
+</description>
+      <exits>
+        <node name="east">
+          <description>Небольшая дорожка уводит тебя сквозь деревья на восток.
+</description>
+          <target>6014</target>
+        </node>
+        <node name="west">
+          <description>Небольшая дорожка уводит тебя сквозь деревья на запад.
+</description>
+          <target>6012</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="path paths дорога дорожка дорожки">Узкая дорожка протоптана в животными, живущими в лесу.
+</node>
+        <node keyword="tree trees дерево деревья">Тебя окружают преимущественно старые дубы и буки.
+</node>
+      </extraDescr>
+      <name>Небольшая дорожка в чаще леса</name>
+      <resets>
+        <drop vnum="6011"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="6014">
+      <description>Ты на небольшой дорожке, идущей сквозь чащу леса. К северу лес становится
+значительно реже. Дороги отсюда ведут на север, восток и запад.
+</description>
+      <exits>
+        <node name="east">
+          <description>Небольшая дорожка ведет тебя сквозь деревья на восток.
+</description>
+          <target>6015</target>
+        </node>
+        <node name="north">
+          <description>Дорожка уводит тебя из чащи леса на север.
+</description>
+          <target>6009</target>
+        </node>
+        <node name="west">
+          <description>Небольшая дорожка ведет тебя сквозь деревья на запад.
+</description>
+          <target>6013</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="path paths дорога дорожка дорожки">Узкая дорожка протоптана в животными, живущими в лесу.
+</node>
+        <node keyword="tree trees дерево деревья">Кроны старых деревьев закрывают свет и под ними царит волшебный
+полумрак.
+</node>
+      </extraDescr>
+      <name>Развилка в чаще леса</name>
+      <resets>
+        <mob limit="2" maxHere="2" vnum="6005"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="6015">
+      <description>Ты на небольшой дорожке, идущей сквозь чащу леса. Кроны старых деревьев
+закрывают  свет и под  ними в лесу  царит волшебный  сумрак. Дорожка идет
+на юг и запад.
+</description>
+      <exits>
+        <node name="south">
+          <description>Небольшая дорожка ведет тебя на юг сквозь деревья.
+</description>
+          <target>6016</target>
+        </node>
+        <node name="west">
+          <description>Небольшая дорожка ведет тебя сквозь деревья на запад.
+</description>
+          <target>6014</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="path paths дорога дорожка дорожки">Узкая дорожка протоптана в животными, живущими в лесу.
+</node>
+        <node keyword="tree trees дерево деревья">Тебя окружают преимущественно старые дубы и буки.
+</node>
+      </extraDescr>
+      <name>Небольшая дорожка в чаще леса</name>
+      <resets>
+        <mob limit="5" maxHere="1" vnum="6003"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="6016">
+      <description>Ты на небольшой дорожке, идущей сквозь чащу леса. Кроны старых деревьев 
+закрывают  свет и под  ними в лесу  царит волшебный  сумрак. Дорожка идет
+на север и юг.
+ 
+</description>
+      <exits>
+        <node name="north">
+          <description>Небольшая дорожка идет сквозь деревья на север.
+</description>
+          <target>6015</target>
+        </node>
+        <node name="south">
+          <description>Небольшая дорожка идет на юг сквозь деревья.
+</description>
+          <target>6017</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="path paths дорога дорожка дорожки">Узкая дорожка протоптана в животными, живущими в лесу.
+</node>
+        <node keyword="tree trees дерево деревья">Тебя окружают преимущественно старые дубы и буки.
+</node>
+      </extraDescr>
+      <name>Небольшая дорожка в чаще леса</name>
+      <resets>
+        <drop vnum="6011"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="6017">
+      <description>Ты на небольшой дорожке, идущей сквозь чащу леса. К западу лес становится
+значительно реже. Дорожка идет на север и запад.
+</description>
+      <exits>
+        <node name="north">
+          <description>Небольшая дорожка идет сквозь деревья на север.
+</description>
+          <target>6016</target>
+        </node>
+        <node name="south">
+          <description>Дорожка бежит среди деревьев.
+</description>
+          <target>11800</target>
+        </node>
+        <node name="west">
+          <description>Небольшая дорожка бежит на запад, выводя тебя из чащи.
+</description>
+          <target>6018</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="path paths дорога дорожка дорожки">Узкая дорожка протоптана в животными, живущими в лесу.
+</node>
+        <node keyword="tree trees дерево деревья">Кроны старых деревьев закрывают свет и под ними царит волшебный
+полумрак.
+</node>
+      </extraDescr>
+      <name>Небольшая дорожка в чаще леса</name>
+      <resets>
+        <mob limit="5" maxHere="1" vnum="6003"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="6018">
+      <description>Ты на небольшой дорожке, идущей через лес. Она разветвляется перед
+тобой - одна  идет на север, где  находится небольшая поляна. Другие
+идут на восток и запад в чащу леса.
+</description>
+      <exits>
+        <node name="east">
+          <description>Дорожка ведет тебя на восток, в чащу леса.
+</description>
+          <target>6017</target>
+        </node>
+        <node name="north">
+          <description>Дорожка идет на север, на маленькую заросшую травой полянку.
+</description>
+          <target>6023</target>
+        </node>
+        <node name="west">
+          <description>Дорожка ведет тебя на запад, в чащу леса.
+</description>
+          <target>6019</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="path paths дорога дороги дорожка дорожки">Узкая дорожка протоптана в животными, живущими в лесу.
+</node>
+        <node keyword="tree trees дерево деревья">Окружающие тебя деревья молоды - их возраст не превышает сотни лет
+или около того.
+</node>
+      </extraDescr>
+      <name>Развилка в редколесье</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6019">
+      <description>Ты на небольшой дорожке, идущей сквозь чащу леса. К востоку лес становится
+значительно реже. Дорожка идет на север и восток.
+</description>
+      <exits>
+        <node name="east">
+          <description>Небольшая дорожка выводит тебя на восток из чащи леса.
+</description>
+          <target>6018</target>
+        </node>
+        <node name="north">
+          <description>Небольшая дорожка идет сквозь деревья на север.
+</description>
+          <target>6020</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="path paths дорога дороги дорожка дорожки">Узкая дорожка протоптана в животными, живущими в лесу.
+</node>
+        <node keyword="tree trees дерево деревья">Кроны старых деревьев закрывают свет и под ними царит волшебный
+полумрак.
+</node>
+      </extraDescr>
+      <name>Небольшая дорожка в чаще леса</name>
+      <resets>
+        <mob limit="5" maxHere="1" vnum="6003"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="6020">
+      <description>Ты на небольшой дорожке, идущей сквозь чащу леса. Кроны старых деревьев 
+закрывают  свет и под  ними в лесу  царит волшебный  сумрак. Дорожка идет
+на юг и запад.
+</description>
+      <exits>
+        <node name="south">
+          <description>Небольшая дорожка ведет тебя сквозь деревья на юг.
+</description>
+          <target>6019</target>
+        </node>
+        <node name="west">
+          <description>Небольшая дорожка ведет тебя на запад сквозь деревья.
+</description>
+          <target>6021</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="path paths дорога дороги дорожка дорожки">Узкая дорожка протоптана в животными, живущими в лесу.
+</node>
+        <node keyword="tree trees дерево деревья">Тебя окружают преимущественно старые дубы и буки.
+</node>
+      </extraDescr>
+      <name>Небольшая дорожка в чаще леса</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6021">
+      <description>Ты на небольшой дорожке, идущей сквозь чащу леса. На западе от тебя
+находится вход в пещеру (cave), а сама дорожка идет на север и восток.
+</description>
+      <exits>
+        <node name="east">
+          <description>Небольшая дорожка выводит тебя сквозь деревья на восток.
+</description>
+          <target>6020</target>
+        </node>
+        <node name="north">
+          <description>Небольшая дорожка идет сквозь деревья на север.
+</description>
+          <target>6012</target>
+        </node>
+        <node name="west">
+          <description>Внутри пещеры очень темно.
+</description>
+          <target>6022</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="path paths дорога дороги дорожка дорожки">Узкая дорожка протоптана в животными, живущими в лесу.
+</node>
+        <node keyword="tree trees дерево деревья">Кроны старых деревьев закрывают свет и под ними царит волшебный
+полумрак.
+</node>
+        <node keyword="cave entrance пещера щель вход">Вход в пещеру представляет собой дыру неправильной формы, из которой
+доносится очень неприятный запах.
+</node>
+      </extraDescr>
+      <name>Небольшая дорожка в чаще леса</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6022">
+      <description>Ты стоишь в обыкновенной пещере.  Разнообразный мусор (debris) покрывает
+каменный пол (floor), испуская ужасное зловоние, которое делает воздух (air)
+в пещере непригодным для дыхания.  Единственный выход отсюда находится на
+востоке.  
+</description>
+      <exits>
+        <node name="east">
+          <description>Выход из пещеры находится на востоке.
+</description>
+          <target>6021</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="debris мусор кости">В основном это разнообразные обглоданные кости, валяющиеся в перемежку
+с клочьями меха.
+</node>
+        <node keyword="cave walls floor stone пещера стены стена пол камни">Тут нет ничего интересного.
+</node>
+        <node keyword="air smell воздух запах смрад зловоние">Несмотря ни на что, этот воздух все таки прозрачен.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>В пещере</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="6002"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="6023">
+      <description>Ты стоишь на маленькой поляне, которая затерялась где то в лесу.
+Вся поляна  покрыта высокой травой (grass), которая  почти достает тебе до
+пояса, а окружающие дубы и буки образуют вокруг непроходимую чащу.
+Небольшая дорожка ведет сквозь деревья на юг.
+</description>
+      <exits>
+        <node name="south">
+          <description>Небольшая дорожка ведет тебя сквозь деревья на юг.
+</description>
+          <target>6018</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="grass трава травка">Высокая трава создает отличное убежище для небольших зверушек.
+</node>
+        <node keyword="path дорожка дорога">Узкая дорожка протоптана в животными, живущими в лесу.
+</node>
+        <node keyword="tree trees thicket дерево деревья заросли чаща">Окружающие деревья создают вокруг тебя густые заросли.
+</node>
+      </extraDescr>
+      <name>На маленькой поляне</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="6004"/>
+        <drop vnum="6010"/>
+      </resets>
+      <sector>field</sector>
+    </node>
+    <node name="6024">
+      <description>Ты  находишься на едва заметной в кустах тропе, ведущей к пещерному лазу
+в скале. Ты ФИЗИЧЕСКИ ощущаешь опасность, исходящую оттуда!
+</description>
+      <exits>
+        <node name="down">
+          <description>Пещерный лаз ведет вниз в темноту.
+</description>
+          <flags>isdoor closed nopass</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>500</target>
+        </node>
+        <node name="south">
+          <description>Ты видишь густую чащу леса.
+</description>
+          <target>6007</target>
+        </node>
+      </exits>
+      <name>На тропе в Львиное Логово</name>
+      <sector>inside</sector>
+    </node>
+    <node name="6025">
+      <description>Деревья сумрачной рощи расступаются ненамного, но только чтобы уступить место
+еще более неприветливым кустам с огромными колючками.  Клубящийся повсюду
+туман и здесь не сдает позиции, клочьями цепляясь за ветки. Из отверстия грота
+на севере исходит слабое золотистое свечение.
+</description>
+      <exits>
+        <node name="north">
+          <target>6026</target>
+        </node>
+        <node name="south">
+          <target>1307</target>
+        </node>
+      </exits>
+      <flags>dark no_vanish no_recall nowhere nosummon no_quest</flags>
+      <name>Мрачная поляна</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6026">
+      <description>Небольшой грот доверху завален разного рода добром, накопленным его обитателем
+за бесконечно долгую жизнь. Груды драгоценных камней и золота соседствуют с
+кучами каких-то полуистлевших тряпок, о существовании и назначении которых
+сам хозяин уже давно забыл. В центре пещеры стоит диван, накрытый парчовым
+покрывалом, перед ним на маленьком столике разложена шахматная партия.
+</description>
+      <exits>
+        <node name="south">
+          <target>6025</target>
+        </node>
+      </exits>
+      <flags>no_vanish indoors safe no_recall nowhere nosummon no_quest</flags>
+      <name>Пещера Кощея Бессмертного</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="6026"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="6100">
+      <description>Ты  стоишь  на неприметной  тропке (trail), петляющей  между гигантских серых
+деревьев (trees). Должно быть кроных этих деревьев очень густые,  так как под
+ними царит полный мрак. Тропинка ведет на восток и запад.
+</description>
+      <exits>
+        <node name="east">
+          <description>Узкая тропа выводит тебя в немного более светлую часть леса.
+</description>
+          <target>6004</target>
+        </node>
+        <node name="west">
+          <description>Узкая и пыльная тропа бежит по лесу на запад.
+</description>
+          <target>6101</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="trail тропа тропинка тропка">Эта темная и  пыльная тропинка выглядит  совершенно заброшенной между
+гигантскими деревьями. В некоторых местах ее бег прерывается большими
+серыми корнями, вылезшими из земли.
+</node>
+        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">Эти древние деревья растут тут уже многие стони лет. Ты не видишь даже
+лучика света, который упал бы сверху на их нижние ветви.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Узкая тропа в темной чаще леса</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="6115"/>
+        <equip to="finger_l" vnum="6114"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="6101">
+      <description>Ты на пыльной тропе (trail), которая идет с востока на запад между
+огромными древними деревьями (trees).  Их серые стволы напоминают тебе
+древние колонны в гигантской пустынной зале.  Неприметная дорожка (path)
+уводит тебя с тропы на юг.  
+</description>
+      <exits>
+        <node name="east">
+          <description>Узкая и пыльная тропа бежит сквозь лес на восток.
+</description>
+          <target>6100</target>
+        </node>
+        <node name="south">
+          <description>Дорожка ведет тебя на юг - прочь с тропы.
+</description>
+          <target>6104</target>
+        </node>
+        <node name="west">
+          <description>Узкая и пыльная тропа бежит по лесу на запад.
+</description>
+          <target>6102</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="trail тропа тропинка тропка">Эта темная и  пыльная тропинка выглядит  совершенно заброшенной между
+гигантскими деревьями. В некоторых местах ее бег прерывается большими
+серыми корнями, вылезшими из земли.
+</node>
+        <node keyword="path дорога дорожка">Дорожка кажется узкой и очень небезопастной под гигантскими деревьями,
+что окружают ее со всех сторон.
+</node>
+        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">Эти древние деревья растут тут уже многие стони лет. Ты не видишь даже
+лучика света, который упал бы сверху на их нижние ветви.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Узкая тропа в темной чаще леса</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6102">
+      <description>Ты на  пыльной тропе, которая  идет с  востока на запад между огромными
+древними деревьями, обступившими ее. Из леса не доносится ни одного звука
+и вокруг тебя царит зловещая тишина.
+</description>
+      <exits>
+        <node name="east">
+          <description>Узкая и пыльная тропа ведет тебя сквозь лес на восток.
+</description>
+          <target>6101</target>
+        </node>
+        <node name="west">
+          <description>Узкая и пыльная тропа ведет тебя сквозь лес на запад.
+</description>
+          <target>6103</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="trail тропа тропинка тропка">Эта темная и  пыльная тропинка выглядит  совершенно заброшенной между
+гигантскими деревьями. В некоторых местах ее бег прерывается большими
+серыми корнями, вылезшими из земли.
+</node>
+        <node keyword="path дорога дорожка">Дорожка кажется узкой и очень небезопастной под гигантскими деревьями,
+что окружают ее со всех сторон.
+</node>
+        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">Эти древние деревья растут тут уже многие стони лет. Ты не видишь даже
+лучика света, который упал бы сверху на их нижние ветви.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Узкая тропа в темной чаще леса</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6103">
+      <description>Ты стоишь на развилке пыльной тропы. Она идет на север и юг, огибая
+громадный ствол дерева на западе, и уходит на восток. Здесь не слышно
+ни одного звука - вокруг царит зловещая тишина.
+</description>
+      <exits>
+        <node name="east">
+          <description>Узкая и пыльная тропа ведет тебя сквозь деревья на восток.
+</description>
+          <target>6102</target>
+        </node>
+        <node name="north">
+          <description>Ты видишь темную тропу на севере.
+</description>
+          <target>6150</target>
+        </node>
+        <node name="south">
+          <description>Узкая и пыльная тропа ведет тебя сквозь деревья на юг.
+</description>
+          <target>6108</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="trail тропа тропинка тропка">Эта темная и  пыльная тропинка выглядит  совершенно заброшенной между
+гигантскими деревьями. В некоторых местах ее бег прерывается большими
+серыми корнями, вылезшими из земли.
+</node>
+        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">Эти древние деревья растут тут уже многие стони лет. Ты не видишь даже
+лучика света, который упал бы сверху на их нижние ветви.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Узкая тропа в темной чаще леса</name>
+      <resets>
+        <drop vnum="6102"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="6104">
+      <description>Ты стоишь на узкой дорожке (path), идущей сквозь темную чащу леса. У тебя
+такое чувство, будто в окружающем безмолвии древние деревья (trees) осторожно
+рассматривают тебя. Дорожка ведет тебя на север и юг.
+</description>
+      <exits>
+        <node name="north">
+          <description>Узкая дорожка петляет между деревьев, идя на север.
+</description>
+          <target>6101</target>
+        </node>
+        <node name="south">
+          <description>Узкая дорожка петляет между деревьями, идя на юг.
+</description>
+          <target>6105</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">Кажется, что эти древние мрачные гиганты безмолвно смотрят на тебя.
+</node>
+        <node keyword="path дорога дорожка">Тропинка выглядит очень заброшенной. Один из гигантских корней вылез
+из земли и разрушил часть ее.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Небольшая дорожка в темной чаще леса</name>
+      <resets>
+        <mob limit="4" maxHere="2" vnum="6102"/>
+        <mob limit="4" maxHere="2" vnum="6102"/>
+        <drop vnum="6106"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="6105">
+      <description>Ты стоишь  на узкой дорожке, идущей сквозь темную чащу леса. Древние
+мрачные деревья разрослись вокруг тебя. Дорожка ведет на север и запад.
+</description>
+      <exits>
+        <node name="north">
+          <description>Узкая дорожка бежит на север, петляя между деревьями.
+</description>
+          <target>6104</target>
+        </node>
+        <node name="west">
+          <description>Узкая дорожка бежит на запад, петляя между деревьями.
+</description>
+          <target>6106</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">Кажется, что эти древние мрачные гиганты безмолвно смотрят на тебя.
+</node>
+        <node keyword="path дорога дорожка">Тропинка выглядит очень заброшенной. Один из гигантских корней вылез
+из земли и разрушил часть ее.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Небольшая дорожка в темной чаще леса</name>
+      <resets>
+        <drop vnum="6105"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="6106">
+      <description>Ты стоишь в месте, где сливаются три дороги. Со всех  сторон над тобой
+возвышаются древние мрачные деревья. Дороги ведут на восток, юг и запад.
+</description>
+      <exits>
+        <node name="east">
+          <description>Узкая дорожка ведет тебя на восток, петляя между деревьями.
+</description>
+          <target>6105</target>
+        </node>
+        <node name="south">
+          <description>Узкая дорожка ведет тебя на юг, петляя между деревьями.
+</description>
+          <target>6117</target>
+        </node>
+        <node name="west">
+          <description>Узкая дорожка ведет тебя на запад, петляя между деревьями.
+</description>
+          <target>6107</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">Кажется, что эти древние мрачные гиганты безмолвно смотрят на тебя.
+</node>
+        <node keyword="path дорога дорожка">Тропинка выглядит очень заброшенной. Один из гигантских корней вылез
+из земли и разрушил часть ее.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Развилка в темной чаще леса</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6107">
+      <description>Ты стоишь  на узкой дорожке, идущей сквозь  темную чащу леса. Древние
+мрачные деревья (trees) разрослись вокруг тебя. Дорожка ведет на север и восток.
+</description>
+      <exits>
+        <node name="east">
+          <description>Узкая дорожка ведет тебя на восток, петляя между деревьями.
+</description>
+          <target>6106</target>
+        </node>
+        <node name="north">
+          <description>Узкая дорожка ведет тебя на север, петляя между деревьями.
+</description>
+          <target>6108</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">Кажется, что эти древние мрачные гиганты безмолвно смотрят на тебя.
+</node>
+        <node keyword="path дорога дорожка">Тропинка выглядит очень заброшенной. Один из гигантских корней вылез
+из земли и разрушил часть ее.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Небольшая дорожка в темной чаще леса</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6108">
+      <description>Ты на узкой пыльной тропе (trail), которая петляет между громадными древними
+деревьями , окружающими тебя  со всех  сторон. Тропа  ведет на север и
+запад. На юг с тропы уходит неприметная дорожка (path).
+</description>
+      <exits>
+        <node name="north">
+          <description>Узкая и пыльная тропа ведет тебя сквозь лес на север.
+</description>
+          <target>6103</target>
+        </node>
+        <node name="south">
+          <description>Дорожка уходит на юг - прочь с тропы.
+</description>
+          <target>6107</target>
+        </node>
+        <node name="west">
+          <description>Узкая и пыльная тропинка ведет тебя сквозь лес на запад.
+</description>
+          <target>6109</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="trail тропа тропка тропинка">Темная и пыльная тропинка выглядит совершенно заброшенной среди стоящих
+вокруг огромных деревьев.  В нескольких  местах она разрушена  большими
+корнями, вылезшими из земли.
+</node>
+        <node keyword="path дорога дорожка">Дорожка выглядит заброшенной и небезопасной под этими массивными
+деревьями, обступившими ее.
+</node>
+        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">Эти древние деревья растут тут уже многие стони лет. Ты не видишь даже
+лучика света, который упал бы сверху на их нижние ветви.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Узкая тропа в темной чаще леса</name>
+      <resets>
+        <mob limit="4" maxHere="2" vnum="6102"/>
+        <mob limit="4" maxHere="2" vnum="6102"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="6109">
+      <description>Ты стоишь на пыльной  тропе,  петляющей  с  востока  на  запад между
+громадными  древними  деревьями,  окружающими тебя  со всех сторон. Из
+леса не доносится ни одного звука и вокруг тебя царит зловещая тишина.
+</description>
+      <exits>
+        <node name="east">
+          <description>Узкая и пыльная тропа ведет тебя сквозь лес на восток.
+</description>
+          <target>6108</target>
+        </node>
+        <node name="west">
+          <description>Узкая и пыльная тропинка ведет тебя сквозь лес на запад.
+</description>
+          <target>6110</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="trail тропа тропка тропинка">Темная и пыльная тропинка выглядит совершенно заброшенной среди стоящих
+вокруг огромных деревьев.  В нескольких  местах она разрушена  большими
+корнями, вылезшими из земли.
+</node>
+        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">Эти древние деревья растут тут уже многие стони лет. Ты не видишь даже
+лучика света, который упал бы сверху на их нижние ветви.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Узкая тропа в темной чаще леса</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6110">
+      <description>Ты на узкой пыльной тропе, которая петляет  между громадными древними
+деревьями, окружающими тебя со всех сторон. Тропа ведет на восток и юг.
+На север с тропы уходит узкая дорожка.
+</description>
+      <exits>
+        <node name="east">
+          <description>Узкая и пыльная тропинка идет сквозь лес на восток.
+</description>
+          <target>6109</target>
+        </node>
+        <node name="north">
+          <description>Узкая и пыльная тропинка идет на запад среди гигантских деревьев.
+</description>
+          <target>6144</target>
+        </node>
+        <node name="south">
+          <description>Узкая и пыльная тропинка идет сквозь лес на юг.
+</description>
+          <target>6111</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="trail тропа тропка тропинка">Темная и пыльная тропинка выглядит совершенно заброшенной среди стоящих
+вокруг огромных деревьев.  В нескольких  местах она разрушена  большими
+корнями, вылезшими из земли.
+</node>
+        <node keyword="path дорога дорожка">Дорожка выглядит заброшенной и небезопасной под этими массивными
+деревьями, обступившими ее.
+</node>
+        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">Некоторые деревья на западе покрыты тонким слоем странного, почти
+прозрачного вещества. Больше всего оно напоминает узкие нити, кем
+то сплетенные вместе.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Узкая тропа в темной чаще леса</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6111">
+      <description>Ты стоишь на пыльной тропе, которая петляет с севера на юг между
+огромными  древними деревьями,  зловеще возвышающимися  над тобой.
+</description>
+      <exits>
+        <node name="north">
+          <description>Узкая и пыльная тропинка ведет тебя сквозь лес на север.
+</description>
+          <target>6110</target>
+        </node>
+        <node name="south">
+          <description>Узкая и пыльная тропинка ведет тебя сквозь лес на юг.
+</description>
+          <target>6112</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="trail тропа тропка тропинка">Темная и пыльная тропинка выглядит совершенно заброшенной среди стоящих
+вокруг огромных деревьев.  В нескольких  местах она разрушена  большими
+корнями, вылезшими из земли.
+</node>
+        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">Эти древние деревья растут тут уже многие стони лет. Ты не видишь даже
+лучика света, который упал бы сверху на их нижние ветви.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Узкая тропа в темной чаще леса</name>
+      <resets>
+        <drop vnum="6106"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="6112">
+      <description>Ты на узкой пыльной  тропе, которая петляет  между громадными  древними
+деревьями, окружающими тебя со всех сторон. Тропа ведет на север и запад.
+На восток с тропы уходит неприметная дорожка.
+</description>
+      <exits>
+        <node name="east">
+          <description>Дорожка ведет тебя на восток, прочь с тропинки.
+</description>
+          <target>6113</target>
+        </node>
+        <node name="north">
+          <description>Узкая и пыльная тропинка ведет тебя сквозь лес на север.
+</description>
+          <target>6111</target>
+        </node>
+        <node name="west">
+          <description>Узкая и пыльная тропинка ведет тебя сквозь деревья на запад.
+</description>
+          <target>6127</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="trail тропа тропка тропинка">Темная и пыльная тропинка выглядит совершенно заброшенной среди стоящих
+вокруг огромных деревьев.  В нескольких  местах она разрушена  большими
+корнями, вылезшими из земли.
+</node>
+        <node keyword="path дорога дорожка">Дорожка выглядит заброшенной и небезопасной под этими массивными
+деревьями, обступившими ее.
+</node>
+        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">Эти древние деревья растут тут уже многие стони лет. Ты не видишь даже
+лучика света, который упал бы сверху на их нижние ветви.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Узкая тропа в темной чаще леса</name>
+      <resets>
+        <mob limit="4" maxHere="2" vnum="6103"/>
+        <mob limit="4" maxHere="2" vnum="6103"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="6113">
+      <description>Ты стоишь на  узкой дорожке, идущей  сквозь темную чащу леса. Древние
+мрачные деревья угрожающе возвышаются вокруг тебя. Дорожка продолжается
+на юг и запад.
+</description>
+      <exits>
+        <node name="south">
+          <description>Узкая тропинка бежит на юг, петляя между деревьями.
+</description>
+          <target>6114</target>
+        </node>
+        <node name="west">
+          <description>Узкая тропинка петляет между деревьями, уводя тебя на запад.
+</description>
+          <target>6112</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">Кажется, что эти громадные мрачные деревья безмолвно наблюдают за тобой.
+</node>
+        <node keyword="path дорога дорожка">Тропинка выглядит очень заброшенной. Один из гигантских корней вылез
+из земли и разрушил часть ее.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Небольшая дорожка в темной чаще леса</name>
+      <resets>
+        <drop vnum="6103"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="6114">
+      <description>Ты стоишь в месте, где  сливаются три  дороги. Со всех  сторон  над тобой
+возвышаются древние мрачные деревья. Дороги ведут на север, восток и запад.
+ 
+</description>
+      <exits>
+        <node name="east">
+          <description>Узкая дорожкая петляет между деревьями и выводит тебя на восток.
+</description>
+          <target>6115</target>
+        </node>
+        <node name="north">
+          <description>Узкая дорожка, петляя между деревьев, уводит тебя на север.
+</description>
+          <target>6113</target>
+        </node>
+        <node name="up">
+          <description>В воздух, под Парящие Горы.
+</description>
+          <target>17241</target>
+        </node>
+        <node name="west">
+          <description>Узкая дорожка, петляя между деревьями, выводит тебя на запад.
+</description>
+          <target>6122</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">Кажется, что эти громадные мрачные деревья безмолвно наблюдают за тобой.
+</node>
+        <node keyword="path дорога дорожка">Тропинка выглядит очень заброшенной. Один из гигантских корней вылез
+из земли и разрушил часть ее.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Развилка в темной чаще леса</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6115">
+      <description>Ты стоишь на узкой дорожке, идущей сквозь темную чащу леса. У тебя
+такое чувство, будто в окружающем безмолвии древние деревья осторожно
+рассматривают тебя. Дорожка ведет тебя на север и запад.
+</description>
+      <exits>
+        <node name="north">
+          <description>Узкая дорожка петляет между деревьями и выводит тебя на север.
+</description>
+          <target>6116</target>
+        </node>
+        <node name="west">
+          <description>Узкая дорожка петляет в лесу и выводит тебя на запад.
+</description>
+          <target>6114</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">Кажется, что эти громадные мрачные деревья безмолвно наблюдают за тобой.
+</node>
+        <node keyword="path дорога дорожка">Тропинка выглядит очень заброшенной. Один из гигантских корней вылез
+из земли и разрушил часть ее.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Небольшая дорожка в темной чаще леса</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6116">
+      <description>Ты стоишь на узкой дорожке, идущей  сквозь темную чащу  леса. Гигантские
+мрачные деревья зловеще возвышаются над тобой со  всех сторон. Дорога идет
+на восток и юг.
+</description>
+      <exits>
+        <node name="east">
+          <description>Узкая дорожка, петляя между деревьями, выводит тебя на восток.
+</description>
+          <target>6117</target>
+        </node>
+        <node name="south">
+          <description>Узкая дорожка, петляя между деревьями, выводит тебя на юг.
+</description>
+          <target>6115</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">Кажется, что эти громадные мрачные деревья безмолвно наблюдают за тобой.
+</node>
+        <node keyword="path дорога дорожка">Тропинка выглядит очень заброшенной. Один из гигантских корней вылез
+из земли и разрушил часть ее.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Небольшая дорожка в темной чаще леса</name>
+      <resets>
+        <mob limit="2" maxHere="2" vnum="6100"/>
+        <mob limit="2" maxHere="2" vnum="6100"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="6117">
+      <description>Ты стоишь в месте, где сливаются три дороги. Похоже, что эти древние
+мрачные деревья безмолвно смотрят на тебя со свех сторон. Дороги ведут
+на север, восток и запад.
+</description>
+      <exits>
+        <node name="east">
+          <description>Узкая дорожка, петляя между деревьев, выводит тебя на восток.
+</description>
+          <target>6118</target>
+        </node>
+        <node name="north">
+          <description>Узкая дорожка бежит по лесу и выводит тебя на север.
+</description>
+          <target>6106</target>
+        </node>
+        <node name="west">
+          <description>Узкая дорожка петляет между деревьями и выводит тебя на запад.
+</description>
+          <target>6116</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">Кажется, что эти громадные мрачные деревья безмолвно наблюдают за тобой.
+</node>
+        <node keyword="path дорога дорожка">Тропинка выглядит очень заброшенной. Один из гигантских корней вылез
+из земли и разрушил часть ее.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Развилка в темной чаще леса</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6118">
+      <description>Ты  стоишь на  узкой дорожке, идущей  сквозь темную чащу леса. Вокруг
+везде возвышаются древние мрачные деревья. Дорожка ведет на юг и запад.
+</description>
+      <exits>
+        <node name="north">
+          <description>Парящие Горы.
+</description>
+          <target>17251</target>
+        </node>
+        <node name="south">
+          <description>Узкая дорожка ведет тебя на юг, петляя между деревьев.
+</description>
+          <target>6119</target>
+        </node>
+        <node name="west">
+          <description>Узкая дорожка убегает на запад, петляя между деревьев.
+</description>
+          <target>6117</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">Кажется, что эти громадные мрачные деревья безмолвно наблюдают за тобой.
+</node>
+        <node keyword="path дорога дорожка">Тропинка выглядит очень заброшенной. Один из гигантских корней вылез
+из земли и разрушил часть ее.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Небольшая дорожка в темной чаще леса</name>
+      <resets>
+        <mob limit="4" maxHere="2" vnum="6103"/>
+        <mob limit="4" maxHere="2" vnum="6103"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="6119">
+      <description>Ты стоишь на узкой дорожке, идущей сквозь темную чащу леса. Со всех
+сторон  возвышаются громадные древние деревья. Дорожка ведет на север
+и юг.
+</description>
+      <exits>
+        <node name="north">
+          <description>Узкая дорожка убегает на север, петляя между деревьями.
+</description>
+          <target>6118</target>
+        </node>
+        <node name="south">
+          <description>Узкая дорожка петляет между деревьями и уходит на юг.
+</description>
+          <target>6120</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">Тебе кажется, будто они смотрят на тебя.
+</node>
+        <node keyword="path дорога дорожка">Тропинка выглядит очень заброшенной. Один из гигантских корней вылез
+из земли и разрушил часть ее.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Небольшая дорожка в темной чаще леса</name>
+      <resets>
+        <drop vnum="6107"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="6120">
+      <description>Ты стоишь на узкой дорожке,  идущей сквозь темную  чащу леса. На  юге
+быстрая река (river) течет на запад сквозь лес. На обоих ее берегах (banks) 
+возвышаются древние мрачные деревья. Дорога идет на север и запад.
+</description>
+      <exits>
+        <node name="north">
+          <description>Узкая дорожка уходит на север, петляя между деревьями.
+</description>
+          <target>6119</target>
+        </node>
+        <node name="west">
+          <description>Узкая дорожка бежит на запад, петляя между деревьями.
+</description>
+          <target>6121</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="river река поток">Течение реки быстрое и сильное, а вода в ней черная или кажется такой
+в сумраке.
+</node>
+        <node keyword="bank banks tree trees trunk trunks берег берега дерево деревья ствол стволы">Кроны старых деревьев, растущих на обоих берегах реки, раскинулись над
+водой подобно крыше.
+</node>
+        <node keyword="path дорога дорожка">Тропинка выглядит очень заброшенной. Один из гигантских корней вылез
+из земли и разрушил часть ее.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>На берегу реки в темной чаще леса</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6121">
+      <description>Ты стоишь на узкой  дорожке, идущей  сквозь темную чащу леса. Древний
+лес растет здесь настолько густо, что дорожка просто теряется в пыльных
+корнях. На юге темная река течет с востока на запад. Единственный выход
+отсюда, кажется, есть только на востоке.
+</description>
+      <exits>
+        <node name="east">
+          <description>Узкая дорожка петляет между деревьями и уходит на восток.
+</description>
+          <target>6120</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="river река поток">Течение реки быстрое и сильное, а вода в ней черная или кажется такой
+в сумраке.
+</node>
+        <node keyword="bank banks tree trees trunk trunks берег берега дерево деревья ствол стволы">Кроны старых деревьев, растущих на обоих берегах реки, раскинулись над
+водой подобно крыше.
+</node>
+        <node keyword="path дорога дорожка">Тропинка выглядит очень заброшенной. Один из гигантских корней вылез
+из земли и разрушил часть ее.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Тупик на берегу реки в темной чаще леса</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6122">
+      <description>Ты стоишь на узкой дорожке, идущей  сквозь темную чащу  леса. Гигантские
+мрачные деревья зловеще возвышаются над тобой со  всех сторон. Дорога идет
+на восток и юг.
+</description>
+      <exits>
+        <node name="east">
+          <description>Узкая дорожка, петляя между деревьями, уводит тебя на восток.
+</description>
+          <target>6114</target>
+        </node>
+        <node name="south">
+          <description>Узкая дорожка бежит на юг, петляя между деревьями.
+</description>
+          <target>6123</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">Кажется, что эти громадные мрачные деревья безмолвно наблюдают за тобой.
+</node>
+        <node keyword="path дорога дорожка">Тропинка выглядит очень заброшенной. Один из гигантских корней вылез
+из земли и разрушил часть ее.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Небольшая дорожка в темной чаще леса</name>
+      <resets>
+        <drop vnum="6106"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="6123">
+      <description>Ты стоишь на развилке, где сходятся три дороги. Тебе кажется, что
+древние мрачные деревья (trees) безмолвно смотрят на тебя со всех сторон. На
+юге темная река (river) течет с востока на запад сквозь лес. Дороги ведут на
+север, восток и запад.
+</description>
+      <exits>
+        <node name="east">
+          <description>Узкая дорожка бежит на восток, петляя между деревьями.
+</description>
+          <target>6124</target>
+        </node>
+        <node name="north">
+          <description>Узкая дорожка бежит на север, петляя между деревьями.
+</description>
+          <target>6122</target>
+        </node>
+        <node name="south">
+          <description>Ты видишь воды темной реки.
+</description>
+          <target>9774</target>
+        </node>
+        <node name="west">
+          <description>Узкая дорожка бежит на запад, петляя между деревьями.
+</description>
+          <target>6125</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="river река поток">Течение реки быстрое и сильное, а вода в ней черная или кажется такой
+в сумраке.
+</node>
+        <node keyword="bank banks tree trees trunk trunks берег берега дерево деревья ствол стволы">Кроны старых деревьев, растущих на обоих берегах реки, раскинулись над
+водой подобно крыше.
+</node>
+        <node keyword="path дорога дорожка">Тропинка выглядит очень заброшенной. Один из гигантских корней вылез
+из земли и разрушил часть ее.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Развилка на берегу реки в темной чаще леса</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6124">
+      <description>Ты стоишь на узкой  дорожке, идущей  сквозь темную чащу леса. Древний
+лес растет здесь настолько густо, что дорожка просто теряется в пыльных
+корнях. На юге темная река (river) течет с востока на запад. Единственный выход
+отсюда, кажется, есть только на западе.
+</description>
+      <exits>
+        <node name="south">
+          <description>Оттуда сильно воняет.
+</description>
+          <target>2801</target>
+        </node>
+        <node name="west">
+          <description>Узкая дорожка петляет между деревьями, уводя тебя на запад.
+</description>
+          <target>6123</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="river река поток">Течение реки быстрое и сильное, а вода в ней черная или кажется такой
+в сумраке.
+</node>
+        <node keyword="bank banks tree trees trunk trunks берег берега дерево деревья ствол стволы">Кроны старых деревьев, растущих на обоих берегах реки, раскинулись над
+водой подобно крыше.
+</node>
+        <node keyword="path дорога дорожка">Тропинка выглядит очень заброшенной. Один из гигантских корней вылез
+из земли и разрушил часть ее.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Тупик в темной чаще леса.</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6125">
+      <description>Ты стоишь на узкой дорожке, идущей сквозь темную чащу леса. Вокруг
+возвышаются древние мрачные  деревья. Ты чувствуешь, как с юга воняет
+болотным газом. Дорожка идет на север и восток.
+</description>
+      <exits>
+        <node name="east">
+          <description>Узкая дорожка, петляя между деревьями, выводит тебя на восток.
+</description>
+          <target>6123</target>
+        </node>
+        <node name="north">
+          <description>Узкая дорожка выводит тебя на север, петляя между деревьями.
+</description>
+          <target>6126</target>
+        </node>
+        <node name="south">
+          <description>Ты чувствуешь доносящийся оттуда запах болотного газа.
+</description>
+          <target>8301</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="river река поток">Течение реки быстрое и сильное, а вода в ней черная или кажется такой
+в сумраке.
+</node>
+        <node keyword="bank banks tree trees trunk trunks берег берега дерево деревья ствол стволы">Кроны старых деревьев, растущих на обоих берегах реки, раскинулись над
+водой подобно крыше.
+</node>
+        <node keyword="path дорога дорожка">Тропинка выглядит очень заброшенной. Один из гигантских корней вылез
+из земли и разрушил часть ее.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Небольшая дорожка на берегу реки в темной чаще леса</name>
+      <resets>
+        <drop vnum="6104"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="6126">
+      <description>Ты на пыльной тропе, петляющей между громадными древними деревьями,
+обступившими ее со всех сторон. Тропа ведет на север и запад, а на юг
+от нее отделяется неприметная дорожка.
+</description>
+      <exits>
+        <node name="north">
+          <description>Узкая, пыльная тропинка идет на север.
+</description>
+          <target>6127</target>
+        </node>
+        <node name="south">
+          <description>Дорожка уходит на юг, прочь с тропинки.
+</description>
+          <target>6125</target>
+        </node>
+        <node name="west">
+          <description>Узкая, пыльная тропинка ведет тебя сквозь лес на запад.
+</description>
+          <target>6128</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="trail тропа тропка тропинка">Темная и пыльная тропинка выглядит совершенно заброшенной среди стоящих
+вокруг огромных деревьев.  В нескольких  местах она разрушена  большими
+корнями, вылезшими из земли.
+</node>
+        <node keyword="path дорога дорожка">Дорожка выглядит заброшенной и небезопасной под этими массивными
+деревьями, обступившими ее.
+</node>
+        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">Эти древние деревья растут тут уже многие стони лет. Ты не видишь даже
+лучика света, который упал бы сверху на их нижние ветви.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Узкая тропа в темной чаще леса</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6127">
+      <description>Ты на пыльной тропе, петляющей между громадными древними деревьями,
+обступившими ее со всех сторон. Тропа ведет на юг и восток.
+ 
+</description>
+      <exits>
+        <node name="east">
+          <description>Узкая, пыльная тропа идет сквозь лес на восток.
+</description>
+          <target>6112</target>
+        </node>
+        <node name="south">
+          <description>Узкая, пыльная тропа выводит тебя на юг.
+</description>
+          <target>6126</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="trail тропа тропка тропинка">Темная и пыльная тропинка выглядит совершенно заброшенной среди стоящих
+вокруг огромных деревьев.  В нескольких  местах она разрушена  большими
+корнями, вылезшими из земли.
+</node>
+        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">Эти древние деревья растут тут уже многие стони лет. Ты не видишь даже
+лучика света, который упал бы сверху на их нижние ветви.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Узкая тропа в темной чаще леса</name>
+      <resets>
+        <mob limit="2" maxHere="2" vnum="6101"/>
+        <mob limit="2" maxHere="2" vnum="6101"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="6128">
+      <description>Ты стоишь на пыльной тропе, петляющей с востока на запад между огромными
+древними деревьями, обступившими ее  со всех сторон. Вокруг тебя не слышно
+ни звука - везде стоит зловещее безмолвие.
+</description>
+      <exits>
+        <node name="east">
+          <description>Узкая и пыльная тропа идет по лесу и выводит тебя на восток.
+</description>
+          <target>6126</target>
+        </node>
+        <node name="west">
+          <description>Узкая и пыльная лесная тропинка выводит тебя на запад.
+</description>
+          <target>6129</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="trail тропа тропка тропинка">Темная и пыльная тропинка выглядит совершенно заброшенной среди стоящих
+вокруг огромных деревьев.  В нескольких  местах она разрушена  большими
+корнями, вылезшими из земли.
+</node>
+        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">Эти древние деревья растут тут уже многие стони лет. Ты не видишь даже
+лучика света, который упал бы сверху на их нижние ветви.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Узкая тропа в темной чаще леса</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6129">
+      <description>Ты стоишь на пыльной тропе, петляющей с востока на запад между огромными
+древними деревьями, обступившими ее  со всех сторон. Вокруг тебя не слышно
+ни звука - везде стоит зловещее безмолвие.
+</description>
+      <exits>
+        <node name="east">
+          <description>Узкая и пыльная лесная тропинка идет на восток.
+</description>
+          <target>6128</target>
+        </node>
+        <node name="west">
+          <description>Узкая и пыльная лесная тропа ведет тебя на запад.
+</description>
+          <target>6135</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="trail тропа тропка тропинка">Темная и пыльная тропинка выглядит совершенно заброшенной среди стоящих
+вокруг огромных деревьев.  В нескольких  местах она разрушена  большими
+корнями, вылезшими из земли.
+</node>
+        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">Эти древние деревья растут тут уже многие стони лет. Ты не видишь даже
+лучика света, который упал бы сверху на их нижние ветви.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Узкая тропа в темной чаще леса</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6130">
+      <description>Ты на пыльной  тропе,  бегущей на  запад. Над тропинкой висят большие
+липкие шнуры (wires), подвешенные  на манер веревок  между деревьями. На западе
+дорога полностью покрыта гигантской паутиной из огромных нитей, укрытых
+клеем. Тебе придется ползти, чтобы пройти там.
+</description>
+      <exits>
+        <node name="east">
+          <description>Узкая и пыльная лесная тропинка ведет тебя на восток, прочь от паутины.
+</description>
+          <target>6144</target>
+        </node>
+        <node name="up">
+          <target>6132</target>
+        </node>
+        <node name="west">
+          <description>Больше всего это похоже на гигантскую паутину. Похоже, что там можно пройти.
+</description>
+          <target>6131</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="trail тропа тропка тропинка">Темная и пыльная тропинка выглядит совершенно заброшенной среди стоящих
+вокруг огромных деревьев.  В нескольких  местах она разрушена  большими
+корнями, вылезшими из земли.
+</node>
+        <node keyword="substance wire wires rope ropes tree trees trunk trunks паутина нить нити веревка веревки вещество дерево деревья ствол стволы">Липкое вещество висит между этими древними деревьями, подвешенное как
+веревки, кое-где перекрывая  дорогу. Кажется по этим  веревкам  можно
+взобраться на одно из деревьев.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Узкая тропа в темной чаще леса</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6131">
+      <description>Ты идешь по пыльной тропе, тщательно пригибая голову под
+клейкими нитями...
+&gt;
+Огромный ядовитый паук падает сверху !
+Огромный ядовитый паук падает сверху !
+Огромный ядовитый паук падает сверху !
+&gt;
+Огромный ядовитый паук жалит тебя ! Ты выдерживаешь его укус !
+Огромный ядовитый паук жалит тебя ! Ты отравлен !
+Огромный ядовитый паук жалит тебя ! Ты отравлен !
+&gt;
+Ты падаешь и не можешь подняться !!!
+</description>
+      <flags>no_mob indoors</flags>
+      <name>Паутина</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6132">
+      <description>Ты  висишь на  боку огромного  древесного  ствола,  покрытого  клейким
+веществом. Прямо на западе от тебя между множеством гигантских деревьев,
+включая и твое, раскинулась громаднейшая паутина (web).
+</description>
+      <exits>
+        <node name="down">
+          <description>Снизу виднеется узкая лесная дорожка.
+</description>
+          <target>6130</target>
+        </node>
+        <node name="west">
+          <description>На западе от тебя плавно колышется гигантская паутина.
+</description>
+          <target>6133</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="web паутина">Паутина тянется на запад. Она настолько большая, что по ней можно идти.
+</node>
+      </extraDescr>
+      <flags>dark no_mob indoors</flags>
+      <name>На дереве</name>
+      <sector>water_swim</sector>
+    </node>
+    <node name="6133">
+      <description>Ты осторожно  балансируешь  на огромных  клейких нитях , удерживающих
+громадную паутину (web) на месте. На востоке от тебя находится ствол большого
+дерева, а  на  западе - вход  в  пещероподобное строение (cave), созданное  из
+множества слоев паутины.
+</description>
+      <exits>
+        <node name="east">
+          <description>На востоке виден ствол гигантского дерева.
+</description>
+          <target>6132</target>
+        </node>
+        <node name="north">
+          <description>Паутина тянется дальше, на север.
+</description>
+          <target>6200</target>
+        </node>
+        <node name="west">
+          <description>На западе виден вход в странное пещерообразное сооружение.
+</description>
+          <target>6134</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="web паутина">Гигантская паутина плавно колышется.
+</node>
+        <node keyword="cave structure пещера строение сооружение">Это сооружение двадцати футов в диаметре и десяти высотой очень старо.
+Его основание напоминает неровно очерченный круг.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>На паутине</name>
+      <sector>water_swim</sector>
+    </node>
+    <node name="6134">
+      <description>Ты внутри строения, которое создано из бесчисленных слоев паутины.
+Температура и сырость здесь очень велики  и дышать этим застоявшимся
+отвратительным  воздухом очень тяжело.  Все стены (walls)  покрыты открытыми
+коконами (cocoons).
+</description>
+      <exits>
+        <node name="east">
+          <description>Выход, находящийся на востоке, буквально зовет тебя отсюда.
+</description>
+          <target>6133</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="web wall walls паутина стена стены">Липкие стены сплошь покрыты раскрытыми коконами.
+</node>
+        <node keyword="cocoon cocoons кокон коконы">Эти коконы буквально взломаны изнутри, как будто росшее в них существо
+не  могло больше существовать внутри и вырывалось наружу. Размером они
+будут с голову человека.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Логово Паучьей Королевы</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="6319"/>
+        <give vnum="6308"/>
+        <give vnum="6309"/>
+        <mob limit="3" maxHere="3" vnum="6318"/>
+        <mob limit="3" maxHere="3" vnum="6318"/>
+        <mob limit="3" maxHere="3" vnum="6318"/>
+        <mob limit="1" maxHere="1" vnum="6319"/>
+        <give vnum="6308"/>
+        <give vnum="6309"/>
+        <mob limit="3" maxHere="3" vnum="6318"/>
+        <mob limit="3" maxHere="3" vnum="6318"/>
+        <mob limit="3" maxHere="3" vnum="6318"/>
+        <mob limit="1" maxHere="1" vnum="6319"/>
+        <give vnum="6308"/>
+        <give vnum="6309"/>
+        <mob limit="3" maxHere="3" vnum="6318"/>
+        <mob limit="3" maxHere="3" vnum="6318"/>
+        <mob limit="3" maxHere="3" vnum="6318"/>
+        <mob limit="1" maxHere="1" vnum="6319"/>
+        <give vnum="6308"/>
+        <give vnum="6309"/>
+        <mob limit="3" maxHere="3" vnum="6318"/>
+        <mob limit="3" maxHere="3" vnum="6318"/>
+        <mob limit="3" maxHere="3" vnum="6318"/>
+        <mob limit="1" maxHere="1" vnum="6319"/>
+        <give vnum="6308"/>
+        <give vnum="6309"/>
+        <mob limit="3" maxHere="3" vnum="6318"/>
+        <mob limit="3" maxHere="3" vnum="6318"/>
+        <mob limit="3" maxHere="3" vnum="6318"/>
+        <mob limit="1" maxHere="1" vnum="6319"/>
+        <give vnum="6308"/>
+        <give vnum="6309"/>
+        <mob limit="3" maxHere="3" vnum="6318"/>
+        <mob limit="3" maxHere="3" vnum="6318"/>
+        <mob limit="3" maxHere="3" vnum="6318"/>
+      </resets>
+      <sector>water_swim</sector>
+    </node>
+    <node name="6135">
+      <description>Ты стоишь на пыльной тропе, идущей сквозь  темную чащу леса. Древние
+мрачные деревья возвышаются вокруг тебя. Тропа идет на север и восток.
+</description>
+      <exits>
+        <node name="east">
+          <description>Пыльная тропинка ведет тебя сквозь деревья на восток.
+</description>
+          <target>6129</target>
+        </node>
+        <node name="north">
+          <description>Пыльная тропинка идет сквозь деревья на север.
+</description>
+          <target>6136</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">Кажется, что эти громадные мрачные деревья безмолвно наблюдают за тобой.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Пыльная тропа в темной чаще леса</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6136">
+      <description>Ты стоишь на пыльной тропе, идущей сквозь  темную чащу леса.  Древние
+мрачные деревья (trees) возвышаются вокруг тебя. Тропа идет на юг и запад, а на
+восток уходит широкая неровная дорога
+</description>
+      <exits>
+        <node name="east">
+          <description>На деревьях, стоящих вокруг, видно множество царапин.
+</description>
+          <target>6142</target>
+        </node>
+        <node name="south">
+          <description>Пыльная тропинка ведет тебя сквозь деревья на юг.
+</description>
+          <target>6135</target>
+        </node>
+        <node name="west">
+          <description>Пыльная тропинка ведет тебя сквозь деревья на запад.
+</description>
+          <target>6137</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">На деревьях, что растут к востоку, видно множество отметин, как будто
+кто-то с гигантскими когтями в ярости сдирал с них кору.
+</node>
+        <node keyword="path дорога дорожка">На деревьях, стоящих по обе стороны дороги видно множество царапин.
+</node>
+        <node keyword="trail тропа тропка тропинка">Темная и пыльная тропинка выглядит совершенно заброшенной среди стоящих
+вокруг огромных деревьев.  В нескольких  местах она разрушена  большими
+корнями, вылезшими из земли.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Пыльная тропа в темной чаще леса</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6137">
+      <description>Ты стоишь на пыльной тропе, идущей сквозь темную чащу леса. Древние
+мрачные деревья возвышаются вокруг тебя.  На севере ты видишь мрачный
+лес. Другие выходы ведут на юг и восток.
+</description>
+      <exits>
+        <node name="east">
+          <description>Пыльная тропинка ведет тебя сквозь деревья на восток.
+</description>
+          <target>6136</target>
+        </node>
+        <node name="north">
+          <description>На севере виднеется темная роща.
+</description>
+          <target>1300</target>
+        </node>
+        <node name="south">
+          <target>8838</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">Кажется, что эти громадные мрачные деревья безмолвно наблюдают за тобой.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Конец тропы в темной чаще леса</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6142">
+      <description>Ты в конце широкой неровной дороги. На  севере находится  очень большой
+зловещего вида вход в пещеру (cave). На окружающих деревьях видны многочисленные
+отметины, как будто их грызли в ярости огромными клыками.
+</description>
+      <exits>
+        <node name="north">
+          <description>Из этой пещеры доносится отвратительный запах гигантской змеи.
+</description>
+          <target>6143</target>
+        </node>
+        <node name="west">
+          <description>Дорожка бежит на запад.
+</description>
+          <target>6136</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">На деревьях видно множество отметин, как будто кто-то с гигантскими
+когтями в ярости сдирал с них кору.
+</node>
+        <node keyword="cave opening пещера отверстие дыра вход">Из этой пещеры доносится отвратительный запах гигантской змеи.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Перед пещерой в темной чаще леса</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6143">
+      <description>Ты стоишь в обыкновенной  большой пещере.  Пол покрыт грудами разных
+костей (bones), а зловоние так сильно, что можно топор в воздухе вешать. Виден
+только один выход - на юге.
+</description>
+      <exits>
+        <node name="south">
+          <description>Выход ведет в лес.
+</description>
+          <target>6142</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="bone bones floor пол кости кость">Большинство костей на полу этой пещеры - человеческие.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Пещера Зеленого Дракона</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="6112"/>
+        <give vnum="6110"/>
+        <give vnum="6112"/>
+        <give vnum="6111"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="6144">
+      <description>Ты на узкой  дорожке (path), идущей  сквозь темную чащу леса.  Вокруг тебя
+возвышаются древние мрачные деревья (trees). Стволы деревьев покрыты каким-то
+клейким веществом (substance). Дорожка ведет на юг и запад.
+</description>
+      <exits>
+        <node name="south">
+          <description>Узкая дорожка петляет между деревьев, уводя тебя на юг.
+</description>
+          <target>6110</target>
+        </node>
+        <node name="west">
+          <description>Узкая дорожка петляет между деревьев, уводя тебя на запад.
+</description>
+          <target>6130</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="substance rope ropes thread threads вещество клей нить нити веревка веревки">Это вещество напоминает тебе гигантские нити, покрытые клеем. Если бы
+они не были таких громадных размеров, ты мог бы присягнуться, что это
+часть паутины.
+</node>
+        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">Кажется, что эти мрачные древние гиганты молча наблюдают за тобой.
+</node>
+        <node keyword="path дорога дорожка тропа тропинка">Дорожка еле различима. Корни гигантских деревьев делают ее практически
+невидимой.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Небольшая дорожка в темной чаще леса</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6150">
+      <description>Тропа, на которой ты стоишь, выглядит намного более страшной, чем все,
+что тебе приходилось видеть ранее. На деревьях и возле них видны следы
+от зубов и когтей обычных животных. Тропинка идет на север.
+</description>
+      <exits>
+        <node name="north">
+          <description>Узкая тропа продолжает свой бег на север.
+</description>
+          <target>6151</target>
+        </node>
+        <node name="south">
+          <description>Тропинка пересекается с большой дорогой в лесу.
+</description>
+          <target>6103</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Узкая тропа</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6151">
+      <description>Часть тропы, на которой ты сейчас стоишь, выглядет особенно - ты не
+видишь тут никаких следов животных. Густо растущие деревья заставляют
+тропинку резко свернуть на восток.
+</description>
+      <exits>
+        <node name="east">
+          <description>Тропинка поворачивает на восток.
+</description>
+          <target>6152</target>
+        </node>
+        <node name="south">
+          <description>Начало тропинки.
+</description>
+          <target>6150</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Узкая тропа</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6152">
+      <description>Перед тобой  открывается странная  картина - окружающие деревья словно
+выстроились кольцом вокруг ГРОМАДНОГО дерева, которое находится в центре
+этого круга. Ты замечаешь, что на  востоке в ствол  этого дерева врезана
+деревянная  дверь,  а тропа, на  которой ты  стоишь, заканчивается у его
+основания.
+</description>
+      <exits>
+        <node name="east">
+          <description>Искустно вырезанная в дереве дверь.
+</description>
+          <flags>isdoor closed</flags>
+          <keyword>door дверь</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>6153</target>
+        </node>
+        <node name="north">
+          <description>Длинная пыльная тропа.
+</description>
+          <target>18001</target>
+        </node>
+        <node name="west">
+          <description>Поворот на тропинке.
+</description>
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>6151</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Кольцо деревьев</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6153">
+      <description>Ты находишься внутри дерева и отсюда можешь пойти вниз, в мрак,
+или  выйти  наружу, на  запад. На севере  находится вход в логово
+Ciquala.
+</description>
+      <exits>
+        <node name="down">
+          <description>Ступеньки. Кажется они смогут выдержать твой вес.
+</description>
+          <target>6154</target>
+        </node>
+        <node name="north">
+          <description>Большое дупло в дереве.
+</description>
+          <target>13400</target>
+        </node>
+        <node name="west">
+          <description>Искустно вырезанная в дереве дверь.
+</description>
+          <flags>isdoor closed</flags>
+          <keyword>door дверь</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>6152</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>В большом дереве</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6154">
+      <description>Коридор, в котором ты стоишь, на  самом деле - один  из корней этого
+пустого  изнутри дерева. Он  ведет тебя на юг, в комнату из которой ты
+слышишь странные звуки, и наверх. На западе от тебя - вход в Трельские
+пещеры.
+</description>
+      <exits>
+        <node name="north">
+          <target>14700</target>
+        </node>
+        <node name="south">
+          <description>Коридор выглядит довольно величественно.
+</description>
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>6155</target>
+        </node>
+        <node name="up">
+          <description>Ступеньки. Кажется они смогут выдержать твой вес.
+</description>
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>6153</target>
+        </node>
+        <node name="west">
+          <description>Вход в Трельские пещеры.
+</description>
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>18800</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Подземный ход</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6155">
+      <description>Этот храм  был выстроен  в  честь бога, о котором ты  даже и не знаешь.
+Здесь очень   хорошее место для посещений, но ты чувствуешь себя не очень
+хорошо, когда  решаешь провести здесь немного больше времени. Деревянный
+алтарь едва заметно мерцает с момента твоего прихода. Отсюда только
+два выхода - на север, в подземных ход, и на юг - в Бездну.
+</description>
+      <exits>
+        <node name="north">
+          <description>Коридор выглядит довольно величественно.
+</description>
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>6154</target>
+        </node>
+        <node name="south">
+          <description>Путь в Бездну.
+</description>
+          <target>25004</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Храм друидов</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="6116"/>
+        <equip to="wield" vnum="6155"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="6156">
+      <description>Раздвигая подлесок, ты выходишь на маленькую поляну. Она тихая и
+мирная,  ты  расслабляешься  на ней,  соприкасаясь с красой  леса.
+Маленькие феи и эльфы танцуют  вокруг тихого пруда, предлагая тебе
+прохладный напиток. Ты чувствуешь  себя в мире с собой и окружающим
+тебя лесом.
+</description>
+      <exits>
+        <node name="down">
+          <description>Ты видишь вход в небольшую землянку.
+</description>
+          <target>6157</target>
+        </node>
+        <node name="north">
+          <description>На севере виднеется просвет между деревьями.
+</description>
+          <target>6008</target>
+        </node>
+      </exits>
+      <flags>no_vanish law nosummon</flags>
+      <guilds>ranger </guilds>
+      <name>Спрятанная поляна</name>
+      <sector>forest</sector>
+    </node>
+    <node name="6157">
+      <description>Небольшая  уютная  землянка.  Правда  тут  малость  темновато,  зато
+намного  безопаснее, чем на открытой местности. Возле одной из  стенок
+дымит  небольшой  очаг  - интересно, а куда выходит  дым,  на  полянке
+вроде  ничего  не дымило. Скудную обстановку составляют  пара  простых
+скамеек и большой грубый деревянный стол.
+</description>
+      <exits>
+        <node name="up">
+          <description>Выход на небольшую полянку.
+</description>
+          <target>6156</target>
+        </node>
+      </exits>
+      <flags>no_vanish indoors law nosummon</flags>
+      <guilds>ranger </guilds>
+      <name>В землянке рейнджеров</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="6117"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+  </rooms>
+</area>

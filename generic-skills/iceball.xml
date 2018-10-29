@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <beats>12</beats>
   <classes>
@@ -17,15 +17,25 @@
       <weight>50</weight>
     </node>
   </classes>
-  <dammsg>������� ���</dammsg>
+  <dammsg>ледяной шар</dammsg>
   <group>combat</group>
+  <help level="-1" type="SkillHelp">
+%FMT% *%SPELL%* _%VICT%_
+
+Опасное заклинание анти-паладинов, способное поразить холодом всех, кто
+находится рядом с ним. Сила заклинания растет по мере того, как анти-паладин
+становится более опытным. Созданный таким образом ледяной шар также сковывает
+движения жертв, отнимая у них очки движения.
+
+%SA% %H% [(cast,колдовать)]
+</help>
   <mana>25</mana>
   <mob>
     <forbidden>false</forbidden>
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>������� ���</nameRus>
+  <nameRus>ледяной шар</nameRus>
   <spell type="SPELL(Iceball)">
     <casted>true</casted>
     <position>fight</position>

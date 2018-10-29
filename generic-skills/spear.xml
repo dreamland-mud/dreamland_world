@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <beats>12</beats>
   <classes>
@@ -51,17 +51,23 @@
   </classes>
   <command type="SKILL(throwspear)">
     <extra>hidden</extra>
-    <hint>������� �����</hint>
+    <hint>метнуть копье</hint>
     <name>throwspear</name>
     <position>stand</position>
   </command>
-  <dammsg mg="n">�����</dammsg>
+  <dammsg mg="n">копье</dammsg>
   <group>weaponsmaster</group>
   <hard>5</hard>
-  <help type="SkillHelp">
-%FMT% *(throw,�������)* _�����_ _�����������_ _������_
+  <help level="-1" type="SkillHelp" keyword="'МЕТНУТЬ КОПЬЕ'">
+Это умение позволяет пользоваться копьями и боевыми посохами.      
+Раса урукхаев владеет копьями в совершенстве с раннего возраста.
+Рейнджеры очень хорошо обращаются с посохами в качестве вторичного оружия.
 
-��������� ������� ����� ������ ������� ������ ��.
+%FMT% *(throw,метнуть)* _копье_ _направление_ _жертва_
+
+Владеющие копьями могут весьма успешно метать их.
+
+%SA% %H% [(ranger staff,посох рейнджера)], [(dual,вторичное)]
   </help>
   <mob>
     <bonus>40</bonus>
@@ -70,7 +76,7 @@
     <ordered>true</ordered>
     <professional>false</professional>
   </mob>
-  <nameRus>�����</nameRus>
+  <nameRus>копье</nameRus>
   <raceBonuses>
     <node name="urukhai">
       <bonus>100</bonus>

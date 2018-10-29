@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
     <cancelled>true</cancelled>
     <dispelled>true</dispelled>
-    <wearoff>Твои движения становятся медленнее.</wearoff>
-    <wearoffDispel>Движения %1$C2 становятся не такими быстрыми.</wearoffDispel>
+    <wearoff>п╒п╡п╬п╦ п╢п╡п╦п╤п╣п╫п╦я▐ я│я┌п╟п╫п╬п╡я▐я┌я│я▐ п╪п╣п╢п╩п╣п╫п╫п╣п╣.</wearoff>
+    <wearoffDispel>п■п╡п╦п╤п╣п╫п╦я▐ %1$C2 я│я┌п╟п╫п╬п╡я▐я┌я│я▐ п╫п╣ я┌п╟п╨п╦п╪п╦ п╠я▀я│я┌я─я▀п╪п╦.</wearoffDispel>
   </affect>
   <beats>12</beats>
   <classes>
@@ -25,9 +25,10 @@
       <rating>1</rating>
     </node>
   </classes>
+  <dammsg></dammsg>
   <group>enhancement</group>
-  <help type="SkillHelp">Заклинание делает твои движения быстрее. Это полезно в битве. Однако
-организм повышает свой метаболизм, и восстанавливает силы медленнее.
+  <help level="-1" type="SkillHelp">п≈п╟п╨п╩п╦п╫п╟п╫п╦п╣ п╢п╣п╩п╟п╣я┌ я┌п╡п╬п╦ п╢п╡п╦п╤п╣п╫п╦я▐ п╠я▀я│я┌я─п╣п╣. п╜я┌п╬ п©п╬п╩п╣п╥п╫п╬ п╡ п╠п╦я┌п╡п╣. п·п╢п╫п╟п╨п╬
+п╬я─пЁп╟п╫п╦п╥п╪ п©п╬п╡я▀я┬п╟п╣я┌ я│п╡п╬п╧ п╪п╣я┌п╟п╠п╬п╩п╦п╥п╪, п╦ п╡п╬я│я│я┌п╟п╫п╟п╡п╩п╦п╡п╟п╣я┌ я│п╦п╩я▀ п╪п╣п╢п╩п╣п╫п╫п╣п╣.
   </help>
   <mana>30</mana>
   <mob>
@@ -35,7 +36,7 @@
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>ускорение</nameRus>
+  <nameRus>я┐я│п╨п╬я─п╣п╫п╦п╣</nameRus>
   <spell type="SPELL(Haste)">
     <casted>true</casted>
     <position>fight</position>

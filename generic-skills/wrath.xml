@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
-    <wearoff>��������� ��������.</wearoff>
+    <wearoff>Проклятие проходит.</wearoff>
   </affect>
   <beats>12</beats>
   <classes>
@@ -20,15 +20,24 @@
       <weight>35</weight>
     </node>
   </classes>
-  <dammsg>������������ ����</dammsg>
+  <dammsg>божественный гнев</dammsg>
   <group>benedictions</group>
+  <help level="-1" type="SkillHelp">
+%FMT% *%SPELL%* _%VICT%_
+
+Паладин может наслать божественные кары на головы своих врагов, не только
+нанося им повреждения, но и проклиная. Защита от святых атак уменьшает
+повреждения и позволяет избежать проклятия.
+
+%SA% %H% [(cast,колдовать)]
+</help>
   <mana>20</mana>
   <mob>
     <forbidden>false</forbidden>
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>������������ ����</nameRus>
+  <nameRus>божественный гнев</nameRus>
   <spell type="SPELL(Wrath)">
     <casted>true</casted>
     <position>fight</position>

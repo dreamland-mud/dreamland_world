@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <beats>12</beats>
   <classes>
@@ -27,15 +27,24 @@
       <rating>1</rating>
     </node>
   </classes>
-  <dammsg>������ ������</dammsg>
+  <dammsg>ацетум примус</dammsg>
   <group>combat</group>
+  <help level="-1" type="SkillHelp">
+%FMT% *%SPELL%* _%VICT%_
+
+Это заклинание обволакивает жертву облаком кислоты, нанося ей серьезные повреждения.
+Если сработала защита от заклинаний (saves vs spell), повреждения будут ослаблены
+вдвое. Сила повреждений возрастает с уровнем заклинания.
+
+%SA% %H% [(cast,колдовать)]
+</help>
   <mana>20</mana>
   <mob>
     <forbidden>false</forbidden>
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>������ ������</nameRus>
+  <nameRus>ацетум примус</nameRus>
   <spell type="SPELL(AcetumPrimus)">
     <casted>true</casted>
     <position>fight</position>

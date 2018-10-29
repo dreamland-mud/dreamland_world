@@ -325,7 +325,7 @@
 </long_descr>
       <mana>1d1+999</mana>
       <material>0</material>
-      <player_name>boy продавец</player_name>
+      <player_name>pet shop boy продавец</player_name>
       <race>human</race>
       <res add="spell weapon"/>
       <sex>male</sex>
@@ -625,6 +625,42 @@
       <start_pos>stand</start_pos>
       <wealth>5000</wealth>
     </node>
+    <node name="3013">
+      <ac bash="-65" exotic="-35" pierce="-65" slash="-65"/>
+      <act add="npc sentinel nosteal nopurge sage"/>
+      <alignment>900</alignment>
+      <behavior type="MansionKeyMaker">
+        <price type="QuestPointPrice">
+          <questpoint>50</questpoint>
+        </price>
+      </behavior>
+      <dam_type>slap</dam_type>
+      <damage>15d30+60</damage>
+      <default_pos>stand</default_pos>
+      <description>Тощий как жердь, этот слесарь большую часть времени занят неизвестно чем,
+в редкие моменты обслуживая желающих разжиться ключами для дома.
+Заметив твой взгляд, он молча отрывается от своего занятия и кивает
+в сторону таблички на прилавке. Да уж, поболтать о погоде с этим типом не 
+получится.
+</description>
+      <detection add="invis hidden"/>
+      <hit>1d1+28099</hit>
+      <imm add="summon charm"/>
+      <level>75</level>
+      <long_descr>Слесарь (locksmith) со скучающим видом подпиливает ногти напильником.
+</long_descr>
+      <mana>1d1+199</mana>
+      <material>none</material>
+      <off add="dodge fade"/>
+      <player_name>locksmith слесарь</player_name>
+      <race>human</race>
+      <res add="spell weapon"/>
+      <sex>male</sex>
+      <short_descr>слесар|ь|я|ю|я|ем|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
     <node name="3020">
       <ac bash="-65" exotic="-35" pierce="-65" slash="-65"/>
       <act add="npc sentinel practice mage nopurge notrack"/>
@@ -647,7 +683,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer>none detection creation harmful weather </practicer>
+      <practicer>harmful weather creation detection none </practicer>
       <race>elf</race>
       <res add="spell"/>
       <sex>female</sex>
@@ -677,7 +713,7 @@
       <material>0</material>
       <off add="disarm dodge fast kick parry"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer>none detection creation harmful weather </practicer>
+      <practicer>harmful weather creation detection none </practicer>
       <race>human</race>
       <res add="spell"/>
       <sex>male</sex>
@@ -713,7 +749,7 @@
       <material>0</material>
       <off add="backstab disarm dodge fast kick_dirt trip"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer>none detection creation harmful weather </practicer>
+      <practicer>harmful weather creation detection none </practicer>
       <race>human</race>
       <res add="spell"/>
       <sex>female</sex>
@@ -742,7 +778,7 @@
       <material>0</material>
       <off add="area_attack bash berserk disarm kick parry"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer>none detection creation harmful weather </practicer>
+      <practicer>harmful weather creation detection none </practicer>
       <race>dwarf</race>
       <res add="spell"/>
       <sex>male</sex>
@@ -1258,7 +1294,7 @@
 </description>
       <hit>1d6+4</hit>
       <hitroll>1</hitroll>
-      <long_descr>Аллейный кот (alley cat) шипит на тебя.
+      <long_descr>Аллейный кот (cat) шипит на тебя.
 </long_descr>
       <mana>1d1+99</mana>
       <material>0</material>
@@ -2007,7 +2043,7 @@
       <mana>1d1+99</mana>
       <material>0</material>
       <off add="berserk"/>
-      <player_name>crier плакальшщик</player_name>
+      <player_name>town crier плакальщик</player_name>
       <race>human</race>
       <sex>male</sex>
       <short_descr>городск|ой|ого|ому|ого|им|ом плакальщи|к|ка|ку|ка|ком|ке</short_descr>
@@ -2399,7 +2435,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer>none detection creation harmful weather </practicer>
+      <practicer>harmful weather creation detection none </practicer>
       <race>human</race>
       <res add="spell"/>
       <sex>male</sex>
@@ -2426,7 +2462,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer>none detection creation harmful weather </practicer>
+      <practicer>harmful weather creation detection none </practicer>
       <race>human</race>
       <res add="spell weapon"/>
       <sex>male</sex>
@@ -2459,7 +2495,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer>none detection creation harmful weather </practicer>
+      <practicer>harmful weather creation detection none </practicer>
       <race>dark-elf</race>
       <res add="spell weapon"/>
       <sex>male</sex>
@@ -2488,7 +2524,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer>none detection creation harmful weather </practicer>
+      <practicer>harmful weather creation detection none </practicer>
       <race>elf</race>
       <res add="spell"/>
       <sex>female</sex>
@@ -2519,7 +2555,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer>none detection creation harmful weather </practicer>
+      <practicer>harmful weather creation detection none </practicer>
       <race>human</race>
       <res add="spell"/>
       <sex>male</sex>
@@ -2584,7 +2620,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>adept guildmaster адепт карлик</player_name>
-      <practicer>none detection creation harmful weather </practicer>
+      <practicer>harmful weather creation detection none </practicer>
       <race>duergar</race>
       <res add="weapon"/>
       <sex>male</sex>
@@ -2765,6 +2801,19 @@
       </type>
       <weight>1000</weight>
     </node>
+    <node name="3008">
+      <description>Бутылка чернил (ink) стоит здесь.</description>
+      <gender>f</gender>
+      <material>glass</material>
+      <name>ink bottle бутылка чернил</name>
+      <short_descr>бутыл|ка|ки|ке|ку|кой|ке чернил</short_descr>
+      <type name="drink">
+        <left>10</left>
+        <liquid>ink</liquid>
+        <total>10</total>
+      </type>
+      <wear_flags>take</wear_flags>
+    </node>
     <node name="3009">
       <cost>22</cost>
       <description>Большой пирог (pie) лежит здесь.</description>
@@ -2892,6 +2941,30 @@
       </type>
       <wear_flags>take</wear_flags>
       <weight>10</weight>
+    </node>
+    <node name="3018">
+      <affects>
+        <node>
+          <apply to="hitroll">3</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="damroll">5</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
+      <description>Искусное изображение (picture) скарабея валяется никому не нужное.</description>
+      <gender>m</gender>
+      <material>paper</material>
+      <name>picture рисунок</name>
+      <properties>
+        <node name="name">scarab скарабей</node>
+        <node name="short">скараб|ей|ея|ею|ея|еем|ее</node>
+      </properties>
+      <short_descr>рисун|ок|ка|ку|ок|ком|ке скарабея</short_descr>
+      <type name="recipe">
+      </type>
+      <wear_flags>take</wear_flags>
     </node>
     <node name="3020">
       <condition>90</condition>
@@ -9252,6 +9325,30 @@ eg, say kassandra
       <name>Мидгаард, станция метро Общая Площадь</name>
       <sector>inside</sector>
     </node>
+    <node name="3039">
+      <description>Тесная комнатушка мастерской завалена ключами, разнообразными заготовками и
+инструментами для изготовления ключей. Табличка (sign) прибита к прилавку.
+</description>
+      <exits>
+        <node name="south">
+          <key>0</key>
+          <target>3302</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="sign табличка">Здесь ты можешь купить ключ от дома, если он у тебя, конечно же, есть.
+                    Бездомных не обслуживаем!
+       Используй команду {y{lRключи список{lEmkey list{x для списка твоих ключей,
+     и команду {y{lRключи купить{lEmkey list{x{D &lt;название ключа&gt;{x для покупки ключа из списка.
+</node>
+      </extraDescr>
+      <flags>indoors law</flags>
+      <name>Мастерская ключника</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="3013"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
     <node name="3040">
       <description>Ты стоишь  между двух  небольших башен (towers), встроенных  в городскую 
 стену  (wall).  Они  связанны  с  перекидным  мостом (footbridge),  который
@@ -9281,6 +9378,7 @@ eg, say kassandra
           <flags>isdoor</flags>
           <key>3379</key>
           <keyword>gate ворота</keyword>
+          <short_descr>ворот|а||ам|а|ами|ах</short_descr>
           <target>3052</target>
         </node>
       </exits>
@@ -9331,6 +9429,7 @@ eg, say kassandra
           <flags>isdoor</flags>
           <key>3379</key>
           <keyword>gate ворота</keyword>
+          <short_descr>ворот|а||ам|а|ами|ах</short_descr>
           <target>3053</target>
         </node>
         <node name="north">
@@ -9591,6 +9690,7 @@ eg, say kassandra
 </description>
           <flags>isdoor closed</flags>
           <keyword>trapdoor люк</keyword>
+          <short_descr>люк||а|у||ом|е</short_descr>
           <target>3062</target>
         </node>
         <node name="north">
@@ -9708,7 +9808,8 @@ eg, say kassandra
 </description>
           <flags>isdoor</flags>
           <key>3379</key>
-          <keyword>gate</keyword>
+          <keyword>gate ворота</keyword>
+          <short_descr>ворот|а||ам|а|ами|ах</short_descr>
           <target>3040</target>
         </node>
         <node name="north">
@@ -9765,6 +9866,7 @@ eg, say kassandra
           <flags>isdoor</flags>
           <key>3133</key>
           <keyword>gate ворота</keyword>
+          <short_descr>ворот|а||ам|а|ами|ах</short_descr>
           <target>3041</target>
         </node>
       </exits>
@@ -9943,6 +10045,7 @@ eg, say kassandra
 </description>
           <flags>isdoor closed</flags>
           <keyword>trapdoor люк</keyword>
+          <short_descr>люк||а|у||ом|е</short_descr>
           <target>3048</target>
         </node>
       </exits>
@@ -10656,6 +10759,7 @@ reads...   ???.
 </description>
           <flags>isdoor</flags>
           <keyword>door дверь</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
           <target>3111</target>
         </node>
         <node name="west">
@@ -10664,6 +10768,7 @@ reads...   ???.
           <flags>isdoor closed locked</flags>
           <key>3120</key>
           <keyword>door дверь</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
           <target>3142</target>
         </node>
       </exits>
@@ -10692,6 +10797,7 @@ reads...   ???.
 </description>
           <flags>isdoor</flags>
           <keyword>door дверь</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
           <target>3110</target>
         </node>
       </exits>
@@ -11031,7 +11137,8 @@ reads...   ???.
 </description>
           <flags>isdoor closed locked</flags>
           <key>3121</key>
-          <keyword>grate</keyword>
+          <keyword>grate решетка</keyword>
+          <short_descr>решетк|а|и|е|у|ой|е</short_descr>
           <target>3600</target>
         </node>
         <node name="west">
@@ -11289,6 +11396,7 @@ reads...   ???.
           <description>Тяжелая дубовая дверь на востоке.</description>
           <flags>isdoor closed</flags>
           <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
           <target>6904</target>
         </node>
         <node name="south">
@@ -11445,7 +11553,8 @@ reads...   ???.
 </description>
           <flags>isdoor closed locked</flags>
           <key>3120</key>
-          <keyword>door</keyword>
+          <keyword>door дверь</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
           <target>3110</target>
         </node>
         <node name="south">
@@ -11454,6 +11563,7 @@ reads...   ???.
           <flags>isdoor closed locked</flags>
           <key>3137</key>
           <keyword>door дверь</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
           <target>3143</target>
         </node>
       </exits>
@@ -11494,6 +11604,7 @@ reads...   ???.
           <flags>isdoor closed locked</flags>
           <key>3137</key>
           <keyword>door дверь</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
           <target>3142</target>
         </node>
       </exits>
@@ -11599,7 +11710,8 @@ reads...   ???.
 </description>
           <flags>isdoor closed locked</flags>
           <key>3161</key>
-          <keyword>door</keyword>
+          <keyword>door дверь</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
           <target>3161</target>
         </node>
         <node name="south">
@@ -11654,6 +11766,7 @@ reads...   ???.
           <flags>isdoor closed locked</flags>
           <key>3161</key>
           <keyword>door дверь</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
           <target>3160</target>
         </node>
         <node name="up">
@@ -11680,7 +11793,8 @@ reads...   ???.
       <exits>
         <node name="down">
           <flags>isdoor closed</flags>
-          <keyword>дверь</keyword>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
           <target>777</target>
         </node>
         <node name="up">
@@ -11962,7 +12076,8 @@ reads...   ???.
 </description>
           <flags>isdoor</flags>
           <key>3133</key>
-          <keyword>дверь</keyword>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
           <target>3256</target>
         </node>
         <node name="west">
@@ -12002,7 +12117,8 @@ reads...   ???.
 </description>
           <flags>isdoor</flags>
           <key>3133</key>
-          <keyword>дверь</keyword>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
           <target>3255</target>
         </node>
         <node name="south">
@@ -12147,7 +12263,8 @@ reads...   ???.
 </description>
           <flags>isdoor</flags>
           <key>3133</key>
-          <keyword>дверь</keyword>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
           <target>3268</target>
         </node>
         <node name="west">
@@ -12297,7 +12414,8 @@ reads...   ???.
 </description>
           <flags>isdoor</flags>
           <key>3133</key>
-          <keyword>дверь</keyword>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
           <target>3262</target>
         </node>
       </exits>
@@ -12442,6 +12560,7 @@ reads...   ???.
     </node>
     <node name="3302">
       <description>Ты идешь вдоль Клановой  дороги.  На юге ты можешь обменять свои деньги.
+На севере небольшая дверь ведет в мастерскую ключника.
 Клановая дорога продолжается на запад и на восток.
 </description>
       <exits>
@@ -12449,6 +12568,10 @@ reads...   ???.
           <description>Клановая дорога продолжается на восток.
 </description>
           <target>3303</target>
+        </node>
+        <node name="north">
+          <key>0</key>
+          <target>3039</target>
         </node>
         <node name="south">
           <description>Пункт обмена денег на юге.
@@ -12602,7 +12725,8 @@ reads...   ???.
         <node name="south">
           <flags>isdoor closed locked noflee pickproof nopass</flags>
           <key>3298</key>
-          <keyword>дверь</keyword>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
           <target>3336</target>
         </node>
       </exits>
@@ -12636,7 +12760,8 @@ reads...   ???.
         <node name="north">
           <flags>isdoor closed locked noflee pickproof nopass</flags>
           <key>3298</key>
-          <keyword>дверь</keyword>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
           <target>3335</target>
         </node>
       </exits>

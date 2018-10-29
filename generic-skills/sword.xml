@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <classes>
     <node name="anti-paladin">
@@ -53,8 +53,22 @@
       <rating>1</rating>
     </node>
   </classes>
+  <dammsg></dammsg>
   <group>weaponsmaster</group>
   <hard>5</hard>
+  <help level="-1" type="SkillHelp">
+Мечи - очень популярный и широко распространенный в мире вид вооружения.
+Меч является излюбленным оружием для эльфов, дроу, гитианки и некоторых рас
+гигантов. Умелое владение мечом даже позволяет отражать или разрубать в полете
+стрелы. Мечом также можно расколоть щит и оружие противника надвое, однако не 
+так успешно, как топором.
+
+Cамураи достигли высшего мастерства в обращении с мечами: им доступно
+умение 'мастер меча', а также секрет изготовления катан. Они - единственный
+класс, который орудует мечом в левой руке почти так же хорошо, как и в правой.
+
+%SA% %H% [(katana,катана)], [(dual,вторичное)], [(mastering sword,мастер меча)], [(weapon cleave,расколоть оружие)], [(shield cleave,расколоть щит)]
+</help>
   <mob>
     <bonus>40</bonus>
     <dice>3</dice>
@@ -62,7 +76,7 @@
     <ordered>true</ordered>
     <professional>false</professional>
   </mob>
-  <nameRus>���</nameRus>
+  <nameRus>меч</nameRus>
   <raceBonuses>
     <node name="drow">
       <bonus>100</bonus>
@@ -75,6 +89,16 @@
       <professional>true</professional>
     </node>
     <node name="githyanki">
+      <bonus>100</bonus>
+      <level>0</level>
+      <professional>true</professional>
+    </node>
+    <node name="storm giant">
+      <bonus>100</bonus>
+      <level>0</level>
+      <professional>true</professional>
+    </node>
+    <node name="fire giant">
       <bonus>100</bonus>
       <level>0</level>
       <professional>true</professional>

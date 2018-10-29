@@ -443,7 +443,7 @@
         <name>noiac</name>
         <position>dead</position>
         <rname>noiac</rname>
-        <help type="CommandHelp" ref="notelnet">
+        <help type="CommandHelp" ref="notelnet telnetga">
 Настройка отображения символов в зависимости от используемого терминала.
 
 %FMT%  *noiac* 
@@ -465,6 +465,14 @@
 
 При игре под клиентом zMUD для Win95, чтобы нормально видеть русскую букву "YA",
 оба переключателя необходимо установить в состояние "ВЫКЛ."
+
+%FMT%  *(config,режим)* *telnetga* *%YES%*|*%NO%*
+
+Включает-выключает высылку специальной последовательности символов (telnet go ahead)
+после каждой строки состояния. Это необходимо для комфортной работы некоторых клиентов,
+в частности, MudLet. Также необходимо установить переключатель noiac в ВЫКЛ, а
+notelnet во ВКЛ.
+
 </help>
       </node>
       <node type="ConfigElement">
@@ -479,6 +487,20 @@
         <name>notelnet</name>
         <position>dead</position>
         <rname>notelnet</rname>
+        <help type="CommandHelp" refby="noiac"></help>
+      </node>
+      <node type="ConfigElement">
+        <autocmd>false</autocmd>
+        <autolist>true</autolist>
+        <autotext>false</autotext>
+        <bit table="comm_flags">telnet_ga</bit>
+        <extra>keep_hide ghost afk nanny</extra>
+        <hint>посылать последовательность TELNET GA после строки состояния</hint>
+        <msgOff>Отправка TELNET GA отключена.</msgOff>
+        <msgOn>Отправка TELNET GA включена.</msgOn>
+        <name>telnetga</name>
+        <position>dead</position>
+        <rname>telnetga</rname>
         <help type="CommandHelp" refby="noiac"></help>
       </node>
       <name>Настройки соединения:</name>

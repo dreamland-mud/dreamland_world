@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <classes>
     <node name="anti-paladin">
@@ -23,8 +23,20 @@
       <rating>1</rating>
     </node>
   </classes>
+  <dammsg></dammsg>
   <group>weaponsmaster</group>
   <hard>5</hard>
+  <help level="-1" type="SkillHelp">
+Умение обращаться с топором. Топоры хороши для нанесения повреждений броне и
+другой экипировке противника, и позволяют использовать умения расколоть щит
+и расколоть оружие. Воины довольно успешно сражаются топорами во второй руке,
+в то время как другие профессии далеко не столь эффективны.
+
+Топор также является излюбленным оружием для некоторых рас, например, для
+дварфов и урукхаев.
+
+%SA% %H% [(weapon cleave,расколоть оружие)], [(shield cleave,расколоть щит)], [(dual,вторичное)]
+</help>
   <mob>
     <bonus>40</bonus>
     <dice>3</dice>
@@ -32,7 +44,7 @@
     <ordered>true</ordered>
     <professional>false</professional>
   </mob>
-  <nameRus>�����</nameRus>
+  <nameRus>топор</nameRus>
   <raceBonuses>
     <node name="duergar">
       <bonus>100</bonus>
@@ -50,6 +62,11 @@
       <professional>true</professional>
     </node>
     <node name="urukhai">
+      <bonus>100</bonus>
+      <level>0</level>
+      <professional>true</professional>
+    </node>
+    <node name="frost giant">
       <bonus>100</bonus>
       <level>0</level>
       <professional>true</professional>

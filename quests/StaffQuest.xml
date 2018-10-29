@@ -1,39 +1,40 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Quest>
-    <priority>1</priority>
-    <shortDesc>Поиск королевских вещей</shortDesc>
-    <objVnum>28107</objVnum>
-    <scenarios>
-	<node name="sceptre" type="StaffScenario">
-	    <name>скипетр sceptre</name>
-	    <shortDesc>королевск|ий|ого|ому|ий|им|ом скипетр||а|у||ом|е</shortDesc>
-	    <desc>Королевский скипетр (sceptre) лежит здесь, излучая желание вернуться к владельцу.</desc>
-	</node>
-	<node name="chest" type="StaffScenario">
-	    <name>treasure chest сундук драгоценностями</name>
-	    <shortDesc>сундук||а|у||ом|е с драгоценностями</shortDesc>
-	    <desc>Сундук (chest) хранит королевские сокровища.</desc>
-	</node>
-	<node name="leg" type="StaffScenario">
-	    <msg>Неизвестные вандалы открутили {Wножку{G от королевского {Wтрона{G!</msg>
-	    <name>ножка leg трона throne</name>
-	    <shortDesc>ножк|а|и|е|у|ой|е от трона</shortDesc>
-	    <desc>Ножка (leg) трона скучает здесь по своим трем соседкам.</desc>
-	    <wear table="wear_flags">wear_wield</wear>
-	</node>
-	<node name="wig" type="StaffScenario">
-	    <msg>Прямо из королевской спальни был украден {Wпарик королевы{G!</msg>
-	    <name>парик wig</name>
-	    <shortDesc>парик||а|у||ом|е королевы</shortDesc>
-	    <desc>На земле ты замечаешь фрагмент королевской прически (wig).</desc>
-	    <wear table="wear_flags">wear_head</wear>
-	</node>
-	<node name="pendant" type="StaffScenario">
-	    <msg>На балу с наряда королевы были срезаны {Wбриллиантовые подвески{G!</msg>
-	    <name>подвески pendant diamond</name>
-	    <shortDesc>бриллиантовы|е|х|м|е|ми|х подвес|ки|ок|кам|ки|ками|ках королевы</shortDesc>
-	    <desc>Драгоценные королевские подвески (pendant) лежат здесь.</desc>
-	    <wear table="wear_flags">wear_body</wear>
-	</node>
-    </scenarios>
+  <objVnum>28107</objVnum>
+  <priority>1</priority>
+  <scenarios>
+    <node name="chest" type="StaffScenario">
+      <desc>п║я┐п╫п╢я┐п╨ (chest) я┘я─п╟п╫п╦я┌ п╨п╬я─п╬п╩п╣п╡я│п╨п╦п╣ я│п╬п╨я─п╬п╡п╦я┴п╟.</desc>
+      <msg></msg>
+      <name>treasure chest я│я┐п╫п╢я┐п╨ п╢я─п╟пЁп╬я├п╣п╫п╫п╬я│я┌я▐п╪п╦</name>
+      <shortDesc>я│я┐п╫п╢я┐п╨||п╟|я┐||п╬п╪|п╣ я│ п╢я─п╟пЁп╬я├п╣п╫п╫п╬я│я┌я▐п╪п╦</shortDesc>
+    </node>
+    <node name="leg" type="StaffScenario">
+      <desc>п²п╬п╤п╨п╟ (leg) я┌я─п╬п╫п╟ я│п╨я┐я┤п╟п╣я┌ п╥п╢п╣я│я▄ п©п╬ я│п╡п╬п╦п╪ я┌я─п╣п╪ я│п╬я│п╣п╢п╨п╟п╪.</desc>
+      <msg>п²п╣п╦п╥п╡п╣я│я┌п╫я▀п╣ п╡п╟п╫п╢п╟п╩я▀ п╬я┌п╨я─я┐я┌п╦п╩п╦ {Wп╫п╬п╤п╨я┐{G п╬я┌ п╨п╬я─п╬п╩п╣п╡я│п╨п╬пЁп╬ {Wя┌я─п╬п╫п╟{G!</msg>
+      <name>п╫п╬п╤п╨п╟ leg я┌я─п╬п╫п╟ throne</name>
+      <shortDesc>п╫п╬п╤п╨|п╟|п╦|п╣|я┐|п╬п╧|п╣ п╬я┌ я┌я─п╬п╫п╟</shortDesc>
+    </node>
+    <node name="pendant" type="StaffScenario">
+      <desc>п■я─п╟пЁп╬я├п╣п╫п╫я▀п╣ п╨п╬я─п╬п╩п╣п╡я│п╨п╦п╣ п©п╬п╢п╡п╣я│п╨п╦ (pendant) п╩п╣п╤п╟я┌ п╥п╢п╣я│я▄.</desc>
+      <msg>п²п╟ п╠п╟п╩я┐ я│ п╫п╟я─я▐п╢п╟ п╨п╬я─п╬п╩п╣п╡я▀ п╠я▀п╩п╦ я│я─п╣п╥п╟п╫я▀ {Wп╠я─п╦п╩п╩п╦п╟п╫я┌п╬п╡я▀п╣ п©п╬п╢п╡п╣я│п╨п╦{G!</msg>
+      <name>п©п╬п╢п╡п╣я│п╨п╦ pendant diamond</name>
+      <shortDesc>п╠я─п╦п╩п╩п╦п╟п╫я┌п╬п╡я▀|п╣|я┘|п╪|п╣|п╪п╦|я┘ п©п╬п╢п╡п╣я│|п╨п╦|п╬п╨|п╨п╟п╪|п╨п╦|п╨п╟п╪п╦|п╨п╟я┘ п╨п╬я─п╬п╩п╣п╡я▀</shortDesc>
+      <wear>wear_body</wear>
+    </node>
+    <node name="sceptre" type="StaffScenario">
+      <desc>п п╬я─п╬п╩п╣п╡я│п╨п╦п╧ я│п╨п╦п©п╣я┌я─ (sceptre) п╩п╣п╤п╦я┌ п╥п╢п╣я│я▄, п╦п╥п╩я┐я┤п╟я▐ п╤п╣п╩п╟п╫п╦п╣ п╡п╣я─п╫я┐я┌я▄я│я▐ п╨ п╡п╩п╟п╢п╣п╩я▄я├я┐.</desc>
+      <msg></msg>
+      <name>я│п╨п╦п©п╣я┌я─ sceptre</name>
+      <shortDesc>п╨п╬я─п╬п╩п╣п╡я│п╨|п╦п╧|п╬пЁп╬|п╬п╪я┐|п╦п╧|п╦п╪|п╬п╪ я│п╨п╦п©п╣я┌я─||п╟|я┐||п╬п╪|п╣</shortDesc>
+    </node>
+    <node name="wig" type="StaffScenario">
+      <desc>п²п╟ п╥п╣п╪п╩п╣ я┌я▀ п╥п╟п╪п╣я┤п╟п╣я┬я▄ я└я─п╟пЁп╪п╣п╫я┌ п╨п╬я─п╬п╩п╣п╡я│п╨п╬п╧ п©я─п╦я┤п╣я│п╨п╦ (wig).</desc>
+      <msg>п÷я─я▐п╪п╬ п╦п╥ п╨п╬я─п╬п╩п╣п╡я│п╨п╬п╧ я│п©п╟п╩я▄п╫п╦ п╠я▀п╩ я┐п╨я─п╟п╢п╣п╫ {Wп©п╟я─п╦п╨ п╨п╬я─п╬п╩п╣п╡я▀{G!</msg>
+      <name>п©п╟я─п╦п╨ wig</name>
+      <shortDesc>п©п╟я─п╦п╨||п╟|я┐||п╬п╪|п╣ п╨п╬я─п╬п╩п╣п╡я▀</shortDesc>
+      <wear>wear_head</wear>
+    </node>
+  </scenarios>
+  <shortDesc>п÷п╬п╦я│п╨ п╨п╬я─п╬п╩п╣п╡я│п╨п╦я┘ п╡п╣я┴п╣п╧</shortDesc>
 </Quest>

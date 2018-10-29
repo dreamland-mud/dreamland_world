@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
-    <wearoff>�� ���������� ���� ����� ���������.</wearoff>
+    <wearoff>Ты чувствуешь себя менее защищенно.</wearoff>
   </affect>
   <beats>36</beats>
   <classes>
@@ -20,14 +20,22 @@
       <weight>20</weight>
     </node>
   </classes>
+  <dammsg></dammsg>
   <group>benedictions</group>
+  <help level="-1" type="SkillHelp">
+%FMT% *%SPELL%*
+
+Клерики могут наложить заклинания брони и щита разом на всех членов своей группы. 
+
+%SA% %H% [(cast,колдовать)], [(armor,броня)], [(shield,щит)]
+</help>
   <mana>100</mana>
   <mob>
     <forbidden>false</forbidden>
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>��������� ������</nameRus>
+  <nameRus>групповая защита</nameRus>
   <spell type="SPELL(GroupDefense)">
     <casted>true</casted>
     <position>stand</position>

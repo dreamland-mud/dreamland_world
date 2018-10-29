@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <beats>24</beats>
   <classes>
@@ -18,24 +18,25 @@
     </node>
   </classes>
   <command type="SKILL(cleave)">
-    <hint>(анти-паладины) рассечь противника надвое</hint>
+    <hint>(п╟п╫я┌п╦-п©п╟п╩п╟п╢п╦п╫я▀) я─п╟я│я│п╣я┤я▄ п©я─п╬я┌п╦п╡п╫п╦п╨п╟ п╫п╟п╢п╡п╬п╣</hint>
     <name>cleave</name>
     <order>player_only</order>
     <position>stand</position>
     <russian>
-      <node>расколоть</node>
-      <node>рассечь</node>
+      <node>я─п╟я│п╨п╬п╩п╬я┌я▄</node>
+      <node>я─п╟я│я│п╣я┤я▄</node>
     </russian>
   </command>
-  <dammsg mg="f">рассечка</dammsg>
-  <group>none</group>
-  <help type="SkillHelp">Нападение, подобное backstab, но не такое сильное. 
-Имеется шанс, что жертва будет немедленно убита.
+  <dammsg mg="f">я─п╟я│я│п╣я┤п╨п╟</dammsg>
+  <help level="-1" type="SkillHelp">
+%FMT% *%CMD%*
+
+п²п╟п©п╟п╢п╣п╫п╦п╣, п©п╬п╢п╬п╠п╫п╬п╣ п╡п╬я─п╬п╡я│п╨п╬п╪я┐ я┐п╢п╟я─я┐ п╡ я│п©п╦п╫я┐, п╫п╬ п╫п╣ я┌п╟п╨п╬п╣ я│п╦п╩я▄п╫п╬п╣. п≤п╪п╣п╣я┌я│я▐ я┬п╟п╫я│, я┤я┌п╬ п╤п╣я─я┌п╡п╟ п╠я┐п╢п╣я┌ п╫п╣п╪п╣п╢п╩п╣п╫п╫п╬ я┐п╠п╦я┌п╟.
   </help>
   <mob>
     <forbidden>true</forbidden>
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>рассечь</nameRus>
+  <nameRus>я─п╟я│я│п╣я┤я▄</nameRus>
 </skill>

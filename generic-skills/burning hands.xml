@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <beats>12</beats>
   <classes>
@@ -29,15 +29,23 @@
       <rating>1</rating>
     </node>
   </classes>
-  <dammsg mg="p">������� ����</dammsg>
+  <dammsg mg="p">горящие руки</dammsg>
   <group>combat</group>
+  <help level="-1" type="SkillHelp">
+%FMT% *%SPELL%* _%VICT%_
+
+Это боевое заклинание поражает жертву огнем. Повреждения снижаются, если у жертвы
+успешно прошел спасс-бросок против заклинаний (saves vs spell).
+
+%SA% %H% [(cast,колдовать)]
+</help>
   <mana>15</mana>
   <mob>
     <forbidden>false</forbidden>
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>������� ����</nameRus>
+  <nameRus>горящие руки</nameRus>
   <spell type="SPELL(BurningHands)">
     <casted>true</casted>
     <position>fight</position>

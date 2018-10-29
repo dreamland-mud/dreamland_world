@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <beats>12</beats>
   <classes>
@@ -17,15 +17,26 @@
       <weight>30</weight>
     </node>
   </classes>
-  <dammsg>�������� ��������</dammsg>
+  <dammsg>звуковой резонанс</dammsg>
   <group>combat</group>
+  <help level="-1" type="SkillHelp">
+%FMT% *%SPELL%* _%VICT%_
+
+Это боевое заклинание некромантов поражает жертву энергетическим разрядом,
+окружая ее цилиндром энергии. Жертва обездвиживается на какое-то время,
+лишаясь возможности пользоваться активными умениями и заклинаниями.
+Повреждения снижаются, если у жертвы успешно прошел спасс-бросок против
+заклинаний (saves vs spell).
+
+%SA% %H% [(cast,колдовать)]
+</help>
   <mana>20</mana>
   <mob>
     <forbidden>false</forbidden>
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>�������� ��������</nameRus>
+  <nameRus>звуковой резонанс</nameRus>
   <spell type="SPELL(SonicResonance)">
     <casted>true</casted>
     <position>fight</position>

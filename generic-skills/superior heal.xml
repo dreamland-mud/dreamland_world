@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <beats>12</beats>
   <classes>
@@ -22,14 +22,25 @@
       <weight>50</weight>
     </node>
   </classes>
+  <dammsg></dammsg>
   <group>healing</group>
+  <help level="-1" type="SkillHelp">
+%FMT% *%SPELL%* 
+%FMT% *%SPELL%* _%CHAR%_
+
+Профессиональная молитва, усиленная версия молитвы [(heal,лечение)].
+С каждым уровнем врачевателя (и, следовательно, произносимой молитвы) он
+будет все эффективнее оказывать помощь, восстанавливая здоровье себе или пациенту.
+
+%SA% %H% [(cast,колдовать)], [(master healing,мастерское лечение)]
+</help>
   <mana>100</mana>
   <mob>
     <forbidden>false</forbidden>
     <ordered>false</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>������ �������</nameRus>
+  <nameRus>высшее лечение</nameRus>
   <spell type="SPELL(SuperiorHeal)">
     <casted>true</casted>
     <position>fight</position>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <beats>12</beats>
   <classes>
@@ -17,14 +17,25 @@
       <weight>80</weight>
     </node>
   </classes>
+  <dammsg></dammsg>
   <group>healing</group>
+  <help level="-1" type="SkillHelp" keyword="раны">
+%FMT% *%SPELL%* 
+%FMT% *%SPELL%* _%CHAR%_
+
+Достигнув высочайшего мастерства в искусстве лечения, клерики могут восстановить
+за один раз большое количество очков здоровья у себя или у пациента. 
+Эффективность этой молитвы возрастает с уровнем.
+
+%SA% %H% [(cast,колдовать)]
+</help>
   <mana>250</mana>
   <mob>
     <forbidden>false</forbidden>
     <ordered>false</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>���������� �������</nameRus>
+  <nameRus>мастерское лечение</nameRus>
   <spell type="SPELL(MasterHealing)">
     <casted>true</casted>
     <position>fight</position>

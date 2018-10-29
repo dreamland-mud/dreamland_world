@@ -1,0 +1,101 @@
+systemInit = function() {
+    if (.tmp == null) 
+	.tmp = .Map();
+
+    if (.tmp.system == null) 
+	.tmp.system = .Map();
+    
+    this = .tmp.system;
+
+    sleep = function (t) {
+	var i;
+	
+	for (i = 0; i < t; i = i + 1) 
+	    .scheduler.yield(); 
+    };
+
+    RandomArray = function(list) {
+	this = .Map();
+	
+	array = .Array();
+	
+	list.forEach(
+	    function(arr) {
+		arr[arr.size()] = this;
+	    }, array);
+	
+	random = function() {
+	    return array[.number_range(0, array.size() - 1)];
+	};
+
+        get = function(i) {
+            return array[i]; 
+        };
+	
+	return this;
+    };
+
+    /*
+     * schedules extraction to occur in the next tick
+     */
+    trueExtract = function(obj_or_mob) {
+	.scheduler.Thread(
+		function(objmob) {
+			if (!objmob.dead)
+			    objmob.extract(true);
+			return;
+		}, obj_or_mob
+	).start(); 
+    };
+    
+    /*
+     * returns: null if num is not numerical
+     *          numerical representation of num - otherwise
+     */
+    toNumber = function(num) {
+	try {
+	    var n;
+	    n=0+num;
+	    return n;
+	} catch(e) {
+	    return null;
+	}
+    };
+    
+    /*
+     * transforms list (a1, a2, ... an) into the string "a1, a2, ... , an"
+     */
+    concatComma = function(msgs) {
+	var m, str;
+
+	m = msgs.clone();
+	str = "";
+
+	for (;m.size() != 0;) {
+	    str = str + m.front();
+	    m.pop_front();
+
+	    if (m.size() != 0) str = str + ", ";
+	}
+	return str;
+    };
+    
+    /*
+     * transforms list (a1, as2, ... an) into the string "a1, a2, ... É an"
+     */
+    concatCommaAnd = function(msgs) {
+	var m, str;
+	
+	m = msgs.clone();
+	str = "";
+
+	for (;m.size() != 0;) {
+	    str = str + m.front();
+	    m.pop_front();
+
+	    if (m.size() == 1)     str = str + " É ";
+	    else if (m.size() > 1) str = str + ", ";
+	}
+	return str;
+    };
+}

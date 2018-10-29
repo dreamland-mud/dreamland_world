@@ -1,18 +1,22 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <command type="SKILL(suck)">
-    <hint>(вампиры) высосать кровь из шеи</hint>
+    <hint>(п╡п╟п╪п©п╦я─я▀) п╡я▀я│п╬я│п╟я┌я▄ п╨я─п╬п╡я▄ п╦п╥ я┬п╣п╦</hint>
     <name>suck</name>
     <order>player_only</order>
     <position>stand</position>
     <russian>
-      <node>сосать</node>
+      <node>я│п╬я│п╟я┌я▄</node>
     </russian>
   </command>
-  <group>none</group>
-  <help type="SkillHelp">Пить кровь из уже укушенной спящей жертвы. Каждый глоток утоляет жажду
-крови, однако чем меньше эта жажда, тем больше шанс разбудить жертву 
-и самому попасть под удар.
+  <dammsg></dammsg>
+  <help level="-1" type="SkillHelp">%FMT% *(suck,я│п╬я│п╟я┌я▄)* _п╤п╣я─я┌п╡п╟_
+
+п÷п╦я┌я▄ п╨я─п╬п╡я▄ п╦п╥ я┐п╤п╣ я┐п╨я┐я┬п╣п╫п╫п╬п╧ я│п©я▐я┴п╣п╧ п╤п╣я─я┌п╡я▀. п п╟п╤п╢я▀п╧ пЁп╩п╬я┌п╬п╨ я┐я┌п╬п╩я▐п╣я┌ п╤п╟п╤п╢я┐
+п╨я─п╬п╡п╦, п╬п╢п╫п╟п╨п╬ я┤п╣п╪ п╪п╣п╫я▄я┬п╣ я█я┌п╟ п╤п╟п╤п╢п╟, я┌п╣п╪ п╠п╬п╩я▄я┬п╣ я┬п╟п╫я│ я─п╟п╥п╠я┐п╢п╦я┌я▄ п╤п╣я─я┌п╡я┐ 
+п╦ я│п╟п╪п╬п╪я┐ п©п╬п©п╟я│я┌я▄ п©п╬п╢ я┐п╢п╟я─.
+
+%SA% %H% [(touch,п╨п╬я│п╫я┐я┌я▄я│я▐)], [(bite,п╨я┐я│п╟я┌я▄)], [(bloodlet,п╨я─п╬п╡п╬п©я┐я│п╨п╟п╫п╦п╣)], [(vampiric form,я└п╬я─п╪п╟ п╡п╟п╪п©п╦я─п╟)]
   </help>
   <hidden>true</hidden>
   <mob>
@@ -20,5 +24,5 @@
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>сосание</nameRus>
+  <nameRus>я│п╬я│п╟п╫п╦п╣</nameRus>
 </skill>

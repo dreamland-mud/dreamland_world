@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
-    <wearoff>Ты вновь чуствуешь силы для создания голема.</wearoff>
+    <wearoff>п╒я▀ п╡п╫п╬п╡я▄ я┤я┐я│я┌п╡я┐п╣я┬я▄ я│п╦п╩я▀ п╢п╩я▐ я│п╬п╥п╢п╟п╫п╦я▐ пЁп╬п╩п╣п╪п╟.</wearoff>
   </affect>
   <beats>48</beats>
   <classes>
@@ -20,32 +20,41 @@
       <weight>15</weight>
     </node>
   </classes>
+  <dammsg></dammsg>
   <group>necromancy</group>
+  <help level="-1" type="SkillHelp">
+%FMT% *%SPELL%*
+
+п п╟п╪п╣п╫п╫я▀п╧ пЁп╬п╩п╣п╪ - я┐п╩я┐я┤я┬п╣п╫п╫п╟я▐ п╡п╣я─я│п╦я▐ п╪п╟п╩п╬пЁп╬ пЁп╬п╩п╣п╪п╟, я│ п╠Oп╩я▄я┬п╦п╪ п╨п╬п╩п╦я┤п╣я│я┌п╡п╬п╪
+п╥п╢п╬я─п╬п╡я▄я▐ п╦ я█п╫п╣я─пЁп╦п╦.
+
+%SA% %H% [(cast,п╨п╬п╩п╢п╬п╡п╟я┌я▄)] [(golems,пЁп╬п╩п╣п╪я▀)] [(resummon,п©п╣я─п╣п©я─п╦п╥я▀п╡)]
+</help>
   <mana>300</mana>
   <mob>
     <forbidden>false</forbidden>
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>каменный голем</nameRus>
+  <nameRus>п╨п╟п╪п╣п╫п╫я▀п╧ пЁп╬п╩п╣п╪</nameRus>
   <spell type="SPELL(StoneGolem)">
     <castMobCount>1</castMobCount>
     <casted>true</casted>
     <maxMobCount>3</maxMobCount>
     <mobVnum>22</mobVnum>
     <msgCreateAttemptArea></msgCreateAttemptArea>
-    <msgCreateAttemptRoom>%^C1 пытается создать каменного голема.</msgCreateAttemptRoom>
-    <msgCreateAttemptSelf>Ты пытаешься создать каменного голема.</msgCreateAttemptSelf>
-    <msgCreateRoom>%^C1 создает каменного голема!</msgCreateRoom>
-    <msgCreateSelf>Ты создаешь каменного голема!</msgCreateSelf>
-    <msgNotRecognizeRoom>%2$^C1 отказывается повиноваться %1$C3.</msgNotRecognizeRoom>
-    <msgNotRecognizeSelf>%2$^C1 отказывается повиноваться тебе.</msgNotRecognizeSelf>
-    <msgReattachAttemptRoom>%1$^C1 приказывает %2$C3 вновь следовать за %1$P5.</msgReattachAttemptRoom>
-    <msgReattachAttemptSelf>Ты приказываешь %C3 вновь следовать за тобой.</msgReattachAttemptSelf>
-    <msgReattachRoom>%2$^C1 подчиняется приказу %1$C2.</msgReattachRoom>
-    <msgReattachSelf>%^C1 подчиняется твоему приказу.</msgReattachSelf>
-    <msgStillAffected>У тебя не хватает сил создать сейчас голема.</msgStillAffected>
-    <msgTooManyMobiles>Ты не сможешь управлять таким количеством големов!</msgTooManyMobiles>
+    <msgCreateAttemptRoom>%^C1 п©я▀я┌п╟п╣я┌я│я▐ я│п╬п╥п╢п╟я┌я▄ п╨п╟п╪п╣п╫п╫п╬пЁп╬ пЁп╬п╩п╣п╪п╟.</msgCreateAttemptRoom>
+    <msgCreateAttemptSelf>п╒я▀ п©я▀я┌п╟п╣я┬я▄я│я▐ я│п╬п╥п╢п╟я┌я▄ п╨п╟п╪п╣п╫п╫п╬пЁп╬ пЁп╬п╩п╣п╪п╟.</msgCreateAttemptSelf>
+    <msgCreateRoom>%^C1 я│п╬п╥п╢п╟п╣я┌ п╨п╟п╪п╣п╫п╫п╬пЁп╬ пЁп╬п╩п╣п╪п╟!</msgCreateRoom>
+    <msgCreateSelf>п╒я▀ я│п╬п╥п╢п╟п╣я┬я▄ п╨п╟п╪п╣п╫п╫п╬пЁп╬ пЁп╬п╩п╣п╪п╟!</msgCreateSelf>
+    <msgNotRecognizeRoom>%2$^C1 п╬я┌п╨п╟п╥я▀п╡п╟п╣я┌я│я▐ п©п╬п╡п╦п╫п╬п╡п╟я┌я▄я│я▐ %1$C3.</msgNotRecognizeRoom>
+    <msgNotRecognizeSelf>%2$^C1 п╬я┌п╨п╟п╥я▀п╡п╟п╣я┌я│я▐ п©п╬п╡п╦п╫п╬п╡п╟я┌я▄я│я▐ я┌п╣п╠п╣.</msgNotRecognizeSelf>
+    <msgReattachAttemptRoom>%1$^C1 п©я─п╦п╨п╟п╥я▀п╡п╟п╣я┌ %2$C3 п╡п╫п╬п╡я▄ я│п╩п╣п╢п╬п╡п╟я┌я▄ п╥п╟ %1$P5.</msgReattachAttemptRoom>
+    <msgReattachAttemptSelf>п╒я▀ п©я─п╦п╨п╟п╥я▀п╡п╟п╣я┬я▄ %C3 п╡п╫п╬п╡я▄ я│п╩п╣п╢п╬п╡п╟я┌я▄ п╥п╟ я┌п╬п╠п╬п╧.</msgReattachAttemptSelf>
+    <msgReattachRoom>%2$^C1 п©п╬п╢я┤п╦п╫я▐п╣я┌я│я▐ п©я─п╦п╨п╟п╥я┐ %1$C2.</msgReattachRoom>
+    <msgReattachSelf>%^C1 п©п╬п╢я┤п╦п╫я▐п╣я┌я│я▐ я┌п╡п╬п╣п╪я┐ п©я─п╦п╨п╟п╥я┐.</msgReattachSelf>
+    <msgStillAffected>пё я┌п╣п╠я▐ п╫п╣ я┘п╡п╟я┌п╟п╣я┌ я│п╦п╩ я│п╬п╥п╢п╟я┌я▄ я│п╣п╧я┤п╟я│ пЁп╬п╩п╣п╪п╟.</msgStillAffected>
+    <msgTooManyMobiles>п╒я▀ п╫п╣ я│п╪п╬п╤п╣я┬я▄ я┐п©я─п╟п╡п╩я▐я┌я▄ я┌п╟п╨п╦п╪ п╨п╬п╩п╦я┤п╣я│я┌п╡п╬п╪ пЁп╬п╩п╣п╪п╬п╡!</msgTooManyMobiles>
     <position>stand</position>
     <postaffectDuration>24</postaffectDuration>
     <target>create_mob</target>

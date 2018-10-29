@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <beats>12</beats>
   <classes>
@@ -19,15 +19,24 @@
       <rating>1</rating>
     </node>
   </classes>
-  <dammsg>������������� ������</dammsg>
+  <dammsg>электрический захват</dammsg>
   <group>combat</group>
+  <help level="-1" type="SkillHelp">
+%FMT% *%SPELL%* _%VICT%_
+
+Это боевое заклинание поражает жертву разрядом молнии. Сила разряда плавно
+увеличивается с уровнем заклинателя.  Повреждения снижаются, если у жертвы
+успешно прошел спасс-бросок против заклинаний (saves vs spell).
+
+%SA% %H% [(cast,колдовать)]
+</help>
   <mana>15</mana>
   <mob>
     <forbidden>false</forbidden>
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>������������� ������</nameRus>
+  <nameRus>электрический захват</nameRus>
   <spell type="SPELL(ShockingGrasp)">
     <casted>true</casted>
     <position>fight</position>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <beats>12</beats>
   <classes>
@@ -17,15 +17,24 @@
       <weight>20</weight>
     </node>
   </classes>
-  <dammsg mg="n">����������</dammsg>
+  <dammsg mg="n">заклинание</dammsg>
   <group>harmful</group>
+  <help level="-1" type="SkillHelp">
+%FMT% *%SPELL%* _%VICT%_
+
+Эта молитва нанесет вред здоровью жертвы. Уровень повреждений
+никак не зависит от того, насколько хорошо жертва защищена от заклинаний
+и молитв (saves vs spell).
+
+%SA% %H% [(cast,колдовать)]
+</help>
   <mana>20</mana>
   <mob>
     <forbidden>false</forbidden>
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>����������� ����</nameRus>
+  <nameRus>критические раны</nameRus>
   <spell type="SPELL(CauseCritical)">
     <casted>true</casted>
     <position>fight</position>

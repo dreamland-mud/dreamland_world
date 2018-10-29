@@ -1,0 +1,1976 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<area>
+  <areadata>
+    <authors>Drkside</authors>
+    <credits>Drow City</credits>
+    <levelHigh>25</levelHigh>
+    <levelLow>15</levelLow>
+    <name>Город Дроу</name>
+    <resetMessage></resetMessage>
+    <security>9</security>
+    <speedwalk>6e4s2es2edws2d</speedwalk>
+    <translator>Tahi</translator>
+    <vnumHigh>5199</vnumHigh>
+    <vnumLow>5100</vnumLow>
+  </areadata>
+  <mobiles>
+    <node name="5100">
+      <ac bash="9" exotic="10" pierce="9" slash="9"/>
+      <act add="npc sentinel wimpy"/>
+      <alignment>-450</alignment>
+      <dam_type>none</dam_type>
+      <damage>1d4+0</damage>
+      <default_pos>sleep</default_pos>
+      <description>Беззащитный гоблин молит о пощаде.
+</description>
+      <hit>2d6+10</hit>
+      <level>1</level>
+      <long_descr>Спящий раб (slave) гоблин лежит тут.
+</long_descr>
+      <mana>0d9+100</mana>
+      <material>0</material>
+      <off add="disarm dodge trip assist_race"/>
+      <player_name>goblin slave гоблин раб</player_name>
+      <race>goblin</race>
+      <sex>male</sex>
+      <short_descr>раб||а|у|а|ом|е гоблин||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>sleep</start_pos>
+    </node>
+    <node name="5101">
+      <ac bash="1" exotic="8" pierce="1" slash="1"/>
+      <act add="npc noeye aggressive stay_area"/>
+      <alignment>-1000</alignment>
+      <dam_type>none</dam_type>
+      <damage>2d4+2</damage>
+      <default_pos>stand</default_pos>
+      <description>У тебя есть сомение, что он из тех, кто подскажет дорогу.
+</description>
+      <detection add="invis"/>
+      <hit>2d7+121</hit>
+      <level>10</level>
+      <long_descr>Дроу-плебей (commoner) несет караульную службу.
+</long_descr>
+      <mana>5d9+100</mana>
+      <material>0</material>
+      <off add="disarm dodge trip assist_race assist_vnum"/>
+      <player_name>drow commoner дроу плебей</player_name>
+      <race>drow</race>
+      <sex>male</sex>
+      <short_descr>дроу-плебе|й|я|ю|я|ем|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>15</wealth>
+    </node>
+    <node name="5102">
+      <ac bash="-1" exotic="8" pierce="-1" slash="-1"/>
+      <act add="npc sentinel aggressive"/>
+      <alignment>-1000</alignment>
+      <dam_type>none</dam_type>
+      <damage>1d12+3</damage>
+      <default_pos>stand</default_pos>
+      <description>Он выглядит рассерженным!
+</description>
+      <detection add="invis"/>
+      <hit>2d10+190</hit>
+      <level>14</level>
+      <long_descr>Знатный воин дроу (warrior) охраняет свой дом.
+</long_descr>
+      <mana>7d9+100</mana>
+      <material>0</material>
+      <off add="disarm dodge trip assist_race assist_vnum"/>
+      <player_name>drow noble warrior дроу знатный воин</player_name>
+      <race>drow</race>
+      <sex>male</sex>
+      <short_descr>знатн|ый|ого|ому|ого|ым|ом воин||а|у|а|ом|е дроу</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>50</wealth>
+    </node>
+    <node name="5103">
+      <ac bash="-1" exotic="5" pierce="-1" slash="-1"/>
+      <act add="npc sentinel aggressive mage"/>
+      <alignment>-1000</alignment>
+      <dam_type>none</dam_type>
+      <damage>1d10+3</damage>
+      <default_pos>stand</default_pos>
+      <description>Маг готовит заклинание... для тебя!!
+</description>
+      <detection add="invis"/>
+      <hit>2d10+190</hit>
+      <level>15</level>
+      <long_descr>Знатный маг дроу (mage) охраняет свой дом.
+</long_descr>
+      <mana>15d9+100</mana>
+      <material>0</material>
+      <off add="dodge assist_race assist_vnum"/>
+      <player_name>drow noble mage дроу знатный маг</player_name>
+      <race>drow</race>
+      <sex>male</sex>
+      <short_descr>знатн|ый|ого|ому|ого|ым|ом маг||а|у|а|ом|е дроу</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>100</wealth>
+    </node>
+    <node name="5104">
+      <ac bash="-3" exotic="6" pierce="-3" slash="-3"/>
+      <act add="npc sentinel aggressive cleric"/>
+      <alignment>-1000</alignment>
+      <dam_type>none</dam_type>
+      <damage>2d6+4</damage>
+      <default_pos>stand</default_pos>
+      <description>Лучше бы не видеть её худшую сторону!
+</description>
+      <detection add="invis"/>
+      <hit>3d9+258</hit>
+      <level>17</level>
+      <long_descr>Жрица дроу (priestess) выкрикывает указания.
+</long_descr>
+      <mana>17d9+100</mana>
+      <material>0</material>
+      <off add="disarm kick parry assist_race assist_vnum"/>
+      <player_name>drow priestess дроу жрица</player_name>
+      <race>drow</race>
+      <sex>female</sex>
+      <short_descr>жриц|а|ы|е|у|ей|е дроу</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>200</wealth>
+    </node>
+    <node name="5105">
+      <ac bash="-5" exotic="7" pierce="-5" slash="-5"/>
+      <act add="npc sentinel aggressive"/>
+      <alignment>-1000</alignment>
+      <dam_type>none</dam_type>
+      <damage>4d4+5</damage>
+      <default_pos>stand</default_pos>
+      <description>Дроу-инструктор ВСЕГДА готов к драке.
+</description>
+      <detection add="invis"/>
+      <hit>4d10+360</hit>
+      <level>21</level>
+      <long_descr>Дроу-инструктор (master) гневно пялится на тебя.
+</long_descr>
+      <mana>10d9+100</mana>
+      <material>0</material>
+      <off add="disarm dodge trip assist_race assist_vnum"/>
+      <player_name>drow master дроу инструктор</player_name>
+      <race>drow</race>
+      <sex>male</sex>
+      <short_descr>дроу-инструктор||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>500</wealth>
+    </node>
+    <node name="5106">
+      <ac bash="-6" exotic="6" pierce="-6" slash="-6"/>
+      <act add="npc sentinel aggressive"/>
+      <alignment>-1000</alignment>
+      <dam_type>none</dam_type>
+      <damage>3d6+6</damage>
+      <default_pos>stand</default_pos>
+      <description>Он определенно знает, что делать в бою.
+</description>
+      <detection add="invis"/>
+      <hit>5d10+450</hit>
+      <level>23</level>
+      <long_descr>Дроу-мастер оружия (weapon) бьется с тенью.
+</long_descr>
+      <mana>11d9+100</mana>
+      <material>0</material>
+      <off add="disarm dodge trip assist_race assist_vnum"/>
+      <player_name>drow weapons master дроу мастер оружия</player_name>
+      <race>drow</race>
+      <sex>male</sex>
+      <short_descr>дроу-мастер||а|у|а|ом|е оружия</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>750</wealth>
+    </node>
+    <node name="5107">
+      <ac bash="-6" exotic="6" pierce="-6" slash="-6"/>
+      <act add="npc sentinel aggressive"/>
+      <alignment>-1000</alignment>
+      <dam_type>none</dam_type>
+      <damage>2d10+6</damage>
+      <default_pos>stand</default_pos>
+      <description>Она выглядит очень раздражённой!
+</description>
+      <detection add="invis"/>
+      <hit>5d10+500</hit>
+      <level>24</level>
+      <long_descr>Верховная мать дома (matron) стоит здесь.
+</long_descr>
+      <mana>12d9+100</mana>
+      <material>0</material>
+      <off add="disarm dodge trip assist_race assist_vnum"/>
+      <player_name>drow matron mother дроу верховная мать</player_name>
+      <race>drow</race>
+      <sex>female</sex>
+      <short_descr>верховн|ая|ой|ой|ую|ой|ой мат|ь|ери|ери|ь|ерью|ери</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1500</wealth>
+    </node>
+    <node name="5108">
+      <ac bash="-7" exotic="5" pierce="-7" slash="-7"/>
+      <act add="npc sentinel aggressive cleric"/>
+      <aff add="sanctuary"/>
+      <alignment>-1000</alignment>
+      <dam_type>none</dam_type>
+      <damage>2d10+7</damage>
+      <default_pos>stand</default_pos>
+      <description>Похоже, она собирается оторвать твою голову и съесть ее.
+</description>
+      <detection add="invis"/>
+      <hit>5d10+600</hit>
+      <level>26</level>
+      <long_descr>Верховная мать первого дома (matron) ожидает тебя.
+</long_descr>
+      <mana>26d9+100</mana>
+      <material>0</material>
+      <off add="disarm kick parry assist_race assist_vnum"/>
+      <player_name>drow matron mother дроу верховная мать</player_name>
+      <race>drow</race>
+      <sex>female</sex>
+      <short_descr>верховн|ая|ой|ой|ую|ой|ой мат|ь|ери|ери|ь|ерью|ери</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1500</wealth>
+    </node>
+    <node name="5109">
+      <ac bash="-11" exotic="5" pierce="-11" slash="-11"/>
+      <act add="npc sentinel aggressive notrack"/>
+      <aff add="sanctuary infrared"/>
+      <alignment>-1000</alignment>
+      <behavior type="QuestMaster">
+        <services>
+          <node type="PersonalQuestArticle">
+            <vnum>95</vnum>
+            <name>ring</name>
+            <descr>Кольцо Героя</descr>
+            <price type="QuestPointPrice">
+              <questpoint>1000</questpoint>
+            </price>
+            <gender table="sex_table">neutral</gender>
+            <troubled>true</troubled>
+          </node>
+          <node type="PersonalQuestArticle">
+            <vnum>94</vnum>
+            <name>girth</name>
+            <descr>Пояс Героя</descr>
+            <price type="QuestPointPrice">
+              <questpoint>1000</questpoint>
+            </price>
+            <gender table="sex_table">male</gender>
+            <troubled>true</troubled>
+          </node>
+          <node type="GoldQuestArticle">
+            <amount>5000</amount>
+            <name>gold</name>
+            <descr>5000 золотых монет</descr>
+            <price type="QuestPointPrice">
+              <questpoint>1000</questpoint>
+            </price>
+          </node>
+          <node type="TattooQuestArticle">
+            <name>tattoo</name>
+            <descr>Татуировка твоей религии</descr>
+            <price type="QuestPointPrice">
+              <questpoint>200</questpoint>
+            </price>
+          </node>
+          <node type="ObjectQuestArticle">
+            <vnum>106</vnum>
+            <name>coupon</name>
+            <descr>{YР{Bе{Gс{Rт{Cр{Mи{Bн{Cг{x {rк{yу{gп{bо{mн{x</descr>
+            <price type="QuestPointPrice">
+              <questpoint>200</questpoint>
+            </price>
+          </node>
+          <node type="ObjectQuestArticle">
+            <vnum>108</vnum>
+            <name>colourless</name>
+            <descr>Рестринг купон</descr>
+            <price type="QuestPointPrice">
+              <questpoint>50</questpoint>
+            </price>
+          </node>
+          <node type="ObjectQuestArticle">
+            <vnum>102</vnum>
+            <name>orb</name>
+            <descr>Хрустальный шар</descr>
+            <price type="QuestPointPrice">
+              <questpoint>50</questpoint>
+            </price>
+          </node>
+        </services>
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>4d7+11</damage>
+      <default_pos>stand</default_pos>
+      <description>Огромный восковой пузырь, на поверхности которого недобрым светом мерцают
+два красных глаза, - Йоклол постоянно меняет свою форму.
+</description>
+      <detection add="invis"/>
+      <hit>10d10+1300</hit>
+      <imm add="summon charm"/>
+      <level>35</level>
+      <long_descr>Служанка Паучьей Королевы Ллот (yochlol) дает здесь задания во славу своей хозяйки.
+</long_descr>
+      <mana>17d9+100</mana>
+      <material>0</material>
+      <off add="disarm dodge trip assist_race assist_vnum"/>
+      <player_name>yochlol йоклол служанка servant</player_name>
+      <race>demon</race>
+      <sex>female</sex>
+      <short_descr>йоклол</short_descr>
+      <size>medium</size>
+      <spec>spec_breath_any</spec>
+      <start_pos>stand</start_pos>
+      <wealth>1500</wealth>
+    </node>
+    <node name="5110">
+      <ac bash="0" exotic="8" pierce="0" slash="0"/>
+      <act add="npc sentinel aggressive"/>
+      <aff add="hide"/>
+      <alignment>-1000</alignment>
+      <dam_type>none</dam_type>
+      <damage>1d10+3</damage>
+      <default_pos>stand</default_pos>
+      <description>Дроу-охранник так хорошо сливается с окружающей средой, что ты едва видишь его силуэт.
+</description>
+      <hit>2d10+150</hit>
+      <level>12</level>
+      <long_descr>Дроу-охранник (guard) зловеще смотрит на тебя.
+</long_descr>
+      <mana>6d9+100</mana>
+      <material>0</material>
+      <off add="disarm dodge trip assist_race assist_vnum"/>
+      <player_name>drow guard дроу охранник</player_name>
+      <race>drow</race>
+      <sex>male</sex>
+      <short_descr>дроу-охранник||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>250</wealth>
+    </node>
+    <node name="5111">
+      <ac bash="1" exotic="8" pierce="1" slash="1"/>
+      <act add="npc aggressive wimpy"/>
+      <aff add="sneak hide"/>
+      <alignment>-1000</alignment>
+      <dam_type>none</dam_type>
+      <damage>1d10+2</damage>
+      <default_pos>stand</default_pos>
+      <description>Дроу-лазутчик так хорошо сливается с окружающей средой, что ты едва видишь его силуэт.
+</description>
+      <hit>2d8+134</hit>
+      <level>11</level>
+      <long_descr>Дроу-лазутчик (scout) крадётся среди теней.
+</long_descr>
+      <mana>5d9+100</mana>
+      <material>0</material>
+      <off add="disarm dodge trip assist_race assist_vnum"/>
+      <player_name>drow scout дроу лазутчик</player_name>
+      <race>drow</race>
+      <sex>female</sex>
+      <short_descr>дроу-лазутчик||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>50</wealth>
+    </node>
+    <node name="5112">
+      <ac bash="-478" exotic="-379" pierce="-478" slash="-476"/>
+      <act add="npc sentinel cleric nopurge notrack"/>
+      <aff add="sanctuary" del="infrared"/>
+      <behavior type="Healer">
+        <services>
+          <node type="SpellHealService">
+            <descr>излечить легкие раны</descr>
+            <name>light</name>
+            <price type="CoinPrice">
+              <gold>10</gold>
+            </price>
+            <spell>cure light</spell>
+          </node>
+          <node type="SpellHealService">
+            <descr>излечить серьезные раны</descr>
+            <name>serious</name>
+            <price type="CoinPrice">
+              <gold>15</gold>
+            </price>
+            <spell>cure serious</spell>
+          </node>
+          <node type="SpellHealService">
+            <descr>излечить очень серьезные раны</descr>
+            <name>critic</name>
+            <price type="CoinPrice">
+              <gold>25</gold>
+            </price>
+            <spell>cure critical</spell>
+          </node>
+          <node type="SpellHealService">
+            <descr>healing spell</descr>
+            <name>heal</name>
+            <price type="CoinPrice">
+              <gold>50</gold>
+            </price>
+            <spell>heal</spell>
+          </node>
+          <node type="SpellHealService">
+            <descr>вылечить слепоту</descr>
+            <name>blind</name>
+            <price type="CoinPrice">
+              <gold>20</gold>
+            </price>
+            <spell>cure blindness</spell>
+          </node>
+          <node type="SpellHealService">
+            <descr>вылечить чуму</descr>
+            <name>disease</name>
+            <price type="CoinPrice">
+              <gold>15</gold>
+            </price>
+            <spell>cure disease</spell>
+          </node>
+          <node type="SpellHealService">
+            <descr>вылечить отравление</descr>
+            <name>poison</name>
+            <price type="CoinPrice">
+              <gold>25</gold>
+            </price>
+            <spell>cure poison</spell>
+          </node>
+          <node type="SpellHealService">
+            <descr>снять проклятие</descr>
+            <name>uncurse</name>
+            <price type="CoinPrice">
+              <gold>50</gold>
+            </price>
+            <spell>remove curse</spell>
+          </node>
+          <node type="SpellHealService">
+            <descr>снять усталость</descr>
+            <name>refresh</name>
+            <price type="CoinPrice">
+              <gold>5</gold>
+            </price>
+            <spell>refresh</spell>
+          </node>
+          <node type="SpellHealService">
+            <descr>master heal spell</descr>
+            <name>master</name>
+            <price type="CoinPrice">
+              <gold>200</gold>
+            </price>
+            <spell>master healing</spell>
+          </node>
+          <node type="ManaHealService">
+            <descr>восстановить ману</descr>
+            <name>mana</name>
+            <price type="CoinPrice">
+              <gold>10</gold>
+            </price>
+            <words>candamira</words>
+            <enhanced>false</enhanced>
+          </node>
+          <node type="ManaHealService">
+            <descr>восстановить 300 маны</descr>
+            <name>energize</name>
+            <price type="CoinPrice">
+              <gold>200</gold>
+            </price>
+            <words>energizer</words>
+            <enhanced>true</enhanced>
+          </node>
+        </services>
+      </behavior>
+      <dam_type>none</dam_type>
+      <damage>20d23+135</damage>
+      <default_pos>stand</default_pos>
+      <description>Облаченная в темные одежды с символикой первого дома жрица молится Великой
+богине Ллот. В тенях рядом снуют пауки. Её высокое положение даёт ей право 
+смотреть надменно почти на всех обитателей города. Не отвлекай её без особой
+необходимости и щедрого подношения.
+</description>
+      <detection add="invis hidden"/>
+      <hit>25d11+26942</hit>
+      <hitroll>73</hitroll>
+      <imm add="summon charm spell"/>
+      <level>120</level>
+      <long_descr>Жрица Богини Ллот (priestess) молится своей королеве.
+</long_descr>
+      <mana>10d10+4450</mana>
+      <material>none</material>
+      <off add="dodge fast kick parry"/>
+      <player_name>priestess lloth жрица ллот</player_name>
+      <race>drow</race>
+      <res add="weapon"/>
+      <sex>female</sex>
+      <short_descr>жриц|а|ы|е|у|ей|е Ллот</short_descr>
+      <size>medium</size>
+      <smell>Пахнет пауками и неприятностями.</smell>
+      <spec>spec_cast_adept</spec>
+      <start_pos>stand</start_pos>
+    </node>
+  </mobiles>
+  <objects>
+    <node name="5100">
+      <affects>
+        <node>
+          <apply to="damroll">2</apply>
+        </node>
+        <node>
+          <apply to="hitroll">1</apply>
+        </node>
+      </affects>
+      <cost>310</cost>
+      <description>Плебейский длинный меч (longsword) из адамантита оставлен здесь.</description>
+      <gender>m</gender>
+      <level>11</level>
+      <material>adamantite</material>
+      <name>longsword commoner плебейский длинный меч</name>
+      <short_descr>плебейск|ий|ого|ому|ий|им|ом длинн|ый|ого|ому|ый|ым|ом меч||а|у||ом|е</short_descr>
+      <type name="weapon">
+        <diceNumber>2</diceNumber>
+        <diceType>7</diceType>
+        <weapClass>sword</weapClass>
+        <weapType>slash</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>20</weight>
+    </node>
+    <node name="5101">
+      <affects>
+        <node>
+          <apply to="damroll">3</apply>
+        </node>
+        <node>
+          <apply to="hitroll">2</apply>
+        </node>
+      </affects>
+      <cost>810</cost>
+      <description>Длинный меч (longsword) из адамантита оставлен тут знатным дроу.</description>
+      <gender>m</gender>
+      <level>15</level>
+      <material>adamantite</material>
+      <name>longsword noble длинный меч знати</name>
+      <short_descr>длинн|ый|ого|ому|ый|ым|ом меч||а|у||ом|е знати</short_descr>
+      <type name="weapon">
+        <diceNumber>3</diceNumber>
+        <diceType>7</diceType>
+        <weapClass>sword</weapClass>
+        <weapType>slash</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="5102">
+      <affects>
+        <node>
+          <apply to="damroll">3</apply>
+        </node>
+        <node>
+          <apply to="hitroll">3</apply>
+        </node>
+      </affects>
+      <cost>520</cost>
+      <description>Хлыст с двумя змеиными головами (snake) лежит здесь.</description>
+      <extra_flags>glow</extra_flags>
+      <gender>m</gender>
+      <level>11</level>
+      <material>leather</material>
+      <name>whip snake two-headed хлыст змея двухголовый</name>
+      <short_descr>змееголов|ый|ого|ому|ый|ым|ом хлыст||а|у||ом|е</short_descr>
+      <type name="weapon">
+        <diceNumber>2</diceNumber>
+        <diceType>7</diceType>
+        <specType>two_hands</specType>
+        <weapClass>whip</weapClass>
+        <weapType>whip</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="5103">
+      <affects>
+        <node>
+          <apply to="damroll">3</apply>
+        </node>
+        <node>
+          <apply to="hitroll">3</apply>
+        </node>
+      </affects>
+      <cost>720</cost>
+      <description>Хлыст с тремя змеиными головами (snake) оставлен здесь.</description>
+      <extra_flags>glow</extra_flags>
+      <gender>m</gender>
+      <level>15</level>
+      <material>leather</material>
+      <name>whip snake three-headed хлыст змея трехголовый</name>
+      <short_descr>змееголов|ый|ого|ому|ый|ым|ом хлыст||а|у||ом|е</short_descr>
+      <type name="weapon">
+        <diceNumber>3</diceNumber>
+        <diceType>7</diceType>
+        <weapClass>whip</weapClass>
+        <weapType>whip</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="5104">
+      <affects>
+        <node>
+          <apply to="damroll">3</apply>
+        </node>
+        <node>
+          <apply to="hitroll">3</apply>
+        </node>
+      </affects>
+      <cost>730</cost>
+      <description>Хлыст с четырьмя змеиными головами (snake) оставлен здесь.</description>
+      <extra_flags>glow</extra_flags>
+      <gender>m</gender>
+      <level>24</level>
+      <material>leather</material>
+      <name>whip snake four-headed хлыст змея четырехголовый</name>
+      <short_descr>змееголов|ый|ого|ому|ый|ым|ом хлыст||а|у||ом|е</short_descr>
+      <type name="weapon">
+        <diceNumber>5</diceNumber>
+        <diceType>5</diceType>
+        <weapClass>whip</weapClass>
+        <weapType>whip</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="5105">
+      <affects>
+        <node>
+          <apply to="damroll">3</apply>
+        </node>
+        <node>
+          <apply to="hitroll">3</apply>
+        </node>
+      </affects>
+      <cost>1300</cost>
+      <description>Черный длинный меч (black) беспечно оставлен здесь.</description>
+      <extra_flags>glow</extra_flags>
+      <gender>m</gender>
+      <level>21</level>
+      <material>adamantite</material>
+      <name>longsword black длинный меч черный</name>
+      <short_descr>черн|ый|ого|ому|ый|ым|ом длинн|ый|ого|ому|ый|ым|ом меч||а|у||ом|е</short_descr>
+      <type name="weapon">
+        <diceNumber>5</diceNumber>
+        <diceType>6</diceType>
+        <weapClass>sword</weapClass>
+        <weapType>slash</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+    </node>
+    <node name="5106">
+      <affects>
+        <node>
+          <apply to="int">-1</apply>
+        </node>
+        <node>
+          <apply to="str">-1</apply>
+        </node>
+      </affects>
+      <cost>10</cost>
+      <description>Хлыст с пятью змеиными головами (snake) лежит здесь.</description>
+      <extra_flags>glow anti_good</extra_flags>
+      <gender>m</gender>
+      <level>14</level>
+      <material>leather</material>
+      <name>whip snake five-headed хлыст змея пятиголовый</name>
+      <short_descr>змееголов|ый|ого|ому|ый|ым|ом хлыст||а|у||ом|е</short_descr>
+      <type name="weapon">
+        <diceNumber>4</diceNumber>
+        <diceType>6</diceType>
+        <weapClass>whip</weapClass>
+        <weapType>whip</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+    </node>
+    <node name="5107">
+      <affects>
+        <node>
+          <apply to="int">-2</apply>
+        </node>
+        <node>
+          <apply to="str">-2</apply>
+        </node>
+      </affects>
+      <description>Хлыст с шестью змеиными головами (snake) брошен здесь.</description>
+      <extra_flags>glow anti_good</extra_flags>
+      <gender>m</gender>
+      <level>13</level>
+      <material>leather</material>
+      <name>whip snake six-headed хлыст змея шестиголовый</name>
+      <short_descr>змееголов|ый|ого|ому|ый|ым|ом хлыст||а|у||ом|е</short_descr>
+      <type name="weapon">
+        <diceNumber>5</diceNumber>
+        <diceType>5</diceType>
+        <weapClass>whip</weapClass>
+        <weapType>whip</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+    </node>
+    <node name="5108">
+      <cost>850</cost>
+      <description>Железный нарукавник (iron) брошен здесь.</description>
+      <extra_flags>glow</extra_flags>
+      <gender>m</gender>
+      <level>15</level>
+      <material>iron</material>
+      <name>bracer iron нарукавник железный</name>
+      <short_descr>железн|ый|ого|ому|ый|ым|ом нарукавник||а|у||ом|е</short_descr>
+      <type name="armor">
+        <ac bash="7" exotic="2" pierce="4" slash="7"/>
+      </type>
+      <wear_flags>take wear_wrist</wear_flags>
+      <weight>30</weight>
+    </node>
+    <node name="5109">
+      <affects>
+        <node>
+          <apply to="str">2</apply>
+        </node>
+      </affects>
+      <cost>1500</cost>
+      <description>Пара рукавиц (gauntlets) брошена здесь.</description>
+      <extra_flags>glow</extra_flags>
+      <gender>p</gender>
+      <level>17</level>
+      <material>iron</material>
+      <name>gauntlets iron рукавицы пара железные</name>
+      <short_descr>пар|а|ы|е|у|ой|е рукавиц</short_descr>
+      <type name="armor">
+        <ac bash="5" exotic="0" pierce="5" slash="5"/>
+      </type>
+      <wear_flags>take wear_hands</wear_flags>
+      <weight>20</weight>
+    </node>
+    <node name="5110">
+      <cost>1550</cost>
+      <description>Серебристо-голубой жезл (wand) лежит в грязи.</description>
+      <gender>m</gender>
+      <level>9</level>
+      <material>silver</material>
+      <name>wand blue silver жезл голубой серебристый</name>
+      <short_descr>серебристо-голуб|ой|ого|ому|ой|ым|ом жезл||а|у||ом|е</short_descr>
+      <type name="wand">
+        <left>3</left>
+        <level>8</level>
+        <spell>lightning bolt</spell>
+        <total>3</total>
+      </type>
+      <wear_flags>take hold</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="5111">
+      <affects>
+        <node>
+          <apply to="int">2</apply>
+        </node>
+      </affects>
+      <cost>1800</cost>
+      <description>Маленький шлем helmet лежит на камне.</description>
+      <gender>m</gender>
+      <level>16</level>
+      <material>steel</material>
+      <name>helmet small helm маленький шлем</name>
+      <short_descr>маленьк|ий|ого|ому|ий|им|ом шлем||а|у||ом|е</short_descr>
+      <type name="armor">
+        <ac bash="4" exotic="0" pierce="4" slash="4"/>
+      </type>
+      <wear_flags>take wear_head</wear_flags>
+      <weight>50</weight>
+    </node>
+    <node name="5112">
+      <affects>
+        <node>
+          <apply to="hit">25</apply>
+        </node>
+      </affects>
+      <cost>380</cost>
+      <description>Маленькое рубиновое колечко (ruby) лежит в пыли.</description>
+      <gender>f</gender>
+      <level>25</level>
+      <material>ruby</material>
+      <name>ring ruby кольцо рубиновое маленькое</name>
+      <short_descr>маленьк|ое|ого|ому|ое|им|ом рубинов|ое|ого|ому|ое|им|ом колечк|о|а|у|о|ом|е</short_descr>
+      <type name="jewelry">
+      </type>
+      <wear_flags>take wear_finger</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="5113">
+      <affects>
+        <node>
+          <apply to="hitroll">3</apply>
+        </node>
+        <node>
+          <apply to="damroll">5</apply>
+        </node>
+      </affects>
+      <cost>1900</cost>
+      <description>Кинжал (dagger) с лезвиями, изогнутыми в форме паучьих лап.</description>
+      <extra_flags>anti_good</extra_flags>
+      <gender>m</gender>
+      <level>30</level>
+      <material>unknown</material>
+      <name>dagger sacrificial кинжал паук жертвенный</name>
+      <short_descr>кинжал||а|у||ом|е в форме паука</short_descr>
+      <type name="weapon">
+        <diceNumber>5</diceNumber>
+        <diceType>8</diceType>
+        <weapClass>dagger</weapClass>
+        <weapType>stab</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>25</weight>
+    </node>
+    <node name="5114">
+      <affects>
+        <node>
+          <apply to="ac">-2</apply>
+        </node>
+      </affects>
+      <cost>880</cost>
+      <description>Маленькая зеленая шляпа валяется в пыли.</description>
+      <extra_flags>nodrop</extra_flags>
+      <gender>f</gender>
+      <level>12</level>
+      <material>cloth</material>
+      <name>hat green шляпа зеленая маленькая ярко</name>
+      <short_descr>маленьк|ая|ой|ой|ую|ой|ой ярко-зелен|ая|ой|ой|ую|ой|ой шляп|а|ы|е|у|ой|е</short_descr>
+      <type name="armor">
+        <ac bash="5" exotic="0" pierce="4" slash="5"/>
+      </type>
+      <wear_flags>take wear_head</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="5115">
+      <affects>
+        <node>
+          <apply to="damroll">7</apply>
+        </node>
+        <node>
+          <apply to="hitroll">5</apply>
+        </node>
+      </affects>
+      <behavior type="TwoSnakeWhip">
+      </behavior>
+      <cost>1330</cost>
+      <description>На земле лежит кнут (snake) с двумя Змеиными головами.</description>
+      <extra_flags>dark anti_good nosac nolocate</extra_flags>
+      <gender>m</gender>
+      <level>24</level>
+      <limit>1</limit>
+      <material>snakeskin</material>
+      <name>whip snake skin кнут змея кожа голова две</name>
+      <short_descr>кнут||а|у||ом|е с двумя головами змей</short_descr>
+      <type name="weapon">
+        <diceNumber>7</diceNumber>
+        <diceType>6</diceType>
+        <weapClass>whip</weapClass>
+        <weapType>whip</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>140</weight>
+    </node>
+    <node name="5116">
+      <condition>90</condition>
+      <description>Светящийся портал (portal) ведущий в Храм Лео.</description>
+      <extra_flags>glow hum</extra_flags>
+      <gender>m</gender>
+      <material>energy</material>
+      <name>portal портал</name>
+      <short_descr>портал||а|у||ом|е</short_descr>
+      <type name="portal">
+        <charges>0</charges>
+        <portalFlags>normal_exit</portalFlags>
+        <target>3001</target>
+      </type>
+    </node>
+    <node name="5117">
+      <description>Яма (pit) для пожертвований находится перед алтарем.</description>
+      <extraDescr>
+        <node keyword="pit яма">В эту яму ты можешь пожертвовать несколько монет для помощи неимущим мира
+сего.
+</node>
+      </extraDescr>
+      <extra_flags>nopurge</extra_flags>
+      <gender>m</gender>
+      <name>яма pit</name>
+      <short_descr>ям|а|ы|е|у|ой|е для пожертвований</short_descr>
+      <type name="container">
+        <capacity>10000</capacity>
+        <flags>pit</flags>
+        <maxWeight>1000</maxWeight>
+      </type>
+    </node>
+  </objects>
+  <rooms>
+    <node name="5100">
+      <description>Ты  у  входа  в  небольшой  подземный город.  На западе  распахнуты великие
+адамантитовые врата (gate), позволяя войти в город.
+</description>
+      <exits>
+        <node name="east">
+          <key>0</key>
+          <target>13013</target>
+        </node>
+        <node name="up">
+          <description>Небольшое отверстие (hole) в своде ведет в темноту наверх.
+</description>
+          <flags>isdoor closed</flags>
+          <keyword>door дверь</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>5270</target>
+        </node>
+        <node name="west">
+          <description>Громадные врата на западе распахнуты, позволяя войти в город.</description>
+          <keyword>gate</keyword>
+          <target>5101</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="hole отверстие">Небольшое отверстие, похоже, было запечатано.
+</node>
+        <node keyword="gate врата">Громадные адамантитовые врата с эмблемой в форме гигантского паука.
+</node>
+      </extraDescr>
+      <flags>dark indoors</flags>
+      <name>Вход в город</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5101">
+      <description>Ты идёшь по очень богато украшенной улице, которая ведет с севера на юг. 
+Громадные врата на востоке, а постройки на западе.
+</description>
+      <exits>
+        <node name="east">
+          <target>5100</target>
+        </node>
+        <node name="north">
+          <target>5123</target>
+        </node>
+        <node name="south">
+          <target>5102</target>
+        </node>
+        <node name="west">
+          <target>5122</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Городская улица</name>
+      <resets>
+        <mob limit="2" maxHere="1" vnum="5106"/>
+        <equip to="wield" vnum="5105"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="5102">
+      <description>Ты идёшь по очень богато украшенной улице, ведущей с севера на запад.
+</description>
+      <exits>
+        <node name="north">
+          <target>5101</target>
+        </node>
+        <node name="west">
+          <target>5103</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Городская улица</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5103">
+      <description>Ты идёшь по очень богато украшенной улице, ведущей с запада на восток. 
+На юге стоит большой дом.
+</description>
+      <exits>
+        <node name="east">
+          <target>5102</target>
+        </node>
+        <node name="south">
+          <target>5104</target>
+        </node>
+        <node name="west">
+          <target>5106</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Городская улица</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5104">
+      <description>Ты внутри 3го  дома города,  довольно хорошо  оформленного по  меркам дроу:
+несколько статуй, фрески и тому подобное. Дверь ведёт на юг.
+</description>
+      <exits>
+        <node name="north">
+          <target>5103</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>5105</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>3й Дом</name>
+      <resets>
+        <mob limit="4" maxHere="1" vnum="5102"/>
+        <equip to="wield" vnum="5101"/>
+        <mob limit="4" maxHere="1" vnum="5103"/>
+        <equip to="wield" vnum="5102"/>
+        <mob limit="4" maxHere="1" vnum="5104"/>
+        <equip to="wield" vnum="5103"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="5105">
+      <description>Тронный зал 3го дома примерно так же украшен, как и внутренний
+двор. Исключение составляет кровавый алтарь в центре комнаты.
+</description>
+      <exits>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>5104</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Тронный зал</name>
+      <resets>
+        <mob limit="3" maxHere="1" vnum="5107"/>
+        <equip to="wield" vnum="5104"/>
+        <equip to="head" vnum="5111"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="5106">
+      <description>Ты идёшь по очень богато украшенной улице, ведущей с запада на восток. 
+На севере стоит большое строение.
+</description>
+      <exits>
+        <node name="east">
+          <target>5103</target>
+        </node>
+        <node name="north">
+          <target>5118</target>
+        </node>
+        <node name="west">
+          <target>5107</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Городская улица</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5107">
+      <description>Ты идёшь по очень богато украшенной улице, ведущей с севера на восток. 
+На юге громаднейший особняк.
+</description>
+      <exits>
+        <node name="east">
+          <target>5106</target>
+        </node>
+        <node name="north">
+          <target>5110</target>
+        </node>
+        <node name="south">
+          <target>5108</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Городская улица</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5108">
+      <description>Ты внутри 2го дома города. Зала очень богато украшена, статуи
+пауков и фрески повсеместно.
+</description>
+      <exits>
+        <node name="north">
+          <target>5107</target>
+        </node>
+        <node name="west">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>5109</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>2й Дом</name>
+      <resets>
+        <mob limit="4" maxHere="1" vnum="5102"/>
+        <equip to="wield" vnum="5101"/>
+        <mob limit="4" maxHere="1" vnum="5103"/>
+        <equip to="wield" vnum="5102"/>
+        <mob limit="4" maxHere="1" vnum="5104"/>
+        <equip to="wield" vnum="5103"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="5109">
+      <description>Тронный зал 2го дома чуточку богаче обставлен, нежели внутренний
+двор, а посреди зала стоит алтарь.
+</description>
+      <exits>
+        <node name="east">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>5108</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Тронный зал</name>
+      <resets>
+        <mob limit="3" maxHere="1" vnum="5107"/>
+        <equip to="wield" vnum="5104"/>
+        <equip to="arms" vnum="5108"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="5110">
+      <description>Ты возле входа в 1й дом города. Здесь установлены такие же громадные
+и изящные врата, как на входе в город.
+</description>
+      <exits>
+        <node name="north">
+          <target>5114</target>
+        </node>
+        <node name="south">
+          <target>5107</target>
+        </node>
+        <node name="west">
+          <description>Громадные врата  на западе.</description>
+          <flags>isdoor</flags>
+          <keyword>gate ворота</keyword>
+          <short_descr>ворот|а||ам|а|ами|ах</short_descr>
+          <target>5111</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Главные врата</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5111">
+      <description>Ты во внутреннем  дворе 1го  и самого  большого дома  в городе.  Двор очень
+большой и отлично декорирован. Панно и картины  висят на  стенах, изображая
+некоторые баталии и Паучью Королеву.
+</description>
+      <exits>
+        <node name="east">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>5110</target>
+        </node>
+        <node name="west">
+          <target>5112</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>1й Дом</name>
+      <resets>
+        <mob limit="4" maxHere="1" vnum="5102"/>
+        <equip to="wield" vnum="5101"/>
+        <mob limit="4" maxHere="1" vnum="5103"/>
+        <equip to="wield" vnum="5102"/>
+        <mob limit="4" maxHere="1" vnum="5104"/>
+        <equip to="wield" vnum="5103"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="5112">
+      <description>Тронный зал 1го дома можно описать одним словом - потрясающий. Он столь
+ужасающий, что чуть ли не красивый.
+</description>
+      <exits>
+        <node name="east">
+          <target>5111</target>
+        </node>
+        <node name="north">
+          <key>0</key>
+          <target>5113</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Тронный зал</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5113">
+      <description>Это зал совета самой Верховной Матери. Огромный стол в центре  зала окружен
+креслами. В центре стола кто-то оставил огромный плащ с вмятинами от тел.
+</description>
+      <exits>
+        <node name="south">
+          <key>0</key>
+          <target>5112</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Главный зал</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="5108"/>
+        <equip to="wield" vnum="5115"/>
+        <equip to="finger_l" vnum="5112"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="5114">
+      <description>Ты идёшь по очень богато украшенной улице, ведущей с севера на юг и восток.
+</description>
+      <exits>
+        <node name="east">
+          <target>5117</target>
+        </node>
+        <node name="north">
+          <target>5115</target>
+        </node>
+        <node name="south">
+          <target>5110</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Городская улица</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5115">
+      <description>Ты идёшь по очень богато украшенной улице, ведущей с юга. На западе строение.
+</description>
+      <exits>
+        <node name="south">
+          <target>5114</target>
+        </node>
+        <node name="west">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>5116</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Городская улица</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5116">
+      <description>Это самая роскошная из академий, поскольку она предназначена
+для жриц.
+</description>
+      <exits>
+        <node name="east">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>5115</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Академия жриц</name>
+      <resets>
+        <mob limit="3" maxHere="1" vnum="5105"/>
+        <equip to="wield" vnum="5104"/>
+        <equip to="hold" vnum="5110"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="5117">
+      <description>Ты идёшь по очень богато украшенной улице, ведущей с  запада на  восток. На
+севере гигантский храм.
+</description>
+      <exits>
+        <node name="east">
+          <target>5121</target>
+        </node>
+        <node name="north">
+          <description>Вход в храм Ллот.</description>
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>5119</target>
+        </node>
+        <node name="west">
+          <target>5114</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Городская улица</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5118">
+      <description>Выглядит скорее как казарма, нежели школа.
+</description>
+      <exits>
+        <node name="south">
+          <target>5106</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Академия воинов</name>
+      <resets>
+        <mob limit="10" maxHere="5" vnum="5101"/>
+        <equip to="wield" vnum="5100"/>
+        <mob limit="3" maxHere="1" vnum="5105"/>
+        <equip to="wield" vnum="5105"/>
+        <equip to="hold" vnum="5110"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="5119">
+      <description>Храм является самым большим зданием в городе. Даже его двери находятся
+за гранью воображения. Внутренние стены храмового входа отделаны золотом и
+адамантитом.
+</description>
+      <exits>
+        <node name="down">
+          <target>5126</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>5117</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Вход в Храм Ллот</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5120">
+      <description>Академия магов довольно хорошо украшена. Видно, что дроу предпочитают магию
+физической силе.
+</description>
+      <exits>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>5121</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Академия магов</name>
+      <resets>
+        <mob limit="3" maxHere="1" vnum="5105"/>
+        <equip to="wield" vnum="5104"/>
+        <equip to="hold" vnum="5110"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="5121">
+      <description>Ты  идёшь  по  очень  богато  украшенной улице,  которая ведёт  в восточном
+направлении. На севере здание.
+</description>
+      <exits>
+        <node name="east">
+          <target>5123</target>
+        </node>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>5120</target>
+        </node>
+        <node name="south">
+          <target>5122</target>
+        </node>
+        <node name="west">
+          <target>5117</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Городская улица</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5122">
+      <description>Комната в  беспорядке. Пол  усыпан соломой,  служащей ложем  для несчастных
+существ, которые пали жертвами империализма дроу.
+</description>
+      <exits>
+        <node name="east">
+          <target>5101</target>
+        </node>
+        <node name="north">
+          <target>5121</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Камера рабов</name>
+      <resets>
+        <mob limit="15" maxHere="15" vnum="5100"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="5123">
+      <description>Ты идёшь по очень богато украшенной улице, которая ведёт на запад и  юг. На
+севере относительно небольшой дом.
+</description>
+      <exits>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>5124</target>
+        </node>
+        <node name="south">
+          <target>5101</target>
+        </node>
+        <node name="west">
+          <target>5121</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Городская улица</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5124">
+      <description>Ты внутри 4го дома города. Его внутренний двор довольно непритязательный по
+меркам дроу и сравнительно маленький.
+</description>
+      <exits>
+        <node name="east">
+          <target>5125</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>5123</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>4й Дом</name>
+      <resets>
+        <mob limit="4" maxHere="1" vnum="5102"/>
+        <equip to="wield" vnum="5101"/>
+        <mob limit="4" maxHere="1" vnum="5103"/>
+        <equip to="wield" vnum="5102"/>
+        <mob limit="4" maxHere="1" vnum="5104"/>
+        <equip to="wield" vnum="5103"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="5125">
+      <description>Тронный зал  в основном  похож на  внутренний двор  в отношении  декора. За
+алтарем есть небольшой трон, и это всё.
+</description>
+      <exits>
+        <node name="west">
+          <target>5124</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Тронный зал</name>
+      <resets>
+        <mob limit="3" maxHere="1" vnum="5107"/>
+        <equip to="wield" vnum="5104"/>
+        <give vnum="5114"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="5126">
+      <description>Ты  в  центральном  входе  в  храм,  который  переходит в  большой коридор,
+протянувшийся с запада на восток. Небольшие статуи пауков выстроились вдоль
+стен.
+</description>
+      <exits>
+        <node name="north">
+          <target>5127</target>
+        </node>
+        <node name="up">
+          <target>5119</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Центральный вход</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5127">
+      <description>Ты  находишься  в  длинном  коридоре,  отделанном  адамантитом.  На  стенах
+выгравированы изображения эльфов и пауков. Коридор продолжается на восток и
+запад. Всматриваясь в даль, ты можешь разглядеть  одну или  две удаляющиеся
+фигуры. К северу находится обсидиановая лестница.
+</description>
+      <exits>
+        <node name="east">
+          <target>5128</target>
+        </node>
+        <node name="north">
+          <target>5135</target>
+        </node>
+        <node name="south">
+          <target>5126</target>
+        </node>
+        <node name="west">
+          <target>5131</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Коридор</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5128">
+      <description>Ты  находишься  в  длинном  коридоре,  отделанном  адамантитом.  На  стенах
+выгравированы изображения эльфов и пауков. Коридор продолжается на восток и
+запад. Всматриваясь в даль, ты можешь разглядеть  одну или  две удаляющиеся
+фигуры.
+</description>
+      <exits>
+        <node name="east">
+          <target>5129</target>
+        </node>
+        <node name="west">
+          <target>5127</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Длинный коридор</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5129">
+      <description>Ты находишься в длинном коридоре, отделанном адамантитом. На стенах
+выгравированы изображения эльфов и пауков. Коридор продолжается на 
+восток и запад. Всматриваясь в даль, ты можешь разглядеть одну 
+или две удаляющиеся фигуры. Дверь на севере.
+</description>
+      <exits>
+        <node name="east">
+          <target>5130</target>
+        </node>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>5150</target>
+        </node>
+        <node name="west">
+          <target>5128</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Длинный коридор</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5130">
+      <description>Ты находишься в длинном коридоре, отделанном адамантитом. На стенах
+выгравированы изображения эльфов и пауков. Коридор продолжается на 
+восток и запад. Всматриваясь в даль, ты можешь разглядеть одну 
+или две удаляющиеся фигуры.
+</description>
+      <exits>
+        <node name="east">
+          <target>5134</target>
+        </node>
+        <node name="west">
+          <target>5129</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Длинный коридор</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5131">
+      <description>Ты  находишься  в  длинном  коридоре,  отделанном  адамантитом.  На  стенах
+выгравированы изображения эльфов и пауков. Коридор продолжается на восток и
+запад. Всматриваясь в даль, ты можешь разглядеть  одну или  две удаляющиеся
+фигуры.
+</description>
+      <exits>
+        <node name="east">
+          <target>5127</target>
+        </node>
+        <node name="west">
+          <target>5132</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Длинный коридор</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5132">
+      <description>Ты  находишься  в  длинном  коридоре,  отделанном  адамантитом.  На  стенах
+выгравированы изображения эльфов и пауков. Коридор продолжается на восток и
+запад. Всматриваясь в даль, ты можешь разглядеть  одну или  две удаляющиеся
+фигуры. На юге дверь.
+</description>
+      <exits>
+        <node name="east">
+          <target>5131</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>5133</target>
+        </node>
+        <node name="west">
+          <target>5134</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Длинный коридор</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5133">
+      <description>В комнате полный бедлам. Кровати не застелены, вещи и предметы
+разбросаны по комнате. Воины-дроу никогда не славились своей
+аккуратностью.
+</description>
+      <exits>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>5132</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Воинские казармы</name>
+      <resets>
+        <mob limit="10" maxHere="5" vnum="5101"/>
+        <equip to="wield" vnum="5100"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="5134">
+      <description>Ты находишься в длинном коридоре, отделанном адамантитом. На стенах
+выгравированы изображения эльфов и пауков. Коридор продолжается на 
+восток и запад. Всматриваясь в даль, ты можешь разглядеть одну 
+или две удаляющиеся фигуры.
+</description>
+      <exits>
+        <node name="east">
+          <target>5132</target>
+        </node>
+        <node name="west">
+          <target>5130</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Длинный коридор</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5135">
+      <description>Ты  у  подножия  гигантской  лестницы  из обсидиана  и адамантита.  Её края
+отделаны золотом.
+</description>
+      <exits>
+        <node name="south">
+          <target>5127</target>
+        </node>
+        <node name="up">
+          <target>5136</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Грандиозная лестница</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5136">
+      <description>Ты посреди грандиозного коридора. Стены из чистейшего адамантита  с золотой
+отделкой. На стенах мозаика.
+</description>
+      <exits>
+        <node name="down">
+          <target>5135</target>
+        </node>
+        <node name="east">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>5137</target>
+        </node>
+        <node name="north">
+          <target>5138</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Грандиозный коридор</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5137">
+      <description>Жилые   помещения   магов  довольно   чистые,  за   исключением  нескольких
+используемых   контейнеров   для   компонентов.   Здесь   довольно  хорошее
+оформление.  Кровати  выстроены  в  ряд,  чтобы   магам  было   где  спать.
+Единственная дверь на запад.
+</description>
+      <exits>
+        <node name="west">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>5136</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Казармы магов</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5138">
+      <description>Ты идешь по грандиозному коридору, обильно украшенному адамантитом
+и золотом. На севере холл переходит в лестницу, на западе дверь.
+</description>
+      <exits>
+        <node name="down">
+          <target>5140</target>
+        </node>
+        <node name="south">
+          <target>5136</target>
+        </node>
+        <node name="west">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>5139</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Грандиозный коридор</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5139">
+      <description>Спальня ярко украшена  паукообразными статуями,  фресками и  тому подобным.
+Большие кровати стоят в ряд, делая комнату уютной для жилья.
+</description>
+      <exits>
+        <node name="east">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>5138</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Спальня жриц</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5140">
+      <description>Ты ступаешь  по обсидиановым  ступеням, окруженным  адамантитовыми стенами.
+Несколько больших золотых дверей на севере.
+</description>
+      <exits>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>5141</target>
+        </node>
+        <node name="up">
+          <target>5138</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Грандиозная лестница</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5141">
+      <description>Южная  часть  большой  аудитории,  используемой для  служб жрицами  дроу. В
+центре большая яма для жертвоприношений, позади которой находится алтарь.
+</description>
+      <exits>
+        <node name="east">
+          <target>5142</target>
+        </node>
+        <node name="north">
+          <target>5145</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>5140</target>
+        </node>
+        <node name="west">
+          <target>5144</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Главный зал</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5142">
+      <description>Ты в восточной части зала с видом  на яму.  На востоке  дверь, а  на севере
+алтарь.
+</description>
+      <exits>
+        <node name="east">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>5146</target>
+        </node>
+        <node name="north">
+          <target>5145</target>
+        </node>
+        <node name="west">
+          <target>5141</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Восточная сторона зала</name>
+      <resets>
+        <drop vnum="5116"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="5143">
+      <description>Когда ты спускаешься, тысячи пауков покрывают тебя, разрывая тело
+в клочья.
+{DЛлот{x благодарит тебя за твою жертву.
+Ты упа{Smл{Sfла{Sx и не можешь встать!!!
+</description>
+      <flags>no_mob indoors</flags>
+      <name>Яма для жертвоприношений</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5144">
+      <description>Ты в западной части зала с видом на яму. На севере алтарь.
+</description>
+      <exits>
+        <node name="east">
+          <target>5141</target>
+        </node>
+        <node name="north">
+          <target>5145</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Западная сторона зала</name>
+      <resets>
+        <drop vnum="5117"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="5145">
+      <description>Ты стоишь перед алтарём, который недавно весьма обильно забрызгали
+кровью. На вершине алтаря выгравирован гигантский паук с человеческой
+головой. Опустив взор, ты видишь большую жертвенную яму.
+</description>
+      <exits>
+        <node name="down">
+          <target>5143</target>
+        </node>
+        <node name="north">
+          <target>5148</target>
+        </node>
+        <node name="south">
+          <target>5141</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Алтарь</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="5112"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="5146">
+      <description>Это главное помещение для клеток рабами, которых принесут
+в жертву. Ты не замечаешь тут охранников.
+</description>
+      <exits>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>5147</target>
+        </node>
+        <node name="west">
+          <target>5142</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Рабские камеры</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5147">
+      <description>Гнилое мясо и хлеб лежат на полу, а кандалы свисают со стен. 
+В комнате пахнет смертью. Тебя начинает подташнивать, и ты решаешь уйти, 
+так как очевидно, что раба спасать поздно.
+</description>
+      <exits>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>5146</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Рабский загон</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5148">
+      <description>Ты стоишь на помосте за алтарем. Над тобой огромная иллюзия женщины 
+дроу, превращающейся в гигантского паука и обратно. На западе дверь.
+</description>
+      <exits>
+        <node name="south">
+          <target>5145</target>
+        </node>
+        <node name="west">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>5149</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Помост</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="5109"/>
+        <equip to="wield" vnum="5113"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="5149">
+      <description>Очевидно, что это лишь временное место хранения собранных сокровищ.
+</description>
+      <exits>
+        <node name="east">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>5148</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Сокровищница</name>
+      <sector>inside</sector>
+    </node>
+    <node name="5150">
+      <description>Эта одноместная спальня очень элегантная. Владелец должен быть 
+очень высокого ранга, чтобы заслужить такое обращение.
+</description>
+      <exits>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>5129</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>Комната мастера оружия</name>
+      <resets>
+        <mob limit="2" maxHere="1" vnum="5106"/>
+        <equip to="wield" vnum="5105"/>
+        <equip to="hands" vnum="5109"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+  </rooms>
+</area>

@@ -1,55 +1,57 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Race type="DefaultPCRace">
   <aff>flying</aff>
   <align>good</align>
   <classes>
-    <cleric>100</cleric>
     <druid>-1</druid>
     <necromancer>-1</necromancer>
-    <ninja>-1</ninja>
-    <paladin>-1</paladin>
-    <ranger>100</ranger>
-    <samurai>-1</samurai>
-    <thief>-1</thief>
+    <witch>100</witch>
+    <ninja>100</ninja>
     <universal>100</universal>
+    <warlock>100</warlock>
     <vampire>-1</vampire>
-    <warlock>-1</warlock>
+    <paladin>100</paladin>
+    <thief>100</thief>
+    <cleric>100</cleric>
     <warrior>100</warrior>
     <anti-paladin>-1</anti-paladin>
-    <witch>-1</witch>
+    <samurai>-1</samurai>
+    <ranger>100</ranger>
   </classes>
   <form>edible sentient biped mammal</form>
-  <help keyword="stormgiant штвел" type="RaceHelp">Storm Giant&apos;ы - самые крупные из великанов. 
-Рост штормовых великанов достигает 12-20 футов. Они сильны и выносливы. 
-Ловкость, видимо, обратнопропорциональна размерам.
-Великаны - великолепные воины, но и только.
-  Storm Giant&apos;ы устойчивы к ударам молний и перемещаются по воздуху.
-Да и вообще самые смышленые из великанов.
-Как и остальные великаны владеют &apos;enhanced damage&apos; и &apos;bash&apos;.
-Излюбленное оружие - молоты и дубины.
-Характер имеют добрый.
+  <help keyword="'STORM GIANT' STORMGIANT 'п╗п╒п·п═п°п·п▓п░п╞ п▓п∙п⌡п≤п п░п²п╗п░' 'п╗п╒п·п═п°п·п▓п·п≥ п▓п∙п⌡п≤п п░п²' 'п╗п╒п·п═п°п·п▓п╚п∙ п▓п∙п⌡п≤п п░п²п╚' п╗п╒п▓п∙п⌡" level="-1" type="RaceHelp">
+п╗я┌п╬я─п╪п╬п╡я▀п╣ п╡п╣п╩п╦п╨п╟п╫я▀ - я│п╟п╪я▀п╣ п╨я─я┐п©п╫я▀п╣ п╦п╥ п╡п╣п╩п╦п╨п╟п╫п╬п╡, п╫п╟я│п╣п╩я▐я▌я┴п╦я┘ п°п╦я─ п⌠я─п╣п╥. п≤я┘ я─п╬я│я┌
+п©я─п╣п╡я▀я┬п╟п╣я┌ я┤п╣я┌я▀я─п╣ п╪п╣я┌я─п╟. п▓п╫п╣я┬п╫п╣ п╬п╫п╦ п╫п╟п©п╬п╪п╦п╫п╟я▌я┌ я┘п╬я─п╬я┬п╬ я│п╩п╬п╤п╣п╫п╫я▀я┘ п╩я▌п╢п╣п╧ пЁп╦пЁп╟п╫я┌я│п╨п╦я┘
+я─п╟п╥п╪п╣я─п╬п╡. п п╬п╤п╟ я┬я┌п╬я─п╪п╬п╡я▀я┘ п╡п╣п╩п╦п╨п╟п╫п╬п╡ п╠п╩п╣п╢п╫п╟я▐ п╦ п╡п╟я─я▄п╦я─я┐п╣я┌я│я▐ п©п╬ п╬я┌я┌п╣п╫п╨п╟п╪ п╬я┌ п╠п╩п╣п╢п╫п╬-
+п╥п╣п╩п╣п╫п╬п╧ п╢п╬ я└п╦п╬п╩п╣я┌п╬п╡п╬п╧. п≈п╣п╩п╣п╫п╟я▐ п╨п╬п╤п╟ я┤п╟я│я┌п╬ п╦п╢п╣я┌ п╡ я│п╬я┤п╣я┌п╟п╫п╦п╦ я│ я┌п╣п╪п╫п╬-п╥п╣п╩п╣п╫я▀п╪п╦ 
+п╡п╬п╩п╬я│п╟п╪п╦ п╦ п╦п╥я┐п╪я─я┐п╢п╫п╬пЁп╬ я├п╡п╣я┌п╟ пЁп╩п╟п╥п╟п╪п╦, п╟ я┐ пЁп╦пЁп╟п╫я┌п╬п╡ я│ я└п╦п╬п╩п╣я┌п╬п╡п╬п╧ п╨п╬п╤п╣п╧ п╪п╬п╤п╫п╬
+п╡я│я┌я─п╣я┌п╦я┌я▄ п╦я│я│п╦п╫я▐-я┤п╣я─п╫я▀п╣ п╡п╬п╩п╬я│я▀ п╦ п╩п╦п╩п╬п╡я▀п╣ пЁп╩п╟п╥п╟. п·п╫п╦ п╬я┤п╣п╫я▄ я┐п╪п╫я▀, п╩я▌п╠я▐я┌ п╪я┐п╥я▀п╨я┐ п╦ 
+п╦п╥я▐я┴п╫я▀п╣ п╦я│п╨я┐я│я│я┌п╡п╟. п╗я┌п╬я─п╪п╬п╡я▀п╣ п╡п╣п╩п╦п╨п╟п╫я▀ я┐я│я┌п╬п╧я┤п╦п╡я▀ п╨ я┐п╢п╟я─п╟п╪ п╪п╬п╩п╫п╦п╧ п╦ п©п╣я─п╣п╪п╣я┴п╟я▌я┌я│я▐ 
+п©п╬ п╡п╬п╥п╢я┐я┘я┐. п▓ п╠п╬я▌ п©я─п╣п╢п©п╬я┤п╦я┌п╟я▌я┌ п©п╬п╩я▄п╥п╬п╡п╟я┌я▄я│я▐ п╪п╟пЁп╦п╣п╧ п©п╬пЁп╬п╢я▀, п╡я▀п╥я▀п╡п╟я▐ п╪п╬п╩п╫п╦п╦ п╫п╟ 
+пЁп╬п╩п╬п╡я▀ я│п╡п╬п╦я┘ п©я─п╬я┌п╦п╡п╫п╦п╨п╬п╡. п·п╢п╫п╟п╨п╬ п╨п╟п╨ п╦ п╢я─я┐пЁп╦п╣ п╡п╣п╩п╦п╨п╟п╫я▀, я┘п╬я─п╬я┬п╬ п╡п╩п╟п╢п╣я▌я┌ п╢п╡я┐я─я┐я┤п╫я▀п╪
+п╬я─я┐п╤п╦п╣п╪, п©я─п╣п╢п©п╬я┤п╦я┌п╟я▐ п╪п╣я┤п╦.
 </help>
   <hpBonus>20</hpBonus>
   <manaBonus>-20</manaBonus>
   <maxAlign>1000</maxAlign>
   <minAlign>300</minAlign>
-  <nameFemale>штормов|ая|ую|ой|ую|ой|ой великанш|а|и|е|у|ей|е</nameFemale>
-  <nameMale>штормов|ой|ого|ому|ого|ым|ом великан||а|у|а|ом|е</nameMale>
-  <nameMlt>штормов|ые|ых|ым|ых|ыми|ых великан|ы|ов|ам|ов|ами|ах</nameMlt>
-  <nameScore>шторм. вел.</nameScore>
+  <nameFemale>я┬я┌п╬я─п╪п╬п╡|п╟я▐|я┐я▌|п╬п╧|я┐я▌|п╬п╧|п╬п╧ п╡п╣п╩п╦п╨п╟п╫я┬|п╟|п╦|п╣|я┐|п╣п╧|п╣</nameFemale>
+  <nameMale>я┬я┌п╬я─п╪п╬п╡|п╬п╧|п╬пЁп╬|п╬п╪я┐|п╬пЁп╬|я▀п╪|п╬п╪ п╡п╣п╩п╦п╨п╟п╫||п╟|я┐|п╟|п╬п╪|п╣</nameMale>
+  <nameMlt>я┬я┌п╬я─п╪п╬п╡|я▀п╣|я▀я┘|я▀п╪|я▀я┘|я▀п╪п╦|я▀я┘ п╡п╣п╩п╦п╨п╟п╫|я▀|п╬п╡|п╟п╪|п╬п╡|п╟п╪п╦|п╟я┘</nameMlt>
+  <nameScore>я┬я┌п╬я─п╪. п╡п╣п╩.</nameScore>
   <nameWho>StGia</nameWho>
-  <nameWhoRus>ШтВел</nameWhoRus>
+  <nameWhoRus>п╗я┌п▓п╣п╩</nameWhoRus>
   <parts>head arms legs heart brains guts hands feet fingers ear eye</parts>
   <points>600</points>
   <res>lightning</res>
   <size>huge</size>
   <stats>
     <str>5</str>
-    <int>-2</int>
-    <wis>-2</wis>
+    <int>3</int>
+    <wis>0</wis>
     <dex>-6</dex>
     <con>3</con>
   </stats>
-  <vuln>fire cold mental</vuln>
-  <wearloc>finger_l second_wield neck_2 neck_1 finger_r wrist_r wrist_l body light shield head legs feet hands arms about waist wield hold float tattoo face </wearloc>
+  <vuln></vuln>
+  <wearloc>finger_l second_wield neck_2 neck_1 finger_r wrist_r wrist_l body light shield head legs feet hands arms about waist wield hold float tattoo face tat_arms tat_wrist_l tat_wrist_r</wearloc>
 </Race>

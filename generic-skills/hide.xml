@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
-  <beats>0</beats>
   <classes>
     <node name="ninja">
       <level>10</level>
@@ -21,17 +20,27 @@
   </classes>
   <command type="SKILL(hide)">
     <extra>keep_hide</extra>
-    <hint>(����, ������) ���������� � �����</hint>
+    <hint>(воры, ниндзи) спрятаться в тенях</hint>
     <name>hide</name>
     <order>thief_only</order>
     <position>rest</position>
     <russian>
-      <node>��������</node>
-      <node>����������</node>
+      <node>укрыться</node>
+      <node>скрываться</node>
     </russian>
   </command>
-  <group>none</group>
+  <dammsg></dammsg>
   <hard>3</hard>
+  <help level="-1" type="SkillHelp">
+%FMT% *%CMD%*
+
+Умение скрываться позволяет тебе остаться незамеченным. Для того, чтобы
+скрыться, воры и нинзи используют тени, ниши и всякие укрытия, поэтому
+гораздо проще так спрятаться в городе, чем на открытой местности.
+Многие действия выведут тебя из укрытия, сделав заметным для окружающих.
+
+%SA% %H% [(sneak,подкрадывание)], [(detect hide,приглядеться)]
+</help>
   <mob>
     <bonus>20</bonus>
     <dice>2</dice>
@@ -39,7 +48,7 @@
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>����������</nameRus>
+  <nameRus>скрываться</nameRus>
   <raceBonuses>
     <node name="drow">
       <bonus>100</bonus>

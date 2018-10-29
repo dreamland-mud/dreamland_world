@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
-    <wearoff>Ты более не чувствуешь присутствие скрытых сил.</wearoff>
+    <wearoff>п╒я▀ п╠п╬п╩п╣п╣ п╫п╣ я┤я┐п╡я│я┌п╡я┐п╣я┬я▄ п©я─п╦я│я┐я┌я│я┌п╡п╦п╣ я│п╨я─я▀я┌я▀я┘ я│п╦п╩.</wearoff>
   </affect>
   <beats>12</beats>
   <classes>
@@ -26,17 +26,21 @@
     </node>
   </classes>
   <command type="SKILL(detect)">
-    <hint>(воры, ниндзи) замечать скрытое</hint>
+    <hint>(п╡п╬я─я▀, п╫п╦п╫п╢п╥п╦) п╥п╟п╪п╣я┤п╟я┌я▄ я│п╨я─я▀я┌п╬п╣</hint>
     <name>detect</name>
     <position>rest</position>
     <russian>
-      <node>приглядеться</node>
+      <node>п©я─п╦пЁп╩я▐п╢п╣я┌я▄я│я▐</node>
     </russian>
   </command>
+  <dammsg></dammsg>
   <group>detection</group>
   <hard>4</hard>
-  <help type="SkillHelp">Этот навык позволяет обнаружить скрытых существ.
-Так же существуют снадобья с &apos;detect hidden&apos;.
+  <help level="-1" type="SkillHelp">
+%FMT% *%CMD%*
+
+п╜я┌п╬я┌ п╫п╟п╡я▀п╨ п©п╬п╥п╡п╬п╩я▐п╣я┌ п╬п╠п╫п╟я─я┐п╤п╦я┌я▄ я│п╨я─я▀я┌я▀я┘ я│я┐я┴п╣я│я┌п╡.
+п╒п╟п╨п╤п╣ я│я┐я┴п╣я│я┌п╡я┐я▌я┌ я│п╫п╟п╢п╬п╠я▄я▐ я│ п╥п╟п╨п╩п╦п╫п╟п╫п╦п╣п╪ [(detect hidden,п╬п╠п╫п╟я─я┐п╤п╦я┌я▄ я│п╨я─я▀я┌п╬п╣)].
   </help>
   <mana>5</mana>
   <mob>
@@ -44,5 +48,5 @@
     <ordered>false</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>замечать скрытое</nameRus>
+  <nameRus>п╥п╟п╪п╣я┤п╟я┌я▄ я│п╨я─я▀я┌п╬п╣</nameRus>
 </skill>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <beats>24</beats>
   <classes>
@@ -17,14 +17,26 @@
       <weight>40</weight>
     </node>
   </classes>
+  <dammsg></dammsg>
   <group>benedictions</group>
+  <help level="-1" type="SkillHelp">
+%FMT% *%SPELL%* _%CHAR%_
+
+Опытные клерики могут превратить свою энергию (ману) в исцеляющий луч света.
+Направленный на кого-то, такой луч излечит все раны, отбирая от клерика по
+одному очку энергии за каждый восстановленный пункт здоровья.
+Помимо этого, исцеляющий луч попытается излечить от чумы, яда, слепоты и 
+избавить от проклятия.
+
+%SA% %H% [(cast,колдовать)], [(cure poison,лечить яд)], [(cure blindness,лечить слепоту)], [(cure disease,лечить болезнь)], [(remove curse,снять проклятие)]
+</help>
   <mana>50</mana>
   <mob>
     <forbidden>false</forbidden>
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>��� ��������������</nameRus>
+  <nameRus>луч восстановления</nameRus>
   <spell type="SPELL(RestoringLight)">
     <casted>true</casted>
     <position>stand</position>

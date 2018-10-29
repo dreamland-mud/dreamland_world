@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <classes>
     <node name="anti-paladin">
@@ -43,8 +43,18 @@
       <rating>1</rating>
     </node>
   </classes>
+  <dammsg></dammsg>
   <group>weaponsmaster</group>
   <hard>5</hard>
+  <help level="-1" type="SkillHelp">
+Это умения позволяет обращаться с булавами, дубинками и боевыми молотами.
+Дубина - излюбленное оружие троллей, урукхаев и облачных великанов.
+Клерики также предпочитают именно этот вид оружия, владея секретом превращения
+любого оружия в булаву. Паладины могут с переменным успехом орудовать булавой 
+в качестве вторичного оружия. 
+
+%SA% %H% [(weapon morph,превратить оружие)], [(dual,вторичное)]
+</help>      
   <mob>
     <bonus>40</bonus>
     <dice>3</dice>
@@ -52,24 +62,9 @@
     <ordered>true</ordered>
     <professional>false</professional>
   </mob>
-  <nameRus>������</nameRus>
+  <nameRus>булава</nameRus>
   <raceBonuses>
     <node name="cloud giant">
-      <bonus>100</bonus>
-      <level>0</level>
-      <professional>true</professional>
-    </node>
-    <node name="fire giant">
-      <bonus>100</bonus>
-      <level>0</level>
-      <professional>true</professional>
-    </node>
-    <node name="frost giant">
-      <bonus>100</bonus>
-      <level>0</level>
-      <professional>true</professional>
-    </node>
-    <node name="storm giant">
       <bonus>100</bonus>
       <level>0</level>
       <professional>true</professional>

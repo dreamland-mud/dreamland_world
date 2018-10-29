@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
     <cancelled>true</cancelled>
     <dispelled>true</dispelled>
-    <wearoff>Ты больше не видишь {RКрасной ауры{x.</wearoff>
+    <wearoff>п╒я▀ п╠п╬п╩я▄я┬п╣ п╫п╣ п╡п╦п╢п╦я┬я▄ {Rп я─п╟я│п╫п╬п╧ п╟я┐я─я▀{x.</wearoff>
   </affect>
   <beats>12</beats>
   <classes>
@@ -29,17 +29,21 @@
       <rating>1</rating>
     </node>
   </classes>
+  <dammsg></dammsg>
   <group>detection</group>
-  <help type="SkillHelp">Это заклинание позволит обнаруживать злую ауру вокруг персонажей.
-Цвет такой ауры - {Rкрасный{x.
-  </help>
+  <help level="-1" type="SkillHelp">
+%FMT% *%SPELL%*
+
+п╜я┌п╬ п╥п╟п╨п╩п╦п╫п╟п╫п╦п╣ п©п╬п╥п╡п╬п╩п╦я┌ п╬п╠п╫п╟я─я┐п╤п╦п╡п╟я┌я▄ п╥п╩я┐я▌ п╟я┐я─я┐ п╡п╬п╨я─я┐пЁ п©п╣я─я│п╬п╫п╟п╤п╣п╧.
+п╕п╡п╣я┌ я┌п╟п╨п╬п╧ п╟я┐я─я▀ - {Rп╨я─п╟я│п╫я▀п╧{x.
+</help>
   <mana>5</mana>
   <mob>
     <forbidden>false</forbidden>
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>обнаружить зло</nameRus>
+  <nameRus>п╬п╠п╫п╟я─я┐п╤п╦я┌я▄ п╥п╩п╬</nameRus>
   <spell type="SPELL(DetectEvil)">
     <casted>true</casted>
     <position>stand</position>

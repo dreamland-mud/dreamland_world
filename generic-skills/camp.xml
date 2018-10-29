@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="AFFECT(Camp)">
-    <wearoff>Ты можешь устроить еще один лагерь.</wearoff>
+    <wearoff>п╒я▀ п╪п╬п╤п╣я┬я▄ я┐я│я┌я─п╬п╦я┌я▄ п╣я┴п╣ п╬п╢п╦п╫ п╩п╟пЁп╣я─я▄.</wearoff>
   </affect>
   <beats>24</beats>
   <classes>
@@ -18,17 +18,23 @@
     </node>
   </classes>
   <command type="SKILL(camp)">
-    <hint>(рейнджеры) разбить лагерь</hint>
+    <hint>(я─п╣п╧п╫п╢п╤п╣я─я▀) я─п╟п╥п╠п╦я┌я▄ п╩п╟пЁп╣я─я▄</hint>
     <name>camp</name>
     <position>stand</position>
     <russian>
-      <node>лагерь</node>
+      <node>п╩п╟пЁп╣я─я▄</node>
     </russian>
   </command>
-  <group>none</group>
+  <dammsg></dammsg>
   <hard>4</hard>
-  <help type="SkillHelp">Умение разбивать походный лагерь. Помогает жителю леса быстрее 
-восстанавливать силы.
+  <help level="-1" type="SkillHelp">
+%FMT% *%CMD%*
+
+пёп╪п╣п╫п╦п╣ я─п╣п╧п╫п╢п╤п╣я─п╬п╡ я─п╟п╥п╠п╦п╡п╟я┌я▄ п©п╬я┘п╬п╢п╫я▀п╧ п╩п╟пЁп╣я─я▄ п╡ п╢п╦п╨п╬п╧ п╪п╣я│я┌п╫п╬я│я┌п╦. п▓я│п╣, п╨я┌п╬
+п╫п╟я┘п╬п╢я▐я┌я│я▐ п╡ п╪п╣я│я┌п╫п╬я│я┌п╦, п╡ п╨п╬я┌п╬я─п╬п╧ я─п╟п╥п╠п╦я┌ я┌п╟п╨п╬п╧ п╩п╟пЁп╣я─я▄, п╠я┐п╢я┐я┌ п╠я▀я│я┌я─п╣п╣ 
+п╡п╬я│я│я┌п╟п╫п╟п╡п╩п╦п╡п╟я┌я▄ п╥п╢п╬я─п╬п╡я▄п╣ п╦ п╪п╟п╫я┐.
+
+%SA% %H% [(raffects,п╨я█я└я└п╣п╨я┌я▀)]
   </help>
   <mana>150</mana>
   <mob>
@@ -36,5 +42,5 @@
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>лагерь</nameRus>
+  <nameRus>п╩п╟пЁп╣я─я▄</nameRus>
 </skill>

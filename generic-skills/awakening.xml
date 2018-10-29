@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <beats>12</beats>
   <classes>
@@ -17,9 +17,15 @@
       <weight>30</weight>
     </node>
   </classes>
+  <dammsg></dammsg>
   <group>curative</group>
-  <help type="SkillHelp">Боги дают паладину силу будить спящих нездоровым сном (&apos;{yawakening{x&apos;). Однако,
-заклинания сна на пациенте должны быть не сильнее, чем само заклинание пробуждения.
+  <help level="-1" type="SkillHelp">
+%FMT% *%SPELL%* _%VICT%_
+
+п▒п╬пЁп╦ п╢п╟я▌я┌ п©п╟п╩п╟п╢п╦п╫я┐ я│п╦п╩я┐ п╠я┐п╢п╦я┌я▄ я│п©я▐я┴п╦я┘ п╫п╣п╥п╢п╬я─п╬п╡я▀п╪ я│п╫п╬п╪. п·п╢п╫п╟п╨п╬, п╥п╟п╨п╩п╦п╫п╟п╫п╦я▐ я│п╫п╟
+п╫п╟ п©п╟я├п╦п╣п╫я┌п╣ п╢п╬п╩п╤п╫я▀ п╠я▀я┌я▄ п╫п╣ я│п╦п╩я▄п╫п╣п╣, я┤п╣п╪ я│п╟п╪п╬ п╥п╟п╨п╩п╦п╫п╟п╫п╦п╣ п©я─п╬п╠я┐п╤п╢п╣п╫п╦я▐.
+
+%SA% %H% [(cast,п╨п╬п╩п╢п╬п╡п╟я┌я▄)]
   </help>
   <mana>20</mana>
   <mob>
@@ -27,7 +33,7 @@
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>пробуждение</nameRus>
+  <nameRus>п©я─п╬п╠я┐п╤п╢п╣п╫п╦п╣</nameRus>
   <spell type="SPELL(Awakening)">
     <casted>true</casted>
     <position>fight</position>

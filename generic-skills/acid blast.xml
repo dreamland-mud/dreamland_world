@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <beats>12</beats>
   <classes>
@@ -27,7 +27,17 @@
       <rating>1</rating>
     </node>
   </classes>
-  <dammsg mg="f">����� �������</dammsg>
+  <dammsg mg="f">струя кислоты</dammsg>
+  <help level="-1" type="SkillHelp">
+%FMT% *%SPELL%* _%VICT%_
+
+Одно из самых мощных боевых заклинаний, известных современным колдунам и ведьмам.
+Струя кислоты, направленная на жертву, нанесет ей урон сообразно с уровнем
+произнесенного заклинания. Если сработала защита от заклинаний (saves vs spell),
+повреждения будут ослаблены вдвое.
+
+%SA% %H% [(cast,колдовать)]
+</help>
   <group>combat</group>
   <mana>40</mana>
   <mob>
@@ -35,7 +45,7 @@
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>����� �������</nameRus>
+  <nameRus>струя кислоты</nameRus>
   <spell type="SPELL(AcidBlast)">
     <casted>true</casted>
     <position>fight</position>

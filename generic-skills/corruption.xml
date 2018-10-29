@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
     <cancelled>true</cancelled>
     <dispelled>true</dispelled>
-    <wearoff>Ты вновь ощущаешь свое тело здоровым.</wearoff>
-    <wearoffDispel>%1$^C1 выглядит здоровее.</wearoffDispel>
+    <wearoff>п╒я▀ п╡п╫п╬п╡я▄ п╬я┴я┐я┴п╟п╣я┬я▄ я│п╡п╬п╣ я┌п╣п╩п╬ п╥п╢п╬я─п╬п╡я▀п╪.</wearoff>
+    <wearoffDispel>%1$^C1 п╡я▀пЁп╩я▐п╢п╦я┌ п╥п╢п╬я─п╬п╡п╣п╣.</wearoffDispel>
   </affect>
   <beats>12</beats>
   <classes>
@@ -24,10 +24,11 @@
       <weight>30</weight>
     </node>
   </classes>
+  <dammsg></dammsg>
   <group>maladictions</group>
-  <help type="SkillHelp">Гниение, наложенное с помощью этого заклинания, мешает нормальному
-восстановлению здоровья у жертвы. 
-Аналогичный эффект дает стрела, воткнутая в тело.
+  <help level="-1" type="SkillHelp">п⌠п╫п╦п╣п╫п╦п╣, п╫п╟п╩п╬п╤п╣п╫п╫п╬п╣ я│ п©п╬п╪п╬я┴я▄я▌ я█я┌п╬пЁп╬ п╥п╟п╨п╩п╦п╫п╟п╫п╦я▐, п╪п╣я┬п╟п╣я┌ п╫п╬я─п╪п╟п╩я▄п╫п╬п╪я┐
+п╡п╬я│я│я┌п╟п╫п╬п╡п╩п╣п╫п╦я▌ п╥п╢п╬я─п╬п╡я▄я▐ я┐ п╤п╣я─я┌п╡я▀. 
+п░п╫п╟п╩п╬пЁп╦я┤п╫я▀п╧ я█я└я└п╣п╨я┌ п╢п╟п╣я┌ я│я┌я─п╣п╩п╟, п╡п╬я┌п╨п╫я┐я┌п╟я▐ п╡ я┌п╣п╩п╬.
   </help>
   <mana>100</mana>
   <mob>
@@ -35,7 +36,7 @@
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>гниение</nameRus>
+  <nameRus>пЁп╫п╦п╣п╫п╦п╣</nameRus>
   <spell type="SPELL(Corruption)">
     <casted>true</casted>
     <position>fight</position>

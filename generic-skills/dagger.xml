@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <classes>
     <node name="anti-paladin">
@@ -50,7 +50,6 @@
       <level>1</level>
       <maximum>100</maximum>
       <rating>1</rating>
-      <weight>0</weight>
     </node>
     <node name="vampire">
       <level>1</level>
@@ -73,8 +72,17 @@
       <rating>2</rating>
     </node>
   </classes>
+  <dammsg></dammsg>
   <group>weaponsmaster</group>
   <hard>5</hard>
+  <help level="-1" type="SkillHelp">
+Кинжалы и ножи - самый популярный вид вооружения, доступный практически любой профессии.
+Воины, паладины, нинзи, рейнджеры и самураи умело орудуют кинжалом в качестве второго
+оружия.
+Также это излюбленное оружие для рас гитианки и урукхаев.
+
+%SA% %H% [(dual,вторичное)]
+</help>      
   <mob>
     <bonus>40</bonus>
     <dice>3</dice>
@@ -82,7 +90,7 @@
     <ordered>true</ordered>
     <professional>false</professional>
   </mob>
-  <nameRus>������</nameRus>
+  <nameRus>кинжал</nameRus>
   <raceBonuses>
     <node name="githyanki">
       <bonus>100</bonus>

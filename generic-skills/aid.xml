@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
-    <wearoff>�� ������ ������ ��� ����-������.</wearoff>
+    <wearoff>Ты можешь помочь еще кому-нибудь.</wearoff>
   </affect>
   <beats>12</beats>
   <classes>
@@ -20,14 +20,25 @@
       <weight>50</weight>
     </node>
   </classes>
+  <dammsg></dammsg>
   <group>healing</group>
+  <help level="-1" type="SkillHelp">
+%FMT% *%SPELL%*
+%FFF% *%SPELL%* _%CHAR%_
+
+Клерики могут использовать эту молитву, чтобы не только излечить свои или
+чьи-то раны, но и на короткое время увеличить максимальное количество
+здоровья.
+
+%SA% %H% [(cast,колдовать)]
+  </help>
   <mana>100</mana>
   <mob>
     <forbidden>false</forbidden>
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>������</nameRus>
+  <nameRus>помощь</nameRus>
   <spell type="SPELL(Aid)">
     <casted>true</casted>
     <position>fight</position>

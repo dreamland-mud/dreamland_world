@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <beats>24</beats>
   <classes>
@@ -17,15 +17,25 @@
       <weight>40</weight>
     </node>
   </classes>
-  <dammsg mg="f">���� ��������</dammsg>
+  <dammsg mg="f">рука умертвия</dammsg>
   <group>combat</group>
+  <help level="-1" type="SkillHelp">
+%FMT% *%SPELL%* _%VICT%_
+
+Заклинание могущественных некромантов не только нанесет жертве повреждения
+негативной энергией, но и переполовинит количество шагов и маны, в случае,
+если не прошел спасс-бросок. Часть отобранной таким образом энергии превратится
+в здоровье самого некроманта.
+
+%SA% %H% [(cast,колдовать)]
+</help>
   <mana>20</mana>
   <mob>
     <forbidden>false</forbidden>
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>���� ��������</nameRus>
+  <nameRus>рука умертвия</nameRus>
   <spell type="SPELL(HandOfUndead)">
     <casted>true</casted>
     <position>fight</position>

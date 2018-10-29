@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
-    <wearoff>Магическая Сила, позволяющая оживлять трупы, возвращается к тебе.</wearoff>
+    <wearoff>п°п╟пЁп╦я┤п╣я│п╨п╟я▐ п║п╦п╩п╟, п©п╬п╥п╡п╬п╩я▐я▌я┴п╟я▐ п╬п╤п╦п╡п╩я▐я┌я▄ я┌я─я┐п©я▀, п╡п╬п╥п╡я─п╟я┴п╟п╣я┌я│я▐ п╨ я┌п╣п╠п╣.</wearoff>
   </affect>
   <beats>12</beats>
   <classes>
@@ -25,17 +25,22 @@
       <rating>1</rating>
     </node>
   </classes>
+  <dammsg></dammsg>
   <group>necromancy</group>
-  <help type="SkillHelp">Зомби, оживленное с помощью этого заклинания, будет служить 
-своему новому хозяину до смерти.
-  </help>
+  <help level="-1" type="SkillHelp">
+%FMT% *%SPELL%* _я┌я─я┐п©_
+
+п≈п╬п╪п╠п╦, п╬п╤п╦п╡п╩п╣п╫п╫п╬п╣ я│ п©п╬п╪п╬я┴я▄я▌ я█я┌п╬пЁп╬ п╥п╟п╨п╩п╦п╫п╟п╫п╦я▐, п╠я┐п╢п╣я┌ я│п╩я┐п╤п╦я┌я▄ я│п╡п╬п╣п╪я┐ п╫п╬п╡п╬п╪я┐ я┘п╬п╥я▐п╦п╫я┐ п╢п╬ я│п╪п╣я─я┌п╦.
+
+%SA% %H% [(cast,п╨п╬п╩п╢п╬п╡п╟я┌я▄)]
+</help>
   <mana>50</mana>
   <mob>
     <forbidden>false</forbidden>
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>оживление мертвеца</nameRus>
+  <nameRus>п╬п╤п╦п╡п╩п╣п╫п╦п╣ п╪п╣я─я┌п╡п╣я├п╟</nameRus>
   <spell type="SPELL(AnimateDead)">
     <casted>true</casted>
     <position>stand</position>

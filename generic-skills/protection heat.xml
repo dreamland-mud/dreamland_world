@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
     <cancelled>true</cancelled>
     <dispelled>true</dispelled>
-    <wearoff>Твоя защищенность от воздействия высоких температур понижается.</wearoff>
-    <wearoffDispel>%1$^C1 теряет защиту от огня.</wearoffDispel>
+    <wearoff>п╒п╡п╬я▐ п╥п╟я┴п╦я┴п╣п╫п╫п╬я│я┌я▄ п╬я┌ п╡п╬п╥п╢п╣п╧я│я┌п╡п╦я▐ п╡я▀я│п╬п╨п╦я┘ я┌п╣п╪п©п╣я─п╟я┌я┐я─ п©п╬п╫п╦п╤п╟п╣я┌я│я▐.</wearoff>
+    <wearoffDispel>%1$^C1 я┌п╣я─я▐п╣я┌ п╥п╟я┴п╦я┌я┐ п╬я┌ п╬пЁп╫я▐.</wearoffDispel>
   </affect>
   <beats>12</beats>
   <classes>
@@ -38,8 +38,9 @@
       <rating>1</rating>
     </node>
   </classes>
+  <dammsg></dammsg>
   <group>protective</group>
-  <help type="SkillHelp">Это заклинание дает тебе защиту от огненных (fire) атак.
+  <help level="-1" type="SkillHelp">п╜я┌п╬ п╥п╟п╨п╩п╦п╫п╟п╫п╦п╣ п╢п╟п╣я┌ я┌п╣п╠п╣ п╥п╟я┴п╦я┌я┐ п╬я┌ п╬пЁп╫п╣п╫п╫я▀я┘ (fire) п╟я┌п╟п╨.
   </help>
   <mana>5</mana>
   <mob>
@@ -47,7 +48,7 @@
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>защита от тепла</nameRus>
+  <nameRus>п╥п╟я┴п╦я┌п╟ п╬я┌ я┌п╣п©п╩п╟</nameRus>
   <spell type="SPELL(ProtectionHeat)">
     <casted>true</casted>
     <position>stand</position>

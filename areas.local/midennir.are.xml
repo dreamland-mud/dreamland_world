@@ -1,0 +1,1643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<area>
+  <areadata>
+    <authors>Copper</authors>
+    <credits>Miden&apos;nir</credits>
+    <levelHigh>15</levelHigh>
+    <levelLow>5</levelLow>
+    <name>Миден&apos;нир</name>
+    <security>9</security>
+    <speedwalk>3e8s2w2s</speedwalk>
+    <translator>Zav</translator>
+    <vnumHigh>3599</vnumHigh>
+    <vnumLow>3500</vnumLow>
+  </areadata>
+  <mobiles>
+    <node name="3500">
+      <ac bash="4" exotic="6" pierce="5" slash="5"/>
+      <act add="npc stay_area"/>
+      <alignment>-200</alignment>
+      <dam_type>bite</dam_type>
+      <damage>2d6+1</damage>
+      <default_pos>stand</default_pos>
+      <description>Это   огромное  крылатое  создание  выглядит  достаточно  угрожающе.  Ты
+счастлив, что оно НЕ КАЖЕТСЯ, очень голодным ... Но все же...
+</description>
+      <hit>8d8+80</hit>
+      <hitroll>2</hitroll>
+      <level>8</level>
+      <long_descr>Чудовищный виверн (wyvern) медленно кружит над твоей головой. 
+</long_descr>
+      <mana>1d1+149</mana>
+      <material>0</material>
+      <off add="berserk trip assist_race"/>
+      <player_name>виверн wyvern</player_name>
+      <race>wyvern</race>
+      <sex>male</sex>
+      <short_descr>вивер|н|на|ну|на|ном|не</short_descr>
+      <size>huge</size>
+      <spec>spec_poison</spec>
+      <start_pos>stand</start_pos>
+    </node>
+    <node name="3501">
+      <ac bash="6" exotic="9" pierce="4" slash="4"/>
+      <act add="npc aggressive stay_area warrior"/>
+      <alignment>-500</alignment>
+      <dam_type>punch</dam_type>
+      <damage>2d4+1</damage>
+      <default_pos>stand</default_pos>
+      <description>Ты  видишь  перед  собой мелкое корявое существо с узловатыми мускулами.
+Мама никогда не учила его чистить зубы...
+</description>
+      <hit>4d4+65</hit>
+      <hitroll>1</hitroll>
+      <level>6</level>
+      <long_descr>Горный гоблин (goblin) блуждает вокруг, бурча себе под нос.
+</long_descr>
+      <mana>1d1+99</mana>
+      <material>0</material>
+      <off add="parry assist_race"/>
+      <player_name>горный гоблин goblin mountain</player_name>
+      <race>goblin</race>
+      <sex>male</sex>
+      <short_descr>гобли|н|на|ну|на|ном|не</short_descr>
+      <size>small</size>
+      <start_pos>stand</start_pos>
+      <wealth>25</wealth>
+    </node>
+    <node name="3502">
+      <ac bash="8" exotic="10" pierce="8" slash="8"/>
+      <act add="npc sentinel wimpy"/>
+      <alignment>500</alignment>
+      <dam_type>beating</dam_type>
+      <damage>1d6+0</damage>
+      <default_pos>rest</default_pos>
+      <description>Бедный  мальчик  весь  в  ссадинах  и  небольших царапинах, но видимо он
+больше испуган, чем ранен.
+</description>
+      <hit>1d12+47</hit>
+      <level>4</level>
+      <long_descr>Маленький мальчик (small boy) сидит здесь, перевязывая свои раны.
+</long_descr>
+      <mana>1d1+99</mana>
+      <material>0</material>
+      <off add="kick"/>
+      <player_name>маленький мальчик boy small</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>мальчи|к|ка|ку|ка|ком|ке</short_descr>
+      <size>small</size>
+      <start_pos>rest</start_pos>
+      <vuln add="spell"/>
+    </node>
+    <node name="3503">
+      <ac bash="2" exotic="8" pierce="2" slash="2"/>
+      <act add="npc sentinel warrior"/>
+      <alignment>500</alignment>
+      <dam_type>punch</dam_type>
+      <damage>2d8+1</damage>
+      <default_pos>stand</default_pos>
+      <description>Владелец  гостиницы  теперь проводит большинство дней ожидая клиентов, в
+то  время  как  ночи  проходят  в  страхе перед гоблинами. Его гостиница
+больше не то счастливое место, которым она была в прошлом.
+</description>
+      <hit>1d12+200</hit>
+      <hitroll>1</hitroll>
+      <imm add="summon charm"/>
+      <level>10</level>
+      <long_descr>Владелец гостиницы (innkeeper) стоит здесь, тоскливо протирая очки.
+</long_descr>
+      <mana>1d1+149</mana>
+      <material>0</material>
+      <off add="backstab dodge parry assist_align"/>
+      <player_name>владелец гостиницы innkeeper</player_name>
+      <race>human</race>
+      <res add="spell weapon"/>
+      <sex>male</sex>
+      <short_descr>владеле|ц|ца|цу|ца|цем|це гостиницы</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>350</wealth>
+    </node>
+    <node name="3504">
+      <ac bash="5" exotic="6" pierce="3" slash="3"/>
+      <act add="npc sentinel thief warrior"/>
+      <alignment>600</alignment>
+      <dam_type>punch</dam_type>
+      <damage>2d6+0</damage>
+      <default_pos>sit</default_pos>
+      <description>Ты  чувствуешь  запах алкогольного перегара на расстоянии пары метров...
+Этот бедный бард находился здесь долгое время, и теперь он практически в
+невменяемом состоянии. Ну надо же было так напиться!...
+</description>
+      <detection add="invis"/>
+      <hit>1d12+110</hit>
+      <hitroll>3</hitroll>
+      <level>8</level>
+      <long_descr>Угрюмый бродячий певец (bard) пытается утопить в выпивке свои проблемы.
+</long_descr>
+      <mana>1d1+99</mana>
+      <material>0</material>
+      <off add="dodge kick kick_dirt parry trip assist_align"/>
+      <player_name>бродячий певец bard</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>бродяч|ий|его|ему|его|им|ем певе|ц|ца|цу|ца|цом|це</short_descr>
+      <size>medium</size>
+      <start_pos>sit</start_pos>
+      <wealth>260</wealth>
+    </node>
+    <node name="3505">
+      <ac bash="3" exotic="6" pierce="5" slash="3"/>
+      <act add="npc stay_area wimpy thief"/>
+      <aff add="sneak"/>
+      <alignment>-900</alignment>
+      <dam_type>punch</dam_type>
+      <damage>2d5+2</damage>
+      <default_pos>stand</default_pos>
+      <description>Этот  человек  очевидно вне закона и не задумываясь нападет при малейшей
+возможности.
+</description>
+      <hit>1d12+110</hit>
+      <hitroll>2</hitroll>
+      <level>8</level>
+      <long_descr>Темный всадник (horseman) как влитой сидит на своем черном коне.
+</long_descr>
+      <mana>1d1+99</mana>
+      <material>0</material>
+      <off add="backstab dodge kick_dirt parry assist_align"/>
+      <player_name>темный всадник horseman dark</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>темн|ый|ого|ому|ого|ым|ом всадни|к|ка|ку|ка|ком|ке</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>400</wealth>
+    </node>
+    <node name="3506">
+      <ac bash="5" exotic="8" pierce="3" slash="3"/>
+      <act add="npc aggressive stay_area warrior"/>
+      <alignment>-600</alignment>
+      <dam_type>punch</dam_type>
+      <damage>1d10+1</damage>
+      <default_pos>stand</default_pos>
+      <description>Он  достаточно сердит, и ищет одного из подчиненных, чтобы наказать его.
+Поглядев на тебя, он задумался - может быть сорвать злость на тебе?...
+</description>
+      <hit>1d12+100</hit>
+      <hitroll>1</hitroll>
+      <level>7</level>
+      <long_descr>Гоблин-лейтенант (goblin) стоит здесь, пытаясь отдавать своим людям приказы.
+</long_descr>
+      <mana>1d1+149</mana>
+      <material>0</material>
+      <off add="berserk parry trip assist_race"/>
+      <player_name>гоблин лейтенант goblin lieutenant</player_name>
+      <race>goblin</race>
+      <sex>male</sex>
+      <short_descr>гобли|н|на|ну|на|ном|не</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>55</wealth>
+    </node>
+    <node name="3507">
+      <ac bash="3" exotic="6" pierce="1" slash="1"/>
+      <act add="npc scavenger aggressive stay_area warrior"/>
+      <alignment>-900</alignment>
+      <dam_type>punch</dam_type>
+      <damage>1d12+3</damage>
+      <default_pos>stand</default_pos>
+      <description>Лидер  гоблинов  не  выглядит  счастливым  от  того  что  попал  в  твою
+компанию... Он хватает свой меч и с криком бьет тебя метя в горло.
+</description>
+      <hit>1d12+120</hit>
+      <hitroll>2</hitroll>
+      <level>9</level>
+      <long_descr>Лидер гоблинов (leader) осматривает местность.
+</long_descr>
+      <mana>1d1+199</mana>
+      <material>0</material>
+      <off add="berserk kick_dirt parry trip assist_race"/>
+      <player_name>лидер гоблинов goblin leader</player_name>
+      <race>goblin</race>
+      <sex>male</sex>
+      <short_descr>лиде|р|ра|ру|ра|ром|ре гоблинов</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>500</wealth>
+    </node>
+  </mobiles>
+  <objects>
+    <node name="3500">
+      <affects>
+        <node>
+          <apply to="hitroll">-1</apply>
+        </node>
+      </affects>
+      <condition>75</condition>
+      <cost>460</cost>
+      <description>Короткий меч (short sword), покрытый ржавчиной, лежит на земле.</description>
+      <extraDescr>
+        <node keyword="меч sword">Он выглядит тяжелее, чем обычный короткий меч, но его не мешало бы
+смазать и почистить.</node>
+      </extraDescr>
+      <gender>m</gender>
+      <level>5</level>
+      <material>iron</material>
+      <name>меч короткий sword short</name>
+      <short_descr>коротк|ий|ого|ому|ий|им|ом ме|ч|ча|чу|ч|чом|че гоблина</short_descr>
+      <type name="weapon">
+        <diceNumber>2</diceNumber>
+        <diceType>5</diceType>
+        <weapClass>sword</weapClass>
+        <weapType>stab</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>40</weight>
+    </node>
+    <node name="3501">
+      <affects>
+        <node>
+          <apply to="hitroll">-5</apply>
+        </node>
+        <node>
+          <apply to="ac">2</apply>
+        </node>
+      </affects>
+      <condition>75</condition>
+      <cost>100</cost>
+      <description>Почерневшее копье (spear) со зловещим наконечником валяется на земле.</description>
+      <extraDescr>
+        <node keyword="копье spear">Это копье делали для убоя свиней, но сейчас оно используется для
+более невинных вещей - например протыкания насквозь ближнего своего...
+</node>
+      </extraDescr>
+      <gender>n</gender>
+      <level>6</level>
+      <material>iron</material>
+      <name>копье длинное spear long</name>
+      <short_descr>длинн|ое|ого|ому|ое|ым|ом копь|е|я|ю|е|ем|е</short_descr>
+      <type name="weapon">
+        <diceNumber>2</diceNumber>
+        <diceType>8</diceType>
+        <specType>two_hands</specType>
+        <weapClass>spear</weapClass>
+        <weapType>thrust</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>80</weight>
+    </node>
+    <node name="3502">
+      <condition>75</condition>
+      <cost>290</cost>
+      <description>Шлем (helmet) с острыми черными рогами небрежно брошен на землю.</description>
+      <gender>m</gender>
+      <level>5</level>
+      <material>iron</material>
+      <name>шлем рогатый черный helmet horned black</name>
+      <short_descr>черн|ый|ого|ому|ый|ым|ом рогат|ый|ого|ому|ый|ым|ом шле|м|ма|му|м|мом|ме</short_descr>
+      <type name="armor">
+        <ac bash="7" exotic="2" pierce="5" slash="6"/>
+        <reserved0>1</reserved0>
+      </type>
+      <wear_flags>take wear_head</wear_flags>
+      <weight>30</weight>
+    </node>
+    <node name="3503">
+      <condition>75</condition>
+      <cost>110</cost>
+      <description>Старый выцветший плащ (cloak) путешественника выглядит неопрятной грудой тряпья.</description>
+      <gender>m</gender>
+      <level>3</level>
+      <material>cloth</material>
+      <name>плащ заляпанный cloak stained</name>
+      <short_descr>стар|ый|ого|ому|ый|ым|ом пла|щ|ща|щу|щ|щом|ще</short_descr>
+      <type name="armor">
+        <ac bash="6" exotic="1" pierce="5" slash="7"/>
+        <reserved0>1</reserved0>
+      </type>
+      <wear_flags>take wear_neck</wear_flags>
+      <weight>40</weight>
+    </node>
+    <node name="3504">
+      <affects>
+        <node>
+          <apply to="hitroll">1</apply>
+        </node>
+      </affects>
+      <condition>90</condition>
+      <cost>290</cost>
+      <description>Плотные нарукавники из кожи (bracer). На них начертаны мистические символы.</description>
+      <extraDescr>
+        <node keyword="нарукавник bracer">Эти нарукавники покрыты рунами приносящими удачу в бою.
+</node>
+      </extraDescr>
+      <gender>p</gender>
+      <level>7</level>
+      <material>leather</material>
+      <name>нарукавники кожаные плотные bracer leather enchanted</name>
+      <short_descr>плотн|ые|ых|ым|ые|ыми|ых кожан|ые|ых|ым|ые|ыми|ых нарукавник|и|ов|ам|и|ами|ах</short_descr>
+      <type name="armor">
+        <ac bash="6" exotic="4" pierce="4" slash="6"/>
+      </type>
+      <wear_flags>take wear_wrist</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="3505">
+      <affects>
+        <node>
+          <apply to="hitroll">2</apply>
+        </node>
+      </affects>
+      <cost>220</cost>
+      <description>Луч света блеснул на широком лезвии ножа (knife), воткнутого в пол.</description>
+      <extraDescr>
+        <node keyword="Нож кинжал knife dagger">Он очень остр. При взгляде на этот нож думается что он более эффективен
+чем некоторые мечи. Клинок явно эльфийской работы, выкован из мифрила,
+рукоять изящно выточена из слоновой кости.
+</node>
+      </extraDescr>
+      <extra_flags>anti_evil</extra_flags>
+      <gender>m</gender>
+      <level>5</level>
+      <material>mithril</material>
+      <name>нож кинжал knife dagger</name>
+      <short_descr>покрыт|ый|ого|ому|ый|ым|ом рунами но|ж|жа|жу|ж|жом|же</short_descr>
+      <type name="weapon">
+        <diceNumber>2</diceNumber>
+        <diceType>5</diceType>
+        <weapClass>dagger</weapClass>
+        <weapType>stab</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>10</weight>
+    </node>
+  </objects>
+  <rooms>
+    <node name="3500">
+      <description>Ты стоишь  на равнинах.  В этом пустынном месте только ветер свистит над
+головой  и  никого не видно в окрестностях. Неожиданно ты замечаешь, что ты
+не  первый  путник  в  этих местах. Кто-то протоптал едва заметную тропинку
+ведущую в холмы на севере.
+... С пару секунд ты думаешь  о важности этого наблюдения, и придя к выводу
+о  своей  непревзойденной   наблюдательности,  а  возможно  и  гениальности
+продолжаешь путь.
+</description>
+      <exits>
+        <node name="east">
+          <description>Королевство Зеркал.
+</description>
+          <target>19001</target>
+        </node>
+        <node name="north">
+          <target>4000</target>
+        </node>
+        <node name="south">
+          <target>3501</target>
+        </node>
+      </exits>
+      <name>Равнины</name>
+      <sector>city</sector>
+    </node>
+    <node name="3501">
+      <description>Ты неспешно идешь по тенистой дороге, дыша полной грудью. Ах, природа! С
+обеих сторон возвышаются величественные деревья примерно одинаковой высоты.
+Их вид наполняет местность спокойствием.
+   Ты можешь пройти на юг или на север.
+</description>
+      <exits>
+        <node name="north">
+          <target>3500</target>
+        </node>
+        <node name="south">
+          <target>3502</target>
+        </node>
+      </exits>
+      <name>Участок пути</name>
+      <sector>city</sector>
+    </node>
+    <node name="3502">
+      <description>Здесь большая восточная дорога  пересекается с более старой,  ведущей из 
+шахт  Мории  в руины Старого Талоса. Предместья Мидгаарда лежат к западу от
+тебя,  дорога  продолжается  на  восток.  Старая  северная  дорога  ведет в
+Королевство  Гномов  и  разрушенные  шахты   Мории.  Южная  дорога  надолго
+запомнила войну разрушившую Талос. Она вся как напоминание об этой битве.
+</description>
+      <exits>
+        <node name="east">
+          <description>Дорога  продолжается  на восток, и там, на востоке слабо слышится писклявое
+пение.
+</description>
+          <target>3525</target>
+        </node>
+        <node name="north">
+          <description>Старая дорога ведет к оставленным шахтам Мории и Гномьему Королевству.
+</description>
+          <target>3501</target>
+        </node>
+        <node name="south">
+          <description>Некогда  удобная  а ныне разрушенная дорога ведет через лес гномов к руинам
+Талоса.
+</description>
+          <target>5261</target>
+        </node>
+        <node name="west">
+          <description>Дорога ведет на запад к Мидгаарду.
+</description>
+          <target>3503</target>
+        </node>
+      </exits>
+      <name>Перекресток</name>
+      <sector>city</sector>
+    </node>
+    <node name="3503">
+      <description>Вы стоите  в предместьях большого  города  Мидгаарда.  О, великий город! 
+Центр мира!  Пуп вселенной!  И столица этой земли.  Дорога на востоке ведет
+в лес - тихий,  но  временами полный опасностей, а на западе превращается в
+одну  из  главных  улиц города,  поражающую воображение  обилием магазинов,
+баров и базарчиков.
+</description>
+      <exits>
+        <node name="east">
+          <target>3502</target>
+        </node>
+        <node name="west">
+          <target>3053</target>
+        </node>
+      </exits>
+      <flags>no_mob</flags>
+      <name>Вход в город</name>
+      <sector>city</sector>
+    </node>
+    <node name="3505">
+      <description>Ты идешь по редкому лесу.  Путь ведет далее на юг, но и на восток пройти
+достаточно несложно.  К западу заметны  дымы,  поднимающиеся над верхушками
+деревьев. Мидгаард находится севернее этой местности.
+</description>
+      <exits>
+        <node name="east">
+          <description>Много редколесья.
+</description>
+          <target>3506</target>
+        </node>
+        <node name="north">
+          <description>На севере ты видишь южные ворота Мидгаарда.
+</description>
+          <target>3256</target>
+        </node>
+        <node name="south">
+          <description>Этот путь идет сквозь чащу Миден&apos;нира.
+</description>
+          <target>3507</target>
+        </node>
+        <node name="west">
+          <description>Гостиница лешего.
+</description>
+          <target>3570</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="credits credit author автор">+-------------------------------------------------+
+| This area originally written for Copper II DIKU |
+|   by ?                                          |
+| Modifications and alterations for MERCmud DIKU  |
+|   by VampLestat                        1 JAN 93 |
++-------------------------------------------------+
+</node>
+      </extraDescr>
+      <name>Тропа в Миден&apos;нир</name>
+      <sector>forest</sector>
+    </node>
+    <node name="3506">
+      <description>Ты стоишь в темном лесу.  На востоке вздымаются горы.  Отсюда только два 
+пути - выбор небогат. Ты можешь вернуться  в редколесье  на запад или пойти 
+на юг.
+</description>
+      <exits>
+        <node name="east">
+          <target>3550</target>
+        </node>
+        <node name="south">
+          <description>Лес на юге все темнее и темнее.
+</description>
+          <target>3509</target>
+        </node>
+        <node name="west">
+          <description>Лес становится реже на западе.
+</description>
+          <target>3505</target>
+        </node>
+      </exits>
+      <name>Миден&apos;нир</name>
+      <resets>
+        <mob limit="10" maxHere="2" vnum="3501"/>
+        <equip to="wield" vnum="3500"/>
+        <equip to="legs" vnum="3074"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="3507">
+      <description>Здесь чаща леса и лишь ветер свистит между стволами, стучит ветвями
+и хватает тебя за волосы. К северу лес редеет. Дороги на юг и на запад
+ведут еще глубже в лес.
+</description>
+      <exits>
+        <node name="north">
+          <description>В этом направлении лес становится реже.
+</description>
+          <target>3505</target>
+        </node>
+        <node name="south">
+          <description>Еще более темный лес.
+</description>
+          <target>3510</target>
+        </node>
+        <node name="west">
+          <description>Маленькая тропа ведет на запад.
+</description>
+          <target>3508</target>
+        </node>
+      </exits>
+      <name>Миден&apos;нир</name>
+      <sector>forest</sector>
+    </node>
+    <node name="3508">
+      <description>Ты  на маленькой тропе ведущей  на восток и на юг через чащу Миден&apos;нира. 
+На западе пейзаж несколько портят горы.
+</description>
+      <exits>
+        <node name="east">
+          <description>Лес насквозь продувается ветром.
+</description>
+          <target>3507</target>
+        </node>
+        <node name="south">
+          <description>На юге путь продолжается.
+</description>
+          <target>3511</target>
+        </node>
+      </exits>
+      <name>На маленькой тропе</name>
+      <sector>forest</sector>
+    </node>
+    <node name="3509">
+      <description>Деревья Миден&apos;нира пышные  и зеленые,  но они прячут в тени зло, которое
+скрывается  в  этом лесу. Деревья становятся слишком толстыми на западе, но
+ты  можешь  пройти на север и на юг, или отправиться в путешествие к горам,
+которые лежат к востоку отсюда.
+</description>
+      <exits>
+        <node name="east">
+          <description>Огромные серые горы виднеются в этом направлении.
+</description>
+          <target>3512</target>
+        </node>
+        <node name="north">
+          <description>Деревья здесь растут реже и это несколько облегчает путь.
+</description>
+          <target>3506</target>
+        </node>
+        <node name="south">
+          <description>Лес продолжается.
+</description>
+          <target>3514</target>
+        </node>
+      </exits>
+      <name>Миден&apos;нир</name>
+      <resets>
+        <mob limit="10" maxHere="2" vnum="3501"/>
+        <equip to="wield" vnum="3500"/>
+        <equip to="body" vnum="3072"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="3510">
+      <description>Здесь встречаются пути  ведущие  на север,  на восток  и  на юг. Деревья 
+кажутся  сбившимися  в  кучу, и сквозь их ветви, нависшие прямо над головой
+едва видно голубое небо.
+</description>
+      <exits>
+        <node name="east">
+          <description>Особенно темный лес в этом месте.
+</description>
+          <target>3514</target>
+        </node>
+        <node name="north">
+          <description>Деревья, деревья, деревья... Куда ни кинешь взгляд - везде лес.
+</description>
+          <target>3507</target>
+        </node>
+        <node name="south">
+          <description>Особенно темная часть леса в этом месте.
+</description>
+          <target>3516</target>
+        </node>
+      </exits>
+      <name>Перекресток</name>
+      <sector>forest</sector>
+    </node>
+    <node name="3511">
+      <description>Ты находишься  на тропе ведущей на север и на юг. На западе непроходимые
+горы  глядят  на  тебя,  и  толстые деревья, утопая в густом кустарнике, не
+оставляют надежды пробиться туда.
+</description>
+      <exits>
+        <node name="north">
+          <description>Тропа отклоняется к северу.
+</description>
+          <target>3508</target>
+        </node>
+        <node name="south">
+          <description>На юге тропа скрывается в лесу.
+</description>
+          <target>3515</target>
+        </node>
+        <node name="west">
+          <description>Таинственная дорога в Изумрудный Лес.
+</description>
+          <flags>isdoor closed</flags>
+          <keyword>secret секрет секретная потайная дверь</keyword>
+          <short_descr>потайн|ая|ой|ой|ую|ой|ой двер|ь|и|и|ь|ью|и</short_descr>
+          <target>201</target>
+        </node>
+      </exits>
+      <name>Тропа</name>
+      <sector>forest</sector>
+    </node>
+    <node name="3512">
+      <description>Деревья Миден&apos;нира пышные  и зеленые,  но они прячут в тени зло, которое
+скрывается  в этом лесу. Ты можешь пройти на север к горам или к западу, но
+на востоке горы неприступны, и нет возможности пройти.
+</description>
+      <exits>
+        <node name="north">
+          <target>3550</target>
+        </node>
+        <node name="south">
+          <description>Участок редколесья.
+</description>
+          <target>3513</target>
+        </node>
+        <node name="west">
+          <description>Лес продолжается.
+</description>
+          <target>3509</target>
+        </node>
+      </exits>
+      <name>Миден&apos;нир</name>
+      <resets>
+        <mob limit="8" maxHere="2" vnum="3501"/>
+        <equip to="wield" vnum="3500"/>
+        <equip to="body" vnum="3045"/>
+        <mob limit="10" maxHere="2" vnum="3501"/>
+        <equip to="wield" vnum="3500"/>
+        <equip to="head" vnum="3502"/>
+        <equip to="feet" vnum="3075"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="3513">
+      <description>Лес  и так темный,  но  к западу  он становится еще темнее и угрюмее. Ты
+ощущаешь  зло,  скрывающееся  в  этом  лесу. На севере деревья растут реже.
+Когда  ты  задумываешься  куда идти, ветер подталкивает тебя, и пронизывает
+насквозь заставляя прибавить шаг.
+</description>
+      <exits>
+        <node name="east">
+          <target>29101</target>
+        </node>
+        <node name="north">
+          <description>На севере виднеется небольшой просвет.
+</description>
+          <target>3512</target>
+        </node>
+        <node name="west">
+          <description>Деревья становятся все толще, а лес все темнее.
+</description>
+          <target>3514</target>
+        </node>
+      </exits>
+      <name>Миден&apos;нир</name>
+      <resets>
+        <mob limit="10" maxHere="2" vnum="3501"/>
+        <equip to="wield" vnum="3500"/>
+        <equip to="arms" vnum="3077"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="3514">
+      <description>Здесь темно,  корявые ветви  кажется окружают тебя и смыкаются позади. С
+каждым  шагом  крепнет  нехорошее  предчувствие.  Может  быть  самое  время
+повернуть назад?
+</description>
+      <exits>
+        <node name="east">
+          <description>Редкие деревья и горы невдалеке.
+</description>
+          <target>3513</target>
+        </node>
+        <node name="north">
+          <description>Еще лес.
+</description>
+          <target>3509</target>
+        </node>
+        <node name="south">
+          <description>Еще деревья.
+</description>
+          <target>3517</target>
+        </node>
+        <node name="west">
+          <description>Лес продолжается.
+</description>
+          <target>3510</target>
+        </node>
+      </exits>
+      <name>Чаща леса</name>
+      <sector>forest</sector>
+    </node>
+    <node name="3515">
+      <description>Лес здесь редкий, и ты легко можешь выбирать направление. На востоке лес
+становится более густым, тропа продолжается на юг.
+</description>
+      <exits>
+        <node name="east">
+          <description>Деревья растут все гуще при продвижении на восток.
+</description>
+          <target>3516</target>
+        </node>
+        <node name="north">
+          <description>Тропа ведет на север и на юг.
+</description>
+          <target>3511</target>
+        </node>
+        <node name="south">
+          <description>Деревья и несколько маленьких холмов.
+</description>
+          <target>3518</target>
+        </node>
+      </exits>
+      <name>Лиственный лес</name>
+      <sector>forest</sector>
+    </node>
+    <node name="3516">
+      <description>Все здесь покрыто растоптанной влажной грязью и глиной. В твоих ботинках
+начинает  подозрительно  хлюпать.Ты  можешь  идти в любом направлении, и ты
+надеешься, что там куда ты выйдешь будет посуше.
+</description>
+      <exits>
+        <node name="east">
+          <description>Еще деревья.
+</description>
+          <target>3517</target>
+        </node>
+        <node name="north">
+          <description>Миден&apos;нир продолжается.
+</description>
+          <target>3510</target>
+        </node>
+        <node name="south">
+          <description>Деревья становятся просто необхватными на юге. Ты можешь только смотреть...
+</description>
+          <target>3519</target>
+        </node>
+        <node name="west">
+          <description>Несколько деревьев в дневном свете.
+</description>
+          <target>3515</target>
+        </node>
+      </exits>
+      <name>Глинистая прогалина</name>
+      <sector>forest</sector>
+    </node>
+    <node name="3517">
+      <description>Наиболее заметная  особенность пейзажа - горы, которые лежат на востоке.
+Ты можешь  идти  только  на  север  и  на  запад  отсюда,  поскольку  камни
+останавливают тебя, если ты пытаешься пройти в другом направлении.
+</description>
+      <exits>
+        <node name="north">
+          <description>Множество деревьев виднеется на севере.
+</description>
+          <target>3514</target>
+        </node>
+        <node name="west">
+          <description>На западе ощущается небольшой наклон.
+</description>
+          <target>3516</target>
+        </node>
+      </exits>
+      <name>Около гор</name>
+      <sector>forest</sector>
+    </node>
+    <node name="3518">
+      <description>Тропа понемногу  становится непроходимой. Ты можешь пойти на север - там 
+лес относительно светлый, а можешь на юг.
+</description>
+      <exits>
+        <node name="east">
+          <description>Деревья одно на другом в этом месте.
+</description>
+        </node>
+        <node name="north">
+          <description>Ты не можешь разглядеть тропу.
+</description>
+          <target>3515</target>
+        </node>
+        <node name="south">
+          <description>Чаща леса.
+</description>
+          <target>3522</target>
+        </node>
+      </exits>
+      <name>Постепенно пропадающая тропка</name>
+      <sector>forest</sector>
+    </node>
+    <node name="3519">
+      <description>Ты сжат деревьями  со  всех сторон. Тропа продолжается на север и на юг,
+кое-что виднеется на западе, и можно попытаться пробраться на восток.
+</description>
+      <exits>
+        <node name="east">
+          <description>Лес продолжается.
+</description>
+          <target>3520</target>
+        </node>
+        <node name="north">
+          <description>Лес редеет.
+</description>
+          <target>3516</target>
+        </node>
+        <node name="south">
+          <description>Идя в этом направлении ты начинаешь чувствовать сильную вонь.
+</description>
+          <target>3521</target>
+        </node>
+        <node name="west">
+          <description>Деревья растут прямо друг на друге.
+</description>
+        </node>
+      </exits>
+      <name>Темная тропа</name>
+      <sector>forest</sector>
+    </node>
+    <node name="3520">
+      <description>Ты бодро топаешь через подлесок. Миден&apos;нир здесь довольно густой, высоко
+над головой ветви сплетаются настолько, что не пропускают солнечный свет.
+   На восток идти стало невозможно, но ты можешь продолжить путь на юг и на
+запад..
+</description>
+      <exits>
+        <node name="south">
+          <description>Густой лес продолжается.
+</description>
+          <target>3523</target>
+        </node>
+        <node name="west">
+          <description>Густой лес продолжается.
+</description>
+          <target>3519</target>
+        </node>
+      </exits>
+      <name>Темный лес</name>
+      <sector>forest</sector>
+    </node>
+    <node name="3521">
+      <description>Ты видишь ужасное зрелище. Кровь повсюду, она стекает с деревьев, травы,
+камней...  Она пропитала всю землю...  На поляне лежит пара мертвых тел, их
+остановившиеся взгляды направлены на тебя.  На юг пройти нельзя, но во всех 
+остальных направлениях, кажется, есть проходы.
+</description>
+      <exits>
+        <node name="east">
+          <description>Твой свет не достает так далеко.
+</description>
+          <target>3523</target>
+        </node>
+        <node name="north">
+          <description>Тьма...
+</description>
+          <target>3519</target>
+        </node>
+        <node name="west">
+          <description>Еще темный лес.
+</description>
+          <target>3522</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="труп тело трупы тела carcass body corpse carcasses bodies corpses">Тела  несчастных  проткнуты  острыми зазубренными копьями... Количество ран
+нанесенных  этим людям просто удивительно. Оторванные конечности... Но хуже
+всего синюшный оттенок их лиц. Они были отравлены!
+</node>
+      </extraDescr>
+      <flags>dark</flags>
+      <name>Место резни</name>
+      <resets>
+        <mob limit="2" maxHere="2" vnum="3500"/>
+        <mob limit="2" maxHere="2" vnum="3500"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="3522">
+      <description>Здесь отвратительная вонь!  Пахнет кровью и смертью. На севере ты видишь
+робкий лучик света, на востоке же просто ничего не видно. Деревья стоят так
+близко, что тебя охватывает клаустрофобия..
+</description>
+      <exits>
+        <node name="east">
+          <description>Зловоние усиливается в этом направлении.
+</description>
+          <target>3521</target>
+        </node>
+        <node name="north">
+          <description>Ты видишь дневной свет вдалеке.
+</description>
+          <target>3518</target>
+        </node>
+      </exits>
+      <name>Глубоко в лесу Миден&apos;нира</name>
+      <sector>forest</sector>
+    </node>
+    <node name="3523">
+      <description>Ветви  над головой блокируют солнечный свет, делая лес очень темным. Лес
+продолжается  на  восток,  где  он  смыкается  с горами. Воздух душный - от
+зловония исходящего с запада волосы просто встают дыбом!
+</description>
+      <exits>
+        <node name="east">
+          <target>3551</target>
+        </node>
+        <node name="north">
+          <description>Лес, кажется, становится еще темнее.
+</description>
+          <target>3520</target>
+        </node>
+        <node name="west">
+          <description>Небо светлеет в этом направлении.
+</description>
+          <target>3521</target>
+        </node>
+      </exits>
+      <name>Темный лес</name>
+      <sector>forest</sector>
+    </node>
+    <node name="3525">
+      <description>Ты идешь  по утоптанной широкой дороге, ведущей из Мидгаарда в восточные
+земли.  На  север  уходит  ответвление.  С северной стороны слышится слабое
+пение.
+</description>
+      <exits>
+        <node name="east">
+          <description>Дорога продолжается на восток.
+</description>
+          <target>3526</target>
+        </node>
+        <node name="north">
+          <description>Ты видишь тропку, покрытую крошечными следами. Пение усиливается.
+</description>
+          <target>1901</target>
+        </node>
+        <node name="west">
+          <description>Ты видишь перекресток.
+</description>
+          <target>3502</target>
+        </node>
+      </exits>
+      <name>На восточной дороге</name>
+      <sector>city</sector>
+    </node>
+    <node name="3526">
+      <description>Ты уходишь  все дальше по дороге между Мидгаардом и восточными странами.
+Дорога в Мидгаард позади на западе, усиленно охраняемая застава на востоке.
+Красивая роща видна севернее, и пыльная тропинка уходит на юг.
+</description>
+      <exits>
+        <node name="east">
+          <description>Дорога продолжается на запад к охраняемой заставе.
+</description>
+          <target>3527</target>
+        </node>
+        <node name="north">
+          <description>Ты видишь красивую, тенистую рощу - это мирное место где можно расслабиться.
+</description>
+          <target>8950</target>
+        </node>
+        <node name="south">
+          <description>Пыльная тропа ведет в деревню гномов.
+</description>
+          <target>1501</target>
+        </node>
+        <node name="west">
+          <description>Дорога ведет на запад в Мидгаард.
+</description>
+          <target>3525</target>
+        </node>
+      </exits>
+      <name>На восточной дороге</name>
+      <sector>city</sector>
+    </node>
+    <node name="3527">
+      <description>Возле хорошо укрепленной заставы  ты  встречен группой тяжеловооруженных
+рыцарей.  Они закованы в сверкающие латы. Они проверяют твои вещи в поисках
+контрабанды  и  один  из них предостерегает тебя - не стоит идти в пустыню,
+там очень просто потеряться и сгинуть....
+</description>
+      <exits>
+        <node name="east">
+          <description>Дорога ведет на восток к Новому Талосу.
+</description>
+          <target>3528</target>
+        </node>
+        <node name="west">
+          <description>Дорога ведет на запал к Мидгаарду.
+</description>
+          <target>3526</target>
+        </node>
+      </exits>
+      <name>Укрепленная застава</name>
+      <sector>city</sector>
+    </node>
+    <node name="3528">
+      <description>Насвистывая,  ты идешь  по широкой, удобной дороге, ведущей на восток от 
+заставы.  Ты уже покрыл больше половины расстояния между Мидгаардом и Новым
+Талосом. Внезапно начинает дуть сухой горячий ветер, от него першит в горле
+и  пыль  забивается  куда  только  можно.  Тут  ты замечаешь, что подошел к
+бесплодным пустошам Песков Горя..
+</description>
+      <exits>
+        <node name="east">
+          <description>Дорога   продолжается  вперед,  становясь  все  более  засушливой  по  мере
+приближения к пустыне.
+</description>
+          <target>3529</target>
+        </node>
+        <node name="west">
+          <description>Ты видишь укрепленную заставу на западе.
+</description>
+          <target>3527</target>
+        </node>
+      </exits>
+      <name>На восточной дороге</name>
+      <sector>city</sector>
+    </node>
+    <node name="3529">
+      <description>Жара  и сухость возрастают по мере приближения к Пескам Горя, бесплодной
+пустоши,  сожженной  и  оплавленной  великой  магией.  Дорога продолжается,
+местами пропадая в зыбучих песках. Ветер становится еще более горячим, хотя
+кажется, что это невозможно..
+</description>
+      <exits>
+        <node name="east">
+          <description>Ты в Песках Горя. Пыль клубится вокруг на дороге.
+</description>
+          <target>3530</target>
+        </node>
+        <node name="west">
+          <description>Дорога идет на запад, Мидгаард в отдалении.
+</description>
+          <target>3528</target>
+        </node>
+      </exits>
+      <name>На восточной дороге</name>
+      <sector>city</sector>
+    </node>
+    <node name="3530">
+      <description>Восточная дорога  в этом месте переходит  в безлюдную, песчаную пустыню. 
+Все колеблется в возрастающей жаре,  и ты подсчитываешь свой запас питьевой
+воды. Бесконечная пустыня Песков Горя на юге, дорога продолжается на восток
+и на запад. Солнце рисует миражи, и один из них похож на большой отдаленный
+город...
+</description>
+      <exits>
+        <node name="east">
+          <description>Дорога впереди полностью теряется в пустыне.
+</description>
+          <target>3531</target>
+        </node>
+        <node name="west">
+          <description>Невдалеке более чистый участок дороги. 
+</description>
+          <target>3529</target>
+        </node>
+      </exits>
+      <name>Около Песков Горя</name>
+      <sector>desert</sector>
+    </node>
+    <node name="3531">
+      <description>Дорогу  почти полностью  поглотила пустыня.  Изнуряющая жара безжалостно 
+высасывает  жизнь  из  твоего тела, и ты задаешься вопросом - закончится ли
+это когда-нибудь. На юге, Пески Горя простираются на много миль, на востоке
+ты видишь башни великолепного города... или - это только мираж?
+</description>
+      <exits>
+        <node name="east">
+          <description>Ты можешь едва пройти по дороге.
+</description>
+          <target>3532</target>
+        </node>
+        <node name="west">
+          <description>Пустыня несколько разбавлена к западу.
+</description>
+          <target>3530</target>
+        </node>
+      </exits>
+      <name>Возле Песков Горя</name>
+      <sector>desert</sector>
+    </node>
+    <node name="3532">
+      <description>Солнце достаточно горячее, чтобы расплавить твой доспех, но спасение под
+рукой.  На  востоке  ты  видишь  могучие  ворота  Нового  Талоса, одного из
+богатейших и благоустроенных городов мира.
+   На юге бесконечные пустоши Песков Горя,  на западе видна дорога, ведущая 
+в Мидгаард.. 
+</description>
+      <exits>
+        <node name="east">
+          <description>Ты видишь западные врата Нового Талоса.
+</description>
+          <target>9669</target>
+        </node>
+        <node name="west">
+          <description>Ты видишь дорогу на Мидгаард, покрытую песком.
+</description>
+          <target>3531</target>
+        </node>
+      </exits>
+      <name>В предместьях Нового Талоса</name>
+      <sector>desert</sector>
+    </node>
+    <node name="3550">
+      <description>Ты у подножия гор,  на востоке и на севере дорога спускается вниз, а на
+юге и на западе зеленеет пышный лес Миден&apos;нира..
+</description>
+      <exits>
+        <node name="south">
+          <description>Лес Миден&apos;нира раскинулся перед тобой.
+</description>
+          <target>3512</target>
+        </node>
+        <node name="west">
+          <description>Лес Миден&apos;нира раскинулся перед тобой.
+</description>
+          <target>3506</target>
+        </node>
+      </exits>
+      <name>У подножия гор</name>
+      <sector>mountain</sector>
+    </node>
+    <node name="3551">
+      <description>Ветви, зловеще нависшие над головой, совсем не пропускают солнечный свет.
+Лес продолжается на запад,  а во всех других направлениях  преграждают путь
+горы.  На  юге  ты  видишь  маленький туннель, врытый в склон горы. Что это
+может означать?!....
+</description>
+      <exits>
+        <node name="south">
+          <target>3552</target>
+        </node>
+        <node name="west">
+          <target>3523</target>
+        </node>
+      </exits>
+      <flags>dark</flags>
+      <name>Глубоко в лесу Миден&apos;нира</name>
+      <resets>
+        <mob limit="4" maxHere="2" vnum="3506"/>
+        <equip to="head" vnum="3502"/>
+        <equip to="wield" vnum="3500"/>
+        <equip to="body" vnum="3072"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="3552">
+      <description>Стены этого туннеля были вырезаны гоблинами много лет назад. Истоптанный
+путь ведет на юг внутрь горы, и на север в лес.
+</description>
+      <exits>
+        <node name="north">
+          <description>Снаружи ты видишь лес Миден&apos;нира.
+</description>
+          <target>3551</target>
+        </node>
+        <node name="south">
+          <description>Туннель продолжается на юг.
+</description>
+          <target>3553</target>
+        </node>
+      </exits>
+      <flags>dark</flags>
+      <name>Туннель в горах</name>
+      <sector>city</sector>
+    </node>
+    <node name="3553">
+      <description>Туннель становится  немного светлее  на севере там,  где виден выход, на 
+юге проход сужается. В восточной стенке вырезан проход в маленький альков.
+</description>
+      <exits>
+        <node name="east">
+          <description>Ты видишь маленький альков.
+</description>
+          <target>3554</target>
+        </node>
+        <node name="north">
+          <description>Туннели идут во всех направлениях.
+</description>
+          <target>3552</target>
+        </node>
+        <node name="south">
+          <description>Тунель сужается во всех направлениях.
+</description>
+          <target>3555</target>
+        </node>
+      </exits>
+      <flags>dark</flags>
+      <name>Туннель в горах</name>
+      <sector>city</sector>
+    </node>
+    <node name="3554">
+      <description>Ты находишься внутри маленького алькова. На полу небрежно брошена связка
+веток  и куча листьев. Вероятно какое-то бедное существо использует ЭТО как
+постель...
+</description>
+      <exits>
+        <node name="west">
+          <description>Ты видишь главный проход.
+</description>
+          <target>3553</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="Листья ветки постель twigs leaves bead">Ветви  и  листья  были  сложены  вместе  как  временное  ложе для какого-то
+маленького существа.
+</node>
+      </extraDescr>
+      <flags>dark</flags>
+      <name>Маленький альков</name>
+      <sector>city</sector>
+    </node>
+    <node name="3555">
+      <description>Ты исследуешь склон горы, туннель становится все уже и уже. Ты начинаешь
+догадываться,   что  зря  поперся  через  весь  этот  туннель...  Маленький
+сводчатый проход на юг ведет в большую камеру.
+</description>
+      <exits>
+        <node name="north">
+          <description>Туннель продолжается на север.
+</description>
+          <target>3553</target>
+        </node>
+        <node name="south">
+          <description>Ты видишь небольшую каверну.
+</description>
+          <target>3556</target>
+        </node>
+      </exits>
+      <flags>dark</flags>
+      <name>Туннель в горах</name>
+      <sector>city</sector>
+    </node>
+    <node name="3556">
+      <description>Туннель плавно расширяется, переходя в большой (правда большой он только 
+для гоблинов) вход в пещеру.  Видимо,  она используется  как главное жилище 
+гоблинов.  Там  и сям остатки  разных, лесных существ, отвратительно белеют
+кости, валяются груды гнилого мяса.
+</description>
+      <exits>
+        <node name="north">
+          <description>Туннель ведет на север.
+</description>
+          <target>3555</target>
+        </node>
+        <node name="up">
+          <target>29001</target>
+        </node>
+      </exits>
+      <flags>dark</flags>
+      <name>Штаб гоблинов</name>
+      <resets>
+        <mob limit="10" maxHere="2" vnum="3501"/>
+        <equip to="wield" vnum="3500"/>
+        <equip to="hands" vnum="3076"/>
+        <mob limit="4" maxHere="2" vnum="3506"/>
+        <equip to="wield" vnum="3500"/>
+        <equip to="head" vnum="3502"/>
+        <equip to="body" vnum="3072"/>
+        <mob limit="1" maxHere="1" vnum="3507"/>
+        <equip to="body" vnum="3072"/>
+        <equip to="wield" vnum="3501"/>
+        <equip to="head" vnum="3502"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="3570">
+      <description>Ты стоишь на утоптанной дорожке,  переходящей в просвет. Здесь ты видишь
+старое, деревянное  здание,  из  его трубы дым вздымается.  На западе видна
+раскрашенная табличка Ты можешь обойти дом с севера и юга, или возвратиться
+в лес..
+</description>
+      <exits>
+        <node name="east">
+          <description>Обратно под деревья Миден&apos;нира.
+</description>
+          <target>3505</target>
+        </node>
+        <node name="north">
+          <description>Ты видишь проход на север вокруг гостиницы.
+</description>
+          <target>3571</target>
+        </node>
+        <node name="south">
+          <description>Ты видишь проход на север вокруг гостиницы.
+</description>
+          <target>3572</target>
+        </node>
+        <node name="west">
+          <description>Передняя дверь гостиницы приглашает войти.
+</description>
+          <target>3574</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="табличка sign">табличка гласит:
+   Леший
+</node>
+        <node keyword="credits credit author автор">+-------------------------------------------------+
+| This zone originally written for Copper II DIKU |
+|   by ?                                          |
+| Modification and alterations for MERCmud DIKU   |
+|   by VampLestat                        1 JAN 93 |
+| Зона практически полностью переведена мной.     |
+| Zav aka Gesser (Zmey_ag)              14 aug 99 |
++-------------------------------------------------+
+</node>
+      </extraDescr>
+      <name>Перед гостиницей</name>
+      <sector>forest</sector>
+    </node>
+    <node name="3571">
+      <description>Ты стоишь севернее гостиницы. Вид не сильно меняется с этого угла. Воздух
+наполнен запахами и дымом, доносящимися с кухни. На юге тебя ожидает главный
+вход, но вдруг ты замечаешь небольшую заднюю дверь..
+</description>
+      <exits>
+        <node name="south">
+          <description>Ты видишь двор перед гостиницей.
+</description>
+          <target>3570</target>
+        </node>
+      </exits>
+      <name>Севернее гостиницы</name>
+      <sector>forest</sector>
+    </node>
+    <node name="3572">
+      <description>Ты стоишь  к югу от гостиницы.  Ты можешь пройти на север  и войти через
+главную   дверь,  или  пойти  на  запад, к задней части постройки. Вдруг ты
+слышишь какие-то приглушенные крики с крошечной тропки, ведущей на юг..
+</description>
+      <exits>
+        <node name="north">
+          <description>Путь ведет во двор гостиницы.
+</description>
+          <target>3570</target>
+        </node>
+        <node name="south">
+          <description>Тропка ведет на юг.
+</description>
+          <target>3575</target>
+        </node>
+        <node name="west">
+          <description>Эта тропка ведет назад к гостинице.
+</description>
+          <target>3573</target>
+        </node>
+      </exits>
+      <name>Южнее гостиницы</name>
+      <sector>forest</sector>
+    </node>
+    <node name="3573">
+      <description>Теперь ты стоишь позади гостиницы.  Запах здесь не столь уж приятен, так 
+как  хозяин  и  его  помощники  бросают  тут мусор. Несколько куч мусора ты
+видишь на западе, но если ты решишься пойти туда - вонять будет еще хуже...
+Есть более ЧИСТЫЙ вариант - путь на север или на восток вокруг гостиницы.
+</description>
+      <exits>
+        <node name="east">
+          <description>Ты можешь идти вокруг гостиницы этим путем.
+</description>
+          <target>3572</target>
+        </node>
+        <node name="west">
+          <description>Только крысы и глупые авантюристы играют в мусоре.
+</description>
+          <target>3578</target>
+        </node>
+      </exits>
+      <name>За гостиницей</name>
+      <sector>forest</sector>
+    </node>
+    <node name="3574">
+      <description>Ты находишься в комнате отдыха гостиницы. В воздухе витают клубы дыма...
+Гостиница  теперь  пуста,  поскольку  лес наводнили гоблины, и в этих краях
+стало   неспокойно.  Бар прямо к северу от сюда. Если ты хочешь присесть за
+стол - на юге есть свободный...
+</description>
+      <exits>
+        <node name="east">
+          <description>Ты можешь вернуться на свежий воздух.
+</description>
+          <target>3570</target>
+        </node>
+        <node name="north">
+          <description>Барная стойка. За ней владелец гостиницы.
+</description>
+          <target>3576</target>
+        </node>
+        <node name="south">
+          <description>Пустой стол - жалкое зрелище...
+</description>
+          <target>3579</target>
+        </node>
+        <node name="west">
+          <target>3577</target>
+        </node>
+      </exits>
+      <flags>no_mob indoors</flags>
+      <name>Гостиница лешего</name>
+      <sector>city</sector>
+    </node>
+    <node name="3575">
+      <description>На востоке  от гостиницы, ты  замечаешь  следы ног.  Они продолжаются на 
+запад.  Множество  кустов  растоптано и поломано, некоторые ветви ободраны.
+Очевидно, сражение было тут совсем недавно.
+</description>
+      <exits>
+        <node name="north">
+          <description>Гостиница находится севернее.
+</description>
+          <target>3572</target>
+        </node>
+        <node name="west">
+          <description>Тропа ведет в леса.
+</description>
+          <target>3581</target>
+        </node>
+      </exits>
+      <name>Засада</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="3502"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="3576">
+      <description>В этом  уютном уголке  можно  спокойно  насладиться  едой,  напитками  и
+гостеприимством  владельца этой небольшой гостиницы, но последнее время, он
+обслуживает  лишь немногих путешественников, переживших поход через лес. Ты
+можешь оставить это место и вернуться на юг в  комнату отдыха.
+</description>
+      <exits>
+        <node name="south">
+          <description>Ты можешь вернуться на юг в комнату отдыха.
+</description>
+          <target>3574</target>
+        </node>
+      </exits>
+      <name>Бар</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="3503"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="3577">
+      <description>Ты находишься  в  более темном углу  гостиницы. Здесь ты видишь большой,
+круглый  стол  и  несколько  деревянных  стульев.  На столе большая лужа от
+пролитого пива.
+</description>
+      <exits>
+        <node name="east">
+          <description>Ты видишь главную комнату гостиницы на востоке.
+</description>
+          <target>3574</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Возле столика бара</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="3504"/>
+        <equip to="wield" vnum="3505"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="3578">
+      <description>Ты стоишь по колено в мусоре... БЮЭЭЭ!!! Тебя начинает тошнить...
+Здесь отвратительное зловоние, и кто знает, каких паразитов можно 
+тут подцепить...
+</description>
+      <exits>
+        <node name="east">
+          <description>Ты можешь вернуться в более чистое место.
+</description>
+          <target>3573</target>
+        </node>
+      </exits>
+      <name>Мусорная куча</name>
+      <sector>forest</sector>
+    </node>
+    <node name="3579">
+      <description>Кажется  в  этом конце гостиницы  никого нет.  Вероятно это лучшее место
+передохнуть и подлечить своим раны.
+</description>
+      <exits>
+        <node name="north">
+          <description>Ты видишь комнату отдыха.
+</description>
+          <target>3574</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Более тихая часть гостиницы</name>
+      <sector>inside</sector>
+    </node>
+    <node name="3581">
+      <description>Тропа ведет далее на запад и восток. На мягкой земле ты замечаешь свежие
+следы. Всадники сбежали на запад!
+</description>
+      <exits>
+        <node name="east">
+          <description>Обратно к точке засады.
+</description>
+          <target>3575</target>
+        </node>
+        <node name="west">
+          <description>Тропа продолжается.
+</description>
+          <target>3582</target>
+        </node>
+      </exits>
+      <name>Тропа черных всадников</name>
+      <sector>forest</sector>
+    </node>
+    <node name="3582">
+      <description>Тропа ведет далее на восток и на юг. На мягкой земле ты замечаешь свежие
+следы. Кажется всадники повернули на юг.
+</description>
+      <exits>
+        <node name="east">
+          <description>Тропа продолжается.
+</description>
+          <target>3581</target>
+        </node>
+        <node name="south">
+          <description>Тропа ведет на юг.
+</description>
+          <target>3583</target>
+        </node>
+      </exits>
+      <name>На тропе черных всадников</name>
+      <sector>forest</sector>
+    </node>
+    <node name="3583">
+      <description>Следы всадников ведут далее по этой тропе  на восток и на север. Следы 
+все еще свежие, значит всадники должны быть где-то рядом..
+</description>
+      <exits>
+        <node name="north">
+          <description>Тропа продолжается.
+</description>
+          <target>3582</target>
+        </node>
+        <node name="west">
+          <description>Следы ведут на восток.
+</description>
+          <target>3584</target>
+        </node>
+      </exits>
+      <name>На тропе всадников</name>
+      <resets>
+        <mob limit="4" maxHere="2" vnum="3505"/>
+        <equip to="neck_1" vnum="3503"/>
+        <equip to="wield" vnum="3022"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+    <node name="3584">
+      <description>Тропа приводит  в тупик. Деревья обступают тебя со всех сторон, и делают
+продолжение  пути невозможным. Повсюду  на  земле видны свежие следы, и они
+заканчиваются прямо здесь. Всадники ОЧЕНЬ близко!
+</description>
+      <exits>
+        <node name="east">
+          <description>Назад на тропу.
+</description>
+          <target>3583</target>
+        </node>
+      </exits>
+      <name>Тупик</name>
+      <resets>
+        <mob limit="4" maxHere="2" vnum="3505"/>
+        <equip to="wrist_l" vnum="3504"/>
+        <equip to="wield" vnum="3022"/>
+      </resets>
+      <sector>forest</sector>
+    </node>
+  </rooms>
+</area>

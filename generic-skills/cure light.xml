@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <beats>12</beats>
   <classes>
@@ -39,14 +39,24 @@
       <weight>15</weight>
     </node>
   </classes>
+  <dammsg></dammsg>
   <group>healing</group>
+  <help level="-1" type="SkillHelp">
+%FMT% *%SPELL%* 
+%FMT% *%SPELL%* _%CHAR%_
+
+Это самое простое из излечивающих заклинаний. Вылечит небольшие раны и порезы на тебе
+или на пациенте.
+
+%SA% %H% [(cast,колдовать)]
+</help>
   <mana>10</mana>
   <mob>
     <forbidden>false</forbidden>
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>������ ������ ����</nameRus>
+  <nameRus>лечить легкие раны</nameRus>
   <spell type="SPELL(CureLight)">
     <casted>true</casted>
     <position>fight</position>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <classes>
     <node name="anti-paladin">
@@ -28,8 +28,17 @@
       <rating>1</rating>
     </node>
   </classes>
+  <dammsg></dammsg>
   <group>weaponsmaster</group>
   <hard>5</hard>
+  <help level="-1" type="SkillHelp">
+Цепы и моргенштерны на цепи - довольно редкий вид оружия, орудовать которым
+могут не только лишь все, мало кто может это делать. Атаку цепом невозможно
+спарировать и не так просто отразить щитом. Впрочем, уклониться от цепа 
+немного проще, чем от других видов оружия.
+
+%SA% [(parry,парирование)], [(dodge,увертка)]
+</help>      
   <mob>
     <bonus>40</bonus>
     <dice>3</dice>
@@ -37,5 +46,5 @@
     <ordered>true</ordered>
     <professional>false</professional>
   </mob>
-  <nameRus>���</nameRus>
+  <nameRus>цеп</nameRus>
 </skill>

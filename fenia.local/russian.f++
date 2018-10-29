@@ -1,0 +1,81 @@
+russianInit = function() {
+/*
+ * Translated to Fenia from the Perl package Lingua::RU::Inflect.
+ * https://github.com/shoorick/lingua-ru-inflect/blob/master/lib/Lingua/RU/Inflect.pm
+ */
+    this = .tmp.system;
+
+    /*
+     * Returns Russian inflection of a name.
+     * Parameters: 
+     * name in cyrillic 
+     * gender (.tables.sex_table.male or female) 
+     * grammatical case (1..6) 
+     */
+    inflect_name = function(name, gender, gcase) {
+        var root0, root00, i;
+        var end_1,end_2,end_3,end_4,end_5,end_6,end_7,end_8;
+
+        // Ignore wrong case numbers.
+        if (gcase < 1 || gcase > 6)
+            return name;
+        // Ignore empty, short or latin strings.
+        if (name.size() <= 2 || !name.isRussian())
+            return name;
+        // Nothing to do for nominative case.
+        if (gcase == 1) 
+            return name;
+
+        // Names that ends with vowels "o", "yo", "u", "yu", "y", "i", "e", "ye"
+        // and pairs of vowels except "yeya", "iya" can not be inflected.
+        if (name.match("[Å£ÉÏÕÙÜÀ]$") 
+            || name.match("[ÁÅ£ÉÏÕÙÜÀÑ]Á$")
+            || name.match("[Á£ÏÕÙÜÀÑ]Ñ$"))
+            return name;
+
+        // Feminine names ending with a consonant are not inflected.
+        if (gender == .tables.sex_table.female
+            && name.match("[Â×ÇÄÖÚËÌÍÎÊÐÒÓÔÆÈÃÞÛÝ]$"))
+            return name;
+
+        // Remember this name without suffix(es).
+        root0 = name.substr(0, name.size() - 1);
+        root00 = name.substr(0, name.size() - 2);
+
+        // Use i to index array of suffixes, starting from genitive case (0).
+        i = gcase - 2;
+        // More Russian dark magic follows.
+        end_1=RandomArray(.List().add("ÉÉ", "ÉÉ", "ÉÀ", "ÉÅÊ", "ÉÅ"));
+        end_2=RandomArray(.List().add("É", "Å", "Õ", "ÏÊ", "Å"));
+        end_3=RandomArray(.List().add("Ù", "Å", "Õ", "ÏÊ", "Å"));
+        end_4=RandomArray(.List().add("ÍÅÎÉ", "ÍÅÎÉ", "ÍÑ", "ÍÅÎÅÍ", "ÍÅÎÉ"));
+        end_5=RandomArray(.List().add("É", "Å", "À", "ÅÊ", "Å"));
+        end_6=RandomArray(.List().add("Ñ", "À", "Ñ", "ÅÍ", "Å"));
+        end_7=RandomArray(.List().add("É", "É", "Ø", "ØÀ", "É"));
+        end_8=RandomArray(.List().add("Á", "Õ", "Á", "ÏÍ", "Å"));
+        
+        // Match various endings in nominative case with corresponding table of
+        // inflected endings.
+        if (name.match("ÉÑ$"))
+            return root00 + end_1.get(i); 
+        if (name.match("[ÇÖÊËÈÞÛÝ]Á$"))
+            return root0 + end_2.get(i); 
+        if (name.match("Á$"))
+            return root0 + end_3.get(i); 
+        if (name.match("ÍÑ$"))
+            return root00 + end_4.get(i); 
+        if (name.match("Ñ$"))
+            return root0 + end_5.get(i); 
+        if (name.match("Ê$"))
+            return root0 + end_6.get(i); 
+        // Same endings, different gender.
+        if (name.match("Ø$")) {
+            if (gender == .tables.sex_table.male)
+                return root0 + end_6.get(i);
+            else
+                return root0 + end_7.get(i);
+        }
+        // Rest of the names that end with a consonant.
+        return name + end_8.get(i);
+    };
+}

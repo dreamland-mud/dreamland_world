@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <beats>12</beats>
   <classes>
@@ -18,25 +18,30 @@
     </node>
   </classes>
   <command type="SKILL(ambush)">
-    <hint>(��������) ������� �� ������</hint>
+    <hint>(рейнджер) напасть из засады</hint>
     <name>ambush</name>
     <order>player_only</order>
     <position>stand</position>
     <russian>
-      <node>������</node>
+      <node>засада</node>
     </russian>
   </command>
-  <dammsg mg="f">����� �� ������</dammsg>
-  <group>none</group>
-  <help type="SkillHelp">��������������� �������� ����� ������� �� ����-���� �� ������, �� ������
-� ��� ������, ���� ������ ��� �� �����.
-  </help>
+  <dammsg mg="f">атака из засады</dammsg>
+  <help level="-1" type="SkillHelp">
+%FMT% *%CMD%* _имя жертвы_
+
+Камуфлированный персонаж может напасть на кого-либо из засады, но только
+в том случае, если жертва его не видит. Засаду можно подготовить заранее,
+не обязательно для этого находиться рядом с жертвой - просто укажите ее имя.
+Как только сидящий в засаде пошевелится и выйдет из укрытия, засада, 
+разумеется, разрушится.
+</help>
   <mob>
     <forbidden>true</forbidden>
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>������</nameRus>
+  <nameRus>засада</nameRus>
   <raceBonuses>
     <node name="satyr">
       <bonus>100</bonus>

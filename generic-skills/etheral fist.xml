@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <beats>12</beats>
   <classes>
@@ -17,15 +17,25 @@
       <weight>40</weight>
     </node>
   </classes>
-  <dammsg>���������� �����</dammsg>
+  <dammsg>призрачный кулак</dammsg>
   <group>combat</group>
+  <help level="-1" type="SkillHelp">
+%FMT% *%SPELL%* _%VICT%_
+
+Это боевое заклинание анти-паладинов поражает его противников энергией
+темного эфира.  Мощь заклинания возрастате по мере того, как анти-паладин
+становится более опытным. Повреждения снижаются, если у противника успешно
+прошел спасс-бросок против заклинаний (saves vs spell);
+
+%SA% %H% [(cast,колдовать)]
+</help>
   <mana>20</mana>
   <mob>
     <forbidden>false</forbidden>
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>���������� �����</nameRus>
+  <nameRus>призрачный кулак</nameRus>
   <spell type="SPELL(EtheralFist)">
     <casted>true</casted>
     <position>fight</position>

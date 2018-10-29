@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <beats>12</beats>
   <classes>
@@ -22,15 +22,25 @@
       <weight>35</weight>
     </node>
   </classes>
-  <dammsg mg="n">���������� �����</dammsg>
+  <dammsg mg="n">заклинание вреда</dammsg>
   <group>harmful</group>
+  <help level="-1" type="SkillHelp">
+%FMT% *%SPELL%* _%VICT%_
+
+Эта молитва нанесет серьезный вред здоровью жертвы. Чем больше у жертвы
+очков здоровья, тем серьезнее повреждения, однако успешный спасс-бросок
+снизит их вдвое. Помимо клериков, этому заклинанию также обучились
+анти-паладины.
+
+%SA% %H% [(cast,колдовать)]
+</help>
   <mana>35</mana>
   <mob>
     <forbidden>false</forbidden>
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>����</nameRus>
+  <nameRus>вред</nameRus>
   <spell type="SPELL(Harm)">
     <casted>true</casted>
     <position>fight</position>

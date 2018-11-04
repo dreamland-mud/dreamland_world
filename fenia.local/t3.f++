@@ -1,0 +1,46 @@
+toint = function() {
+    var TattooRemover;
+    
+    // Средство для уничтожения татуировок.
+    TattooRemover = function(vnum) {
+	this = .get_obj_index(vnum);
+	onUse = function(obj, ch, arg) {
+	    var target, aff;
+	    
+	    target = ch.get_obj_wear(arg);
+	    if (target == null) {
+		ch.act("Куда именно ты хочешь нанести %O4?", obj);
+		return true;
+	    }
+	    
+	    if (target.item_type != .tables.item_table.tattoo) {
+		ch.act("Но %O1 - не татуировка!", target);
+		return true;
+	    }
+	    
+	    if (target.wear_loc == "tattoo") {
+		ch.act("За уничтожением татиуровки твоей религии надо обращаться к бессмертным!");
+		return true;
+	    }
+	    
+	    if (target.isAffected("remove tattoo")) {
+		ch.act("%^O1 уже и так постепенно исчезает.", target);
+		return true;
+	    }
+
+	    ch.act("Ты наносишь %O4 поверх %O2 и тщательно втираешь это в кожу.", obj, target);
+	    ch.recho("%^C1 наносит %O4 поверх %O2.", ch, obj, target);
+	    
+	    aff = .Affect();
+	    aff.type = "remove tattoo";
+	    aff.where = .tables.affwhere_flags.object;
+	    aff.duration = .number_range(3, 5);
+	    target.affectAdd(aff);
+	    target.timer = aff.duration;
+	    
+	    return true;
+	};
+    };
+    
+//	TattooRemover(2008);
+}

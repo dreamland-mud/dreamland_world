@@ -1,0 +1,61 @@
+tpracInit = function() {
+	var proto;
+	
+	proto = .get_mob_index(16098);
+	
+	// Татуировщик: приветствует входящих в шалаш.
+	proto.onGreet = function(mob, ch) {
+	    var prof, level, exp;
+	    
+	    if (ch.is_npc())
+		return;
+		
+	    prof = .CraftProfession("tattooist");
+	    level = prof.getLevel(ch);
+	    // Профессия не освоена.
+	    if (level <= 0) {
+		mob.say("Привет, %1$C1! Если хочешь научиться делать татуировки, скажи '{yхочу стать татуировщиком{g'.", ch);
+		return;
+	    }
+	    
+	    exp = prof.getTotalExp(ch);
+	    // Профессия приобретена, но еще не было сделано ни одной тату.
+	    if (exp < 100) {
+		mob.say("Я поделюсь с тобой начальными инструментами за скромную цену.");
+		mob.say("Воспользуйся командой {y{lRсписок{lElist{lx{g, чтобы увидеть ассортимент.{x");
+		mob.say("Также используй {y{lRпрак здесь{lEprac here{lx{g, чтобы узнать, чему еще я могу тебя обучить.");
+		return;	        
+	    }
+	    
+	    // Уже что-то умеет.
+	    mob.interpret("smile " + ch.name);
+	};
+	
+	// Татуировщик: выставляет профессию по реакции на фразу.
+	proto.onSpeech = function(mob, ch, msg) {
+	    var prof;
+		
+	    if (ch.is_npc())
+		return;
+	    if (!msg.match("хочу.*татуировщ") && !msg.match("want.*tattooist"))
+		return;
+			
+	    prof = .CraftProfession("tattooist");
+	    if (prof.getLevel(ch) > 0) {
+		mob.say("Но ты и так владеешь этой профессией, %1$C1!", ch);
+		return;
+	    }
+		
+	    prof.setLevel(ch, 1);
+	    ch.act("%1$^C1 обучает тебя азам профессии %2$N2.", mob, prof.nameRus);
+	    ch.recho("%1$^C1 обучает %3$C4 азам профессии %2$N2.", mob, prof.nameRus, ch);
+	    mob.say("Я поделюсь с тобой начальными инструментами за скромную цену.");
+	    mob.say("Воспользуйся командой {y{lRсписок{lElist{lx{g, чтобы увидеть ассортимент.{x");
+	    mob.say("Также используй {y{lRпрак здесь{lEprac here{lx{g, чтобы узнать, чему еще я могу тебя обучить.");
+	    
+	    .infonet(.fmt(
+		    "{CРадостный голос из хрустального шара: {W%C1 достигает новой ступени мастерства.",
+			ch), ch);
+	};
+}
+

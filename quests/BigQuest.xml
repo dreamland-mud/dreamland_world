@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Quest>
+  <priority>1</priority>
+  <shortDesc>Банду геть</shortDesc>
+  <difficulty>набор опыта</difficulty>
+  <scenarios>
+    <node name="bug" type="BigQuestScenario">
+      <priority>2</priority>
+      <mobiles>
+        <node>
+            <desc>Эта бага настолько массивна, что вызывает искажение пространственно-временного континуума.
+    Уничтожь ее побыстрее, пока не случилось чего-то непоправимого.
+    </desc>
+            <longDesc>Толстая бага (bug) искривляет здесь пространство.</longDesc>
+            <name>bug fat бага толстая</name>
+            <sex>female</sex>
+            <shortDesc>толст|ая|ой|ой|ую|ой|ой баг|а|и|е|у|ой|е</shortDesc>
+            <race>unique</race>
+        </node>
+        <node>
+            <desc>Впечатляющий рот с двумя  рядами острейших зубов рвет ткань мироздания
+и пожирает ее. Теперь понятно, кто прогрыз дыру и вывел этих тварей наружу.
+Скорее убей ее!
+    </desc>
+            <longDesc>Крашащая бага (bug) острыми зубами подгрызает основы мироздания.</longDesc>
+            <name>bug crash бага крашащая</name>
+            <sex>female</sex>
+            <shortDesc>крашащ|ая|ей|ей|ую|ей|ей баг|а|и|е|у|ой|е</shortDesc>
+            <race>unique</race>
+        </node>
+        <node>
+            <desc>Ты не успеваешь моргнуть, как на ее месте появляется еще две,
+потом их уже четверо, через мгновение - восемь... Это необходимо остановить!
+    </desc>
+            <longDesc>Ксерящая бага (bug) размножается делением здесь.</longDesc>
+            <name>bug xerox бага ксерящая</name>
+            <sex>female</sex>
+            <shortDesc>ксерящ|ая|ей|ей|ую|ей|ей баг|а|и|е|у|ой|е</shortDesc>
+            <race>unique</race>
+        </node>
+      </mobiles>
+      <item>28003</item>
+      <msgStart> 
+        <node>В местности {W%3$s{G порвалась ткань мироздания, породив на свет разных неприятных существ.</node>
+        <node>Ты легко их обнаружишь, так сильно они выделяются среди прочих.</node>
+        <node>Уничтожь их всех и вернись ко мне за вознаграждением.</node>
+      </msgStart>
+      <msgInfo>Тебе надо уничтожить %3$d существ%3$Iо|а|, порвавш%3$Iего|их|их ткань мироздания.</msgInfo>
+    </node>
+    <node name="religion1" type="BigQuestScenario">
+      <criteria>
+        <node allow="false">
+            <node invert="false" type="XMLPCAlignPredicate">evil</node>
+        </node>
+      </criteria>
+      <priority>4</priority>
+      <mobiles>
+        <node>
+            <desc>Голову хулиганки украшает ярко-зеленый ирокез, а на теле надета майка с непонятной символикой.
+Ты не видишь ничего особенно оскорбительного, но раз тебя послали - надо выполнять!
+</desc>
+            <longDesc>Хулиганка (punk girl) подыскивает подходящий храм, чтобы осквернить его.</longDesc>
+            <name>punk girl хулиганка</name>
+            <sex>female</sex>
+            <shortDesc>хулиганк||и|е|у|ой|е</shortDesc>
+            <race>draconian</race>
+        </node>
+        <node>
+            <desc>Голову хулигана украшает ярко-зеленый ирокез, а на теле надета майка с непонятной символикой.
+Ты не видишь ничего особенно оскорбительного, но раз тебя послали - надо выполнять!
+</desc>
+            <longDesc>Хулиган (punk) подыскивает подходящий храм, чтобы осквернить его.</longDesc>
+            <name>punk хулиган</name>
+            <sex>male</sex>
+            <shortDesc>хулиган||а|у|а|ом|е</shortDesc>
+            <race>draconian</race>
+        </node>
+      </mobiles>
+      <item>28003</item>
+      <msgStart> 
+        <node>Группа хулиганов нарушила закон об оскорблении чувств верующих в Атум-Ра!</node>
+        <node>Они скрываются в местности {W%3$s{G. Полное уничтожение - вот единственный способ призвать их к порядку.</node>
+        <node>Разделайся с ними и вернись сюда за наградой.</node>
+      </msgStart>
+      <msgInfo>Тебе необходимо ликвидировать группу из %3$d хулиган%3$Iа|ов|ов, нарушивш%3$Iего|их|их закон об оскорблении чувств верующих в Атум-Ра</msgInfo>
+    </node>
+
+    <node name="defamation" type="BigQuestScenario">
+      <criteria>
+        <node allow="false">
+            <node invert="false" type="XMLPCEthosPredicate">chaotic</node>
+        </node>
+        <node allow="false">
+            <node invert="false" type="XMLPCRacePredicate">hobbit</node>
+        </node>
+      </criteria>
+      <priority>4</priority>
+      <mobiles>
+        <node>
+            <desc>Маленькая, но очень проворная феечка с радужными крыльями не пропустит
+ни одного интересного "кадра" - все они рано или поздно окажутся в ее альбоме.
+</desc>
+            <longDesc>Папарацци (paparazzi) делает быструю зарисовку с натуры.</longDesc>
+            <name>reporter paparazzi папарацци журналист</name>
+            <sex>female</sex>
+            <shortDesc>папарацци</shortDesc>
+            <race>faery</race>
+        </node>
+        <node>
+            <desc>Упитанный хоббит с волосатыми ногами вооружен блокнотом
+и ручкой. Он пытливо вглядывается в тебя, но быстро теряет интерес.
+</desc>
+            <longDesc>Пронырливый журналист (reporter) выискивает очередную сенсацию.</longDesc>
+            <name>reporter журналист</name>
+            <sex>male</sex>
+            <shortDesc>журналист||а|у|а|ом|е</shortDesc>
+            <race>hobbit</race>
+        </node>
+      </mobiles>
+      <item>28003</item>
+      <msgStart> 
+        <node>Группа независимых журналистов распространяет компрометирующие материалы на Валькирию.</node>
+        <node>Эту возмутительную клевету необходимо остановить! Последний раз их видели в {W%3$s{G.</node>
+        <node>Спаси репутацию Валькирии и вернись ко мне за наградой.</node>
+      </msgStart>
+      <msgInfo>Тебе предстоит уничтожить %3$d журналист%3$Iа|ов|ов, которые распространяют клевету.</msgInfo>
+    </node>
+    <node name="vegan" type="BigQuestScenario">
+      <priority>4</priority>
+      <mobiles>
+        <node>
+            <desc>Тебя одолевает желание прикончить его еще до того, как он откроет рот.
+</desc>
+            <longDesc>Проповедник (preacher) пытается поговорить с тобой о религии.</longDesc>
+            <name>preacher проповедник</name>
+            <sex>male</sex>
+            <shortDesc>проповедник||а|у|а|ом|е</shortDesc>
+            <race>human</race>
+        </node>
+      </mobiles>
+      <item>28003</item>
+      <msgStart> 
+        <node>Группа бродячих проповедников пытается обратить всю территорию {W%3$s{G в свою веру.</node>
+        <node>Жители умоляют избавить их от этих зануд.</node>
+        <node>Верни несчастным их мир и покой, а я вознагражу тебя.</node>
+      </msgStart>
+      <msgInfo>Необходимо избавить мир от %3$d проповедник%3$Iа|ов|ов, которые не дают проходу мирным жителям.</msgInfo>
+    </node>
+    <node name="music" type="BigQuestScenario">
+      <priority>4</priority>
+      <mobiles>
+        <node>
+            <desc>Девица с длинными нечесаными волосами и в балахоне то ли поет,
+то ли делает домашнее задание по сольфеджио. 
+</desc>
+            <longDesc>Певица (singer) выводит ртом очередную руладу.</longDesc>
+            <name>musician singer певица музыкант</name>
+            <sex>female</sex>
+            <shortDesc>певиц|а|ы|е|у|ей|е</shortDesc>
+            <race>half-elf</race>
+        </node>
+        <node>
+            <desc>Поглощенный своей гитарой, он не видит ничего вокруг себя, и, зажмурившись,
+производит на свет очередное отвратительное брынь-брынь.
+</desc>
+            <longDesc>Музыкант (musician) берет на редкость фальшивый аккорд.</longDesc>
+            <name>musician музыкант</name>
+            <sex>male</sex>
+            <shortDesc>музыкант||а|у|а|ом|е</shortDesc>
+            <race>mawg</race>
+        </node>
+        <node>
+            <desc>Тощий тип в очках и с сальными жидкими волосами крепко 
+зажал скрипку под подбородком и что-то там подстраивает. Издаваемые при этом
+звуки просто невыносимы, но в твоих силах это прекратить!
+</desc>
+            <longDesc>Скрипач (fiddler) в который раз пытается настроить скрипку.</longDesc>
+            <name>musician fiddler музыкант скрипач</name>
+            <sex>male</sex>
+            <shortDesc>скрипач||а|у|а|ом|е</shortDesc>
+            <race>half-elf</race>
+        </node>
+      </mobiles>
+      <item>28003</item>
+      <msgStart> 
+        <node>На мирных жителей местности {W%3$s{G внезапно обрушилась группа начинающих музыкантов!</node>
+        <node>Теперь стало невозможно спать по ночам, да и днем от них нет покоя.</node>
+        <node>Избавь мир от какофонии, а я вознагражу тебя.</node>
+      </msgStart>
+      <msgInfo>Необходимо избавить мир от %3$d музыкант%3$Iа|ов|ов, которые не дают покоя мирным жителям.</msgInfo>
+    </node>
+  </scenarios>
+</Quest>

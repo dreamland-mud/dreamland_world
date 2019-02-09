@@ -60,7 +60,7 @@
             <node invert="false" type="XMLPCAlignPredicate">evil</node>
         </node>
       </criteria>
-      <priority>4</priority>
+      <priority>2</priority>
       <item>
         <desc>Cмятая бумажка содержит куплет (verse) какой-то песни.</desc>
         <name>verse куплет</name>
@@ -169,9 +169,9 @@
       <msgJoin>{YТомик священной книги возникает перед тобой, сложенный из всех страниц.{x</msgJoin>
     </node>
     <node name="music" type="BigQuestScenario">
-      <priority>4</priority>
+      <priority>2</priority>
       <item>
-        <desc>Cтруна (string) валяется здесь, жертва излишнего музыкального рвениея.</desc>
+        <desc>Cтруна (string) валяется здесь, жертва излишнего музыкального рвения.</desc>
         <name>broken string порванная струна</name>
         <shortDesc>порванн|ая|ой|ой|ую|ой|ой струн|а|ы|е|у|ой|е</shortDesc>
       </item>
@@ -215,6 +215,107 @@
       </msgStart>
       <msgInfo>Необходимо избавить мир от {W%3$d{G музыкант%3$Iа|ов|ов, которые не дают покоя мирным жителям.</msgInfo>
       <msgJoin>{YПорванные струны внезапно свиваются в один какофонический клубок.{x</msgJoin>
+    </node>
+    <node name="rockmusic" type="BigQuestScenario">
+      <criteria>
+        <node allow="false">
+            <node invert="false" type="XMLPCRacePredicate">dwarf</node>
+        </node>
+      </criteria>
+      <priority>2</priority>
+      <item>
+        <desc>Неумело нацарапанная листовка (flyer) зазывает на концерт рок-менестрелей.</desc>
+        <name>flyer листовка</name>
+        <shortDesc>листовк|а|и|е|у|ой|е с приглашением на концерт</shortDesc>
+      </item>
+      <mobiles>
+        <node>
+			<desc>Необычайно подвижный, как для дварфа, экземпляр ни на секунду не прекращает
+свои пасы руками. Тебе необходимо вмешаться, пока под его палочки не попался
+настоящий барабан.
+</desc>
+            <longDesc>Рок-менестрель (minstrel) размахивает барабанными палочками.</longDesc>
+            <name>minstrel rock-minstrel менестрель рок-менестрель</name>
+            <sex>male</sex>
+            <shortDesc>рок-менестрел|ь|я|ю|я|ем|е</shortDesc>
+            <race>dwarf</race>
+        </node>
+        <node>
+			<desc>Коренастый дварф с копной волос и бородой до пояса сверлит тебя тяжелым
+похмельным взглядом. Разделайся с ним поскорее!
+</desc>
+            <longDesc>Рок-менестрель (minstrel) ищет, об кого бы сломать гитару.</longDesc>
+            <name>minstrel rock-minstrel менестрель рок-менестрель</name>
+            <sex>male</sex>
+            <shortDesc>рок-менестрел|ь|я|ю|я|ем|е</shortDesc>
+            <race>dwarf</race>
+        </node>
+      </mobiles>
+      <msgStart> 
+        <node>Группа бродячих {Wрок-менестрелей{G готовится дать концерт тяжелой музыки в местности {W%3$s{G.</node>
+        <node>У них нет ни голоса, ни слуха, только безудержное рвение.</node>
+        <node>Уничтожь их до того, как они успеют выступить, а я вознагражу тебя.</node>
+      </msgStart>
+      <msgInfo>Необходимо уничтожить {W%3$d{w бродячих рок-менестрел%3$Iя|ей|ей, до того как они устроят концерт.</msgInfo>
+      <msgJoin>{YВсе листовки из пачки складываются вместе, превращаясь в огромный плакат-афишу.{x</msgJoin>
+    </node>
+    <node name="religion2" type="BigQuestScenario">
+      <priority>2</priority>
+      <criteria>
+        <node allow="false">
+            <node invert="false" type="XMLPCEthosPredicate">lawful</node>
+        </node>
+        <node allow="false">
+            <node invert="false" type="XMLPCRacePredicate">arial</node>
+        </node>
+      </criteria>
+      <item>
+        <desc>Маленькая крупица сомнения (doubt) пытается закрасться в тебя.</desc>
+        <name>silver doubt крупица сомнений</name>
+        <shortDesc>крупиц|а|ы|е|у|ей|е сомнений</shortDesc>
+      </item>
+      <mobiles>
+        <node>
+			<desc>Ариальша в белоснежных одеждах и с белоснежными крыльями парит в нескольких
+сантиметрах от земли. Ее просветленное лицо отражает решимость нести в массы
+знания о единственно правильном образе жизни. 
+</desc>
+            <longDesc>Ханжа (bigot) готовится прочитать лекцию о вреде mlove.</longDesc>
+            <name>bigot ханжа</name>
+            <sex>female</sex>
+            <shortDesc>ханж|а|и|е|у|ой|е</shortDesc>
+            <race>arial</race>
+        </node>
+        <node>
+			<desc>Ариальша в белоснежных одеждах и с белоснежными крыльями парит в нескольких
+сантиметрах от земли. Ее просветленное лицо отражает решимость нести в массы
+знания о единственно правильном образе жизни. 
+</desc>
+            <longDesc>Ханжа (bigot) призывает окружающих стать на путь полной трезвости.</longDesc>
+            <name>bigot ханжа</name>
+            <sex>female</sex>
+            <shortDesc>ханж|а|и|е|у|ой|е</shortDesc>
+            <race>arial</race>
+        </node>
+        <node>
+			<desc>Ариал в белоснежных одеждах и с белоснежными крыльями парит в нескольких
+сантиметрах от земли. Его просветленное лицо отражает решимость нести в массы
+знания о единственно правильном образе жизни. 
+</desc>
+            <longDesc>Ханжа (bigot) хмурится, заметив, что не 100% твоего тела прикрыто броней.</longDesc>
+            <name>bigot ханжа</name>
+            <sex>male</sex>
+            <shortDesc>ханж|а|и|е|у|ой|е</shortDesc>
+            <race>arial</race>
+        </node>
+      </mobiles>
+      <msgStart> 
+	    <node>Группа {Wханжей{G наводнила местность {W%3$s{G и оскорбляет чувства верующих в Эроса.</node>
+        <node>Верующие жалуются, что из их жизни скоро окончательно исчезнет разврат и пьянство.</node>
+        <node>Уничтожь ханжей, восстанови равновесие и возвращайся ко мне за наградой.</node>
+      </msgStart>
+      <msgInfo>Уничтожить {W%3$d{w ханж%3$Iу|ей|ей, пока они не замучали окружающих своей праведностью.</msgInfo>
+	  <msgJoin>{YВсе крупицы сливаются в солидный булыжник уверенности.{x</msgJoin>
     </node>
   </scenarios>
 </Quest>

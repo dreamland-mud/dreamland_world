@@ -5,7 +5,7 @@ toint = function() {
     TattooRemover = function(vnum) {
 	this = .get_obj_index(vnum);
 	onUse = function(obj, ch, arg) {
-	    var target, aff;
+	    var target;
 	    
 	    target = ch.get_obj_wear(arg);
 	    if (target == null) {
@@ -23,24 +23,19 @@ toint = function() {
 		return true;
 	    }
 	    
-	    if (target.isAffected("remove tattoo")) {
-		ch.act("%^O1 уже и так постепенно исчезает.", target);
+	    if (target.timer <= 3 && target.timer > 0) {
+		ch.act("%^O1 уже и так скоро исчезнет.", target);
 		return true;
 	    }
 
 	    ch.act("Ты наносишь %O4 поверх %O2 и тщательно втираешь это в кожу.", obj, target);
 	    ch.recho("%^C1 наносит %O4 поверх %O2.", ch, obj, target);
 	    
-	    aff = .Affect();
-	    aff.type = "remove tattoo";
-	    aff.where = .tables.affwhere_flags.object;
-	    aff.duration = .number_range(3, 5);
-	    target.affectAdd(aff);
-	    target.timer = aff.duration;
+	    target.timer = .number_range(1, 3);
 	    
 	    return true;
 	};
     };
     
-//	TattooRemover(2008);
+    TattooRemover(33054);
 }

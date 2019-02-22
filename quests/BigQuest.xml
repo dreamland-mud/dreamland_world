@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Quest>
+  <priority>1</priority>
+  <shortDesc>Банду геть</shortDesc>
+  <difficulty>набор опыта</difficulty>
+  <itemVnum>28003</itemVnum>
+  <mobileVnum>28012</mobileVnum>
+
+  <scenarios>
+    <node name="bug" type="BigQuestScenario">
+      <priority>2</priority>
+      <item>
+        <desc>Частичка (piece) окружающей тебя реальности.</desc>
+        <name>piece fabric space частичка кусочек бытия</name>
+        <shortDesc>кусоч|ек|ка|ку|ек|ком|ке бытия</shortDesc>
+      </item>
+      <mobiles>
+        <node>
+            <desc>Эта бага настолько массивна, что вызывает искажение пространственно-временного континуума.
+Уничтожь ее побыстрее, пока не случилось что-то непоправимое.
+    </desc>
+            <longDesc>Толстая бага (bug) искривляет здесь пространство.</longDesc>
+            <name>bug fat anomaly аномалия бага толстая</name>
+            <sex>female</sex>
+            <shortDesc>толст|ая|ой|ой|ую|ой|ой баг|а|и|е|у|ой|е</shortDesc>
+            <race>unique</race>
+        </node>
+        <node>
+            <desc>Впечатляющий рот с двумя  рядами острейших зубов рвет ткань мироздания
+и пожирает ее. Теперь понятно, кто прогрыз дыру и вывел этих тварей наружу.
+Скорее убей ее!
+    </desc>
+            <longDesc>Крашащая бага (bug) острыми зубами подгрызает основы мироздания.</longDesc>
+            <name>bug crash anomaly аномалия бага крашащая</name>
+            <sex>female</sex>
+            <shortDesc>крашащ|ая|ей|ей|ую|ей|ей баг|а|и|е|у|ой|е</shortDesc>
+            <race>unique</race>
+        </node>
+        <node>
+            <desc>Ты не успеваешь моргнуть, как на ее месте появляется еще две,
+потом их уже четверо, через мгновение - восемь... Это необходимо остановить!
+    </desc>
+            <longDesc>Ксерящая бага (bug) размножается делением здесь.</longDesc>
+            <name>bug xerox anomaly аномалия бага ксерящая</name>
+            <sex>female</sex>
+            <shortDesc>ксерящ|ая|ей|ей|ую|ей|ей баг|а|и|е|у|ой|е</shortDesc>
+            <race>unique</race>
+        </node>
+      </mobiles>
+      <msgStart> 
+        <node>В местности {W%3$s{G порвалась ткань мироздания, породив на свет различные {Wаномалии{G.</node>
+        <node>Восстанови порядок вещей и вернись ко мне за вознаграждением.</node>
+      </msgStart>
+      <msgInfo>Тебе надо уничтожить {Y%3$d{w аномали%3$Iю|и|й, прорвавшихся сюда из дыры в ткани мироздания.</msgInfo>
+      <msgJoin>{YИз разрозненных кусочков внезапно возникает цельный фрагмент бытия.{x</msgJoin>
+    </node>
+    <node name="religion1" type="BigQuestScenario">
+      <criteria>
+        <node allow="false">
+            <node invert="false" type="XMLPCAlignPredicate">evil</node>
+        </node>
+      </criteria>
+      <priority>2</priority>
+      <item>
+        <desc>Cмятая бумажка содержит куплет (verse) какой-то песни.</desc>
+        <name>verse куплет</name>
+        <shortDesc>куплет||а|у||ом|е панк-молебна</shortDesc>
+      </item>
+      <mobiles>
+        <node>
+            <desc>Голову хулиганки украшает ярко-зеленый ирокез, а на теле надета майка с непонятной символикой.
+Ты не видишь ничего особенно оскорбительного, но раз тебя послали - надо выполнять!
+</desc>
+            <longDesc>Хулиганка (punk girl) подыскивает подходящий храм, чтобы осквернить его.</longDesc>
+            <name>punk girl хулиганка</name>
+            <sex>female</sex>
+            <shortDesc>хулиганк|а|и|е|у|ой|е</shortDesc>
+            <race>draconian</race>
+        </node>
+        <node>
+            <desc>Голову хулигана украшает ярко-зеленый ирокез, а на теле надета майка с непонятной символикой.
+Ты не видишь ничего особенно оскорбительного, но раз тебя послали - надо выполнять!
+</desc>
+            <longDesc>Хулиган (punk) подыскивает подходящий храм, чтобы осквернить его.</longDesc>
+            <name>punk хулиган</name>
+            <sex>male</sex>
+            <shortDesc>хулиган||а|у|а|ом|е</shortDesc>
+            <race>draconian</race>
+        </node>
+      </mobiles>
+      <msgStart> 
+        <node>Группа {Wхулиганов{G нарушила закон об оскорблении чувств верующих в Атум-Ра!</node>
+        <node>Они скрываются в местности {W%3$s{G. Полное уничтожение - вот единственный способ призвать их к порядку.</node>
+        <node>Разделайся с ними и вернись сюда за наградой.</node>
+      </msgStart>
+      <msgInfo>Тебе необходимо ликвидировать группу из {Y%3$d{w хулиган%3$Iа|ов|ов, нарушивш%3$Iего|их|их закон об оскорблении чувств верующих в Атум-Ра</msgInfo>
+      <msgJoin>{YВсе куплеты неожиданно складываются в издевательский молебен.{x</msgJoin>
+    </node>
+
+    <node name="defamation" type="BigQuestScenario">
+      <criteria>
+        <node allow="false">
+            <node invert="false" type="XMLPCEthosPredicate">chaotic</node>
+        </node>
+        <node allow="false">
+            <node invert="false" type="XMLPCRacePredicate">hobbit</node>
+        </node>
+      </criteria>
+      <priority>4</priority>
+      <item>
+        <desc>Фотография (photo) изображает Валькирию при весьма интересных обстоятельствах.</desc>
+        <name>photo nu фото ню-фото</name>
+        <shortDesc>ню-фото Валькирии</shortDesc>
+      </item>
+      <mobiles>
+        <node>
+            <desc>Маленькая, но очень проворная феечка с радужными крыльями не пропустит
+ни одного интересного "кадра" - все они рано или поздно окажутся в ее альбоме.
+</desc>
+            <longDesc>Папарацци (paparazzi) делает быструю зарисовку с натуры.</longDesc>
+            <name>reporter paparazzi папарацци журналист</name>
+            <sex>female</sex>
+            <shortDesc>папарацци</shortDesc>
+            <race>faery</race>
+        </node>
+        <node>
+            <desc>Упитанный хоббит с волосатыми ногами вооружен блокнотом
+и ручкой. Он пытливо вглядывается в тебя, но быстро теряет интерес.
+</desc>
+            <longDesc>Пронырливый журналист (reporter) выискивает очередную сенсацию.</longDesc>
+            <name>reporter журналист</name>
+            <sex>male</sex>
+            <shortDesc>журналист||а|у|а|ом|е</shortDesc>
+            <race>hobbit</race>
+        </node>
+      </mobiles>
+      <msgStart> 
+        <node>Группа независимых {Wжурналистов{G распространяет компрометирующие материалы на Валькирию.</node>
+        <node>Эту возмутительную клевету необходимо остановить! Последний раз их видели в местности {W%3$s{G.</node>
+        <node>Спаси репутацию Валькирии и вернись ко мне за наградой.</node>
+      </msgStart>
+      <msgInfo>Тебе предстоит уничтожить {Y%3$d{w журналист%3$Iа|ов|ов, которые распространяют клевету.</msgInfo>
+      <msgJoin>{YВсе фотографии внезапно образуют захватывающий фото-альбом!{x</msgJoin>
+    </node>
+    <node name="vegan" type="BigQuestScenario">
+      <priority>4</priority>
+      <mobiles>
+        <node>
+            <desc>Тебя одолевает желание прикончить его еще до того, как он откроет рот.
+</desc>
+            <longDesc>Проповедник (preacher) пытается поговорить с тобой о религии.</longDesc>
+            <name>preacher проповедник</name>
+            <sex>male</sex>
+            <shortDesc>проповедник||а|у|а|ом|е</shortDesc>
+            <race>human</race>
+        </node>
+      </mobiles>
+      <item>
+        <desc>Страница (page) вырвана из какой-то священной книги.</desc>
+        <name>page holy text страница текст</name>
+        <shortDesc>страниц|а|ы|е|у|ей|е священного текста</shortDesc>
+      </item>
+      <msgStart> 
+        <node>Группа бродячих {Wпроповедников{G пытается обратить всю территорию {W%3$s{G в свою веру.</node>
+        <node>Жители умоляют избавить их от этих зануд.</node>
+        <node>Верни несчастным их мир и покой, а я вознагражу тебя.</node>
+      </msgStart>
+      <msgInfo>Необходимо избавить мир от {Y%3$d{w проповедник%3$Iа|ов|ов, которые не дают проходу мирным жителям.</msgInfo>
+      <msgJoin>{YТомик священной книги возникает перед тобой, сложенный из всех страниц.{x</msgJoin>
+    </node>
+    <node name="music" type="BigQuestScenario">
+      <priority>2</priority>
+      <item>
+        <desc>Cтруна (string) валяется здесь, жертва излишнего музыкального рвения.</desc>
+        <name>broken string порванная струна</name>
+        <shortDesc>порванн|ая|ой|ой|ую|ой|ой струн|а|ы|е|у|ой|е</shortDesc>
+      </item>
+      <mobiles>
+        <node>
+            <desc>Девица с длинными нечесаными волосами и в балахоне то ли поет,
+то ли делает домашнее задание по сольфеджио. 
+</desc>
+            <longDesc>Певица (singer) выводит ртом очередную руладу.</longDesc>
+            <name>musician singer певица музыкант</name>
+            <sex>female</sex>
+            <shortDesc>певиц|а|ы|е|у|ей|е</shortDesc>
+            <race>half-elf</race>
+        </node>
+        <node>
+            <desc>Поглощенный своей гитарой, он не видит ничего вокруг себя, и, зажмурившись,
+производит на свет очередное отвратительное брынь-брынь.
+</desc>
+            <longDesc>Музыкант (musician) берет на редкость фальшивый аккорд.</longDesc>
+            <name>musician музыкант</name>
+            <sex>male</sex>
+            <shortDesc>музыкант||а|у|а|ом|е</shortDesc>
+            <race>mawg</race>
+        </node>
+        <node>
+            <desc>Тощий тип в очках и с сальными жидкими волосами крепко 
+зажал скрипку под подбородком и что-то там подстраивает. Издаваемые при этом
+звуки просто невыносимы, но в твоих силах это прекратить!
+</desc>
+            <longDesc>Скрипач (fiddler) в который раз пытается настроить скрипку.</longDesc>
+            <name>musician fiddler музыкант скрипач</name>
+            <sex>male</sex>
+            <shortDesc>скрипач||а|у|а|ом|е</shortDesc>
+            <race>half-elf</race>
+        </node>
+      </mobiles>
+      <msgStart> 
+        <node>На мирных жителей местности {W%3$s{G внезапно обрушилась группа начинающих {Wмузыкантов{G!</node>
+        <node>Теперь стало невозможно спать по ночам, да и днем от них нет покоя.</node>
+        <node>Избавь мир от какофонии, а я вознагражу тебя.</node>
+      </msgStart>
+      <msgInfo>Необходимо избавить мир от {Y%3$d{w музыкант%3$Iа|ов|ов, которые не дают покоя мирным жителям.</msgInfo>
+      <msgJoin>{YПорванные струны внезапно свиваются в один какофонический клубок.{x</msgJoin>
+    </node>
+    <node name="rockmusic" type="BigQuestScenario">
+      <criteria>
+        <node allow="false">
+            <node invert="false" type="XMLPCRacePredicate">dwarf</node>
+        </node>
+      </criteria>
+      <priority>2</priority>
+      <item>
+        <desc>Неумело нацарапанная листовка (flyer) зазывает на концерт рок-менестрелей.</desc>
+        <name>flyer листовка</name>
+        <shortDesc>листовк|а|и|е|у|ой|е с приглашением на концерт</shortDesc>
+      </item>
+      <mobiles>
+        <node>
+			<desc>Необычайно подвижный, как для дварфа, экземпляр ни на секунду не прекращает
+свои пасы руками. Тебе необходимо вмешаться, пока под его палочки не попался
+настоящий барабан.
+</desc>
+            <longDesc>Рок-менестрель (minstrel) размахивает барабанными палочками.</longDesc>
+            <name>minstrel rock-minstrel менестрель рок-менестрель</name>
+            <sex>male</sex>
+            <shortDesc>рок-менестрел|ь|я|ю|я|ем|е</shortDesc>
+            <race>dwarf</race>
+        </node>
+        <node>
+			<desc>Коренастый дварф с копной волос и бородой до пояса сверлит тебя тяжелым
+похмельным взглядом. Разделайся с ним поскорее!
+</desc>
+            <longDesc>Рок-менестрель (minstrel) ищет, об кого бы сломать гитару.</longDesc>
+            <name>minstrel rock-minstrel менестрель рок-менестрель</name>
+            <sex>male</sex>
+            <shortDesc>рок-менестрел|ь|я|ю|я|ем|е</shortDesc>
+            <race>dwarf</race>
+        </node>
+      </mobiles>
+      <msgStart> 
+        <node>Группа бродячих {Wрок-менестрелей{G готовится дать концерт тяжелой музыки в местности {W%3$s{G.</node>
+        <node>У них нет ни голоса, ни слуха, только безудержное рвение.</node>
+        <node>Уничтожь их до того, как они успеют выступить, а я вознагражу тебя.</node>
+      </msgStart>
+      <msgInfo>Необходимо уничтожить {W%3$d{w бродячих рок-менестрел%3$Iя|ей|ей, до того как они устроят концерт.</msgInfo>
+      <msgJoin>{YВсе листовки из пачки складываются вместе, превращаясь в огромный плакат-афишу.{x</msgJoin>
+    </node>
+    <node name="religion2" type="BigQuestScenario">
+      <priority>2</priority>
+      <criteria>
+        <node allow="false">
+            <node invert="false" type="XMLPCEthosPredicate">lawful</node>
+        </node>
+        <node allow="false">
+            <node invert="false" type="XMLPCRacePredicate">arial</node>
+        </node>
+      </criteria>
+      <item>
+        <desc>Маленькая крупица сомнения (doubt) пытается закрасться в тебя.</desc>
+        <name>silver doubt крупица сомнений</name>
+        <shortDesc>крупиц|а|ы|е|у|ей|е сомнений</shortDesc>
+      </item>
+      <mobiles>
+        <node>
+			<desc>Ариальша в белоснежных одеждах и с белоснежными крыльями парит в нескольких
+сантиметрах от земли. Ее просветленное лицо отражает решимость нести в массы
+знания о единственно правильном образе жизни. 
+</desc>
+            <longDesc>Ханжа (bigot) готовится прочитать лекцию о вреде mlove.</longDesc>
+            <name>bigot ханжа</name>
+            <sex>female</sex>
+            <shortDesc>ханж|а|и|е|у|ой|е</shortDesc>
+            <race>arial</race>
+        </node>
+        <node>
+			<desc>Ариальша в белоснежных одеждах и с белоснежными крыльями парит в нескольких
+сантиметрах от земли. Ее просветленное лицо отражает решимость нести в массы
+знания о единственно правильном образе жизни. 
+</desc>
+            <longDesc>Ханжа (bigot) призывает окружающих стать на путь полной трезвости.</longDesc>
+            <name>bigot ханжа</name>
+            <sex>female</sex>
+            <shortDesc>ханж|а|и|е|у|ой|е</shortDesc>
+            <race>arial</race>
+        </node>
+        <node>
+			<desc>Ариал в белоснежных одеждах и с белоснежными крыльями парит в нескольких
+сантиметрах от земли. Его просветленное лицо отражает решимость нести в массы
+знания о единственно правильном образе жизни. 
+</desc>
+            <longDesc>Ханжа (bigot) хмурится, заметив, что не 100% твоего тела прикрыто броней.</longDesc>
+            <name>bigot ханжа</name>
+            <sex>male</sex>
+            <shortDesc>ханж|а|и|е|у|ой|е</shortDesc>
+            <race>arial</race>
+        </node>
+      </mobiles>
+      <msgStart> 
+	    <node>Группа {Wханжей{G наводнила местность {W%3$s{G и оскорбляет чувства верующих в Эроса.</node>
+        <node>Верующие жалуются, что из их жизни скоро окончательно исчезнет разврат и пьянство.</node>
+        <node>Уничтожь ханжей, восстанови равновесие и возвращайся ко мне за наградой.</node>
+      </msgStart>
+      <msgInfo>Уничтожить {W%3$d{w ханж%3$Iу|ей|ей, пока они не замучали окружающих своей праведностью.</msgInfo>
+	  <msgJoin>{YВсе крупицы сливаются в солидный булыжник уверенности.{x</msgJoin>
+    </node>
+  </scenarios>
+</Quest>

@@ -1,0 +1,240 @@
+eggfarmInit = function() {
+    if (.tmp.eggfarm == null)
+	.tmp.eggfarm = .Map();
+
+    this = .tmp.eggfarm;
+
+    Pet = function(littleVnum, bigVnum, eggVnum) {
+	this = .Map();
+
+	little = .get_obj_index(littleVnum);
+	big = .get_mob_index(bigVnum);
+	egg = .get_obj_index(eggVnum);
+
+	little.eggFarm = this;
+	big.eggFarm = this;
+	egg.eggFarm = this;
+	
+	log = function(ch, msg) {
+	    .wiznet("EggFarm: " + ch.name + " " + msg);
+	};
+	
+	egg.onOpen = function(obj, ch) {
+	    var pet;
+
+	    pet = eggFarm.little.create();
+	    pet.obj_to_char(ch);
+	    
+	    ch.recho("Из %2$O2 вылупляется %1$O1!", pet, obj);
+	    eggFarm.log(ch, "вылупляет " + pet.short_descr.ruscase(4));
+	    obj.extract(true);
+	};
+
+	big.onStopfol = function(pet, master) {
+	    master.act("%^C1 машет тебе на прощанье и исчезает.", pet);
+	    master.in_room.ppl.sub(master).call.act("%^C1 машет %C3 на прощанье и исчезает.", pet, master);
+	    .tmp.system.trueExtract(pet);
+	};
+
+	little.msgGrow = function(pet, mob, ch) {
+	    ch.recho("%1$^O1 вырастает в %2$C4!", pet, mob);
+	};
+
+	little.msgGreet = function(mob, ch) {
+	    ch.act("%1$^C1 изящно гарцует перед тобой.", mob);
+	    ch.in_room.ppl.sub(ch).call.act("%1$^C1 изящно гарцует перед %2$C5.", mob, ch);
+	};
+
+	little.msgEat = function(pet, obj, ch) {
+	    if (.chanceOneOf(3)) 
+		ch.recho("%1$^O1 грызет %2$O4, жадно чавкая.", pet, obj);
+	    else if (.chanceOneOf(2))
+		ch.recho("%1$^O1 лопает %2$O4.", pet, obj);
+	    else
+		ch.recho("%1$^O1 задумчиво хрустит %2$O5.", pet, obj);
+	};
+	
+	little.msgNoDrink = function(pet, obj, ch) {
+	    ch.recho("%1$^O1 обиженно стучит по донышку %2$O2.", pet, obj);
+	};
+
+	little.msgDrink = function(pet, obj, ch) {
+	    ch.recho("%1$^O1 отхлебывает из %2$O2.", pet, obj);
+	};
+	
+	little.msgNibble = function(pet, obj, ch) {
+	    ch.recho("%1$^O1 бурчит '{gЖрать совсем нечего..{x'", pet);
+
+	    if (.chanceOneOf(3))
+		ch.recho("%1$^O1 старательно грызет %2$O4.", pet, obj);
+	    else if (.chanceOneOf(2))
+		ch.recho("%1$^O1 обнюхивает %2$O4 и пытается надкусить.", pet, obj);
+	    else
+		ch.recho("%1$^O1 точит зубы об %2$O4.", pet, obj);
+	};
+	
+	little.msgLocked = function(pet, obj, ch) {
+	    ch.recho("%1$^O1 требовательно стучит по %2$O3: '{gХозяин, открывай!{x'", pet, obj);
+	};
+
+	little.foodMax = 5;
+
+	little.init = function(pet) {
+	    pet.foodCounter = 0;
+	};
+
+	little.onSpec = function(pet) {
+	    var ch;
+
+	    ch = pet.carried_by;
+	    if (ch == null)
+		return false;
+
+	    if (doGrow(pet))
+		return true;
+
+	    doFeed(pet, ch);
+	    return false;
+	};
+
+	little.doGrow = function(pet) {
+	    var ch, mob;
+
+	    if (pet.foodCounter < foodMax)
+		return false;
+	     
+	    ch = pet.carried_by;
+
+	    if (ch.pet != null) {
+		ch.recho("%^O1 обиженно косится на %C4.", pet, ch.pet);
+		ch.recho("%^O1 залазит обратно в яйцо.", pet);
+		pet.extract(true);
+		eggFarm.egg.create().obj_to_char(ch);
+		return true;
+	    }
+
+	    mob = eggFarm.big.create();
+	    mob.char_to_room(ch.in_room);
+	    msgGrow(pet, mob, ch);
+	    pet.extract(true);
+
+	    ch.add_pet(mob);
+
+	    msgGreet(mob, ch);
+	    return true;
+	};
+
+	little.doFeed = function(pet, ch) {
+	    var obj;
+	    
+	    if (( obj = ch.carrying.random_obj_list("food") ) != null) 
+		if (.chance(80)) {
+		    doEat(pet, obj);
+		    return;
+		}
+	    
+	    if (( obj = ch.carrying.random_obj_list("drink") ) != null) 
+		if (.chance(80)) {
+		    doDrink(pet, obj);
+		    return;
+		}
+	    
+	    if (( obj = ch.carrying.random_obj_list("container") ) != null && obj.contains != null) {
+		var inner;
+
+		if (( inner = obj.contains.random_obj_list("food") ) != null) {
+		    doEat(pet, inner);
+		    return;
+		}
+
+		if (( inner = obj.contains.random_obj_list("drink") ) != null) {
+		    doDrink(pet, inner);
+		    return;
+		}
+	    }
+	    
+	    if (.chance(80))
+		return;
+
+	    if (( obj = ch.carrying.random_obj_list() ) != null)
+		if (obj != pet)
+		    doNibble(pet, obj);
+	};
+
+	little.doEat = function(pet, obj) {
+	    if (!doFetch(pet, obj))
+		return;
+	    
+	    msgEat(pet, obj, pet.carried_by);
+	    pet.foodCounter = pet.foodCounter + 1;
+	    obj.extract(true);
+	};
+
+	little.doDrink = function(pet, obj) {
+	    if (!doFetch(pet, obj))
+		return;
+	    
+	    if (obj.value1 == 0) {
+		msgNoDrink(pet, obj, pet.carried_by);
+	    }
+	    else {
+		msgDrink(pet, obj, pet.carried_by);
+
+		pet.foodCounter = pet.foodCounter + 1;
+		obj.value1 = obj.value1 - 10;
+		if (obj.value1 < 0)
+		    obj.value1 = 0;
+	    }
+	};
+
+	little.doNibble = function(pet, obj) {
+	    msgNibble(pet, obj, pet.carried_by);
+	    /* TODO: make obj condition worse */
+	};
+
+	little.doFetch = function(pet, obj) {
+	    var ch;
+
+	    ch = pet.carried_by;
+	    if (obj.carried_by == ch)
+		return true;
+
+	    if (obj.in_obj.carried_by != ch)
+		return false;
+
+	    if (.isset_bit(obj.in_obj.value1, .tables.container_flags.locked)) {
+		msgLocked(pet, obj.in_obj, ch);
+		return false;
+	    }
+	    
+	    if (.isset_bit(obj.in_obj.value1, .tables.container_flags.closed)) 
+		ch.recho("%1$^O1 открывает %2$O4.", pet, obj.in_obj);
+	    
+	    ch.recho("%1$^O1 берет %2$O4 из %3$O2.", pet, obj, obj.in_obj);
+	    obj.obj_to_char(ch);
+	    return false; 
+	};
+
+	return this;
+    };
+    
+    CowPet = function(littleVnum, bigVnum, eggVnum) {
+	this = Pet(littleVnum, bigVnum, eggVnum);
+
+	little.msgGrow = function(pet, mob, ch) {
+	    ch.recho("%1$^O1 вырастает в Матерую Коровищу!", pet);
+	};
+
+	return this;
+    };
+    
+    CowPet(50082, 50042, 50085); // cow
+    Pet(50087, 50048, 50088);    // sven
+    Pet(50101, 50050, 50089);    // snail
+    Pet(50095, 50045, 50090);    // cockroach 
+    Pet(50096, 50046, 50091);    // chicken 
+    Pet(50097, 50051, 50092);    // seal 
+    Pet(50100, 50047, 50099);    // donkey 
+    Pet(50094, 50049, 50093);    // boar 
+}
+

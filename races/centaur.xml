@@ -14,15 +14,14 @@
     <cleric>100</cleric>
     <warrior>100</warrior>
     <anti-paladin>-1</anti-paladin>
-    <samurai>-1</samurai>
+    <samurai>100</samurai>
     <ranger>100</ranger>
   </classes>
   <donates>centaur </donates>
   <form>edible animal centaur mammal</form>
   <help keyword="CENTAUR КЕНТАВР КЕНТАВРА КЕНТАВРЫ" level="-1" type="RaceHelp">Кентавры - раса произошедшая от чрезмерной активной любви людей к лошадям 
-и, наоборот, лошадей к людям.
-Внешний вид: нижняя половина лошадиная - хвост, копыта, четыре ноги, 
-верхняя - человеческая.
+и, наоборот, лошадей к людям. Внешний вид: нижняя половина лошадиная - хвост,
+копыта, четыре ноги, верхняя - человеческая.
 Кентавры сильны физически, обладают горячей кровью. Хорошо переносят холод.
 Отсутствие высоких умственно-моральных качеств компенсируется выносливостью, 
 привлекательностью и крепкими копытами. К магии особого влечения не испытывают.
@@ -32,13 +31,15 @@
 
 Штаны и ботинки, предназначенные для двуногих рас, на кентавров разумеется
 не налезут, зато они могут носить подковы. В Аноне есть кузнец, Jolob, который
-не только изготовит подковы за (не)скромную плату в золоте, но и подкует. 
+не только изготовит подковы за (не)скромную плату в золоте, но и подкует (%H% [(smith,кузнец)]).
 Свойства подков зависят от уровня, поэтому имеет смысл периодически покупать новые.
+Хорошие попоны можно найти в арии Прерии.
 
 Кентавры обладают врожденной способностью наносить по два удара копытами
-(double kick). Умеют неожиданно и больно дать задним копытом по лбу тому,
-кто подкрадывается к ним сзади с целью свернуть шею или усыпить (rear kick).
-Могут возить на себе других персонажей (help mount). См. также help request.
+(%H% [(double kick,двойной удар копытами)]). Умеют неожиданно и больно дать задним копытом по лбу тому,
+кто подкрадывается к ним сзади с целью свернуть шею или усыпить (%H% [(rear kick,удар задними копытами)]).
+Могут возить на себе других персонажей (%H% [(mount,оседлать)]). 
+%SA% %H% [(request,попросить)]
 </help>
   <hpBonus>20</hpBonus>
   <maxAlign>1000</maxAlign>
@@ -61,5 +62,5 @@
     <con>3</con>
   </stats>
   <vuln>charm lightning</vuln>
-  <wearloc>finger_l second_wield neck_2 neck_1 finger_r wrist_r wrist_l body light shield head hands arms about waist wield hold float tattoo face horse hooves tat_arms tat_wrist_l tat_wrist_r</wearloc>
+  <wearloc>finger_l second_wield neck_2 neck_1 finger_r wrist_r wrist_l body light shield head hands arms about waist wield hold float tattoo face horse hooves tat_arms tat_face tat_wrist_l tat_wrist_r tail</wearloc>
 </Race>

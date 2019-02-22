@@ -15,7 +15,7 @@
     <vnumLow>3000</vnumLow>
   </areadata>
   <helps>
-    <node keyword="MIDGAARD МИДГААРД" level="-1">Midgaard - столица мира. Здесь расположены гильдии, храмы, магазины, библиотеки,
+    <node keyword="MIDGAARD МИДГААРД" level="-1" type="AreaHelp">Midgaard - столица мира. Здесь расположены гильдии, храмы, магазины, библиотеки,
 на его улицах постоянно кипит жизнь. Все дороги, так или иначе, приводят сюда.
 В храмах всех остальных крупных городов установлены порталы, ведущие в
 центральный храм Мидгаарда, посвященный богу Лео.
@@ -412,10 +412,73 @@
       <alignment>1000</alignment>
       <behavior type="QuestMaster">
         <services>
+          <node type="ObjectQuestArticle">
+            <vnum>102</vnum>
+            <name>orb</name>
+            <rname>шар</rname>
+            <descr>Хрустальный шар</descr>
+            <price type="QuestPointPrice">
+              <questpoint>50</questpoint>
+            </price>
+          </node>
+          <node type="PiercingQuestArticle">
+            <name>piercing</name>
+            <rname>пирсинг</rname>
+            <descr>Прокалывание ушей</descr>
+            <price type="QuestPointPrice">
+              <questpoint>50</questpoint>
+            </price>
+          </node>
+          <node type="ObjectQuestArticle">
+            <vnum>108</vnum>
+            <name>colourless</name>
+            <rname>бесцветный рестринг</rname>
+            <descr>Рестринг купон</descr>
+            <price type="QuestPointPrice">
+              <questpoint>50</questpoint>
+            </price>
+          </node>
+          <node type="ObjectQuestArticle">
+            <vnum>106</vnum>
+            <name>coupon</name>
+            <rname>цветной рестринг</rname>
+            <descr>{YР{Bе{Gс{Rт{Cр{Mи{Bн{Cг{x {rк{yу{gп{bо{mн{x</descr>
+            <price type="QuestPointPrice">
+              <questpoint>200</questpoint>
+            </price>
+          </node>
+          <node type="TattooQuestArticle">
+            <name>tattoo</name>
+            <rname>татуировка</rname>
+            <descr>Татуировка твоей религии</descr>
+            <price type="QuestPointPrice">
+              <questpoint>200</questpoint>
+            </price>
+          </node>
+          <node type="ConQuestArticle">
+            <name>constitution</name>
+            <rname>сложение</rname>
+            <descr>+1 сложение</descr>
+            <price type="QuestPointPrice">
+              <questpoint>150</questpoint>
+            </price>
+          </node>
           <node type="PersonalQuestArticle">
             <vnum>95</vnum>
             <name>ring</name>
+            <rname>кольцо</rname>
             <descr>Кольцо Героя</descr>
+            <price type="QuestPointPrice">
+              <questpoint>1000</questpoint>
+            </price>
+            <gender table="sex_table">neutral</gender>
+            <troubled>true</troubled>
+          </node>
+          <node type="PersonalQuestArticle">
+            <vnum>96</vnum>
+            <name>weapon</name>
+            <rname>оружие</rname>
+            <descr>Оружие Героя</descr>
             <price type="QuestPointPrice">
               <questpoint>1000</questpoint>
             </price>
@@ -425,6 +488,7 @@
           <node type="PersonalQuestArticle">
             <vnum>94</vnum>
             <name>girth</name>
+            <rname>пояс</rname>
             <descr>Пояс Героя</descr>
             <price type="QuestPointPrice">
               <questpoint>1000</questpoint>
@@ -432,35 +496,53 @@
             <gender table="sex_table">male</gender>
             <troubled>true</troubled>
           </node>
-          <node type="GoldQuestArticle">
-            <amount>5000</amount>
-            <name>gold</name>
-            <descr>5000 золотых монет</descr>
+          <node type="KeyringQuestArticle">
+            <name>keyring</name>
+            <rname>брелок</rname>
+            <descr>Прикрепить брелок для ключей к Поясу Героя</descr>
+            <price type="QuestPointPrice">
+              <questpoint>200</questpoint>
+            </price>
+          </node>
+          <node type="PersonalQuestArticle">
+            <vnum>103</vnum>
+            <name>bag</name>
+            <rname>сумка</rname>
+            <descr>Дорожная сумка Героя</descr>
+            <price type="QuestPointPrice">
+              <questpoint>500</questpoint>
+            </price>
+            <gender table="sex_table">female</gender>
+            <troubled>false</troubled>
+          </node>
+          <node type="PocketsQuestArticle">
+            <name>pockets</name>
+            <rname>карманы</rname>
+            <descr>Нашить карманы на Сумку Героя</descr>
+            <price type="QuestPointPrice">
+              <questpoint>50</questpoint>
+            </price>
+          </node>
+          <node type="OwnerQuestArticle">
+            <vnum>109</vnum>
+            <name>owner</name>
+            <rname>талон</rname>
+            <descr>Талон на единоличное владение вещью</descr>
             <price type="QuestPointPrice">
               <questpoint>1000</questpoint>
             </price>
+            <lifePrice>
+              <victories>500</victories>
+              <lifes>1</lifes>
+            </lifePrice>
           </node>
-          <node type="TattooQuestArticle">
-            <name>tattoo</name>
-            <descr>Татуировка твоей религии</descr>
+          <node type="GoldQuestArticle">
+            <amount>5000</amount>
+            <name>gold</name>
+            <rname>золото</rname>
+            <descr>5000 золотых монет</descr>
             <price type="QuestPointPrice">
-              <questpoint>200</questpoint>
-            </price>
-          </node>
-          <node type="ObjectQuestArticle">
-            <vnum>106</vnum>
-            <name>coupon</name>
-            <descr>{YР{Bе{Gс{Rт{Cр{Mи{Bн{Cг{x {rк{yу{gп{bо{mн{x</descr>
-            <price type="QuestPointPrice">
-              <questpoint>200</questpoint>
-            </price>
-          </node>
-          <node type="ObjectQuestArticle">
-            <vnum>108</vnum>
-            <name>colourless</name>
-            <descr>Рестринг купон</descr>
-            <price type="QuestPointPrice">
-              <questpoint>50</questpoint>
+              <questpoint>1000</questpoint>
             </price>
           </node>
         </services>
@@ -471,6 +553,8 @@
       <description>Юная  русалка  сидит на краю фонтана, свесив длинные золотистые волосы в
 воду.  Она так прекрасна, что многие доблестные герои отдали свои жизни,
 выполняя ее капризы.
+Ты тоже можешь взять у нее задание командой {y{lRквест попросить{lEquest request{x.
+Еще полезно прочесть справку по темам &apos;{hhквестор{x&apos; и &apos;{hhвиды заданий{x&apos;.
 </description>
       <detection add="evil invis hidden dark_vision"/>
       <group>3000</group>
@@ -500,40 +584,17 @@
       <behavior type="Healer">
         <services>
           <node type="SpellHealService">
-            <descr>излечить легкие раны</descr>
-            <name>light</name>
-            <price type="CoinPrice">
-              <gold>10</gold>
+            <descr>излечить раны</descr>
+            <name>wounds</name>
+            <rname>раны</rname>
+            <price type="CustomHealPrice">
             </price>
-            <spell>cure light</spell>
-          </node>
-          <node type="SpellHealService">
-            <descr>излечить серьезные раны</descr>
-            <name>serious</name>
-            <price type="CoinPrice">
-              <gold>15</gold>
-            </price>
-            <spell>cure serious</spell>
-          </node>
-          <node type="SpellHealService">
-            <descr>излечить очень серьезные раны</descr>
-            <name>critic</name>
-            <price type="CoinPrice">
-              <gold>25</gold>
-            </price>
-            <spell>cure critical</spell>
-          </node>
-          <node type="SpellHealService">
-            <descr>healing spell</descr>
-            <name>heal</name>
-            <price type="CoinPrice">
-              <gold>50</gold>
-            </price>
-            <spell>heal</spell>
+            <spell>master healing</spell>
           </node>
           <node type="SpellHealService">
             <descr>вылечить слепоту</descr>
             <name>blind</name>
+            <rname>слепоту</rname>
             <price type="CoinPrice">
               <gold>20</gold>
             </price>
@@ -542,6 +603,7 @@
           <node type="SpellHealService">
             <descr>вылечить чуму</descr>
             <name>disease</name>
+            <rname>чуму</rname>
             <price type="CoinPrice">
               <gold>15</gold>
             </price>
@@ -550,6 +612,7 @@
           <node type="SpellHealService">
             <descr>вылечить отравление</descr>
             <name>poison</name>
+            <rname>яд</rname>
             <price type="CoinPrice">
               <gold>25</gold>
             </price>
@@ -558,6 +621,7 @@
           <node type="SpellHealService">
             <descr>снять проклятие</descr>
             <name>uncurse</name>
+            <rname>проклятие</rname>
             <price type="CoinPrice">
               <gold>50</gold>
             </price>
@@ -565,37 +629,29 @@
           </node>
           <node type="SpellHealService">
             <descr>снять усталость</descr>
+            <rname>усталость</rname>
             <name>refresh</name>
             <price type="CoinPrice">
               <gold>5</gold>
             </price>
             <spell>refresh</spell>
           </node>
-          <node type="SpellHealService">
-            <descr>master heal spell</descr>
-            <name>master</name>
-            <price type="CoinPrice">
-              <gold>200</gold>
-            </price>
-            <spell>master healing</spell>
-          </node>
           <node type="ManaHealService">
             <descr>восстановить ману</descr>
             <name>mana</name>
-            <price type="CoinPrice">
-              <gold>10</gold>
+            <rname>ману</rname>
+            <price type="CustomHealPrice">
             </price>
             <words>candamira</words>
-            <enhanced>false</enhanced>
           </node>
-          <node type="ManaHealService">
-            <descr>восстановить 300 маны</descr>
-            <name>energize</name>
+          <node type="SpellHealService">
+            <descr>благословить</descr>
+            <rname>благо</rname>
+            <name>bless</name>
             <price type="CoinPrice">
-              <gold>200</gold>
+              <gold>300</gold>
             </price>
-            <words>energizer</words>
-            <enhanced>true</enhanced>
+            <spell>bless</spell>
           </node>
         </services>
       </behavior>
@@ -603,7 +659,7 @@
       <damage>10d20+50</damage>
       <default_pos>stand</default_pos>
       <description>Хотя  лекарь  оставил  свою  практику - он тихо протягивает руку помощи.
-Набери &apos;heal&apos; для того, чтобы увидеть перечень заклинаний.
+Набери {y{hc{lRлечить{lEheal{x, чтобы увидеть, чем он может тебе помочь за деньги.
 </description>
       <detection add="invis hidden"/>
       <hit>1d1+29099</hit>
@@ -2286,40 +2342,17 @@
       <behavior type="Healer">
         <services>
           <node type="SpellHealService">
-            <descr>излечить легкие раны</descr>
-            <name>light</name>
-            <price type="CoinPrice">
-              <gold>10</gold>
+            <descr>излечить раны</descr>
+            <name>wounds</name>
+            <rname>раны</rname>
+            <price type="CustomHealPrice">
             </price>
-            <spell>cure light</spell>
-          </node>
-          <node type="SpellHealService">
-            <descr>излечить серьезные раны</descr>
-            <name>serious</name>
-            <price type="CoinPrice">
-              <gold>15</gold>
-            </price>
-            <spell>cure serious</spell>
-          </node>
-          <node type="SpellHealService">
-            <descr>излечить очень серьезные раны</descr>
-            <name>critic</name>
-            <price type="CoinPrice">
-              <gold>25</gold>
-            </price>
-            <spell>cure critical</spell>
-          </node>
-          <node type="SpellHealService">
-            <descr>healing spell</descr>
-            <name>heal</name>
-            <price type="CoinPrice">
-              <gold>50</gold>
-            </price>
-            <spell>heal</spell>
+            <spell>master healing</spell>
           </node>
           <node type="SpellHealService">
             <descr>вылечить слепоту</descr>
             <name>blind</name>
+            <rname>слепоту</rname>
             <price type="CoinPrice">
               <gold>20</gold>
             </price>
@@ -2328,6 +2361,7 @@
           <node type="SpellHealService">
             <descr>вылечить чуму</descr>
             <name>disease</name>
+            <rname>чуму</rname>
             <price type="CoinPrice">
               <gold>15</gold>
             </price>
@@ -2336,6 +2370,7 @@
           <node type="SpellHealService">
             <descr>вылечить отравление</descr>
             <name>poison</name>
+            <rname>яд</rname>
             <price type="CoinPrice">
               <gold>25</gold>
             </price>
@@ -2344,6 +2379,7 @@
           <node type="SpellHealService">
             <descr>снять проклятие</descr>
             <name>uncurse</name>
+            <rname>проклятие</rname>
             <price type="CoinPrice">
               <gold>50</gold>
             </price>
@@ -2351,37 +2387,29 @@
           </node>
           <node type="SpellHealService">
             <descr>снять усталость</descr>
+            <rname>усталость</rname>
             <name>refresh</name>
             <price type="CoinPrice">
               <gold>5</gold>
             </price>
             <spell>refresh</spell>
           </node>
-          <node type="SpellHealService">
-            <descr>master heal spell</descr>
-            <name>master</name>
-            <price type="CoinPrice">
-              <gold>200</gold>
-            </price>
-            <spell>master healing</spell>
-          </node>
           <node type="ManaHealService">
             <descr>восстановить ману</descr>
             <name>mana</name>
-            <price type="CoinPrice">
-              <gold>10</gold>
+            <rname>ману</rname>
+            <price type="CustomHealPrice">
             </price>
             <words>candamira</words>
-            <enhanced>false</enhanced>
           </node>
-          <node type="ManaHealService">
-            <descr>восстановить 300 маны</descr>
-            <name>energize</name>
+          <node type="SpellHealService">
+            <descr>благословить</descr>
+            <rname>благо</rname>
+            <name>bless</name>
             <price type="CoinPrice">
-              <gold>200</gold>
+              <gold>300</gold>
             </price>
-            <words>energizer</words>
-            <enhanced>true</enhanced>
+            <spell>bless</spell>
           </node>
         </services>
       </behavior>
@@ -2393,6 +2421,8 @@
 мира и доброты мир Богов. На ней белые одежды, которые передают простоту
 ее  души.  Она  стоит  у  алтаря  и полностью сосредоточена на исцелении
 больных.
+
+Набери {y{hc{lRлечить{lEheal{x, чтобы увидеть, чем она может тебе помочь.
 </description>
       <detection add="invis magic hidden dark_vision"/>
       <hit>25d11+26942</hit>
@@ -2941,30 +2971,6 @@
       </type>
       <wear_flags>take</wear_flags>
       <weight>10</weight>
-    </node>
-    <node name="3018">
-      <affects>
-        <node>
-          <apply to="hitroll">3</apply>
-          <bits table="affect_flags"></bits>
-        </node>
-        <node>
-          <apply to="damroll">5</apply>
-          <bits table="affect_flags"></bits>
-        </node>
-      </affects>
-      <description>Искусное изображение (picture) скарабея валяется никому не нужное.</description>
-      <gender>m</gender>
-      <material>paper</material>
-      <name>picture рисунок</name>
-      <properties>
-        <node name="name">scarab скарабей</node>
-        <node name="short">скараб|ей|ея|ею|ея|еем|ее</node>
-      </properties>
-      <short_descr>рисун|ок|ка|ку|ок|ком|ке скарабея</short_descr>
-      <type name="recipe">
-      </type>
-      <wear_flags>take</wear_flags>
     </node>
     <node name="3020">
       <condition>90</condition>
@@ -10412,6 +10418,7 @@ reads...   ???.
 (наверное   их   начищают  ежедневно)  в  старинных  доспехах  стоят  около
 противоположной  стены. Большие мечи и серебряные щиты красиво развешаны по
 стенам.
+{W    Гравированная табличка (plaque) привлекает к себе внимание.{x
 </description>
       <exits>
         <node name="east">
@@ -10420,6 +10427,19 @@ reads...   ???.
           <target>3075</target>
         </node>
       </exits>
+      <extraDescr>
+        <node keyword="plaque табличка">Ты можешь выкупить у гильдмастера свою смерть за {Y50{x квестовых единиц.
+Просто скажи ему слово {gсмерть{x ({gdeath{x).
+
+Если дать гильдмастеру свежесозданную катану, то за {Y100{x квестовых единиц
+он наделит ее {gособыми свойствами{x. С этого момента сила катаны будет расти
+с каждым ударом. 
+
+Если отдать ему уже заточенную катану, то за {Y300{x квестовых единиц гильдмастер
+этот меч твоей {gличной собственностью{x. Никто, кроме тебя, не сможет к ней
+прикоснуться. Такая катана не будет повреждаться в бою или тонуть.
+</node>
+      </extraDescr>
       <flags>no_vanish no_mob indoors law nosummon</flags>
       <guilds>samurai </guilds>
       <name>Святыня Самураев</name>

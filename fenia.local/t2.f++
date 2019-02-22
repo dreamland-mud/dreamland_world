@@ -1,0 +1,390 @@
+tknifeInit = function() {
+	var TattooKnife;
+	
+	TattooKnife = function(vnum) {
+		this = .get_obj_index(vnum);
+		
+		// Пауза на указанное число пульсов. Татуаж прерывается, если изменится
+		// положение тел чаров, кто-то покинет комнату или умрет.
+		sleep = function(pulses, ch, vict) {
+			var i, old_room;
+			
+			ch.wait = pulses;
+			vict.wait = pulses;
+			
+			old_room = ch.in_room;
+			for (i = 0; i < pulses; i = i + 1) {
+				.scheduler.yield();   
+				if (ch.position > .tables.position_table.sit) {
+					if (ch == vict) {
+						ch.act("Ты поднимаешься на ноги, прекращая наносить на себя татуировку.");
+						ch.recho("%1$^C1 поднимается на ноги, прекращая наносить на себя татуировку.", ch);
+					} else {
+						ch.act("Ты поднимаешься на ноги, прекращая наносить татуировку на %C4.", vict);
+						vict.act("%1$^C1 поднимается на ноги, прекращая наносить на тебя татуировку.", ch);
+						ch.rvecho(vict, "%1$^C1 поднимается на ноги, прекращая наносить татуировку на %2$C4.", ch, vict);
+					}
+					throw "tattoo ch stood up";
+				}
+				if (vict.position > .tables.position_table.sit) {
+					vict.act("Ты поднимаешься на ноги, прерывая процесс нанесения татуировки.");
+					vict.recho("%1$^C1 поднимается на ноги, прерывая процесс нанесения татуировки.", vict);
+					throw "tattoo vict stood up";
+				}
+				if (ch.position <= .tables.position_table.sleep
+					 || vict.position < .tables.position_table.sleep) 
+				{
+					if (ch == vict) {
+						ch.act("Ты прекращаешь таттуаж.");
+						ch.recho("%1$^C1 прекращает таттуаж.", ch);
+					} else {
+						ch.act("Ты прекращаешь наносить татуировку на %C4.", vict);
+						vict.act("%1$^C1 прекращает наносить на тебя татуировку.", ch);
+						ch.rvecho(vict, "%1$^C1 прекращает наносить татуировку на %2$C4.", ch, vict);
+					}
+					throw "tattoo ch or vict not well";
+				}
+				if (ch.in_room != vict.in_room) {
+					ch.act("Процесс нанесения татуировки был грубо прерван.");
+					vict.act("%1$^C1 прекращает процесс татуировки.", ch);
+					old_room.ppl.sub(ch,vict).call.act("%1$^C1 прекращает процесс татуировки.", ch);
+					throw "tattoo ch or vict left the room";
+				}
+			}	   
+		};
+		
+		// Находит существующую татуировку с заданным рисунком. TODO
+		getTattooEquip = function(vict, pic) {
+		    var obj, short;
+		    
+		    short = pic.pIndexData.property("short");
+		    for (obj = vict.carrying; obj != null; obj = obj.next_content) {
+//				        if (obj.wear_loc != "none" && obj.vnum == 77 && obj.short_descr == short)
+//				            return obj;
+		    }
+		    return null;
+		};
+		
+		// Триггер для команды use для татуировочного ножа.
+		// Возвращает true, чтобы не выдалась стандартное сообщение о "вертит в руках".
+		onUse = function(obj, ch, args) {
+			return true;
+		};
+
+		// Асинхронный триггер, вызовется в феневом потоке в следующий пульс после use.
+		postUse = function(obj, ch, args) {
+			var vict, where, wearloc, skill, needMirror, i, equip_wearloc, equip;
+			var tattoo, pic, ink, profession;
+			
+			if (obj.wear_loc == "none") {
+				ch.act("Сперва следует взять %O4 в руку.", obj);
+				return;
+			}
+			
+			// Проверка аргументов: поиск жертвы.
+			vict = ch.get_char_room(args.getOneArgument());
+			if (vict == null) {
+				ch.act("Жертва не найдена, целься получше!");
+				ch.act("Например: {yисп{D нож персонаж {yплечо{x.");
+				ch.recho("%1$^C1 угрожающе размахивает %2$O5.", ch, obj);
+				return;
+			}
+			
+			// Нельзя татуировать мобов.
+			if (vict.is_npc()) {
+				ch.act("%1$^C1 не оценит твоих усилий.", vict);
+				return;
+			}
+			
+			// Проверка положения цели татуировщика и жертвы.
+			if (ch.position > .tables.position_table.sit) {
+				ch.act("Нанести татуировку стоя довольно проблематично.");
+				return;
+			}
+
+			if (vict.position > .tables.position_table.sit) {
+				ch.act("%1$^C1 долж%1$Gно|ен|на сперва сесть.", vict);
+				return;
+			}
+			
+			// 3й аргумент для use: слот экипировки, веарлокация. Поиск ее и умения.
+			// TODO: это все будут поля структуры CraftTattoo.
+			where = args.cutOneArgument();
+			if (where.is_name("правое запястье right wrist")) {
+				wearloc = "tat_wrist_r";
+				equip_wearloc = "wrist_r";
+				skill = .Skill("wrist tattoo");
+				where = "прав|ое|ого|ому|ое|ым|ом запясть|е|я|ю|е|ем|е";
+				needMirror = false;
+			} else if (where.is_name("левое запястье left wrist")) {
+				wearloc = "tat_wrist_l";
+				equip_wearloc = "wrist_l";
+				skill = .Skill("wrist tattoo");
+				where = "лев|ое|ого|ому|ое|ым|ом запясть|е|я|ю|е|ем|е";
+				needMirror = false;
+			} else if (where.is_name("плечи плечо shoulders arms"))  {
+				wearloc = "tat_arms";
+				equip_wearloc = "arms";
+				skill = .Skill("shoulder tattoo");
+				where = "плеч|о|а|у|о|ом|е";
+				needMirror = true;
+			} else if (where.is_name("лицо face"))  {
+				wearloc = "tat_face";
+				equip_wearloc = "face";
+				skill = .Skill("face tattoo");
+				where = "лиц|о|а|у|о|ом|е";
+				needMirror = true;								
+			} else {
+				ch.act("Укажи, куда именно ты хочешь нанести татуировку.");
+				ch.act("Примеры: правое запястье, плечо, лев зап.");
+				if (ch == vict) 
+					ch.recho("%1$^C1 бессмысленно тычет себя %2$O5.", ch, obj);
+				else {
+					vict.act("%1$^C1 бессмысленно тычет в тебя %2$O5.", ch, obj);
+					ch.rvecho(vict, "%1$^C1 тычет %2$O5 в %3$C4.", ch, obj, vict);
+				}
+				return;
+			}
+			
+			// Умение не найдено/не загружено?
+			if (skill == null) {
+				ch.act("Секрет нанесения татуировки на это место пока недоступен.");
+				return;
+			}
+			
+			// Умение недоступно персонажу? (не разучено, мал уровень)
+			if (!skill.usable(ch) || skill.effective(ch) <= 1) {
+				ch.act("Ты не владеешь искусством '%N1'.", skill.nameRus);
+				if (ch == vict) {
+					ch.recho("%1$^C1 пытается нанести себе татуировку на %2$N6, но опыта явно не хватает.", ch, where);
+				} else {
+					vict.act("%1$^C1 пытается нанести тебе татуировку на %2$N6, но опыта явно не хватает.", ch, where);
+					ch.rvecho(vict, "%1$^C1 пытается нанести %2$C3 татуировку на %3$N6, но опыта явно не хватает.", ch, vict, where);
+				}
+				return;
+			}
+			
+			// У жертвы нету такого слота? (например, оторвало руку)
+			if (!vict.hasWearloc(wearloc)) {
+				if (ch == vict)
+					ch.act("Ты не видишь на своем теле места под татуировку на %N6.", where);
+				else
+					ch.act("Ты не видишь на теле %C2 места под татуировку на %N6.", vict, where);
+				return;
+			}
+
+			// В этом слоте уже есть другая татуировка?
+			tattoo = vict.get_eq_char(wearloc);
+			if (tattoo != null) {
+				ch.act("Ты безуспешно пытаешься нанести татуировку поверх %O2.", tattoo);
+				if (ch == vict) 
+					ch.recho("%1$^C1 пытается отковырять с себя %2$O4.", ch, tattoo);
+				else {
+					vict.act("%1$^C1 пытается отковырять с тебя %2$O4.", ch, tattoo);
+					ch.rvecho(vict, "%1$^C1 пытается отковырять с %3$C2 %2$O4.", ch, tattoo, vict);
+				}
+				return;
+			}
+			
+			// Некоторые слоты требуют наличия зеркала, если татуируешь сам себя.
+			if (ch == vict && needMirror) {
+				if (ch.get_obj_here("mirror") == null 
+					&& ch.get_obj_here("зеркал") == null
+					&& !ch.in_room.description.match("зеркал|mirror")) {
+						ch.act("Тебе необходимо зеркало, чтобы нанести себе татуировку на %N6.", where);
+						ch.recho("%1$^C1 вертится и так и сяк, пытаясь попасть по себе %2$O5.", ch, obj);
+						return;
+					}
+			}
+			
+			// Слот должен быть не закрыт одеждой.
+			equip = vict.get_eq_char(equip_wearloc);
+			if (equip != null) {
+			    ch.act("Ты безуспешно пытаешься нанести татуировку поверх %O2.", equip);
+			    ch.recho("%^C1 тычет %O5 в %O4.", ch, obj, equip);
+			    return;
+			}
+			
+			// Поиск специальных чернил в инвентаре татуировщика.
+			ink = ch.get_liquid_carry("ink");
+			if (ink == null) {
+				ch.act("Тебе необходимо иметь в инвентаре специальные чернила.");
+				return;
+			}
+			if (ink.value1 == 0) {
+				ch.act("В %O6 совсем пусто.", ink);
+				return;
+			}
+			
+			// Поиск рисунка татуировки (рецепта) в инвентаре татуировщика.
+			pic = ch.get_recipe_carry(.tables.recipe_flags.tattoo);
+			if (pic == null) {
+				ch.act("Тебе необходимо иметь в инвентаре рисунок татуировки.");
+				return;
+			}
+			// Проверка уровня татуировщика, пациента и рисунка.
+			if (pic.level > ch.getModifyLevel()) {
+			    ch.act("Этот рисунок слишком сложен для тебя.");
+			    return;
+			}
+			if (pic.level > vict.getModifyLevel()) {
+			    ch.act("Этот рисунок можно наносить только на тех, кто достиг %1$dго уровня в основной профессии.", pic.level);
+			    return;
+			}
+			
+			// Ограничение на два одинаковых рисунка.
+			tattoo = getTattooEquip(vict, pic);
+			if (tattoo != null) {
+			    if (ch == vict) 
+				ch.act("У тебя уже есть татуировка %O2.", tattoo);
+			    else
+				ch.act("У %C2 уже есть татуировка %O2.", vict, tattoo);
+			    return;
+			}
+
+			// Процесс пошел. Если при выходе из очередного sleep татуировщик
+			// или жертва встанут, покинут комнату или умрут - процесс прервется.
+			ch.act("Ты обмакиваешь %1$O4 в %2$O4.", obj, ink);
+			ch.recho("%1$^C1 обмакивает %2$O4 в %3$O4.", ch, obj, ink);
+			sleep(4, ch, vict);
+			
+			if (ch == vict) {
+				ch.act("Ты прикладываешь %1$O4 к %N3.", obj, where);
+				ch.recho("%1$^C1 прикладывает %2$O4 к своему %3$N3.", ch, obj, where);
+			} else {
+				ch.act("Ты прикладываешь %1$O4 к %2$N3 %3$C2.", obj, where, vict);
+				vict.act("%1$^C1 прикладывает %2$O4 к твоему %3$N3.", ch, obj, where);
+				ch.rvecho(vict, "%1$^C1 прикладывает %2$O4 к %3$N3 %4$C2.", ch, obj, where, vict);
+			}
+			sleep(4, ch, vict);
+			
+			// Длительность нанесения татуировки зависит от сложности рисунка,
+			// которая задается в поле рецепта value2.
+			for (i = 0; i < pic.value2; ) {
+				// Снова проверяем, можно ли продолжить процесс.
+				if (vict.get_eq_char(wearloc) != null
+					|| !vict.hasWearloc(wearloc)
+					|| pic.carried_by != ch
+					|| ink.carried_by != ch
+					|| obj.wearloc == "none"
+					|| obj.carried_by != ch) {
+					 ch.act("Ты прекращаешь наносить татуировку.");
+					 ch.recho("%1$^C1 прекращает наносить татуировку.", ch);
+					 return;
+				 }
+					
+				// Расходуем немного чернил.
+				ink.value1 = ink.value1 - 1;
+				if (ink.value1 <= 0) {
+					ink.value1 = 0;
+					ch.act("В %O6 совсем пусто.", ink);
+					ch.recho("У %C2 кончились чернила.", ch);
+					return;
+				}
+				
+				// Вывод разных сообщений для антуража.
+				if (.chanceOneOf(4)) {
+					var picName;
+					// Превратить "рисунок скарабея" в "скарабея";
+					picName = pic.short_descr.ruscase(1).cutOneArgument();
+					
+					if (ch == vict) {
+						ch.act("Поглядывая на рисунок, ты наносишь себе татуировку %1$N1.", picName);
+						ch.recho("Поглядывая на рисунок, %1$C1 наносит себе татуировку %2$N1.", ch, picName);
+					} else {
+						ch.act("Поглядывая на рисунок, ты наносишь %1$C3 татуировку %2$N1.", vict, picName);
+						vict.act("Поглядывая на рисунок, %1$C1 наносит тебе татуровку %2$N1.", ch, picName);
+						ch.rvecho(vict, "Поглядывая на рисунок, %1$C1 наносит %2$C3 татуировку %3$N1.", ch, vict, picName);
+					}
+				}
+				else if (.chanceOneOf(3)) {
+					if (ch == vict) {
+						ch.act("Тщательно надавливая, ты выводишь на своей коже %1$O4.", pic);
+						ch.recho("Тщательно надавливая, %2$C1 выводит на своей коже %1$O4.", pic, ch);
+					} else {
+						ch.act("Тщательно надавливая, ты выводишь на коже %1$C2 %2$O4.", vict, pic);
+						vict.act("Тщательно надавливая, %1$C1 выводит на твоей коже %2$O4.", ch, pic);
+						ch.rvecho(vict, "Тщательно надавливая, %1$C1 выводит на коже %2$C2 %3$O4.", ch, vict, pic);
+					}
+				} else if (.chanceOneOf(2)) {
+					ch.act("Ты делаешь надрезы на %1$N6, позволяя чернилам проникнуть под кожу.", where);
+					ch.recho("%1$^C1 делает надрезы на %2$N6, позволяя чернилам проникнуть под кожу.", ch, where);
+				} else {
+					if (ch == vict) {
+						ch.act("Ты проводишь %1$O5 по своей коже, оставляя царапины.", obj);
+						ch.recho("%1$^C1 проводит %2$O5 по своей коже, оставляя царапины.", ch, obj);
+					} else {
+						ch.act("Ты проводишь %1$O5 по коже %2$C2, оставляя царапины.", obj, vict);
+						vict.act("%1$^C1 проводит %2$O5 по твоей коже, оставляя царапины.", ch, obj);
+						ch.rvecho(vict, "%1$^C1 проводит %2$O5 по коже %3$C2, оставляя царапины.", ch, obj, vict);
+					}
+				}
+
+				sleep(4, ch, vict);
+				
+				// Невдача спiткала...
+				if (.number_percent() > skill.effective(ch) + ch.cur_dex)  {
+					if (ch == vict) {
+						ch.act("Ты делаешь неловкое движение и слишком сильно {rранишь{x себя!");
+						ch.recho("%1$^C1 делает неловкое движение и слишком сильно {rранит{x себя!", ch);
+					} else {
+						ch.act("Ты делаешь неловкое движение и слишком сильно {rранишь{x %1$C4!", vict);
+						vict.act("%1$^C1 делает неловкое движение и слишком сильно {rранит{x тебя!", ch);
+						ch.rvecho(vict, "%1$^C1 делает неловкое движение и слишком сильно {rранит{x %2$C4!", ch, vict);
+					}
+					ch.rawdamage(vict, vict.hit / 10, "slash");
+					// Учимся на неудачах.
+					skill.improve(ch, false, vict);
+					return;
+				}
+				
+				// Удалось чему-то научиться на успехах?
+				skill.improve(ch, true, vict);
+				sleep(4, ch, vict);
+				// Есть прогресс, увеличиваем счетчик.
+				i = i + 1;
+			}
+
+			// Создание и конфигурация татиуровки.
+			tattoo = .get_obj_index(77).create().obj_to_char(vict);
+			tattoo.short_descr = pic.pIndexData.property("short");
+			tattoo.name = pic.pIndexData.property("name") + " " + tattoo.name;
+			tattoo.long = pic.pIndexData.property("long");
+			if (pic.pIndexData.property("description") != null)
+			    tattoo.set_extra_descr(tattoo.name, pic.pIndexData.property("description"));
+			
+			ch.in_room.ppl.call.act("{GТатуировка %O2{G готова!{x", tattoo);
+			.wiznet("Tattoo: " + ch.name + " tattooes " + wearloc + " on " + vict.name);
+			
+			// Начисление опыта, который в идеале должен зависеть от истории.			
+			profession = .CraftProfession("tattooist");
+			profession.gainExp(ch, .number_range(90, 110));
+//            profession.rememberUsage(ch, vict, wearloc);
+			
+			// Перенос всех аффектов с рисунка на новую татуировку. 
+			// Обработка аффектов, зависящих от уровня носителя.
+			var mult, div, adaptive, mod;
+			adaptive = pic.pIndexData.property("levelAdaptive");
+			div = pic.pIndexData.property("div", 1);
+			mult = pic.pIndexData.property("mult", 1);
+			mod = vict.getModifyLevel() * mult / div;
+			
+			pic.affected.forEach(function (tattoo, mod, adaptive) {
+			    if (location != .tables.apply_flags.none && adaptive != null) {
+				modifier = mod;
+			    }
+			    tattoo.affectAdd(this);
+			}, tattoo, mod, adaptive);
+
+			// Время жизни татуировки в минутах (должно еще зависеть от чернил).
+			tattoo.timer = 24 * 60 * profession.getLevel(ch) * profession.getLevel(ch);
+			// Надеваем на чара на нужное место.
+			tattoo.equip(wearloc);
+
+		};
+	};
+	
+	TattooKnife(33050);
+}
+
+

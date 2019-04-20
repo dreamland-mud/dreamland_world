@@ -20,7 +20,7 @@
     </node>
   </classes>
   <command type="SKILL(tame)">
-    <hint>(рейнджеры) приручить аггресивных животных</hint>
+    <hint>(рейнджеры) приручить агрессивных животных</hint>
     <name>tame</name>
     <position>fight</position>
     <russian>
@@ -29,7 +29,11 @@
   </command>
   <dammsg></dammsg>
   <group>nature</group>
-  <help level="-1" type="SkillHelp">Tame используется на агрессивных монстров как перманентный калм.
+  <help level="-1" type="SkillHelp">
+%FMT% *(calm,приручить)* _жертва_
+
+Опытные рейнджеры могут приручать агрессивных животных.
+По действию схоже с умением 'спокойствие' (calm).
   </help>
   <mob>
     <forbidden>true</forbidden>

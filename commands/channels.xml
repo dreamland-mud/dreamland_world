@@ -13,6 +13,7 @@
       <position>dead</position>
       <positionOther>dead</positionOther>
       <trustSpeak>106</trustSpeak>
+      <cat>comm</cat>
     </node>
     <node type="PersonalChannel">
       <extra>keep_hide ghost</extra>
@@ -27,6 +28,7 @@
       <position>dead</position>
       <positionOther>dead</positionOther>
       <trustSpeak>106</trustSpeak>
+      <cat>comm</cat>
     </node>
     <node type="RoomChannel">
       <extra>keep_hide ghost</extra>
@@ -40,6 +42,7 @@
       <position>dead</position>
       <positionOther>dead</positionOther>
       <trustSpeak>104</trustSpeak>
+      <cat>comm</cat>
     </node>
     <node type="AreaChannel">
       <extra>keep_hide ghost</extra>
@@ -53,6 +56,7 @@
       <position>dead</position>
       <positionOther>dead</positionOther>
       <trustSpeak>106</trustSpeak>
+      <cat>comm</cat>
     </node>
     <node type="WorldChannel">
       <aliases>
@@ -75,6 +79,7 @@
       </russian>
       <trustHear>102</trustHear>
       <trustSpeak>102</trustSpeak>
+      <cat>comm</cat>
     </node>
     <node type="WorldChannel">
       <aliases>
@@ -97,6 +102,7 @@
       </russian>
       <trustHear>110</trustHear>
       <trustSpeak>110</trustSpeak>
+      <cat>comm</cat>
     </node>
     <node type="SpeechChannel">
       <aliases>
@@ -121,6 +127,7 @@
         <node>сказать</node>
       </russian>
       <translate>true</translate>
+      <cat>comm</cat>
     </node>
     <node type="WorldChannel">
       <confirmed>true</confirmed>
@@ -148,6 +155,7 @@
       </russian>
       <soap>true</soap>
       <translate>true</translate>
+      <cat>comm</cat>
     </node>
     <node type="WorldChannel">
       <aliases>
@@ -178,6 +186,7 @@
       </russian>
       <soap>true</soap>
       <translate>true</translate>
+      <cat>comm</cat>
     </node>
     <node type="WorldChannel">
       <extra>keep_hide ghost</extra>
@@ -194,6 +203,7 @@
         <node>квестканал</node>
       </russian>
       <trustSpeak>102</trustSpeak>
+      <cat>comm</cat>
     </node>
     <node type="WorldChannel">
       <extra>keep_hide ghost</extra>
@@ -215,6 +225,7 @@
       </russian>
       <soap>true</soap>
       <translate>true</translate>
+      <cat>comm</cat>
     </node>
     <node type="WorldChannel">
       <extra>keep_hide ghost</extra>
@@ -238,6 +249,7 @@
       </russian>
       <soap>true</soap>
       <translate>true</translate>
+      <cat>comm</cat>
     </node>
     <node type="AreaChannel">
       <deafen>true</deafen>
@@ -263,6 +275,7 @@
       </russian>
       <soap>true</soap>
       <translate>true</translate>
+      <cat>comm</cat>
     </node>
     <node type="AreaChannel">
       <deafen>true</deafen>
@@ -286,6 +299,7 @@
       </russian>
       <soap>true</soap>
       <translate>true</translate>
+      <cat>comm</cat>
     </node>
     <node type="WorldChannel">
       <aliases>
@@ -316,6 +330,7 @@
         <node>воззвать</node>
       </russian>
       <trustHear>102</trustHear>
+      <cat>comm</cat>
     </node>
     <node type="EmoteChannel">
       <aliases>
@@ -341,13 +356,14 @@
       <russian>
         <node>эмоция</node>
       </russian>
+      <cat>comm</cat>
     </node>
     <node type="RaceChannel">
       <aliases>
         <node>racetalk</node>
       </aliases>
       <extra>keep_hide ghost manacles</extra>
-      <help level="-1" type="CommandHelp">Канал *(rtalk,расговор)* предназначен для общения с представителями своей расы.
+      <help level="-1" type="CommandHelp">Канал *(rtalk,расговорить)* предназначен для общения с представителями своей расы.
 Его слышат только ваши соплеменники и Боги.
       </help>
       <hint>общение с собратьями по расе</hint>
@@ -369,6 +385,7 @@
       </russian>
       <soap>true</soap>
       <translate>true</translate>
+      <cat>comm</cat>
     </node>
     <node type="TellChannel">
       <deafen>true</deafen>
@@ -391,6 +408,7 @@
       <storeAFK>true</storeAFK>
       <storeDisco>true</storeDisco>
       <storeFight>true</storeFight>
+      <cat>comm</cat>
     </node>
     <node type="PageChannel">
       <aliases>
@@ -422,6 +440,7 @@
         <node>шар</node>
       </russian>
       <soap>true</soap>
+      <cat>comm</cat>
     </node>
     <node type="ReplyChannel">
       <deafen>true</deafen>
@@ -445,12 +464,13 @@
       <storeAFK>true</storeAFK>
       <storeDisco>true</storeDisco>
       <storeFight>true</storeFight>
+      <cat>comm</cat>
     </node>
     <node type="WorldChannel">
       <extra>keep_hide manacles</extra>
       <help level="-1" type="CommandHelp">Большинство каналов предназначено только для разговоров от имени
 персонажа. Если необходимо сказать что-то вне своей роли или обсудить
-рл (real life), используйте канал *(ooc,треп)*. Именно здесь надо обсуждать
+рл (real life), используйте канал *(ooc,трепаться)*. Именно здесь надо обсуждать
 лаги, пинги, проблемы со связью и прочие не относящиеся к миру вещи.
 Избегайте посылать сообщения в неправильный канал.
        </help>
@@ -475,10 +495,11 @@
         <node>оос</node>
       </russian>
       <soap>true</soap>
+      <cat>comm</cat>
     </node>
   </channels>
   <extra>keep_hide ghost afk</extra>
-  <help keyword="communication общение" level="-1" ref="gossip grats ic music page reply say shout tell yell" type="CommandHelp">Команда *(channels,каналы)* показывает список всех доступных каналов и их состояние
+  <help keyword="communication общение" level="-1" ref="gossip grats ic music page reply say shout tell yell" type="CommandHelp" labels="comm">Команда *(channels,каналы)* показывает список всех доступных каналов и их состояние
 (ВКЛ/ВЫКЛ). Также отображается режим глухоты (deaf) и тишины (quiet).
 
 Разновидности каналов:
@@ -490,11 +511,11 @@
 *(orb all  ,шар все  )*- существо из твоего хрустального шара передаст сообщения
            в другие хрустальные шары по всему миру 
 *(cb       ,кк       )*- в этом канале общаются с соклановиками (%H% [(cb,кк)])
-*(rtalk    ,расговор )*- канал для общения с соплеменниками (%H% [(rtalk,расговор)])
+*(rtalk    ,расговор )*- канал для общения с соплеменниками (%H% [(rtalk,расговорить)])
 *(gtell    ,гговорить)*- общение со своей группой (%H% [(gtell,гговорить)])
 *(pray     ,воззвать )*- воззвать с богам с просьбой о помощи (%H% [(pray,воззвать)])
 *(auction  ,аукцион  )*- сообщения аукциона, реклама своего товара (%H% [(auction,аукцион)])
-*(ooc      ,треп     )*- канал для внеролевого общения (%H% [(ooc,треп)])
+*(ooc      ,треп     )*- канал для внеролевого общения (%H% [(ooc,трепаться)])
 
 =Арийные=: вопли слышны всем в пределах одной арии.
 *(yell     ,вопить   )*- пронзительный крик на всю арию
@@ -524,4 +545,5 @@
   <russian>
     <node>каналы</node>
   </russian>
+  <cat>comm</cat>
 </Command>

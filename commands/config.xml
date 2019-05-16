@@ -416,7 +416,7 @@
         <rname>имяпредмета</rname>
       </node>
       <node type="ConfigElement">
-        <autocmd>false</autocmd>
+        <autocmd>true</autocmd>
         <autolist>false</autolist>
         <autotext>true</autotext>
         <bit table="config_flags">screenreader</bit>
@@ -427,6 +427,16 @@
         <name>screenreader</name>
         <position>dead</position>
         <rname>скринридер</rname>
+        <help type="CommandHelp">
+%FMT%  *(config,режим)* *(screenreader,скринридер)* *%YES%*|*%NO%*
+
+Включает поддержку screen readers. На данный момент в этом режиме:
+%A% не будут отображаться английские имена в скобках у предметов, лежащих на земле
+%A% не будут отображаться английские имена в скобках у мобов
+
+Также рекомендуется выключить английские подсказки имен предметов: *(config,режим)* *(objname,имяпредмета)* *%NO%*.
+%SA% %H% [(score,счет)]
+        </help>
       </node>
       <name>Настройки отображения:</name>
     </node>

@@ -1,0 +1,116 @@
+initdreams = function() {
+    // My "synaesthesia" is the place to be.
+    // Эффект вешается на все комнаты Неоновой Пустоши.
+    var vnum;
+    for (vnum = 8600; vnum <= 8628; vnum = vnum + 1) {
+	var room;
+	
+	room = .get_room_index(vnum);
+	if (room == null)
+	    continue;
+	
+	// Каждый раз при выводе описания игроку подкрашивать некоторые буквы
+	// случайным цветом из набора. Одинаковые буквы красятся одинаковым цветом.
+	room.onDescr = function(ch, descr) {
+	    var i, txt, colors, letters;
+	    
+	    txt = descr;
+	    colors = .tmp.system.RandomArray(
+		.List().add('W', 'G', 'M', 'C', 'R', 'Y', 'B'));
+	    letters = .tmp.system.RandomArray(
+		.List().add('а', 'е', 'р', 'т', 'п', 'и', 'у', 'с'));
+		
+	    for (i = 0; i < 5; i=i+1) {
+		var color, letter;
+		
+		color = colors.random();
+		letter = letters.random();
+		txt = txt.replace(letter, "{" + color + letter + "{x");
+	    }
+	    
+	    return txt;
+	};
+    }
+    
+    // Комплект "костюм танцора морриса". 8600, 8601, 8602, 8603.
+    // Хореографичка 8600 дает недостающие предметы, если перед ней станцевать.
+    .get_mob_index(8600).morrisDancerSet = .List().add(8600, 8601, 8602, 8603);
+    .get_mob_index(8600).doDance = function(mob, ch) {
+	var count;
+	
+	count = 0;
+	// Посчитать каждый предмет из набора по одному разу.
+	for (vnum in morrisDancerSet) {
+	    if (ch.get_obj_carry_vnum(vnum) != null)
+		count = count + 1;
+	}
+	
+	// Если ничего нет - послать гулять дальше.
+	if (count < 1) {
+	    mob.say("Э, нет, так не пойдет.");
+	    mob.say("Чтобы пройти собеседование, тебе нужно доказать, что ты серьезно относишься к традициям танца моррис!"); 
+	    mob.say("Где твой костюм?");
+	    return;
+	}
+	
+	// Если один - похвалить и послать дальше.
+	if (count < 2) {
+	    mob.say("Неплохо как для новичка, но одной вещи из костюма явно недостаточно для сценического образа.");
+	    mob.say("Поищи в деревне, может у кого-то завалялись лишние?");
+	    return;
+	}
+	
+	// Если хотя бы два - дать недостающие.
+	if (count < 4) {
+	    mob.say("Молодец, тебе удалось собрать почти весь костюм.");
+	    mob.say("Я помогу тебе и дам недостающие предметы.");
+	    for (vnum in morrisDancerSet) {
+		if (ch.get_obj_carry_vnum(vnum) == null) {
+		    var obj;
+		    obj = .get_obj_index(vnum).create();
+		    obj.obj_to_char(ch);
+		    ch.act("%^C1 дает тебе %O4.", mob, obj);
+		    ch.recho("%^C1 дает %C3 %O4.", mob, ch, obj);
+		}
+	    }
+
+	}
+	// Похвалить за полный комплект.
+	else {
+	    mob.say("Поздравляю, тебе удалось собрать полный костюм!");
+	}
+	
+	// Рассказать как пользоваться.
+	.scheduler.sleep(4);
+	mob.say("Надень все вещи и почувствуй себя настоящим танцором морриса.");
+	mob.say("Немного практики - и твои движения станут быстрыми и отточенными.");
+    };
+    
+    // Реагирует на танцевальные социалы.
+    .get_mob_index(8600).postSocial = function(mob, ch, victim, social) {
+	if (ch.is_npc())
+	    return;
+	if (victim != null && mob != victim)
+	    return;
+	if (social != "dance" && social != "discodance")
+	    return;
+	if (!mob.can_see_mob(ch))
+	    return;
+	    
+	doDance(mob, ch);
+    };
+    
+    // Реагирует на танцевальные эмоции.
+    .get_mob_index(8600).postEmote = function(mob, ch, msg) {
+	if (ch.is_npc())
+	    return;
+	if (!msg.match("танцует|выплясыва|пляшет|вытанцов|отплясыв"))
+	    return;
+	if (!mob.can_see_mob(ch))
+	    return;
+	    
+	doDance(mob, ch);
+    };
+
+    
+}

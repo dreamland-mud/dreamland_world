@@ -1,0 +1,352 @@
+fireInit = function() {
+if (.tmp.fire == null)
+    .tmp.fire = .Map();
+
+this = .tmp.fire;
+fireVnum = 39001;
+ashVnum = 39002;
+matchCount = 10;
+
+itemBurnProof = function(item) {
+    if (.isset_bit(item.extra_flags, .tables.extra_flags.nosac))
+	return true;
+
+    if (.isset_bit(item.extra_flags, .tables.extra_flags.burn_proof))
+	return true;
+
+    if (.isset_bit(item.extra_flags, .tables.extra_flags.nopurge))
+	return true;
+    
+    if (!.isset_bit(item.wear_flags, .tables.wear_flags.take))
+	return true;
+
+    if (item.owner != "") 
+	return true;
+
+    return false;
+};
+
+itemFlaming = function(item) {
+    if (item.fire_time != null && item.fire_time > 0) {
+	return true;
+    }
+    
+    return false;
+};
+
+itemFlammable = function(item) {
+
+    // no_sac, nopurge, burn_proof are not flamable
+    if (itemBurnProof(item)) {
+	return false;
+    }
+
+    // if not wood
+    if (item.materialBurns() < 1) {
+	return false;
+    }
+    
+    return true;
+};
+	
+createFire = function(room, item) {
+    var fire, time;
+    
+    // fire life
+    time = item.materialBurns();
+
+    fire = room.get_obj_vnum(fireVnum);
+    if (fire != null) {
+	room.ppl.call.act("%1$^O1 разгора%1$nется|ются еще ярче.", fire);
+	fire.fire_time = fire.fire_time + time;
+    }
+    else {
+	fire = .get_obj_index(fireVnum).create();
+	fire.obj_to_room(room);
+	fire.fire_time = time;
+	room.ppl.call.act("%1$^O1 вспыхива%1$nет|ют ярким пламенем.",item);
+    }
+
+    item.extract(true);
+};
+
+createAshes = function(room) {
+    if (room.get_obj_vnum(ashVnum) == null) {
+	var ash;
+
+	ash = .get_obj_index(ashVnum).create();
+	ash.obj_to_room(room);
+	ash.timer = 15;
+    }
+};
+
+.get_obj_index(ashVnum).onUse = function(obj, ch, str) {
+	var victim;
+
+	victim = ch.get_char_room(str);
+	
+	if (victim == null) {
+	    ch.act("Ты посыпаешь голову {Dпеплом{x.");
+	    ch.recho("%1$^C1 посыпает голову {Dпеплом{x.", ch);
+	} else {
+            victim.act("%1$^C1 посыпает твой голову {Dпеплом{x.", ch);
+            ch.act("Ты посыпаешь {Dпеплом{x голову %1$C2.", victim);
+            ch.in_room.ppl.sub(ch,victim).call.act("%1$^C1 посыпает {Dпеплом{x голову %2$C2.", ch, victim);
+        }
+
+   	obj.extract(true);
+	return true;
+};
+
+Matches = function(vnum) {
+    this = .get_obj_index(vnum);
+    
+    onUse = function(obj, ch,str) {
+	var item;
+	
+	// match count
+	if (obj.match_cnt == null) {
+	    obj.match_cnt = .tmp.fire.matchCount;
+	}
+
+	// match is over
+	if (obj.match_cnt == 0) {
+	    ch.act("Ба! Да у тебя спичек не осталось.");
+	    return(true);
+	}
+    
+	item = ch.get_obj_here(str);
+	if (item == null) {
+	    ch.act("Что поджигать будем?");
+	    return true;
+	}
+
+	// if not on floor
+	if (item.carried_by != null) {
+	    ch.act("Ты же не будешь поджигать спички у себя в кармане?");
+	    return(true);
+	}
+	
+	if (.tmp.fire.itemFlaming(item)) {
+	    ch.act("Зачем совать спичку в уже пылающий костер?");
+	    ch.in_room.ppl.sub(ch).call.act("%1$^C1 зачем-то сует спичку в %2$O4.", ch, item);
+	}
+	else if (.tmp.fire.itemFlammable(item)) {
+	    ch.act("Ты чиркаешь спичкой и поджигаешь %1$O4.", item);
+	    ch.in_room.ppl.sub(ch).call.act("%1$^C1 поджигает спичкой %2$O4.", ch, item);
+
+	    .tmp.fire.createFire(ch.in_room, item);
+	}
+	else {
+	    ch.act("Ты чиркаешь спичкой, но %1$O1 и не дума%1$nет|ют загораться.", item);
+	    ch.in_room.ppl.sub(ch).call.act("%1$^C1 безуспешно пытается поджечь %2$O4.", ch, item);
+	}
+
+	// one match left
+	if (obj.match_cnt == 1) {
+	    ch.act("Учти, ты использова%1$Gло|л|ла последнюю спичку.", ch);
+	}
+
+	obj.match_cnt = obj.match_cnt - 1;
+	return(true);
+    };
+
+    return this;
+};
+
+Torch = function(vnum) {
+    this = .get_obj_index(vnum);
+    
+    onUse = function(obj, ch, str) {
+	var item;
+
+	item = ch.get_obj_here(str);
+	if (item == null) {
+	    ch.act("Что поджигать будем?");
+	    return true;
+	}
+
+	// if not on floor
+	if (item.carried_by != null) {
+	    ch.act("Ты же не будешь устраивать пожар у себя в кармане?");
+	    return(true);
+	}
+
+	if (.tmp.fire.itemFlaming(item)) {
+	    ch.act("Зачем совать %1$O4 в уже пылающий костер?", obj);
+	    ch.in_room.ppl.sub(ch).call.act("%1$^C1 зачем-то сует %3$O4 в %2$O4.", ch, item, obj);
+	}
+	else if (.tmp.fire.itemFlammable(item)) {
+	    ch.act("Ты подносишь %2$O4 к %1$O3.",item, obj);
+	    ch.in_room.ppl.sub(ch).call.act("%1$^C1 подносит %3$O4 к %2$O3.",ch,item,obj);
+
+	    .tmp.fire.createFire(ch.in_room, item);
+	}
+	else {
+	    ch.act("Ты подносишь %2$O4 к %1$O3, но %1$P1 и не дума%1$nет|ют загораться.", item, obj);
+	    ch.in_room.ppl.sub(ch).call.act("%1$^C1 безуспешно пытается поджечь %3$O5 %2$O4.", ch, item, obj);
+	}
+
+	return true;
+    };
+
+    return this;
+};
+
+Fire = function() {
+    this = .get_obj_index(.tmp.fire.fireVnum);
+
+    // getting all from fire on floor
+    fireDown = function(obj) {
+	obj.items.forEach(function() {
+	    if (is_glow != null) {
+		is_glow = null;
+		extra_flags = .unset_bit(extra_flags, .tables.extra_flags.glow);
+	    }
+
+	    obj_to_room(getRoom());
+	});
+    };
+
+    // Fire on take
+    // XXX janitor
+    onGet = function(obj, ch) {
+	ch.act("Ты обжигаешся огнем и бросаешь костер на землю.");
+	ch.in_room.ppl.sub(ch).call.act("%^C1 обжигается огнем и бросает костер на землю.",ch);   
+	ch.hit = ch.hit - ch.max_hit/50;
+	obj.obj_to_room(ch.in_room);
+	return true;
+    };
+
+    // Taking smth from fire
+    onCantFetch = function(fire, ch, obj, pocket) {
+	if (obj == null)
+	    return false;
+
+	if (.number_range(1, 26) > ch.cur_dex) {
+	    ch.act("Ты пытаешься вытащить %1$O4 из костра, но горячее пламя не позволяет ухватиться за %1$P4.",obj);
+	    ch.in_room.ppl.sub(ch).call.act("%1$^C1 пытается вытащить %2$O4 из костра, но горячее пламя не позволяет ухватиться за %2$P4.",ch,obj);
+	    return true;
+	}	
+
+	return false;
+    };
+
+    onFetch = function(fire,ch,obj) {  
+	if (obj.is_glow != null) {
+	    obj.is_glow = null;
+	    
+	    obj.extra_flags = .unset_bit(obj.extra_flags, .tables.extra_flags.glow);
+	    obj.obj_to_room(ch.in_room);
+
+	    ch.act("Ты вытаскиваешь %1$O4 из пламени, но обжигаешься и роняешь %1$P2 на землю.",obj);
+	    ch.in_room.ppl.sub(ch).call.act("%1$^C1 вытаскивает %2$O4 из пламени, но обжигается и роняет %2$P2 на землю.",ch,obj);   
+       }
+    };
+
+    // Firing...Fire down
+    onArea = function(obj) {  
+	var a, rch;
+
+	if (obj.fire_time == null) {
+	    obj.fire_time = 2;
+	}
+   
+	if (obj.fire_time == 1) {
+	    obj.getRoom().ppl.call.act("Пламя уменьшается, %1$O1 начина%1$nет|ют гаснуть.",obj);
+	}
+
+	// the fin
+	if (obj.fire_time == 0) {
+	    fireDown(obj);
+
+	    obj.getRoom().ppl.call.act("%1$^O1 гасн%1$nет|ут окончательно и превраща%1$nется|ются в груду пепла.",obj);
+	    .tmp.fire.createAshes(obj.getRoom());
+
+	    obj.extract(true);
+	    return true;
+	}
+   
+	if (obj.fire_time > 1) {
+	    a = .number_range(1,10);
+	    if (a > 3) {
+		obj.getRoom().ppl.call.act("%1$^O1 потрескива%1$nет|ют, испуская кучу искр.",obj);
+	    }
+	    else if (obj.in_room != null) {
+		obj.in_room.ppl.call.act("Тебя окутывает тепло, исходящее от %1$O2.",obj);
+		for (rch = obj.in_room.people; rch != null; rch = rch.next_in_room) {
+		    if (rch.hit < rch.max_hit) {
+			rch.hit = .min(rch.max_hit, rch.hit + rch.level/2);
+		    }
+		}
+	    }
+	}
+
+	obj.fire_time = obj.fire_time - 1;         
+	return false;
+    };
+
+    // Putting smth in fire
+    onCantPut = function(fire, ch, obj, pocket, verbose) {
+        // no_sac, nopurge, burn_proof are not flamable
+	if (.tmp.fire.itemBurnProof(obj)) {
+	    ch.act("Увы. Это гореть не будет.");
+	    return true;
+	}
+
+	return false;
+    };
+
+    onPut = function(fire, ch, obj, container) {
+	var time;
+	
+	if (fire != container)
+	    return false;
+
+	time = obj.materialBurns();
+
+	// uninflammable
+	if (time == -1) {
+	    .tmp.fire.createAshes(obj.getRoom());
+
+	    ch.in_room.ppl.call.act("%^O1 гасит пламя. На его месте остается горстка пепла.",obj);
+	    
+	    fireDown(fire);
+
+	    obj.extract(true);
+	    fire.extract(true);
+	    return(true);
+	} 
+
+	if (time != 0) {
+	    fire.fire_time = fire.fire_time + time;
+	    ch.in_room.ppl.call.act("%1$^O1 вспыхива%1$nет|ют, усиливая пламя.",obj);   
+	    obj.extract(true);
+	    return(true);
+	}
+	else {
+	    if (.isset_bit(obj.extra_flags,.tables.extra_flags.glow) == 0) {
+	       obj.is_glow = 1;
+	       obj.extra_flags = .set_bit(obj.extra_flags, .tables.extra_flags.glow);
+	    }
+	    return false;
+	}
+    };
+
+    return this;
+};
+
+
+
+// initialize items
+Fire();
+
+.List().add(10414, 28034, 5303, 14500, 31100).forEach(
+    function() { .tmp.fire.Matches(this); });
+
+.List().add(5853, 14209, 3030, 4811, 10445, 24106, 31007, 40010).forEach(
+    function() { .tmp.fire.Torch(this); });
+}
+
+
+

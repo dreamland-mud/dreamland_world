@@ -15,10 +15,8 @@ initdreams = function() {
 	    var i, txt, colors, letters;
 	    
 	    txt = descr;
-	    colors = .tmp.system.RandomArray(
-		.List().add('W', 'G', 'M', 'C', 'R', 'Y', 'B'));
-	    letters = .tmp.system.RandomArray(
-		.List().add('Á', 'Å', 'Ò', 'Ô', 'Ð', 'É', 'Õ', 'Ó'));
+	    colors = .List().add('W', 'G', 'M', 'C', 'R', 'Y', 'B');
+	    letters = .List().add('Á', 'Å', 'Ò', 'Ô', 'Ð', 'É', 'Õ', 'Ó');
 		
 	    for (i = 0; i < 5; i=i+1) {
 		var color, letter;
@@ -26,6 +24,9 @@ initdreams = function() {
 		color = colors.random();
 		letter = letters.random();
 		txt = txt.replace(letter, "{" + color + letter + "{x");
+		
+		letters.sub(letter);
+		colors.sub(color);
 	    }
 	    
 	    return txt;

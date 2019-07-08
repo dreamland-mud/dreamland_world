@@ -1,0 +1,12 @@
+cubesInit = function() 
+{
+    .get_obj_index(5866).onDrop = function(obj, char){
+	var a,b;
+
+	a = .number_range(1,7);
+	b = .number_range(1,7);
+	char.act("После твоего броска на верхних гранях %O2 видны цифры {Y" + a +" {xи{Y " + b + "{x.", obj);
+	char.in_room.ppl.sub(char).call.act("После броска %^C2 на верхних гранях %O2 застывают цифры{Y " + a + "{x и{Y " + b + "{x.", char, obj);
+    };
+}
+

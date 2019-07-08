@@ -1,0 +1,25 @@
+adepts = function() {
+    // Dwarking adept: no training after 20 level.
+    .get_mob_index(3718).onCantTrain = function(adept, client) {
+	if (client.getModifyLevel() >= 20) {
+	    adept.recho("%^C1 сокрушенно цокает языком.", adept);
+	    adept.say("Ты уже взросл%1$Gое|ый|ая, %1$C1, поищи себе другого тренера.", client);
+	    return true;
+	}
+	return false;
+    };
+    
+    // NoFate adept: no practicing after 20 level.
+    .get_mob_index(3719).onCantTeach = function(adept, client, skillName) {
+	if (client.getModifyLevel() >= 20) {
+	    var skill;
+	    skill = .Skill(skillName);
+	    
+	    adept.say("Извини, %1$^C1, но теперь тебе придется искать себе другого учителя.", client);
+	    adept.say("Для этого пригодятся команды: {y{hc{lRумение " + skill.nameRus + "{lEslook " + skill.name + "{x");
+	    adept.say("А затем {y{lRгруппаумен {Dгруппа{y{lEglist {Dгруппа{x.");
+	    return true;
+	}
+	return false;
+    };
+}

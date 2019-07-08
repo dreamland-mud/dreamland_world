@@ -1,0 +1,171 @@
+
+trainInit = function() {
+    .tmp.train = .Map();
+
+    .tmp.train.rooms = .List();
+    .tmp.train.addRoom = function(vnum) {
+        rooms.push_back(.get_room_index(vnum));
+    };
+
+    .tmp.train.addRoom(33142);
+    .tmp.train.addRoom(33143);
+    .tmp.train.addRoom(33144);
+    .tmp.train.addRoom(33145);
+    .tmp.train.addRoom(33146);
+
+    .tmp.train.schedule = .List();
+    .tmp.train.Station = function(room, time, name) {
+        var s;
+
+        s = .Map();
+
+        s.room = .get_room_index(room);
+        s.time = time;
+        s.name = name;
+        
+        s.room.onLook = function(ch, kwd) {
+            if(kwd == "schedule расписание")
+                .tmp.train.show(ch);
+        };
+
+        schedule.push_back(s);
+    };
+
+    .tmp.train.Station(10542, 0, "Ад");
+    .tmp.train.Station(3038, 8, "Мидгаард");
+    .tmp.train.Station(8222, 10, "Фонтан желаний");
+    .tmp.train.Station(33114, 12, "Прерии");
+    .tmp.train.Station(10542, 14, "Ад");
+    .tmp.train.Station(33114, 16, "Прерии");
+    .tmp.train.Station(3038, 18, "Мидгаард");
+    .tmp.train.Station(8222, 20, "Фонтан желаний");
+    .tmp.train.Station(33114, 22, "Прерии");
+    
+    .tmp.train.show = function(ch) {
+        ch.act("%-20s %-5s", "Станция", "Прибытие");
+        
+        .tmp.train.schedule.forEach(function(ch) {
+            ch.act("%-20s %02d:00", name, time);
+        }, ch);
+    };
+
+    .tmp.train.currentStation = null;
+    .tmp.train.getStation = function(hour) {
+        var rc;
+        
+        rc = schedule.forEach(function(hour) {
+            if(time >= hour)
+                return this;
+        }, hour);
+
+        if(rc.size() == 0) {
+            return null;
+        } else {
+            return rc.front();
+        }
+    };
+
+    .tmp.train.stationTimer = null;
+
+    .get_room_index(33141).onEntryLocation = function(ch, from_room, mtype) {
+        if(.tmp.train.currentStation == null) {
+            return 1;
+        }
+
+        return .tmp.train.currentStation.room.vnum;
+    };
+
+    .tmp.train.portal = .get_obj_index(33145);
+
+    .tmp.train.portal.onArea = function(obj) {
+        .tmp.train.currentStation = .tmp.train.getStation(.hour);
+        .tmp.train.nextStation = .tmp.train.getStation(.hour + 1);
+
+        if(.tmp.train.currentStation != null && .tmp.train.currentStation.time == .hour) {
+            .tmp.train.stationTimer = 0;
+        } else {
+            .tmp.train.stationTimer = null;
+            .tmp.train.currentStation = null;
+        }
+
+        if(.tmp.train.nextStation == null)
+            .tmp.train.nextStation = .tmp.train.schedule.front();
+    };
+
+    .tmp.train.portal.onSpec = function(obj) {
+        if(.tmp.train.stationTimer == null)
+            return;
+
+        .tmp.train.update(obj);
+
+        .tmp.train.stationTimer = .tmp.train.stationTimer + 4;
+    };
+
+    .tmp.train.techo = function(txt) {
+        .tmp.train.rooms.forEach(function(txt) {
+            ppl.call.act(txt);
+        }, txt);
+    };
+    
+    .tmp.train.open = function() {
+        .tmp.train.rooms.forEach(function() {
+            unlock(1);
+            unlock(3);
+            open(1);
+            open(3);
+        });
+    };
+
+    .tmp.train.close = function() {
+        .tmp.train.rooms.forEach(function() {
+            close(1);
+            close(3);
+            lock(1);
+            lock(3);
+        });
+    };
+
+    .tmp.train.update = function(obj) {
+        var room;
+        
+        room = .tmp.train.currentStation.room;
+
+        if(.tmp.train.stationTimer == 0) {
+            room.ppl.call.act("Издалека раздается грохот колес.");
+        } 
+        else if(.tmp.train.stationTimer == 4) {
+            room.ppl.call.act("Вдалеке появляется поезд. Он быстро приближается.");
+        }
+        else if(.tmp.train.stationTimer == 8) {
+            room.ppl.call.act("Поезд останавливается возле перрона.");
+        }
+        else if(.tmp.train.stationTimer == 12) {
+            var statname;
+            
+            statname = .tmp.train.currentStation.name;
+            if(.tmp.train.currentStation.room.vnum == 8222) {
+                statname = statname +". Вихiд до Мiдгаардського зоопарку";
+            }
+            room.ppl.call.act("Из репродуктора раздается: '{CОсторожно, двери открываются.{x'");
+            techo("Из репродуктора раздается: '{CСтанция " + statname + ". Осторожно, двери открываются.{x'");
+            open();
+            obj.obj_to_room(room);
+        }
+        else if(.tmp.train.stationTimer == 40) {
+            room.ppl.call.act("Из репродуктора раздается: '{CОтправление через 8 секунд. Просьба пассажирам занять свои места, а провожающим - покинуть вагон.{x'");
+            techo("Из репродуктора раздается: '{CОтправление через 8 секунд. Просьба пассажирам занять свои места, а провожающим - покинуть вагон.{x'");
+        }
+        else if(.tmp.train.stationTimer == 48) {
+            room.ppl.call.act("Из репродуктора раздается: '{CОсторожно, двери закрываются.{x'");
+            techo("Из репродуктора раздается: '{CОсторожно, двери закрываются. Следующая станция - " + .tmp.train.nextStation.name + ".{x'");
+            close();
+            obj.obj_to_room(.get_room_index(1));
+        }
+        else if(.tmp.train.stationTimer == 52) {
+            room.ppl.call.act("Поезд трогается с места.");
+        }
+        else if(.tmp.train.stationTimer == 56) {
+            room.ppl.call.act("Поезд уносится прочь.");
+        }
+    };
+}

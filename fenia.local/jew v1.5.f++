@@ -1,0 +1,753 @@
+jewInit = function() {
+    var jew;
+
+    jew = .Map();
+
+    jew.giveBack = function(jew, vict, obj) {
+	if(obj.carried_by != jew) {
+	    .print("restring: oops, trying to give back not mine object");
+	    return;
+	}
+	obj.obj_from_char();
+	obj.obj_to_char(vict);
+	jew.in_room.ppl.sub(vict).call.act("%^C1 возвращает %O4 %C3.", jew, obj, vict);
+	vict.act("%^C1 возвращает тебе %O4.", jew, obj);
+    };
+    
+    jew.init = function() {
+	var ndx;
+
+	ndx = .get_mob_index(3174);
+	
+	ndx.onTell = function(jew, vict, msg) {
+	    if(vict.restring == null)
+		return;
+
+	    if(!vict.restring.expectSpeech) {
+		vict.restring.say("Не говорите пока вас не спросили!");
+		return;
+	    }
+	    
+	    vict.restring.speech = msg;
+	    vict.restring.expectSpeech = false;
+	};
+
+	ndx.onGive = function(jew, vict, obj) {
+	    if(vict.restring == null || !vict.restring.expectItem) {
+		jew.in_room.ppl.call.act("%^C1 произносит '{gДержите свое %O4 при себе!{x'.", jew, obj);
+		.tmp.jew.giveBack(jew, vict, obj);
+		return true;
+	    }
+
+	    vict.restring.item = obj;
+	    vict.restring.expectItem = false;
+
+	    return true;
+	};
+
+	ndx.onGreet = function(jew, vict) {
+	    var r;
+	    
+	    if(vict.is_npc( ))
+		return;
+
+	    if(vict.restring == null)
+		vict.restring = .tmp.jew.State();
+		
+	    r = vict.restring;
+
+	    if(r.thread.running)
+		return;
+	
+	    r.vict = vict;
+	    r.jew = jew;
+	    r.thread.start( );
+	};
+    };
+
+    jew.State = function() {
+	this = .Map();
+
+	changed = null;
+	expectSpeech = false;
+	expectItem = false;
+	store = .get_room_index(3336);
+	timeout = 4*60*5;
+	
+	thread = .scheduler.Thread(function (this) {
+	    try {
+		task();
+	    } catch(e) {
+		if(e == "timeout") {
+		    vict.act("%^C1 теряет к тебе интерес.", jew);
+		} else {
+		    .print("Oi-oi: " + e);
+		}
+	    }
+	    vict.restring.thread = null;
+	    vict.restring = null;
+	}, this);
+	
+	giveBack = function(vict, obj) {
+	    .tmp.jew.giveBack(jew, vict, obj);
+	};
+
+	yield = function() {
+	    .scheduler.yield();
+	    
+	    if(jew.in_room != vict.in_room)
+		throw "victim left the room";
+	};
+
+	sleep = function(amt) {
+	    var i;
+
+	    for(i = 0; i < amt; i = i + 1)
+		yield();
+	};
+
+	waitSpeech = function() {
+	    for(;;) {
+		var i;
+	    
+		speech = null;
+		expectSpeech = true;
+		
+		for(i=0; i < timeout && speech == null; i = i + 1)
+		    yield();
+
+		if(speech == null)
+		    throw "timeout";
+		
+		if(speech.match("(give|дай|гони).*(key|ключ)"))
+		    taskKey();
+		else
+		    break;
+	    }
+
+	    return speech;
+	};
+
+	waitColourStr = function() {
+	    var s;
+
+	    s = waitSpeech();
+
+	    if(s.stripColour() != s && !s.match("[^{]{x"))
+		s = s + "{x";
+
+	    return s;
+	};
+
+	waitItem = function() {
+	    var i;
+	    
+	    item = null;
+	    expectItem = true;
+	    
+	    for(i=0; i < timeout && item == null; i = i + 1)
+		yield();
+
+	    if(item == null)
+		throw "timeout";
+
+	    if(item.carried_by != jew)
+		throw "oops, wait item returns not mine object";
+
+	    return item;
+	};
+	
+	say = function(msg) {
+//	    vict.act("%^C1 говорит тебе '{G%s{x'.", jew, msg);
+//	    vict.reply = jew;
+	    jew.interpret("tell " + vict.getName() + " " + msg);
+	};
+
+	checkItem = function(obj) {
+	    return 1;
+	};
+
+	confirm = function() {
+	    var i, repl;
+	    
+	    for(i = 1;;i = i + 1) {
+		repl = waitSpeech();
+		
+		if(repl.match("^да|yes|^угу|^ага|типа *того"))
+		    return true;
+		else if(repl.match("^no$|нет|не-*а|фиг|хрен"))
+		    return false;
+		else {
+		    if( i % 4 == 0 ) {
+			say("...как ты меня запарил!");
+			sleep(10);
+		    }
+		    
+		    if(repl.match("типа"))
+			say("типа да, или типа нет?");
+		    else 
+			say("а точнее? да, или нет?");
+		}
+	    }
+	};
+	
+	taskCoupon = function(restring) {
+	    var rvnum;
+
+	    rvnum = 108;
+	    
+	    if(restring.short != null 
+		    && restring.short != restring.short.stripColour( ))
+		rvnum = 106;
+
+	    if(restring.long != null 
+		    && restring.long != restring.long.stripColour( ))
+		rvnum = 106;
+
+	    say("Покраска окончена!");
+
+	    for(;;) {
+		var coup;
+		
+		if(rvnum == 106)
+		    say("Отдавайте мне цветной купон.");
+		else
+		    say("Отдавайте мне бесцветный купон.");
+		    
+		coup = waitItem();
+		
+		if(coup.pIndexData.vnum != rvnum) {
+		    say("Ви меня дурите.");
+		    giveBack(vict, coup);
+		    continue;
+		}
+		
+		.print("restring: " + vict.getName() + " gives coupon " + rvnum);
+
+		jew.in_room.ppl.call.act("%^C1 прячет %O4 в нагрудный карман жилетки.", jew, coup);
+		item.extract(true);
+		sleep(4);
+
+		break;
+	    }
+	};
+
+	getReport = function() {
+	    if(changed == null)
+		return "пусто";
+
+	    var report;
+	    
+	    report = "";
+	    
+	    if(changed.name != null)
+		report = report + "Изменить имена: " + changed.name + "\n\n";
+		
+	    if(changed.short != null) {
+		var s;
+		s = changed.short;
+		report = report + s.ruscase(1) + " падает тебе на голову.\n";
+		report = report + "Ты пьешь из " + s.ruscase(2) + ".\n";
+		report = report + "Ты наносишь повреждения " + s.ruscase(3) + ".\n";
+		report = report + "Ты садишься верхом на " + s.ruscase(4) + ".\n";
+		report = report + "Ты взмахиваешь " + s.ruscase(5) + ".\n";
+		report = report + "Ты мечтаешь о " + s.ruscase(6) + ".\n\n";
+	    }
+		
+	    if(changed.long != null)
+		report = report + "Изменить длинное описание: " + changed.long + "\n\n";
+
+	    return report;
+	};
+	
+	taskItem = function() {
+	    say("Давайте сюда вашу штучку!");
+		
+	    for(;;) {
+		item = waitItem();
+
+		if(!checkItem(item)) {
+		    room.ppl.call.act("%^C1 озабочено качает головой.", jew);
+		    sleep(2);
+		    say("Ой, ой-ой... Увы, это не подлежит покраске.");
+		    giveBack(vict, obj);
+		    sleep(1);
+		    say("Но я могу покрасить вам что-нибудь другое.");
+		    continue;
+		}
+
+		item.origName = item.name;
+		item.name = item.name + " so" + item.id;
+		
+		item.obj_from_char();
+		item.obj_to_obj(safe);
+		
+		var order;
+
+		changed.vict = vict;
+		changed.obj = item;
+		changed.origShort = item.short_descr;
+		
+		order = .get_obj_index(3297).create();
+		order.restring = changed;
+		
+		var report;
+		
+		report = "Заказ {W" + jew.seeName(vict, 2) + "{x номер so" + item.id 
+		       + " на покраску {W" + item.short_descr.ruscase(4) + "{x\n\n";
+			
+		report = report + getReport();
+
+		report = report + "Комментарий(comment) ревизора.\n\n";
+
+		order.name = "so" + item.id + " " + order.name;
+		order.set_extra_descr(order.name, report);
+		order.short_descr = order.short_descr + " " + jew.seeName(vict, 2) + ", номер so" + item.id;
+		order.obj_to_obj(pendingsBox);
+
+		.wiznet("Еврею принесли штучку: " + jew.seeName(vict, 1) + " просит перекрасить " + item.short_descr.ruscase(4));
+		
+		changed = null;
+
+		jew.in_room.ppl.call.act("%^C1 вырывает из блокнота исписанный листик.", jew);
+		sleep(1);
+		jew.in_room.ppl.call.act("%^C1 наклеивает листок на %O4.", jew, item);
+		sleep(1);
+		jew.in_room.ppl.call.act("%^C1 относит %O4 на склад.", jew, item);
+		sleep(2);
+		break;
+	    }
+	};
+
+	taskShort = function () {
+	    vict.act("%^C1 тяжко вздыхает.", jew);
+	    sleep(1);
+	    
+	    for(;;) {
+		var s1, s2, s3, s4, s5, s6;
+		
+		say("Склоняем...");
+		say("Именительный. Упало что?");
+		s1 = waitColourStr();
+		
+		say("Родительный. Кусочек чего?");
+		s2 = waitColourStr();
+		
+		say("Дательный. Приклеить к чему?");
+		s3 = waitColourStr();
+		
+		say("Винительный. Испортить что?");
+		s4 = waitColourStr();
+		
+		say("Творительный. Ударить чем?");
+		s5 = waitColourStr();
+		
+		say("Предложный. Говорить о чем?");
+		s6 = waitColourStr();
+
+		var s;
+
+		s = .makeShort(s1, s2, s3, s4, s5, s6);
+
+		.print("restring: short: " + s);
+
+		vict.act("%^N1 падает тебе на голову.", s);
+		vict.act("Ты пьешь из %N2.", s);
+		vict.act("Ты наносишь повреждения %N3.", s);
+		vict.act("Ты садишься верхом на %N4.", s);
+		vict.act("Ты взмахиваешь %N5.", s);
+		vict.act("Ты мечтаешь о %N6.", s);
+
+		say("Все так?");
+		
+		if(confirm()) {
+		    if(changed == null)
+			changed = .Map();
+
+		    changed.short = s;
+		    break;
+		}
+		jew.interpret("collaps");
+		sleep(5);
+		say("Ты меня в Мидгаарде держишь!");
+		sleep(1);
+	    }
+	};
+	
+	taskLong = function () {
+	    say("что должно быть видно, когда объект лежит на земле?");
+	    var s;
+	    
+	    for(;;) {
+		s = waitColourStr();
+
+		vict.act("    {G%^s{x", s);
+
+		sleep(1);
+		say("Так?");
+		
+		if(confirm()) {
+		    if(changed == null)
+			changed = .Map();
+
+		    changed.long = s;
+		    break;
+		}
+		say("Ну, и как тогда?");
+	    }
+	};
+
+	taskKey = function() {
+	    if(!vict.is_immortal()) {
+		jew.in_room.ppl.sub(vict).call.act("%^C1 плюет %C3 на ботинок.", jew, vict);
+		vict.act("%^C1 плюет тебе на ботинок!", jew);
+
+		sleep(1);
+
+		return;
+	    }
+
+	    var k;
+
+	    k = .get_obj_index(3298).create();
+	    k.obj_to_char(vict);
+
+	    say("Для вас - всегда пожалуйста!");
+	    
+	    sleep(1);
+
+	    jew.in_room.ppl.sub(vict).call.act("%^C1 дает %C3 ключ от своих апартаментов.", jew, vict);
+	    vict.act("%^C1 дает тебе ключ от своих апартаментов.", jew);
+
+	    sleep(1);
+
+	    jew.in_room.ppl.sub(vict).call.act("%^C1 заискивающе улыбается %C3.", jew, vict);
+	    vict.act("%^C1 заискивающе улыбается тебе.", jew);
+
+	    sleep(1);
+	};
+	
+	taskName = function() {
+	    for(;;) {
+		say("И как же ты это будешь называть, как?");
+		
+		var s;
+		
+		s = waitSpeech();
+		say("С предметом можно будет манипулировать при помощи слов {W" + s + "{G. Все верно?");
+		
+		if(confirm()) {
+		    if(changed == null)
+			changed = .Map();
+
+		    changed.name = s;
+		    break;
+		}
+	    }
+	}; 
+
+	victObjs = function(o) {
+	    var l;
+
+	    l = .List();
+	    
+	    for(;o != null; o = o.next_content)
+		if(o.restring != null && o.restring.vict == vict)
+		    l.add(o);
+
+	    return l;
+	};
+	
+	returnItemTask = function (order) {
+	    var o, r;
+	    
+	    r = order.restring;
+	    
+	    if(r == null)
+		return;
+
+	    o = r.obj;
+	    
+	    if(o.in_obj != safe) {
+		say("Грабят! Прямо таки режут-убивают!");
+		say(r.origShort.ruscase(4) + " украли!");
+		return;
+	    }
+	    
+	    o.name = o.origName;
+	    o.origName = null;
+
+	    o.obj_from_obj();
+	    o.obj_to_char(jew);
+	    
+	    giveBack(vict, o);
+	    
+	    var comment;
+	    
+	    comment = order.get_extra_descr("comment");
+	    
+	    if(comment != null)
+		say(comment);
+		
+	    order.extract(true);
+
+	    sleep(5);
+	};
+
+	getStoreObj = function(name) {
+	    var o;
+	    
+	    for(o = store.contents;o != null; o = o.next_content)
+		if(name.is_name(o.name))
+		    return o;
+		    
+	    return null;
+	};
+	
+	acceptsBox = getStoreObj("accept");
+	rejectsBox = getStoreObj("reject");
+	pendingsBox = getStoreObj("pending");
+	safe = getStoreObj("safe");
+
+	pollBoxesTask = function() {
+	    var accepts, rejects, pendings;
+	    
+	    accepts = victObjs(acceptsBox.contains);
+	    rejects = victObjs(rejectsBox.contains);
+	    pendings = victObjs(pendingsBox.contains);
+	    
+	    rejects.forEach(function (task) {
+		task.returnItemTask(this);
+	    }, this);
+
+	    accepts.forEach( function (task) {
+		var i;
+		
+		task.taskCoupon(restring);
+		
+		i = restring.obj;
+
+		if(restring.name != null)
+		    i.origName = restring.name/* + " " + i.origName*/;
+		    
+		if(restring.short != null)
+		    i.short_descr = restring.short;
+
+		if(restring.long != null)
+		    i.description = restring.long;
+		
+		task.returnItemTask(this);
+	    }, this);
+
+	    if(pendings.size() > 0)
+		say("До " + pendings.size() + " ваших заказов еще не дошли руки");
+
+	};
+	
+	ack = function(hint) {
+	    var i, repl;
+	    
+	    sleep(2);
+	    say("Если не знаешь что это такое, просто спроси у меня.");
+
+	    for(i = 1;;i = i + 1) {
+		repl = waitSpeech();
+		
+		if(repl.match("^да|yes|^угу|^ага|типа *того"))
+		    return true;
+		else if(repl.match("^no$|нет|не-*а|фиг|хрен"))
+		    return false;
+		else if(repl.match("\\?|что|what")) {
+		    hint(this);
+		} else {
+		    if( i % 4 == 0 ) {
+			say("...как ты меня запарил!");
+			sleep(10);
+		    }
+		    
+		    if(repl.match("типа"))
+			say("типа да, или типа нет?");
+		    else 
+			say("а точнее? да, или нет?");
+		}
+	    }
+	};
+	
+	alterTask = function() {
+
+	    for(;;) {
+		say("Вот ваш заказ");
+		sleep(5);
+		
+		jew.in_room.ppl.sub(vict).call.act("%^C1 показывает %C3 блокнот.", jew, vict);
+		vict.act("%^C1 показывает тебе исписанный аккурантым почерком блокнот:", jew);
+		
+		vict.ptc(getReport());
+
+		sleep(10);
+		
+		say("Что-то хотите изменить, или добавить?");
+		
+		if(!confirm()) {
+
+		    break;
+		}
+
+		say("Что именно? Короткое (short), длинное (long) описание, или имя (name)?");
+
+		for(;;) {
+		    var speech;
+
+		    speech = waitSpeech();
+
+		    if(speech.match("корот|short")) {
+			taskShort();
+		    } else if(speech.match("длин|long")) {
+			taskLong();
+		    } else if(speech.match("имя|name")) {
+			taskName();
+		    } else {
+			say("Можно изменить только короткое (short), длинное (long) описание, или имя (name)?");
+			continue;
+		    }
+
+		    break;
+		}
+	    }
+	};
+	
+	stepsTask = function() {
+	    say("Меняем короткое описание?");
+	    if( ack(function(this) {
+		    say("Короткое описание, это то, как предмет видно когда он одет, "
+			"или находится в инвентаре.");
+		    sleep(1);
+		    say("Оно так же испльзуется для описания различных действий:");
+		    sleep(1);
+		    say("Ты бросаешь xxx. Ты берешь xxx.");
+		    sleep(1);
+		    say("Короткое описание склоняется по падежам.");
+		    sleep(2);
+		    say("Меняем?");
+		}) ) {
+		taskShort();
+		sleep(5);
+	    }
+	    
+	    say("Меняем длинное описание?");
+	    if( ack(function(this) {
+		    say("Длинное описание, это то, как предмет выглядет на земле.");
+		    sleep(2);
+		    say("Меняем?");
+		}) ) {
+		taskLong();
+		sleep(5);
+	    }
+	    
+	    say("Изменить имена?"); 
+	    if( ack(function(this) {
+		    say("Имена предмета, это слова, с помощью которых можно "
+		        "манипулировать с предметом.");
+		    sleep(1);
+		    say("Например take sword, drop shield.");
+		    sleep(1);
+		    say("Изменяя короткое и длинное описание, обязательно поменять также и имя,");
+		    sleep(1);
+		    say("чтобы потом не пришлось гадать как с этим предметом что-нибудь сделать.");
+		    sleep(2);
+		    say("Меняем?");
+		}) ) {
+		taskName();
+		sleep(5);
+	    }
+	};
+	    
+	task = function() {
+	    pollBoxesTask();
+
+	    say("Будем что-то стрингать?");
+		
+	    for(;confirm( );) {
+		stepsTask();
+
+		if(changed == null) {
+		    jew.in_room.ppl.sub(vict).call.act("%^C1 многозначительно крутит пальцем у виска, глядя на %C4.", jew, vict);
+		    vict.act("%^C1 крутит пальцем у виска и теряет к тебе интерес.", jew);
+		    return;
+		}
+
+		alterTask();
+		taskItem();
+
+		sleep(10);
+
+		say("Будем что-то еще стрингать?");
+	    }
+	    
+	    say("Всех благ.");
+	};
+
+	return this;
+    };
+    
+    if(.tmp == null)
+	.tmp = .Map();
+
+    .tmp.jew = jew;
+
+    jew.init();
+}
+
+/*
+
+-- будем что-то стрингать?
+-- да
+-- меняем короткое описание? (если не знаешь что это - спроси у меня!)
+-- а что это?
+-- короткое описание это тра-ля-ля.
+-- меняем?
+-- да
+-- склоняем....
+...
+-- все правильно?
+-- да
+-- меняем длинное описание? (если не знаешь что это - спроси!)
+-- а что это?
+-- короткое описание это тра-ля-ля.
+-- меняем?
+-- да
+-- и какое одно будет, какое?
+-- бубу
+-- вот что будет видно, когда предмет валяется на земле:
+   Бубу
+-- все правильно?
+-- да
+-- добавить имена? (если не знаешь что это - спроси!)
+-- а что это?
+-- короткое описание это тра-ля-ля.
+-- меняем?
+-- да
+-- какие имена добавить?
+-- бубу бебе
+-- С предметом можно будет манипулировать при помощи слов бубу, бебе.
+-- все правильно?
+-- да
+============================================================================
+
+-- Итак, вот ваш заказ:
+...
+-- что-то хотите изменить/добавить?
+-- да
+-- что именно? короткое опмсание, длинное описание, имя?
+...
+-- Итак, вот ваш заказ:
+...
+-- что-то хотите изменить/добавить?
+-- нет
+-- давайте сюда вашу штучку
+...
+-- будем что-то еще стрингать?
+-- нет
+-- всех благ
+*/
+

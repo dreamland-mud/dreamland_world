@@ -1,0 +1,81 @@
+n2 = function() {
+    if (.tmp.commands == null)
+	.tmp.commands = .Map();
+    
+    // Команда 'уроки' для вывода инфы по текущим или всем урокам из экскурсии.
+    
+    // Общий подход: по названию (title) урока должно быть сразу понятно, какие
+    // темы он покрывает. Цель (goal) должна быть выделена отдельно, чтоб было
+    // ясно, что именно сделать и продвинуться дальше. В то же время урок
+    // можно читать и потом, получая оттуда полезные подсказки, поэтому описание
+    // (description) должно не сильно зависеть от текущей цели.
+
+    .tmp.commands.lessons = .Command();
+    .tmp.commands.lessons.name = "lessons";
+    .tmp.commands.lessons.rname = "уроки";
+    .tmp.commands.lessons.func = function(ch, args) {
+	var num, lesson;
+	
+	// Вывести список всех уроков и подсказку.
+	if (args == "all" || args == "все") {
+	    ch.act("{YСписок всех уроков{x \n");
+	    
+	    for (num in .tmp.lessons.tutorial.keys) {
+		ch.act("{hc{gУрок " + num + "{x: " + .tmp.lessons.tutorial[num].title);
+	    }
+	    
+	    ch.act("\nПодробности про каждый урок покажет команда '{y{lRурок{lElessons{x {Dномер{x'.");
+	    if (ch.lecture != null)
+		ch.act("Твой текущий урок можно быстро посмотреть, выполнив команду {hc{y{lRурок{lElessons{x без параметров.");
+	    else
+		ch.act("Начать выполнять уроки можно по команде {hc{y{lRурок начать{lElesson start{x.");
+	    return;
+	}
+	
+	// Начать с начала, будто бы только что сошли с корабля.
+	if (args.match("start|старт|начать")) {
+	    if (ch.lecture != null) {
+		ch.act("Ты уже выполняешь урок номер " + ch.lecture + ".");
+		return;
+	    }
+	    
+	    ch.lecture = 0;
+	    ch.act("Уроки начнутся, как будто ты только что сош%Gло|ел|ла с корабля.\n", ch);
+	    // Выполнить через scheduler, т.к. postLeave предназначено для выполнения из потока.
+	    .scheduler.Thread(function(ch) {
+		.get_room_index(40102).postLeave(ch, ch.in_room, null);
+	    }, ch).start();
+	    
+	    return;
+	}
+
+	// Показать текущий урок, если есть, или по заданному номеру.
+	if (args.match("^ *$")) {
+	    if (ch.lecture == null) {
+		ch.act("У тебя нет текущего урока. Используй {y{hc{lRурок все{lElesson all{x для списка.");
+		return;
+	    }
+	    num = ch.lecture;
+	} else if (args.match("^[0-9]\+$")) {
+	    num = args;
+	} else {
+	    ch.act("Использование: {lRурок, урок номер, урок все{lElesson, lesson номер, lesson all{x.");
+	    return;
+	}
+	
+	lesson = .tmp.lessons.tutorial[num];
+	if (lesson == null) {
+	    ch.act("Урок под номером " + num + " не найден.");
+	    return;
+	}
+	
+	ch.act("{gУрок " + num + "{x: {G" + lesson.title + "{x\n");
+	ch.act("{gЗадание{x:\n" + lesson.goal + "\n");
+	ch.act("{gПояснение{x:"); 
+	lesson.description(ch);
+
+	ch.act("\nСписок всех уроков можно посмотреть по команде {y{hc{lRурок все{lElesson all{x.");
+    };
+
+}
+

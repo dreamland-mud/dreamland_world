@@ -1,8 +1,6 @@
-<?xml version="1.0" encoding="KOI8-R"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <Command>
-  <aliases>
-    <node>toggle</node>
-  </aliases>
+  <cat>config</cat>
   <extra>important keep_hide ghost afk nanny</extra>
   <groups>
     <node>
@@ -11,13 +9,13 @@
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="plr_flags">autoassist</bit>
-        <extra>keep_hide ghost afk </extra>
-        <hint>вступать в бой при нападении на группу</hint>
-        <msgOff>Ты не будешь вступать в бой при нападении на твою группу.</msgOff>
-        <msgOn>Ты будешь вступать в бой при нападении на твою группу.</msgOn>
+        <extra>hidden keep_hide ghost afk </extra>
+        <hint>п╡я│я┌я┐п©п╟я┌я▄ п╡ п╠п╬п╧ п©я─п╦ п╫п╟п©п╟п╢п╣п╫п╦п╦ п╫п╟ пЁя─я┐п©п©я┐</hint>
+        <msgOff>п╒я▀ п╫п╣ п╠я┐п╢п╣я┬я▄ п╡я│я┌я┐п©п╟я┌я▄ п╡ п╠п╬п╧ п©я─п╦ п╫п╟п©п╟п╢п╣п╫п╦п╦ п╫п╟ я┌п╡п╬я▌ пЁя─я┐п©п©я┐.</msgOff>
+        <msgOn>п╒я▀ п╠я┐п╢п╣я┬я▄ п╡я│я┌я┐п©п╟я┌я▄ п╡ п╠п╬п╧ п©я─п╦ п╫п╟п©п╟п╢п╣п╫п╦п╦ п╫п╟ я┌п╡п╬я▌ пЁя─я┐п©п©я┐.</msgOn>
         <name>autoassist</name>
         <position>dead</position>
-        <rname>автопомощь</rname>
+        <rname>п╟п╡я┌п╬п©п╬п╪п╬я┴я▄</rname>
 	<help type="CommandHelp" refby="autolist"></help>
       </node>
       <node type="ConfigElement">
@@ -25,13 +23,13 @@
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="plr_flags">autogold</bit>
-        <extra>keep_hide ghost afk </extra>
-        <hint>забирать деньги из трупов</hint>
-        <msgOff>Ты не будешь автоматически обшаривать трупы в поисках денег.</msgOff>
-        <msgOn>Ты будешь автоматически обшаривать трупы в поисках денег.</msgOn>
+        <extra>hidden keep_hide ghost afk </extra>
+        <hint>п╥п╟п╠п╦я─п╟я┌я▄ п╢п╣п╫я▄пЁп╦ п╦п╥ я┌я─я┐п©п╬п╡</hint>
+        <msgOff>п╒я▀ п╫п╣ п╠я┐п╢п╣я┬я▄ п╟п╡я┌п╬п╪п╟я┌п╦я┤п╣я│п╨п╦ п╥п╟п╠п╦я─п╟я┌я▄ п╢п╣п╫я▄пЁп╦ п╦п╥ я┌я─я┐п©п╬п╡.</msgOff>
+        <msgOn>п╒я▀ п╠я┐п╢п╣я┬я▄ п╟п╡я┌п╬п╪п╟я┌п╦я┤п╣я│п╨п╦ п╥п╟п╠п╦я─п╟я┌я▄ п╢п╣п╫я▄пЁп╦ п╦п╥ я┌я─я┐п©п╬п╡.</msgOn>
         <name>autogold</name>
         <position>dead</position>
-        <rname>автомонеты</rname>
+        <rname>п╟п╡я┌п╬п╪п╬п╫п╣я┌я▀</rname>
 	<help type="CommandHelp" refby="autolist"></help>
       </node>
       <node type="ConfigElement">
@@ -39,13 +37,13 @@
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="plr_flags">autoloot</bit>
-        <extra>keep_hide ghost afk </extra>
-        <hint>забирать вещи из трупов</hint>
-        <msgOff>Ты не будешь автоматически забирать все вещи из трупа врага.</msgOff>
-        <msgOn>Ты будешь автоматически забирать все вещи из трупа врага.</msgOn>
+        <extra>hidden keep_hide ghost afk </extra>
+        <hint>п╥п╟п╠п╦я─п╟я┌я▄ п╡п╣я┴п╦ п╦п╥ я┌я─я┐п©п╬п╡</hint>
+        <msgOff>п╒я▀ п╫п╣ п╠я┐п╢п╣я┬я▄ п╟п╡я┌п╬п╪п╟я┌п╦я┤п╣я│п╨п╦ п╥п╟п╠п╦я─п╟я┌я▄ п╡я│п╣ п╡п╣я┴п╦ п╦п╥ я┌я─я┐п©п╟ п╡я─п╟пЁп╟.</msgOff>
+        <msgOn>п╒я▀ п╠я┐п╢п╣я┬я▄ п╟п╡я┌п╬п╪п╟я┌п╦я┤п╣я│п╨п╦ п╥п╟п╠п╦я─п╟я┌я▄ п╡я│п╣ п╡п╣я┴п╦ п╦п╥ я┌я─я┐п©п╟ п╡я─п╟пЁп╟.</msgOn>
         <name>autoloot</name>
         <position>dead</position>
-        <rname>автограбеж</rname>
+        <rname>п╟п╡я┌п╬пЁя─п╟п╠п╣п╤</rname>
 	<help type="CommandHelp" refby="autolist"></help>
       </node>
       <node type="ConfigElement">
@@ -53,13 +51,13 @@
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="add_comm_flags">autolook</bit>
-        <extra>keep_hide ghost afk </extra>
-        <hint>заглядывать в труп после убийства</hint>
-        <msgOff>Ты не будешь заглядывать в труп после убийства.</msgOff>
-        <msgOn>Ты будешь заглядывать в труп после убийства.</msgOn>
+        <extra>hidden keep_hide ghost afk </extra>
+        <hint>п╥п╟пЁп╩я▐п╢я▀п╡п╟я┌я▄ п╡ я┌я─я┐п© п©п╬я│п╩п╣ я┐п╠п╦п╧я│я┌п╡п╟</hint>
+        <msgOff>п╒я▀ п╫п╣ п╠я┐п╢п╣я┬я▄ п╥п╟пЁп╩я▐п╢я▀п╡п╟я┌я▄ п╡ я┌я─я┐п© п©п╬я│п╩п╣ я┐п╠п╦п╧я│я┌п╡п╟.</msgOff>
+        <msgOn>п╒я▀ п╠я┐п╢п╣я┬я▄ п╥п╟пЁп╩я▐п╢я▀п╡п╟я┌я▄ п╡ я┌я─я┐п© п©п╬я│п╩п╣ я┐п╠п╦п╧я│я┌п╡п╟.</msgOn>
         <name>autolook</name>
         <position>dead</position>
-        <rname>автовзгляд</rname>
+        <rname>п╟п╡я┌п╬п╡п╥пЁп╩я▐п╢</rname>
 	<help type="CommandHelp" refby="autolist"></help>
       </node>
       <node type="ConfigElement">
@@ -67,13 +65,13 @@
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="plr_flags">autosac</bit>
-        <extra>keep_hide ghost afk </extra>
-        <hint>приносить трупы в жертву после убийства</hint>
-        <msgOff>Ты не будешь приносить в жертву труп после убийства.</msgOff>
-        <msgOn>Ты будешь приносить в жертву труп после убийства.</msgOn>
+        <extra>hidden keep_hide ghost afk </extra>
+        <hint>п©я─п╦п╫п╬я│п╦я┌я▄ я┌я─я┐п©я▀ п╡ п╤п╣я─я┌п╡я┐ п©п╬я│п╩п╣ я┐п╠п╦п╧я│я┌п╡п╟</hint>
+        <msgOff>п╒я▀ п╫п╣ п╠я┐п╢п╣я┬я▄ п©я─п╦п╫п╬я│п╦я┌я▄ п╡ п╤п╣я─я┌п╡я┐ я┌я─я┐п© п©п╬я│п╩п╣ я┐п╠п╦п╧я│я┌п╡п╟.</msgOff>
+        <msgOn>п╒я▀ п╠я┐п╢п╣я┬я▄ п©я─п╦п╫п╬я│п╦я┌я▄ п╡ п╤п╣я─я┌п╡я┐ я┌я─я┐п© п©п╬я│п╩п╣ я┐п╠п╦п╧я│я┌п╡п╟.</msgOn>
         <name>autosac</name>
         <position>dead</position>
-        <rname>автожертва</rname>
+        <rname>п╟п╡я┌п╬п╤п╣я─я┌п╡п╟</rname>
 	<help type="CommandHelp" refby="autolist"></help>
       </node>
       <node type="ConfigElement">
@@ -81,13 +79,13 @@
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="plr_flags">autosplit</bit>
-        <extra>keep_hide ghost afk </extra>
-        <hint>делиться с группой деньгами из трупов</hint>
-        <msgOff>Ты не будешь делить деньги из трупа врага между членами своей группы.</msgOff>
-        <msgOn>Ты будешь делить деньги из трупа врага между членами своей группы.</msgOn>
+        <extra>hidden keep_hide ghost afk </extra>
+        <hint>п╢п╣п╩п╦я┌я▄я│я▐ я│ пЁя─я┐п©п©п╬п╧ п╢п╣п╫я▄пЁп╟п╪п╦ п╦п╥ я┌я─я┐п©п╬п╡</hint>
+        <msgOff>п╒я▀ п╫п╣ п╠я┐п╢п╣я┬я▄ п╢п╣п╩п╦я┌я▄ п╢п╣п╫я▄пЁп╦ п╦п╥ я┌я─я┐п©п╟ п╡я─п╟пЁп╟ п╪п╣п╤п╢я┐ я┤п╩п╣п╫п╟п╪п╦ я│п╡п╬п╣п╧ пЁя─я┐п©п©я▀.</msgOff>
+        <msgOn>п╒я▀ п╠я┐п╢п╣я┬я▄ п╢п╣п╩п╦я┌я▄ п╢п╣п╫я▄пЁп╦ п╦п╥ я┌я─я┐п©п╟ п╡я─п╟пЁп╟ п╪п╣п╤п╢я┐ я┤п╩п╣п╫п╟п╪п╦ я│п╡п╬п╣п╧ пЁя─я┐п©п©я▀.</msgOn>
         <name>autosplit</name>
         <position>dead</position>
-        <rname>автодележ</rname>
+        <rname>п╟п╡я┌п╬п╢п╣п╩п╣п╤</rname>
 	<help type="CommandHelp" refby="autolist"></help>
       </node>
       <node type="ConfigElement">
@@ -95,54 +93,54 @@
         <autolist>false</autolist>
         <autotext>false</autotext>
         <bit table="config_flags">fightspam</bit>
-        <extra>keep_hide ghost afk</extra>
-        <hint>показывать ли боевые автоумения</hint>
-        <msgOff>Ты не видишь парирований, уверток ...</msgOff>
-        <msgOn>Тебе отображаются парирования, увертки и тп.</msgOn>
+        <extra>hidden keep_hide ghost afk</extra>
+        <hint>п©п╬п╨п╟п╥я▀п╡п╟я┌я▄ п╩п╦ п╠п╬п╣п╡я▀п╣ п╟п╡я┌п╬я┐п╪п╣п╫п╦я▐</hint>
+        <msgOff>п╒я▀ п╫п╣ п╡п╦п╢п╦я┬я▄ п©п╟я─п╦я─п╬п╡п╟п╫п╦п╧, я┐п╡п╣я─я┌п╬п╨ п╦ я┌.п©.</msgOff>
+        <msgOn>п╒п╣п╠п╣ п╬я┌п╬п╠я─п╟п╤п╟я▌я┌я│я▐ п©п╟я─п╦я─п╬п╡п╟п╫п╦я▐, я┐п╡п╣я─я┌п╨п╦ п╦ я┌.п©.</msgOn>
         <name>fightspam</name>
         <position>dead</position>
-        <rname>спамбой</rname>
+        <rname>я│п©п╟п╪п╠п╬п╧</rname>
       </node>
       <node type="ConfigElement">
         <autocmd>false</autocmd>
         <autolist>false</autolist>
         <autotext>false</autotext>
         <bit table="config_flags">skillspam</bit>
-        <extra>keep_hide ghost afk</extra>
-        <hint>показывать ли промахи умений</hint>
-        <msgOff>Ты не видишь промахи умений.</msgOff>
-        <msgOn>Тебе отображаются промахи умений.</msgOn>
+        <extra>hidden keep_hide ghost afk</extra>
+        <hint>п©п╬п╨п╟п╥я▀п╡п╟я┌я▄ п╩п╦ п©я─п╬п╪п╟я┘п╦ я┐п╪п╣п╫п╦п╧</hint>
+        <msgOff>п╒я▀ п╫п╣ п╡п╦п╢п╦я┬я▄ п©я─п╬п╪п╟я┘п╦ я┐п╪п╣п╫п╦п╧.</msgOff>
+        <msgOn>п╒п╣п╠п╣ п╬я┌п╬п╠я─п╟п╤п╟я▌я┌я│я▐ п©я─п╬п╪п╟я┘п╦ я┐п╪п╣п╫п╦п╧.</msgOn>
         <name>skillspam</name>
         <position>dead</position>
-        <rname>спамумения</rname>
+        <rname>я│п©п╟п╪я┐п╪п╣п╫п╦я▐</rname>
       </node>
       <node type="ConfigElement">
         <autocmd>false</autocmd>
         <autolist>false</autolist>
         <autotext>false</autotext>
         <bit table="config_flags">weaponspam</bit>
-        <extra>keep_hide ghost afk</extra>
-        <hint>не показывать действия эффектов оружия(flaming, frost, ...)</hint>
-        <msgOff>Ты видишь все действия эффектов на оружии.</msgOff>
-        <msgOn>Ты не видишь действия эффектов на оружии.</msgOn>
+        <extra>hidden keep_hide ghost afk</extra>
+        <hint>п╫п╣ п©п╬п╨п╟п╥я▀п╡п╟я┌я▄ п╢п╣п╧я│я┌п╡п╦я▐ я█я└я└п╣п╨я┌п╬п╡ п╬я─я┐п╤п╦я▐(flaming, frost, ...)</hint>
+        <msgOff>п╒я▀ п╡п╦п╢п╦я┬я▄ п╡я│п╣ п╢п╣п╧я│я┌п╡п╦я▐ я█я└я└п╣п╨я┌п╬п╡ п╫п╟ п╬я─я┐п╤п╦п╦.</msgOff>
+        <msgOn>п╒я▀ п╫п╣ п╡п╦п╢п╦я┬я▄ п╢п╣п╧я│я┌п╡п╦я▐ я█я└я└п╣п╨я┌п╬п╡ п╫п╟ п╬я─я┐п╤п╦п╦.</msgOn>
         <name>noweaponspam</name>
         <position>dead</position>
-        <rname>нетспаморужия</rname>
+        <rname>п╫п╣я┌я│п©п╟п╪п╬я─я┐п╤п╦я▐</rname>
       </node>
       <node type="ConfigElement">
         <autocmd>false</autocmd>
         <autolist>false</autolist>
         <autotext>false</autotext>
         <bit table="config_flags">newdamage</bit>
-        <extra>keep_hide ghost afk</extra>
-        <hint>альтернативная система отображения повреждений</hint>
-        <msgOff>Ты используешь обычную систему отображение повреждений.</msgOff>
-        <msgOn>Ты используешь альтернативную систему отображения повреждений ({lR? новые повреждения{lEhelp newdamage{lx)</msgOn>
+        <extra>hidden keep_hide ghost afk</extra>
+        <hint>п╟п╩я▄я┌п╣я─п╫п╟я┌п╦п╡п╫п╟я▐ я│п╦я│я┌п╣п╪п╟ п╬я┌п╬п╠я─п╟п╤п╣п╫п╦я▐ п©п╬п╡я─п╣п╤п╢п╣п╫п╦п╧</hint>
+        <msgOff>п╒я▀ п╦я│п©п╬п╩я▄п╥я┐п╣я┬я▄ п╬п╠я▀я┤п╫я┐я▌ я│п╦я│я┌п╣п╪я┐ п╬я┌п╬п╠я─п╟п╤п╣п╫п╦п╣ п©п╬п╡я─п╣п╤п╢п╣п╫п╦п╧.</msgOff>
+        <msgOn>п╒я▀ п╦я│п©п╬п╩я▄п╥я┐п╣я┬я▄ п╫п╬п╡я┐я▌ я│п╦я│я┌п╣п╪я┐ п╬я┌п╬п╠я─п╟п╤п╣п╫п╦я▐ п©п╬п╡я─п╣п╤п╢п╣п╫п╦п╧.</msgOn>
         <name>newdamage</name>
         <position>dead</position>
-        <rname>повреждения</rname>
+        <rname>п©п╬п╡я─п╣п╤п╢п╣п╫п╦я▐</rname>
       </node>
-      <name>Настройки персонажа, связанные с боями:</name>
+      <name>п²п╟я│я┌я─п╬п╧п╨п╦ п©п╣я─я│п╬п╫п╟п╤п╟, я│п╡я▐п╥п╟п╫п╫я▀п╣ я│ п╠п╬я▐п╪п╦:</name>
     </node>
     <node>
       <node type="ConfigElement">
@@ -150,41 +148,41 @@
         <autolist>true</autolist>
         <autotext>true</autotext>
         <bit table="add_comm_flags">nocancel</bit>
-        <extra>keep_hide ghost afk </extra>
-        <hint>запрет не-соклановикам применять {lRзаклинание отмена{lEcancellation{lx</hint>
-        <msgOff>Заклинание &apos;{lRотмена{lEcancellation{lx&apos; на тебя смогут применить все.</msgOff>
-        <msgOn>Заклинание &apos;{lRотмена{lEcancellation{lx&apos; на тебя смогут применить только соклановцы.</msgOn>
+        <extra>hidden keep_hide ghost afk </extra>
+        <hint>п╥п╟п©я─п╣я┌ п╫п╣-я│п╬п╨п╩п╟п╫п╬п╡п╦п╨п╟п╪ п©я─п╦п╪п╣п╫я▐я┌я▄ {lRп╥п╟п╨п╩п╦п╫п╟п╫п╦п╣ п╬я┌п╪п╣п╫п╟{lEcancellation{lx</hint>
+        <msgOff>п≈п╟п╨п╩п╦п╫п╟п╫п╦п╣ &apos;{lRп╬я┌п╪п╣п╫п╟{lEcancellation{lx&apos; п╫п╟ я┌п╣п╠я▐ я│п╪п╬пЁя┐я┌ п©я─п╦п╪п╣п╫п╦я┌я▄ п╡я│п╣.</msgOff>
+        <msgOn>п≈п╟п╨п╩п╦п╫п╟п╫п╦п╣ &apos;{lRп╬я┌п╪п╣п╫п╟{lEcancellation{lx&apos; п╫п╟ я┌п╣п╠я▐ я│п╪п╬пЁя┐я┌ п©я─п╦п╪п╣п╫п╦я┌я▄ я┌п╬п╩я▄п╨п╬ я│п╬п╨п╩п╟п╫п╬п╡я├я▀.</msgOn>
         <name>nocancel</name>
         <position>dead</position>
-        <rname>неотменять</rname>
+        <rname>п╫п╣п╬я┌п╪п╣п╫я▐я┌я▄</rname>
       </node>
       <node type="ConfigElement">
         <autocmd>false</autocmd>
         <autolist>true</autolist>
         <autotext>true</autotext>
         <bit table="plr_flags">nofollow</bit>
-        <extra>keep_hide ghost afk</extra>
-        <hint>запретить следовать за собой</hint>
-        <msgOff>Ты разрешаешь следовать за собой.</msgOff>
-        <msgOn>Ты запрещаешь следовать за собой.</msgOn>
+        <extra>hidden keep_hide ghost afk</extra>
+        <hint>п╥п╟п©я─п╣я┌п╦я┌я▄ я│п╩п╣п╢п╬п╡п╟я┌я▄ п╥п╟ я│п╬п╠п╬п╧</hint>
+        <msgOff>п╒я▀ я─п╟п╥я─п╣я┬п╟п╣я┬я▄ я│п╩п╣п╢п╬п╡п╟я┌я▄ п╥п╟ я│п╬п╠п╬п╧.</msgOff>
+        <msgOn>п╒я▀ п╥п╟п©я─п╣я┴п╟п╣я┬я▄ я│п╩п╣п╢п╬п╡п╟я┌я▄ п╥п╟ я│п╬п╠п╬п╧.</msgOn>
         <name>nofollow</name>
         <position>dead</position>
-        <rname>неследовать</rname>
+        <rname>п╫п╣я│п╩п╣п╢п╬п╡п╟я┌я▄</rname>
       </node>
       <node type="ConfigElement">
         <autocmd>true</autocmd>
         <autolist>true</autolist>
         <autotext>true</autotext>
         <bit table="plr_flags">nosummon</bit>
-        <extra>keep_hide ghost afk </extra>
-        <hint>запретить не-соклановикам призывать вне ПК</hint>
-        <msgOff>Тебя сможет призвать кто угодно.</msgOff>
-        <msgOn>Вне твоего ПК тебя смогут призвать только соклановики.</msgOn>
+        <extra>hidden keep_hide ghost afk </extra>
+        <hint>п╥п╟п©я─п╣я┌п╦я┌я▄ п╫п╣-я│п╬п╨п╩п╟п╫п╬п╡п╦п╨п╟п╪ п©я─п╦п╥я▀п╡п╟я┌я▄ п╡п╫п╣ п÷п </hint>
+        <msgOff>п╒п╣п╠я▐ я│п╪п╬п╤п╣я┌ п©я─п╦п╥п╡п╟я┌я▄ п╨я┌п╬ я┐пЁп╬п╢п╫п╬.</msgOff>
+        <msgOn>п▓п╫п╣ я┌п╡п╬п╣пЁп╬ п÷п  я┌п╣п╠я▐ я│п╪п╬пЁя┐я┌ п©я─п╦п╥п╡п╟я┌я▄ я┌п╬п╩я▄п╨п╬ я│п╬п╨п╩п╟п╫п╬п╡п╦п╨п╦.</msgOn>
         <name>nosummon</name>
         <position>dead</position>
-        <rname>непризывать</rname>
+        <rname>п╫п╣п©я─п╦п╥я▀п╡п╟я┌я▄</rname>
       </node>
-      <name>Защитные настройки:</name>
+      <name>п≈п╟я┴п╦я┌п╫я▀п╣ п╫п╟я│я┌я─п╬п╧п╨п╦:</name>
     </node>
     <node>
       <node type="ConfigElement">
@@ -192,40 +190,40 @@
         <autolist>true</autolist>
         <autotext>true</autotext>
         <bit table="plr_flags">holylight</bit>
-        <extra>keep_hide ghost afk</extra>
-        <hint>божественный взор</hint>
+        <extra>hidden keep_hide ghost afk</extra>
+        <hint>п╠п╬п╤п╣я│я┌п╡п╣п╫п╫я▀п╧ п╡п╥п╬я─</hint>
         <level>102</level>
-        <msgOff>Божественный взор выключен.</msgOff>
-        <msgOn>Божественный взор включен.</msgOn>
+        <msgOff>п▒п╬п╤п╣я│я┌п╡п╣п╫п╫я▀п╧ п╡п╥п╬я─ п╡я▀п╨п╩я▌я┤п╣п╫.</msgOff>
+        <msgOn>п▒п╬п╤п╣я│я┌п╡п╣п╫п╫я▀п╧ п╡п╥п╬я─ п╡п╨п╩я▌я┤п╣п╫.</msgOn>
         <name>holylight</name>
         <position>dead</position>
-        <rname>боговзор</rname>
+        <rname>п╠п╬пЁп╬п╡п╥п╬я─</rname>
       </node>
       <node type="ConfigElement">
         <autocmd>false</autocmd>
         <autolist>false</autolist>
         <autotext>false</autotext>
         <bit table="comm_flags">show_affects</bit>
-        <extra>keep_hide ghost afk</extra>
-        <hint>показывать эффекты по команде {lRсчет{lEscore{lx</hint>
-        <msgOff>Эффекты не видны по команде {lRсчет{lEscore{lx</msgOff>
-        <msgOn>Эффекты видны по команде {lRсчет{lEscore{lx</msgOn>
+        <extra>hidden keep_hide ghost afk</extra>
+        <hint>п©п╬п╨п╟п╥я▀п╡п╟я┌я▄ п╟я└я└п╣п╨я┌я▀ п©п╬ п╨п╬п╪п╟п╫п╢п╣ {lRя│я┤п╣я┌{lEscore{lx</hint>
+        <msgOff>п░я└я└п╣п╨я┌я▀ п╫п╣ п╡п╦п╢п╫я▀ п©п╬ п╨п╬п╪п╟п╫п╢п╣ {lRя│я┤п╣я┌{lEscore{lx.</msgOff>
+        <msgOn>п░я└я└п╣п╨я┌я▀ п╡п╦п╢п╫я▀ п©п╬ п╨п╬п╪п╟п╫п╢п╣ {lRя│я┤п╣я┌{lEscore{lx.</msgOn>
         <name>affects</name>
         <position>dead</position>
-        <rname>эффекты</rname>
+        <rname>п╟я└я└п╣п╨я┌я▀</rname>
       </node>
       <node type="ConfigElement">
         <autocmd>true</autocmd>
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="plr_flags">autoexit</bit>
-        <extra>keep_hide ghost afk</extra>
-        <hint>отображать выходы из комнаты</hint>
-        <msgOff>Выходы не отображаются автоматически.</msgOff>
-        <msgOn>Выходы отображаются автоматически.</msgOn>
+        <extra>hidden keep_hide ghost afk</extra>
+        <hint>п╬я┌п╬п╠я─п╟п╤п╟я┌я▄ п╡я▀я┘п╬п╢я▀ п╦п╥ п╨п╬п╪п╫п╟я┌я▀</hint>
+        <msgOff>п▓я▀я┘п╬п╢я▀ п╫п╣ п╬я┌п╬п╠я─п╟п╤п╟я▌я┌я│я▐ п╟п╡я┌п╬п╪п╟я┌п╦я┤п╣я│п╨п╦.</msgOff>
+        <msgOn>п▓я▀я┘п╬п╢я▀ п╬я┌п╬п╠я─п╟п╤п╟я▌я┌я│я▐ п╟п╡я┌п╬п╪п╟я┌п╦я┤п╣я│п╨п╦.</msgOn>
         <name>autoexit</name>
         <position>dead</position>
-        <rname>автовыходы</rname>
+        <rname>п╟п╡я┌п╬п╡я▀я┘п╬п╢я▀</rname>
 	<help type="CommandHelp" refby="autolist"></help>
       </node>
       <node type="ConfigElement">
@@ -233,13 +231,13 @@
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="add_comm_flags">autostore</bit>
-        <extra>keep_hide ghost afk </extra>
-        <hint>во время боя сохранять сообщения в буфер</hint>
-        <msgOff>Сообщения, поступившие во время сражения, отображаются сразу же.</msgOff>
-        <msgOn>Сообщения, поступившие во время сражения, сохраняются в буфере.</msgOn>
+        <extra>hidden keep_hide ghost afk </extra>
+        <hint>п╡п╬ п╡я─п╣п╪я▐ п╠п╬я▐ я│п╬я┘я─п╟п╫я▐я┌я▄ я│п╬п╬п╠я┴п╣п╫п╦я▐ п╡ п╠я┐я└п╣я─</hint>
+        <msgOff>п║п╬п╬п╠я┴п╣п╫п╦я▐, п©п╬я│я┌я┐п©п╦п╡я┬п╦п╣ п╡п╬ п╡я─п╣п╪я▐ я│я─п╟п╤п╣п╫п╦я▐, п╬я┌п╬п╠я─п╟п╤п╟я▌я┌я│я▐ я│я─п╟п╥я┐ п╤п╣.</msgOff>
+        <msgOn>п║п╬п╬п╠я┴п╣п╫п╦я▐, п©п╬я│я┌я┐п©п╦п╡я┬п╦п╣ п╡п╬ п╡я─п╣п╪я▐ я│я─п╟п╤п╣п╫п╦я▐, я│п╬я┘я─п╟п╫я▐я▌я┌я│я▐ п╡ п╠я┐я└п╣я─п╣.</msgOn>
         <name>autostore</name>
         <position>dead</position>
-        <rname>автобуфер</rname>
+        <rname>п╟п╡я┌п╬п╠я┐я└п╣я─</rname>
 	<help type="CommandHelp" refby="afk autolist"></help>
       </node>
       <node type="ConfigElement">
@@ -247,24 +245,24 @@
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="comm_flags">brief</bit>
-        <extra>keep_hide ghost afk </extra>
-        <hint>видеть сокращенное описание комнаты</hint>
-        <msgOff>Описание комнаты отображается в полном виде.</msgOff>
-        <msgOn>Описание комнаты отображается в сокращенном виде.</msgOn>
+        <extra>hidden keep_hide ghost afk </extra>
+        <hint>п╡п╦п╢п╣я┌я▄ я│п╬п╨я─п╟я┴п╣п╫п╫п╬п╣ п╬п©п╦я│п╟п╫п╦п╣ п╨п╬п╪п╫п╟я┌я▀</hint>
+        <msgOff>п·п©п╦я│п╟п╫п╦п╣ п╨п╬п╪п╫п╟я┌я▀ п╬я┌п╬п╠я─п╟п╤п╟п╣я┌я│я▐ п╡ п©п╬п╩п╫п╬п╪ п╡п╦п╢п╣.</msgOff>
+        <msgOn>п·п©п╦я│п╟п╫п╦п╣ п╨п╬п╪п╫п╟я┌я▀ п╬я┌п╬п╠я─п╟п╤п╟п╣я┌я│я▐ п╡ я│п╬п╨я─п╟я┴п╣п╫п╫п╬п╪ п╡п╦п╢п╣.</msgOn>
         <name>brief</name>
         <position>dead</position>
-        <rname>кратко</rname>
+        <rname>п╨я─п╟я┌п╨п╬</rname>
 	<help type="CommandHelp" ref="compact">
-Эти команды устанавливают опции отображения.
+п╜я┌п╦ п╨п╬п╪п╟п╫п╢я▀ я┐я│я┌п╟п╫п╟п╡п╩п╦п╡п╟я▌я┌ п╬п©я├п╦п╦ п╬я┌п╬п╠я─п╟п╤п╣п╫п╦я▐.
 
-%FMT%  *(brief,кратко)*
-Включает и выключает вывод описаний комнат при движении, намного уменьшая
-количество текста для пересылки и обработки.
+%FMT%  *(config,я─п╣п╤п╦п╪)* *(brief,п╨я─п╟я┌п╨п╬)* *%YES%*|*%NO%*
+п▓п╨п╩я▌я┤п╟п╣я┌ п╦ п╡я▀п╨п╩я▌я┤п╟п╣я┌ п╡я▀п╡п╬п╢ п╬п©п╦я│п╟п╫п╦п╧ п╨п╬п╪п╫п╟я┌ п©я─п╦ п╢п╡п╦п╤п╣п╫п╦п╦, п╫п╟п╪п╫п╬пЁп╬ я┐п╪п╣п╫я▄я┬п╟я▐
+п╨п╬п╩п╦я┤п╣я│я┌п╡п╬ я┌п╣п╨я│я┌п╟ п╢п╩я▐ п©п╣я─п╣я│я▀п╩п╨п╦ п╦ п╬п╠я─п╟п╠п╬я┌п╨п╦.
 
-%FMT%  *(compact,компактно)*
-Убирает дополнительную пустую строку перед строкой-подсказкой (prompt).
+%FMT%  *(config,я─п╣п╤п╦п╪)* *(compact,п╨п╬п╪п©п╟п╨я┌п╫п╬)* *%YES%*|*%NO%*
+пёп╠п╦я─п╟п╣я┌ п╢п╬п©п╬п╩п╫п╦я┌п╣п╩я▄п╫я┐я▌ п©я┐я│я┌я┐я▌ я│я┌я─п╬п╨я┐ п©п╣я─п╣п╢ я│я┌я─п╬п╨п╬п╧-п©п╬п╢я│п╨п╟п╥п╨п╬п╧ (prompt).
 
-%SA% %H% [(config,режим)], [(autolist,автонастройки)]
+%SA% %H% [(config,я─п╣п╤п╦п╪)], [(autolist,п╟п╡я┌п╬п╫п╟я│я┌я─п╬п╧п╨п╦)]
 	</help>
       </node>
       <node type="ConfigElement">
@@ -276,39 +274,39 @@
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="plr_flags">color</bit>
-        <extra>keep_hide ghost afk nanny</extra>
-        <hint>использование цветов</hint>
-        <msgOff>Цвет выключен.</msgOff>
+        <extra>hidden keep_hide ghost afk nanny</extra>
+        <hint>п╦я│п©п╬п╩я▄п╥п╬п╡п╟п╫п╦п╣ я├п╡п╣я┌п╬п╡</hint>
+        <msgOff>п╕п╡п╣я┌ п╡я▀п╨п╩я▌я┤п╣п╫.</msgOff>
         <msgOn>{BC{Ro{Yl{Co{Mu{Gr{x is now {RON{x, Way Cool!</msgOn>
         <name>color</name>
         <position>dead</position>
-        <rname>цвет</rname>
+        <rname>я├п╡п╣я┌</rname>
       </node>
       <node type="ConfigElement">
         <autocmd>true</autocmd>
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="comm_flags">combine</bit>
-        <extra>keep_hide ghost afk </extra>
-        <hint>комбинировать одинаковые вещи в списке</hint>
-        <msgOff>Список предметов отображается в полном виде.</msgOff>
-        <msgOn>Список предметов отображается в сокращенном виде.</msgOn>
+        <extra>hidden keep_hide ghost afk </extra>
+        <hint>п╨п╬п╪п╠п╦п╫п╦я─п╬п╡п╟я┌я▄ п╬п╢п╦п╫п╟п╨п╬п╡я▀п╣ п╡п╣я┴п╦ п╡ я│п©п╦я│п╨п╣</hint>
+        <msgOff>п·п╢п╦п╫п╟п╨п╬п╡я▀п╣ п╡п╣я┴п╦ п╡ я│п©п╦я│п╨п╣ п©я─п╣п╢п╪п╣я┌п╬п╡ п╫п╣ пЁя─я┐п©п©п╦я─я┐я▌я┌я│я▐ п╡п╪п╣я│я┌п╣.</msgOff>
+        <msgOn>п·п╢п╦п╫п╟п╨п╬п╡я▀п╣ п╡п╣я┴п╦ п╡ я│п©п╦я│п╨п╣ п©я─п╣п╢п╪п╣я┌п╬п╡ пЁя─я┐п©п©п╦я─я┐я▌я┌я│я▐ п╡п╪п╣я│я┌п╣.</msgOn>
         <name>combine</name>
         <position>dead</position>
-        <rname>комбинировать</rname>
+        <rname>п╨п╬п╪п╠п╦п╫п╦я─п╬п╡п╟я┌я▄</rname>
       </node>
       <node type="ConfigElement">
         <autocmd>true</autocmd>
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="comm_flags">compact</bit>
-        <extra>keep_hide ghost afk nanny</extra>
-        <hint>не выводить дополнительных строк</hint>
-        <msgOff>Компактный режим вывода выключен.</msgOff>
-        <msgOn>Компактный режим вывода включен.</msgOn>
+        <extra>hidden keep_hide ghost afk nanny</extra>
+        <hint>п╫п╣ п╡я▀п╡п╬п╢п╦я┌я▄ п╢п╬п©п╬п╩п╫п╦я┌п╣п╩я▄п╫я▀я┘ я│я┌я─п╬п╨</hint>
+        <msgOff>п÷п╣я─п╣п╢ я│я┌я─п╬п╨п╬п╧ п©п╬п╢я│п╨п╟п╥п╨п╦ п╠я┐п╢п╣я┌ п╡я▀п╡п╬п╢п╦я┌я▄я│я▐ п╢п╬п©п╬п╩п╫п╦я┌п╣п╩я▄п╫п╟я▐ я│я┌я─п╬п╨п╟.</msgOff>
+        <msgOn>п÷п╣я─п╣п╢ я│я┌я─п╬п╨п╬п╧ п©п╬п╢я│п╨п╟п╥п╨п╦ п╫п╣ п╠я┐п╢п╣я┌ п╡я▀п╡п╬п╢п╦я┌я▄я│я▐ п╢п╬п©п╬п╩п╫п╦я┌п╣п╩я▄п╫п╟я▐ я│я┌я─п╬п╨п╟.</msgOn>
         <name>compact</name>
         <position>dead</position>
-        <rname>компактно</rname>
+        <rname>п╨п╬п╪п©п╟п╨я┌п╫п╬</rname>
 	<help type="CommandHelp" refby="brief"></help>
       </node>
       <node type="ConfigElement">
@@ -316,129 +314,129 @@
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="comm_flags">prompt</bit>
-        <extra>keep_hide ghost afk</extra>
-        <hint>выводить подсказку с параметрами персонажа</hint>
-        <msgOff>Вывод подсказки (prompt) отключен.</msgOff>
-        <msgOn>Подсказка (prompt) выводится.</msgOn>
+        <extra>hidden keep_hide ghost afk</extra>
+        <hint>п╡я▀п╡п╬п╢п╦я┌я▄ п©п╬п╢я│п╨п╟п╥п╨я┐ я│ п©п╟я─п╟п╪п╣я┌я─п╟п╪п╦ п©п╣я─я│п╬п╫п╟п╤п╟</hint>
+        <msgOff>п▓я▀п╡п╬п╢ п©п╬п╢я│п╨п╟п╥п╨п╦ (prompt) п╬я┌п╨п╩я▌я┤п╣п╫.</msgOff>
+        <msgOn>п÷п╬п╢я│п╨п╟п╥п╨п╟ (prompt) п╡я▀п╡п╬п╢п╦я┌я│я▐.</msgOn>
         <name>prompt</name>
         <position>dead</position>
-        <rname>подсказка</rname>
+        <rname>п©п╬п╢я│п╨п╟п╥п╨п╟</rname>
       </node>
       <node type="ConfigElement">
         <autocmd>false</autocmd>
         <autolist>false</autolist>
         <autotext>false</autotext>
         <bit table="config_flags">runames</bit>
-        <extra>keep_hide ghost afk nanny</extra>
-        <hint>показывать имена игроков в русском варианте</hint>
-        <msgOff>Имена игроков показываются по-английски.</msgOff>
-        <msgOn>Имена игроков показываются по-русски.</msgOn>
+        <extra>hidden keep_hide ghost afk nanny</extra>
+        <hint>п©п╬п╨п╟п╥я▀п╡п╟я┌я▄ п╦п╪п╣п╫п╟ п╦пЁя─п╬п╨п╬п╡ п╡ я─я┐я│я│п╨п╬п╪ п╡п╟я─п╦п╟п╫я┌п╣</hint>
+        <msgOff>п≤п╪п╣п╫п╟ п╦пЁя─п╬п╨п╬п╡ п©п╬п╨п╟п╥я▀п╡п╟я▌я┌я│я▐ п©п╬-п╟п╫пЁп╩п╦п╧я│п╨п╦.</msgOff>
+        <msgOn>п≤п╪п╣п╫п╟ п╦пЁя─п╬п╨п╬п╡ п©п╬п╨п╟п╥я▀п╡п╟я▌я┌я│я▐ п©п╬-я─я┐я│я│п╨п╦.</msgOn>
         <name>runames</name>
         <position>dead</position>
-        <rname>русимена</rname>
+        <rname>я─я┐я│п╦п╪п╣п╫п╟</rname>
       </node>
       <node type="ConfigElement">
         <autocmd>false</autocmd>
         <autolist>false</autolist>
         <autotext>false</autotext>
         <bit table="config_flags">rucommands</bit>
-        <extra>keep_hide ghost afk nanny</extra>
-        <hint>показывать команды в русском варианте</hint>
-        <msgOff>Команды показываются по-английски.</msgOff>
-        <msgOn>Команды показываются по-русски.</msgOn>
+        <extra>hidden keep_hide ghost afk nanny</extra>
+        <hint>п©п╬п╨п╟п╥я▀п╡п╟я┌я▄ п╨п╬п╪п╟п╫п╢я▀ п╡ я─я┐я│я│п╨п╬п╪ п╡п╟я─п╦п╟п╫я┌п╣</hint>
+        <msgOff>п п╬п╪п╟п╫п╢я▀ п©п╬п╨п╟п╥я▀п╡п╟я▌я┌я│я▐ п©п╬-п╟п╫пЁп╩п╦п╧я│п╨п╦.</msgOff>
+        <msgOn>п п╬п╪п╟п╫п╢я▀ п©п╬п╨п╟п╥я▀п╡п╟я▌я┌я│я▐ п©п╬-я─я┐я│я│п╨п╦.</msgOn>
         <name>rucommands</name>
         <position>dead</position>
-        <rname>рускоманды</rname>
+        <rname>я─я┐я│п╨п╬п╪п╟п╫п╢я▀</rname>
       </node>
       <node type="ConfigElement">
         <autocmd>false</autocmd>
         <autolist>false</autolist>
         <autotext>false</autotext>
         <bit table="config_flags">ruskills</bit>
-        <extra>keep_hide ghost afk nanny</extra>
-        <hint>показывать умения в русском варианте</hint>
-        <msgOff>Умения показываются по-английски.</msgOff>
-        <msgOn>Умения показываются по-русски.</msgOn>
+        <extra>hidden keep_hide ghost afk nanny</extra>
+        <hint>п©п╬п╨п╟п╥я▀п╡п╟я┌я▄ я┐п╪п╣п╫п╦я▐ п╡ я─я┐я│я│п╨п╬п╪ п╡п╟я─п╦п╟п╫я┌п╣</hint>
+        <msgOff>пёп╪п╣п╫п╦я▐ п©п╬п╨п╟п╥я▀п╡п╟я▌я┌я│я▐ п©п╬-п╟п╫пЁп╩п╦п╧я│п╨п╦.</msgOff>
+        <msgOn>пёп╪п╣п╫п╦я▐ п©п╬п╨п╟п╥я▀п╡п╟я▌я┌я│я▐ п©п╬-я─я┐я│я│п╨п╦.</msgOn>
         <name>ruskills</name>
         <position>dead</position>
-        <rname>русумения</rname>
+        <rname>я─я┐я│я┐п╪п╣п╫п╦я▐</rname>
       </node>
       <node type="ConfigElement">
         <autocmd>false</autocmd>
         <autolist>false</autolist>
         <autotext>false</autotext>
         <bit table="config_flags">ruexits</bit>
-        <extra>keep_hide ghost afk nanny</extra>
-        <hint>показывать выходы в русском варианте</hint>
-        <msgOff>Выходы показываются по-английски.</msgOff>
-        <msgOn>Выходы показываются по-русски.</msgOn>
+        <extra>hidden keep_hide ghost afk nanny</extra>
+        <hint>п©п╬п╨п╟п╥я▀п╡п╟я┌я▄ п╡я▀я┘п╬п╢я▀ п╡ я─я┐я│я│п╨п╬п╪ п╡п╟я─п╦п╟п╫я┌п╣</hint>
+        <msgOff>п▓я▀я┘п╬п╢я▀ п©п╬п╨п╟п╥я▀п╡п╟я▌я┌я│я▐ п©п╬-п╟п╫пЁп╩п╦п╧я│п╨п╦.</msgOff>
+        <msgOn>п▓я▀я┘п╬п╢я▀ п©п╬п╨п╟п╥я▀п╡п╟я▌я┌я│я▐ п©п╬-я─я┐я│я│п╨п╦.</msgOn>
         <name>ruexits</name>
         <position>dead</position>
-        <rname>русвыходы</rname>
+        <rname>я─я┐я│п╡я▀я┘п╬п╢я▀</rname>
       </node>
       <node type="ConfigElement">
         <autocmd>false</autocmd>
         <autolist>false</autolist>
         <autotext>false</autotext>
         <bit table="config_flags">short_objflag</bit>
-        <extra>keep_hide ghost afk </extra>
-        <hint>показывать флаги на предметах в сокращенной форме</hint>
-        <msgOff>Флаги на предметах будут отображаться в развернутом виде.</msgOff>
-        <msgOn>Флаги на предметах будут отображаться в сокращенном виде.</msgOn>
+        <extra>hidden keep_hide ghost afk </extra>
+        <hint>п©п╬п╨п╟п╥я▀п╡п╟я┌я▄ я└п╩п╟пЁп╦ п╫п╟ п©я─п╣п╢п╪п╣я┌п╟я┘ п╡ я│п╬п╨я─п╟я┴п╣п╫п╫п╬п╧ я└п╬я─п╪п╣</hint>
+        <msgOff>п╓п╩п╟пЁп╦ п╫п╟ п©я─п╣п╢п╪п╣я┌п╟я┘ п╬я┌п╬п╠я─п╟п╤п╟я▌я┌я│я▐ п╡ я─п╟п╥п╡п╣я─п╫я┐я┌п╬п╪ п╡п╦п╢п╣.</msgOff>
+        <msgOn>п╓п╩п╟пЁп╦ п╫п╟ п©я─п╣п╢п╪п╣я┌п╟я┘ п╬я┌п╬п╠я─п╟п╤п╟я▌я┌я│я▐ п╡ я│п╬п╨я─п╟я┴п╣п╫п╫п╬п╪ п╡п╦п╢п╣.</msgOn>
         <name>objflag</name>
         <position>dead</position>
-        <rname>предмфлаги</rname>
+        <rname>п©я─п╣п╢п╪я└п╩п╟пЁп╦</rname>
       </node>
       <node type="ConfigElement">
         <autocmd>false</autocmd>
         <autolist>false</autolist>
         <autotext>true</autotext>
         <bit table="comm_flags">mildcolor</bit>
-        <extra>keep_hide ghost afk nanny</extra>
-        <hint>использовать альтернативную (&apos;мягкую&apos;) цветовую схему</hint>
-        <msgOff>Ты используешь стандартную (яркую) цветовую схему.</msgOff>
-        <msgOn>Ты используешь &apos;мягкую&apos; цветовую схему.</msgOn>
+        <extra>hidden keep_hide ghost afk nanny</extra>
+        <hint>п╦я│п©п╬п╩я▄п╥п╬п╡п╟я┌я▄ п╟п╩я▄я┌п╣я─п╫п╟я┌п╦п╡п╫я┐я▌ (&apos;п╪я▐пЁп╨я┐я▌&apos;) я├п╡п╣я┌п╬п╡я┐я▌ я│я┘п╣п╪я┐</hint>
+        <msgOff>п╒я▀ п╦я│п©п╬п╩я▄п╥я┐п╣я┬я▄ я│я┌п╟п╫п╢п╟я─я┌п╫я┐я▌ (я▐я─п╨я┐я▌) я├п╡п╣я┌п╬п╡я┐я▌ я│я┘п╣п╪я┐.</msgOff>
+        <msgOn>п╒я▀ п╦я│п©п╬п╩я▄п╥я┐п╣я┬я▄ &apos;п╪я▐пЁп╨я┐я▌&apos; я├п╡п╣я┌п╬п╡я┐я▌ я│я┘п╣п╪я┐.</msgOn>
         <name>mildcolor</name>
         <position>dead</position>
-        <rname>мягкцвет</rname>
+        <rname>п╪я▐пЁп╨я├п╡п╣я┌</rname>
       </node>
       <node type="ConfigElement">
         <autocmd>false</autocmd>
         <autolist>false</autolist>
         <autotext>true</autotext>
         <bit table="config_flags">objname_hint</bit>
-        <extra>keep_hide ghost afk nanny</extra>
-        <hint>показывать английское название предмета</hint>
-        <msgOff>У предметов не будут показываться английские названия.</msgOff>
-        <msgOn>Английские названия для предметов включены.</msgOn>
+        <extra>hidden keep_hide ghost afk nanny</extra>
+        <hint>п©п╬п╨п╟п╥я▀п╡п╟я┌я▄ п╟п╫пЁп╩п╦п╧я│п╨п╬п╣ п╫п╟п╥п╡п╟п╫п╦п╣ п©я─п╣п╢п╪п╣я┌п╟</hint>
+        <msgOff>пё п©я─п╣п╢п╪п╣я┌п╬п╡ п╫п╣ п╠я┐п╢я┐я┌ п©п╬п╨п╟п╥я▀п╡п╟я┌я▄я│я▐ п╟п╫пЁп╩п╦п╧я│п╨п╦п╣ п╫п╟п╥п╡п╟п╫п╦я▐.</msgOff>
+        <msgOn>п░п╫пЁп╩п╦п╧я│п╨п╦п╣ п╫п╟п╥п╡п╟п╫п╦я▐ п╢п╩я▐ п©я─п╣п╢п╪п╣я┌п╬п╡ п╡п╨п╩я▌я┤п╣п╫я▀.</msgOn>
         <name>objname</name>
         <position>dead</position>
-        <rname>имяпредмета</rname>
+        <rname>п╦п╪я▐п©я─п╣п╢п╪п╣я┌п╟</rname>
       </node>
       <node type="ConfigElement">
         <autocmd>true</autocmd>
         <autolist>false</autolist>
         <autotext>true</autotext>
         <bit table="config_flags">screenreader</bit>
-        <extra>keep_hide ghost afk nanny</extra>
-        <hint>режим поддержки screen reader</hint>
-        <msgOff>Режим поддержки screen reader выключен.</msgOff>
-        <msgOn>Режим поддержки screen reader включен.</msgOn>
+        <extra>hidden keep_hide ghost afk nanny</extra>
+        <hint>я─п╣п╤п╦п╪ п©п╬п╢п╢п╣я─п╤п╨п╦ screen reader</hint>
+        <msgOff>п═п╣п╤п╦п╪ п©п╬п╢п╢п╣я─п╤п╨п╦ screen reader п╡я▀п╨п╩я▌я┤п╣п╫.</msgOff>
+        <msgOn>п═п╣п╤п╦п╪ п©п╬п╢п╢п╣я─п╤п╨п╦ screen reader п╡п╨п╩я▌я┤п╣п╫.</msgOn>
         <name>screenreader</name>
         <position>dead</position>
-        <rname>скринридер</rname>
+        <rname>я│п╨я─п╦п╫я─п╦п╢п╣я─</rname>
         <help type="CommandHelp">
-%FMT%  *(config,режим)* *(screenreader,скринридер)* *%YES%*|*%NO%*
+%FMT%  *(config,я─п╣п╤п╦п╪)* *(screenreader,я│п╨я─п╦п╫я─п╦п╢п╣я─)* *%YES%*|*%NO%*
 
-Включает поддержку screen readers. На данный момент в этом режиме:
-%A% не будут отображаться английские имена в скобках у предметов, лежащих на земле
-%A% не будут отображаться английские имена в скобках у мобов
+п▓п╨п╩я▌я┤п╟п╣я┌ п©п╬п╢п╢п╣я─п╤п╨я┐ screen readers. п²п╟ п╢п╟п╫п╫я▀п╧ п╪п╬п╪п╣п╫я┌ п╡ я█я┌п╬п╪ я─п╣п╤п╦п╪п╣:
+%A% п╫п╣ п╠я┐п╢я┐я┌ п╬я┌п╬п╠я─п╟п╤п╟я┌я▄я│я▐ п╟п╫пЁп╩п╦п╧я│п╨п╦п╣ п╦п╪п╣п╫п╟ п╡ я│п╨п╬п╠п╨п╟я┘ я┐ п©я─п╣п╢п╪п╣я┌п╬п╡, п╩п╣п╤п╟я┴п╦я┘ п╫п╟ п╥п╣п╪п╩п╣
+%A% п╫п╣ п╠я┐п╢я┐я┌ п╬я┌п╬п╠я─п╟п╤п╟я┌я▄я│я▐ п╟п╫пЁп╩п╦п╧я│п╨п╦п╣ п╦п╪п╣п╫п╟ п╡ я│п╨п╬п╠п╨п╟я┘ я┐ п╪п╬п╠п╬п╡
 
-Также рекомендуется выключить английские подсказки имен предметов: *(config,режим)* *(objname,имяпредмета)* *%NO%*.
-%SA% %H% [(score,счет)]
+п╒п╟п╨п╤п╣ я─п╣п╨п╬п╪п╣п╫п╢я┐п╣я┌я│я▐ п╡я▀п╨п╩я▌я┤п╦я┌я▄ п╟п╫пЁп╩п╦п╧я│п╨п╦п╣ п©п╬п╢я│п╨п╟п╥п╨п╦ п╦п╪п╣п╫ п©я─п╣п╢п╪п╣я┌п╬п╡: *(config,я─п╣п╤п╦п╪)* *(objname,п╦п╪я▐п©я─п╣п╢п╪п╣я┌п╟)* *%NO%*.
+%SA% %H% [(score,я│я┤п╣я┌)]
         </help>
       </node>
-      <name>Настройки отображения:</name>
+      <name>п²п╟я│я┌я─п╬п╧п╨п╦ п╬я┌п╬п╠я─п╟п╤п╣п╫п╦я▐:</name>
     </node>
     <node>
       <node type="ConfigElement">
@@ -446,55 +444,53 @@
         <autolist>false</autolist>
         <autotext>false</autotext>
         <bit table="config_flags">autoafk</bit>
-        <extra>keep_hide ghost afk</extra>
-        <hint>автоматическое {lRВОК{lEAFK{lx после 10 минут бездействия</hint>
-        <msgOff>Ты не будешь уходить в {lRВОК{lEAFK{lx после 10 минут бездействия.</msgOff>
-        <msgOn>Ты будешь уходить в {lRВОК{lEAFK{lx после 10 минут бездействия.</msgOn>
+        <extra>hidden keep_hide ghost afk</extra>
+        <hint>п╟п╡я┌п╬п╪п╟я┌п╦я┤п╣я│п╨п╬п╣ {lRп▓п·п {lEAFK{lx п©п╬я│п╩п╣ 10 п╪п╦п╫я┐я┌ п╠п╣п╥п╢п╣п╧я│я┌п╡п╦я▐</hint>
+        <msgOff>п╒я▀ п╫п╣ п╠я┐п╢п╣я┬я▄ я┐я┘п╬п╢п╦я┌я▄ п╡ {lRп▓п·п {lEAFK{lx п©п╬я│п╩п╣ 10 п╪п╦п╫я┐я┌ п╠п╣п╥п╢п╣п╧я│я┌п╡п╦я▐.</msgOff>
+        <msgOn>п╒я▀ п╠я┐п╢п╣я┬я▄ я┐я┘п╬п╢п╦я┌я▄ п╡ {lRп▓п·п {lEAFK{lx п©п╬я│п╩п╣ 10 п╪п╦п╫я┐я┌ п╠п╣п╥п╢п╣п╧я│я┌п╡п╦я▐.</msgOn>
         <name>autoafk</name>
         <position>dead</position>
-        <rname>автовок</rname>
+        <rname>п╟п╡я┌п╬п╡п╬п╨</rname>
       </node>
       <node type="ConfigElement">
         <autocmd>true</autocmd>
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="add_comm_flags">noiac</bit>
-        <extra>keep_hide ghost afk nanny</extra>
-        <hint>не заменять IAC на большое YA при выводе текста</hint>
-        <msgOff>IAC-и будут заменяться другой буквой (YA в кодировке cp1251).</msgOff>
-        <msgOn>Тебе будет пересылаться немодифицированный текст.</msgOn>
+        <extra>hidden keep_hide ghost afk nanny</extra>
+        <hint>п╫п╣ п╥п╟п╪п╣п╫я▐я┌я▄ IAC п╫п╟ п╠п╬п╩я▄я┬п╬п╣ YA п©я─п╦ п╡я▀п╡п╬п╢п╣ я┌п╣п╨я│я┌п╟</hint>
+        <msgOff>IAC-п╦ п╠я┐п╢я┐я┌ п╥п╟п╪п╣п╫я▐я┌я▄я│я▐ п╢я─я┐пЁп╬п╧ п╠я┐п╨п╡п╬п╧ (YA п╡ п╨п╬п╢п╦я─п╬п╡п╨п╣ cp1251).</msgOff>
+        <msgOn>п╒п╣п╠п╣ п╠я┐п╢п╣я┌ п©п╣я─п╣я│я▀п╩п╟я┌я▄я│я▐ п╫п╣п╪п╬п╢п╦я└п╦я├п╦я─п╬п╡п╟п╫п╫я▀п╧ я┌п╣п╨я│я┌.</msgOn>
         <name>noiac</name>
         <position>dead</position>
         <rname>noiac</rname>
         <help type="CommandHelp" ref="notelnet telnetga">
-Настройка отображения символов в зависимости от используемого терминала.
+п²п╟я│я┌я─п╬п╧п╨п╟ п╬я┌п╬п╠я─п╟п╤п╣п╫п╦я▐ я│п╦п╪п╡п╬п╩п╬п╡ п╡ п╥п╟п╡п╦я│п╦п╪п╬я│я┌п╦ п╬я┌ п╦я│п©п╬п╩я▄п╥я┐п╣п╪п╬пЁп╬ я┌п╣я─п╪п╦п╫п╟п╩п╟.
 
-%FMT%  *noiac* 
-%FFF%  *(config,режим)* *noiac* *%YES%*|*%NO%*
+%FMT%  *(config,я─п╣п╤п╦п╪)* *noiac* *%YES%*|*%NO%*
 
-Включает-выключает пересылку игроку немодифицированного текста, т.е. такого
-текста, в котором маленькие русские буквы YA в кодировке cp1251 не заменяются
-на большие YA. 
-Если всюду видишь вместо маленьких YA - большие, выключи этот режим командой 
-*(config noiac no,режим noiac нет)*.
+п▓п╨п╩я▌я┤п╟п╣я┌-п╡я▀п╨п╩я▌я┤п╟п╣я┌ п©п╣я─п╣я│я▀п╩п╨я┐ п╦пЁя─п╬п╨я┐ п╫п╣п╪п╬п╢п╦я└п╦я├п╦я─п╬п╡п╟п╫п╫п╬пЁп╬ я┌п╣п╨я│я┌п╟, я┌.п╣. я┌п╟п╨п╬пЁп╬
+я┌п╣п╨я│я┌п╟, п╡ п╨п╬я┌п╬я─п╬п╪ п╪п╟п╩п╣п╫я▄п╨п╦п╣ я─я┐я│я│п╨п╦п╣ п╠я┐п╨п╡я▀ YA п╡ п╨п╬п╢п╦я─п╬п╡п╨п╣ cp1251 п╫п╣ п╥п╟п╪п╣п╫я▐я▌я┌я│я▐
+п╫п╟ п╠п╬п╩я▄я┬п╦п╣ YA. 
+п∙я│п╩п╦ п╡я│я▌п╢я┐ п╡п╦п╢п╦я┬я▄ п╡п╪п╣я│я┌п╬ п╪п╟п╩п╣п╫я▄п╨п╦я┘ YA - п╠п╬п╩я▄я┬п╦п╣, п╡я▀п╨п╩я▌я┤п╦ я█я┌п╬я┌ я─п╣п╤п╦п╪ п╨п╬п╪п╟п╫п╢п╬п╧ 
+*(config noiac no,я─п╣п╤п╦п╪ noiac п╫п╣я┌)*.
 
-%FMT%  *notelnet*
-%FFF%  *(config,режим)* *notelnet* *%YES%*|*%NO%*
+%FMT%  *(config,я─п╣п╤п╦п╪)* *notelnet* *%YES%*|*%NO%*
 
-Отключает-включает фильтр telnet на текст, приходящий от игрока, отключая тем
-самым и любые расширения телнет-протокола, такие как mccp (%H% [(compression,сжатие)]).
-Если ты набираешь одну русскую букву YA, а видишь две, выключи этот режим
-командой *(config notelnet no,режим notelnet нет)*.
+п·я┌п╨п╩я▌я┤п╟п╣я┌-п╡п╨п╩я▌я┤п╟п╣я┌ я└п╦п╩я▄я┌я─ telnet п╫п╟ я┌п╣п╨я│я┌, п©я─п╦я┘п╬п╢я▐я┴п╦п╧ п╬я┌ п╦пЁя─п╬п╨п╟, п╬я┌п╨п╩я▌я┤п╟я▐ я┌п╣п╪
+я│п╟п╪я▀п╪ п╦ п╩я▌п╠я▀п╣ я─п╟я│я┬п╦я─п╣п╫п╦я▐ я┌п╣п╩п╫п╣я┌-п©я─п╬я┌п╬п╨п╬п╩п╟, я┌п╟п╨п╦п╣ п╨п╟п╨ mccp (%H% [(compression,я│п╤п╟я┌п╦п╣)]).
+п∙я│п╩п╦ я┌я▀ п╫п╟п╠п╦я─п╟п╣я┬я▄ п╬п╢п╫я┐ я─я┐я│я│п╨я┐я▌ п╠я┐п╨п╡я┐ YA, п╟ п╡п╦п╢п╦я┬я▄ п╢п╡п╣, п╡я▀п╨п╩я▌я┤п╦ я█я┌п╬я┌ я─п╣п╤п╦п╪
+п╨п╬п╪п╟п╫п╢п╬п╧ *(config notelnet no,я─п╣п╤п╦п╪ notelnet п╫п╣я┌)*.
 
-При игре под клиентом zMUD для Win95, чтобы нормально видеть русскую букву "YA",
-оба переключателя необходимо установить в состояние "ВЫКЛ."
+п÷я─п╦ п╦пЁя─п╣ п©п╬п╢ п╨п╩п╦п╣п╫я┌п╬п╪ zMUD, я┤я┌п╬п╠я▀ п╫п╬я─п╪п╟п╩я▄п╫п╬ п╡п╦п╢п╣я┌я▄ я─я┐я│я│п╨я┐я▌ п╠я┐п╨п╡я┐ "YA",
+п╬п╠п╟ п©п╣я─п╣п╨п╩я▌я┤п╟я┌п╣п╩я▐ п╫п╣п╬п╠я┘п╬п╢п╦п╪п╬ я┐я│я┌п╟п╫п╬п╡п╦я┌я▄ п╡ я│п╬я│я┌п╬я▐п╫п╦п╣ "п▓п╚п п⌡."
 
-%FMT%  *(config,режим)* *telnetga* *%YES%*|*%NO%*
+%FMT%  *(config,я─п╣п╤п╦п╪)* *telnetga* *%YES%*|*%NO%*
 
-Включает-выключает высылку специальной последовательности символов (telnet go ahead)
-после каждой строки состояния. Это необходимо для комфортной работы некоторых клиентов,
-в частности, MudLet. Также необходимо установить переключатель noiac в ВЫКЛ, а
-notelnet во ВКЛ.
+п▓п╨п╩я▌я┤п╟п╣я┌-п╡я▀п╨п╩я▌я┤п╟п╣я┌ п╡я▀я│я▀п╩п╨я┐ я│п©п╣я├п╦п╟п╩я▄п╫п╬п╧ п©п╬я│п╩п╣п╢п╬п╡п╟я┌п╣п╩я▄п╫п╬я│я┌п╦ я│п╦п╪п╡п╬п╩п╬п╡ (telnet go ahead)
+п©п╬я│п╩п╣ п╨п╟п╤п╢п╬п╧ я│я┌я─п╬п╨п╦ я│п╬я│я┌п╬я▐п╫п╦я▐. п╜я┌п╬ п╫п╣п╬п╠я┘п╬п╢п╦п╪п╬ п╢п╩я▐ п╨п╬п╪я└п╬я─я┌п╫п╬п╧ я─п╟п╠п╬я┌я▀ п╫п╣п╨п╬я┌п╬я─я▀я┘ п╨п╩п╦п╣п╫я┌п╬п╡,
+п╡ я┤п╟я│я┌п╫п╬я│я┌п╦, MudLet. п╒п╟п╨п╤п╣ п╫п╣п╬п╠я┘п╬п╢п╦п╪п╬ я┐я│я┌п╟п╫п╬п╡п╦я┌я▄ п©п╣я─п╣п╨п╩я▌я┤п╟я┌п╣п╩я▄ noiac п╡ п▓п╚п п⌡, п╟
+notelnet п╡п╬ п▓п п⌡.
 
 </help>
       </node>
@@ -503,10 +499,10 @@ notelnet во ВКЛ.
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="add_comm_flags">notelnet</bit>
-        <extra>keep_hide ghost afk nanny</extra>
-        <hint>отключить фильтр TELNET на приходящий текст</hint>
-        <msgOff>Фильтр TELNET включен.</msgOff>
-        <msgOn>Фильтр TELNET отключен.</msgOn>
+        <extra>hidden keep_hide ghost afk nanny</extra>
+        <hint>п╬я┌п╨п╩я▌я┤п╦я┌я▄ я└п╦п╩я▄я┌я─ TELNET п╫п╟ п©я─п╦я┘п╬п╢я▐я┴п╦п╧ я┌п╣п╨я│я┌</hint>
+        <msgOff>п╓п╦п╩я▄я┌я─ TELNET п╡п╨п╩я▌я┤п╣п╫.</msgOff>
+        <msgOn>п╓п╦п╩я▄я┌я─ TELNET п╬я┌п╨п╩я▌я┤п╣п╫.</msgOn>
         <name>notelnet</name>
         <position>dead</position>
         <rname>notelnet</rname>
@@ -517,36 +513,36 @@ notelnet во ВКЛ.
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="comm_flags">telnet_ga</bit>
-        <extra>keep_hide ghost afk nanny</extra>
-        <hint>посылать последовательность TELNET GA после строки состояния</hint>
-        <msgOff>Отправка TELNET GA отключена.</msgOff>
-        <msgOn>Отправка TELNET GA включена.</msgOn>
+        <extra>hidden keep_hide ghost afk nanny</extra>
+        <hint>п©п╬я│я▀п╩п╟я┌я▄ п©п╬я│п╩п╣п╢п╬п╡п╟я┌п╣п╩я▄п╫п╬я│я┌я▄ TELNET GA п©п╬я│п╩п╣ я│я┌я─п╬п╨п╦ я│п╬я│я┌п╬я▐п╫п╦я▐</hint>
+        <msgOff>п·я┌п©я─п╟п╡п╨п╟ TELNET GA п╬я┌п╨п╩я▌я┤п╣п╫п╟.</msgOff>
+        <msgOn>п·я┌п©я─п╟п╡п╨п╟ TELNET GA п╡п╨п╩я▌я┤п╣п╫п╟.</msgOn>
         <name>telnetga</name>
         <position>dead</position>
         <rname>telnetga</rname>
         <help type="CommandHelp" refby="noiac"></help>
       </node>
-      <name>Настройки соединения:</name>
+      <name>п²п╟я│я┌я─п╬п╧п╨п╦ я│п╬п╣п╢п╦п╫п╣п╫п╦я▐:</name>
     </node>
   </groups>
   <name>config</name>
   <position>dead</position>
   <russian>
-    <node>настройки</node>
-    <node>конфиг</node>
-    <node>режим</node>
+    <node>я─п╣п╤п╦п╪</node>
+    <node>п╫п╟я│я┌я─п╬п╧п╨п╦</node>
+    <node>п╨п╬п╫я└п╦пЁ</node>
   </russian>
-  <hint>список всех настроек</hint>
+  <hint>я│п©п╦я│п╬п╨ п╡я│п╣я┘ п╫п╟я│я┌я─п╬п╣п╨</hint>
   <help type="CommandHelp">
 %FMT%  *%CMD%*
-Показывает список всех текущих настроек.
+п÷п╬п╨п╟п╥я▀п╡п╟п╣я┌ я│п©п╦я│п╬п╨ п╡я│п╣я┘ я┌п╣п╨я┐я┴п╦я┘ п╫п╟я│я┌я─п╬п╣п╨.
 
-%FMT%  *%CMD%* _опция_
-Показывает текущее состояние указанной опции.
+%FMT%  *%CMD%* _п╬п©я├п╦я▐_
+п÷п╬п╨п╟п╥я▀п╡п╟п╣я┌ я┌п╣п╨я┐я┴п╣п╣ я│п╬я│я┌п╬я▐п╫п╦п╣ я┐п╨п╟п╥п╟п╫п╫п╬п╧ п╬п©я├п╦п╦.
 
-%FMT%  *%CMD%* _опция_ *%YES%*|*%NO%*|*(toggle,переключить)*
-Включает-выключает указанную опцию.
+%FMT%  *%CMD%* _п╬п©я├п╦я▐_ *%YES%*|*%NO%*|*(toggle,п©п╣я─п╣п╨п╩я▌я┤п╦я┌я▄)*
+п▓п╨п╩я▌я┤п╟п╣я┌-п╡я▀п╨п╩я▌я┤п╟п╣я┌ я┐п╨п╟п╥п╟п╫п╫я┐я▌ п╬п©я├п╦я▌.
 
-%SA% %H% [(autolist,автонастройки)], [(brief,кратко)], [noiac], [notelnet]
+%SA% %H% [(autolist,п╟п╡я┌п╬п╫п╟я│я┌я─п╬п╧п╨п╦)], [(brief,п╨я─п╟я┌п╨п╬)], [noiac], [notelnet]
 </help>
 </Command>

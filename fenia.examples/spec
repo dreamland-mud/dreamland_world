@@ -1,0 +1,20 @@
+.get_obj_index(@vnum@).@trig@ = function(obj) {
+    // Вызывается каждые 4 секунды.
+
+    // Иногда выдавать сообщение всем в комнате, если предмет лежит на земле.    
+    if (obj.in_room != null) {
+        if (.chance(1))
+            obj.in_room.echo("%^O1 таинственно мерцает с земли.", obj);
+
+        return;
+    }
+
+    // Иногда выдавать сообщение тому, кто несет предмет.
+    if (obj.carried_by != null) {
+        if (.chance(1))
+            obj.carried_by.act("%^O1 жаждет приключений.", obj);
+
+        return;
+    }
+}
+

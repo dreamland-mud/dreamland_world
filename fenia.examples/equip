@@ -1,0 +1,39 @@
+.get_obj_index(@vnum@).@trig@ = function(obj, ch) {
+    // Аффекты от надевания вещей вешаются в этом тригере.
+
+    // Пример аффекта, дающего полет и защиту от заклинаний:
+    if (!isAffected("cow lust")) {
+        var af;
+        af = .Affect();
+        af.duration = 5;
+        af.type = "cow lust";
+        af.bitvector = .tables.affect_flags.flying;
+        af.where = .tables.affwhere_flags.affects;
+        af.modifier = -1;
+        af.location = .tables.apply_flags.saves;
+
+        ch.affectAdd(af);
+        ch.act("Аромат весны и счастья будоражит тебя!");
+        ch.recho("%1$^C1 выглядит взбудораженн%1$Gым|ым|ой.", ch);
+    }
+
+    // Пример двух аффектов, дающих точность и защиту от заклинаний:
+    if (!isAffected("inspire")) {
+        var af;
+
+        af = .Affect();
+        af.where     = .tables.affwhere_flags.affects;
+        af.type      = "inspire";
+        af.level     = ch.getModifyLevel();
+        af.duration  = 6 + af.level;
+        af.location  = .tables.apply_flags.hitroll;
+        af.modifier  = af.level/12;
+        af.bitvector = 0;
+        ch.affectAdd(af);
+
+        af.location = .tables.apply_flags.saves;
+        af.modifier  = 0 - af.level/12;
+        ch.affectAdd(af);
+    }
+}
+

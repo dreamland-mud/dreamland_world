@@ -2,7 +2,7 @@
     // Аффекты от надевания вещей вешаются в этом тригере.
 
     // Пример аффекта, дающего полет и защиту от заклинаний:
-    if (!isAffected("cow lust")) {
+    if (!ch.isAffected("cow lust")) {
         var af;
         af = .Affect();
         af.duration = 5;
@@ -18,7 +18,7 @@
     }
 
     // Пример двух аффектов, дающих точность и защиту от заклинаний:
-    if (!isAffected("inspire")) {
+    if (!ch.isAffected("inspire")) {
         var af;
 
         af = .Affect();

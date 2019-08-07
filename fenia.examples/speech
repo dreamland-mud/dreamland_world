@@ -1,0 +1,55 @@
+.get_obj_index(@vnum@).@trig@ = function(obj, ch, speech) {
+    // Пример speech-проги для кассандры: реакция на слова.
+    var level;
+   
+    // Не реагировать, если реплику произносит моб или не тот, кто несет предмет: 
+    if (ch.is_npc() || ch != obj.getCarrier())
+        return;
+
+    // Не реагировать, если вещь не надета.
+    if (obj.wear_loc == "none")
+        return;
+
+    // Ничего не делать для клана баттлов.
+    if (ch.getClan() == "BATTLERAGER")
+        return;
+        
+    // Кассандра именная и реагирует только на хозяина; обычно эта проверка не нужна.
+    if (ch.name != obj.owner)
+        return;
+
+    // Запомнить уровень заклинания в переменной.
+    level = ch.getModifyLevel();
+
+    // Реакция на слова, точное соответствие.
+    if (speech == "kassandra" || speech == "кассандра") {
+        ch.act("Кассандра загорается {Yуютным желтым светом.{x");
+        ch.recho("Кассандра %^C2 загорается {Yуютным желтым светом.{x", ch);
+        ch.spell("kassandra", level, ch, true);
+    }   
+    
+    else if (speech == "sebat" || speech == "себат") {
+        ch.act("Кассандра загорается {Cзащитным голубым светом.{x");
+        ch.recho("Кассандра %^C2 загорается {Cзащитным голубым светом.{x", ch);
+        ch.spell("sebat", level, ch, true);
+    }   
+    
+    else if ((speech == "matandra" || speech == "матандра") && ch.fighting != null) {
+        // Мессага всем в комнате, кроме ch и ch.fighting.
+        ch.rvecho(ch.fighting, "Кассандра %C2 испускает {Wослепительный луч{g в сторону %C2!{x", ch, ch.fighting);
+        ch.act("Кассандра испускает {Wослепительный луч{g в сторону %C2!", ch.fighting);
+        ch.fighting.act("Кассандра %C2 испускает {Wослепительный луч{g в твою сторону!", ch);
+        ch.spell("matandra", level, ch.fighting, true);
+    }
+
+    // Конец примера кассандры.
+
+    // Пример реакции на неточную реплику:
+    if (speech.match("(горшок|горшочек).*вари")) {
+        // Загрузить еду (похлебку) и положить в инвентарь:
+        .get_obj_index(19113).create().obj_to_char(ch);
+        ch.act("Теперь тебе будет не так голодно.");
+        return;
+    }
+}
+

@@ -1,0 +1,32 @@
+.get_obj_index(@vnum@).@trig@ = function(obj, ch) {
+    // Вызывается каждый боевой раунд (четыре секунды).
+
+    // Если хотим, чтобы триггер срабатывал только на предмет в экипировке:
+    if (obj.wear_loc == "none")
+        return;
+
+    // Пример воплей в бою с некоторой вероятностью:
+    if (.chance(1)) {
+        if (.chanceOneOf(3)) {
+            ch.interpret_cmd("yell", "Cry Havoc and Let Loose the Dogs of War!"); 
+        } else if (.chanceOneOf(2)) {
+            ch.interpret_cmd("yell", "No Mercy!");
+        } else {
+            ch.interpret_cmd("yell", "Los Valdar Cuebiyari!");
+        }
+    }
+
+    // Пример обкаста в бою с некоторой вероятностью:
+    if (.chance(10)) {
+        if (!ch.isAffected("haste"))
+            ch.spell("haste", ch.getModifyLevel(), ch, false);
+        else if (ch.hit < ch.max_hit) 
+            ch.spell("cure critical", ch.getModifyLevel(), ch, false);
+    }
+
+    // Пример атакующего заклинания в бою, в зависимости от характера жертвы:
+    if (ch.fighting.alignment <= -350)
+        ch.spell("wrath", ch.getModifyLevel(), ch.fighting, false);
+
+}
+

@@ -18,15 +18,22 @@
 
     // Пример обкаста в бою с некоторой вероятностью:
     if (.chance(10)) {
-        if (!ch.isAffected("haste"))
+        if (!ch.isAffected("haste")) {
+            ch.act("%^O1 загорается {Mфиолетовым{x.", obj);
             ch.spell("haste", ch.getModifyLevel(), ch, false);
-        else if (ch.hit < ch.max_hit) 
+        }
+        else if (ch.hit < ch.max_hit) {
+            ch.act("Тебя окутывает тепло, исходящее от %O2.", obj);
             ch.spell("cure critical", ch.getModifyLevel(), ch, false);
+            ch.recho("%1$^C1 выглядит посвежевш%1$Gим|им|ей.", ch);
+        }
     }
 
     // Пример атакующего заклинания в бою, в зависимости от характера жертвы:
-    if (ch.fighting.alignment <= -350)
+    if (ch.fighting.alignment <= -350) {
+        ch.act("Яркий луч света вырывается из %O2.", obj);
+        ch.recho("Яркий луч света вырывается из %O2 %C2.", obj, ch);
         ch.spell("wrath", ch.getModifyLevel(), ch.fighting, false);
+    }
 
 }
-

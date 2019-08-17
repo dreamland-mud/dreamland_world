@@ -1,0 +1,80 @@
+.get_obj_index(@vnum@).@trig@ = function(obj, ch, args) {
+    // Триггер postUse вызовется в следующий пульс после команды 'использовать'.
+    // Если планируется при использовании чего-то запускать долгий
+    // процесс с паузами, это надо делать в этом триггере.
+
+    // Рекомендуется также перекрыть onUse и просто вернуть из него true,
+    // чтобы избежать мессаги "Ты вертишь в руках...".
+
+
+    // Пример: 'использ игла <вещь>', зашьет предметы из ткани, улучшив их состояние.
+    
+    var cloth;
+
+    cloth = ch.get_obj_here(args);
+    if (cloth == null) {
+        var mob;
+
+        mob = ch.get_char_room(args);
+        if (mob != null) {
+            // VIOLENCE
+            ch.act("Ты колешь %C4 %O5.", mob, obj);
+            mob.act("%^C1 колет тебя %O5, ай!", ch, obj);
+            ch.rvecho(mob, "%^C1 колет %C4 %O5.", ch, mob, obj);
+            return;
+        }
+
+        // Цель не найдена.
+        ch.act("Что именно ты хочешь зашить с помощью %O2?", obj);
+        return;
+    }
+
+    // Можно зашить только некоторые материалы.
+    if (cloth.material != "cotton" 
+            && cloth.material != "cloth"
+            && cloth.material != "silk" 
+            && cloth.material != "wool" 
+            && !cloth.material.match("leather"))
+    {
+        ch.act("Этот материал не поддастся %O3.", obj);
+        return;
+    }
+
+    // Проверка состояния цели.
+    if (cloth.condition >= 100) {
+        ch.act("Но %O1 и так в прекрасном состоянии.", cloth);
+        return;
+    }
+
+    // Проверка, что цель в инвентаре, а иголка в руке.
+    if (cloth.carried_by != ch) {
+        ch.act("%^O1 должо находиться у тебя в инвентаре.", cloth);
+        return;
+    }
+    if (obj.wear_loc == "none") {
+        ch.act("Сперва надо зажать %O4 в руках.", obj);
+        return;
+    }
+
+    // Запустить процесс пошивки, в конце каждого стежка засыпать на 1 секунду, 
+    // а потом проверять, все ли еще игла в руках, а предмет рядом.
+    // Домашнее задание: сделать число стежков зависимым от condition предмета.
+    var i;
+    for (i = 0; i < 3; i=i+1) {
+        ch.act("Ты старательно орудуешь %O5, зашивая все дырки на %O6.", obj, cloth);
+        ch.recho("%^C1 старательно орудует %O5.", ch, obj);
+            
+        .scheduler.sleep(4);
+
+        if (cloth.carried_by != ch
+             || obj.carried_by != ch
+             || obj.wear_loc == "none")
+        {
+            ch.act("Процесс починки прерван, а жаль.");
+            return;
+        }
+    }
+
+    cloth.condition = 100;
+    ch.act("%1$^O1 выглядит как нов%1$Gое|ый|ая!", cloth);
+}

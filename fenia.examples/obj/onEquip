@@ -34,6 +34,8 @@
         af.location = .tables.apply_flags.saves;
         af.modifier  = 0 - af.level/12;
         ch.affectAdd(af);
+
+        ch.act("%^O1 вдохновляет тебя на подвиги.", obj);
+        ch.recho("%^C1 вдохновляется на подвиги могучей силой %O2.", ch, obj);
     }
 }
-

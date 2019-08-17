@@ -1,0 +1,14 @@
+.get_obj_index(@vnum@).@trig@ = function(obj, ch, args) {
+    // Пример того, как по команде "использовать снег" лепится снежок,
+    // а сам снег исчезает. На локалке работать не будет, т.к. нет внума снежка.
+
+    var ball;
+
+    ball = .get_obj_index(27123).create();
+    ball.obj_to_char(ch);
+    
+    ch.act("Ты лепишь %O4 из %O2.", ball, obj);
+    ch.recho("%^C1 старательно лепит %O4 из %O2.", ch, ball, obj);
+    obj.extract(true);
+    return true;
+}

@@ -1,0 +1,44 @@
+.get_obj_index(@vnum@).@trig@ = function(obj, ch, speech) {
+    // Пример speech-проги для кассандры: реакция на слова.
+    var level;
+   
+    // Не реагировать, если реплику произносит моб или не тот, кто несет предмет: 
+    if (ch.is_npc() || ch != obj.getCarrier())
+        return;
+
+    // Не реагировать, если вещь не надета.
+    if (obj.wear_loc == "none")
+        return;
+
+    // Кассандра не работает для клана баттлов.
+    // if (ch.getClan() == "BATTLERAGER")
+    //    return;
+        
+    // Кассандра именная и реагирует только на хозяина.
+    // if (ch.name != obj.owner)
+    //    return;
+
+    // Запомнить уровень заклинания в переменной.
+    level = ch.getModifyLevel();
+
+    // Реакция на слова, точное соответствие.
+    if (speech == "kassandra" || speech == "кассандра") {
+        ch.act("%^O1 загорается {Yуютным желтым светом.{x", obj);
+        ch.recho("%^O1 %C2 загорается {Yуютным желтым светом.{x", obj, ch);
+        ch.spell("kassandra", level, ch, true);
+    }   
+    
+    else if (speech == "sebat" || speech == "себат") {
+        ch.act("%^O1 загорается {Cзащитным голубым светом.{x", obj);
+        ch.recho("%^O1 %^C2 загорается {Cзащитным голубым светом.{x", obj, ch);
+        ch.spell("sebat", level, ch, true);
+    }   
+    
+    else if ((speech == "matandra" || speech == "матандра") && ch.fighting != null) {
+        // Мессага всем в комнате, кроме ch и ch.fighting.
+        ch.rvecho(ch.fighting, "%^O1 %C2 испускает {Wослепительный луч{g в сторону %C2!{x", obj, ch, ch.fighting);
+        ch.act("%^O1 испускает {Wослепительный луч{g в сторону %C2!", obj, ch.fighting);
+        ch.fighting.act("%^O1 %C2 испускает {Wослепительный луч{g в твою сторону!", obj, ch);
+        ch.spell("matandra", level, ch.fighting, true);
+    }
+}

@@ -1,0 +1,17 @@
+.get_mob_index(@vnum@).@trig@ = function(mob, attacker, dam_type, dam) {
+   // dam_type - один из .tables.damage_table
+   // attacker - кто бьет моба
+   // dam - текущий размер повреждений
+   // вернуть надо результирующие повреждения
+
+   // Сильная уязвимость к holy, так чтоб наверняка убить:
+   if (dam_type == .tables.damage_table.holy)
+       return dam * 100;
+
+   // Иммунитет к негативному:
+   if (dam_type == .tables.damage_table.negative)
+       return 0;
+
+   // Обычная реакция на все остальные типы повреждений:
+   return dam;
+}

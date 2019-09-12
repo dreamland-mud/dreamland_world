@@ -12,8 +12,6 @@
     <vnumHigh>199</vnumHigh>
     <vnumLow>0</vnumLow>
   </areadata>
-  <helps>
-  </helps>
   <mobiles>
     <node name="10">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
@@ -417,7 +415,7 @@
       <player_name>golem adamantite адамантитовый голем</player_name>
       <race>golem</race>
       <sex>either</sex>
-      <short_descr>адамантитов|ый|ого|ому|ый|ым|ом голем||а|у|а|ом|е</short_descr>
+      <short_descr>адамантитов|ый|ого|ому|ого|ым|ом голем||а|у|а|ом|е</short_descr>
       <size>large</size>
       <start_pos>stand</start_pos>
     </node>
@@ -2117,6 +2115,17 @@
         <maxWeight>0</maxWeight>
       </type>
     </node>
+    <node name="77">
+      <description>Божественная сила татуировки (tattoo) кружится в воздухе.</description>
+      <extra_flags>glow nolocate melt_drop burn_proof</extra_flags>
+      <gender>f</gender>
+      <material>none</material>
+      <name>tattoo татуировка</name>
+      <short_descr>(no short description)</short_descr>
+      <type name="tattoo">
+      </type>
+      <wear_flags>take</wear_flags>
+    </node>
     <node name="8">
       <description>{x</description>
       <extraDescr>
@@ -2248,17 +2257,46 @@
       <wear_flags>take wield</wear_flags>
       <weight>100</weight>
     </node>
-    <node name="89">
-      <description>Мистический зеленый камень (stone) парит в воздухе.</description>
-      <extra_flags>glow nolocate melt_drop had_timer burn_proof</extra_flags>
+    <node name="88">
+      <description>Алтарь (altar) для подношений установлен здесь.</description>
+      <extra_flags>glow water_stand nolocate burn_proof noident</extra_flags>
       <gender>m</gender>
       <material>stone</material>
+      <name>altar алтарь</name>
+      <short_descr>алтар|ь|я|ю|ь|ем|е</short_descr>
+      <type name="container">
+        <capacity>10000</capacity>
+        <flags>put_on2</flags>
+        <maxWeight>1000</maxWeight>
+      </type>
+      <wear_flags>no_sac</wear_flags>
+      <weight>100</weight>
+    </node>
+    <node name="89">
+      <affects>
+        <node>
+          <apply to="hit">25</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="damroll">2</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="mana">50</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
+      <description>Мистический зеленый камень (stone) парит в воздухе.</description>
+      <extra_flags>glow magic nolocate burn_proof</extra_flags>
+      <gender>f</gender>
+      <material>stone</material>
       <name>камень kassandra stone кассандра</name>
-      <short_descr>кассандр|а|ы|е|у|ой|е</short_descr>
+      <short_descr>{Gк{gассандр|а{x|ы{x|е{x|у{x|ой{x|е{x</short_descr>
       <type name="treasure">
         <v2>-1</v2>
       </type>
-      <wear_flags>take hold</wear_flags>
+      <wear_flags>take wear_float</wear_flags>
     </node>
     <node name="9">
       <description>На земле ты замечаешь свежевыкопанную могилу (grave).</description>
@@ -2274,15 +2312,15 @@
       <cost>100</cost>
       <description>Белое шёлковое платье (dress) лежит здесь.</description>
       <extraDescr>
-        <node keyword="dress платье">Это платье изготовлено портным для охранника, который после долгих
-лет лет тяжелой службы охраняет удалившегося от дел лорда.
+        <node keyword="dress платье">Это платье изготовлено портным для Хранителя, который после долгих лет тяжелой
+службы охраняет удалившегося от дел лорда.
 </node>
       </extraDescr>
       <gender>n</gender>
       <level>1</level>
       <material>silk</material>
-      <name>dress платье</name>
-      <short_descr>плать|е|я|ю|е|ем|е</short_descr>
+      <name>silk dress платье шелковое</name>
+      <short_descr>шелков|ое|ого|ому|ое|ым|ом плать|е|я|ю|е|ем|е</short_descr>
       <type name="armor">
         <ac bash="1" exotic="1" pierce="1" slash="1"/>
         <reserved0>1</reserved0>
@@ -2293,12 +2331,12 @@
     <node name="91">
       <condition>90</condition>
       <cost>1000</cost>
-      <description>Маленький коврик (rug) с турецким рисунком лежит здесь.</description>
+      <description>Маленький коврик (rug) с восточным орнаментом лежит здесь.</description>
       <gender>m</gender>
-      <level>18</level>
+      <level>1</level>
       <material>wool</material>
-      <name>коврик turkish rug</name>
-      <short_descr>коврик||а|у||ом|е с турецким рисунком</short_descr>
+      <name>rug ornament коврик орнамент</name>
+      <short_descr>коврик||а|у||ом|е с восточным орнаментом</short_descr>
       <type name="treasure">
       </type>
       <wear_flags>take hold</wear_flags>
@@ -2433,7 +2471,7 @@
 </node>
       </extraDescr>
       <extra_flags>nosell</extra_flags>
-      <gender>m</gender>
+      <gender>f</gender>
       <level>15</level>
       <material>iron</material>
       <name>катана меч sword katana</name>

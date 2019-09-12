@@ -3,6 +3,7 @@
   <areadata>
     <authors>Drkside</authors>
     <credits>Drow City</credits>
+    <flags>hometown</flags>
     <levelHigh>25</levelHigh>
     <levelLow>15</levelLow>
     <name>Город Дроу</name>
@@ -14,6 +15,15 @@
     <vnumLow>5100</vnumLow>
   </areadata>
   <helps>
+    <node keyword="'DROW CITY' 'ГОРОД ДРОУ'" level="1">В Городе Дроу могут селиться темные эльфы, дроу и злые полу-эльфы. По соседству
+с городом располагаются пригороды, где можно построить собственный дом.
+Для всех остальных это не слишком дружелюбное место. 
+%PAUSE%
+{yЗадания{x:
+  {Y*{x Йоклол в Храме выдает задания всем желающим (команда &apos;задание попросить&apos;).
+  {Y*{x Матроны просят избавить мир от эльфов. 
+    Ограничения: надо жить в городе. Как часто: раз в сутки.
+</node>
   </helps>
   <mobiles>
     <node name="5100">
@@ -241,9 +251,9 @@
       <wealth>1500</wealth>
     </node>
     <node name="5109">
-      <ac bash="-11" exotic="5" pierce="-11" slash="-11"/>
-      <act add="npc sentinel aggressive notrack"/>
-      <aff add="sanctuary infrared"/>
+      <ac bash="-970" exotic="-950" pierce="-970" slash="-970"/>
+      <act add="npc sentinel warrior nopurge notrack"/>
+      <aff add="infrared sneak haste"/>
       <alignment>-1000</alignment>
       <behavior type="QuestMaster">
         <services>
@@ -382,8 +392,8 @@
           </node>
         </services>
       </behavior>
-      <dam_type>none</dam_type>
-      <damage>4d7+11</damage>
+      <dam_type>wrath</dam_type>
+      <damage>18d18+85</damage>
       <default_pos>stand</default_pos>
       <description>Огромный восковой пузырь, на поверхности которого недобрым светом мерцают
 два красных глаза, - Йоклол постоянно меняет свою форму.
@@ -391,23 +401,28 @@
 Если хочешь послужить Паучьей Королеве - попроси у Йоклол задание командой {y{lRквест попросить{lEquest request{x.
 Еще полезно прочесть справку по темам &apos;{hhквестор{x&apos; и &apos;{hhвиды заданий{x&apos;.
 </description>
-      <detection add="invis"/>
-      <hit>10d10+1300</hit>
-      <imm add="summon charm"/>
-      <level>35</level>
+      <detection add="evil invis hidden dark_vision"/>
+      <form add="edible sentient biped mammal"/>
+      <group>3000</group>
+      <hit>1d1+28999</hit>
+      <hitroll>300</hitroll>
+      <imm add="summon charm spell weapon bash pierce slash fire cold acid poison negative holy energy mental disease drowning sound wood silver iron"/>
+      <level>100</level>
       <long_descr>Служанка Паучьей Королевы Ллот (yochlol) дает здесь задания во славу своей хозяйки.
 </long_descr>
-      <mana>17d9+100</mana>
+      <mana>1d1+1499</mana>
       <material>0</material>
-      <off add="disarm dodge trip assist_race assist_vnum"/>
-      <player_name>yochlol йоклол служанка servant</player_name>
+      <off add="area_attack bash berserk disarm dodge fade fast kick_dirt parry rescue tail trip crush"/>
+      <parts add="head arms legs heart brains guts hands feet fingers ear eye"/>
+      <player_name>yochlol servant questor квестор йоклол служанка</player_name>
       <race>demon</race>
+      <res add="charm spell weapon fire cold"/>
       <sex>female</sex>
       <short_descr>йоклол</short_descr>
-      <size>medium</size>
+      <size>huge</size>
       <spec>spec_breath_any</spec>
       <start_pos>stand</start_pos>
-      <wealth>1500</wealth>
+      <vuln add="lightning mental iron"/>
     </node>
     <node name="5110">
       <ac bash="0" exotic="8" pierce="0" slash="0"/>
@@ -557,7 +572,7 @@
       <mana>10d10+4450</mana>
       <material>none</material>
       <off add="dodge fast kick parry"/>
-      <player_name>priestess lloth жрица ллот</player_name>
+      <player_name>priestess lloth healer жрица ллот лекарь</player_name>
       <race>drow</race>
       <res add="weapon"/>
       <sex>female</sex>
@@ -864,10 +879,10 @@
     <node name="5113">
       <affects>
         <node>
-          <apply to="hitroll">3</apply>
+          <apply to="damroll">5</apply>
         </node>
         <node>
-          <apply to="damroll">5</apply>
+          <apply to="hitroll">3</apply>
         </node>
       </affects>
       <cost>1900</cost>
@@ -910,10 +925,10 @@
     <node name="5115">
       <affects>
         <node>
-          <apply to="damroll">7</apply>
+          <apply to="hitroll">5</apply>
         </node>
         <node>
-          <apply to="hitroll">5</apply>
+          <apply to="damroll">7</apply>
         </node>
       </affects>
       <behavior type="TwoSnakeWhip">
@@ -966,6 +981,32 @@
         <flags>pit</flags>
         <maxWeight>1000</maxWeight>
       </type>
+    </node>
+    <node name="5118">
+      <affects>
+        <node>
+          <apply to="hitroll">2</apply>
+        </node>
+        <node>
+          <apply to="damroll">2</apply>
+        </node>
+      </affects>
+      <cost>570</cost>
+      <description>Кинжал (dagger) с лезвиями, изогнутыми в форме паучьих лап.</description>
+      <extra_flags>hum dark</extra_flags>
+      <gender>m</gender>
+      <level>5</level>
+      <material>obsidian</material>
+      <name>dagger spider sacrificial кинжал паук жертвенный</name>
+      <short_descr>кинжал||а|у||ом|е в форме паука</short_descr>
+      <type name="weapon">
+        <diceNumber>4</diceNumber>
+        <diceType>4</diceType>
+        <weapClass>dagger</weapClass>
+        <weapType>pierce</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>50</weight>
     </node>
   </objects>
   <rooms>
@@ -1852,6 +1893,9 @@
       </exits>
       <flags>dark indoors</flags>
       <name>Главный зал</name>
+      <resets>
+        <drop vnum="5116"/>
+      </resets>
       <sector>inside</sector>
     </node>
     <node name="5142">
@@ -1874,9 +1918,6 @@
       </exits>
       <flags>dark indoors</flags>
       <name>Восточная сторона зала</name>
-      <resets>
-        <drop vnum="5116"/>
-      </resets>
       <sector>inside</sector>
     </node>
     <node name="5143">
@@ -1902,9 +1943,6 @@
       </exits>
       <flags>dark indoors</flags>
       <name>Западная сторона зала</name>
-      <resets>
-        <drop vnum="5117"/>
-      </resets>
       <sector>inside</sector>
     </node>
     <node name="5145">
@@ -1926,6 +1964,7 @@
       <flags>dark indoors</flags>
       <name>Алтарь</name>
       <resets>
+        <drop vnum="5117"/>
         <mob limit="1" maxHere="1" vnum="5112"/>
       </resets>
       <sector>inside</sector>

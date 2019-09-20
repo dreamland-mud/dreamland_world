@@ -12,13 +12,18 @@
     <vnumHigh>6199</vnumHigh>
     <vnumLow>6000</vnumLow>
   </areadata>
-  <helps>
-  </helps>
   <mobiles>
     <node name="6000">
       <ac bash="4" exotic="9" pierce="4" slash="4"/>
       <act add="npc stay_area"/>
       <alignment>350</alignment>
+      <behavior type="ShopTrader">
+        <buys>food gem</buys>
+        <closeHour>23</closeHour>
+        <openHour>0</openHour>
+        <profitBuy>180</profitBuy>
+        <profitSell>20</profitSell>
+      </behavior>
       <dam_type>chop</dam_type>
       <damage>1d7+1</damage>
       <default_pos>stand</default_pos>
@@ -381,16 +386,17 @@
       <hit>5d10+1550</hit>
       <hitroll>50</hitroll>
       <level>45</level>
-      <long_descr>Громадный зеленый дракон (green dragon) разлегся здесь.
+      <long_descr>Громадная зеленая драконица (green dragon) разлеглась здесь.
+
 </long_descr>
       <mana>12d9+400</mana>
       <material>0</material>
       <off add="disarm dodge trip assist_race"/>
-      <player_name>dragon green дракон змей зеленый</player_name>
+      <player_name>dragon green громадная драконица змей зеленая</player_name>
       <race>dragon</race>
-      <sex>male</sex>
-      <short_descr>громадн|ый|ого|ому|ого|ым|ому зелен|ый|ого|ому|ого|ым|ом дракон||а|у|а|ом|е</short_descr>
-      <size>medium</size>
+      <sex>female</sex>
+      <short_descr>громадн|ая|ой|ой|ую|ой|ой {1{Gзелен|ая|ой|ой|ую|ой|ой {2дракониц|а|ы|е|у|ей|е</short_descr>
+      <size>large</size>
       <spec>spec_breath_gas</spec>
       <start_pos>stand</start_pos>
       <wealth>2500</wealth>
@@ -465,7 +471,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>guildmaster master мастер гильдия</player_name>
-      <practicer>harmful weather creation detection none </practicer>
+      <practicer>none detection creation harmful weather </practicer>
       <race>human</race>
       <res add="spell"/>
       <sex>male</sex>
@@ -521,8 +527,19 @@
       <weight>20</weight>
     </node>
     <node name="6002">
+      <affects>
+        <node>
+          <apply to="str">1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
       <cost>310</cost>
-      <description>Пара кожанных ботинок (boots) лежит здесь.</description>
+      <description>Пара кожаных ботинок (boots) лежит здесь.
+</description>
       <extraDescr>
         <node keyword="boots ботинки">Ботинки сделаны из грубой кожи, многократно промасленной, что-бы
 сделать ботинки непромокаемыми. Они выглядят поношенными, но еще
@@ -532,8 +549,8 @@
       <gender>p</gender>
       <level>3</level>
       <material>leather</material>
-      <name>boots ботинки</name>
-      <short_descr>кожанн|ые|ых|ым|ые|ыми|ых ботин|ки|ок|кам|ки|ками|ках</short_descr>
+      <name>boots lumberjack ботинки дровосека</name>
+      <short_descr>ботин|ки|ок|кам|ки|ками|ках дровосека</short_descr>
       <type name="armor">
         <ac bash="3" exotic="0" pierce="3" slash="3"/>
       </type>
@@ -689,8 +706,7 @@
       <material>wood</material>
       <name>branch ветка сук</name>
       <short_descr>длинн|ая|ой|ой|ую|ой|ой сер|ая|ой|ой|ую|ой|ой ветк|а|и|е|у|ой|е</short_descr>
-      <type name="light">
-        <v2>25</v2>
+      <type name="trash">
       </type>
       <wear_flags>take hold</wear_flags>
       <weight>200</weight>
@@ -789,6 +805,23 @@
       <weight>20</weight>
     </node>
     <node name="6111">
+      <affects>
+        <node>
+          <bits table="res_flags">fire</bits>
+        </node>
+        <node>
+          <apply to="hit">25</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">3</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="damroll">5</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
       <cost>1760</cost>
       <description>Большой круглый щит (shield) оставлен здесь.</description>
       <extraDescr>
@@ -797,9 +830,10 @@
       </extraDescr>
       <gender>m</gender>
       <level>15</level>
-      <material>wood</material>
-      <name>shield large щит большой</name>
-      <short_descr>больш|ой|ого|ому|ой|им|ом кругл|ый|ого|ому|ый|ым|ом щит||а|у||ом|е</short_descr>
+      <limit>2</limit>
+      <material>jade</material>
+      <name>shield green dragon large щит большой зеленой драконицы</name>
+      <short_descr>{1{GЩ{gит||а|у||ом|е {GЗ{gеленой {GД{gраконицы{2</short_descr>
       <type name="armor">
         <ac bash="6" exotic="3" pierce="6" slash="6"/>
       </type>
@@ -1207,6 +1241,7 @@
         <equip to="wield" vnum="6000"/>
         <equip to="body" vnum="6001"/>
         <equip to="feet" vnum="6002"/>
+        <give vnum="27140"/>
       </resets>
       <sector>forest</sector>
     </node>
@@ -1985,7 +2020,8 @@
     </node>
     <node name="6107">
       <description>Ты стоишь  на узкой дорожке, идущей сквозь  темную чащу леса. Древние
-мрачные деревья (trees) разрослись вокруг тебя. Дорожка ведет на север и восток.
+мрачные деревья (trees) разрослись вокруг тебя. Дорожка (path) ведет на 
+север и восток.
 </description>
       <exits>
         <node name="east">
@@ -2000,7 +2036,7 @@
         </node>
       </exits>
       <extraDescr>
-        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">Кажется, что эти древние мрачные гиганты безмолвно смотрят на тебя.
+        <node keyword="trees trunks деревья стволы">Кажется, что эти древние мрачные гиганты безмолвно смотрят на тебя.
 </node>
         <node keyword="path дорога дорожка">Тропинка выглядит очень заброшенной. Один из гигантских корней вылез
 из земли и разрушил часть ее.
@@ -3072,7 +3108,7 @@
 </node>
       </extraDescr>
       <flags>dark indoors</flags>
-      <name>Пещера Зеленого Дракона</name>
+      <name>Пещера Зеленой Драконицы</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="6112"/>
         <give vnum="6110"/>

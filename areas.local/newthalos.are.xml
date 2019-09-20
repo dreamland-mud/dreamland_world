@@ -15,8 +15,6 @@
     <vnumHigh>9801</vnumHigh>
     <vnumLow>9500</vnumLow>
   </areadata>
-  <helps>
-  </helps>
   <mobiles>
     <node name="9500">
       <ac bash="-15" exotic="-15" pierce="-15" slash="-15"/>
@@ -40,7 +38,7 @@
       <material>0</material>
       <off add="dodge fast trip"/>
       <player_name>mage guildmaster мастер гильдии маг</player_name>
-      <practicer>harmful weather creation detection none </practicer>
+      <practicer registry="skillGroup">none detection creation harmful weather</practicer>
       <race>human</race>
       <sex>male</sex>
       <short_descr>мастер||а|у|а|ом|е гильдии</short_descr>
@@ -73,7 +71,7 @@
       <material>0</material>
       <off add="disarm dodge fade kick parry"/>
       <player_name>cleric guildmaster мастер гильдии</player_name>
-      <practicer>harmful weather creation detection none </practicer>
+      <practicer registry="skillGroup">none detection creation harmful weather</practicer>
       <race>human</race>
       <sex>male</sex>
       <short_descr>мастер||а|у|а|ом|е гильдии</short_descr>
@@ -102,7 +100,7 @@
       <material>0</material>
       <off add="area_attack bash disarm dodge fast kick parry"/>
       <player_name>warrior guildmaster мастер гильдии</player_name>
-      <practicer>harmful weather creation detection none </practicer>
+      <practicer registry="skillGroup">none detection creation harmful weather</practicer>
       <race>human</race>
       <sex>male</sex>
       <short_descr>мастер||а|у|а|ом|е гильдии</short_descr>
@@ -141,7 +139,7 @@
       <material>0</material>
       <off add="backstab disarm dodge fast kick_dirt parry trip"/>
       <player_name>thief guildmaster мастер гильдии</player_name>
-      <practicer>harmful weather creation detection none </practicer>
+      <practicer registry="skillGroup">none detection creation harmful weather</practicer>
       <race>elf</race>
       <sex>male</sex>
       <short_descr>мастер||а|у|а|ом|е гильдии</short_descr>
@@ -1305,6 +1303,13 @@
       <ac bash="-4" exotic="7" pierce="-4" slash="-4"/>
       <act add="npc sentinel warrior noalign"/>
       <alignment>300</alignment>
+      <behavior type="ShopTrader">
+        <buys>gem</buys>
+        <closeHour>23</closeHour>
+        <openHour>0</openHour>
+        <profitBuy>110</profitBuy>
+        <profitSell>100</profitSell>
+      </behavior>
       <dam_type>none</dam_type>
       <damage>2d8+5</damage>
       <default_pos>sit</default_pos>
@@ -1942,15 +1947,15 @@
 </description>
       <hit>2d7+96</hit>
       <level>8</level>
-      <long_descr>Креогидра (cryohydra) стоит здесь.
+      <long_descr>Криогидра (cryohydra) стоит здесь.
 </long_descr>
       <mana>4d9+100</mana>
       <material>0</material>
       <off add="disarm dodge trip assist_vnum"/>
-      <player_name>cryohydra креогидра</player_name>
+      <player_name>cryohydra криогидра</player_name>
       <race>unique</race>
       <sex>either</sex>
-      <short_descr>креогидр|а|ы|е|у|ой|е</short_descr>
+      <short_descr>криогидр|а|ы|е|у|ой|е</short_descr>
       <size>medium</size>
       <spec>spec_breath_frost</spec>
       <start_pos>stand</start_pos>
@@ -2059,8 +2064,9 @@
       <dam_type>none</dam_type>
       <damage>1d8+2</damage>
       <default_pos>stand</default_pos>
-      <description>Химера выглядит очень таинственно, и лучше оставить его непознанным.
-Это существо с задней частью козла, лапами льва и телом дракона.
+      <description>Это трехголовое существо с задней частью козла, лапами льва и телом дракона.
+Три головы постоянно спорят и переругиваются между собой, и ты решаешь не 
+вмешиваться в их сложный внутренний мир.
 </description>
       <detection add="invis"/>
       <hit>2d6+110</hit>
@@ -2684,7 +2690,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>samurai weaponsmaster самурай мастер оружия</player_name>
-      <practicer>weaponsmaster </practicer>
+      <practicer registry="skillGroup">weaponsmaster</practicer>
       <race>human</race>
       <res add="spell"/>
       <sex>male</sex>
@@ -2891,7 +2897,7 @@
         <rotGround>1</rotGround>
         <rotInv>1</rotInv>
       </type>
-      <wear_flags>take wear_neck</wear_flags>
+      <wear_flags>take</wear_flags>
       <weight>30</weight>
     </node>
     <node name="9502">
@@ -3375,6 +3381,16 @@
       <weight>30</weight>
     </node>
     <node name="9532">
+      <affects>
+        <node>
+          <apply to="hit">5</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
       <cost>68</cost>
       <description>Пара усиленных кожаных перчаток (gloves) лежат здесь.</description>
       <gender>f</gender>
@@ -3418,8 +3434,9 @@
       <cost>50</cost>
       <description>Масляная лампа (oil lamp) лежит здесь.</description>
       <gender>f</gender>
+      <level>1</level>
       <material>glass</material>
-      <name>oil lamp oillamp масленая лампа</name>
+      <name>lamp oil масляная лампа</name>
       <short_descr>маслян|ая|ой|ой|ую|ой|ой ламп|а|ы|е|у|ой|е</short_descr>
       <type name="light">
         <v2>100</v2>
@@ -3459,6 +3476,7 @@
     <node name="9538">
       <cost>27</cost>
       <description>Мешочек (pouch) на ремне лежит здесь.</description>
+      <extra_flags>burn_proof</extra_flags>
       <gender>m</gender>
       <material>cloth</material>
       <name>belt pouch мешочек ремень</name>
@@ -3474,13 +3492,14 @@
       <cost>4</cost>
       <description>Свеча (candle) лежит здесь.</description>
       <gender>f</gender>
+      <level>1</level>
       <material>parafin</material>
       <name>candle свеча</name>
       <short_descr>свеч|а|и|е|у|ой|е</short_descr>
       <type name="light">
         <v2>50</v2>
       </type>
-      <wear_flags>take hold</wear_flags>
+      <wear_flags>take</wear_flags>
       <weight>10</weight>
     </node>
     <node name="9540">
@@ -3586,7 +3605,7 @@
       <short_descr>рем|ень|ня|ню|ень|нем|не</short_descr>
       <type name="clothing">
       </type>
-      <wear_flags>take wear_wrist</wear_flags>
+      <wear_flags>take wear_waist</wear_flags>
       <weight>20</weight>
     </node>
     <node name="9547">
@@ -3605,6 +3624,7 @@
       <cost>200</cost>
       <description>Хорошо сделанный меховой плащ (cloak) лежит здесь.</description>
       <gender>m</gender>
+      <level>1</level>
       <material>fur</material>
       <name>fur cloak меховой плащ</name>
       <short_descr>мехов|ой|ого|ому|ой|ым|ом плащ||а|е||ом|е</short_descr>
@@ -3689,6 +3709,7 @@
       <cost>320</cost>
       <description>Хорошо сделанный шелковый жакет (jacket) лежит здесь.</description>
       <gender>m</gender>
+      <level>1</level>
       <material>silk</material>
       <name>silk jacket жакет шелковый</name>
       <short_descr>шелков|ый|ого|ому|ый|ым|ом жакет||а|у||ом|е</short_descr>
@@ -3836,6 +3857,44 @@
       </type>
       <wear_flags>take</wear_flags>
       <weight>10</weight>
+    </node>
+    <node name="9566">
+      <affects>
+        <node>
+          <apply to="hit">15</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="damroll">3</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
+      <cost>3300</cost>
+      <description>На кусочке бумаги нанесен какой-то рисунок (picture).</description>
+      <extraDescr>
+        <node keyword="picture scarab рисунок скарабея">Черное матовое изображение жука-скарабея на светлом фоне. Кажется, что
+глядя на этот рисунок, довольно просто воспроизвести его на коже
+счастливца, на котором ты решишь экспериментировать.
+Скарабей почитается некоторыми как символ созидательной силы солнца.
+Татуировка с его изображением сделает носителя чуть более выносливым и опасным.
+</node>
+      </extraDescr>
+      <extra_flags>burn_proof</extra_flags>
+      <gender>p</gender>
+      <level>1</level>
+      <material>paper</material>
+      <name>picture palm изображение рисунок ладони</name>
+      <properties>
+        <node name="name">short ладон|ь|и|и|ь|ью|и</node>
+        <node name="short">скараб|ей|ея|ею|ея|еем|ее</node>
+      </properties>
+      <short_descr>рисун|ок|ка|ку|ок|ком|ке скарабея</short_descr>
+      <type name="recipe">
+        <complexity>3</complexity>
+        <flags>tattoo</flags>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>3</weight>
     </node>
     <node name="9567">
       <cost>10</cost>
@@ -4178,21 +4237,21 @@
       <cost>300</cost>
       <description>Лошадиная подкова (shoe) лежит здесь.</description>
       <extra_flags>hum</extra_flags>
-      <gender>m</gender>
+      <gender>f</gender>
       <level>5</level>
       <material>iron</material>
-      <name>horse shoe подкова</name>
+      <name>horseshoe horse shoe подкова</name>
       <short_descr>лошадин|ая|ой|ой|ую|ой|ой подков|а|ы|е|у|ой|е</short_descr>
       <type name="armor">
         <ac bash="5" exotic="0" pierce="5" slash="5"/>
       </type>
-      <wear_flags>take wear_neck</wear_flags>
+      <wear_flags>take wear_hooves</wear_flags>
       <weight>20</weight>
     </node>
     <node name="9588">
       <affects>
         <node>
-          <apply to="damroll">3</apply>
+          <apply to="ac">-5</apply>
           <bits table="affect_flags"></bits>
         </node>
         <node>
@@ -4200,7 +4259,7 @@
           <bits table="affect_flags"></bits>
         </node>
         <node>
-          <apply to="ac">-5</apply>
+          <apply to="damroll">3</apply>
           <bits table="affect_flags"></bits>
         </node>
       </affects>
@@ -4725,7 +4784,7 @@
       <type name="keyring">
         <maxKeys>15</maxKeys>
       </type>
-      <wear_flags>take wear_neck</wear_flags>
+      <wear_flags>take</wear_flags>
       <weight>1</weight>
     </node>
     <node name="9620">
@@ -4771,6 +4830,109 @@
       </type>
       <wear_flags>take</wear_flags>
       <weight>1</weight>
+    </node>
+    <node name="9623">
+      <affects>
+        <node>
+          <apply to="saves">-1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
+      <cost>3300</cost>
+      <description>На кусочке бумаги нанесен какой-то рисунок (picture).</description>
+      <extraDescr>
+        <node keyword="picture palm изображение рисунок ладони">На листке бумаги изображен довольной простой рисунок ладони.
+Не смотря на простоту рисунка, от него веет силой. Ладонь узкая,
+с длинными пальцами, что наводит на мысли об эльфах.
+Носитель такой татуировки получит защиту от заклинаний.
+</node>
+      </extraDescr>
+      <extra_flags>rot_death burn_proof</extra_flags>
+      <gender>p</gender>
+      <level>10</level>
+      <material>paper</material>
+      <name>picture palm изображение рисунок ладони</name>
+      <properties>
+        <node name="div">10</node>
+        <node name="levelAdaptive">true</node>
+        <node name="mult">-1</node>
+        <node name="name">palm ладонь</node>
+        <node name="short">ладон|ь|и|и|ь|ью|и</node>
+      </properties>
+      <short_descr>изображени|е|я|ю|е|ем|и ладони</short_descr>
+      <type name="recipe">
+        <complexity>2</complexity>
+        <flags>tattoo</flags>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>3</weight>
+    </node>
+    <node name="9624">
+      <affects>
+        <node>
+          <apply to="hit">1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
+      <cost>6700</cost>
+      <description>На кусочке бумаги нанесен какой-то рисунок (picture).</description>
+      <extraDescr>
+        <node keyword="picture shield изображение рисунок щита">Один из базовых рисунков, на которых удобно практиковаться наносить
+татуировки: щит с гербом внутри можно изобразить всего в несколько штрихов.
+Носитель такой татуировки будет более выносливым.
+</node>
+      </extraDescr>
+      <extra_flags>rot_death burn_proof</extra_flags>
+      <gender>p</gender>
+      <level>10</level>
+      <material>paper</material>
+      <name>picture shield изображение рисунок щита</name>
+      <properties>
+        <node name="div">1</node>
+        <node name="levelAdaptive">true</node>
+        <node name="mult">1</node>
+        <node name="name">shield щит</node>
+        <node name="short">щит||а|у||ом|е</node>
+      </properties>
+      <short_descr>изображени|е|я|ю|е|ем|и щита</short_descr>
+      <type name="recipe">
+        <complexity>2</complexity>
+        <flags>tattoo</flags>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>3</weight>
+    </node>
+    <node name="9625">
+      <affects>
+        <node>
+          <apply to="int">3</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
+      <cost>1000</cost>
+      <description>На кусочке бумаги нанесен какой-то узор (ornament).</description>
+      <extraDescr>
+        <node keyword="ornament meander узор меандр">Узор, составленный из прямых углов, складывающийся в непрерывную линию,
+кажется достаточно простым рисунком для освоения. 
+Нанеся его на свою кожу, сразу почувствуешь себя гораздо умнее.
+</node>
+      </extraDescr>
+      <extra_flags>rot_death burn_proof</extra_flags>
+      <gender>m</gender>
+      <level>1</level>
+      <material>paper</material>
+      <name>ornament meander узор меандр</name>
+      <properties>
+        <node name="name">meander меандр</node>
+        <node name="short">меандр||а|у||ом|е</node>
+      </properties>
+      <short_descr>узор||а|у||ом|е меандра</short_descr>
+      <type name="recipe">
+        <complexity>1</complexity>
+        <flags>tattoo</flags>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>3</weight>
     </node>
   </objects>
   <rooms>
@@ -7163,7 +7325,7 @@ drafting table.
         </node>
       </exits>
       <flags>no_mob indoors law nosummon</flags>
-      <guilds>cleric </guilds>
+      <guilds>cleric</guilds>
       <name>Возле Святыни Монахов</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="9501"/>
@@ -7504,7 +7666,7 @@ BUY   : Купить у Веры овощи.
         </node>
       </exits>
       <flags>indoors law nosummon</flags>
-      <guilds>necromancer witch warlock vampire </guilds>
+      <guilds>warlock witch necromancer vampire</guilds>
       <name>В Основании Башни</name>
       <sector>inside</sector>
     </node>
@@ -7523,7 +7685,7 @@ BUY   : Купить у Веры овощи.
         </node>
       </exits>
       <flags>law nosummon</flags>
-      <guilds>necromancer witch warlock vampire </guilds>
+      <guilds>warlock witch necromancer vampire</guilds>
       <name>Во Внутреннем Дворе Магов</name>
       <sector>inside</sector>
     </node>
@@ -7544,7 +7706,7 @@ BUY   : Купить у Веры овощи.
         </node>
       </exits>
       <flags>indoors law nosummon</flags>
-      <guilds>cleric </guilds>
+      <guilds>cleric</guilds>
       <name>В &quot;Нектаре Богов&quot;</name>
       <sector>inside</sector>
     </node>
@@ -7886,7 +8048,7 @@ BUY   : ЛЮБИМАЯ команда Абдула позволит тебе к�
         </node>
       </exits>
       <flags>indoors law nosummon</flags>
-      <guilds>warrior samurai </guilds>
+      <guilds>samurai warrior</guilds>
       <name>В &quot;Точильном Камне&quot;</name>
       <sector>inside</sector>
     </node>
@@ -7910,7 +8072,7 @@ BUY   : ЛЮБИМАЯ команда Абдула позволит тебе к�
         </node>
       </exits>
       <flags>no_mob indoors law nosummon</flags>
-      <guilds>warrior samurai </guilds>
+      <guilds>samurai warrior</guilds>
       <name>Во Дворе Турниров и Тренировок</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="9502"/>
@@ -8108,7 +8270,7 @@ BUY   : купить товар по жалкой цене
         </node>
       </exits>
       <flags>indoors law nosummon</flags>
-      <guilds>thief </guilds>
+      <guilds>thief</guilds>
       <name>В &quot;Грязном Единороге&quot;</name>
       <sector>inside</sector>
     </node>
@@ -8269,7 +8431,7 @@ BUY   : купить товар у кузнеца по справедливой 
         </node>
       </exits>
       <flags>indoors law nosummon</flags>
-      <guilds>thief </guilds>
+      <guilds>thief</guilds>
       <name>На Секретном Дворе</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="9503"/>
@@ -8310,7 +8472,7 @@ BUY   : купить товар у кузнеца по справедливой 
         </node>
       </exits>
       <flags>indoors law nosummon</flags>
-      <guilds>necromancer witch warlock vampire </guilds>
+      <guilds>warlock witch necromancer vampire</guilds>
       <name>В Лаборатории Мага</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="9500"/>
@@ -8370,7 +8532,7 @@ BUY   : купить товар у кузнеца по справедливой 
 были доставлены сюда комиссией созданной для восстановления потерянных 
 знаний Талоса. Ряды книжных полок, заполненных книгами в установленном 
 порядке, установлены вдоль стен. Воздух наполнен ароматом старых
-рукописей и запахом клея.
+рукописей и запахом клея. Некоторые картины даже выставлены на продажу.
 </description>
       <exits>
         <node name="east">
@@ -8381,6 +8543,9 @@ BUY   : купить товар у кузнеца по справедливой 
       <name>В Библиотеке</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="9546"/>
+        <give vnum="9625"/>
+        <give vnum="9624"/>
+        <give vnum="9623"/>
       </resets>
       <sector>inside</sector>
     </node>
@@ -8611,7 +8776,7 @@ BUY   : купить товар у кузнеца по справедливой 
       <description>Как только ты входишь, едкий запах дубленой  кожи  ударяет  тебе  в  нос.
 Следующая вещь, на которую ты обращаешь внимание - богатый выбор цветов, в
 который выкрашены изделия. Кожевенники растягивают  кожу  и  режут  ее  на 
-нужные куски. Ты замечаешь не большое послание (message) на стене. 
+нужные куски. Ты замечаешь небольшое послание (message) на стене. 
 </description>
       <exits>
         <node name="east">
@@ -9580,9 +9745,9 @@ you notice a pair of small red eyes peering at you from the darkness.
       <sector>inside</sector>
     </node>
     <node name="9705">
-      <description>You stand in a large cedar wood hall leading east and west. On the floor
-lies a thin and narrow purple rug. The hall leads west inside the palace
-and east to the Grand Entrance.
+      <description>Вы стоите в большом зале из кедрового дерева, ведущем на восток и запад. 
+На полу лежит тонкий и узкий фиолетовый коврик. Зал ведет на запад внутрь
+дворца, а на востоке Главный Вход.
 </description>
       <exits>
         <node name="east">
@@ -9833,6 +9998,157 @@ papasan chairs, and choose a title that strikes you.
         <put in="9502" limit="1" maxHere="1" vnum="9544"/>
       </resets>
       <sector>inside</sector>
+    </node>
+    <node name="9712">
+      <description>Ты находишься посреди кристальной синевы вод Моря Дракона. Вода
+окружает тебя со всех сторон и простирается до самого горизонта.
+</description>
+      <exits>
+        <node name="east">
+          <key>0</key>
+          <target>9713</target>
+        </node>
+        <node name="north">
+          <key>0</key>
+          <target>9715</target>
+        </node>
+        <node name="south">
+          <key>0</key>
+          <target>9715</target>
+        </node>
+        <node name="west">
+          <key>0</key>
+          <target>9714</target>
+        </node>
+      </exits>
+      <name>В Море Дракона</name>
+      <sector>water_noswim</sector>
+    </node>
+    <node name="9713">
+      <description>Ты находишься посреди кристальной синевы вод Моря Дракона. Вода
+окружает тебя со всех сторон и простирается до самого горизонта.
+</description>
+      <exits>
+        <node name="east">
+          <key>0</key>
+          <target>9714</target>
+        </node>
+        <node name="north">
+          <key>0</key>
+          <target>9716</target>
+        </node>
+        <node name="south">
+          <key>0</key>
+          <target>9797</target>
+        </node>
+        <node name="west">
+          <key>0</key>
+          <target>9712</target>
+        </node>
+      </exits>
+      <name>В Море Дракона</name>
+      <sector>water_noswim</sector>
+    </node>
+    <node name="9714">
+      <description>Ты находишься посреди кристальной синевы вод Моря Дракона. Вода
+окружает тебя со всех сторон и простирается до самого горизонта.
+</description>
+      <exits>
+        <node name="east">
+          <key>0</key>
+          <target>9712</target>
+        </node>
+        <node name="north">
+          <key>0</key>
+          <target>9717</target>
+        </node>
+        <node name="south">
+          <key>0</key>
+          <target>9717</target>
+        </node>
+        <node name="west">
+          <key>0</key>
+          <target>9713</target>
+        </node>
+      </exits>
+      <name>В Море Дракона</name>
+      <sector>water_noswim</sector>
+    </node>
+    <node name="9715">
+      <description>Ты находишься посреди кристальной синевы вод Моря Дракона. Вода
+окружает тебя со всех сторон и простирается до самого горизонта.
+Тебе кажется, что вдалеке виднеется земля.
+</description>
+      <exits>
+        <node name="east">
+          <key>0</key>
+          <target>9716</target>
+        </node>
+        <node name="north">
+          <key>0</key>
+          <target>9712</target>
+        </node>
+        <node name="south">
+          <key>0</key>
+          <target>9712</target>
+        </node>
+        <node name="west">
+          <key>0</key>
+          <target>17171</target>
+        </node>
+      </exits>
+      <name>В Море Дракона</name>
+      <sector>water_noswim</sector>
+    </node>
+    <node name="9716">
+      <description>Ты находишься посреди кристальной синевы вод Моря Дракона. Вода
+окружает тебя со всех сторон и простирается до самого горизонта.
+</description>
+      <exits>
+        <node name="east">
+          <key>0</key>
+          <target>9717</target>
+        </node>
+        <node name="north">
+          <key>0</key>
+          <target>9713</target>
+        </node>
+        <node name="south">
+          <key>0</key>
+          <target>9713</target>
+        </node>
+        <node name="west">
+          <key>0</key>
+          <target>9715</target>
+        </node>
+      </exits>
+      <name>В Море Дракона</name>
+      <sector>water_noswim</sector>
+    </node>
+    <node name="9717">
+      <description>Ты находишься посреди кристальной синевы вод Моря Дракона. Вода
+окружает тебя со всех сторон и простирается до самого горизонта.
+</description>
+      <exits>
+        <node name="east">
+          <key>0</key>
+          <target>9715</target>
+        </node>
+        <node name="north">
+          <key>0</key>
+          <target>9714</target>
+        </node>
+        <node name="south">
+          <key>0</key>
+          <target>9714</target>
+        </node>
+        <node name="west">
+          <key>0</key>
+          <target>9716</target>
+        </node>
+      </exits>
+      <name>В Море Дракона</name>
+      <sector>water_noswim</sector>
     </node>
     <node name="9719">
       <description>The waters of the swamp pool in this low area and begin to flow southward.
@@ -10588,6 +10904,10 @@ expanse of grass spreads out to the south.
       <exits>
         <node name="east">
           <target>14501</target>
+        </node>
+        <node name="north">
+          <key>0</key>
+          <target>9713</target>
         </node>
         <node name="south">
           <target>9789</target>

@@ -13,6 +13,16 @@
     <vnumLow>40000</vnumLow>
   </areadata>
   <helps>
+    <node keyword="FRIGATE ФРЕГАТ" level="1">Во время плаванья на этом корабле можно получить базовые навыки для
+дальнейших путешествий по миру, а также поломать голову над различными
+заданиями.
+%PAUSE%
+{yЗадания{x:
+  {Y*{x Повар просит помочь в приготовлении блюда. 
+  {Y*{x Дварф хочет расследовать кражу рома. 
+  {Y*{x Капитан просит починить его шляпу. 
+  {Y*{x Лекарь не может найти свое пенсне. 
+</node>
   </helps>
   <mobiles>
     <node name="40000">
@@ -112,7 +122,7 @@
       <material>none</material>
       <off add="disarm fast kick"/>
       <player_name>доктор healer doctor лекарь katzman кацман</player_name>
-      <practicer>benedictions illusion curative enhancement protective combat harmful weather creation meditation healing detection maladictions attack none beguiling </practicer>
+      <practicer registry="skillGroup">combat protective benedictions none illusion attack detection creation curative enhancement beguiling harmful healing weather meditation maladictions </practicer>
       <race>human</race>
       <sex>male</sex>
       <short_descr>доктор||а|у|а|ом|е Кацман||а|у|а|ом|е</short_descr>
@@ -142,7 +152,7 @@
       <mana>42d9+641</mana>
       <material>none</material>
       <player_name>soldier солдат etkin эткин</player_name>
-      <practicer>weaponsmaster defensive fightmaster none </practicer>
+      <practicer registry="skillGroup">none defensive weaponsmaster fightmaster </practicer>
       <race>giant</race>
       <sex>male</sex>
       <short_descr>Эткин||а|у|а|ом|е</short_descr>
@@ -380,14 +390,14 @@
 </description>
       <hit>1d1+7</hit>
       <level>1</level>
-      <long_descr>Аггресивный кровопивец (mosquito) вонзает в тебя свое жало!
+      <long_descr>Агрессивный кровопивец (mosquito) вонзает в тебя свое жало!
 </long_descr>
       <mana>1d1+99</mana>
       <material>0</material>
       <off add="disarm parry"/>
       <player_name>комар mosquito</player_name>
       <race>insect</race>
-      <sex>female</sex>
+      <sex>male</sex>
       <short_descr>маленьк|ий|ого|ому|ого|им|ом комарик||а|у|а|ом|е</short_descr>
       <size>small</size>
       <smell>Пахнет твоей же {rКРОВЬЮ{x!</smell>
@@ -438,7 +448,7 @@
       <off add="bash dodge fast crush"/>
       <player_name>моллюск clam</player_name>
       <race>water fowl</race>
-      <sex>neutral</sex>
+      <sex>male</sex>
       <short_descr>моллюск||а|у|а|ом|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
@@ -716,6 +726,7 @@
       </extraDescr>
       <extra_flags>glow</extra_flags>
       <gender>m</gender>
+      <level>1</level>
       <material>wood</material>
       <name>факел torch</name>
       <short_descr>смолян|ой|ого|ому|ой|ым|ом факел||а|у||ом|е</short_descr>
@@ -944,442 +955,302 @@ Cъесть сухарик можно так: {hc{yесть сухарик{x({hc
       <cost>1000</cost>
       <description>Тяжелый атлас (atlas) в кожанном переплете брошен тут.</description>
       <extraDescr>
-        <node keyword="atlas атлас">Эта солидная тяжелая книга в кожаном переплете содержит несколько очень полезных
-карт. Каждой карте посвящена отдельная страница, на которую можно {yсмотреть{x ({ylook{x).
+        <node keyword="page21 стр21">.
+               * * * Зеркальная Часть Мира Грёз * * *
+                      = = ============== = =
+Эта часть Мира Грез зеркально отражает Мидгаард, Талос и Священную Рощу,
+изображая их такими, какими они были в далеком прошлом. Также в зеркальной
+части находится город Солас с пригородом, в котором можно строить свои дома.
 
-{cОГЛАВЛЕНИЕ{x
 
-{x  {c*{x Карта центрального Мидгаарда             ({hc{y{lRсм стр01{lEl page01{x)
-{x  {c*{x Карта северного Мидгаарда                ({hc{y{lRсм стр02{lEl page02{x)
-{x  {c*{x Карта южного Мидгаарда                   ({hc{y{lRсм стр03{lEl page03{x)
-{x  {c*{x Карта северной части Мира Грез           ({hc{y{lRсм стр04{lEl page04{x)
-{x  {c*{x Карта восточной части Мира Грез          ({hc{y{lRсм стр05{lEl page05{x)
-{x  {c*{x Карта южной и западной частей Мира Грез  ({hc{y{lRсм стр06{lEl page06{x)
-{x  {c*{x Карта зеркальной части Мира Грез         ({hc{y{lRсм стр21{lEl page21{x)
-{x  {c*{x Карта Нового Талоса                      ({hc{y{lRсм стр07{lEl page07{x)
-{x  {c*{x Карта Долины Титанов                     ({hc{y{lRсм стр08{lEl page08{x)
-{x  {c*{x Карта Шира                               ({hc{y{lRсм стр09{lEl page09{x)
-{x  {c*{x Карта Соласа                             ({hc{y{lRсм стр10{lEl page10{x)
-{x  {c*{x Карта Герихельма                         ({hc{y{lRсм стр11{lEl page11{x)
-{x  {c*{x Карта Старого Мидгаарда                  ({hc{y{lRсм стр12{lEl page12{x)
-
-{x  {c*{x Карта Dangerous Neighborhoods            ({hc{y{lRсм стр13{lEl page13{x)
-{x  {c*{x Карта Деревни Смурфов                    ({hc{y{lRсм стр14{lEl page14{x)
-{x  {c*{x Карта Музея Зоологии                     ({hc{y{lRсм стр15{lEl page15{x)
-{x  {c*{x Карта Королевства Дварфов                ({hc{y{lRсм стр16{lEl page16{x)
-{x  {c*{x Карта 1го уровня Мории                   ({hc{y{lRсм стр17{lEl page17{x)
-{x  {c*{x Карта Mother Goose                       ({hc{y{lRсм стр18{lEl page18{x)
-{x  {c*{x Карта Олимпа                             ({hc{y{lRсм стр19{lEl page19{x)
-{x  {c*{x План Города Анон                         ({hc{y{lRсм стр20{lEl page20{x)
-          </node>
-        <node keyword="page20 стр20">The City of Anon
-
-    Illithid                      Elf                       Avian
-     Guild      Merc    Magic    Guild     ID       Pet     Guild
-       |        Hire    Shop       |       Guy      Shop      |
-       |_________|________|________|________|________|________|________Human
-                 |                                   |                 Guild
-  Castellan _____|               Green               |_____ Armorer
-                 |  Thaumaturgist  /    Enhancer     |
-W. Gate _________|_______|_______Temple______________|_________ E Gate 
-                 |       |         |                 |         
-      Smith _____|    Artificer    |_ Book Shop      |_____ Weapon Smith
-                 |                 |                 |
-Stables _________|_________________|_________________|________Sewer
-        |        |        |        |        |        |       |
-        |       Bank   Grocer      |      Baker     Bar      |
-Dungeon_|                        Dryad                       |
-        |                        Guild                       |
-     Dwarf                         |                       Kender
-     Guild                   Insect Garden                 Guild
-
+                              Ад    Cолас(Утеха)
+                               ^          |
+                               |          |
+                          (Поля и хаты)   |
+                               |          |
+                Пригород ------+-------Озеро
+                 Соласа              Кристалмир
+                                      /   |
+                                 Антария  |
+                                          |
+                                          |
+                             Тайное       |
+                            Убежище-------+
+                            Колдуна      /|     +-------------+
+                                        = |     |   Пустота   |   Cовремен.
+                                       /  |     | (случайные  +---Мидгаард
+                     Школа       Кладбище |     |   выходы)   |   и Талос
+                    Новичков              |     +------+------+   
+                      /                   |            |            
+                     /                    |            |
+Непрерывность-----Старый--------------Перекресток----Священная
+   Парков         Мидгаард                |           Роща
+                                          | 
+                                          |
+                           Старый----Дварфийский
+                           Талос         лес
       </node>
-        <node keyword="page19 стр19">{x                             *****OLYMPUS*****
-                               =================
- 
-                                   Bedroom
-                                      |
-                                   Northern
-                                     Hall
-                        Western       |         Eastern
-              Bedroom----Hall----Second Floor----Hall----Bedroom
-                                /     |
-                         Stairway  Southern
-                             |       Hall                    North
-                        Throne Room   |                        |  /Up
-                             |      Bedroom                    |/
-                             |                          West---+---East
-                  Kitchen    |     Stable                     /|
-                     |       |       |                  Down/  |
-        Guest     Western  Castle  Eastern   Guest           South
-       Quarters----Wing----Entry----Wing----Quarters
-                     |       |       |
-                  Storage   Z|    Storage
-                   Room     e|S    Room   Smithy
-                            u|t             |
-                            s+--Ares Street-+--Weapon
-                    Mystery  |              |   Shop
-                    Shop-----+           Armoury
-                             |
-                   Residence-+-Residence
-                             |
-                     Bakery--+
-                             |
-                       **Entrance**
-                            /
-                      Mountain
+        <node keyword="page01 стр01">{x                   * * * ЦЕНТРАЛЬНЫЙ МИДГААРД * * *
+        С  Вв               = = ========== = =
+        | /
+    З &lt; + &gt; В                Ризница   Радужный Мост {D(Вальгалла){x
+      / |                   {D(религия){x /
+    Вн  Ю                        |   /
+                           У Храмового
+                  Беседка---- Алтаря   MUD Школа-и-Музей-Зоологии
+                                 |    /     |
+                                 |   /    Арена{D(портал в Зону Новичков,{x
+                             {CХрам Лео{x           {DСтарый Мидгаард, Солас){x
+                                 |                      
+                                 |  В воздухе     Банк
+          ...     Гильд.         | /             /                 ...
+           |     Клериков----Храмовая------Прихожая---Хрюкающий     |
+      (Северный               площадь                 Кабан     (Северный
+       Мидгаард)          {D(фонтан,квестор){x             |         Мидгаард)
+           |                     |              Гильд.Самураев      |
+           |    Магич.           |       Гильд.                     |
+           |   Товары  Булочная  |      Паладинов  Оружейник{D(чинить){x|
+{D(Леса{x      |       |      |      |         |           |            |
+{DХаон){x &lt;--Запад--Главная-улица--{CРыночная{x----Главная-улица---------Восточн-&gt;
+{D(Шир){x    Ворота    |      |    {CПлощадь{x     |           |          Ворота
+           |    Гильд.  Доспехи  |       Ювелир     Гильдия     {D(к Новому{x
+           |    Ведьм            |                   Воинов        {DТалосу){x
+           |          Бюро Нах.--+---Мясник                         |
+           |                     |                                  |
+           |           Бакалея--Больш.--Храм Фемиды                 |
+       Дорога                  Дорога                               |     
+     у стены---Храм Дураков      |                               Дорога
+           |   \                 |                               у стены
+           |    \Храм Крыс.Бога  |      +--Гильд.Варлоков           |
+           |                     |      |                           |
+           |   Товары   Магазин  |    Таверна  Зоо-   Аптека        |
+           |   из кожи   Карт    |    Поганка Магазин {D(зелья){x       |
+           |      |       |    Общая    |       |       |           |
+{D(Шахм{x--Дорога---Алея-Бедняков--Площадь--Темная-Алея-----+--------Дорога
+{DДоска){x у стены    |       |      |      |       |       |        у стены
+           |   Гильд.   Грязная  |   Гильдия Набережн. Склад        |
+           |   А-Палад  Таверна  |    Воров  {D(лодки){x  {D(тренер){x      |
+           |            /        |              |                   |
+           |    Гильд.Нинзя      |              |                   |
+           |                     |          &lt;-На реке-&gt; {D(к Пескам{x   |
+       Дорога     {D(Пригород){x---Свалка           |        {DCкорби){x  Дорога
+       у стены                   |   \   Закусочная Кати          у стены
+           |                   Южный  \                             |
+      На мосту                 Мост  {D(Канализация){x              На Мосту
+           |                     |                                  |
+        (Южный                (Южный                             (Южный
+        Мидгаард)             Мидгаард)                          Мидгаард)
+      
+</node>
+        <node keyword="page02 стр02">.
+                   * * * СЕВЕРНЫЙ МИДГААРД * * *
+                        = = =========== = =
+
+            (к Аркадии, Огненной Горе, Камелоту, Лихолесью)                              
+                         (Северные Равнины)
+                                |
+С-З Угол---Дорога------------Северные------------Дорога----С-В угол
+   |      у стены             Ворота             у стены        |
+Дорога                                                       Дорога
+у стены                                                      у стены
+   |                      (Казино)                              |
+Дорога                        |                               Дорога
+у стены---Клановая-дорога-+-Клановая-дорога--Клановая-дорога--у стены
+   |           |          |             |                       |
+Дорога     Обмен денег  Контора     Трактир и                 Дорога
+у стены    (identify)  рестрингов   гостиница Энди           у стены
+   |                                                            |
+ Запад.                                                       Восточн
+ Ворота                                                       Ворота
+   |                                                            |
+(Центр.                                                     (Центр.     
+Мидгаард)                                                    Мидгаард)
       </node>
-        <node keyword="page18 стр18">Mother Goose
-Путь от MSM: run 3s2e2sW
+        <node keyword="page03 стр03">{x                       * * *   ЮЖНЫЙ МИДГААРД  * * *
+                          = = =================== = =
 
-v или ^ - односторонний проход  
-d - дверь                       
-
-   Northwest----Along the -------North Wall
-    Corner      North Wall           |
-      |             |                |
-      |             | Mother Goose&apos;s |
-      |             |     Cloud      |
-      |             |    /           |
-      |             |  /             |
-      |             |/               |
-  West Wall------End of            Field
-               Main Street           |          Kitchen
-                    |                |             |
-                    |  Hill Top      |             |
-                    |  /    /        |           House
-                    | v    ^         |             |
-                    |/    /          |             d
-      House --d-- Main-------------Field           |
-        |        Street /                        Alley
-        v              /                           |
-        |             ^                            d
-        |            /                             |
-      Field-------Main ----d----Farmhouse-------Kitchen
-                 Street
-                    |
-                    |
-                    |
-        Meadow--- Main ---Meadow---Meadow
-                 Street
-                    |
-                    |
-                Entrance----На Темной Реке---...
-                            (Новый Талос)
-                                  |
-                         Поворот на Темной Реке
-                               (Амбер)
-                                  .
-                                  .
-                                  .
+   На                          Южный           Закусочная                 На 
+  Мосту                         Мост              Кати                   Мосту
+    |                            |                 |                       |
+C-З конец                        |              Площадь               С-В конец
+мног.улицы--Променад---------Променад------------Астрал--------------мног.улицы
+    |           |                |                 |                       |
+    |           |                |                 |           Фонтан      |
+ Многол.        |                |              Изумр.            |     Многол.
+  улица      Парковая         Вход в---Парков.  просп.--Монетн--Монетн---улица  
+    |         Дорога           Парк     Кафе       |     Пер.    Пер.      |
+    |           |                |              Изумр.                     |
+    |           |    (Храм       |              просп.                     |
+    |           |    Тананды)    | (Зоопарк)       |                       |
+    | Помещ.  Парк      |     (*)|/             Изумр.    Ратуша           |
+    | Стражи--Дор.--Вход--Пруд--Парк---Вход в---просп.----(мэр)            |
+    |           |   в парк              парк       |                       |
+    |        Парков.            Изумр.----------Изумр.---------------Gang  |
+    |        Дорога             просп.          просп.               |  |  |
+    |           |                  |                                 |  |  |
+    |        Парков.----------Перекресток-------Парков.          Ул.-Land  |
+    |        Дорога            , Дорог,          дор.            Вязов     |
+    |          |              /    |   \          |  (Библиотека) |        |
+    |     Храм Солнца  (Разд.Души) | (Редферн)    |       |       |     Многол.
+ Многол.   (recall)   (Зона Дилана)| (Квифаэль) Парков.-Улица---Улица---улица  
+  улица                            |            дорога  Вязов   Вязов      | 
+    |                              |              |              |         |
+    |                              |              |           (Кладбище)   |
+    |                 Изумр.---Изумр.             |          (Подземелье   |
+    |                 просп.   просп.             |            Часовни)    |
+    |                   |                         |                        |
+    |                 Изумр.                    Парков. Темный             |
+    |                 просп.                     дор.---Храм (recall)      |
+ Многол.                |                         |                    Многол.
+  улица-----------Многол.улица-----Южные------Многол.улица--------------улица  
+                                  Ворота                                   |
+(*) Парк показан схематично.         |                                  (Цирк)
+                                (Миден&apos;нир)
+                       (Изумрудный лес)  (Крепость Гоблинов)
       </node>
-        <node keyword="page17 стр17">* * * MORIA - Map 1 * * *                                           To Mahn-Tor
- = = =============== = =                                                 |
-Talk about a mess!                                                   Foothills
-                                                                         |
-This is as far as our courageous, noble, brave           Light Cave    Valley
-and apparently quite deceased cartographers                   |           |
-could get.  Perhaps more maps could be found             Smelly Tunnel  Cave
-in the depths of Moria itself.                                |           |
-                                                  Cave---Many Tunnels---Tunnel
-                                                    |         |           |
-         West End--Large Cave--East End           Cave      Tunnel      *Hole
-            |          |                            |         |        (Map 2)
-            |        Tunnel---------Tunnel--------Tunnel----Tunnel
-            |                                       |
- *Hole----Damp----Damp  Tunnel--Tunnel--Tunnel    Tunnel
-(Map 3)  Tunnel  Tunnel   |               |         |
-                   |      |            (*Map 3)  The Cave
-                   |      |                         |
-                   |    Tunnel--Light--Maze      End of
-                   |            Cave    |        The Path
-                   |                  Light         |
-                   |                  Cave      The Hills--&gt; Dwarven Kingdom
-                   |                    |           |
-                 Tunnel----Tunnel-----Light     The Plains
-                                      Cave          |
-                                                 The Lane
-                                                    |
-                                      Midgaard &lt;--Cross--&gt; Eastern Road
-                                                  Roads
-                                                    |
-                                               Dwarf Forest
+        <node keyword="page04 стр04">{x                  * * * Северная Часть Мира Грёз * * *           
+                           = = ============== = =
 
+                               Троя, Олимп     
+                                   |       ,Облачная Гора
+                      King&apos;s       |      /    
+            Аркадия   Castle       |     /       Офкол и Нов.Офкол
+               |        |          |    /              |
+               |        |          |   /               | 
+  Огненная--Долина------+------Сев.Равнины--------Перекресток------Камелот
+    Гора    Эльфов                 |                   |          
+                             ______+______             |
+                            |             |        Пик Драконов
+                            |  Мидгаард   |            |
+                            |_____________|      Пиратские Острова
+
+
+На этой карте очень приблизительно и без соблюдения масштаба изображены
+зоны северной части Мира Грез. Цель карты - показать относительное 
+расположение зон по отношению друг к другу. Для полного списка см. ? {lRзоны{lEareas{x.
       </node>
-        <node keyword="page16 стр16">{x                       * * * The Dwarven Kingdom * * *
-                          = = ===================== = =
- 
-                    Dwarven
-                    Hospital
-                       |                                              *Path to
-         North of---Path by---Path by---Barracks     Guard--Door to----Castle
-          Shops     Hospital  Barracks  Entrance     House  Kingdom  Strangelove
-Granite     |                              |                   |
-Head&apos;s---Path North                      First               Narrow
-Bakery    of Shop                       Barracks              Path
-            |                              |                   |
-         Hide and    Turn               Back of     Bend in--Narrow
-        Tooth Shop--in Road             Barracks     Path     Path
-                       |                    \         |
-                    Path to               Dwarven   Narrow
-                    Village              Catacombs   Path
-                       |                              |
-             Store  *Inside    Entrance     Top of   Dark   *Mine
-             Room---Entrance--To Mountain--Mountain--Path--Entrance
-                \                             |                 \
-               Wine                        Middle of          Dwarven
-              Cellar                       Mountain            Mines
-                  \                            |
-                Dwarven                    Base of
-               Catacombs    Moria          Mountain           North
-                              |               |           Up\   |
-                              |            Path to            \ |
-                            Plains--Hills--Dwarven      West----+----East
-                              |            Kingdom              | \
-                              |               |                 |   \Down
-              Midgaard &lt;----Cross          Dwarven            South
-                            Roads          Drop-off
-                                          (Day-Care)
- 
-*key required
+        <node keyword="page05 стр05">{x                  * * * Восточная Часть Мира Грёз * * *           
+                           = = =============== = =
+
+            Дьявольский
+             Монастырь
+                 | 
+      Blight-----+
+                 |                                   Старый
+               Мория    Катакомбы         Нирвана   Мидгаард
+              /  |       /                   |     /
+             /   |      /                    | (void)     
+       Подземье  +--Корол.--Детсад           |   /                              
+     (Underdark) |  Дварфов                  |  /           Армагеддон        
+                 |               Деревня  Cвященная             |           
+                 +--Корол.       Смурфов   Роща     Шаолинь   Вольная
+                 |  Зеркал          |        |         |      Гавань         
+Восточн.         |                  |        |         |        |                
+Ворота------Перекресток-----Восточная-Дорога-+----Новый-Талос--Море-----Земля       
+Мидгаарда       Дорог                        |         |     Драконов  Гоблинов
+                 |                        Деревня      |        |         |   
+                 |       Шабаш             Гномов      |     Темный     Страна
+                 |         |                          / \    Контин.    Чудес       
+Руины--------Дварфийский---+---Мах&apos;н-Тор             /   \           
+Талоса     /    Лес               |     \        Базар   Город   
+          /      |                |      \              Призраков
+      Город      +--Вивернова   Башня   Пещеры
+      Дроу       |    башня     Лича       \
+               Каньон                       \
+               Стихий                        Ад
+                 |   \
+               Абисс  Ааракокран
+
+
+На этой карте очень приблизительно и без соблюдения масштаба изображены
+зоны восточной части Мира Грез. Цель карты - показать относительное 
+расположение зон по отношению друг к другу. Для полного списка см. ? {lRзоны{lEareas{x.
       </node>
-        <node keyword="page15 стр15">{x                 Вход в          Вход     Сувенирная
-       N  U       MUD Школу ----- в Музей     лавка
-       | /                           |     /
-   W &lt; + &gt; E                         |    /
-     / |                             |   /
-    D  S            Зал            Холл            Под
-                позвоночных ------ Музея -------- водой
-                     |               |              |
-                     |               |              |
-                     |               |              |
- Клетка             Зал          Выставка        Морская         Аквариум
- Гориллы --||-- позвоночных      Насекомых       выставка --L--- с акулами
-                     |               |              |
-                     |               |              |
-                     |               |              |
-                    Зал          Выставка        Морская
-                позвоночных      Насекомых       выставка
-                     |               |              |
-                     |               |              |
-                     |               V              |
-                     +----------&gt; Выход из &lt;--------+
- /------------------\              Музея
- |  Музей Зоологии  |                |
- | (Zoology Museum) |                |
- |  1 - 10 уровень  |                V
- |   от MSM 2nue    |            MUD Школа:
- \------------------/         Северо-Восточный
-                                 Угол Арены
+        <node keyword="page06 стр06">{x               * * * Западная и Южная часть Мира Грёз * * *
+                          = = ================== = =
+        Mage 
+Dragon  Tower						Plains
+Tower    |   	 		Ciquala&apos;s Lair		   |
+ |       |  Galaxy    Titans    /			   |
+ --- Shadow-/		|___ _/                            |
+     Grove   Yggdrasil 	|	     	  	         Northern           
+      | 	/  	|  	Greater	      Shire        Midg.            
+      \      Arachnos 	|	Gerighelm       |           |  / 
+        \        \ 	|    	 / 	   	|           | / 
+      Forest Of Haon Dor-------/----+--------------------Midgaard--------Cross
+	  	/    |		|	     Chessboard -/|\| |		 Roads
+	      /	     |		|	                  | |\|
+     	    Old    Troll Den	|    	 		 /| | | \ 
+	    Marsh    		|		    Sewer | | |  Goblin Str.hold
+			  Drakyri Isle		 Prison --| | \
+							    |   \	             
+				Redferne&apos;s-----Chain----Southern  \      
+			     /  Residence		Midgaard    Midgaard 
+			   /	   |			/  /|\    	 River
+		      Divided	   |	      Gang Land  /  |  Graveyard   /
+		      Souls	Clouds  	      Zoo   |	  |      /
+			       (Harpie)			Miden&apos;nir |  Sands of
+					  		(Goblins) |   Sorrow
+					           	         /       
+						            Church              
+						           Catacombs       
 
-
-
-Картограф: Zustin 
+На этой карте очень приблизительно и без соблюдения масштаба изображены
+зоны западной и южной частей Мира Грез. Цель карты - показать относительное 
+расположение зон по отношению друг к другу. Для полного списка см. ? {lRзоны{lEareas{x.
       </node>
-        <node keyword="page14 стр14">{x                                        /-----------------\
-                  Замок                   | Деревня Смурфов |
-     N          Гаргамела                 |  (Smurfville)   |
-     |              |                     |  1 - 10 уровень |
- W &lt; + &gt; E     Перед Замком               |   от MSM 7en    |
-     |          Гаргамела                 \-----------------/
-     S              |
-               Путь к Замку
-                Гаргамела
-                    |
-                 Дорожка      Дорожка      Дорожка      Смурфо-
-                 смурфов ---- смурфов ---- смурфов ---- ягодная
-                    |                       (well)      дорожка
-                    |                         |            |
-                Дом Джоки                     |            |
-                                              |            |
-Дом Грампи      Каменистая                 Дорожка      Смурфо-
-  Смурфа  ------  тропа   ---------------- смурфов ---- ягодная
-                    |                         |         дорожка
-                    |                         |            |
-                 Дом Папы       Дом        Дорожка      Смурфо-
-                  Смурфа     Смурфетты --- смурфов ---- ягодная
-                                              |         дорожка
-                                              |
-               Дом Слиппи     Дорожка      Дорожка     Дом Хенди
-                 Смурфа  ---- смурфов ---- смурфов ---- Смурфа
-                                 |            |
-                                 |            |       Дом Брейни
-                                 |            |         Смурфа
-                                 |            |            |
-                 Дорожка      Дорожка      Дорожка      Дорожка
-                 смурфов ---- смурфов ---- смурфов ---- смурфов
-                                 |            |
-                             Дом Хефти     Вход в
-                              Смурфа       Деревню
-                                           Смурфов
-                                              |
-                                          Затененная
-                                            Тропа
-                                              |
-                                          Затененная
-                                            Тропа
-                                              |
-                                          Затененная
-                                            Тропа
-                                              |
-                                       /------+-------\
-                                       |  Миден&apos;нир:  |
-                       на Мидгаард &lt;---+ На восточной +---&gt; к Новому Талосу
-                                       |    дороге    |
-                                       \--------------/
-Картограф: Zustin
-      </node>
-        <node keyword="page13 стр13">Dangerous Neighborhood (Опасные кварталы) 
+        <node keyword="page07 стр07">{x         * * * **************** New Thalos ***************** * * *
+                   &quot;Not Thalos or Old Thalos but New Thalos&quot;
+            = = =============================================== = =
 
-Path from MS Midgaard to &quot;A Dark Alleyway&quot; 6se3se 
-
---------------------------------------------------------------------------------
-Dark
-Alleyway               W h i t e   D r a g o n   B o u l e v a r d        B
- *--------*------------*-------*---------*-------*------------*---------* r
- Midgaard |            |       |               I |                      | o
-          |Overground  |       |               c |      The remains of  | n
-          |plot of land|       |       D       e |      the magic shop  | z
-          *------------*    Armoury    r *----Courtyard-------*---------* e
-                       |       |       a |      North                   |
-                       |       |       g |                              | D
-              Dracolich*----Shortcut   o *-------*                      * r
-               Plaza           |       n |       |        Old Abandoned | a
-                               |         |W      |        Warehouse     | g
-                            Shortcut-----*a   Courtyard       *----#----* o
-                                         |y    South                    | n
-                                         |       |                      |
-                                         |       |                      | s
-                               *---------*-------*------------*---------* t
-                             H |  Y e l l o w   D|r a g o n  R|o a d      r
-                             e |                 |            |           .
-                             c *-----------------*------------*---------*
-                             t |   N o    M a n &apos;|s   L a n d |         |
-                             o *-----------------*------------*---------*
-                             r |                 |                      |
-                               |                 |          Jewelir     |
-                             S *-----------------*------------*---------* A
-                             t | H  e  c  t  o  r|   S  t  r  e  e  t   | j
-                             r |                 |  Small Ruined Chapel | a
-                             e *                 *            *-------- * x
-                             e |                 |      What is left of | 
-                             t | Achilles Avenue |       the Weaponshop | S
-                               *---------*------bend          *---------* t
-                     Khan      |A                |                      | e
-                     Park      |c                |                      | e
-                       *-------*h                *------------*---------* t
-Midgaard              |       |i                |  A j a x  S|t r e e t
- (Конец      Alexander |road   |l               A|            |
- Улицы&lt;---*------*-----*       *l               j*           The
- ВЯзов)A wide          |       |e               a|         Inn/Pub
-      alleyway         |       |s               x|            |
-                       *-------*---------*-------*---------Hallway
-                            S o l o m o n   S t r e e t
-
-
-      </node>
-        <node keyword="page12 стр12">{x                          Old Midgaard	
-*****************************************************************************
-    N              Templeman&apos;s room
-    |                     |
-W - + - E            Temple altar                                    
-    |                     |                        
-    S              Temple of Midgaard                GraveYard
-                          |                              |
-    Necromancer  Wizard   |     Bakery  Weaponsmith      |            
-       Guild       |    Market    |         |          Cross    
-         |---------+--- Square ---+---------+--------- Roads -- Forest
-         |         |              |         |            |
-      Vampire  Jeweller        General   Armourer     Village
-     Guildroom                 Store                  guarded
-                                                        by
-                                                   Imperial Guards
-                                                  
-*****************************************************************************
-      </node>
-        <node keyword="page11 стр11">{w                 {W *------------------*          Обозначения:{w
-     Врата       {W* Большой Геригхельм *          КП  - Купеческий Путь{w
-   Геригхельма   {W *__________________*           [1] - Дворец{w
-       |                                         {W[2] - Канализация{w
-    Зап.Улица--Ав.Петра-Ав.Петра-Авеню Петра     {W[3] - Деревня{w
-       |                  |       |
-    Зап.Улица          {W[Парк]{w  Авеню Петра
-       |                         |               Окончание
-    Зап.Улица--КП----КП----------КП-----КП-----Купеческого Пути
-       |       |     |           |      |           |
-       |  Зверинец Магические  Магазин  Оружейный  Магазин       Перекресток-{W[3]{w
-       |             товары    с пищей  Магазин   знатока трав         |
-       |                                                          Длинный путь
-       |      Магазин  Мебельный  Портат.  Свежая    Магазин           |
-   Зап.Улица  Животных  Магазин   Фонтаны  вода/пиво  Зелий       Длинный путь
-       |         |        |         |        |          |              |
-{W[1]{w-Зап.Улица----КП-------КП--------КП-------КП--------КП--Мост--КП--Шумный--...
-       |                            |                      над       базар   
-       |                          Бараки                  рекой
-       |
-       |        Храмовая  Храмовая  Храмовая  Храмовая  Вход в  Проход
-    Зап.Улица----Улица-----Улица------Улица----Улица-----Храм---между---Алтарь
-       |                     |          |        |              рядами    |
-{W[2]{w-Зап.Улица              Место     Церковь    Храм                   Ризница
-       |    	      Строительства  Времени   Смерти
-    Путь из                                      |
-    Геригхельма                                  v
-       |	               	             Жертвенник
-     Свалка   
-
-      </node>
-        <node keyword="page10 стр10">{W ***************{w                 Кабинет Капитана
-{W* Солас (Утеха) *{w                       |            Алтарь
-{W ***************{w                   У гостиницы         |
-                       ...-=--&quot;Последний Приют&quot;    Неф возле---Возле одного
-                                        |        / Алтаря     из окон
-                                       Дорожка, /
-Магазин  Рашанские  Водол.  Универмаг  вымощенная
-Молина   Брюквы    Магазин  Кробена    булыжником
-  |        |         |         |         |
-Рынок----Рынок-----Рын.Пл----Рын.Пл---Окончание--Пыльная----Управление----...
-  |       |          |         |       Гл.Улицы   дорога   городской стражи
-Овощи  Фруктовый   Сувениры Морозилка   |
-      Лоток Кристы  Джанни  &quot;У Ниси&quot;  Гл.Улица
-                                        |
-Перекресток                             |
-Зап.Галленского--ЗГП----ЗГП--ЗГП-----Перекресток---ВГП--ВГП--------Пересечение
-и Ул.Урожая       |      |    |         |           |    |         ВГП и Кетра
-   |          Пивоварня Дом  Дом      Гл.Улица     Дом  Птичий         |
-Ул.Урожая       Мэтта                   |              Питомник    Улица Кетра
-   |                        Магазин     |                              |
-Ул.Урожая--Дом              Печенек---Гл.Улица             Ангар---Улица Кетра
-   |                                    |                              |
-Ул.Урожая--МакБулочная          Дом---Гл.Улица---...--У Джандера-=-Улица Кетра
-   |                   Салун            |         |                    |
-Ю-З сторожевой пост      |            Ворота      |         Ю-В сторожевой пост
-и смотровая башня----П---П--П---------Соласа---П--П----П----и смотровая башня
-
-{WОбозначения: П{w (Перекресток), {WЗГП {w(Западный Галленский путь), 
-             {WВГП{w (Восточный Галленский Путь)
-
-      </node>
-        <node keyword="page09 стр09">{WШир (Хоббитания){x
-
-(к таверне, Торбе-на-Круче)                                                
-         ^                                           
-         | 
-    Брендидиумский              Магазин       Магазин
-       Мост             &quot;Все для путника&quot;  &quot;Оружейная палата&quot;
-(к       |                         |           |
-лугу)&lt;-Речная--Речная--У ворот----Речная-----Речная------На повороте-&gt; (к посту
-       улица   улица    Шира      улица      улица         дороги     шириффов)
-         |               |                                  |
-         |               |                      Кабинет     |
-      &quot;Отрада          Тенистая                 Хоббитана   |
-      бакалейщика&quot;     дорожка                     |      Речная
-                         |             Курильня--Дом Еды--улица--На плацу
-                         v                                  |    
-                       ....                               Речная
-                  (Леса Королевства Хаон)                  улица
-                                                            |
-                                                          Таверна
-                                                        &quot;Ветка Плюща&quot;
+                                   Plains
+                                     |
+Northwest--West Casbah-------------North-----------------Casbah--------Northeast
+  Tower     |                       Gate                    |            Tower
+          Alley                      |                      |              |
+            |    Guard            Sultan&apos;s                  |  Library----Kali
+          Alley  House              Walk                    |             Row
+                   |                 |      Dancing         |              |
+     Sultan&apos;s----Grand----Palace--Sultan&apos;s--Daemon          |   Dance-----Kali
+      Palace    Entrance   Gate     Walk      Inn           |   Hall      Row
+                   |                 |                      |
+                 Guard               |         Bowyer--Guildsman&apos;s--Mason&apos;s
+                 House               |         Guild       Row      Guild
+ High                                |                      |
+Priest                               |         Weaver--Guildsman&apos;s--Craftsman
+Chamber  Altar                    Sultan&apos;s     Guild       Row        Guild
+  |        |                        Walk                    |
+Inside--Inside--Donation             |         Tanner--Guildsman&apos;s--Museum
+Temple  Temple    Room               |         Guild       Row      of the
+  |        |                         |                      |       Greater
+Cleric     |                         |                 Guildsman&apos;s---Gods
+Guild     /                          |                     Row
+        /                            |                      |
+     Temple             Ahkeem&apos;s  Sultan&apos;s  Vera&apos;s     Guildsman&apos;s         Mage
+     Gates                Stuff     Walk   Veggies         Row             Tower
+       |     Alley--Alley    |       |       |              |                |
+     Temple    |           Market--Market--Market           | Witch&apos;s  Magic |
+     Square  Alley   Bank--Square  Square  Square--Butchery |  Brew    Shop  |
+       |       |             |       |       |              |    |      |    |
+West--West---West---West---Market--Center--Market---East--East--East--East--East
+Gate  Main   Main   Main   Square  Square  Square   Main  Main  Main  Main  Gate
+  |    |       |             |       |       |              |    |
+  |  Repair  Alley  Store--Market--Market--Market--Abdul&apos;s  | Mercenary--Thieves
+  |   Shop     |           Square  Square  Sqaure   Armor   |   Guild     Guild
+  |          Alley--Alley    |       |       |             Alley
+Warrior&apos;s                  Bread   Medina  Igor&apos;s  Leather  |           Smuggler
+  Guild                    Stand     |    Weapons   Shop---Alley--Alley---Inn
+                                   Medina                        /
+      Warehouse    Shipwright        |     Forge  Stables      /    Cass&apos;s  Dump
+       |     |          |          Common    |       |        |       |      |
+       +-----West Ishtar Drive-----Square----+---East Ishtar Drive----+------+
+                        |            |
+                    Boat Ramp        |				
+                        |          South			    
+===================Ishtar River====Bridge======================&gt; To Dragon Sea
+                                     |
+                                   South
+                                   Gate
       </node>
         <node keyword="page08 стр08">{x                                  ....
                                       |
@@ -1484,303 +1355,434 @@ W - + - E            Temple altar
 
 
       </node>
-        <node keyword="page07 стр07">{x         * * * **************** New Thalos ***************** * * *
-                   &quot;Not Thalos or Old Thalos but New Thalos&quot;
-            = = =============================================== = =
+        <node keyword="page09 стр09">{WШир (Хоббитания){x
 
-                                   Plains
-                                     |
-Northwest--West Casbah-------------North-----------------Casbah--------Northeast
-  Tower     |                       Gate                    |            Tower
-          Alley                      |                      |              |
-            |    Guard            Sultan&apos;s                  |  Library----Kali
-          Alley  House              Walk                    |             Row
-                   |                 |      Dancing         |              |
-     Sultan&apos;s----Grand----Palace--Sultan&apos;s--Daemon          |   Dance-----Kali
-      Palace    Entrance   Gate     Walk      Inn           |   Hall      Row
-                   |                 |                      |
-                 Guard               |         Bowyer--Guildsman&apos;s--Mason&apos;s
-                 House               |         Guild       Row      Guild
- High                                |                      |
-Priest                               |         Weaver--Guildsman&apos;s--Craftsman
-Chamber  Altar                    Sultan&apos;s     Guild       Row        Guild
-  |        |                        Walk                    |
-Inside--Inside--Donation             |         Tanner--Guildsman&apos;s--Museum
-Temple  Temple    Room               |         Guild       Row      of the
-  |        |                         |                      |       Greater
-Cleric     |                         |                 Guildsman&apos;s---Gods
-Guild     /                          |                     Row
-        /                            |                      |
-     Temple             Ahkeem&apos;s  Sultan&apos;s  Vera&apos;s     Guildsman&apos;s         Mage
-     Gates                Stuff     Walk   Veggies         Row             Tower
-       |     Alley--Alley    |       |       |              |                |
-     Temple    |           Market--Market--Market           | Witch&apos;s  Magic |
-     Square  Alley   Bank--Square  Square  Square--Butchery |  Brew    Shop  |
-       |       |             |       |       |              |    |      |    |
-West--West---West---West---Market--Center--Market---East--East--East--East--East
-Gate  Main   Main   Main   Square  Square  Square   Main  Main  Main  Main  Gate
-  |    |       |             |       |       |              |    |
-  |  Repair  Alley  Store--Market--Market--Market--Abdul&apos;s  | Mercenary--Thieves
-  |   Shop     |           Square  Square  Sqaure   Armor   |   Guild     Guild
-  |          Alley--Alley    |       |       |             Alley
-Warrior&apos;s                  Bread   Medina  Igor&apos;s  Leather  |           Smuggler
-  Guild                    Stand     |    Weapons   Shop---Alley--Alley---Inn
-                                   Medina                        /
-      Warehouse    Shipwright        |     Forge  Stables      /    Cass&apos;s  Dump
-       |     |          |          Common    |       |        |       |      |
-       +-----West Ishtar Drive-----Square----+---East Ishtar Drive----+------+
-                        |            |
-                    Boat Ramp        |				
-                        |          South			    
-===================Ishtar River====Bridge======================&gt; To Dragon Sea
-                                     |
-                                   South
-                                   Gate
+(к таверне, Торбе-на-Круче)                                                
+         ^                                           
+         | 
+    Брендидиумский              Магазин       Магазин
+       Мост             &quot;Все для путника&quot;  &quot;Оружейная палата&quot;
+(к       |                         |           |
+лугу)&lt;-Речная--Речная--У ворот----Речная-----Речная------На повороте-&gt; (к посту
+       улица   улица    Шира      улица      улица         дороги     шириффов)
+         |               |                                  |
+         |               |                      Кабинет     |
+      &quot;Отрада          Тенистая                 Хоббитана   |
+      бакалейщика&quot;     дорожка                     |      Речная
+                         |             Курильня--Дом Еды--улица--На плацу
+                         v                                  |    
+                       ....                               Речная
+                  (Леса Королевства Хаон)                  улица
+                                                            |
+                                                          Таверна
+                                                        &quot;Ветка Плюща&quot;
       </node>
-        <node keyword="page06 стр06">{x               * * * Западная и Южная часть Мира Грёз * * *
-                          = = ================== = =
-        Mage 
-Dragon  Tower						Plains
-Tower    |   	 		Ciquala&apos;s Lair		   |
- |       |  Galaxy    Titans    /			   |
- --- Shadow-/		|___ _/                            |
-     Grove   Yggdrasil 	|	     	  	         Northern           
-      | 	/  	|  	Greater	      Shire        Midg.            
-      \      Arachnos 	|	Gerighelm       |           |  / 
-        \        \ 	|    	 / 	   	|           | / 
-      Forest Of Haon Dor-------/----+--------------------Midgaard--------Cross
-	  	/    |		|	     Chessboard -/|\| |		 Roads
-	      /	     |		|	                  | |\|
-     	    Old    Troll Den	|    	 		 /| | | \ 
-	    Marsh    		|		    Sewer | | |  Goblin Str.hold
-			  Drakyri Isle		 Prison --| | \
-							    |   \	             
-				Redferne&apos;s-----Chain----Southern  \      
-			     /  Residence		Midgaard    Midgaard 
-			   /	   |			/  /|\    	 River
-		      Divided	   |	      Gang Land  /  |  Graveyard   /
-		      Souls	Clouds  	      Zoo   |	  |      /
-			       (Harpie)			Miden&apos;nir |  Sands of
-					  		(Goblins) |   Sorrow
-					           	         /       
-						            Church              
-						           Catacombs       
+        <node keyword="page10 стр10">{W ***************{w                 Кабинет Капитана
+{W* Солас (Утеха) *{w                       |            Алтарь
+{W ***************{w                   У гостиницы         |
+                       ...-=--&quot;Последний Приют&quot;    Неф возле---Возле одного
+                                        |        / Алтаря     из окон
+                                       Дорожка, /
+Магазин  Рашанские  Водол.  Универмаг  вымощенная
+Молина   Брюквы    Магазин  Кробена    булыжником
+  |        |         |         |         |
+Рынок----Рынок-----Рын.Пл----Рын.Пл---Окончание--Пыльная----Управление----...
+  |       |          |         |       Гл.Улицы   дорога   городской стражи
+Овощи  Фруктовый   Сувениры Морозилка   |
+      Лоток Кристы  Джанни  &quot;У Ниси&quot;  Гл.Улица
+                                        |
+Перекресток                             |
+Зап.Галленского--ЗГП----ЗГП--ЗГП-----Перекресток---ВГП--ВГП--------Пересечение
+и Ул.Урожая       |      |    |         |           |    |         ВГП и Кетра
+   |          Пивоварня Дом  Дом      Гл.Улица     Дом  Птичий         |
+Ул.Урожая       Мэтта                   |              Питомник    Улица Кетра
+   |                        Магазин     |                              |
+Ул.Урожая--Дом              Печенек---Гл.Улица             Ангар---Улица Кетра
+   |                                    |                              |
+Ул.Урожая--МакБулочная          Дом---Гл.Улица---...--У Джандера-=-Улица Кетра
+   |                   Салун            |         |                    |
+Ю-З сторожевой пост      |            Ворота      |         Ю-В сторожевой пост
+и смотровая башня----П---П--П---------Соласа---П--П----П----и смотровая башня
 
-На этой карте очень приблизительно и без соблюдения масштаба изображены
-зоны западной и южной частей Мира Грез. Цель карты - показать относительное 
-расположение зон по отношению друг к другу. Для полного списка см. ? {lRзоны{lEareas{x.
+{WОбозначения: П{w (Перекресток), {WЗГП {w(Западный Галленский путь), 
+             {WВГП{w (Восточный Галленский Путь)
+
       </node>
-        <node keyword="page05 стр05">{x                  * * * Восточная Часть Мира Грёз * * *           
-                           = = =============== = =
+        <node keyword="page11 стр11">{w                 {W *------------------*          Обозначения:{w
+     Врата       {W* Большой Геригхельм *          КП  - Купеческий Путь{w
+   Геригхельма   {W *__________________*           [1] - Дворец{w
+       |                                         {W[2] - Канализация{w
+    Зап.Улица--Ав.Петра-Ав.Петра-Авеню Петра     {W[3] - Деревня{w
+       |                  |       |
+    Зап.Улица          {W[Парк]{w  Авеню Петра
+       |                         |               Окончание
+    Зап.Улица--КП----КП----------КП-----КП-----Купеческого Пути
+       |       |     |           |      |           |
+       |  Зверинец Магические  Магазин  Оружейный  Магазин       Перекресток-{W[3]{w
+       |             товары    с пищей  Магазин   знатока трав         |
+       |                                                          Длинный путь
+       |      Магазин  Мебельный  Портат.  Свежая    Магазин           |
+   Зап.Улица  Животных  Магазин   Фонтаны  вода/пиво  Зелий       Длинный путь
+       |         |        |         |        |          |              |
+{W[1]{w-Зап.Улица----КП-------КП--------КП-------КП--------КП--Мост--КП--Шумный--...
+       |                            |                      над       базар   
+       |                          Бараки                  рекой
+       |
+       |        Храмовая  Храмовая  Храмовая  Храмовая  Вход в  Проход
+    Зап.Улица----Улица-----Улица------Улица----Улица-----Храм---между---Алтарь
+       |                     |          |        |              рядами    |
+{W[2]{w-Зап.Улица              Место     Церковь    Храм                   Ризница
+       |    	      Строительства  Времени   Смерти
+    Путь из                                      |
+    Геригхельма                                  v
+       |	               	             Жертвенник
+     Свалка   
 
-            Дьявольский
-             Монастырь
-                 | 
-      Blight-----+
-                 |                                   Старый
-               Мория    Катакомбы         Нирвана   Мидгаард
-              /  |       /                   |     /
-             /   |      /                    | (void)     
-       Подземье  +--Корол.--Детсад           |   /                              
-     (Underdark) |  Дварфов                  |  /           Армагеддон        
-                 |               Деревня  Cвященная             |           
-                 +--Корол.       Смурфов   Роща     Шаолинь   Вольная
-                 |  Зеркал          |        |         |      Гавань         
-Восточн.         |                  |        |         |        |                
-Ворота------Перекресток-----Восточная-Дорога-+----Новый-Талос--Море-----Земля       
-Мидгаарда       Дорог                        |         |     Драконов  Гоблинов
-                 |                        Деревня      |        |         |   
-                 |       Шабаш             Гномов      |     Темный     Страна
-                 |         |                          / \    Контин.    Чудес       
-Руины--------Дварфийский---+---Мах&apos;н-Тор             /   \           
-Талоса     /    Лес               |     \        Базар   Город   
-          /      |                |      \              Призраков
-      Город      +--Вивернова   Башня   Пещеры
-      Дроу       |    башня     Лича       \
-               Каньон                       \
-               Стихий                        Ад
-                 |   \
-               Абисс  Ааракокран
-
-
-На этой карте очень приблизительно и без соблюдения масштаба изображены
-зоны восточной части Мира Грез. Цель карты - показать относительное 
-расположение зон по отношению друг к другу. Для полного списка см. ? {lRзоны{lEareas{x.
       </node>
-        <node keyword="page04 стр04">{x                  * * * Северная Часть Мира Грёз * * *           
-                           = = ============== = =
-
-                               Троя, Олимп     
-                                   |       ,Облачная Гора
-                      King&apos;s       |      /    
-            Аркадия   Castle       |     /       Офкол и Нов.Офкол
-               |        |          |    /              |
-               |        |          |   /               | 
-  Огненная--Долина------+------Сев.Равнины--------Перекресток------Камелот
-    Гора    Эльфов                 |                   |          
-                             ______+______             |
-                            |             |        Пик Драконов
-                            |  Мидгаард   |            |
-                            |_____________|      Пиратские Острова
-
-
-На этой карте очень приблизительно и без соблюдения масштаба изображены
-зоны северной части Мира Грез. Цель карты - показать относительное 
-расположение зон по отношению друг к другу. Для полного списка см. ? {lRзоны{lEareas{x.
+        <node keyword="page12 стр12">{x                          Old Midgaard	
+*****************************************************************************
+    N              Templeman&apos;s room
+    |                     |
+W - + - E            Temple altar                                    
+    |                     |                        
+    S              Temple of Midgaard                GraveYard
+                          |                              |
+    Necromancer  Wizard   |     Bakery  Weaponsmith      |            
+       Guild       |    Market    |         |          Cross    
+         |---------+--- Square ---+---------+--------- Roads -- Forest
+         |         |              |         |            |
+      Vampire  Jeweller        General   Armourer     Village
+     Guildroom                 Store                  guarded
+                                                        by
+                                                   Imperial Guards
+                                                  
+*****************************************************************************
       </node>
-        <node keyword="page03 стр03">{x                       * * *   ЮЖНЫЙ МИДГААРД  * * *
-                          = = =================== = =
+        <node keyword="page13 стр13">Dangerous Neighborhood (Опасные кварталы) 
 
-   На                          Южный           Закусочная                 На 
-  Мосту                         Мост              Кати                   Мосту
-    |                            |                 |                       |
-C-З конец                        |              Площадь               С-В конец
-мног.улицы--Променад---------Променад------------Астрал--------------мног.улицы
-    |           |                |                 |                       |
-    |           |                |                 |           Фонтан      |
- Многол.        |                |              Изумр.            |     Многол.
-  улица      Парковая         Вход в---Парков.  просп.--Монетн--Монетн---улица  
-    |         Дорога           Парк     Кафе       |     Пер.    Пер.      |
-    |           |                |              Изумр.                     |
-    |           |    (Храм       |              просп.                     |
-    |           |    Тананды)    | (Зоопарк)       |                       |
-    | Помещ.  Парк      |     (*)|/             Изумр.    Ратуша           |
-    | Стражи--Дор.--Вход--Пруд--Парк---Вход в---просп.----(мэр)            |
-    |           |   в парк              парк       |                       |
-    |        Парков.            Изумр.----------Изумр.---------------Gang  |
-    |        Дорога             просп.          просп.               |  |  |
-    |           |                  |                                 |  |  |
-    |        Парков.----------Перекресток-------Парков.          Ул.-Land  |
-    |        Дорога            , Дорог,          дор.            Вязов     |
-    |          |              /    |   \          |  (Библиотека) |        |
-    |     Храм Солнца  (Разд.Души) | (Редферн)    |       |       |     Многол.
- Многол.   (recall)   (Зона Дилана)| (Квифаэль) Парков.-Улица---Улица---улица  
-  улица                            |            дорога  Вязов   Вязов      | 
-    |                              |              |              |         |
-    |                              |              |           (Кладбище)   |
-    |                 Изумр.---Изумр.             |          (Подземелье   |
-    |                 просп.   просп.             |            Часовни)    |
-    |                   |                         |                        |
-    |                 Изумр.                    Парков. Темный             |
-    |                 просп.                     дор.---Храм (recall)      |
- Многол.                |                         |                    Многол.
-  улица-----------Многол.улица-----Южные------Многол.улица--------------улица  
-                                  Ворота                                   |
-(*) Парк показан схематично.         |                                  (Цирк)
-                                (Миден&apos;нир)
-                       (Изумрудный лес)  (Крепость Гоблинов)
+Path from MS Midgaard to &quot;A Dark Alleyway&quot; 6se3se 
+
+--------------------------------------------------------------------------------
+Dark
+Alleyway               W h i t e   D r a g o n   B o u l e v a r d        B
+ *--------*------------*-------*---------*-------*------------*---------* r
+ Midgaard |            |       |               I |                      | o
+          |Overground  |       |               c |      The remains of  | n
+          |plot of land|       |       D       e |      the magic shop  | z
+          *------------*    Armoury    r *----Courtyard-------*---------* e
+                       |       |       a |      North                   |
+                       |       |       g |                              | D
+              Dracolich*----Shortcut   o *-------*                      * r
+               Plaza           |       n |       |        Old Abandoned | a
+                               |         |W      |        Warehouse     | g
+                            Shortcut-----*a   Courtyard       *----#----* o
+                                         |y    South                    | n
+                                         |       |                      |
+                                         |       |                      | s
+                               *---------*-------*------------*---------* t
+                             H |  Y e l l o w   D|r a g o n  R|o a d      r
+                             e |                 |            |           .
+                             c *-----------------*------------*---------*
+                             t |   N o    M a n &apos;|s   L a n d |         |
+                             o *-----------------*------------*---------*
+                             r |                 |                      |
+                               |                 |          Jewelir     |
+                             S *-----------------*------------*---------* A
+                             t | H  e  c  t  o  r|   S  t  r  e  e  t   | j
+                             r |                 |  Small Ruined Chapel | a
+                             e *                 *            *-------- * x
+                             e |                 |      What is left of | 
+                             t | Achilles Avenue |       the Weaponshop | S
+                               *---------*------bend          *---------* t
+                     Khan      |A                |                      | e
+                     Park      |c                |                      | e
+                       *-------*h                *------------*---------* t
+Midgaard              |       |i                |  A j a x  S|t r e e t
+ (Конец      Alexander |road   |l               A|            |
+ Улицы&lt;---*------*-----*       *l               j*           The
+ ВЯзов)A wide          |       |e               a|         Inn/Pub
+      alleyway         |       |s               x|            |
+                       *-------*---------*-------*---------Hallway
+                            S o l o m o n   S t r e e t
+
+
       </node>
-        <node keyword="page02 стр02">.
-                   * * * СЕВЕРНЫЙ МИДГААРД * * *
-                        = = =========== = =
-
-            (к Аркадии, Огненной Горе, Камелоту, Лихолесью)                              
-                         (Северные Равнины)
-                                |
-С-З Угол---Дорога------------Северные------------Дорога----С-В угол
-   |      у стены             Ворота             у стены        |
-Дорога                                                       Дорога
-у стены                                                      у стены
-   |                      (Казино)                              |
-Дорога                        |                               Дорога
-у стены---Клановая-дорога-+-Клановая-дорога--Клановая-дорога--у стены
-   |           |          |             |                       |
-Дорога     Обмен денег  Контора     Трактир и                 Дорога
-у стены    (identify)  рестрингов   гостиница Энди           у стены
-   |                                                            |
- Запад.                                                       Восточн
- Ворота                                                       Ворота
-   |                                                            |
-(Центр.                                                     (Центр.     
-Мидгаард)                                                    Мидгаард)
+        <node keyword="page14 стр14">{x                                        /-----------------\
+                  Замок                   | Деревня Смурфов |
+     N          Гаргамела                 |  (Smurfville)   |
+     |              |                     |  1 - 10 уровень |
+ W &lt; + &gt; E     Перед Замком               |   от MSM 7en    |
+     |          Гаргамела                 \-----------------/
+     S              |
+               Путь к Замку
+                Гаргамела
+                    |
+                 Дорожка      Дорожка      Дорожка      Смурфо-
+                 смурфов ---- смурфов ---- смурфов ---- ягодная
+                    |                       (well)      дорожка
+                    |                         |            |
+                Дом Джоки                     |            |
+                                              |            |
+Дом Грампи      Каменистая                 Дорожка      Смурфо-
+  Смурфа  ------  тропа   ---------------- смурфов ---- ягодная
+                    |                         |         дорожка
+                    |                         |            |
+                 Дом Папы       Дом        Дорожка      Смурфо-
+                  Смурфа     Смурфетты --- смурфов ---- ягодная
+                                              |         дорожка
+                                              |
+               Дом Слиппи     Дорожка      Дорожка     Дом Хенди
+                 Смурфа  ---- смурфов ---- смурфов ---- Смурфа
+                                 |            |
+                                 |            |       Дом Брейни
+                                 |            |         Смурфа
+                                 |            |            |
+                 Дорожка      Дорожка      Дорожка      Дорожка
+                 смурфов ---- смурфов ---- смурфов ---- смурфов
+                                 |            |
+                             Дом Хефти     Вход в
+                              Смурфа       Деревню
+                                           Смурфов
+                                              |
+                                          Затененная
+                                            Тропа
+                                              |
+                                          Затененная
+                                            Тропа
+                                              |
+                                          Затененная
+                                            Тропа
+                                              |
+                                       /------+-------\
+                                       |  Миден&apos;нир:  |
+                       на Мидгаард &lt;---+ На восточной +---&gt; к Новому Талосу
+                                       |    дороге    |
+                                       \--------------/
+Картограф: Zustin
       </node>
-        <node keyword="page01 стр01">.
-                     * * * ЦЕНТРАЛЬНЫЙ МИДГААРД * * *
-                            = = ========== = =
+        <node keyword="page15 стр15">{x                 Вход в          Вход     Сувенирная
+       N  U       MUD Школу ----- в Музей     лавка
+       | /                           |     /
+   W &lt; + &gt; E                         |    /
+     / |                             |   /
+    D  S            Зал            Холл            Под
+                позвоночных ------ Музея -------- водой
+                     |               |              |
+                     |               |              |
+                     |               |              |
+ Клетка             Зал          Выставка        Морская         Аквариум
+ Гориллы --||-- позвоночных      Насекомых       выставка --L--- с акулами
+                     |               |              |
+                     |               |              |
+                     |               |              |
+                    Зал          Выставка        Морская
+                позвоночных      Насекомых       выставка
+                     |               |              |
+                     |               |              |
+                     |               V              |
+                     +----------&gt; Выход из &lt;--------+
+ /------------------\              Музея
+ |  Музей Зоологии  |                |
+ | (Zoology Museum) |                |
+ |  1 - 10 уровень  |                V
+ |   от MSM 2nue    |            MUD Школа:
+ \------------------/         Северо-Восточный
+                                 Угол Арены
 
-                            Священник  Радужный Мост (Вальгалла)
-                                 |    /
-                                 |   /
-                           У Храмового
-                Беседка------Алтаря    MUD Школа--(Музей Зоологии)
-                (safe)           |    /     |
-                                 |   /    Арена(портал в Старый Мидг.)
-                    (recall) Храм Лео
-                                 |                 Банк(ATM)
-                                 |  В воздухе     /
-          ...     Гильд.         | /             /                 ...
-           |     Клериков--Храмовая Пл.----Прихожая---Хрюкающ.      |
-      (Северный          (фонтан,квестор)  гостиницы  Кабан     (Северный
-       Мидгаард)                 |                     |         Мидгаард)
-           |                     |              Гильд.Самураев      |
-           |    Магич.           |       Гильд.                     |
-           |   Товары  Булочная  |      Паладинов  Оружейник(чинить)|
-(Леса      |       |      |      |         |           |            |
-Хаон) &lt;--Запад--Главная улица--Рыночная----Главная улица---------Восточн-&gt;
-(Шир)    Ворота    |      |    Площадь     |           |          Ворота
-           |    Гильд.  Доспехи  |       Ювелир     Гильдия         |
-           |    Ведьм            |                   Воинов         |
-           |          Бюро Нах.--+---Мясник                         |
-           |                     |                                  |
-           |           Бакалея--Больш.--Храм Фемиды                 |
-       Дорога                  Дорога                               |     
-     у стены---Храм Дураков      |                               Дорога
-           |   \                 |                               у стены
-           |    \Храм Крыс.Бога  |      +--Гильд.Варлоков           |
-           |                     |      |                           |
-           |   Товары   Магазин  |    Таверна  Зоо-   Аптека        |
-           |   из кожи   Карт    |    Поганка Магазин (зелья)       |
-           |      |       |    Общая    |       |       |           |
-(Шахм--Дорога---Алея Бедняков--Площадь--Темная Алея-----+--------Дорога
-Доска) у стены    |       |      |      |       |       |        у стены
-           |   Гильд.   Грязная  |   Гильдия Набережн. Склад        |
-           |   А-Палад  Таверна  |    Воров  (лодки)  (тренер)      |
-           |            /        |              |                   |
-           |    Гильд.Нинзя      |              |                   |
-           |                     |          &lt;-На реке-&gt; (к Пескам   |
-       Дорога   Разв.  Пригород--Свалка         |        Cкорби)  Дорога
-       у стены--Фабрики          |   \          |                 у стены
-           |     \             Южный (Sewers) Закусочная            |
-      На мосту    Гильдия      Мост             Кати             На Мосту
-           |     Универсалов     |                                  |
-        (Южный                (Южный                             (Южный
-        Мидгаард)             Мидгаард)                          Мидгаард)
+
+
+Картограф: Zustin 
       </node>
-        <node keyword="page21 стр21">.
-               * * * Зеркальная Часть Мира Грёз * * *
-                      = = ============== = =
-Эта часть Мира Грез зеркально отражает Мидгаард, Талос и Священную Рощу,
-изображая их такими, какими они были в далеком прошлом. Также в зеркальной
-части находится город Солас с пригородом, в котором можно строить свои дома.
-
-
-                              Ад    Cолас(Утеха)
-                               ^          |
-                               |          |
-                          (Поля и хаты)   |
-                               |          |
-                Пригород ------+-------Озеро
-                 Соласа              Кристалмир
-                                      /   |
-                                 Антария  |
-                                          |
-                                          |
-                             Тайное       |
-                            Убежище-------+
-                            Колдуна      /|     +-------------+
-                                        = |     |   Пустота   |   Cовремен.
-                                       /  |     | (случайные  +---Мидгаард
-                     Школа       Кладбище |     |   выходы)   |   и Талос
-                    Новичков              |     +------+------+   
-                      /                   |            |            
-                     /                    |            |
-Непрерывность-----Старый--------------Перекресток----Священная
-   Парков         Мидгаард                |           Роща
-                                          | 
-                                          |
-                           Старый----Дварфийский
-                           Талос         лес
+        <node keyword="page16 стр16">{x                       * * * The Dwarven Kingdom * * *
+                          = = ===================== = =
+ 
+                    Dwarven
+                    Hospital
+                       |                                              *Path to
+         North of---Path by---Path by---Barracks     Guard--Door to----Castle
+          Shops     Hospital  Barracks  Entrance     House  Kingdom  Strangelove
+Granite     |                              |                   |
+Head&apos;s---Path North                      First               Narrow
+Bakery    of Shop                       Barracks              Path
+            |                              |                   |
+         Hide and    Turn               Back of     Bend in--Narrow
+        Tooth Shop--in Road             Barracks     Path     Path
+                       |                    \         |
+                    Path to               Dwarven   Narrow
+                    Village              Catacombs   Path
+                       |                              |
+             Store  *Inside    Entrance     Top of   Dark   *Mine
+             Room---Entrance--To Mountain--Mountain--Path--Entrance
+                \                             |                 \
+               Wine                        Middle of          Dwarven
+              Cellar                       Mountain            Mines
+                  \                            |
+                Dwarven                    Base of
+               Catacombs    Moria          Mountain           North
+                              |               |           Up\   |
+                              |            Path to            \ |
+                            Plains--Hills--Dwarven      West----+----East
+                              |            Kingdom              | \
+                              |               |                 |   \Down
+              Midgaard &lt;----Cross          Dwarven            South
+                            Roads          Drop-off
+                                          (Day-Care)
+ 
+*key required
       </node>
+        <node keyword="page17 стр17">* * * MORIA - Map 1 * * *                                           To Mahn-Tor
+ = = =============== = =                                                 |
+Talk about a mess!                                                   Foothills
+                                                                         |
+This is as far as our courageous, noble, brave           Light Cave    Valley
+and apparently quite deceased cartographers                   |           |
+could get.  Perhaps more maps could be found             Smelly Tunnel  Cave
+in the depths of Moria itself.                                |           |
+                                                  Cave---Many Tunnels---Tunnel
+                                                    |         |           |
+         West End--Large Cave--East End           Cave      Tunnel      *Hole
+            |          |                            |         |        (Map 2)
+            |        Tunnel---------Tunnel--------Tunnel----Tunnel
+            |                                       |
+ *Hole----Damp----Damp  Tunnel--Tunnel--Tunnel    Tunnel
+(Map 3)  Tunnel  Tunnel   |               |         |
+                   |      |            (*Map 3)  The Cave
+                   |      |                         |
+                   |    Tunnel--Light--Maze      End of
+                   |            Cave    |        The Path
+                   |                  Light         |
+                   |                  Cave      The Hills--&gt; Dwarven Kingdom
+                   |                    |           |
+                 Tunnel----Tunnel-----Light     The Plains
+                                      Cave          |
+                                                 The Lane
+                                                    |
+                                      Midgaard &lt;--Cross--&gt; Eastern Road
+                                                  Roads
+                                                    |
+                                               Dwarf Forest
+
+      </node>
+        <node keyword="page18 стр18">Mother Goose
+Путь от MSM: run 3s2e2sW
+
+v или ^ - односторонний проход  
+d - дверь                       
+
+   Northwest----Along the -------North Wall
+    Corner      North Wall           |
+      |             |                |
+      |             | Mother Goose&apos;s |
+      |             |     Cloud      |
+      |             |    /           |
+      |             |  /             |
+      |             |/               |
+  West Wall------End of            Field
+               Main Street           |          Kitchen
+                    |                |             |
+                    |  Hill Top      |             |
+                    |  /    /        |           House
+                    | v    ^         |             |
+                    |/    /          |             d
+      House --d-- Main-------------Field           |
+        |        Street /                        Alley
+        v              /                           |
+        |             ^                            d
+        |            /                             |
+      Field-------Main ----d----Farmhouse-------Kitchen
+                 Street
+                    |
+                    |
+                    |
+        Meadow--- Main ---Meadow---Meadow
+                 Street
+                    |
+                    |
+                Entrance----На Темной Реке---...
+                            (Новый Талос)
+                                  |
+                         Поворот на Темной Реке
+                               (Амбер)
+                                  .
+                                  .
+                                  .
+      </node>
+        <node keyword="page19 стр19">{x                             *****OLYMPUS*****
+                               =================
+ 
+                                   Bedroom
+                                      |
+                                   Northern
+                                     Hall
+                        Western       |         Eastern
+              Bedroom----Hall----Second Floor----Hall----Bedroom
+                                /     |
+                         Stairway  Southern
+                             |       Hall                    North
+                        Throne Room   |                        |  /Up
+                             |      Bedroom                    |/
+                             |                          West---+---East
+                  Kitchen    |     Stable                     /|
+                     |       |       |                  Down/  |
+        Guest     Western  Castle  Eastern   Guest           South
+       Quarters----Wing----Entry----Wing----Quarters
+                     |       |       |
+                  Storage   Z|    Storage
+                   Room     e|S    Room   Smithy
+                            u|t             |
+                            s+--Ares Street-+--Weapon
+                    Mystery  |              |   Shop
+                    Shop-----+           Armoury
+                             |
+                   Residence-+-Residence
+                             |
+                     Bakery--+
+                             |
+                       **Entrance**
+                            /
+                      Mountain
+      </node>
+        <node keyword="page20 стр20">The City of Anon
+
+    Illithid                      Elf                       Avian
+     Guild      Merc    Magic    Guild     ID       Pet     Guild
+       |        Hire    Shop       |       Guy      Shop      |
+       |_________|________|________|________|________|________|________Human
+                 |                                   |                 Guild
+  Castellan _____|               Green               |_____ Armorer
+                 |  Thaumaturgist  /    Enhancer     |
+W. Gate _________|_______|_______Temple______________|_________ E Gate 
+                 |       |         |                 |         
+      Smith _____|    Artificer    |_ Book Shop      |_____ Weapon Smith
+                 |                 |                 |
+Stables _________|_________________|_________________|________Sewer
+        |        |        |        |        |        |       |
+        |       Bank   Grocer      |      Baker     Bar      |
+Dungeon_|                        Dryad                       |
+        |                        Guild                       |
+     Dwarf                         |                       Kender
+     Guild                   Insect Garden                 Guild
+
+      </node>
+        <node keyword="atlas атлас">Эта солидная тяжелая книга в кожаном переплете содержит несколько очень полезных
+карт. Каждой карте посвящена отдельная страница, на которую можно {yсмотреть{x ({ylook{x).
+
+{cОГЛАВЛЕНИЕ{x
+
+{x  {c*{x Карта центрального Мидгаарда             ({hc{y{lRсм стр01{lEl page01{x)
+{x  {c*{x Карта северного Мидгаарда                ({hc{y{lRсм стр02{lEl page02{x)
+{x  {c*{x Карта южного Мидгаарда                   ({hc{y{lRсм стр03{lEl page03{x)
+{x  {c*{x Карта северной части Мира Грез           ({hc{y{lRсм стр04{lEl page04{x)
+{x  {c*{x Карта восточной части Мира Грез          ({hc{y{lRсм стр05{lEl page05{x)
+{x  {c*{x Карта южной и западной частей Мира Грез  ({hc{y{lRсм стр06{lEl page06{x)
+{x  {c*{x Карта зеркальной части Мира Грез         ({hc{y{lRсм стр21{lEl page21{x)
+{x  {c*{x Карта Нового Талоса                      ({hc{y{lRсм стр07{lEl page07{x)
+{x  {c*{x Карта Долины Титанов                     ({hc{y{lRсм стр08{lEl page08{x)
+{x  {c*{x Карта Шира                               ({hc{y{lRсм стр09{lEl page09{x)
+{x  {c*{x Карта Соласа                             ({hc{y{lRсм стр10{lEl page10{x)
+{x  {c*{x Карта Герихельма                         ({hc{y{lRсм стр11{lEl page11{x)
+{x  {c*{x Карта Старого Мидгаарда                  ({hc{y{lRсм стр12{lEl page12{x)
+</node>
       </extraDescr>
       <extra_flags>glow hum burn_proof</extra_flags>
       <gender>m</gender>
@@ -2045,15 +2047,15 @@ C-З конец                        |              Площадь            
     <node name="40111">
       <affects>
         <node>
-          <apply to="damroll">2</apply>
+          <apply to="hit">10</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="damroll">1</apply>
           <bits table="affect_flags"></bits>
         </node>
         <node>
           <apply to="hitroll">2</apply>
-          <bits table="affect_flags"></bits>
-        </node>
-        <node>
-          <apply to="hit">15</apply>
           <bits table="affect_flags"></bits>
         </node>
         <node>
@@ -2072,7 +2074,7 @@ C-З конец                        |              Площадь            
       <gender>m</gender>
       <level>1</level>
       <material>cloth</material>
-      <name>pea-jacket бушлат</name>
+      <name>peacoat pea-jacket бушлат</name>
       <short_descr>бушлат||а|у||ом|е</short_descr>
       <type name="armor">
         <ac bash="10" exotic="10" pierce="10" slash="10"/>

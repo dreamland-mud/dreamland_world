@@ -15,7 +15,7 @@
     <vnumLow>3000</vnumLow>
   </areadata>
   <helps>
-    <node keyword="MIDGAARD МИДГААРД" level="-1" type="AreaHelp">Midgaard - столица мира. Здесь расположены гильдии, храмы, магазины, библиотеки,
+    <node keyword="MIDGAARD МИДГААРД 'МИДГААРД (СТОЛИЦА)'" level="-1">Midgaard - столица мира. Здесь расположены гильдии, храмы, магазины, библиотеки,
 на его улицах постоянно кипит жизнь. Все дороги, так или иначе, приводят сюда.
 В храмах всех остальных крупных городов установлены порталы, ведущие в
 центральный храм Мидгаарда, посвященный богу Лео.
@@ -23,6 +23,10 @@
 алигмента (кроме гигантов, вампиров и некромантов, которым полагается жить
 отдельно). Однако, в отличие от Нового Талоса, представители каждого алигмента
 будут приписаны к отдельному храму (Храм Лео, Темный Храм, Храм Солнца).
+%PAUSE%
+{yЗадания{x:
+  {Y*{x Поиск камня кассандры. Квест начинается с прочтения старой книги в магазине Меланхолика. 
+    Ограничения: нет. 
 </node>
   </helps>
   <mobiles>
@@ -55,7 +59,7 @@
       <material>0</material>
       <off add="area_attack dodge"/>
       <player_name>wizard колдун</player_name>
-      <practicer>wizard </practicer>
+      <practicer registry="skillGroup">wizard</practicer>
       <race>human</race>
       <res add="weapon"/>
       <sex>male</sex>
@@ -396,7 +400,7 @@
       <mana>1d1+999</mana>
       <material>0</material>
       <off add="area_attack dodge trip"/>
-      <player_name>leather worker мастер</player_name>
+      <player_name>leather worker мастер кожевеник кожевенник</player_name>
       <race>human</race>
       <res add="spell weapon"/>
       <sex>female</sex>
@@ -567,7 +571,7 @@
       <mana>1d1+1499</mana>
       <material>0</material>
       <off add="area_attack bash berserk disarm dodge fade fast kick_dirt parry rescue tail trip crush"/>
-      <player_name>mermaid questor русалка</player_name>
+      <player_name>mermaid questor русалка квестор</player_name>
       <race>elf</race>
       <res add="spell weapon fire cold"/>
       <sex>female</sex>
@@ -717,6 +721,349 @@
       <start_pos>stand</start_pos>
       <wealth>1000</wealth>
     </node>
+    <node name="3014">
+      <ac bash="-970" exotic="-950" pierce="-970" slash="-970"/>
+      <act add="npc sentinel warrior nopurge notrack"/>
+      <aff add="haste"/>
+      <alignment>-1000</alignment>
+      <behavior type="QuestMaster">
+        <services>
+          <node type="ObjectQuestArticle">
+            <vnum>102</vnum>
+            <name>orb</name>
+            <rname>шар</rname>
+            <descr>Хрустальный шар</descr>
+            <price type="QuestPointPrice">
+              <questpoint>50</questpoint>
+            </price>
+          </node>
+          <node type="PiercingQuestArticle">
+            <name>piercing</name>
+            <rname>пирсинг</rname>
+            <descr>Прокалывание ушей</descr>
+            <price type="QuestPointPrice">
+              <questpoint>50</questpoint>
+            </price>
+          </node>
+          <node type="ObjectQuestArticle">
+            <vnum>108</vnum>
+            <name>colourless</name>
+            <rname>бесцветный рестринг</rname>
+            <descr>Рестринг купон</descr>
+            <price type="QuestPointPrice">
+              <questpoint>50</questpoint>
+            </price>
+          </node>
+          <node type="ObjectQuestArticle">
+            <vnum>106</vnum>
+            <name>coupon</name>
+            <rname>цветной рестринг</rname>
+            <descr>{YР{Bе{Gс{Rт{Cр{Mи{Bн{Cг{x {rк{yу{gп{bо{mн{x</descr>
+            <price type="QuestPointPrice">
+              <questpoint>200</questpoint>
+            </price>
+          </node>
+          <node type="TattooQuestArticle">
+            <name>tattoo</name>
+            <rname>татуировка</rname>
+            <descr>Татуировка твоей религии</descr>
+            <price type="QuestPointPrice">
+              <questpoint>200</questpoint>
+            </price>
+          </node>
+          <node type="ConQuestArticle">
+            <name>constitution</name>
+            <rname>сложение</rname>
+            <descr>+1 сложение</descr>
+            <price type="QuestPointPrice">
+              <questpoint>150</questpoint>
+            </price>
+          </node>
+          <node type="PersonalQuestArticle">
+            <vnum>95</vnum>
+            <name>ring</name>
+            <rname>кольцо</rname>
+            <descr>Кольцо Героя</descr>
+            <price type="QuestPointPrice">
+              <questpoint>1000</questpoint>
+            </price>
+            <gender table="sex_table">neutral</gender>
+            <troubled>true</troubled>
+          </node>
+          <node type="PersonalQuestArticle">
+            <vnum>96</vnum>
+            <name>weapon</name>
+            <rname>оружие</rname>
+            <descr>Оружие Героя</descr>
+            <price type="QuestPointPrice">
+              <questpoint>1000</questpoint>
+            </price>
+            <gender table="sex_table">neutral</gender>
+            <troubled>true</troubled>
+          </node>
+          <node type="PersonalQuestArticle">
+            <vnum>94</vnum>
+            <name>girth</name>
+            <rname>пояс</rname>
+            <descr>Пояс Героя</descr>
+            <price type="QuestPointPrice">
+              <questpoint>1000</questpoint>
+            </price>
+            <gender table="sex_table">male</gender>
+            <troubled>true</troubled>
+          </node>
+          <node type="KeyringQuestArticle">
+            <name>keyring</name>
+            <rname>брелок</rname>
+            <descr>Прикрепить брелок для ключей к Поясу Героя</descr>
+            <price type="QuestPointPrice">
+              <questpoint>200</questpoint>
+            </price>
+          </node>
+          <node type="PersonalQuestArticle">
+            <vnum>103</vnum>
+            <name>bag</name>
+            <rname>сумка</rname>
+            <descr>Дорожная сумка Героя</descr>
+            <price type="QuestPointPrice">
+              <questpoint>500</questpoint>
+            </price>
+            <gender table="sex_table">female</gender>
+            <troubled>false</troubled>
+          </node>
+          <node type="PocketsQuestArticle">
+            <name>pockets</name>
+            <rname>карманы</rname>
+            <descr>Нашить карманы на Сумку Героя</descr>
+            <price type="QuestPointPrice">
+              <questpoint>50</questpoint>
+            </price>
+          </node>
+          <node type="OwnerQuestArticle">
+            <vnum>109</vnum>
+            <name>owner</name>
+            <rname>талон</rname>
+            <descr>Талон на единоличное владение вещью</descr>
+            <price type="QuestPointPrice">
+              <questpoint>1000</questpoint>
+            </price>
+            <lifePrice>
+              <victories>500</victories>
+              <lifes>1</lifes>
+            </lifePrice>
+          </node>
+          <node type="GoldQuestArticle">
+            <amount>5000</amount>
+            <name>gold</name>
+            <rname>золото</rname>
+            <descr>5000 золотых монет</descr>
+            <price type="QuestPointPrice">
+              <questpoint>1000</questpoint>
+            </price>
+          </node>
+        </services>
+      </behavior>
+      <dam_type>crush</dam_type>
+      <damage>18d18+85</damage>
+      <default_pos>stand</default_pos>
+      <description>Один из рыцарей Ордена Такхизис выбрал своей миссией раздачу важных поручений,
+поддерживающих баланс добра и зла во вселенной.
+
+Ты тоже можешь взять у него задание командой {y{lRквест попросить{lEquest request{x.
+Еще полезно прочесть справку по темам &apos;{hhквестор{x&apos; и &apos;{hhвиды заданий{x&apos;.
+</description>
+      <detection add="evil invis hidden dark_vision"/>
+      <group>3000</group>
+      <hit>1d1+28999</hit>
+      <hitroll>300</hitroll>
+      <imm add="summon charm spell weapon bash pierce slash fire cold acid poison negative holy energy mental disease drowning sound wood silver iron"/>
+      <level>100</level>
+      <long_descr>Анти-паладин (anti-paladin) в темных доспехах с эмблемой Тахизис раздает поручения.
+</long_descr>
+      <mana>1d1+1499</mana>
+      <material>0</material>
+      <off add="area_attack bash berserk disarm dodge fade fast kick_dirt parry rescue tail trip crush"/>
+      <player_name>anti-paladin анти-паладин questor квестор</player_name>
+      <race>dark-elf</race>
+      <res add="spell weapon fire cold"/>
+      <sex>male</sex>
+      <short_descr>анти-паладин||а|у|а|ом|е</short_descr>
+      <size>huge</size>
+      <start_pos>stand</start_pos>
+      <vuln add="lightning mental"/>
+    </node>
+    <node name="3015">
+      <ac bash="-970" exotic="-950" pierce="-970" slash="-970"/>
+      <act add="npc sentinel warrior nopurge notrack"/>
+      <aff add="haste"/>
+      <alignment>1000</alignment>
+      <behavior type="QuestMaster">
+        <services>
+          <node type="ObjectQuestArticle">
+            <vnum>102</vnum>
+            <name>orb</name>
+            <rname>шар</rname>
+            <descr>Хрустальный шар</descr>
+            <price type="QuestPointPrice">
+              <questpoint>50</questpoint>
+            </price>
+          </node>
+          <node type="PiercingQuestArticle">
+            <name>piercing</name>
+            <rname>пирсинг</rname>
+            <descr>Прокалывание ушей</descr>
+            <price type="QuestPointPrice">
+              <questpoint>50</questpoint>
+            </price>
+          </node>
+          <node type="ObjectQuestArticle">
+            <vnum>108</vnum>
+            <name>colourless</name>
+            <rname>бесцветный рестринг</rname>
+            <descr>Рестринг купон</descr>
+            <price type="QuestPointPrice">
+              <questpoint>50</questpoint>
+            </price>
+          </node>
+          <node type="ObjectQuestArticle">
+            <vnum>106</vnum>
+            <name>coupon</name>
+            <rname>цветной рестринг</rname>
+            <descr>{YР{Bе{Gс{Rт{Cр{Mи{Bн{Cг{x {rк{yу{gп{bо{mн{x</descr>
+            <price type="QuestPointPrice">
+              <questpoint>200</questpoint>
+            </price>
+          </node>
+          <node type="TattooQuestArticle">
+            <name>tattoo</name>
+            <rname>татуировка</rname>
+            <descr>Татуировка твоей религии</descr>
+            <price type="QuestPointPrice">
+              <questpoint>200</questpoint>
+            </price>
+          </node>
+          <node type="ConQuestArticle">
+            <name>constitution</name>
+            <rname>сложение</rname>
+            <descr>+1 сложение</descr>
+            <price type="QuestPointPrice">
+              <questpoint>150</questpoint>
+            </price>
+          </node>
+          <node type="PersonalQuestArticle">
+            <vnum>95</vnum>
+            <name>ring</name>
+            <rname>кольцо</rname>
+            <descr>Кольцо Героя</descr>
+            <price type="QuestPointPrice">
+              <questpoint>1000</questpoint>
+            </price>
+            <gender table="sex_table">neutral</gender>
+            <troubled>true</troubled>
+          </node>
+          <node type="PersonalQuestArticle">
+            <vnum>96</vnum>
+            <name>weapon</name>
+            <rname>оружие</rname>
+            <descr>Оружие Героя</descr>
+            <price type="QuestPointPrice">
+              <questpoint>1000</questpoint>
+            </price>
+            <gender table="sex_table">neutral</gender>
+            <troubled>true</troubled>
+          </node>
+          <node type="PersonalQuestArticle">
+            <vnum>94</vnum>
+            <name>girth</name>
+            <rname>пояс</rname>
+            <descr>Пояс Героя</descr>
+            <price type="QuestPointPrice">
+              <questpoint>1000</questpoint>
+            </price>
+            <gender table="sex_table">male</gender>
+            <troubled>true</troubled>
+          </node>
+          <node type="KeyringQuestArticle">
+            <name>keyring</name>
+            <rname>брелок</rname>
+            <descr>Прикрепить брелок для ключей к Поясу Героя</descr>
+            <price type="QuestPointPrice">
+              <questpoint>200</questpoint>
+            </price>
+          </node>
+          <node type="PersonalQuestArticle">
+            <vnum>103</vnum>
+            <name>bag</name>
+            <rname>сумка</rname>
+            <descr>Дорожная сумка Героя</descr>
+            <price type="QuestPointPrice">
+              <questpoint>500</questpoint>
+            </price>
+            <gender table="sex_table">female</gender>
+            <troubled>false</troubled>
+          </node>
+          <node type="PocketsQuestArticle">
+            <name>pockets</name>
+            <rname>карманы</rname>
+            <descr>Нашить карманы на Сумку Героя</descr>
+            <price type="QuestPointPrice">
+              <questpoint>50</questpoint>
+            </price>
+          </node>
+          <node type="OwnerQuestArticle">
+            <vnum>109</vnum>
+            <name>owner</name>
+            <rname>талон</rname>
+            <descr>Талон на единоличное владение вещью</descr>
+            <price type="QuestPointPrice">
+              <questpoint>1000</questpoint>
+            </price>
+            <lifePrice>
+              <victories>500</victories>
+              <lifes>1</lifes>
+            </lifePrice>
+          </node>
+          <node type="GoldQuestArticle">
+            <amount>5000</amount>
+            <name>gold</name>
+            <rname>золото</rname>
+            <descr>5000 золотых монет</descr>
+            <price type="QuestPointPrice">
+              <questpoint>1000</questpoint>
+            </price>
+          </node>
+        </services>
+      </behavior>
+      <dam_type>crush</dam_type>
+      <damage>18d18+85</damage>
+      <default_pos>stand</default_pos>
+      <description>Легионер Стали облачен в блестящий металлический доспех. Он раздает всем 
+желающим поручения, которые помогают бороться с несправедливостью, карать
+виновных и помогать невинным.
+
+Ты тоже можешь взять у него задание командой {y{lRквест попросить{lEquest request{x.
+Еще полезно прочесть справку по темам &apos;{hhквестор{x&apos; и &apos;{hhвиды заданий{x&apos;.
+</description>
+      <detection add="evil invis hidden dark_vision"/>
+      <group>3000</group>
+      <hit>1d1+28999</hit>
+      <hitroll>300</hitroll>
+      <imm add="summon charm spell weapon bash pierce slash fire cold acid poison negative holy energy mental disease drowning sound wood silver iron"/>
+      <level>100</level>
+      <long_descr>Легионер Стали (questor) выдает поручения ради борьбы за правое дело.
+</long_descr>
+      <mana>1d1+1499</mana>
+      <material>0</material>
+      <off add="area_attack bash berserk disarm dodge fade fast kick_dirt parry rescue tail trip crush"/>
+      <player_name>legionnaire steel questor легионер стали квестор</player_name>
+      <race>elf</race>
+      <res add="spell weapon fire cold"/>
+      <sex>female</sex>
+      <short_descr>легионер||а|у|а|ом|е</short_descr>
+      <size>huge</size>
+      <start_pos>stand</start_pos>
+      <vuln add="lightning mental"/>
+    </node>
     <node name="3020">
       <ac bash="-65" exotic="-35" pierce="-65" slash="-65"/>
       <act add="npc sentinel practice mage nopurge notrack"/>
@@ -739,7 +1086,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer>harmful weather creation detection none </practicer>
+      <practicer registry="skillGroup">none detection creation harmful weather</practicer>
       <race>elf</race>
       <res add="spell"/>
       <sex>female</sex>
@@ -769,7 +1116,7 @@
       <material>0</material>
       <off add="disarm dodge fast kick parry"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer>harmful weather creation detection none </practicer>
+      <practicer registry="skillGroup">none detection creation harmful weather</practicer>
       <race>human</race>
       <res add="spell"/>
       <sex>male</sex>
@@ -805,7 +1152,7 @@
       <material>0</material>
       <off add="backstab disarm dodge fast kick_dirt trip"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer>harmful weather creation detection none </practicer>
+      <practicer registry="skillGroup">none detection creation harmful weather</practicer>
       <race>human</race>
       <res add="spell"/>
       <sex>female</sex>
@@ -834,7 +1181,7 @@
       <material>0</material>
       <off add="area_attack bash berserk disarm kick parry"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer>harmful weather creation detection none </practicer>
+      <practicer registry="skillGroup">none detection creation harmful weather</practicer>
       <race>dwarf</race>
       <res add="spell"/>
       <sex>male</sex>
@@ -1605,7 +1952,6 @@
     </node>
     <node name="3090">
       <ac bash="8" exotic="10" pierce="8" slash="8"/>
-      <act add="npc sentinel noalign"/>
       <alignment>400</alignment>
       <behavior type="Pet">
       </behavior>
@@ -1631,7 +1977,6 @@
     </node>
     <node name="3091">
       <ac bash="7" exotic="10" pierce="7" slash="7"/>
-      <act add="npc sentinel noalign"/>
       <alignment>400</alignment>
       <behavior type="Pet">
       </behavior>
@@ -1660,7 +2005,6 @@
     </node>
     <node name="3092">
       <ac bash="5" exotic="9" pierce="5" slash="5"/>
-      <act add="npc sentinel noalign"/>
       <alignment>400</alignment>
       <behavior type="Pet">
       </behavior>
@@ -1689,7 +2033,6 @@
     </node>
     <node name="3093">
       <ac bash="4" exotic="8" pierce="4" slash="4"/>
-      <act add="npc sentinel noalign"/>
       <alignment>400</alignment>
       <behavior type="Pet">
       </behavior>
@@ -1717,7 +2060,6 @@
     </node>
     <node name="3094">
       <ac bash="4" exotic="8" pierce="4" slash="4"/>
-      <act add="npc sentinel noalign"/>
       <behavior type="Pet">
       </behavior>
       <dam_type>bite</dam_type>
@@ -2202,7 +2544,7 @@
       <race>snake</race>
       <res add="pierce"/>
       <sex>male</sex>
-      <short_descr>Листе|р|ра|ру|ра|ом|ре</short_descr>
+      <short_descr>Листе|р|ра|ру|ра|ром|ре</short_descr>
       <size>small</size>
       <start_pos>stand</start_pos>
     </node>
@@ -2465,7 +2807,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer>harmful weather creation detection none </practicer>
+      <practicer registry="skillGroup">none detection creation harmful weather</practicer>
       <race>human</race>
       <res add="spell"/>
       <sex>male</sex>
@@ -2492,7 +2834,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer>harmful weather creation detection none </practicer>
+      <practicer registry="skillGroup">none detection creation harmful weather</practicer>
       <race>human</race>
       <res add="spell weapon"/>
       <sex>male</sex>
@@ -2525,7 +2867,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer>harmful weather creation detection none </practicer>
+      <practicer registry="skillGroup">none detection creation harmful weather</practicer>
       <race>dark-elf</race>
       <res add="spell weapon"/>
       <sex>male</sex>
@@ -2554,7 +2896,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer>harmful weather creation detection none </practicer>
+      <practicer registry="skillGroup">none detection creation harmful weather</practicer>
       <race>elf</race>
       <res add="spell"/>
       <sex>female</sex>
@@ -2585,7 +2927,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer>harmful weather creation detection none </practicer>
+      <practicer registry="skillGroup">none detection creation harmful weather</practicer>
       <race>human</race>
       <res add="spell"/>
       <sex>male</sex>
@@ -2603,26 +2945,29 @@
       <dam_type>divine</dam_type>
       <damage>12d44+60</damage>
       <default_pos>stand</default_pos>
-      <description>Хотя он очень красив, священник посвятил свою жизнь служению Бессмертным
-и  Богам.  Набери - help &apos;religion&apos; - чтобы увидеть перечень существующих
-религий.
+      <description>Очень миловидный молодой человек, однако, предпочел удалиться от мирской
+суеты и посвятить свою жизнь служению богам. Он сможет приобщить тебя к
+любой из религий, которые известны в Мире Грез. 
+{Wсправка религия{x покажет список всех возможных религий. А когда будешь
+готов, просто назови вслух имя божества, которому ты будешь поклоняться
+всю свою жизнь.
 </description>
       <detection add="invis hidden"/>
       <hit>1d1+25999</hit>
       <hitroll>10</hitroll>
       <imm add="summon charm spell"/>
       <level>80</level>
-      <long_descr>Священник (templeman), что-то ищет здесь в старинных книгах.
+      <long_descr>Священник (templeman) перебирает старинные книги.
 </long_descr>
       <mana>1d1+999</mana>
       <material>0</material>
       <off add="dodge fast kick parry"/>
       <player_name>templeman священник</player_name>
-      <practicer>benedictions </practicer>
+      <practicer registry="skillGroup">benedictions</practicer>
       <race>human</race>
       <res add="weapon"/>
       <sex>male</sex>
-      <short_descr>священни|к|ка|ку|ка|ком|ке</short_descr>
+      <short_descr>священник||а|у|а|ом|е</short_descr>
       <size>huge</size>
       <spec>spec_cast_adept</spec>
       <start_pos>stand</start_pos>
@@ -2650,7 +2995,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>adept guildmaster адепт карлик</player_name>
-      <practicer>harmful weather creation detection none </practicer>
+      <practicer registry="skillGroup">none detection creation harmful weather</practicer>
       <race>duergar</race>
       <res add="weapon"/>
       <sex>male</sex>
@@ -2873,7 +3218,6 @@
         <flags>pit</flags>
         <maxWeight>1000</maxWeight>
       </type>
-      <wear_flags>wear_horse</wear_flags>
     </node>
     <node name="3011">
       <cost>9</cost>
@@ -2970,6 +3314,58 @@
         <maxWeight>1000</maxWeight>
       </type>
       <wear_flags>take</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="3018">
+      <affects>
+        <node>
+          <apply to="hitroll">3</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="damroll">5</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
+      <description>Искусное изображение (picture) скарабея валяется никому не нужное.</description>
+      <gender>m</gender>
+      <material>paper</material>
+      <name>picture рисунок</name>
+      <properties>
+        <node name="name">scarab скарабей</node>
+        <node name="short">скараб|ей|ея|ею|ея|еем|ее</node>
+      </properties>
+      <short_descr>рисун|ок|ка|ку|ок|ком|ке скарабея</short_descr>
+      <type name="recipe">
+        <complexity>0</complexity>
+      </type>
+      <wear_flags>take</wear_flags>
+    </node>
+    <node name="3019">
+      <affects>
+        <node>
+          <apply to="hitroll">1</apply>
+        </node>
+        <node>
+          <apply to="damroll">1</apply>
+        </node>
+      </affects>
+      <condition>40</condition>
+      <cost>10</cost>
+      <description>Опасного вида инструмент (knife) лежит на земле.</description>
+      <gender>m</gender>
+      <level>6</level>
+      <material>steel</material>
+      <name>knife резак нож</name>
+      <short_descr>резак||а|у||ом|е</short_descr>
+      <type name="weapon">
+        <diceNumber>5</diceNumber>
+        <diceType>2</diceType>
+        <specType>sharp</specType>
+        <weapClass>dagger</weapClass>
+        <weapType>pierce</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
       <weight>10</weight>
     </node>
     <node name="3020">
@@ -3177,6 +3573,7 @@
       <cost>4</cost>
       <description>Большой факел (torch) оставлен здесь.</description>
       <gender>m</gender>
+      <level>1</level>
       <material>wood</material>
       <name>факел torch</name>
       <short_descr>факе|л|ла|лу|л|лом|ле</short_descr>
@@ -3194,6 +3591,7 @@
 </node>
       </extraDescr>
       <gender>m</gender>
+      <level>1</level>
       <material>brass</material>
       <name>фонарь lantern</name>
       <short_descr>медн|ый|ого|ому|ый|ым|ом фона|рь|ря|рю|рь|рем|ре</short_descr>
@@ -3775,6 +4173,12 @@
       <weight>20</weight>
     </node>
     <node name="3077">
+      <affects>
+        <node>
+          <apply to="hit">5</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
       <cost>420</cost>
       <description>Пара легких кольчужных рукавов (sleeves) лежит здесь.</description>
       <gender>f</gender>
@@ -4166,14 +4570,20 @@
       <weight>10</weight>
     </node>
     <node name="3105">
+      <affects>
+        <node>
+          <apply to="damroll">1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
       <condition>90</condition>
       <cost>760</cost>
-      <description>Бронзовый нарукавник (bracer) лежит здесь.</description>
+      <description>Древний нарукавник (bracer) с изображением ламии лежит здесь.</description>
       <gender>m</gender>
-      <level>10</level>
+      <level>6</level>
       <material>bronze</material>
-      <name>нарукавник bracer bronze</name>
-      <short_descr>бронзов|ый|ого|ому|ый|ым|ом нарукавни|к|ка|ку|к|ком|ке</short_descr>
+      <name>bracer ancient lamia древний нарукавник ламии</name>
+      <short_descr>древн|ий|его|ему|ий|им|ем нарукавни|к|ка|ку|к|ком|ке {1{rламии{2</short_descr>
       <type name="armor">
         <ac bash="6" exotic="0" pierce="3" slash="6"/>
         <reserved0>3</reserved0>
@@ -4303,6 +4713,20 @@
       <weight>140</weight>
     </node>
     <node name="3117">
+      <affects>
+        <node>
+          <apply to="ac">-10</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hit">5</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
       <cost>510</cost>
       <description>Малый деревянный щит (shield) оставлен здесь.</description>
       <gender>m</gender>
@@ -4733,7 +5157,7 @@
       <weight>20</weight>
     </node>
     <node name="3160">
-      <cost>500</cost>
+      <cost>1</cost>
       <description>Свернутая в рулон карта (map) лежит здесь.</description>
       <extraDescr>
         <node keyword="map northern midgaard карта северного мидгаарда">.
@@ -4786,7 +5210,7 @@
       <weight>10</weight>
     </node>
     <node name="3162">
-      <cost>500</cost>
+      <cost>1</cost>
       <description>Свернутая в рулон карта (map) лежит здесь.</description>
       <extraDescr>
         <node keyword="map central midgaard карта центрального мидгаарда">.
@@ -4853,7 +5277,7 @@
       <weight>10</weight>
     </node>
     <node name="3163">
-      <cost>150</cost>
+      <cost>1</cost>
       <description>Свернутая в рулон карта (map) лежит здесь.</description>
       <extraDescr>
         <node keyword="map dream land northern dreamland карта северной мира грез">.
@@ -4890,7 +5314,7 @@
       <weight>10</weight>
     </node>
     <node name="3164">
-      <cost>1000</cost>
+      <cost>1</cost>
       <description>Свернутая в рулон карта (map) лежит здесь.</description>
       <extraDescr>
         <node keyword="map southern midgaard карта южного мидгаарда">.
@@ -5048,7 +5472,7 @@ in the depths of Moria itself.                                |           |
       <weight>10</weight>
     </node>
     <node name="3167">
-      <cost>2500</cost>
+      <cost>1</cost>
       <description>Свернутая в рулон карта (map) лежит здесь.</description>
       <extraDescr>
         <node keyword="map new thalos карта">.
@@ -7080,7 +7504,7 @@ Inscribed on the inside of the band is: &apos;Your loving husband&apos;.
       <weight>11</weight>
     </node>
     <node name="3382">
-      <cost>500</cost>
+      <cost>1</cost>
       <description>Свернутая в рулон карта (map) лежит здесь.</description>
       <extraDescr>
         <node keyword="map titan карта">.
@@ -7187,7 +7611,7 @@ Tower    |   	 		Ciquala&apos;s Lair		   |
       <weight>10</weight>
     </node>
     <node name="3384">
-      <cost>150</cost>
+      <cost>1</cost>
       <description>Свернутая в рулон карта (map) лежит здесь.</description>
       <extraDescr>
         <node keyword="map east dreamland карта восточной восток мира грез">.
@@ -7962,24 +8386,36 @@ Affects saves by -2.
       <cost>20000</cost>
       <description>Старинная книга (book) без названия.</description>
       <extraDescr>
-        <node keyword="книга old book">I am not sure about all information in this book, because the adventurer
-who told me the story was not...........................................
-Firstly you will need a dress for the keeper. You may find a suitable
-dress in the general store in New Thalos area. Say to shopkeeper keeper
-( say keeper) and he will help you. Now you need a beautiful rug for the
-Fireflash who has the key of kassandra. Fireflash interests only with special
-rug which has been sold by grocer in Valley of Titans area. Now, you
-should find the keeper who will unlocks the gate to you against the
-dress. I don&apos;t know the exact place of the keeper and Fireflash,
-but I heard that they are in an area which includes many pixies and
-dragons. As you give the dress to keeper he will helps you. And now you
-should give rug to Fireflash. Now you have a key find the Paladin who is
-responsible for the stone kassandra. Adventured said me that you may find
-that paladin in the south and up of the Midgaard. 
-	Usage of the kassandra is very easy, as you are holding it say :
-&quot;  kassandra, matandra, or sebat.&quot;
-eg, say kassandra
-    say sebat
+        <node keyword="книга old book">{CЛЕГЕНДА О КАССАНДРЕ{x
+Давным-давно, когда мои волосы еще не были белее снега, я услышала  эту легенду
+от одного таинственного незнакомца. Он рассказал мне о  древнем камне  по имени
+{GК{gассандра{x, обладающем могучей  магией. Но  чтобы добыть  этот камень,  мой юный
+слушатель, тебе придется пройти через много испытаний.
+
+Для  начала  тебе  потребуется  {Yплатье{x. Да-да,  именно так.  В мире  есть много
+платьев, но тебе потребуется особое, сшитое лучшими  портными Нового  Талоса на
+заказ. Скажи продавцу универмага пароль ({y{lRск хранитель{lEsay keeper{x), и он выдаст тебе платье.
+
+Затем  тебе понадобится  {Yковрик с  восточным орнаментом{x.  Я слышала,  что такие
+коврики  в  свободное  время  плетет  один  из продавцов  в Долине  Титанов. Ты
+спросишь, зачем нужны все эти штуки? Чтобы задобрить пару  очень могущественных
+личностей.
+
+Далеко-далеко  в  пещерах,  населенных  древними  Драконами,  живет  {YХранитель{x.
+Когда-то  он  был  одним  из  лучших  стражников Мидгаарда,  но затем  вышел на
+заслуженный отдых. Он хотел бы сходить на бал, но его парадную  одежду похитили
+шаловливые пещерные пикси. Хранитель заказал новое платье у портного,  но заказ
+некому доставить. Принеси ему платье, и он укажет тебе путь к своему господину.
+
+Господин Хранителя -- это золотой дракон по имени {YВспышка Пламени{x, владыка этих
+пещер.  Многие  тысячелетия,  проведенные  в  пещерной  сырости,  наградили его
+ревматизмом. Он  бы все  на свете  отдал за  мягкий и  уютный коврик,  чтобы не
+сидеть на твердом! Ну ладно, может и не  все на  свете, но  в твоих  поисках он
+точно поможет.
+
+Кассандру охраняет один престарелый рыцарь Соламнии. Я слышала, он живет в... 
+
+{c....................[остаток страницы кем-то грубо вырван].....................{x
 </node>
       </extraDescr>
       <gender>f</gender>
@@ -8105,7 +8541,7 @@ eg, say kassandra
         </node>
       </exits>
       <flags>no_vanish no_mob indoors law nosummon</flags>
-      <guilds>cleric </guilds>
+      <guilds>cleric</guilds>
       <name>Внутреннее Святилище Монахов</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="3021"/>
@@ -8139,7 +8575,7 @@ eg, say kassandra
 </node>
       </extraDescr>
       <flags>no_vanish no_mob indoors law nosummon</flags>
-      <guilds>cleric </guilds>
+      <guilds>cleric</guilds>
       <name>Бар Монахов</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="3043"/>
@@ -8276,9 +8712,9 @@ eg, say kassandra
         <node keyword="sign листок">На листке значится:
 Инструкции таверны &quot;Хрюкающий Кабан&quot;.
 
-   Buy  - купить что-нибудь (из напитков) у бармена.
-   List - бармен покажет вам все напитки и кое-что особенное,
-          и скажет цену каждого.
+   {y{hc{lRсписок{lElist{x          - показать ассортимент и цены
+   {y{hc{lRкупить{lEbuy{x название 
+   {y{hc{lRкупить{lEbuy{x номер    - купить что-нибудь из напитков
 </node>
       </extraDescr>
       <flags>indoors law</flags>
@@ -8652,7 +9088,7 @@ eg, say kassandra
         </node>
       </exits>
       <flags>no_vanish no_mob indoors law nosummon</flags>
-      <guilds>witch </guilds>
+      <guilds>witch</guilds>
       <name>Бар Магов</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="3042"/>
@@ -8685,7 +9121,7 @@ eg, say kassandra
         </node>
       </exits>
       <flags>no_vanish no_mob indoors law nosummon</flags>
-      <guilds>witch </guilds>
+      <guilds>witch</guilds>
       <name>Магическая Лаборатория</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="3020"/>
@@ -8789,7 +9225,7 @@ eg, say kassandra
         </node>
       </exits>
       <flags>no_vanish no_mob indoors law nosummon</flags>
-      <guilds>warrior </guilds>
+      <guilds>warrior</guilds>
       <name>Бар Мечников</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="3045"/>
@@ -8818,7 +9254,7 @@ eg, say kassandra
         </node>
       </exits>
       <flags>no_vanish no_mob indoors law nosummon</flags>
-      <guilds>warrior </guilds>
+      <guilds>warrior</guilds>
       <name>Двор Турниров и Упражнений</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="3023"/>
@@ -9004,7 +9440,7 @@ eg, say kassandra
 </node>
       </extraDescr>
       <flags>no_vanish no_mob indoors law nosummon</flags>
-      <guilds>thief </guilds>
+      <guilds>thief</guilds>
       <name>Бар Воров</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="3044"/>
@@ -9032,7 +9468,7 @@ eg, say kassandra
         </node>
       </exits>
       <flags>no_vanish no_mob indoors law nosummon</flags>
-      <guilds>thief </guilds>
+      <guilds>thief</guilds>
       <name>Секретный Двор</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="3022"/>
@@ -9706,7 +10142,7 @@ eg, say kassandra
         </node>
       </exits>
       <flags>no_vanish indoors law nosummon</flags>
-      <guilds>ninja </guilds>
+      <guilds>ninja</guilds>
       <name>Грязная Таверна</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="3046"/>
@@ -10012,7 +10448,7 @@ eg, say kassandra
         </node>
       </exits>
       <flags>no_vanish indoors law nosummon</flags>
-      <guilds>anti-paladin </guilds>
+      <guilds>anti-paladin</guilds>
       <name>Вход в Гильдию Анти-Паладинов</name>
       <sector>inside</sector>
     </node>
@@ -10032,7 +10468,7 @@ eg, say kassandra
         </node>
       </exits>
       <flags>no_vanish no_mob indoors law nosummon</flags>
-      <guilds>anti-paladin </guilds>
+      <guilds>anti-paladin</guilds>
       <name>Палата Пыток</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="3169"/>
@@ -10056,7 +10492,7 @@ eg, say kassandra
         </node>
       </exits>
       <flags>no_vanish no_mob indoors law nosummon</flags>
-      <guilds>ninja </guilds>
+      <guilds>ninja</guilds>
       <name>Подземная Палата</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="3168"/>
@@ -10084,7 +10520,7 @@ eg, say kassandra
         </node>
       </exits>
       <flags>no_vanish no_mob indoors law nosummon</flags>
-      <guilds>paladin </guilds>
+      <guilds>paladin</guilds>
       <name>Священный Храм</name>
       <sector>inside</sector>
     </node>
@@ -10103,7 +10539,7 @@ eg, say kassandra
         </node>
       </exits>
       <flags>no_vanish no_mob indoors law nosummon</flags>
-      <guilds>paladin </guilds>
+      <guilds>paladin</guilds>
       <name>Святилище Рыцарей</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="3167"/>
@@ -10253,7 +10689,7 @@ eg, say kassandra
       <flags>law</flags>
       <name>Храмовая Площадь</name>
       <resets>
-        <drop vnum="3010"/>
+        <mob limit="1" maxHere="1" vnum="3015"/>
         <drop vnum="3398"/>
       </resets>
       <sector>city</sector>
@@ -10291,6 +10727,7 @@ reads...   ???.
       <manaRate>200</manaRate>
       <name>Алтарь</name>
       <resets>
+        <drop vnum="3010"/>
         <mob limit="1" maxHere="1" vnum="3166"/>
       </resets>
       <sector>inside</sector>
@@ -10318,6 +10755,9 @@ reads...   ???.
       <healRate>150</healRate>
       <manaRate>150</manaRate>
       <name>Темный Храм</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="3014"/>
+      </resets>
       <sector>inside</sector>
     </node>
     <node name="3072">
@@ -10357,7 +10797,7 @@ reads...   ???.
         </node>
       </exits>
       <flags>no_vanish no_mob indoors law nosummon</flags>
-      <guilds>warlock </guilds>
+      <guilds>warlock</guilds>
       <name>Бар Варлоков</name>
       <sector>inside</sector>
     </node>
@@ -10384,7 +10824,7 @@ reads...   ???.
         </node>
       </exits>
       <flags>no_vanish no_mob indoors law nosummon</flags>
-      <guilds>warlock </guilds>
+      <guilds>warlock</guilds>
       <name>Лаборатория Варлоков</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="3170"/>
@@ -10408,7 +10848,7 @@ reads...   ???.
         </node>
       </exits>
       <flags>no_vanish no_mob indoors law nosummon</flags>
-      <guilds>samurai </guilds>
+      <guilds>samurai</guilds>
       <name>Бар Самураев</name>
       <sector>inside</sector>
     </node>
@@ -10441,7 +10881,7 @@ reads...   ???.
 </node>
       </extraDescr>
       <flags>no_vanish no_mob indoors law nosummon</flags>
-      <guilds>samurai </guilds>
+      <guilds>samurai</guilds>
       <name>Святыня Самураев</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="3171"/>
@@ -10449,12 +10889,10 @@ reads...   ???.
       <sector>inside</sector>
     </node>
     <node name="3077">
-      <description>Ты видишь  тысячи книг, лежащих  на книжных  полках, около которых стоит
-священник. Он вопросительно смотрит на тебя, пытаясь понять зачем ты здесь.
-Но  он  знает,  что  каждый посетитель должен его знать также хорошо, как и
-свою  религию. Комната наполнена легкой дымкой. Ты начинаешь молиться с ним
-вместе.
-  Попробуй поговорить со священником о[1;36m религии [0;37m.
+      <description>В северной части алтаря расположено небольшое помещение, где хранятся книги,
+одежды и священные сосуды. В воздухе витает таинственный туман, заставляя 
+задуматься о вечном. Томимые духовной жаждой всегда могут застать здесь
+священника и побеседовать с ним о {Cрелигии{x. 
 </description>
       <exits>
         <node name="south">
@@ -10466,7 +10904,7 @@ reads...   ???.
       </exits>
       <flags>indoors law</flags>
       <manaRate>150</manaRate>
-      <name>Комната Священника</name>
+      <name>Ризница</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="3172"/>
       </resets>
@@ -12966,7 +13404,7 @@ reads...   ???.
         </node>
       </exits>
       <flags>no_vanish no_mob indoors law nosummon</flags>
-      <guilds>universal </guilds>
+      <guilds>universal</guilds>
       <name>Развалины фабрики</name>
       <sector>inside</sector>
     </node>
@@ -13010,7 +13448,7 @@ reads...   ???.
 </node>
       </extraDescr>
       <flags>no_vanish no_mob indoors law nosummon</flags>
-      <guilds>universal </guilds>
+      <guilds>universal</guilds>
       <name>Пещера</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="3173"/>

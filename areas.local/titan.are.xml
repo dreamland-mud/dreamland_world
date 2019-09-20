@@ -15,8 +15,6 @@
     <vnumHigh>18150</vnumHigh>
     <vnumLow>18000</vnumLow>
   </areadata>
-  <helps>
-  </helps>
   <mobiles>
     <node name="18001">
       <ac bash="-15" exotic="4" pierce="-15" slash="-15"/>
@@ -1733,7 +1731,7 @@
     </node>
     <node name="18054">
       <ac bash="-13" exotic="4" pierce="-13" slash="-13"/>
-      <act add="npc sentinel warrior nopurge"/>
+      <act add="warrior"/>
       <aff add="sanctuary pass_door haste"/>
       <alignment>1000</alignment>
       <behavior type="Pet">
@@ -1765,7 +1763,7 @@
     </node>
     <node name="18055">
       <ac bash="-15" exotic="3" pierce="-15" slash="-15"/>
-      <act add="npc sentinel warrior nopurge"/>
+      <act add="warrior"/>
       <aff add="sanctuary pass_door haste"/>
       <alignment>1000</alignment>
       <behavior type="Pet">
@@ -1796,8 +1794,8 @@
     </node>
     <node name="18056">
       <ac bash="-20" exotic="2" pierce="-20" slash="-20"/>
-      <act add="npc sentinel undead mage nopurge"/>
-      <aff add="sanctuary pass_door haste"/>
+      <act add="undead mage"/>
+      <aff add="sanctuary pass_door haste" del="infrared"/>
       <alignment>1000</alignment>
       <behavior type="Pet">
       </behavior>
@@ -1828,7 +1826,7 @@
     </node>
     <node name="18057">
       <ac bash="-4" exotic="7" pierce="-4" slash="-4"/>
-      <act add="npc sentinel warrior"/>
+      <act add="warrior"/>
       <aff add="haste"/>
       <alignment>1000</alignment>
       <behavior type="Pet">
@@ -1859,7 +1857,7 @@
     </node>
     <node name="18058">
       <ac bash="-7" exotic="5" pierce="-7" slash="-7"/>
-      <act add="npc warrior"/>
+      <act add="warrior" del="sentinel"/>
       <aff add="haste"/>
       <alignment>1000</alignment>
       <behavior type="Pet">
@@ -1890,7 +1888,7 @@
     </node>
     <node name="18059">
       <ac bash="-9" exotic="6" pierce="-9" slash="-9"/>
-      <act add="npc sentinel warrior"/>
+      <act add="warrior"/>
       <aff add="flying haste"/>
       <alignment>1000</alignment>
       <behavior type="Pet">
@@ -1920,8 +1918,8 @@
     </node>
     <node name="18060">
       <ac bash="-11" exotic="5" pierce="-11" slash="-11"/>
-      <act add="npc sentinel mage"/>
-      <aff add="haste"/>
+      <act add="mage"/>
+      <aff add="haste" del="infrared"/>
       <alignment>1000</alignment>
       <behavior type="Pet">
       </behavior>
@@ -2521,8 +2519,8 @@
     </node>
     <node name="18090">
       <ac bash="-11" exotic="5" pierce="-11" slash="-11"/>
-      <act add="npc sentinel mage warrior nopurge"/>
-      <aff add="haste"/>
+      <act add="mage warrior"/>
+      <aff add="haste" del="infrared"/>
       <alignment>1000</alignment>
       <behavior type="Pet">
       </behavior>
@@ -4063,10 +4061,22 @@
     <node name="18057">
       <affects>
         <node>
-          <apply to="str">-1</apply>
+          <apply to="con">1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="damroll">1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">1</apply>
+          <bits table="affect_flags"></bits>
         </node>
         <node>
           <apply to="hit">20</apply>
+        </node>
+        <node>
+          <apply to="str">-1</apply>
         </node>
       </affects>
       <condition>90</condition>
@@ -4570,7 +4580,7 @@
       <type name="armor">
         <ac bash="9" exotic="1" pierce="9" slash="9"/>
       </type>
-      <wear_flags>take wear_about</wear_flags>
+      <wear_flags>take wear_wrist</wear_flags>
       <weight>10</weight>
     </node>
     <node name="18084">

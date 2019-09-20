@@ -1,0 +1,22 @@
+.get_mob_index(@vnum@).@trig@ = function(mob, ch, victim, social) {
+    // Вызывается в следующий пульс после применения социала social персонажем ch (возможно на жертву victim).
+
+    // Игнорируем ужимки мобов.
+    if (ch.is_npc())
+        return;
+
+    // Игнорируем невидимых.
+    if (!mob.can_see_mob(ch))
+        return;
+
+    // Если хочется реагировать только на социалы без цели или примененные на нас:
+    if (victim != null && mob != victim)
+        return;
+
+    // Реагируем на социалы по их полному английскому названию:
+    if (social == "dance" || social == "discodance") {
+        mob.say("Ты отлично танцуешь, %^C1!", ch);
+        return;
+    }
+}
+

@@ -13,26 +13,36 @@
     <vnumLow>3500</vnumLow>
   </areadata>
   <helps>
+    <node keyword="MIDEN'NIR МИДЕН'НИР" level="1">Большой лес к югу от Мидгаарда, населенный туповатыми и агрессивными гоблинами.
+В его западной части располагается небольшой трактир, который с трудом 
+сводит концы с концами. 
+%PAUSE%
+{yЗадания{x:
+  {Y*{x Трактирщик дает два поручения подряд. 
+    Ограничения: нет. Как часто: раз в час.
+  {Y*{x Бродячий певец просит отомстить гоблинам. 
+    Ограничения: добрый или нейтральный характер. Как часто: раз в час.
+</node>
   </helps>
   <mobiles>
     <node name="3500">
       <ac bash="4" exotic="6" pierce="5" slash="5"/>
-      <act add="npc stay_area"/>
+      <act add="npc stay_area warrior"/>
       <alignment>-200</alignment>
       <dam_type>bite</dam_type>
-      <damage>2d6+1</damage>
+      <damage>3d5+10</damage>
       <default_pos>stand</default_pos>
       <description>Это   огромное  крылатое  создание  выглядит  достаточно  угрожающе.  Ты
-счастлив, что оно НЕ КАЖЕТСЯ, очень голодным ... Но все же...
+счастлив, что оно НЕ КАЖЕТСЯ очень голодным... Но все же...
 </description>
       <hit>8d8+80</hit>
-      <hitroll>2</hitroll>
+      <hitroll>10</hitroll>
       <level>8</level>
       <long_descr>Чудовищный виверн (wyvern) медленно кружит над твоей головой. 
 </long_descr>
       <mana>1d1+149</mana>
       <material>0</material>
-      <off add="berserk trip assist_race"/>
+      <off add="berserk assist_race"/>
       <player_name>виверн wyvern</player_name>
       <race>wyvern</race>
       <sex>male</sex>
@@ -96,6 +106,13 @@
       <ac bash="2" exotic="8" pierce="2" slash="2"/>
       <act add="npc sentinel warrior"/>
       <alignment>500</alignment>
+      <behavior type="ShopTrader">
+        <buys>drink food gem</buys>
+        <openHour>0</openHour>
+        <closeHour>23</closeHour>
+        <profitBuy>125</profitBuy>
+        <profitSell>75</profitSell>
+      </behavior>
       <dam_type>punch</dam_type>
       <damage>2d8+1</damage>
       <default_pos>stand</default_pos>
@@ -144,7 +161,7 @@
       <player_name>бродячий певец bard</player_name>
       <race>human</race>
       <sex>male</sex>
-      <short_descr>бродяч|ий|его|ему|его|им|ем певе|ц|ца|цу|ца|цом|це</short_descr>
+      <short_descr>бродяч|ий|его|ему|его|им|ем пев|ец|ца|цу|ца|цом|це</short_descr>
       <size>medium</size>
       <start_pos>sit</start_pos>
       <wealth>260</wealth>
@@ -373,6 +390,111 @@
       </type>
       <wear_flags>take wield</wear_flags>
       <weight>10</weight>
+    </node>
+    <node name="3506">
+      <description>Старое вонючее ведро (bucket) привлекает мух.</description>
+      <extra_flags>nosavedrop</extra_flags>
+      <gender>n</gender>
+      <material>wood</material>
+      <name>bucket ведро</name>
+      <short_descr>помойн|ое|ого|ому|ое|ым|ом ведр|о|а|у|о|ом|е</short_descr>
+      <smell>От резкого запаха тебя чуть не выворачивает наизнанку.</smell>
+      <sound>Внутри что-то омерзительно хлюпает.</sound>
+      <type name="drink">
+        <flags>poisoned</flags>
+        <left>300</left>
+        <liquid>swill</liquid>
+        <total>300</total>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>300</weight>
+    </node>
+    <node name="3507">
+      <description>Неаппетитно оторванное ухо (ear) гниет на земле.</description>
+      <extraDescr>
+        <node keyword="ear goblin ухо гоблина">Волосатое ухо, только что оторванное от хозяина, с еще свежими следами запекшейся крови.
+Из таких ушей любители изготавливают нехитрую бижутерию.
+Была бы только специальная проволока!
+</node>
+      </extraDescr>
+      <extra_flags>dark</extra_flags>
+      <gender>n</gender>
+      <material>flesh</material>
+      <name>ear goblin ухо гоблина</name>
+      <short_descr>оторванн|ое|ого|ому|ое|ым|ом ух|о|а|у|о|ом|е гоблина</short_descr>
+      <smell>Пахнет свежей гоблинятиной.</smell>
+      <type name="food">
+        <foodHours>3</foodHours>
+        <fullHours>3</fullHours>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>3</weight>
+    </node>
+    <node name="3508">
+      <affects>
+        <node>
+          <apply to="hitroll">2</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="damroll">2</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="ac">-6</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
+      <description>Искусно составленной ожерелье (necklace) из ушей.</description>
+      <extraDescr>
+        <node keyword="ear necklace ожерелье уши">С десяток волосатых гоблинских ушей старательно нанизаны на кусок проволоки.
+</node>
+      </extraDescr>
+      <gender>n</gender>
+      <level>8</level>
+      <material>flesh</material>
+      <name>ear necklace ожерелье уши</name>
+      <short_descr>ожерель|е|я|ю|е|ем|е из ушей гоблинов</short_descr>
+      <smell>Пахнет несвежей гоблинятиной.</smell>
+      <type name="jewelry">
+      </type>
+      <wear_flags>take wear_neck</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="3509">
+      <description>Кусок проволоки (wire) лежит под ногами.</description>
+      <gender>m</gender>
+      <material>metal</material>
+      <name>wire piece кусок проволоки</name>
+      <short_descr>{wкус|ок|ка|ку|ок|ком|ке проволоки{x</short_descr>
+      <type name="container">
+        <capacity>100</capacity>
+        <flags>put_on2</flags>
+        <maxWeight>100</maxWeight>
+        <weightMult>1</weightMult>
+      </type>
+      <wear_flags>take</wear_flags>
+    </node>
+    <node name="3510">
+      <cost>500</cost>
+      <description>Кожаный ошейник (collar) с узорами лежит без дела.</description>
+      <extraDescr>
+        <node keyword="rune collar руны ошейник">На кожаный ремень нанесено тиснение пяти рун и рисунок двуногого существа с 
+драконьей головой и крыльями.
+На обратной стороне видна надпись обычными мелкими буквами:
+{x           {G&quot;{WНабил, экзотические звери в каждый дом{G&quot;{x
+</node>
+      </extraDescr>
+      <extra_flags>hum burn_proof nosell</extra_flags>
+      <gender>m</gender>
+      <material>leather</material>
+      <name>rune collar руны ошейник</name>
+      <short_descr>покрыт|ый|ого|ому|ый|ым|ом рунами ошейник||а|у||ом|е</short_descr>
+      <type name="armor">
+        <ac bash="10" exotic="10" pierce="10" slash="10"/>
+      </type>
+      <wear_flags>take wear_neck</wear_flags>
+      <weight>30</weight>
     </node>
   </objects>
   <rooms>
@@ -1503,11 +1625,16 @@
           <target>3574</target>
         </node>
       </exits>
+      <flags>indoors</flags>
       <name>Бар</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="3503"/>
+        <give vnum="3154"/>
+        <give vnum="3003"/>
+        <give vnum="3002"/>
+        <give vnum="3001"/>
       </resets>
-      <sector>city</sector>
+      <sector>inside</sector>
     </node>
     <node name="3577">
       <description>Ты находишься  в  более темном углу  гостиницы. Здесь ты видишь большой,
@@ -1545,8 +1672,8 @@
       <sector>forest</sector>
     </node>
     <node name="3579">
-      <description>Кажется  в  этом конце гостиницы  никого нет.  Вероятно это лучшее место
-передохнуть и подлечить своим раны.
+      <description>Кажется,  в  этом конце гостиницы  никого нет.  Вероятно, это лучшее место
+передохнуть и подлечить свои раны.
 </description>
       <exits>
         <node name="north">
@@ -1556,6 +1683,8 @@
         </node>
       </exits>
       <flags>indoors</flags>
+      <healRate>200</healRate>
+      <manaRate>200</manaRate>
       <name>Более тихая часть гостиницы</name>
       <sector>inside</sector>
     </node>

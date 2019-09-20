@@ -1,0 +1,143 @@
+fc = function() {
+    .tmp.trigger_handler = function(trigName, args) {
+	var array;
+	
+	if (.tmp.gtrig == null)
+	    return;
+	    
+	array = .tmp.gtrig[trigName];
+	if (array == null)
+	    return;
+	    
+	for (key in array.keys) {
+	    .apply(array[key], null, args);
+	}
+    };
+    
+    
+    .tmp.commands.fenia = .Command();
+    .tmp.commands.fenia.name = "fenia";
+    .tmp.commands.fenia.rname = "феня";
+    .tmp.commands.fenia.func = function(ch, argument) {
+	var args, cmd, trig, label;
+	
+	if (!.buildplot)
+	    if (ch.feniaSecurity == null || ch.feniaSecurity < 110) {
+		ch.act("У тебя нет прав писать скрипты.");
+		return;
+	    }
+	    
+	if (.tmp.gtrig == null)
+	    .tmp.gtrig = .Array();
+	
+	args = argument.split(' ');
+	cmd = args.at(0);
+	trig = args.at(1);
+	label = args.at(2);
+	
+	if (cmd == null)
+	    cmd = "";
+	    
+	if (cmd.strPrefix("add") || cmd.strPrefix("edit")) {
+	    var cs;
+	    
+	    if (trig == null || trig.size() == 0 || label == null || label.size() == 0) {
+		ch.act("Использование:\nfenia add onDeath label.");
+		return;
+	    }
+	    
+	    if (!trig.matchCase("^(on|post)[A-Z][a-z]+$")) {
+		ch.act("Глобальный триггер должен начинаться с 'on' или 'post', например, onLore или onDeath.");
+		return;
+	    }
+	    
+	    if (.tmp.gtrig[trig] == null) {
+		ch.act("Создаю первый в мире триггер типа %s.", trig);
+		.tmp.gtrig[trig] = .Array();
+	    }
+	    
+	    cs = .tmp.gtrig[trig][label];
+	    
+	    if (cs == null) {
+		var cs_name, cs_content;
+		
+		ch.act("Триггера %s с меткой %s не существует, создаю новый.", trig, label);
+		
+		cs_name = "Global " + trig + " " + label;
+		cs_content = ".tmp.gtrig[\"" + trig + "\"][\"" + label + "\"] = "
+			     + .tmp.examples.gtrig[trig];
+			     
+		ch.writeWSCommand("cs_edit", cs_name, cs_content);
+		
+	    } else {
+		ch.act("Редактирую существующий триггер %s с меткой %s.", trig, label);
+		ch.interpret_raw("cs", "web " +  .codesource(cs));
+	    }
+	    
+	    return;
+	}
+	
+	if (cmd.strPrefix("remove") || cmd.strPrefix("delete")) {
+	    if (trig == null || trig.size() == 0 || label == null || label.size() == 0) {
+		ch.act("Использование:\nfenia del onReset label.");
+		return;
+	    }
+	    
+	    if (.tmp.gtrig[trig] == null) {
+		ch.act("Триггеров %s пока не существует.", trig);
+		return;
+	    }
+	    
+	    if (.tmp.gtrig[trig][label] == null) {
+		ch.act("Триггер %s с меткой %s не задан.", trig, label);
+		return;
+	    }
+	    
+	    .tmp.gtrig[trig][label] = null;
+	    ch.act("Триггер %s с меткой %s успешно удален.", trig, label);
+	    ch.act("(резервную копию сценария можно найти в системных логах)");
+	    return;
+	}
+	
+	if (cmd.strPrefix("list")) {
+	    if (.tmp.gtrig == null || .tmp.gtrig.size() == 0) {
+		ch.act("Не задано ни одного глобального триггера.");
+		return;
+	    }
+	    
+	    for (t in .tmp.gtrig.keys) {
+		ch.act("Триггер {g%s{x:", t);
+		
+		for (l in .tmp.gtrig[t].keys)
+		    ch.act("   [%5d] %s", .codesource(.tmp.gtrig[t][l]), l);
+		    
+		ch.act("");
+	    }
+	    return;
+	}
+	
+	ch.act("Использование:");
+	ch.act("fenia add <trigger> <label> - добавить новый триггер с меткой или редактировать существующий");
+	ch.act("fenia del <trigger> <label> - удалить триггер с данной меткой");
+	ch.act("fenia list                  - перечислить все объявленные триггера и метки");
+    };
+
+
+    if (.tmp.examples == null)
+	.tmp.examples = .Map();
+    if (.tmp.examples.gtrig == null)    
+	.tmp.examples.gtrig = .Array();
+	
+    .tmp.examples.gtrig["onDeath"] = "function(ch, killer) {\n" +
+		  "\n" +
+		  "}\n";
+
+    .tmp.examples.gtrig["onReset"] = "function(mob) {\n" +
+		  "\n" +
+		  "}\n";
+
+    .tmp.examples.gtrig["onLore"] = "function(ch, obj) {\n" +
+		  "\n" +
+		  "}\n";
+		  
+}

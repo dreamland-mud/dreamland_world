@@ -6,6 +6,7 @@
     <levelHigh>10</levelHigh>
     <levelLow>1</levelLow>
     <name>Зона Новичков</name>
+    <resetMessage></resetMessage>
     <security>9</security>
     <speedwalk>2nu3s;enter portal</speedwalk>
     <translator>Unknown, Ruffina</translator>
@@ -13,7 +14,7 @@
     <vnumLow>18600</vnumLow>
   </areadata>
   <helps>
-    <node keyword="NEWBIE ZONE" level="102" type="AreaHelp">Converted to standard Envy 1.x by Jason Huang (god@sure.net)
+    <node keyword="NEWBIE ZONE" level="102">Converted to standard Envy 1.x by Jason Huang (god@sure.net)
 Further conversion to Rom 2.4 by Jaceks and Chicken&apos;s Den Staff</node>
   </helps>
   <mobiles>
@@ -470,10 +471,14 @@ Further conversion to Rom 2.4 by Jaceks and Chicken&apos;s Den Staff</node>
     <node name="18604">
       <affects>
         <node>
-          <apply to="wis">1</apply>
+          <apply to="hitroll">1</apply>
+          <bits table="affect_flags"></bits>
         </node>
         <node>
           <apply to="ac">-3</apply>
+        </node>
+        <node>
+          <apply to="wis">1</apply>
         </node>
       </affects>
       <condition>90</condition>
@@ -582,7 +587,15 @@ Further conversion to Rom 2.4 by Jaceks and Chicken&apos;s Den Staff</node>
     <node name="18609">
       <affects>
         <node>
+          <apply to="hit">10</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
           <apply to="saving_spell">-1</apply>
+        </node>
+        <node>
+          <apply to="hitroll">1</apply>
+          <bits table="affect_flags"></bits>
         </node>
       </affects>
       <condition>90</condition>
@@ -624,10 +637,15 @@ Further conversion to Rom 2.4 by Jaceks and Chicken&apos;s Den Staff</node>
     <node name="18611">
       <affects>
         <node>
-          <apply to="ac">-6</apply>
+          <apply to="cha">-1</apply>
+          <bits table="affect_flags"></bits>
         </node>
         <node>
-          <apply to="hit">15</apply>
+          <apply to="hit">20</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="ac">-6</apply>
         </node>
       </affects>
       <condition>90</condition>
@@ -663,6 +681,14 @@ Further conversion to Rom 2.4 by Jaceks and Chicken&apos;s Den Staff</node>
     </node>
     <node name="18613">
       <affects>
+        <node>
+          <apply to="hit">5</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
         <node>
           <apply to="dex">1</apply>
         </node>

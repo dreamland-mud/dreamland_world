@@ -19,12 +19,15 @@
 		    ch.act("Это задание невозможно отменить.");
 		} else {
 		    ch.act("Ты не выполняешь задания под номером %s.", arg);
+		    ch.act("Используй команду {y{hc{lRквест{lEquest{x для списка.");
 		}
 		return true;
 	    }
 	}
-	    
-	return false;
+	
+	ch.act("Такое задание не найдено.");
+	ch.act("Используй команду {y{hc{lRквест{lEquest{x для списка.");
+	return true;
     };
     
     .tmp.quest.newinfo = function(ch, arg) {
@@ -44,14 +47,13 @@
 		return false;
 		
 	    ch.act("{YЗадания в зонах{x\n{W%5s     %-40s %-20s{x", "Номер", "Задание", "Зона");
-	    ch.act(buf);
-	    ch.act("Используй команду '{lEquest info{lRквест инфо{lx номер{x' (или кратко '{lEq i{lRкв и{x номер'), чтобы увидеть детали задания.");
-	    ch.act("Для отмены задания служит команда '{lEq cancel{lRкв отмен{lx номер{x'. См. также справка {hhквесты{x.");
+	    ch.ptc(buf);
+	    ch.act("{WКоманды{x: '{lEquest{lRквест{lx {Dномер{x' для подробностей, '{lEq cancel{lRквест отмен{lx {Dномер{x' для отмены задания.\n");
 	    return true;
 	}
 
 	if (buf == "")
-	    ch.act("Ты не выполняешь задания с таким номером или именем.");
+	    ch.act("Ты не выполняешь задания под номером %s.", arg);
 	else
 	    ch.act(buf);
 	    
@@ -61,11 +63,12 @@
     if (.tmp.quest.numbers == null)
 	.tmp.quest.numbers = .Array();
 	
-    .tmp.quest.header = "[{Y%3d{w]     {y%-40s {x%-20s\n";
+    .tmp.quest.header = "[{w%3d{w]     {w%-40s {x%-20s\n";
     .tmp.quest.title1 = "{yЗадание {Y%d{x: {Y%s{x\n";
     .tmp.quest.title2 = "{yМестность{x: {Y%s{x\n\n";
     
-}, null, .List())
+})
+
 
 
 

@@ -1,0 +1,74 @@
+.apply(function() {
+
+    if (.tmp.quest.newinfo_array == null)
+	.tmp.quest.newinfo_array = .Array();
+	
+    if (.tmp.quest.cancel_array == null)
+	.tmp.quest.cancel_array = .Array();
+	
+    .tmp.quest.cancel = function(ch, arg) {
+	for (key in numbers.keys) {
+	    if (numbers[key] == arg) {
+		var func;
+		
+		func = cancel_array[key];
+		
+		if (func != null && func(ch, arg)) {
+		    ch.act("Задание под номером {Y%s{x успешно отменено.", arg);
+		} else if (func == null) {
+		    ch.act("Это задание невозможно отменить.");
+		} else {
+		    ch.act("Ты не выполняешь задания под номером %s.", arg);
+		    ch.act("Используй команду {y{hc{lRквест{lEquest{x для списка.");
+		}
+		return true;
+	    }
+	}
+	
+	ch.act("Такое задание не найдено.");
+	ch.act("Используй команду {y{hc{lRквест{lEquest{x для списка.");
+	return true;
+    };
+    
+    .tmp.quest.newinfo = function(ch, arg) {
+	var buf;
+
+	buf = "";
+	for (key in newinfo_array.keys) {
+	    var func;
+	    
+	    func = newinfo_array[key];
+	    if (func != null)
+		buf = buf + func(ch, arg);
+	}
+
+	if (arg == "") {
+	    if (buf == "")
+		return false;
+		
+	    ch.act("{YЗадания в зонах{x\n{W%5s     %-40s %-20s{x", "Номер", "Задание", "Зона");
+	    ch.ptc(buf);
+	    ch.act("{WКоманды{x: '{lEquest{lRквест{lx {Dномер{x' для подробностей, '{lEq cancel{lRквест отмен{lx {Dномер{x' для отмены задания.\n");
+	    return true;
+	}
+
+	if (buf == "")
+	    ch.act("Ты не выполняешь задания под номером %s.", arg);
+	else
+	    ch.act(buf);
+	    
+	return true;
+    };
+    
+    if (.tmp.quest.numbers == null)
+	.tmp.quest.numbers = .Array();
+	
+    .tmp.quest.header = "[{w%3d{w]     {w%-40s {x%-20s\n";
+    .tmp.quest.title1 = "{yЗадание {Y%d{x: {Y%s{x\n";
+    .tmp.quest.title2 = "{yМестность{x: {Y%s{x\n\n";
+    
+})
+
+
+
+

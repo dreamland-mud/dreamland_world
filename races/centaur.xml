@@ -2,38 +2,39 @@
 <Race type="DefaultPCRace">
   <align>good neutral</align>
   <classes>
-    <druid>-1</druid>
-    <necromancer>-1</necromancer>
-    <witch>100</witch>
     <ninja>100</ninja>
-    <universal>100</universal>
-    <warlock>100</warlock>
-    <vampire>-1</vampire>
-    <paladin>100</paladin>
-    <thief>100</thief>
     <cleric>100</cleric>
-    <warrior>100</warrior>
-    <anti-paladin>-1</anti-paladin>
+    <druid>-1</druid>
+    <warlock>100</warlock>
+    <thief>100</thief>
     <samurai>100</samurai>
+    <universal>100</universal>
+    <anti-paladin>-1</anti-paladin>
+    <witch>100</witch>
     <ranger>100</ranger>
+    <paladin>100</paladin>
+    <warrior>100</warrior>
+    <necromancer>-1</necromancer>
+    <vampire>-1</vampire>
   </classes>
-  <donates>centaur </donates>
+  <donates registry="race">centaur</donates>
   <form>edible animal centaur mammal</form>
-  <help keyword="CENTAUR КЕНТАВР КЕНТАВРА КЕНТАВРЫ" level="-1" type="RaceHelp">Кентавры - раса произошедшая от чрезмерной активной любви людей к лошадям 
-и, наоборот, лошадей к людям. Внешний вид: нижняя половина лошадиная - хвост,
-копыта, четыре ноги, верхняя - человеческая.
-Кентавры сильны физически, обладают горячей кровью. Хорошо переносят холод.
-Отсутствие высоких умственно-моральных качеств компенсируется выносливостью, 
-привлекательностью и крепкими копытами. К магии особого влечения не испытывают.
-Составляют серьезную конкуренцию сатирам в винораспитии и не только.
-Кентавры по природе доверчивы и бесхитростны, а потому становятся легкой
+  <help id="151" keyword="centaurs кентавр кентавра кентавры" level="-1" type="RaceHelp">Кентавры -- раса, произошедшая от чрезмерной активной любви людей к лошадям. 
+Или наоборот -- лошадей к людям.
+Внешний вид: нижняя половина -- лошадиная (хвост, копыта, четыре ноги), верхняя
+-- человеческая. Кентавры сильны физически и обладают горячей кровью. Хорошо
+переносят холода. Отсутствие высоких умственно-моральных качеств компенсируется
+выносливостью, привлекательностью и крепкими копытами. К магии особого влечения
+не испытывают. Составляют серьезную конкуренцию сатирам в винораспитии и других
+приятных излишествах.
+По природе кентавры доверчивы и бесхитростны, а потому становятся легкой
 жертвой для очаровывающих заклинаний. Боятся электрических разрядов (молний).
 
-Штаны и ботинки, предназначенные для двуногих рас, на кентавров разумеется
-не налезут, зато они могут носить подковы. В Аноне есть кузнец, Jolob, который
-не только изготовит подковы за (не)скромную плату в золоте, но и подкует (%H% [(smith,кузнец)]).
-Свойства подков зависят от уровня, поэтому имеет смысл периодически покупать новые.
-Хорошие попоны можно найти в арии Прерии.
+Штаны и ботинки, предназначенные для двуногих рас, на кентавров, разумеется,
+не налезут, зато они могут носить подковы. В городе Аноне ([City of Anon]) есть
+кузнец Jolob, который не только изготовит подковы за (не)скромную плату, но и
+подкует (%H% [(smith,кузнец)]). Свойства подков зависят от уровня, поэтому имеет
+смысл периодически покупать новые. Хорошие попоны можно найти в [Прерии].
 
 Кентавры обладают врожденной способностью наносить по два удара копытами
 (%H% [(double kick,двойной удар копытами)]). Умеют неожиданно и больно дать задним копытом по лбу тому,
@@ -62,5 +63,5 @@
     <con>3</con>
   </stats>
   <vuln>charm lightning</vuln>
-  <wearloc>finger_l second_wield neck_2 neck_1 finger_r wrist_r wrist_l body light shield head hands arms about waist wield hold float tattoo face horse hooves tat_arms tat_face tat_wrist_l tat_wrist_r tail</wearloc>
+  <wearloc registry="wearlocation">finger_l second_wield neck_2 neck_1 finger_r wrist_r wrist_l body light shield head hands arms about waist wield hold float tattoo face tat_arms tat_face tat_wrist_l tat_wrist_r horse hooves tail</wearloc>
 </Race>

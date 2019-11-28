@@ -3,26 +3,25 @@
   <align>good neutral evil</align>
   <description>Бог справедливости</description>
   <ethos>lawful neutral chaotic</ethos>
-  <nameRus>Гефест||а|у|а|ом|е</nameRus>
-  <shortDescr>Hephaestus</shortDescr>
-  <help type="ReligionHelp">
-Гефест - один из олимпийских богов, сын Зевса и Геры. Он почитается как бог
+  <help id="975" level="-1" type="ReligionHelp">Гефест - один из олимпийских богов, сын Зевса и Геры. Он почитается как бог
 огня, самый искусный кузнец, покровитель кузнечного ремесла и изобретений,
 и изготовитель молний Зевса. Могуч, широкоплеч, хромает на обе ноги и
 некрасив лицом.
 
-В бою татуировка Гефеста будет лечить тебя заклинаниями '{sEcure serious{sRлечить серьезные раны{x',
-а противников повергать в ошеломление заклинанием 'крик' ('scream'),
+В бою татуировка Гефеста будет лечить тебя заклинаниями &apos;{sEcure serious{sRлечить серьезные раны{x&apos;,
+а противников повергать в ошеломление заклинанием &apos;крик&apos; (&apos;scream&apos;),
 оглушая их и останавливая на время битву.
 
 {cЖертвоприношения{x: Гефест предпочитает волшебные предметы с заклинаниями
 группы лечения ран и заклинанием крика. Из напитков больше всего любит вина.
 </help>
   <likes>
-    <skills>scream</skills>
-    <skillGroups>healing</skillGroups>
     <items></items>
     <liquidFlags>wine</liquidFlags>
-    <liquids></liquids>
+    <skillGroups registry="skillGroup">healing</skillGroups>
+    <skills registry="skill">scream</skills>
   </likes>
+  <nameRus>Гефест||а|у|а|ом|е</nameRus>
+  <sex>male</sex>
+  <shortDescr>Hephaestus</shortDescr>
 </Religion>

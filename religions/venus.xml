@@ -3,26 +3,24 @@
   <align>good neutral evil</align>
   <description>Богиня красоты</description>
   <ethos>lawful neutral chaotic</ethos>
-  <nameRus>Венер|а|ы|е|у|ой|е</nameRus>
-  <shortDescr>Venus</shortDescr>
-  <help type="ReligionHelp">
-Венера принадлежит тому же пантеону, что и Марс. Почитается как богиня красоты,
+  <help id="985" level="-1" type="ReligionHelp">Венера принадлежит тому же пантеону, что и Марс. Почитается как богиня красоты,
 любви, желания, плодородия и процветания. Ее символы - голубь и заяц.
 
-В бою татуировка этой богини будет лечить твои раны ('{sEcure light{sRлечить легкие раны{x'),
-а также подарит благословение ('bless'). Противников же попытается заразить
-чумой ('plague').
+В бою татуировка этой богини будет лечить твои раны (&apos;{sEcure light{sRлечить легкие раны{x&apos;),
+а также подарит благословение (&apos;bless&apos;). Противников же попытается заразить
+чумой (&apos;plague&apos;).
 
 {cЖертвоприношения{x: Венера предпочитает волшебные предметы с заклинаниями
 группы лечения ран и проклятий, а также заклинанием благословения.
 Из напитков предпочитает вина.
 </help>
-  <sex>female</sex>
   <likes>
-    <skills>bless</skills>
-    <skillGroups>healing maladictions</skillGroups>
     <items></items>
     <liquidFlags>wine</liquidFlags>
-    <liquids></liquids>
+    <skillGroups registry="skillGroup">healing maladictions</skillGroups>
+    <skills registry="skill">bless</skills>
   </likes>
+  <nameRus>Венер|а|ы|е|у|ой|е</nameRus>
+  <sex>female</sex>
+  <shortDescr>Venus</shortDescr>
 </Religion>

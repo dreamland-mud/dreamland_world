@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Religion type="ErevanGod">
-  <align>evil good neutral</align>
-  <ethos>chaotic</ethos>
-  <races>elf dark-elf rockseer half-elf kender</races>
-  <classes>thief</classes>
+  <align>good neutral evil</align>
+  <classes registry="profession">thief</classes>
   <description>Покровитель хаотичных воров, кендеров и эльфов</description>
-  <nameRus>Эреван||а|у|а|ом|е Илесир</nameRus>
-  <shortDescr>Erevan Ilesere</shortDescr>
-  <help type="ReligionHelp">
-Эреван Илесир - божество обмана и коварства из эльфийского  пантеона Сельдарин,
+  <ethos>chaotic</ethos>
+  <help id="977" level="-1" type="ReligionHelp">Эреван Илесир - божество обмана и коварства из эльфийского  пантеона Сельдарин,
 основанного  Кореллоном.  В  нашем мире  он покровительствует  хаотичным ворам,
 кендерам, а так же расам эльфов, полу-эльфов, темных эльфов и роксиров.	  
 Это  полностью  непредсказуемое божество,  меняющее свой  внешний вид,  как ему
@@ -17,7 +13,7 @@
 одного дюйма до двух метров. Эреван  неизменно носит  как минимум  один зеленый
 предмет одежды. Символ Эревана - звезда с ассиметричными лучами. 
 
-В бою татуировка будет лечить тебя заклинаниями '{sEcure critical{sRлечить серьезные раны{x' и ускорять,
+В бою татуировка будет лечить тебя заклинаниями &apos;{sEcure critical{sRлечить серьезные раны{x&apos; и ускорять,
 а противников может обдать цветными брызгами (colour spray). Иногда Эреван
 Илесир неожиданно вселяется в тебя и исподтишка наносит удар твоему противнику.
 
@@ -25,10 +21,15 @@
 вещей. Из волшебных предметов предпочитает те, что содержат заклинания лечения
 и ускорения.
 </help>
-  <sex>male</sex>
   <likes>
-    <skills>haste</skills>
-    <skillGroups>healing</skillGroups>
-	<stolen>true</stolen>
+    <items></items>
+    <liquidFlags></liquidFlags>
+    <skillGroups registry="skillGroup">healing</skillGroups>
+    <skills registry="skill">haste</skills>
+    <stolen>true</stolen>
   </likes>
+  <nameRus>Эреван||а|у|а|ом|е Илесир</nameRus>
+  <races registry="race">kender dark-elf elf half-elf rockseer</races>
+  <sex>male</sex>
+  <shortDescr>Erevan Ilesere</shortDescr>
 </Religion>

@@ -3,24 +3,21 @@
   <align>evil</align>
   <description>Покровитель злых хаотичных персонажей</description>
   <ethos>chaotic</ethos>
-  <nameRus>Эхрумен||а|у|а|ом|е</nameRus>
-  <shortDescr>Ehrumen</shortDescr>
-  <help type="ReligionHelp">
-Злое полузабытое божество, Эхрумен покровительствует всему злому и хаотичному.
+  <help id="980" level="-1" type="ReligionHelp">Злое полузабытое божество, Эхрумен покровительствует всему злому и хаотичному.
 
-В бою татуировка этого божества будет лечить тебя заклинаниями '{sEcure serious{sRлечить серьезные раны{sx',
-а на противников насылать огонь демонов ('demonfire').
+В бою татуировка этого божества будет лечить тебя заклинаниями &apos;{sEcure serious{sRлечить серьезные раны{sx&apos;,
+а на противников насылать огонь демонов (&apos;demonfire&apos;).
 
 {cЖертвоприношения{x: Эхрумен предпочитает волшебные предметы с заклинаниями
 группы лечения ран и атакующими. Эхрумену нравится, когда ему в жертву приносят
 хорошее оружие. Обрадуется трупу не-злого существа.
 </help>
   <likes>
-    <skills>
-    </skills>
-    <skillGroups>healing attack</skillGroups>
-    <items>weapon</items>
+    <items>weapon recipe</items>
     <liquidFlags></liquidFlags>
-    <liquids></liquids>
+    <skillGroups registry="skillGroup">attack healing</skillGroups>
   </likes>
+  <nameRus>Эхрумен||а|у|а|ом|е</nameRus>
+  <sex>male</sex>
+  <shortDescr>Ehrumen</shortDescr>
 </Religion>

@@ -2,6 +2,7 @@
 <skill type="RaceAptitude">
   <beats>12</beats>
   <command type="SKILL(throwstone)">
+    <cat></cat>
     <extra>hidden</extra>
     <name>throwstone</name>
     <position>stand</position>
@@ -9,7 +10,7 @@
   <dammsg>камень</dammsg>
   <group>weaponsmaster</group>
   <hard>4</hard>
-  <help level="-1" type="SkillHelp">Хоббиты и гиганты метко швыряются камнями, но, конечно же, не так далеко как можно
+  <help id="875" level="-1" type="SkillHelp">Хоббиты и гиганты метко швыряются камнями, но, конечно же, не так далеко как можно
 выстрелить из лука. Подходящие для метания камни они умеют находить прямо
 под ногами. Для броска найденный камень надо зажать в руке.
 
@@ -25,16 +26,16 @@
   </mob>
   <nameRus>бросать камни</nameRus>
   <races>
-    <node name="hobbit">
-      <level>25</level>
-    </node>
-    <node name="frost giant">
+    <node name="cloud giant">
       <level>25</level>
     </node>
     <node name="fire giant">
       <level>25</level>
     </node>
-    <node name="cloud giant">
+    <node name="frost giant">
+      <level>25</level>
+    </node>
+    <node name="hobbit">
       <level>25</level>
     </node>
   </races>

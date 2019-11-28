@@ -3,17 +3,14 @@
   <align>neutral</align>
   <description>Бог грозы, покровитель хаотично-нейтральных персонажей</description>
   <ethos>chaotic</ethos>
-  <nameRus>Тешуб||а|у|а|ом|е</nameRus>
-  <shortDescr>Teshub</shortDescr>
-  <help type="ReligionHelp">
-Тешуб - бог грозы и глава своего собственного пантеона. Его священные
+  <help id="988" level="-1" type="ReligionHelp">Тешуб - бог грозы и глава своего собственного пантеона. Его священные
 животные - бык и корова, отчего Тешуба часто изображали в колеснице,
 запряженной быками, с пучком молний в руках.
 В нашем мире покровительствует хаотично-нейтральным персонажам.
 
 В бою татуировка Тешуба придаст твоим движениям особую быстроту (заклинание
-ускорение, haste) и окружит щитом ('shield'), а противников наградит слепотой
-('blindness') и ядом ('poison').
+ускорение, haste) и окружит щитом (&apos;shield&apos;), а противников наградит слепотой
+(&apos;blindness&apos;) и ядом (&apos;poison&apos;).
 
 {cЖертвоприношения{x: Тешуб предпочитает волшебные предметы с заклинаниями
 группы проклятий и заклинаний защиты, а также заклинанием ускорения. 
@@ -21,10 +18,12 @@
 приносят хорошее оружие. 
 </help>
   <likes>
-    <skills>haste</skills>
-    <skillGroups>maladictions protective</skillGroups>
-    <items>weapon</items>
+    <items>weapon recipe</items>
     <liquidFlags></liquidFlags>
-    <liquids></liquids>
+    <skillGroups registry="skillGroup">protective maladictions</skillGroups>
+    <skills registry="skill">haste</skills>
   </likes>
+  <nameRus>Тешуб||а|у|а|ом|е</nameRus>
+  <sex>male</sex>
+  <shortDescr>Teshub</shortDescr>
 </Religion>

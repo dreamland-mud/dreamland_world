@@ -3,23 +3,22 @@
   <align>good</align>
   <description>Покровитель хаотично-добрых персонажей</description>
   <ethos>chaotic</ethos>
-  <nameRus>Ахурамазд|а|ы|е|у|ой|е</nameRus>
-  <shortDescr>Ahuramazda</shortDescr>
-  <help type="ReligionHelp">
-Всеведующее верховное божество, которому поклонялись в древней Персии. 
+  <help id="982" level="-1" type="ReligionHelp">Всеведующее верховное божество, которому поклонялись в древней Персии. 
 Покровитель добрых, но хаотичных персонажей.
 
-В бою татуировка этого божества будет лечить тебя заклинаниями '{sEcure light{sRлечить легкие раны{x' и
-'{sEcure serious{sRлечить серьезные раны{x', а злых противников атаковать заклинанием '{sEdispel evil{sRизгнать зло{x'.
+В бою татуировка этого божества будет лечить тебя заклинаниями &apos;{sEcure light{sRлечить легкие раны{x&apos; и
+&apos;{sEcure serious{sRлечить серьезные раны{x&apos;, а злых противников атаковать заклинанием &apos;{sEdispel evil{sRизгнать зло{x&apos;.
 
 {cЖертвоприношения{x: Ахурамазда предпочитает волшебные предметы с заклинаниями
-'изгнать зло' и группы лечения ран. Обрадуется трупу не-доброго существа.
+&apos;изгнать зло&apos; и группы лечения ран. Обрадуется трупу не-доброго существа.
   </help>
   <likes>
-    <skills>'dispel evil'</skills>
-    <skillGroups>healing</skillGroups>
     <items></items>
     <liquidFlags></liquidFlags>
-    <liquids></liquids>
+    <skillGroups registry="skillGroup">healing</skillGroups>
+    <skills registry="skill">&apos;dispel evil&apos;</skills>
   </likes>
+  <nameRus>Ахурамазд|а|ы|е|у|ой|е</nameRus>
+  <sex>male</sex>
+  <shortDescr>Ahuramazda</shortDescr>
 </Religion>

@@ -3,10 +3,7 @@
   <align>good neutral evil</align>
   <description>Богиня кошек</description>
   <ethos>lawful neutral chaotic</ethos>
-  <nameRus>Баст</nameRus>
-  <shortDescr>Bast</shortDescr>
-  <help type="ReligionHelp">
-Баст - богиня радости, веселья, любви, женской красоты, плодородия, 
+  <help id="969" level="-1" type="ReligionHelp">Баст - богиня радости, веселья, любви, женской красоты, плодородия, 
 домашнего очага и кошек.
 
 Татуировка Баст защищает от огня и ускоряет носителя.
@@ -15,13 +12,15 @@
 и ускорения. Из напитков больше всего любит молоко. Баст нравится, когда ей в
 жертву приносят книги, свитки, учебники и книги заклинаний.
 </help>
-  <sex>female</sex>
   <likes>
-    <skills>haste</skills>
-    <skillGroups>protective</skillGroups>
-    <items>spellbook parchment textbook</items>
     <books>true</books>
+    <items>scroll staff furniture spellbook textbook parchment</items>
     <liquidFlags></liquidFlags>
-    <liquids>milk</liquids>
+    <liquids registry="liquid">milk</liquids>
+    <skillGroups registry="skillGroup">protective</skillGroups>
+    <skills registry="skill">haste</skills>
   </likes>
+  <nameRus>Баст</nameRus>
+  <sex>female</sex>
+  <shortDescr>Bast</shortDescr>
 </Religion>

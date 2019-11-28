@@ -3,25 +3,24 @@
   <align>good neutral evil</align>
   <description>Бог ярости</description>
   <ethos>lawful neutral chaotic</ethos>
-  <nameRus>Сет||а|у|а|ом|е</nameRus>
-  <shortDescr>Seth</shortDescr>
-  <help type="ReligionHelp">
-Сет - это бог ярости, песчаных бурь, разрушения, хаоса, войны и смерти.
+  <help id="967" level="-1" type="ReligionHelp">Сет - это бог ярости, песчаных бурь, разрушения, хаоса, войны и смерти.
 Поклонники Сета изображают его с головой осла, с длинными ушами, красной 
 гривой и красными глазами.
 
-Татуировка Сета накладывает на тебя заклинание cилы дракона ('dragon
-strength'), увеличивая твой урон, силу и точность. На противника же
-в бою извергнет дыхание дракона ('dragon breath').
+Татуировка Сета накладывает на тебя заклинание cилы дракона (&apos;dragon
+strength&apos;), увеличивая твой урон, силу и точность. На противника же
+в бою извергнет дыхание дракона (&apos;dragon breath&apos;).
 
 {cЖертвоприношения{x: Сет предпочитает волшебные предметы с заклинаниями
 группы драконьей магии, кожи дракона и силы дракона. 
 </help>
   <likes>
-    <skills>'dragon skin' 'dragon strength'</skills>
-    <skillGroups>draconian</skillGroups>
     <items></items>
     <liquidFlags></liquidFlags>
-    <liquids></liquids>
+    <skillGroups registry="skillGroup">draconian</skillGroups>
+    <skills registry="skill">&apos;dragon strength&apos; &apos;dragon skin&apos;</skills>
   </likes>
+  <nameRus>Сет||а|у|а|ом|е</nameRus>
+  <sex>male</sex>
+  <shortDescr>Seth</shortDescr>
 </Religion>

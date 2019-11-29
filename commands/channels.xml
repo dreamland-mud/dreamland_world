@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
+  <cat>comm</cat>
   <channels>
     <node type="WorldChannel">
+      <cat>comm</cat>
       <extra>keep_hide ghost</extra>
       <hint>выдать сообщение на весь мир</hint>
       <level>106</level>
@@ -13,9 +15,9 @@
       <position>dead</position>
       <positionOther>dead</positionOther>
       <trustSpeak>106</trustSpeak>
-      <cat>comm</cat>
     </node>
     <node type="PersonalChannel">
+      <cat>comm</cat>
       <extra>keep_hide ghost</extra>
       <hint>выдать сообщение лично кому-то</hint>
       <level>106</level>
@@ -28,9 +30,9 @@
       <position>dead</position>
       <positionOther>dead</positionOther>
       <trustSpeak>106</trustSpeak>
-      <cat>comm</cat>
     </node>
     <node type="RoomChannel">
+      <cat>comm</cat>
       <extra>keep_hide ghost</extra>
       <hint>выдать сообщения всем в комнате</hint>
       <level>104</level>
@@ -42,9 +44,9 @@
       <position>dead</position>
       <positionOther>dead</positionOther>
       <trustSpeak>104</trustSpeak>
-      <cat>comm</cat>
     </node>
     <node type="AreaChannel">
+      <cat>comm</cat>
       <extra>keep_hide ghost</extra>
       <hint>выдать сообщение всем в арии</hint>
       <level>106</level>
@@ -56,12 +58,12 @@
       <position>dead</position>
       <positionOther>dead</positionOther>
       <trustSpeak>106</trustSpeak>
-      <cat>comm</cat>
     </node>
     <node type="WorldChannel">
       <aliases>
         <node>:</node>
       </aliases>
+      <cat>comm</cat>
       <extra>keep_hide ghost</extra>
       <hint>общение с коллегами по облаку</hint>
       <ignore>true</ignore>
@@ -79,13 +81,13 @@
       </russian>
       <trustHear>102</trustHear>
       <trustSpeak>102</trustSpeak>
-      <cat>comm</cat>
     </node>
     <node type="WorldChannel">
       <aliases>
         <node>&quot;</node>
         <node>ctalk</node>
       </aliases>
+      <cat>comm</cat>
       <extra>keep_hide ghost</extra>
       <hint>общение с кодерами</hint>
       <level>110</level>
@@ -102,12 +104,12 @@
       </russian>
       <trustHear>110</trustHear>
       <trustSpeak>110</trustSpeak>
-      <cat>comm</cat>
     </node>
     <node type="SpeechChannel">
       <aliases>
         <node>&apos;</node>
       </aliases>
+      <cat>comm</cat>
       <deafen>true</deafen>
       <deafenOther>true</deafenOther>
       <dig>true</dig>
@@ -127,15 +129,16 @@
         <node>сказать</node>
       </russian>
       <translate>true</translate>
-      <cat>comm</cat>
     </node>
     <node type="WorldChannel">
+      <cat>comm</cat>
       <confirmed>true</confirmed>
       <extra>manacles</extra>
       <garble>true</garble>
       <help level="-1" refby="channels" type="CommandHelp">
       </help>
       <hint>громко прокричать на весь мир</hint>
+      <hook>true</hook>
       <ignore>true</ignore>
       <isolate>true</isolate>
       <msgOff>Канал gossip теперь выключен.</msgOff>
@@ -155,18 +158,18 @@
       </russian>
       <soap>true</soap>
       <translate>true</translate>
-      <hook>true</hook>
-      <cat>comm</cat>
     </node>
     <node type="WorldChannel">
       <aliases>
         <node>.</node>
       </aliases>
+      <cat>comm</cat>
       <extra>manacles important</extra>
       <garble>true</garble>
       <help level="-1" refby="channels" type="CommandHelp">
       </help>
       <hint>болтать о чем-то на весь мир</hint>
+      <hook>true</hook>
       <ignore>true</ignore>
       <isolate>true</isolate>
       <msgOff>Канал InChar теперь выключен.</msgOff>
@@ -187,12 +190,12 @@
       </russian>
       <soap>true</soap>
       <translate>true</translate>
-      <hook>true</hook>
-      <cat>comm</cat>
     </node>
     <node type="WorldChannel">
-      <extra>hidden keep_hide ghost</extra>
+      <cat>comm</cat>
+      <extra>keep_hide ghost hidden</extra>
       <hint>сюда боги сообщают о божественных заданиях</hint>
+      <hook>true</hook>
       <msgOther>{Y[{cQuest Info{Y]{x &apos;{G%2$s{x&apos;</msgOther>
       <msgSelf>{Y[{cQuest Info{Y]{x &apos;{G%2$s{x&apos;</msgSelf>
       <name>qinfo</name>
@@ -205,14 +208,14 @@
         <node>квестканал</node>
       </russian>
       <trustSpeak>102</trustSpeak>
-      <hook>true</hook>
-      <cat>comm</cat>
     </node>
     <node type="WorldChannel">
+      <cat>comm</cat>
       <extra>keep_hide ghost</extra>
       <help level="-1" refby="channels" type="CommandHelp">
       </help>
       <hint>поздравить кого-то на весь мир</hint>
+      <hook>true</hook>
       <ignore>true</ignore>
       <isolate>true</isolate>
       <msgOther>%1$^C1 поздравляет &apos;{M%2$s{x&apos;</msgOther>
@@ -228,14 +231,14 @@
       </russian>
       <soap>true</soap>
       <translate>true</translate>
-      <hook>true</hook>
-      <cat>comm</cat>
     </node>
     <node type="WorldChannel">
+      <cat>comm</cat>
       <extra>keep_hide ghost</extra>
       <help level="-1" refby="channels" type="CommandHelp">
       </help>
       <hint>спеть песню на весь мир</hint>
+      <hook>true</hook>
       <ignore>true</ignore>
       <isolate>true</isolate>
       <msgOther>%1$#^C1 {CП{MО{GЕ{RТ{x:&apos;{c%2$s{x&apos;</msgOther>
@@ -244,6 +247,7 @@
       <nochannel>true</nochannel>
       <nomob>true</nomob>
       <off>nomusic</off>
+      <ooc>true</ooc>
       <position>rest</position>
       <positionOther>sleep</positionOther>
       <quiet>true</quiet>
@@ -253,11 +257,9 @@
       </russian>
       <soap>true</soap>
       <translate>true</translate>
-      <ooc>true</ooc>
-      <hook>true</hook>
-      <cat>comm</cat>
     </node>
     <node type="AreaChannel">
+      <cat>comm</cat>
       <deafen>true</deafen>
       <deafenOther>true</deafenOther>
       <dig>true</dig>
@@ -281,14 +283,14 @@
       </russian>
       <soap>true</soap>
       <translate>true</translate>
-      <cat>comm</cat>
     </node>
     <node type="WorldChannel">
       <aliases>
         <node>appeal</node>
       </aliases>
+      <cat>comm</cat>
       <extra>keep_hide ghost manacles</extra>
-      <help level="-1" type="CommandHelp">Эта команда используется для посылки сообщения Бессмертным, которые 
+      <help id="1060" level="-1" type="CommandHelp">Эта команда используется для посылки сообщения Бессмертным, которые 
 находятся в мире в данный момент времени. Если тебе необходимо поговорить
 с конкретным Богом, впиши его имя в сообщение, ты можешь даже просто 
 воззвать к нему по имени.
@@ -312,15 +314,15 @@
         <node>воззвать</node>
       </russian>
       <trustHear>102</trustHear>
-      <cat>comm</cat>
     </node>
     <node type="EmoteChannel">
       <aliases>
         <node>,</node>
       </aliases>
+      <cat>comm</cat>
       <extra>ghost nanny</extra>
       <garble>true</garble>
-      <help level="-1" type="CommandHelp">%FMT%  *%CMD%* _строка_
+      <help id="1061" level="-1" type="CommandHelp">%FMT%  *%CMD%* _строка_
 Используется для выражение эмоций или действий. Запятая *,* - синоним этой команды.
 Указанная строка отобразится всем окружающим, как действие, выполненное твоим
 персонажем. 
@@ -338,14 +340,14 @@
       <russian>
         <node>эмоция</node>
       </russian>
-      <cat>comm</cat>
     </node>
     <node type="RaceChannel">
       <aliases>
         <node>racetalk</node>
       </aliases>
+      <cat>comm</cat>
       <extra>keep_hide ghost manacles</extra>
-      <help level="-1" type="CommandHelp">Канал *(rtalk,расговорить)* предназначен для общения с представителями своей расы.
+      <help id="1062" level="-1" type="CommandHelp">Канал *(rtalk,расговорить)* предназначен для общения с представителями своей расы.
 Его слышат только ваши соплеменники и Боги.
       </help>
       <hint>общение с собратьями по расе</hint>
@@ -367,9 +369,9 @@
       </russian>
       <soap>true</soap>
       <translate>true</translate>
-      <cat>comm</cat>
     </node>
     <node type="TellChannel">
+      <cat>comm</cat>
       <deafen>true</deafen>
       <extra>keep_hide ghost manacles important</extra>
       <help level="-1" refby="channels" type="CommandHelp">
@@ -387,13 +389,13 @@
       <russian>
         <node>говорить</node>
       </russian>
-      <cat>comm</cat>
     </node>
     <node type="PageChannel">
       <aliases>
         <node>orb</node>
       </aliases>
-      <extra>hidden keep_hide ghost</extra>
+      <cat>comm</cat>
+      <extra>keep_hide ghost hidden</extra>
       <help level="-1" refby="channels" type="CommandHelp">
       </help>
       <hint>отправить сообщение через хрустальный шар</hint>
@@ -419,9 +421,9 @@
         <node>шар</node>
       </russian>
       <soap>true</soap>
-      <cat>comm</cat>
     </node>
     <node type="ReplyChannel">
+      <cat>comm</cat>
       <deafen>true</deafen>
       <extra>keep_hide ghost manacles</extra>
       <help level="-1" refby="channels" type="CommandHelp">
@@ -440,17 +442,18 @@
         <node>вответ</node>
         <node>реплика</node>
       </russian>
-      <cat>comm</cat>
     </node>
     <node type="WorldChannel">
+      <cat>comm</cat>
       <extra>keep_hide manacles</extra>
-      <help level="-1" type="CommandHelp">Большинство каналов предназначено только для разговоров от имени
+      <help id="1063" level="-1" type="CommandHelp">Большинство каналов предназначено только для разговоров от имени
 персонажа. Если необходимо сказать что-то вне своей роли или обсудить
 рл (real life), используйте канал *(ooc,трепаться)*. Именно здесь надо обсуждать
 лаги, пинги, проблемы со связью и прочие не относящиеся к миру вещи.
 Избегайте посылать сообщения в неправильный канал.
        </help>
       <hint>треп вне своей роли, от имени игрока</hint>
+      <hook>true</hook>
       <ignore>true</ignore>
       <isolate>true</isolate>
       <msgOther>{Y[{Rooc{Y]{W %1$#^C1{x : &apos;{C%2$s{x&apos;</msgOther>
@@ -461,6 +464,7 @@
       <nochannel>true</nochannel>
       <nomob>true</nomob>
       <off>noooc</off>
+      <ooc>true</ooc>
       <position>dead</position>
       <positionOther>dead</positionOther>
       <quiet>true</quiet>
@@ -471,13 +475,10 @@
         <node>оос</node>
       </russian>
       <soap>true</soap>
-      <hook>true</hook>
-      <ooc>true</ooc>
-      <cat>comm</cat>
     </node>
   </channels>
   <extra>keep_hide ghost afk</extra>
-  <help keyword="communication общение" level="-1" ref="gossip grats ic music page reply say tell yell" type="CommandHelp" labels="comm">Команда *(channels,каналы)* показывает список всех доступных каналов и их состояние
+  <help id="1059" keyword="communication общение" labels="comm" level="-1" ref="gossip grats ic music page reply say tell yell" type="CommandHelp">Команда *(channels,каналы)* показывает список всех доступных каналов и их состояние
 (ВКЛ/ВЫКЛ). Также отображается режим глухоты (deaf) и тишины (quiet).
 
 Разновидности каналов:
@@ -522,5 +523,4 @@
   <russian>
     <node>каналы</node>
   </russian>
-  <cat>comm</cat>
 </Command>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
   <cat>config</cat>
-  <extra>important keep_hide ghost afk nanny</extra>
+  <extra>keep_hide ghost afk nanny important</extra>
   <groups>
     <node>
       <node type="ConfigElement">
@@ -9,91 +9,104 @@
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="plr_flags">autoassist</bit>
-        <extra>hidden keep_hide ghost afk </extra>
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden</extra>
+        <help level="-1" refby="autolist" type="CommandHelp">
+        </help>
         <hint>вступать в бой при нападении на группу</hint>
         <msgOff>Ты не будешь вступать в бой при нападении на твою группу.</msgOff>
         <msgOn>Ты будешь вступать в бой при нападении на твою группу.</msgOn>
         <name>autoassist</name>
         <position>dead</position>
         <rname>автопомощь</rname>
-	<help type="CommandHelp" refby="autolist"></help>
       </node>
       <node type="ConfigElement">
         <autocmd>true</autocmd>
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="plr_flags">autogold</bit>
-        <extra>hidden keep_hide ghost afk </extra>
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden</extra>
+        <help level="-1" refby="autolist" type="CommandHelp">
+        </help>
         <hint>забирать деньги из трупов</hint>
         <msgOff>Ты не будешь автоматически забирать деньги из трупов.</msgOff>
         <msgOn>Ты будешь автоматически забирать деньги из трупов.</msgOn>
         <name>autogold</name>
         <position>dead</position>
         <rname>автомонеты</rname>
-	<help type="CommandHelp" refby="autolist"></help>
       </node>
       <node type="ConfigElement">
         <autocmd>true</autocmd>
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="plr_flags">autoloot</bit>
-        <extra>hidden keep_hide ghost afk </extra>
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden</extra>
+        <help level="-1" refby="autolist" type="CommandHelp">
+        </help>
         <hint>забирать вещи из трупов</hint>
         <msgOff>Ты не будешь автоматически забирать все вещи из трупа врага.</msgOff>
         <msgOn>Ты будешь автоматически забирать все вещи из трупа врага.</msgOn>
         <name>autoloot</name>
         <position>dead</position>
         <rname>автограбеж</rname>
-	<help type="CommandHelp" refby="autolist"></help>
       </node>
       <node type="ConfigElement">
         <autocmd>true</autocmd>
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="add_comm_flags">autolook</bit>
-        <extra>hidden keep_hide ghost afk </extra>
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden</extra>
+        <help level="-1" refby="autolist" type="CommandHelp">
+        </help>
         <hint>заглядывать в труп после убийства</hint>
         <msgOff>Ты не будешь заглядывать в труп после убийства.</msgOff>
         <msgOn>Ты будешь заглядывать в труп после убийства.</msgOn>
         <name>autolook</name>
         <position>dead</position>
         <rname>автовзгляд</rname>
-	<help type="CommandHelp" refby="autolist"></help>
       </node>
       <node type="ConfigElement">
         <autocmd>true</autocmd>
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="plr_flags">autosac</bit>
-        <extra>hidden keep_hide ghost afk </extra>
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden</extra>
+        <help level="-1" refby="autolist" type="CommandHelp">
+        </help>
         <hint>приносить трупы в жертву после убийства</hint>
         <msgOff>Ты не будешь приносить в жертву труп после убийства.</msgOff>
         <msgOn>Ты будешь приносить в жертву труп после убийства.</msgOn>
         <name>autosac</name>
         <position>dead</position>
         <rname>автожертва</rname>
-	<help type="CommandHelp" refby="autolist"></help>
       </node>
       <node type="ConfigElement">
         <autocmd>true</autocmd>
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="plr_flags">autosplit</bit>
-        <extra>hidden keep_hide ghost afk </extra>
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden</extra>
+        <help level="-1" refby="autolist" type="CommandHelp">
+        </help>
         <hint>делиться с группой деньгами из трупов</hint>
         <msgOff>Ты не будешь делить деньги из трупа врага между членами своей группы.</msgOff>
         <msgOn>Ты будешь делить деньги из трупа врага между членами своей группы.</msgOn>
         <name>autosplit</name>
         <position>dead</position>
         <rname>автодележ</rname>
-	<help type="CommandHelp" refby="autolist"></help>
       </node>
       <node type="ConfigElement">
         <autocmd>false</autocmd>
         <autolist>false</autolist>
         <autotext>false</autotext>
         <bit table="config_flags">fightspam</bit>
-        <extra>hidden keep_hide ghost afk</extra>
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden</extra>
         <hint>показывать ли боевые автоумения</hint>
         <msgOff>Ты не видишь парирований, уверток и т.п.</msgOff>
         <msgOn>Тебе отображаются парирования, увертки и т.п.</msgOn>
@@ -106,7 +119,8 @@
         <autolist>false</autolist>
         <autotext>false</autotext>
         <bit table="config_flags">skillspam</bit>
-        <extra>hidden keep_hide ghost afk</extra>
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden</extra>
         <hint>показывать ли промахи умений</hint>
         <msgOff>Ты не видишь промахи умений.</msgOff>
         <msgOn>Тебе отображаются промахи умений.</msgOn>
@@ -119,7 +133,8 @@
         <autolist>false</autolist>
         <autotext>false</autotext>
         <bit table="config_flags">weaponspam</bit>
-        <extra>hidden keep_hide ghost afk</extra>
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden</extra>
         <hint>не показывать действия эффектов оружия(flaming, frost, ...)</hint>
         <msgOff>Ты видишь все действия эффектов на оружии.</msgOff>
         <msgOn>Ты не видишь действия эффектов на оружии.</msgOn>
@@ -132,7 +147,8 @@
         <autolist>false</autolist>
         <autotext>false</autotext>
         <bit table="config_flags">newdamage</bit>
-        <extra>hidden keep_hide ghost afk</extra>
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden</extra>
         <hint>альтернативная система отображения повреждений</hint>
         <msgOff>Ты используешь обычную систему отображение повреждений.</msgOff>
         <msgOn>Ты используешь новую систему отображения повреждений.</msgOn>
@@ -148,7 +164,8 @@
         <autolist>true</autolist>
         <autotext>true</autotext>
         <bit table="add_comm_flags">nocancel</bit>
-        <extra>hidden keep_hide ghost afk </extra>
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden</extra>
         <hint>запрет не-соклановикам применять {lRзаклинание отмена{lEcancellation{lx</hint>
         <msgOff>Заклинание &apos;{lRотмена{lEcancellation{lx&apos; на тебя смогут применить все.</msgOff>
         <msgOn>Заклинание &apos;{lRотмена{lEcancellation{lx&apos; на тебя смогут применить только соклановцы.</msgOn>
@@ -161,7 +178,8 @@
         <autolist>true</autolist>
         <autotext>true</autotext>
         <bit table="plr_flags">nofollow</bit>
-        <extra>hidden keep_hide ghost afk</extra>
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden</extra>
         <hint>запретить следовать за собой</hint>
         <msgOff>Ты разрешаешь следовать за собой.</msgOff>
         <msgOn>Ты запрещаешь следовать за собой.</msgOn>
@@ -174,7 +192,8 @@
         <autolist>true</autolist>
         <autotext>true</autotext>
         <bit table="plr_flags">nosummon</bit>
-        <extra>hidden keep_hide ghost afk </extra>
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden</extra>
         <hint>запретить не-соклановикам призывать вне ПК</hint>
         <msgOff>Тебя сможет призвать кто угодно.</msgOff>
         <msgOn>Вне твоего ПК тебя смогут призвать только соклановики.</msgOn>
@@ -190,7 +209,8 @@
         <autolist>true</autolist>
         <autotext>true</autotext>
         <bit table="plr_flags">holylight</bit>
-        <extra>hidden keep_hide ghost afk</extra>
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden</extra>
         <hint>божественный взор</hint>
         <level>102</level>
         <msgOff>Божественный взор выключен.</msgOff>
@@ -204,7 +224,8 @@
         <autolist>false</autolist>
         <autotext>false</autotext>
         <bit table="comm_flags">show_affects</bit>
-        <extra>hidden keep_hide ghost afk</extra>
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden</extra>
         <hint>показывать аффекты по команде {lRсчет{lEscore{lx</hint>
         <msgOff>Аффекты не видны по команде {lRсчет{lEscore{lx.</msgOff>
         <msgOn>Аффекты видны по команде {lRсчет{lEscore{lx.</msgOn>
@@ -217,43 +238,41 @@
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="plr_flags">autoexit</bit>
-        <extra>hidden keep_hide ghost afk</extra>
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden</extra>
+        <help level="-1" refby="autolist" type="CommandHelp">
+        </help>
         <hint>отображать выходы из комнаты</hint>
         <msgOff>Выходы не отображаются автоматически.</msgOff>
         <msgOn>Выходы отображаются автоматически.</msgOn>
         <name>autoexit</name>
         <position>dead</position>
         <rname>автовыходы</rname>
-	<help type="CommandHelp" refby="autolist"></help>
       </node>
       <node type="ConfigElement">
         <autocmd>true</autocmd>
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="add_comm_flags">autostore</bit>
-        <extra>hidden keep_hide ghost afk </extra>
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden</extra>
+        <help level="-1" refby="afk autolist" type="CommandHelp">
+        </help>
         <hint>во время боя сохранять сообщения в буфер</hint>
         <msgOff>Сообщения, поступившие во время сражения, отображаются сразу же.</msgOff>
         <msgOn>Сообщения, поступившие во время сражения, сохраняются в буфере.</msgOn>
         <name>autostore</name>
         <position>dead</position>
         <rname>автобуфер</rname>
-	<help type="CommandHelp" refby="afk autolist"></help>
       </node>
       <node type="ConfigElement">
         <autocmd>true</autocmd>
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="comm_flags">brief</bit>
-        <extra>hidden keep_hide ghost afk </extra>
-        <hint>видеть сокращенное описание комнаты</hint>
-        <msgOff>Описание комнаты отображается в полном виде.</msgOff>
-        <msgOn>Описание комнаты отображается в сокращенном виде.</msgOn>
-        <name>brief</name>
-        <position>dead</position>
-        <rname>кратко</rname>
-	<help type="CommandHelp" ref="compact">
-Эти команды устанавливают опции отображения.
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden</extra>
+        <help id="1088" level="-1" ref="compact" type="CommandHelp">Эти команды устанавливают опции отображения.
 
 %FMT%  *(config,режим)* *(brief,кратко)* *%YES%*|*%NO%*
 Включает и выключает вывод описаний комнат при движении, намного уменьшая
@@ -264,6 +283,12 @@
 
 %SA% %H% [(config,режим)], [(autolist,автонастройки)]
 	</help>
+        <hint>видеть сокращенное описание комнаты</hint>
+        <msgOff>Описание комнаты отображается в полном виде.</msgOff>
+        <msgOn>Описание комнаты отображается в сокращенном виде.</msgOn>
+        <name>brief</name>
+        <position>dead</position>
+        <rname>кратко</rname>
       </node>
       <node type="ConfigElement">
         <aliases>
@@ -274,7 +299,8 @@
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="plr_flags">color</bit>
-        <extra>hidden keep_hide ghost afk nanny</extra>
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden nanny</extra>
         <hint>использование цветов</hint>
         <msgOff>Цвет выключен.</msgOff>
         <msgOn>{BC{Ro{Yl{Co{Mu{Gr{x is now {RON{x, Way Cool!</msgOn>
@@ -287,7 +313,8 @@
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="comm_flags">combine</bit>
-        <extra>hidden keep_hide ghost afk </extra>
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden</extra>
         <hint>комбинировать одинаковые вещи в списке</hint>
         <msgOff>Одинаковые вещи в списке предметов не группируются вместе.</msgOff>
         <msgOn>Одинаковые вещи в списке предметов группируются вместе.</msgOn>
@@ -300,21 +327,24 @@
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="comm_flags">compact</bit>
-        <extra>hidden keep_hide ghost afk nanny</extra>
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden nanny</extra>
+        <help level="-1" refby="brief" type="CommandHelp">
+        </help>
         <hint>не выводить дополнительных строк</hint>
         <msgOff>Перед строкой подсказки будет выводиться дополнительная строка.</msgOff>
         <msgOn>Перед строкой подсказки не будет выводиться дополнительная строка.</msgOn>
         <name>compact</name>
         <position>dead</position>
         <rname>компактно</rname>
-	<help type="CommandHelp" refby="brief"></help>
       </node>
       <node type="ConfigElement">
         <autocmd>false</autocmd>
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="comm_flags">prompt</bit>
-        <extra>hidden keep_hide ghost afk</extra>
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden</extra>
         <hint>выводить подсказку с параметрами персонажа</hint>
         <msgOff>Вывод подсказки (prompt) отключен.</msgOff>
         <msgOn>Подсказка (prompt) выводится.</msgOn>
@@ -327,7 +357,8 @@
         <autolist>false</autolist>
         <autotext>false</autotext>
         <bit table="config_flags">runames</bit>
-        <extra>hidden keep_hide ghost afk nanny</extra>
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden nanny</extra>
         <hint>показывать имена игроков в русском варианте</hint>
         <msgOff>Имена игроков показываются по-английски.</msgOff>
         <msgOn>Имена игроков показываются по-русски.</msgOn>
@@ -340,7 +371,8 @@
         <autolist>false</autolist>
         <autotext>false</autotext>
         <bit table="config_flags">rucommands</bit>
-        <extra>hidden keep_hide ghost afk nanny</extra>
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden nanny</extra>
         <hint>показывать команды в русском варианте</hint>
         <msgOff>Команды показываются по-английски.</msgOff>
         <msgOn>Команды показываются по-русски.</msgOn>
@@ -353,7 +385,8 @@
         <autolist>false</autolist>
         <autotext>false</autotext>
         <bit table="config_flags">ruskills</bit>
-        <extra>hidden keep_hide ghost afk nanny</extra>
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden nanny</extra>
         <hint>показывать умения в русском варианте</hint>
         <msgOff>Умения показываются по-английски.</msgOff>
         <msgOn>Умения показываются по-русски.</msgOn>
@@ -366,7 +399,8 @@
         <autolist>false</autolist>
         <autotext>false</autotext>
         <bit table="config_flags">ruexits</bit>
-        <extra>hidden keep_hide ghost afk nanny</extra>
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden nanny</extra>
         <hint>показывать выходы в русском варианте</hint>
         <msgOff>Выходы показываются по-английски.</msgOff>
         <msgOn>Выходы показываются по-русски.</msgOn>
@@ -379,7 +413,8 @@
         <autolist>false</autolist>
         <autotext>false</autotext>
         <bit table="config_flags">short_objflag</bit>
-        <extra>hidden keep_hide ghost afk </extra>
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden</extra>
         <hint>показывать флаги на предметах в сокращенной форме</hint>
         <msgOff>Флаги на предметах отображаются в развернутом виде.</msgOff>
         <msgOn>Флаги на предметах отображаются в сокращенном виде.</msgOn>
@@ -392,7 +427,8 @@
         <autolist>false</autolist>
         <autotext>true</autotext>
         <bit table="comm_flags">mildcolor</bit>
-        <extra>hidden keep_hide ghost afk nanny</extra>
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden nanny</extra>
         <hint>использовать альтернативную (&apos;мягкую&apos;) цветовую схему</hint>
         <msgOff>Ты используешь стандартную (яркую) цветовую схему.</msgOff>
         <msgOn>Ты используешь &apos;мягкую&apos; цветовую схему.</msgOn>
@@ -405,7 +441,8 @@
         <autolist>false</autolist>
         <autotext>true</autotext>
         <bit table="config_flags">objname_hint</bit>
-        <extra>hidden keep_hide ghost afk nanny</extra>
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden nanny</extra>
         <hint>показывать английское название предмета</hint>
         <msgOff>У предметов не будут показываться английские названия.</msgOff>
         <msgOn>Английские названия для предметов включены.</msgOn>
@@ -418,15 +455,9 @@
         <autolist>false</autolist>
         <autotext>true</autotext>
         <bit table="config_flags">screenreader</bit>
-        <extra>hidden keep_hide ghost afk nanny</extra>
-        <hint>режим поддержки screen reader</hint>
-        <msgOff>Режим поддержки screen reader выключен.</msgOff>
-        <msgOn>Режим поддержки screen reader включен.</msgOn>
-        <name>screenreader</name>
-        <position>dead</position>
-        <rname>скринридер</rname>
-        <help type="CommandHelp">
-%FMT%  *(config,режим)* *(screenreader,скринридер)* *%YES%*|*%NO%*
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden nanny</extra>
+        <help id="1089" level="-1" type="CommandHelp">%FMT%  *(config,режим)* *(screenreader,скринридер)* *%YES%*|*%NO%*
 
 Включает поддержку screen readers. На данный момент в этом режиме:
 %A% не будут отображаться английские имена в скобках у предметов, лежащих на земле
@@ -435,6 +466,12 @@
 Также рекомендуется выключить английские подсказки имен предметов: *(config,режим)* *(objname,имяпредмета)* *%NO%*.
 %SA% %H% [(score,счет)]
         </help>
+        <hint>режим поддержки screen reader</hint>
+        <msgOff>Режим поддержки screen reader выключен.</msgOff>
+        <msgOn>Режим поддержки screen reader включен.</msgOn>
+        <name>screenreader</name>
+        <position>dead</position>
+        <rname>скринридер</rname>
       </node>
       <name>Настройки отображения:</name>
     </node>
@@ -444,7 +481,8 @@
         <autolist>false</autolist>
         <autotext>false</autotext>
         <bit table="config_flags">autoafk</bit>
-        <extra>hidden keep_hide ghost afk</extra>
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden</extra>
         <hint>автоматическое {lRВОК{lEAFK{lx после 10 минут бездействия</hint>
         <msgOff>Ты не будешь уходить в {lRВОК{lEAFK{lx после 10 минут бездействия.</msgOff>
         <msgOn>Ты будешь уходить в {lRВОК{lEAFK{lx после 10 минут бездействия.</msgOn>
@@ -457,15 +495,9 @@
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="add_comm_flags">noiac</bit>
-        <extra>hidden keep_hide ghost afk nanny</extra>
-        <hint>не заменять IAC на большое YA при выводе текста</hint>
-        <msgOff>IAC-и будут заменяться другой буквой (YA в кодировке cp1251).</msgOff>
-        <msgOn>Тебе будет пересылаться немодифицированный текст.</msgOn>
-        <name>noiac</name>
-        <position>dead</position>
-        <rname>noiac</rname>
-        <help type="CommandHelp" ref="notelnet telnetga">
-Настройка отображения символов в зависимости от используемого терминала.
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden nanny</extra>
+        <help id="1090" level="-1" ref="notelnet telnetga" type="CommandHelp">Настройка отображения символов в зависимости от используемого терминала.
 
 %FMT%  *(config,режим)* *noiac* *%YES%*|*%NO%*
 
@@ -482,8 +514,8 @@
 Если ты набираешь одну русскую букву YA, а видишь две, выключи этот режим
 командой *(config notelnet no,режим notelnet нет)*.
 
-При игре под клиентом zMUD, чтобы нормально видеть русскую букву "YA",
-оба переключателя необходимо установить в состояние "ВЫКЛ."
+При игре под клиентом zMUD, чтобы нормально видеть русскую букву &quot;YA&quot;,
+оба переключателя необходимо установить в состояние &quot;ВЫКЛ.&quot;
 
 %FMT%  *(config,режим)* *telnetga* *%YES%*|*%NO%*
 
@@ -493,48 +525,49 @@
 notelnet во ВКЛ.
 
 </help>
+        <hint>не заменять IAC на большое YA при выводе текста</hint>
+        <msgOff>IAC-и будут заменяться другой буквой (YA в кодировке cp1251).</msgOff>
+        <msgOn>Тебе будет пересылаться немодифицированный текст.</msgOn>
+        <name>noiac</name>
+        <position>dead</position>
+        <rname>noiac</rname>
       </node>
       <node type="ConfigElement">
         <autocmd>true</autocmd>
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="add_comm_flags">notelnet</bit>
-        <extra>hidden keep_hide ghost afk nanny</extra>
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden nanny</extra>
+        <help level="-1" refby="noiac" type="CommandHelp">
+        </help>
         <hint>отключить фильтр TELNET на приходящий текст</hint>
         <msgOff>Фильтр TELNET включен.</msgOff>
         <msgOn>Фильтр TELNET отключен.</msgOn>
         <name>notelnet</name>
         <position>dead</position>
         <rname>notelnet</rname>
-        <help type="CommandHelp" refby="noiac"></help>
       </node>
       <node type="ConfigElement">
         <autocmd>false</autocmd>
         <autolist>true</autolist>
         <autotext>false</autotext>
         <bit table="comm_flags">telnet_ga</bit>
-        <extra>hidden keep_hide ghost afk nanny</extra>
+        <cat></cat>
+        <extra>keep_hide ghost afk hidden nanny</extra>
+        <help level="-1" refby="noiac" type="CommandHelp">
+        </help>
         <hint>посылать последовательность TELNET GA после строки состояния</hint>
         <msgOff>Отправка TELNET GA отключена.</msgOff>
         <msgOn>Отправка TELNET GA включена.</msgOn>
         <name>telnetga</name>
         <position>dead</position>
         <rname>telnetga</rname>
-        <help type="CommandHelp" refby="noiac"></help>
       </node>
       <name>Настройки соединения:</name>
     </node>
   </groups>
-  <name>config</name>
-  <position>dead</position>
-  <russian>
-    <node>режим</node>
-    <node>настройки</node>
-    <node>конфиг</node>
-  </russian>
-  <hint>список всех настроек</hint>
-  <help type="CommandHelp">
-%FMT%  *%CMD%*
+  <help id="1087" level="-1" type="CommandHelp">%FMT%  *%CMD%*
 Показывает список всех текущих настроек.
 
 %FMT%  *%CMD%* _опция_
@@ -545,4 +578,12 @@ notelnet во ВКЛ.
 
 %SA% %H% [(autolist,автонастройки)], [(brief,кратко)], [noiac], [notelnet]
 </help>
+  <hint>список всех настроек</hint>
+  <name>config</name>
+  <position>dead</position>
+  <russian>
+    <node>режим</node>
+    <node>настройки</node>
+    <node>конфиг</node>
+  </russian>
 </Command>

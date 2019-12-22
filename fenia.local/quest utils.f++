@@ -1,0 +1,87 @@
+initqu = function() {
+    /*
+     * Increment player's victory counter for a quest.
+     * Same as .tmp.quest.rememberVictory but with different arguments
+     * (doesn't require Quest structure).
+     */
+    .tmp.quest.addVictory = function(ch, label) {
+	var q;
+	
+	if (.tmp.quest.victories == null)
+	    .tmp.quest.victories = .Array();
+   
+	if (.tmp.quest.victories[label] == null)
+	    .tmp.quest.victories[label] = .Array();
+
+	q = .tmp.quest.victories[label];
+	if (q[ch.name] == null) {
+	    q[ch.name] = .Map();
+	    q[ch.name].wins = 0;
+	}
+	
+	q[ch.name].wins = q[ch.name].wins + 1;
+	.tmp.quest.wiznet(label, ch.name + " completes for the " + q[ch.name].wins + " time.");
+    };
+    
+    /*
+     * Prints a summary of all victory labels, player names and counts.
+     */
+    .tmp.quest.reportVictories = function(ch) {
+	.tmp.quest.victories.keys.forEach(function(ch) {
+	    var q;
+	    
+	    ch.act("{Y" + this + "{x");
+	    q = .tmp.quest.victories[this];
+	    q.keys.forEach(function(q, ch) {
+		if (q[this].wins > 0)
+		    ch.act("    {y%-15s: %d", this, q[this].wins);
+	    }, q, ch);
+	    ch.act("");
+	}, ch);
+    };
+    
+    /*
+     * Returns player victory count for the quest.
+     */
+    .tmp.quest.getVictory = function(ch, label) {
+	var q;
+	
+	if (.tmp.quest.victories == null)
+	    return 0;
+	if (.tmp.quest.victories[label] == null)
+	    return 0;
+	    
+	q = .tmp.quest.victories[label];
+	if (q[ch.name] == null)
+	    return 0;
+	    
+	return q[ch.name].wins;
+    };
+    
+    /*
+     * Sleeps for required number of seconds and interrupts if 
+     * questor and player are no longer in the same room or alive.
+     */
+    .tmp.quest.sleep = function(seconds, mob, ch) {
+	.scheduler.sleep(seconds * 4);
+	if (mob.dead || ch.dead)
+	    throw "sleep: someone is dead";
+	if (mob.in_room != ch.in_room)
+	    throw "sleep: ch left the room";
+    };
+    
+    /*
+     * Sleeps for required number of seconds and interrupts if
+     * player is no longer alive or left the room.
+     */
+    .tmp.quest.sleepRoom = function(seconds, ch) {
+	var room;
+	
+	room = ch.in_room;
+	.scheduler.sleep(seconds * 4);
+	if (ch.dead)
+	    throw "sleep: ch is dead";
+	if (room != ch.in_room)
+	    throw "sleep: ch left the room";
+    };
+}

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<behavior type="DefaultQuestMaster">
+  <services>
+    <node type="ObjectQuestArticle">
+      <vnum>102</vnum>
+      <name>orb</name>
+      <rname>шар</rname>
+      <descr>Хрустальный шар</descr>
+      <price type="QuestPointPrice">
+        <questpoint>50</questpoint>
+      </price>
+    </node>
+    <node type="PiercingQuestArticle">
+      <name>piercing</name>
+      <rname>пирсинг</rname>
+      <descr>Прокалывание ушей</descr>
+      <price type="QuestPointPrice">
+        <questpoint>50</questpoint>
+      </price>
+    </node>
+    <node type="ObjectQuestArticle">
+      <vnum>108</vnum>
+      <name>colourless</name>
+      <rname>бесцветный рестринг</rname>
+      <descr>Рестринг купон</descr>
+      <price type="QuestPointPrice">
+        <questpoint>50</questpoint>
+      </price>
+    </node>
+    <node type="ObjectQuestArticle">
+      <vnum>106</vnum>
+      <name>coupon</name>
+      <rname>цветной рестринг</rname>
+      <descr>{YР{Bе{Gс{Rт{Cр{Mи{Bн{Cг{x {rк{yу{gп{bо{mн{x</descr>
+      <price type="QuestPointPrice">
+        <questpoint>200</questpoint>
+      </price>
+    </node>
+    <node type="TattooQuestArticle">
+      <name>mark</name>
+      <rname>знак</rname>
+      <descr>Знак твоей религии</descr>
+      <price type="QuestPointPrice">
+        <questpoint>200</questpoint>
+      </price>
+    </node>
+    <node type="ConQuestArticle">
+      <name>constitution</name>
+      <rname>сложение</rname>
+      <descr>+1 сложение</descr>
+      <price type="QuestPointPrice">
+        <questpoint>150</questpoint>
+      </price>
+    </node>
+    <node type="PersonalQuestArticle">
+      <vnum>95</vnum>
+      <name>ring</name>
+      <rname>кольцо</rname>
+      <descr>Кольцо Героя</descr>
+      <price type="QuestPointPrice">
+        <questpoint>1000</questpoint>
+      </price>
+      <gender table="sex_table">neutral</gender>
+      <troubled>true</troubled>
+    </node>
+    <node type="PersonalQuestArticle">
+      <vnum>96</vnum>
+      <name>weapon</name>
+      <rname>оружие</rname>
+      <descr>Оружие Героя</descr>
+      <price type="QuestPointPrice">
+        <questpoint>1000</questpoint>
+      </price>
+      <gender table="sex_table">neutral</gender>
+      <troubled>true</troubled>
+    </node>
+    <node type="PersonalQuestArticle">
+      <vnum>94</vnum>
+      <name>girth</name>
+      <rname>пояс</rname>
+      <descr>Пояс Героя</descr>
+      <price type="QuestPointPrice">
+        <questpoint>1000</questpoint>
+      </price>
+      <gender table="sex_table">male</gender>
+      <troubled>true</troubled>
+    </node>
+    <node type="KeyringQuestArticle">
+      <name>keyring</name>
+      <rname>брелок</rname>
+      <descr>Прикрепить брелок для ключей к Поясу Героя</descr>
+      <price type="QuestPointPrice">
+        <questpoint>200</questpoint>
+      </price>
+    </node>
+    <node type="PersonalQuestArticle">
+      <vnum>103</vnum>
+      <name>bag</name>
+      <rname>сумка</rname>
+      <descr>Дорожная сумка Героя</descr>
+      <price type="QuestPointPrice">
+        <questpoint>500</questpoint>
+      </price>
+      <gender table="sex_table">female</gender>
+      <troubled>false</troubled>
+    </node>
+    <node type="PocketsQuestArticle">
+      <name>pockets</name>
+      <rname>карманы</rname>
+      <descr>Нашить карманы на Сумку Героя</descr>
+      <price type="QuestPointPrice">
+        <questpoint>50</questpoint>
+      </price>
+    </node>
+    <node type="OwnerQuestArticle">
+      <vnum>109</vnum>
+      <name>owner</name>
+      <rname>талон</rname>
+      <descr>Талон на единоличное владение вещью</descr>
+      <price type="QuestPointPrice">
+        <questpoint>1000</questpoint>
+      </price>
+      <lifePrice>
+        <victories>500</victories>
+        <lifes>1</lifes>
+      </lifePrice>
+    </node>
+    <node type="GoldQuestArticle">
+      <amount>5000</amount>
+      <name>gold</name>
+      <rname>золото</rname>
+      <descr>5000 золотых монет</descr>
+      <price type="QuestPointPrice">
+        <questpoint>1000</questpoint>
+      </price>
+    </node>
+  </services>
+</behavior>
+

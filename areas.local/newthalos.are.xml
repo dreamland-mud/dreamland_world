@@ -15,6 +15,13 @@
     <vnumHigh>9801</vnumHigh>
     <vnumLow>9500</vnumLow>
   </areadata>
+  <helps>
+    <node id="1838" keyword="'NEW THALOS' 'НОВЫЙ ТАЛОС'" level="1">Новый Талос -- процветающий молодой город на востоке от {hh1392Мидгаарда{x, населенный
+беженцами из {hh1446Старого Талоса{x. Городом правит мудрый султан, и под его
+руководством в Новом Талосе процветает торговля и ремесла.
+Советуем посетить местный базар!
+</node>
+  </helps>
   <mobiles>
     <node name="9500">
       <ac bash="-15" exotic="-15" pierce="-15" slash="-15"/>
@@ -38,7 +45,7 @@
       <material>0</material>
       <off add="dodge fast trip"/>
       <player_name>mage guildmaster мастер гильдии маг</player_name>
-      <practicer registry="skillGroup">none detection creation harmful weather</practicer>
+      <practicer registry="skillGroup">none detection harmful creation weather</practicer>
       <race>human</race>
       <sex>male</sex>
       <short_descr>мастер||а|у|а|ом|е гильдии</short_descr>
@@ -71,7 +78,7 @@
       <material>0</material>
       <off add="disarm dodge fade kick parry"/>
       <player_name>cleric guildmaster мастер гильдии</player_name>
-      <practicer registry="skillGroup">none detection creation harmful weather</practicer>
+      <practicer registry="skillGroup">none detection harmful creation weather</practicer>
       <race>human</race>
       <sex>male</sex>
       <short_descr>мастер||а|у|а|ом|е гильдии</short_descr>
@@ -100,7 +107,7 @@
       <material>0</material>
       <off add="area_attack bash disarm dodge fast kick parry"/>
       <player_name>warrior guildmaster мастер гильдии</player_name>
-      <practicer registry="skillGroup">none detection creation harmful weather</practicer>
+      <practicer registry="skillGroup">none detection harmful creation weather</practicer>
       <race>human</race>
       <sex>male</sex>
       <short_descr>мастер||а|у|а|ом|е гильдии</short_descr>
@@ -139,7 +146,7 @@
       <material>0</material>
       <off add="backstab disarm dodge fast kick_dirt parry trip"/>
       <player_name>thief guildmaster мастер гильдии</player_name>
-      <practicer registry="skillGroup">none detection creation harmful weather</practicer>
+      <practicer registry="skillGroup">none detection harmful creation weather</practicer>
       <race>elf</race>
       <sex>male</sex>
       <short_descr>мастер||а|у|а|ом|е гильдии</short_descr>
@@ -668,17 +675,20 @@
       <dam_type>none</dam_type>
       <damage>6d4+11</damage>
       <default_pos>stand</default_pos>
+      <description>Статуя высечена из серого песчаника и изображает мужчину с безмятежно закрытыми
+глазами. У подножия статуи копошится множество толстых жуков.
+</description>
       <hit>10d10+1300</hit>
       <level>35</level>
-      <long_descr>Статуя (statue) Нати стоит здесь.
+      <long_descr>Статуя (statue) НоФейт стоит здесь.
 </long_descr>
       <mana>35d9+100</mana>
       <material>0</material>
       <off add="disarm kick parry assist_vnum"/>
-      <player_name>statue статуя</player_name>
+      <player_name>statue nofate статуя нофейт</player_name>
       <race>unique</race>
       <sex>female</sex>
-      <short_descr>стату|я|и|е|ю|ей|е Нати</short_descr>
+      <short_descr>стату|я|и|е|ю|ей|е НоФейт</short_descr>
       <size>huge</size>
       <start_pos>stand</start_pos>
       <wealth>1150</wealth>
@@ -690,21 +700,22 @@
       <dam_type>none</dam_type>
       <damage>2d12+9</damage>
       <default_pos>stand</default_pos>
-      <description>Аландер запечатлен произносящим заклинание огненной молнии вниз
-на какую-то беззащитную жертву. Он одет в мантию мага, но все же
-вооружен мечем, вырезанным в блестящем камне его статуи.
+      <description>Статуя сделана из небрежно склееных между собой осколков бутылочного стекла и
+изображает в дупель пьяного сатира с внушительным... эээ... хвостом.
+Хвост натерт до блеска суеверными жителями города и туристами, загадывающими
+у статуи желания.
 </description>
       <hit>6d12+928</hit>
       <level>31</level>
-      <long_descr>Статуя (statue) Аландера стоит здесь.
+      <long_descr>Статуя (statue) Бастиана стоит здесь.
 </long_descr>
       <mana>31d9+100</mana>
       <material>0</material>
       <off add="disarm kick parry assist_vnum"/>
-      <player_name>statue статуя</player_name>
+      <player_name>statue bastian статуя бастиан</player_name>
       <race>unique</race>
       <sex>male</sex>
-      <short_descr>стату|я|и|е|ю|ей|е Аландера</short_descr>
+      <short_descr>стату|я|и|е|ю|ей|е Бастиана</short_descr>
       <size>huge</size>
       <start_pos>stand</start_pos>
       <wealth>1150</wealth>
@@ -716,20 +727,22 @@
       <dam_type>none</dam_type>
       <damage>2d12+9</damage>
       <default_pos>stand</default_pos>
-      <description>Статуя коренастого, выглядящего злым гнома с сигаретой во рту.
+      <description>Статуя сделана из универсального пластика и изображает карлика с сумасшедшим
+взглядом. В руках у карлика малярная кисть, а пьедестал испещрен странными
+орнаментами, напоминающими ветвящиеся деревья символов и иероглифов.
 </description>
       <hit>6d12+928</hit>
       <level>31</level>
-      <long_descr>Статуя (statue) Зампа стоит здесь.
+      <long_descr>Статуя (statue) Дворкина стоит здесь.
 </long_descr>
       <mana>31d9+100</mana>
       <material>0</material>
       <off add="disarm kick parry assist_vnum"/>
-      <player_name>statue статуя</player_name>
+      <player_name>statue dwarkin статуя дворкин</player_name>
       <race>unique</race>
       <sex>male</sex>
-      <short_descr>стату|я|и|е|ю|ей|е Зампа</short_descr>
-      <size>huge</size>
+      <short_descr>стату|я|и|е|ю|ей|е Дворкина</short_descr>
+      <size>small</size>
       <start_pos>stand</start_pos>
       <wealth>1150</wealth>
     </node>
@@ -740,20 +753,21 @@
       <dam_type>none</dam_type>
       <damage>2d12+9</damage>
       <default_pos>stand</default_pos>
-      <description>Высокий темный камень образует эту статую. Всмотревшись в нее подольше
-тебе кажется, что она хихикает.
+      <description>Статуя высечена из ослепительно-белого мрамора и изображает могучего короля
+древности. Мрамор статут отполирован и так ярко отражает свет, что на нее
+больно смотреть.
 </description>
       <hit>6d12+928</hit>
       <level>31</level>
-      <long_descr>Статуя (statue) НочнойТени стоит здесь.
+      <long_descr>Статуя (statue) Разера стоит здесь.
 </long_descr>
       <mana>31d9+100</mana>
       <material>0</material>
       <off add="disarm kick parry assist_vnum"/>
-      <player_name>statue статуя</player_name>
+      <player_name>statue razer статуя разер</player_name>
       <race>unique</race>
       <sex>male</sex>
-      <short_descr>стату|я|и|е|ю|ей|е НочнойТени</short_descr>
+      <short_descr>стату|я|и|е|ю|ей|е Разера</short_descr>
       <size>huge</size>
       <start_pos>stand</start_pos>
       <wealth>1190</wealth>
@@ -765,20 +779,22 @@
       <dam_type>none</dam_type>
       <damage>2d12+9</damage>
       <default_pos>stand</default_pos>
-      <description>Сатин маленькая эльфийская женщина в одежде мага, открыто улыбается
-и ее глаза задорно блестят. С опаской ты отступаешь.
+      <description>Статуя отлита из чистого золота и изображает молодого юношу-следопыта.
+Он склонился над землей, будто внимательно изучая что-то недоступное твоему
+глазу. У подножия статуи растеклась обширная желтая лужа -- похоже, все псы
+Нового Талоса облюбовали ее в качестве своего чат-форума.
 </description>
       <hit>6d12+928</hit>
       <level>31</level>
-      <long_descr>Статуя (statue) Сатин стоит здесь.
+      <long_descr>Статуя (statue) Алланона стоит здесь.
 </long_descr>
       <mana>31d9+100</mana>
       <material>0</material>
       <off add="disarm kick parry assist_vnum"/>
-      <player_name>statue статуя</player_name>
+      <player_name>statue allanon статуя алланон</player_name>
       <race>unique</race>
       <sex>female</sex>
-      <short_descr>стату|я|и|е|ю|ей|е Сатин</short_descr>
+      <short_descr>стату|я|и|е|ю|ей|е Алланона</short_descr>
       <size>huge</size>
       <start_pos>stand</start_pos>
       <wealth>1150</wealth>
@@ -790,20 +806,20 @@
       <dam_type>none</dam_type>
       <damage>2d12+9</damage>
       <default_pos>stand</default_pos>
-      <description>Статуя изображает Леди Гор в простой одежде. Ее гладкое улыбающееся 
-лицо обрамлено длинными локонами волос. 
+      <description>Статуя из кроваво-красного гематита изображает могучего воина с двумя
+скрещенными клинками. У ног воина высечен тигр, хромающий на переднюю лапу.
 </description>
       <hit>6d12+928</hit>
       <level>31</level>
-      <long_descr>Статуя (statue) Шандры стоит здесь.
+      <long_descr>Статуя (statue) Турлока стоит здесь.
 </long_descr>
       <mana>31d9+100</mana>
       <material>0</material>
       <off add="disarm kick parry assist_vnum"/>
-      <player_name>statue статуя</player_name>
+      <player_name>statue turlok статуя турлок</player_name>
       <race>unique</race>
       <sex>female</sex>
-      <short_descr>стату|я|и|е|ю|ей|е Шандры</short_descr>
+      <short_descr>стату|я|и|е|ю|ей|е Турлока</short_descr>
       <size>huge</size>
       <start_pos>stand</start_pos>
       <wealth>1150</wealth>
@@ -815,19 +831,22 @@
       <dam_type>none</dam_type>
       <damage>6d4+10</damage>
       <default_pos>stand</default_pos>
-      <description>Статуя Фурия.
+      <description>Статуя искусно сплетена из виноградной лозы, каким-то чудом сохраняющей жизнь
+на протяжении столетий. Она изображает прекрасную, веселую и немного грустную
+сатиршу с высоким бюстом и низкой самооценкой. У ног статуи лежит маленький
+кентавреныш с венком из одуванчиков на голове.
 </description>
       <hit>10d10+1200</hit>
       <level>34</level>
-      <long_descr>Статуя (statue) Фурия стоит здесь.
+      <long_descr>Статуя (statue) Кради стоит здесь.
 </long_descr>
       <mana>34d9+100</mana>
       <material>0</material>
       <off add="disarm kick parry assist_vnum"/>
-      <player_name>statue статуя</player_name>
+      <player_name>statue cradya статуя крадя</player_name>
       <race>unique</race>
       <sex>male</sex>
-      <short_descr>стату|я|и|е|ю|ей|е Фурия</short_descr>
+      <short_descr>стату|я|и|е|ю|ей|е Кради</short_descr>
       <size>huge</size>
       <start_pos>stand</start_pos>
       <wealth>3250</wealth>
@@ -839,20 +858,20 @@
       <dam_type>none</dam_type>
       <damage>6d4+11</damage>
       <default_pos>stand</default_pos>
-      <description>Ландру вырезан из мерцающего хеманита, и улыбка кажется мерцает на
-его лице. Пара игральных костей лежит в одной из его рук.
+      <description>Статуя в виде огромного темно-серого дракона вырезана из дымчатого камня.
+Он поглощает свет, а вокруг статуи лежит густая тень.
 </description>
       <hit>10d10+1300</hit>
       <level>35</level>
-      <long_descr>Статуя (statue) Ландру стоит здесь.
+      <long_descr>Статуя (statue) Тайфоэн стоит здесь.
 </long_descr>
       <mana>35d9+100</mana>
       <material>0</material>
       <off add="disarm kick parry assist_vnum"/>
-      <player_name>statue статуя</player_name>
+      <player_name>statue taiphoen статуя тайфоэн</player_name>
       <race>unique</race>
       <sex>male</sex>
-      <short_descr>стату|я|и|е|ю|ей|е Ландру</short_descr>
+      <short_descr>стату|я|и|е|ю|ей|е Тайфоэн</short_descr>
       <size>huge</size>
       <start_pos>stand</start_pos>
       <wealth>3250</wealth>
@@ -1158,16 +1177,16 @@
       <detection add="invis"/>
       <hit>5d10+500</hit>
       <level>25</level>
-      <long_descr>Райстлин (Raistlin) молодой волшебник стоит здесь.
+      <long_descr>Рейстлин (Reistlyn), будущий князь Тьмы и лейтенант Захватчиков, стоит здесь.
 </long_descr>
       <mana>25d9+100</mana>
       <material>0</material>
       <off add="dodge assist_vnum"/>
       <parts del="hands feet fingers ear eye"/>
-      <player_name>raistlin райстлин</player_name>
+      <player_name>reistlyn рейстлин</player_name>
       <race>human</race>
       <sex>male</sex>
-      <short_descr>Райстлин||а|у|а|ом|е</short_descr>
+      <short_descr>Рейстлин||а|у|а|ом|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
       <wealth>615</wealth>
@@ -1543,26 +1562,30 @@
     <node name="9555">
       <ac bash="-10" exotic="4" pierce="-10" slash="-10"/>
       <act add="npc sentinel cleric mage warrior noalign outdoors"/>
-      <aff add="sanctuary pass_door"/>
       <alignment>1000</alignment>
       <dam_type>none</dam_type>
       <damage>4d6+9</damage>
       <default_pos>rest</default_pos>
-      <description>Перед тобой всезнающий бог.
+      <description>Ты видишь пожилого человека в широком походном одеянии дервиша, странствующего
+мудреца. У него высокая шапка и солидная окладистая борода, в подражание своему
+богу и повелителю, Ахурамазде. 
+Пророк предрекает наступление Фрашкарда -- Судного Дня, уничтожение всего
+зла... да и всего сущего, заодно.
 </description>
       <detection add="invis"/>
       <hit>10d10+1000</hit>
       <level>32</level>
-      <long_descr>БОГ (god) - здесь.
+      <long_descr>Пророк (prophet) Ахурамазды оглашенно вопит, предрекая конец света.
 </long_descr>
       <mana>32d9+100</mana>
       <material>0</material>
       <off add="disarm kick parry assist_vnum"/>
       <parts del="hands feet fingers ear eye"/>
-      <player_name>god бог</player_name>
+      <player_name>prophet doomsday ahuramazda пророк ахурамазда последних дней</player_name>
       <race>human</race>
+      <religion registry="religion">ahuramazda</religion>
       <sex>either</sex>
-      <short_descr>БОГ||а|у|а|ом|е</short_descr>
+      <short_descr>пророк||а|у|а|ом|е Ахурамазды и Судного Дня</short_descr>
       <size>large</size>
       <start_pos>rest</start_pos>
       <wealth>1400</wealth>
@@ -2702,142 +2725,7 @@
       <ac bash="-970" exotic="-970" pierce="-970" slash="-970"/>
       <act add="npc sentinel stay_area warrior nopurge notrack"/>
       <aff add="sanctuary infrared haste"/>
-      <behavior type="QuestMaster">
-        <services>
-          <node type="ObjectQuestArticle">
-            <vnum>102</vnum>
-            <name>orb</name>
-            <rname>шар</rname>
-            <descr>Хрустальный шар</descr>
-            <price type="QuestPointPrice">
-              <questpoint>50</questpoint>
-            </price>
-          </node>
-          <node type="PiercingQuestArticle">
-            <name>piercing</name>
-            <rname>пирсинг</rname>
-            <descr>Прокалывание ушей</descr>
-            <price type="QuestPointPrice">
-              <questpoint>50</questpoint>
-            </price>
-          </node>
-          <node type="ObjectQuestArticle">
-            <vnum>108</vnum>
-            <name>colourless</name>
-            <rname>бесцветный рестринг</rname>
-            <descr>Рестринг купон</descr>
-            <price type="QuestPointPrice">
-              <questpoint>50</questpoint>
-            </price>
-          </node>
-          <node type="ObjectQuestArticle">
-            <vnum>106</vnum>
-            <name>coupon</name>
-            <rname>цветной рестринг</rname>
-            <descr>{YР{Bе{Gс{Rт{Cр{Mи{Bн{Cг{x {rк{yу{gп{bо{mн{x</descr>
-            <price type="QuestPointPrice">
-              <questpoint>200</questpoint>
-            </price>
-          </node>
-          <node type="TattooQuestArticle">
-            <name>tattoo</name>
-            <rname>татуировка</rname>
-            <descr>Татуировка твоей религии</descr>
-            <price type="QuestPointPrice">
-              <questpoint>200</questpoint>
-            </price>
-          </node>
-          <node type="ConQuestArticle">
-            <name>constitution</name>
-            <rname>сложение</rname>
-            <descr>+1 сложение</descr>
-            <price type="QuestPointPrice">
-              <questpoint>150</questpoint>
-            </price>
-          </node>
-          <node type="PersonalQuestArticle">
-            <vnum>95</vnum>
-            <name>ring</name>
-            <rname>кольцо</rname>
-            <descr>Кольцо Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>1000</questpoint>
-            </price>
-            <gender table="sex_table">neutral</gender>
-            <troubled>true</troubled>
-          </node>
-          <node type="PersonalQuestArticle">
-            <vnum>96</vnum>
-            <name>weapon</name>
-            <rname>оружие</rname>
-            <descr>Оружие Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>1000</questpoint>
-            </price>
-            <gender table="sex_table">neutral</gender>
-            <troubled>true</troubled>
-          </node>
-          <node type="PersonalQuestArticle">
-            <vnum>94</vnum>
-            <name>girth</name>
-            <rname>пояс</rname>
-            <descr>Пояс Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>1000</questpoint>
-            </price>
-            <gender table="sex_table">male</gender>
-            <troubled>true</troubled>
-          </node>
-          <node type="KeyringQuestArticle">
-            <name>keyring</name>
-            <rname>брелок</rname>
-            <descr>Прикрепить брелок для ключей к Поясу Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>200</questpoint>
-            </price>
-          </node>
-          <node type="PersonalQuestArticle">
-            <vnum>103</vnum>
-            <name>bag</name>
-            <rname>сумка</rname>
-            <descr>Дорожная сумка Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>500</questpoint>
-            </price>
-            <gender table="sex_table">female</gender>
-            <troubled>false</troubled>
-          </node>
-          <node type="PocketsQuestArticle">
-            <name>pockets</name>
-            <rname>карманы</rname>
-            <descr>Нашить карманы на Сумку Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>50</questpoint>
-            </price>
-          </node>
-          <node type="OwnerQuestArticle">
-            <vnum>109</vnum>
-            <name>owner</name>
-            <rname>талон</rname>
-            <descr>Талон на единоличное владение вещью</descr>
-            <price type="QuestPointPrice">
-              <questpoint>1000</questpoint>
-            </price>
-            <lifePrice>
-              <victories>500</victories>
-              <lifes>1</lifes>
-            </lifePrice>
-          </node>
-          <node type="GoldQuestArticle">
-            <amount>5000</amount>
-            <name>gold</name>
-            <rname>золото</rname>
-            <descr>5000 золотых монет</descr>
-            <price type="QuestPointPrice">
-              <questpoint>1000</questpoint>
-            </price>
-          </node>
-        </services>
+      <behavior type="DefaultQuestMaster">
       </behavior>
       <dam_type>magic</dam_type>
       <damage>18d18+85</damage>
@@ -4322,7 +4210,7 @@
         <rotGround>1</rotGround>
         <rotInv>1</rotInv>
       </type>
-      <wear_flags>take hold</wear_flags>
+      <wear_flags>take</wear_flags>
       <weight>30</weight>
     </node>
     <node name="9592">
@@ -4351,7 +4239,7 @@
         <rotGround>1</rotGround>
         <rotInv>1</rotInv>
       </type>
-      <wear_flags>take hold</wear_flags>
+      <wear_flags>take</wear_flags>
       <weight>30</weight>
     </node>
     <node name="9594">
@@ -5118,7 +5006,7 @@
 покупая все что ты только можешь себе  представить.  Может  и  тебе  стоит
 заглянуть в одну из лавок разбросанных по рыночку Нового Талоса.
 
-{YБольшаЯ, имеющая очень странный вид статуя (statue) стоит в центре площади.{x
+{YБольшая, имеющая очень странный вид статуя (statue) стоит в центре площади{x.
 </description>
       <exits>
         <node name="east">
@@ -5147,6 +5035,7 @@
         <mob limit="1" maxHere="1" vnum="9540"/>
         <drop vnum="9601"/>
         <mob limit="1" maxHere="1" vnum="3075"/>
+        <mob limit="1" maxHere="1" vnum="9555"/>
       </resets>
       <sector>inside</sector>
     </node>
@@ -7354,8 +7243,7 @@ drafting table.
     <node name="9605">
       <description>Ты у храмового алтаря в северной части Храма Нового Талоса. Огромный
 алтарь из черного отполированного оникса находится перед тобой. За алтарем
-находится двенадцати футовая статуя (statue) Локи, величайшего бога всех 
-земель.
+находится четырехметровая статуя (statue) NoFate, бога равновесия и порядка.
 </description>
       <exits>
         <node name="south">
@@ -7363,8 +7251,10 @@ drafting table.
         </node>
       </exits>
       <extraDescr>
-        <node keyword="statue">Ты смотришь вверх на огромную статую Локи спокойно взирающего 
-на свои земли. Выглядит он вполне довольным.
+        <node keyword="statue">Ты смотришь вверх на огромную статую NoFate, спокойно взирающего 
+на свои земли. Выглядит он вполне довольным. На его лице написано безмятежное
+спокойствие демиурга, создающего ткань реальности, вне зависимости от пожеланий
+ее обитателей.
 </node>
       </extraDescr>
       <flags>no_mob indoors law</flags>
@@ -7478,9 +7368,11 @@ drafting table.
       <sector>inside</sector>
     </node>
     <node name="9611">
-      <description>Четыре больших каменных статуи размещены в музее. Они созданы жителями
-Нового Талоса, как свидетельтво почитания святых, которые, как они верят,
-сохранили их жизни.
+      <description>Четыре больших статуи размещены в музее. Они созданы жителями Нового Талоса как
+свидетельство почитания богов и богинь, покровителей Восьми Путей.
+У входа ты замечаешь два пустых постамента -- здесь когда-то стояли статуи
+Верховных Богов, Лео и Варды, но их передали в дар жителям Мидгаарда по
+программе культурного обмена.
 </description>
       <exits>
         <node name="south">
@@ -7491,7 +7383,7 @@ drafting table.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>В Музее Величайших Богов</name>
+      <name>В Музее Богов Мира Мечты</name>
       <resets>
         <mob limit="14" maxHere="1" vnum="9592"/>
         <mob limit="1" maxHere="1" vnum="9524"/>
@@ -7634,7 +7526,7 @@ BUY   : Купить у Веры овощи.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>В Музее Величайших Богов</name>
+      <name>В Музее Богов Мира Мечты</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="9523"/>
         <mob limit="1" maxHere="1" vnum="9522"/>
@@ -7666,7 +7558,7 @@ BUY   : Купить у Веры овощи.
         </node>
       </exits>
       <flags>indoors law nosummon</flags>
-      <guilds>warlock witch necromancer vampire</guilds>
+      <guilds>necromancer vampire witch warlock</guilds>
       <name>В Основании Башни</name>
       <sector>inside</sector>
     </node>
@@ -7685,7 +7577,7 @@ BUY   : Купить у Веры овощи.
         </node>
       </exits>
       <flags>law nosummon</flags>
-      <guilds>warlock witch necromancer vampire</guilds>
+      <guilds>necromancer vampire witch warlock</guilds>
       <name>Во Внутреннем Дворе Магов</name>
       <sector>inside</sector>
     </node>
@@ -8472,7 +8364,7 @@ BUY   : купить товар у кузнеца по справедливой 
         </node>
       </exits>
       <flags>indoors law nosummon</flags>
-      <guilds>warlock witch necromancer vampire</guilds>
+      <guilds>necromancer vampire witch warlock</guilds>
       <name>В Лаборатории Мага</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="9500"/>
@@ -10611,10 +10503,9 @@ euphoria as you freefall the 200 + feet to your death.
       <sector>mountain</sector>
     </node>
     <node name="9781">
-      <description>You stand on an open expanse of grass extending in all directions. To
-the south of you stand the might northern gates of New Thalos. East
-and west of you the grassy fields continue and north, in the distance,
-you see a line of trees.
+      <description>Ты стоишь на бескрайней травяной равнине, простирающейся во все стороны.
+На юге ты видишь мощные северные ворота Нового Талоса. 
+Далеко на севере ты замечаешь ряд деревьев.
 </description>
       <exits>
         <node name="north">
@@ -10628,9 +10519,9 @@ you see a line of trees.
       <sector>field</sector>
     </node>
     <node name="9782">
-      <description>You stand on an open field of grass. The forest to the north is
-closer but still a good distance away. To the south a small dirt
-path has been trodden into the ground heading towards New Thalos.
+      <description>Ты стоишь на бескрайней травяной равнине, простирающейся во все стороны.
+Ты уже можешь разглядеть лес на севере.
+Небольшая тропа ведет на юг, в сторону Нового Талоса.
 </description>
       <exits>
         <node name="north">
@@ -10644,9 +10535,8 @@ path has been trodden into the ground heading towards New Thalos.
       <sector>field</sector>
     </node>
     <node name="9783">
-      <description>You stand at the edge of a huge forest. The line of trees
-continues as far as the eye can see to the east and west. A large
-expanse of grass spreads out to the south.
+      <description>Ты стоишь на опушке огромного леса. Стена деревьев простирается на запад и
+восток покуда хватает глаз. На юге простирается большая травяная равнина.
 </description>
       <exits>
         <node name="north">

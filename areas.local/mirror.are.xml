@@ -16,13 +16,23 @@
     <vnumLow>5300</vnumLow>
   </areadata>
   <helps>
-    <node keyword="'OLD MIDGAARD' 'OLD THALOS' 'СТАРЫЙ МИДГААРД' 'СТАРЫЙ ТАЛОС'" level="0">Где-то в священной роще друидов нарушилась ткань бытия и открылся портал в
+    <node id="1446" keyword="'OLD MIDGAARD' 'OLD THALOS' 'СТАРЫЙ МИДГААРД' 'СТАРЫЙ ТАЛОС'" level="0">Где-то в священной роще друидов нарушилась ткань бытия и открылся портал в
 прошлое, в альтернативную реальность. В ней орды нежити захватили сначала лес
-к западу от Мидгаарда, а затем и сам город, перебив или обратив в зомби всех
-жителей и плотно обосновавшись в нем. В скором времени и Талос постигнет та же
-судьба. Старый Мидгаард служит уютным пристанищем для некромантов, вампиров и
-антипаладинов. В городе можно найти магазины на любой вкус, получить задания
+к востоку от {hh1392Мидгаарда,{x а затем и сам город, перебив или обратив в зомби всех
+жителей и плотно обосновавшись в нем.
+
+Старый Мидгаард служит уютным пристанищем для {hh143некромантов{x, {hh144вампиров{x и
+{hh138антипаладинов{x. В городе можно найти магазины на любой вкус, получить задания
 и полакомиться кровью. 
+
+Из Старого Мидгаарда можно пройти в соседний город, Старый Талос.
+В этой альтернативной реальности город Талос все еще жив, а Мидгаард, наоборот,
+населен нежитью. На текущий момент есть три места с этим именем:
+%A% {hh1837Руины Старого Талоса{x -- опустевшие и населенные монстрами
+%A% {hh1446Старый Талос{x -- отражение города из альтернативной реальности прошлого, куда
+{x  можно пройти из Старого Мидгаарда
+%A% {hh1838Новый Талос{x -- процветающий молодой город на востоке от Мидгаарда,
+{x  населенный беженцами из Старого Талоса
 
 %PAUSE%
 {yЗадания{x:
@@ -206,15 +216,16 @@
 </description>
       <hit>2d7+121</hit>
       <level>10</level>
-      <long_descr>Одержимый пророчествами священиик (priest) предсказывает разрушение Талоса.
+      <long_descr>Одержимый священник (priest) культа Шамаша предсказывает разрушение города.
 </long_descr>
       <mana>10d9+100</mana>
       <material>0</material>
       <off add="disarm kick parry assist_vnum"/>
-      <player_name>priest священник</player_name>
+      <player_name>priest shamash священник шамаш</player_name>
       <race>human</race>
+      <religion registry="religion">shamash</religion>
       <sex>male</sex>
-      <short_descr>одержим|ый|ого|ому|ого|ым|ом священник||а|у|а|ом|е</short_descr>
+      <short_descr>одержим|ый|ого|ому|ого|ым|ом священник||а|у|а|ом|е Шамаша</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
       <wealth>5</wealth>
@@ -1189,142 +1200,7 @@
       <ac bash="-50" exotic="-50" pierce="-50" slash="-50"/>
       <act add="npc sentinel warrior nopurge notrack"/>
       <aff add="infrared haste"/>
-      <behavior type="QuestMaster">
-        <services>
-          <node type="ObjectQuestArticle">
-            <vnum>102</vnum>
-            <name>orb</name>
-            <rname>шар</rname>
-            <descr>Хрустальный шар</descr>
-            <price type="QuestPointPrice">
-              <questpoint>50</questpoint>
-            </price>
-          </node>
-          <node type="PiercingQuestArticle">
-            <name>piercing</name>
-            <rname>пирсинг</rname>
-            <descr>Прокалывание ушей</descr>
-            <price type="QuestPointPrice">
-              <questpoint>50</questpoint>
-            </price>
-          </node>
-          <node type="ObjectQuestArticle">
-            <vnum>108</vnum>
-            <name>colourless</name>
-            <rname>бесцветный рестринг</rname>
-            <descr>Рестринг купон</descr>
-            <price type="QuestPointPrice">
-              <questpoint>50</questpoint>
-            </price>
-          </node>
-          <node type="ObjectQuestArticle">
-            <vnum>106</vnum>
-            <name>coupon</name>
-            <rname>цветной рестринг</rname>
-            <descr>{YР{Bе{Gс{Rт{Cр{Mи{Bн{Cг{x {rк{yу{gп{bо{mн{x</descr>
-            <price type="QuestPointPrice">
-              <questpoint>200</questpoint>
-            </price>
-          </node>
-          <node type="TattooQuestArticle">
-            <name>tattoo</name>
-            <rname>татуировка</rname>
-            <descr>Татуировка твоей религии</descr>
-            <price type="QuestPointPrice">
-              <questpoint>200</questpoint>
-            </price>
-          </node>
-          <node type="ConQuestArticle">
-            <name>constitution</name>
-            <rname>сложение</rname>
-            <descr>+1 сложение</descr>
-            <price type="QuestPointPrice">
-              <questpoint>150</questpoint>
-            </price>
-          </node>
-          <node type="PersonalQuestArticle">
-            <vnum>95</vnum>
-            <name>ring</name>
-            <rname>кольцо</rname>
-            <descr>Кольцо Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>1000</questpoint>
-            </price>
-            <gender table="sex_table">neutral</gender>
-            <troubled>true</troubled>
-          </node>
-          <node type="PersonalQuestArticle">
-            <vnum>96</vnum>
-            <name>weapon</name>
-            <rname>оружие</rname>
-            <descr>Оружие Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>1000</questpoint>
-            </price>
-            <gender table="sex_table">neutral</gender>
-            <troubled>true</troubled>
-          </node>
-          <node type="PersonalQuestArticle">
-            <vnum>94</vnum>
-            <name>girth</name>
-            <rname>пояс</rname>
-            <descr>Пояс Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>1000</questpoint>
-            </price>
-            <gender table="sex_table">male</gender>
-            <troubled>true</troubled>
-          </node>
-          <node type="KeyringQuestArticle">
-            <name>keyring</name>
-            <rname>брелок</rname>
-            <descr>Прикрепить брелок для ключей к Поясу Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>200</questpoint>
-            </price>
-          </node>
-          <node type="PersonalQuestArticle">
-            <vnum>103</vnum>
-            <name>bag</name>
-            <rname>сумка</rname>
-            <descr>Дорожная сумка Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>500</questpoint>
-            </price>
-            <gender table="sex_table">female</gender>
-            <troubled>false</troubled>
-          </node>
-          <node type="PocketsQuestArticle">
-            <name>pockets</name>
-            <rname>карманы</rname>
-            <descr>Нашить карманы на Сумку Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>50</questpoint>
-            </price>
-          </node>
-          <node type="OwnerQuestArticle">
-            <vnum>109</vnum>
-            <name>owner</name>
-            <rname>талон</rname>
-            <descr>Талон на единоличное владение вещью</descr>
-            <price type="QuestPointPrice">
-              <questpoint>1000</questpoint>
-            </price>
-            <lifePrice>
-              <victories>500</victories>
-              <lifes>1</lifes>
-            </lifePrice>
-          </node>
-          <node type="GoldQuestArticle">
-            <amount>5000</amount>
-            <name>gold</name>
-            <rname>золото</rname>
-            <descr>5000 золотых монет</descr>
-            <price type="QuestPointPrice">
-              <questpoint>1000</questpoint>
-            </price>
-          </node>
-        </services>
+      <behavior type="DefaultQuestMaster">
       </behavior>
       <dam_type>crush</dam_type>
       <damage>5d14+40</damage>
@@ -1485,7 +1361,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>guildmaster гильдмастер мастер гильдии</player_name>
-      <practicer>none detection creation necromancy harmful weather </practicer>
+      <practicer registry="skillGroup">none detection necromancy harmful creation weather</practicer>
       <race>elf</race>
       <res add="spell"/>
       <sex>female</sex>
@@ -1515,7 +1391,7 @@
       <material>0</material>
       <off add="disarm dodge fast kick parry"/>
       <player_name>guildmaster гильдмастер мастер гильдии</player_name>
-      <practicer>none detection creation harmful weather vampiric </practicer>
+      <practicer registry="skillGroup">none vampiric detection harmful creation weather</practicer>
       <race>human</race>
       <res add="spell"/>
       <sex>male</sex>
@@ -1528,19 +1404,23 @@
       <act add="npc sentinel cleric nopurge notrack"/>
       <aff add="sanctuary" del="infrared sneak"/>
       <alignment>-700</alignment>
-      <behavior type="Templeman">
-      </behavior>
       <dam_type>divine</dam_type>
       <damage>2d4+30</damage>
       <default_pos>stand</default_pos>
       <description>Эта бледная эльфийка с тонкими чертами лица и кругами под глазами, очевидно,
 измождена долгими сидениями над книгами и пренебрежением такими мирскими
 заботами, как еда и сон. Ты вряд ли узнаешь, какому именно богу она поклоняется.
-Однако благодаря своим обширным познаниям в теологии, она сможет приобщить тебя
-к любой из религий, которые известны в Мире Грез. 
-{Wсправка религия{x покажет список всех возможных религий. А когда будешь
-готов, просто назови вслух имя божества, которому ты будешь поклоняться
-всю свою жизнь.
+Благодаря своим обширным познаниям в теологии, она сможет приобщить тебя к любой
+из официальных религий, которые известны в Мире Мечты, но ей недоступны древние
+культы. 
+
+Чтобы увидеть список всех возможных религий, набери {W{hcсправка религия{hx{x.
+Чтобы узнать, какие религии доступны тебе, посмотри на Книгу Судеб ({W{hclook book{hx{x).
+Чтобы стать атеист{Smом{Sfкой{Sx, можно {W{hcсказать хочу стать атеистом{hx{x -- это можно сделать
+{RТОЛЬКО ОДИН РАЗ{x за все перерождения.
+
+А когда будешь готов{Sfа{Sx принять одну из официальных религий, просто назови вслух
+имя божества, которому ты будешь поклоняться всю свою жизнь.
 </description>
       <detection add="invis hidden"/>
       <hit>1d1+20999</hit>
@@ -1554,6 +1434,7 @@
       <off add="dodge fast kick parry"/>
       <player_name>dark-elf эльфийка темная</player_name>
       <race>dark-elf</race>
+      <religion registry="religion">dwarkin kind cradya mihail leo varda hauzer nofate fili allanon bastian irlana tirna turlok karmina tananda mephisto ruffina razer bast godiva taiphoen</religion>
       <res add="weapon" del="charm"/>
       <sex>female</sex>
       <short_descr>темн|ая|ой|ой|ую|ой|ой эльфийк|а|и|е|у|ой|е</short_descr>
@@ -1634,6 +1515,8 @@
       <ac bash="-65" exotic="-35" pierce="-65" slash="-65"/>
       <act add="npc sentinel practice mage warrior nopurge notrack"/>
       <alignment>-1000</alignment>
+      <behavior type="AntipaladinGuildmaster">
+      </behavior>
       <dam_type>divine</dam_type>
       <damage>3d8+24</damage>
       <default_pos>stand</default_pos>
@@ -1654,7 +1537,7 @@
       <material>0</material>
       <off add="disarm dodge fast kick parry"/>
       <player_name>guildmaster master гилдьмастер мастер гильдии</player_name>
-      <practicer>none detection creation harmful weather vampiric </practicer>
+      <practicer registry="skillGroup">none vampiric detection harmful creation weather</practicer>
       <race>human</race>
       <res add="spell"/>
       <sex>female</sex>
@@ -1665,6 +1548,16 @@
   </mobiles>
   <objects>
     <node name="5300">
+      <affects>
+        <node>
+          <apply to="hitroll">-1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="damroll">1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
       <cost>310</cost>
       <description>Ошейник ламии (collar) лежит здесь.</description>
       <gender>m</gender>
@@ -3760,7 +3653,7 @@ W - + - E            Temple altar
         </node>
       </exits>
       <flags>no_vanish indoors nosummon</flags>
-      <guilds>necromancer </guilds>
+      <guilds>necromancer</guilds>
       <name>Фабрика Големов </name>
       <sector>inside</sector>
     </node>
@@ -5064,7 +4957,7 @@ W - + - E            Temple altar
         </node>
       </exits>
       <flags>no_mob indoors law nosummon</flags>
-      <guilds>necromancer </guilds>
+      <guilds>necromancer</guilds>
       <name>Бар &quot;Утечка Энергии&quot;</name>
       <sector>inside</sector>
     </node>
@@ -5090,7 +4983,7 @@ W - + - E            Temple altar
         </node>
       </exits>
       <flags>no_vanish no_mob indoors law nosummon</flags>
-      <guilds>necromancer </guilds>
+      <guilds>necromancer</guilds>
       <name>Лаборатория некромантов</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="5343"/>
@@ -5112,7 +5005,7 @@ W - + - E            Temple altar
         </node>
       </exits>
       <flags>no_vanish no_mob indoors law nosummon</flags>
-      <guilds>vampire </guilds>
+      <guilds>vampire</guilds>
       <name>Бар &quot;Упыри и вурдалаки&quot;</name>
       <sector>inside</sector>
     </node>
@@ -5131,7 +5024,7 @@ W - + - E            Temple altar
         </node>
       </exits>
       <flags>dark no_vanish no_mob indoors law nosummon</flags>
-      <guilds>vampire </guilds>
+      <guilds>vampire</guilds>
       <name>Лаборатория Вампиров</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="5344"/>
@@ -5153,6 +5046,7 @@ W - + - E            Temple altar
       <name>Библиотека</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="5345"/>
+        <drop vnum="28620"/>
       </resets>
       <sector>inside</sector>
     </node>
@@ -5227,7 +5121,7 @@ W - + - E            Temple altar
           <target>5402</target>
         </node>
       </exits>
-      <guilds>necromancer </guilds>
+      <guilds>necromancer</guilds>
       <name>Фабрика Големов</name>
       <sector>inside</sector>
     </node>
@@ -5250,6 +5144,7 @@ W - + - E            Temple altar
           <target>5403</target>
         </node>
       </exits>
+      <guilds>necromancer</guilds>
       <name>Фабрика Големов</name>
       <sector>inside</sector>
     </node>
@@ -5268,6 +5163,7 @@ W - + - E            Temple altar
           <target>5402</target>
         </node>
       </exits>
+      <guilds>necromancer</guilds>
       <name>Фабрика Големов</name>
       <sector>inside</sector>
     </node>
@@ -5287,7 +5183,7 @@ W - + - E            Temple altar
         </node>
       </exits>
       <flags>no_vanish indoors nosummon</flags>
-      <guilds>necromancer </guilds>
+      <guilds>necromancer</guilds>
       <name>Фабрика Големов</name>
       <sector>inside</sector>
     </node>
@@ -5307,7 +5203,7 @@ W - + - E            Temple altar
         </node>
       </exits>
       <flags>no_vanish indoors nosummon</flags>
-      <guilds>necromancer </guilds>
+      <guilds>necromancer</guilds>
       <name>Фабрика Големов</name>
       <sector>inside</sector>
     </node>
@@ -5440,7 +5336,7 @@ W - + - E            Temple altar
         </node>
       </exits>
       <flags>no_vanish indoors law nosummon</flags>
-      <guilds>anti-paladin </guilds>
+      <guilds>anti-paladin</guilds>
       <name>Дьявольский Храм</name>
       <sector>inside</sector>
     </node>
@@ -5449,6 +5345,8 @@ W - + - E            Temple altar
 занимает  площадка  для  тренировок,  покрытая  хорошо  утоптанной  травой.
 Тяжелая кованая дверь на севере ведет обратно в храм. Колодец в  углу двора
 предлагает альтернативный выход вниз, в канализацию.
+
+Табличка (plaque) на двери привлекает твое внимание.
 </description>
       <exits>
         <node name="down">
@@ -5463,8 +5361,13 @@ W - + - E            Temple altar
           <target>5411</target>
         </node>
       </exits>
+      <extraDescr>
+        <node keyword="plaque табличка">Если хочешь совершить защитный ритуал над своим призрачным клинком, 
+просто дай клинок гильдмастеру.
+</node>
+      </extraDescr>
       <flags>no_vanish law nosummon</flags>
-      <guilds>anti-paladin </guilds>
+      <guilds>anti-paladin</guilds>
       <name>Внутренний двор гильдии анти-паладинов</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="5348"/>

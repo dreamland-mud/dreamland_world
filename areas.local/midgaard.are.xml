@@ -15,13 +15,13 @@
     <vnumLow>3000</vnumLow>
   </areadata>
   <helps>
-    <node keyword="MIDGAARD МИДГААРД 'МИДГААРД (СТОЛИЦА)'" level="-1">Midgaard - столица мира. Здесь расположены гильдии, храмы, магазины, библиотеки,
+    <node id="1392" keyword="MIDGAARD МИДГААРД 'МИДГААРД (СТОЛИЦА)'" level="-1">Мидгаард -- столица {hh82Тэры{x. Здесь расположены {hh44гильдии{x, {hh1храмы{x, {hh1056магазины{x, библиотеки,
 на его улицах постоянно кипит жизнь. Все дороги, так или иначе, приводят сюда.
 В храмах всех остальных крупных городов установлены порталы, ведущие в
-центральный храм Мидгаарда, посвященный богу Лео.
+центральный храм Мидгаарда, посвященный богу {hh1576Лео{x.
 Этот город, как и Новый Талос, может стать родным для персонажей любого 
-алигмента (кроме гигантов, вампиров и некромантов, которым полагается жить
-отдельно). Однако, в отличие от Нового Талоса, представители каждого алигмента
+алигмента (кроме гигантов, {hh144вампиров{x и {hh143некромантов{x, которым полагается жить
+отдельно). Однако, в отличие от Нового Талоса, представители каждой {hh33натуры{x
 будут приписаны к отдельному храму (Храм Лео, Темный Храм, Храм Солнца).
 %PAUSE%
 {yЗадания{x:
@@ -414,142 +414,7 @@
       <act add="npc sentinel warrior nopurge notrack"/>
       <aff add="haste"/>
       <alignment>1000</alignment>
-      <behavior type="QuestMaster">
-        <services>
-          <node type="ObjectQuestArticle">
-            <vnum>102</vnum>
-            <name>orb</name>
-            <rname>шар</rname>
-            <descr>Хрустальный шар</descr>
-            <price type="QuestPointPrice">
-              <questpoint>50</questpoint>
-            </price>
-          </node>
-          <node type="PiercingQuestArticle">
-            <name>piercing</name>
-            <rname>пирсинг</rname>
-            <descr>Прокалывание ушей</descr>
-            <price type="QuestPointPrice">
-              <questpoint>50</questpoint>
-            </price>
-          </node>
-          <node type="ObjectQuestArticle">
-            <vnum>108</vnum>
-            <name>colourless</name>
-            <rname>бесцветный рестринг</rname>
-            <descr>Рестринг купон</descr>
-            <price type="QuestPointPrice">
-              <questpoint>50</questpoint>
-            </price>
-          </node>
-          <node type="ObjectQuestArticle">
-            <vnum>106</vnum>
-            <name>coupon</name>
-            <rname>цветной рестринг</rname>
-            <descr>{YР{Bе{Gс{Rт{Cр{Mи{Bн{Cг{x {rк{yу{gп{bо{mн{x</descr>
-            <price type="QuestPointPrice">
-              <questpoint>200</questpoint>
-            </price>
-          </node>
-          <node type="TattooQuestArticle">
-            <name>tattoo</name>
-            <rname>татуировка</rname>
-            <descr>Татуировка твоей религии</descr>
-            <price type="QuestPointPrice">
-              <questpoint>200</questpoint>
-            </price>
-          </node>
-          <node type="ConQuestArticle">
-            <name>constitution</name>
-            <rname>сложение</rname>
-            <descr>+1 сложение</descr>
-            <price type="QuestPointPrice">
-              <questpoint>150</questpoint>
-            </price>
-          </node>
-          <node type="PersonalQuestArticle">
-            <vnum>95</vnum>
-            <name>ring</name>
-            <rname>кольцо</rname>
-            <descr>Кольцо Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>1000</questpoint>
-            </price>
-            <gender table="sex_table">neutral</gender>
-            <troubled>true</troubled>
-          </node>
-          <node type="PersonalQuestArticle">
-            <vnum>96</vnum>
-            <name>weapon</name>
-            <rname>оружие</rname>
-            <descr>Оружие Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>1000</questpoint>
-            </price>
-            <gender table="sex_table">neutral</gender>
-            <troubled>true</troubled>
-          </node>
-          <node type="PersonalQuestArticle">
-            <vnum>94</vnum>
-            <name>girth</name>
-            <rname>пояс</rname>
-            <descr>Пояс Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>1000</questpoint>
-            </price>
-            <gender table="sex_table">male</gender>
-            <troubled>true</troubled>
-          </node>
-          <node type="KeyringQuestArticle">
-            <name>keyring</name>
-            <rname>брелок</rname>
-            <descr>Прикрепить брелок для ключей к Поясу Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>200</questpoint>
-            </price>
-          </node>
-          <node type="PersonalQuestArticle">
-            <vnum>103</vnum>
-            <name>bag</name>
-            <rname>сумка</rname>
-            <descr>Дорожная сумка Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>500</questpoint>
-            </price>
-            <gender table="sex_table">female</gender>
-            <troubled>false</troubled>
-          </node>
-          <node type="PocketsQuestArticle">
-            <name>pockets</name>
-            <rname>карманы</rname>
-            <descr>Нашить карманы на Сумку Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>50</questpoint>
-            </price>
-          </node>
-          <node type="OwnerQuestArticle">
-            <vnum>109</vnum>
-            <name>owner</name>
-            <rname>талон</rname>
-            <descr>Талон на единоличное владение вещью</descr>
-            <price type="QuestPointPrice">
-              <questpoint>1000</questpoint>
-            </price>
-            <lifePrice>
-              <victories>500</victories>
-              <lifes>1</lifes>
-            </lifePrice>
-          </node>
-          <node type="GoldQuestArticle">
-            <amount>5000</amount>
-            <name>gold</name>
-            <rname>золото</rname>
-            <descr>5000 золотых монет</descr>
-            <price type="QuestPointPrice">
-              <questpoint>1000</questpoint>
-            </price>
-          </node>
-        </services>
+      <behavior type="DefaultQuestMaster">
       </behavior>
       <dam_type>crush</dam_type>
       <damage>18d18+85</damage>
@@ -726,147 +591,12 @@
       <act add="npc sentinel warrior nopurge notrack"/>
       <aff add="haste"/>
       <alignment>-1000</alignment>
-      <behavior type="QuestMaster">
-        <services>
-          <node type="ObjectQuestArticle">
-            <vnum>102</vnum>
-            <name>orb</name>
-            <rname>шар</rname>
-            <descr>Хрустальный шар</descr>
-            <price type="QuestPointPrice">
-              <questpoint>50</questpoint>
-            </price>
-          </node>
-          <node type="PiercingQuestArticle">
-            <name>piercing</name>
-            <rname>пирсинг</rname>
-            <descr>Прокалывание ушей</descr>
-            <price type="QuestPointPrice">
-              <questpoint>50</questpoint>
-            </price>
-          </node>
-          <node type="ObjectQuestArticle">
-            <vnum>108</vnum>
-            <name>colourless</name>
-            <rname>бесцветный рестринг</rname>
-            <descr>Рестринг купон</descr>
-            <price type="QuestPointPrice">
-              <questpoint>50</questpoint>
-            </price>
-          </node>
-          <node type="ObjectQuestArticle">
-            <vnum>106</vnum>
-            <name>coupon</name>
-            <rname>цветной рестринг</rname>
-            <descr>{YР{Bе{Gс{Rт{Cр{Mи{Bн{Cг{x {rк{yу{gп{bо{mн{x</descr>
-            <price type="QuestPointPrice">
-              <questpoint>200</questpoint>
-            </price>
-          </node>
-          <node type="TattooQuestArticle">
-            <name>tattoo</name>
-            <rname>татуировка</rname>
-            <descr>Татуировка твоей религии</descr>
-            <price type="QuestPointPrice">
-              <questpoint>200</questpoint>
-            </price>
-          </node>
-          <node type="ConQuestArticle">
-            <name>constitution</name>
-            <rname>сложение</rname>
-            <descr>+1 сложение</descr>
-            <price type="QuestPointPrice">
-              <questpoint>150</questpoint>
-            </price>
-          </node>
-          <node type="PersonalQuestArticle">
-            <vnum>95</vnum>
-            <name>ring</name>
-            <rname>кольцо</rname>
-            <descr>Кольцо Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>1000</questpoint>
-            </price>
-            <gender table="sex_table">neutral</gender>
-            <troubled>true</troubled>
-          </node>
-          <node type="PersonalQuestArticle">
-            <vnum>96</vnum>
-            <name>weapon</name>
-            <rname>оружие</rname>
-            <descr>Оружие Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>1000</questpoint>
-            </price>
-            <gender table="sex_table">neutral</gender>
-            <troubled>true</troubled>
-          </node>
-          <node type="PersonalQuestArticle">
-            <vnum>94</vnum>
-            <name>girth</name>
-            <rname>пояс</rname>
-            <descr>Пояс Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>1000</questpoint>
-            </price>
-            <gender table="sex_table">male</gender>
-            <troubled>true</troubled>
-          </node>
-          <node type="KeyringQuestArticle">
-            <name>keyring</name>
-            <rname>брелок</rname>
-            <descr>Прикрепить брелок для ключей к Поясу Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>200</questpoint>
-            </price>
-          </node>
-          <node type="PersonalQuestArticle">
-            <vnum>103</vnum>
-            <name>bag</name>
-            <rname>сумка</rname>
-            <descr>Дорожная сумка Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>500</questpoint>
-            </price>
-            <gender table="sex_table">female</gender>
-            <troubled>false</troubled>
-          </node>
-          <node type="PocketsQuestArticle">
-            <name>pockets</name>
-            <rname>карманы</rname>
-            <descr>Нашить карманы на Сумку Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>50</questpoint>
-            </price>
-          </node>
-          <node type="OwnerQuestArticle">
-            <vnum>109</vnum>
-            <name>owner</name>
-            <rname>талон</rname>
-            <descr>Талон на единоличное владение вещью</descr>
-            <price type="QuestPointPrice">
-              <questpoint>1000</questpoint>
-            </price>
-            <lifePrice>
-              <victories>500</victories>
-              <lifes>1</lifes>
-            </lifePrice>
-          </node>
-          <node type="GoldQuestArticle">
-            <amount>5000</amount>
-            <name>gold</name>
-            <rname>золото</rname>
-            <descr>5000 золотых монет</descr>
-            <price type="QuestPointPrice">
-              <questpoint>1000</questpoint>
-            </price>
-          </node>
-        </services>
+      <behavior type="DefaultQuestMaster">
       </behavior>
       <dam_type>crush</dam_type>
       <damage>18d18+85</damage>
       <default_pos>stand</default_pos>
-      <description>Один из рыцарей Ордена Такхизис выбрал своей миссией раздачу важных поручений,
+      <description>Один из рыцарей Ордена Хаузера выбрал своей миссией раздачу важных поручений,
 поддерживающих баланс добра и зла во вселенной.
 
 Ты тоже можешь взять у него задание командой {y{lRквест попросить{lEquest request{x.
@@ -878,7 +608,7 @@
       <hitroll>300</hitroll>
       <imm add="summon charm spell weapon bash pierce slash fire cold acid poison negative holy energy mental disease drowning sound wood silver iron"/>
       <level>100</level>
-      <long_descr>Анти-паладин (anti-paladin) в темных доспехах с эмблемой Тахизис раздает поручения.
+      <long_descr>Анти-паладин (anti-paladin) в темных доспехах с эмблемой Хаузера раздает поручения.
 </long_descr>
       <mana>1d1+1499</mana>
       <material>0</material>
@@ -897,142 +627,7 @@
       <act add="npc sentinel warrior nopurge notrack"/>
       <aff add="haste"/>
       <alignment>1000</alignment>
-      <behavior type="QuestMaster">
-        <services>
-          <node type="ObjectQuestArticle">
-            <vnum>102</vnum>
-            <name>orb</name>
-            <rname>шар</rname>
-            <descr>Хрустальный шар</descr>
-            <price type="QuestPointPrice">
-              <questpoint>50</questpoint>
-            </price>
-          </node>
-          <node type="PiercingQuestArticle">
-            <name>piercing</name>
-            <rname>пирсинг</rname>
-            <descr>Прокалывание ушей</descr>
-            <price type="QuestPointPrice">
-              <questpoint>50</questpoint>
-            </price>
-          </node>
-          <node type="ObjectQuestArticle">
-            <vnum>108</vnum>
-            <name>colourless</name>
-            <rname>бесцветный рестринг</rname>
-            <descr>Рестринг купон</descr>
-            <price type="QuestPointPrice">
-              <questpoint>50</questpoint>
-            </price>
-          </node>
-          <node type="ObjectQuestArticle">
-            <vnum>106</vnum>
-            <name>coupon</name>
-            <rname>цветной рестринг</rname>
-            <descr>{YР{Bе{Gс{Rт{Cр{Mи{Bн{Cг{x {rк{yу{gп{bо{mн{x</descr>
-            <price type="QuestPointPrice">
-              <questpoint>200</questpoint>
-            </price>
-          </node>
-          <node type="TattooQuestArticle">
-            <name>tattoo</name>
-            <rname>татуировка</rname>
-            <descr>Татуировка твоей религии</descr>
-            <price type="QuestPointPrice">
-              <questpoint>200</questpoint>
-            </price>
-          </node>
-          <node type="ConQuestArticle">
-            <name>constitution</name>
-            <rname>сложение</rname>
-            <descr>+1 сложение</descr>
-            <price type="QuestPointPrice">
-              <questpoint>150</questpoint>
-            </price>
-          </node>
-          <node type="PersonalQuestArticle">
-            <vnum>95</vnum>
-            <name>ring</name>
-            <rname>кольцо</rname>
-            <descr>Кольцо Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>1000</questpoint>
-            </price>
-            <gender table="sex_table">neutral</gender>
-            <troubled>true</troubled>
-          </node>
-          <node type="PersonalQuestArticle">
-            <vnum>96</vnum>
-            <name>weapon</name>
-            <rname>оружие</rname>
-            <descr>Оружие Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>1000</questpoint>
-            </price>
-            <gender table="sex_table">neutral</gender>
-            <troubled>true</troubled>
-          </node>
-          <node type="PersonalQuestArticle">
-            <vnum>94</vnum>
-            <name>girth</name>
-            <rname>пояс</rname>
-            <descr>Пояс Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>1000</questpoint>
-            </price>
-            <gender table="sex_table">male</gender>
-            <troubled>true</troubled>
-          </node>
-          <node type="KeyringQuestArticle">
-            <name>keyring</name>
-            <rname>брелок</rname>
-            <descr>Прикрепить брелок для ключей к Поясу Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>200</questpoint>
-            </price>
-          </node>
-          <node type="PersonalQuestArticle">
-            <vnum>103</vnum>
-            <name>bag</name>
-            <rname>сумка</rname>
-            <descr>Дорожная сумка Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>500</questpoint>
-            </price>
-            <gender table="sex_table">female</gender>
-            <troubled>false</troubled>
-          </node>
-          <node type="PocketsQuestArticle">
-            <name>pockets</name>
-            <rname>карманы</rname>
-            <descr>Нашить карманы на Сумку Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>50</questpoint>
-            </price>
-          </node>
-          <node type="OwnerQuestArticle">
-            <vnum>109</vnum>
-            <name>owner</name>
-            <rname>талон</rname>
-            <descr>Талон на единоличное владение вещью</descr>
-            <price type="QuestPointPrice">
-              <questpoint>1000</questpoint>
-            </price>
-            <lifePrice>
-              <victories>500</victories>
-              <lifes>1</lifes>
-            </lifePrice>
-          </node>
-          <node type="GoldQuestArticle">
-            <amount>5000</amount>
-            <name>gold</name>
-            <rname>золото</rname>
-            <descr>5000 золотых монет</descr>
-            <price type="QuestPointPrice">
-              <questpoint>1000</questpoint>
-            </price>
-          </node>
-        </services>
+      <behavior type="DefaultQuestMaster">
       </behavior>
       <dam_type>crush</dam_type>
       <damage>18d18+85</damage>
@@ -1086,7 +681,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer registry="skillGroup">none detection creation harmful weather</practicer>
+      <practicer registry="skillGroup">none detection harmful creation weather</practicer>
       <race>elf</race>
       <res add="spell"/>
       <sex>female</sex>
@@ -1116,7 +711,7 @@
       <material>0</material>
       <off add="disarm dodge fast kick parry"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer registry="skillGroup">none detection creation harmful weather</practicer>
+      <practicer registry="skillGroup">none detection harmful creation weather</practicer>
       <race>human</race>
       <res add="spell"/>
       <sex>male</sex>
@@ -1152,7 +747,7 @@
       <material>0</material>
       <off add="backstab disarm dodge fast kick_dirt trip"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer registry="skillGroup">none detection creation harmful weather</practicer>
+      <practicer registry="skillGroup">none detection harmful creation weather</practicer>
       <race>human</race>
       <res add="spell"/>
       <sex>female</sex>
@@ -1181,7 +776,7 @@
       <material>0</material>
       <off add="area_attack bash berserk disarm kick parry"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer registry="skillGroup">none detection creation harmful weather</practicer>
+      <practicer registry="skillGroup">none detection harmful creation weather</practicer>
       <race>dwarf</race>
       <res add="spell"/>
       <sex>male</sex>
@@ -2527,21 +2122,24 @@
       <dam_type>bite</dam_type>
       <damage>6d6+4</damage>
       <default_pos>stand</default_pos>
-      <description>Это  Листер  - домашняя древесная змея Меланхолика. Его челюсти выглядят
-чудно,  особенно если он улыбается вам. Листер совершенно дружелюбен, но
-не давай ему напиваться!
+      <description>Это Листер -- домашняя древесная змея Меланхолика. Змея -- символ древнего бога
+знания, Энки. Интересно, какое отношение к нему имеет Листер?
+Его челюсти выглядят чудно, особенно если он улыбается вам -- такое впечатление,
+что он умеет говорить...
+Листер совершенно дружелюбен, но не давай ему напиваться!
 </description>
       <detection add="invis"/>
       <hit>11d10+1300</hit>
       <hitroll>3</hitroll>
       <level>35</level>
-      <long_descr>Зеленая древесная змея Листер (snake) сидит здесь на куче книг.
+      <long_descr>Зеленая змея Листер (snake) обвивает статуэтку бога знаний, Энки.
 </long_descr>
       <mana>1d1+99</mana>
       <material>0</material>
       <off add="dodge fast trip assist_race"/>
-      <player_name>lister green tree snake листер</player_name>
+      <player_name>lister green tree snake enki листер энки</player_name>
       <race>snake</race>
+      <religion registry="religion">enki</religion>
       <res add="pierce"/>
       <sex>male</sex>
       <short_descr>Листе|р|ра|ру|ра|ром|ре</short_descr>
@@ -2807,7 +2405,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer registry="skillGroup">none detection creation harmful weather</practicer>
+      <practicer registry="skillGroup">none detection harmful creation weather</practicer>
       <race>human</race>
       <res add="spell"/>
       <sex>male</sex>
@@ -2834,7 +2432,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer registry="skillGroup">none detection creation harmful weather</practicer>
+      <practicer registry="skillGroup">none detection harmful creation weather</practicer>
       <race>human</race>
       <res add="spell weapon"/>
       <sex>male</sex>
@@ -2856,6 +2454,9 @@
 закрывает  почти  все  его  лицо. Конечно же он эльф - он высок и крепко
 сложен.  Он будет помогать тебе в тренировках до тех пор, пока ты будешь
 оставаться демоном.
+
+Если хочешь провести защитный ритуал над своим призрачным клинком, просто
+дай его в руки мастеру.
 </description>
       <detection add="invis magic hidden dark_vision"/>
       <hit>1d1+29099</hit>
@@ -2867,7 +2468,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer registry="skillGroup">none detection creation harmful weather</practicer>
+      <practicer registry="skillGroup">none detection harmful creation weather</practicer>
       <race>dark-elf</race>
       <res add="spell weapon"/>
       <sex>male</sex>
@@ -2896,7 +2497,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer registry="skillGroup">none detection creation harmful weather</practicer>
+      <practicer registry="skillGroup">none detection harmful creation weather</practicer>
       <race>elf</race>
       <res add="spell"/>
       <sex>female</sex>
@@ -2927,7 +2528,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer registry="skillGroup">none detection creation harmful weather</practicer>
+      <practicer registry="skillGroup">none detection harmful creation weather</practicer>
       <race>human</race>
       <res add="spell"/>
       <sex>male</sex>
@@ -2940,17 +2541,21 @@
       <act add="npc sentinel practice cleric nopurge notrack"/>
       <aff add="sanctuary"/>
       <alignment>1000</alignment>
-      <behavior type="Templeman">
-      </behavior>
       <dam_type>divine</dam_type>
       <damage>12d44+60</damage>
       <default_pos>stand</default_pos>
-      <description>Очень миловидный молодой человек, однако, предпочел удалиться от мирской
-суеты и посвятить свою жизнь служению богам. Он сможет приобщить тебя к
-любой из религий, которые известны в Мире Грез. 
-{Wсправка религия{x покажет список всех возможных религий. А когда будешь
-готов, просто назови вслух имя божества, которому ты будешь поклоняться
-всю свою жизнь.
+      <description>Очень миловидный молодой человек, который предпочел удалиться от мирской суеты и
+посвятить свою жизнь служению богам. Он сможет приобщить тебя к любой из
+официальных религий, которые известны в Мире Мечты, но ему недоступны древние
+культы.
+
+Чтобы увидеть список всех возможных религий, набери {W{hcсправка религия{hx{x.
+Чтобы узнать, какие религии доступны тебе, посмотри на Книгу Судеб ({W{hclook book{hx{x).
+Чтобы стать атеист{Smом{Sfкой{Sx, можно {W{hcсказать хочу стать атеистом{hx{x -- это можно сделать
+{RТОЛЬКО ОДИН РАЗ{x за все перерождения.
+
+А когда будешь готов{Sfа{Sx принять одну из официальных религий, просто назови вслух
+имя божества, которому ты будешь поклоняться всю свою жизнь.
 </description>
       <detection add="invis hidden"/>
       <hit>1d1+25999</hit>
@@ -2965,6 +2570,7 @@
       <player_name>templeman священник</player_name>
       <practicer registry="skillGroup">benedictions</practicer>
       <race>human</race>
+      <religion registry="religion">dwarkin kind cradya mihail leo varda hauzer nofate fili allanon bastian irlana tirna turlok karmina tananda mephisto ruffina razer bast godiva taiphoen</religion>
       <res add="weapon"/>
       <sex>male</sex>
       <short_descr>священник||а|у|а|ом|е</short_descr>
@@ -2995,11 +2601,11 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>adept guildmaster адепт карлик</player_name>
-      <practicer registry="skillGroup">none detection creation harmful weather</practicer>
+      <practicer registry="skillGroup">none detection harmful creation weather</practicer>
       <race>duergar</race>
       <res add="weapon"/>
       <sex>male</sex>
-      <short_descr>адепт||а|у|а|ом|е Дворкина</short_descr>
+      <short_descr>адепт||а|у|а|ом|е Дворкина и универсалов</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
     </node>
@@ -3319,11 +2925,11 @@
     <node name="3018">
       <affects>
         <node>
-          <apply to="hitroll">3</apply>
+          <apply to="damroll">5</apply>
           <bits table="affect_flags"></bits>
         </node>
         <node>
-          <apply to="damroll">5</apply>
+          <apply to="hitroll">3</apply>
           <bits table="affect_flags"></bits>
         </node>
       </affects>
@@ -4262,7 +3868,7 @@
       <level>1</level>
       <material>glass</material>
       <name>снадобье potion cure serious</name>
-      <short_descr>снадобь|е|я|ю|е|ем|е средних легких ран</short_descr>
+      <short_descr>снадобь|е|я|ю|е|ем|е лечения средних ран</short_descr>
       <type name="potion">
         <level>10</level>
         <spell0>cure serious</spell0>
@@ -4579,6 +4185,7 @@
       <condition>90</condition>
       <cost>760</cost>
       <description>Древний нарукавник (bracer) с изображением ламии лежит здесь.</description>
+      <extra_flags>magic</extra_flags>
       <gender>m</gender>
       <level>6</level>
       <material>bronze</material>
@@ -4787,7 +4394,7 @@
       <gender>m</gender>
       <material>wood</material>
       <name>ключ key wooden</name>
-      <short_descr>клю|ч|ча|чу|ч|чом|че</short_descr>
+      <short_descr>клю|ч|ча|чу|ч|чом|че от стола</short_descr>
       <type name="key">
         <rotGround>1</rotGround>
         <rotInv>1</rotInv>
@@ -4805,7 +4412,7 @@
       <gender>m</gender>
       <material>brass</material>
       <name>ключ key brass</name>
-      <short_descr>клю|ч|ча|чу|ч|чом|че</short_descr>
+      <short_descr>клю|ч|ча|чу|ч|чом|че от сейфа</short_descr>
       <type name="key">
         <rotGround>1</rotGround>
         <rotInv>1</rotInv>
@@ -4861,15 +4468,15 @@
       <condition>90</condition>
       <description>Стол (desk) стоит слева от тебя.</description>
       <extraDescr>
-        <node keyword="drawer ящик">Ты замечаешь замочную скважину в ящике стола.
-</node>
         <node keyword="desk стол">Шаткий стол с выдвижными ящиками.
+</node>
+        <node keyword="drawer ящик">Ты замечаешь замочную скважину в ящике стола.
 </node>
       </extraDescr>
       <gender>m</gender>
       <material>wood</material>
       <name>стол desk drawer</name>
-      <short_descr>сто|л|а|у|л|ом|е</short_descr>
+      <short_descr>стол||а|у||ом|е</short_descr>
       <type name="container">
         <capacity>34</capacity>
         <flags>closeable closed locked</flags>
@@ -8051,35 +7658,132 @@ MSM : Market Square of the Midgaard.
       <cost>200000</cost>
       <description>На обложке книги (book) название: &quot;Известные Элитные Вещи Страны Грнз. Часть I&quot;.</description>
       <extraDescr>
-        <node keyword="old book книга">В  этой  книге  ты  можешь  найти краткую информацию о характеристиках и
-местонахождении  элитных  вещей  этого  Мира.  Для  получения информации
-используй  команды:  &apos;read page1&apos;,&apos;read page2&apos;,&apos;read page3&apos; и так далее.
-Внимание:  большинство  информации базируется  на  легендах и преданиях,
-следовательно  возможны ошибки, а так же в эту книгу могут быть включены
-не все имеющиеся элитные вещи..........................................
+        <node keyword="page8">.	Unreadable..............
 </node>
-        <node keyword="page1">-----------------&gt; Tales show the Olympus
-Object  &apos; sun sword&apos;, extra flags invis magic anti-evil.
-Weight is 20, value is 6800, level is 50.
-LIMITED by number 1 
-Weapon type is sword.
-Damage is depends on your character level.
-Affects hit roll by ???
-Affects damage roll by ???
--&gt;While fighting,  raw kills evil victims.
+        <node keyword="page7">--------------------&gt;General area : The Prison of Midgaard
+Object &apos;titanium shield&apos;, extra flags none.
+Weight is 0, value is 99000, level is 100.
+LIMITED by number 2 
+Armor class is 23 pierce, 23 bash, 22 slash, and 11 vs. magic.
+Affects damage roll by 10.
 
-------------------&gt; General area : Catacombs
-Object &apos;sword excalibur&apos;, extra flags glow magic anti-evil anti-neutral.
-Weight is 15, value is 3400, level is from 24 to your level.
+--------------------&gt;General area : Unknown
+Object &apos;rose shield&apos;, extra flags magic bless anti-evil anti-neutral. 
+Weight is 30, value is 5800, level is 30.
 LIMITED by number 1 
-Weapon type is sword.
-Damage is depends on your character level.
-  From 10d4   (average 25).
-  To   10d12  (average 65). 
-Affects hit roll by 3.
-Affects strength by 1.
--&gt;Affecst immortality.
--&gt;Speech casts &apos;acid blast&apos;
+Armor class is 8 pierce, 8 bash, 8 slash, and 3 vs. magic.
+Affects armor class by -7.
+-&gt;While fighting at forest surrounds victim by leaves.
+</node>
+        <node keyword="page6">--------------------&gt;General area : Armageddon
+Object &apos;lance holy archangel michael&apos;, glow hum magic bless anti-evil noremove
+Weight is 1, value is 20000, level is 91.
+LIMITED by number 1 
+Weapon type is exotic.
+Damage is 12d10 (average 66).
+Affects hit     roll by 10.
+Affects damage  roll by 10.
+Weapons         flags : flaming.
+
+--------------------&gt;General area : Mirror Realm
+Object &apos;horn golden&apos;, glow magic anti-evil 
+Weight is 3, value is 30000, level is 39.
+LIMITED by number 1 
+Weapon type is exotic.
+Damage is 5d12 (average 32).
+Affects hit     roll by 8.
+Affects damage  roll by 8.
+
+--------------------&gt;General area : The Prison of Midgaard
+Object &apos;axe destruction&apos;, magic hum invis 
+Weight is 3, value is 0, level is 90.
+LIMITED by number 1 
+Weapon type is axe.
+Damage is 11d11 (average 66).
+Affects damage  roll by 10.
+Affects armor class  by 120
+Weapons flags         : sharp vorpal
+</node>
+        <node keyword="page5">--------------------&gt;General area : Greater Gerighelm
+Object &apos;scythe&apos;, extra flags magic.
+Weight is 20, value is 50000, level is 60.
+LIMITED by number 2 
+Weapon type is exotic.
+Damage is 10d8 (average 45).
+Weapons flags: sharp vorpal ????
+
+--------------------&gt;General area : The Great Pyramid
+Object &apos;lion paw&apos;, extra flags magic.
+Weight is 20, value is 4400, level is 26.
+LIMITED by number 1 
+Weapon type is exotic.
+Damage is 4d15 (average 32).
+Affects constitution by 1.
+Affects hit     roll by 8.
+Affects damage  roll by 6.
+-&gt;While fighting claws also attacks to victim.
+
+--------------------&gt;General area : Armageddon
+Object &apos;scythe reaper grim&apos;, dark evil invis anti-good noremove vis_death.
+Weight is 2, value is 14000, level is 85.
+LIMITED by number 1 
+Weapon type is polearm.
+Damage is 11d10 (average 60).
+Affects hit     roll by 10.
+Affects damage  roll by 10.
+Weapons         flags : vampiric, sharp, poison, two-handed.
+</node>
+        <node keyword="page4">-------------------&gt;General area : Olympus 
+Object &apos;hammer thunder bolt thunderbolt&apos;, extra flags invis magic anti-evil.
+Weight is 14, value is 5400, level is 50.
+LIMITED by number 1 
+Weapon type is mace/club.
+Damage is 8d7 (average 32).
+Weapons flags        : shocking
+Affects wisdom      by -1.
+Affects damage roll by 5.
+Affects hit    roll by 5.
+-&gt;While fighting casts &apos;lightning bolt&apos;.
+
+--------------------&gt;General area : Drow City
+Object &apos;whip snake skin&apos;, extra flags dark magic anti-good no_locate.
+Weight is 14, value is 1530, level is 24.
+LIMITED by number 1 
+Weapon type is whip.
+Damage is depend on your level.
+Affects hit    roll by 5.
+Affects damage roll by 5.
+-&gt;While fighting casts &apos;poison&apos; and &apos;weaken&apos; to wictim.
+</node>
+        <node keyword="page3">-----------------&gt;General area : unknown
+Object &apos;crimson hilted stiletto&apos;, extra flags glow dark.
+Weight is 18, value is 12500, level is 90.
+LIMITED by number ??? 
+Weapon type is dagger.
+Damage is 12d11 (average 72).
+Weapons flags        : vampiric sharp
+Affects damage roll by 25.
+Affects hit roll    by 25.
+
+------------------&gt;General area : Blight
+Object &apos;cuendillar heartstone dagger&apos;, extra flags magic noremove.
+Weight is 0, value is 600, level is 60.
+LIMITED by number ???? 
+Weapon type is dagger.
+Damage is 10d11 (average 60).
+Weapons flags        : sharp
+Affects damage roll by 10.
+Affects hit roll    by 10.
+Affects wisdom      by 3
+
+--------------------&gt;General area : Mirror Realm
+Object &apos;blood red dagger&apos;, extra flags magic evil anti-good.
+Weight is 1, value is 10000, level is 45.
+LIMITED by number 1 
+Weapon type is dagger.
+Damage is 6d10 (average 33).
+Weapons flags        : sharp, flaming
+Affects damage roll by 15.
 </node>
         <node keyword="page2">-----------------&gt;General area : Armageddon
 Object &apos;sword war&apos;, extra flags evil anti-good noremove.
@@ -8112,132 +7816,35 @@ Affects hit roll by 10.
 Affects hp       by 50.
 Weapons flags     : sharp, vorpal
 </node>
-        <node keyword="page3">-----------------&gt;General area : unknown
-Object &apos;crimson hilted stiletto&apos;, extra flags glow dark.
-Weight is 18, value is 12500, level is 90.
-LIMITED by number ??? 
-Weapon type is dagger.
-Damage is 12d11 (average 72).
-Weapons flags        : vampiric sharp
-Affects damage roll by 25.
-Affects hit roll    by 25.
-
-------------------&gt;General area : Blight
-Object &apos;cuendillar heartstone dagger&apos;, extra flags magic noremove.
-Weight is 0, value is 600, level is 60.
-LIMITED by number ???? 
-Weapon type is dagger.
-Damage is 10d11 (average 60).
-Weapons flags        : sharp
-Affects damage roll by 10.
-Affects hit roll    by 10.
-Affects wisdom      by 3
-
---------------------&gt;General area : Mirror Realm
-Object &apos;blood red dagger&apos;, extra flags magic evil anti-good.
-Weight is 1, value is 10000, level is 45.
+        <node keyword="page1">-----------------&gt; Tales show the Olympus
+Object  &apos; sun sword&apos;, extra flags invis magic anti-evil.
+Weight is 20, value is 6800, level is 50.
 LIMITED by number 1 
-Weapon type is dagger.
-Damage is 6d10 (average 33).
-Weapons flags        : sharp, flaming
-Affects damage roll by 15.
+Weapon type is sword.
+Damage is depends on your character level.
+Affects hit roll by ???
+Affects damage roll by ???
+-&gt;While fighting,  raw kills evil victims.
+
+------------------&gt; General area : Catacombs
+Object &apos;sword excalibur&apos;, extra flags glow magic anti-evil anti-neutral.
+Weight is 15, value is 3400, level is from 24 to your level.
+LIMITED by number 1 
+Weapon type is sword.
+Damage is depends on your character level.
+  From 10d4   (average 25).
+  To   10d12  (average 65). 
+Affects hit roll by 3.
+Affects strength by 1.
+-&gt;Affecst immortality.
+-&gt;Speech casts &apos;acid blast&apos;
 </node>
-        <node keyword="page4">-------------------&gt;General area : Olympus 
-Object &apos;hammer thunder bolt thunderbolt&apos;, extra flags invis magic anti-evil.
-Weight is 14, value is 5400, level is 50.
-LIMITED by number 1 
-Weapon type is mace/club.
-Damage is 8d7 (average 32).
-Weapons flags        : shocking
-Affects wisdom      by -1.
-Affects damage roll by 5.
-Affects hit    roll by 5.
--&gt;While fighting casts &apos;lightning bolt&apos;.
-
---------------------&gt;General area : Drow City
-Object &apos;whip snake skin&apos;, extra flags dark magic anti-good no_locate.
-Weight is 14, value is 1530, level is 24.
-LIMITED by number 1 
-Weapon type is whip.
-Damage is depend on your level.
-Affects hit    roll by 5.
-Affects damage roll by 5.
--&gt;While fighting casts &apos;poison&apos; and &apos;weaken&apos; to wictim.
-</node>
-        <node keyword="page5">--------------------&gt;General area : Greater Gerighelm
-Object &apos;scythe&apos;, extra flags magic.
-Weight is 20, value is 50000, level is 60.
-LIMITED by number 2 
-Weapon type is exotic.
-Damage is 10d8 (average 45).
-Weapons flags: sharp vorpal ????
-
---------------------&gt;General area : The Great Pyramid
-Object &apos;lion paw&apos;, extra flags magic.
-Weight is 20, value is 4400, level is 26.
-LIMITED by number 1 
-Weapon type is exotic.
-Damage is 4d15 (average 32).
-Affects constitution by 1.
-Affects hit     roll by 8.
-Affects damage  roll by 6.
--&gt;While fighting claws also attacks to victim.
-
---------------------&gt;General area : Armageddon
-Object &apos;scythe reaper grim&apos;, dark evil invis anti-good noremove vis_death.
-Weight is 2, value is 14000, level is 85.
-LIMITED by number 1 
-Weapon type is polearm.
-Damage is 11d10 (average 60).
-Affects hit     roll by 10.
-Affects damage  roll by 10.
-Weapons         flags : vampiric, sharp, poison, two-handed.
-</node>
-        <node keyword="page6">--------------------&gt;General area : Armageddon
-Object &apos;lance holy archangel michael&apos;, glow hum magic bless anti-evil noremove
-Weight is 1, value is 20000, level is 91.
-LIMITED by number 1 
-Weapon type is exotic.
-Damage is 12d10 (average 66).
-Affects hit     roll by 10.
-Affects damage  roll by 10.
-Weapons         flags : flaming.
-
---------------------&gt;General area : Mirror Realm
-Object &apos;horn golden&apos;, glow magic anti-evil 
-Weight is 3, value is 30000, level is 39.
-LIMITED by number 1 
-Weapon type is exotic.
-Damage is 5d12 (average 32).
-Affects hit     roll by 8.
-Affects damage  roll by 8.
-
---------------------&gt;General area : The Prison of Midgaard
-Object &apos;axe destruction&apos;, magic hum invis 
-Weight is 3, value is 0, level is 90.
-LIMITED by number 1 
-Weapon type is axe.
-Damage is 11d11 (average 66).
-Affects damage  roll by 10.
-Affects armor class  by 120
-Weapons flags         : sharp vorpal
-</node>
-        <node keyword="page7">--------------------&gt;General area : The Prison of Midgaard
-Object &apos;titanium shield&apos;, extra flags none.
-Weight is 0, value is 99000, level is 100.
-LIMITED by number 2 
-Armor class is 23 pierce, 23 bash, 22 slash, and 11 vs. magic.
-Affects damage roll by 10.
-
---------------------&gt;General area : Unknown
-Object &apos;rose shield&apos;, extra flags magic bless anti-evil anti-neutral. 
-Weight is 30, value is 5800, level is 30.
-LIMITED by number 1 
-Armor class is 8 pierce, 8 bash, 8 slash, and 3 vs. magic.
-Affects armor class by -7.
--&gt;While fighting at forest surrounds victim by leaves.
-</node>
-        <node keyword="page8">.	Unreadable..............
+        <node keyword="old book книга">В  этой  книге  ты  можешь  найти краткую информацию о характеристиках и
+местонахождении  элитных  вещей  этого  Мира.  Для  получения информации
+используй  команды:  &apos;read page1&apos;,&apos;read page2&apos;,&apos;read page3&apos; и так далее.
+Внимание:  большинство  информации базируется  на  легендах и преданиях,
+следовательно  возможны ошибки, а так же в эту книгу могут быть включены
+не все имеющиеся элитные вещи..........................................
 </node>
       </extraDescr>
       <gender>f</gender>
@@ -8253,36 +7860,65 @@ Affects armor class by -7.
       <cost>200000</cost>
       <description>На обложке книги (book) название: &quot;Известные Элитные Вещи Страны Грез. Часть II&quot;.</description>
       <extraDescr>
-        <node keyword="old book книга">В  этой  книге  ты  можешь  найти краткую информацию о характеристиках и
-местонахождении  элитных  вещей  этого  Мира.  Для  получения информации
-используй команды: &apos;read page1&apos;,&apos;read page2&apos;,&apos;read page3&apos; и так далее.
+        <node keyword="page6">Unreadable....................................................
 </node>
-        <node keyword="page1">--------------------&gt;General area : Divided Souls
-Object &apos;bracers energy&apos;, extra flags glow hum.
-Weight is 4, value is 4300, level is 76.
-LIMITED by number ??? 
-Armor class is 20 pierce, 20 bash, 20 slash, and 20 vs. magic.
+        <node keyword="page5">--------------------&gt;General area : Elemental Canyon
+Object &apos;boots wind&apos; is type armor, extra flags magic.
+Weight is 1, value is 5200, level is 26.
+LIMITED by number 3 
+Armor class is 8 pierce, 8 bash, 8 slash, and 2 vs. magic.
+Affects dexterity by 2.
+-&gt;Affects &apos;fly&apos; spell.
+
+--------------------&gt;General area : Underdark
+Boots of flying 
+Object &apos;boots of flying&apos; is type armor, extra flags invis magic noremove.
+Weight is 0, value is 1000, level is 31.
+Armor class is 18 pierce, 18 bash, 18 slash, and 9 vs. magic.
+  Affects dexterity by 4.
+  Affects moves by 200.
+
+--------------------&gt;General area : Unknown
+Object &apos;shield ????&apos;, extra flags magic anti-good.
+Weight is 10, value is 4400, level is 24.
+LIMITED by number 1 
+Armor class is 7 pierce, 7 bash, 7 slash, and 3 vs. magic.
+Affects saves by -2.
+Affects saves by -2.
+-&gt;Affects immune to CHARM.
+</node>
+        <node keyword="page4">--------------------&gt;General area : Underdark or Caverns
+Demon fire 
+Object &apos;demon fire&apos; is type armor, extra flags hum evil magic.
+Weight is 0, value is 1000, level is 37.
+Armor class is 22 pierce, 20 bash, 20 slash, and 12 vs. magic.
+  Affects damage roll by 6.
+  Affects armor class by -15.
+-&gt;While fighting your shield ?????
+
+--------------------&gt;General area : Isles of the Pirate Lords 
+armbands of the Volcanoes 
+Object &apos;armbands volcanoes&apos; is type armor, extra flags glow magic vis_death.
+Weight is 0, value is 1000, level is 64.
+Armor class is 25 pierce, 25 bash, 25 slash, and 25 vs. magic.
+  Affects hp by 100.
+-&gt;While fighting your armbands cast ?????
+</node>
+        <node keyword="page3">--------------------&gt;General area : Unknown
+Object &apos;lost ring ra&apos; is type jewelry, extra flags hum magic.
+Weight is 5, value is 44300, level is 40.
+LIMITED by number 1 
+Affects armor class by 20.
 Affects damage roll by 5.
-Affects mana by 90.
-Affects dexterity by 3.
--&gt;Affects &apos;haste&apos; spell.
+-&gt;Speech casts &apos;lightning breath&apos; to victim.
 
---------------------&gt;General area : Hitower of magic
-Object &apos;bracelet silver&apos;, extra flags magic.
-Weight is 5, value is 1440, level is 20.
-LIMITED by number ??? 
-Affects armor class by -5.
--&gt;Affects haste spell
-
---------------------&gt;General area : Divided Souls
-Object &apos;musical bracers black feather&apos;, extra flags glow hum.
-Weight is 2, value is 2200, level is 43.
-LIMITED by number ???
-Armor class is 13 pierce, 13 bash, 13 slash, and 13 vs. magic.
-Affects damage roll by 3.
-Affects mana by 45.
-Affects dexterity by 3.
--&gt;Affects &apos;haste&apos; spell.
+--------------------&gt;General area : Olympus
+Object &apos;gauntlets flaming&apos; is type armor, extra flags magic.
+Weight is 6, value is 2900, level is 27.
+LIMITED by number 3 
+Armor class is 7 pierce, 7 bash, 7 slash, and 4 vs. magic.
+Affects hp by 25.
+-&gt;While fighting your gauntlets cast &apos;burning hands&apos;.
 </node>
         <node keyword="page2">--------------------&gt;General area : Galaxy
 Object &apos;arm hercules&apos; is type armor, extra flags glow magic anti-evil.
@@ -8312,65 +7948,36 @@ Armor class is 20 pierce, 20 bash, 20 slash, and 10 vs. magic.
   Affects damage roll by 5.
 -&gt;Affects &apos;giant strength&apos; spell.
 </node>
-        <node keyword="page3">--------------------&gt;General area : Unknown
-Object &apos;lost ring ra&apos; is type jewelry, extra flags hum magic.
-Weight is 5, value is 44300, level is 40.
-LIMITED by number 1 
-Affects armor class by 20.
+        <node keyword="page1">--------------------&gt;General area : Divided Souls
+Object &apos;bracers energy&apos;, extra flags glow hum.
+Weight is 4, value is 4300, level is 76.
+LIMITED by number ??? 
+Armor class is 20 pierce, 20 bash, 20 slash, and 20 vs. magic.
 Affects damage roll by 5.
--&gt;Speech casts &apos;lightning breath&apos; to victim.
+Affects mana by 90.
+Affects dexterity by 3.
+-&gt;Affects &apos;haste&apos; spell.
 
---------------------&gt;General area : Olympus
-Object &apos;gauntlets flaming&apos; is type armor, extra flags magic.
-Weight is 6, value is 2900, level is 27.
-LIMITED by number 3 
-Armor class is 7 pierce, 7 bash, 7 slash, and 4 vs. magic.
-Affects hp by 25.
--&gt;While fighting your gauntlets cast &apos;burning hands&apos;.
+--------------------&gt;General area : Hitower of magic
+Object &apos;bracelet silver&apos;, extra flags magic.
+Weight is 5, value is 1440, level is 20.
+LIMITED by number ??? 
+Affects armor class by -5.
+-&gt;Affects haste spell
+
+--------------------&gt;General area : Divided Souls
+Object &apos;musical bracers black feather&apos;, extra flags glow hum.
+Weight is 2, value is 2200, level is 43.
+LIMITED by number ???
+Armor class is 13 pierce, 13 bash, 13 slash, and 13 vs. magic.
+Affects damage roll by 3.
+Affects mana by 45.
+Affects dexterity by 3.
+-&gt;Affects &apos;haste&apos; spell.
 </node>
-        <node keyword="page4">--------------------&gt;General area : Underdark or Caverns
-Demon fire 
-Object &apos;demon fire&apos; is type armor, extra flags hum evil magic.
-Weight is 0, value is 1000, level is 37.
-Armor class is 22 pierce, 20 bash, 20 slash, and 12 vs. magic.
-  Affects damage roll by 6.
-  Affects armor class by -15.
--&gt;While fighting your shield ?????
-
---------------------&gt;General area : Isles of the Pirate Lords 
-armbands of the Volcanoes 
-Object &apos;armbands volcanoes&apos; is type armor, extra flags glow magic vis_death.
-Weight is 0, value is 1000, level is 64.
-Armor class is 25 pierce, 25 bash, 25 slash, and 25 vs. magic.
-  Affects hp by 100.
--&gt;While fighting your armbands cast ?????
-</node>
-        <node keyword="page5">--------------------&gt;General area : Elemental Canyon
-Object &apos;boots wind&apos; is type armor, extra flags magic.
-Weight is 1, value is 5200, level is 26.
-LIMITED by number 3 
-Armor class is 8 pierce, 8 bash, 8 slash, and 2 vs. magic.
-Affects dexterity by 2.
--&gt;Affects &apos;fly&apos; spell.
-
---------------------&gt;General area : Underdark
-Boots of flying 
-Object &apos;boots of flying&apos; is type armor, extra flags invis magic noremove.
-Weight is 0, value is 1000, level is 31.
-Armor class is 18 pierce, 18 bash, 18 slash, and 9 vs. magic.
-  Affects dexterity by 4.
-  Affects moves by 200.
-
---------------------&gt;General area : Unknown
-Object &apos;shield ????&apos;, extra flags magic anti-good.
-Weight is 10, value is 4400, level is 24.
-LIMITED by number 1 
-Armor class is 7 pierce, 7 bash, 7 slash, and 3 vs. magic.
-Affects saves by -2.
-Affects saves by -2.
--&gt;Affects immune to CHARM.
-</node>
-        <node keyword="page6">Unreadable....................................................
+        <node keyword="old book книга">В  этой  книге  ты  можешь  найти краткую информацию о характеристиках и
+местонахождении  элитных  вещей  этого  Мира.  Для  получения информации
+используй команды: &apos;read page1&apos;,&apos;read page2&apos;,&apos;read page3&apos; и так далее.
 </node>
       </extraDescr>
       <gender>f</gender>
@@ -8420,8 +8027,8 @@ Affects saves by -2.
       </extraDescr>
       <gender>f</gender>
       <material>leather</material>
-      <name>книга old book</name>
-      <short_descr>стар|ая|ой|ой|ую|ой|ой книг|а|и|е|у|ой|е</short_descr>
+      <name>книга старая кассандра old book kassandra</name>
+      <short_descr>стар|ая|ой|ой|ую|ой|ой книг|а|и|е|у|ой|е о {1{gКассандре{2</short_descr>
       <type name="trash">
       </type>
       <wear_flags>take hold</wear_flags>
@@ -8522,7 +8129,7 @@ Affects saves by -2.
       <sector>inside</sector>
     </node>
     <node name="3002">
-      <description>Это внутреннее Святилище монахов.  Картина могущественного Leo  висит на 
+      <description>Это внутреннее Святилище монахов.  Картина могущественной Годивы  висит на 
 стене,  как раз над алтарем,  который расположен  у западной стены. Посреди 
 пола  расположен  колодец,  который уходит  вниз  в темноту.  Ужасный запах 
 доносится оттуда.
@@ -8962,7 +8569,8 @@ Affects saves by -2.
         </node>
       </exits>
       <extraDescr>
-        <node keyword="statue статуя">Статуя изображает Бога, покровителя торговцев и ремесленников Мидгаарда.
+        <node keyword="statue статуя">Статуя изображает бога Фили, покровителя торговцев Мидгаарда. На его лице
+навеки застыла ехидная улыбка, а каменные глаза как будто горят жаждой наживы.
 </node>
       </extraDescr>
       <flags>law</flags>
@@ -10459,6 +10067,8 @@ Affects saves by -2.
 В  этом  месте также нет никаких окон, что заставляет тебя чувствовать себя
 тут  уверенно  и  спокойно.  Орудия пыток мастера гильдии развешаны по всей
 комнате.
+
+Табличка (plaque) на одной из стен привлекает твое внимание.
 </description>
       <exits>
         <node name="west">
@@ -10467,6 +10077,11 @@ Affects saves by -2.
           <target>3060</target>
         </node>
       </exits>
+      <extraDescr>
+        <node keyword="plaque табличка">Если хочешь совершить защитный ритуал над своим призрачным клинком, 
+просто дай клинок гильдмастеру.
+</node>
+      </extraDescr>
       <flags>no_vanish no_mob indoors law nosummon</flags>
       <guilds>anti-paladin</guilds>
       <name>Палата Пыток</name>
@@ -10762,7 +10377,7 @@ reads...   ???.
     </node>
     <node name="3072">
       <description>Огромный  кусок  черного  вулканического  стекла  превращен  в чашу  для
-жертвоприношений  в  честь  Темного Бога. Факелы на стенах проливают слабый
+жертвоприношений  в  честь  Темной Богини. Факелы на стенах проливают слабый
 свет над темной чашей алтаря.
 </description>
       <exits>
@@ -10907,6 +10522,7 @@ reads...   ???.
       <name>Ризница</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="3172"/>
+        <drop vnum="28620"/>
       </resets>
       <sector>inside</sector>
     </node>
@@ -11148,8 +10764,7 @@ reads...   ???.
           <target>3108</target>
         </node>
         <node name="north">
-          <description>Ты замечаешь разноцветное сияние.
-</description>
+          <key>0</key>
           <target>1041</target>
         </node>
         <node name="south">
@@ -12179,6 +11794,9 @@ reads...   ???.
         </node>
       </exits>
       <extraDescr>
+        <node keyword="door">Табличка на дверях гласит:
+&quot;Посторонним вход воспрещен. Комната для персонала&quot;
+</node>
         <node keyword="window окно">Ты заглядываешь в окно и видишь стражника, поднимающего старую даму.
 </node>
         <node keyword="bookcase книжный шкаф">Ты   видишь   в   нем  много  картографических  атласов  и  топографических
@@ -12190,8 +11808,6 @@ reads...   ???.
       <name>Магазин Карт Меланхолика</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="3160"/>
-        <give vnum="3394"/>
-        <give vnum="3395"/>
         <give vnum="3396"/>
         <give vnum="3168"/>
         <give vnum="3167"/>
@@ -12984,13 +12600,22 @@ reads...   ???.
 от себя. На поверхности ковров четко отпечатались следы грязных ног и лап.
 На стене нарисована бутылка пива с подписью &quot;Пиво - Навсегда!&quot; и маленькое
 сердечко. Вокруг изображения тоже отпечатки лап.
+
+Под изображением бутылки приколот листок в клеточку (paper).
 </description>
       <exits>
         <node name="east">
           <target>3054</target>
         </node>
       </exits>
-      <flags>safe law</flags>
+      <extraDescr>
+        <node keyword="paper листок">Находясь в этой комнате, можно не беспокоиться о голоде или жажде крови,
+чуме или яде, и спокойно предаваться общению. Вы не покинете мир автоматически
+после 20 тиков бездействия. Все аффекты и параметры не будут обновляться, пока
+вы находитесь здесь.
+</node>
+      </extraDescr>
+      <flags>safe law chat</flags>
       <manaRate>1000</manaRate>
       <name>Беседка (комната для бесед)</name>
       <sector>city</sector>

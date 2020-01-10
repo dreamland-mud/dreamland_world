@@ -6,12 +6,37 @@
     <levelHigh>10</levelHigh>
     <levelLow>5</levelLow>
     <name>Леса Королевства Хаон</name>
+    <resetMessage>Ты слышишь тихий шелест листвы -- будто исполинские дубы говорят на своем древнем наречии.</resetMessage>
     <security>9</security>
     <speedwalk>5w</speedwalk>
     <translator>Tirna</translator>
     <vnumHigh>6199</vnumHigh>
     <vnumLow>6000</vnumLow>
   </areadata>
+  <helps>
+    <node id="1862" keyword="'HAON DOR' 'ЛЕСА КОРОЛЕВСТВА ХАОН' HAONDOR ХАОНДОР 'ХАОН ДОР'" level="1">На запад от Мидгаарда простирается огромный лес Хаон Дор -- по легенде, лишь
+последний остаток исполинского лесного массива, который задолго до появления
+людей простирался от Закатных Пределов до Моря Дракона на востоке.
+Говорят, что этот лес стал первым королевством детей {hh1565Варды{x, эльфов, еще до
+{hh80Первой Эпохи{x. Заброшенные волей богов в иной мир, они назвали свою обитель
+Хаэн Д&apos;ор -- &quot;далекая земля&quot;.
+
+Когда люди начали заселять просторы {hh82Тэры{x, они встретились с эльфами и, не зная
+языка квенья, окрестили их владения Королевством Хаон. Люди расширяли свои земли
+очень быстро, прокладывая дороги и вырубая леса на постройку домов и городов.
+Теснимые людьми, эльфы покинули леса Хаон Дор и основали новые анклавы, подальше
+от шумных новоприбывших. Но название прижилось, и жители Тэры и по сей день
+называют Лес его исконным именем.
+
+В Хаон Доре зародился круг друидов и развился культ богини-матери {hh983Кибелы{x. В наше
+время друидов на просторах Тэры уже почти не осталось, но их капища все еще
+можно встретить в потаенных уголках Леса. 
+
+Лес хранит множество тайн и может быть опасен для неопытных приключенцев,
+особенно ночью. В глубинах чащи рыщут варги и волколаки, плетут сети гигантские
+пауки и другие чудовища. По слухам, где-то в лесу есть драконья пещера...
+</node>
+  </helps>
   <mobiles>
     <node name="6000">
       <ac bash="4" exotic="9" pierce="4" slash="4"/>
@@ -430,24 +455,27 @@
     </node>
     <node name="6116">
       <ac bash="-3" exotic="6" pierce="-3" slash="-3"/>
-      <act add="npc sentinel scavenger aggressive cleric"/>
+      <act add="npc sentinel cleric"/>
       <dam_type>none</dam_type>
       <damage>2d6+4</damage>
       <default_pos>stand</default_pos>
-      <description>Этот друид очень стар. Тебе хотелось бы видеть в нем святого, но ясно
-что это твой злейший враг.
+      <description>Эта старуха охраняет тайны сил Природы, посвященные древней богине Кибеле.
+Она покровительствует всем растениям и животным, но очень недовольна всеми
+мыслящими и говорящими существами, которые вырубают ее леса, осушают реки,
+и строят отвратительные грязные города-муравейники.
 </description>
       <hit>3d9+258</hit>
       <level>17</level>
-      <long_descr>Старый друид (elder druid) выглядит очень растроенным твоим появлением.
+      <long_descr>Старая жрица (elder priestess) культа Кибелы недовольна твоим вторжением.
 </long_descr>
       <mana>17d9+100</mana>
       <material>0</material>
       <off add="disarm kick parry assist_vnum"/>
-      <player_name>elder druid старик друид</player_name>
+      <player_name>elder priestess siebele старуха жрица кибела</player_name>
       <race>human</race>
-      <sex>male</sex>
-      <short_descr>стар|ый|ого|ому|ого|ым|ом друид||а|у|а|ом|е</short_descr>
+      <religion registry="religion">siebele</religion>
+      <sex>female</sex>
+      <short_descr>жриц|а|ы|е|у|ей|е культа Кибелы</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
       <wealth>250</wealth>
@@ -471,7 +499,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>guildmaster master мастер гильдия</player_name>
-      <practicer>none detection creation harmful weather </practicer>
+      <practicer registry="skillGroup">none detection harmful creation weather</practicer>
       <race>human</race>
       <res add="spell"/>
       <sex>male</sex>
@@ -509,13 +537,23 @@
       <weight>100</weight>
     </node>
     <node name="6001">
+      <affects>
+        <node>
+          <apply to="hitroll">1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="cha">1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
       <cost>610</cost>
       <description>Пестрая рубаха (shirt) лежит здесь.</description>
       <extraDescr>
         <node keyword="shirt рубаха рубашка">Эта огромная пестрая рубаха сшита из грубой ткани.
 </node>
       </extraDescr>
-      <gender>m</gender>
+      <gender>f</gender>
       <level>3</level>
       <material>cloth</material>
       <name>shirt рубаха рубашка</name>
@@ -841,6 +879,20 @@
       <weight>150</weight>
     </node>
     <node name="6112">
+      <affects>
+        <node>
+          <apply to="hitroll">2</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="damroll">1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hit">10</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
       <cost>1050</cost>
       <description>Железный венец (crown) покоится на земле.</description>
       <extraDescr>
@@ -850,8 +902,8 @@
       <gender>m</gender>
       <level>15</level>
       <material>iron</material>
-      <name>crown iron венец железо</name>
-      <short_descr>железн|ый|ого|ому|ый|ым|ом вен|ец|ца|цу|ец|цом|це</short_descr>
+      <name>crown kings iron венец древних королей железо</name>
+      <short_descr>вен|ец|ца|цу|ец|цом|це {1{Wдревних королей{2</short_descr>
       <type name="armor">
         <ac bash="6" exotic="0" pierce="6" slash="6"/>
       </type>
@@ -859,6 +911,16 @@
       <weight>100</weight>
     </node>
     <node name="6114">
+      <affects>
+        <node>
+          <apply to="wis">1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="damroll">1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
       <cost>50</cost>
       <description>Железное кольцо (ring) позабыто здесь.</description>
       <extraDescr>
@@ -1941,10 +2003,10 @@
         </node>
       </exits>
       <extraDescr>
-        <node keyword="tree trees trunk trunks дерево деревья ствол стволы">Кажется, что эти древние мрачные гиганты безмолвно смотрят на тебя.
+        <node keyword="path узкая дорожка">Дорожка выглядит очень заброшенной. Один из гигантских корней вылез
+из земли и разрушил часть.
 </node>
-        <node keyword="path дорога дорожка">Тропинка выглядит очень заброшенной. Один из гигантских корней вылез
-из земли и разрушил часть ее.
+        <node keyword="trees деревья">Кажется, что эти древние мрачные гиганты безмолвно смотрят на тебя.
 </node>
       </extraDescr>
       <flags>dark indoors</flags>
@@ -2800,7 +2862,7 @@
       <sector>forest</sector>
     </node>
     <node name="6130">
-      <description>Ты на пыльной  тропе,  бегущей на  запад. Над тропинкой висят большие
+      <description>Ты на пыльной  тропе (trail),  бегущей на  запад. Над тропинкой висят большие
 липкие шнуры (wires), подвешенные  на манер веревок  между деревьями. На западе
 дорога полностью покрыта гигантской паутиной из огромных нитей, укрытых
 клеем. Тебе придется ползти, чтобы пройти там.
@@ -2821,11 +2883,11 @@
         </node>
       </exits>
       <extraDescr>
-        <node keyword="trail тропа тропка тропинка">Темная и пыльная тропинка выглядит совершенно заброшенной среди стоящих
+        <node keyword="trail тропа тропинка">Темная и пыльная тропинка выглядит совершенно заброшенной среди стоящих
 вокруг огромных деревьев.  В нескольких  местах она разрушена  большими
 корнями, вылезшими из земли.
 </node>
-        <node keyword="substance wire wires rope ropes tree trees trunk trunks паутина нить нити веревка веревки вещество дерево деревья ствол стволы">Липкое вещество висит между этими древними деревьями, подвешенное как
+        <node keyword="wires шнуры веревки деревья">Липкое вещество висит между этими древними деревьями, подвешенное как
 веревки, кое-где перекрывая  дорогу. Кажется по этим  веревкам  можно
 взобраться на одно из деревьев.
 </node>
@@ -3294,11 +3356,12 @@ Ciquala.
       <sector>forest</sector>
     </node>
     <node name="6155">
-      <description>Этот храм  был выстроен  в  честь бога, о котором ты  даже и не знаешь.
-Здесь очень   хорошее место для посещений, но ты чувствуешь себя не очень
-хорошо, когда  решаешь провести здесь немного больше времени. Деревянный
-алтарь едва заметно мерцает с момента твоего прихода. Отсюда только
-два выхода - на север, в подземных ход, и на юг - в Бездну.
+      <description>Этот храм был выстроен в незапамятные времена в честь богини-матери Природы, 
+Кибелы. Здесь очень тихо, стены затянуты плющом, а пол выстлан густым мхом.
+Мыслящим существам здесь не рады, и ты чувствуешь себя не очень хорошо, когда
+решаешь провести здесь немного больше времени.
+Деревянный алтарь (altar) едва заметно мерцает с момента твоего прихода.
+Отсюда только два выхода - на север, в подземных ход, и на юг - в Бездну.
 </description>
       <exits>
         <node name="north">
@@ -3315,8 +3378,14 @@ Ciquala.
           <target>25004</target>
         </node>
       </exits>
+      <extraDescr>
+        <node keyword="altar алтарь">Алтарь окроплен свежей кровью, стекающей по древним изразцам, изображающим
+стаю львов, разрывающую в клочья неудачливого наемника. Пожалуй, стоит поскорее
+убираться отсюда, чтобы не стать следующей жертвой...
+</node>
+      </extraDescr>
       <flags>dark indoors</flags>
-      <name>Храм друидов</name>
+      <name>Капище Кибелы</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="6116"/>
         <equip to="wield" vnum="6155"/>
@@ -3343,7 +3412,7 @@ Ciquala.
         </node>
       </exits>
       <flags>no_vanish law nosummon</flags>
-      <guilds>ranger </guilds>
+      <guilds>ranger</guilds>
       <name>Спрятанная поляна</name>
       <sector>forest</sector>
     </node>
@@ -3362,7 +3431,7 @@ Ciquala.
         </node>
       </exits>
       <flags>no_vanish indoors law nosummon</flags>
-      <guilds>ranger </guilds>
+      <guilds>ranger</guilds>
       <name>В землянке рейнджеров</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="6117"/>

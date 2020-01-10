@@ -14,7 +14,7 @@
     <vnumLow>18600</vnumLow>
   </areadata>
   <helps>
-    <node keyword="NEWBIE ZONE" level="102">Converted to standard Envy 1.x by Jason Huang (god@sure.net)
+    <node id="1435" keyword="NEWBIE ZONE" level="102">Converted to standard Envy 1.x by Jason Huang (god@sure.net)
 Further conversion to Rom 2.4 by Jaceks and Chicken&apos;s Den Staff</node>
   </helps>
   <mobiles>
@@ -422,10 +422,11 @@ Further conversion to Rom 2.4 by Jaceks and Chicken&apos;s Den Staff</node>
       <material>steel</material>
       <name>sword newbie меч ньюбский</name>
       <short_descr>сияющ|ий|его|ему|его|им|ем меч||а|у||ом|е</short_descr>
-      <type name="">
-        <v0>536870912</v0>
-        <v1>2</v1>
-        <v2>5</v2>
+      <type name="weapon">
+        <diceNumber>4</diceNumber>
+        <diceType>3</diceType>
+        <weapClass>sword</weapClass>
+        <weapType>slash</weapType>
       </type>
       <wear_flags>take wield</wear_flags>
       <weight>120</weight>
@@ -499,6 +500,14 @@ Further conversion to Rom 2.4 by Jaceks and Chicken&apos;s Den Staff</node>
     </node>
     <node name="18605">
       <affects>
+        <node>
+          <apply to="hit">3</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
         <node>
           <apply to="ac">-2</apply>
         </node>
@@ -615,6 +624,14 @@ Further conversion to Rom 2.4 by Jaceks and Chicken&apos;s Den Staff</node>
     </node>
     <node name="18610">
       <affects>
+        <node>
+          <apply to="ac">-10</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
         <node>
           <apply to="str">1</apply>
         </node>
@@ -1666,6 +1683,7 @@ Further conversion to Rom 2.4 by Jaceks and Chicken&apos;s Den Staff</node>
       <name>Северная Лестница</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="18612"/>
+        <equip to="wield" vnum="18601"/>
       </resets>
       <sector>inside</sector>
     </node>

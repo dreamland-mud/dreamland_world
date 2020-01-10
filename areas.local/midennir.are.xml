@@ -13,7 +13,7 @@
     <vnumLow>3500</vnumLow>
   </areadata>
   <helps>
-    <node keyword="MIDEN'NIR МИДЕН'НИР" level="1">Большой лес к югу от Мидгаарда, населенный туповатыми и агрессивными гоблинами.
+    <node id="1441" keyword="MIDENIR MIDENNIR МИДЕНИР МИДЕННИР" level="1">Большой лес к югу от {hh1392Мидгаарда{x, населенный туповатыми и агрессивными гоблинами.
 В его западной части располагается небольшой трактир, который с трудом 
 сводит концы с концами. 
 %PAUSE%
@@ -323,6 +323,12 @@
       <weight>30</weight>
     </node>
     <node name="3503">
+      <affects>
+        <node>
+          <apply to="hitroll">1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
       <condition>75</condition>
       <cost>110</cost>
       <description>Старый выцветший плащ (cloak) путешественника выглядит неопрятной грудой тряпья.</description>
@@ -340,6 +346,14 @@
     </node>
     <node name="3504">
       <affects>
+        <node>
+          <apply to="dex">1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="str">1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
         <node>
           <apply to="hitroll">1</apply>
         </node>
@@ -433,7 +447,11 @@
     <node name="3508">
       <affects>
         <node>
-          <apply to="hitroll">2</apply>
+          <apply to="hit">10</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="ac">-6</apply>
           <bits table="affect_flags"></bits>
         </node>
         <node>
@@ -441,7 +459,7 @@
           <bits table="affect_flags"></bits>
         </node>
         <node>
-          <apply to="ac">-6</apply>
+          <apply to="hitroll">2</apply>
           <bits table="affect_flags"></bits>
         </node>
       </affects>
@@ -454,7 +472,7 @@
       <level>8</level>
       <material>flesh</material>
       <name>ear necklace ожерелье уши</name>
-      <short_descr>ожерель|е|я|ю|е|ем|е из ушей гоблинов</short_descr>
+      <short_descr>ожерель|е|я|ю|е|ем|е из {1{rушей гоблинов{2</short_descr>
       <smell>Пахнет несвежей гоблинятиной.</smell>
       <type name="jewelry">
       </type>

@@ -1,0 +1,3726 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<area>
+  <areadata>
+    <authors>Yaegar</authors>
+    <credits>The Village of Anon</credits>
+    <levelHigh>65</levelHigh>
+    <levelLow>1</levelLow>
+    <name>The Village of Anon</name>
+    <security>9</security>
+    <speedwalk>6e4s4w3s4wnws8w</speedwalk>
+    <vnumHigh>24200</vnumHigh>
+    <vnumLow>24100</vnumLow>
+  </areadata>
+  <mobiles>
+    <node name="24100">
+      <ac bash="-66" exotic="-33" pierce="-66" slash="-66"/>
+      <act add="npc sentinel noeye stay_area"/>
+      <aff add="sanctuary protect_evil"/>
+      <alignment>1000</alignment>
+      <dam_type>divine</dam_type>
+      <damage>17d10+64</damage>
+      <default_pos>stand</default_pos>
+      <description>The shaman is a well respected and devoted healer and mystic. He spends his
+time curing the ailments of the inhabitants of this village, or those of any
+strangers that may pass by.
+</description>
+      <hit>50d10+20500</hit>
+      <level>93</level>
+      <long_descr>The village shaman tends to the weak and infirm here.
+</long_descr>
+      <mana>5d5+5000</mana>
+      <material>0</material>
+      <off add="dodge fast parry trip"/>
+      <player_name>shaman</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>the village shaman</short_descr>
+      <size>medium</size>
+      <spec>spec_cast_adept</spec>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24101">
+      <ac bash="-66" exotic="-33" pierce="-66" slash="-66"/>
+      <act add="npc sentinel stay_area"/>
+      <aff add="sanctuary protect_evil"/>
+      <alignment>1000</alignment>
+      <dam_type>pound</dam_type>
+      <damage>17d10+64</damage>
+      <default_pos>stand</default_pos>
+      <description>While the knapper&apos;s primary job is to craft tools for the village, such is
+his skill that he may also be able to repair your equipment. Contact with
+merchants from more advanced civilisations to the south have made him
+remarkably conversant with the properties of metals such as copper and silver 
+and alloys such as bronze.
+</description>
+      <hit>50d10+20500</hit>
+      <level>73</level>
+      <long_descr>The village flint-knapper is here repairing crude tools.
+</long_descr>
+      <mana>5d5+5000</mana>
+      <material>0</material>
+      <off add="dodge fast kick parry trip"/>
+      <player_name>flint knapper flint-knapper</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>the village flint-knapper</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24102">
+      <ac bash="-66" exotic="-33" pierce="-66" slash="-66"/>
+      <act add="npc sentinel stay_area"/>
+      <aff add="sanctuary protect_evil"/>
+      <alignment>1000</alignment>
+      <behavior type="ShopTrader">
+        <buys>weapon armor warp_stone gem</buys>
+        <closeHour>23</closeHour>
+        <openHour>0</openHour>
+        <profitBuy>150</profitBuy>
+        <profitSell>50</profitSell>
+      </behavior>
+      <dam_type>pound</dam_type>
+      <damage>17d10+64</damage>
+      <default_pos>stand</default_pos>
+      <description>This fellow is possessed of much darker skin and eyes than his current
+neighbors, hailing as he does from the island kingdoms far to the south. He
+has brought with him a variety of bronze arms and armor, as well as the 
+occasional crude iron oddity.
+</description>
+      <hit>50d10+20500</hit>
+      <level>80</level>
+      <long_descr>A swarthy southern trader is here hawking his wares.
+</long_descr>
+      <mana>5d5+5000</mana>
+      <material>0</material>
+      <off add="dodge fast kick parry trip"/>
+      <player_name>trader</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>a swarthy southern trader</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24103">
+      <ac bash="-66" exotic="-33" pierce="-66" slash="-66"/>
+      <act add="npc sentinel stay_area"/>
+      <aff add="sanctuary protect_evil"/>
+      <alignment>1000</alignment>
+      <behavior type="ShopTrader">
+        <buys>gem</buys>
+        <closeHour>23</closeHour>
+        <openHour>0</openHour>
+        <profitBuy>150</profitBuy>
+        <profitSell>50</profitSell>
+      </behavior>
+      <dam_type>slash</dam_type>
+      <damage>17d10+64</damage>
+      <default_pos>stand</default_pos>
+      <description>Type list to see what he has to offer.
+</description>
+      <hit>50d10+20500</hit>
+      <level>93</level>
+      <long_descr>A tough mercenary offers to hire out his men to you.
+</long_descr>
+      <mana>5d5+5000</mana>
+      <material>0</material>
+      <off add="dodge fast kick parry trip"/>
+      <player_name>merc</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>a mercenary</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24104">
+      <ac bash="-66" exotic="-33" pierce="-66" slash="-66"/>
+      <act add="npc sentinel stay_area"/>
+      <aff add="sanctuary protect_evil"/>
+      <alignment>1000</alignment>
+      <behavior type="ShopTrader">
+        <buys>scroll wand staff potion pill spellbook tattoo</buys>
+        <closeHour>23</closeHour>
+        <openHour>0</openHour>
+        <profitBuy>150</profitBuy>
+        <profitSell>50</profitSell>
+      </behavior>
+      <dam_type>pound</dam_type>
+      <damage>17d10+64</damage>
+      <default_pos>stand</default_pos>
+      <description>This young woman, one of the chief&apos;s many daughters, has travelled far and 
+wide, and gathered a variety of exotic herbs and roots that she blends into 
+marvellous potions. They taste even worse than they smell...
+</description>
+      <hit>50d10+20500</hit>
+      <level>83</level>
+      <long_descr>The village witchdoctor is here selling a variety of potions and brews.
+</long_descr>
+      <mana>5d5+5000</mana>
+      <material>0</material>
+      <off add="dodge fast kick parry trip"/>
+      <player_name>witchdoctor</player_name>
+      <race>human</race>
+      <sex>female</sex>
+      <short_descr>the village witchdoctor</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24105">
+      <ac bash="-66" exotic="-33" pierce="-66" slash="-66"/>
+      <act add="npc sentinel stay_area"/>
+      <aff add="sanctuary protect_evil"/>
+      <alignment>1000</alignment>
+      <dam_type>pound</dam_type>
+      <damage>17d10+64</damage>
+      <default_pos>stand</default_pos>
+      <description>Age may have taken what beauty this crone once possessed, but it hasn&apos;t 
+robbed her of her wits. She is more knowledgable in the properties of items
+than anyone else in the known world (which, admittedly, doesn&apos;t cover very
+much. In fact, to these villagers it is about as far as you can see on a 
+clear day).
+</description>
+      <hit>50d10+20500</hit>
+      <level>83</level>
+      <long_descr>The village wise woman cracks a toothless grin as you enter.
+</long_descr>
+      <mana>5d5+5000</mana>
+      <material>0</material>
+      <off add="dodge fast kick parry trip"/>
+      <player_name>wise woman</player_name>
+      <race>human</race>
+      <sex>female</sex>
+      <short_descr>the village wise woman</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24106">
+      <ac bash="-66" exotic="-33" pierce="-66" slash="-66"/>
+      <act add="npc sentinel stay_area"/>
+      <aff add="sanctuary protect_evil"/>
+      <alignment>1000</alignment>
+      <behavior type="ShopTrader">
+        <buys>gem</buys>
+        <closeHour>23</closeHour>
+        <openHour>0</openHour>
+        <profitBuy>150</profitBuy>
+        <profitSell>50</profitSell>
+      </behavior>
+      <dam_type>pound</dam_type>
+      <damage>17d10+64</damage>
+      <default_pos>stand</default_pos>
+      <description>When he has the time, this impossibly huge man will gladly sell you a pet
+that he has domesticated, though from the look of it you may have doubts
+in his ability to exact obedience. That bear sure doesn&apos;t look tame...
+</description>
+      <hit>50d10+20500</hit>
+      <level>80</level>
+      <long_descr>The village beastmaster is here wrestling with a large bear.
+</long_descr>
+      <mana>5d5+5000</mana>
+      <material>0</material>
+      <off add="dodge fast kick parry trip"/>
+      <player_name>beastmaster</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>the village beastmaster</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24107">
+      <ac bash="-66" exotic="-33" pierce="-66" slash="-66"/>
+      <act add="npc sentinel stay_area"/>
+      <aff add="sanctuary protect_evil"/>
+      <alignment>1000</alignment>
+      <behavior type="ShopTrader">
+        <buys>light treasure trash container key jewelry</buys>
+        <closeHour>23</closeHour>
+        <openHour>0</openHour>
+        <profitBuy>150</profitBuy>
+        <profitSell>50</profitSell>
+      </behavior>
+      <dam_type>pound</dam_type>
+      <damage>17d10+64</damage>
+      <default_pos>stand</default_pos>
+      <description>This stout hunter spends six months of the year trapping for fur, and the rest 
+of the year fashioning and selling basic equipment.
+</description>
+      <hit>50d10+20500</hit>
+      <level>83</level>
+      <long_descr>A grizzled northerner offers to sell you some supplies.
+</long_descr>
+      <mana>5d5+5000</mana>
+      <material>0</material>
+      <off add="dodge kick parry trip"/>
+      <player_name>trader northerner</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>a northern trader</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24108">
+      <ac bash="-66" exotic="-33" pierce="-66" slash="-66"/>
+      <act add="npc sentinel stay_area"/>
+      <aff add="sanctuary protect_evil"/>
+      <alignment>1000</alignment>
+      <behavior type="ShopTrader">
+        <buys>food gem</buys>
+        <closeHour>23</closeHour>
+        <openHour>0</openHour>
+        <profitBuy>180</profitBuy>
+        <profitSell>20</profitSell>
+      </behavior>
+      <dam_type>pound</dam_type>
+      <damage>17d10+64</damage>
+      <default_pos>stand</default_pos>
+      <description>The crop was good this year, and the villagers have sufficient to sell to
+travellers and other villagers.
+</description>
+      <hit>50d10+20500</hit>
+      <level>80</level>
+      <long_descr>A daughter of the tribe is here selling food.
+</long_descr>
+      <mana>5d5+5000</mana>
+      <material>0</material>
+      <off add="dodge kick parry trip"/>
+      <player_name>daughter woman girl</player_name>
+      <race>human</race>
+      <sex>female</sex>
+      <short_descr>a daughter of the tribe</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24109">
+      <ac bash="-66" exotic="-33" pierce="-66" slash="-66"/>
+      <act add="npc sentinel stay_area"/>
+      <aff add="sanctuary protect_evil"/>
+      <alignment>1000</alignment>
+      <behavior type="ShopTrader">
+        <buys>drink gem</buys>
+        <closeHour>23</closeHour>
+        <openHour>0</openHour>
+        <profitBuy>180</profitBuy>
+        <profitSell>20</profitSell>
+      </behavior>
+      <dam_type>pound</dam_type>
+      <damage>17d10+64</damage>
+      <default_pos>stand</default_pos>
+      <description>The art of brewing is held sacred by the northern tribes, and the brewers
+are considered holy men. In accordance with their beliefs, the brewers hand
+out samples of their sacred draught to all who pass by, and while there is
+no real cost, a small &quot;donation&quot; to the sacred coffer is expected. And when 
+the brewer is the size of a grizzly bear, few refuse.
+</description>
+      <hit>50d10+20500</hit>
+      <level>85</level>
+      <long_descr>The village brewer is handing out samples of his sacred drink.
+</long_descr>
+      <mana>5d5+5000</mana>
+      <material>0</material>
+      <off add="dodge kick parry trip"/>
+      <player_name>brewer</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>the village brewer</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24110">
+      <ac bash="6" exotic="9" pierce="6" slash="6"/>
+      <alignment>400</alignment>
+      <behavior type="Pet">
+      </behavior>
+      <dam_type>charge</dam_type>
+      <damage>1d5+1</damage>
+      <default_pos>stand</default_pos>
+      <description>The hedgehog looks like a cute, little, fierce fighter.
+</description>
+      <hit>2d7+46</hit>
+      <level>4</level>
+      <long_descr>A hedgehog, well, does nothing at you.
+</long_descr>
+      <mana>5d5+100</mana>
+      <material>0</material>
+      <off add="dodge"/>
+      <player_name>hedgehog</player_name>
+      <race>hedgehog</race>
+      <sex>either</sex>
+      <short_descr>the hedgehog</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24111">
+      <ac bash="1" exotic="7" pierce="1" slash="1"/>
+      <alignment>400</alignment>
+      <behavior type="Pet">
+      </behavior>
+      <dam_type>claw</dam_type>
+      <damage>2d4+2</damage>
+      <default_pos>stand</default_pos>
+      <description>The otter looks like a fierce fighter.
+</description>
+      <hit>2d7+121</hit>
+      <level>10</level>
+      <long_descr>A loyal, sleek growls at you.
+</long_descr>
+      <mana>5d5+100</mana>
+      <material>0</material>
+      <off add="dodge"/>
+      <player_name>otter</player_name>
+      <race>unique</race>
+      <sex>either</sex>
+      <short_descr>the otter</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24112">
+      <ac bash="-2" exotic="6" pierce="-2" slash="-2"/>
+      <alignment>400</alignment>
+      <behavior type="Pet">
+      </behavior>
+      <dam_type>claw</dam_type>
+      <damage>2d6+3</damage>
+      <default_pos>stand</default_pos>
+      <description>The hawk looks like a fierce fighter.
+</description>
+      <hit>3d9+208</hit>
+      <level>15</level>
+      <long_descr>A fierce but loyal hawk is here.
+</long_descr>
+      <mana>5d5+100</mana>
+      <material>0</material>
+      <player_name>hawk</player_name>
+      <race>bird</race>
+      <sex>either</sex>
+      <short_descr>the hawk</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24113">
+      <ac bash="-4" exotic="5" pierce="-4" slash="-4"/>
+      <behavior type="Pet">
+      </behavior>
+      <dam_type>claw</dam_type>
+      <damage>2d8+5</damage>
+      <default_pos>stand</default_pos>
+      <description>The grizzly bear looks like a strong, fierce fighter.
+</description>
+      <hit>3d9+333</hit>
+      <level>20</level>
+      <long_descr>A large, loyal grizzly bear is here.
+</long_descr>
+      <mana>5d5+1000</mana>
+      <material>0</material>
+      <off add="bash dodge"/>
+      <player_name>grizzly bear</player_name>
+      <race>bear</race>
+      <sex>either</sex>
+      <short_descr>the grizzly bear</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24114">
+      <ac bash="-9" exotic="3" pierce="-9" slash="-9"/>
+      <behavior type="Pet">
+      </behavior>
+      <dam_type>charge</dam_type>
+      <damage>4d6+8</damage>
+      <default_pos>stand</default_pos>
+      <description>The aurochs is a BAD ASS.
+</description>
+      <hit>6d12+853</hit>
+      <level>30</level>
+      <long_descr>A HUGE Aurochs stomps its feet and lowers its head to charge.
+</long_descr>
+      <mana>5d5+1000</mana>
+      <material>0</material>
+      <off add="dodge"/>
+      <player_name>aurochs</player_name>
+      <race>unique</race>
+      <sex>either</sex>
+      <short_descr>the aurochs</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24115">
+      <ac bash="-76" exotic="-33" pierce="-76" slash="-76"/>
+      <act add="npc sentinel noeye stay_area"/>
+      <aff add="sanctuary infrared protect_evil"/>
+      <dam_type>crush</dam_type>
+      <damage>18d10+64</damage>
+      <default_pos>stand</default_pos>
+      <description>The village champion once tore the head off a rabid Mastodon with his thumbs.
+Imagine what he could do to you...
+</description>
+      <form add="nonadoptable undead mist centaur"/>
+      <hit>50d10+20500</hit>
+      <level>93</level>
+      <long_descr>The village champion flexes his mighty thews and grins at you.
+</long_descr>
+      <mana>5d5+5000</mana>
+      <material>0</material>
+      <player_name>champion</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>the village champion</short_descr>
+      <size>medium</size>
+      <spec>spec_executioner</spec>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24116">
+      <ac bash="-30" exotic="-3" pierce="-30" slash="-30"/>
+      <act add="npc scavenger stay_area wimpy"/>
+      <aff add="protect_evil"/>
+      <behavior type="ShopTrader">
+        <buys>weapon armor potion container key</buys>
+        <closeHour>23</closeHour>
+        <openHour>0</openHour>
+        <profitBuy>180</profitBuy>
+        <profitSell>20</profitSell>
+      </behavior>
+      <dam_type>pound</dam_type>
+      <damage>8d6+28</damage>
+      <default_pos>stand</default_pos>
+      <description>This fellow may not speak your language well, but the language he does know
+very well makes conversation suddenly become much simpler- MONEY.
+</description>
+      <detection add="invis hidden"/>
+      <hit>50d10+6750</hit>
+      <level>60</level>
+      <long_descr>A hook-nosed merchant from the desert kingdoms rubs his hands together.
+</long_descr>
+      <mana>5d5+5000</mana>
+      <material>0</material>
+      <off add="dodge fast kick parry trip"/>
+      <player_name>merchant</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>a hook-nosed merchant</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24117">
+      <ac bash="-30" exotic="-3" pierce="-30" slash="-30"/>
+      <act add="npc stay_area"/>
+      <aff add="sanctuary infrared protect_evil"/>
+      <alignment>1000</alignment>
+      <dam_type>pound</dam_type>
+      <damage>8d6+28</damage>
+      <default_pos>stand</default_pos>
+      <description>This strapping giant of a woman has flaming red hair and biceps bigger than
+your thighs. She has ruled this village wisely for many years, through lean 
+times and times of plenty, and her people have the utmost faith in her
+ability. Time and the birth of many children have not softened her 
+well-muscled frame - she is still a very attractive woman, and the men of the 
+village (and some women too) vie for her favours.
+</description>
+      <detection add="evil invis"/>
+      <hit>50d10+6750</hit>
+      <level>60</level>
+      <long_descr>The village chieftain welcomes you to her village.
+</long_descr>
+      <mana>5d5+5000</mana>
+      <material>0</material>
+      <off add="dodge kick parry trip"/>
+      <player_name>chieftain</player_name>
+      <race>human</race>
+      <sex>female</sex>
+      <short_descr>the village chieftain</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24118">
+      <ac bash="6" exotic="9" pierce="6" slash="6"/>
+      <act add="npc stay_area"/>
+      <dam_type>punch</dam_type>
+      <damage>1d5+1</damage>
+      <default_pos>stand</default_pos>
+      <description>The villagers are a hardy lot, toughened by their environment and their
+rugged lifestyle, and you marvel at their good condition as they pass.
+</description>
+      <hit>2d7+46</hit>
+      <level>4</level>
+      <long_descr>A fur-clad villager hurries by.
+</long_descr>
+      <mana>5d5+100</mana>
+      <material>0</material>
+      <off add="dodge"/>
+      <player_name>villager</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>a villager</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24119">
+      <ac bash="6" exotic="9" pierce="6" slash="6"/>
+      <act add="npc stay_area"/>
+      <dam_type>punch</dam_type>
+      <damage>1d5+1</damage>
+      <default_pos>stand</default_pos>
+      <description>The villagers are a hardy lot, toughened by their environment and their
+rugged lifestyle, and you marvel at their good condition as they pass.
+</description>
+      <hit>2d7+46</hit>
+      <level>4</level>
+      <long_descr>A fur-clad villager hurries by.
+</long_descr>
+      <mana>5d5+100</mana>
+      <material>0</material>
+      <off add="dodge"/>
+      <player_name>villager</player_name>
+      <race>human</race>
+      <sex>female</sex>
+      <short_descr>a villager</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24120">
+      <ac bash="6" exotic="9" pierce="6" slash="6"/>
+      <act add="npc stay_area"/>
+      <dam_type>punch</dam_type>
+      <damage>1d5+1</damage>
+      <default_pos>stand</default_pos>
+      <description>The children of the village are a rough and tumble lot, used to working hard
+and playing harder.
+</description>
+      <hit>2d7+46</hit>
+      <level>3</level>
+      <long_descr>A child engages in rough horse play with other village children.
+</long_descr>
+      <mana>5d5+100</mana>
+      <material>0</material>
+      <off add="dodge"/>
+      <player_name>child</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>a child</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24121">
+      <ac bash="6" exotic="9" pierce="6" slash="6"/>
+      <act add="npc scavenger stay_area wimpy"/>
+      <dam_type>punch</dam_type>
+      <damage>1d5+1</damage>
+      <default_pos>stand</default_pos>
+      <description>When he was young, this poor fellow had his skull staved in by a horse kick.
+</description>
+      <hit>2d7+46</hit>
+      <level>4</level>
+      <long_descr>The village idiot gawks at you.
+</long_descr>
+      <mana>5d5+100</mana>
+      <material>0</material>
+      <player_name>idiot</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>the village idiot</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24122">
+      <ac bash="6" exotic="9" pierce="6" slash="6"/>
+      <act add="npc stay_area"/>
+      <alignment>400</alignment>
+      <dam_type>punch</dam_type>
+      <damage>1d5+1</damage>
+      <default_pos>stand</default_pos>
+      <description>This fellow has evidently made many generous donations to the village brewer.
+</description>
+      <hit>2d7+46</hit>
+      <level>4</level>
+      <long_descr>A village drunk.
+</long_descr>
+      <mana>5d5+100</mana>
+      <material>0</material>
+      <player_name>drunk</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>a village drunk</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24123">
+      <ac bash="6" exotic="9" pierce="6" slash="6"/>
+      <act add="npc sentinel stay_area"/>
+      <alignment>400</alignment>
+      <dam_type>punch</dam_type>
+      <damage>1d5+1</damage>
+      <default_pos>stand</default_pos>
+      <description>The inhabitants of this village are a tough lot, but not ungenerous, and it
+is likely that this fellow will have a roof over his head soon, provided by
+one of the more prosperous villagers.
+</description>
+      <hit>2d7+46</hit>
+      <level>3</level>
+      <long_descr>A beggar sits in the dirt asking for donations.
+</long_descr>
+      <mana>5d5+100</mana>
+      <material>0</material>
+      <off add="dodge"/>
+      <player_name>beggar</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>a beggar</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24124">
+      <ac bash="1" exotic="7" pierce="1" slash="1"/>
+      <act add="npc stay_area wimpy"/>
+      <aff add="invisible sneak hide pass_door"/>
+      <dam_type>punch</dam_type>
+      <damage>2d4+2</damage>
+      <default_pos>stand</default_pos>
+      <description>This unsavory fellow preys on the rich foreign merchants from the south.
+</description>
+      <hit>2d7+121</hit>
+      <level>10</level>
+      <long_descr>A thief adroitly cuts the strings of another fat merchant&apos;s purse.
+</long_descr>
+      <mana>5d5+100</mana>
+      <material>0</material>
+      <off add="dodge kick trip"/>
+      <player_name>thief</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>a thief</short_descr>
+      <size>medium</size>
+      <spec>spec_thief</spec>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24125">
+      <ac bash="6" exotic="9" pierce="6" slash="6"/>
+      <act add="npc stay_area wimpy"/>
+      <dam_type>bite</dam_type>
+      <damage>1d5+1</damage>
+      <default_pos>stand</default_pos>
+      <description>This wolf has strayed in from the wild, driven by hunger. The villagers are
+quick to repel such unwelcome wildlife, and it is only a matter of time
+before the militia run it off.
+</description>
+      <hit>2d7+46</hit>
+      <level>5</level>
+      <long_descr>A scrawny wolf is here looking for food.
+</long_descr>
+      <mana>5d5+100</mana>
+      <material>0</material>
+      <player_name>wolf</player_name>
+      <race>wolf</race>
+      <sex>either</sex>
+      <short_descr>a scrawny wolf</short_descr>
+      <size>medium</size>
+      <spec>spec_fido</spec>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24126">
+      <ac bash="6" exotic="9" pierce="6" slash="6"/>
+      <act add="npc stay_area wimpy"/>
+      <dam_type>charge</dam_type>
+      <damage>1d5+1</damage>
+      <default_pos>stand</default_pos>
+      <description>These mangy black rodents came with the merchants from the south, hidden
+amongst their goods, and have quickly become a nuisance, being scavengers
+and carriers of disease.
+</description>
+      <hit>2d7+26</hit>
+      <level>2</level>
+      <long_descr>A black rat.
+</long_descr>
+      <mana>5d5+100</mana>
+      <material>0</material>
+      <off add="dodge"/>
+      <player_name>rat</player_name>
+      <race>rat</race>
+      <sex>either</sex>
+      <short_descr>a rat</short_descr>
+      <size>medium</size>
+      <spec>spec_fido</spec>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24127">
+      <ac bash="6" exotic="9" pierce="6" slash="6"/>
+      <act add="npc stay_area wimpy"/>
+      <dam_type>bite</dam_type>
+      <damage>1d5+1</damage>
+      <default_pos>stand</default_pos>
+      <description>This mongrel is the unwanted offspring of some hunter&apos;s sled dogs, left to 
+fend for itself here in the village.
+</description>
+      <hit>2d7+46</hit>
+      <level>3</level>
+      <long_descr>A stray dog whines piteously at you.
+</long_descr>
+      <mana>5d5+100</mana>
+      <material>0</material>
+      <player_name>dog</player_name>
+      <race>fido</race>
+      <sex>female</sex>
+      <short_descr>a dog</short_descr>
+      <size>medium</size>
+      <spec>spec_fido</spec>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24128">
+      <ac bash="-20" exotic="0" pierce="-20" slash="-20"/>
+      <act add="npc noeye stay_area"/>
+      <aff add="sanctuary protect_evil"/>
+      <alignment>1000</alignment>
+      <dam_type>pound</dam_type>
+      <damage>5d8+19</damage>
+      <default_pos>stand</default_pos>
+      <description>Like most civilizations of the time, the northern villagers have no organised
+standing military or police force. However, the recent influx of foreigners
+and bandits has necessitated the introduction of a militia to keep the peace.
+</description>
+      <detection add="evil"/>
+      <hit>50d10+4250</hit>
+      <level>50</level>
+      <long_descr>A member of the village militia eyes you suspiciously.
+</long_descr>
+      <mana>5d5+5000</mana>
+      <material>0</material>
+      <off add="disarm dodge kick parry trip"/>
+      <player_name>militia member</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>a member of the village militia</short_descr>
+      <size>medium</size>
+      <spec>spec_guard</spec>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24129">
+      <ac bash="-20" exotic="0" pierce="-20" slash="-20"/>
+      <act add="npc noeye stay_area"/>
+      <aff add="sanctuary protect_evil"/>
+      <alignment>1000</alignment>
+      <dam_type>pound</dam_type>
+      <damage>5d8+19</damage>
+      <default_pos>stand</default_pos>
+      <description>Like most civilizations of the time, the northern villagers have no organised
+standing military or police force. However, the recent influx of foreigners
+and bandits has necessitated the introduction of a militia to keep the peace.
+</description>
+      <detection add="evil"/>
+      <hit>50d10+4250</hit>
+      <level>50</level>
+      <long_descr>A member of the village militia eyes you suspiciously.
+</long_descr>
+      <mana>5d5+5000</mana>
+      <material>0</material>
+      <off add="bash disarm dodge kick parry trip"/>
+      <player_name>militia member</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>a member of the village militia</short_descr>
+      <size>medium</size>
+      <spec>spec_guard</spec>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24130">
+      <ac bash="-20" exotic="0" pierce="-20" slash="-20"/>
+      <act add="npc sentinel noeye stay_area"/>
+      <aff add="sanctuary protect_evil"/>
+      <alignment>1000</alignment>
+      <dam_type>pound</dam_type>
+      <damage>5d8+19</damage>
+      <default_pos>stand</default_pos>
+      <description>Like most civilizations of the time, the northern villagers have no organised
+standing military or police force. However, the recent influx of foreigners
+and bandits has necessitated the introduction of a militia to keep the peace.
+</description>
+      <detection add="evil"/>
+      <hit>50d10+4250</hit>
+      <level>50</level>
+      <long_descr>A member of the village militia hefts a large club and eyes you suspiciously.
+</long_descr>
+      <mana>5d5+5000</mana>
+      <material>0</material>
+      <off add="bash disarm dodge kick parry trip"/>
+      <player_name>militia member</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>a member of the village militia</short_descr>
+      <size>medium</size>
+      <spec>spec_guard</spec>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24131">
+      <ac bash="-2" exotic="6" pierce="-2" slash="-2"/>
+      <behavior type="Pet">
+      </behavior>
+      <dam_type>pound</dam_type>
+      <damage>2d6+3</damage>
+      <default_pos>stand</default_pos>
+      <description>This Merc looks big and tough. Better be careful.
+</description>
+      <detection add="hidden"/>
+      <hit>3d9+208</hit>
+      <level>15</level>
+      <long_descr>A Minoan mercenary scowls menacingly at you.
+</long_descr>
+      <mana>5d5+100</mana>
+      <material>0</material>
+      <off add="bash berserk dodge kick kick_dirt parry"/>
+      <player_name>minoan merc merc1</player_name>
+      <race>human</race>
+      <sex>female</sex>
+      <short_descr>minoan mercenary</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24132">
+      <ac bash="-4" exotic="5" pierce="-4" slash="-4"/>
+      <behavior type="Pet">
+      </behavior>
+      <dam_type>pound</dam_type>
+      <damage>2d8+5</damage>
+      <default_pos>stand</default_pos>
+      <description>This Merc looks big and tough. Better be careful.
+</description>
+      <detection add="invis"/>
+      <hit>3d9+333</hit>
+      <level>20</level>
+      <long_descr>An Assyrian Mercenary scowls menacingly at you.
+</long_descr>
+      <mana>5d5+1000</mana>
+      <material>0</material>
+      <off add="dodge kick kick_dirt parry trip"/>
+      <player_name>assyrian merc merc2</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>Assyrian mercenary</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24133">
+      <ac bash="-7" exotic="4" pierce="-7" slash="-7"/>
+      <aff add="protect_evil"/>
+      <behavior type="Pet">
+      </behavior>
+      <dam_type>pound</dam_type>
+      <damage>2d10+7</damage>
+      <default_pos>stand</default_pos>
+      <description>This Merc looks big and tough. Better be careful.
+</description>
+      <hit>5d10+550</hit>
+      <level>25</level>
+      <long_descr>An Egyptian mercenary scowls menacingly at you.
+</long_descr>
+      <mana>5d5+1000</mana>
+      <material>0</material>
+      <off add="dodge kick parry trip"/>
+      <player_name>egyptian merc merc3</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>Egyptian mercenary</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24134">
+      <ac bash="-9" exotic="3" pierce="-9" slash="-9"/>
+      <aff add="protect_evil"/>
+      <behavior type="Pet">
+      </behavior>
+      <dam_type>slash</dam_type>
+      <damage>4d6+8</damage>
+      <default_pos>stand</default_pos>
+      <description>This Merc looks big and tough. Better be careful.
+</description>
+      <hit>6d12+853</hit>
+      <level>30</level>
+      <long_descr>A Trojan mercenary scowls menacingly at you.
+</long_descr>
+      <mana>5d5+1000</mana>
+      <material>0</material>
+      <off add="dodge kick kick_dirt parry"/>
+      <player_name>trojan merc merc4</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>Trojan mercenary</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24135">
+      <ac bash="-11" exotic="3" pierce="-11" slash="-11"/>
+      <aff add="protect_evil"/>
+      <behavior type="Pet">
+      </behavior>
+      <dam_type>slash</dam_type>
+      <damage>4d7+11</damage>
+      <default_pos>stand</default_pos>
+      <description>This Merc looks big and tough. Better be careful.
+</description>
+      <hit>10d10+1300</hit>
+      <level>35</level>
+      <long_descr>A Nubian mercenary scowls menacingly at you.
+</long_descr>
+      <mana>5d5+1000</mana>
+      <material>0</material>
+      <off add="dodge kick parry trip"/>
+      <player_name>nubian merc merc5</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>nubian Mercenary</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+    <node name="24136">
+      <ac bash="-13" exotic="3" pierce="-13" slash="-13"/>
+      <aff add="flying"/>
+      <behavior type="Pet">
+      </behavior>
+      <dam_type>slash</dam_type>
+      <damage>4d8+13</damage>
+      <default_pos>stand</default_pos>
+      <description>This Merc looks big and tough. Better be careful.
+</description>
+      <detection add="invis hidden"/>
+      <hit>15d10+1850</hit>
+      <level>40</level>
+      <long_descr>A Mycenaean mercenary scowls menacingly at you.
+</long_descr>
+      <mana>5d5+1000</mana>
+      <material>0</material>
+      <off add="dodge kick parry trip"/>
+      <player_name>mycenaean merc merc6</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>Mycenaean mercenary</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>1000</wealth>
+    </node>
+  </mobiles>
+  <objects>
+    <node name="24100">
+      <description>The key to the village gates.
+</description>
+      <gender>m</gender>
+      <material>bone</material>
+      <name>key</name>
+      <short_descr>a bone key</short_descr>
+      <type name="key">
+        <rotGround>1</rotGround>
+        <rotInv>1</rotInv>
+      </type>
+      <wear_flags>take hold</wear_flags>
+      <weight>1</weight>
+    </node>
+    <node name="24101">
+      <cost>60</cost>
+      <description>A beer barrel has been left here.
+</description>
+      <gender>m</gender>
+      <level>1</level>
+      <material>wood</material>
+      <name>barrel beer</name>
+      <short_descr>a barrel of beer</short_descr>
+      <type name="drink">
+        <left>30</left>
+        <liquid>beer</liquid>
+        <total>30</total>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>60</weight>
+    </node>
+    <node name="24102">
+      <cost>60</cost>
+      <description>A beer bottle has been left here.</description>
+      <gender>m</gender>
+      <level>1</level>
+      <material>glass</material>
+      <name>bottle beer</name>
+      <short_descr>a bottle of rough beer</short_descr>
+      <type name="drink">
+        <left>4</left>
+        <liquid>beer</liquid>
+        <total>4</total>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="24103">
+      <cost>59</cost>
+      <description>A dark bottle of ale has been left here.</description>
+      <gender>m</gender>
+      <level>1</level>
+      <name>bottle ale</name>
+      <short_descr>a bottle of home brew ale</short_descr>
+      <type name="drink">
+        <left>5</left>
+        <liquid>ale</liquid>
+        <total>5</total>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="24104">
+      <cost>61</cost>
+      <description>A firebreather has been left here.</description>
+      <gender>m</gender>
+      <level>1</level>
+      <name>bottle firebreather</name>
+      <short_descr>a bottle of rough spirits</short_descr>
+      <type name="drink">
+        <left>8</left>
+        <liquid>firebreather</liquid>
+        <total>8</total>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="24105">
+      <cost>59</cost>
+      <description>A dark bottle has been left here.</description>
+      <gender>m</gender>
+      <level>1</level>
+      <name>bottle local</name>
+      <short_descr>a bottle of brewer&apos;s specialty (&quot;Holy Water&quot;)</short_descr>
+      <type name="drink">
+        <left>8</left>
+        <liquid>local specialty</liquid>
+        <total>8</total>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="24106">
+      <cost>59</cost>
+      <description>A large torch.</description>
+      <gender>m</gender>
+      <level>1</level>
+      <material>wood</material>
+      <name>torch</name>
+      <short_descr>a torch</short_descr>
+      <type name="light">
+        <v2>24</v2>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>1</weight>
+    </node>
+    <node name="24107">
+      <affects>
+        <node>
+          <apply to="damroll">4</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">2</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
+      <cost>60</cost>
+      <description>A stone lamp that uses animal fat as fuel has been left here.</description>
+      <gender>f</gender>
+      <level>60</level>
+      <material>stone</material>
+      <name>lamp</name>
+      <short_descr>a stone lamp</short_descr>
+      <type name="light">
+        <v2>-1</v2>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>4</weight>
+    </node>
+    <node name="24108">
+      <cost>8</cost>
+      <description>A yellow brew.</description>
+      <gender>m</gender>
+      <level>8</level>
+      <material>drink</material>
+      <name>brew yellow</name>
+      <short_descr>a yellow brew</short_descr>
+      <type name="potion">
+        <level>12</level>
+        <spell0>bless</spell0>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>1</weight>
+    </node>
+    <node name="24109">
+      <cost>8</cost>
+      <description>A buffalo water skin is on the floor.</description>
+      <gender>m</gender>
+      <level>8</level>
+      <material>leather</material>
+      <name>skin water buffalo</name>
+      <short_descr>a buffalo water skin</short_descr>
+      <type name="drink">
+        <left>25</left>
+        <liquid>water</liquid>
+        <total>25</total>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>5</weight>
+    </node>
+    <node name="24110">
+      <cost>8</cost>
+      <description>A large jug of water sloshes on the floor.</description>
+      <extra_flags>glow</extra_flags>
+      <gender>m</gender>
+      <level>8</level>
+      <material>clay</material>
+      <name>jug water</name>
+      <short_descr>a jug of water</short_descr>
+      <type name="drink">
+        <left>60</left>
+        <liquid>water</liquid>
+        <total>60</total>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>85</weight>
+    </node>
+    <node name="24111">
+      <affects>
+        <node>
+          <apply to="damroll">4</apply>
+        </node>
+        <node>
+          <apply to="hitroll">-2</apply>
+        </node>
+      </affects>
+      <cost>13</cost>
+      <description>A heavy club sheathed in lead lies here.</description>
+      <gender>m</gender>
+      <level>12</level>
+      <name>club</name>
+      <short_descr>a heavy lead-sheathed club</short_descr>
+      <type name="weapon">
+        <diceNumber>5</diceNumber>
+        <diceType>3</diceType>
+        <weapClass>mace</weapClass>
+        <weapType>crush</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>30</weight>
+    </node>
+    <node name="24112">
+      <affects>
+        <node>
+          <apply to="hitroll">-1</apply>
+        </node>
+        <node>
+          <apply to="damroll">1</apply>
+        </node>
+      </affects>
+      <cost>4</cost>
+      <description>A bone mace lies here.</description>
+      <gender>m</gender>
+      <level>5</level>
+      <material>bone</material>
+      <name>mace</name>
+      <short_descr>a bone mace</short_descr>
+      <type name="weapon">
+        <diceNumber>3</diceNumber>
+        <diceType>3</diceType>
+        <weapClass>mace</weapClass>
+        <weapType>pound</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>20</weight>
+    </node>
+    <node name="24113">
+      <affects>
+        <node>
+          <apply to="hitroll">-1</apply>
+        </node>
+        <node>
+          <apply to="damroll">-1</apply>
+        </node>
+      </affects>
+      <cost>6</cost>
+      <description>A bronze dagger lies here.</description>
+      <gender>m</gender>
+      <level>5</level>
+      <material>bronze</material>
+      <name>dagger</name>
+      <short_descr>a bronze dagger</short_descr>
+      <type name="weapon">
+        <diceNumber>3</diceNumber>
+        <diceType>3</diceType>
+        <weapClass>dagger</weapClass>
+        <weapType>pierce</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>15</weight>
+    </node>
+    <node name="24114">
+      <affects>
+        <node>
+          <apply to="hitroll">-2</apply>
+        </node>
+        <node>
+          <apply to="damroll">2</apply>
+        </node>
+      </affects>
+      <cost>6</cost>
+      <description>A broad, heavy bronze blade lies here.</description>
+      <gender>m</gender>
+      <level>6</level>
+      <material>bronze</material>
+      <name>blade sword</name>
+      <short_descr>a bronze sword</short_descr>
+      <type name="weapon">
+        <diceNumber>3</diceNumber>
+        <diceType>3</diceType>
+        <weapClass>sword</weapClass>
+        <weapType>slash</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>25</weight>
+    </node>
+    <node name="24115">
+      <cost>6</cost>
+      <description>A pair of sandals lies here.</description>
+      <gender>m</gender>
+      <level>6</level>
+      <material>leather</material>
+      <name>sandals</name>
+      <short_descr>a pair of sandals</short_descr>
+      <type name="armor">
+        <ac bash="4" exotic="0" pierce="4" slash="4"/>
+      </type>
+      <wear_flags>take wear_feet</wear_flags>
+      <weight>15</weight>
+    </node>
+    <node name="24116">
+      <affects>
+        <node>
+          <apply to="con">1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="ac">-10</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
+      <cost>6</cost>
+      <description>A belt crafted of hide is curled up here.</description>
+      <gender>m</gender>
+      <level>6</level>
+      <material>leather</material>
+      <name>belt</name>
+      <short_descr>a hide belt</short_descr>
+      <type name="armor">
+        <ac bash="4" exotic="0" pierce="4" slash="4"/>
+      </type>
+      <wear_flags>take wear_waist</wear_flags>
+      <weight>20</weight>
+    </node>
+    <node name="24117">
+      <affects>
+        <node>
+          <apply to="ac">-2</apply>
+        </node>
+        <node>
+          <apply to="ac">-2</apply>
+        </node>
+      </affects>
+      <cost>15</cost>
+      <description>A bronze helm.</description>
+      <gender>m</gender>
+      <level>15</level>
+      <material>bronze</material>
+      <name>bronze helm</name>
+      <short_descr>a bronze helm</short_descr>
+      <type name="armor">
+        <ac bash="6" exotic="0" pierce="6" slash="6"/>
+      </type>
+      <wear_flags>take wear_head</wear_flags>
+      <weight>5</weight>
+    </node>
+    <node name="24118">
+      <affects>
+        <node>
+          <apply to="ac">-5</apply>
+        </node>
+        <node>
+          <apply to="saving_breath">-1</apply>
+        </node>
+      </affects>
+      <cost>9</cost>
+      <description>A rough fur cloak is here.</description>
+      <gender>m</gender>
+      <level>8</level>
+      <material>fur</material>
+      <name>cloak</name>
+      <short_descr>a rough fur cloak</short_descr>
+      <type name="armor">
+        <ac bash="4" exotic="0" pierce="4" slash="4"/>
+      </type>
+      <wear_flags>take wear_neck</wear_flags>
+      <weight>5</weight>
+    </node>
+    <node name="24119">
+      <cost>9</cost>
+      <description>A bronze ring.</description>
+      <extra_flags>glow</extra_flags>
+      <gender>m</gender>
+      <level>8</level>
+      <material>bronze</material>
+      <name>ring</name>
+      <short_descr>a bronze ring</short_descr>
+      <type name="key">
+        <rotGround>1</rotGround>
+        <rotInv>1</rotInv>
+      </type>
+      <wear_flags>take wear_finger</wear_flags>
+      <weight>1</weight>
+    </node>
+    <node name="24120">
+      <cost>9</cost>
+      <description>Black bread.</description>
+      <gender>m</gender>
+      <level>8</level>
+      <material>food</material>
+      <name>black bread</name>
+      <short_descr>black bread</short_descr>
+      <type name="food">
+        <foodHours>5</foodHours>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>3</weight>
+    </node>
+    <node name="24121">
+      <cost>8</cost>
+      <description>A sour cheese.</description>
+      <gender>m</gender>
+      <level>1</level>
+      <material>food</material>
+      <name>cheese</name>
+      <short_descr>cheese</short_descr>
+      <type name="food">
+        <foodHours>8</foodHours>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>5</weight>
+    </node>
+    <node name="24122">
+      <cost>7</cost>
+      <description>A strip of unidentifiable dried meat.</description>
+      <gender>m</gender>
+      <level>1</level>
+      <material>food</material>
+      <name>dried meat</name>
+      <short_descr>a strip of dried meat</short_descr>
+      <type name="food">
+        <foodHours>10</foodHours>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>5</weight>
+    </node>
+    <node name="24123">
+      <cost>8</cost>
+      <description>An egg (raw), warm from the nest.</description>
+      <gender>m</gender>
+      <level>1</level>
+      <material>food</material>
+      <name>egg</name>
+      <short_descr>an egg</short_descr>
+      <type name="food">
+        <foodHours>4</foodHours>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>5</weight>
+    </node>
+    <node name="24124">
+      <cost>4</cost>
+      <description>A foul potion rolls around here.</description>
+      <extra_flags>glow hum</extra_flags>
+      <gender>m</gender>
+      <level>4</level>
+      <name>potion</name>
+      <short_descr>a foul potion</short_descr>
+      <type name="potion">
+        <level>10</level>
+        <spell0>invisibility</spell0>
+        <spell1>heal</spell1>
+        <spell2>fly</spell2>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>2</weight>
+    </node>
+    <node name="24125">
+      <description>The village totem stands here.</description>
+      <gender>m</gender>
+      <material>wood</material>
+      <name>totem</name>
+      <short_descr>the village totem</short_descr>
+      <type name="furniture">
+        <heal>0</heal>
+        <mana>0</mana>
+        <maxPeople>0</maxPeople>
+        <maxWeight>0</maxWeight>
+      </type>
+      <weight>1000</weight>
+    </node>
+    <node name="24126">
+      <affects>
+        <node>
+          <apply to="hit">250</apply>
+        </node>
+      </affects>
+      <description>The champion&apos;s wolf&apos;s head is here.
+</description>
+      <gender>m</gender>
+      <level>90</level>
+      <material>flesh</material>
+      <name>wolf head</name>
+      <short_descr>a wolf&apos;s head</short_descr>
+      <type name="armor">
+        <ac bash="21" exotic="0" pierce="21" slash="21"/>
+      </type>
+      <wear_flags>take wear_head</wear_flags>
+      <weight>75</weight>
+    </node>
+    <node name="24127">
+      <affects>
+        <node>
+          <apply to="ac">-15</apply>
+        </node>
+        <node>
+          <apply to="damroll">6</apply>
+        </node>
+        <node>
+          <apply to="saving_breath">-3</apply>
+        </node>
+      </affects>
+      <description>The chief&apos;s oak club is lying here in the dirt.
+</description>
+      <gender>m</gender>
+      <level>60</level>
+      <material>oak</material>
+      <name>club</name>
+      <short_descr>the chief&apos;s club</short_descr>
+      <type name="weapon">
+        <diceNumber>17</diceNumber>
+        <diceType>3</diceType>
+        <weapClass>mace</weapClass>
+        <weapType>crush</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>25</weight>
+    </node>
+    <node name="24128">
+      <description>A wooden stick.</description>
+      <gender>m</gender>
+      <level>4</level>
+      <material>wood</material>
+      <name>stick</name>
+      <short_descr>a stick</short_descr>
+      <type name="weapon">
+        <diceNumber>3</diceNumber>
+        <diceType>3</diceType>
+        <weapClass>dagger</weapClass>
+        <weapType>pound</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>15</weight>
+    </node>
+    <node name="24129">
+      <affects>
+        <node>
+          <apply to="damroll">6</apply>
+        </node>
+      </affects>
+      <description>A wooden club is lying here.</description>
+      <gender>m</gender>
+      <level>50</level>
+      <material>wood</material>
+      <name>wooden club</name>
+      <short_descr>a wooden club</short_descr>
+      <type name="weapon">
+        <diceNumber>14</diceNumber>
+        <diceType>3</diceType>
+        <weapClass>mace</weapClass>
+        <weapType>crush</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>15</weight>
+    </node>
+    <node name="24130">
+      <affects>
+        <node>
+          <apply to="hit">30</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="damroll">4</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">6</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="ac">-15</apply>
+        </node>
+        <node>
+          <apply to="con">2</apply>
+        </node>
+      </affects>
+      <description>A boiled leather jerkin is lying here.</description>
+      <gender>m</gender>
+      <level>50</level>
+      <material>leather</material>
+      <name>boiled leather jerkin</name>
+      <short_descr>a boiled leather jerkin</short_descr>
+      <type name="armor">
+        <ac bash="13" exotic="0" pierce="13" slash="13"/>
+      </type>
+      <wear_flags>take wear_body</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="24131">
+      <affects>
+        <node>
+          <apply to="hit">50</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="damroll">5</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">4</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="dex">1</apply>
+        </node>
+      </affects>
+      <description>A rune-covered bone bracelet is lying here.</description>
+      <gender>m</gender>
+      <level>50</level>
+      <material>bone</material>
+      <name>bone bracelet</name>
+      <short_descr>a rune-covered bone bracelet</short_descr>
+      <type name="armor">
+        <ac bash="13" exotic="0" pierce="13" slash="13"/>
+      </type>
+      <wear_flags>take wear_wrist</wear_flags>
+      <weight>5</weight>
+    </node>
+    <node name="24132">
+      <affects>
+        <node>
+          <apply to="ac">-50</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="damroll">2</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">6</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="mana">25</apply>
+        </node>
+      </affects>
+      <description>A fur cloak is lying here.</description>
+      <gender>m</gender>
+      <level>50</level>
+      <material>fur</material>
+      <name>fur cloak</name>
+      <short_descr>a fur cloak</short_descr>
+      <type name="armor">
+        <ac bash="13" exotic="0" pierce="13" slash="13"/>
+      </type>
+      <wear_flags>take wear_neck</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="24133">
+      <affects>
+        <node>
+          <apply to="ac">-10</apply>
+        </node>
+      </affects>
+      <description>A boar tusk helm lies here.</description>
+      <gender>m</gender>
+      <level>50</level>
+      <material>bone</material>
+      <name>helm</name>
+      <short_descr>a boar tusk helm</short_descr>
+      <type name="armor">
+        <ac bash="13" exotic="0" pierce="13" slash="13"/>
+      </type>
+      <wear_flags>take wear_head</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="24134">
+      <affects>
+        <node>
+          <bits table="affect_flags">berserk</bits>
+        </node>
+        <node>
+          <apply to="damroll">10</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">2</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
+      <description>An ox-hide shield lies here.
+</description>
+      <gender>m</gender>
+      <level>50</level>
+      <material>leather</material>
+      <name>shield</name>
+      <short_descr>an ox-hide shield</short_descr>
+      <type name="armor">
+        <ac bash="13" exotic="0" pierce="13" slash="13"/>
+      </type>
+      <wear_flags>take wear_shield</wear_flags>
+      <weight>20</weight>
+    </node>
+    <node name="24135">
+      <affects>
+        <node>
+          <apply to="damroll">2</apply>
+        </node>
+        <node>
+          <apply to="hitroll">2</apply>
+        </node>
+      </affects>
+      <description>A sturdy throwing spear has been thrust into the ground here.
+</description>
+      <gender>m</gender>
+      <level>50</level>
+      <material>metal</material>
+      <name>spear</name>
+      <short_descr>a throwing spear</short_descr>
+      <type name="warp_stone">
+      </type>
+      <wear_flags>take hold</wear_flags>
+      <weight>20</weight>
+    </node>
+    <node name="24136">
+      <cost>75</cost>
+      <description>A blank papyrus is here.
+</description>
+      <gender>m</gender>
+      <level>50</level>
+      <material>paper</material>
+      <name>papyrus</name>
+      <short_descr>a blank papyrus</short_descr>
+      <type name="scroll">
+        <level>0</level>
+      </type>
+      <wear_flags>take hold</wear_flags>
+      <weight>1</weight>
+    </node>
+    <node name="24137">
+      <cost>12</cost>
+      <description>A shimmering potion is here.
+</description>
+      <gender>m</gender>
+      <level>11</level>
+      <name>potion</name>
+      <short_descr>a shimmering potion</short_descr>
+      <type name="potion">
+        <level>5</level>
+        <spell0>mind light</spell0>
+        <spell1>cure poison</spell1>
+        <spell2>curse</spell2>
+      </type>
+      <wear_flags>take hold</wear_flags>
+      <weight>1</weight>
+    </node>
+    <node name="24138">
+      <description>A magical stone gate allows one to pass through to other worlds.</description>
+      <gender>m</gender>
+      <material>stone</material>
+      <name>gate</name>
+      <short_descr>a stone gate</short_descr>
+      <type name="jewelry">
+        <v0>31144</v0>
+      </type>
+      <weight>1</weight>
+    </node>
+  </objects>
+  <rooms>
+    <node name="24100">
+      <description>You are standing outside the wooden hut where the Shaman of the village
+resides. Paths stretch out to the east, south and west from here.
+</description>
+      <exits>
+        <node name="east">
+          <target>24104</target>
+        </node>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>24101</target>
+        </node>
+        <node name="south">
+          <target>24103</target>
+        </node>
+        <node name="west">
+          <target>24102</target>
+        </node>
+      </exits>
+      <name>Outside the Shaman&apos;s Hut</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="24115"/>
+        <equip to="head" vnum="24126"/>
+        <drop vnum="24125"/>
+        <mob limit="8" maxHere="1" vnum="24128"/>
+        <equip to="wield" vnum="24129"/>
+        <equip to="body" vnum="24130"/>
+        <equip to="wrist_l" vnum="24131"/>
+        <equip to="wrist_r" vnum="24131"/>
+        <equip to="neck_1" vnum="24132"/>
+        <equip to="head" vnum="24133"/>
+        <equip to="shield" vnum="24134"/>
+        <equip to="hold" vnum="24135"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="24101">
+      <description>You cough as you enter the smoky interior of this cramped hut, your eyes
+watering as the odor of some bubbling concoction in an iron cauldron wafts
+toward you. In the center of this hut the shaman awaits, quietly meditating.
+A variety of furs, bones, charms and trinkets line the walls, doubtless
+serving as focii for the shaman&apos;s mystic powers.
+</description>
+      <exits>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>24100</target>
+        </node>
+      </exits>
+      <flags>indoors safe</flags>
+      <name>The Interior of the Shaman&apos;s Hut</name>
+      <resets>
+        <drop vnum="24138"/>
+        <mob limit="1" maxHere="1" vnum="24100"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="24102">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening.
+</description>
+      <exits>
+        <node name="east">
+          <target>24100</target>
+        </node>
+        <node name="west">
+          <target>24105</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>A Path in the Village</name>
+      <sector>inside</sector>
+    </node>
+    <node name="24103">
+      <description>You are walking along a path of packed earth that heads north toward the
+Shaman&apos;s hut.
+</description>
+      <exits>
+        <node name="north">
+          <target>24100</target>
+        </node>
+        <node name="south">
+          <target>24106</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>A Path in the Village</name>
+      <sector>inside</sector>
+    </node>
+    <node name="24104">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening.
+</description>
+      <exits>
+        <node name="east">
+          <target>24107</target>
+        </node>
+        <node name="west">
+          <target>24100</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>A Path in the Village</name>
+      <sector>inside</sector>
+    </node>
+    <node name="24105">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening.
+</description>
+      <exits>
+        <node name="east">
+          <target>24102</target>
+        </node>
+        <node name="north">
+          <target>24137</target>
+        </node>
+        <node name="south">
+          <target>24139</target>
+        </node>
+        <node name="west">
+          <target>24108</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>A Path in the Village</name>
+      <sector>inside</sector>
+    </node>
+    <node name="24106">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening.
+</description>
+      <exits>
+        <node name="east">
+          <target>24163</target>
+        </node>
+        <node name="north">
+          <target>24103</target>
+        </node>
+        <node name="south">
+          <target>24109</target>
+        </node>
+        <node name="west">
+          <target>24161</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>A Path in the Village</name>
+      <resets>
+        <mob limit="6" maxHere="1" vnum="24127"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="24107">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening.
+</description>
+      <exits>
+        <node name="east">
+          <target>24110</target>
+        </node>
+        <node name="north">
+          <target>24141</target>
+        </node>
+        <node name="south">
+          <target>24143</target>
+        </node>
+        <node name="west">
+          <target>24104</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>A Path in the Village</name>
+      <sector>inside</sector>
+    </node>
+    <node name="24108">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening.
+</description>
+      <exits>
+        <node name="east">
+          <target>24105</target>
+        </node>
+        <node name="west">
+          <target>24111</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>A Path in the Village</name>
+      <sector>inside</sector>
+    </node>
+    <node name="24109">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening. The village square outside
+the Shaman&apos;s hut lies a short way to the north of here.
+</description>
+      <exits>
+        <node name="north">
+          <target>24106</target>
+        </node>
+        <node name="south">
+          <target>24133</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>A Path in the Village</name>
+      <sector>inside</sector>
+    </node>
+    <node name="24110">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening.
+</description>
+      <exits>
+        <node name="east">
+          <target>24112</target>
+        </node>
+        <node name="west">
+          <target>24107</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>A Path in the Village</name>
+      <sector>inside</sector>
+    </node>
+    <node name="24111">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening.
+</description>
+      <exits>
+        <node name="east">
+          <target>24108</target>
+        </node>
+        <node name="west">
+          <target>24113</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>A Path in the Village</name>
+      <resets>
+        <mob limit="3" maxHere="1" vnum="24123"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="24112">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening. Several children suddenly
+rush by, immersed in some strange activity, the rules of which are quite
+unfathomable to you.
+</description>
+      <exits>
+        <node name="east">
+          <target>24114</target>
+        </node>
+        <node name="west">
+          <target>24110</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>A Path in the Village</name>
+      <resets>
+        <mob limit="3" maxHere="1" vnum="24120"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="24113">
+      <description>You are approaching the western gates of the village, which are constantly
+patrolled by the militia. There is no-one else about here, as the 
+concentration of residences and shops is nearer to the center of the village.
+</description>
+      <exits>
+        <node name="east">
+          <target>24111</target>
+        </node>
+        <node name="west">
+          <target>24115</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Approaching the Western Gate</name>
+      <resets>
+        <mob limit="3" maxHere="1" vnum="24119"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="24114">
+      <description>You are approaching the eastern gates of the village, which are constantly
+patrolled by the militia. There is no-one else about here, as the 
+concentration of residences and shops is nearer to the center of the village.
+</description>
+      <exits>
+        <node name="east">
+          <target>24116</target>
+        </node>
+        <node name="west">
+          <target>24112</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Approaching the Eastern Gate</name>
+      <sector>inside</sector>
+    </node>
+    <node name="24115">
+      <description>You have reached the westernmost extent of the village. To the west lie the
+stout wooden gates, set in the wooden barrier that surrounds the village.
+Members of the militia, on the lookout for bandits and wolves, grant you
+a cursory nod as they go about their duties.
+</description>
+      <exits>
+        <node name="east">
+          <target>24113</target>
+        </node>
+        <node name="west">
+          <flags>isdoor</flags>
+          <key>24100</key>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>24117</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Inside the Western Gates</name>
+      <resets>
+        <mob limit="8" maxHere="1" vnum="24130"/>
+        <equip to="wield" vnum="24129"/>
+        <equip to="body" vnum="24130"/>
+        <equip to="wrist_l" vnum="24131"/>
+        <equip to="wrist_r" vnum="24131"/>
+        <equip to="neck_1" vnum="24132"/>
+        <equip to="head" vnum="24133"/>
+        <equip to="shield" vnum="24134"/>
+        <equip to="hold" vnum="24135"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="24116">
+      <description>You have reached the easternmost extent of the village. To the east lie the
+stout wooden gates, set in the wooden barrier that surrounds the village.
+Members of the militia, on the lookout for bandits and wolves, grant you
+a cursory nod as they go about their duties.
+</description>
+      <exits>
+        <node name="east">
+          <flags>isdoor</flags>
+          <key>24100</key>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>24118</target>
+        </node>
+        <node name="west">
+          <target>24114</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Inside the Eastern Gates</name>
+      <resets>
+        <mob limit="8" maxHere="1" vnum="24130"/>
+        <equip to="wield" vnum="24129"/>
+        <equip to="body" vnum="24130"/>
+        <equip to="wrist_l" vnum="24131"/>
+        <equip to="wrist_r" vnum="24131"/>
+        <equip to="neck_1" vnum="24132"/>
+        <equip to="head" vnum="24133"/>
+        <equip to="shield" vnum="24134"/>
+        <equip to="hold" vnum="24135"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="24117">
+      <description>You are standing outside the Gates at the western end of town. They currently
+stand open, but the militia are ready at a moment&apos;s notice to slam them shut
+and bar them with heavy wooden crossbeams bound with rare iron imported from
+the south.
+</description>
+      <exits>
+        <node name="east">
+          <flags>isdoor</flags>
+          <key>24100</key>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>24115</target>
+        </node>
+        <node name="north">
+          <target>24119</target>
+        </node>
+        <node name="south">
+          <target>24132</target>
+        </node>
+      </exits>
+      <flags>no_mob</flags>
+      <name>Outside the Western Gates</name>
+      <sector>field</sector>
+    </node>
+    <node name="24118">
+      <description>You are standing outside the Gates at the eastern end of town. They currently
+stand open, but the militia are ready at a moment&apos;s notice to slam them shut
+and bar them with heavy wooden crossbeams bound with rare iron imported from
+the south.
+</description>
+      <exits>
+        <node name="east">
+          <target>31018</target>
+        </node>
+        <node name="north">
+          <target>24125</target>
+        </node>
+        <node name="south">
+          <target>24126</target>
+        </node>
+        <node name="west">
+          <flags>isdoor</flags>
+          <key>24100</key>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>24116</target>
+        </node>
+      </exits>
+      <flags>no_mob</flags>
+      <name>Outside the Eastern Gates</name>
+      <sector>field</sector>
+    </node>
+    <node name="24119">
+      <description>You are travelling along a broad path comprised of hard earth packed down
+by the steps of thousands of travellers over the many years. This path  
+circles the wooden walls of the village, and from here you can see some of
+the larger structures within.
+</description>
+      <exits>
+        <node name="north">
+          <target>24120</target>
+        </node>
+        <node name="south">
+          <target>24117</target>
+        </node>
+      </exits>
+      <name>A Dirt Path</name>
+      <sector>field</sector>
+    </node>
+    <node name="24120">
+      <description>You are travelling along a broad path comprised of hard earth packed down
+by the steps of thousands of travellers over the many years. This path  
+circles the wooden walls of the village, and from here you can see some of
+the larger structures within.
+</description>
+      <exits>
+        <node name="east">
+          <target>24121</target>
+        </node>
+        <node name="south">
+          <target>24119</target>
+        </node>
+      </exits>
+      <name>A Dirt Path</name>
+      <sector>field</sector>
+    </node>
+    <node name="24121">
+      <description>You are travelling along a broad path comprised of hard earth packed down
+by the steps of thousands of travellers over the many years. This path  
+circles the wooden walls of the village, and from here you can see some of
+the larger structures within.
+</description>
+      <exits>
+        <node name="east">
+          <target>24122</target>
+        </node>
+        <node name="west">
+          <target>24120</target>
+        </node>
+      </exits>
+      <name>A Dirt Path</name>
+      <sector>field</sector>
+    </node>
+    <node name="24122">
+      <description>You are travelling along a broad path comprised of hard earth packed down
+by the steps of thousands of travellers over the many years. This path  
+circles the wooden walls of the village, and from here you can see some of
+the larger structures within.
+
+There is a path running up a hill here which you may ascend.
+</description>
+      <exits>
+        <node name="east">
+          <target>24123</target>
+        </node>
+        <node name="west">
+          <target>24121</target>
+        </node>
+      </exits>
+      <flags>no_mob</flags>
+      <name>A Dirt Path</name>
+      <sector>field</sector>
+    </node>
+    <node name="24123">
+      <description>You are travelling along a broad path comprised of hard earth packed down
+by the steps of thousands of travellers over the many years. This path  
+circles the wooden walls of the village, and from here you can see some of
+the larger structures within.
+</description>
+      <exits>
+        <node name="east">
+          <target>24124</target>
+        </node>
+        <node name="west">
+          <target>24122</target>
+        </node>
+      </exits>
+      <name>A Dirt Path</name>
+      <sector>field</sector>
+    </node>
+    <node name="24124">
+      <description>You are travelling along a broad path comprised of hard earth packed down
+by the steps of thousands of travellers over the many years. This path  
+circles the wooden walls of the village, and from here you can see some of
+the larger structures within.
+</description>
+      <exits>
+        <node name="south">
+          <target>24125</target>
+        </node>
+        <node name="west">
+          <target>24123</target>
+        </node>
+      </exits>
+      <name>A Dirt Path</name>
+      <sector>field</sector>
+    </node>
+    <node name="24125">
+      <description>You are travelling along a broad path comprised of hard earth packed down
+by the steps of thousands of travellers over the many years. This path  
+circles the wooden walls of the village, and from here you can see some of
+the larger structures within.
+</description>
+      <exits>
+        <node name="north">
+          <target>24124</target>
+        </node>
+        <node name="south">
+          <target>24118</target>
+        </node>
+      </exits>
+      <name>A Dirt Path</name>
+      <sector>field</sector>
+    </node>
+    <node name="24126">
+      <description>You are travelling along a broad path comprised of hard earth packed down
+by the steps of thousands of travellers over the many years. This path  
+circles the wooden walls of the village, and from here you can see some of
+the larger structures within.
+</description>
+      <exits>
+        <node name="north">
+          <target>24118</target>
+        </node>
+        <node name="south">
+          <target>24127</target>
+        </node>
+      </exits>
+      <name>A Dirt Path</name>
+      <sector>field</sector>
+    </node>
+    <node name="24127">
+      <description>You are travelling along a broad path comprised of hard earth packed down
+by the steps of thousands of travellers over the many years. This path  
+circles the wooden walls of the village, and from here you can see some of
+the larger structures within.
+</description>
+      <exits>
+        <node name="north">
+          <target>24126</target>
+        </node>
+        <node name="west">
+          <target>24128</target>
+        </node>
+      </exits>
+      <name>A Dirt Path</name>
+      <sector>field</sector>
+    </node>
+    <node name="24128">
+      <description>You are travelling along a broad path comprised of hard earth packed down
+by the steps of thousands of travellers over the many years. This path  
+circles the wooden walls of the village, and from here you can see some of
+the larger structures within.
+</description>
+      <exits>
+        <node name="east">
+          <target>24127</target>
+        </node>
+        <node name="west">
+          <target>24129</target>
+        </node>
+      </exits>
+      <name>A Dirt Path</name>
+      <sector>field</sector>
+    </node>
+    <node name="24129">
+      <description>You are travelling along a broad path comprised of hard earth packed down
+by the steps of thousands of travellers over the many years. This path  
+circles the wooden walls of the village, and from here you can see some of
+the larger structures within.
+</description>
+      <exits>
+        <node name="east">
+          <target>24128</target>
+        </node>
+        <node name="west">
+          <target>24130</target>
+        </node>
+      </exits>
+      <name>A Dirt Path</name>
+      <sector>field</sector>
+    </node>
+    <node name="24130">
+      <description>You are travelling along a broad path comprised of hard earth packed down
+by the steps of thousands of travellers over the many years. This path  
+circles the wooden walls of the village, and from here you can see some of
+the larger structures within.
+</description>
+      <exits>
+        <node name="east">
+          <target>24129</target>
+        </node>
+        <node name="west">
+          <target>24131</target>
+        </node>
+      </exits>
+      <name>A Dirt Path</name>
+      <sector>field</sector>
+    </node>
+    <node name="24131">
+      <description>You are travelling along a broad path comprised of hard earth packed down
+by the steps of thousands of travellers over the many years. This path  
+circles the wooden walls of the village, and from here you can see some of
+the larger structures within.
+</description>
+      <exits>
+        <node name="east">
+          <target>24130</target>
+        </node>
+        <node name="north">
+          <target>24132</target>
+        </node>
+      </exits>
+      <name>A Dirt Path</name>
+      <sector>field</sector>
+    </node>
+    <node name="24132">
+      <description>You are travelling along a broad path comprised of hard earth packed down
+by the steps of thousands of travellers over the many years. This path  
+circles the wooden walls of the village, and from here you can see some of
+the larger structures within.
+</description>
+      <exits>
+        <node name="north">
+          <target>24117</target>
+        </node>
+        <node name="south">
+          <target>24131</target>
+        </node>
+      </exits>
+      <name>A Dirt Path</name>
+      <sector>field</sector>
+    </node>
+    <node name="24133">
+      <description>You are standing outside a hut in the village. It is a wooden walled structure
+with a thatched roof, and a sturdy oak door. Occasionally a villager enters
+or exits the hut, sparing you a curious glance as they do. A crude etching
+upon the doors of this hut marks it as the Horse Clan hut.
+</description>
+      <exits>
+        <node name="north">
+          <target>24109</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>24134</target>
+        </node>
+      </exits>
+      <name>Outside a Village Clan Hut</name>
+      <sector>city</sector>
+    </node>
+    <node name="24134">
+      <description>You are standing inside the hut. The sounds and smells of cooking emanate
+from the east, while quiet conversation can be heard to the west. You feel
+slightly nervous about intruding upon this clan, but then again that&apos;s
+what your profession is all about, really. Intruding.
+</description>
+      <exits>
+        <node name="east">
+          <target>24136</target>
+        </node>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>24133</target>
+        </node>
+        <node name="west">
+          <target>24135</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Inside the Hut</name>
+      <sector>inside</sector>
+    </node>
+    <node name="24135">
+      <description>You have entered the common room of this hut. Several villagers sit about,
+sipping at their ales and chatting quietly with each other. As you enter
+they smile and bid you welcome, and ask you to stay and enjoy some good
+conversation for a while.
+</description>
+      <exits>
+        <node name="east">
+          <target>24134</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>The Meeting Room</name>
+      <sector>inside</sector>
+    </node>
+    <node name="24136">
+      <description>In here several teenagers of both sexes rush about preparing the evening
+meal under the watchful eye of a hefty cook, who helps them along with the
+occasional shout or cuff on the ear.
+</description>
+      <exits>
+        <node name="west">
+          <target>24134</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>The Kitchen</name>
+      <sector>inside</sector>
+    </node>
+    <node name="24137">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening.
+
+The chieftain&apos;s lodge lies to the west of here.
+</description>
+      <exits>
+        <node name="north">
+          <target>24145</target>
+        </node>
+        <node name="south">
+          <target>24105</target>
+        </node>
+        <node name="west">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>24138</target>
+        </node>
+      </exits>
+      <name>A Path in the Village</name>
+      <sector>city</sector>
+    </node>
+    <node name="24138">
+      <description>This is where the chieftain resides. It may seem to be a small dwelling
+for a figure of such importance, but it should be remembered that she has
+it to herself, while most other villagers live with their clans in groups of
+up to thirty, residing in three room lodges.
+</description>
+      <exits>
+        <node name="east">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>24137</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>The Chieftain&apos;s Lodge</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="24117"/>
+        <equip to="wield" vnum="24127"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="24139">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening.
+
+The flint-knepper practices his trade to the west of here.
+</description>
+      <exits>
+        <node name="north">
+          <target>24105</target>
+        </node>
+        <node name="south">
+          <target>24160</target>
+        </node>
+        <node name="west">
+          <target>24140</target>
+        </node>
+      </exits>
+      <name>A Path in the Village</name>
+      <sector>city</sector>
+    </node>
+    <node name="24140">
+      <description>You are greeted with a sudden blast of heat from the furnace as you enter
+the smithy. Wiping sweat from your brow, you gaze about, taking the place
+in. Various items of armor in various stages of repair line the walls. A
+huge, muscular man is using a massive hammer to beat the dents out of a
+suit of rather battered-looking bronze plate. The flint-knepper has learnt
+skills far more advanced than his contemporaries, thanks to the many
+visitors this village attracts, and his forge shows evidence of this.
+</description>
+      <exits>
+        <node name="east">
+          <target>24139</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>The Flint-Knepper</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="24101"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="24141">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening.
+</description>
+      <exits>
+        <node name="east">
+          <target>24142</target>
+        </node>
+        <node name="north">
+          <target>24153</target>
+        </node>
+        <node name="south">
+          <target>24107</target>
+        </node>
+      </exits>
+      <name>A Path in the Village</name>
+      <sector>city</sector>
+    </node>
+    <node name="24142">
+      <description>This hut is used to store the goods of the many merchants that come to this
+village. It currently holds little of interest, being filled largely with
+bales of hay and coils of hemp rope.
+</description>
+      <exits>
+        <node name="west">
+          <target>24141</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>A Storage Hut</name>
+      <sector>inside</sector>
+    </node>
+    <node name="24143">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening.
+</description>
+      <exits>
+        <node name="east">
+          <target>24144</target>
+        </node>
+        <node name="north">
+          <target>24107</target>
+        </node>
+        <node name="south">
+          <target>24165</target>
+        </node>
+      </exits>
+      <name>A Path in the Village</name>
+      <sector>city</sector>
+    </node>
+    <node name="24144">
+      <description>This hut has been loaned by the chieftain to a travelling arms specialist,
+who is currently doing a roaring trade with the locals, who are eager to
+acquire the rare metal weapons he has bought with him from the south.
+</description>
+      <exits>
+        <node name="west">
+          <target>24143</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>A Trader&apos;s Den</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="24102"/>
+        <give vnum="24115"/>
+        <give vnum="24116"/>
+        <give vnum="24117"/>
+        <give vnum="24118"/>
+        <give vnum="24119"/>
+        <give vnum="24111"/>
+        <give vnum="24112"/>
+        <give vnum="24113"/>
+        <give vnum="24114"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="24145">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening.
+</description>
+      <exits>
+        <node name="east">
+          <target>24148</target>
+        </node>
+        <node name="north">
+          <target>24146</target>
+        </node>
+        <node name="south">
+          <target>24137</target>
+        </node>
+        <node name="west">
+          <target>24181</target>
+        </node>
+      </exits>
+      <name>A Path in the Village</name>
+      <resets>
+        <mob limit="8" maxHere="1" vnum="24128"/>
+        <equip to="wield" vnum="24129"/>
+        <equip to="body" vnum="24130"/>
+        <equip to="wrist_l" vnum="24131"/>
+        <equip to="wrist_r" vnum="24131"/>
+        <equip to="neck_1" vnum="24132"/>
+        <equip to="head" vnum="24133"/>
+        <equip to="shield" vnum="24134"/>
+        <equip to="hold" vnum="24135"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="24146">
+      <behavior type="PetShopRoom">
+        <storageVnum>24147</storageVnum>
+      </behavior>
+      <description>Here the foreign mercenaries who have come to the north looking for 
+employment gather. You may take advantage of their services for a sizeable
+sum of gold should you wish to.
+</description>
+      <exits>
+        <node name="south">
+          <target>24145</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Militia Hut</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="24103"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="24147">
+      <behavior type="PetShopStorage">
+      </behavior>
+      <description>You shouldn&apos;t be here. Go Away. Or I&apos;ll Tell.
+
+Oh look- a garbled transmission from Outer Space-
+and a large fries.
+</description>
+      <flags>no_mob indoors</flags>
+      <name>Merc Store</name>
+      <resets>
+        <mob limit="-1" maxHere="1" vnum="24131"/>
+        <mob limit="-1" maxHere="1" vnum="24132"/>
+        <mob limit="-1" maxHere="1" vnum="24133"/>
+        <mob limit="-1" maxHere="1" vnum="24134"/>
+        <mob limit="-1" maxHere="1" vnum="24135"/>
+        <mob limit="-1" maxHere="1" vnum="24136"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="24148">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening.
+
+The witchdoctor&apos;s hut is to the north of here.
+</description>
+      <exits>
+        <node name="east">
+          <target>24150</target>
+        </node>
+        <node name="north">
+          <target>24149</target>
+        </node>
+        <node name="west">
+          <target>24145</target>
+        </node>
+      </exits>
+      <name>A Path in the Village</name>
+      <sector>city</sector>
+    </node>
+    <node name="24149">
+      <description>This hut is cram-packed with magical artefacts, items and spell components
+of every type imaginable (and several unimaginable). Forcing your way through
+the clutter, you eventually find an assistant, a raven-haired witch doctor who 
+smiles sweetly and welcomes you to her hut.
+</description>
+      <exits>
+        <node name="south">
+          <target>24148</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>The Witch Doctor&apos;s Hut</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="24104"/>
+        <give vnum="24108"/>
+        <give vnum="24124"/>
+        <give vnum="24136"/>
+        <give vnum="24137"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="24150">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening.
+</description>
+      <exits>
+        <node name="east">
+          <target>24151</target>
+        </node>
+        <node name="north">
+          <target>24156</target>
+        </node>
+        <node name="west">
+          <target>24148</target>
+        </node>
+      </exits>
+      <name>A Path in the Village</name>
+      <resets>
+        <mob limit="5" maxHere="1" vnum="24125"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="24151">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening.
+
+The wise woman&apos;s hut is to the north.
+</description>
+      <exits>
+        <node name="east">
+          <target>24153</target>
+        </node>
+        <node name="north">
+          <target>24152</target>
+        </node>
+        <node name="west">
+          <target>24150</target>
+        </node>
+      </exits>
+      <name>A Path in the Village</name>
+      <sector>city</sector>
+    </node>
+    <node name="24152">
+      <description>The Wise Woman of the village lives in this run-down old hut. People come
+to her to avail themselves of her remarkable ability to determine the nature
+of items of all types (there&apos;s no other reason to come here, really).
+</description>
+      <exits>
+        <node name="south">
+          <target>24151</target>
+        </node>
+      </exits>
+      <flags>no_mob indoors</flags>
+      <name>The Wise Woman&apos;s Residence</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="24105"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="24153">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening.
+
+The beastmaster&apos;s hut is to the north.
+</description>
+      <exits>
+        <node name="east">
+          <target>24188</target>
+        </node>
+        <node name="north">
+          <target>24154</target>
+        </node>
+        <node name="south">
+          <target>24141</target>
+        </node>
+        <node name="west">
+          <target>24151</target>
+        </node>
+      </exits>
+      <name>A Path in the Village</name>
+      <resets>
+        <mob limit="8" maxHere="1" vnum="24129"/>
+        <equip to="wield" vnum="24129"/>
+        <equip to="body" vnum="24130"/>
+        <equip to="wrist_l" vnum="24131"/>
+        <equip to="wrist_r" vnum="24131"/>
+        <equip to="neck_1" vnum="24132"/>
+        <equip to="head" vnum="24133"/>
+        <equip to="shield" vnum="24134"/>
+        <equip to="hold" vnum="24135"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="24154">
+      <behavior type="PetShopRoom">
+        <storageVnum>24155</storageVnum>
+      </behavior>
+      <description>The Beastmaster captures and trains the wild animals of the north, and then
+sells them to the merchants from the south. It is a very profitable but
+extremely dangerous profession, as the many scars on his brawny body
+suggest.
+</description>
+      <exits>
+        <node name="south">
+          <target>24153</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>The Beastmaster&apos;s Hut</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="24106"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="24155">
+      <behavior type="PetShopStorage">
+      </behavior>
+      <description>You shouldn&apos;t be here. Go Away. Or I&apos;ll Tell.
+
+
+
+
+
+
+
+NOW!
+</description>
+      <flags>no_mob indoors</flags>
+      <name>Pet Store Storage</name>
+      <resets>
+        <mob limit="-1" maxHere="1" vnum="24110"/>
+        <mob limit="-1" maxHere="1" vnum="24111"/>
+        <mob limit="-1" maxHere="1" vnum="24112"/>
+        <mob limit="-1" maxHere="1" vnum="24113"/>
+        <mob limit="-1" maxHere="1" vnum="24114"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="24156">
+      <description>You are standing outside a hut in the village. It is a wooden walled structure
+with a thatched roof, and a sturdy oak door. Occasionally a villager enters
+or exits the hut, sparing you a curious glance as they do. A crude etching
+upon the doors of this hut marks it as the Bear Clan hut.
+</description>
+      <exits>
+        <node name="north">
+          <target>24157</target>
+        </node>
+        <node name="south">
+          <target>24150</target>
+        </node>
+      </exits>
+      <name>Outside a Village Clan Hut</name>
+      <sector>city</sector>
+    </node>
+    <node name="24157">
+      <description>You are standing inside the hut. The sounds and smells of cooking emanate
+from the east, while quiet conversation can be heard to the west. You feel
+slightly nervous about intruding upon this clan, but then again that&apos;s
+what your profession is all about, really. Intruding.
+</description>
+      <exits>
+        <node name="east">
+          <target>24158</target>
+        </node>
+        <node name="south">
+          <target>24156</target>
+        </node>
+        <node name="west">
+          <target>24159</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Inside the Hut</name>
+      <sector>inside</sector>
+    </node>
+    <node name="24158">
+      <description>You have entered the common room of this hut. Several villagers sit about,
+sipping at their ales and chatting quietly with each other. As you enter
+they smile and bid you welcome, and ask you to stay and enjoy some good
+conversation for a while.
+</description>
+      <exits>
+        <node name="west">
+          <target>24157</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>The Meeting Room</name>
+      <sector>inside</sector>
+    </node>
+    <node name="24159">
+      <description>In here several teenagers of both sexes rush about preparing the evening
+meal under the watchful eye of a hefty cook, who helps them along with the
+occasional shout or cuff on the ear.
+</description>
+      <exits>
+        <node name="east">
+          <target>24157</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>The Kitchen</name>
+      <sector>inside</sector>
+    </node>
+    <node name="24160">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening.
+</description>
+      <exits>
+        <node name="east">
+          <target>24161</target>
+        </node>
+        <node name="north">
+          <target>24139</target>
+        </node>
+        <node name="west">
+          <target>24167</target>
+        </node>
+      </exits>
+      <name>A Path in the Village</name>
+      <sector>city</sector>
+    </node>
+    <node name="24161">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening.
+
+A trapper is selling his goods to the south.
+</description>
+      <exits>
+        <node name="east">
+          <target>24106</target>
+        </node>
+        <node name="south">
+          <target>24162</target>
+        </node>
+        <node name="west">
+          <target>24160</target>
+        </node>
+      </exits>
+      <name>A Path in the Village</name>
+      <resets>
+        <mob limit="3" maxHere="1" vnum="24119"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="24162">
+      <description>A trapper has set up a business here, where he sells goods that he has
+fashioned or acquired during his expeditions into the wilds. His stock is
+usually rather low, as the villagers quickly buy up for the winter.
+</description>
+      <exits>
+        <node name="north">
+          <target>24161</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>A Hut</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="24107"/>
+        <give vnum="24106"/>
+        <give vnum="24107"/>
+        <give vnum="24109"/>
+        <give vnum="24110"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="24163">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening.
+
+Food is in fact available to the south of here, though it isn&apos;t hot.
+</description>
+      <exits>
+        <node name="east">
+          <target>24165</target>
+        </node>
+        <node name="south">
+          <target>24164</target>
+        </node>
+        <node name="west">
+          <target>24106</target>
+        </node>
+      </exits>
+      <name>A Path in the Village</name>
+      <sector>city</sector>
+    </node>
+    <node name="24164">
+      <description>Some enterprising young women have set up a small shop here, where they
+sell off the surplus food that is not required to provision their Clans.
+You may purchase supplies for your travels here.
+</description>
+      <exits>
+        <node name="north">
+          <target>24163</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>A Supply Hut</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="24108"/>
+        <give vnum="24120"/>
+        <give vnum="24121"/>
+        <give vnum="24122"/>
+        <give vnum="24123"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="24165">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening.
+
+The brewer&apos;s hut is south of here.
+</description>
+      <exits>
+        <node name="east">
+          <target>24174</target>
+        </node>
+        <node name="north">
+          <target>24143</target>
+        </node>
+        <node name="south">
+          <target>24166</target>
+        </node>
+        <node name="west">
+          <target>24163</target>
+        </node>
+      </exits>
+      <name>A Path in the Village</name>
+      <resets>
+        <mob limit="8" maxHere="1" vnum="24128"/>
+        <equip to="wield" vnum="24129"/>
+        <equip to="body" vnum="24130"/>
+        <equip to="wrist_l" vnum="24131"/>
+        <equip to="wrist_r" vnum="24131"/>
+        <equip to="neck_1" vnum="24132"/>
+        <equip to="head" vnum="24133"/>
+        <equip to="shield" vnum="24134"/>
+        <equip to="hold" vnum="24135"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="24166">
+      <description>It is here that the village Brewer practices his holy trade. Should you
+wish to indulge, you may obtain alcohol from the Brewer, though a small
+donation is in order.
+</description>
+      <exits>
+        <node name="north">
+          <target>24165</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>The Brewer&apos;s Hut</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="24109"/>
+        <give vnum="24101"/>
+        <give vnum="24102"/>
+        <give vnum="24103"/>
+        <give vnum="24104"/>
+        <give vnum="24105"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="24167">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening.
+</description>
+      <exits>
+        <node name="east">
+          <target>24160</target>
+        </node>
+        <node name="west">
+          <target>24168</target>
+        </node>
+      </exits>
+      <name>A Path in the Village</name>
+      <sector>city</sector>
+    </node>
+    <node name="24168">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening.
+</description>
+      <exits>
+        <node name="east">
+          <target>24167</target>
+        </node>
+        <node name="west">
+          <target>24169</target>
+        </node>
+      </exits>
+      <name>A Path in the Village</name>
+      <sector>city</sector>
+    </node>
+    <node name="24169">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening.
+</description>
+      <exits>
+        <node name="east">
+          <target>24168</target>
+        </node>
+        <node name="south">
+          <target>24170</target>
+        </node>
+      </exits>
+      <name>A Path in the Village</name>
+      <resets>
+        <mob limit="3" maxHere="1" vnum="24118"/>
+        <mob limit="8" maxHere="1" vnum="24129"/>
+        <equip to="wield" vnum="24129"/>
+        <equip to="body" vnum="24130"/>
+        <equip to="wrist_l" vnum="24131"/>
+        <equip to="wrist_r" vnum="24131"/>
+        <equip to="neck_1" vnum="24132"/>
+        <equip to="head" vnum="24133"/>
+        <equip to="shield" vnum="24134"/>
+        <equip to="hold" vnum="24135"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="24170">
+      <description>You are standing outside a hut in the village. It is a wooden walled structure
+with a thatched roof, and a sturdy oak door. Occasionally a villager enters
+or exits the hut, sparing you a curious glance as they do. A crude etching
+upon the doors of this hut marks it as the Eagle Clan hut.
+</description>
+      <exits>
+        <node name="north">
+          <target>24169</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>24171</target>
+        </node>
+      </exits>
+      <name>Outside a Village Clan Hut</name>
+      <sector>city</sector>
+    </node>
+    <node name="24171">
+      <description>You are standing inside the hut. The sounds and smells of cooking emanate
+from the east, while quiet conversation can be heard to the west. You feel
+slightly nervous about intruding upon this clan, but then again that&apos;s
+what your profession is all about, really. Intruding.
+</description>
+      <exits>
+        <node name="east">
+          <target>24173</target>
+        </node>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>24170</target>
+        </node>
+        <node name="west">
+          <target>24172</target>
+        </node>
+      </exits>
+      <name>Inside the Hut</name>
+      <resets>
+        <mob limit="6" maxHere="1" vnum="24122"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="24172">
+      <description>You have entered the common room of this hut. Several villagers sit about,
+sipping at their ales and chatting quietly with each other. As you enter
+they smile and bid you welcome, and ask you to stay and enjoy some good
+conversation for a while.
+</description>
+      <exits>
+        <node name="east">
+          <target>24171</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>The Meeting Room</name>
+      <sector>inside</sector>
+    </node>
+    <node name="24173">
+      <description>In here several teenagers of both sexes rush about preparing the evening
+meal under the watchful eye of a hefty cook, who helps them along with the
+occasional shout or cuff on the ear.
+</description>
+      <exits>
+        <node name="west">
+          <target>24171</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>The Kitchen</name>
+      <sector>inside</sector>
+    </node>
+    <node name="24174">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening.
+</description>
+      <exits>
+        <node name="east">
+          <target>24175</target>
+        </node>
+        <node name="west">
+          <target>24165</target>
+        </node>
+      </exits>
+      <name>A Path in the Village</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="24116"/>
+        <give vnum="24124"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="24175">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening.
+</description>
+      <exits>
+        <node name="east">
+          <target>24176</target>
+        </node>
+        <node name="west">
+          <target>24174</target>
+        </node>
+      </exits>
+      <name>A Path in the Village</name>
+      <resets>
+        <mob limit="2" maxHere="1" vnum="24121"/>
+        <equip to="wield" vnum="24128"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="24176">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening.
+</description>
+      <exits>
+        <node name="south">
+          <target>24177</target>
+        </node>
+        <node name="west">
+          <target>24175</target>
+        </node>
+      </exits>
+      <name>A Path in the Village</name>
+      <resets>
+        <mob limit="6" maxHere="1" vnum="24126"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="24177">
+      <description>You are standing outside a hut in the village. It is a wooden walled structure
+with a thatched roof, and a sturdy oak door. Occasionally a villager enters
+or exits the hut, sparing you a curious glance as they do. A crude etching
+upon the doors of this hut marks it as the Wolf Clan hut.
+</description>
+      <exits>
+        <node name="north">
+          <target>24176</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>24178</target>
+        </node>
+      </exits>
+      <name>Outside a Village Clan Hut</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="24124"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="24178">
+      <description>You are standing inside the hut. The sounds and smells of cooking emanate
+from the east, while quiet conversation can be heard to the west. You feel
+slightly nervous about intruding upon this clan, but then again that&apos;s
+what your profession is all about, really. Intruding.
+</description>
+      <exits>
+        <node name="east">
+          <target>24179</target>
+        </node>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>24177</target>
+        </node>
+        <node name="west">
+          <target>24180</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Inside the Hut</name>
+      <sector>inside</sector>
+    </node>
+    <node name="24179">
+      <description>In here several teenagers of both sexes rush about preparing the evening
+meal under the watchful eye of a hefty cook, who helps them along with the
+occasional shout or cuff on the ear.
+</description>
+      <exits>
+        <node name="west">
+          <target>24178</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>The Kitchen</name>
+      <sector>inside</sector>
+    </node>
+    <node name="24180">
+      <description>You have entered the common room of this hut. Several villagers sit about,
+sipping at their ales and chatting quietly with each other. As you enter
+they smile and bid you welcome, and ask you to stay and enjoy some good
+conversation for a while.
+</description>
+      <exits>
+        <node name="east">
+          <target>24178</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>The Meeting Room</name>
+      <sector>inside</sector>
+    </node>
+    <node name="24181">
+      <description>You are standing outside a hut in the village. It is a wooden walled structure
+with a thatched roof, and a sturdy oak door. Occasionally a villager enters
+or exits the hut, sparing you a curious glance as they do. A crude etching
+upon the doors of this hut marks it as the Boar Clan hut.
+</description>
+      <exits>
+        <node name="east">
+          <target>24145</target>
+        </node>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>24185</target>
+        </node>
+      </exits>
+      <name>Outside a Village Clan Hut</name>
+      <sector>city</sector>
+    </node>
+    <node name="24182">
+      <description>These rooms are used by locals and foreigners alike to relax, sing songs and
+enjoy each other&apos;s company. Feel free to stay as long as you wish.
+</description>
+      <exits>
+        <node name="north">
+          <target>24183</target>
+        </node>
+        <node name="south">
+          <target>24184</target>
+        </node>
+        <node name="west">
+          <target>24190</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>The Common Hall</name>
+      <sector>inside</sector>
+    </node>
+    <node name="24183">
+      <description>These rooms are used by locals and foreigners alike to relax, sing songs and
+enjoy each other&apos;s company. Feel free to stay as long as you wish.
+</description>
+      <exits>
+        <node name="south">
+          <target>24182</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>The Common Hall</name>
+      <sector>inside</sector>
+    </node>
+    <node name="24184">
+      <description>These rooms are used by locals and foreigners alike to relax, sing songs and
+enjoy each other&apos;s company. Feel free to stay as long as you wish.
+</description>
+      <exits>
+        <node name="north">
+          <target>24182</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>The Common Hall</name>
+      <sector>inside</sector>
+    </node>
+    <node name="24185">
+      <description>You are standing inside the hut. The sounds and smells of cooking emanate
+from the east, while quiet conversation can be heard to the west. You feel
+slightly nervous about intruding upon this clan, but then again that&apos;s
+what your profession is all about, really. Intruding.
+</description>
+      <exits>
+        <node name="east">
+          <target>24187</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>24181</target>
+        </node>
+        <node name="west">
+          <target>24186</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Inside the Hut</name>
+      <sector>inside</sector>
+    </node>
+    <node name="24186">
+      <description>You have entered the common room of this hut. Several villagers sit about,
+sipping at their ales and chatting quietly with each other. As you enter
+they smile and bid you welcome, and ask you to stay and enjoy some good
+conversation for a while.
+</description>
+      <exits>
+        <node name="east">
+          <target>24185</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>The Meeting Room</name>
+      <sector>inside</sector>
+    </node>
+    <node name="24187">
+      <description>In here several teenagers of both sexes rush about preparing the evening
+meal under the watchful eye of a hefty cook, who helps them along with the
+occasional shout or cuff on the ear.
+</description>
+      <exits>
+        <node name="west">
+          <target>24185</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>The Kitchen</name>
+      <sector>inside</sector>
+    </node>
+    <node name="24188">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening.
+</description>
+      <exits>
+        <node name="east">
+          <target>24189</target>
+        </node>
+        <node name="west">
+          <target>24153</target>
+        </node>
+      </exits>
+      <name>A Path in the Village</name>
+      <sector>city</sector>
+    </node>
+    <node name="24189">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening.
+</description>
+      <exits>
+        <node name="east">
+          <target>24190</target>
+        </node>
+        <node name="west">
+          <target>24188</target>
+        </node>
+      </exits>
+      <name>A Path in the Village</name>
+      <resets>
+        <mob limit="3" maxHere="1" vnum="24118"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="24190">
+      <description>You are strolling along a path in the village. Flecks of white snow are blown
+about on the hard ground by a chill northern breeze that blows in from the
+icy mountains far to the north. You hope that you will be able to find
+a hot meal and a comfortable bed this evening.
+
+The Common Halls lie to the east.
+</description>
+      <exits>
+        <node name="east">
+          <target>24182</target>
+        </node>
+        <node name="north">
+          <target>24191</target>
+        </node>
+        <node name="west">
+          <target>24189</target>
+        </node>
+      </exits>
+      <name>A Path in the Village</name>
+      <sector>city</sector>
+    </node>
+    <node name="24191">
+      <description>You are standing outside a hut in the village. It is a wooden walled structure
+with a thatched roof, and a sturdy oak door. Occasionally a villager enters
+or exits the hut, sparing you a curious glance as they do. A crude etching
+upon the doors of this hut marks it as the Deer Clan hut.
+</description>
+      <exits>
+        <node name="north">
+          <target>24192</target>
+        </node>
+        <node name="south">
+          <target>24190</target>
+        </node>
+      </exits>
+      <name>Outside a Village Clan Hut</name>
+      <sector>city</sector>
+    </node>
+    <node name="24192">
+      <description>You are standing inside the hut. The sounds and smells of cooking emanate
+from the east, while quiet conversation can be heard to the west. You feel
+slightly nervous about intruding upon this clan, but then again that&apos;s
+what your profession is all about, really. Intruding.
+</description>
+      <exits>
+        <node name="east">
+          <target>24194</target>
+        </node>
+        <node name="south">
+          <target>24191</target>
+        </node>
+        <node name="west">
+          <target>24193</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Inside the Hut</name>
+      <sector>inside</sector>
+    </node>
+    <node name="24193">
+      <description>You have entered the common room of this hut. Several villagers sit about,
+sipping at their ales and chatting quietly with each other. As you enter
+they smile and bid you welcome, and ask you to stay and enjoy some good
+conversation for a while.
+</description>
+      <exits>
+        <node name="east">
+          <target>24192</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>The Meeting Room</name>
+      <sector>inside</sector>
+    </node>
+    <node name="24194">
+      <description>In here several teenagers of both sexes rush about preparing the evening
+meal under the watchful eye of a hefty cook, who helps them along with the
+occasional shout or cuff on the ear.
+</description>
+      <exits>
+        <node name="west">
+          <target>24192</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>The Kitchen</name>
+      <sector>inside</sector>
+    </node>
+  </rooms>
+</area>

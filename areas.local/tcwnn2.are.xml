@@ -1,0 +1,4725 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<area>
+  <areadata>
+    <authors>Yaegar</authors>
+    <credits>The Walls of Anon</credits>
+    <levelHigh>65</levelHigh>
+    <levelLow>50</levelLow>
+    <name>The Walls of Anon</name>
+    <security>9</security>
+    <speedwalk>через все Guard Towers в The City of Anon</speedwalk>
+    <vnumHigh>31400</vnumHigh>
+    <vnumLow>31200</vnumLow>
+  </areadata>
+  <mobiles>
+    <node name="31200">
+      <ac bash="-20" exotic="0" pierce="-20" slash="-20"/>
+      <act add="npc stay_area warrior"/>
+      <aff add="sanctuary protect_evil"/>
+      <alignment>500</alignment>
+      <dam_type>pound</dam_type>
+      <damage>5d8+19</damage>
+      <default_pos>stand</default_pos>
+      <description>These dedicated guards are among the elite of the guards of the city,
+selected for their dedication, endurance and keen eyesight. They remain
+eternally vigilant, not wishing for their city to fall under the domination
+of evil forces.
+</description>
+      <hit>50d10+4250</hit>
+      <level>50</level>
+      <long_descr>An east wall guard patrols the battlements, ever alert for approaching enemies.
+</long_descr>
+      <mana>5d5+5000</mana>
+      <material>0</material>
+      <off add="bash berserk disarm dodge kick parry assist_guard assist_vnum"/>
+      <player_name>east wall guard</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>an east wall guard</short_descr>
+      <size>medium</size>
+      <spec>spec_guard</spec>
+      <start_pos>stand</start_pos>
+      <wealth>200</wealth>
+    </node>
+    <node name="31201">
+      <ac bash="-20" exotic="0" pierce="-20" slash="-20"/>
+      <act add="npc stay_area warrior"/>
+      <aff add="sanctuary protect_evil"/>
+      <alignment>500</alignment>
+      <dam_type>pound</dam_type>
+      <damage>5d8+19</damage>
+      <default_pos>stand</default_pos>
+      <description>These dedicated guards are among the elite of the guards of the city,
+selected for their dedication, endurance and keen eyesight. They remain
+eternally vigilant, not wishing for their city to fall under the domination
+of evil forces.
+</description>
+      <hit>50d10+4250</hit>
+      <level>50</level>
+      <long_descr>A south wall guard patrols the battlements, ever alert for approaching enemies.
+</long_descr>
+      <mana>5d5+5000</mana>
+      <material>0</material>
+      <off add="bash berserk disarm dodge kick parry assist_guard assist_vnum"/>
+      <player_name>south wall guard</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>a south wall guard</short_descr>
+      <size>medium</size>
+      <spec>spec_guard</spec>
+      <start_pos>stand</start_pos>
+      <wealth>200</wealth>
+    </node>
+    <node name="31202">
+      <ac bash="-20" exotic="0" pierce="-20" slash="-20"/>
+      <act add="npc stay_area warrior"/>
+      <aff add="sanctuary protect_evil"/>
+      <alignment>500</alignment>
+      <dam_type>pound</dam_type>
+      <damage>5d8+19</damage>
+      <default_pos>stand</default_pos>
+      <description>These dedicated guards are among the elite of the guards of the city,
+selected for their dedication, endurance and keen eyesight. They remain
+eternally vigilant, not wishing for their city to fall under the domination
+of evil forces.
+</description>
+      <hit>50d10+4250</hit>
+      <level>50</level>
+      <long_descr>A north wall guard patrols the battlements, ever alert for approaching enemies.
+</long_descr>
+      <mana>5d5+5000</mana>
+      <material>0</material>
+      <off add="bash berserk disarm dodge kick parry assist_guard assist_vnum"/>
+      <player_name>north wall guard</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>a north wall guard</short_descr>
+      <size>medium</size>
+      <spec>spec_guard</spec>
+      <start_pos>stand</start_pos>
+      <wealth>200</wealth>
+    </node>
+    <node name="31203">
+      <ac bash="-20" exotic="0" pierce="-20" slash="-20"/>
+      <act add="npc stay_area warrior"/>
+      <aff add="sanctuary protect_evil"/>
+      <alignment>500</alignment>
+      <dam_type>pound</dam_type>
+      <damage>5d8+19</damage>
+      <default_pos>stand</default_pos>
+      <description>These dedicated guards are among the elite of the guards of the city,
+selected for their dedication, endurance and keen eyesight. They remain
+eternally vigilant, not wishing for their city to fall under the domination
+of evil forces.
+</description>
+      <hit>50d10+4250</hit>
+      <level>50</level>
+      <long_descr>An west wall guard patrols the battlements, ever alert for approaching enemies.
+</long_descr>
+      <mana>5d5+5000</mana>
+      <material>0</material>
+      <off add="bash berserk disarm dodge kick parry assist_guard assist_vnum"/>
+      <player_name>west wall guard</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>an west wall guard</short_descr>
+      <size>medium</size>
+      <spec>spec_guard</spec>
+      <start_pos>stand</start_pos>
+      <wealth>200</wealth>
+    </node>
+    <node name="31204">
+      <ac bash="-25" exotic="-1" pierce="-25" slash="-25"/>
+      <act add="npc sentinel stay_area warrior"/>
+      <aff add="sanctuary protect_evil"/>
+      <alignment>800</alignment>
+      <dam_type>slash</dam_type>
+      <damage>10d4+23</damage>
+      <default_pos>stand</default_pos>
+      <description>This stern fellow is in charge of the guards on this wall, and has no time
+for idle chit-chat with civilians. Or silly adventurers either. Scars on his
+face and the cold look in his eye bespeak of a man who definitely knows how
+to handle himself in battle.
+</description>
+      <detection add="evil invis magic hidden"/>
+      <hit>50d10+5500</hit>
+      <level>55</level>
+      <long_descr>The east wall guard captain stares grimly at you.
+</long_descr>
+      <mana>5d5+5000</mana>
+      <material>0</material>
+      <off add="bash berserk disarm dodge kick parry assist_guard assist_vnum"/>
+      <player_name>guard captain east wall</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>the east wall guard captain</short_descr>
+      <size>medium</size>
+      <spec>spec_guard</spec>
+      <start_pos>stand</start_pos>
+      <wealth>200</wealth>
+    </node>
+    <node name="31205">
+      <ac bash="-25" exotic="-1" pierce="-25" slash="-25"/>
+      <act add="npc sentinel stay_area warrior"/>
+      <aff add="sanctuary protect_evil"/>
+      <alignment>800</alignment>
+      <dam_type>slash</dam_type>
+      <damage>10d4+23</damage>
+      <default_pos>stand</default_pos>
+      <description>This stern fellow is in charge of the guards on this wall, and has no time
+for idle chit-chat with civilians. Or silly adventurers either. Scars on his
+face and the cold look in his eye bespeak of a man who definitely knows how
+to handle himself in battle.
+</description>
+      <detection add="evil invis magic hidden"/>
+      <hit>50d10+5500</hit>
+      <level>55</level>
+      <long_descr>The south wall guard captain stares grimly at you.
+</long_descr>
+      <mana>5d5+5000</mana>
+      <material>0</material>
+      <off add="bash berserk disarm dodge kick parry assist_guard assist_vnum"/>
+      <player_name>guard captain south wall</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>the south wall guard captain</short_descr>
+      <size>medium</size>
+      <spec>spec_guard</spec>
+      <start_pos>stand</start_pos>
+      <wealth>200</wealth>
+    </node>
+    <node name="31206">
+      <ac bash="-25" exotic="-1" pierce="-25" slash="-25"/>
+      <act add="npc sentinel stay_area warrior"/>
+      <aff add="sanctuary protect_evil"/>
+      <alignment>800</alignment>
+      <dam_type>slash</dam_type>
+      <damage>10d4+23</damage>
+      <default_pos>stand</default_pos>
+      <description>This stern fellow is in charge of the guards on this wall, and has no time
+for idle chit-chat with civilians. Or silly adventurers either. Scars on his
+face and the cold look in his eye bespeak of a man who definitely knows how
+to handle himself in battle.
+</description>
+      <detection add="evil invis magic hidden"/>
+      <hit>50d10+5500</hit>
+      <level>55</level>
+      <long_descr>The north wall guard captain stares grimly at you.
+</long_descr>
+      <mana>5d5+5000</mana>
+      <material>0</material>
+      <off add="bash berserk disarm dodge kick parry assist_guard assist_vnum"/>
+      <player_name>guard captain north wall</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>the north wall guard captain</short_descr>
+      <size>medium</size>
+      <spec>spec_guard</spec>
+      <start_pos>stand</start_pos>
+      <wealth>200</wealth>
+    </node>
+    <node name="31207">
+      <ac bash="-25" exotic="-1" pierce="-25" slash="-25"/>
+      <act add="npc sentinel stay_area warrior"/>
+      <aff add="sanctuary protect_evil"/>
+      <alignment>800</alignment>
+      <dam_type>slash</dam_type>
+      <damage>10d4+23</damage>
+      <default_pos>stand</default_pos>
+      <description>This stern fellow is in charge of the guards on this wall, and has no time
+for idle chit-chat with civilians. Or silly adventurers either. Scars on his
+face and the cold look in his eye bespeak of a man who definitely knows how
+to handle himself in battle.
+</description>
+      <detection add="evil invis magic hidden"/>
+      <hit>50d10+5500</hit>
+      <level>55</level>
+      <long_descr>The west wall guard captain stares grimly at you.
+</long_descr>
+      <mana>5d5+5000</mana>
+      <material>0</material>
+      <off add="bash berserk disarm dodge kick parry assist_guard assist_vnum"/>
+      <player_name>guard captain west wall</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>the west wall guard captain</short_descr>
+      <size>medium</size>
+      <spec>spec_guard</spec>
+      <start_pos>stand</start_pos>
+      <wealth>200</wealth>
+    </node>
+    <node name="31208">
+      <ac bash="-28" exotic="-3" pierce="-28" slash="-28"/>
+      <act add="npc sentinel stay_area cleric warrior"/>
+      <aff add="sanctuary protect_evil"/>
+      <alignment>1000</alignment>
+      <dam_type>slash</dam_type>
+      <damage>5d10+25</damage>
+      <default_pos>stand</default_pos>
+      <description>The knights of Anon are a well-respected and renowned order that has been
+in existence for 15 generations. However constant wars and incursions of
+chaos have severely depleted their numbers, and now very few remain.
+</description>
+      <detection add="evil invis magic hidden"/>
+      <hit>50d10+6250</hit>
+      <level>58</level>
+      <long_descr>A well-armored knight strolls the battlements.
+</long_descr>
+      <mana>5d5+5000</mana>
+      <material>0</material>
+      <off add="bash berserk disarm dodge kick parry"/>
+      <player_name>knight</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>a knight</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>200</wealth>
+    </node>
+    <node name="31209">
+      <ac bash="-26" exotic="-2" pierce="-26" slash="-26"/>
+      <act add="npc sentinel stay_area mage"/>
+      <aff add="flying"/>
+      <alignment>400</alignment>
+      <dam_type>pound</dam_type>
+      <damage>10d4+24</damage>
+      <default_pos>stand</default_pos>
+      <description>While Elves are not by nature particularly interested in war or soldiering,
+there are, as in all races, &quot;black sheep&quot; who feel the call to arms as
+keenly as any Dwarven or Human mercenary. These few become mercenaries or
+adventurers. Some of them, such as this fellow, labor for the forces of
+good, if the price is right.
+</description>
+      <detection add="evil invis magic hidden"/>
+      <hit>50d10+5750</hit>
+      <level>56</level>
+      <long_descr>An elven battle mage stands ready.
+</long_descr>
+      <mana>5d5+5000</mana>
+      <material>0</material>
+      <off add="disarm kick parry"/>
+      <player_name>battle mage</player_name>
+      <race>elf</race>
+      <sex>male</sex>
+      <short_descr>an elven battle mage</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>200</wealth>
+    </node>
+    <node name="31210">
+      <ac bash="-32" exotic="-4" pierce="-32" slash="-32"/>
+      <act add="npc sentinel stay_area warrior"/>
+      <aff add="sanctuary protect_evil"/>
+      <alignment>800</alignment>
+      <dam_type>slash</dam_type>
+      <damage>6d9+32</damage>
+      <default_pos>stand</default_pos>
+      <description>This ancient veteran is clad in an immaculate uniform that sports more
+medals than it does material. He marches proudly along, constantly on
+duty, ever eager to make sure order is maintained on HIS walls.
+</description>
+      <detection add="evil invis magic hidden"/>
+      <hit>50d10+7250</hit>
+      <level>62</level>
+      <long_descr>The marshal of the guards marches back and forth, inspecting his men.
+</long_descr>
+      <mana>5d5+5000</mana>
+      <material>0</material>
+      <off add="bash disarm dodge kick parry"/>
+      <player_name>marshal</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>the marshal</short_descr>
+      <size>medium</size>
+      <spec>spec_cast_judge</spec>
+      <start_pos>stand</start_pos>
+      <wealth>200</wealth>
+    </node>
+    <node name="31211">
+      <ac bash="-18" exotic="1" pierce="-18" slash="-18"/>
+      <act add="npc sentinel stay_area warrior"/>
+      <aff add="infrared protect_evil"/>
+      <alignment>400</alignment>
+      <dam_type>pound</dam_type>
+      <damage>6d6+18</damage>
+      <default_pos>stand</default_pos>
+      <description>The crossbowmen of the city of Anon are renowned for their marksmanship
+across the land. Only the very best can ever hope to join their elite
+ranks.
+</description>
+      <hit>25d10+3750</hit>
+      <level>48</level>
+      <long_descr>A crossbowman patrols here, alert for invaders.
+</long_descr>
+      <mana>5d5+1000</mana>
+      <material>0</material>
+      <off add="disarm dodge kick parry trip"/>
+      <player_name>crossbowman</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>a crossbowman</short_descr>
+      <size>medium</size>
+      <spec>spec_cast_judge</spec>
+      <start_pos>stand</start_pos>
+      <wealth>200</wealth>
+    </node>
+    <node name="31212">
+      <ac bash="-29" exotic="-3" pierce="-29" slash="-29"/>
+      <act add="npc sentinel stay_area warrior"/>
+      <aff add="sanctuary protect_evil"/>
+      <behavior type="Repairman">
+        <repairs>light weapon armor clothing jewelry</repairs>
+      </behavior>
+      <dam_type>pound</dam_type>
+      <damage>8d6+26</damage>
+      <default_pos>stand</default_pos>
+      <description>This doughty dwarf spends all his time repairing damaged equipment. He isn&apos;t
+one for much conversation.
+</description>
+      <detection add="evil invis magic hidden"/>
+      <hit>50d10+6500</hit>
+      <level>59</level>
+      <long_descr>The wall guard smith grunts at you.
+</long_descr>
+      <mana>5d5+5000</mana>
+      <material>0</material>
+      <off add="bash berserk disarm dodge kick parry assist_guard assist_vnum"/>
+      <player_name>smith</player_name>
+      <race>dwarf</race>
+      <sex>male</sex>
+      <short_descr>the guard smith</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>200</wealth>
+    </node>
+    <node name="31213">
+      <ac bash="-30" exotic="-3" pierce="-30" slash="-30"/>
+      <act add="npc sentinel aggressive stay_area necromancer"/>
+      <aff add="sanctuary infrared protect_evil sneak flying"/>
+      <alignment>-1000</alignment>
+      <dam_type>charge</dam_type>
+      <damage>8d6+28</damage>
+      <default_pos>stand</default_pos>
+      <description>This is the evil soul of a vile sergeant-at-arms who imprisoned the young
+girl here who eventually slew him, dying herself in the process. He has been
+condemned to remain here for eternity in punishment for his sins.
+</description>
+      <detection add="evil invis magic hidden"/>
+      <hit>50d10+6750</hit>
+      <level>60</level>
+      <long_descr>A vile spectre lunges at you.
+</long_descr>
+      <mana>5d5+5000</mana>
+      <material>0</material>
+      <off add="disarm dodge kick parry trip"/>
+      <player_name>spectre</player_name>
+      <race>unique</race>
+      <sex>male</sex>
+      <short_descr>a vile spectre</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>200</wealth>
+    </node>
+    <node name="31214">
+      <ac bash="-30" exotic="-3" pierce="-30" slash="-30"/>
+      <act add="npc sentinel stay_area wimpy"/>
+      <aff add="invisible sanctuary infrared protect_evil sneak hide"/>
+      <alignment>1000</alignment>
+      <dam_type>magic</dam_type>
+      <damage>8d6+28</damage>
+      <default_pos>stand</default_pos>
+      <description>This is the tormented soul of an innocent peasant girl, captured and dragged
+here by a wicked guard intent on marrying her. She slew him while trying to
+escape, but died herself in the process, slipping in his blood and breaking
+her neck. Her spirit remains here, tormented by its misery.
+</description>
+      <detection add="evil invis magic hidden"/>
+      <hit>50d10+6750</hit>
+      <level>60</level>
+      <long_descr>A nearly-insubstantial ghost flits silently about.
+</long_descr>
+      <mana>5d5+5000</mana>
+      <material>0</material>
+      <off add="disarm dodge"/>
+      <player_name>ghost</player_name>
+      <race>ghost</race>
+      <sex>female</sex>
+      <short_descr>a ghost</short_descr>
+      <size>medium</size>
+      <spec>spec_cast_adept</spec>
+      <start_pos>stand</start_pos>
+      <wealth>200</wealth>
+    </node>
+    <node name="31215">
+      <ac bash="-30" exotic="-3" pierce="-30" slash="-30"/>
+      <act add="npc sentinel stay_area"/>
+      <aff add="sanctuary infrared protect_evil"/>
+      <alignment>1000</alignment>
+      <behavior type="Healer">
+        <services>
+          <node type="SpellHealService">
+            <descr>излечить раны</descr>
+            <name>wounds</name>
+            <rname>раны</rname>
+            <price type="CustomHealPrice">
+            </price>
+            <spell>master healing</spell>
+          </node>
+          <node type="SpellHealService">
+            <descr>вылечить слепоту</descr>
+            <name>blind</name>
+            <rname>слепоту</rname>
+            <price type="CoinPrice">
+              <gold>20</gold>
+            </price>
+            <spell>cure blindness</spell>
+          </node>
+          <node type="SpellHealService">
+            <descr>вылечить чуму</descr>
+            <name>disease</name>
+            <rname>чуму</rname>
+            <price type="CoinPrice">
+              <gold>15</gold>
+            </price>
+            <spell>cure disease</spell>
+          </node>
+          <node type="SpellHealService">
+            <descr>вылечить отравление</descr>
+            <name>poison</name>
+            <rname>яд</rname>
+            <price type="CoinPrice">
+              <gold>25</gold>
+            </price>
+            <spell>cure poison</spell>
+          </node>
+          <node type="SpellHealService">
+            <descr>снять проклятие</descr>
+            <name>uncurse</name>
+            <rname>проклятие</rname>
+            <price type="CoinPrice">
+              <gold>50</gold>
+            </price>
+            <spell>remove curse</spell>
+          </node>
+          <node type="SpellHealService">
+            <descr>снять усталость</descr>
+            <rname>усталость</rname>
+            <name>refresh</name>
+            <price type="CoinPrice">
+              <gold>5</gold>
+            </price>
+            <spell>refresh</spell>
+          </node>
+          <node type="ManaHealService">
+            <descr>восстановить ману</descr>
+            <name>mana</name>
+            <rname>ману</rname>
+            <price type="CustomHealPrice">
+            </price>
+            <words>candamira</words>
+          </node>
+          <node type="SpellHealService">
+            <descr>благословить</descr>
+            <rname>благо</rname>
+            <name>bless</name>
+            <price type="CoinPrice">
+              <gold>300</gold>
+            </price>
+            <spell>bless</spell>
+          </node>
+        </services>
+      </behavior>
+      <dam_type>slap</dam_type>
+      <damage>8d6+28</damage>
+      <default_pos>stand</default_pos>
+      <description>This kind woman cures the injuries and ailments of the city guards. She
+smiles at you as you enter, and bids you state your injuries so she can
+heal them.
+
+Набери {y{hc{lRлечить{lEheal{x, чтобы увидеть, чем она может тебе помочь.
+</description>
+      <detection add="evil invis magic hidden"/>
+      <hit>50d10+6750</hit>
+      <level>60</level>
+      <long_descr>A priestess of Lenny is here tending to the sick.
+</long_descr>
+      <mana>5d5+5000</mana>
+      <material>0</material>
+      <off add="disarm dodge trip assist_vnum"/>
+      <player_name>priestess</player_name>
+      <race>human</race>
+      <sex>female</sex>
+      <short_descr>a priestess of Lenny</short_descr>
+      <size>medium</size>
+      <spec>spec_cast_adept</spec>
+      <start_pos>stand</start_pos>
+      <wealth>200</wealth>
+    </node>
+    <node name="31216">
+      <ac bash="3" exotic="8" pierce="3" slash="3"/>
+      <act add="npc stay_area"/>
+      <aff add="protect_evil"/>
+      <dam_type>punch</dam_type>
+      <damage>1d7+2</damage>
+      <default_pos>stand</default_pos>
+      <description>These burly fellows would be a tough foe in a barroom brawl. They have more
+tattoos than skin, it seems, and more hair than the average Kodiak grizzly.
+</description>
+      <hit>2d7+96</hit>
+      <level>8</level>
+      <long_descr>A burly worker shoves a heavy barrel onto a scow.
+</long_descr>
+      <mana>5d5+100</mana>
+      <material>0</material>
+      <off add="disarm dodge trip assist_vnum"/>
+      <player_name>worker</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>a burly worker</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>200</wealth>
+    </node>
+    <node name="31217">
+      <ac bash="3" exotic="8" pierce="3" slash="3"/>
+      <act add="npc stay_area"/>
+      <aff add="protect_evil"/>
+      <dam_type>punch</dam_type>
+      <damage>1d7+2</damage>
+      <default_pos>stand</default_pos>
+      <description>This disreputable-looking fellow is a crew member from one of the scows. He
+is simply waiting till its time to go.
+</description>
+      <hit>2d7+96</hit>
+      <level>8</level>
+      <long_descr>A crusty old sailor swigs from his bottle of rum.
+</long_descr>
+      <mana>5d5+100</mana>
+      <material>0</material>
+      <off add="disarm dodge trip assist_vnum"/>
+      <player_name>sailor</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>a sailor</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>200</wealth>
+    </node>
+    <node name="31218">
+      <ac bash="0" exotic="7" pierce="0" slash="0"/>
+      <act add="npc sentinel stay_area"/>
+      <aff add="sanctuary"/>
+      <alignment>400</alignment>
+      <dam_type>pound</dam_type>
+      <damage>1d10+3</damage>
+      <default_pos>stand</default_pos>
+      <description>He is far too busy to speak to you.
+</description>
+      <hit>2d10+150</hit>
+      <level>12</level>
+      <long_descr>The dock master is here checking cargo inventories.
+</long_descr>
+      <mana>5d5+100</mana>
+      <material>0</material>
+      <off add="bash disarm kick parry"/>
+      <player_name>dock master</player_name>
+      <race>human</race>
+      <sex>male</sex>
+      <short_descr>the dock master</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+      <wealth>200</wealth>
+    </node>
+  </mobiles>
+  <objects>
+    <node name="31200">
+      <affects>
+        <node>
+          <apply to="hitroll">4</apply>
+        </node>
+        <node>
+          <apply to="damroll">4</apply>
+        </node>
+      </affects>
+      <description>An ornate Longsword is lying here.</description>
+      <gender>m</gender>
+      <level>50</level>
+      <material>iron</material>
+      <name>sword longsword</name>
+      <short_descr>an ornate Longsword</short_descr>
+      <type name="weapon">
+        <diceNumber>14</diceNumber>
+        <diceType>3</diceType>
+        <weapClass>sword</weapClass>
+        <weapType>pierce</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>25</weight>
+    </node>
+    <node name="31201">
+      <affects>
+        <node>
+          <apply to="saves">-3</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hit">30</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="damroll">5</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">4</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="ac">-15</apply>
+        </node>
+        <node>
+          <apply to="con">2</apply>
+        </node>
+      </affects>
+      <description>An ornate Breastplate with a black and gold coat of arms is lying here.</description>
+      <gender>m</gender>
+      <level>50</level>
+      <material>iron</material>
+      <name>breastplate plate</name>
+      <short_descr>an ornate Breastplate</short_descr>
+      <type name="armor">
+        <ac bash="13" exotic="0" pierce="13" slash="13"/>
+      </type>
+      <wear_flags>take wear_body</wear_flags>
+      <weight>20</weight>
+    </node>
+    <node name="31202">
+      <affects>
+        <node>
+          <apply to="hitroll">9</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
+      <description>An ornate Bracer with a black and gold coat of arms is lying here.</description>
+      <gender>m</gender>
+      <level>50</level>
+      <material>iron</material>
+      <name>bracer</name>
+      <short_descr>an ornate Bracer</short_descr>
+      <type name="armor">
+        <ac bash="13" exotic="0" pierce="13" slash="13"/>
+      </type>
+      <wear_flags>take wear_wrist</wear_flags>
+      <weight>15</weight>
+    </node>
+    <node name="31203">
+      <affects>
+        <node>
+          <apply to="saves">-4</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="damroll">5</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">4</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="ac">-15</apply>
+        </node>
+        <node>
+          <apply to="mana">25</apply>
+        </node>
+      </affects>
+      <description>A black cloak with Gold Trim is lying here.</description>
+      <gender>m</gender>
+      <level>50</level>
+      <material>cloth</material>
+      <name>cloak</name>
+      <short_descr>a black cloak with gold trim</short_descr>
+      <type name="armor">
+        <ac bash="13" exotic="0" pierce="13" slash="13"/>
+      </type>
+      <wear_flags>take wear_neck</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="31204">
+      <affects>
+        <node>
+          <apply to="int">1</apply>
+        </node>
+        <node>
+          <apply to="wis">1</apply>
+        </node>
+        <node>
+          <apply to="ac">-20</apply>
+        </node>
+      </affects>
+      <description>An ornate helm bearing a black and gold coat of arms lies here.</description>
+      <gender>m</gender>
+      <level>50</level>
+      <material>iron</material>
+      <name>helm</name>
+      <short_descr>an ornate helm</short_descr>
+      <type name="armor">
+        <ac bash="13" exotic="0" pierce="13" slash="13"/>
+      </type>
+      <wear_flags>take wear_head</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="31205">
+      <affects>
+        <node>
+          <apply to="saves">-5</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hit">40</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="damroll">6</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">6</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="ac">-20</apply>
+        </node>
+      </affects>
+      <description>A shield bearing the crest of the House of Lenny lies here.</description>
+      <gender>m</gender>
+      <level>50</level>
+      <material>iron</material>
+      <name>shield</name>
+      <short_descr>an ornate shield</short_descr>
+      <type name="armor">
+        <ac bash="13" exotic="0" pierce="13" slash="13"/>
+      </type>
+      <wear_flags>take wear_shield</wear_flags>
+      <weight>20</weight>
+    </node>
+    <node name="31206">
+      <affects>
+        <node>
+          <apply to="damroll">2</apply>
+        </node>
+        <node>
+          <apply to="hitroll">2</apply>
+        </node>
+      </affects>
+      <description>A sturdy throwing spear has been thrust into the ground here.</description>
+      <gender>m</gender>
+      <level>50</level>
+      <material>iron</material>
+      <name>spear</name>
+      <short_descr>a throwing spear</short_descr>
+      <type name="warp_stone">
+      </type>
+      <wear_flags>take hold</wear_flags>
+      <weight>20</weight>
+    </node>
+    <node name="31207">
+      <affects>
+        <node>
+          <apply to="damroll">3</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">4</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="ac">-25</apply>
+        </node>
+        <node>
+          <apply to="dex">3</apply>
+        </node>
+      </affects>
+      <description>A signet ring that identifies the wearer as a trusted wall guard lies here.</description>
+      <extra_flags>glow hum</extra_flags>
+      <gender>m</gender>
+      <level>50</level>
+      <material>silver</material>
+      <name>ring</name>
+      <short_descr>a signet ring</short_descr>
+      <type name="armor">
+        <ac bash="13" exotic="0" pierce="13" slash="13"/>
+      </type>
+      <wear_flags>take wear_finger</wear_flags>
+      <weight>1</weight>
+    </node>
+    <node name="31208">
+      <affects>
+        <node>
+          <apply to="learned">-15</apply>
+          <global registry="skill">dodge</global>
+        </node>
+        <node>
+          <apply to="hit">50</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="damroll">7</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">4</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="ac">-45</apply>
+        </node>
+        <node>
+          <apply to="dex">-2</apply>
+        </node>
+      </affects>
+      <description>A suit of heavy plate mail is piled up here.</description>
+      <extra_flags>anti_evil</extra_flags>
+      <gender>m</gender>
+      <level>58</level>
+      <material>iron</material>
+      <name>suit plate mail</name>
+      <short_descr>a suit of plate mail</short_descr>
+      <type name="armor">
+        <ac bash="14" exotic="0" pierce="14" slash="14"/>
+      </type>
+      <wear_flags>take wear_body</wear_flags>
+      <weight>50</weight>
+    </node>
+    <node name="31209">
+      <affects>
+        <node>
+          <apply to="hitroll">8</apply>
+        </node>
+        <node>
+          <apply to="damroll">8</apply>
+        </node>
+      </affects>
+      <description>A knight&apos;s broadsword lies here.</description>
+      <extra_flags>glow anti_evil</extra_flags>
+      <gender>m</gender>
+      <level>58</level>
+      <name>broadsword</name>
+      <short_descr>a finely-made broadsword</short_descr>
+      <type name="weapon">
+        <diceNumber>16</diceNumber>
+        <diceType>3</diceType>
+        <weapClass>sword</weapClass>
+        <weapType>slash</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="31210">
+      <affects>
+        <node>
+          <apply to="hit">80</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="damroll">6</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">8</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="saving_spell">-3</apply>
+        </node>
+        <node>
+          <apply to="saving_breath">-3</apply>
+        </node>
+        <node>
+          <apply to="ac">-20</apply>
+        </node>
+      </affects>
+      <description>A knight&apos;s shield lies here.</description>
+      <extra_flags>anti_evil</extra_flags>
+      <gender>m</gender>
+      <level>58</level>
+      <material>leather</material>
+      <name>shield</name>
+      <short_descr>a knight&apos;s shield</short_descr>
+      <type name="armor">
+        <ac bash="14" exotic="0" pierce="14" slash="14"/>
+      </type>
+      <wear_flags>take wear_shield</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="31211">
+      <affects>
+        <node>
+          <apply to="learned">15</apply>
+          <global registry="skillGroup">defensive</global>
+        </node>
+        <node>
+          <apply to="damroll">4</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">5</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="wis">3</apply>
+        </node>
+      </affects>
+      <description>A knight&apos;s helm lies here.</description>
+      <extra_flags>anti_evil</extra_flags>
+      <gender>m</gender>
+      <level>58</level>
+      <material>iron</material>
+      <name>helm</name>
+      <short_descr>a knight&apos;s helm</short_descr>
+      <type name="armor">
+        <ac bash="14" exotic="0" pierce="14" slash="14"/>
+      </type>
+      <wear_flags>take wear_head</wear_flags>
+      <weight>5</weight>
+    </node>
+    <node name="31212">
+      <affects>
+        <node>
+          <apply to="hitroll">6</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="str">2</apply>
+        </node>
+        <node>
+          <apply to="damroll">4</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hit">50</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
+      <description>A pair of mail gauntlets lie here.</description>
+      <extra_flags>anti_evil</extra_flags>
+      <gender>m</gender>
+      <level>58</level>
+      <material>steel</material>
+      <name>gauntlets</name>
+      <short_descr>a pair of mail gauntlets</short_descr>
+      <type name="armor">
+        <ac bash="14" exotic="0" pierce="14" slash="14"/>
+      </type>
+      <wear_flags>take wear_hands</wear_flags>
+      <weight>4</weight>
+    </node>
+    <node name="31213">
+      <affects>
+        <node>
+          <bits table="detect_flags">evil</bits>
+        </node>
+        <node>
+          <apply to="saves">-3</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">7</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
+      <description>A holy signet ring lies here.</description>
+      <extra_flags>glow hum anti_evil</extra_flags>
+      <gender>m</gender>
+      <level>58</level>
+      <material>silver</material>
+      <name>ring</name>
+      <short_descr>a holy signet ring</short_descr>
+      <type name="armor">
+        <ac bash="14" exotic="0" pierce="14" slash="14"/>
+      </type>
+      <wear_flags>take wear_finger</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="31214">
+      <affects>
+        <node>
+          <apply to="hit">60</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">9</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="damroll">3</apply>
+        </node>
+      </affects>
+      <description>The marshal&apos;s uniform lies here, neatly pressed.</description>
+      <gender>m</gender>
+      <level>62</level>
+      <material>cloth</material>
+      <name>marshal uniform</name>
+      <short_descr>the marshal&apos;s uniform</short_descr>
+      <type name="armor">
+        <ac bash="15" exotic="0" pierce="15" slash="15"/>
+      </type>
+      <wear_flags>take wear_body</wear_flags>
+      <weight>5</weight>
+    </node>
+    <node name="31215">
+      <affects>
+        <node>
+          <apply to="damroll">5</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">5</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
+      <description>The marshal&apos;s swagger stick lies here.</description>
+      <extra_flags>glow hum anti_evil</extra_flags>
+      <gender>m</gender>
+      <level>62</level>
+      <material>bronze</material>
+      <name>swagger stick</name>
+      <short_descr>the marshal&apos;s swagger stick</short_descr>
+      <type name="wand">
+        <left>1</left>
+        <level>60</level>
+        <spell>enchant weapon</spell>
+        <total>1</total>
+      </type>
+      <wear_flags>take hold</wear_flags>
+      <weight>1</weight>
+    </node>
+    <node name="31216">
+      <description>This beacon illuminates the walls for guards patrolling at night.</description>
+      <gender>m</gender>
+      <material>bronze</material>
+      <name>beacon</name>
+      <short_descr>a wall beacon</short_descr>
+      <type name="light">
+        <v2>-1</v2>
+      </type>
+      <weight>5</weight>
+    </node>
+    <node name="31217">
+      <description>A pot of boiling oil bubbles away here.</description>
+      <extraDescr>
+        <node keyword="pot boiling oil">It is far too heavy to lift.</node>
+      </extraDescr>
+      <extra_flags>glow</extra_flags>
+      <gender>m</gender>
+      <material>metal</material>
+      <name>pot boiling oil</name>
+      <short_descr>a pot of boiling oil</short_descr>
+      <type name="furniture">
+        <heal>0</heal>
+        <mana>0</mana>
+        <maxPeople>0</maxPeople>
+        <maxWeight>0</maxWeight>
+      </type>
+      <weight>100</weight>
+    </node>
+    <node name="31218">
+      <description>A murder hole is in the middle of the floor here.</description>
+      <extraDescr>
+        <node keyword="murder hole">A small square hole with a series of metal bars across it through which
+boiling oil can be poured onto attackers below.</node>
+      </extraDescr>
+      <gender>m</gender>
+      <material>vacuum</material>
+      <name>murderhole murder hole</name>
+      <short_descr>a murder hole</short_descr>
+      <type name="furniture">
+        <heal>0</heal>
+        <mana>0</mana>
+        <maxPeople>0</maxPeople>
+        <maxWeight>0</maxWeight>
+      </type>
+      <weight>1</weight>
+    </node>
+    <node name="31219">
+      <affects>
+        <node>
+          <apply to="hitroll">6</apply>
+        </node>
+      </affects>
+      <description>A finely-crafted crossbow lies here.</description>
+      <gender>m</gender>
+      <level>48</level>
+      <material>iron</material>
+      <name>crossbow</name>
+      <short_descr>a crossbow</short_descr>
+      <type name="weapon">
+        <diceNumber>14</diceNumber>
+        <diceType>3</diceType>
+        <weapClass>exotic</weapClass>
+        <weapType>pierce</weapType>
+      </type>
+      <wear_flags>take wield no_sac</wear_flags>
+      <weight>10</weight>
+    </node>
+    <node name="31220">
+      <affects>
+        <node>
+          <apply to="con">2</apply>
+        </node>
+      </affects>
+      <description>A suit of chainmail lies here.</description>
+      <gender>m</gender>
+      <level>48</level>
+      <material>iron</material>
+      <name>chainmail</name>
+      <short_descr>a suit of chainmail</short_descr>
+      <type name="armor">
+        <ac bash="12" exotic="0" pierce="12" slash="12"/>
+      </type>
+      <wear_flags>take wear_body</wear_flags>
+      <weight>5</weight>
+    </node>
+    <node name="31221">
+      <affects>
+        <node>
+          <apply to="damroll">2</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">5</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hit">25</apply>
+        </node>
+      </affects>
+      <description>A pair of leather leggings lie here.</description>
+      <gender>m</gender>
+      <level>48</level>
+      <material>iron</material>
+      <name>leather leggings</name>
+      <short_descr>a pair of leather leggings</short_descr>
+      <type name="armor">
+        <ac bash="12" exotic="0" pierce="12" slash="12"/>
+      </type>
+      <wear_flags>take wear_legs</wear_flags>
+      <weight>5</weight>
+    </node>
+    <node name="31222">
+      <affects>
+        <node>
+          <apply to="none">20</apply>
+          <global registry="skill">bow</global>
+        </node>
+        <node>
+          <apply to="damroll">2</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">5</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
+      <description>A strip of hardened leather lies here.</description>
+      <gender>m</gender>
+      <level>48</level>
+      <material>leather</material>
+      <name>leather wristguard</name>
+      <short_descr>a crossbowman&apos;s leather wristguard</short_descr>
+      <type name="armor">
+        <ac bash="12" exotic="0" pierce="12" slash="12"/>
+      </type>
+      <wear_flags>take wear_wrist</wear_flags>
+      <weight>1</weight>
+    </node>
+    <node name="31223">
+      <gender>m</gender>
+      <material>paper</material>
+      <name>scroll</name>
+      <short_descr>a torn scroll</short_descr>
+      <type name="scroll">
+        <level>50</level>
+        <spell0>dispel affects</spell0>
+      </type>
+      <wear_flags>take hold</wear_flags>
+      <weight>1</weight>
+    </node>
+    <node name="31224">
+      <description>An old key lies here.</description>
+      <extraDescr>
+        <node keyword="key">This key is inscribed with silvery runes.
+</node>
+      </extraDescr>
+      <gender>m</gender>
+      <material>brass</material>
+      <name>key</name>
+      <short_descr>an old key</short_descr>
+      <type name="key">
+        <rotGround>1</rotGround>
+        <rotInv>1</rotInv>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>1</weight>
+    </node>
+    <node name="31225">
+      <affects>
+        <node>
+          <apply to="wis">3</apply>
+        </node>
+      </affects>
+      <description>An old scroll has been left here, neatly rolled and sealed.</description>
+      <extraDescr>
+        <node keyword="scroll">The scroll reads-
+
+&quot;Use the power of this scroll to help send the foul sergeant&apos;s spectre
+to the oblivion it deserves. Unlock the tower and enter. Be not weak of
+heart nor of sinew- the spectre is ancient and very powerful. Only the
+strongest shall pervail! You will find a key to break the mystic portal,
+use it well&quot;
+</node>
+      </extraDescr>
+      <gender>m</gender>
+      <material>paper</material>
+      <name>scroll</name>
+      <short_descr>an old scroll</short_descr>
+      <type name="scroll">
+        <level>60</level>
+        <spell0>flamestrike</spell0>
+        <spell1>flamestrike</spell1>
+        <spell2>flamestrike</spell2>
+      </type>
+      <wear_flags>take hold</wear_flags>
+      <weight>1</weight>
+    </node>
+    <node name="31226">
+      <description>A footlocker rests near a bed.</description>
+      <extraDescr>
+        <node keyword="footlocker">It is bolted to the floor. Perhaps its contents are easier to abscond with.
+</node>
+      </extraDescr>
+      <gender>m</gender>
+      <material>wood</material>
+      <name>footlocker</name>
+      <short_descr>a footlocker</short_descr>
+      <type name="container">
+        <capacity>100</capacity>
+        <flags>closeable</flags>
+        <weightMult>0</weightMult>
+      </type>
+      <weight>10</weight>
+    </node>
+    <node name="31227">
+      <cost>50000</cost>
+      <description>An ancient tapestry depicting the construction of these walls hangs here.</description>
+      <extra_flags>glow</extra_flags>
+      <gender>m</gender>
+      <name>tapestry</name>
+      <short_descr>an ancient tapestry</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take hold</wear_flags>
+      <weight>25</weight>
+    </node>
+    <node name="31228">
+      <cost>50000</cost>
+      <description>An ancient tapestry depicting the construction of Midgaard hangs here.</description>
+      <extra_flags>glow</extra_flags>
+      <gender>m</gender>
+      <name>tapestry</name>
+      <short_descr>an ancient tapestry</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take hold</wear_flags>
+      <weight>25</weight>
+    </node>
+    <node name="31229">
+      <cost>50000</cost>
+      <description>An ancient tapestry depicting the construction of Malathar hangs here.</description>
+      <extra_flags>glow</extra_flags>
+      <gender>m</gender>
+      <name>tapestry</name>
+      <short_descr>an ancient tapestry</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take hold</wear_flags>
+      <weight>25</weight>
+    </node>
+    <node name="31230">
+      <cost>50000</cost>
+      <description>An ancient tapestry depicting the construction of Freeport hangs here.</description>
+      <extra_flags>glow</extra_flags>
+      <gender>m</gender>
+      <name>tapestry</name>
+      <short_descr>an ancient tapestry</short_descr>
+      <type name="portal">
+        <charges>0</charges>
+        <portalFlags>nocurse</portalFlags>
+        <target>29246</target>
+      </type>
+      <wear_flags>take hold</wear_flags>
+      <weight>25</weight>
+    </node>
+    <node name="31231">
+      <description>A belaying pin lies here.</description>
+      <gender>m</gender>
+      <level>8</level>
+      <name>belaying pin</name>
+      <short_descr>a belaying pin</short_descr>
+      <type name="weapon">
+        <diceNumber>4</diceNumber>
+        <diceType>3</diceType>
+        <weapClass>exotic</weapClass>
+        <weapType>pound</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>5</weight>
+    </node>
+    <node name="31232">
+      <description>A barrel of ale sits here, ready to be transported.</description>
+      <gender>m</gender>
+      <level>8</level>
+      <name>barrel ale</name>
+      <short_descr>a barrel of ale</short_descr>
+      <type name="drink">
+        <left>25</left>
+        <liquid>ale</liquid>
+        <total>25</total>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>25</weight>
+    </node>
+    <node name="31233">
+      <description>An empty barrel rests here.</description>
+      <gender>m</gender>
+      <material>wood</material>
+      <name>barrel</name>
+      <short_descr>an empty barrel</short_descr>
+      <type name="armor">
+        <ac bash="3" exotic="0" pierce="3" slash="3"/>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>5</weight>
+    </node>
+    <node name="31234">
+      <cost>25</cost>
+      <description>A lantern sits here.</description>
+      <gender>m</gender>
+      <level>1</level>
+      <material>light</material>
+      <name>lantern</name>
+      <short_descr>a lantern</short_descr>
+      <type name="light">
+        <v2>200</v2>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>2</weight>
+    </node>
+    <node name="31235">
+      <affects>
+        <node>
+          <apply to="con">2</apply>
+        </node>
+      </affects>
+      <cost>200</cost>
+      <description>A coil of rope lies here.</description>
+      <gender>m</gender>
+      <material>cloth</material>
+      <name>rope</name>
+      <short_descr>a coiled rope</short_descr>
+      <type name="armor">
+        <ac bash="3" exotic="0" pierce="3" slash="3"/>
+      </type>
+      <wear_flags>take wear_waist</wear_flags>
+      <weight>2</weight>
+    </node>
+    <node name="31236">
+      <description>A leather backpack sits here.</description>
+      <gender>m</gender>
+      <material>leather</material>
+      <name>backpack</name>
+      <short_descr>a leather backpack</short_descr>
+      <type name="container">
+        <capacity>100</capacity>
+        <flags>closeable</flags>
+        <weightMult>0</weightMult>
+      </type>
+      <wear_flags>take wear_about</wear_flags>
+      <weight>2</weight>
+    </node>
+    <node name="31237">
+      <cost>250</cost>
+      <description>A bolt of cloth lies on the floor here.</description>
+      <gender>m</gender>
+      <material>cloth</material>
+      <name>cloth</name>
+      <short_descr>a bolt of cloth</short_descr>
+      <type name="treasure">
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>5</weight>
+    </node>
+    <node name="31238">
+      <cost>250</cost>
+      <description>A warehouse key is here.</description>
+      <gender>m</gender>
+      <level>1</level>
+      <material>iron</material>
+      <name>key</name>
+      <short_descr>a warehouse key</short_descr>
+      <type name="key">
+        <rotGround>1</rotGround>
+        <rotInv>1</rotInv>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>1</weight>
+    </node>
+    <node name="31239">
+      <description>A scow is moored here.</description>
+      <extra_flags>nonmetal nolocate</extra_flags>
+      <gender>m</gender>
+      <material>wood</material>
+      <name>scow</name>
+      <short_descr>a scow</short_descr>
+      <type name="container">
+        <capacity>10000</capacity>
+        <maxWeight>1</maxWeight>
+        <weightMult>0</weightMult>
+      </type>
+      <weight>1000</weight>
+    </node>
+    <node name="31240">
+      <description>A cutlass lies here.</description>
+      <gender>m</gender>
+      <level>8</level>
+      <material>steel</material>
+      <name>cutlass</name>
+      <short_descr>a cutlass</short_descr>
+      <type name="weapon">
+        <diceNumber>4</diceNumber>
+        <diceType>3</diceType>
+        <weapClass>sword</weapClass>
+        <weapType>slash</weapType>
+      </type>
+      <wear_flags>take wield</wear_flags>
+      <weight>7</weight>
+    </node>
+    <node name="31241">
+      <affects>
+        <node>
+          <apply to="hit">50</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="mana">50</apply>
+        </node>
+        <node>
+          <apply to="int">2</apply>
+        </node>
+      </affects>
+      <description>A ring of wizardry has been left here.</description>
+      <extra_flags>glow magic</extra_flags>
+      <gender>m</gender>
+      <level>56</level>
+      <material>metal</material>
+      <name>ring wizardry</name>
+      <short_descr>a ring of wizardry</short_descr>
+      <type name="armor">
+        <ac bash="14" exotic="0" pierce="14" slash="14"/>
+      </type>
+      <wear_flags>take wear_finger</wear_flags>
+      <weight>1</weight>
+    </node>
+    <node name="31242">
+      <affects>
+        <node>
+          <apply to="mana">25</apply>
+        </node>
+        <node>
+          <apply to="ac">-20</apply>
+        </node>
+      </affects>
+      <description>A staff of power rests on the floor here.</description>
+      <extra_flags>glow</extra_flags>
+      <gender>m</gender>
+      <level>56</level>
+      <material>metal</material>
+      <name>staff power</name>
+      <short_descr>a staff of power</short_descr>
+      <type name="staff">
+        <left>25</left>
+        <level>55</level>
+        <spell>lightning bolt</spell>
+        <total>25</total>
+      </type>
+      <wear_flags>take hold</wear_flags>
+      <weight>1</weight>
+    </node>
+    <node name="31243">
+      <affects>
+        <node>
+          <apply to="hit">60</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="damroll">4</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">6</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="dex">1</apply>
+        </node>
+        <node>
+          <apply to="mana">20</apply>
+        </node>
+        <node>
+          <apply to="ac">-20</apply>
+        </node>
+      </affects>
+      <description>A white robe of the magi lies here.</description>
+      <extra_flags>glow anti_evil</extra_flags>
+      <gender>m</gender>
+      <level>56</level>
+      <material>cloth</material>
+      <name>robe magi</name>
+      <short_descr>a white robe of the magi</short_descr>
+      <type name="armor">
+        <ac bash="20" exotic="10" pierce="20" slash="10"/>
+      </type>
+      <wear_flags>take wear_about</wear_flags>
+      <weight>5</weight>
+    </node>
+    <node name="31244">
+      <affects>
+        <node>
+          <apply to="hitroll">6</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <bits table="affect_flags">haste</bits>
+        </node>
+        <node>
+          <apply to="ac">-10</apply>
+        </node>
+        <node>
+          <apply to="move">100</apply>
+        </node>
+        <node>
+          <apply to="dex">3</apply>
+        </node>
+      </affects>
+      <description>A pair of boots of speed lie here.</description>
+      <extra_flags>glow</extra_flags>
+      <gender>p</gender>
+      <level>56</level>
+      <limit>2</limit>
+      <material>leather</material>
+      <name>boots speed</name>
+      <short_descr>a pair of boots of speed</short_descr>
+      <type name="armor">
+        <ac bash="14" exotic="0" pierce="14" slash="14"/>
+      </type>
+      <wear_flags>take wear_feet</wear_flags>
+      <weight>2</weight>
+    </node>
+    <node name="31245">
+      <affects>
+        <node>
+          <bits table="res_flags">weapon</bits>
+        </node>
+        <node>
+          <apply to="hit">66</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="damroll">9</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">9</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="str">4</apply>
+        </node>
+        <node>
+          <apply to="con">4</apply>
+        </node>
+      </affects>
+      <description>Комплект брони (plate) выглядит абсолютно идеально -- ни царапинки!
+</description>
+      <extra_flags>hum dark evil invis nodrop anti_good anti_neutral noremove</extra_flags>
+      <gender>m</gender>
+      <level>60</level>
+      <limit>1</limit>
+      <material>iron</material>
+      <name>plate invincible непобедимая броня</name>
+      <short_descr>{1{RН{wепобедим|ая|ой|ой|ую|ой|ой {RБ{wрон|я|и|е|ю|ей|е{2</short_descr>
+      <type name="armor">
+        <ac bash="15" exotic="0" pierce="15" slash="15"/>
+      </type>
+      <wear_flags>take wear_body</wear_flags>
+      <weight>25</weight>
+    </node>
+  </objects>
+  <rooms>
+    <node name="31200">
+      <description>You are standing inside the northern guard tower at the west gate. This
+tower is a circular affair approximately twenty feet in diameter and forty
+feet high. Straw has been scattered across the stone floor, and some plain
+but functional wooden furniture has been arranged about the room for off-
+duty guards. A spiral staircase winds its way up to the next floor in one
+corner. A fire burns merrily away in a hearth to the east, the smoke
+escaping through a small shaft that runs up one side of the turret.
+</description>
+      <exits>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31016</target>
+        </node>
+        <node name="up">
+          <target>31202</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Inside the Guard Tower</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31201">
+      <description>You are standing inside the southern guard tower at the west gate. This
+tower is a circular affair approximately twenty feet in diameter and forty
+feet high. Straw has been scattered across the stone floor, and some plain
+but functional wooden furniture has been arranged about the room for off-
+duty guards. A set of dominos and a small pile of silver pieces suggest that
+a friendly game between some guards was recently in progress. It seems the
+guards were called away in a hurry, for they left their winnings behind. A
+spiral staircase winds its way up to the next floor in one corner.
+</description>
+      <exits>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31016</target>
+        </node>
+        <node name="up">
+          <target>31207</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Inside the Guard Tower</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31202">
+      <description>You are standing inside the north tower at the west gatehouse. Doors lead
+north into the passages that run through the city walls, and south into the
+gatehouse proper. A staircase winds its way up to the next floor.
+</description>
+      <exits>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31203</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31216</target>
+        </node>
+        <node name="up">
+          <target>31226</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Inside the North Tower, West Gatehouse</name>
+      <resets>
+        <drop vnum="31216"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31203">
+      <description>You are making you way along a narrow corridor that runs through the
+center of the cyclopean walls of the city of Anon. Crossbow slits at regular
+intervals allow you to look out upon the western plains that lie beyond
+the city. Crossbowmen walk back and forth, talking and joking but ever alert
+for any signs of attack. After a while you begin to feel slightly
+claustrophobic.
+
+A door leads south into the north tower, west gatehouse.
+</description>
+      <exits>
+        <node name="north">
+          <target>31204</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31202</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Inside the Western City Wall</name>
+      <resets>
+        <drop vnum="31216"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31204">
+      <description>You are making you way along a narrow corridor that runs through the
+center of the cyclopean walls of the city of Anon. Crossbow slits at regular
+intervals allow you to look out upon the western plains that lie beyond
+the city. Crossbowmen walk back and forth, talking and joking but ever alert
+for any signs of attack. After a while you begin to feel slightly
+claustrophobic.
+</description>
+      <exits>
+        <node name="north">
+          <target>31205</target>
+        </node>
+        <node name="south">
+          <target>31203</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Inside the Western City Wall</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31205">
+      <description>You are making you way along a narrow corridor that runs through the
+center of the cyclopean walls of the city of Anon. Crossbow slits at regular
+intervals allow you to look out upon the western plains that lie beyond
+the city. Crossbowmen walk back and forth, talking and joking but ever alert
+for any signs of attack. After a while you begin to feel slightly
+claustrophobic.
+
+A door leads north into the northwest tower.
+</description>
+      <exits>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31206</target>
+        </node>
+        <node name="south">
+          <target>31204</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Inside the Western City Wall</name>
+      <resets>
+        <mob limit="8" maxHere="1" vnum="31211"/>
+        <equip to="wield" vnum="31219"/>
+        <equip to="body" vnum="31220"/>
+        <equip to="legs" vnum="31221"/>
+        <equip to="wrist_l" vnum="31222"/>
+        <drop vnum="31216"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31206">
+      <description>This massive circular tower rises at the northwest corner of the city walls.
+It is sixty feet tall, and thirty feet in diameter, making it just about the
+largest tower you&apos;ve ever seen. Guards march back and forth past you,
+barely sparing you a second glance as they busily go about their duty. Doors
+to the east and south allow you to enter the passages that run through the
+bowels of the walls, and a staircase allows you to proceed up or down
+through the tower.
+</description>
+      <exits>
+        <node name="down">
+          <target>31252</target>
+        </node>
+        <node name="east">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31230</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31205</target>
+        </node>
+        <node name="up">
+          <target>31256</target>
+        </node>
+      </exits>
+      <flags>no_mob indoors</flags>
+      <name>Northwest Tower</name>
+      <resets>
+        <drop vnum="31216"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31207">
+      <description>You are standing inside the north tower at the west gatehouse. Doors lead
+north into the passages that run through the city walls, and south into the
+gatehouse proper. A staircase winds its way up to the next floor. A pile of
+old weapons lies in one corner, waiting to me removed.
+</description>
+      <exits>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31216</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31208</target>
+        </node>
+        <node name="up">
+          <target>31227</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Inside the South Tower, West Gatehouse</name>
+      <resets>
+        <drop vnum="31216"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31208">
+      <description>You are making you way along a narrow corridor that runs through the
+center of the cyclopean walls of the city of Anon. Crossbow slits at regular
+intervals allow you to look out upon the western plains that lie beyond
+the city. Crossbowmen walk back and forth, talking and joking but ever alert
+for any signs of attack. After a while you begin to feel slightly
+claustrophobic.
+
+A door leads north into the south tower, west gatehouse.
+</description>
+      <exits>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31207</target>
+        </node>
+        <node name="south">
+          <target>31209</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Inside the Western City Wall</name>
+      <resets>
+        <drop vnum="31216"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31209">
+      <description>You are making you way along a narrow corridor that runs through the
+center of the cyclopean walls of the city of Anon. Crossbow slits at regular
+intervals allow you to look out upon the western plains that lie beyond
+the city. Crossbowmen walk back and forth, talking and joking but ever alert
+for any signs of attack. After a while you begin to feel slightly
+claustrophobic.
+</description>
+      <exits>
+        <node name="north">
+          <target>31208</target>
+        </node>
+        <node name="south">
+          <target>31210</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Inside the Western City Wall</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31210">
+      <description>You are making you way along a narrow corridor that runs through the
+center of the cyclopean walls of the city of Anon. Crossbow slits at regular
+intervals allow you to look out upon the western plains that lie beyond
+the city. Crossbowmen walk back and forth, talking and joking but ever alert
+for any signs of attack. After a while you begin to feel slightly
+claustrophobic.
+
+A door leads south into the northwest tower.
+</description>
+      <exits>
+        <node name="north">
+          <target>31209</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31211</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Inside the Western City Wall</name>
+      <resets>
+        <mob limit="8" maxHere="1" vnum="31211"/>
+        <equip to="wield" vnum="31219"/>
+        <equip to="body" vnum="31220"/>
+        <equip to="legs" vnum="31221"/>
+        <equip to="wrist_l" vnum="31222"/>
+        <drop vnum="31216"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31211">
+      <description>This massive circular tower rises at the southwest corner of the city walls.
+It is sixty feet tall, and thirty feet in diameter, making it just about the
+largest tower you&apos;ve ever seen. Guards march back and forth past you,
+barely sparing you a second glance as they busily go about their duty. Doors
+to the east and north allow you to enter the passages that run through the
+bowels of the walls, and a staircase allows you to proceed up or down
+through the tower.
+
+You hear the ringing of metal against metal coming from below, and feel a
+sudden wave of heat, as if from a furnace.
+</description>
+      <exits>
+        <node name="down">
+          <target>31254</target>
+        </node>
+        <node name="east">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31241</target>
+        </node>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31210</target>
+        </node>
+        <node name="up">
+          <target>31258</target>
+        </node>
+      </exits>
+      <flags>no_mob indoors</flags>
+      <name>Southwest Tower</name>
+      <resets>
+        <drop vnum="31216"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31212">
+      <description>You are standing inside the northern guard tower at the east gate. This
+tower is a circular affair approximately twenty feet in diameter and forty
+feet high. Straw has been scattered across the stone floor, and some plain
+but functional wooden furniture, deeply scored with dagger cuts, has been
+arranged about the room for off-duty guards. Several pewter mugs half-full
+of the local brew sit about near a game of draughts. A spiral staircase winds
+its way up to the next floor in one corner. A fire burns merrily away in a
+hearth to the east, the smoke escaping through a small shaft that runs up one
+side of the turret.
+</description>
+      <exits>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31017</target>
+        </node>
+        <node name="up">
+          <target>31214</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Inside the Guard Tower</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31213">
+      <description>You are standing inside the southern guard tower at the east gate. This
+tower is a circular affair approximately twenty feet in diameter and forty
+feet high. Straw has been scattered across the stone floor, and some plain
+but functional wooden furniture, deeply scored with dagger cuts, has been
+arranged about the room for off-duty guards. A spiral staircase winds
+its way up to the next floor in one corner. A fire burns merrily away in a
+hearth to the east, the smoke escaping through a small shaft that runs up one
+side of the turret. A small cat purrs contentedly near the fire.
+</description>
+      <exits>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31017</target>
+        </node>
+        <node name="up">
+          <target>31215</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Inside the Guard Tower</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31214">
+      <description>You are standing inside the north tower at the east gatehouse. Doors lead
+north into the passages that run through the city walls, and south into the
+gatehouse proper. A staircase winds its way up to the next floor. The eastern
+wall is crossletted, allowing you to gaze out upon the forbidding plains of
+blood.
+</description>
+      <exits>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31218</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31217</target>
+        </node>
+        <node name="up">
+          <target>31228</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Inside the North Tower, East Gatehouse</name>
+      <resets>
+        <drop vnum="31216"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31215">
+      <description>You are standing inside the south tower at the east gatehouse. Doors lead
+south into the passages that run through the city walls, and north into the
+gatehouse proper. A staircase winds its way up to the next floor. The eastern
+wall is crossletted, allowing you to gaze out upon the forbidding plains of
+blood. There is some writing on the wall here.
+</description>
+      <exits>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31217</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31222</target>
+        </node>
+        <node name="up">
+          <target>31229</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="writing wall">The writing says-
+
+&quot;Now my charms are all o&apos;erthrown, and what strength I have&apos;s mine own;
+ which is most faint; now, &apos;tis true, I must be here confined by you, or
+ send to Naples. Let me not, since I have my dukedom got and pardon&apos;d the
+ deceiver dwell in this bare siland by your spell; but release me from my
+ bands with the help fo your good hands. Gentle breath of yours my sails
+ must fill, or else my project fails, which was to please. Now I want spirits
+ to enforce, art to enchant; and my ending is despair, unless I be reliev&apos;d
+ by prayer, which pierces so that it assaults mercy itself and frees all
+ faults. As you from crimes would pardon&apos;d be, let your indulgence set me
+ free&quot;. (The Tempest, Epilogue)
+</node>
+      </extraDescr>
+      <flags>indoors</flags>
+      <name>Inside the South Tower, East Gatehouse</name>
+      <resets>
+        <drop vnum="31216"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31216">
+      <description>You are standing in the gatehouse that houses the great western mithril
+valves of the City of Anon. Massive guard towers lie to the north and south.
+There are murder holes set in the floor at your feet, allowing defenders
+to pour boiling oil upon any who manage to breach the gate. The western wall
+is crossletted for archers, and through it you can see the plains of
+western Anon, and beyond them an impenetrable mountain range.
+</description>
+      <exits>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31202</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31207</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>The Gatehouse</name>
+      <resets>
+        <drop vnum="31217"/>
+        <drop vnum="31218"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31217">
+      <description>You are standing in the gatehouse that houses the great eastern mithril
+valves of the City of Anon. Massive guard towers lie to the north and south.
+There are murder holes set in the floor at your feet, allowing defenders
+to pour boiling oil upon any who manage to breach the gate. The western wall
+is crossletted for archers, and through it you can see the forbidding plains
+of blood.
+</description>
+      <exits>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31214</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31215</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>The Gatehouse</name>
+      <resets>
+        <drop vnum="31217"/>
+        <drop vnum="31218"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31218">
+      <description>You are making you way along a narrow corridor that runs through the
+center of the cyclopean walls of the City of Anon. Crossbow slits at regular
+intervals allow you to look out upon the western plains that lie beyond
+the city. Crossbowmen walk back and forth, talking and joking but ever alert
+for any signs of attack. After a while you begin to feel slightly
+claustrophobic.
+
+A door leads south into the north tower, east gatehouse.
+</description>
+      <exits>
+        <node name="north">
+          <target>31219</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31214</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Inside the Eastern City Wall</name>
+      <resets>
+        <drop vnum="31216"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31219">
+      <description>You are making you way along a narrow corridor that runs through the
+center of the cyclopean walls of the City of Anon. Crossbow slits at regular
+intervals allow you to look out upon the western plains that lie beyond
+the city. Crossbowmen walk back and forth, talking and joking but ever alert
+for any signs of attack. After a while you begin to feel slightly
+claustrophobic.
+</description>
+      <exits>
+        <node name="north">
+          <target>31220</target>
+        </node>
+        <node name="south">
+          <target>31218</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Inside the Eastern City Wall</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31220">
+      <description>You are making you way along a narrow corridor that runs through the
+center of the cyclopean walls of the City of Anon. Crossbow slits at regular
+intervals allow you to look out upon the western plains that lie beyond
+the city. Crossbowmen walk back and forth, talking and joking but ever alert
+for any signs of attack. After a while you begin to feel slightly
+claustrophobic.
+
+A door leads north into northeast tower.
+</description>
+      <exits>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31221</target>
+        </node>
+        <node name="south">
+          <target>31219</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Inside the Eastern City Wall</name>
+      <resets>
+        <mob limit="8" maxHere="1" vnum="31211"/>
+        <equip to="wield" vnum="31219"/>
+        <equip to="body" vnum="31220"/>
+        <equip to="legs" vnum="31221"/>
+        <equip to="wrist_l" vnum="31222"/>
+        <drop vnum="31216"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31221">
+      <description>This massive circular tower rises at the northeast corner of the city walls.
+It is sixty feet tall, and thirty feet in diameter, making it just about the
+largest tower you&apos;ve ever seen. Guards march back and forth past you,
+barely sparing you a second glance as they busily go about their duty. Doors
+to the west and south allow you to enter the passages that run through the
+bowels of the walls, and a staircase allows you to proceed up or down
+through the tower.
+</description>
+      <exits>
+        <node name="down">
+          <target>31253</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31220</target>
+        </node>
+        <node name="up">
+          <target>31257</target>
+        </node>
+        <node name="west">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31240</target>
+        </node>
+      </exits>
+      <flags>no_mob indoors</flags>
+      <name>Northeast Tower</name>
+      <resets>
+        <drop vnum="31216"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31222">
+      <description>You are making you way along a narrow corridor that runs through the
+center of the cyclopean walls of the city of Anon. Crossbow slits at regular
+intervals allow you to look out upon the western plains that lie beyond
+the city. Crossbowmen walk back and forth, talking and joking but ever alert
+for any signs of attack. After a while you begin to feel slightly
+claustrophobic.
+
+A door leads south into the north tower, east gatehouse.
+</description>
+      <exits>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31215</target>
+        </node>
+        <node name="south">
+          <target>31223</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Inside the Eastern City Wall</name>
+      <resets>
+        <drop vnum="31216"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31223">
+      <description>You are making you way along a narrow corridor that runs through the
+center of the cyclopean walls of the city of Anon. Crossbow slits at regular
+intervals allow you to look out upon the western plains that lie beyond
+the city. Crossbowmen walk back and forth, talking and joking but ever alert
+for any signs of attack. After a while you begin to feel slightly
+claustrophobic.
+</description>
+      <exits>
+        <node name="north">
+          <target>31222</target>
+        </node>
+        <node name="south">
+          <target>31224</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Inside the Eastern City Wall</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31224">
+      <description>You are making you way along a narrow corridor that runs through the
+center of the cyclopean walls of the city of Anon. Crossbow slits at regular
+intervals allow you to look out upon the western plains that lie beyond
+the city. Crossbowmen walk back and forth, talking and joking but ever alert
+for any signs of attack. After a while you begin to feel slightly
+claustrophobic.
+
+A door leads south into southeast tower.
+</description>
+      <exits>
+        <node name="north">
+          <target>31223</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31225</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Inside the Eastern City Wall</name>
+      <resets>
+        <drop vnum="31216"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31225">
+      <description>This massive circular tower rises at the southwest corner of the city walls.
+It is sixty feet tall, and thirty feet in diameter, making it just about the
+largest tower you&apos;ve ever seen. Guards march back and forth past you,
+barely sparing you a second glance as they busily go about their duty. Doors
+to the west and north allow you to enter the passages that run through the
+bowels of the walls, and a staircase allows you to proceed up or down
+through the tower.
+</description>
+      <exits>
+        <node name="down">
+          <target>31255</target>
+        </node>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31224</target>
+        </node>
+        <node name="up">
+          <target>31259</target>
+        </node>
+        <node name="west">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31251</target>
+        </node>
+      </exits>
+      <flags>no_mob indoors</flags>
+      <name>Southeast Tower</name>
+      <resets>
+        <mob limit="8" maxHere="1" vnum="31211"/>
+        <equip to="wield" vnum="31219"/>
+        <equip to="body" vnum="31220"/>
+        <equip to="legs" vnum="31221"/>
+        <equip to="wrist_l" vnum="31222"/>
+        <drop vnum="31216"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31226">
+      <description>You are in the north tower, western gatehouse. The staircase you have been
+using continues up and down through the tower. Doors lead north and south
+onto the battlements.
+</description>
+      <exits>
+        <node name="down">
+          <target>31202</target>
+        </node>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31270</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31268</target>
+        </node>
+        <node name="up">
+          <target>31260</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>North Tower, Western Gatehouse</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31227">
+      <description>You are in the south tower, western gatehouse. The staircase you have been
+using continues up and down through the tower. Doors lead north and south
+onto the battlements.
+</description>
+      <exits>
+        <node name="down">
+          <target>31207</target>
+        </node>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31268</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31271</target>
+        </node>
+        <node name="up">
+          <target>31261</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>South Tower, Western Gatehouse</name>
+      <resets>
+        <mob limit="4" maxHere="1" vnum="31200"/>
+        <equip to="wield" vnum="31200"/>
+        <equip to="body" vnum="31201"/>
+        <equip to="wrist_l" vnum="31202"/>
+        <equip to="wrist_r" vnum="31202"/>
+        <equip to="neck_1" vnum="31203"/>
+        <equip to="head" vnum="31204"/>
+        <equip to="shield" vnum="31205"/>
+        <equip to="hold" vnum="31206"/>
+        <equip to="finger_l" vnum="31207"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31228">
+      <description>You are in the north tower, eastern gatehouse. The staircase you have been
+using continues up and down through the tower. Doors lead north and south
+onto the battlements.
+</description>
+      <exits>
+        <node name="down">
+          <target>31214</target>
+        </node>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31272</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31269</target>
+        </node>
+        <node name="up">
+          <target>31262</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>North Tower, Eastern Gatehouse</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31229">
+      <description>You are in the south tower, eastern gatehouse. The staircase you have been
+using continues up and down through the tower. Doors lead north and south
+onto the battlements.
+</description>
+      <exits>
+        <node name="down">
+          <target>31215</target>
+        </node>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31269</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31273</target>
+        </node>
+        <node name="up">
+          <target>31263</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>South Tower, Eastern Gatehouse</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31230">
+      <description>You are advancing along the long narrow passage that runs through the
+center of the vast northern wall of the City of Anon. This passage, like
+the shorter eastern and western versions, is crossletted at regular
+intervals, and regularly patrolled by squads of crossbowmen.
+
+A door leads west into northwest tower.
+</description>
+      <exits>
+        <node name="east">
+          <target>31231</target>
+        </node>
+        <node name="west">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31206</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Within the Walls</name>
+      <resets>
+        <drop vnum="31216"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31231">
+      <description>You are advancing along the long narrow passage that runs through the
+center of the vast northern wall of the City of Anon. This passage, like
+the shorter eastern and western versions, is crossletted at regular
+intervals, and regularly patrolled by squads of crossbowmen.
+</description>
+      <exits>
+        <node name="east">
+          <target>31232</target>
+        </node>
+        <node name="west">
+          <target>31230</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Within the Walls</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31232">
+      <description>You are advancing along the long narrow passage that runs through the
+center of the vast northern wall of the City of Anon. This passage, like
+the shorter eastern and western versions, is crossletted at regular
+intervals, and regularly patrolled by squads of crossbowmen.
+</description>
+      <exits>
+        <node name="east">
+          <target>31233</target>
+        </node>
+        <node name="west">
+          <target>31231</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Within the Walls</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31233">
+      <description>You are advancing along the long narrow passage that runs through the
+center of the vast northern wall of the City of Anon. This passage, like
+the shorter eastern and western versions, is crossletted at regular
+intervals, and regularly patrolled by squads of crossbowmen.
+</description>
+      <exits>
+        <node name="east">
+          <target>31234</target>
+        </node>
+        <node name="west">
+          <target>31232</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Within the Walls</name>
+      <resets>
+        <drop vnum="31216"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31234">
+      <description>You are advancing along the long narrow passage that runs through the
+center of the vast northern wall of the City of Anon. This passage, like
+the shorter eastern and western versions, is crossletted at regular
+intervals, and regularly patrolled by squads of crossbowmen.
+</description>
+      <exits>
+        <node name="east">
+          <target>31235</target>
+        </node>
+        <node name="west">
+          <target>31233</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Within the Walls</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31235">
+      <description>You are advancing along the long narrow passage that runs through the
+center of the vast northern wall of the City of Anon. This passage, like
+the shorter eastern and western versions, is crossletted at regular
+intervals, and regularly patrolled by squads of crossbowmen.
+</description>
+      <exits>
+        <node name="east">
+          <target>31236</target>
+        </node>
+        <node name="west">
+          <target>31234</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Within the Walls</name>
+      <resets>
+        <mob limit="8" maxHere="1" vnum="31211"/>
+        <equip to="wield" vnum="31219"/>
+        <equip to="body" vnum="31220"/>
+        <equip to="legs" vnum="31221"/>
+        <equip to="wrist_l" vnum="31222"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31236">
+      <description>You are advancing along the long narrow passage that runs through the
+center of the vast northern wall of the City of Anon. This passage, like
+the shorter eastern and western versions, is crossletted at regular
+intervals, and regularly patrolled by squads of crossbowmen.
+</description>
+      <exits>
+        <node name="east">
+          <target>31237</target>
+        </node>
+        <node name="west">
+          <target>31235</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Within the Walls</name>
+      <resets>
+        <drop vnum="31216"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31237">
+      <description>You are advancing along the long narrow passage that runs through the
+center of the vast northern wall of the City of Anon. This passage, like
+the shorter eastern and western versions, is crossletted at regular
+intervals, and regularly patrolled by squads of crossbowmen.
+</description>
+      <exits>
+        <node name="east">
+          <target>31238</target>
+        </node>
+        <node name="west">
+          <target>31236</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Within the Walls</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31238">
+      <description>You are advancing along the long narrow passage that runs through the
+center of the vast northern wall of the City of Anon. This passage, like
+the shorter eastern and western versions, is crossletted at regular
+intervals, and regularly patrolled by squads of crossbowmen.
+</description>
+      <exits>
+        <node name="east">
+          <target>31239</target>
+        </node>
+        <node name="west">
+          <target>31237</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Within the Walls</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31239">
+      <description>You are advancing along the long narrow passage that runs through the
+center of the vast northern wall of the City of Anon. This passage, like
+the shorter eastern and western versions, is crossletted at regular
+intervals, and regularly patrolled by squads of crossbowmen.
+</description>
+      <exits>
+        <node name="east">
+          <target>31240</target>
+        </node>
+        <node name="west">
+          <target>31238</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Within the Walls</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31240">
+      <description>You are advancing along the long narrow passage that runs through the
+center of the vast northern wall of the City of Anon. This passage, like
+the shorter eastern and western versions, is crossletted at regular
+intervals, and regularly patrolled by squads of crossbowmen.
+
+A door leads east into northeast tower.
+</description>
+      <exits>
+        <node name="east">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31221</target>
+        </node>
+        <node name="west">
+          <target>31239</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Within the Walls</name>
+      <resets>
+        <drop vnum="31216"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31241">
+      <description>You are advancing along the long narrow passage that runs through the
+center of the vast southern wall of the City of Anon. This passage, like
+the shorter eastern and western versions, is crossletted at regular
+intervals, and regularly patrolled by squads of crossbowmen.
+
+A door leads west into southwest tower.
+</description>
+      <exits>
+        <node name="east">
+          <target>31242</target>
+        </node>
+        <node name="west">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31211</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Within the Walls</name>
+      <resets>
+        <drop vnum="31216"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31242">
+      <description>You are advancing along the long narrow passage that runs through the
+center of the vast southern wall of the City of Anon. This passage, like
+the shorter eastern and western versions, is crossletted at regular
+intervals, and regularly patrolled by squads of crossbowmen.
+</description>
+      <exits>
+        <node name="east">
+          <target>31243</target>
+        </node>
+        <node name="west">
+          <target>31241</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Within the Walls</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31243">
+      <description>You are advancing along the long narrow passage that runs through the
+center of the vast southern wall of the City of Anon. This passage, like
+the shorter eastern and western versions, is crossletted at regular
+intervals, and regularly patrolled by squads of crossbowmen.
+</description>
+      <exits>
+        <node name="east">
+          <target>31244</target>
+        </node>
+        <node name="west">
+          <target>31242</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Within the Walls</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31244">
+      <description>You are advancing along the long narrow passage that runs through the
+center of the vast southern wall of the City of Anon. This passage, like
+the shorter eastern and western versions, is crossletted at regular
+intervals, and regularly patrolled by squads of crossbowmen.
+</description>
+      <exits>
+        <node name="east">
+          <target>31245</target>
+        </node>
+        <node name="west">
+          <target>31243</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Within the Walls</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31245">
+      <description>You are advancing along the long narrow passage that runs through the
+center of the vast southern wall of the City of Anon. This passage, like
+the shorter eastern and western versions, is crossletted at regular
+intervals, and regularly patrolled by squads of crossbowmen.
+</description>
+      <exits>
+        <node name="east">
+          <target>31246</target>
+        </node>
+        <node name="west">
+          <target>31244</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Within the Walls</name>
+      <resets>
+        <drop vnum="31216"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31246">
+      <description>You are advancing along the long narrow passage that runs through the
+center of the vast southern wall of the City of Anon. This passage, like
+the shorter eastern and western versions, is crossletted at regular
+intervals, and regularly patrolled by squads of crossbowmen.
+</description>
+      <exits>
+        <node name="east">
+          <target>31247</target>
+        </node>
+        <node name="west">
+          <target>31245</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Within the Walls</name>
+      <resets>
+        <mob limit="8" maxHere="1" vnum="31211"/>
+        <equip to="wield" vnum="31219"/>
+        <equip to="body" vnum="31220"/>
+        <equip to="legs" vnum="31221"/>
+        <equip to="wrist_l" vnum="31222"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31247">
+      <description>You are advancing along the long narrow passage that runs through the
+center of the vast southern wall of the City of Anon. This passage, like
+the shorter eastern and western versions, is crossletted at regular
+intervals, and regularly patrolled by squads of crossbowmen.
+</description>
+      <exits>
+        <node name="east">
+          <target>31248</target>
+        </node>
+        <node name="west">
+          <target>31246</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Within the Walls</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31248">
+      <description>You are advancing along the long narrow passage that runs through the
+center of the vast southern wall of the City of Anon. This passage, like
+the shorter eastern and western versions, is crossletted at regular
+intervals, and regularly patrolled by squads of crossbowmen.
+</description>
+      <exits>
+        <node name="east">
+          <target>31249</target>
+        </node>
+        <node name="west">
+          <target>31247</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Within the Walls</name>
+      <resets>
+        <drop vnum="31216"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31249">
+      <description>You are advancing along the long narrow passage that runs through the
+center of the vast southern wall of the City of Anon. This passage, like
+the shorter eastern and western versions, is crossletted at regular
+intervals, and regularly patrolled by squads of crossbowmen.
+</description>
+      <exits>
+        <node name="east">
+          <target>31250</target>
+        </node>
+        <node name="west">
+          <target>31248</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Within the Walls</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31250">
+      <description>You are advancing along the long narrow passage that runs through the
+center of the vast southern wall of the City of Anon. This passage, like
+the shorter eastern and western versions, is crossletted at regular
+intervals, and regularly patrolled by squads of crossbowmen.
+</description>
+      <exits>
+        <node name="east">
+          <target>31251</target>
+        </node>
+        <node name="west">
+          <target>31249</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Within the Walls</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31251">
+      <description>You are advancing along the long narrow passage that runs through the
+center of the vast southern wall of the City of Anon. This passage, like
+the shorter eastern and western versions, is crossletted at regular
+intervals, and regularly patrolled by squads of crossbowmen.
+
+A door to the east leads into southeast tower.
+</description>
+      <exits>
+        <node name="east">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31225</target>
+        </node>
+        <node name="west">
+          <target>31250</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Within the Walls</name>
+      <resets>
+        <drop vnum="31216"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31252">
+      <description>You have reached the bottom of Northwest tower, the huge tower at the
+northwestern corner of the walls of the City of Anon. It appears to serve
+as some sort of storage area, being as it is full of weapons and armor.
+There are no visible exits, besides the staircase back up.
+</description>
+      <exits>
+        <node name="up">
+          <target>31206</target>
+        </node>
+      </exits>
+      <flags>dark no_mob indoors</flags>
+      <name>Base of Northwest Tower</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31253">
+      <description>This room is dusty and full of cobwebs. It probably hasn&apos;t been entered in
+ages. Coughing, you make your way through a jumble of debris, looking for
+another exit, but you find none. You do spy several torn scraps of what
+looks like scrolls scattered about, though.
+</description>
+      <exits>
+        <node name="up">
+          <target>31221</target>
+        </node>
+      </exits>
+      <flags>dark no_mob indoors</flags>
+      <name>Base of Northeast Tower</name>
+      <resets>
+        <drop vnum="31223"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31254">
+      <description>This chamber serves as quarters for the wall guard smith. He spends most of
+his day down here in this smithy, repairing the damaged equipment of the
+guards. He may even repair yours.
+</description>
+      <exits>
+        <node name="up">
+          <target>31211</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Base of Southwest Tower</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="31212"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31255">
+      <description>This rooms is totally devoid of furniture, and looks to have been swept
+recently. Wonder what it will be used for...?
+</description>
+      <exits>
+        <node name="up">
+          <target>31225</target>
+        </node>
+      </exits>
+      <flags>dark no_mob indoors</flags>
+      <name>Base of Southeast Tower</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31256">
+      <description>You are inside the northwest tower of the walls of Anon. Up from here are
+the offices of some of the guard officers and other personnel. Doors lead
+east and south out onto the battlements.
+</description>
+      <exits>
+        <node name="down">
+          <target>31206</target>
+        </node>
+        <node name="east">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31286</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31276</target>
+        </node>
+        <node name="up">
+          <target>31308</target>
+        </node>
+      </exits>
+      <flags>no_mob indoors</flags>
+      <name>Northwest Tower</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31257">
+      <description>You are inside the northwest tower of the walls of Anon. From the look of it
+it hasn&apos;t been cleaned in ages. A bolted iron trapdoor blocks the staircase
+leading up. How odd...
+</description>
+      <exits>
+        <node name="down">
+          <target>31221</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31285</target>
+        </node>
+        <node name="up">
+          <description>As you look closer, you notice the door is lined with silver runes...
+</description>
+          <flags>isdoor closed locked nopass</flags>
+          <key>31224</key>
+          <keyword>door trapdoor up дверь</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31311</target>
+        </node>
+        <node name="west">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31296</target>
+        </node>
+      </exits>
+      <flags>dark no_mob indoors</flags>
+      <name>Northeast Tower</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31258">
+      <description>You are inside the southwest tower of the walls of Anon. Up from here are
+the offices of some of the guard officers and other personnel. Doors lead
+east and north out onto the battlements.
+</description>
+      <exits>
+        <node name="down">
+          <target>31211</target>
+        </node>
+        <node name="east">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31297</target>
+        </node>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31279</target>
+        </node>
+        <node name="up">
+          <target>31309</target>
+        </node>
+      </exits>
+      <flags>no_mob indoors</flags>
+      <name>Southwest Tower</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31259">
+      <description>You are inside the southeast tower of the walls of Anon. Up from here are
+the offices of some of the guard officers and other personnel. Doors lead
+west and north out onto the battlements.
+</description>
+      <exits>
+        <node name="down">
+          <target>31225</target>
+        </node>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31282</target>
+        </node>
+        <node name="up">
+          <target>31310</target>
+        </node>
+        <node name="west">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31307</target>
+        </node>
+      </exits>
+      <flags>no_mob indoors</flags>
+      <name>Southeast Tower</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31260">
+      <description>Guards nod briefly at you, with slight curiosity as you advance up into
+this guard tower. This level appears to be the quarters of many of them,
+judging by the neatly-made beds and clothes racks. A trapdoor in the ceiling
+leads up the the roof of the tower.
+</description>
+      <exits>
+        <node name="down">
+          <target>31226</target>
+        </node>
+        <node name="up">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31264</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>North Tower, West Gatehouse</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31261">
+      <description>Guards nod briefly at you, with slight curiosity as you advance up into
+this guard tower. This level appears to be the quarters of many of them,
+judging by the neatly-made beds and clothes racks. A trapdoor in the ceiling
+leads up the the roof of the tower.
+</description>
+      <exits>
+        <node name="down">
+          <target>31227</target>
+        </node>
+        <node name="up">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31265</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>South Tower, West Gatehouse</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31262">
+      <description>Guards nod briefly at you, with slight curiosity as you advance up into
+this guard tower. This level appears to be the quarters of many of them,
+judging by the neatly-made beds and clothes racks. A trapdoor in the ceiling
+leads up the the roof of the tower.
+</description>
+      <exits>
+        <node name="down">
+          <target>31228</target>
+        </node>
+        <node name="up">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31267</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>North Tower, East Gatehouse</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31263">
+      <description>Guards nod briefly at you, with slight curiosity as you advance up into
+this guard tower. This level appears to be the quarters of many of them,
+judging by the neatly-made beds and clothes racks. A trapdoor in the ceiling
+leads up the the roof of the tower.
+</description>
+      <exits>
+        <node name="down">
+          <target>31229</target>
+        </node>
+        <node name="up">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31266</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>South Tower, East Gatehouse</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31264">
+      <description>You are standing on the roof of the tower. Looking around, you can see the
+sprawl of Anon to the east, the roof of the temple dominating the scene in
+the mid-center. To the west you can see the vast plains that stretch for
+miles to the distant mountain ranges, where few have dared to travel. To
+the south lies more fields, divided up by features such as the river of
+Anon.
+</description>
+      <exits>
+        <node name="down">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31260</target>
+        </node>
+      </exits>
+      <name>The Roof of the Tower</name>
+      <sector>city</sector>
+    </node>
+    <node name="31265">
+      <description>You are standing on the roof of the tower. Looking around, you can see the
+sprawl of Anon to the east, the roof of the temple dominating the scene in
+the mid-center. To the west you can see the vast plains that stretch for
+miles to the distant mountain ranges, where few have dared to travel. To
+the south lies more fields, divided up by features such as the river of
+Anon.
+</description>
+      <exits>
+        <node name="down">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31261</target>
+        </node>
+      </exits>
+      <name>The Roof of the Tower</name>
+      <sector>city</sector>
+    </node>
+    <node name="31266">
+      <description>You are standing on the roof of the tower. Looking around, you can see the
+sprawl of Anon to the east, the roof of the temple dominating the scene in
+the mid-center. To the west you can see the vast plains that stretch for
+miles to the distant mountain ranges, where few have dared to travel. To
+the south lies more fields, divided up by features such as the river of
+Anon.
+</description>
+      <exits>
+        <node name="down">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31263</target>
+        </node>
+      </exits>
+      <name>The Roof of the Tower</name>
+      <sector>city</sector>
+    </node>
+    <node name="31267">
+      <description>You are standing on the roof of the tower. Looking around, you can see the
+sprawl of Anon to the east, the roof of the temple dominating the scene in
+the mid-center. To the west you can see the vast plains that stretch for
+miles to the distant mountain ranges, where few have dared to travel. To
+the south lies more fields, divided up by features such as the river of
+Anon.
+</description>
+      <exits>
+        <node name="down">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31262</target>
+        </node>
+      </exits>
+      <name>The Roof of the Tower</name>
+      <sector>city</sector>
+    </node>
+    <node name="31268">
+      <description>You are standing on the short section of the battlements that runs between
+the north and south towers of the western gatehouse. Below, you can see
+travellers making their way into and out of the city.
+</description>
+      <exits>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31226</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31227</target>
+        </node>
+      </exits>
+      <name>Atop the Gatehouse</name>
+      <resets>
+        <drop vnum="31216"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="31269">
+      <description>You are standing on the short section of the battlements that runs between
+the north and south towers of the eastern gatehouse. Below, you can see
+travellers making their way into and out of the city. Looking west, you
+see smoke rising from the blasted terrain of the plains of blood, and
+wonder if there is another raiding party coming.
+</description>
+      <exits>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31228</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31229</target>
+        </node>
+      </exits>
+      <name>Atop the Gatehouse</name>
+      <resets>
+        <mob limit="4" maxHere="1" vnum="31203"/>
+        <equip to="wield" vnum="31200"/>
+        <equip to="body" vnum="31201"/>
+        <equip to="wrist_l" vnum="31202"/>
+        <equip to="wrist_r" vnum="31202"/>
+        <equip to="neck_1" vnum="31203"/>
+        <equip to="head" vnum="31204"/>
+        <equip to="shield" vnum="31205"/>
+        <equip to="hold" vnum="31206"/>
+        <equip to="finger_l" vnum="31207"/>
+        <drop vnum="31216"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="31270">
+      <description>You are heading along the northern half of the battlements on the western
+wall. Looking west, you can see far across the plains. Smoke rises from
+several settlements, including Solace, Midgaard, the Gnome village and the
+Shire.
+
+A door to the south leads into the north tower, western gatehouse.
+</description>
+      <exits>
+        <node name="north">
+          <target>31274</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31226</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <sector>city</sector>
+    </node>
+    <node name="31271">
+      <description>You are heading along the southern half of the battlements on the western
+wall. Guards nod at you as you pass, before quickly returning to their
+observation of the land and the city, and you admire their dedication to
+their work.
+
+A door to the north leads into the southern tower, western gatehouse.
+</description>
+      <exits>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31227</target>
+        </node>
+        <node name="south">
+          <target>31277</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <sector>city</sector>
+    </node>
+    <node name="31272">
+      <description>You are heading along the northern half of the battlements on the eastern
+wall. Peering over the crenelations, you shudder as you gaze upon the
+desolate wastes of the plains of blood. You cast your eye about to try and
+spot something more pleasing, but only see the old marsh and the acid forest.
+Charming terrain.
+
+A door to the south leads into the northern tower, eastern gatehouse.
+</description>
+      <exits>
+        <node name="north">
+          <target>31283</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31228</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <sector>city</sector>
+    </node>
+    <node name="31273">
+      <description>You are heading along the southern half of the battlements on the eastern
+wall. Seagulls circle overhead, and you are puzzling at their presence when
+you suddenly remember the river of Anon runs just south east of here.
+Looking over the crenelations, you see it flowing swiftly along, parallel
+to the south wall, heading off into a thick forest.
+
+A door to the north leads into the southern tower, eastern gatehouse.
+</description>
+      <exits>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31229</target>
+        </node>
+        <node name="south">
+          <target>31280</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <sector>city</sector>
+    </node>
+    <node name="31274">
+      <description>You are heading along the northern half of the battlements on the western
+wall. Looking west, you can see far across the plains. Smoke rises from
+several settlements, including Solace, Midgaard, the Gnome village and the
+Shire.
+</description>
+      <exits>
+        <node name="north">
+          <target>31276</target>
+        </node>
+        <node name="south">
+          <target>31270</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <resets>
+        <mob limit="4" maxHere="1" vnum="31200"/>
+        <equip to="wield" vnum="31200"/>
+        <equip to="body" vnum="31201"/>
+        <equip to="wrist_l" vnum="31202"/>
+        <equip to="wrist_r" vnum="31202"/>
+        <equip to="neck_1" vnum="31203"/>
+        <equip to="head" vnum="31204"/>
+        <equip to="shield" vnum="31205"/>
+        <equip to="hold" vnum="31206"/>
+        <equip to="finger_l" vnum="31207"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="31275">
+      <description>This collection of buildings serves as the dock for the city on the Anon
+River. As most of the city&apos;s trade comes in by caravan, the docks are not
+very large.
+</description>
+      <exits>
+        <node name="north">
+          <target>31028</target>
+        </node>
+        <node name="south">
+          <target>31278</target>
+        </node>
+        <node name="west">
+          <target>31281</target>
+        </node>
+      </exits>
+      <name>The Anon Docks</name>
+      <resets>
+        <mob limit="4" maxHere="1" vnum="31217"/>
+        <equip to="wield" vnum="31240"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="31276">
+      <description>You are heading along the northern half of the battlements on the western
+wall. Looking west, you can see far across the plains. Smoke rises from
+several settlements, including Solace, Midgaard, the Gnome village and the
+Shire.
+
+A door leads into northwest tower north of here.
+</description>
+      <exits>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31256</target>
+        </node>
+        <node name="south">
+          <target>31274</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <sector>city</sector>
+    </node>
+    <node name="31277">
+      <description>You are heading along the southern half of the battlements on the western
+wall. Guards nod at you as you pass, before quickly returning to their
+observation of the land and the city, and you admire their dedication to
+their work.
+</description>
+      <exits>
+        <node name="north">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31271</target>
+        </node>
+        <node name="south">
+          <target>31279</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <resets>
+        <mob limit="4" maxHere="1" vnum="31200"/>
+        <equip to="wield" vnum="31200"/>
+        <equip to="body" vnum="31201"/>
+        <equip to="wrist_l" vnum="31202"/>
+        <equip to="wrist_r" vnum="31202"/>
+        <equip to="neck_1" vnum="31203"/>
+        <equip to="head" vnum="31204"/>
+        <equip to="shield" vnum="31205"/>
+        <equip to="hold" vnum="31206"/>
+        <equip to="finger_l" vnum="31207"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="31278">
+      <description>Several small punts and a couple of larger scows are moored at the jetty
+here. A couple of burly laborers work at moving several heavy barrels onto
+one of the scows. They grunt in greeting as you watch.
+</description>
+      <exits>
+        <node name="north">
+          <target>31275</target>
+        </node>
+      </exits>
+      <name>The Pier</name>
+      <resets>
+        <mob limit="4" maxHere="1" vnum="31216"/>
+        <equip to="wield" vnum="31231"/>
+        <give vnum="31232"/>
+        <drop vnum="31232"/>
+        <drop vnum="31233"/>
+        <drop vnum="31239"/>
+        <mob limit="1" maxHere="1" vnum="31218"/>
+        <give vnum="31238"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="31279">
+      <description>You are heading along the southern half of the battlements on the western
+wall. Guards nod at you as you pass, before quickly returning to their
+observation of the land and the city, and you admire their dedication to
+their work.
+
+A door to the south leads into southwest tower.
+</description>
+      <exits>
+        <node name="north">
+          <target>31277</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31258</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <sector>city</sector>
+    </node>
+    <node name="31280">
+      <description>You are heading along the southern half of the battlements on the eastern
+wall. Seagulls circle overhead, and you are puzzling at their presence when
+you suddenly remember the river of Anon runs just south east of here.
+Looking over the crenelations, you see it flowing swiftly along, parallel
+to the south wall, heading off into a thick forest.
+</description>
+      <exits>
+        <node name="north">
+          <target>31273</target>
+        </node>
+        <node name="south">
+          <target>31282</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <resets>
+        <mob limit="4" maxHere="1" vnum="31203"/>
+        <equip to="wield" vnum="31200"/>
+        <equip to="body" vnum="31201"/>
+        <equip to="wrist_l" vnum="31202"/>
+        <equip to="wrist_r" vnum="31202"/>
+        <equip to="neck_1" vnum="31203"/>
+        <equip to="head" vnum="31204"/>
+        <equip to="shield" vnum="31205"/>
+        <equip to="hold" vnum="31206"/>
+        <equip to="finger_l" vnum="31207"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="31281">
+      <description>You are standing outside several warehouses. Most of them are boarded up and
+empty. However, there is one to the south that appears to be still in use.
+</description>
+      <exits>
+        <node name="east">
+          <target>31275</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <key>31238</key>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31284</target>
+        </node>
+      </exits>
+      <name>Warehouses</name>
+      <sector>city</sector>
+    </node>
+    <node name="31282">
+      <description>You are heading along the southern half of the battlements on the eastern
+wall. Seagulls circle overhead, and you are puzzling at their presence when
+you suddenly remember the river of Anon runs just south east of here.
+Looking over the crenelations, you see it flowing swiftly along, parallel
+to the south wall, heading off into a thick forest.
+
+A door to the south leads into southeast tower.
+</description>
+      <exits>
+        <node name="north">
+          <target>31280</target>
+        </node>
+        <node name="south">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31259</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <sector>city</sector>
+    </node>
+    <node name="31283">
+      <description>You are heading along the northern half of the battlements on the eastern
+wall. Peering over the crenelations, you shudder as you gaze upon the
+desolate wastes of the plains of blood. You cast your eye about to try and
+spot something more pleasing, but only see the old marsh and the acid forest.
+Charming terrain.
+</description>
+      <exits>
+        <node name="north">
+          <target>31285</target>
+        </node>
+        <node name="south">
+          <target>31272</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <resets>
+        <mob limit="4" maxHere="1" vnum="31203"/>
+        <equip to="wield" vnum="31200"/>
+        <equip to="body" vnum="31201"/>
+        <equip to="wrist_l" vnum="31202"/>
+        <equip to="wrist_r" vnum="31202"/>
+        <equip to="neck_1" vnum="31203"/>
+        <equip to="head" vnum="31204"/>
+        <equip to="shield" vnum="31205"/>
+        <equip to="hold" vnum="31206"/>
+        <equip to="finger_l" vnum="31207"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="31284">
+      <description>This warehouse is filled with general goods such as coils of rope, piles of
+cheap cloth, barrels of ale and wine, lanterns, flasks of oil, jars of
+spices and dried meats. There is a sweet aroma in the air.
+</description>
+      <exits>
+        <node name="north">
+          <flags>isdoor</flags>
+          <key>31238</key>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31281</target>
+        </node>
+      </exits>
+      <flags>dark indoors</flags>
+      <name>A Warehouse</name>
+      <resets>
+        <drop vnum="31232"/>
+        <drop vnum="31233"/>
+        <drop vnum="31234"/>
+        <drop vnum="31235"/>
+        <drop vnum="31236"/>
+        <drop vnum="31237"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31285">
+      <description>You are heading along the northern half of the battlements on the eastern
+wall. Peering over the crenelations, you shudder as you gaze upon the
+desolate wastes of the plains of blood. You cast your eye about to try and
+spot something more pleasing, but only see the old marsh and the acid forest.
+Charming terrain.
+
+A door to the north leads into northwest tower. There is a sign tacked to it.
+</description>
+      <exits>
+        <node name="north">
+          <description>The sign reads- &quot;KEEP OUT! By order of the Marshal&quot;
+</description>
+          <flags>isdoor</flags>
+          <keyword>door sign дверь</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31257</target>
+        </node>
+        <node name="south">
+          <target>31283</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <sector>city</sector>
+    </node>
+    <node name="31286">
+      <description>You are heading along the huge northern wall of the City of Anon. This wall
+extends for at least twice the distance of the east and west walls,
+protecting the vulnerable northern aspect of the city from the constant
+attacks by warring raiders from the northern plains. Peering about, you see
+little of note, save the dark stretch of Mirkwood. Who knows what adventures
+may be found in there...?
+
+A door leads west into northwest tower.
+</description>
+      <exits>
+        <node name="east">
+          <target>31287</target>
+        </node>
+        <node name="west">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31256</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <resets>
+        <mob limit="4" maxHere="1" vnum="31202"/>
+        <equip to="wield" vnum="31200"/>
+        <equip to="body" vnum="31201"/>
+        <equip to="wrist_l" vnum="31202"/>
+        <equip to="wrist_r" vnum="31202"/>
+        <equip to="neck_1" vnum="31203"/>
+        <equip to="head" vnum="31204"/>
+        <equip to="shield" vnum="31205"/>
+        <equip to="hold" vnum="31206"/>
+        <equip to="finger_l" vnum="31207"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="31287">
+      <description>You are heading along the huge northern wall of the City of Anon. This wall
+extends for at least twice the distance of the east and west walls,
+protecting the vulnerable northern aspect of the city from the constant
+attacks by warring raiders from the northern plains. Peering about, you see
+little of note, save the dark stretch of Mirkwood. Who knows what adventures
+may be found in there...?
+</description>
+      <exits>
+        <node name="east">
+          <target>31288</target>
+        </node>
+        <node name="west">
+          <target>31286</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <sector>city</sector>
+    </node>
+    <node name="31288">
+      <description>You are heading along the huge northern wall of the City of Anon. This wall
+extends for at least twice the distance of the east and west walls,
+protecting the vulnerable northern aspect of the city from the constant
+attacks by warring raiders from the northern plains. Peering about, you see
+little of note, save the dark stretch of Mirkwood. Who knows what adventures
+may be found in there...?
+</description>
+      <exits>
+        <node name="east">
+          <target>31289</target>
+        </node>
+        <node name="west">
+          <target>31287</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <sector>city</sector>
+    </node>
+    <node name="31289">
+      <description>You are heading along the huge northern wall of the City of Anon. This wall
+extends for at least twice the distance of the east and west walls,
+protecting the vulnerable northern aspect of the city from the constant
+attacks by warring raiders from the northern plains. Peering about, you see
+little of note, save the dark stretch of Mirkwood. Who knows what adventures
+may be found in there...?
+</description>
+      <exits>
+        <node name="east">
+          <target>31290</target>
+        </node>
+        <node name="west">
+          <target>31288</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <sector>city</sector>
+    </node>
+    <node name="31290">
+      <description>You are heading along the huge northern wall of the City of Anon. This wall
+extends for at least twice the distance of the east and west walls,
+protecting the vulnerable northern aspect of the city from the constant
+attacks by warring raiders from the northern plains. Peering about, you see
+little of note, save the dark stretch of Mirkwood. Who knows what adventures
+may be found in there...?
+</description>
+      <exits>
+        <node name="east">
+          <target>31291</target>
+        </node>
+        <node name="west">
+          <target>31289</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <sector>city</sector>
+    </node>
+    <node name="31291">
+      <description>You are heading along the huge northern wall of the City of Anon. This wall
+extends for at least twice the distance of the east and west walls,
+protecting the vulnerable northern aspect of the city from the constant
+attacks by warring raiders from the northern plains. Peering about, you see
+little of note, save the dark stretch of Mirkwood. Who knows what adventures
+may be found in there...?
+</description>
+      <exits>
+        <node name="east">
+          <target>31292</target>
+        </node>
+        <node name="west">
+          <target>31290</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <resets>
+        <mob limit="4" maxHere="1" vnum="31202"/>
+        <equip to="wield" vnum="31200"/>
+        <equip to="body" vnum="31201"/>
+        <equip to="wrist_l" vnum="31202"/>
+        <equip to="wrist_r" vnum="31202"/>
+        <equip to="neck_1" vnum="31203"/>
+        <equip to="head" vnum="31204"/>
+        <equip to="shield" vnum="31205"/>
+        <equip to="hold" vnum="31206"/>
+        <equip to="finger_l" vnum="31207"/>
+        <mob limit="1" maxHere="1" vnum="31206"/>
+        <equip to="wield" vnum="31200"/>
+        <equip to="body" vnum="31201"/>
+        <equip to="wrist_l" vnum="31202"/>
+        <equip to="wrist_r" vnum="31202"/>
+        <equip to="neck_1" vnum="31203"/>
+        <equip to="head" vnum="31204"/>
+        <equip to="shield" vnum="31205"/>
+        <equip to="hold" vnum="31206"/>
+        <equip to="finger_l" vnum="31207"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="31292">
+      <description>You are heading along the huge northern wall of the City of Anon. This wall
+extends for at least twice the distance of the east and west walls,
+protecting the vulnerable northern aspect of the city from the constant
+attacks by warring raiders from the northern plains. Peering about, you see
+little of note, save the dark stretch of Mirkwood. Who knows what adventures
+may be found in there...?
+</description>
+      <exits>
+        <node name="east">
+          <target>31293</target>
+        </node>
+        <node name="west">
+          <target>31291</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <sector>city</sector>
+    </node>
+    <node name="31293">
+      <description>You are heading along the huge northern wall of the City of Anon. This wall
+extends for at least twice the distance of the east and west walls,
+protecting the vulnerable northern aspect of the city from the constant
+attacks by warring raiders from the northern plains. Peering about, you see
+little of note, save the dark stretch of Mirkwood. Who knows what adventures
+may be found in there...?
+</description>
+      <exits>
+        <node name="east">
+          <target>31294</target>
+        </node>
+        <node name="west">
+          <target>31292</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <sector>city</sector>
+    </node>
+    <node name="31294">
+      <description>You are heading along the huge northern wall of the City of Anon. This wall
+extends for at least twice the distance of the east and west walls,
+protecting the vulnerable northern aspect of the city from the constant
+attacks by warring raiders from the northern plains. Peering about, you see
+little of note, save the dark stretch of Mirkwood. Who knows what adventures
+may be found in there...?
+</description>
+      <exits>
+        <node name="east">
+          <target>31295</target>
+        </node>
+        <node name="west">
+          <target>31293</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <sector>city</sector>
+    </node>
+    <node name="31295">
+      <description>You are heading along the huge northern wall of the City of Anon. This wall
+extends for at least twice the distance of the east and west walls,
+protecting the vulnerable northern aspect of the city from the constant
+attacks by warring raiders from the northern plains. Peering about, you see
+little of note, save the dark stretch of Mirkwood. Who knows what adventures
+may be found in there...?
+</description>
+      <exits>
+        <node name="east">
+          <target>31296</target>
+        </node>
+        <node name="west">
+          <target>31294</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <sector>city</sector>
+    </node>
+    <node name="31296">
+      <description>You are heading along the huge northern wall of the City of Anon. This wall
+extends for at least twice the distance of the east and west walls,
+protecting the vulnerable northern aspect of the city from the constant
+attacks by warring raiders from the northern plains. Peering about, you see
+little of note, save the dark stretch of Mirkwood. Who knows what adventures
+may be found in there...?
+
+A door leads east into northeast tower. There is a sign tacked to it.
+</description>
+      <exits>
+        <node name="east">
+          <description>The sign says- &quot;Keep Out! By order of the Marshal&quot;
+</description>
+          <flags>isdoor</flags>
+          <keyword>door sign дверь</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31257</target>
+        </node>
+        <node name="west">
+          <target>31295</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <resets>
+        <mob limit="4" maxHere="1" vnum="31202"/>
+        <equip to="wield" vnum="31200"/>
+        <equip to="body" vnum="31201"/>
+        <equip to="wrist_l" vnum="31202"/>
+        <equip to="wrist_r" vnum="31202"/>
+        <equip to="neck_1" vnum="31203"/>
+        <equip to="head" vnum="31204"/>
+        <equip to="shield" vnum="31205"/>
+        <equip to="hold" vnum="31206"/>
+        <equip to="finger_l" vnum="31207"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="31297">
+      <description>You are strolling along the vast southern wall of the City of Anon, enjoying
+the cool breeze and the scenic view. The guards call this the &quot;easy spot&quot;
+because there has never been an assault from the south on the city, mostly
+due to the presence of the mighty Anon River, which flows parallel to this
+wall. You smile, relax and enjoy the walk.
+
+A door to the west leads into southwest tower.
+</description>
+      <exits>
+        <node name="east">
+          <target>31298</target>
+        </node>
+        <node name="west">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31258</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <resets>
+        <mob limit="4" maxHere="1" vnum="31201"/>
+        <equip to="wield" vnum="31200"/>
+        <equip to="body" vnum="31201"/>
+        <equip to="wrist_l" vnum="31202"/>
+        <equip to="wrist_r" vnum="31202"/>
+        <equip to="neck_1" vnum="31203"/>
+        <equip to="head" vnum="31204"/>
+        <equip to="shield" vnum="31205"/>
+        <equip to="hold" vnum="31206"/>
+        <equip to="finger_l" vnum="31207"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="31298">
+      <description>You are strolling along the vast southern wall of the City of Anon, enjoying
+the cool breeze and the scenic view. The guards call this the &quot;easy spot&quot;
+because there has never been an assault from the south on the city, mostly
+due to the presence of the mighty Anon River, which flows parallel to this
+wall. You smile, relax and enjoy the walk.
+</description>
+      <exits>
+        <node name="east">
+          <target>31299</target>
+        </node>
+        <node name="west">
+          <target>31297</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <sector>city</sector>
+    </node>
+    <node name="31299">
+      <description>You are strolling along the vast southern wall of the City of Anon, enjoying
+the cool breeze and the scenic view. The guards call this the &quot;easy spot&quot;
+because there has never been an assault from the south on the city, mostly
+due to the presence of the mighty Anon River, which flows parallel to this
+wall. You smile, relax and enjoy the walk.
+</description>
+      <exits>
+        <node name="east">
+          <target>31300</target>
+        </node>
+        <node name="west">
+          <target>31298</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <sector>city</sector>
+    </node>
+    <node name="31300">
+      <description>You are strolling along the vast southern wall of the City of Anon, enjoying
+the cool breeze and the scenic view. The guards call this the &quot;easy spot&quot;
+because there has never been an assault from the south on the city, mostly
+due to the presence of the mighty Anon River, which flows parallel to this
+wall. You smile, relax and enjoy the walk.
+</description>
+      <exits>
+        <node name="east">
+          <target>31301</target>
+        </node>
+        <node name="west">
+          <target>31299</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="31205"/>
+        <equip to="wield" vnum="31200"/>
+        <equip to="body" vnum="31201"/>
+        <equip to="wrist_l" vnum="31202"/>
+        <equip to="wrist_r" vnum="31202"/>
+        <equip to="neck_1" vnum="31203"/>
+        <equip to="head" vnum="31204"/>
+        <equip to="shield" vnum="31205"/>
+        <equip to="hold" vnum="31206"/>
+        <equip to="finger_l" vnum="31207"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="31301">
+      <description>You are strolling along the vast southern wall of the City of Anon, enjoying
+the cool breeze and the scenic view. The guards call this the &quot;easy spot&quot;
+because there has never been an assault from the south on the city, mostly
+due to the presence of the mighty Anon River, which flows parallel to this
+wall. You smile, relax and enjoy the walk.
+</description>
+      <exits>
+        <node name="east">
+          <target>31302</target>
+        </node>
+        <node name="west">
+          <target>31300</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <sector>city</sector>
+    </node>
+    <node name="31302">
+      <description>You are strolling along the vast southern wall of the City of Anon, enjoying
+the cool breeze and the scenic view. The guards call this the &quot;easy spot&quot;
+because there has never been an assault from the south on the city, mostly
+due to the presence of the mighty Anon River, which flows parallel to this
+wall. You smile, relax and enjoy the walk.
+</description>
+      <exits>
+        <node name="east">
+          <target>31303</target>
+        </node>
+        <node name="west">
+          <target>31301</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <resets>
+        <mob limit="4" maxHere="1" vnum="31201"/>
+        <equip to="wield" vnum="31200"/>
+        <equip to="body" vnum="31201"/>
+        <equip to="wrist_l" vnum="31202"/>
+        <equip to="wrist_r" vnum="31202"/>
+        <equip to="neck_1" vnum="31203"/>
+        <equip to="head" vnum="31204"/>
+        <equip to="shield" vnum="31205"/>
+        <equip to="hold" vnum="31206"/>
+        <equip to="finger_l" vnum="31207"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="31303">
+      <description>You are strolling along the vast southern wall of the City of Anon, enjoying
+the cool breeze and the scenic view. The guards call this the &quot;easy spot&quot;
+because there has never been an assault from the south on the city, mostly
+due to the presence of the mighty Anon River, which flows parallel to this
+wall. You smile, relax and enjoy the walk.
+</description>
+      <exits>
+        <node name="east">
+          <target>31304</target>
+        </node>
+        <node name="west">
+          <target>31302</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <sector>city</sector>
+    </node>
+    <node name="31304">
+      <description>You are strolling along the vast southern wall of the City of Anon, enjoying
+the cool breeze and the scenic view. The guards call this the &quot;easy spot&quot;
+because there has never been an assault from the south on the city, mostly
+due to the presence of the mighty Anon River, which flows parallel to this
+wall. You smile, relax and enjoy the walk.
+</description>
+      <exits>
+        <node name="east">
+          <target>31305</target>
+        </node>
+        <node name="west">
+          <target>31303</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <sector>city</sector>
+    </node>
+    <node name="31305">
+      <description>You are strolling along the vast southern wall of the City of Anon, enjoying
+the cool breeze and the scenic view. The guards call this the &quot;easy spot&quot;
+because there has never been an assault from the south on the city, mostly
+due to the presence of the mighty Anon River, which flows parallel to this
+wall. You smile, relax and enjoy the walk.
+</description>
+      <exits>
+        <node name="east">
+          <target>31306</target>
+        </node>
+        <node name="west">
+          <target>31304</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <sector>city</sector>
+    </node>
+    <node name="31306">
+      <description>You are strolling along the vast southern wall of the City of Anon, enjoying
+the cool breeze and the scenic view. The guards call this the &quot;easy spot&quot;
+because there has never been an assault from the south on the city, mostly
+due to the presence of the mighty Anon River, which flows parallel to this
+wall. You smile, relax and enjoy the walk.
+</description>
+      <exits>
+        <node name="east">
+          <target>31307</target>
+        </node>
+        <node name="west">
+          <target>31305</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <sector>city</sector>
+    </node>
+    <node name="31307">
+      <description>You are strolling along the vast southern wall of the City of Anon, enjoying
+the cool breeze and the scenic view. The guards call this the &quot;easy spot&quot;
+because there has never been an assault from the south on the city, mostly
+due to the presence of the mighty Anon River, which flows parallel to this
+wall. You smile, relax and enjoy the walk.
+
+A door to the east leads into southeast tower.
+</description>
+      <exits>
+        <node name="east">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31259</target>
+        </node>
+        <node name="west">
+          <target>31306</target>
+        </node>
+      </exits>
+      <name>Heading Along the Battlements</name>
+      <resets>
+        <mob limit="4" maxHere="1" vnum="31201"/>
+        <equip to="wield" vnum="31200"/>
+        <equip to="body" vnum="31201"/>
+        <equip to="wrist_l" vnum="31202"/>
+        <equip to="wrist_r" vnum="31202"/>
+        <equip to="neck_1" vnum="31203"/>
+        <equip to="head" vnum="31204"/>
+        <equip to="shield" vnum="31205"/>
+        <equip to="hold" vnum="31206"/>
+        <equip to="finger_l" vnum="31207"/>
+      </resets>
+      <sector>city</sector>
+    </node>
+    <node name="31308">
+      <description>This room serves as the quarters of the commanders of the north and west
+wall guards. It is sparsely decorated, featuring only two beds, two wardrobes,
+a mirror and two footlockers. A few weapons are neatly arranged on one wall,
+and a throw rug lies near the staircase.
+</description>
+      <exits>
+        <node name="down">
+          <target>31256</target>
+        </node>
+        <node name="up">
+          <target>31312</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Northwest Tower</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="31204"/>
+        <equip to="wield" vnum="31200"/>
+        <equip to="body" vnum="31201"/>
+        <equip to="wrist_l" vnum="31202"/>
+        <equip to="wrist_r" vnum="31202"/>
+        <equip to="neck_1" vnum="31203"/>
+        <equip to="head" vnum="31204"/>
+        <equip to="shield" vnum="31205"/>
+        <equip to="hold" vnum="31206"/>
+        <equip to="finger_l" vnum="31207"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31309">
+      <description>This room serves as quarters to the Knights of the Grand and Holy Order of
+Anon assigned to wall guard duty. This room resembles a chapel more than
+anything, with two small cots arranged near an altar bearing a chalice and
+a ewer. A tapestry hangs on one wall, depicting knights receiving blessings
+from Lenny.
+</description>
+      <exits>
+        <node name="down">
+          <target>31258</target>
+        </node>
+        <node name="up">
+          <target>31314</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Southwest Tower</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="31208"/>
+        <equip to="body" vnum="31208"/>
+        <equip to="wield" vnum="31209"/>
+        <equip to="shield" vnum="31210"/>
+        <equip to="head" vnum="31211"/>
+        <equip to="hands" vnum="31212"/>
+        <equip to="finger_l" vnum="31213"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31310">
+      <description>This room serves as the quarters of the commanders of the south and east
+wall guards. It is sparsely decorated, featuring only two beds, two wardrobes,
+a mirror and two footlockers. A few weapons are neatly arranged on one wall,
+and a throw rug lies near the staircase.
+</description>
+      <exits>
+        <node name="down">
+          <target>31259</target>
+        </node>
+        <node name="up">
+          <target>31316</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Southeast Tower</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="31207"/>
+        <equip to="wield" vnum="31200"/>
+        <equip to="body" vnum="31201"/>
+        <equip to="wrist_l" vnum="31202"/>
+        <equip to="wrist_r" vnum="31202"/>
+        <equip to="neck_1" vnum="31203"/>
+        <equip to="head" vnum="31204"/>
+        <equip to="shield" vnum="31205"/>
+        <equip to="hold" vnum="31206"/>
+        <equip to="finger_l" vnum="31207"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31311">
+      <description>This room has an evil feel to it. The smashed furniture, bloodstains and
+broken bones are bad enough, but in addition there is a definite evil aura
+to this fell domain, as if some foul deed has been perpetrated here. You
+get the distinct feeling that this place is haunted.
+</description>
+      <exits>
+        <node name="down">
+          <flags>isdoor closed locked nopass</flags>
+          <key>31224</key>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31257</target>
+        </node>
+        <node name="up">
+          <target>31318</target>
+        </node>
+      </exits>
+      <flags>dark indoors no_recall</flags>
+      <name>A Dusty Chamber</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="31214"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31312">
+      <description>This room is the quarters of the Guards Provost-Marshal, Glenwellucan Mad-
+Llleweleucam. He is a rather senile old veteran of more wars than he could
+possibly count. The room is littered with memorabilia, probably worth a
+fortune to a collector, but useless to you. Then again, maybe not...
+</description>
+      <exits>
+        <node name="down">
+          <target>31308</target>
+        </node>
+        <node name="up">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31313</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>The Top of Northwest Tower</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="31210"/>
+        <equip to="body" vnum="31214"/>
+        <equip to="hold" vnum="31215"/>
+        <drop vnum="31226"/>
+        <put in="31226" limit="1" maxHere="1" vnum="31224"/>
+        <put in="31226" limit="1" maxHere="1" vnum="31225"/>
+        <drop vnum="31227"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31313">
+      <description>The Marshal uses this area as a relaxation area. There is a deckchair and
+a small table, for use on sunny days- the Marshal sports a very healthy
+tan. An umbrella lies folded up next to a bookcase with several tattered
+magazines.
+</description>
+      <exits>
+        <node name="down">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31312</target>
+        </node>
+      </exits>
+      <name>The Roof of Northwest Tower</name>
+      <sector>city</sector>
+    </node>
+    <node name="31314">
+      <description>Here reside the battlemages currently in the employ of the City. As they
+spend little free time doing anything but meditating or learning new spells,
+this room has little of interest. There is a bookcase full of scrolls, but
+none of them are magical.
+</description>
+      <exits>
+        <node name="down">
+          <target>31309</target>
+        </node>
+        <node name="up">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31315</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>The Battlemages&apos; Quarters</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="31209"/>
+        <equip to="finger_l" vnum="31241"/>
+        <equip to="hold" vnum="31242"/>
+        <equip to="about" vnum="31243"/>
+        <equip to="feet" vnum="31244"/>
+        <drop vnum="31228"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31315">
+      <description>This roof is totally featureless. Peering through the crenelations, you
+get a good view of southwestern Anon, though. Due south lies the cursed
+forest wherein a Witches&apos; Coven is supposed to exist, and beyond that lies
+the fabled elemental canyon.
+</description>
+      <exits>
+        <node name="down">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31314</target>
+        </node>
+      </exits>
+      <name>The Roof of Southwest Tower</name>
+      <sector>city</sector>
+    </node>
+    <node name="31316">
+      <description>In this room, generous priests and priestesses of Lenny give up their time
+to tend to the illnesses of the city guards. They will tend to others&apos;
+injuries as well, for a fee. Such is the way of Lenny.
+</description>
+      <exits>
+        <node name="down">
+          <target>31310</target>
+        </node>
+        <node name="up">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31317</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>The Healing Chambers</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="31215"/>
+        <drop vnum="31229"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31317">
+      <description>This roof has been recently swept clean, and a stone altar erected to the
+Gods. The sun is caught by a reflecting crystal so that it shines directly
+onto the altar at all times during the day. The effect is quite splendid.
+You feel totally at ease in this place.
+</description>
+      <exits>
+        <node name="down">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31316</target>
+        </node>
+      </exits>
+      <flags>safe</flags>
+      <name>The Roof of Southeast Tower</name>
+      <sector>inside</sector>
+    </node>
+    <node name="31318">
+      <description>This room has an evil feel to it. The smashed furniture, bloodstains and
+broken bones are bad enough, but in addition there is a definite evil aura
+to this fell domain, as if some foul deed has been perpetrated here. You
+get the distinct feeling that this place is haunted.
+</description>
+      <exits>
+        <node name="down">
+          <flags>isdoor closed locked nopass</flags>
+          <key>31224</key>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31311</target>
+        </node>
+        <node name="up">
+          <flags>isdoor closed locked nopass</flags>
+          <key>31224</key>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31319</target>
+        </node>
+      </exits>
+      <flags>dark indoors no_recall</flags>
+      <name>A Dusty Chamber</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="31213"/>
+        <equip to="body" vnum="31245"/>
+        <drop vnum="31230"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31319">
+      <description>This roof has not bee visited in a long time. The trapdoor is covered in
+silvery mystic runes, as is the stone around it. A chill wind blows here,
+at all times, and birds have been known to die when flying too close. It
+is truly a cursed place.
+</description>
+      <exits>
+        <node name="down">
+          <flags>isdoor closed locked nopass</flags>
+          <key>31224</key>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31318</target>
+        </node>
+      </exits>
+      <flags>dark no_recall</flags>
+      <name>The Roof of the Cursed Northeast Tower</name>
+      <sector>city</sector>
+    </node>
+    <node name="31320">
+      <description>In here Clea, the beautiful Elven Artificer from Malathar, offers a 
+popular service, reharging magical staves and wands that have lost their 
+energies. Piles of such items can be seen, awaiting retrieval by their 
+owners. You feel quite comfortable in this simple yet pleasant workshop.
+</description>
+      <exits>
+        <node name="north">
+          <target>31009</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>The Artificer&apos;s Workshop</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="31058"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31321">
+      <description>This old shop is filled with old wooden shelves crammed with books, the
+furniture strained to breaking point by the many tomes stacked upon it. In
+front of these shelves an ancient man sits reading an ancient text. As you
+enter he welcomes you and offers to show you some of his stock- abridged
+versions of some of the greatest works of Anonian literature.
+</description>
+      <exits>
+        <node name="west">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31004</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>The Book Shoppe</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="31059"/>
+        <give vnum="31086"/>
+        <give vnum="31087"/>
+        <give vnum="31088"/>
+        <give vnum="31089"/>
+        <give vnum="31090"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31322">
+      <description>In this shop sits a small fat dwarf who is busy making locks and keys. He 
+will also purchase your keys if you don&apos;t want them, for a good price. 
+You marvel at all the strange technology about you.
+</description>
+      <exits>
+        <node name="east">
+          <flags>isdoor</flags>
+          <keyword>дверь door</keyword>
+          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
+          <target>31004</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>The Locksmith</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="31060"/>
+        <give vnum="31001"/>
+        <give vnum="31085"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="31323">
+      <description>In this small shop you can enhance your statistics, with the aid of one 
+Thom, the enhancer. He stands ready to help you behind a massive oak desk.
+There are several degrees and diplomas affixed to the walls here.
+</description>
+      <exits>
+        <node name="north">
+          <target>31011</target>
+        </node>
+      </exits>
+      <flags>indoors</flags>
+      <name>Enhancing Shop</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="31061"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
+  </rooms>
+</area>

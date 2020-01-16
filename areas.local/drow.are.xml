@@ -15,7 +15,7 @@
     <vnumLow>5100</vnumLow>
   </areadata>
   <helps>
-    <node keyword="'DROW CITY' 'ГОРОД ДРОУ'" level="1">В Городе Дроу могут селиться темные эльфы, дроу и злые полу-эльфы. По соседству
+    <node id="1406" keyword="'DROW CITY' 'ГОРОД ДРОУ'" level="1">В Городе Дроу могут селиться темные эльфы, дроу и злые полу-эльфы. По соседству
 с городом располагаются пригороды, где можно построить собственный дом.
 Для всех остальных это не слишком дружелюбное место. 
 %PAUSE%
@@ -255,142 +255,7 @@
       <act add="npc sentinel warrior nopurge notrack"/>
       <aff add="infrared sneak haste"/>
       <alignment>-1000</alignment>
-      <behavior type="QuestMaster">
-        <services>
-          <node type="ObjectQuestArticle">
-            <vnum>102</vnum>
-            <name>orb</name>
-            <rname>шар</rname>
-            <descr>Хрустальный шар</descr>
-            <price type="QuestPointPrice">
-              <questpoint>50</questpoint>
-            </price>
-          </node>
-          <node type="PiercingQuestArticle">
-            <name>piercing</name>
-            <rname>пирсинг</rname>
-            <descr>Прокалывание ушей</descr>
-            <price type="QuestPointPrice">
-              <questpoint>50</questpoint>
-            </price>
-          </node>
-          <node type="ObjectQuestArticle">
-            <vnum>108</vnum>
-            <name>colourless</name>
-            <rname>бесцветный рестринг</rname>
-            <descr>Рестринг купон</descr>
-            <price type="QuestPointPrice">
-              <questpoint>50</questpoint>
-            </price>
-          </node>
-          <node type="ObjectQuestArticle">
-            <vnum>106</vnum>
-            <name>coupon</name>
-            <rname>цветной рестринг</rname>
-            <descr>{YР{Bе{Gс{Rт{Cр{Mи{Bн{Cг{x {rк{yу{gп{bо{mн{x</descr>
-            <price type="QuestPointPrice">
-              <questpoint>200</questpoint>
-            </price>
-          </node>
-          <node type="TattooQuestArticle">
-            <name>tattoo</name>
-            <rname>татуировка</rname>
-            <descr>Татуировка твоей религии</descr>
-            <price type="QuestPointPrice">
-              <questpoint>200</questpoint>
-            </price>
-          </node>
-          <node type="ConQuestArticle">
-            <name>constitution</name>
-            <rname>сложение</rname>
-            <descr>+1 сложение</descr>
-            <price type="QuestPointPrice">
-              <questpoint>150</questpoint>
-            </price>
-          </node>
-          <node type="PersonalQuestArticle">
-            <vnum>95</vnum>
-            <name>ring</name>
-            <rname>кольцо</rname>
-            <descr>Кольцо Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>1000</questpoint>
-            </price>
-            <gender table="sex_table">neutral</gender>
-            <troubled>true</troubled>
-          </node>
-          <node type="PersonalQuestArticle">
-            <vnum>96</vnum>
-            <name>weapon</name>
-            <rname>оружие</rname>
-            <descr>Оружие Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>1000</questpoint>
-            </price>
-            <gender table="sex_table">neutral</gender>
-            <troubled>true</troubled>
-          </node>
-          <node type="PersonalQuestArticle">
-            <vnum>94</vnum>
-            <name>girth</name>
-            <rname>пояс</rname>
-            <descr>Пояс Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>1000</questpoint>
-            </price>
-            <gender table="sex_table">male</gender>
-            <troubled>true</troubled>
-          </node>
-          <node type="KeyringQuestArticle">
-            <name>keyring</name>
-            <rname>брелок</rname>
-            <descr>Прикрепить брелок для ключей к Поясу Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>200</questpoint>
-            </price>
-          </node>
-          <node type="PersonalQuestArticle">
-            <vnum>103</vnum>
-            <name>bag</name>
-            <rname>сумка</rname>
-            <descr>Дорожная сумка Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>500</questpoint>
-            </price>
-            <gender table="sex_table">female</gender>
-            <troubled>false</troubled>
-          </node>
-          <node type="PocketsQuestArticle">
-            <name>pockets</name>
-            <rname>карманы</rname>
-            <descr>Нашить карманы на Сумку Героя</descr>
-            <price type="QuestPointPrice">
-              <questpoint>50</questpoint>
-            </price>
-          </node>
-          <node type="OwnerQuestArticle">
-            <vnum>109</vnum>
-            <name>owner</name>
-            <rname>талон</rname>
-            <descr>Талон на единоличное владение вещью</descr>
-            <price type="QuestPointPrice">
-              <questpoint>1000</questpoint>
-            </price>
-            <lifePrice>
-              <victories>500</victories>
-              <lifes>1</lifes>
-            </lifePrice>
-          </node>
-          <node type="GoldQuestArticle">
-            <amount>5000</amount>
-            <name>gold</name>
-            <rname>золото</rname>
-            <descr>5000 золотых монет</descr>
-            <price type="QuestPointPrice">
-              <questpoint>1000</questpoint>
-            </price>
-          </node>
-        </services>
+      <behavior type="DefaultQuestMaster">
       </behavior>
       <dam_type>wrath</dam_type>
       <damage>18d18+85</damage>
@@ -766,10 +631,10 @@
     <node name="5107">
       <affects>
         <node>
-          <apply to="int">-2</apply>
+          <apply to="str">-2</apply>
         </node>
         <node>
-          <apply to="str">-2</apply>
+          <apply to="int">-2</apply>
         </node>
       </affects>
       <description>Хлыст с шестью змеиными головами (snake) брошен здесь.</description>
@@ -863,6 +728,14 @@
         <node>
           <apply to="hit">25</apply>
         </node>
+        <node>
+          <apply to="damroll">2</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="level">1</apply>
+          <global registry="skillGroup">harmful</global>
+        </node>
       </affects>
       <cost>380</cost>
       <description>Маленькое рубиновое колечко (ruby) лежит в пыли.</description>
@@ -905,17 +778,25 @@
     <node name="5114">
       <affects>
         <node>
+          <apply to="mana">20</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="damroll">2</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
           <apply to="ac">-2</apply>
         </node>
       </affects>
       <cost>880</cost>
-      <description>Маленькая зеленая шляпа валяется в пыли.</description>
+      <description>Высокая церемониальная шапка (hat) с символом богини Ллот лежит на земле.</description>
       <extra_flags>nodrop</extra_flags>
       <gender>f</gender>
       <level>12</level>
       <material>cloth</material>
-      <name>hat green шляпа зеленая маленькая ярко</name>
-      <short_descr>маленьк|ая|ой|ой|ую|ой|ой ярко-зелен|ая|ой|ой|ую|ой|ой шляп|а|ы|е|у|ой|е</short_descr>
+      <name>hat drow matron фофудья матроны</name>
+      <short_descr>фофудь|я|и|е|ю|ей|е {1{mматроны{2</short_descr>
       <type name="armor">
         <ac bash="5" exotic="0" pierce="4" slash="5"/>
       </type>
@@ -1571,7 +1452,7 @@
       <resets>
         <mob limit="3" maxHere="1" vnum="5107"/>
         <equip to="wield" vnum="5104"/>
-        <give vnum="5114"/>
+        <equip to="head" vnum="5114"/>
       </resets>
       <sector>inside</sector>
     </node>

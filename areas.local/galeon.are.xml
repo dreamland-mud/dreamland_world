@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <area>
   <areadata>
-    <authors>Ruffina</authors>
+    <authors>Ruffina,Miyamoto</authors>
     <flags>noquest nogate popular</flags>
     <levelHigh>5</levelHigh>
     <levelLow>1</levelLow>
-    <name>Фрегат</name>
+    <name>Галеон</name>
     <resetMessage>Ты слышишь скрип мачт и крики чаек.</resetMessage>
     <security>9</security>
     <speedwalk>сюда все попадают после создания персонажа</speedwalk>
@@ -13,7 +13,7 @@
     <vnumLow>40000</vnumLow>
   </areadata>
   <helps>
-    <node keyword="FRIGATE ФРЕГАТ" level="1">Во время плаванья на этом корабле можно получить базовые навыки для
+    <node id="1560" keyword="GALEON ГАЛЕОН КОРАБЛЬ" labels="area" level="1">Во время плаванья на этом корабле можно получить базовые навыки для
 дальнейших путешествий по миру, а также поломать голову над различными
 заданиями.
 %PAUSE%
@@ -25,30 +25,6 @@
 </node>
   </helps>
   <mobiles>
-    <node name="40000">
-      <ac bash="-4" exotic="4" pierce="-4" slash="-4"/>
-      <act add="npc sentinel notrack"/>
-      <dam_type>none</dam_type>
-      <damage>2d6+6</damage>
-      <default_pos>stand</default_pos>
-      <description>Разжалован окончательно, но оставлен здесь, в арии, козлихе в назидание.
-</description>
-      <form del="edible sentient biped mammal"/>
-      <hit>4d8+366</hit>
-      <level>20</level>
-      <long_descr>Матрос Загор (Zagor) готов изменить твою судьбу одним броском костей.
-</long_descr>
-      <mana>31d5+358</mana>
-      <material>none</material>
-      <parts del="head arms legs heart brains guts hands feet fingers ear eye"/>
-      <player_name>загор zagor</player_name>
-      <race>human</race>
-      <sex>male</sex>
-      <short_descr>Загор||а|у|а|ом|е</short_descr>
-      <size>medium</size>
-      <start_pos>stand</start_pos>
-      <wealth>10</wealth>
-    </node>
     <node name="40001">
       <ac bash="-22" exotic="-3" pierce="-22" slash="-22"/>
       <act add="npc sentinel notrack"/>
@@ -122,7 +98,8 @@
       <material>none</material>
       <off add="disarm fast kick"/>
       <player_name>доктор healer doctor лекарь katzman кацман</player_name>
-      <practicer registry="skillGroup">combat protective benedictions none illusion attack detection creation curative enhancement beguiling harmful healing weather meditation maladictions </practicer>
+      <practicer registry="skillGroup">illusion none enhancement meditation maladictions attack detection beguiling harmful combat curative creation benedictions protective healing we
+ather</practicer>
       <race>human</race>
       <sex>male</sex>
       <short_descr>доктор||а|у|а|ом|е Кацман||а|у|а|ом|е</short_descr>
@@ -152,7 +129,7 @@
       <mana>42d9+641</mana>
       <material>none</material>
       <player_name>soldier солдат etkin эткин</player_name>
-      <practicer registry="skillGroup">none defensive weaponsmaster fightmaster </practicer>
+      <practicer registry="skillGroup">fightmaster defensive none weaponsmaster</practicer>
       <race>giant</race>
       <sex>male</sex>
       <short_descr>Эткин||а|у|а|ом|е</short_descr>
@@ -626,18 +603,19 @@
       <weight>3</weight>
     </node>
     <node name="40007">
-      <description>Деревянный ящик (crate) стоит тут.</description>
+      <description>Деревянный рундук (locker) стоит тут.</description>
       <extraDescr>
-        <node keyword="ящик crate">Это деревянный ящик со сломанной крышкой. Непохоже, что в нем хранится что-либо
-ценное. Можешь заглянуть в него {hc{yсм в ящик{x({hc{ylook in crate{x) или {hc{yизучить ящик{x({hc{yexamine crate{x),
-взять то, что понравится {yвзять {Dпредмет{y ящик{w({ytake {Dпредмет{y crate{x),
-рассмотреть предмет: {yсм {Dпредмет{w({ylook {Dпредмет{x),
-попробовать примерить: {yнадеть {Dпредмет{x({ywear {Dпредмет{x)
-или положить на место: {yположить {Dпредмет{y ящик{w ({yput {Dпредмет{y crate{x).
-Если ящиков несколько, а тебя интересует второй по счету, указывай его номер
-перед именем, например: {hc{yсмотреть в 2.ящик{w({hc{ylook in 2.crate{x).
+        <node keyword="рундук locker">Это деревянный рундук со сломанной крышкой. Непохоже, что в нем хранится что-либо
+ценное.
+Можешь заглянуть в него {hc{yсм в рундук{x ({hc{ylook in locker{x) или {hc{yизучить рундук{x ({hc{yexamine locker{x),
+взять то, что понравится {yвзять {Dпредмет{y рундук{w ({ytake {Dпредмет{y locker{x),
+рассмотреть предмет: {yсм {Dпредмет{w ({ylook {Dпредмет{x),
+попробовать примерить: {yнадеть {Dпредмет{x ({ywear {Dпредмет{x)
+или положить на место: {yположить {Dпредмет{y рундук{w ({yput {Dпредмет{y locker{x).
+Если контейнеров несколько, а тебя интересует второй по счету, указывай его номер
+перед именем, например: {hc{yсмотреть в 2.рундук{w{x ({hc{ylook in 2.locker{x).
 {x
-Иногда такие контейнеры бывают закрыты, тогда не получится заглянуть в них, 
+Иногда такие контейнеры бывают закрыты, тогда не получится заглянуть в них,
 предварительно не открыв: {yоткрыть {Dконтейнер{x({yopen {Dконтейнер{w){x.
 Закрыть обратно: {yзакрыть {Dконтейнер{x({yclose {Dконтейнер){x.
 Запертые на ключ контейнеры можно отпереть: {yотпереть {Dконтейнер{x({yunlock {Dконтейнер{x){x,
@@ -646,8 +624,8 @@
       </extraDescr>
       <gender>m</gender>
       <material>wood</material>
-      <name>ящик crate</name>
-      <short_descr>деревянн|ый|ого|ому|ый|ым|ом ящик||а|у||ом|е</short_descr>
+      <name>рундук locker</name>
+      <short_descr>деревянн|ый|ого|ому|ый|ым|ом рундук||а|у||ом|е</short_descr>
       <type name="container">
         <capacity>100</capacity>
         <flags>closeable</flags>
@@ -677,8 +655,24 @@
       <weight>40</weight>
     </node>
     <node name="40009">
-      <description>Деревянный ящик (crate) стоит тут.</description>
+      <description>Деревянный рундук (locker) стоит тут.</description>
       <extraDescr>
+        <node keyword="рундук locker">Это деревянный рундук со сломанной крышкой. Непохоже, что в нем хранится что-либо
+ценное.
+Можешь заглянуть в него {hc{yсм в рундук{x ({hc{ylook in locker{x) или {hc{yизучить рундук{x ({hc{yexamine locker{x),
+взять то, что понравится {yвзять {Dпредмет{y рундук{w ({ytake {Dпредмет{y locker{x),
+рассмотреть предмет: {yсм {Dпредмет{w ({ylook {Dпредмет{x),
+попробовать примерить: {yнадеть {Dпредмет{x ({ywear {Dпредмет{x)
+или положить на место: {yположить {Dпредмет{y рундук{w ({yput {Dпредмет{y locker{x).
+Если контейнеров несколько, а тебя интересует второй по счету, указывай его номер
+перед именем, например: {hc{yсмотреть в 2.рундук{w{x ({hc{ylook in 2.locker{x).
+{x
+Иногда такие контейнеры бывают закрыты, тогда не получится заглянуть в них,
+предварительно не открыв: {yоткрыть {Dконтейнер{x({yopen {Dконтейнер{w){x.
+Закрыть обратно: {yзакрыть {Dконтейнер{x({yclose {Dконтейнер){x.
+Запертые на ключ контейнеры можно отпереть: {yотпереть {Dконтейнер{x({yunlock {Dконтейнер{x){x,
+если у тебя, конечно же, есть нужный ключ.
+</node>
         <node keyword="ящик crate">Это деревянный ящик со сломанной крышкой. Непохоже, что в нем хранится что-либо
 ценное. Можешь заглянуть в него {hc{yсм в ящик{x({hc{ylook in crate{x) или {hc{yизучить ящик{x({hc{yexamine crate{x),
 взять то, что понравится {yвзять {Dпредмет{y ящик{w({ytake {Dпредмет{y crate{x),
@@ -697,8 +691,8 @@
       </extraDescr>
       <gender>m</gender>
       <material>wood</material>
-      <name>ящик crate</name>
-      <short_descr>деревянн|ый|ого|ому|ый|ым|ом ящик||а|у||ом|е</short_descr>
+      <name>рундук locker</name>
+      <short_descr>деревянн|ый|ого|ому|ый|ым|ом рундук||а|у||ом|е</short_descr>
       <type name="container">
         <capacity>100</capacity>
         <flags>closeable</flags>
@@ -787,11 +781,19 @@ Cъесть сухарик можно так: {hc{yесть сухарик{x({hc
     <node name="40014">
       <affects>
         <node>
-          <apply to="hit">5</apply>
+          <apply to="damroll">1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">1</apply>
           <bits table="affect_flags"></bits>
         </node>
         <node>
           <apply to="wis">1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hit">5</apply>
           <bits table="affect_flags"></bits>
         </node>
       </affects>
@@ -955,6 +957,55 @@ Cъесть сухарик можно так: {hc{yесть сухарик{x({hc
       <cost>1000</cost>
       <description>Тяжелый атлас (atlas) в кожанном переплете брошен тут.</description>
       <extraDescr>
+        <node keyword="page00 стр00">.
+Галеон (корабль новичков)
+
+Пристань                                           N  U       
+========                                           | /        
+                                               W &lt; + &gt; E
+ Гавань----Причал -&gt; На палубе (*)               / |          
+                                                D  S          
+
+Верхняя палуба (опердек)
+========================
+                             Фор-марс               Грот-марс   Кройс-марс             
+                                 .                      .           .          
+                                 .                      .           .          
+                             Фок-мачта              Грот-мачта    Палуба      
+                                 .        (*)           .        .полуюта            
+ Бушприт---Гальюн----Палуба      .     На палубе        .       .     
+                    полубака     .    по штирборту      .  Шканцы---Каюта
+                            .    .         |            .   /      капитана
+                             .   .         |            .  /
+                     Камбуз---Палуба у---На палубе----На палубе у--Часовня
+                              фок-мачты    |  \       грот-мачты      \
+                                           |                      (в лазарет)
+                                           |
+                                      На палубе по                 
+                                       бакборту {G[выход]{x
+Средняя палуба (орлопдек)
+=========================
+                      (на палубу)                  (в часовню)
+                         /                             /
+  В кубрике---------В кубрике--------Арсенал-------Лазарет
+  у гамаков        у рундуков                        /
+                      /                             /
+                (к бочкам)                     (в трюм)
+Трюм
+====
+ Темный закуток                       В трюме           В трюме
+    в трюме           (Кубрик)    у правого борта---у правого борта
+      |                  /               |                 |             (Лазарет)
+      |                 /                |                 |              /
+    Проход           В трюме       В самом центре          |             /
+  между рядами------возле бочек--------трюма-------------В трюме-----В трюме
+                                         |                 |         у трапа
+                                         |                 |
+                                      В трюме            В трюме
+                                  у левого борта-----у левого борта
+
+
+        </node>
         <node keyword="page21 стр21">.
                * * * Зеркальная Часть Мира Грёз * * *
                       = = ============== = =
@@ -1108,7 +1159,7 @@ C-З конец                        |              Площадь            
                                 (Миден&apos;нир)
                        (Изумрудный лес)  (Крепость Гоблинов)
       </node>
-        <node keyword="page04 стр04">{x                  * * * Северная Часть Мира Грёз * * *           
+        <node keyword="page04 стр04">{x                         * * * СЕВЕРНАЯ ТЭРА * * *           
                            = = ============== = =
 
                                Троя, Олимп     
@@ -1125,11 +1176,13 @@ C-З конец                        |              Площадь            
                             |_____________|      Пиратские Острова
 
 
-На этой карте очень приблизительно и без соблюдения масштаба изображены
-зоны северной части Мира Грез. Цель карты - показать относительное 
-расположение зон по отношению друг к другу. Для полного списка см. ? {lRзоны{lEareas{x.
-      </node>
-        <node keyword="page05 стр05">{x                  * * * Восточная Часть Мира Грёз * * *           
+На этой карте очень приблизительно и без соблюдения масштаба изображены зоны
+северной части Тэры. Цель карты -- показать относительное расположение зон по
+отношению друг к другу. 
+
+См. также {hc? зоны{x, {hc? тэра{x
+</node>
+        <node keyword="page05 стр05">{x                         * * * ВОСТОЧНАЯ ТЭРА * * *          
                            = = =============== = =
 
             Дьявольский
@@ -1162,11 +1215,14 @@ C-З конец                        |              Площадь            
                Абисс  Ааракокран
 
 
-На этой карте очень приблизительно и без соблюдения масштаба изображены
-зоны восточной части Мира Грез. Цель карты - показать относительное 
-расположение зон по отношению друг к другу. Для полного списка см. ? {lRзоны{lEareas{x.
-      </node>
-        <node keyword="page06 стр06">{x               * * * Западная и Южная часть Мира Грёз * * *
+На этой карте очень приблизительно и без соблюдения масштаба изображены зоны
+восточной части Тэры. Цель карты -- показать относительное расположение зон по
+отношению друг к другу. 
+
+См. также {hc? зоны{x, {hc? тэра{x
+      
+</node>
+        <node keyword="page06 стр06">{x                         * * * ЗАПАДНАЯ И ЮЖНАЯ ТЭРА * * *
                           = = ================== = =
         Mage 
 Dragon  Tower						Plains
@@ -1195,10 +1251,13 @@ Tower    |   	 		Ciquala&apos;s Lair		   |
 						            Church              
 						           Catacombs       
 
-На этой карте очень приблизительно и без соблюдения масштаба изображены
-зоны западной и южной частей Мира Грез. Цель карты - показать относительное 
-расположение зон по отношению друг к другу. Для полного списка см. ? {lRзоны{lEareas{x.
-      </node>
+На этой карте очень приблизительно и без соблюдения масштаба изображены зоны
+западной и южной частей Тэры. Цель карты -- показать относительное расположение
+зон по отношению друг к другу. 
+
+См. также {hc? зоны{x, {hc? тэра{x
+      
+</node>
         <node keyword="page07 стр07">{x         * * * **************** New Thalos ***************** * * *
                    &quot;Not Thalos or Old Thalos but New Thalos&quot;
             = = =============================================== = =
@@ -1769,12 +1828,14 @@ Dungeon_|                        Dryad                       |
 
 {cОГЛАВЛЕНИЕ{x
 
+{x  {c*{x Карта Галеона                            ({hc{y{lRсм стр00{lEl page00{x)
+
 {x  {c*{x Карта центрального Мидгаарда             ({hc{y{lRсм стр01{lEl page01{x)
 {x  {c*{x Карта северного Мидгаарда                ({hc{y{lRсм стр02{lEl page02{x)
 {x  {c*{x Карта южного Мидгаарда                   ({hc{y{lRсм стр03{lEl page03{x)
-{x  {c*{x Карта северной части Мира Грез           ({hc{y{lRсм стр04{lEl page04{x)
-{x  {c*{x Карта восточной части Мира Грез          ({hc{y{lRсм стр05{lEl page05{x)
-{x  {c*{x Карта южной и западной частей Мира Грез  ({hc{y{lRсм стр06{lEl page06{x)
+{x  {c*{x Карта Северной Тэры                      ({hc{y{lRсм стр04{lEl page04{x)
+{x  {c*{x Карта Восточной Тэры                     ({hc{y{lRсм стр05{lEl page05{x)
+{x  {c*{x Карта Южной и Западной Тэры              ({hc{y{lRсм стр06{lEl page06{x)
 {x  {c*{x Карта зеркальной части Мира Грез         ({hc{y{lRсм стр21{lEl page21{x)
 {x  {c*{x Карта Нового Талоса                      ({hc{y{lRсм стр07{lEl page07{x)
 {x  {c*{x Карта Долины Титанов                     ({hc{y{lRсм стр08{lEl page08{x)
@@ -1782,6 +1843,8 @@ Dungeon_|                        Dryad                       |
 {x  {c*{x Карта Соласа                             ({hc{y{lRсм стр10{lEl page10{x)
 {x  {c*{x Карта Герихельма                         ({hc{y{lRсм стр11{lEl page11{x)
 {x  {c*{x Карта Старого Мидгаарда                  ({hc{y{lRсм стр12{lEl page12{x)
+
+См. также {hc? тэра{x, {hc? зоны{x
 </node>
       </extraDescr>
       <extra_flags>glow hum burn_proof</extra_flags>
@@ -2047,15 +2110,15 @@ Dungeon_|                        Dryad                       |
     <node name="40111">
       <affects>
         <node>
-          <apply to="hit">10</apply>
-          <bits table="affect_flags"></bits>
-        </node>
-        <node>
           <apply to="damroll">1</apply>
           <bits table="affect_flags"></bits>
         </node>
         <node>
           <apply to="hitroll">2</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hit">10</apply>
           <bits table="affect_flags"></bits>
         </node>
         <node>
@@ -2083,6 +2146,12 @@ Dungeon_|                        Dryad                       |
       <weight>20</weight>
     </node>
     <node name="40112">
+      <affects>
+        <node>
+          <apply to="heal_gain">50</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
       <cost>22</cost>
       <description>Тренировочный пояс (belt) лежит здесь.</description>
       <extraDescr>
@@ -2394,19 +2463,25 @@ Dungeon_|                        Dryad                       |
   </objects>
   <rooms>
     <node name="40000">
-      <description>Ты стоишь на  палубе фрегата,  бороздящего просторы  Великого Моря.  Доски под
-твоими ногами поют в унисон с шумом ветра  и музыкой  волн. За  обоими бортами
-раскинулись бескрайние воды,  ни кусочка  суши до  самого горизонта.  Рано или
-поздно корабль причалит к берегу, но сперва ты должен многое узнать  и многому
-научиться. 
-Спускайся {hc{yвниз{x ({hc{ydown{x), в трюм, и хорошенько его исследуй.
-Палуба продолжается на север и на юг.
+      <description>Ты стоишь в центре верхней палубы, между фок и грот-мачтами галеона. За обоими
+бортами раскинулись бескрайние воды, ни кусочка суши до самого  горизонта. Рано
+или поздно судно причалит к берегу, но сперва ты долж{Smен{Sfна{Sx многое узнать и многому
+научиться.
+ Палуба продожается во всех направлениях, на {yсевере{x правый борт - штирборт, на
+{yюге{x - бакборт, отправившись по палубе на {yзапад{x, в  сторону  носа,  дойдешь  до
+бака, где расположен камбуз, на {yвостоке{x, в сторону  кормы  -  шканцы,  где  ты
+сможешь разыскать капитана.
+ По центру палубы имеется люк с трапом, ведущий на  нижние  палубы.  Спускайся
+по трапу {hc{yвниз{x ({hc{ydown{x), и хорошенько их исследуй.
 </description>
       <exits>
         <node name="down">
-          <description>Виден трюм.
-</description>
-          <target>40022</target>
+          <key>0</key>
+          <target>40020</target>
+        </node>
+        <node name="east">
+          <key>0</key>
+          <target>40003</target>
         </node>
         <node name="north">
           <key>0</key>
@@ -2414,19 +2489,25 @@ Dungeon_|                        Dryad                       |
         </node>
         <node name="south">
           <key>0</key>
-          <target>40003</target>
+          <target>40005</target>
+        </node>
+        <node name="west">
+          <key>0</key>
+          <target>40006</target>
         </node>
       </exits>
       <flags>no_vanish no_mob nosummon</flags>
-      <name>На палубе</name>
+      <name>На верхней палубе</name>
       <sector>inside</sector>
     </node>
     <node name="40001">
-      <description>Ты  стоишь  на  открытом  участке  палубы. Тут валяется несколько  ящиков,
-на  которых удобно расположились матросы. Они режутся в кости, отлынивая от
-работы. Приземистый дварф строгого вида время от времени покрикивает на них,
-тщетно пытаясь воззвать к совести.
-На юг отсюда продолжается палуба, набери {hc{yю{x ({hc{ys{x), чтобы туда пройти.
+      <description>Ты  стоишь  на  верхней  палубе  у  правого  борта  галеона.  Перегнувшись через
+фальшборт, ты сможешь полюбоваться, как волны стонут и плачут  и бьются  о борт.
+Тут  валяется  несколько ящиков,  на которых  удобно расположились  матросы. Они
+режутся в кости, отлынивая от работы. Приземистый дварф  строгого вида  время от
+времени покрикивает на них, тщетно пытаясь воззвать  к совести.  Отправившись на
+юг, ты попадешь в центр палубы, откуда можешь попасть в остальные части галеона.
+Набери {hc{yю{x ({hc{ys{x), чтобы туда пойти.
 </description>
       <exits>
         <node name="south">
@@ -2437,7 +2518,7 @@ Dungeon_|                        Dryad                       |
         </node>
       </exits>
       <flags>no_vanish no_mob nosummon</flags>
-      <name>На палубе</name>
+      <name>На верхней палубе по штирботу</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="40008"/>
       </resets>
@@ -2465,76 +2546,86 @@ Dungeon_|                        Dryad                       |
       <sector>city</sector>
     </node>
     <node name="40003">
-      <description>Ты стоишь на открытом участке палубы. Ветер раздувает паруса и  швыряет соленые
-брызги тебе в лицо. Деревянная лесенка позволяет вскарабкаться вверх на капитанский
-мостик к штурвалу. К западу отсюда - камбуз, а на востоке можно подойти прямо к борту. 
+      <description>Ты стоишь на верхней палубе возле грот-мачты. Ветер  раздувает паруса и швыряет
+соленые брызги  тебе в  лицо. Трап  с дубовыми  перилами позволяет  {yподняться{x на
+шканцы,  к  штурвалу. Небольшой  проход на  {yвостоке{x под  трапом ведёт  в судовую
+часовню.
+Отправившись на {yзапад{x, в сторону носа, ты попадешь в центр палубы.
 </description>
       <exits>
         <node name="east">
           <key>0</key>
-          <target>40005</target>
-        </node>
-        <node name="north">
-          <key>0</key>
-          <target>40000</target>
-        </node>
-        <node name="south">
-          <key>0</key>
-          <target>40004</target>
+          <target>40025</target>
         </node>
         <node name="up">
           <target>40009</target>
         </node>
         <node name="west">
           <key>0</key>
-          <target>40006</target>
+          <target>40000</target>
         </node>
       </exits>
+      <extraExits>
+        <node name="мачта грот-мачта mainmast mast">
+          <description>Главная (и потому самая высокая) мачта галеона. Похоже, постаравшись, можно
+вскарабкаться на мачту, и осмотреться сверху. Кажется, идея неплоха!
+</description>
+          <key>0</key>
+          <max_size_pass>gargantuan</max_size_pass>
+          <moving_from>1</moving_from>
+          <moving_mode_from>11</moving_mode_from>
+          <moving_mode_to>11</moving_mode_to>
+          <moving_to>1</moving_to>
+          <short_desc_from>мачте</short_desc_from>
+          <short_desc_to>мачте</short_desc_to>
+          <target>40031</target>
+        </node>
+      </extraExits>
+      <flags>no_vanish no_mob nosummon</flags>
+      <name>На палубе у грот-мачты</name>
+      <sector>inside</sector>
+    </node>
+    <node name="40004">
+      <description>Ты стоишь на открытом участке палубы. 
+Под ногами располагается решетчатый деревянный люк, ведущий
+в трюм. Если хочешь спуститься - сперва открой его: {hc{yоткрыть вниз{x ({hc{yopen down{x).
+Палуба продолжается на {yсевер{x. На {yюге{x - вход в небольшую часовню.
+</description>
       <flags>no_vanish no_mob nosummon</flags>
       <name>На палубе</name>
       <sector>inside</sector>
     </node>
-    <node name="40004">
-      <description>Ты стоишь на открытом участке палубы. Ветер раздувает паруса и  швыряет соленые
-брызги тебе в лицо. Под ногами располагается решетчатый деревянный люк, ведущий
-в трюм. Если хочешь спуститься - сперва открой его: {hc{yоткрыть вниз{x ({hc{yopen down{x).
-Палуба продолжается на север. На юге - вход в небольшую часовню.
+    <node name="40005">
+      <description>Ты стоишь  на верхней  палубе у  бакборта -  левого борта  галеона. Перегнувшись
+через фальшборт, ты сможешь полюбоваться, как волны и стонут, и плачут, и плещут
+на  борт.  Штормтрап  (ladder) спускается  вниз к  шлюпке. Если  хочешь покинуть
+галеон - слезь по нему вниз {hc{yидти штормтрап{x ({hc{ywalk  ladder{x). Или  вернись назад,
+на {yсевер{x, в центр палубы.
 </description>
       <exits>
-        <node name="down">
-          <description>Виден решетчатый деревянный люк.
-</description>
-          <flags>isdoor closed</flags>
-          <keyword>люк trapdoor</keyword>
-          <short_descr>люк||а|у||ом|е</short_descr>
-          <target>40023</target>
-        </node>
         <node name="north">
           <key>0</key>
-          <target>40003</target>
-        </node>
-        <node name="south">
-          <target>40025</target>
-        </node>
-      </exits>
-      <flags>no_vanish nosummon</flags>
-      <name>На палубе</name>
-      <sector>inside</sector>
-    </node>
-    <node name="40005">
-      <description>Перегнувшись через перила, ты сможешь полюбоваться, как  волны бьются  о борт
-корабля. Веревочная лестница (ladder)  спускается вниз  к шлюпке.  Если хочешь
-покинуть корабль - слезь по ней вниз {hc{yидти лестница{x ({hc{ywalk ladder{x).
-Или вернись назад, на запад.
-</description>
-      <exits>
-        <node name="west">
-          <key>0</key>
-          <target>40003</target>
+          <target>40000</target>
         </node>
       </exits>
       <extraExits>
+        <node name="laddet">
+          <key>0</key>
+          <max_size_pass>tiny</max_size_pass>
+        </node>
         <node name="лестница ladder">
+          <max_size_pass>gargantuan</max_size_pass>
+          <moving_from>11</moving_from>
+          <moving_mode_from>11</moving_mode_from>
+          <moving_mode_to>11</moving_mode_to>
+          <moving_to>11</moving_to>
+          <short_desc_from>веревочной лестнице</short_desc_from>
+          <short_desc_to>веревочной лестнице</short_desc_to>
+          <target>40026</target>
+        </node>
+        <node name="штормтрап ladder">
+          <description>Веревочная лестница с деревянными балясинами опущена по наружному борту.
+</description>
           <max_size_pass>gargantuan</max_size_pass>
           <moving_from>11</moving_from>
           <moving_mode_from>11</moving_mode_from>
@@ -2546,39 +2637,72 @@ Dungeon_|                        Dryad                       |
         </node>
       </extraExits>
       <flags>no_vanish no_mob nosummon</flags>
-      <name>Возле бортика</name>
+      <name>На палубе по бакборту</name>
       <sector>inside</sector>
     </node>
     <node name="40006">
-      <description>Запахи,  доносящиеся  из-за  двери  на севере,  не  под силу  перебить даже
-морскому ветру. Однако, если ты проголодался, тебе именно туда --  другой пищи
-на корабле не водится.
+      <description>Ты стоишь на верхней палубе возле фок-мачты. Ветер раздувает паруса, заставляя
+скрипеть  мачты  и  такелаж.  Доски  палубы  стонут  в  такт  покачиванию судна.
+{yЗапад{xнее, в надстройке бака, расположен камбуз. Запахи, доносящиеся из-за двери,
+не под силу перебить  даже морскому  ветру. Однако, если ты  проголодал{Smся{Sfась{Sx, тебе
+именно туда - другой пищи на корабле не водится.
+ Также можно отправится на {yвосток{x, в центр  палубы,  или  подняться  на  палубу 
+полубака, над камбузом по трапу ({y{hcсм трап{x).  
+
 </description>
       <exits>
         <node name="east">
           <key>0</key>
-          <target>40003</target>
+          <target>40000</target>
         </node>
-        <node name="north">
+        <node name="west">
           <key>0</key>
           <target>40007</target>
         </node>
       </exits>
+      <extraExits>
+        <node name="мачта фок-мачта foremast mast">
+          <description>Похоже, постаравшись, можно вскарабкаться на мачту, и осмотреться сверху. Кажется, идея неплоха!
+</description>
+          <key>0</key>
+          <max_size_pass>gargantuan</max_size_pass>
+          <moving_from>1</moving_from>
+          <moving_mode_from>11</moving_mode_from>
+          <moving_mode_to>11</moving_mode_to>
+          <moving_to>1</moving_to>
+          <short_desc_from>мачте</short_desc_from>
+          <short_desc_to>мачте</short_desc_to>
+          <target>40029</target>
+        </node>
+        <node name="трап ladder">
+          <description>Обычный, ничем не примечательный, деревянный морской трап, ведущий на
+палубу полубака, расположенным над камбузом.
+Чтоб подняться введи {hc{yидти трап{x ({hc{ywalk ladder{x).
+</description>
+          <key>0</key>
+          <max_size_pass>gargantuan</max_size_pass>
+          <moving_mode_from>11</moving_mode_from>
+          <moving_mode_to>11</moving_mode_to>
+          <short_desc_from>трапу</short_desc_from>
+          <short_desc_to>трапу</short_desc_to>
+          <target>40024</target>
+        </node>
+      </extraExits>
       <flags>no_vanish no_mob nosummon</flags>
-      <name>Участок палубы перед кухней</name>
+      <name>Палуба у фок-мачты</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="40017"/>
       </resets>
       <sector>inside</sector>
     </node>
     <node name="40007">
-      <description>Вот главное место на всем судне! Правда,  пахнет здесь  не очень.  И кастрюли
-никто не мыл уже очень давно.  Но что-то  перекусить наверняка  найдется. Вот,
+      <description>Вот главное место на всем судне! Правда, пахнет здесь не очень. И кастрюли
+никто не мыл уже очень давно. Но что-то перекусить наверняка найдется.  Вот,
 местные тараканы и крысы находят же - значит и тебе повезет.
-Дверь на юге ведет обратно на свежий воздух.
+Дверь на {yвосток{xе ведет обратно на свежий воздух.
 </description>
       <exits>
-        <node name="south">
+        <node name="east">
           <key>0</key>
           <target>40006</target>
         </node>
@@ -2610,23 +2734,40 @@ Dungeon_|                        Dryad                       |
       <sector>inside</sector>
     </node>
     <node name="40009">
-      <description>С высоты капитанского мостика открывается вид на весь корабль и  на окружающие
-его водные просторы. Почему-то кажется, что берег уже близко. В центре мостика
-возвышается огромный штурвал. Позади  него -  дверь в  рубку. Эльф,  стоящий у
-руля, поможет тебе повысить твои  параметры в  обмен на  тренировочные сессии.
-Для этого используй команду {hc{yтренировать{x ({hc{ytrain{x). Универсалы могут выбрать
-здесь свою первую профессию, просто сказав вслух ее название.
+      <description>С высоты шканцев открывается вид  на весь  корабль и  на окружающие  его  водные
+просторы. В центре возвышается огромный штурвал. Позади него - ют, где  находится
+каюта капитана. Сбоку от входа в каюту расположен дубовый трап ({y{hcсм трап{x), вeдущий 
+на палубу полуюта. Эльф, стоящий у руля, поможет тебе повысить твои  параметры  в
+обмен на тренировочные сессии. Для этого  используй  команду  {hc{yтренировать{x ({hc{ytrain{x). 
+Универсалы могут выбрать здесь свою первую  профессию,  просто  сказав  вслух  ее
+название.
 </description>
       <exits>
         <node name="down">
           <target>40003</target>
         </node>
-        <node name="north">
+        <node name="east">
+          <key>0</key>
           <target>40010</target>
         </node>
       </exits>
+      <extraExits>
+        <node name="трап ladder">
+          <description>Деревянный трап с дубовыми перилами ведёт на палубу полуюта.
+Чтоб подняться введи {hc{yидти трап{x ({hc{ywalk ladder{x).
+
+</description>
+          <key>0</key>
+          <max_size_pass>gargantuan</max_size_pass>
+          <moving_mode_from>11</moving_mode_from>
+          <moving_mode_to>11</moving_mode_to>
+          <short_desc_from>трапу</short_desc_from>
+          <short_desc_to>трапу</short_desc_to>
+          <target>40034</target>
+        </node>
+      </extraExits>
       <flags>no_vanish nosummon</flags>
-      <name>На мостике</name>
+      <name>На шканцах</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="40005"/>
         <mob limit="1" maxHere="1" vnum="40016"/>
@@ -2641,7 +2782,8 @@ Dungeon_|                        Dryad                       |
 Используй команду {hc{yчитать буклет{x ({hc{yread booklet{x), чтобы изучить его.
 </description>
       <exits>
-        <node name="south">
+        <node name="west">
+          <key>0</key>
           <target>40009</target>
         </node>
       </exits>
@@ -2669,7 +2811,7 @@ Dungeon_|                        Dryad                       |
 </node>
       </extraDescr>
       <flags>no_vanish no_mob indoors nosummon</flags>
-      <name>Рубка</name>
+      <name>Каюта Капитана</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="40001"/>
         <drop vnum="40012"/>
@@ -2693,15 +2835,16 @@ Dungeon_|                        Dryad                       |
 изделий свисает с потолка. Выглядело бы уютно, если бы  не тряпье  и храпящие
 матросы, набросанные сверху. По одному взгляду на гамак становится понятно,
 как обращаться с ним и с мебелью вообще, так что {hc{yсм гамак{x ({hc{ylook hammock{x)!
-На юге ты можешь вернуться в другие помещения трюма.
+Единственный выход на восток.
 </description>
       <exits>
-        <node name="south">
-          <target>40022</target>
+        <node name="east">
+          <key>0</key>
+          <target>40020</target>
         </node>
       </exits>
       <flags>no_vanish no_mob indoors nosummon</flags>
-      <name>В трюме у гамаков</name>
+      <name>В кубрике у гамаков</name>
       <resets>
         <drop vnum="40001"/>
       </resets>
@@ -2720,13 +2863,13 @@ Dungeon_|                        Dryad                       |
 ({yprac {Dумение&gt;{x), чтобы практиковаться. Например, {yпрак кинжал{x ({ypra dagger{x).
 </description>
       <exits>
-        <node name="north">
+        <node name="east">
           <key>0</key>
-          <target>40022</target>
+          <target>40013</target>
         </node>
-        <node name="south">
+        <node name="west">
           <key>0</key>
-          <target>40014</target>
+          <target>40020</target>
         </node>
       </exits>
       <flags>no_vanish no_mob indoors nosummon</flags>
@@ -2747,14 +2890,19 @@ Dungeon_|                        Dryad                       |
 или {hc{yзаклинания{x ({hc{yspells{x), чтобы увидеть доступные тебе заклинания,
 и {yпрак {Dзаклинание{x ({yprac {Dзаклинание{x), чтобы практиковаться.
 Например, {yпрак волшеб{x ({yprac magic{x).
-Небольшая лестница ведет вверх в часовню.
+Трапы ведут {yвверх{x в часовню и {yвниз{x в трюм.
 </description>
       <exits>
-        <node name="north">
-          <target>40023</target>
+        <node name="down">
+          <key>0</key>
+          <target>40022</target>
         </node>
         <node name="up">
           <target>40025</target>
+        </node>
+        <node name="west">
+          <key>0</key>
+          <target>40012</target>
         </node>
       </exits>
       <flags>no_vanish no_mob indoors nosummon</flags>
@@ -2770,48 +2918,55 @@ Dungeon_|                        Dryad                       |
       <description>Ты находишься в помещении трюма, сыром и тусклом.  Доски пола  просмолены на
 тяп-ляп, кое-где даже образовались лужицы. Желтоватый свет твоего факела едва
 разгоняет  окружающий сумрак.  Здесь бегает  всякая живность,  можешь оценить
-свои силы: {yшансы {Dжертва{x ({yconsider {Dжертва{x) и поохотиться: {yубить {Dжертва{x
+свои  силы:  {yшансы {Dжертва{x  ({yconsider {Dжертва{x)  и   поохотиться:   {yубить {Dжертва{x
 ({ykill {Dжертва{x). Если бой окажется не в твою пользу - убегай: {hc{yсбежать{x ({hc{yflee{x).
-Но сперва тебе нужно потренироваться и научиться владеть оружием. В этом тебе
-поможет вояка Эткин, его арсенал лежит к северу отсюда. Трюм продолжается на
-юг, запад и восток.
+Но будь осторожен, некоторые твари агрессивны и нападут на тебя как только ты
+подойдешь достаточно близко.
+Но перед тем как сражаться тебе нужно  потренироваться  и  научиться  владеть
+оружием. Если ты этого еще не сделал, в этом тебе  поможет  вояка  Эткин.  Ты
+можешь найти его арсенал на палубе выше, подняться на которую можно по  трапу
+на востоке. Трюм продолжается во всех направлениях.
 </description>
       <exits>
         <node name="east">
-          <target>40015</target>
+          <key>0</key>
+          <target>40022</target>
         </node>
         <node name="north">
           <key>0</key>
-          <target>40012</target>
+          <target>40015</target>
         </node>
         <node name="south">
           <key>0</key>
-          <target>40018</target>
-        </node>
-        <node name="west">
           <target>40016</target>
         </node>
-      </exits>
-      <flags>no_vanish no_mob indoors nosummon</flags>
-      <name>В самом центре</name>
-      <sector>inside</sector>
-    </node>
-    <node name="40015">
-      <description>Ты находишься в помещении трюма, сыром и тусклом.  Доски пола  просмолены на
-тяп-ляп, под ногами хлюпает вода. Желтоватый свет твоего факела едва разгоняет
-окружающий сумрак. Здесь ты можешь поохотиться на мух и другую живность,
-например, {hc{yубить муха{x ({hc{ykill fly{x). 
-</description>
-      <exits>
-        <node name="south">
-          <target>40019</target>
-        </node>
         <node name="west">
-          <target>40014</target>
+          <key>0</key>
+          <target>40018</target>
         </node>
       </exits>
       <flags>no_vanish no_mob indoors nosummon</flags>
       <name>В трюме</name>
+      <sector>inside</sector>
+    </node>
+    <node name="40015">
+      <description>Ты находишься в помещении трюма, сыром и тусклом. Доски  пола  просмолены  на
+тяп-ляп, под ногами хлюпает вода. Желтоватый свет твоего факела едва разгоняет
+окружающий сумрак. Здесь ты  можешь  поохотиться  на  мух  и  другую  живность,
+например, {hc{yубить муха{x ({hc{ykill fly{x). 
+</description>
+      <exits>
+        <node name="south">
+          <key>0</key>
+          <target>40014</target>
+        </node>
+        <node name="west">
+          <key>0</key>
+          <target>40019</target>
+        </node>
+      </exits>
+      <flags>no_vanish no_mob indoors nosummon</flags>
+      <name>В трюме у правого борта</name>
       <resets>
         <mob limit="4" maxHere="1" vnum="40012"/>
         <mob limit="4" maxHere="1" vnum="40014"/>
@@ -2821,41 +2976,45 @@ Dungeon_|                        Dryad                       |
     <node name="40016">
       <description>Ты находишься в помещении трюма, сыром и тусклом.  Доски пола  просмолены на
 тяп-ляп, кое-где даже образовались лужицы. Желтоватый свет твоего факела едва
-разгоняет окружающий сумрак. Здесь ты можешь поохотиться на мух и другую живность,
-например, {hc{yубить муха{x ({hc{ykill fly{x). 
+разгоняет окружающий сумрак. Здесь ты можешь  поохотиться  на  мух  и  другую
+живность, например, {hc{yубить муха{x ({hc{ykill fly{x). 
 </description>
       <exits>
-        <node name="east">
+        <node name="north">
+          <key>0</key>
           <target>40014</target>
         </node>
-        <node name="south">
+        <node name="west">
+          <key>0</key>
           <target>40017</target>
         </node>
       </exits>
       <flags>no_vanish no_mob indoors nosummon</flags>
-      <name>В трюме</name>
+      <name>В трюме у левого борта</name>
       <resets>
         <mob limit="4" maxHere="1" vnum="40011"/>
       </resets>
       <sector>inside</sector>
     </node>
     <node name="40017">
-      <description>Ты находишься в помещении трюма, сыром и тусклом.  Доски пола  просмолены на
+      <description>Ты находишься в помещении трюма, сыром и тусклом.  Доски пола  просмолены  на
 тяп-ляп, под ногами хлюпает вода. Желтоватый свет твоего факела едва разгоняет
-окружающий сумрак. Здесь ты можешь поохотиться на мух и другую живность,
-например, {hc{yубить муха{x ({hc{ykill fly{x). После удачной охоты, ты сможешь забрать из трупа
-врага то, что тебе понравится: {hc{yвз все труп{x ({hc{ytake all corpse{x). 
+окружающий сумрак. Здесь ты  можешь  поохотиться  на  мух  и  другую  живность,
+например, {hc{yубить муха{x ({hc{ykill fly{x). После удачной охоты, ты  сможешь  забрать  из 
+трупа врага то, что тебе понравится: {hc{yвз все труп{x ({hc{ytake all corpse{x). 
 </description>
       <exits>
         <node name="east">
-          <target>40018</target>
+          <key>0</key>
+          <target>40016</target>
         </node>
         <node name="north">
-          <target>40016</target>
+          <key>0</key>
+          <target>40018</target>
         </node>
       </exits>
       <flags>no_vanish no_mob indoors nosummon</flags>
-      <name>В трюме</name>
+      <name>В трюме у левого борта</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="40015"/>
         <give vnum="40015"/>
@@ -2866,46 +3025,51 @@ Dungeon_|                        Dryad                       |
     <node name="40018">
       <description>Ты находишься в помещении трюма, сыром и тусклом.  Доски пола  просмолены на
 тяп-ляп, кое-где даже образовались лужицы. Желтоватый свет твоего факела едва
-разгоняет окружающий сумрак. Здесь ты можешь поохотиться на мух и другую живность,
-например, {hc{yубить муха{x ({hc{ykill fly{x). 
+разгоняет окружающий сумрак. Здесь ты можешь  поохотиться  на  мух  и  другую
+живность, например, {hc{yубить муха{x ({hc{ykill fly{x). 
 </description>
       <exits>
         <node name="east">
-          <target>40019</target>
-        </node>
-        <node name="north">
+          <key>0</key>
           <target>40014</target>
         </node>
+        <node name="north">
+          <key>0</key>
+          <target>40019</target>
+        </node>
         <node name="south">
-          <target>40023</target>
+          <target>40017</target>
         </node>
         <node name="west">
-          <target>40017</target>
+          <key>0</key>
+          <target>40021</target>
         </node>
       </exits>
       <flags>no_vanish no_mob indoors nosummon</flags>
-      <name>В трюме</name>
+      <name>В самом центре трюма</name>
       <resets>
         <mob limit="4" maxHere="1" vnum="40011"/>
       </resets>
       <sector>inside</sector>
     </node>
     <node name="40019">
-      <description>Ты находишься в помещении трюма, сыром и тусклом.  Доски пола  просмолены на
+      <description>Ты находишься в помещении трюма, сыром и тусклом.  Доски пола  просмолены  на
 тяп-ляп, под ногами хлюпает вода. Желтоватый свет твоего факела едва разгоняет
-окружающий сумрак. Здесь ты можешь поохотиться на мух и другую живность,
+окружающий сумрак. Здесь ты  можешь  поохотиться  на  мух  и  другую  живность,
 например, {hc{yубить муха{x ({hc{ykill fly{x). 
 </description>
       <exits>
-        <node name="north">
+        <node name="east">
+          <key>0</key>
           <target>40015</target>
         </node>
-        <node name="west">
+        <node name="south">
+          <key>0</key>
           <target>40018</target>
         </node>
       </exits>
       <flags>no_vanish no_mob indoors nosummon</flags>
-      <name>В трюме</name>
+      <name>В трюме у правого борта</name>
       <resets>
         <mob limit="4" maxHere="1" vnum="40014"/>
         <mob limit="2" maxHere="1" vnum="40013"/>
@@ -2913,23 +3077,39 @@ Dungeon_|                        Dryad                       |
       <sector>inside</sector>
     </node>
     <node name="40020">
-      <description>Эта часть трюма захламлена больше остальных. Разнообразные ящики, коробки, тюки
-сложены стопками. Проходы между ними образуют запутанный лабиринт. Несколько
-мешков и ящиков валяется прямо на полу, и ты можешь порыться в них, пока никто
-не видит. Посмотри на ящик: {hc{yсм ящик{x ({hc{ylook crate{x), чтобы узнать, как это
-делается. Узкий проход между двумя рядами коробок позволяет пробраться дальше
-на восток, а на западе можно вернуться ко входу в трюм.
+      <description>Ты находишься в кубрике, жилом помещении команды. Повсюду  стоят  рундуки,  и 
+навалены мешки с простым матросским скарбом. Можешь порыться в них, пока никто
+не видит. Посмотри на рундук: {hc{yсм рундук{x ({hc{ylook locker{x), чтобы узнать,  как  это
+делается. На западе ты видишь  несколько  гамаков,  в  которых  возможно  тебе 
+удасться выспаться. На востоке судовой арсенал, где у  Эткина  можно  улучшить 
+свои боевые навыки.
+ На полу деревянная решетка, которую можно открыть и попасть в трюм.
 </description>
       <exits>
+        <node name="down">
+          <description>На полу деревянная решетка, закрывающая люк, через который можно попасть в трюм.
+</description>
+          <flags>isdoor closed</flags>
+          <key>0</key>
+          <keyword>люк trapdoor</keyword>
+          <short_descr>люк||а|у||ом|е</short_descr>
+          <target>40021</target>
+        </node>
         <node name="east">
-          <target>40027</target>
+          <key>0</key>
+          <target>40012</target>
+        </node>
+        <node name="up">
+          <key>0</key>
+          <target>40000</target>
         </node>
         <node name="west">
-          <target>40022</target>
+          <key>0</key>
+          <target>40011</target>
         </node>
       </exits>
       <flags>no_vanish no_mob indoors nosummon</flags>
-      <name>В трюме возле ящиков</name>
+      <name>В кубрике у рундуков</name>
       <resets>
         <drop vnum="40009"/>
         <put in="40007" limit="1" maxHere="1" vnum="40008"/>
@@ -2940,15 +3120,33 @@ Dungeon_|                        Dryad                       |
       <sector>inside</sector>
     </node>
     <node name="40021">
-      <description>Возле стены ты замечаешь несколько  пузатых бочек.  Вряд ли  в них  вода.. Если
+      <description>Возле стены ты замечаешь несколько  пузатых бочек.  Вряд ли  в них  вода... Если
 хочешь проверить - просто выпей: {hc{yпить бочка{x ({hc{ydrink barrel{x). Если ты
-предусмотрительно захватил с собой флягу или другую емкость, можешь наполнить
-ее из бочки: {hc{yнаполнить фляга бочка{x ({hc{yfill flask barrel{x). А не понравится -
+предусмотрительно захватил с собой флягу или  другую  емкость,  можешь  наполнить
+ее  из  бочки:  {hc{yнаполнить фляга бочка{x  ({hc{yfill flask barrel{x).  А  не   понравится -
 выльешь: {hc{yвылить фляга{x ({hc{ypour flask out{x).
+ Трап ведёт вверх к люку закрытому деревянной решёткой. Если  хочешь  подняться -
+сперва открой его: {hc{yоткрыть люк{x ({hc{yopen trapdoor{x) или {hc{yоткрыть вверх{x ({hc{yopen up{x).
+ Основное помещение трюма расположено на востоке, но ты можешь протиснуться между
+тюками, ящиками и бочками на запад.
 </description>
       <exits>
         <node name="east">
-          <target>40022</target>
+          <key>0</key>
+          <target>40018</target>
+        </node>
+        <node name="up">
+          <description>Виден люк закрывающийся деревянной решёткой.
+</description>
+          <flags>isdoor closed</flags>
+          <key>0</key>
+          <keyword>люк trapdoor</keyword>
+          <short_descr>люк||а|у||ом|е</short_descr>
+          <target>40020</target>
+        </node>
+        <node name="west">
+          <key>0</key>
+          <target>40027</target>
         </node>
       </exits>
       <flags>no_vanish no_mob indoors nosummon</flags>
@@ -2960,84 +3158,99 @@ Dungeon_|                        Dryad                       |
       <sector>inside</sector>
     </node>
     <node name="40022">
-      <description>Спустившись по деревянной лесенке, ты попадаешь в помещение  трюма. Кажется,
-оно довольно  обширное, но  тебе виден  только маленький  кусочек, освещенный
-сверху люком. Отсюда ты можешь идти на все четыре стороны, или подняться
-обратно на палубу. Для  путешествия  по  темным помещениям  тебе понадобится
-факел, который висит на стене. Возьми его: {hc{yвзять факел{x ({hc{ytake torch{x) и зажги:
-{hc{yнадеть факел{x ({hc{ywear torch{x).
+      <description>Спустившись по деревянному трапу, ты попадаешь в трюм. Кажется,  он  довольно 
+обширный, но тебе виден только  маленький  кусочек,  освещенный  сверху  люком.
+Вокруг расставлены ящики и бочки, сквозь которые  ты  можешь  протиснуться  на
+запад. Или можешь воспользоваться трапом и подняться на верхние палубы.
+ Для путешествия по темным помещениям тебе понадобится факел, который висит на 
+стене. Возьми его: {hc{yвзять факел{x ({hc{ytake torch{x) и зажги: {hc{yнадеть факел{x ({hc{ywear torch{x).
 </description>
       <exits>
-        <node name="east">
-          <target>40020</target>
-        </node>
-        <node name="north">
-          <target>40011</target>
-        </node>
-        <node name="south">
-          <key>0</key>
-          <target>40012</target>
-        </node>
         <node name="up">
           <description>Видна палуба.
 </description>
-          <target>40000</target>
+          <target>40013</target>
         </node>
         <node name="west">
-          <target>40021</target>
+          <target>40014</target>
         </node>
       </exits>
       <flags>no_vanish indoors nosummon</flags>
-      <name>В трюме</name>
+      <name>В трюме у трапа</name>
       <resets>
         <drop vnum="40010"/>
       </resets>
       <sector>inside</sector>
     </node>
     <node name="40023">
-      <description>Спустившись по деревянной лесенке, ты попадаешь в помещение  трюма. Кажется,
-оно довольно  обширное, но  тебе виден  только маленький  кусочек, освещенный
-сверху люком. Небольшая дверка ведет в лазарет.
+      <description>Ты стоишь на деревянном решетчатом настиле, разделенным на две  части
+бушпритом, выступающим вперед из носа галеона. Под деревянной решеткой
+ты видишь море. Брызги морские волн, разбиваемых носом корабля,  то  и 
+дело окатывающих тебя с ног до  головы,  кажется, летят со всех сторон. 
+Не хотелось бы тебе оказаться  здесь  в  шторм, когда гальюн, зачастую, 
+полностью ныряет под воду. 
+ Можешь отправиться по бушприту на запад, или вернуться на  восток  на
+палубу.
 </description>
       <exits>
-        <node name="north">
-          <target>40018</target>
+        <node name="east">
+          <key>0</key>
+          <target>40024</target>
         </node>
-        <node name="south">
-          <description>За этой дверью располагается лазарет.
-</description>
-          <target>40013</target>
-        </node>
-        <node name="up">
-          <description>Видна палуба.
-</description>
-          <target>40004</target>
+        <node name="west">
+          <key>0</key>
+          <target>40033</target>
         </node>
       </exits>
-      <flags>no_vanish no_mob indoors nosummon</flags>
-      <name>Под люком</name>
+      <flags>no_vanish no_mob nosummon</flags>
+      <name>На гальюне</name>
       <sector>inside</sector>
     </node>
     <node name="40024">
-      <description>Перегнувшись через перила, ты сможешь полюбоваться, как  волны бьются  о борт
-корабля. Отсюда можно подняться вверх на капитанский мостик.
+      <description>Ты поднял{Smся{Sfась{Sx на полубак. Мачты остались позади. Сверху стаксели. Впереди кливера.
+Вокруг открытое море. Лучший вид на галеоне, не считая марсов  на  мачтах,  куда
+еще нужно как-то забраться. Глядя вперед,  ты  видишь  как  форштевень,  взрезая  
+волны, подымает брызги, которые то и дело летят тебе в лицо. Перед  носом  судна,
+то там,  то  тут,  из  воды  выпрыгивают  дельфины,  сопроваждая  галеон  в  его
+путешествии.
+Ты можешь спуститься по трапу (ladder) на палубу, или пройти  вперёд,  на  запад, 
+на гальюн.
 </description>
       <exits>
-        <node name="up">
-          <description>Лестница ведет на капитанский мостик.
-</description>
-          <target>40009</target>
+        <node name="down">
+          <key>0</key>
+          <target>40006</target>
+        </node>
+        <node name="west">
+          <key>0</key>
+          <target>40023</target>
         </node>
       </exits>
+      <extraExits>
+        <node name="трап ladder">
+          <description>Обычный, ничем не примечательный, деревянный морской трап, ведущий на
+палубу. Чтоб спуститься введи {hc{yидти трап{x ({hc{ywalk ladder{x).
+</description>
+          <key>0</key>
+          <max_size_pass>gargantuan</max_size_pass>
+          <moving_from>11</moving_from>
+          <moving_mode_from>11</moving_mode_from>
+          <moving_mode_to>11</moving_mode_to>
+          <moving_to>11</moving_to>
+          <short_desc_from>трап||а|у||ом|е</short_desc_from>
+          <short_desc_to>трап||а|у||ом|е</short_desc_to>
+          <target>40006</target>
+        </node>
+      </extraExits>
       <flags>no_vanish nosummon</flags>
-      <name>Возле бортика</name>
+      <name>На палубе полубака</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="40016"/>
       </resets>
       <sector>inside</sector>
     </node>
     <node name="40025">
-      <description>Здесь тихо и спокойно. Изображения святых и морских покровителей  на стенах
+      <description>Здесь тихо и спокойно. Изображения святых и морских покровителей на стенах
 мерно покачиваются в такт движению корабля. Несколько букетов  сухих цветов
 заткнуто в щели между досками. Если  ты очнешься  здесь после  смерти, твой
 труп будет лежать здесь, со всеми вещами внутри. Возьми их: {hc{yвзять  все труп{x
@@ -3045,14 +3258,16 @@ Dungeon_|                        Dryad                       |
 по лестнице {hc{yвниз{x ({hc{ydown{x) к доктору Кацману,  который обложит  тебя защитными
 заклинаниями.   Обстановка   вокруг   также   располагает  к   тому,  чтобы
 ознакомиться с самой концепцией смерти: прочти {hc{y? смерть{x.
+ Проход на запад (west) ведет обратно на палубу.
 </description>
       <exits>
         <node name="down">
           <keyword>дверь</keyword>
           <target>40013</target>
         </node>
-        <node name="north">
-          <target>40004</target>
+        <node name="west">
+          <key>0</key>
+          <target>40003</target>
         </node>
       </exits>
       <flags>no_vanish nosummon</flags>
@@ -3093,11 +3308,12 @@ Dungeon_|                        Dryad                       |
 по обе стороны от тебя. Проход ведет дальше на север.
 </description>
       <exits>
+        <node name="east">
+          <key>0</key>
+          <target>40021</target>
+        </node>
         <node name="north">
           <target>40028</target>
-        </node>
-        <node name="west">
-          <target>40020</target>
         </node>
       </exits>
       <flags>no_vanish no_mob indoors nosummon</flags>
@@ -3119,6 +3335,207 @@ Dungeon_|                        Dryad                       |
         <mob limit="-1" maxHere="1" vnum="40009"/>
         <equip to="wield" vnum="40013"/>
       </resets>
+      <sector>inside</sector>
+    </node>
+    <node name="40029">
+      <description>Приложив немало усилий и сноровки ты всё же взобрал{Smся{Sfась{Sx на мачту. Непонятно  для 
+чего тебя на нее понесло, но взглянув вниз с высоты, идея взобраться повыше уже
+не кажется тебя такой забавной. Теперь или спускайся или карабкайся дальше.
+</description>
+      <exits>
+        <node name="down">
+          <key>0</key>
+          <target>40006</target>
+        </node>
+      </exits>
+      <extraExits>
+        <node name="мачтa">
+          <key>0</key>
+          <max_size_pass>tiny</max_size_pass>
+        </node>
+        <node name="мачта фок-мачта foremast mast">
+          <description>Похоже, приложив еще немного усилий, можно подняться, выше на деревянную площадку на верхушке мачты.
+</description>
+          <key>0</key>
+          <max_size_pass>gargantuan</max_size_pass>
+          <moving_from>1</moving_from>
+          <moving_mode_from>11</moving_mode_from>
+          <moving_mode_to>11</moving_mode_to>
+          <moving_to>1</moving_to>
+          <short_desc_from>мачте</short_desc_from>
+          <short_desc_to>мачте</short_desc_to>
+          <target>40030</target>
+        </node>
+      </extraExits>
+      <flags>no_vanish no_mob nosummon</flags>
+      <name>На фок-мачте</name>
+      <sector>inside</sector>
+    </node>
+    <node name="40030">
+      <description>Ты взобрал{Smся{Sfась{Sx на марс - деревянную площадку на верхушке фок-мачты... до палубы
+лететь далеко. Ветер раздувает паруса, заставляя  скрипеть   мачты  и  такелаж. 
+Нельзя сказать, что эти звуки на такой высоте доставляют  тебе  много  радости,
+однако вид с это высоты просто потрясающий. Как говорил  классик:  &quot;Море  было 
+большое&quot;, и с марса ты видишь этот своими глазами.
+ Теперь или оставайся и любуйся, или спускайся  вниз  на  палубу,  но  влезать 
+по стеньге выше ты не собираешься - это точно.
+</description>
+      <exits>
+        <node name="down">
+          <key>0</key>
+          <target>40029</target>
+        </node>
+      </exits>
+      <flags>no_vanish no_mob nosummon</flags>
+      <name>На фор-марсе</name>
+      <sector>inside</sector>
+    </node>
+    <node name="40031">
+      <description>Приложив немало усилий и сноровки ты всё же взобрал{Smся{Sfась{Sx на мачту. Непонятно  для 
+чего тебя на нее понесло, но взглянув вниз с высоты, идея взобраться повыше уже
+не кажется тебя такой забавной. Теперь или спускайся или карабкайся дальше.
+</description>
+      <exits>
+        <node name="down">
+          <key>0</key>
+          <target>40003</target>
+        </node>
+      </exits>
+      <extraExits>
+        <node name="мачта грот-мачта mainmast mast">
+          <description>Похоже, несмотря на головокружение вызванное высотой, можно подняться повыше, на деревянную площадку на верхушке мачты.
+</description>
+          <key>0</key>
+          <max_size_pass>gargantuan</max_size_pass>
+          <moving_from>1</moving_from>
+          <moving_mode_from>11</moving_mode_from>
+          <moving_mode_to>11</moving_mode_to>
+          <moving_to>1</moving_to>
+          <short_desc_from>мачте</short_desc_from>
+          <short_desc_to>мачте</short_desc_to>
+          <target>40032</target>
+        </node>
+      </extraExits>
+      <flags>no_vanish no_mob nosummon</flags>
+      <name>На грот-мачте</name>
+      <sector>inside</sector>
+    </node>
+    <node name="40032">
+      <description>Ты взобрал{Smся{Sfась{Sx на марс - деревянную площадку на верхушке грот-мачты, главной, и
+самой высокой мачты галеона... до палубы лететь ОЧЕНЬ далеко. Ветер  раздувает
+паруса, заставляя стонать мачты и такелаж. Нельзя сказать, что  эти  звуки  на
+такой высоте  доставляют  тебе  много  радости,  однако  вид  от  сюда  просто 
+потрясающий. Сколько бы ни смотреть на  море (sea) - оно  никогда  не  надоест.
+Оно всегда разное, новое, невиданное.
+ Теперь или оставайся и любуйся, или спускайся  вниз  на  палубу,  но  влезать 
+по стеньге выше ты не собираешься - это точно.
+</description>
+      <exits>
+        <node name="down">
+          <key>0</key>
+          <target>40031</target>
+        </node>
+      </exits>
+      <extraDescr>
+        <node keyword="sea море">Сколько бы ни смотреть на море - оно никогда не надоест. Оно всегда  разное,
+новое, невиданное.
+ То оно тихое, светло-голубое, в нескольких  местах  покрытое  почти  белыми
+дорожками штиля. То оно ярко-синее, пламенное,  сверкающее.  То  оно  играет
+барашками. То под свежим ветром становится вдруг темно-индиговым, шерстяным,
+точно его гладят против ворса. То налетает буря, и оно грозно преображается.
+Штормовой ветер гонит крупную зыбь. По грифельному  небу  летают  с  криками
+чайки. Взбаламученные волны волокут и швыряют вдоль берега глянцевитое  тело
+дохлого дельфина. Резкая зелень горизонта стоит зубчатой стеной  над  бурыми
+облаками шторма. Малахитовые доски  прибоя,  размашисто  исписанные  беглыми
+зигзагами пены, с пушечным громом разбиваются о берег. Эхо звенит бронзой  в
+оглушенном воздухе. Тонкий туман брызг висит кисеей во всю громадную  высоту
+потрясенных обрывов.
+ Но главное очарование моря заключалось в какой-то тайне, которую оно всегда
+хранило в своих пространствах.
+ Разве  не  тайной  было  его  фосфорическое  свечение,  когда  в  безлунную
+солнцевую (в месяц Солнца) ночь рука, опущенная в черную теплую воду,  вдруг
+озарялась, вся осыпанная голубыми искрами?  Или  движущиеся  огни  невидимых
+судов и бледные медлительные вспышки неведомого маяка?  Или  число  песчинок,
+недоступное уму простого смертного?
+</node>
+      </extraDescr>
+      <flags>no_vanish no_mob nosummon</flags>
+      <name>На грот-марсе</name>
+      <sector>inside</sector>
+    </node>
+    <node name="40033">
+      <description>Ты прош{Smел{Sfла{Sx вперед по горизонтальному рангоутному древу, выступающее вперёд с 
+носа судна. Под бушпритом только морские волны, и ты  крепко  цепляешься  за 
+канаты  кливеров,  чтоб  не  свалиться  в  море.  Обернувшись,  ты  замечешь 
+деревянную фигуру обнаженной пышногрудой эльфийки, закрепленной под гальюном.
+В руках у эльфийки копьё, которым она как бы замахивается,  готовая  нанести 
+удар в спину дельфинам, то и дело выпрыгивающим из воды  перед  самым  носом 
+галеона.
+Единственный путь на восток, через гальюн, обратно  на  палубу.  Или  можешь
+сигануть в море.
+</description>
+      <exits>
+        <node name="east">
+          <key>0</key>
+          <target>40023</target>
+        </node>
+      </exits>
+      <flags>no_vanish no_mob nosummon</flags>
+      <name>На бушприте</name>
+      <sector>inside</sector>
+    </node>
+    <node name="40034">
+      <description>Ты стоишь на верхней палубе на корме судна, прямо над каютой  капитана.  Позади
+галеона, на голубой поверхности моря белой кипящей полосой остаётся кильватерный 
+след. Изящные чайки время от времени пикируют к нему выхватывая из воды рыбу.
+Ты  можешь  спуститься  по  трапу  на  шканцы,  или  попытаться  взобраться   по
+бизень-мачте (mizzenmast), установленной аккурат между полуютом и шканцами.
+</description>
+      <exits>
+        <node name="down">
+          <key>0</key>
+          <target>40009</target>
+        </node>
+      </exits>
+      <extraExits>
+        <node name="мачта бизень бизень-мачта mizzenmast mast">
+          <description>Самая короткая из трех мачт галеона. Похоже ты легко на нее влезешь.
+</description>
+          <key>0</key>
+          <max_size_pass>gargantuan</max_size_pass>
+          <moving_from>1</moving_from>
+          <moving_mode_from>11</moving_mode_from>
+          <moving_mode_to>11</moving_mode_to>
+          <moving_to>1</moving_to>
+          <short_desc_from>мачте</short_desc_from>
+          <short_desc_to>мачте</short_desc_to>
+          <target>40035</target>
+        </node>
+      </extraExits>
+      <flags>no_vanish no_mob nosummon</flags>
+      <name>На палубе полуюта</name>
+      <sector>inside</sector>
+    </node>
+    <node name="40035">
+      <description>Ты без остановки вскорапкал{Smся{Sfась{Sx по бизань-мачте  сразу  на  деревянную  площадку 
+марса. Хоть мачта и самая невысокая на галеоне, спрыгнуть вниз было бы  большой
+ошибкой. Где-то внизу ты видишь палубу полуюта и шканцы  с  эльфом  у  штурвала.
+Весь вид прямо по курсу закрыт от тебя парусами  грот-мачты.  Но  и  без  этого
+открывающийся вокруг вид просто потрясающий. Бескрайнее море изумрудно-голубого  
+цвета, украшенное белой пеной бурунов,  переливаясь  мириадами  золотых  бликов, 
+раскинулось до самого горизонта.
+ Можешь сидеть и любоваться морем и кильвареным следом  оставляемым  на  водной
+поверхности судном, можешь даже встретить тут рассвет, ведь это самая восточный
+марс галеона. Или можешь спуститься вниз, по мачте, на палубу.
+</description>
+      <exits>
+        <node name="down">
+          <key>0</key>
+          <target>40034</target>
+        </node>
+      </exits>
+      <flags>no_vanish no_mob nosummon</flags>
+      <name>На кройс-марсе</name>
       <sector>inside</sector>
     </node>
     <node name="40100">
@@ -3160,12 +3577,12 @@ Dungeon_|                        Dryad                       |
       <sector>city</sector>
     </node>
     <node name="40101">
-      <description>Весь причал завален множеством мешков, ящиков, коробок, бочек, рассортированных
-и готовых к погрузке. Несколько матросов довольно быстро, даже почти без матов
-и совсем без перекуров, грузят это все на корабль. Скоро отплытие. 
-Можно вернуться на запад ко входу на причал, или подняться на палубу по
-откидному трапу: {hc{yидти трап{x (или {hc{ywalk trap{x).
-Если хочешь изменить свои начальные параметры, иди на {hc{yсевер{x к лекарю.
+      <description>Весь причал завален множеством мешков, ящиков, коробок,  бочек, рассортированных
+и готовых к погрузке. Несколько матросов довольно быстро, даже почти без матов и
+совсем без перекуров, грузят это все на корабль. Скоро отплытие. Можно вернуться
+на запад ко входу на причал, или подняться на палубу  по откидному  трапу: {hc{yидти
+трап{x (или {hc{ywalk trap{x).  Если хочешь  изменить свои  начальные параметры,  иди на
+{hc{yсевер{x к лекарю.
 </description>
       <exits>
         <node name="north">

@@ -1,48 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Language>
   <beats>12</beats>
+  <cat>language</cat>
   <classes>
     <node name="other">
       <level>102</level>
       <maximum>0</maximum>
     </node>
   </classes>
-  <cat>language</cat>
-  <help id="2041" level="-1" type="LanguageHelp">{WArcadian{x ({Wаркади{x) - язык, на котором когда-то говорило копытное население Аркадии. 
-Все, что вы когда-либо хотели знать об эффектах алкоголя, но стеснялись попробовать на себе.
-
-{CДействия слов и команды{x
-
-%FMT% *%CMD%* _слово_ _сосуд_
-Слова, содержащие секрет {cпревращения воды в вино{x и {cпиво{x, произносят на
-сосуд с водой.
-
-%FMT% *%CMD%* _слово_ _сосуд_
-%FFF% *(drink,пить)* _сосуд_
-Слово с секретом {cизготовления освежающего напитка{x можно произнести на сосуд
-с вином, а затем выпить это заряженное вино, восстановив здоровье.
-
-%FMT% *%CMD%* _слово_ _сосуд_
-%FFF% *(pour,вылить)* _сосуд_ *{lEout{x* _жертва_
-Слова, содержащие секреты изготовления {cснотворного{x, {cбодрящего напитка{x
-или {cуспокоительного напитка{x, можно произнести на сосуд с вином, а затем
-вылить этот сосуд на кого-то, добившись желанного эффекта. Снотворное погрузит
-жертву в сон, бодрящий напиток - наоборот, пробудит ото сна, а успокоительное
-подействует очень умиротворяюще, заставив забыть про битвы и ярость.
-
-%FMT% *%CMD%* _слово_ _сосуд_
-%FFF% *(pour,вылить)* _сосуд_ *{lEout{x* _персонаж_
-Слово с секретом {cтолстокожести{x произносят на бочонок пива, а затем выливают
-его на себя, покрываясь {hh713защитной пленкой{x.
-
-%FMT% *%CMD%* _слово_ _сосуд_
-%FFF% *(pour,вылить)* _сосуд_ *{lEout{x*
-Слово с секретом {cвызова пивного элементала{x произносят на бочонок пива, а
-затем выливают бочонок на землю, вызывая себе в помощники пивного элементала.
-Если, конечно, в бочонке достаточно пива для формирования элементала.
-
-%SA% %H% [(ancient languages,древние языки)], {W{lRумение{lEslook{x {lRаркади{lEarcadi{x.
-</help>
   <effects>
     <node name="beer_armor" type="BeerArmorWE">
       <frequency>3</frequency>
@@ -50,6 +15,7 @@
       <meaning>толстокожест|ь|и|и|ь|ью|и</meaning>
       <minEffectiveVolume>75</minEffectiveVolume>
       <object>true</object>
+      <offensive>false</offensive>
     </node>
     <node name="beer_elemental" type="BeerElementalWE">
       <frequency>2</frequency>
@@ -57,18 +23,21 @@
       <meaning>вызов||а|у||ом|е пивного элементаля</meaning>
       <minEffectiveVolume>100</minEffectiveVolume>
       <object>true</object>
+      <offensive>false</offensive>
     </node>
     <node name="water2beer" type="WaterToBeerWE">
       <frequency>2</frequency>
       <global>true</global>
       <meaning>превращени|е|я|ю|е|ем|и воды в пиво</meaning>
       <object>true</object>
+      <offensive>false</offensive>
     </node>
     <node name="water2wine" type="WaterToWineWE">
       <frequency>2</frequency>
       <global>true</global>
       <meaning>превращени|е|я|ю|е|ем|и воды в вино</meaning>
       <object>true</object>
+      <offensive>false</offensive>
     </node>
     <node name="wine_awake" type="WineAwakeWE">
       <frequency>1</frequency>
@@ -76,6 +45,7 @@
       <meaning>изготовлени|е|я|ю|е|ем|и бодрящего напитка</meaning>
       <minEffectiveVolume>100</minEffectiveVolume>
       <object>true</object>
+      <offensive>false</offensive>
     </node>
     <node name="wine_calm" type="WineCalmWE">
       <frequency>1</frequency>
@@ -83,6 +53,7 @@
       <meaning>изготовлени|е|я|ю|е|ем|и успокоительного напитка</meaning>
       <minEffectiveVolume>100</minEffectiveVolume>
       <object>true</object>
+      <offensive>false</offensive>
     </node>
     <node name="wine_refresh" type="WineRefreshWE">
       <frequency>3</frequency>
@@ -90,6 +61,7 @@
       <meaning>изготовлени|е|я|ю|е|ем|и освежающего напитка</meaning>
       <minEffectiveVolume>0</minEffectiveVolume>
       <object>true</object>
+      <offensive>false</offensive>
     </node>
     <node name="wine_sleep" type="WineSleepWE">
       <frequency>1</frequency>
@@ -97,6 +69,7 @@
       <meaning>изготовлени|е|я|ю|е|ем|и снотворного</meaning>
       <minEffectiveVolume>100</minEffectiveVolume>
       <object>true</object>
+      <offensive>false</offensive>
     </node>
   </effects>
   <endings>
@@ -138,6 +111,41 @@
     <node>erate</node>
     <node>eran</node>
   </endings>
+  <help id="2041" level="-1" type="LanguageHelp">{WArcadian{x ({Wаркади{x) - язык, на котором когда-то говорило копытное население Аркадии. 
+Все, что вы когда-либо хотели знать об эффектах алкоголя, но стеснялись попробовать на себе.
+
+{CДействия слов и команды{x
+
+%FMT% *%CMD%* _слово_ _сосуд_
+Слова, содержащие секрет {cпревращения воды в вино{x и {cпиво{x, произносят на
+сосуд с водой.
+
+%FMT% *%CMD%* _слово_ _сосуд_
+%FFF% *(drink,пить)* _сосуд_
+Слово с секретом {cизготовления освежающего напитка{x можно произнести на сосуд
+с вином, а затем выпить это заряженное вино, восстановив здоровье.
+
+%FMT% *%CMD%* _слово_ _сосуд_
+%FFF% *(pour,вылить)* _сосуд_ *{lEout{x* _жертва_
+Слова, содержащие секреты изготовления {cснотворного{x, {cбодрящего напитка{x
+или {cуспокоительного напитка{x, можно произнести на сосуд с вином, а затем
+вылить этот сосуд на кого-то, добившись желанного эффекта. Снотворное погрузит
+жертву в сон, бодрящий напиток - наоборот, пробудит ото сна, а успокоительное
+подействует очень умиротворяюще, заставив забыть про битвы и ярость.
+
+%FMT% *%CMD%* _слово_ _сосуд_
+%FFF% *(pour,вылить)* _сосуд_ *{lEout{x* _персонаж_
+Слово с секретом {cтолстокожести{x произносят на бочонок пива, а затем выливают
+его на себя, покрываясь {hh713защитной пленкой{x.
+
+%FMT% *%CMD%* _слово_ _сосуд_
+%FFF% *(pour,вылить)* _сосуд_ *{lEout{x*
+Слово с секретом {cвызова пивного элементала{x произносят на бочонок пива, а
+затем выливают бочонок на землю, вызывая себе в помощники пивного элементала.
+Если, конечно, в бочонке достаточно пива для формирования элементала.
+
+%SA% %H% [(ancient languages,древние языки)], {W{lRумение{lEslook{x {lRаркади{lEarcadi{x.
+</help>
   <hint>изречь на аркади</hint>
   <maxAlign>1000</maxAlign>
   <minAlign>0</minAlign>

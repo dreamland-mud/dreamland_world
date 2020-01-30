@@ -1,13 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Language>
   <beats>12</beats>
+  <cat>language</cat>
   <classes>
     <node name="other">
       <level>102</level>
       <maximum>0</maximum>
     </node>
   </classes>
-  <cat>language</cat>
+  <effects>
+    <node name="accuracy" type="AccuracyWE">
+      <frequency>2</frequency>
+      <global>true</global>
+      <meaning>меткост|ь|и|и|ь|ью|и</meaning>
+      <object>false</object>
+      <offensive>false</offensive>
+    </node>
+    <node name="bless" type="BlessEquipWE">
+      <frequency>2</frequency>
+      <global>true</global>
+      <meaning>благословени|е|я|ю|е|ем|и</meaning>
+      <object>false</object>
+      <offensive>false</offensive>
+    </node>
+    <node name="good" type="GoodSpellWE">
+      <frequency>3</frequency>
+      <global>true</global>
+      <meaning>благост|ь|и|и|ь|ью|и</meaning>
+      <object>false</object>
+      <offensive>false</offensive>
+    </node>
+    <node name="restore" type="RestoringWE">
+      <frequency>4</frequency>
+      <global>true</global>
+      <meaning>исцелени|е|я|ю|е|ем|и</meaning>
+      <object>false</object>
+      <offensive>false</offensive>
+    </node>
+    <node name="sidhe_secret" type="ResistIronWE">
+      <frequency>2</frequency>
+      <global>false</global>
+      <meaning>тайн|ое|ого|ому|ое|ым|ом знани|е|я|ю|е|ем|и Сидхов</meaning>
+      <object>false</object>
+      <offensive>false</offensive>
+    </node>
+  </effects>
   <help id="2044" level="-1" type="LanguageHelp">{WQuenia{x ({Wквенья{x) - старинное эльфийское наречие. С веками оно было вытеснено
 из разговорного обихода и превратилось в возвышенный язык стихотворений,
 песен и философских манускриптов, а затем и вовсе забылось. Воскрешенные
@@ -27,38 +64,6 @@
 
 %SA% %H% [(ancient languages,древние языки)], {W{lRумение{lEslook{x {lRквенья{lEquenia{x.
 </help>
-  <effects>
-    <node name="accuracy" type="AccuracyWE">
-      <frequency>2</frequency>
-      <global>true</global>
-      <meaning>меткост|ь|и|и|ь|ью|и</meaning>
-      <object>false</object>
-    </node>
-    <node name="bless" type="BlessEquipWE">
-      <frequency>2</frequency>
-      <global>true</global>
-      <meaning>благословени|е|я|ю|е|ем|и</meaning>
-      <object>false</object>
-    </node>
-    <node name="good" type="GoodSpellWE">
-      <frequency>3</frequency>
-      <global>true</global>
-      <meaning>благост|ь|и|и|ь|ью|и</meaning>
-      <object>false</object>
-    </node>
-    <node name="restore" type="RestoringWE">
-      <frequency>4</frequency>
-      <global>true</global>
-      <meaning>исцелени|е|я|ю|е|ем|и</meaning>
-      <object>false</object>
-    </node>
-    <node name="sidhe_secret" type="ResistIronWE">
-      <frequency>2</frequency>
-      <global>false</global>
-      <meaning>тайн|ое|ого|ому|ое|ым|ом знани|е|я|ю|е|ем|и Сидхов</meaning>
-      <object>false</object>
-    </node>
-  </effects>
   <hint>изречь на квенье</hint>
   <maxAlign>1000</maxAlign>
   <minAlign>0</minAlign>

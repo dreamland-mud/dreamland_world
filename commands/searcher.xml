@@ -2,6 +2,48 @@
 <Command>
   <cat></cat>
   <extra>keep_hide ghost</extra>
+  <help id="2125" level="106" type="CommandHelp">%FMT% *%CMD%* *all* | *armor* | *weapon* | *magic* | *pets*
+
+Сохранить базу предметов на диск, тут же делая ее доступной для поисковика на сайте.
+Автоматическое сохранение базы из мира происходит каждые 4 часа.
+
+%FMT% *%CMD%* *q* _запрос_
+Найти все предметы, удовлетворящие запросу, и вывести их в таблицу.
+
+%FMT% *%CMD%* *wq* _запрос_
+Найти всё оружие, удовлетворяющее запросу, и вывести в таблицу.
+%PAUSE%
+{CЗАПРОС{x
+Запрос - это выражение, состоящее из полей, операций и скобок. 
+
+Поля могут быть {cчисленные{x, для них работают операции сравнения {C&gt;{x, {C&gt;={x,
+{C&lt;{x, {C&lt;={x, {C={x, {C!={x.
+
+Численные поля предметов: lvl/level, hr, dr, hp, mana, move, saves/svs, armor, 
+size, age, str, int, wis, dex, con, cha, heal_gain, mana_gain, slevel {D(бонус к уровню умений){x.
+Численные поля оружия: d1 {D(value1 предмета){x, d2 {D(value2 предмета){x, ave {D(среднее повреждение){x.
+
+Для {cстроковых{x полей и {cфлагов{x работают операции сравнения и поиска 
+подстроки: {C={x, {C!={x и {C*xxx*{x, например: wear=neck или name=&quot;*нарук*&quot;:
+
+Строковые поля предметов: name, type/itemtype, extra, wear, aff, vuln, res, 
+imm, det, fenia {D(список тригеров){x, learned {D(знание каких умений и групп повышает){x, material.
+Строковые поля оружия: wclass {D(dagger, sword){x, wflags {D(vampiric, vorpal){x, damage {D(название
+повреждение, olchelp weapon_flags){x.
+
+Еще есть {cбулевое{x поле, ed, означающее, есть ли на предмете экстра-описания.
+
+Также существуют логические операции {Cand{x, {Cor{x и скобки {C({x {C){x для
+группировки логических операций, см. примеры ниже.
+
+{CПРИМЕРЫ{x
+{ysearcher q lvl&gt;0 and lvl&lt;=10 and type=drink{x - все напитки с 1го по 10й
+{ysearcher q imm!=&quot;&quot; or res!=&quot;&quot;{x - предметы, дающие иммунитет или сопротивляемость
+{ysearcher q fenia=&quot;*equip*&quot;{x - предметы с триггером onEquip, среди прочих.
+{ysearcher wq extra=&quot;*nosac*&quot; and level=100{x  - все оружие на 100м, которое нельзя жертвовать
+{ysearcher q (wear=finger or wear=waist) and dr&gt;3{x - все пояса ИЛИ кольца с damroll &gt; 3.
+{ysearcher wq lvl=1 and ed{x - всё оружие на 1й уровень с экстра-описанием
+</help>
   <hint>поиск предметов и сохранение базы на диск</hint>
   <level>106</level>
   <log>1</log>

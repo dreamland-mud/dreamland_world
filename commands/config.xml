@@ -457,15 +457,6 @@
         <bit table="config_flags">screenreader</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden nanny</extra>
-        <help id="1089" level="-1" type="CommandHelp">%FMT%  *(config,режим)* *(screenreader,скринридер)* *%YES%*|*%NO%*
-
-Включает поддержку screen readers. На данный момент в этом режиме:
-%A% не будут отображаться английские имена в скобках у предметов, лежащих на земле
-%A% не будут отображаться английские имена в скобках у мобов
-
-Также рекомендуется выключить английские подсказки имен предметов: *(config,режим)* *(objname,имяпредмета)* *%NO%*.
-%SA% %H% [(score,счет)]
-        </help>
         <hint>режим поддержки screen reader</hint>
         <msgOff>Режим поддержки screen reader выключен.</msgOff>
         <msgOn>Режим поддержки screen reader включен.</msgOn>
@@ -497,34 +488,6 @@
         <bit table="add_comm_flags">noiac</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden nanny</extra>
-        <help id="1090" level="-1" ref="notelnet telnetga" type="CommandHelp">Настройка отображения символов в зависимости от используемого терминала.
-
-%FMT%  *(config,режим)* *noiac* *%YES%*|*%NO%*
-
-Включает-выключает пересылку игроку немодифицированного текста, т.е. такого
-текста, в котором маленькие русские буквы YA в кодировке cp1251 не заменяются
-на большие YA. 
-Если всюду видишь вместо маленьких YA - большие, выключи этот режим командой 
-*(config noiac no,режим noiac нет)*.
-
-%FMT%  *(config,режим)* *notelnet* *%YES%*|*%NO%*
-
-Отключает-включает фильтр telnet на текст, приходящий от игрока, отключая тем
-самым и любые расширения телнет-протокола, такие как mccp (%H% [(compression,сжатие)]).
-Если ты набираешь одну русскую букву YA, а видишь две, выключи этот режим
-командой *(config notelnet no,режим notelnet нет)*.
-
-При игре под клиентом zMUD, чтобы нормально видеть русскую букву &quot;YA&quot;,
-оба переключателя необходимо установить в состояние &quot;ВЫКЛ.&quot;
-
-%FMT%  *(config,режим)* *telnetga* *%YES%*|*%NO%*
-
-Включает-выключает высылку специальной последовательности символов (telnet go ahead)
-после каждой строки состояния. Это необходимо для комфортной работы некоторых клиентов,
-в частности, MudLet. Также необходимо установить переключатель noiac в ВЫКЛ, а
-notelnet во ВКЛ.
-
-</help>
         <hint>не заменять IAC на большое YA при выводе текста</hint>
         <msgOff>IAC-и будут заменяться другой буквой (YA в кодировке cp1251).</msgOff>
         <msgOn>Тебе будет пересылаться немодифицированный текст.</msgOn>
@@ -539,8 +502,6 @@ notelnet во ВКЛ.
         <bit table="add_comm_flags">notelnet</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden nanny</extra>
-        <help level="-1" refby="noiac" type="CommandHelp">
-        </help>
         <hint>отключить фильтр TELNET на приходящий текст</hint>
         <msgOff>Фильтр TELNET включен.</msgOff>
         <msgOn>Фильтр TELNET отключен.</msgOn>
@@ -555,8 +516,6 @@ notelnet во ВКЛ.
         <bit table="comm_flags">telnet_ga</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden nanny</extra>
-        <help level="-1" refby="noiac" type="CommandHelp">
-        </help>
         <hint>посылать последовательность TELNET GA после строки состояния</hint>
         <msgOff>Отправка TELNET GA отключена.</msgOff>
         <msgOn>Отправка TELNET GA включена.</msgOn>
@@ -576,7 +535,7 @@ notelnet во ВКЛ.
 %FMT%  *%CMD%* _опция_ *%YES%*|*%NO%*|*(toggle,переключить)*
 Включает-выключает указанную опцию.
 
-%SA% %H% [(autolist,автонастройки)], [(brief,кратко)], [noiac], [notelnet]
+%SA% %H% [(autolist,автонастройки)], [(brief,кратко)], [noiac]
 </help>
   <hint>список всех настроек</hint>
   <name>config</name>

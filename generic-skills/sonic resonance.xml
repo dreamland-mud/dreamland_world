@@ -27,10 +27,15 @@
     <professional>true</professional>
   </mob>
   <nameRus>звуковой резонанс</nameRus>
-  <spell type="SPELL(SonicResonance)">
+  <spell type="AnatoliaCombatSpell">
     <casted>true</casted>
     <position>fight</position>
     <target>char_room</target>
     <type>offensive</type>
+    <dice>7</dice>
+    <damtype>energy</damtype>
+    <msgNotVict>Цилиндр вибрирующей энергии окружает $C4, заставляя $S резонировать.</msgNotVict>
+    <waitMin>0</waitMin>
+    <waitMax>12</waitMax>
   </spell>
 </skill>

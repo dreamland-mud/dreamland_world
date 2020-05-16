@@ -21,10 +21,16 @@
     <professional>true</professional>
   </mob>
   <nameRus>суровые силы</nameRus>
-  <spell type="SPELL(SeverityForce)">
+  <spell type="AnatoliaCombatSpell">
+    <ranged>false</ranged>
+    <savesCheck>false</savesCheck>
     <casted>true</casted>
     <position>fight</position>
     <target>char_room</target>
     <type>offensive</type>
+    <dice>18</dice>
+    <damtype>none</damtype>
+    <msgVict>$c1 призывает подземные силы, раскалывающие землю у твоих ног!</msgVict>
+    <msgChar>Ты призываешь подземные силы, раскалывающие землю у ног $C2.</msgChar>
   </spell>
 </skill>

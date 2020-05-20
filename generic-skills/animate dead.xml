@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
-    <wearoff>Магическая Сила, позволяющая оживлять трупы, возвращается к тебе.</wearoff>
+    <wearoff>Силы Тьмы и Хаоса, позволяющию оживлять трупы, возвращаются к тебе.</wearoff>
   </affect>
   <beats>12</beats>
   <classes>
@@ -34,7 +34,7 @@
   <spell type="SPELL(AnimateDead)">
     <casted>true</casted>
     <position>stand</position>
-    <target>create_mob obj_room</target>
+    <target>obj_inv obj_room</target>
     <type>none</type>
   </spell>
 </skill>

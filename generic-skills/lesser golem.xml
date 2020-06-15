@@ -13,14 +13,16 @@
   </classes>
   <dammsg></dammsg>
   <group>necromancy</group>
-  <help id="545" keyword="golems големы" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+  <help id="545" keyword="GOLEMS ГОЛЕМЫ" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
-Малый голем - самый первый голем, который учится создавать некромант.
+Малый голем -- самый базовый голем, которого учится создавать некромант.
 Это существо будет служить хозяину верой и правдой. Как и все големы, в бою он
 умеет разоружать противника и сокрушать его мощным ударом. Големы уязвимы к 
 заклинаниям и ментальным атакам, но хорошо сопротивляются ударам оружия. Яд и
 чума им не страшны. Големов, как и других призванных существ, можно одевать
 и вооружать.
+
+Одновременно некромант может контролировать не более трех малых големов.
 
 %SA% %H% [(cast,колдовать)] [(resummon,перепризыв)]
 </help>
@@ -33,14 +35,15 @@
   <nameRus>малый голем</nameRus>
   <spell type="SPELL(LesserGolem)">
     <castMobCount>1</castMobCount>
-    <casted>true</casted>
     <maxMobCount>3</maxMobCount>
     <mobVnum>21</mobVnum>
     <msgCreateAttemptArea></msgCreateAttemptArea>
     <msgCreateAttemptRoom>%^C1 пытается создать малого голема.</msgCreateAttemptRoom>
     <msgCreateAttemptSelf>Ты пытаешься создать малого голема.</msgCreateAttemptSelf>
     <msgCreateRoom>%^C1 создает малого голема!</msgCreateRoom>
+    <msgCreateRoomOne></msgCreateRoomOne>
     <msgCreateSelf>Ты создаешь малого голема!</msgCreateSelf>
+    <msgCreateSelfOne></msgCreateSelfOne>
     <msgNotRecognizeRoom>%2$^C1 отказывается повиноваться %1$C3.</msgNotRecognizeRoom>
     <msgNotRecognizeSelf>%2$^C1 отказывается повиноваться тебе.</msgNotRecognizeSelf>
     <msgReattachAttemptRoom>%1$^C1 приказывает %2$C3 вновь следовать за %1$P5.</msgReattachAttemptRoom>

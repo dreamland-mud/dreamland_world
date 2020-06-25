@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
-  <command type="SKILL(human)">
+  <command type="SKILL(unmorph)">
+    <aliases>
+        <node>human</node>
+    </aliases>
     <cat>class</cat>
-    <hint>(вампиры) принять человеческий облик</hint>
-    <name>human</name>
+    <hint>(вампиры) принять обычный облик</hint>
+    <name>unmorph</name>
     <position>fight</position>
     <russian>
-      <node>человек</node>
+      <node>невампир</node>
+      <node>человек</node>      
     </russian>
   </command>
   <dammsg></dammsg>
@@ -16,5 +20,5 @@
     <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>человеческий облик</nameRus>
+  <nameRus>обычный облик</nameRus>
 </skill>

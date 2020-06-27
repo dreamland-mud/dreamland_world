@@ -67,6 +67,7 @@ NannyState = function(ch) {
 	
 	expectSpeech = false;
 	speech = "";
+	steps = .List();
 	this.ch = ch;
 	this.mob = .tmp.nanny.archivarius;
 
@@ -101,7 +102,7 @@ NannyState = function(ch) {
 			ch.nanny = null;
 		}
 	}, this);
-	
+
 	/*
 	 * let archivarius express himself
 	 */
@@ -147,7 +148,34 @@ NannyState = function(ch) {
 	patternYes = "^да$|^yes$|^угу$|^ага$|^д$|^y$|^da$|^Д$|^Да$|^ДА$";
 	patternNo = "^no$|^нет$|^н$|^n$|^net$|^Нет$|^Н$|^НЕТ$";
 	patternEnglishName = "^[A-Za-z]+$";
-    patternRussianName = "^[Ю-Ъю-ъ]+$";
+	patternRussianName = "^[Ю-Ъю-ъ]+$";
+
+	/* 
+	 * Execute functions from a list of steps, going backwards to previous position on request.
+	 */
+	runSteps = function() {
+		var i;
+
+		for (i = 0; i < steps.size(); ) {				
+			try {
+				this.currentStep = steps.at(i);
+				this.currentStep();
+				i = i + 1;
+
+			} catch (e) {
+				if (e != "goback")
+					throw e;
+				
+				if (i == 0) 
+					say("Ты не можешь вернуться к предыдущему вопросу, мы только начали беседу!");
+				else {
+					emote("тяжко вздыхает.");
+					i = i - 1;
+				}
+			}
+		}
+	};
+
 
 	/*
 	 * waiting for character's speech
@@ -159,6 +187,11 @@ NannyState = function(ch) {
 			
 			for ( ; speech == null; )
 				yield();
+
+			// React to the "back" command if we're now running through a list of steps.
+			if (steps.size() > 0)
+				if (speech == "back" || speech == "назад")
+					throw "goback";
 
 			break;
 		}
@@ -184,6 +217,8 @@ NannyState = function(ch) {
 			
 			if (msg.match(patternNo))
 				return false;
+
+			say("Я жду от тебя ответа на мой вопрос. Просто напиши {1{yда{2 или {1{yнет{2.");
 		}
 	};
 	
@@ -198,7 +233,7 @@ NannyState = function(ch) {
 			ch.char_to_room(.get_room_index(7));
 
 		if (!ch.hasAttribute("remorting"))
-            initStranger();
+			initStranger();
 
 		ch.interpret_raw("look");
 	};
@@ -275,21 +310,26 @@ NannyState = function(ch) {
 			taskRemort();
 			taskReadMotd();
 		}
-		else {
-			taskSex();
-			taskScreenreader();
-			taskRace();
-			taskProfession();
-			taskAlignment();
-			taskEthos();
-			taskNewPassword();
-			taskRussianName();
+		else {			
+			steps.add(
+				taskSex,
+				taskScreenreader,
+				taskRace,
+				taskProfession,
+				taskAlignment,
+				taskEthos,
+				taskNewPassword,
+				taskRussianName
+			);
+			runSteps();
+			steps.clear();
+
 			taskGreetNewbie();
 			taskReadMotd();
 			ch.save();
 		}
 	};
-	
+
 	/*
 	 * remort
 	 */
@@ -297,11 +337,16 @@ NannyState = function(ch) {
 		if (!ch.hasAttribute("remorting"))
 			return;
 
-		taskRace();
-		taskProfession();
-		taskAlignment();
-		taskEthos();
-		taskRussianName();
+		steps.add(
+			taskRace,
+			taskProfession,
+			taskAlignment,
+			taskEthos,
+			taskRussianName
+		);
+		runSteps();
+		steps.clear();
+
 		taskGreetRemorted();
 		taskReadMotd();
 
@@ -314,7 +359,7 @@ NannyState = function(ch) {
 	 * greet freshly created character
 	 */
 	taskGreetNewbie = function() {
-		excl("Добро пожаловать в {CМир Мечты{x, %2$C1!");
+		excl("Добро пожаловать в {1{CМир Мечты{2, %2$C1!");
 		initCreated();
 		ch.start_room = 40100;
 		
@@ -341,7 +386,7 @@ NannyState = function(ch) {
 		ch = .nanny.load(ch);
 		ch.nanny = this;
 		ch.ptc("\r\n");
-		excl0("Добро пожаловать в {CМир Мечты{x, %2$C1!");
+		excl0("Добро пожаловать в {1{CМир Мечты{2, %2$C1!");
 		say0("Последний раз я видел тебя здесь " + ch.lastAccessTime + ".");
 	};
 	
@@ -595,11 +640,11 @@ NannyState = function(ch) {
 		if (name == null || name.size() == 0)
 			return false;
 
-        if (!name.match(patternEnglishName) && !name.match(patternRussianName)) {
-            say("Мне нравятся только имена, состоящие из русских или английских букв, без пробелов или дефисов.");
-            say("Попробуй еще раз.");
-            return false;
-        }
+		if (!name.match(patternEnglishName) && !name.match(patternRussianName)) {
+			say("Мне нравятся только имена, состоящие из русских или английских букв, без пробелов или дефисов.");
+			say("Попробуй еще раз.");
+			return false;
+		}
 			
 		if (.player_exists(name)) {
 			ch.name = .player_name(name);
@@ -613,9 +658,9 @@ NannyState = function(ch) {
 			say("Точно '" + name + "'? Ты уверен?");
 		}
 		else {
-           say("В моей книге нет записей об имени {1{G" + name + "{2.");
-           say("Если хочешь продолжить регистрацию с этим именем, напиши {1{hc{yДА{hx{2.");
-           say("Если хочешь выбрать другое имя, напиши {1{hc{yНЕТ{hx{2.");
+		   say("В моей книге нет записей об имени {1{G" + name + "{2.");
+		   say("Если хочешь продолжить регистрацию с этим именем, напиши {1{hc{yДА{hx{2.");
+		   say("Если хочешь выбрать другое имя, напиши {1{hc{yНЕТ{hx{2.");
 		}
 
 		if (!waitConfirm()) {
@@ -709,8 +754,10 @@ NannyState = function(ch) {
 	/* Ask to enable screenreader support. */
 	taskScreenreader = function() {
 		sleep(2);
-
+		say("Ты всегда можешь вернуться к предыдущему вопросу, если напишешь {1{hc{yназад{x{2.");
+		sleep(2);
 		ask("Хочешь ли ты включить поддержку скринридера (для незрячих игроков)? Напиши {1{hc{yда{hx {2или {hc{yнет{x.");
+
 		if (!waitConfirm())
 			return;
 
@@ -777,7 +824,10 @@ NannyState = function(ch) {
 		say("Рад приветствовать в нашем мире очередн%2$Gого|ого|ую "
 			"представител%2$Gя|я|ьницу племени " 
 			+ race.nameMlt.ruscase('2') + ".");
-		sleep(2);
+
+		sleep(2);	
+		say("Если ты ошиб%2$Gлось|ся|лась в выборе, напиши {1{hc{yназад{x{2 и выбери еще раз.");
+		sleep(4);
 		return true;
 	};
 	
@@ -898,6 +948,7 @@ NannyState = function(ch) {
 		sleep(2);
 		say("Итак, ты %2$^C1, " + ch.race.nameRus(ch).ruscase('1') + ", "
 			+ "профессия - " + ch.profession.nameRus.ruscase('1') + ".");
+		say("Если ты ошиб%2$Gлось|ся|лась в выборе, напиши {1{hc{yназад{x{2 и выбери еще раз.");
 		sleep(2);
 		return true;
 	};
@@ -937,7 +988,7 @@ NannyState = function(ch) {
 		say("Я вижу, что твой характер колеблется между "
 			+ ch.alignMin.ruscase('5') + " и "
 			+ ch.alignMax.ruscase('5') + ".");
-		ask("Но какой он на самом деле?");
+		ask("Но какой он на самом деле? Напиши название или номер характера.");
 		ch.ptc(.nanny.alignAllowed(ch));
 
 		for ( ; !ackAlignment(); )
@@ -973,10 +1024,12 @@ NannyState = function(ch) {
 			return;
 		}
 		
-		ask("Ты законопослушн%2$Gое|ый|ая граждан%2$Gин|ин|ка (lawful), "
-			"нейтрально относишься к закону (neutral), или в твое душе "
-			"царит хаос (chaotic)?");
-
+		ask("Каково твое отношение к законам и правилам, твой этос?");
+		ch.act("1) {hc{yзаконопослушный{x: всегда придерживаешься буквы закона");
+		ch.act("2) {hc{yнейтральный{x:     отношение к законам нейтральное и зависит от обстоятельств");
+		ch.act("3) {hc{yхаотический{x:     свобода и наплевательство на законы");		
+		say("Сделай свой выбор -- напиши название или номер этоса.");
+		
 		for ( ; !ackEthos(); )
 			;
 	};
@@ -989,19 +1042,19 @@ NannyState = function(ch) {
 		if (e == "")
 			return false;
 
-		if (e.strPrefix("lawful") || e.strPrefix("законопослушный")) {
+		if (e.strPrefix("lawful") || e.strPrefix("законопослушный") || e.strPrefix("1")) {
 			ch.ethos = .tables.ethos_table.lawful;
 			say("Ты всегда следуешь по пути закона и порядка.");
 			return true;
 		}
 		
-		if (e.strPrefix("neutral") || e.strPrefix("нейтральный")) {
+		if (e.strPrefix("neutral") || e.strPrefix("нейтральный") || e.strPrefix("2")) {
 			ch.ethos = .tables.ethos_table.neutral;
 			say("Ты нейтрально относишься к законам.");
 			return true;
 		}
 
-		if (e.strPrefix("chaos") 
+		if (e.strPrefix("chaos") || e.strPrefix("3")
 			|| e.strPrefix("chaotic")
 			|| e.strPrefix("хаотический")
 			|| e.strPrefix("хаос")) 
@@ -1076,24 +1129,22 @@ NannyState = function(ch) {
 			return;
 
 		if (ch.russianName == "") {
-			ask("Ты хочешь назвать мне русский вариант своего имени? (напиши {hc{yда{x или {hc{yнет{x)");
+			ask("Ты хочешь назвать мне русский вариант своего имени? (напиши {1{hc{yда{x{2 или {1{hc{yнет{x{2)");
 			if (!waitConfirm())
 				return;
 
 			say("Как звучит твое имя {1{G" + ch.name + "{2 в русском варианте?");
 			waitRussian();
+			say("Отлично!");
 		} 
 
 		s1 = ch.russianName;
-	    s2 = .tmp.system.inflect_name(s1, ch.sex, 2);
-	    s3 = .tmp.system.inflect_name(s1, ch.sex, 3);
-	    s4 = .tmp.system.inflect_name(s1, ch.sex, 4);
-	    s5 = .tmp.system.inflect_name(s1, ch.sex, 5);
-	    s6 = .tmp.system.inflect_name(s1, ch.sex, 6);
-	    ch.russianName = .makeShort(s1,s2,s3,s4,s5,s6);
-
-		sleep(2);
-		say("Отлично!");
+		s2 = .tmp.system.inflect_name(s1, ch.sex, 2);
+		s3 = .tmp.system.inflect_name(s1, ch.sex, 3);
+		s4 = .tmp.system.inflect_name(s1, ch.sex, 4);
+		s5 = .tmp.system.inflect_name(s1, ch.sex, 5);
+		s6 = .tmp.system.inflect_name(s1, ch.sex, 6);
+		ch.russianName = .makeShort(s1,s2,s3,s4,s5,s6);
 	};
 
 	waitRussian = function() {

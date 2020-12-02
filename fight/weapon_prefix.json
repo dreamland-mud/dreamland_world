@@ -1,12 +1,12 @@
 {
 // Префиксы, определяющие флаг оружия value4 (weapon_type2).
 "flag": [
-    {"value": "vorpal",   "price": 50, "tier": 1, "extra": "", "adjectives": ["смертельный", "стрижающий", "ворпальный"] },
+    {"value": "vorpal",   "price": 50, "tier": 1, "extra": "",      "adjectives": ["смертельный", "стрижающий", "ворпальный"] },
     {"value": "fading",   "price": 50, "tier": 2, "extra": "invis", "adjectives": ["призрачный"] },
-    {"value": "shocking", "price": 30, "tier": 2, "extra": "hum", "adjectives": ["искристый"] },
-    {"value": "flaming",  "price": 20, "tier": 3, "extra": "glow burn_proof", "adjectives": ["пылающий"] },
+    {"value": "shocking", "price": 30, "tier": 2, "extra": "hum",   "adjectives": ["искристый"] },
+    {"value": "flaming",  "price": 20, "tier": 3, "extra": "glow burn_proof", "excl": ["frost", "fading", "wood", "ice"], "adjectives": ["пылающий"] },
     {"value": "frost",    "price": 20, "tier": 3, "extra": "water_stand", "adjectives": ["леденящий", "ледяной", "морозный"] },
-    {"value": "holy",     "price": 20, "tier": 3, "extra": "bless", "adjectives": ["священный"] },
+    {"value": "holy",     "price": 20, "tier": 3, "extra": "bless",           "excl": ["poison", "vampiric"], "adjectives": ["священный"] },
     {"value": "sharp",    "price": 10, "tier": 4, "extra": "", "adjectives": ["острый"] },
     {"value": "poison",   "price": 10, "tier": 4, "extra": "", "adjectives": ["паучий", "ядовитый", "змеиный"] },
     {"value": "vampiric", "price": 10, "tier": 4, "extra": "dark", "adjectives": ["вампирский", "кровососущий"] },
@@ -15,8 +15,8 @@
 
 // Префиксы, определяющие экстра-флаги оружия (extra_flags).
 "extra": [
-    {"value": "anti_good", "price": -10, "adjectives": ["темный"]},
-    {"value": "anti_evil", "price": -10, "adjectives": ["светлый"]},
+    {"value": "anti_good", "price": -10, "excl": ["holy"], "adjectives": ["темный"]},
+    {"value": "anti_evil", "price": -10, "excl": ["vampiric", "evil"], "adjectives": ["светлый"]},
     {"value": "hum",       "price":  5,  "adjectives": ["гудящий"]},
     {"value": "evil",      "price": -5,  "adjectives": ["зловещий"]},
     {"value": "noremove",  "price": -5,  "adjectives": ["проклятый"]}

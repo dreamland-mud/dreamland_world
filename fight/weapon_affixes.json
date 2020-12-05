@@ -44,5 +44,43 @@
     {"value": "-dr",  "price": -20, "stack": 1, "step": -1 },
     {"value": "hr",   "price": 10,  "stack": 3, "step": 1, "align_bonus": "good", "nouns": ["точности"]},
     {"value": "-hr",  "price": -10, "stack": 3, "step": -1 }
+]},
+
+// Суффиксы, чья сила зависит от уровня персонажа или фиксирована, по формуле (level * mult + mod). 
+// Поле value -- из таблицы apply_flags.
+"affects_by_level": {
+  "conflictsWith": "same_value",
+  "values": [
+    {"value": "hit",   "price": 10,  "stack": 3, "mult": 0.5, "align_bonus": "good", "nouns": ["здоровья", "жизни"]},
+    {"value": "-hit",  "price": -10, "stack": 3, "mult": -0.5},
+    {"value": "mana",  "price": 10,  "stack": 3, "mult": 1, "align_bonus": "good", "nouns": ["маны", "энергии"]},
+    {"value": "-mana", "price": -10, "stack": 3, "mult": -1},
+    {"value": "saves", "price": 10,  "stack": 2, "mult": -0.2, "align_bonus": "good", "extra": "bless", "nouns": ["охраны", "спасения", "защиты"]},
+    {"value": "-saves","price": -10, "stack": 2, "mult": 0.2},
+    {"value": "ac",    "price":  5,  "stack": 2, "mult": -1, "align_bonus": "good", "nouns": ["брони"]},
+    {"value": "-ac",   "price": -5,  "stack": 2, "mult": 1},
+    {"value": "str",   "price":  5,  "stack": 2,        "mod": 2, "nouns": ["валькирий", "силы"]},
+    {"value": "-str",  "price": -5,  "stack": 2,        "mod": -2},
+    {"value": "dex",   "price":  5,  "stack": 2,        "mod": 2, "nouns": ["валькирий", "проворства"]},
+    {"value": "-dex",  "price": -5,  "stack": 2,        "mod": -2},
+    {"value": "level", "price": 40,                     "mod": 1, "nouns": ["мастерства"]}
+]},
+
+// Суффиксы аффектов, изменяющих поле affected_by. Поле value из таблицы affect_flags.
+"affects_with_bits": {
+  "values": [
+    {"value": "haste",        "price": 30, "extra": "noenchant", "nouns": ["скорости", "ускорения"]},
+    {"value": "protect_good", "price": 40, "align": [-1000,350], "align_bonus": "evil", "extra": "evil noenchant",  "conflicts": ["protect_evil"], "nouns": ["зла", "тьмы"]},
+    {"value": "protect_evil", "price": 40, "align": [-350,1000], "align_bonus": "good", "extra": "bless noenchant", "conflicts": ["protect_good"], "nouns": ["добра", "света"]}
+]},
+
+// Суффиксы аффектов, дающих бонусы к уровню умений группы. Поле value - название группы.
+"skill_group": {
+  "values": [
+    {"value": "defensive",     "price": 20, "mod": 1, "align_bonus": "good", "nouns": ["умения", "защитника"]},
+    {"value": "fightmaster",   "price": 20, "mod": 1, "align_bonus": "evil", "nouns": ["умения", "мастера поединков"]},
+    {"value": "weaponsmaster", "price": 20, "mod": 1, "align_bonus": "neutral", "nouns": ["умения", "мастера оружия"]}
 ]}
+
 }
+

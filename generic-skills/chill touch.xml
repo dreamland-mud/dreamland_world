@@ -31,7 +31,9 @@
   </classes>
   <dammsg mg="n">ледяное касание</dammsg>
   <group>combat</group>
-  <help id="610" level="-1" type="SkillHelp">Это заклинание наносит повреждения жертве, а также уменьшает ее силу.
+  <help aka="ЗАЛЕДЕНЕЙ" id="610" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
+
+Это заклинание наносит повреждения жертве, а также обмораживает, уменьшая силу.
 </help>
   <mana>15</mana>
   <mob>
@@ -41,7 +43,6 @@
   </mob>
   <nameRus>ледяное касание</nameRus>
   <spell type="SPELL(ChillTouch)">
-    <casted>true</casted>
     <position>fight</position>
     <target>char_room</target>
     <type>offensive</type>

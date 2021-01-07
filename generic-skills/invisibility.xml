@@ -27,9 +27,11 @@
   </classes>
   <dammsg></dammsg>
   <group>illusion</group>
-  <help id="607" level="-1" type="SkillHelp">Это заклинание делает цель невидимой. Невидимые существа проявляются,
-когда атакуют. Это заклинание может быть так же наложено на объекты, делая 
-их тоже невидимыми.
+  <help id="607" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%CHAR%_
+%FMT% *%SPELL%* _%OBJ%_
+
+Это заклинание делает цель невидимой. Невидимые существа проявляются, когда
+вступают в бой. Невидимость также можно временно наложить на вещи.
 </help>
   <mana>5</mana>
   <mob>
@@ -39,7 +41,6 @@
   </mob>
   <nameRus>невидимость</nameRus>
   <spell type="SPELL(Invisibility)">
-    <casted>true</casted>
     <position>stand</position>
     <target>char_room obj_inv obj_room</target>
     <type>defensive</type>

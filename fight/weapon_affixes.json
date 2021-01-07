@@ -2,26 +2,26 @@
 // Префиксы, определяющие флаг оружия value4 (weapon_type2).
 "flag": {
   "values": [
-    {"value": "vorpal",   "price": 50, "tier": 1, "extra": "", "align": [-350,1000], "align_bonus": "good", "adjectives": ["смертельн(ое,ый,ая2,ые)", "стрижающ(ее,ий1,ая1,ие)", "ворпальн(ое,ый,ая2,ые)"] },
-    {"value": "fading",   "price": 50, "conflicts": ["holy", "anti_evil", "protect_evil"], "tier": 2, "extra": "invis", "align": [-1000,350], "align_bonus": "evil", "adjectives": ["призрачн(ое,ый,ая2,ые)"] },
+    {"value": "vorpal",   "price": 50, "tier": 1, "extra": "noenchant", "align": [-349,1000], "align_bonus": "good", "adjectives": ["смертельн(ое,ый,ая2,ые)", "стрижающ(ее,ий1,ая1,ие)", "ворпальн(ое,ый,ая2,ые)"] },
+    {"value": "fading",   "price": 50, "conflicts": ["holy", "anti_evil", "protect_evil"], "tier": 2, "extra": "invis noenchant", "align": [-1000,349], "align_bonus": "evil", "adjectives": ["призрачн(ое,ый,ая2,ые)"] },
     {"value": "shocking", "price": 30, "tier": 2, "extra": "hum",   "adjectives": ["искрист(ое,ый,ая2,ые)"] },
     {"value": "flaming",  "price": 20, "tier": 3, "extra": "glow burn_proof", "align_bonus": "good", "conflicts": ["frost", "fading", "wood", "ice"], "adjectives": ["пылающ(ее,ий1,ая1,ие)"] },
     {"value": "frost",    "price": 20, "tier": 3, "extra": "water_stand", "align_bonus": "evil", "adjectives": ["леденящ(ее,ий1,ая1,ие)", "ледян(ое,ой,ая2,ые)", "морозн(ое,ый,ая2,ые)"] },
-    {"value": "holy",     "price": 20, "tier": 3, "extra": "bless", "align": [350,1000], "align_bonus": "good", "conflicts": ["poison", "vampiric"], "adjectives": ["священн(ое,ый,ая2,ые)"] },
+    {"value": "holy",     "price": 35, "tier": 3, "extra": "bless noenchant", "align": [349,1000], "align_bonus": "good", "conflicts": ["poison", "vampiric"], "adjectives": ["священн(ое,ый,ая2,ые)"] },
     {"value": "poison",   "price": 20, "tier": 4, "extra": "", "align_bonus": "evil", "adjectives": ["пауч(ье,ий2,ья,ьи)", "ядовит(ое,ый,ая2,ые)", "змеин(ое,ый,ая2,ые)"] },
-    {"value": "sharp",    "price": 10, "tier": 4, "extra": "", "adjectives": ["остр(ое,ый,ая2,ые)"] },
-    {"value": "vampiric", "price": 10, "tier": 4, "extra": "dark", "align": [-1000,350], "align_bonus": "evil", "adjectives": ["вампирск(ое,ий3,ая2,ие)", "кровососущ(ее,ий1,ая1,ие)"] },
-    {"value": "two_hands","price": -10, "tier": 5, "extra": "", "adjectives": ["двуручн(ое,ый,ая2,ые)", "больш(ое,ой,ая2,ие)", "огромн(ое,ый,ая2,ые)"] }
+    {"value": "sharp",    "price": 10, "tier": 4, "extra": "noenchant", "adjectives": ["остр(ое,ый,ая2,ые)"] },
+    {"value": "vampiric", "price": 10, "tier": 4, "extra": "dark", "align": [-1000,349], "align_bonus": "evil", "adjectives": ["вампирск(ое,ий3,ая2,ие)", "кровососущ(ее,ий1,ая1,ие)"] },
+    {"value": "two_hands","price": -10, "tier": 5, "extra": "noenchant", "adjectives": ["двуручн(ое,ый,ая2,ые)", "больш(ое,ой,ая2,ие)", "огромн(ое,ый,ая2,ые)"] }
 ]},
 
 // Префиксы, определяющие экстра-флаги оружия (extra_flags).
 "extra": {
   "values": [
-    {"value": "anti_good", "price": -10, "conflicts": ["holy", "protect_evil"], "align": [-1000,350], "adjectives": ["темн(ое,ый,ая2,ые)"]},
-    {"value": "anti_evil", "price": -10, "conflicts": ["vampiric", "evil", "protect_good"], "align": [-350,1000], "adjectives": ["светл(ое,ый,ая2,ые)"]},
+    {"value": "anti_good", "price": -10, "conflicts": ["holy", "protect_evil"], "align": [-1000,349], "extra": "dark noenchant", "adjectives": ["темн(ое,ый,ая2,ые)"]},
+    {"value": "anti_evil", "price": -10, "conflicts": ["vampiric", "evil", "protect_good"], "align": [-349,1000], "extra": "noenchant", "adjectives": ["светл(ое,ый,ая2,ые)"]},
     {"value": "hum",       "price":  5,  "adjectives": ["гудящ(ее,ий1,ая1,ие)"]},
-    {"value": "evil",      "price": -5,  "conflicts": ["holy", "anti_evil", "protect_evil"], "align": [-1000,350], "align_bonus": "evil", "adjectives": ["зловещ(ее,ий1,ая1,ие)"]},
-    {"value": "noremove",  "price": -5,  "adjectives": ["проклят(ое,ый,ая2,ые)"]}
+    {"value": "evil",      "price": -5,  "conflicts": ["holy", "anti_evil", "protect_evil"], "align": [-1000,349], "align_bonus": "evil", "extra": "noenchant", "adjectives": ["зловещ(ее,ий1,ая1,ие)"]},
+    {"value": "noremove",  "price": -5,  "extra": "noenchant", "adjectives": ["проклят(ое,ый,ая2,ые)"]}
 ]},
 
 // Префиксы, определяющие материал оружия. TODO должно задаваться через флаги и типы материалов.
@@ -31,7 +31,7 @@
     {"value": "platinum", "price": 10, "adjectives": ["платинов(ое,ый,ая2,ые)"]},
     {"value": "titanium", "price":  5, "adjectives": ["титанов(ое,ый,ая2,ые)"]},
     {"value": "wood",     "price": -5, "adjectives": ["деревянн(ое,ый,ая2,ые)"]},
-    {"value": "ice",      "price": -20,"adjectives": ["ледян(ое,ой,ая2,ые)"]}
+    {"value": "ice",      "price": -30,"adjectives": ["ледян(ое,ой,ая2,ые)"]}
 ]},
 
 // Суффиксы, которые меняют параметр оружия на 0.5-2 уровней крутости, вверх или вниз.
@@ -51,7 +51,7 @@
 "affects_by_level": {
   "conflictsWith": "same_value",
   "values": [
-    {"value": "saves", "price": 10,  "stack": 2, "mult": -0.1, "align_bonus": "good", "extra": "bless", "nouns": ["охраны", "спасения", "оберега"]},
+    {"value": "saves", "price": 15,  "stack": 2, "mult": -0.1, "align_bonus": "good", "extra": "bless", "nouns": ["охраны", "спасения", "оберега"]},
     {"value": "-saves","price": -10, "stack": 2, "mult": 0.1},
     {"value": "ac",    "price":  5,  "stack": 2, "mult": -1, "align_bonus": "good", "nouns": ["брони"]},
     {"value": "-ac",   "price": -5,  "stack": 2, "mult": 1},
@@ -95,8 +95,8 @@
 "affects_with_bits": {
   "values": [
     {"value": "haste",        "price": 40, "extra": "noenchant", "nouns": ["скорости", "ускорения"]},
-    {"value": "protect_good", "price": 40, "align": [-1000,350], "align_bonus": "evil", "extra": "evil noenchant",  "conflicts": ["protect_evil"], "nouns": ["зла", "тьмы"]},
-    {"value": "protect_evil", "price": 40, "align": [-350,1000], "align_bonus": "good", "extra": "bless noenchant", "conflicts": ["protect_good"], "nouns": ["добра", "света"]}
+    {"value": "protect_good", "price": 40, "align": [-1000,349], "align_bonus": "evil", "extra": "evil noenchant",  "conflicts": ["protect_evil"], "nouns": ["зла", "тьмы"]},
+    {"value": "protect_evil", "price": 40, "align": [-349,1000], "align_bonus": "good", "extra": "bless noenchant", "conflicts": ["protect_good"], "nouns": ["добра", "света"]}
 ]},
 
 // Суффиксы аффектов, дающих бонусы к уровню умений группы. Поле value - название группы.

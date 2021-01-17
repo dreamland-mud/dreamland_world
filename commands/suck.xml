@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<skill type="GenericSkill">
-  <command type="SKILL(suck)">
-    <cat>class</cat>
-    <hint>(вампиры) высосать кровь из шеи</hint>
-    <name>suck</name>
-    <order>player_only</order>
-    <position>stand</position>
-    <russian>
-      <node>высосать</node>      
-      <node>сосать</node>
-    </russian>
-  </command>
-  <dammsg></dammsg>
-  <help aka="BLOOD THIRST 'ПИТЬ КРОВЬ' СОСНУТЬ 'ЖАЖДА КРОВИ' ВЫСАСЫВАНИЕ ВЫСОСАТЬ" id="697" level="-1" title="Жажда крови вампиров, высасывание крови " type="SkillHelp">Вампиры не питаются обычной пищей, им незнакома жажда и голод: их терзает
+<Command>
+  <cat>class</cat>
+  <hint>(вампиры) высосать кровь из шеи</hint>
+  <name>suck</name>
+  <order>player_only</order>
+  <position>stand</position>
+  <russian>
+    <node>высосать</node>      
+    <node>сосать</node>
+  </russian>
+  <help aka="BLOOD THIRST 'ПИТЬ КРОВЬ' СОСНУТЬ 'ЖАЖДА КРОВИ' ВЫСАСЫВАНИЕ ВЫСОСАТЬ" id="697" level="-1" title="Жажда крови вампиров, высасывание крови " type="CommandHelp">Вампиры не питаются обычной пищей, им незнакома жажда и голод: их терзает
 только {rжажда крови{x. Ее можно удовлетворить, выпивая кровь из шеи жертв или
 просто убивая их.
 
@@ -31,11 +28,4 @@
 
 %SA% %H% [(touch,коснуться)], [(vampiric form,форма вампира)]
 </help>
-  <hidden>true</hidden>
-  <mob>
-    <forbidden>false</forbidden>
-    <ordered>false</ordered>
-    <professional>true</professional>
-  </mob>
-  <nameRus>высасывание</nameRus>
-</skill>
+</Command>

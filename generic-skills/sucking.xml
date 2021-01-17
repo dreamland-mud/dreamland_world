@@ -7,6 +7,7 @@
     <order>player_only</order>
     <position>stand</position>
     <russian>
+      <node>высосать</node>      
       <node>сосать</node>
     </russian>
   </command>
@@ -20,7 +21,7 @@
 {R%A% {xВ остальных случаях вампирский укус проделывает в шее жертвы две
   аккуратные дырочки, через которые можно =сосать кровь=. 
 
-%FMT% *(suck,сосать)* _жертва_
+%FMT% *(suck,высосать)* _жертва_
 
 Пить кровь из уже укушенной {hh769спящей{x жертвы. Каждый глоток утоляет жажду
 крови, однако чем меньше эта жажда, тем больше шанс разбудить жертву 
@@ -32,9 +33,9 @@
 </help>
   <hidden>true</hidden>
   <mob>
-    <forbidden>true</forbidden>
-    <ordered>true</ordered>
+    <forbidden>false</forbidden>
+    <ordered>false</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>сосание</nameRus>
+  <nameRus>высасывание</nameRus>
 </skill>

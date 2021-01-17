@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="ClanSkill">
   <affect type="DefaultAffectHandler">
-    <wearoff>Ты чувствуешь, что к тебе возвращается сила призывать.</wearoff>
+    <wearoff>Ты чувствуешь, что к тебе возвращается сила призывать ночную тень.</wearoff>
   </affect>
   <beats>12</beats>
   <clans>
@@ -16,7 +16,7 @@
   </clans>
   <dammsg></dammsg>
   <help id="953" keyword="НОЧНОЙСКИТАЛЕЦ 'НОЧНАЯ ТЕНЬ'" level="-1" type="SkillHelp">Вызывает создание тьмы тебе на помощь.
-Ночному скитальцу можно дать экипировку и приказать ее надеть, усиливая его
+Ночной тени можно дать экипировку и приказать ее надеть, усиливая ее
 боевые способности.
 </help>
   <mana>75</mana>
@@ -24,20 +24,20 @@
     <forbidden>true</forbidden>
     <ordered>false</ordered>
   </mob>
-  <nameRus>ночной скиталец</nameRus>
+  <nameRus>ночная тень</nameRus>
   <spell type="SPELL(Nightwalker)">
     <castMobCount>1</castMobCount>
     <casted>true</casted>
     <maxMobCount>1</maxMobCount>
     <mobVnum>14</mobVnum>
     <msgCreateAttemptArea></msgCreateAttemptArea>
-    <msgCreateAttemptRoom>%^C1 пытается призвать Найтволкера.</msgCreateAttemptRoom>
-    <msgCreateAttemptSelf>Ты пытаешься призвать Найтволкера.</msgCreateAttemptSelf>
-    <msgCreateRoom>Из тени к %1$C3 приходит Найтволкер!
-Найтволкер преклоняет колени перед %1$C5.</msgCreateRoom>
+    <msgCreateAttemptRoom>%^C1 пытается призвать ночную тень.</msgCreateAttemptRoom>
+    <msgCreateAttemptSelf>Ты пытаешься призвать ночную тень.</msgCreateAttemptSelf>
+    <msgCreateRoom>На помощь к %1$C3 сгущается ночная тень!
+Ночная тень преклоняет колени перед %1$C5.</msgCreateRoom>
     <msgCreateRoomOne></msgCreateRoomOne>
-    <msgCreateSelf>Из тени на твой зов приходит Найтволкер!
-Найтволкер преклоняет перед тобой колени.</msgCreateSelf>
+    <msgCreateSelf>На твой зов сгущается ночная тень!
+Ночная тень преклоняет перед тобой колени.</msgCreateSelf>
     <msgCreateSelfOne></msgCreateSelfOne>
     <msgNotRecognizeRoom>%2$^C1 смеется в лицо %1$C3.</msgNotRecognizeRoom>
     <msgNotRecognizeSelf>%2$^C1 смеется тебе в лицо.</msgNotRecognizeSelf>
@@ -45,8 +45,8 @@
     <msgReattachAttemptSelf>Повелительным жестом ты подзываешь к себе %C4.</msgReattachAttemptSelf>
     <msgReattachRoom>%2$^C1 преклоняет колени перед %1$C5.</msgReattachRoom>
     <msgReattachSelf>%^C1 преклоняет перед тобой колени.</msgReattachSelf>
-    <msgStillAffected>Твоих сил недостаточно, чтобы призвать Найтволкера.</msgStillAffected>
-    <msgTooManyMobiles>Ты не сможешь справиться с ДВУМЯ Найтволкерами!</msgTooManyMobiles>
+    <msgStillAffected>Твоих сил недостаточно, чтобы призвать ночную тень.</msgStillAffected>
+    <msgTooManyMobiles>Ты не сможешь справиться с двумя ночными тенями!</msgTooManyMobiles>
     <position>fight</position>
     <postaffectDuration>24</postaffectDuration>
     <target>create_mob</target>

@@ -2,7 +2,7 @@
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
     <cancelled>true</cancelled>
-    <dispelled>true</dispelled>    
+    <dispelled>true</dispelled>
     <wearoff>Твоя защищенность от энергетических атак понижается.</wearoff>
   </affect>
   <beats>12</beats>
@@ -15,10 +15,12 @@
   </classes>
   <dammsg></dammsg>
   <group>enhancement</group>
-  <help id="688" level="-1" type="SkillHelp">Одна из защитных молитв {hh141паладинов{x, подготавливающих его к схватке с нечистью
+  <help id="688" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+
+Одна из защитных молитв {hh141паладинов{x, подготавливающих его к схватке с нечистью
 и защищающих от специфических атак на вооружении армий Тьмы.
 
-Молитва {yустойчивости{x дарует паладину сопротивляемость к {Cэнергетическим атакам{x,
+Молитва {yустойчивости{x дарует паладину {hh101сопротивляемость{x к энергетическим атакам,
 таким как заклинания {hh90разрыва{x и {hh826призрачного кулака{x.
 </help>
   <mana>50</mana>
@@ -29,7 +31,6 @@
   </mob>
   <nameRus>устойчивость</nameRus>
   <spell type="SPELL(Resilience)">
-    <casted>true</casted>
     <position>stand</position>
     <target>char_self</target>
     <type>defensive</type>

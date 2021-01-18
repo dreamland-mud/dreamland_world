@@ -35,8 +35,10 @@
   </classes>
   <dammsg></dammsg>
   <group>enhancement</group>
-  <help id="830" keyword="ИНФРАЗРЕНИЕ 'ТЕМНОЕ ЗРЕНИЕ' 'НОЧНОЕ ЗРЕНИЕ' 'DARK VISION' 'NIGHT VISION' NIGHTVISION" level="-1" type="SkillHelp">Это заклинание позволяет цели видеть теплокровных существ в темноте и
-замечать как те выходят(заходят) из(в) комнаты.
+  <help aka="'DARK VISION' 'NIGHT VISION' NIGHTVISION ИНФРАЗРЕНИЕ 'НОЧНОЕ ЗРЕНИЕ' 'ТЕМНОЕ ЗРЕНИЕ'" id="830" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%CHAR%_
+
+Это заклинание позволяет цели видеть теплокровных существ в темноте и замечать,
+как те выходят или заходят в данную комнату.
 </help>
   <mana>5</mana>
   <mob>
@@ -47,7 +49,6 @@
   <nameRus>тепловое зрение</nameRus>
   <raceAffect>infrared</raceAffect>
   <spell type="SPELL(Infravision)">
-    <casted>true</casted>
     <position>stand</position>
     <target>char_room</target>
     <type>defensive</type>

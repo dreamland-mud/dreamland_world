@@ -2,6 +2,11 @@
 <skill type="GenericSkill">
   <beats>12</beats>
   <classes>
+    <node name="anti-paladin">
+      <level>32</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
     <node name="cleric">
       <level>32</level>
       <maximum>100</maximum>
@@ -22,11 +27,6 @@
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
-    <node name="anti-paladin">
-      <level>32</level>
-      <maximum>100</maximum>
-      <rating>1</rating>
-    </node>    
     <node name="samurai">
       <level>32</level>
       <maximum>100</maximum>
@@ -50,9 +50,10 @@
   </classes>
   <dammsg></dammsg>
   <group>transportation</group>
-  <help id="674" level="-1" type="SkillHelp">Это заклинание - аналог умению RECALL. 
-Однако срабатывает в твой родной город, только если ты не в клане.
-Если ты в клане, то заклинание переносит тебя в клановую зону.
+  <help id="674" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+
+Это заклинание -- аналог умения {hh862возврата{x, доступного всем игрокам. 
+Переносит в твой {hh29родной город{x или в {hh3кланхолл{x, если ты состоишь в клане.
 </help>
   <mana>5</mana>
   <mob>
@@ -62,7 +63,6 @@
   </mob>
   <nameRus>слово возврата</nameRus>
   <spell type="SPELL(WordOfRecall)">
-    <casted>true</casted>
     <position>rest</position>
     <target>char_self</target>
     <type>none</type>

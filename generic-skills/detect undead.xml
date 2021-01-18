@@ -2,7 +2,7 @@
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
     <cancelled>true</cancelled>
-    <dispelled>true</dispelled>    
+    <dispelled>true</dispelled>
     <wearoff>Ты перестаешь чувствовать нежить.</wearoff>
   </affect>
   <beats>12</beats>
@@ -22,14 +22,8 @@
 %SA% %H% [(control undead,подчинение нежити)]
 </help>
   <mana>5</mana>
-  <mob>
-    <forbidden>true</forbidden>
-    <ordered>false</ordered>
-    <professional>true</professional>
-  </mob>
   <nameRus>обнаружить нежить</nameRus>
   <spell type="SPELL(DetectUndead)">
-    <casted>true</casted>
     <position>stand</position>
     <target>char_self</target>
     <type>defensive</type>

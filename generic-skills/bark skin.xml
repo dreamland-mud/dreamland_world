@@ -7,11 +7,6 @@
   </affect>
   <beats>12</beats>
   <classes>
-    <node name="druid">
-      <level>33</level>
-      <maximum>100</maximum>
-      <rating>1</rating>
-    </node>
     <node name="ranger">
       <level>33</level>
       <maximum>100</maximum>
@@ -24,12 +19,11 @@
 </help>
   <mana>40</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>кора на коже</nameRus>
+  <nameRus>древесная кожа</nameRus>
   <spell type="SPELL(BarkSkin)">
+    <order>player_only</order>
     <position>stand</position>
     <target>char_self</target>
     <type>defensive</type>

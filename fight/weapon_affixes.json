@@ -2,12 +2,12 @@
 // Префиксы, определяющие флаг оружия value4 (weapon_type2).
 "flag": {
   "values": [
-    {"value": "vorpal",   "price": 50, "tier": 1, "extra": "noenchant", "align": [-349,1000], "align_bonus": "good", "adjectives": ["смертельн(ое,ый,ая2,ые)", "стрижающ(ее,ий1,ая1,ие)", "ворпальн(ое,ый,ая2,ые)"] },
-    {"value": "fading",   "price": 50, "conflicts": ["holy", "anti_evil", "protect_evil"], "tier": 2, "extra": "invis noenchant", "align": [-1000,349], "align_bonus": "evil", "adjectives": ["призрачн(ое,ый,ая2,ые)"] },
-    {"value": "shocking", "price": 30, "tier": 2, "extra": "hum",   "adjectives": ["искрист(ое,ый,ая2,ые)"] },
+    {"value": "vorpal",   "price": 60, "tier": 1, "extra": "noenchant", "align": [-349,1000], "align_bonus": "good", "adjectives": ["смертельн(ое,ый,ая2,ые)", "стрижающ(ее,ий1,ая1,ие)", "ворпальн(ое,ый,ая2,ые)"] },
+    {"value": "fading",   "price": 55, "tier": 2, "conflicts": ["holy", "anti_evil", "protect_evil"], "extra": "invis noenchant", "align": [-1000,349], "align_bonus": "evil", "adjectives": ["призрачн(ое,ый,ая2,ые)"] },
+    {"value": "shocking", "price": 35, "tier": 2, "extra": "hum",   "adjectives": ["искрист(ое,ый,ая2,ые)"] },
+    {"value": "holy",     "price": 30, "tier": 2, "extra": "bless noenchant", "align": [349,1000], "align_bonus": "good", "conflicts": ["poison", "vampiric"], "adjectives": ["священн(ое,ый,ая2,ые)"] },
     {"value": "flaming",  "price": 20, "tier": 3, "extra": "glow burn_proof", "align_bonus": "good", "conflicts": ["frost", "fading", "wood", "ice"], "adjectives": ["пылающ(ее,ий1,ая1,ие)"] },
-    {"value": "frost",    "price": 20, "tier": 3, "extra": "water_stand", "align_bonus": "evil", "adjectives": ["леденящ(ее,ий1,ая1,ие)", "ледян(ое,ой,ая2,ые)", "морозн(ое,ый,ая2,ые)"] },
-    {"value": "holy",     "price": 35, "tier": 3, "extra": "bless noenchant", "align": [349,1000], "align_bonus": "good", "conflicts": ["poison", "vampiric"], "adjectives": ["священн(ое,ый,ая2,ые)"] },
+    {"value": "frost",    "price": 25, "tier": 3, "extra": "water_stand", "align_bonus": "evil", "adjectives": ["леденящ(ее,ий1,ая1,ие)", "ледян(ое,ой,ая2,ые)", "морозн(ое,ый,ая2,ые)"] },
     {"value": "poison",   "price": 20, "tier": 4, "extra": "", "align_bonus": "evil", "adjectives": ["пауч(ье,ий2,ья,ьи)", "ядовит(ое,ый,ая2,ые)", "змеин(ое,ый,ая2,ые)"] },
     {"value": "sharp",    "price": 10, "tier": 4, "extra": "noenchant", "adjectives": ["остр(ое,ый,ая2,ые)"] },
     {"value": "vampiric", "price": 10, "tier": 4, "extra": "dark", "align": [-1000,349], "align_bonus": "evil", "adjectives": ["вампирск(ое,ий3,ая2,ие)", "кровососущ(ее,ий1,ая1,ие)"] },
@@ -31,7 +31,7 @@
     {"value": "platinum", "price": 10, "adjectives": ["платинов(ое,ый,ая2,ые)"]},
     {"value": "titanium", "price":  5, "adjectives": ["титанов(ое,ый,ая2,ые)"]},
     {"value": "wood",     "price": -5, "adjectives": ["деревянн(ое,ый,ая2,ые)"]},
-    {"value": "ice",      "price": -30,"adjectives": ["ледян(ое,ой,ая2,ые)"]}
+    {"value": "ice",      "price": -35,"adjectives": ["ледян(ое,ой,ая2,ые)"]}
 ]},
 
 // Суффиксы, которые меняют параметр оружия на 0.5-2 уровней крутости, вверх или вниз.
@@ -55,7 +55,8 @@
     {"value": "-saves","price": -10, "stack": 2, "mult": 0.1},
     {"value": "ac",    "price":  5,  "stack": 2, "mult": -1, "align_bonus": "good", "nouns": ["брони"]},
     {"value": "-ac",   "price": -5,  "stack": 2, "mult": 1},
-    {"value": "level", "price": 40,  "mod": 1, "nouns": ["мастерства"]}
+    {"value": "slevel", "price": 35,  "mod": 1, "nouns": ["колдовства"]},    
+    {"value": "level", "price": 50,  "mod": 1, "nouns": ["мастерства"]}
 ]},
 
 // Наборы аффиксов, идущие парами или тройками.
@@ -96,6 +97,7 @@
   "values": [
     {"value": "haste",        "price": 40, "extra": "noenchant", "nouns": ["скорости", "ускорения"]},
     {"value": "protect_good", "price": 40, "align": [-1000,349], "align_bonus": "evil", "extra": "evil noenchant",  "conflicts": ["protect_evil"], "nouns": ["зла", "тьмы"]},
+    {"value": "regeneration", "price": 30, "extra": "noenchant", "nouns": ["регенерации", "троллей"]},
     {"value": "protect_evil", "price": 40, "align": [-349,1000], "align_bonus": "good", "extra": "bless noenchant", "conflicts": ["protect_good"], "nouns": ["добра", "света"]}
 ]},
 
@@ -104,6 +106,10 @@
   "values": [
     {"value": "defensive",     "price": 30, "mod": 1, "align_bonus": "good", "nouns": ["защитника"]},
     {"value": "fightmaster",   "price": 30, "mod": 1, "align_bonus": "evil", "nouns": ["дуэлянта"]},
+    {"value": "adventure",     "price": 20, "mod": 1, "nouns": ["приключенца"]},
+    {"value": "arcane",        "price": 15, "mod": 1, "nouns": ["артефактов"]},
+    {"value": "maladictions",  "price": 30, "mod": 1, "align_bonus": "evil", "nouns": ["проклятий"]},
+    {"value": "benedictions",  "price": 30, "mod": 1, "align_bonus": "good", "nouns": ["благости"]},    
     {"value": "weaponsmaster", "price": 20, "mod": 1, "align_bonus": "neutral", "nouns": ["оружейника"]}
 ]},
 

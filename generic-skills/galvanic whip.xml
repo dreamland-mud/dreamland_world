@@ -9,7 +9,7 @@
     </node>
   </classes>
   <dammsg>гальванический хлыст</dammsg>
-  <group>combat</group>
+  <group registry="skillGroup">combat</group>
   <help id="2024" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
 Слабое боевое заклинание, наносящее жертве урон хлестким ударом ионизированных
@@ -23,6 +23,7 @@
   <spell type="AnatoliaCombatSpell">
     <damtype>lightning</damtype>
     <dice>7</dice>
+    <flags>magic</flags>
     <msgNotVict>$c1 заклинает хлыст ионизированных частиц, который яростно хлещет $C4.</msgNotVict>
     <position>fight</position>
     <target>char_room</target>

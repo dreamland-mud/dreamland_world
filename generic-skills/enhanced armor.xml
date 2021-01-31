@@ -30,7 +30,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>protective</group>
+  <group registry="skillGroup">protective</group>
   <help id="605" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 %FFF% *%SPELL%* _%CHAR%_
 
@@ -46,6 +46,8 @@
   </mob>
   <nameRus>улучшенная броня</nameRus>
   <spell type="SPELL(EnhancedArmor)">
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <position>stand</position>
     <target>char_room</target>
     <type>defensive</type>

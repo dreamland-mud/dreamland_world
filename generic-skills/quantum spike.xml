@@ -9,7 +9,7 @@
     </node>
   </classes>
   <dammsg mg="p">квантовые шипы</dammsg>
-  <group>combat</group>
+  <group registry="skillGroup">combat</group>
   <help id="691" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
 Это боевое заклинание ведьм поражает жертву разрядом молнии. Повреждения
@@ -26,6 +26,7 @@
   <spell type="AnatoliaCombatSpell">
     <damtype>lightning</damtype>
     <dice>9</dice>
+    <flags>magic</flags>
     <msgNotVict>Кажется, будто $C1 распадается на мельчайшие несвязанные частицы и вновь мучительно собирается воедино.</msgNotVict>
     <position>fight</position>
     <target>char_room</target>

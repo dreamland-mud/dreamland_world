@@ -21,7 +21,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>maladictions</group>
+  <group registry="skillGroup">maladictions</group>
   <help id="622" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
 Это заклинание позволяет заполнить местность летаргическим туманом, который, при
@@ -31,6 +31,8 @@
   <mana>200</mana>
   <nameRus>летаргический туман</nameRus>
   <spell type="SPELL(LethargicMist)">
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <position>stand</position>
     <target>room</target>
     <type>offensive</type>

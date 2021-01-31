@@ -30,7 +30,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>enhancement</group>
+  <group registry="skillGroup">enhancement</group>
   <help aka="'ЗАЩИТА ОТ СИЛ ЗЛА'" id="779" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
 Эта мощная аура на четверть снижает почти любые повреждения от злых персонажей
@@ -44,6 +44,8 @@
   </mob>
   <nameRus>защита от зла</nameRus>
   <spell type="SPELL(ProtectionEvil)">
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <position>stand</position>
     <target>char_self</target>
     <type>defensive</type>

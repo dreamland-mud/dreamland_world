@@ -14,7 +14,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>enhancement</group>
+  <group registry="skillGroup">enhancement</group>
   <help id="567" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
 Одна из защитных молитв {hh141паладинов{x, подготавливающих его к схватке с нечистью
@@ -30,6 +30,8 @@
   </mob>
   <nameRus>сила духа</nameRus>
   <spell type="SPELL(Fortitude)">
+    <damtype>none</damtype>
+    <flags>prayer</flags>
     <position>stand</position>
     <target>char_self</target>
     <type>defensive</type>

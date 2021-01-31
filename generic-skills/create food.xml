@@ -29,7 +29,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>creation</group>
+  <group registry="skillGroup">creation</group>
   <help id="581" keyword="'СОТВОРИТЬ ЕДУ' 'МАГИЧЕСКИЙ ГРИБ' 'МАННА НЕБЕСНАЯ'" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
 Это умение создает пищу из энергии твоего персонажа.
@@ -48,6 +48,8 @@
   </mob>
   <nameRus>сотворить пищу</nameRus>
   <spell type="SPELL(CreateFood)">
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <position>stand</position>
     <target>create_obj</target>
     <type>none</type>

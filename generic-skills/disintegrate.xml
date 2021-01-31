@@ -9,7 +9,7 @@
     </node>
   </classes>
   <dammsg>разрушающий световой луч</dammsg>
-  <group>suddendeath</group>
+  <group registry="skillGroup">suddendeath</group>
   <help id="791" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
 Самые опытные колдуны могут испепелить противника и все его вещи одним
@@ -18,6 +18,8 @@
   <mana>500</mana>
   <nameRus>дезинтеграция</nameRus>
   <spell type="SPELL(Disintegrate)">
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <position>stand</position>
     <target>char_room</target>
     <type>offensive</type>

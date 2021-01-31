@@ -16,7 +16,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>maladictions</group>
+  <group registry="skillGroup">maladictions</group>
   <help aka="'ПРОКЛЯСТЬ ЗЕМЛЮ'" id="855" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
 Это заклинание позволяет проклясть определенную комнату, предотвращая
@@ -25,6 +25,8 @@
   <mana>200</mana>
   <nameRus>проклятые земли</nameRus>
   <spell type="SPELL(CursedLands)">
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <position>stand</position>
     <target>room</target>
     <type>offensive</type>

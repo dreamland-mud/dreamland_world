@@ -9,7 +9,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>benedictions</group>
+  <group registry="skillGroup">benedictions</group>
   <help id="794" level="-1" type="SkillHelp">Всякой нечисти (големам, андедам) следует быть на чеку - паладин может
 причинить ей серьезный вред и обратить в бегство, начертив в воздухе
 священный символ (заклинание &apos;{yturn undead{x&apos;), либо вообще стереть с
@@ -21,6 +21,8 @@
   </mob>
   <nameRus>изгнать нечисть</nameRus>
   <spell type="SPELL(Banishment)">
+    <damtype>none</damtype>
+    <flags>prayer</flags>
     <position>fight</position>
     <target>char_room</target>
     <type>offensive</type>

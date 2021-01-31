@@ -19,7 +19,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>curative</group>
+  <group registry="skillGroup">curative</group>
   <help id="747" keyword="ПРОТИВОЯДИЕ АНТИДОТ" level="-1" type="SkillHelp">Эта молитва выводит яд из организма больного.
 
 Услуги лечения ядов также предоставляют {hh1365лекари{x.
@@ -30,6 +30,8 @@
   </mob>
   <nameRus>лечить яд</nameRus>
   <spell type="SPELL(CurePoison)">
+    <damtype>none</damtype>
+    <flags>prayer</flags>
     <position>stand</position>
     <target>char_room</target>
     <type>defensive</type>

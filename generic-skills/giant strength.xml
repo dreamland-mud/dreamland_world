@@ -36,7 +36,7 @@
     <position>dead</position>
   </command>
   <dammsg></dammsg>
-  <group>enhancement</group>
+  <group registry="skillGroup">enhancement</group>
   <help aka="ГИГСИЛА" id="589" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%CHAR%_
 
 Заклинание, увеличивающее {hh39силу{x персонажа.
@@ -49,6 +49,8 @@
   </mob>
   <nameRus>гигантская сила</nameRus>
   <spell type="SPELL(GiantStrength)">
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <position>stand</position>
     <target>char_room</target>
     <type>defensive</type>

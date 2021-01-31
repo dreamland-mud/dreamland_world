@@ -24,7 +24,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>healing</group>
+  <group registry="skillGroup">healing</group>
   <help id="544" level="-1" type="SkillHelp">%FMT% *%SPELL%* 
 %FMT% *%SPELL%* _%CHAR%_
 
@@ -40,6 +40,8 @@
   </mob>
   <nameRus>лечить критические раны</nameRus>
   <spell type="SPELL(CureCritical)">
+    <damtype>none</damtype>
+    <flags>prayer</flags>
     <position>fight</position>
     <target>char_room</target>
     <type>defensive</type>

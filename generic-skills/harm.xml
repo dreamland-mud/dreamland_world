@@ -14,7 +14,7 @@
     </node>
   </classes>
   <dammsg mg="n">заклинание вреда</dammsg>
-  <group>attack</group>
+  <group registry="skillGroup">attack</group>
   <help id="724" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
 Эта молитва нанесет серьезный вред здоровью жертвы. Чем больше у жертвы
@@ -30,6 +30,8 @@
   </mob>
   <nameRus>вред</nameRus>
   <spell type="SPELL(Harm)">
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <position>fight</position>
     <target>char_room</target>
     <type>offensive</type>

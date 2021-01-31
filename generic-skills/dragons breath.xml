@@ -17,7 +17,7 @@
     </node>
   </classes>
   <dammsg mg="n">дыхание драконов</dammsg>
-  <group>draconian</group>
+  <group registry="skillGroup">draconian</group>
   <help id="778" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
 Высокоопытные ведьмы и колдуны, а также последователи культа {hh967Сета{x, могут
@@ -43,6 +43,8 @@
   </mob>
   <nameRus>дыхание драконов</nameRus>
   <spell type="SPELL(DragonsBreath)">
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <position>fight</position>
     <target>char_room</target>
     <type>offensive</type>

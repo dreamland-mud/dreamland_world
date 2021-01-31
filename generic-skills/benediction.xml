@@ -15,7 +15,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>benedictions</group>
+  <group registry="skillGroup">benedictions</group>
   <help id="639" level="-1" type="SkillHelp">Паладин может наслать божественное проклятие на своего противника (&apos;{yanathema{x&apos;),
 это плохо отразится на всех умениях проклятого и на силе его заклинаний.
 С другой стороны, его самого и собратьев по оружию боги могут благословить (&apos;{ybenediction{x&apos;),
@@ -27,6 +27,8 @@
   </mob>
   <nameRus>благость</nameRus>
   <spell type="SPELL(Benediction)">
+    <damtype>none</damtype>
+    <flags>prayer</flags>
     <position>stand</position>
     <target>char_room</target>
     <type>defensive</type>

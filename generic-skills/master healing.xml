@@ -9,7 +9,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>healing</group>
+  <group registry="skillGroup">healing</group>
   <help id="698" keyword="РАНЫ" level="-1" type="SkillHelp">%FMT% *%SPELL%* 
 %FMT% *%SPELL%* _%CHAR%_
 
@@ -25,6 +25,8 @@
   </mob>
   <nameRus>мастерское лечение</nameRus>
   <spell type="SPELL(MasterHealing)">
+    <damtype>none</damtype>
+    <flags>prayer</flags>
     <order>player_only</order>
     <position>fight</position>
     <target>char_room</target>

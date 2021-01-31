@@ -25,7 +25,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>benedictions</group>
+  <group registry="skillGroup">benedictions</group>
   <help id="851" keyword="УСПОКОИТЬ УСПОКОЕНИЕ" level="-1" type="SkillHelp">Эта молитва успокаивает дерущихся, прекращает бой и снимает агрессивность с
 большинства существ. 
 
@@ -38,6 +38,8 @@
   </mob>
   <nameRus>спокойствие</nameRus>
   <spell type="SPELL(Calm)">
+    <damtype>none</damtype>
+    <flags>prayer</flags>
     <position>fight</position>
     <target>people</target>
     <type>none</type>

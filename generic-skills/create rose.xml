@@ -24,7 +24,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>creation</group>
+  <group registry="skillGroup">creation</group>
   <help id="692" level="-1" type="SkillHelp">Акт творения. Ты можешь создать прекрасную розу. И подарить ее.
 </help>
   <mana>30</mana>
@@ -33,6 +33,8 @@
   </mob>
   <nameRus>сотворить розу</nameRus>
   <spell type="SPELL(CreateRose)">
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <position>stand</position>
     <target>create_obj</target>
     <type>none</type>

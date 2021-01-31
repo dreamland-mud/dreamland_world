@@ -12,7 +12,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>enchantment</group>
+  <group registry="skillGroup">enchantment</group>
   <help aka="'СВЯЩЕННЫЙ ОГОНЬ'" id="577" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%OBJ%_
 
 Эта мощная молитва наделяет оружие священным огнем. В бою такое оружие будет
@@ -26,6 +26,8 @@
   <mana>150</mana>
   <nameRus>божественный огонь</nameRus>
   <spell type="SPELL(FlameOfGod)">
+    <damtype>none</damtype>
+    <flags>prayer</flags>
     <position>stand</position>
     <target>obj_inv obj_equip</target>
     <type>none</type>

@@ -40,7 +40,7 @@
     </node>
   </classes>
   <dammsg mg="n">проклятие</dammsg>
-  <group>maladictions</group>
+  <group registry="skillGroup">maladictions</group>
   <help id="548" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
 При провале {hh2035спасброска{x к темной энергии это заклинание понижает {hh47точность{x и
@@ -59,6 +59,8 @@
   </mob>
   <nameRus>проклятие</nameRus>
   <spell type="SPELL(Curse)">
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <position>fight</position>
     <target>char_room obj_inv obj_room</target>
     <type>offensive</type>

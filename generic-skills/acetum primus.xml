@@ -19,7 +19,7 @@
     </node>
   </classes>
   <dammsg>ацетум примус</dammsg>
-  <group>combat</group>
+  <group registry="skillGroup">combat</group>
   <help id="587" keyword="АЦЭТУМ ПРИМУС" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
 Это заклинание обволакивает жертву облаком кислоты, нанося ей серьезные повреждения.
@@ -36,6 +36,7 @@
   <spell type="AnatoliaCombatSpell">
     <damtype>acid</damtype>
     <dice>8</dice>
+    <flags>magic</flags>
     <msgNotVict>Плащ первобытной кислоты обволакивает $C4 и, искрясь, поглощает все, к чему прикасается.</msgNotVict>
     <position>fight</position>
     <target>char_room</target>

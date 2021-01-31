@@ -40,7 +40,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>maladictions</group>
+  <group registry="skillGroup">maladictions</group>
   <help id="705" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
 Это заклинание сильно замедляет метаболизм и скорость реакции цели.
@@ -62,6 +62,8 @@
   </mob>
   <nameRus>замедление</nameRus>
   <spell type="SPELL(Slow)">
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <position>fight</position>
     <target>char_room</target>
     <type>offensive</type>

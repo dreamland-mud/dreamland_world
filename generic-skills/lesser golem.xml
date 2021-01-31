@@ -12,7 +12,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>necromancy</group>
+  <group registry="skillGroup">necromancy</group>
   <help id="545" keyword="GOLEMS ГОЛЕМЫ" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
 Малый голем -- самый базовый голем, которого учится создавать некромант.
@@ -30,6 +30,8 @@
   <nameRus>малый голем</nameRus>
   <spell type="SPELL(LesserGolem)">
     <castMobCount>1</castMobCount>
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <maxMobCount>3</maxMobCount>
     <mobVnum>21</mobVnum>
     <msgCreateAttemptRoom>%^C1 пытается создать малого голема.</msgCreateAttemptRoom>

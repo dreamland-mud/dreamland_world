@@ -12,7 +12,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>necromancy</group>
+  <group registry="skillGroup">necromancy</group>
   <help id="547" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
 Каменный голем -- улучшенная версия {hh545малого голема{x, с увеличенным количеством
@@ -26,6 +26,8 @@
   <nameRus>каменный голем</nameRus>
   <spell type="SPELL(StoneGolem)">
     <castMobCount>1</castMobCount>
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <maxMobCount>3</maxMobCount>
     <mobVnum>22</mobVnum>
     <msgCreateAttemptRoom>%^C1 пытается создать каменного голема.</msgCreateAttemptRoom>

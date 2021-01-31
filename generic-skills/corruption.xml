@@ -15,7 +15,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>maladictions</group>
+  <group registry="skillGroup">maladictions</group>
   <help aka="КОРРУПЦИЯ" id="541" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
 Гниение, наложенное с помощью этого заклинания, мешает нормальному
@@ -29,6 +29,8 @@
   </mob>
   <nameRus>гниение</nameRus>
   <spell type="SPELL(Corruption)">
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <position>fight</position>
     <target>char_room</target>
     <type>offensive</type>

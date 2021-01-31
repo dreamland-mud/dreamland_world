@@ -11,7 +11,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>maladictions</group>
+  <group registry="skillGroup">maladictions</group>
   <help id="601" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
 Это заклинание позволяет наложить {hh614чуму{x на определенную местность -- все, кто
@@ -24,6 +24,8 @@
   </mob>
   <nameRus>черная смерть</nameRus>
   <spell type="SPELL(BlackDeath)">
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <position>stand</position>
     <target>room</target>
     <type>offensive</type>

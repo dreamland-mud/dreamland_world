@@ -14,7 +14,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>curative</group>
+  <group registry="skillGroup">curative</group>
   <help id="864" keyword="NOREMOVE NODROP NOUNCURSE 'НЕЛЬЗЯ СНЯТЬ' 'НЕЛЬЗЯ БРОСИТЬ' 'НЕСНИМАЕМОЕ ПРОКЛЯТИЕ'" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%CHAR%_
 
 Эта молитва снимает с персонажа аффект {hh548проклятия{x, а также снимает
@@ -34,6 +34,8 @@
   </mob>
   <nameRus>снять проклятие</nameRus>
   <spell type="SPELL(RemoveCurse)">
+    <damtype>none</damtype>
+    <flags>prayer</flags>
     <position>stand</position>
     <target>char_room obj_inv obj_room</target>
     <type>defensive</type>

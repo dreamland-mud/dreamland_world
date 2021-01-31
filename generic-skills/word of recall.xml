@@ -49,7 +49,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>transportation</group>
+  <group registry="skillGroup">transportation</group>
   <help id="674" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
 Это заклинание -- аналог умения {hh862возврата{x, доступного всем игрокам. 
@@ -61,6 +61,8 @@
   </mob>
   <nameRus>слово возврата</nameRus>
   <spell type="SPELL(WordOfRecall)">
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <order>player_only</order>
     <position>rest</position>
     <target>char_self</target>

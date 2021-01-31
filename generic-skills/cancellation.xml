@@ -24,7 +24,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>arcane</group>
+  <group registry="skillGroup">arcane</group>
   <help aka="NOCANCEL НЕОТМЕНЯТЬ ОТМЕНИТЬ" id="821" level="-1" type="SkillHelp">Заклинание или молитва отмены снимает эффекты заклинаний с цели.
 Можно отменить заклинания на себе, союзнике или любом игроке, у которого не
 включено {y{hc{leconfig nocancel{lrнастройки неотменять{x.
@@ -43,6 +43,8 @@
   <mana>20</mana>
   <nameRus>отмена</nameRus>
   <spell type="SPELL(Cancellation)">
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <position>fight</position>
     <target>char_room</target>
     <type>defensive</type>

@@ -9,13 +9,15 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>healing</group>
+  <group registry="skillGroup">healing</group>
   <help id="781" level="-1" type="SkillHelp">Заклинание вылечивает очень опасные раны. И не только у тебя,
 но и у всех находящихся с тобою в комнате.
 </help>
   <mana>100</mana>
   <nameRus>излечить всех</nameRus>
   <spell type="SPELL(MassHealing)">
+    <damtype>none</damtype>
+    <flags>prayer</flags>
     <position>stand</position>
     <target>people</target>
     <type>defensive</type>

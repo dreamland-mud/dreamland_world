@@ -20,7 +20,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>protective</group>
+  <group registry="skillGroup">protective</group>
   <help id="656" keyword="'БЕЛАЯ АУРА' САНК" level="-1" type="SkillHelp">Молитва Святилища помещает тебя под защиту божественной белой ауры, которая
 уменьшает принятые повреждения от любой атаки пополам. 
 
@@ -34,6 +34,8 @@
   </mob>
   <nameRus>защита святилища</nameRus>
   <spell type="SPELL(Sanctuary)">
+    <damtype>none</damtype>
+    <flags>prayer</flags>
     <position>stand</position>
     <target>char_room</target>
     <type>defensive</type>

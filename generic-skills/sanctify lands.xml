@@ -14,7 +14,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>benedictions</group>
+  <group registry="skillGroup">benedictions</group>
   <help id="816" level="-1" type="SkillHelp">Это заклинание освобождает комнату от наложенных на нее проклятия,
 чумы, яда, сонного или летаргического тумана.
 </help>
@@ -24,6 +24,8 @@
   </mob>
   <nameRus>освятить землю</nameRus>
   <spell type="SPELL(SanctifyLands)">
+    <damtype>none</damtype>
+    <flags>prayer</flags>
     <position>stand</position>
     <target>room</target>
     <type>defensive</type>

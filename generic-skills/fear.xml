@@ -15,7 +15,7 @@
     </node>
   </classes>
   <dammsg>ужас</dammsg>
-  <group>illusion</group>
+  <group registry="skillGroup">illusion</group>
   <help id="740" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
 Ужас, проникший в саму плоть жертвы, заставляет ее {hh1025убегать{x от источника этого 
@@ -26,6 +26,8 @@
   <mana>50</mana>
   <nameRus>страх</nameRus>
   <spell type="SPELL(Fear)">
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <position>stand</position>
     <target>char_room</target>
     <type>offensive</type>

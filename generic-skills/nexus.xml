@@ -24,7 +24,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>transportation</group>
+  <group registry="skillGroup">transportation</group>
   <help id="775" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
 Создает временный портал (похожий на портал в Храм Лео) к местоположению жертвы.
@@ -42,6 +42,8 @@
   <mana>150</mana>
   <nameRus>нексус</nameRus>
   <spell type="SPELL(Nexus)">
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <position>stand</position>
     <target>char_world</target>
     <type>none</type>

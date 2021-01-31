@@ -14,7 +14,7 @@
     </node>
   </classes>
   <dammsg mg="f">божественная кара</dammsg>
-  <group>benedictions</group>
+  <group registry="skillGroup">benedictions</group>
   <help id="859" level="-1" type="SkillHelp">Божественное слово сорвавшись с уст клерика делает его сильнее. 
 Но, если в душе твоей нет добра, произнесенное слово обернется 
 против тебя. Слово действует не только на его произносящего, но
@@ -27,6 +27,8 @@
   </mob>
   <nameRus>святое слово</nameRus>
   <spell type="SPELL(HolyWord)">
+    <damtype>none</damtype>
+    <flags>prayer</flags>
     <position>fight</position>
     <target>people</target>
     <type>offensive</type>

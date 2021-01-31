@@ -13,7 +13,7 @@
     </node>
   </classes>
   <dammsg>колючий терновник</dammsg>
-  <group>nature</group>
+  <group registry="skillGroup">nature</group>
   <help id="835" level="-1" type="SkillHelp">%FMT%  *%CAST%* *%SKILL%* _%CHAR%_
 
 Это заклинание позволяет окружить противника колючим терновником, сковывая
@@ -33,6 +33,8 @@
   </mob>
   <nameRus>опутать терновником</nameRus>
   <spell type="SPELL(Entangle)">
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <position>fight</position>
     <target>char_room obj_room</target>
     <type>offensive</type>

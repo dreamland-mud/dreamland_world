@@ -24,7 +24,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>transportation</group>
+  <group registry="skillGroup">transportation</group>
   <help id="803" keyword="'ЗАКЛИНАНИЕ ВРАТ' ВОРОТА" level="-1" type="SkillHelp">%FMT% *%SPELL%* _цель_
 
 Заклинание врат -- это мощное транспортное заклинание, которое открывает врата
@@ -57,6 +57,8 @@
   <mana>80</mana>
   <nameRus>врата</nameRus>
   <spell type="GateSpell">
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <gateShadow>false</gateShadow>
     <gateViolent>true</gateViolent>
     <levelDiff>3</levelDiff>

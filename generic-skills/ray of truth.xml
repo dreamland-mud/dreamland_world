@@ -14,7 +14,7 @@
     </node>
   </classes>
   <dammsg>луч истины</dammsg>
-  <group>benedictions</group>
+  <group registry="skillGroup">benedictions</group>
   <help id="761" keyword="'RAY OF TRUTH' 'ЛУЧ ИСТИНЫ' 'ЛУЧ ПРАВДЫ'" level="-1" type="SkillHelp">Луч Истины наносит огромные повреждения и способен {hh831ослепить{x противников --
 особенно злых. Но если этой молитвой попытаются воспользовать те, в чьей душе
 нет Добра (например, злые клерики), молитва обратится против них самих -- таким
@@ -28,6 +28,8 @@
   </mob>
   <nameRus>луч истины</nameRus>
   <spell type="SPELL(RayOfTruth)">
+    <damtype>none</damtype>
+    <flags>prayer</flags>
     <position>fight</position>
     <target>char_room</target>
     <type>offensive</type>

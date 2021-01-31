@@ -12,7 +12,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>suddendeath</group>
+  <group registry="skillGroup">suddendeath</group>
   <help aka="WITCHCURSE 'ПРОКЛЯТИЕ ВЕДЬМЫ' 'ВЕДЬМИНО ПРОКЛЯТЬЕ' 'ВЕДЬМИНСКОЕ ПРОКЛЯТЬЕ'" id="712" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
 Мощное убийственное проклятие ведьм, которое нельзя {hh808снять{x или {hh821отменить{x.
@@ -27,6 +27,8 @@
   <mana>150</mana>
   <nameRus>ведьминское проклятие</nameRus>
   <spell type="SPELL(WitchCurse)">
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <position>stand</position>
     <target>char_room</target>
     <type>offensive</type>

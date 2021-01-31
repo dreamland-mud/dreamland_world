@@ -12,7 +12,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>healing</group>
+  <group registry="skillGroup">healing</group>
   <help id="710" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 %FFF% *%SPELL%* _%CHAR%_
 
@@ -28,6 +28,8 @@
   </mob>
   <nameRus>помощь</nameRus>
   <spell type="SPELL(Aid)">
+    <damtype>none</damtype>
+    <flags>prayer</flags>
     <position>fight</position>
     <target>char_room</target>
     <type>defensive</type>

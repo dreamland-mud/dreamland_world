@@ -12,7 +12,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>enchantment</group>
+  <group registry="skillGroup">enchantment</group>
   <help id="828" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%OBJ%_
 
 Вампиры могут передать оружию часть своей силы, на время наделяя его
@@ -24,6 +24,8 @@
   <mana>150</mana>
   <nameRus>голодное оружие</nameRus>
   <spell type="SPELL(HungerWeapon)">
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <position>stand</position>
     <target>obj_inv obj_equip</target>
     <type>none</type>

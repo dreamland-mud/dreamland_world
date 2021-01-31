@@ -9,7 +9,7 @@
     </node>
   </classes>
   <dammsg mg="n">землетрясение</dammsg>
-  <group>nature</group>
+  <group registry="skillGroup">nature</group>
   <help aka="ЗЕМЛЕТРЯСЕНИЕ" id="653" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
 Землетрясение -- мощное заклинание, причиняющее большие повреждения всем в
@@ -22,6 +22,7 @@
   <nameRus>землетрясение</nameRus>
   <spell type="SPELL(Earthquake)">
     <damtype>bash</damtype>
+    <flags>prayer</flags>
     <position>fight</position>
     <target>people</target>
     <tier>3</tier>

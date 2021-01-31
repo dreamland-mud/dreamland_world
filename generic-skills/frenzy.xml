@@ -15,7 +15,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>benedictions</group>
+  <group registry="skillGroup">benedictions</group>
   <help id="619" level="-1" type="SkillHelp">Пробуждая в тебе ярость, это заклинание делает тебя опаснее. Но ты 
 становишься  и  более  уязвимым,  поскольку  не  заботишься о своей 
 безопасности.
@@ -28,6 +28,8 @@
   </mob>
   <nameRus>неистовство</nameRus>
   <spell type="SPELL(Frenzy)">
+    <damtype>none</damtype>
+    <flags>prayer</flags>
     <position>stand</position>
     <target>char_room</target>
     <type>defensive</type>

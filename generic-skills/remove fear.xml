@@ -14,7 +14,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>curative</group>
+  <group registry="skillGroup">curative</group>
   <help id="2026" keyword="'ИЗБАВИТЬ СТРАХ'" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
 Позволяет избавить цель от воздействия заклинания {hh740страх{x.
@@ -25,6 +25,8 @@
   </mob>
   <nameRus>избавить от страха</nameRus>
   <spell type="SPELL(RemoveFear)">
+    <damtype>none</damtype>
+    <flags>prayer</flags>
     <position>stand</position>
     <target>char_room</target>
     <type>defensive</type>

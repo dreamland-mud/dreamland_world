@@ -14,7 +14,7 @@
     </node>
   </classes>
   <dammsg mg="f">молния</dammsg>
-  <group>nature</group>
+  <group registry="skillGroup">nature</group>
   <help aka="МОЛНИЮ МОЛНИЙ ВЫЗВАТЬ" id="650" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
 Это заклинание работает только {hh86вне помещений{x, и только при плохой погоде,
@@ -34,6 +34,8 @@
     </node>
   </raceBonuses>
   <spell type="SPELL(CallLightning)">
+    <damtype>none</damtype>
+    <flags>prayer</flags>
     <position>fight</position>
     <target>people</target>
     <type>offensive</type>

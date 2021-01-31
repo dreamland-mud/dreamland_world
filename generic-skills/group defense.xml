@@ -12,7 +12,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>protective</group>
+  <group registry="skillGroup">protective</group>
   <help id="768" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
 Клерики могут наложить заклинания брони и щита разом на всех членов своей группы. 
@@ -25,6 +25,8 @@
   </mob>
   <nameRus>групповая защита</nameRus>
   <spell type="SPELL(GroupDefense)">
+    <damtype>none</damtype>
+    <flags>prayer</flags>
     <position>stand</position>
     <target>people</target>
     <type>defensive</type>

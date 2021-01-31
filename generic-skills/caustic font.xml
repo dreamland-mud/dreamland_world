@@ -9,7 +9,7 @@
     </node>
   </classes>
   <dammsg>едкий источник</dammsg>
-  <group>combat</group>
+  <group registry="skillGroup">combat</group>
   <help id="847" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
 Это боевое заклинание поражает жертву едкой кислотой. Повреждения снижаются,
@@ -26,6 +26,7 @@
     <damflags>water</damflags>
     <damtype>acid</damtype>
     <dice>9</dice>
+    <flags>magic</flags>
     <msgNotVict>Фонтан едкой жидкости образуется у ног $C2.
 Запах $S разлагающихся тканей просто отвратителен!</msgNotVict>
     <position>fight</position>

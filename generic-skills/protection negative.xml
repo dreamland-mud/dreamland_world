@@ -14,7 +14,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>enhancement</group>
+  <group registry="skillGroup">enhancement</group>
   <help id="2032" keyword="'ЗАЩИТА НЕГАТИВ' NEGATIVE 'ТЕМНАЯ ЭНЕРГИЯ' 'НЕГАТИВНАЯ ЭНЕРГИЯ'" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
 Мощное заклятие {hh143некромантов{x, дающее сопротивляемость ко всем атакам темной
@@ -27,6 +27,8 @@
   </mob>
   <nameRus>защита от негативного</nameRus>
   <spell type="SPELL(ProtectionNegative)">
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <position>stand</position>
     <target>char_self</target>
     <type>defensive</type>

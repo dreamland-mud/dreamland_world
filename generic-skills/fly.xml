@@ -30,7 +30,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>enhancement</group>
+  <group registry="skillGroup">enhancement</group>
   <help id="575" keyword="ЛЕВИТАЦИЯ ЛЕВИТИРОВАТЬ ЛЕТАТЬ" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%CHAR%_
 
 Заклинание или молитва полета позволяет попадать в разные места, куда пешком так
@@ -51,6 +51,8 @@
   <nameRus>полет</nameRus>
   <raceAffect>flying</raceAffect>
   <spell type="SPELL(Fly)">
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <position>stand</position>
     <target>char_room</target>
     <type>defensive</type>

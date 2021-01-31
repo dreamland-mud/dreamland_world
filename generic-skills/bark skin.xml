@@ -14,7 +14,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>protective</group>
+  <group registry="skillGroup">protective</group>
   <help id="608" level="-1" type="SkillHelp">Защитное заклинание, покрывающее твою кожу прочной корой.
 </help>
   <mana>40</mana>
@@ -23,6 +23,8 @@
   </mob>
   <nameRus>древесная кожа</nameRus>
   <spell type="SPELL(BarkSkin)">
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <order>player_only</order>
     <position>stand</position>
     <target>char_self</target>

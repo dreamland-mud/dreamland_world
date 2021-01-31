@@ -12,7 +12,7 @@
     </node>
   </classes>
   <dammsg>ослепительный луч света</dammsg>
-  <group>benedictions</group>
+  <group registry="skillGroup">benedictions</group>
   <help id="716" level="-1" type="SkillHelp">Это заклинание (данное паладину богами для их праведной миссии) 
 святой энергии, заставляющее всех злых тварей в ужасе бежать от него.
 </help>
@@ -22,6 +22,8 @@
   </mob>
   <nameRus>обратить в бегство</nameRus>
   <spell type="SPELL(Turn)">
+    <damtype>none</damtype>
+    <flags>prayer</flags>
     <position>fight</position>
     <target>people</target>
     <type>offensive</type>

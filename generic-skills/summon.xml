@@ -29,7 +29,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>transportation</group>
+  <group registry="skillGroup">transportation</group>
   <help aka="NOSUMMON НЕПРИЗЫВ ПРИЗВАТЬ ПРИЗЫВАТЬ ЗАПРЕТ" id="584" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
 Это мощное заклинание или молитва призывает персонажей в ту комнату, где
@@ -59,6 +59,8 @@
   </mob>
   <nameRus>призыв</nameRus>
   <spell type="SummonSpell">
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <order>player_only</order>
     <position>stand</position>
     <target>char_world</target>

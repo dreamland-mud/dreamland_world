@@ -9,7 +9,7 @@
     </node>
   </classes>
   <dammsg>удар подземных сил</dammsg>
-  <group>nature</group>
+  <group registry="skillGroup">nature</group>
   <help id="753" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
 Это заклинание -- более мощный аналог {hh653землетрясения{x, но направленного
@@ -24,6 +24,7 @@
   <spell type="AnatoliaCombatSpell">
     <damtype>none</damtype>
     <dice>18</dice>
+    <flags>prayer</flags>
     <msgChar>Ты призываешь подземные силы, раскалывающие землю у ног $C2.</msgChar>
     <msgVict>$c1 призывает подземные силы, раскалывающие землю у твоих ног!</msgVict>
     <order>player_only</order>

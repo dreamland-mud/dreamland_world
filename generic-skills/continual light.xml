@@ -19,7 +19,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>creation</group>
+  <group registry="skillGroup">creation</group>
   <help id="857" level="-1" type="SkillHelp">Это заклинание создает светящийся шар, который можно использовать как источник
 света. Шар будет существовать неопределенно долго. Оно также может быть 
 использовано, чтобы заставить светиться любой предмет.
@@ -34,6 +34,8 @@
   </mob>
   <nameRus>постоянный свет</nameRus>
   <spell type="SPELL(ContinualLight)">
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <position>stand</position>
     <target>create_obj</target>
     <type>none</type>

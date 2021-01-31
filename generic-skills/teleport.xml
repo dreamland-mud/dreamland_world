@@ -29,7 +29,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>transportation</group>
+  <group registry="skillGroup">transportation</group>
   <help id="701" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
 Это рискованное транспортное заклинание перемещает тебя в какое-то абсолютно
@@ -47,6 +47,8 @@
   </mob>
   <nameRus>телепортация</nameRus>
   <spell type="SPELL(Teleport)">
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <order>player_only</order>
     <position>fight</position>
     <target>char_self</target>

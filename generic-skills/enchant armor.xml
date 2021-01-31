@@ -19,7 +19,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>enchantment</group>
+  <group registry="skillGroup">enchantment</group>
   <help id="635" keyword="'ЗАЧАРОВАТЬ БРОНЮ'" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%OBJ%_
 
 Это заклинание или молитва улучшает класс защиты предмета с типом {yдоспех{x.
@@ -42,6 +42,8 @@
     </node>
   </raceBonuses>
   <spell type="SPELL(EnchantArmor)">
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <position>stand</position>
     <target>obj_inv</target>
     <type>none</type>

@@ -34,7 +34,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>enhancement</group>
+  <group registry="skillGroup">enhancement</group>
   <help aka="PASSDOOR ПОЛУПРОЗРАЧНОСТЬ 'ПРОХОДИТЬ СКВОЗЬ ДВЕРИ' ПРОЗРАЧНОСТЬ" id="647" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
 Это заклинание позволит тебе становиться полупрозрачн{Smым{Sfой{Sx, что позволяет
@@ -49,6 +49,8 @@
   <nameRus>прохождение преград</nameRus>
   <raceAffect>pass_door</raceAffect>
   <spell type="SPELL(PassDoor)">
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <position>stand</position>
     <target>char_self</target>
     <type>defensive</type>

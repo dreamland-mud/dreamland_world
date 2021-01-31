@@ -40,7 +40,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>maladictions</group>
+  <group registry="skillGroup">maladictions</group>
   <help id="831" keyword="СЛЕПОТУ ОСЛЕПИТЬ ОСЛЕПЛЕНИЕ" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
 Проклятие слепоты лишит тебя или твоего противника зрения на несколько минут.
@@ -58,6 +58,8 @@
   </mob>
   <nameRus>слепота</nameRus>
   <spell type="SPELL(Blindness)">
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <position>fight</position>
     <target>char_room</target>
     <type>offensive</type>

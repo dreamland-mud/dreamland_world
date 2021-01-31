@@ -9,7 +9,7 @@
     </node>
   </classes>
   <dammsg mg="n">искажение разума</dammsg>
-  <group>illusion</group>
+  <group registry="skillGroup">illusion</group>
   <help id="651" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
 Одно из заклинаний из арсенала анти-паладинов, поражающее жертву ментальной атакой.
@@ -24,6 +24,7 @@
   <spell type="AnatoliaCombatSpell">
     <damtype>mental</damtype>
     <dice>9</dice>
+    <flags>magic</flags>
     <msgNotVict>$c1 пристально смотрит на $C4, вызывая в $Z ненормальное оживление.</msgNotVict>
     <position>fight</position>
     <target>char_room</target>

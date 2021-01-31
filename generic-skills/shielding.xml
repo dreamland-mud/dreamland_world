@@ -25,7 +25,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>maladictions</group>
+  <group registry="skillGroup">maladictions</group>
   <help id="679" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
 Экранирование мешает жертве колдовать. Большинство заклинаний, произнесенных
@@ -37,6 +37,8 @@
   </mob>
   <nameRus>экранирование</nameRus>
   <spell type="SPELL(Shielding)">
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <position>stand</position>
     <target>char_room</target>
     <type>offensive</type>

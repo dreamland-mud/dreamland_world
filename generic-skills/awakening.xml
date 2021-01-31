@@ -9,7 +9,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>curative</group>
+  <group registry="skillGroup">curative</group>
   <help id="715" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
 Боги дают паладину силу будить спящих нездоровым сном. Однако, заклинания сна
@@ -20,6 +20,8 @@
   <mana>20</mana>
   <nameRus>пробуждение</nameRus>
   <spell type="SPELL(Awakening)">
+    <damtype>none</damtype>
+    <flags>prayer</flags>
     <position>fight</position>
     <target>char_room</target>
     <type>defensive</type>

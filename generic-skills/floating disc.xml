@@ -2,9 +2,12 @@
 <skill type="GenericSkill">
   <beats>24</beats>
   <dammsg></dammsg>
-  <group>creation</group>
-  <help id="678" level="-1" type="SkillHelp">Летающий вокруг кастующего диск, способен нести его вещи.
-Через некоторое время все вещи падают на землю...
+  <group registry="skillGroup">creation</group>
+  <help id="678" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+
+Это удобное заклинание позволяет создать летающий вокруг тебя контейнер, чтобы
+нести твои вещи. Через некоторое время диск пропадает и все вещи, разумеется,
+падают на землю...
 </help>
   <mana>40</mana>
   <mob>
@@ -12,6 +15,7 @@
   </mob>
   <nameRus>летающий диск</nameRus>
   <spell type="SPELL(FloatingDisc)">
+    <damtype>none</damtype>
     <position>stand</position>
     <target>create_obj</target>
     <type>none</type>

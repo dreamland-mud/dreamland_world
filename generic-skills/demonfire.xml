@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
+  <align>evil</align>
   <beats>12</beats>
   <classes>
     <node name="cleric">
@@ -14,16 +15,17 @@
 провале {hh2035спасс-броска{x, {hh548проклинают{x противника.
 Если в душе твоей нету зла, вызывать адские силы не рекомендуется.
 </help>
-  <mana>20</mana>
+  <mana>80</mana>
   <mob>
     <professional>true</professional>
   </mob>
   <nameRus>огонь демонов</nameRus>
   <spell type="SPELL(Demonfire)">
-    <damtype>none</damtype>
+    <damtype>fire</damtype>
     <flags>prayer</flags>
     <position>fight</position>
     <target>char_room</target>
+    <tier>2</tier>
     <type>offensive</type>
   </spell>
 </skill>

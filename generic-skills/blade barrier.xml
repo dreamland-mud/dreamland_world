@@ -14,16 +14,18 @@
 лезвий, которые, кружась вокруг него, болезненно ранят противника,
 сбивая его с ног.
 </help>
-  <mana>50</mana>
+  <mana>20</mana>
   <mob>
     <professional>true</professional>
   </mob>
   <nameRus>стена лезвий</nameRus>
   <spell type="SPELL(BladeBarrier)">
-    <damtype>none</damtype>
+    <damflags>weapon</damflags>
+    <damtype>pierce</damtype>
     <flags>prayer</flags>
     <position>fight</position>
     <target>char_room</target>
+    <tier>4</tier>
     <type>offensive</type>
   </spell>
 </skill>

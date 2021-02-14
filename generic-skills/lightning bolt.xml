@@ -27,16 +27,14 @@
   <group registry="skillGroup">combat</group>
   <help id="579" keyword="МОЛНИЯ" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
-Боевая магия, поражающая жертву разрядом молнии. Сила повреждений уменьшится
-вдвое, если у жертвы прошел {hh2035спасс-бросок{x против заклинаний.
-
-%SA% %H% [(cast,колдовать)]
+Магическое заклинание, наносящее урон жертве разрядом в зависимости от уровня
+заклинания. Если у жертвы срабатывает {hh2035спасбросок{x, урон уменьшается вдвое.
 </help>
-  <mana>15</mana>
+  <mana>40</mana>
   <mob>
     <professional>true</professional>
   </mob>
-  <nameRus>удар молнии</nameRus>
+  <nameRus>разряд молнии</nameRus>
   <raceBonuses>
     <node name="storm giant">
       <bonus>100</bonus>
@@ -51,6 +49,7 @@
     <flags>magic</flags>
     <position>fight</position>
     <target>char_room</target>
+    <tier>3</tier>
     <type>offensive</type>
   </spell>
 </skill>

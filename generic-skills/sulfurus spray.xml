@@ -12,13 +12,11 @@
   <group registry="skillGroup">combat</group>
   <help id="866" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
-Это боевое заклинание варлоков поражает жертву едкой кислотой. Повреждения
-снижаются, если у жертвы успешно прошел {hh2035спасс-бросок{x против заклинаний
-(saves vs spell).
-
-%SA% %H% [(cast,колдовать)]
+Магическое заклинание, наносящее урон жертве кислотой в зависимости от уровня
+заклинания. Если у жертвы срабатывает {hh2035спасбросок{x, урон уменьшается вдвое.
+Эта разновидность кислоты особенно губительна для экипировки.
 </help>
-  <mana>20</mana>
+  <mana>40</mana>
   <mob>
     <professional>true</professional>
   </mob>
@@ -30,6 +28,7 @@
     <msgNotVict>Вонючая струя серной жидкости низвергается дождем на $C4.</msgNotVict>
     <position>fight</position>
     <target>char_room</target>
+    <tier>3</tier>
     <type>offensive</type>
   </spell>
 </skill>

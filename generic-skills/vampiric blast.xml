@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
+  <align>evil</align>
   <beats>12</beats>
   <classes>
     <node name="vampire">
@@ -23,10 +24,11 @@
   </mob>
   <nameRus>проклятие вампира</nameRus>
   <spell type="SPELL(VampiricBlast)">
-    <damtype>none</damtype>
+    <damtype>negative</damtype>
     <flags>magic</flags>
     <position>fight</position>
     <target>char_room</target>
+    <tier>2</tier>
     <type>offensive</type>
   </spell>
 </skill>

@@ -16,16 +16,17 @@
 частичек воды формируется кулак и бьет по жертве. Работает во время дождя и
 возле водоемов.
 </help>
-  <mana>50</mana>
+  <mana>40</mana>
   <mob>
     <professional>true</professional>
   </mob>
   <nameRus>водяной удар</nameRus>
   <spell type="SPELL(Hydroblast)">
-    <damtype>none</damtype>
-    <flags>magic</flags>
+    <damtype>drowning</damtype>
+    <flags>prayer</flags>
     <position>fight</position>
     <target>char_room</target>
+    <tier>3</tier>
     <type>offensive</type>
   </spell>
 </skill>

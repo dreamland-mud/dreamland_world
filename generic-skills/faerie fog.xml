@@ -25,7 +25,7 @@
 Это весьма полезное заклинание позволяет обнаружить всех невидимых, скрытых,
 спрятанных или замаскированных существ в данной местности.
 </help>
-  <mana>12</mana>
+  <mana>40</mana>
   <mob>
     <professional>true</professional>
   </mob>
@@ -38,8 +38,9 @@
     </node>
   </raceBonuses>
   <spell type="SPELL(FaerieFog)">
-    <damtype>none</damtype>
-    <flags>magic prayer</flags>
+    <damflags>water</damflags>
+    <damtype>drowning</damtype>
+    <flags>magic</flags>
     <position>stand</position>
     <target>people</target>
     <type>none</type>

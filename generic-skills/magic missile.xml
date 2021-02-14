@@ -27,26 +27,27 @@
   <group registry="skillGroup">combat</group>
   <help id="663" keyword="'ВОЛШЕБНЫЕ СТРЕЛЫ'" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
-Боевая магия, поражающая жертву выстрелом волшебных стрел. Это одно из самых
+Боевая магия, поражающая жертву потоком волшебных стрел. Это одно из самых
 первых заклинаний, которым овладевают начинающие колдуны. Количество стрел
 растет с уровнем произносимого заклинания. Энергетический заряд каждой 
 последующей стрелы чуть ослабевает, и уменьшается в два раза в случае, если
-у жертвы прошел {hh2035спасс-бросок{x против заклинаний.
+у жертвы прошел {hh2035спасбросок{x против заклинаний.
 
 Заклинание {hh616щита{x защищает от волшебных стрел.
 
 %SA% %H% [(cast,колдовать)]
 </help>
-  <mana>15</mana>
+  <mana>10</mana>
   <mob>
     <professional>true</professional>
   </mob>
   <nameRus>волшебная стрела</nameRus>
   <spell type="SPELL(MagicMissile)">
-    <damtype>none</damtype>
+    <damtype>energy</damtype>
     <flags>magic</flags>
     <position>fight</position>
     <target>char_room</target>
+    <tier>5</tier>
     <type>offensive</type>
   </spell>
 </skill>

@@ -38,7 +38,7 @@
 Кроме того, под розовой аурой жертва не может скрыться или стать невидимой при
 помощи любого из соответствующих умений.
 </help>
-  <mana>5</mana>
+  <mana>20</mana>
   <mob>
     <professional>true</professional>
   </mob>
@@ -51,10 +51,12 @@
     </node>
   </raceBonuses>
   <spell type="SPELL(FaerieFire)">
-    <damtype>none</damtype>
-    <flags>magic prayer</flags>
+    <damtype>light</damtype>
+    <flags>magic</flags>
     <position>fight</position>
+    <ranged>false</ranged>
     <target>char_room</target>
+    <tier>4</tier>
     <type>offensive</type>
   </spell>
 </skill>

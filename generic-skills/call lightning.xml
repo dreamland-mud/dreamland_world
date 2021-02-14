@@ -7,7 +7,17 @@
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
-    <node name="paladin">
+    <node name="ranger">
+      <level>55</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="warlock">
+      <level>21</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
       <level>21</level>
       <maximum>100</maximum>
       <rating>1</rating>
@@ -21,7 +31,7 @@
 вызывая разряд молнии, поражающий всех в данной местности. Осторожнее!
 Не забудь, что погоду можно предусмотрительно {hh643ухудшить{x.
 </help>
-  <mana>15</mana>
+  <mana>80</mana>
   <mob>
     <professional>true</professional>
   </mob>
@@ -34,10 +44,11 @@
     </node>
   </raceBonuses>
   <spell type="SPELL(CallLightning)">
-    <damtype>none</damtype>
+    <damtype>lightning</damtype>
     <flags>prayer</flags>
     <position>fight</position>
     <target>people</target>
+    <tier>2</tier>
     <type>offensive</type>
   </spell>
 </skill>

@@ -3,12 +3,12 @@
   <beats>12</beats>
   <classes>
     <node name="anti-paladin">
-      <level>29</level>
+      <level>5</level>
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
     <node name="cleric">
-      <level>26</level>
+      <level>2</level>
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
@@ -24,16 +24,17 @@
 
 %SA% %H% [(cast,колдовать)]
 </help>
-  <mana>35</mana>
+  <mana>10</mana>
   <mob>
     <professional>true</professional>
   </mob>
   <nameRus>вред</nameRus>
   <spell type="SPELL(Harm)">
-    <damtype>none</damtype>
-    <flags>magic prayer</flags>
+    <damtype>harm</damtype>
+    <flags>prayer</flags>
     <position>fight</position>
     <target>char_room</target>
+    <tier>5</tier>
     <type>offensive</type>
   </spell>
 </skill>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
-  <beats>24</beats>
+  <align>evil</align>
+  <beats>18</beats>
   <classes>
     <node name="necromancer">
       <level>44</level>
@@ -19,16 +20,17 @@
 
 %SA% %H% [(cast,колдовать)]
 </help>
-  <mana>20</mana>
+  <mana>30</mana>
   <mob>
     <professional>true</professional>
   </mob>
   <nameRus>рука умертвия</nameRus>
   <spell type="SPELL(HandOfUndead)">
-    <damtype>none</damtype>
+    <damtype>negative</damtype>
     <flags>magic</flags>
     <position>fight</position>
     <target>char_room</target>
+    <tier>4</tier>
     <type>offensive</type>
   </spell>
 </skill>

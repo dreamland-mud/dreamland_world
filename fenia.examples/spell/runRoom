@@ -1,3 +1,66 @@
 .Spell(@name@).@trig@ = function() {
-}
+    // sector checks
+    /*
+    if ( (sect == "underwater") || (sect == "inside") || (.isset_bit(ch.in_room.room_flags, .tables.room_flags.indoors)) ) {
+        ch.act("В этой местности создать ураган не удастся.");
+        ch.wait = 0;
+        return;        
+    } 
+    */
 
+    // alternating messages
+    /*
+    var msg;
+    if ( (sect == "water_swim") || (sect == "water_noswim") ) 
+        msg = "мощную {1{Bводяную воронку{2";
+    else if (sect == "desert") 
+        msg = "мощную {1{yпесчаную бурю{2";
+    else if (sect == "air")
+        msg = "{1{Wвоздушное{2 торнадо";
+    else if (sect == "forest")
+        msg = "вихрь из {1{gветок и листьев{2";
+    else if (sect == "city")
+        msg = "вихрь из {1{yкирпичей и мусора{2";
+    else
+        msg = "бушующий ураган";
+
+    ch.act("Ты создаешь " + msg + " вокруг себя!");
+    ch.recho("%^C1 создает " + msg + " вокруг себя!", ch);
+    */
+    msgChar("Ты сотворяешь {2{Cледяной шар{2, замораживающий все на своем пути!");
+    msgRoom("%1$^C1 сотворяет {2{Cледяной шар{2, замораживающий все на своем пути!");  
+    msgArea("Ты слышишь завывание бушующего урагана где-то неподалеку.");
+        
+    damageRoom(function() { // not ch, not safe, 50% chance for mirrors
+        // alternating sector damage bonuses or damtypes
+        /* 
+        var dam_bonus, damtype;
+        if ( (sect == "water_swim") || (sect == "water_noswim") ) {
+            dam_bonus = 12;
+            damtype = .tables.damage_table.drowning;
+        }
+        else if (sect == "desert") {
+            dam_bonus = 12;
+            damtype = .tables.damage_table.slash;
+            effectSand();			
+        }
+        */
+
+        // flying bonus
+        /*
+        if (vict.flying) {
+            dam_bonus = dam_bonus + 2;
+            vict.act("На лету бушующие порывы ураганного ветра ранят тебя особенно сильно!");
+            vict.recho("На лету бушующие порывы ураганного ветра ранят %C4 особенно сильно!", vict);
+        } 
+        */
+            
+        // size and random bonus
+        // dam = dam * (12 - vict.size) / 10;
+        // dam = dam * (dam_bonus - .number_range(0,2)) / 10; // dam_bonus lies between 10..14
+        
+        // remove parameter for pre-defined damtype
+        savesSpell(damtype);
+        damage(damtype);
+    });  
+}

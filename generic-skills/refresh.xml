@@ -29,18 +29,19 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>healing</group>
-  <help id="736" keyword="усталость" level="-1" type="SkillHelp">Это заклинание восстанавливает очки движения персонажа.
+  <group registry="skillGroup">healing</group>
+  <help id="736" keyword="УСТАЛОСТЬ" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%CHAR%_
+
+Это заклинание восстанавливает {hh60очки движения{x персонажа.
 </help>
   <mana>12</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>снять усталость</nameRus>
   <spell type="SPELL(Refresh)">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <position>stand</position>
     <target>char_room</target>
     <type>defensive</type>

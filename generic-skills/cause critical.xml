@@ -1,15 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <beats>12</beats>
-  <classes>
-    <node name="cleric">
-      <level>15</level>
-      <maximum>100</maximum>
-      <rating>1</rating>
-    </node>
-  </classes>
   <dammsg mg="n">заклинание</dammsg>
-  <group>attack</group>
+  <group registry="skillGroup">attack</group>
   <help id="718" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
 Эта молитва нанесет вред здоровью жертвы. Уровень повреждений
@@ -20,13 +13,12 @@
 </help>
   <mana>20</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>критические раны</nameRus>
   <spell type="SPELL(CauseCritical)">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>prayer</flags>
     <position>fight</position>
     <target>char_room</target>
     <type>offensive</type>

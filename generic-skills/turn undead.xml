@@ -9,7 +9,7 @@
     </node>
   </classes>
   <dammsg mg="f">попытка изгнания нежити</dammsg>
-  <group>benedictions</group>
+  <group registry="skillGroup">benedictions</group>
   <help id="595" level="-1" type="SkillHelp">Всякой нечисти (големам, андедам) следует быть на чеку - паладин может
 причинить ей серьезный вред и обратить в бегство, начертив в воздухе
 священный символ (заклинание &apos;{yturn undead{x&apos;), либо вообще стереть с
@@ -17,13 +17,12 @@
 </help>
   <mana>10</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>обратить нежить</nameRus>
   <spell type="SPELL(TurnUndead)">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>prayer</flags>
     <position>fight</position>
     <target>people</target>
     <type>offensive</type>

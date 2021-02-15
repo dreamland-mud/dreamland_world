@@ -1,0 +1,146 @@
+.apply(function() {
+
+/*
+ * Based on https://github.com/greybax/cyrillic-to-translit-js
+ */
+
+/*
+cyrillic-to-translit-js LICENSE:
+
+MIT License
+
+Copyright (c) 2017 Aleksandr Filatov
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+*/
+
+
+    this = .tmp.system;
+
+    /*
+    ASSOCIATIONS FOR INITIAL POSITION
+    */
+
+    // letters in initial position
+    firstLetters = .Array().add(
+        "а", "a",
+        "б", "b",
+        "в", "v",
+        "д", "d",
+        "з", "z",
+        "й", "y",
+        "к", "k",
+        "л", "l",
+        "м", "m",
+        "н", "n",
+        "о", "o",
+        "п", "p",
+        "р", "r",
+        "с", "s",
+        "т", "t",
+        "у", "u",
+        "ф", "f",
+        "ь", "",
+        "г", "g",
+        "и", "i",
+        "ъ", "",
+        "ы", "i",
+        "э", "e"
+    );
+
+    // digraphs appearing only in initial position
+    initialDigraphs = .Array().add(
+        "е", "ye"
+    );
+  
+    // digraphs appearing in all positions
+    regularDigraphs = .Array().add(
+        "ё", "yo",
+        "ж", "zh",
+        "х", "h",
+        "ц", "ts",
+        "ч", "ch",
+        "ш", "sh",
+        "щ", "shch",
+        "ю", "yu",
+        "я", "ya"
+    );
+
+    firstDigraphs = .Array().addAll(regularDigraphs).addAll(initialDigraphs);
+
+    firstAssociations = .Array().addAll(firstLetters).addAll(firstDigraphs);
+
+    /*
+      ASSOCIATIONS FOR NON-INITIAL POSITION
+    */
+    nonFirstLetters = .Array().addAll(firstLetters).add("й", "y").add("е", "e");
+  
+    nonFirstDigraphs = .Array().addAll(regularDigraphs);
+
+    nonFirstAssociations = .Array().addAll(nonFirstLetters).addAll(nonFirstDigraphs);
+
+
+    translit = function(input) {
+        var normalizedInput;
+        var newStr, isWordBoundary;
+        var i;
+
+        if (input == null || input == "") {
+            return "";
+        }
+
+        // We assume input string is normalized already.
+        normalizedInput = input;
+
+        newStr = "";
+        isWordBoundary = false;
+
+        for (i = 0; i < normalizedInput.size(); i=i+1) {
+            var isUpperCaseOrWhatever, here, strLowerCase, newLetter;
+
+            here = normalizedInput.at(i);
+            isUpperCaseOrWhatever = (here == here.toUpper());
+            strLowerCase = here.toLower();
+
+            if (strLowerCase == " ") {
+                newStr = newStr + " ";
+                isWordBoundary = true;
+                continue;
+            }
+
+            if (i == 0 || isWordBoundary) {
+                newLetter = firstAssociations[strLowerCase];
+                isWordBoundary = false;
+            } else {
+                newLetter = nonFirstAssociations[strLowerCase];
+            }
+
+            if (newLetter == null) {
+                if (isUpperCaseOrWhatever)
+                    newStr = newStr + strLowerCase.toUpper();
+                else
+                    newStr = newStr + strLowerCase;
+
+            } else if (isUpperCaseOrWhatever) {
+                // handle multi-symbol letters
+                if (newLetter.size() > 1)
+                    newStr = newStr + newLetter.at(0).toUpper() + newLetter.substr(1);
+                else
+                    newStr = newStr + newLetter.toUpper();
+
+            } else {
+                newStr = newStr + newLetter;
+            }
+        }
+
+        return newStr;
+    };
+})

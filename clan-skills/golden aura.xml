@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="ClanSkill">
   <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
     <wearoff>{YЗолотая аура{x, окружавшая тебя, исчезает.</wearoff>
   </affect>
   <beats>12</beats>
@@ -15,16 +17,12 @@
     </node>
   </clans>
   <dammsg></dammsg>
-  <help id="904" level="-1" type="SkillHelp">Золотая аура, дающая Рыцарю силу для борьбы со Злом.
+  <help aka="'DETECT FADE'" id="904" level="-1" type="SkillHelp">Золотая аура, дающая Рыцарю силу для борьбы со Злом.
+Эта аура также дает способность замечать Захватчиков, укрывшихся в {hh893тенях{x.
 </help>
   <mana>25</mana>
-  <mob>
-    <forbidden>true</forbidden>
-    <ordered>true</ordered>
-  </mob>
   <nameRus>золотая аура</nameRus>
   <spell type="SPELL(GoldenAura)">
-    <casted>true</casted>
     <position>stand</position>
     <target>people</target>
     <type>defensive</type>

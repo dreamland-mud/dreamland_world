@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
   <cat>info</cat>
-  <extra>keep_hide ghost manacles important</extra>
-  <help id="999" keyword="СОСТОЯНИЕ СТАТУС" level="-1" ref="experience oscore worth" type="CommandHelp">=Параметры персонажа=
-
-%FMT%  *(score,счет)*
+  <extra>keep_hide ghost manacles</extra>
+  <help aka="СОСТОЯНИЕ СТАТУС" id="999" level="-1" ref="experience oscore worth" title="Состояние персонажа, текущие параметры" type="CommandHelp">%FMT%  *(score,счет)*
 %FFF%  *(oscore,ссчет)*
 Показывает твои текущие параметры в наиболее полном объеме.
-Первая команда отобразит их в виде цветного свитка, вторая - менее
-цветастая, но местами более подробная.
+Первая команда отобразит удобно и красиво, вторая -- более подробно.
 
 %FMT%  *(score,счет)* _параметр_
 Выведет только информацию по указанному параметру, из числа тех, что упоминаются
@@ -20,10 +17,11 @@
 
 %FMT%  *(worth,доход)*
 Покажет, сколько у тебя денег, очков опыта, а также сколько существ твоего и
-противоположного характера было тобой убито до этих пор.
+противоположной {hh33натуры{x было тобой убито до этих пор.
 </help>
   <hint>увидеть свои параметры</hint>
   <name>score</name>
+  <order>player_only</order>  
   <position>dead</position>
   <russian>
     <node>счет</node>

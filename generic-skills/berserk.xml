@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
-    <wearoff>Твой пульс замедляется.</wearoff>
+    <wearoff>Твой пульс замедляется, и боевая ярость пропадает.</wearoff>
   </affect>
   <beats>24</beats>
   <classes>
@@ -26,7 +26,7 @@
     </russian>
   </command>
   <dammsg></dammsg>
-  <group>fightmaster</group>
+  <group registry="skillGroup">fightmaster defensive</group>
   <hard>2</hard>
   <help id="829" keyword="'БОЕВАЯ ЯРОСТЬ'" level="-1" type="SkillHelp">%FMT% *(berserk,ярость)*
 
@@ -39,24 +39,22 @@
   <mana>50</mana>
   <mob>
     <dice>3</dice>
-    <forbidden>false</forbidden>
     <offense>berserk</offense>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>берсерк</nameRus>
   <raceBonuses>
-    <node name="urukhai">
-      <bonus>100</bonus>
-      <level>1</level>
-      <professional>false</professional>
-    </node>    
     <node name="duergar">
       <bonus>100</bonus>
       <level>1</level>
       <professional>false</professional>
     </node>
     <node name="dwarf">
+      <bonus>100</bonus>
+      <level>1</level>
+      <professional>false</professional>
+    </node>
+    <node name="urukhai">
       <bonus>100</bonus>
       <level>1</level>
       <professional>false</professional>

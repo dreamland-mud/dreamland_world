@@ -3,18 +3,18 @@
   <beats>12</beats>
   <classes>
     <node name="anti-paladin">
-      <level>29</level>
+      <level>5</level>
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
     <node name="cleric">
-      <level>26</level>
+      <level>2</level>
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
   </classes>
   <dammsg mg="n">заклинание вреда</dammsg>
-  <group>attack</group>
+  <group registry="skillGroup">attack</group>
   <help id="724" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
 Эта молитва нанесет серьезный вред здоровью жертвы. Чем больше у жертвы
@@ -24,17 +24,17 @@
 
 %SA% %H% [(cast,колдовать)]
 </help>
-  <mana>35</mana>
+  <mana>10</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>вред</nameRus>
   <spell type="SPELL(Harm)">
-    <casted>true</casted>
+    <damtype>harm</damtype>
+    <flags>prayer</flags>
     <position>fight</position>
     <target>char_room</target>
+    <tier>5</tier>
     <type>offensive</type>
   </spell>
 </skill>

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
-    <wearoff>Теперь окружающие видят тебя.</wearoff>
-    <wearoffObj>%1$^O1 становится видимым для окружающих.</wearoffObj>
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
+    <wearoff>Покров улучшенной невидимости вокруг тебя рассеивается.</wearoff>
+    <wearoffObj>Покров улучшенной невидимости вокруг %1$O2 рассеивается.</wearoffObj>
   </affect>
   <beats>12</beats>
   <classes>
@@ -18,7 +20,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>illusion</group>
+  <group registry="skillGroup">illusion</group>
   <help id="85" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 	  
 Только опытные ведьмы и колдуны способны скрыться под покровом улучшенной
@@ -29,13 +31,12 @@
 </help>
   <mana>20</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>улучшенная невидимость</nameRus>
   <spell type="SPELL(ImprovedInvis)">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <position>stand</position>
     <target>char_self</target>
     <type>defensive</type>

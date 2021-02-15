@@ -14,20 +14,16 @@
     </node>
   </classes>
   <dammsg>священный крест</dammsg>
-  <group>benedictions</group>
+  <group registry="skillGroup">benedictions</group>
   <help id="667" keyword="'HOLY CROSS' 'СВЯТОЙ КРЕСТ'" level="-1" type="SkillHelp">Это заклинание втыкает священный крест в могилу, поражая лежащего
 там вампира и заставляя его выбраться наружу.
 </help>
   <mana>80</mana>
-  <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
-    <professional>true</professional>
-  </mob>
   <nameRus>священный крест</nameRus>
   <spell type="SPELL(Holycross)">
-    <casted>true</casted>
     <ranged>false</ranged>     
+    <damtype>none</damtype>
+    <flags>prayer</flags>
     <position>stand</position>
     <target>obj_room</target>
     <type>offensive</type>

@@ -14,7 +14,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>healing</group>
+  <group registry="skillGroup">healing</group>
   <help id="721" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
 Опытные клерики и паладины обладают умением лечить сразу всех членов своей группы.
@@ -25,13 +25,12 @@
 </help>
   <mana>200</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>излечить группу</nameRus>
   <spell type="SPELL(GroupHeal)">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>prayer</flags>
     <position>fight</position>
     <target>people</target>
     <type>defensive</type>

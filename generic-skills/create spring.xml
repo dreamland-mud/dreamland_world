@@ -7,11 +7,6 @@
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
-    <node name="druid">
-      <level>24</level>
-      <maximum>100</maximum>
-      <rating>1</rating>
-    </node>
     <node name="necromancer">
       <level>31</level>
       <maximum>100</maximum>
@@ -29,20 +24,21 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>creation</group>
-  <help id="680" keyword="'СОЗДАТЬ РОДНИК'" level="-1" type="SkillHelp">Это заклинание или молитва создает источник воды, родник, рядом с тобой.
+  <group registry="skillGroup">creation</group>
+  <help id="680" keyword="'СОЗДАТЬ РОДНИК'" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+
+Это заклинание или молитва создает источник воды, родник, рядом с тобой.
 Родник выполняет те же функции, что и фонтаны в городах -- из него можно {hh1074пить{x
 или {hh1075набрать воды{x с собой в путешествие.
 </help>
   <mana>20</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>сотворить родник</nameRus>
   <spell type="SPELL(CreateSpring)">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <position>stand</position>
     <target>create_obj</target>
     <type>none</type>

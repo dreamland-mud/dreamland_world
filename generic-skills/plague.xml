@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="AFFECT(Plague)">
-    <wearoff>Твоя болезнь прошла.</wearoff>
-    <wearoffDispel>%1$^C1 выздоравливает.</wearoffDispel>
+    <wearoff>Ты выздоравливаешь от чумы.</wearoff>
+    <wearoffDispel>%1$^C1 выздоравливает от чумы.</wearoffDispel>
   </affect>
   <beats>12</beats>
   <classes>
@@ -28,8 +28,8 @@
     </node>
   </classes>
   <dammsg mg="f">болезнь</dammsg>
-  <group>maladictions</group>
-  <help id="614" keyword="чуму" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
+  <group registry="skillGroup">maladictions</group>
+  <help id="614" keyword="ЧУМУ" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
 Чума - опасная болезнь, часто с летальным исходом.
 Жертва бьется в конвульсиях, заражая всех кто находится рядом.
@@ -40,14 +40,13 @@
 </help>
   <mana>20</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>чума</nameRus>
   <spell type="SPELL(Plague)">
-    <casted>true</casted>
     <ranged>false</ranged>     
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <position>fight</position>
     <target>char_room</target>
     <type>offensive</type>

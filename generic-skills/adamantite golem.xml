@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
-    <wearoff>Ты вновь обретаешь силы создавать големов.</wearoff>
+    <wearoff>Ты вновь можешь создать адамантитового голема.</wearoff>
   </affect>
   <beats>72</beats>
   <classes>
@@ -12,7 +12,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>necromancy</group>
+  <group registry="skillGroup">necromancy</group>
   <help id="861" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
 Самый крупный и грозный из всех големов, доступных для создания некроманту.
@@ -22,18 +22,13 @@
 %SA% %H% [(cast,колдовать)] [(golems,големы)] [(resummon,перепризыв)]
 </help>
   <mana>500</mana>
-  <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
-    <professional>true</professional>
-  </mob>
   <nameRus>адамантитовый голем</nameRus>
   <spell type="SPELL(AdamantiteGolem)">
     <castMobCount>1</castMobCount>
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <maxMobCount>1</maxMobCount>
     <mobVnum>24</mobVnum>
-    <msgCreateAttemptArea></msgCreateAttemptArea>
     <msgCreateAttemptRoom>%^C1 пытается создать адамантитового голема.</msgCreateAttemptRoom>
     <msgCreateAttemptSelf>Ты пытаешься создать адамантитового голема.</msgCreateAttemptSelf>
     <msgCreateRoom>%^C1 создает адамантитового голема!</msgCreateRoom>
@@ -44,10 +39,11 @@
     <msgReattachAttemptSelf>Ты приказываешь %C3 вновь следовать за тобой.</msgReattachAttemptSelf>
     <msgReattachRoom>%2$^C1 подчиняется приказу %1$C2.</msgReattachRoom>
     <msgReattachSelf>%^C1 подчиняется твоему приказу.</msgReattachSelf>
-    <msgStillAffected>У тебя не хватает сил создать сейчас голема.</msgStillAffected>
+    <msgStillAffected>У тебя сейчас не хватает сил создать адамантитового голема.</msgStillAffected>
     <msgTooManyMobiles>Ты не сможешь управлять таким количеством големов!</msgTooManyMobiles>
     <position>stand</position>
     <postaffectDuration>24</postaffectDuration>
+    <storageVnums>5400 5402 5403 5404 5405 5413</storageVnums>
     <target>create_mob</target>
     <type>none</type>
   </spell>

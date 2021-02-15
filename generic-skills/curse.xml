@@ -2,9 +2,9 @@
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
     <cancelled>true</cancelled>
-    <wearoff>Проклятие исчезает.</wearoff>
-    <wearoffDispel>Проклятие вокруг %1$C2 исчезает.</wearoffDispel>
-    <wearoffObj>Зловещая аура вокруг %1$O2 исчезает.</wearoffObj>
+    <wearoff>Ты больше не чувствуешь себя под гнетом чьего-то проклятия.</wearoff>
+    <wearoffDispel>Чье-то проклятие на %1$C6 исчезает.</wearoffDispel>
+    <wearoffObj>Зловещая аура проклятия вокруг %1$O2 исчезает.</wearoffObj>
   </affect>
   <beats>12</beats>
   <classes>
@@ -40,26 +40,28 @@
     </node>
   </classes>
   <dammsg mg="n">проклятие</dammsg>
-  <group>maladictions</group>
-  <help id="548" level="-1" type="SkillHelp">Это заклинание понижает hitroll и saves vs. spells у жертвы.
-Оно также представляет жертву в дурном свете перед богом - нельзя 
-пользоваться RECALL. {YCurse {xможет быть использовано чтобы заполнить
-инвентарь Темной Мощью. Например: такое оружие будет делать
-больше повреждений добрым противникам.
+  <group registry="skillGroup">maladictions</group>
+  <help id="548" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
-Этим заклинанием можно также &quot;заговаривать&quot; вещи. Колдовство &quot;вдыхает&quot;
-Зло в вещь. Но есть и такие заклинания, которые препятствуют этому.
+При провале {hh2035спасброска{x к темной энергии это заклинание понижает {hh47точность{x и
+защиту от заклинаний у жертвы. Проклятые персонажи также не могут пользоваться
+{hh862возвратом{x и {hh1126транспортными{x заклинаниями.
+
+%FMT% *%SPELL%* _%OBJ%_
+
+Это заклинание также можно использовать на вещи, добавляя {hh96флаг{x &quot;дьявольское&quot;.
+Дьявольское оружие нанесет больше повреждений добрым противникам. Проклятие
+сбивает с вещи {hh766благословение{x и наоборот. Злые вещи нельзя {hh806освятить{x.
 </help>
   <mana>20</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>проклятие</nameRus>
   <spell type="SPELL(Curse)">
-    <casted>true</casted>
     <ranged>false</ranged>     
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <position>fight</position>
     <target>char_room obj_inv obj_room</target>
     <type>offensive</type>

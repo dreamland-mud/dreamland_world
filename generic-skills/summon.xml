@@ -29,8 +29,10 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>transportation</group>
-  <help id="584" keyword="ПРИЗВАТЬ ПРИЗЫВАТЬ NOSUMMON НЕПРИЗЫВ ЗАПРЕТ" level="-1" type="SkillHelp">Это мощное заклинание или молитва призывает персонажей в ту комнату, где
+  <group registry="skillGroup">transportation</group>
+  <help aka="NOSUMMON НЕПРИЗЫВ ПРИЗВАТЬ ПРИЗЫВАТЬ ЗАПРЕТ" id="584" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
+
+Это мощное заклинание или молитва призывает персонажей в ту комнату, где
 находится призыватель.
 
 {cТы можешь призывать:{x
@@ -39,27 +41,29 @@
 
 {cТебя могут призвать:{x
 %A% игроки в твоем ПК-интервале
+%A% твои клановики
 %A% любые другие игроки, если у тебя не включено {y{hc{leconfig nosummon{lrнастройка непризыв{x
 %A% мобы-маги по миру, от которых ты попытаешься сбежать после неудачного боя
 
 {cНе получится призвать:{x
 %A% персонажей, которые прямо сейчас дерутся
 %A% мобов, на которых дано квестовое задание
-%A% персонажей в {hh86безопасной{x или проклятой (norecall) комнате
+%A% персонажей в {hh86безопасной{x или проклятой{le (norecall){x комнате
+%A% клановых персонажей в твоем ПК, если ты некланов{Smый{Sfая{Sx
 
 {cКак защититься от призыва:{x
-%A% Увеличить {hh2035защиту от магии{x: чтобы успешно призвать, надо пройти спасс-бросок
+%A% Увеличить {hh2035защиту от магии{x: чтобы успешно призвать, надо пройти спасбросок
 %A% Найти вещь или заклинание {hh570ментального блока{x
 </help>
   <mana>50</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>false</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>призыв</nameRus>
   <spell type="SummonSpell">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
+    <order>player_only</order>
     <position>stand</position>
     <target>char_world</target>
     <type>none</type>

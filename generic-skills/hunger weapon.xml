@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
-    <wearoffObj>%1$^O1 больше не жаждет чужой жизни.</wearoffObj>
+    <wearoffObj>%1$^O1 больше не жаждет чужой крови.</wearoffObj>
   </affect>
   <beats>12</beats>
   <classes>
@@ -12,7 +12,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>enchantment</group>
+  <group registry="skillGroup">enchantment</group>
   <help id="828" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%OBJ%_
 
 Вампиры могут передать оружию часть своей силы, на время наделяя его
@@ -22,14 +22,10 @@
 или не для злых. На оружие с другими флагами наложить вампиризм сложнее.
 </help>
   <mana>150</mana>
-  <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
-    <professional>true</professional>
-  </mob>
   <nameRus>голодное оружие</nameRus>
   <spell type="SPELL(HungerWeapon)">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <position>stand</position>
     <target>obj_inv obj_equip</target>
     <type>none</type>

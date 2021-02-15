@@ -1,0 +1,55 @@
+// Описывает ограничения и предпочтения по аффиксам и повреждениям для каждого класса сгенерированного оружия.
+{
+    "sword": {
+            "attacks": "slice slash cleave chop bite pierce scratch peckb sting chomp thrust flbite flame acbite frbite shbite"
+    }, 
+
+    "dagger": {
+            "attacks": "bite pierce scratch peckb sting chomp thrust flbite flame acbite frbite shbite negative",
+            "forbids": ["two_hands", "vorpal"],
+            "prefers": ["sharp", "poison", "dr"],
+            "flags": { "tattoo": 20 }
+    }, 
+
+    "spear": {
+            "attacks": "pound crush beating charge smash thwack bite pierce scratch peckb sting chomp thrust acbite frbite shbite",
+            "forbids": ["vorpal"],
+            "prefers": ["hr", "ac"]
+    }, 
+
+    "mace": {
+            "attacks": "pound crush beating charge smash thwack divine negative",
+            "forbids": ["vorpal", "sharp", "poison", "flaming"],
+            "prefers": ["shocking", "hr", "pack_hp"]
+    }, 
+
+    "axe": {
+            "attacks": "slice slash cleave chop wrath flbite acbite frbite shbite",
+            "prefers": ["vorpal", "sharp", "-hr", "dr"]
+    }, 
+
+    "flail": {
+            "attacks": "pound crush beating charge smash thwack flbite flame divine wrath",
+            "forbids": ["vorpal", "sharp", "poison"],
+            "prefers": ["shocking", "hr", "dr"]
+    }, 
+
+    "whip": {
+            "attacks": "whip grep shock suction negative shbite",
+            "forbids": ["two_hands", "vorpal", "flaming", "sharp", "wood", "ice"],
+            "prefers": ["shocking", "poison", "hr", "-dr"]
+    }, 
+
+    "polearm": {
+            "attacks": "slice slash cleave chop bite pierce scratch peckb sting chomp thrust pound crush beating charge smash thwack flbite flame acbite frbite shbite divine",
+            "requires": ["two_hands"],
+            "forbids": ["flaming"],
+            "prefers": ["vorpal", "sharp", "fightmaster", "dr"]
+    }, 
+
+    "exotic": {
+            "damtypes": "any",
+            "prefers": ["vorpal", "fading", "shocking", "flaming", "frost", "pack_hp", "level"]
+    }
+}
+

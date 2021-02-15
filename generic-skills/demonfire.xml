@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
+  <align>evil</align>
   <beats>12</beats>
   <classes>
     <node name="cleric">
@@ -9,22 +10,22 @@
     </node>
   </classes>
   <dammsg mg="p">муки ада</dammsg>
-  <group>attack</group>
+  <group registry="skillGroup">attack</group>
   <help id="642" keyword="'DEMON FIRE' 'ДЕМОНИЧЕСКИЙ ОГОНЬ'" level="-1" type="SkillHelp">Эта молитва призывает демонов ада, которые наносят врагу повреждения и, при
 провале {hh2035спасс-броска{x, {hh548проклинают{x противника.
 Если в душе твоей нету зла, вызывать адские силы не рекомендуется.
 </help>
-  <mana>20</mana>
+  <mana>80</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>огонь демонов</nameRus>
   <spell type="SPELL(Demonfire)">
-    <casted>true</casted>
+    <damtype>fire</damtype>
+    <flags>prayer</flags>
     <position>fight</position>
     <target>char_room</target>
+    <tier>2</tier>
     <type>offensive</type>
   </spell>
 </skill>

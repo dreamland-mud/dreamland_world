@@ -14,25 +14,25 @@
     </node>
   </classes>
   <dammsg>ураганный ветер</dammsg>
-  <group>nature</group>  
-  <help id="796" level="-1" type="SkillHelp">Ураган, сотворенный при помощи этого заклинания, наносит 
-определенные повреждения каждому, кто находится рядом с заклинателем.
-Возникает опасность, что и недерущиеся с тобой персонажи также 
-нападут на тебя! Жертвы малых размеров и находящиеся в это время под
-эффектом {CFly{x &quot;получат двойную порцию&quot; повреждений.
+  <group registry="skillGroup">nature</group>
+  <help id="796" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+
+Ураган, сотворенный при помощи этого заклинания, наносит сильные повреждения
+всем, кто находится рядом с заклинателем. Особенно сильно действует на всякую
+{hh575летучую{x {hh26мелочь{x.
 </help>
-  <mana>200</mana>
+  <mana>150</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>ураган</nameRus>
   <spell type="SPELL(Hurricane)">
-    <casted>true</casted>
     <ranged>false</ranged>     
+    <damtype>other</damtype>
+    <flags>magic</flags>
     <position>fight</position>
     <target>people</target>
+    <tier>2</tier>
     <type>offensive</type>
   </spell>
 </skill>

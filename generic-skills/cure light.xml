@@ -1,40 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <beats>12</beats>
-  <classes>
-    <node name="anti-paladin">
-      <level>11</level>
-      <maximum>100</maximum>
-      <rating>1</rating>
-    </node>
-    <node name="cleric">
-      <level>2</level>
-      <maximum>100</maximum>
-      <rating>1</rating>
-    </node>
-    <node name="druid">
-      <level>2</level>
-      <maximum>100</maximum>
-      <rating>1</rating>
-    </node>
-    <node name="ninja">
-      <level>9</level>
-      <maximum>100</maximum>
-      <rating>1</rating>
-    </node>
-    <node name="paladin">
-      <level>5</level>
-      <maximum>100</maximum>
-      <rating>1</rating>
-    </node>
-    <node name="samurai">
-      <level>10</level>
-      <maximum>100</maximum>
-      <rating>1</rating>
-    </node>
-  </classes>
   <dammsg></dammsg>
-  <group>healing</group>
+  <group registry="skillGroup">healing</group>
   <help id="854" level="-1" type="SkillHelp">%FMT% *%SPELL%* 
 %FMT% *%SPELL%* _%CHAR%_
 
@@ -45,13 +13,12 @@
 </help>
   <mana>10</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>лечить легкие раны</nameRus>
   <spell type="SPELL(CureLight)">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <position>fight</position>
     <target>char_room</target>
     <type>defensive</type>

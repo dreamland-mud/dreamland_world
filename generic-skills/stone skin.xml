@@ -45,7 +45,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>protective</group>
+  <group registry="skillGroup">protective</group>
   <help id="785" level="-1" type="SkillHelp">%FMT% *%SPELL%* 
 
 Это заклинание превратит твою кожу в камень, тем самым уменьшая (усиливая)
@@ -56,13 +56,12 @@
 </help>
   <mana>12</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>каменная кожа</nameRus>
   <spell type="SPELL(StoneSkin)">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <position>stand</position>
     <target>char_self</target>
     <type>defensive</type>

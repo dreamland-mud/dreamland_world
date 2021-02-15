@@ -9,28 +9,30 @@
     </node>
   </classes>
   <dammsg>удар подземных сил</dammsg>
-  <group>nature</group>   
-  <help id="753" level="-1" type="SkillHelp">Это заклинание - более мощный аналог землетрясения ({CEarthquake{x), но
-в отличие от него направленного действия. Земля под ногами противника 
-разверзается, причиняя ему поистине ужасающие повреждения.
+  <group registry="skillGroup">nature</group>
+  <help id="753" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
+
+Это заклинание -- более мощный аналог {hh653землетрясения{x, но направленного
+действия. Земля под ногами противника разверзается, причиняя поистине ужасающие
+повреждения.
 </help>
-  <mana>20</mana>
+  <mana>40</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
-  <nameRus>суровые силы</nameRus>
+  <nameRus>подземные силы</nameRus>
   <spell type="AnatoliaCombatSpell">
+    <damtype>none</damtype>
+    <dice>18</dice>
+    <flags>prayer</flags>
+    <msgChar>Ты призываешь подземные силы, раскалывающие землю у ног $C2.</msgChar>
+    <msgVict>$c1 призывает подземные силы, раскалывающие землю у твоих ног!</msgVict>
+    <order>player_only</order>
+    <position>fight</position>
     <ranged>false</ranged>
     <savesCheck>false</savesCheck>
-    <casted>true</casted>
-    <position>fight</position>
     <target>char_room</target>
+    <tier>3</tier>
     <type>offensive</type>
-    <dice>18</dice>
-    <damtype>none</damtype>
-    <msgVict>$c1 призывает подземные силы, раскалывающие землю у твоих ног!</msgVict>
-    <msgChar>Ты призываешь подземные силы, раскалывающие землю у ног $C2.</msgChar>
   </spell>
 </skill>

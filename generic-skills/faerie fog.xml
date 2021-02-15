@@ -7,11 +7,6 @@
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
-    <node name="druid">
-      <level>31</level>
-      <maximum>100</maximum>
-      <rating>1</rating>
-    </node>
     <node name="warlock">
       <level>27</level>
       <maximum>100</maximum>
@@ -24,14 +19,14 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>nature</group>
-  <help id="790" level="-1" type="SkillHelp">Если произнести это заклинание в комнате, то невидимые, скрытые, 
-подкрадывающиеся и камуфлированные существа в ней проявятся.
+  <group registry="skillGroup">nature</group>
+  <help id="790" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+
+Это весьма полезное заклинание позволяет обнаружить всех невидимых, скрытых,
+спрятанных или замаскированных существ в данной местности.
 </help>
-  <mana>12</mana>
+  <mana>40</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>туман фей</nameRus>
@@ -43,7 +38,9 @@
     </node>
   </raceBonuses>
   <spell type="SPELL(FaerieFog)">
-    <casted>true</casted>
+    <damflags>water</damflags>
+    <damtype>drowning</damtype>
+    <flags>magic</flags>
     <position>stand</position>
     <target>people</target>
     <type>none</type>

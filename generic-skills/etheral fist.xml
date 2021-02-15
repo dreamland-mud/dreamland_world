@@ -9,27 +9,24 @@
     </node>
   </classes>
   <dammsg>призрачный кулак</dammsg>
-  <group>combat</group>
+  <group registry="skillGroup">combat</group>
   <help id="826" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
-Это боевое заклинание анти-паладинов поражает его противников энергией
-темного эфира.  Мощь заклинания возрастает по мере того, как анти-паладин
-становится более опытным. Повреждения снижаются, если у противника успешно
-прошел {hh2035спасс-бросок{x против заклинаний (saves vs spell);
-
-%SA% %H% [(cast,колдовать)]
+Эта боевая молитва анти-паладинов поражает противников кулаком иномирового
+эфира. Если противник проваливает {hh2035спасбросок{x, то есть шанс получить {hh120задержку{x.
+А при успешном спасброске повреждения снижаются.
 </help>
   <mana>20</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>призрачный кулак</nameRus>
   <spell type="SPELL(EtheralFist)">
-    <casted>true</casted>
+    <damtype>energy</damtype>
+    <flags>prayer</flags>
     <position>fight</position>
     <target>char_room</target>
+    <tier>4</tier>
     <type>offensive</type>
   </spell>
 </skill>

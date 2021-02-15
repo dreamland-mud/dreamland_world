@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill type="BasicSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Твои глаза перестают слезиться от дыма.</wearoff>
+  </affect>
+  <beats>24</beats>
+  <dammsg mg="n">огненное дыхание</dammsg>
+  <help id="658" level="-1" type="SkillHelp">Излюбленное развлечение драконов - пульнуть в тебя воронкой бушующего огня.
+Попав под струю огня, жертва не только получит повреждения, но может и на время
+ослепнут от дыма. Вещи в инвентаре испортятся от воздействия огня.
+Часть этой могущественной магии доступна ведьмам и варлокам.
+
+%SA% %H% [(dragons breath,дыхание драконов)]
+</help>
+  <mana>200</mana>
+  <nameRus>огненное дыхание</nameRus>
+  <spell type="SPELL(FireBreath)">
+    <casted>true</casted>
+    <ranged>false</ranged>     
+    <position>fight</position>
+    <target>char_room</target>
+    <type>offensive</type>
+  </spell>
+</skill>

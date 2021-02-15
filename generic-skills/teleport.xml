@@ -29,19 +29,27 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>transportation</group>
-  <help id="701" level="-1" type="SkillHelp">Это заклинание &quot;перемещает&quot; тебя из комнаты, где ты находишься, 
-в какую-нибудь случайную комнату в мире.
+  <group registry="skillGroup">transportation</group>
+  <help id="701" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+
+Это рискованное транспортное заклинание перемещает тебя в какое-то абсолютно
+случайное место в мире. Будь осторож{Smен{Sfна{Sx, ты можешь попасть в ловушку или
+оказаться рядом с агрессивным существом. Некоторые существа-маги могут применять
+это заклинание в бою против тебя.
+
+Телепортироваться нельзя из мест, где запрещен {hh862возврат{x, но можно попасть в такое
+место. Под {hh2146адреналином{x, {hh32убийцам{x и {hh686ворюгам{x тоже не удастся смыться
+с помощью телепорта.
 </help>
   <mana>35</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>телепортация</nameRus>
   <spell type="SPELL(Teleport)">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
+    <order>player_only</order>
     <position>fight</position>
     <target>char_self</target>
     <type>none</type>

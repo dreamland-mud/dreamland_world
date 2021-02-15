@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
-    <wearoffObj>Защитная аура вокруг %1$O2 исчезает.</wearoffObj>
+    <wearoffObj>Огнеупорная аура вокруг %1$O2 исчезает.</wearoffObj>
   </affect>
   <beats>12</beats>
   <classes>
@@ -32,21 +32,17 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>enchantment</group>
-  <help id="867" keyword="'ЗАЩИТНАЯ АУРА' BURNPROOF" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%OBJ%_
+  <group registry="skillGroup">enchantment</group>
+  <help aka="BURNPROOF 'ЗАЩИТА ОТ ОГНЯ' 'ЗАЩИТНАЯ АУРА'" id="867" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%OBJ%_
 
 Это заклинание на короткое время защищает предмет от {hh101воздействия{x кислоты, огня
 и {hh682разогрева{x металла. Некоторые вещи обладают постоянным {hh96свойством{x защиты от огня.
 </help>
   <mana>10</mana>
-  <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
-    <professional>true</professional>
-  </mob>
   <nameRus>огнеупорность</nameRus>
   <spell type="SPELL(Fireproof)">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <position>stand</position>
     <target>obj_inv</target>
     <type>none</type>

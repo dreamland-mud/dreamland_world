@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты чувствуешь, что снова можешь подчинить кого-то своей воле.</wearoff>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="vampire">
+      <level>43</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <command type="SKILL(dominate)">
+    <aliases>
+      <node>control</node>
+    </aliases>
+    <cat>class</cat>
+    <hint>(вампиры) подчинить кого-то своей воле</hint>
+    <name>dominate</name>
+    <position>stand</position>
+    <russian>
+      <node>доминировать</node>
+      <node>контролировать</node>
+    </russian>
+  </command>
+  <dammsg></dammsg>
+  <group>beguiling</group>
+  <hard>2</hard>
+  <help id="819" keyword="ДОМИНИРОВАНИЕ ДОМИНАЦИЯ" level="-1" type="SkillHelp">%FMT% *%CMD%* _%VICT%_
+
+Опытные вампиры запросто подчиняют различных существ своей воле, после чего те
+беспрекословно выполняют все приказы вампира. Шанс подчинить зависит как
+от личного обаяния, так и от того, насколько жертва умнее и старше. 
+</help>
+  <mana>5</mana>
+  <nameRus>доминировать</nameRus>
+</skill>

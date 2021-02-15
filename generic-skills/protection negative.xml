@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
-    <wearoff>Ты беззащит%1$Gно|ен|на перед своими атаками.</wearoff>
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
+    <wearoff>Твоя защищенность от воздействия темной энергии понижается.</wearoff>
   </affect>
   <beats>12</beats>
   <classes>
@@ -12,21 +14,21 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>enhancement</group>
-  <help id="2032" keyword="'ЗАЩИТА НЕГАТИВ' NEGATIVE" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+  <group registry="skillGroup">enhancement</group>
+  <help id="2032" keyword="'ЗАЩИТА НЕГАТИВ' NEGATIVE 'ТЕМНАЯ ЭНЕРГИЯ' 'НЕГАТИВНАЯ ЭНЕРГИЯ'" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
-Мощное заклятие {hh143некромантов{x, защищающее их от всех атак негативной энергией --
-например, очень многих {hh1117проклятий{x.
+Мощное заклятие {hh143некромантов{x, дающее сопротивляемость ко всем атакам темной
+энергией. =Темная энергия= -- один из {hh101типов повреждений{x, обычно применимый к 
+{hh96вампирическому{x оружию и умениям, темной магии и большинству {hh1117проклятий{x.
 </help>
   <mana>20</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>защита от негативного</nameRus>
   <spell type="SPELL(ProtectionNegative)">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <position>stand</position>
     <target>char_self</target>
     <type>defensive</type>

@@ -7,11 +7,6 @@
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
-    <node name="druid">
-      <level>8</level>
-      <maximum>100</maximum>
-      <rating>1</rating>
-    </node>
     <node name="necromancer">
       <level>8</level>
       <maximum>100</maximum>
@@ -53,13 +48,27 @@
       <rating>1</rating>
     </node>
   </classes>
+  <command type="SKILL(brandish)">
+    <cat>magic</cat>
+    <extra>undig</extra>
+    <hint>взмахнуть волшебным посохом</hint>
+    <name>brandish</name>
+    <order>player_only</order>  
+    <position>rest</position>
+    <russian>
+      <node>взмахнуть</node>
+    </russian>
+  </command>
   <dammsg></dammsg>
   <group>arcane</group>
+  <help aka="STAFF" id="2144" level="-1" type="SkillHelp">Это умение позволяет использовать волшебные посохи.
+Подробно об использовании посохов читай в статье &quot;{hh121Волшебные предметы{x&quot;.
+
+%SA% %H% [(magical items,волшебные предметы)]
+</help>
   <mob>
     <bonus>20</bonus>
     <dice>3</dice>
-    <forbidden>false</forbidden>
-    <ordered>false</ordered>
     <professional>false</professional>
   </mob>
   <nameRus>посохи</nameRus>

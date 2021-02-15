@@ -42,25 +42,21 @@
       <rating>1</rating>
     </node>
     <node name="warrior">
-      <level>1</level>
+      <level>2</level>
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>defensive</group>
+  <group registry="skillGroup">defensive</group>
   <hard>6</hard>
-  <help id="576" level="-1" type="SkillHelp">%FMT% {Cпассивное умение{x, работает автоматически.
-
-Когда не успеваешь {hh754увернуться{x, можно отразить атаку противника своим оружием.
+  <help aka="ПАРИРОВАТЬ" id="576" level="-1" type="SkillHelp">Когда не успеваешь {hh754увернуться{x, можно отразить атаку противника своим оружием.
 Потеряв свое оружие, ты лишаешь себя возможности парировать. 
-{hh1323Хлысты{x (whip) и {hh615цепы{x (flail) не парируются.
+{hh588Хлысты{x (whip) и {hh615цепы{x (flail) не парируются.
 </help>
   <mob>
     <dice>2</dice>
-    <forbidden>false</forbidden>
     <offense>parry</offense>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>парирование</nameRus>

@@ -50,7 +50,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>protective</group>
+  <group registry="skillGroup">protective</group>
   <help id="556" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 %FFF% *%SPELL%* _%CHAR%_
 
@@ -67,13 +67,12 @@
 </help>
   <mana>5</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>броня</nameRus>
   <spell type="SPELL(Armor)">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <position>stand</position>
     <target>char_room</target>
     <type>defensive</type>

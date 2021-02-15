@@ -2,9 +2,8 @@
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
     <cancelled>true</cancelled>
-    <dispelled>true</dispelled>
-    <wearoff>Сеть вокруг тебя растворяется.</wearoff>
-    <wearoffDispel>Паутина, сковывающая движения %1$C2 исчезает.</wearoffDispel>
+    <wearoff>Сковавшая твои движения паутина растворяется.</wearoff>
+    <wearoffDispel>Сковавшая движения %1$C2 паутина растворяется.</wearoffDispel>
   </affect>
   <beats>12</beats>
   <classes>
@@ -25,18 +24,24 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>combat</group>
-  <help id="852" level="-1" type="SkillHelp">Это заклинание окутывает противника густой паутиной, сковывая его движения.
+  <group registry="skillGroup">combat</group>
+  <help id="852" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
+
+Это заклинание окутывает противника густой паутиной, сковывая его движения.
+Успешно наброшенная паутина не дает жертве покинуть данную местность -- жертва
+может разорвать путы после нескольких попыток пройти в каком-то из направлений.
+
+{hh153Облачные гиганты{x и другие нематериальные или полуматериальные существа могут
+выпутаться из паутины быстрее.
 </help>
-  <mana>50</mana>
+  <mana>80</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>паутина</nameRus>
   <spell type="SPELL(Web)">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <position>fight</position>
     <target>char_room</target>
     <type>offensive</type>

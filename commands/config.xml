@@ -1,18 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
   <cat>config</cat>
-  <extra>keep_hide ghost afk nanny important</extra>
+  <extra>keep_hide ghost afk nanny</extra>
   <groups>
     <node>
       <node type="ConfigElement">
-        <autocmd>true</autocmd>
-        <autolist>true</autolist>
-        <autotext>false</autotext>
         <bit table="plr_flags">autoassist</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden</extra>
-        <help level="-1" refby="autolist" type="CommandHelp">
-        </help>
         <hint>вступать в бой при нападении на группу</hint>
         <msgOff>Ты не будешь вступать в бой при нападении на твою группу.</msgOff>
         <msgOn>Ты будешь вступать в бой при нападении на твою группу.</msgOn>
@@ -21,14 +16,9 @@
         <rname>автопомощь</rname>
       </node>
       <node type="ConfigElement">
-        <autocmd>true</autocmd>
-        <autolist>true</autolist>
-        <autotext>false</autotext>
         <bit table="plr_flags">autogold</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden</extra>
-        <help level="-1" refby="autolist" type="CommandHelp">
-        </help>
         <hint>забирать деньги из трупов</hint>
         <msgOff>Ты не будешь автоматически забирать деньги из трупов.</msgOff>
         <msgOn>Ты будешь автоматически забирать деньги из трупов.</msgOn>
@@ -37,14 +27,9 @@
         <rname>автомонеты</rname>
       </node>
       <node type="ConfigElement">
-        <autocmd>true</autocmd>
-        <autolist>true</autolist>
-        <autotext>false</autotext>
         <bit table="plr_flags">autoloot</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden</extra>
-        <help level="-1" refby="autolist" type="CommandHelp">
-        </help>
         <hint>забирать вещи из трупов</hint>
         <msgOff>Ты не будешь автоматически забирать все вещи из трупа врага.</msgOff>
         <msgOn>Ты будешь автоматически забирать все вещи из трупа врага.</msgOn>
@@ -53,14 +38,9 @@
         <rname>автограбеж</rname>
       </node>
       <node type="ConfigElement">
-        <autocmd>true</autocmd>
-        <autolist>true</autolist>
-        <autotext>false</autotext>
         <bit table="add_comm_flags">autolook</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden</extra>
-        <help level="-1" refby="autolist" type="CommandHelp">
-        </help>
         <hint>заглядывать в труп после убийства</hint>
         <msgOff>Ты не будешь заглядывать в труп после убийства.</msgOff>
         <msgOn>Ты будешь заглядывать в труп после убийства.</msgOn>
@@ -69,14 +49,9 @@
         <rname>автовзгляд</rname>
       </node>
       <node type="ConfigElement">
-        <autocmd>true</autocmd>
-        <autolist>true</autolist>
-        <autotext>false</autotext>
         <bit table="plr_flags">autosac</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden</extra>
-        <help level="-1" refby="autolist" type="CommandHelp">
-        </help>
         <hint>приносить трупы в жертву после убийства</hint>
         <msgOff>Ты не будешь приносить в жертву труп после убийства.</msgOff>
         <msgOn>Ты будешь приносить в жертву труп после убийства.</msgOn>
@@ -85,14 +60,9 @@
         <rname>автожертва</rname>
       </node>
       <node type="ConfigElement">
-        <autocmd>true</autocmd>
-        <autolist>true</autolist>
-        <autotext>false</autotext>
         <bit table="plr_flags">autosplit</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden</extra>
-        <help level="-1" refby="autolist" type="CommandHelp">
-        </help>
         <hint>делиться с группой деньгами из трупов</hint>
         <msgOff>Ты не будешь делить деньги из трупа врага между членами своей группы.</msgOff>
         <msgOn>Ты будешь делить деньги из трупа врага между членами своей группы.</msgOn>
@@ -101,9 +71,6 @@
         <rname>автодележ</rname>
       </node>
       <node type="ConfigElement">
-        <autocmd>false</autocmd>
-        <autolist>false</autolist>
-        <autotext>false</autotext>
         <bit table="config_flags">fightspam</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden</extra>
@@ -115,9 +82,6 @@
         <rname>спамбой</rname>
       </node>
       <node type="ConfigElement">
-        <autocmd>false</autocmd>
-        <autolist>false</autolist>
-        <autotext>false</autotext>
         <bit table="config_flags">skillspam</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden</extra>
@@ -129,9 +93,6 @@
         <rname>спамумения</rname>
       </node>
       <node type="ConfigElement">
-        <autocmd>false</autocmd>
-        <autolist>false</autolist>
-        <autotext>false</autotext>
         <bit table="config_flags">weaponspam</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden</extra>
@@ -143,9 +104,6 @@
         <rname>нетспаморужия</rname>
       </node>
       <node type="ConfigElement">
-        <autocmd>false</autocmd>
-        <autolist>false</autolist>
-        <autotext>false</autotext>
         <bit table="config_flags">newdamage</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden</extra>
@@ -160,9 +118,6 @@
     </node>
     <node>
       <node type="ConfigElement">
-        <autocmd>true</autocmd>
-        <autolist>true</autolist>
-        <autotext>true</autotext>
         <bit table="add_comm_flags">nocancel</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden</extra>
@@ -174,9 +129,6 @@
         <rname>неотменять</rname>
       </node>
       <node type="ConfigElement">
-        <autocmd>false</autocmd>
-        <autolist>true</autolist>
-        <autotext>true</autotext>
         <bit table="plr_flags">nofollow</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden</extra>
@@ -188,9 +140,6 @@
         <rname>неследовать</rname>
       </node>
       <node type="ConfigElement">
-        <autocmd>true</autocmd>
-        <autolist>true</autolist>
-        <autotext>true</autotext>
         <bit table="plr_flags">nosummon</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden</extra>
@@ -205,9 +154,6 @@
     </node>
     <node>
       <node type="ConfigElement">
-        <autocmd>true</autocmd>
-        <autolist>true</autolist>
-        <autotext>true</autotext>
         <bit table="plr_flags">holylight</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden</extra>
@@ -220,9 +166,6 @@
         <rname>боговзор</rname>
       </node>
       <node type="ConfigElement">
-        <autocmd>false</autocmd>
-        <autolist>false</autolist>
-        <autotext>false</autotext>
         <bit table="comm_flags">show_affects</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden</extra>
@@ -234,14 +177,9 @@
         <rname>аффекты</rname>
       </node>
       <node type="ConfigElement">
-        <autocmd>true</autocmd>
-        <autolist>true</autolist>
-        <autotext>false</autotext>
         <bit table="plr_flags">autoexit</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden</extra>
-        <help level="-1" refby="autolist" type="CommandHelp">
-        </help>
         <hint>отображать выходы из комнаты</hint>
         <msgOff>Выходы не отображаются автоматически.</msgOff>
         <msgOn>Выходы отображаются автоматически.</msgOn>
@@ -250,14 +188,9 @@
         <rname>автовыходы</rname>
       </node>
       <node type="ConfigElement">
-        <autocmd>true</autocmd>
-        <autolist>true</autolist>
-        <autotext>false</autotext>
         <bit table="add_comm_flags">autostore</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden</extra>
-        <help level="-1" refby="afk autolist" type="CommandHelp">
-        </help>
         <hint>во время боя сохранять сообщения в буфер</hint>
         <msgOff>Сообщения, поступившие во время сражения, отображаются сразу же.</msgOff>
         <msgOn>Сообщения, поступившие во время сражения, сохраняются в буфере.</msgOn>
@@ -266,23 +199,9 @@
         <rname>автобуфер</rname>
       </node>
       <node type="ConfigElement">
-        <autocmd>true</autocmd>
-        <autolist>true</autolist>
-        <autotext>false</autotext>
         <bit table="comm_flags">brief</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden</extra>
-        <help id="1088" level="-1" ref="compact" type="CommandHelp">Эти команды устанавливают опции отображения.
-
-%FMT%  *(config,режим)* *(brief,кратко)* *%YES%*|*%NO%*
-Включает и выключает вывод описаний комнат при движении, намного уменьшая
-количество текста для пересылки и обработки.
-
-%FMT%  *(config,режим)* *(compact,компактно)* *%YES%*|*%NO%*
-Убирает дополнительную пустую строку перед строкой-подсказкой (prompt).
-
-%SA% %H% [(config,режим)], [(autolist,автонастройки)]
-	</help>
         <hint>видеть сокращенное описание комнаты</hint>
         <msgOff>Описание комнаты отображается в полном виде.</msgOff>
         <msgOn>Описание комнаты отображается в сокращенном виде.</msgOn>
@@ -295,9 +214,6 @@
           <node>colour</node>
           <node>ansi</node>
         </aliases>
-        <autocmd>true</autocmd>
-        <autolist>true</autolist>
-        <autotext>false</autotext>
         <bit table="plr_flags">color</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden nanny</extra>
@@ -309,9 +225,6 @@
         <rname>цвет</rname>
       </node>
       <node type="ConfigElement">
-        <autocmd>true</autocmd>
-        <autolist>true</autolist>
-        <autotext>false</autotext>
         <bit table="comm_flags">combine</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden</extra>
@@ -323,14 +236,9 @@
         <rname>комбинировать</rname>
       </node>
       <node type="ConfigElement">
-        <autocmd>true</autocmd>
-        <autolist>true</autolist>
-        <autotext>false</autotext>
         <bit table="comm_flags">compact</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden nanny</extra>
-        <help level="-1" refby="brief" type="CommandHelp">
-        </help>
         <hint>не выводить дополнительных строк</hint>
         <msgOff>Перед строкой подсказки будет выводиться дополнительная строка.</msgOff>
         <msgOn>Перед строкой подсказки не будет выводиться дополнительная строка.</msgOn>
@@ -339,9 +247,6 @@
         <rname>компактно</rname>
       </node>
       <node type="ConfigElement">
-        <autocmd>false</autocmd>
-        <autolist>true</autolist>
-        <autotext>false</autotext>
         <bit table="comm_flags">prompt</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden</extra>
@@ -353,9 +258,6 @@
         <rname>подсказка</rname>
       </node>
       <node type="ConfigElement">
-        <autocmd>false</autocmd>
-        <autolist>false</autolist>
-        <autotext>false</autotext>
         <bit table="config_flags">runames</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden nanny</extra>
@@ -367,9 +269,6 @@
         <rname>русимена</rname>
       </node>
       <node type="ConfigElement">
-        <autocmd>false</autocmd>
-        <autolist>false</autolist>
-        <autotext>false</autotext>
         <bit table="config_flags">rucommands</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden nanny</extra>
@@ -381,9 +280,6 @@
         <rname>рускоманды</rname>
       </node>
       <node type="ConfigElement">
-        <autocmd>false</autocmd>
-        <autolist>false</autolist>
-        <autotext>false</autotext>
         <bit table="config_flags">ruskills</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden nanny</extra>
@@ -395,9 +291,6 @@
         <rname>русумения</rname>
       </node>
       <node type="ConfigElement">
-        <autocmd>false</autocmd>
-        <autolist>false</autolist>
-        <autotext>false</autotext>
         <bit table="config_flags">ruexits</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden nanny</extra>
@@ -409,9 +302,6 @@
         <rname>русвыходы</rname>
       </node>
       <node type="ConfigElement">
-        <autocmd>false</autocmd>
-        <autolist>false</autolist>
-        <autotext>false</autotext>
         <bit table="config_flags">short_objflag</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden</extra>
@@ -423,9 +313,6 @@
         <rname>предмфлаги</rname>
       </node>
       <node type="ConfigElement">
-        <autocmd>false</autocmd>
-        <autolist>false</autolist>
-        <autotext>true</autotext>
         <bit table="comm_flags">mildcolor</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden nanny</extra>
@@ -437,9 +324,6 @@
         <rname>мягкцвет</rname>
       </node>
       <node type="ConfigElement">
-        <autocmd>false</autocmd>
-        <autolist>false</autolist>
-        <autotext>true</autotext>
         <bit table="config_flags">objname_hint</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden nanny</extra>
@@ -451,9 +335,6 @@
         <rname>имяпредмета</rname>
       </node>
       <node type="ConfigElement">
-        <autocmd>true</autocmd>
-        <autolist>false</autolist>
-        <autotext>true</autotext>
         <bit table="config_flags">screenreader</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden nanny</extra>
@@ -468,9 +349,6 @@
     </node>
     <node>
       <node type="ConfigElement">
-        <autocmd>false</autocmd>
-        <autolist>false</autolist>
-        <autotext>false</autotext>
         <bit table="config_flags">autoafk</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden</extra>
@@ -482,9 +360,6 @@
         <rname>автовок</rname>
       </node>
       <node type="ConfigElement">
-        <autocmd>true</autocmd>
-        <autolist>true</autolist>
-        <autotext>false</autotext>
         <bit table="add_comm_flags">noiac</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden nanny</extra>
@@ -496,9 +371,6 @@
         <rname>noiac</rname>
       </node>
       <node type="ConfigElement">
-        <autocmd>true</autocmd>
-        <autolist>true</autolist>
-        <autotext>false</autotext>
         <bit table="add_comm_flags">notelnet</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden nanny</extra>
@@ -510,9 +382,6 @@
         <rname>notelnet</rname>
       </node>
       <node type="ConfigElement">
-        <autocmd>false</autocmd>
-        <autolist>true</autolist>
-        <autotext>false</autotext>
         <bit table="comm_flags">telnet_ga</bit>
         <cat></cat>
         <extra>keep_hide ghost afk hidden nanny</extra>
@@ -535,10 +404,11 @@
 %FMT%  *%CMD%* _опция_ *%YES%*|*%NO%*|*(toggle,переключить)*
 Включает-выключает указанную опцию.
 
-%SA% %H% [(autolist,автонастройки)], [(brief,кратко)], [noiac]
+%SA% %H% [(autosac,автожертва)], [(brief,кратко)], [noiac]
 </help>
   <hint>список всех настроек</hint>
   <name>config</name>
+  <order>player_only</order>	
   <position>dead</position>
   <russian>
     <node>режим</node>

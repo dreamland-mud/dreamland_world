@@ -9,22 +9,24 @@
     </node>
   </classes>
   <dammsg>кулак пустыни</dammsg>
-  <group>nature</group>  
-  <help id="770" level="-1" type="SkillHelp">Это заклинание действует в горах, холмах и пустыне (везде, где есть
-пыль или песок) и наносит повреждения жертве. Существует вероятность,
-что жертва будет ослеплена.
+  <group registry="skillGroup">nature</group>
+  <help aka="КУЛАК ПУСТЫННЫЙ" id="770" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
+
+Это заклинание действует только в определенных {hh86типах местности{x -- в горах,
+холмах и пустынях, где есть пыль или песок -- нанося сильные повреждения жертве.
+Существует вероятность, что жертва будет {hh783ослеплена{x.
 </help>
-  <mana>50</mana>
+  <mana>200</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>кулак пустыни</nameRus>
   <spell type="SPELL(DesertFist)">
-    <casted>true</casted>
+    <damtype>bash</damtype>
+    <flags>prayer</flags>
     <position>fight</position>
     <target>char_room</target>
+    <tier>1</tier>
     <type>offensive</type>
   </spell>
 </skill>

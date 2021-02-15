@@ -9,25 +9,24 @@
     </node>
   </classes>
   <dammsg mg="n">спектральное бешенство</dammsg>
-  <group>combat</group>
+  <group registry="skillGroup">combat</group>
   <help id="2029" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
 Средней силы заклинание, наносящее противнику урон сгустком энергии.
 </help>
-  <mana>20</mana>
+  <mana>40</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>спектральное бешенство</nameRus>
   <spell type="AnatoliaCombatSpell">
-    <casted>true</casted>
+    <damtype>energy</damtype>
+    <dice>8</dice>
+    <flags>magic</flags>
+    <msgNotVict>Космическая материя яростно искажается вокруг $C2!</msgNotVict>
     <position>fight</position>
     <target>char_room</target>
+    <tier>3</tier>
     <type>offensive</type>
-    <dice>8</dice>
-    <damtype>energy</damtype>
-    <msgNotVict>Космическая материя яростно искажается вокруг $C2!</msgNotVict>
   </spell>
 </skill>

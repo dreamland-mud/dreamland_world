@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
   <cat>info</cat>
-  <extra>keep_hide ghost nanny important</extra>
-  <help id="1079" keyword="'СПИСОК КОМАНД' ПРОСМОТРА" level="-1" type="CommandHelp">=Список команд=
+  <extra>keep_hide ghost nanny</extra>
+  <help aka="ПРОСМОТРА 'СПИСОК КОМАНД'" id="1079" level="-1" title="Список команд" type="CommandHelp">Большинство действий в нашем мире выполняются с помощью =команд=. Команд есть
+очень много, и чтобы ориентироваться в них есть справка и общий список.
 
 %FMT%  *%CMD%*
 Показывает список всех доступных на данный момент команд, сгруппированных по
@@ -23,6 +24,7 @@
 </help>
   <hint>список всех команд (это я и есть)</hint>
   <name>commands</name>
+  <order>player_only</order>
   <position>dead</position>
   <russian>
     <node>команды</node>

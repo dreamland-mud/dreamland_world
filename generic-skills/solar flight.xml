@@ -9,7 +9,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>transportation</group>
+  <group registry="skillGroup">transportation</group>
   <help id="631" level="-1" type="SkillHelp">%FMT% *%SPELL%* _цель_
       
 Солнечный полет - это могущественное транспортное заклинание, открывающее
@@ -26,14 +26,10 @@
 %SA% %H% [(cast,колдовать)] [(gate,врата)] 
 </help>
   <mana>80</mana>
-  <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
-    <professional>true</professional>
-  </mob>
   <nameRus>солнечный полет</nameRus>
   <spell type="SPELL(SolarFlight)">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>prayer</flags>
     <gateShadow>true</gateShadow>
     <gateViolent>false</gateViolent>
     <levelDiff>1</levelDiff>

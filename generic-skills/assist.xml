@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
-    <wearoff>Ты вновь можешь лечить.</wearoff>
+    <wearoff>Ты вновь можешь лечить нежить.</wearoff>
   </affect>
   <beats>12</beats>
   <classes>
@@ -12,7 +12,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>healing</group>
+  <group registry="skillGroup">healing</group>
   <help id="842" keyword="'ЛЕЧЕНИЕ НЕЖИТИ'" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 %FFF% *%SPELL%* _%CHAR%_
 
@@ -24,13 +24,12 @@
 </help>
   <mana>100</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>лечить нежить</nameRus>
   <spell type="SPELL(Assist)">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <position>fight</position>
     <target>char_room</target>
     <type>defensive</type>

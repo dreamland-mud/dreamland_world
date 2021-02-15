@@ -9,8 +9,8 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>healing</group>
-  <help id="698" keyword="раны" level="-1" type="SkillHelp">%FMT% *%SPELL%* 
+  <group registry="skillGroup">healing</group>
+  <help id="698" keyword="РАНЫ" level="-1" type="SkillHelp">%FMT% *%SPELL%* 
 %FMT% *%SPELL%* _%CHAR%_
 
 Достигнув высочайшего мастерства в искусстве лечения, клерики могут восстановить
@@ -21,13 +21,13 @@
 </help>
   <mana>250</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>false</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>мастерское лечение</nameRus>
   <spell type="SPELL(MasterHealing)">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>prayer</flags>
+    <order>player_only</order>
     <position>fight</position>
     <target>char_room</target>
     <type>defensive</type>

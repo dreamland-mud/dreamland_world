@@ -9,7 +9,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>transportation</group>
+  <group registry="skillGroup">transportation</group>
   <help id="602" level="-1" type="SkillHelp">%FMT% *%SPELL%* _цель_
       
 Астральная прогулка - это могущественное транспортное заклинание, открывающее
@@ -25,13 +25,12 @@
 </help>
   <mana>80</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>астральная прогулка</nameRus>
   <spell type="GateSpell">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <gateShadow>true</gateShadow>
     <gateViolent>false</gateViolent>
     <levelDiff>3</levelDiff>
@@ -41,6 +40,7 @@
     <msgRoomLeave>Яркая вспышка света озаряет все вокруг и %1$C1 исчезает!</msgRoomLeave>
     <msgSelfEnter>Пройдя множество миров, ты оказываешься рядом с %2$C5.</msgSelfEnter>
     <msgSelfLeave></msgSelfLeave>
+    <order>player_only</order>
     <position>fight</position>
     <takeGroup>false</takeGroup>
     <takePet>true</takePet>

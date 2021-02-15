@@ -12,8 +12,8 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>necromancy</group>
-  <help id="551" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+  <group registry="skillGroup">necromancy</group>
+  <help aka="SUMMONED ПРИЗВАННАЯ ПРИЗВАТЬ ТЕНЬ" id="551" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
 Это заклинание призывает отражение некроманта из мира теней и подчиняет его
 воле. Созданная тень по своим параметрам здоровья и маны напоминает хозяина.
@@ -23,18 +23,13 @@
 %SA% %H% [(cast,колдовать)] [(resummon,перепризыв)] [(order,приказать)]
 </help>
   <mana>200</mana>
-  <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
-    <professional>true</professional>
-  </mob>
   <nameRus>вызов тени</nameRus>
   <spell type="SPELL(SummonShadow)">
     <castMobCount>1</castMobCount>
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <maxMobCount>1</maxMobCount>
     <mobVnum>26</mobVnum>
-    <msgCreateAttemptArea></msgCreateAttemptArea>
     <msgCreateAttemptRoom>%^C1 пытается призвать тень.</msgCreateAttemptRoom>
     <msgCreateAttemptSelf>Ты пытаешься призвать тень.</msgCreateAttemptSelf>
     <msgCreateRoom>Тень появляется, вызванная заклинанием %1$C2!</msgCreateRoom>

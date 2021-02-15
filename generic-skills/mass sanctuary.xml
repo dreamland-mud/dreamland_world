@@ -12,18 +12,17 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>protective</group>
+  <group registry="skillGroup">protective</group>
   <help id="2034" level="-1" type="SkillHelp">Мощная молитва, накладывающая {hh656белую ауру{x на всех членов {hh1378группы{x.
 </help>
   <mana>200</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>массовое святилище</nameRus>
   <spell type="SPELL(MassSanctuary)">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>prayer</flags>
     <position>stand</position>
     <target>people</target>
     <type>defensive</type>

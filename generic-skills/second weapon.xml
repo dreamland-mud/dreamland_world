@@ -52,12 +52,10 @@
     </russian>
   </command>
   <dammsg></dammsg>
-  <group>weaponsmaster</group>
+  <group registry="skillGroup">weaponsmaster</group>
   <hard>2</hard>
-  <help id="752" keyword="DUAL SECOND 'SECOND WEAPON' ВТОРИЧНОЕ ВТОРОЕ 'ВТОРОЕ ОРУЖИЕ' 'ДВУМЯ РУКАМИ'" level="-1" title="Второе оружие" type="SkillHelp">Чтобы надеть второе оружие (при наличии навыка), используй:
+  <help aka="DUAL SECOND 'SECOND WEAPON' 'ДВУМЯ РУКАМИ' ВТОРИЧНОЕ ВТОРОЕ 'ВТОРОЕ ОРУЖИЕ'" id="752" level="-1" title="Второе оружие" type="SkillHelp">Чтобы надеть второе оружие (при наличии навыка), используй:
 %FMT% *(dual,второе)* _оружие_
-
-В бою это {Cпассивное умение{x будет работать автоматически, нанося атаки врагу.
 
 Всем воинским классам доступен навык сражения со вторым оружием -- или, в случае
 {hh585рукопашного{x боя, с использованием обоих рук. Со вторым оружием нельзя носить
@@ -97,8 +95,8 @@
 с помощью мощных артефактов), твой шанс нанесения ударов будет плохим.
 </help>
   <mob>
-    <forbidden>true</forbidden>
-    <ordered>true</ordered>
+    <bonus>10</bonus>
+    <dice>1</dice>      
     <professional>true</professional>
   </mob>
   <nameRus>второе оружие</nameRus>

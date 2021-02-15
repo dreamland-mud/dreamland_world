@@ -2,9 +2,7 @@
 <Command>
   <cat>config</cat>
   <extra>keep_hide ghost</extra>
-  <help id="1012" keyword="ПРОМПТ 'СТРОКА СОСТОЯНИЯ' MUDPROMPT" level="-1" ref="battleprompt" type="CommandHelp">=Строка состояния=
-
-*(prompt,подсказка)* без аргумента включает и выключает вывод строки состояния,
+  <help id="1012" keyword="ПРОМПТ 'СТРОКА СОСТОЯНИЯ' MUDPROMPT" level="-1" ref="battleprompt" type="CommandHelp">*(prompt,подсказка)* без аргумента включает и выключает вывод строки состояния,
        а *(battleprompt,боеваяподсказка)* - строки состояния в бою.
  
 *(prompt,подсказка)* *%ALL%* - устанавливает стандартную строку состояния 
@@ -49,6 +47,7 @@
 </help>
   <hint>задать вид подсказки</hint>
   <name>prompt</name>
+  <order>player_only</order>
   <position>dead</position>
   <russian>
     <node>подсказка</node>

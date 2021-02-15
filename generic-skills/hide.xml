@@ -25,22 +25,24 @@
     </russian>
   </command>
   <dammsg></dammsg>
-  <group>adventure</group>  
+  <group>adventure</group>
   <hard>3</hard>
-  <help id="798" keyword="СКРЫТНОСТЬ СКРЫТЬСЯ СПРЯТАТЬСЯ" level="-1" type="SkillHelp">%FMT% *%CMD%*
+  <help aka="ИСЧЕЗАТЬ НЕЗАМЕТНО СКРЫТНОСТЬ СКРЫТЬСЯ СПРЯТАТЬСЯ" id="798" level="-1" title="Скрытность" type="SkillHelp">%FMT% *%CMD%*
 
 Умение скрываться позволяет тебе остаться незамеченным. Для того, чтобы
 скрыться, воры и нинзи используют тени, ниши и всякие укрытия, поэтому
 гораздо проще так спрятаться в городе, чем на открытой местности.
 Многие действия выведут тебя из укрытия, сделав заметным для окружающих.
 
+Говорят, что где-то в {hh2065Ааракокране{x существует одна из древнейших гильдий воров,
+которая предоставляет своим адептам гораздо более подробное обучение искусству
+быть успешным вором.
+
 %SA% %H% [(sneak,подкрадывание)], [(detect hide,приглядеться)]
 </help>
   <mob>
     <bonus>20</bonus>
     <dice>2</dice>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>скрываться</nameRus>
@@ -54,6 +56,6 @@
       <bonus>100</bonus>
       <level>1</level>
       <professional>false</professional>
-    </node>    
+    </node>
   </raceBonuses>
 </skill>

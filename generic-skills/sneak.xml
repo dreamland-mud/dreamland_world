@@ -27,36 +27,39 @@
     </russian>
   </command>
   <dammsg></dammsg>
-  <group>adventure</group>   
+  <group>adventure</group>
   <hard>3</hard>
   <help id="703" level="-1" type="SkillHelp">%FMT% *%CMD%*
 
-Умение скрытно передвигаться позволяет тебе ходить, не производя шума. Никто
-не заметит, как ты подойдешь и окажешься рядом, пока ты каким-то другим 
+Умение скрытно передвигаться позволяет тебе ходить, не производя шума, а также
+незаметно совершать некоторые другие действия -- например, тихо бросать вещи.
+Никто не заметит, как ты подойдешь и окажешься рядом, пока ты каким-то другим 
 способом не выдашь своего присутствия. Многие расы обладают врожденным
 умением передвигаться скрытно.
 
-%SA% %H% [(hide,скрываться)]
+Говорят, что где-то в {hh2065Ааракокране{x существует одна из древнейших гильдий воров,
+которая предоставляет своим адептам гораздо более подробное обучение искусству
+быть успешным вором.
+
+При наличии этого умения ты можешь передвигаться, будучи {hh798скрыт{Smым{Sfой{Sx{x или {hh893спрятанн{Smым{Sfой{Sx{x.
 </help>
   <mob>
     <bonus>20</bonus>
     <dice>2</dice>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>подкрадывание</nameRus>
   <raceAffect>sneak</raceAffect>
   <raceBonuses>
+    <node name="felar">
+      <bonus>100</bonus>
+      <level>1</level>
+      <professional>false</professional>
+    </node>
     <node name="hobbit">
       <bonus>100</bonus>
       <level>1</level>
       <professional>false</professional>
     </node>
-    <node name="felar">
-      <bonus>100</bonus>
-      <level>1</level>
-      <professional>false</professional>
-    </node>    
   </raceBonuses>
 </skill>

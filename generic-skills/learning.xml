@@ -2,6 +2,7 @@
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
     <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
     <wearoff>Желание учиться покидает тебя.</wearoff>
     <wearoffDispel>Взгляд %1$C2 выглядит не таким сосредоточенным.</wearoffDispel>
   </affect>
@@ -29,19 +30,20 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>enhancement</group>
-  <help id="599" level="-1" type="SkillHelp">Заклинание &apos;learning&apos; позволяет лучше сосредоточиться на учебе. При улучшении
-умений будет начисляться больше опыта.
+  <group registry="skillGroup">enhancement</group>
+  <help id="599" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%CHAR%_
+
+Под воздействием этого заклинания ты будешь получать больше опыта за улучшение 
+владения своими умениями. На скорость самой прокачки оно, к сожалению, не влияет.
 </help>
   <mana>200</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>обучаемость</nameRus>
   <spell type="SPELL(Learning)">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <position>stand</position>
     <target>char_room</target>
     <type>defensive</type>

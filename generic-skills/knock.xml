@@ -19,7 +19,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>adventure</group>
+  <group registry="skillGroup">adventure</group>
   <help id="730" keyword="KNOCK ТУК-ТУК 'ТУК ТУК' ТУКТУК 'РАСПАХНУТЬ ДВЕРЬ'" level="-1" type="SkillHelp">Это заклинание помогает магам распахивать запертые двери энергетической волной.
 Воины умеют {hh833вышибать двери{x грубой силой, а воры всегда смогут подобрать {hh714отмычку{x.
 
@@ -27,13 +27,12 @@
 </help>
   <mana>20</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>тук-тук</nameRus>
   <spell type="SPELL(Knock)">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <position>stand</position>
     <target>ignore</target>
     <type>none</type>

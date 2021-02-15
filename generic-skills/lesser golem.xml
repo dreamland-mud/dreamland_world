@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
-    <wearoff>Ты чувствуешь в себе силы к созданию голема.</wearoff>
+    <wearoff>Ты чувствуешь в себе силы к созданию малого голема.</wearoff>
   </affect>
   <beats>32</beats>
   <classes>
@@ -12,31 +12,28 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>necromancy</group>
-  <help id="545" keyword="golems големы" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+  <group registry="skillGroup">necromancy</group>
+  <help id="545" keyword="GOLEMS ГОЛЕМЫ" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
-Малый голем - самый первый голем, который учится создавать некромант.
+Малый голем -- самый базовый голем, которого учится создавать некромант.
 Это существо будет служить хозяину верой и правдой. Как и все големы, в бою он
 умеет разоружать противника и сокрушать его мощным ударом. Големы уязвимы к 
 заклинаниям и ментальным атакам, но хорошо сопротивляются ударам оружия. Яд и
 чума им не страшны. Големов, как и других призванных существ, можно одевать
 и вооружать.
 
+Одновременно некромант может контролировать не более трех малых големов.
+
 %SA% %H% [(cast,колдовать)] [(resummon,перепризыв)]
 </help>
   <mana>200</mana>
-  <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
-    <professional>true</professional>
-  </mob>
   <nameRus>малый голем</nameRus>
   <spell type="SPELL(LesserGolem)">
     <castMobCount>1</castMobCount>
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <maxMobCount>3</maxMobCount>
     <mobVnum>21</mobVnum>
-    <msgCreateAttemptArea></msgCreateAttemptArea>
     <msgCreateAttemptRoom>%^C1 пытается создать малого голема.</msgCreateAttemptRoom>
     <msgCreateAttemptSelf>Ты пытаешься создать малого голема.</msgCreateAttemptSelf>
     <msgCreateRoom>%^C1 создает малого голема!</msgCreateRoom>
@@ -51,6 +48,7 @@
     <msgTooManyMobiles>Ты не сможешь управлять большим количеством големов!</msgTooManyMobiles>
     <position>stand</position>
     <postaffectDuration>24</postaffectDuration>
+    <storageVnums>5400 5402 5403 5404 5405 5413</storageVnums>
     <target>create_mob</target>
     <type>none</type>
   </spell>

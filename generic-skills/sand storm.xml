@@ -5,11 +5,6 @@
   </affect>
   <beats>24</beats>
   <classes>
-    <node name="druid">
-      <level>51</level>
-      <maximum>100</maximum>
-      <rating>1</rating>
-    </node>
     <node name="warlock">
       <level>51</level>
       <maximum>100</maximum>
@@ -17,21 +12,24 @@
     </node>
   </classes>
   <dammsg mg="f">песчаная буря</dammsg>
-  <group>nature</group>   
-  <help id="738" level="-1" type="SkillHelp">Опытный варлок, может вызывать песчаную бурю, причиняя при этом большие 
-повреждения окружающим. Если под ногами нет песка - то нету и заклинания.
+  <group registry="skillGroup">nature</group>
+  <help aka="ПЕСЧАНЫЙ ШТОРМ" id="738" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+
+Опытные колдуны могут вызывать песчаную бурю, причиняя при этом большие
+повреждения окружающим. Если под ногами нет песка (например, в городах или в
+лесу), заклинание не сработает.
 </help>
   <mana>200</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>песчаная буря</nameRus>
   <spell type="SPELL(SandStorm)">
-    <casted>true</casted>
+    <damtype>slash</damtype>
+    <flags>magic</flags>
     <position>fight</position>
     <target>people</target>
+    <tier>1</tier>
     <type>offensive</type>
   </spell>
 </skill>

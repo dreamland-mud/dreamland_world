@@ -3,10 +3,15 @@
   <affect type="DefaultAffectHandler">
     <cancelled>true</cancelled>
     <dispelled>true</dispelled>
-    <wearoff>Ты больше не видишь {YЗолотой ауры{x.</wearoff>
+    <wearoff>Ты больше не различаешь {Yзолотой ауры{x добра.</wearoff>
   </affect>
   <beats>12</beats>
   <classes>
+    <node name="anti-paladin">
+      <level>12</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
     <node name="cleric">
       <level>11</level>
       <maximum>100</maximum>
@@ -17,11 +22,6 @@
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
-    <node name="anti-paladin">
-      <level>12</level>
-      <maximum>100</maximum>
-      <rating>1</rating>
-    </node>    
     <node name="vampire">
       <level>13</level>
       <maximum>100</maximum>
@@ -39,21 +39,19 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>detection</group>
-  <help id="578" keyword="'ЧУВСТВОВАТЬ ДОБРО'" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+  <group registry="skillGroup">detection</group>
+  <help aka="'ЗОЛОТАЯ АУРА' 'ЧУВСТВОВАТЬ ДОБРО'" id="578" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
-Благодаря заклинанию вокруг добрых видна золотая аура,
-а также {CГолубая аура{x видна вокруг благословленных вещей.
+Это заклинание позволит обнаруживать ауру вокруг персонажей доброй {hh33натуры{x.
+Цвет такой ауры -- {Yзолотой{x.
+
+Также позволяет обнаружить {Cголубую ауру{x вокруг {hh96благословленных{x вещей.
 </help>
   <mana>5</mana>
-  <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
-    <professional>true</professional>
-  </mob>
   <nameRus>обнаружить добро</nameRus>
   <spell type="SPELL(DetectGood)">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <position>stand</position>
     <target>char_self</target>
     <type>defensive</type>

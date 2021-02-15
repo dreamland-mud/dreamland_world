@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="AFFECT(LovePotion)">
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
     <wearoff>Ты больше не чувствуешь себя неотразимо.</wearoff>
   </affect>
   <classes>
@@ -11,22 +13,18 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>beguiling</group>
-  <help id="2025" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+  <group registry="skillGroup">beguiling</group>
+  <help aka="'ЗЕЛЬЕ ЛЮБВИ'" id="2025" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
 При использовании этого заклинания ведьма накладывает на себя ауру абсолютной
 неотразимости. Любое существо, которое попытается {hh1014взглянуть{x на ведьму, имеет
 шанс немедленно оказаться под властью ее {hh729очарования{x.
 </help>
   <mana>10</mana>
-  <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
-    <professional>true</professional>
-  </mob>
   <nameRus>любовное зелье</nameRus>
   <spell type="SPELL(LovePotion)">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <position>stand</position>
     <target>char_self</target>
     <type>none</type>

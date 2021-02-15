@@ -4,18 +4,20 @@
     <node>slook</node>
   </aliases>
   <cat>learn</cat>
-  <extra>keep_hide ghost important</extra>
-  <help id="1357" keyword="ПОКАЗАТЬУМЕНИЕ" level="-1" type="CommandHelp">Команда %CMD% выводит информацию о навыке.
+  <extra>keep_hide ghost hidden</extra>
+  <help aka="ПОКАЗАТЬУМЕНИЕ" id="1357" level="-1" type="CommandHelp">%FMT% *%CMD%* _название_
+ 
+Выводит сводную информацию о любом {hh1352умении{x, его {hh1354группу{x, где можно {hh1359практиковаться{x и другие детали.
+Для {hh24расовых способностей{x и {hh3клановых{x умений покажет, какая раса или какой клан
+дает данное умение. 
 
-Для расовых и клановых скилов покажет, какой расе принадлежит данная
-особенность, или какого клана этот навык.
-
-%SA% %H% [(glist,группаумений)]
+На данный момент все эти детали также видны и в справке по умению.
 </help>
   <hint>посмотреть детали по данному умению</hint>
   <name>showskill</name>
+  <order>player_only</order>  
   <position>sleep</position>
   <russian>
-    <node>умение</node>
+    <node>показатьумение</node>
   </russian>
 </Command>

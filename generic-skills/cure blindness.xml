@@ -24,21 +24,22 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>curative</group>
-  <help id="573" level="-1" type="SkillHelp">Эта молитва лечит слепоту, вызванную специальным {hh831заклинанием{x.
+  <group registry="skillGroup">curative</group>
+  <help id="573" keyword="'ВЕРНУТЬ ЗРЕНИЕ'" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%CHAR%_
+
+Эта молитва лечит слепоту, вызванную специальным {hh831заклинанием{x.
 Однако {hh783грязь{x, попавшую в глаза, а также {hh96ожоги{x оно не убирает.
 
 Эту услугу также предоставляют {hh1365лекари{x.
 </help>
   <mana>5</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>лечить слепоту</nameRus>
   <spell type="SPELL(CureBlindness)">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>prayer</flags>
     <position>fight</position>
     <target>char_room</target>
     <type>defensive</type>

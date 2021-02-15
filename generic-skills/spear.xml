@@ -7,11 +7,6 @@
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
-    <node name="druid">
-      <level>10</level>
-      <maximum>100</maximum>
-      <rating>2</rating>
-    </node>
     <node name="ninja">
       <level>10</level>
       <maximum>100</maximum>
@@ -47,6 +42,7 @@
     <cat>fight</cat>
     <extra>hidden</extra>
     <hint>метнуть копье</hint>
+    <order>player_only</order>
     <name>throwspear</name>
     <position>stand</position>
   </command>
@@ -67,26 +63,24 @@
   <mob>
     <bonus>40</bonus>
     <dice>3</dice>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>false</professional>
   </mob>
   <nameRus>копье</nameRus>
   <raceBonuses>
+    <node name="centaur">
+      <bonus>100</bonus>
+      <level>1</level>
+      <professional>false</professional>
+    </node>
+    <node name="kender">
+      <bonus>100</bonus>
+      <level>1</level>
+      <professional>false</professional>
+    </node>
     <node name="urukhai">
       <bonus>100</bonus>
       <level>1</level>
       <professional>false</professional>
     </node>
-    <node name="centaur">
-      <bonus>100</bonus>
-      <level>1</level>
-      <professional>false</professional>
-    </node> 
-    <node name="kender">
-      <bonus>100</bonus>
-      <level>1</level>
-      <professional>false</professional>
-    </node>      
   </raceBonuses>
 </skill>

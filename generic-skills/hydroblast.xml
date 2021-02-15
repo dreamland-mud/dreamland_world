@@ -2,11 +2,6 @@
 <skill type="GenericSkill">
   <beats>12</beats>
   <classes>
-    <node name="druid">
-      <level>45</level>
-      <maximum>100</maximum>
-      <rating>1</rating>
-    </node>
     <node name="ranger">
       <level>50</level>
       <maximum>100</maximum>
@@ -14,22 +9,24 @@
     </node>
   </classes>
   <dammsg>водяной кулак</dammsg>
-  <group>nature</group>
-  <help id="553" keyword="'УДАР ВОДЫ' 'ВОДНЫЙ УДАР'" level="-1" type="SkillHelp">Мощное заклинание, позволяет рейнджерам направить силы стихии воды против
-своего противника -- из частичек воды формируется кулак и бьет по жертве.
-Работает во время дождя и возле водоемов.
+  <group registry="skillGroup">nature</group>
+  <help aka="'УДАР ВОДЫ' 'ВОДНЫЙ УДАР'" id="553" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
+
+Мощное заклинание, позволяющее направить силы стихии воды на противника -- из
+частичек воды формируется кулак и бьет по жертве. Работает во время дождя и
+возле водоемов.
 </help>
-  <mana>50</mana>
+  <mana>40</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>водяной удар</nameRus>
   <spell type="SPELL(Hydroblast)">
-    <casted>true</casted>
+    <damtype>drowning</damtype>
+    <flags>prayer</flags>
     <position>fight</position>
     <target>char_room</target>
+    <tier>3</tier>
     <type>offensive</type>
   </spell>
 </skill>

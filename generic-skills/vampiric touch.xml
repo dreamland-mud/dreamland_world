@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="SleepAffectHandler">
-    <wearoff>Твой кошмар проходит - ты просыпаешься.</wearoff>
+    <wearoff>Наполненный кошмарами сон проходит, и ты наконец можешь проснуться.</wearoff>
   </affect>
   <beats>8</beats>
   <classes>
     <node name="vampire">
-      <level>15</level>
+      <level>12</level>
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
   </classes>
   <command type="SKILL(touch)">
     <cat>class</cat>
-    <extra>keep_hide</extra>    
+    <extra>keep_hide</extra>
     <hint>(вампиры) усыпить жертву прикосновением</hint>
     <name>touch</name>
     <order>player_only</order>
@@ -28,14 +28,14 @@
 
 Вампир прикасается к шее жертвы, и она забывается в ужасном кошмаре.
 После этого жертву можно укусить за шею и утолить свою жажду крови.
+Успех умения зависит от интеллекта вампира, телосложения жертвы и других
+факторов.
 
 %SA% %H% [(bite,кусать)], [(suck,сосать)], [(bloodlet,кровопускание)], [(vampiric form,форма вампира)]
 </help>
   <mob>
     <bonus>20</bonus>
     <dice>2</dice>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>прикосновение вампира</nameRus>

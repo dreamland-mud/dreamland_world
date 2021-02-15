@@ -14,26 +14,24 @@
     </node>
   </classes>
   <dammsg mg="p">цветные брызги</dammsg>
-  <group>combat</group>
+  <group registry="skillGroup">combat</group>
   <help id="746" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
-Это боевое заклинание поражает жертву ярким светом. Повреждения снижаются,
-если у противника успешно прошел {hh2035спасс-бросок{x против заклинаний
-(saves vs spell); в противном случае он может и {hh831ослепнуть{x.
-
-%SA% %H% [(cast,колдовать)]
+Магическое заклинание, наносящее урон лучами света в зависимости от уровня
+заклинания. Если у жертвы срабатывает {hh2035спасбросок{x, урон уменьшается вдвое.
+В противном случае она может {hh831ослепнуть{x.
 </help>
-  <mana>15</mana>
+  <mana>40</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>цветные брызги</nameRus>
   <spell type="SPELL(ColourSpray)">
-    <casted>true</casted>
+    <damtype>light</damtype>
+    <flags>magic</flags>
     <position>fight</position>
     <target>char_room</target>
+    <tier>3</tier>
     <type>offensive</type>
   </spell>
 </skill>

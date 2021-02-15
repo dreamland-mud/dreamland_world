@@ -3,8 +3,8 @@
   <affect type="AFFECT(Fly)">
     <cancelled>true</cancelled>
     <dispelled>true</dispelled>
-    <wearoff>Ты медленно опускаешься на землю.</wearoff>
-    <wearoffDispel>%1$^C1 медленно опускается на землю.</wearoffDispel>
+    <wearoff>Ты теряешь способность левитировать.</wearoff>
+    <wearoffDispel>%1$^C1 теряет способность к левитации.</wearoffDispel>
   </affect>
   <beats>18</beats>
   <classes>
@@ -15,11 +15,6 @@
     </node>
     <node name="necromancer">
       <level>15</level>
-      <maximum>100</maximum>
-      <rating>1</rating>
-    </node>
-    <node name="vampire">
-      <level>43</level>
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
@@ -35,8 +30,10 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>enhancement</group>
-  <help id="575" level="-1" type="SkillHelp">Заклинание или молитва полета позволяет попадать в разные места, куда пешком так
+  <group registry="skillGroup">enhancement</group>
+  <help id="575" keyword="ЛЕВИТАЦИЯ ЛЕВИТИРОВАТЬ ЛЕТАТЬ" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%CHAR%_
+
+Заклинание или молитва полета позволяет попадать в разные места, куда пешком так
 просто не дойти. Вдобавок, летающий приключенец тратит меньше {hh60очков движения{x,
 чем идущий или ездящий {hh931верхом{x.
 
@@ -49,14 +46,13 @@
 </help>
   <mana>10</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>полет</nameRus>
   <raceAffect>flying</raceAffect>
   <spell type="SPELL(Fly)">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <position>stand</position>
     <target>char_room</target>
     <type>defensive</type>

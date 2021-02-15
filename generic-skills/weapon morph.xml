@@ -9,25 +9,23 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>enchantment</group>
-  <help id="756" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%OBJ%_
+  <group registry="skillGroup">enchantment</group>
+  <help aka="'ПРЕВРАТИТЬ В БУЛАВУ'" id="756" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%OBJ%_
 
-Эта молитва превращает оружие в привычную клерику {hh638булаву{x.
+Эта молитва, если сработает, превращает оружие в привычную клерику {hh638булаву{x.
+Шанс успеха зависит от уровня вещи.
 
 Все созданные булавы выглядят одинаково, однако можно, потратив {hh56рестринг
 купон{x, получить возможность создавать свою особенную булаву. За этой услугой
-обратитесь к Богам. Новое описание должно подходить для оружия, которое 
-&apos;не проливает крови&apos; и наносит повреждения &apos;тяжелым ударом&apos;.
+обращайся к Богам. Новое описание должно подходить для оружия, которое не
+проливает крови и наносит повреждения тяжелым ударом.
+Подробности читай по {y{hcсправка рестринг{x.
 </help>
   <mana>100</mana>
-  <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
-    <professional>true</professional>
-  </mob>
   <nameRus>превратить оружие</nameRus>
   <spell type="SPELL(WeaponMorph)">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>prayer</flags>
     <position>stand</position>
     <target>create_obj</target>
     <type>none</type>

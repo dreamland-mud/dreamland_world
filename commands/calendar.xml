@@ -2,7 +2,7 @@
 <Command>
   <cat>info</cat>
   <extra>keep_hide ghost</extra>
-  <help id="1027" keyword="MONTH МЕСЯЦ DAY ДЕНЬ YEAR ГОД WEEK НЕДЕЛЯ ЗИМА ВЕСНА ЛЕТО ОСЕНЬ" level="-1" type="CommandHelp">%FMT%  *%CMD%*
+  <help aka="DAY MONTH WEEK YEAR ДЕНЬ ГОД ЛЕТО МЕСЯЦ НЕДЕЛЯ ОСЕНЬ ВЕСНА ЗИМА" id="1027" level="-1" title="Календарь, времена года" type="CommandHelp">%FMT%  *%CMD%*
 
 Показывает календарь на этот год. Сегодняшнее число подсвечено красным, другие
 важные даты -- разными цветами, согласно легенде внизу календаря.
@@ -23,6 +23,7 @@
 </help>
   <hint>нарисовать календарь на текущий год</hint>
   <name>calendar</name>
+  <order>player_only</order>
   <position>dead</position>
   <russian>
     <node>календарь</node>

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
     <wearoff>Шепот проклятий вокруг тебя утихает.</wearoff>
   </affect>
   <beats>12</beats>
@@ -12,21 +14,22 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>maladictions</group>
-  <help id="749" level="-1" type="SkillHelp">Леденящий душу шепот проклятий окружает анти-паладина, образуя защитную
-ауру. Любого, кто соприкоснется с этой аурой (своим оружием или рукой),
-может поразить черная немощь: все тело на короткое время охватит паралич,
-а ударившая рука отнимется и станет не в силах удержать оружие.
+  <group registry="skillGroup">maladictions</group>
+  <help aka="FEEBLE НЕМОЧЬ" id="749" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+
+Леденящий душу шепот проклятий окружает анти-паладина, образуя защитную
+ауру. Любого, кто соприкоснется с этой аурой оружием или голыми руками, может
+поразить {hh120слабое оглушение{x (неспособность наносить атаки), а ударившая рука
+отнимется и станет не в силах удержать оружие.
 </help>
   <mana>100</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>черная немощь</nameRus>
   <spell type="SPELL(BlackFeeble)">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <position>stand</position>
     <target>char_self</target>
     <type>defensive</type>

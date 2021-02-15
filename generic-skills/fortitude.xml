@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
-    <wearoff>Твоя сопротивляемость злым силам понижается.</wearoff>
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
+    <wearoff>Твоя сопротивляемость холоду и темной энергии понижается.</wearoff>
   </affect>
   <beats>12</beats>
   <classes>
@@ -12,23 +14,24 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>enhancement</group>
-  <help id="567" level="-1" type="SkillHelp">Одна из защитных молитв {hh141паладинов{x, подготавливающих его к схватке с нечистью
+  <group registry="skillGroup">enhancement</group>
+  <help id="567" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+
+Одна из защитных молитв {hh141паладинов{x, подготавливающих его к схватке с нечистью
 и защищающих от специфических атак на вооружении армий Тьмы.
 
-Молитва {yсилы духа{x дарует паладину сопротивляемость к {Wхолоду{x -- например, к урону
-от {hh795ледяного шара{x анти-паладинов -- и {rнегативным атакам{x, таким как {hh827рука умертвия{x
-и большинство {hh1117проклятий{x.
+Молитва {yсилы духа{x дарует паладину {hh101сопротивляемость{x к {Wхолоду{x (например, к урону
+от {hh795ледяного шара{x анти-паладинов) и {rтемной энергии{x таких умений как
+{hh827рука умертвия{x или большинства {hh1117проклятий{x.
 </help>
   <mana>50</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>сила духа</nameRus>
   <spell type="SPELL(Fortitude)">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>prayer</flags>
     <position>stand</position>
     <target>char_self</target>
     <type>defensive</type>

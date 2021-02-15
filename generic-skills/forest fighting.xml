@@ -2,11 +2,6 @@
 <skill type="GenericSkill">
   <beats>12</beats>
   <classes>
-    <node name="druid">
-      <level>50</level>
-      <maximum>100</maximum>
-      <rating>1</rating>
-    </node>
     <node name="ranger">
       <level>45</level>
       <maximum>100</maximum>
@@ -23,10 +18,9 @@
     </russian>
   </command>
   <dammsg></dammsg>
-  <group>nature</group>
+  <group registry="skillGroup">nature</group>
   <hard>7</hard>
   <help id="590" level="-1" type="SkillHelp">%FMT% *(forest,лес)* attack|defense|normal
-%FMT% {Cпассивное умение{x, работает автоматически.
 
 Опытный рейнджер может использовать в бою свои знания о природе. 
 Выбор режима attack делает его более сильным, а defense -- более защищенным во
@@ -37,8 +31,6 @@
   <mob>
     <bonus>10</bonus>
     <dice>1</dice>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>лесной бой</nameRus>

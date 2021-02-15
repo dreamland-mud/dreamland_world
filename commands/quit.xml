@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
   <cat>char</cat>
-  <extra>keep_hide ghost undig manacles afk freeze nanny spellout important</extra>
-  <help id="992" keyword="РЕНТА ГОСТИНИЦА" level="-1" ref="rent" type="CommandHelp">%FMT%  *%CMD%*   
+  <extra>keep_hide ghost undig manacles afk freeze nanny spellout</extra>
+  <help aka="ГОСТИНИЦА РЕНТА ВЫХОД ВЫЙТИ" id="992" level="-1" ref="rent" title="Выход из игры" type="CommandHelp">%FMT% *%CMD%*   
 
 Эта команда используется для выхода из мира. Выйти можно почти где угодно.
 =Ренты= (или платы за постой) в нашем мире нету. Когда вернешься, ты окажешься в
@@ -10,18 +10,18 @@
 параметры автоматически {hh991сохраняются.{x
 
 {CВ КАКИХ СЛУЧАЯХ НЕЛЬЗЯ ВЫЙТИ{x
-
-%A% {hh32в процессе ПК{x: когда в крови бушует адреналин ({BVIOLENT{x), сразу после убийства
-  игрока ({RKILLER{x) или после смерти в ПК ({DSLAIN{x)
+%A% {hh32в процессе ПК{x: когда в крови бушует {hh2146адреналин{x ({BV{x), сразу после убийства
+  игрока ({RK{x) или после смерти в ПК ({DS{x)
 %A% пока участвуешь в {hh994аукционе{x
 %A% если {hh776отобрали душу{x
 %A% находясь на чужой {hh3клановой территории{x
 
 После 20 {hh16тиков{x бездействия персонаж попытается покинуть мир автоматически,
-но только если он не находится внутри персонального дома или в Беседке в Мидгаарде.
+но только если он не находится внутри {hh50персонального дома{x или в {hh86Беседке{x в Мидгаарде.
 </help>
   <hint>выйти из мира</hint>
   <name>quit</name>
+  <order>player_only</order>
   <position>dead</position>
   <russian>
     <node>конец</node>

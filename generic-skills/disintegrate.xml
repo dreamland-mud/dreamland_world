@@ -9,20 +9,18 @@
     </node>
   </classes>
   <dammsg>разрушающий световой луч</dammsg>
-  <group>suddendeath</group>  
-  <help id="791" level="-1" type="SkillHelp">Только очень опытные варлоки могут научиться убивать противника всего лишь 
-одним заклинанием. Единственный путь спастись от него - {Wsaves vs. spell{x.
+  <group registry="skillGroup">suddendeath</group>
+  <help id="791" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
+
+Самые опытные колдуны могут испепелить противника и все его вещи одним
+заклинанием. Единственный способ спастись от этого -- {hh2035защита от заклинаний{x.
 </help>
   <mana>500</mana>
-  <mob>
-    <forbidden>false</forbidden>
-    <ordered>false</ordered>
-    <professional>true</professional>
-  </mob>
   <nameRus>дезинтеграция</nameRus>
   <spell type="SPELL(Disintegrate)">
-    <casted>true</casted>
     <ranged>false</ranged>     
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <position>stand</position>
     <target>char_room</target>
     <type>offensive</type>

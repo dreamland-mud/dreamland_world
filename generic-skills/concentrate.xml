@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
-    <wearoff>Ты опять можешь концентрироваться для следующих битв.</wearoff>
+    <wearoff>Твоя боевая концентрация пропадает.</wearoff>
   </affect>
   <beats>18</beats>
   <classes>
@@ -28,7 +28,7 @@
   <dammsg></dammsg>
   <group>defensive</group>
   <hard>2</hard>
-  <help id="728" level="-1" type="SkillHelp">%FMT% *(concentrate,сосредоточиться)*	  
+  <help id="728" keyword="КОНЦЕНТРИРОВАТЬСЯ КОНЦЕНТРАЦИЯ" level="-1" type="SkillHelp">%FMT% *(concentrate,сосредоточиться)*	  
 	  
 Приготовление к битве, обдумывание военной стратегии увеличит твои
 шансы в бою с врагом, сделает тебя сильнее духом и телом.
@@ -36,8 +36,8 @@
 </help>
   <mana>50</mana>
   <mob>
-    <forbidden>true</forbidden>
-    <ordered>true</ordered>
+    <bonus>10</bonus>
+    <dice>3</dice>
     <professional>true</professional>
   </mob>
   <nameRus>сосредоточиться</nameRus>

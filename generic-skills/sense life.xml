@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
-    <wearoff>Ты перестаешь чувствовать жизнь рядом с собой.</wearoff>
+    <wearoff>Ты перестаешь чувствовать присутствие жизненных форм.</wearoff>
   </affect>
   <beats>12</beats>
   <classes>
@@ -21,16 +21,12 @@
     </russian>
   </command>
   <dammsg></dammsg>
-  <group>detection</group>   
-  <help id="720" level="-1" type="SkillHelp">%FMT% *(sense,чувствовать)*
+  <group>detection</group>
+  <help aka="'DETECT LIFE' 'ОБНАРУЖИТЬ ЖИЗНЬ'" id="720" level="-1" type="SkillHelp">%FMT% *(sense,чувствовать)*
 
 Вампиры способны учуять присутствие жизненных форм даже в абсолютной темноте.
+Некоторые редкие артефакты также даруют эту способность.
 </help>
   <mana>20</mana>
-  <mob>
-    <forbidden>true</forbidden>
-    <ordered>true</ordered>
-    <professional>true</professional>
-  </mob>
   <nameRus>чувствовать жизнь</nameRus>
 </skill>

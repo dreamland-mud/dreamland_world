@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="ClanSkill">
   <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
     <wearoff>Аура Рулера исчезает.</wearoff>
   </affect>
   <beats>12</beats>
@@ -19,13 +21,8 @@
 видеть закамуфлированых и спрятаных(fade) игроков. 
 </help>
   <mana>20</mana>
-  <mob>
-    <forbidden>true</forbidden>
-    <ordered>true</ordered>
-  </mob>
   <nameRus>аура правителя</nameRus>
   <spell type="SPELL(RulerAura)">
-    <casted>true</casted>
     <position>stand</position>
     <target>char_self</target>
     <type>defensive</type>

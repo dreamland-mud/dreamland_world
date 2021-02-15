@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
-    <wearoff>Ты чувствуешь, что у тебя вновь могут отбирать здоровье и энергию.</wearoff>
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
+    <wearoff>Твоя защищенность от энергетических атак понижается.</wearoff>
   </affect>
   <beats>12</beats>
   <classes>
@@ -12,22 +14,23 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>enhancement</group>
-  <help id="688" level="-1" type="SkillHelp">Одна из защитных молитв {hh141паладинов{x, подготавливающих его к схватке с нечистью
+  <group registry="skillGroup">enhancement</group>
+  <help id="688" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+
+Одна из защитных молитв {hh141паладинов{x, подготавливающих его к схватке с нечистью
 и защищающих от специфических атак на вооружении армий Тьмы.
 
-Молитва {yустойчивости{x дарует паладину сопротивляемость к {Cэнергетическим атакам{x,
+Молитва {yустойчивости{x дарует паладину {hh101сопротивляемость{x к энергетическим атакам,
 таким как заклинания {hh90разрыва{x и {hh826призрачного кулака{x.
 </help>
   <mana>50</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>устойчивость</nameRus>
   <spell type="SPELL(Resilience)">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>prayer</flags>
     <position>stand</position>
     <target>char_self</target>
     <type>defensive</type>

@@ -3,7 +3,7 @@
   <affect type="DefaultAffectHandler">
     <cancelled>true</cancelled>
     <dispelled>true</dispelled>
-    <wearoff>Ты больше не видишь {RКрасной ауры{x.</wearoff>
+    <wearoff>Ты больше не различаешь {Rкрасной ауры{x зла.</wearoff>
   </affect>
   <beats>12</beats>
   <classes>
@@ -16,7 +16,7 @@
       <level>12</level>
       <maximum>100</maximum>
       <rating>1</rating>
-    </node>    
+    </node>
     <node name="warlock">
       <level>12</level>
       <maximum>100</maximum>
@@ -29,21 +29,17 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>detection</group>
-  <help id="748" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+  <group registry="skillGroup">detection</group>
+  <help id="748" keyword="'КРАСНАЯ АУРА'" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
-Это заклинание позволит обнаруживать злую ауру вокруг персонажей.
-Цвет такой ауры - {Rкрасный{x.
+Это заклинание позволит обнаруживать ауру вокруг персонажей злой {hh33натуры{x.
+Цвет такой ауры -- {Rкрасный{x.
 </help>
   <mana>5</mana>
-  <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
-    <professional>true</professional>
-  </mob>
   <nameRus>обнаружить зло</nameRus>
   <spell type="SPELL(DetectEvil)">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <position>stand</position>
     <target>char_self</target>
     <type>defensive</type>

@@ -30,18 +30,22 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>enhancement</group>
-  <help id="779" level="-1" type="SkillHelp">Заклинание, защищающее от злых сил.
+  <group registry="skillGroup">enhancement</group>
+  <help aka="'ЗАЩИТА ОТ СИЛ ЗЛА'" id="779" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+
+Эта мощная аура на четверть снижает почти любые повреждения от злых персонажей
+по тебе. Это заклинание нельзя использовать одновременно с {hh779защитой от Добра{x.
+{hh33Нейтральные{x персонажи не смогут использовать эту защиту -- не стоит даже тратить
+практики.
 </help>
   <mana>5</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>защита от зла</nameRus>
   <spell type="SPELL(ProtectionEvil)">
-    <casted>true</casted>
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <position>stand</position>
     <target>char_self</target>
     <type>defensive</type>

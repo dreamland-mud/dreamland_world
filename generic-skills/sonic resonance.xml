@@ -9,7 +9,7 @@
     </node>
   </classes>
   <dammsg>звуковой резонанс</dammsg>
-  <group>combat</group>
+  <group registry="skillGroup">combat</group>
   <help id="820" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
 Это боевое заклинание некромантов поражает жертву энергетическим разрядом,
@@ -22,20 +22,18 @@
 </help>
   <mana>20</mana>
   <mob>
-    <forbidden>false</forbidden>
-    <ordered>true</ordered>
     <professional>true</professional>
   </mob>
   <nameRus>звуковой резонанс</nameRus>
   <spell type="AnatoliaCombatSpell">
-    <casted>true</casted>
+    <damtype>sound</damtype>
+    <dice>7</dice>
+    <flags>magic</flags>
+    <msgNotVict>Цилиндр вибрирующей энергии окружает $C4, заставляя $S резонировать.</msgNotVict>
     <position>fight</position>
     <target>char_room</target>
+    <tier>4</tier>
     <type>offensive</type>
-    <dice>7</dice>
-    <damtype>energy</damtype>
-    <msgNotVict>Цилиндр вибрирующей энергии окружает $C4, заставляя $S резонировать.</msgNotVict>
-    <waitMin>0</waitMin>
     <waitMax>12</waitMax>
   </spell>
 </skill>

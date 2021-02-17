@@ -291,38 +291,6 @@
       <soap>true</soap>
       <translate>true</translate>
     </node>
-    <node type="WorldChannel">
-      <aliases>
-        <node>appeal</node>
-      </aliases>
-      <cat>comm</cat>
-      <extra>keep_hide ghost manacles</extra>
-      <help id="1060" level="-1" type="CommandHelp">Эта команда используется для посылки сообщения Бессмертным, которые 
-находятся в мире в данный момент времени. Если тебе необходимо поговорить
-с конкретным Богом, впиши его имя в сообщение, ты можешь даже просто 
-воззвать к нему по имени.
-
-НЕ ЗЛОУПОТРЕБЛЯЙ ЭТОЙ ПРИВИЛЕГИЕЙ! Иначе Боги разозлятся и пойдут клочки
-по закоулочкам...
-      </help>
-      <hint>воззвать к богам</hint>
-      <msgNochan>Боги не желают слышать твои молитвы.</msgNochan>
-      <msgOther>{C%1$#^C1 умоляет о помощи: {W%2$s{x</msgOther>
-      <msgOtherNoarg>{C%1$#^C1 умоляет о помощи.{x</msgOtherNoarg>
-      <msgSelf>Ты умоляешь Богов о помощи!</msgSelf>
-      <name>pray</name>
-      <nochannel>true</nochannel>
-      <nomob>true</nomob>
-      <order>player_only</order> 
-      <off>nowiz</off>
-      <position>dead</position>
-      <positionOther>dead</positionOther>
-      <russian>
-        <node>молиться</node>
-        <node>воззвать</node>
-      </russian>
-      <trustHear>102</trustHear>
-    </node>
     <node type="EmoteChannel">
       <aliases>
         <node>,</node>
@@ -527,7 +495,6 @@
 *(yell     ,вопить   )*- услышат только игроки в одной {hh998зоне{x с тобой
 *(rtalk    ,расговор )*- услышат только игроки той же {hh54расы{x, что у тебя
 *(mtalk    ,гсемье   )*- услышат только {hh1349супруги{x
-*(pray     ,воззвать )*- услышат только боги (см. {hh1060воззвать{x)
 
 Команда *(channels,каналы)* показывает список всех доступных каналов и их состояние
 (ВКЛ/ВЫКЛ). Также отображается режим глухоты (deaf) и тишины (quiet).

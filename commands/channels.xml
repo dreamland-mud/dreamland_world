@@ -181,8 +181,8 @@
       <name>ic</name>
       <nochannel>true</nochannel>
       <nomob>true</nomob>
-      <order>player_only</order> 	    
       <off>noic</off>
+      <order>player_only</order>
       <position>rest</position>
       <positionOther>sleep</positionOther>
       <quiet>true</quiet>
@@ -201,9 +201,9 @@
       <msgSelf>{Y[{cQuest Info{Y]{x &apos;{G%2$s{x&apos;</msgSelf>
       <name>qinfo</name>
       <nochannel>true</nochannel>
-      <off>noqinfo</off>
       <nomob>true</nomob>
-      <order>player_only</order> 	    
+      <off>noqinfo</off>
+      <order>player_only</order>
       <position>sleep</position>
       <positionOther>dead</positionOther>
       <quiet>true</quiet>
@@ -225,9 +225,9 @@
       <msgSelf>Ты поздравляешь &apos;{M%2$s{x&apos;</msgSelf>
       <name>grats</name>
       <nochannel>true</nochannel>
-      <off>nograts</off>
       <nomob>true</nomob>
-      <order>player_only</order> 	    
+      <off>nograts</off>
+      <order>player_only</order>
       <position>rest</position>
       <positionOther>sleep</positionOther>
       <quiet>true</quiet>
@@ -253,8 +253,7 @@
       <nomob>true</nomob>
       <off>nomusic</off>
       <ooc>true</ooc>
-      <nomob>true</nomob>
-      <order>player_only</order> 	    
+      <order>player_only</order>
       <position>rest</position>
       <positionOther>sleep</positionOther>
       <quiet>true</quiet>
@@ -298,13 +297,17 @@
       <cat>comm</cat>
       <extra>ghost nanny</extra>
       <garble>true</garble>
-      <help id="1061" level="-1" type="CommandHelp">%FMT%  *%CMD%* _строка_
-Используется для выражение эмоций или действий. Запятая *,* - синоним этой команды.
-Указанная строка отобразится всем окружающим, как действие, выполненное твоим
-персонажем. 
+      <help aka="ЭМОЦИИ" id="1061" level="-1" title="{CОтыгрыш:{x выражение эмоций в свободной форме" type="CommandHelp">%FMT% *%CMD%* _строка_
+Используется в {hh31отыгрыше{x твоего персонажа для выражение любых эмоций или
+действий. В отличии от {hh1095социалов{x, используя эту команду можно написать вообще
+все, что угодно. Например:
+%FFF% *%CMD%* *садится на космический корабль и улетает в космос!*
 
-%SA% %H% [(socials,социалы)], [(mysocial,мойсоциал)]
-      </help>
+Указанная _строка_ отобразится всем окружающим, как будто бы это действие,
+выполненное твоим персонажем. 
+
+Запятая *,* - синоним этой команды.
+</help>
       <hint>выразить какую-то эмоцию</hint>
       <log>2</log>
       <msgOther>%1$^C1 %2$s{x</msgOther>
@@ -323,7 +326,7 @@
       </aliases>
       <cat>comm</cat>
       <extra>keep_hide ghost manacles</extra>
-      <help id="1062" level="-1" type="CommandHelp">Канал *(rtalk,расговорить)* предназначен для общения с представителями своей расы.
+      <help id="1062" keyword="DELETETHIS OLDRACETALK" level="102" title="DELETETHIS OLDRACETALK" type="CommandHelp">Канал *(rtalk,расговорить)* предназначен для общения с представителями своей расы.
 Его слышат только ваши соплеменники и Боги.
       </help>
       <hint>общение с собратьями по расе</hint>
@@ -335,9 +338,9 @@
       <msgSelf>Ты говоришь %2$N3 &apos;{g%3$s{x&apos;</msgSelf>
       <name>rtalk</name>
       <nochannel>true</nochannel>
-      <off>noracetalk</off>
       <nomob>true</nomob>
-      <order>player_only</order> 	    
+      <off>noracetalk</off>
+      <order>player_only</order>
       <position>rest</position>
       <positionOther>dead</positionOther>
       <quiet>true</quiet>
@@ -362,7 +365,7 @@
       <msgNoName>Говорить кому и что?</msgNoName>
       <msgVict>%1$#^C1 говор%1$nит|ят тебе &apos;{G%2$s{x&apos;</msgVict>
       <name>tell</name>
-      <order>player_only</order> 	    
+      <order>player_only</order>
       <position>rest</position>
       <positionOther>rest</positionOther>
       <russian>
@@ -393,7 +396,7 @@
       <name>page</name>
       <nochannel>true</nochannel>
       <nomob>true</nomob>
-      <order>player_only</order> 
+      <order>player_only</order>
       <position>rest</position>
       <positionOther>sleep</positionOther>
       <quiet>true</quiet>
@@ -415,8 +418,7 @@
       <msgNoArg>Ответить что?</msgNoArg>
       <msgVict>%1$^C1 говор%1$nит|ят тебе &apos;{G%2$s{x&apos;</msgVict>
       <name>reply</name>
-      <nomob>true</nomob>
-      <order>player_only</order> 	    
+      <order>player_only</order>
       <position>rest</position>
       <positionOther>rest</positionOther>
       <russian>
@@ -428,12 +430,20 @@
     <node type="WorldChannel">
       <cat>comm</cat>
       <extra>keep_hide manacles</extra>
-      <help id="1063" level="-1" type="CommandHelp">Большинство каналов предназначено только для разговоров от имени
-персонажа. Если необходимо сказать что-то вне своей роли или обсудить
-рл (real life), используйте канал *(ooc,трепаться)*. Именно здесь надо обсуждать
-лаги, пинги, проблемы со связью и прочие не относящиеся к миру вещи.
-Избегайте посылать сообщения в неправильный канал.
-       </help>
+      <help aka="OFFTOPIC 'OUT OF CHARACTER' ОБЩЕНИЕ ОФФТОПИК ООС РЕАЛ РОЛЕВОЕ 'ВНЕ ПЕРСОНАЖА' ВНЕРОЛЕВОЕ" id="1063" level="-1" title="{CОбщение: {xот лица игрока или от лица персонажа" type="CommandHelp">Большинство {hh1059каналов общения{x в мире предназначены только для разговоров от лица
+твоего персонажа -- =ролевого общения=. Если ты громко кричишь, болтаешь, орешь, 
+поздравляешь кого-то с получением уровня -- все это делает твой персонаж в
+рамках {hh31отыгрыша{x (твоего класса, расы, клана и т.д.). Например, светлый {hh1466Рыцарь{x
+может болтать &quot;{Mизыди, темная гадина{x&quot; в ответ на предложение {hh1485Захватчика{x из его
+{hh32ПК-интервала{x выйти на бой, но это никак не относится к игроку, который управляет
+этим персонажем. И наоборот, можно трепаться &quot;{Cу меня лаги{x&quot; или &quot;{Cя сейчас отойду
+от компа{x&quot;, но это выглядит странно от лица твоего фентезийного персонажа.
+
+Для =внеролевого общения= используй канал {Y[{Rooc{Y]{x (*(ooc,трепаться)*) или уютные
+чатики в {hh66Телеграме и Дискорде{x. А вот для ролевого общения можно и нужно
+использовать все остальные. За злостное нарушение правил общения можно получить
+{hh2146молчанку{x от Богов.
+</help>
       <hint>треп вне своей роли, от имени игрока</hint>
       <hook>true</hook>
       <ignore>true</ignore>
@@ -445,9 +455,9 @@
       <name>ooc</name>
       <nochannel>true</nochannel>
       <nomob>true</nomob>
-      <order>player_only</order> 
       <off>noooc</off>
       <ooc>true</ooc>
+      <order>player_only</order>
       <position>dead</position>
       <positionOther>dead</positionOther>
       <quiet>true</quiet>
@@ -461,7 +471,7 @@
     </node>
   </channels>
   <extra>keep_hide ghost afk</extra>
-  <help id="1059" keyword="COMMUNICATION ОБЩЕНИЕ РАЗГОВОР РАЗГОВАРИВАТЬ СПЕТЬ" labels="comm" level="-1" ref="gossip grats ic music page reply say tell yell" type="CommandHelp">Чтобы разговаривать с другими существами в мире есть много =каналов общения=.
+  <help aka="COMMUNICATION RACETALK RTALK SPEAK ОБЩЕНИЕ ЯЗЫКИ РАСГОВОРИТЬ РАЗГОВАРИВАТЬ РАЗГОВОР РГОВОРИТЬ СПЕТЬ" id="1059" labels="comm" level="-1" ref="gossip grats ic music page reply say tell yell" title="{CОбщение:{x каналы общения и коммуникаций" type="CommandHelp">Чтобы разговаривать с другими существами в мире есть много =каналов общения=.
 Разные каналы используются для разных целей и разных групп собеседников.
 Во время общения придерживайся {hh68правил поведения{x в нашем мире.
 
@@ -496,15 +506,15 @@
 *(rtalk    ,расговор )*- услышат только игроки той же {hh54расы{x, что у тебя
 *(mtalk    ,гсемье   )*- услышат только {hh1349супруги{x
 
+Используя команду {y{lespeak{lrязык{x можно на разных языках.
 Команда *(channels,каналы)* показывает список всех доступных каналов и их состояние
-(ВКЛ/ВЫКЛ). Также отображается режим глухоты (deaf) и тишины (quiet).
+(ВКЛ/ВЫКЛ). Также отображается режим глухоты{le (deaf){x и тишины{le (quiet){x.
 
 %SA% %H% [(deaf,глухой)], [(quiet,тишина)], [(twit,жаба)], [(socials,социалы)], [(mysocial,мойсоциал)]
-  
 </help>
   <hint>список и состояние всех каналов</hint>
   <name>channels</name>
-  <order>player_only</order> 	
+  <order>player_only</order>
   <position>dead</position>
   <russian>
     <node>каналы</node>

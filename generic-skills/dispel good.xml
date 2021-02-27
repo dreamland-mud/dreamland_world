@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
+  <align>neutral evil</align>
   <beats>12</beats>
   <classes>
     <node name="anti-paladin">
@@ -12,21 +13,6 @@
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
-    <node name="necromancer">
-      <level>32</level>
-      <maximum>100</maximum>
-      <rating>1</rating>
-    </node>
-    <node name="vampire">
-      <level>32</level>
-      <maximum>100</maximum>
-      <rating>1</rating>
-    </node>
-    <node name="warlock">
-      <level>57</level>
-      <maximum>100</maximum>
-      <rating>1</rating>
-    </node>
   </classes>
   <dammsg mg="n">изгнание добра</dammsg>
   <group registry="skillGroup">maladictions</group>
@@ -36,16 +22,17 @@
 Если ты сам{Sfа{Sx являешься таковым существом, произнесенное заклинание пойдет
 тебе во вред.
 </help>
-  <mana>15</mana>
+  <mana>40</mana>
   <mob>
     <professional>true</professional>
   </mob>
   <nameRus>изгнать добро</nameRus>
   <spell type="SPELL(DispelGood)">
-    <damtype>none</damtype>
-    <flags>magic prayer</flags>
+    <damtype>negative</damtype>
+    <flags>prayer</flags>
     <position>fight</position>
     <target>char_room</target>
+    <tier>3</tier>
     <type>offensive</type>
   </spell>
 </skill>

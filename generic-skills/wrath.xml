@@ -3,6 +3,7 @@
   <affect type="DefaultAffectHandler">
     <wearoff>Тяжесть божественного гнева на тебе проходит.</wearoff>
   </affect>
+  <align>good</align>
   <beats>12</beats>
   <classes>
     <node name="paladin">
@@ -21,16 +22,17 @@
 
 %SA% %H% [(cast,колдовать)]
 </help>
-  <mana>20</mana>
+  <mana>80</mana>
   <mob>
     <professional>true</professional>
   </mob>
   <nameRus>божественный гнев</nameRus>
   <spell type="SPELL(Wrath)">
-    <damtype>none</damtype>
+    <damtype>holy</damtype>
     <flags>prayer</flags>
     <position>fight</position>
     <target>char_room</target>
+    <tier>2</tier>
     <type>offensive</type>
   </spell>
 </skill>

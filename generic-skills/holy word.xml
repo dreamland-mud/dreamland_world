@@ -2,6 +2,11 @@
 <skill type="GenericSkill">
   <beats>24</beats>
   <classes>
+    <node name="anti-paladin">
+      <level>68</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
     <node name="cleric">
       <level>48</level>
       <maximum>100</maximum>
@@ -14,24 +19,27 @@
     </node>
   </classes>
   <dammsg mg="f">божественная кара</dammsg>
-  <group registry="skillGroup">benedictions</group>
-  <help id="859" level="-1" type="SkillHelp">Божественное слово сорвавшись с уст клерика делает его сильнее. 
-Но, если в душе твоей нет добра, произнесенное слово обернется 
-против тебя. Слово действует не только на его произносящего, но
-и на персонажей стоящих с ним в одной комнате. Соответственно,
-благословляя добрых, оно наносит вред и проклинает злых.
+  <group registry="skillGroup">maladictions benedictions</group>
+  <help id="859" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+
+Эта мощная молитва действует на всех вокруг тебя. Персонажи одной {hh33натуры{x с
+тобой получат {hh619неистовство{x и {hh711воодушевление{x от твоего божества, а существа другой
+натуры получат повреждения и рискуют быть {hh120повергнуты наземь{x и {hh548прокляты{x.
 </help>
   <mana>200</mana>
   <mob>
     <professional>true</professional>
   </mob>
+  <move>200</move>
   <nameRus>святое слово</nameRus>
   <spell type="SPELL(HolyWord)">
     <ranged>false</ranged>     
     <damtype>none</damtype>
+    <damtype>holy</damtype>
     <flags>prayer</flags>
     <position>fight</position>
     <target>people</target>
+    <tier>4</tier>
     <type>offensive</type>
   </spell>
 </skill>

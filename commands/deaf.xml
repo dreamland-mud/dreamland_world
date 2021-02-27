@@ -2,7 +2,7 @@
 <Command>
   <cat>comm</cat>
   <extra>keep_hide ghost afk spellout</extra>
-  <help id="1082" level="-1" type="CommandHelp">%FMT%  *%CMD%*
+  <help id="1082" keyword="DELETHIS OLDDEAF" level="102" title="DELETHIS OLDDEAF" type="CommandHelp">%FMT%  *%CMD%*
 
 Глухота отключает способность слышать то, что тебе говорят приватным образом
 (командой *(tell,говорить)*), это очень помогает в случае, если тебя надоели
@@ -13,12 +13,10 @@
 
 Само собой, нельзя ответить тому, кто включил у себя глухоту, до тех пор, пока
 кто-то из вас не пойдет на уступки.
-
-%SA% %H% [(twit,жаба)], [(quiet,тишина)]
 </help>
   <hint>не слышать личных обращений</hint>
   <name>deaf</name>
-  <order>player_only</order>  
+  <order>player_only</order>
   <position>dead</position>
   <russian>
     <node>глухой</node>

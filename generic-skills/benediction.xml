@@ -8,20 +8,31 @@
   </affect>
   <beats>24</beats>
   <classes>
-    <node name="paladin">
+    <node name="anti-paladin">
+      <level>82</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="cleric">
       <level>80</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="paladin">
+      <level>70</level>
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
   </classes>
   <dammsg></dammsg>
   <group registry="skillGroup">benedictions</group>
-  <help id="639" level="-1" type="SkillHelp">Паладин может наслать божественное проклятие на своего противника (&apos;{yanathema{x&apos;),
-это плохо отразится на всех умениях проклятого и на силе его заклинаний.
-С другой стороны, его самого и собратьев по оружию боги могут благословить (&apos;{ybenediction{x&apos;),
-улучшая точность удара и защиту от заклинаний.
+  <help id="639" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%CHAR%_
+
+Эта мощная молитва улучшает {hh47точность{x, {hh2035защиту от заклинаний{x и {hh2036уровень умений{x
+цели. Божественная благость будет сильнее, если {hh33натура{x твоего божества и натура
+цели совпадают.
 </help>
-  <mana>25</mana>
+  <mana>150</mana>
   <mob>
     <professional>true</professional>
   </mob>
@@ -29,6 +40,7 @@
   <spell type="SPELL(Benediction)">
     <damtype>none</damtype>
     <flags>prayer</flags>
+    <order>player_only</order>
     <position>stand</position>
     <target>char_room</target>
     <type>defensive</type>

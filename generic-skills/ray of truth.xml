@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
+  <align>good neutral</align>
   <beats>12</beats>
   <classes>
     <node name="cleric">
@@ -22,16 +23,18 @@
 
 Паладины искуснее клериков в вызове Луча.
 </help>
-  <mana>20</mana>
+  <mana>40</mana>
   <mob>
     <professional>true</professional>
   </mob>
   <nameRus>луч истины</nameRus>
   <spell type="SPELL(RayOfTruth)">
-    <damtype>none</damtype>
+    <damflags>spell prayer</damflags>
+    <damtype>holy</damtype>
     <flags>prayer</flags>
     <position>fight</position>
     <target>char_room</target>
+    <tier>3</tier>
     <type>offensive</type>
   </spell>
 </skill>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
+  <align>good neutral</align>
   <beats>12</beats>
   <classes>
     <node name="cleric">
@@ -12,11 +13,6 @@
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
-    <node name="warlock">
-      <level>55</level>
-      <maximum>100</maximum>
-      <rating>1</rating>
-    </node>
   </classes>
   <dammsg mg="n">изгнание зла</dammsg>
   <group registry="skillGroup">benedictions</group>
@@ -24,16 +20,17 @@
 злую жертву. Нечистым сердцем, которые применяют это заклинание, тоже
 следует опасаться за свою жизнь...
 </help>
-  <mana>15</mana>
+  <mana>40</mana>
   <mob>
     <professional>true</professional>
   </mob>
   <nameRus>изгнать зло</nameRus>
   <spell type="SPELL(DispelEvil)">
-    <damtype>none</damtype>
-    <flags>magic prayer</flags>
+    <damtype>holy</damtype>
+    <flags>prayer</flags>
     <position>fight</position>
     <target>char_room</target>
+    <tier>3</tier>
     <type>offensive</type>
   </spell>
 </skill>

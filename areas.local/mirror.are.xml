@@ -1,870 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <area>
   <areadata>
-    <altname>Старый Талос</altname>
     <authors>Kahn</authors>
     <credits>Old Midgaard</credits>
-    <flags>hometown</flags>
-    <levelHigh>30</levelHigh>
-    <levelLow>1</levelLow>
+    <flags>hometown safe</flags>
+    <levelHigh>0</levelHigh>
+    <levelLow>0</levelLow>
     <name>Старый Мидгаард</name>
-    <resetMessage></resetMessage>
+    <resetMessage>Затхлый аромат смерти и гниения наполняет этот населенный нежитью город.</resetMessage>
     <security>9</security>
-    <speedwalk>2nu3s;enter portal;d</speedwalk>
-    <translator>Shavatar</translator>
+    <speedwalk>3w4n2e3n2w</speedwalk>
+    <translator>Ruffina</translator>
     <vnumHigh>5420</vnumHigh>
-    <vnumLow>5300</vnumLow>
+    <vnumLow>5379</vnumLow>
   </areadata>
   <helps>
-    <node id="1446" keyword="'OLD MIDGAARD' 'OLD THALOS' 'СТАРЫЙ МИДГААРД' 'СТАРЫЙ ТАЛОС'" level="0">Где-то в священной роще друидов нарушилась ткань бытия и открылся портал в
-прошлое, в альтернативную реальность. В ней орды нежити захватили сначала лес
-к востоку от {hh1392Мидгаарда,{x а затем и сам город, перебив или обратив в зомби всех
-жителей и плотно обосновавшись в нем.
+    <node id="1446" keyword="'OLD MIDGAARD' 'СТАРЫЙ МИДГААРД'" level="0">Этот городок был основан первыми людьми, пришедшими на просторы Тэры. После пары
+десятилетий мира город подвергся атаке нежити, спустившейся с темных гор на
+западе, где угнездилось Зло. Многие жители пали в неравной борьбе, и город
+захватили чудовища. Немногочисленные выжившие сбежали дальше на юго-восток, где
+и основали современный {hh1392Мидгаард{x.
 
 Старый Мидгаард служит уютным пристанищем для {hh143некромантов{x, {hh144вампиров{x и
 {hh138антипаладинов{x. В городе можно найти магазины на любой вкус, получить задания
 и полакомиться кровью. 
 
-Из Старого Мидгаарда можно пройти в соседний город, Старый Талос.
-В этой альтернативной реальности город Талос все еще жив, а Мидгаард, наоборот,
-населен нежитью. На текущий момент есть три места с этим именем:
-%A% {hh1837Руины Старого Талоса{x -- опустевшие и населенные монстрами
-%A% {hh1446Старый Талос{x -- отражение города из альтернативной реальности прошлого, куда
-{x  можно пройти из Старого Мидгаарда
-%A% {hh1838Новый Талос{x -- процветающий молодой город на востоке от Мидгаарда,
-{x  населенный беженцами из Старого Талоса
-
 %PAUSE%
 {yЗадания{x:
   {Y*{x Водяной на Храмовой Площади выдаст задания всем желающим (команда &apos;задание попросить&apos;).
   {Y*{x Ведьма из Ведьминской Лавки выдаст поручение во славу зла.
-    Ограничения: злой характер. Как часто: раз в сутки.
+    Ограничения: злая натура. Как часто: раз в сутки.
 </node>
   </helps>
   <mobiles>
-    <node name="5300">
-      <ac bash="6" exotic="8" pierce="6" slash="6"/>
-      <act add="npc sentinel scavenger wimpy mage"/>
-      <alignment>500</alignment>
-      <dam_type>none</dam_type>
-      <damage>1d5+0</damage>
-      <default_pos>stand</default_pos>
-      <description>Большой глаз мигает, как рыбка гуппи, а глазики на стебельках, исходящих
-из круглого тела, просто очаровывают тебя своей проницательностью. Эти
-малыши-бихолдеры известны своей игривой натурой. Опа. А ведь у него
-прорезаются зубки!
-</description>
-      <detection add="invis"/>
-      <hit>2d7+46</hit>
-      <level>5</level>
-      <long_descr>Ты натыкаешься на пристальный взгляд симпатичного малыша-бихолдера (beholder)!
-</long_descr>
-      <mana>5d9+100</mana>
-      <material>0</material>
-      <off add="dodge assist_vnum"/>
-      <player_name>baby beholder малыш бихолдер</player_name>
-      <race>beholder</race>
-      <sex>either</sex>
-      <short_descr>малыш||а|у|а|ом|е бихолдер||а|у|а|ом|е</short_descr>
-      <size>medium</size>
-      <start_pos>stand</start_pos>
-      <wealth>11</wealth>
-    </node>
-    <node name="5301">
-      <ac bash="6" exotic="9" pierce="6" slash="6"/>
-      <act add="npc scavenger wimpy"/>
-      <alignment>500</alignment>
-      <dam_type>none</dam_type>
-      <damage>1d5+1</damage>
-      <default_pos>stand</default_pos>
-      <description>До пояса сверху это самая обыкновенная женщина, но ее нижняя часть - туловище
-какого-то четырехного чудища.
-</description>
-      <hit>2d7+46</hit>
-      <level>4</level>
-      <long_descr>Ручная ламия (lamia) ждет очередного приказа.
-</long_descr>
-      <mana>2d9+100</mana>
-      <material>0</material>
-      <off add="disarm trip assist_vnum"/>
-      <player_name>lamia pet ручная ламия</player_name>
-      <race>lamia</race>
-      <sex>female</sex>
-      <short_descr>ручн|ая|ой|ой|ую|ой|ой лами|я|и|и|ю|ей|и</short_descr>
-      <size>medium</size>
-      <start_pos>stand</start_pos>
-      <wealth>2</wealth>
-    </node>
-    <node name="5302">
-      <ac bash="5" exotic="9" pierce="5" slash="5"/>
-      <act add="npc stay_area wimpy"/>
-      <alignment>500</alignment>
-      <dam_type>none</dam_type>
-      <damage>1d6+1</damage>
-      <default_pos>stand</default_pos>
-      <description>Он улыбается тебе так, словно знает тебя с пеленок. Он настолько приветлив,
-что ты не можешь не ответить взаимностью.
-</description>
-      <hit>2d6+60</hit>
-      <level>5</level>
-      <long_descr>Житель Талоса (citizen) разговаривает с каждым встречным.
-</long_descr>
-      <mana>2d9+100</mana>
-      <material>0</material>
-      <off add="disarm dodge trip assist_vnum"/>
-      <player_name>citizen man горожанин</player_name>
-      <race>human</race>
-      <sex>male</sex>
-      <short_descr>жител|ь|я|ю|я|ем|е Талоса</short_descr>
-      <size>medium</size>
-      <start_pos>stand</start_pos>
-      <wealth>5</wealth>
-    </node>
-    <node name="5303">
-      <ac bash="-3" exotic="7" pierce="-3" slash="-3"/>
-      <act add="npc scavenger stay_area warrior"/>
-      <aff add="sanctuary"/>
-      <alignment>1000</alignment>
-      <dam_type>none</dam_type>
-      <damage>3d4+4</damage>
-      <default_pos>stand</default_pos>
-      <description>Он выглядит довольно внушительно в тяжелых доспехах. Правда, сейчас он
-посмеивается над бегающими вокруг него детьми.
-</description>
-      <hit>3d9+283</hit>
-      <level>17</level>
-      <long_descr>Гвардеец (guard) сохраняет мир в Талосе.
-</long_descr>
-      <mana>8d9+100</mana>
-      <material>0</material>
-      <off add="bash berserk disarm kick parry rescue assist_vnum"/>
-      <player_name>guard imperial cityguard гвардеец</player_name>
-      <race>human</race>
-      <sex>male</sex>
-      <short_descr>гварде|ец|йца|йцу|йца|йвем|йце</short_descr>
-      <size>medium</size>
-      <spec>spec_guard</spec>
-      <start_pos>stand</start_pos>
-      <wealth>75</wealth>
-    </node>
-    <node name="5304">
-      <ac bash="5" exotic="9" pierce="5" slash="5"/>
-      <act add="npc stay_area wimpy"/>
-      <alignment>500</alignment>
-      <dam_type>none</dam_type>
-      <damage>1d6+1</damage>
-      <default_pos>stand</default_pos>
-      <description>Она красива, наряжена в блестящее платье, которое просто искрится россыпью
-самоцветов. Она улыбнулась тебе - и твое сердце стало неровно биться
-только от того, что смог лишь на мгновение привлечь ее внимание.
-</description>
-      <hit>2d6+60</hit>
-      <level>5</level>
-      <long_descr>Жительница Талоса (citizen) красуется своим новым платьем.
-</long_descr>
-      <mana>2d9+100</mana>
-      <material>0</material>
-      <off add="disarm dodge trip assist_vnum"/>
-      <player_name>citizen woman female горожанка</player_name>
-      <race>human</race>
-      <sex>female</sex>
-      <short_descr>жительниц|а|ы|е|у|ей|е Талоса</short_descr>
-      <size>medium</size>
-      <start_pos>stand</start_pos>
-      <wealth>5</wealth>
-    </node>
-    <node name="5305">
-      <ac bash="-11" exotic="5" pierce="-11" slash="-11"/>
-      <act add="npc warrior"/>
-      <aff add="sanctuary"/>
-      <alignment>1000</alignment>
-      <dam_type>none</dam_type>
-      <damage>4d7+11</damage>
-      <default_pos>stand</default_pos>
-      <description>Гордон кажется непобедимым в своем рыцарском доспехе из митрила. Он подозрительно
-смотрит на тебя не только потому, что ты чужак, но еще и потому, что ты ВООРУЖЕННЫЙ
-чужак. Лучше не делай резких движений в его присутствии.
-</description>
-      <hit>10d10+1400</hit>
-      <level>35</level>
-      <long_descr>Храбрец Гордон (Gordon), Защитник Талоса, никого, кроме тебя сейчас не видит,
-потому что ты единственный чужак в городе.
-</long_descr>
-      <mana>17d9+100</mana>
-      <material>0</material>
-      <off add="bash berserk disarm kick parry rescue assist_vnum"/>
-      <player_name>gordon defender гордон защитник</player_name>
-      <race>human</race>
-      <sex>male</sex>
-      <short_descr>храбрец||а|у|а|ом|е Гордон||а|у|а|ом|е</short_descr>
-      <size>medium</size>
-      <spec>spec_guard</spec>
-      <start_pos>stand</start_pos>
-      <wealth>500</wealth>
-    </node>
-    <node name="5306">
-      <ac bash="1" exotic="7" pierce="1" slash="1"/>
-      <act add="npc sentinel wimpy cleric"/>
-      <alignment>-500</alignment>
-      <dam_type>none</dam_type>
-      <damage>1d7+2</damage>
-      <default_pos>stand</default_pos>
-      <description>Видимо, священник совсем выжил из ума. Сжимая поднятый кулак, обернутый
-в золотой шелк, он постоянно твердит о том, что однажды зло одержит победу
-и разрушит весь город. Разумеется, дурачка никто не слушает.
-Одет он во все черное.
-</description>
-      <hit>2d7+121</hit>
-      <level>10</level>
-      <long_descr>Одержимый священник (priest) культа Шамаша предсказывает разрушение города.
-</long_descr>
-      <mana>10d9+100</mana>
-      <material>0</material>
-      <off add="disarm kick parry assist_vnum"/>
-      <player_name>priest shamash священник шамаш</player_name>
-      <race>human</race>
-      <religion registry="religion">shamash</religion>
-      <sex>male</sex>
-      <short_descr>одержим|ый|ого|ому|ого|ым|ом священник||а|у|а|ом|е Шамаша</short_descr>
-      <size>medium</size>
-      <start_pos>stand</start_pos>
-      <wealth>5</wealth>
-    </node>
-    <node name="5307">
-      <ac bash="-4" exotic="6" pierce="-4" slash="-4"/>
-      <act add="npc sentinel cleric"/>
-      <aff add="sanctuary"/>
-      <alignment>1000</alignment>
-      <dam_type>none</dam_type>
-      <damage>2d7+5</damage>
-      <default_pos>stand</default_pos>
-      <description>Он восторженно рассказывает историю Талоса, как город получил титул
-&quot;Города Мира&quot;. Он очень рад, что ему посчастливилось занять пост
-верховного священника в этом города.
-</description>
-      <hit>3d9+333</hit>
-      <level>20</level>
-      <long_descr>Верховный священник Талоса (priest) рассказывает тебе о великолепии города.
-</long_descr>
-      <mana>20d9+100</mana>
-      <material>0</material>
-      <off add="disarm kick parry assist_vnum"/>
-      <player_name>priest священник талоса</player_name>
-      <race>human</race>
-      <sex>male</sex>
-      <short_descr>верховн|ый|ого|ому|ого|ым|ом священник||а|у|а|ом|е Талоса</short_descr>
-      <size>medium</size>
-      <start_pos>stand</start_pos>
-      <wealth>5</wealth>
-    </node>
-    <node name="5308">
-      <ac bash="-9" exotic="6" pierce="-9" slash="-9"/>
-      <act add="npc sentinel"/>
-      <aff add="protect_evil"/>
-      <alignment>1000</alignment>
-      <dam_type>none</dam_type>
-      <damage>4d6+8</damage>
-      <default_pos>stand</default_pos>
-      <description>Это большая каменная глыба, превращенная в гигантское существо. Она
-стоит здесь, охраняя город.
-</description>
-      <hit>6d12+853</hit>
-      <level>30</level>
-      <long_descr>Каменный голем (golem) преданно стоит на страже.
-</long_descr>
-      <mana>15d9+100</mana>
-      <material>0</material>
-      <off add="disarm dodge trip assist_vnum"/>
-      <player_name>golem stone каменный голем</player_name>
-      <race>golem</race>
-      <sex>either</sex>
-      <short_descr>каменн|ый|ого|ому|ого|ым|ом голем||а|у|а|ом|е</short_descr>
-      <size>medium</size>
-      <start_pos>stand</start_pos>
-      <wealth>212</wealth>
-    </node>
-    <node name="5309">
-      <ac bash="-4" exotic="7" pierce="-4" slash="-4"/>
-      <act add="npc sentinel"/>
-      <alignment>800</alignment>
-      <dam_type>none</dam_type>
-      <damage>2d8+5</damage>
-      <default_pos>stand</default_pos>
-      <description>Он очень занят, но находит пару секунд чтобы сказать:
-&quot;Привет и добро пожаловать в Талос!&quot;
-Он очень гордится своей работой.
-</description>
-      <hit>3d9+333</hit>
-      <level>20</level>
-      <long_descr>Мэр Талоса (mayor) возится с бумагами.
-</long_descr>
-      <mana>10d9+100</mana>
-      <material>0</material>
-      <off add="disarm dodge trip assist_vnum"/>
-      <player_name>mayor мэр талоса</player_name>
-      <race>human</race>
-      <sex>male</sex>
-      <short_descr>мэр||а|у|а|ом|е Талоса</short_descr>
-      <size>medium</size>
-      <start_pos>stand</start_pos>
-      <wealth>50</wealth>
-    </node>
-    <node name="5310">
-      <ac bash="-19" exotic="-6" pierce="-19" slash="-19"/>
-      <act add="npc sentinel"/>
-      <alignment>600</alignment>
-      <behavior type="ShopTrader">
-        <buys>gem</buys>
-        <closeHour>23</closeHour>
-        <openHour>0</openHour>
-        <profitBuy>120</profitBuy>
-        <profitSell>90</profitSell>
-      </behavior>
-      <dam_type>none</dam_type>
-      <damage>4d6+8</damage>
-      <default_pos>stand</default_pos>
-      <description>Он смотрит на тебя и спрашивает: &quot;Чем травиться будем?&quot;
-</description>
-      <hit>6d12+1253</hit>
-      <level>30</level>
-      <long_descr>Бармен Дан (Dan) за стойкой протирает рюмку.
-</long_descr>
-      <mana>15d9+100</mana>
-      <material>0</material>
-      <off add="disarm dodge trip assist_vnum"/>
-      <player_name>dan barkeep дан бармен</player_name>
-      <race>human</race>
-      <sex>male</sex>
-      <short_descr>бармен||а|у|а|ом|е Дан||а|у|а|ом|е</short_descr>
-      <size>medium</size>
-      <start_pos>stand</start_pos>
-      <wealth>50</wealth>
-    </node>
-    <node name="5311">
-      <ac bash="-19" exotic="-6" pierce="-19" slash="-19"/>
-      <act add="npc sentinel"/>
-      <alignment>600</alignment>
-      <behavior type="ShopTrader">
-        <buys>weapon drink food gem</buys>
-        <closeHour>20</closeHour>
-        <openHour>6</openHour>
-        <profitBuy>110</profitBuy>
-        <profitSell>90</profitSell>
-      </behavior>
-      <dam_type>none</dam_type>
-      <damage>4d6+8</damage>
-      <default_pos>stand</default_pos>
-      <description>Мясник в окровавленном фартуке взмахивает ножом, бросает взгляд сверху
-на тебя, спрашивает &quot;Тебе сколько?&quot; и ударяет по свежей туше, забрызгивая
-свое лицо кровью.
-</description>
-      <hit>6d12+1253</hit>
-      <level>30</level>
-      <long_descr>Мясник Георг (George) разделывает коровью тушу.
-</long_descr>
-      <mana>15d9+100</mana>
-      <material>0</material>
-      <off add="disarm dodge trip assist_vnum"/>
-      <player_name>george butcher георг мясник</player_name>
-      <race>human</race>
-      <sex>male</sex>
-      <short_descr>мясник||а|у|а|ом|е Георг||а|у|а|ом|е</short_descr>
-      <size>medium</size>
-      <start_pos>stand</start_pos>
-      <wealth>50</wealth>
-    </node>
-    <node name="5312">
-      <ac bash="-19" exotic="-6" pierce="-19" slash="-19"/>
-      <act add="npc sentinel"/>
-      <alignment>650</alignment>
-      <behavior type="ShopTrader">
-        <buys>food gem</buys>
-        <closeHour>19</closeHour>
-        <openHour>7</openHour>
-        <profitBuy>110</profitBuy>
-        <profitSell>90</profitSell>
-      </behavior>
-      <dam_type>none</dam_type>
-      <damage>4d6+8</damage>
-      <default_pos>stand</default_pos>
-      <description>Она кротко улыбается тебе.
-</description>
-      <hit>6d12+1253</hit>
-      <level>30</level>
-      <long_descr>Крестьянка Бетти (Betty) с улыбкой любезно предлагает тебе яблоки.
-</long_descr>
-      <mana>15d9+100</mana>
-      <material>0</material>
-      <off add="disarm dodge trip assist_vnum"/>
-      <player_name>farmer betty крестьянка бетти</player_name>
-      <race>human</race>
-      <sex>female</sex>
-      <short_descr>крестьянк|а|и|е|у|ой|е Бетти</short_descr>
-      <size>medium</size>
-      <start_pos>stand</start_pos>
-      <wealth>50</wealth>
-    </node>
-    <node name="5313">
-      <ac bash="-19" exotic="-6" pierce="-19" slash="-19"/>
-      <act add="npc sentinel"/>
-      <alignment>550</alignment>
-      <behavior type="ShopTrader">
-        <buys>weapon armor gem</buys>
-        <closeHour>21</closeHour>
-        <openHour>5</openHour>
-        <profitBuy>130</profitBuy>
-        <profitSell>70</profitSell>
-      </behavior>
-      <dam_type>none</dam_type>
-      <damage>4d6+8</damage>
-      <default_pos>stand</default_pos>
-      <description>С него пот течет ручьями -- не так то просто превращать куски металла в
-предметы защиты и нападения.
-</description>
-      <hit>6d12+1253</hit>
-      <level>30</level>
-      <long_descr>Таэллор (Thaellor) продает здесь изделия из металла.
-</long_descr>
-      <mana>15d9+100</mana>
-      <material>0</material>
-      <off add="disarm dodge trip assist_vnum"/>
-      <player_name>thaellor dwarf гном таэллор</player_name>
-      <race>dwarf</race>
-      <sex>female</sex>
-      <short_descr>гном||а|у|а|ом|е Таэллор||а|у|а|ом|е</short_descr>
-      <size>medium</size>
-      <start_pos>stand</start_pos>
-      <wealth>50</wealth>
-    </node>
-    <node name="5314">
-      <ac bash="-19" exotic="-6" pierce="-19" slash="-19"/>
-      <act add="npc sentinel"/>
-      <alignment>600</alignment>
-      <behavior type="ShopTrader">
-        <buys>light treasure furniture trash boat jewelry parchment</buys>
-        <closeHour>18</closeHour>
-        <openHour>8</openHour>
-        <profitBuy>135</profitBuy>
-        <profitSell>65</profitSell>
-      </behavior>
-      <dam_type>none</dam_type>
-      <damage>4d6+8</damage>
-      <default_pos>stand</default_pos>
-      <description>Бен пытается продать тебе свои изделия.
-</description>
-      <hit>6d12+1253</hit>
-      <level>30</level>
-      <long_descr>Кузнец Бен (Ben) продает здесь различные металлические безделушки.
-</long_descr>
-      <mana>15d9+100</mana>
-      <material>0</material>
-      <off add="disarm dodge trip assist_vnum"/>
-      <player_name>ben smith кузнец бен</player_name>
-      <race>human</race>
-      <sex>male</sex>
-      <short_descr>кузнец||а|у|а|ом|е Бен||а|у|а|ом|е</short_descr>
-      <size>medium</size>
-      <start_pos>stand</start_pos>
-      <wealth>50</wealth>
-    </node>
-    <node name="5315">
-      <ac bash="3" exotic="9" pierce="3" slash="3"/>
-      <act add="npc sentinel wimpy"/>
-      <alignment>500</alignment>
-      <dam_type>none</dam_type>
-      <damage>1d7+2</damage>
-      <default_pos>stand</default_pos>
-      <description>Вся при делах, шепчет: &quot;Тссс!&quot;
-</description>
-      <hit>2d7+96</hit>
-      <level>8</level>
-      <long_descr>Библиотекарша (librarian) аккуратно расставляет книги по полкам.
-</long_descr>
-      <mana>4d9+100</mana>
-      <material>0</material>
-      <off add="disarm dodge trip assist_vnum"/>
-      <player_name>librarian библиотекарша</player_name>
-      <race>human</race>
-      <sex>female</sex>
-      <short_descr>библиотекарш|а|и|е|у|ей|е</short_descr>
-      <size>medium</size>
-      <start_pos>stand</start_pos>
-    </node>
-    <node name="5316">
-      <ac bash="4" exotic="9" pierce="4" slash="4"/>
-      <act add="npc sentinel wimpy"/>
-      <alignment>500</alignment>
-      <dam_type>none</dam_type>
-      <damage>1d7+1</damage>
-      <default_pos>stand</default_pos>
-      <description>Этот юный грамотей учится на священника.
-</description>
-      <hit>2d7+71</hit>
-      <level>6</level>
-      <long_descr>Ученик (scholar) тише воды ниже травы что-то изучает в углу.
-</long_descr>
-      <mana>3d9+100</mana>
-      <material>0</material>
-      <off add="disarm dodge trip assist_vnum"/>
-      <player_name>scholar boy ученик</player_name>
-      <race>human</race>
-      <sex>male</sex>
-      <short_descr>ученик||а|у|а|ом|е</short_descr>
-      <size>medium</size>
-      <start_pos>stand</start_pos>
-    </node>
-    <node name="5317">
-      <ac bash="-19" exotic="-1" pierce="-19" slash="-19"/>
-      <act add="npc sentinel mage"/>
-      <alignment>550</alignment>
-      <behavior type="ShopTrader">
-        <buys>scroll wand staff potion gem spellbook tattoo</buys>
-        <closeHour>17</closeHour>
-        <openHour>9</openHour>
-        <profitBuy>120</profitBuy>
-        <profitSell>50</profitSell>
-      </behavior>
-      <dam_type>none</dam_type>
-      <damage>5d4+9</damage>
-      <default_pos>stand</default_pos>
-      <description>Да этот старик сейчас упадет и тут же уснет!
-</description>
-      <detection add="invis"/>
-      <hit>6d12+1278</hit>
-      <level>30</level>
-      <long_descr>Старый волшебник (wizard) борется со сном в ожидании покупателей.
-</long_descr>
-      <mana>30d9+100</mana>
-      <material>0</material>
-      <off add="dodge assist_vnum"/>
-      <player_name>wizard волшебник</player_name>
-      <race>human</race>
-      <sex>male</sex>
-      <short_descr>стар|ый|ого|ому|ого|ым|ом волшебник||а|у|а|ом|е</short_descr>
-      <size>medium</size>
-      <start_pos>stand</start_pos>
-      <wealth>50</wealth>
-    </node>
-    <node name="5318">
-      <ac bash="6" exotic="9" pierce="6" slash="6"/>
-      <act add="npc sentinel wimpy"/>
-      <alignment>700</alignment>
-      <dam_type>none</dam_type>
-      <damage>1d5+1</damage>
-      <default_pos>stand</default_pos>
-      <description>Она красива, наряжена в блестящее платье, которое просто искрится россыпью
-самоцветов. Она улыбается тебе, она сводит тебя с ума своими привлекательностями,
-ты так счастлив, что привлек ее внимание, что не можешь отказать ей в
-удовольствии сделать тебе массаж.
-</description>
-      <hit>2d7+46</hit>
-      <level>4</level>
-      <long_descr>Очаровательная массажистка (masseuse) предлагает тебе сделать массаж.
-</long_descr>
-      <mana>2d9+100</mana>
-      <material>0</material>
-      <off add="disarm dodge trip assist_vnum"/>
-      <player_name>masseuse woman массажистка</player_name>
-      <race>human</race>
-      <sex>female</sex>
-      <short_descr>очаровательн|ая|ой|ой|ую|ой|ой массажистк|а|и|е|у|ой|е</short_descr>
-      <size>medium</size>
-      <start_pos>stand</start_pos>
-      <wealth>2</wealth>
-    </node>
-    <node name="5319">
-      <ac bash="5" exotic="9" pierce="5" slash="5"/>
-      <act add="npc sentinel wimpy"/>
-      <alignment>650</alignment>
-      <dam_type>none</dam_type>
-      <damage>1d6+1</damage>
-      <default_pos>stand</default_pos>
-      <description>Он улыбается тебе словно знает тебя. Он так доволен и расслаблен, что ты
-не можешь не поддаться соблазну спуститься в успокоительный бассейн.
-</description>
-      <hit>2d6+60</hit>
-      <level>5</level>
-      <long_descr>Мужчина (man) купается здесь.
-</long_descr>
-      <mana>2d9+100</mana>
-      <material>0</material>
-      <off add="disarm dodge trip assist_vnum"/>
-      <player_name>bather man купальщик мужчина</player_name>
-      <race>human</race>
-      <sex>male</sex>
-      <short_descr>мужчин|а|ы|е|у|ой|е</short_descr>
-      <size>medium</size>
-      <start_pos>stand</start_pos>
-    </node>
-    <node name="5320">
-      <ac bash="-3" exotic="7" pierce="-3" slash="-3"/>
-      <act add="npc sentinel scavenger stay_area warrior"/>
-      <aff add="sanctuary"/>
-      <alignment>1000</alignment>
-      <dam_type>none</dam_type>
-      <damage>3d4+4</damage>
-      <default_pos>stand</default_pos>
-      <description>Он выглядит довольно внушительно в тяжелых доспехах. Сейчас он смотрит
-на карту Талоса, просматривая пути каждого патруля.
-</description>
-      <hit>3d9+283</hit>
-      <level>17</level>
-      <long_descr>Гвардеец (guard) осматривает городские патрули.
-</long_descr>
-      <mana>8d9+100</mana>
-      <material>0</material>
-      <off add="bash berserk disarm kick parry rescue assist_vnum"/>
-      <player_name>guard imperial cityguard гвардеец</player_name>
-      <race>human</race>
-      <sex>male</sex>
-      <short_descr>гварде|ец|йца|йцу|йца|йвем|йце</short_descr>
-      <size>medium</size>
-      <spec>spec_guard</spec>
-      <start_pos>stand</start_pos>
-      <wealth>75</wealth>
-    </node>
-    <node name="5321">
-      <ac bash="-3" exotic="7" pierce="-3" slash="-3"/>
-      <act add="npc sentinel scavenger stay_area warrior"/>
-      <aff add="sanctuary"/>
-      <alignment>1000</alignment>
-      <dam_type>none</dam_type>
-      <damage>3d4+4</damage>
-      <default_pos>stand</default_pos>
-      <description>Он выглядит довольно внушительно в тяжелых доспехах. Сейчас он смотрит на
-веселящихся детей.
-</description>
-      <hit>3d9+283</hit>
-      <level>17</level>
-      <long_descr>Гвардеец (guard) охраняет Главные Ворота.
-</long_descr>
-      <mana>8d9+100</mana>
-      <material>0</material>
-      <off add="bash berserk disarm kick parry rescue assist_vnum"/>
-      <player_name>guard cityguard гвардеец</player_name>
-      <race>human</race>
-      <sex>male</sex>
-      <short_descr>гварде|ец|йца|йцу|йца|йвем|йце</short_descr>
-      <size>medium</size>
-      <spec>spec_guard</spec>
-      <start_pos>stand</start_pos>
-      <wealth>75</wealth>
-    </node>
-    <node name="5322">
-      <ac bash="5" exotic="9" pierce="5" slash="5"/>
-      <act add="npc stay_area"/>
-      <dam_type>none</dam_type>
-      <damage>1d6+1</damage>
-      <default_pos>stand</default_pos>
-      <description>Это мирное создание смотрит на тебя большими темными глазами. 
-Она принюхивается к тебе, слегка дернув носом, и затем продолжает жевать траву.
-</description>
-      <hit>2d6+60</hit>
-      <level>5</level>
-      <long_descr>Олениха (doe) мирно жует траву.
-</long_descr>
-      <mana>2d9+100</mana>
-      <material>0</material>
-      <off add="disarm dodge trip assist_vnum"/>
-      <player_name>doe олениха</player_name>
-      <race>deer</race>
-      <sex>female</sex>
-      <short_descr>олених|а|и|е|у|ой|е</short_descr>
-      <size>medium</size>
-      <start_pos>stand</start_pos>
-    </node>
-    <node name="5323">
-      <ac bash="4" exotic="9" pierce="4" slash="4"/>
-      <act add="npc stay_area"/>
-      <dam_type>none</dam_type>
-      <damage>1d7+1</damage>
-      <default_pos>stand</default_pos>
-      <description>Во взгляде оленя - возмущение твоим вторжением. Он угрожающе наклоняет
-ветвистые рога, хотя и безрезультатно.
-</description>
-      <hit>2d7+71</hit>
-      <level>6</level>
-      <long_descr>Олень (deer) обернулся при твоем появлении.
-</long_descr>
-      <mana>3d9+100</mana>
-      <material>0</material>
-      <off add="disarm dodge trip assist_vnum"/>
-      <player_name>deer олень</player_name>
-      <race>deer</race>
-      <sex>male</sex>
-      <short_descr>олен|ь|я|ю|я|ем|е</short_descr>
-      <size>medium</size>
-      <start_pos>stand</start_pos>
-    </node>
-    <node name="5324">
-      <ac bash="3" exotic="9" pierce="3" slash="3"/>
-      <act add="npc aggressive stay_area"/>
-      <dam_type>none</dam_type>
-      <damage>1d7+2</damage>
-      <default_pos>stand</default_pos>
-      <description>Его глаза наливаются кровью... Лучше оставить его в покое!
-</description>
-      <hit>2d7+96</hit>
-      <level>8</level>
-      <long_descr>Олень-одиночка (stag) готов защищать свою территорию.
-</long_descr>
-      <mana>4d9+100</mana>
-      <material>0</material>
-      <off add="disarm dodge trip assist_vnum"/>
-      <player_name>stag deer олень одиночка олень-одиночка</player_name>
-      <race>deer</race>
-      <sex>male</sex>
-      <short_descr>олен|ь|я|ю|я|ем|е-одиночк|а|и|е|у|ой|е</short_descr>
-      <size>medium</size>
-      <start_pos>stand</start_pos>
-    </node>
-    <node name="5325">
-      <ac bash="8" exotic="10" pierce="8" slash="8"/>
-      <act add="npc stay_area wimpy"/>
-      <dam_type>none</dam_type>
-      <damage>1d5+0</damage>
-      <default_pos>stand</default_pos>
-      <description>Кролик выглядит очень няшно, и тебе жаль, что у тебя такого нет.
-</description>
-      <hit>2d7+21</hit>
-      <level>2</level>
-      <long_descr>Маленький кролик (bunny) прыгает с кочки на кочку.
-</long_descr>
-      <mana>1d9+100</mana>
-      <material>0</material>
-      <off add="disarm trip assist_vnum"/>
-      <player_name>bunny rabbit кролик маленький</player_name>
-      <race>rabbit</race>
-      <sex>either</sex>
-      <short_descr>маленьк|ий|ого|ому|ого|им|ом кроли|к|ка|ку|ка|ком|ке</short_descr>
-      <size>medium</size>
-      <start_pos>stand</start_pos>
-    </node>
-    <node name="5326">
-      <ac bash="6" exotic="9" pierce="6" slash="6"/>
-      <act add="npc aggressive stay_area wimpy"/>
-      <aff add="sneak"/>
-      <dam_type>none</dam_type>
-      <damage>1d5+1</damage>
-      <default_pos>stand</default_pos>
-      <description>После внимательного обследования ты приходишь к выводу, что это НЕ кобра!
-</description>
-      <hit>2d7+46</hit>
-      <level>4</level>
-      <long_descr>Маленькая змея (snake) извивается в траве.
-</long_descr>
-      <mana>2d9+100</mana>
-      <material>0</material>
-      <off add="disarm dodge trip assist_race"/>
-      <player_name>snake змея маленькая безобидная</player_name>
-      <race>snake</race>
-      <sex>either</sex>
-      <short_descr>безобидн|ая|ой|ой|ую|ой|ой зме|я|и|е|ю|ей|е</short_descr>
-      <size>medium</size>
-      <start_pos>stand</start_pos>
-    </node>
-    <node name="5327">
-      <ac bash="1" exotic="7" pierce="1" slash="1"/>
-      <act add="npc stay_area wimpy cleric"/>
-      <aff add="protect_evil"/>
-      <alignment>1000</alignment>
-      <dam_type>none</dam_type>
-      <damage>1d7+2</damage>
-      <default_pos>stand</default_pos>
-      <description>Ему не нравится, что ты беспокоишь его, но он слишком вежлив,
-чтобы просить тебя уйти.
-</description>
-      <detection add="invis"/>
-      <hit>2d7+121</hit>
-      <level>10</level>
-      <long_descr>Друид (druid) медитирует тут.
-</long_descr>
-      <mana>10d9+100</mana>
-      <material>0</material>
-      <off add="disarm kick parry assist_vnum"/>
-      <player_name>druid друид</player_name>
-      <race>human</race>
-      <sex>male</sex>
-      <short_descr>друи|д|да|ду|да|дом|де</short_descr>
-      <size>medium</size>
-      <start_pos>stand</start_pos>
-      <wealth>2</wealth>
-    </node>
-    <node name="5328">
-      <ac bash="1" exotic="7" pierce="1" slash="1"/>
-      <act add="npc stay_area wimpy cleric"/>
-      <aff add="protect_evil"/>
-      <alignment>1000</alignment>
-      <dam_type>none</dam_type>
-      <damage>1d7+2</damage>
-      <default_pos>stand</default_pos>
-      <description>Она задается вопросом, как же посторонний человек мог сюда попасть.
-</description>
-      <detection add="invis"/>
-      <hit>2d7+121</hit>
-      <level>10</level>
-      <long_descr>Друидесса (druidess) ласково смотрит на тебя.
-</long_descr>
-      <mana>10d9+100</mana>
-      <material>0</material>
-      <off add="disarm kick parry assist_vnum"/>
-      <player_name>druidess друидесса</player_name>
-      <race>human</race>
-      <sex>female</sex>
-      <short_descr>друидесс|а|ы|е|у|ой|е</short_descr>
-      <size>medium</size>
-      <start_pos>stand</start_pos>
-      <wealth>2</wealth>
-    </node>
-    <node name="5329">
-      <ac bash="3" exotic="9" pierce="3" slash="3"/>
-      <act add="npc sentinel scavenger"/>
-      <alignment>450</alignment>
-      <dam_type>none</dam_type>
-      <damage>1d7+2</damage>
-      <default_pos>stand</default_pos>
-      <description>Музыкант вместе с компаньонами поет счастливую песню.
-</description>
-      <hit>2d7+96</hit>
-      <level>8</level>
-      <long_descr>Бард (bard) поет песни во славу Талоса.
-</long_descr>
-      <mana>4d9+100</mana>
-      <material>0</material>
-      <off add="disarm dodge trip assist_vnum"/>
-      <player_name>musician bard музыкант бард</player_name>
-      <race>human</race>
-      <sex>male</sex>
-      <short_descr>Бард||а|у|а|ом|е Талоса</short_descr>
-      <size>medium</size>
-      <start_pos>stand</start_pos>
-      <wealth>5</wealth>
-    </node>
-    <node name="5330">
-      <ac bash="2" exotic="8" pierce="2" slash="2"/>
-      <act add="npc scavenger"/>
-      <alignment>550</alignment>
-      <dam_type>none</dam_type>
-      <damage>1d8+2</damage>
-      <default_pos>stand</default_pos>
-      <description>Этот музыкант бродит по всему свету, исполняя песни во славу Талоса.
-</description>
-      <hit>2d6+110</hit>
-      <level>9</level>
-      <long_descr>Веселый бард (bard) поет мажорную песню во славу Талоса.
-</long_descr>
-      <mana>4d9+100</mana>
-      <material>0</material>
-      <off add="disarm dodge trip assist_vnum"/>
-      <player_name>musician bard музыкант бард</player_name>
-      <race>human</race>
-      <sex>male</sex>
-      <short_descr>Бард||а|у|а|ом|е Талоса</short_descr>
-      <size>medium</size>
-      <start_pos>stand</start_pos>
-      <wealth>7</wealth>
-    </node>
-    <node name="5331">
+    <node name="5381">
       <ac bash="-2" exotic="7" pierce="-2" slash="-2"/>
       <act add="npc scavenger stay_area warrior"/>
       <aff del="slow"/>
@@ -877,7 +46,7 @@
 </description>
       <form add="mammal" del="nonadoptable undead"/>
       <hit>3d9+233</hit>
-      <imm del="charm spell poison"/>
+      <imm del="charm poison"/>
       <level>15</level>
       <long_descr>Зомбического вида стражник (guard) следит за порядком на улицах.
 </long_descr>
@@ -892,10 +61,9 @@
       <size>medium</size>
       <spec>spec_guard</spec>
       <start_pos>stand</start_pos>
-      <vuln del="weapon"/>
       <wealth>25</wealth>
     </node>
-    <node name="5332">
+    <node name="5382">
       <ac bash="9" exotic="10" pierce="9" slash="9"/>
       <act add="npc scavenger"/>
       <dam_type>none</dam_type>
@@ -920,7 +88,7 @@
       <start_pos>stand</start_pos>
       <wealth>1</wealth>
     </node>
-    <node name="5333">
+    <node name="5383">
       <ac bash="10" exotic="10" pierce="10" slash="10"/>
       <act add="npc aggressive wimpy"/>
       <alignment>-200</alignment>
@@ -944,7 +112,7 @@
       <spec>spec_fido</spec>
       <start_pos>stand</start_pos>
     </node>
-    <node name="5334">
+    <node name="5384">
       <ac bash="-2" exotic="7" pierce="-2" slash="-2"/>
       <act add="npc sentinel stay_area warrior"/>
       <aff del="slow"/>
@@ -957,7 +125,7 @@
 </description>
       <form add="mammal" del="nonadoptable undead"/>
       <hit>3d9+233</hit>
-      <imm del="charm spell poison"/>
+      <imm del="charm poison"/>
       <level>15</level>
       <long_descr>Зомбического вида стражник (guard) охраняет ворота.
 </long_descr>
@@ -972,10 +140,9 @@
       <size>medium</size>
       <spec>spec_guard</spec>
       <start_pos>stand</start_pos>
-      <vuln del="weapon"/>
       <wealth>25</wealth>
     </node>
-    <node name="5335">
+    <node name="5385">
       <ac bash="-35" exotic="-15" pierce="-35" slash="-35"/>
       <act add="npc sentinel nopurge notrack"/>
       <behavior type="ShopTrader">
@@ -1002,7 +169,7 @@
       <mana>1d1+1999</mana>
       <material>0</material>
       <off add="area_attack dodge"/>
-      <player_name>witch lady ведьма женщина</player_name>
+      <player_name>witch red lady ведьма женщина</player_name>
       <race>human</race>
       <res add="weapon"/>
       <sex>female</sex>
@@ -1011,7 +178,7 @@
       <start_pos>stand</start_pos>
       <wealth>15000</wealth>
     </node>
-    <node name="5336">
+    <node name="5386">
       <ac bash="-55" exotic="-35" pierce="-55" slash="-55"/>
       <act add="npc sentinel nopurge notrack"/>
       <aff del="infrared sneak"/>
@@ -1048,7 +215,7 @@
       <vuln del="iron"/>
       <wealth>500</wealth>
     </node>
-    <node name="5337">
+    <node name="5387">
       <ac bash="-55" exotic="-15" pierce="-55" slash="-55"/>
       <act add="npc sentinel nopurge notrack"/>
       <aff del="infrared"/>
@@ -1086,7 +253,7 @@
       <vuln del="spell"/>
       <wealth>1300</wealth>
     </node>
-    <node name="5338">
+    <node name="5388">
       <ac bash="-50" exotic="-25" pierce="-50" slash="-50"/>
       <act add="npc sentinel warrior nopurge notrack"/>
       <alignment>-500</alignment>
@@ -1123,7 +290,7 @@
       <start_pos>stand</start_pos>
       <wealth>25000</wealth>
     </node>
-    <node name="5339">
+    <node name="5389">
       <ac bash="-55" exotic="-15" pierce="-55" slash="-55"/>
       <act add="npc sentinel nopurge notrack"/>
       <behavior type="ShopTrader">
@@ -1158,7 +325,7 @@
       <start_pos>stand</start_pos>
       <wealth>25000</wealth>
     </node>
-    <node name="5340">
+    <node name="5390">
       <ac bash="-55" exotic="-50" pierce="-55" slash="-55"/>
       <act add="npc sentinel nopurge notrack"/>
       <aff add="haste"/>
@@ -1193,10 +360,9 @@
       <short_descr>ювелир||а|у|а|ом|е</short_descr>
       <size>huge</size>
       <start_pos>stand</start_pos>
-      <vuln del="spell"/>
       <wealth>58000</wealth>
     </node>
-    <node name="5341">
+    <node name="5391">
       <ac bash="-50" exotic="-50" pierce="-50" slash="-50"/>
       <act add="npc sentinel warrior nopurge notrack"/>
       <aff add="infrared haste"/>
@@ -1235,7 +401,7 @@
       <start_pos>stand</start_pos>
       <vuln add="lightning mental"/>
     </node>
-    <node name="5342">
+    <node name="5392">
       <ac bash="-478" exotic="-379" pierce="-478" slash="-476"/>
       <act add="npc sentinel cleric nopurge notrack"/>
       <aff add="sanctuary"/>
@@ -1339,7 +505,7 @@
       <start_pos>stand</start_pos>
       <wealth>5000</wealth>
     </node>
-    <node name="5343">
+    <node name="5393">
       <ac bash="-65" exotic="-35" pierce="-65" slash="-65"/>
       <act add="npc sentinel practice mage nopurge notrack"/>
       <alignment>1000</alignment>
@@ -1360,7 +526,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>guildmaster гильдмастер мастер гильдии</player_name>
-      <practicer registry="skillGroup">none detection necromancy harmful creation weather</practicer>
+      <practicer registry="skillGroup">attack detection nature necromancy creation adventure</practicer>
       <race>elf</race>
       <res add="spell"/>
       <sex>female</sex>
@@ -1368,7 +534,7 @@
       <size>medium</size>
       <start_pos>stand</start_pos>
     </node>
-    <node name="5344">
+    <node name="5394">
       <ac bash="-65" exotic="-35" pierce="-65" slash="-65"/>
       <act add="npc sentinel necromancer practice mage nopurge notrack"/>
       <alignment>-1000</alignment>
@@ -1390,7 +556,7 @@
       <material>0</material>
       <off add="disarm dodge fast kick parry"/>
       <player_name>guildmaster гильдмастер мастер гильдии</player_name>
-      <practicer registry="skillGroup">none vampiric detection harmful creation weather</practicer>
+      <practicer registry="skillGroup">attack vampiric detection nature necromancy creation adventure</practicer>
       <race>human</race>
       <res add="spell"/>
       <sex>male</sex>
@@ -1398,7 +564,7 @@
       <size>medium</size>
       <start_pos>stand</start_pos>
     </node>
-    <node name="5345">
+    <node name="5395">
       <ac bash="-65" exotic="-15" pierce="-65" slash="-65"/>
       <act add="npc sentinel cleric nopurge notrack"/>
       <aff add="sanctuary" del="infrared sneak"/>
@@ -1443,10 +609,12 @@
       <vuln del="iron"/>
       <wealth>5000</wealth>
     </node>
-    <node name="5346">
+    <node name="5396">
       <ac bash="-65" exotic="-15" pierce="-65" slash="-65"/>
       <act add="npc sentinel undead nopurge notrack"/>
       <alignment>-1000</alignment>
+      <behavior type="MoneyChanger">
+      </behavior>
       <dam_type>suction</dam_type>
       <damage>2d4+30</damage>
       <default_pos>stand</default_pos>
@@ -1462,7 +630,7 @@
       <mana>1d1+999</mana>
       <material>none</material>
       <off add="dodge fast kick parry"/>
-      <player_name>vampire bank clerc клерк вампир</player_name>
+      <player_name>vampire bank clerk клерк вампир клерк-вампир</player_name>
       <race>human</race>
       <res add="weapon"/>
       <sex>male</sex>
@@ -1471,7 +639,7 @@
       <start_pos>stand</start_pos>
       <wealth>5000</wealth>
     </node>
-    <node name="5347">
+    <node name="5397">
       <ac bash="-65" exotic="-15" pierce="-65" slash="-65"/>
       <act add="npc sentinel mage nopurge notrack"/>
       <aff add="protect_good" del="infrared"/>
@@ -1502,7 +670,7 @@
       <off add="dodge fast kick parry"/>
       <player_name>duergar witch дуэргарская ведьма</player_name>
       <race>duergar</race>
-      <res add="weapon" del="spell poison disease"/>
+      <res add="weapon" del="disease"/>
       <sex>female</sex>
       <short_descr>дуэргарш|а|и|е|у|ей|е</short_descr>
       <size>medium</size>
@@ -1510,7 +678,7 @@
       <vuln del="drowning"/>
       <wealth>5000</wealth>
     </node>
-    <node name="5348">
+    <node name="5398">
       <ac bash="-65" exotic="-35" pierce="-65" slash="-65"/>
       <act add="npc sentinel practice mage warrior nopurge notrack"/>
       <alignment>-1000</alignment>
@@ -1536,7 +704,7 @@
       <material>0</material>
       <off add="disarm dodge fast kick parry"/>
       <player_name>guildmaster master гилдьмастер мастер гильдии</player_name>
-      <practicer registry="skillGroup">none vampiric detection harmful creation weather</practicer>
+      <practicer registry="skillGroup">maladictions attack detection nature creation adventure</practicer>
       <race>human</race>
       <res add="spell"/>
       <sex>female</sex>
@@ -1546,668 +714,7 @@
     </node>
   </mobiles>
   <objects>
-    <node name="5300">
-      <affects>
-        <node>
-          <apply to="hitroll">-1</apply>
-          <bits table="affect_flags"></bits>
-        </node>
-        <node>
-          <apply to="damroll">1</apply>
-          <bits table="affect_flags"></bits>
-        </node>
-      </affects>
-      <cost>310</cost>
-      <description>Ошейник ламии (collar) лежит здесь.</description>
-      <gender>m</gender>
-      <level>3</level>
-      <material>skin</material>
-      <name>collar ошейник</name>
-      <short_descr>ошейник||а|у||ом|е ламии</short_descr>
-      <type name="armor">
-        <ac bash="5" exotic="1" pierce="5" slash="5"/>
-      </type>
-      <wear_flags>take wear_neck</wear_flags>
-      <weight>50</weight>
-    </node>
-    <node name="5301">
-      <affects>
-        <node>
-          <apply to="hitroll">1</apply>
-        </node>
-      </affects>
-      <cost>500</cost>
-      <description>Красивый железный нагрудник (breast plate) лежит здесь.</description>
-      <gender>m</gender>
-      <level>20</level>
-      <material>iron</material>
-      <name>breast plate iron железный нагрудник</name>
-      <short_descr>красив|ый|ого|ому|ый|ым|ом железн|ый|ого|ому|ый|ым|ом нагрудник||а|у||ом|е</short_descr>
-      <type name="armor">
-        <ac bash="7" exotic="0" pierce="7" slash="7"/>
-      </type>
-      <wear_flags>take wear_body</wear_flags>
-      <weight>450</weight>
-    </node>
-    <node name="5302">
-      <cost>1000</cost>
-      <description>Зеленый змеевидный посох (staff) оставлен здесь.</description>
-      <extra_flags>invis</extra_flags>
-      <gender>m</gender>
-      <level>7</level>
-      <material>oak</material>
-      <name>staff serpentine змеевидный посох</name>
-      <short_descr>зелен|ый|ого|ому|ый|ым|ом змеевидн|ый|ого|ому|ый|ым|ом посох||а|у||ом|е</short_descr>
-      <type name="staff">
-        <left>2</left>
-        <level>6</level>
-        <spell>earthquake</spell>
-        <total>2</total>
-      </type>
-      <wear_flags>take hold</wear_flags>
-      <weight>120</weight>
-    </node>
-    <node name="5303">
-      <cost>100</cost>
-      <description>Коробок спичек (matches) брошен тут.</description>
-      <extraDescr>
-        <node keyword="matches спички">Опасная игрушка в умелых руках! Для поджигания просто &apos;используй&apos; спички.
-</node>
-      </extraDescr>
-      <gender>p</gender>
-      <material>paper, wood</material>
-      <name>matches спички</name>
-      <short_descr>спич|ки|ек|кам|ки|ками|ках</short_descr>
-      <type name="trash">
-      </type>
-      <wear_flags>take</wear_flags>
-      <weight>1</weight>
-    </node>
-    <node name="5304">
-      <cost>1020</cost>
-      <description>Свиток (scroll) наделения волшебными свойствами лежит здесь.
-</description>
-      <gender>m</gender>
-      <level>8</level>
-      <material>vellum</material>
-      <name>scroll magic волшебный свиток</name>
-      <short_descr>заколдовывающ|ий|его|ему|ий|им|ем свит|ок|ка|ку|ок|ком|ке</short_descr>
-      <type name="scroll">
-        <level>14</level>
-        <spell0>enchant weapon</spell0>
-      </type>
-      <wear_flags>take</wear_flags>
-      <weight>150</weight>
-    </node>
-    <node name="5305">
-      <cost>800</cost>
-      <description>Перевязанный свиток (scroll) обнаружения лежит у твоих ног.</description>
-      <gender>m</gender>
-      <material>vellum</material>
-      <name>scroll bound перевязанный свиток</name>
-      <short_descr>перевязанн|ый|ого|ому|ый|ым|ом свит|ок|ка|ку|к|ком|ке</short_descr>
-      <type name="scroll">
-        <level>10</level>
-        <spell0>detect evil</spell0>
-        <spell1>detect invis</spell1>
-        <spell2>detect magic</spell2>
-      </type>
-      <wear_flags>take</wear_flags>
-      <weight>150</weight>
-    </node>
-    <node name="5306">
-      <description>Искусно сделанный белый фонтан (fountain) здесь.</description>
-      <extraDescr>
-        <node keyword="fountain фонтан">Ты видишь один из самый красивых фонтанов на свете. Белый влажный
-мрамор блестит под лучами солнца. Рыбы плещутся во внутренней части
-фонтана, а внешний фонтан служит источником питья.
-</node>
-      </extraDescr>
-      <gender>m</gender>
-      <material>marble</material>
-      <name>fountain фонтан</name>
-      <short_descr>больш|ой|ого|ому|ой|им|ом красив|ый|ого|ому|ый|ым|ом фонтан||а|у||е|ом</short_descr>
-      <type name="fountain">
-        <left>10</left>
-        <liquid>water</liquid>
-        <total>10</total>
-      </type>
-    </node>
-    <node name="5307">
-      <description>Красивый стол (desk), сделанный из раковины гигантской морской черепахи, стоит здесь.</description>
-      <extraDescr>
-        <node keyword="стол">Стол просто великолепен. Глядя на его кремовую поверхность, мечтаешь поплавать
-в водоеме среди русалок.
-</node>
-      </extraDescr>
-      <gender>m</gender>
-      <material>wood</material>
-      <name>desk стол</name>
-      <short_descr>стол||а|у||ом|е из раковины черепахи</short_descr>
-      <type name="container">
-        <capacity>100</capacity>
-        <flags>closeable closed locked</flags>
-        <key>5224</key>
-        <maxWeight>100</maxWeight>
-      </type>
-    </node>
-    <node name="5308">
-      <description>Крепкий (cabinet) сервант стоит здесь.
-</description>
-      <extraDescr>
-        <node keyword="сервант cabinet">Сервант сделан из дуба и красного дерева, этот шедевр плотницкого искусства 
-просто великолепен. Лаковое покрытие настолько крепкое, что кажется, будто
-оно продержится дольше самого серванта.
-</node>
-      </extraDescr>
-      <gender>m</gender>
-      <material>glass</material>
-      <name>cabinet сервант</name>
-      <short_descr>сервант||а|у||ом|е</short_descr>
-      <type name="container">
-        <capacity>500</capacity>
-        <flags>closeable closed locked</flags>
-        <key>5226</key>
-        <maxWeight>100</maxWeight>
-      </type>
-    </node>
-    <node name="5309">
-      <cost>1200</cost>
-      <description>Мандолина (mandolin) лежит здесь.</description>
-      <gender>f</gender>
-      <level>10</level>
-      <material>wood</material>
-      <name>mandolin мандолина</name>
-      <short_descr>мандолин|а|ы|е|у|ой|е</short_descr>
-      <type name="staff">
-        <left>5</left>
-        <level>12</level>
-        <spell>cure critical</spell>
-        <total>5</total>
-      </type>
-      <wear_flags>take hold</wear_flags>
-      <weight>200</weight>
-    </node>
-    <node name="5310">
-      <affects>
-        <node>
-          <apply to="dex">-2</apply>
-        </node>
-      </affects>
-      <cost>1400</cost>
-      <description>Красивая золотая арфа (harp) манит поиграть не ней.</description>
-      <gender>f</gender>
-      <level>7</level>
-      <material>gold</material>
-      <name>harp golden золотая арфа</name>
-      <short_descr>золот|ая|ой|ой|ую|ой|ой арф|а|ы|е|у|ой|е</short_descr>
-      <type name="staff">
-        <left>1</left>
-        <level>7</level>
-        <spell>call lightning</spell>
-        <total>1</total>
-      </type>
-      <wear_flags>take hold</wear_flags>
-      <weight>1000</weight>
-    </node>
-    <node name="5311">
-      <affects>
-        <node>
-          <apply to="dex">-2</apply>
-        </node>
-      </affects>
-      <cost>1600</cost>
-      <description>Блестящая серебряная флейта (flute) блестит из своего кожуха</description>
-      <extra_flags>glow</extra_flags>
-      <gender>f</gender>
-      <level>9</level>
-      <material>silver</material>
-      <name>flute silver серебряная флейта</name>
-      <short_descr>серебрян|ая|ой|ой|ую|ой|ой флейт|а|ы|е|у|ой|е</short_descr>
-      <type name="staff">
-        <left>1</left>
-        <level>14</level>
-        <spell>charm person</spell>
-        <total>1</total>
-      </type>
-      <wear_flags>take hold</wear_flags>
-      <weight>60</weight>
-    </node>
-    <node name="5312">
-      <cost>900</cost>
-      <description>Кто-то обронил здесь зеленое снадобье (green potion).</description>
-      <gender>n</gender>
-      <level>25</level>
-      <material>glass</material>
-      <name>potion green снадобье зеленое</name>
-      <short_descr>зелен|ое|ого|ому|ое|ым|ом снадобь|е|я|ю|е|ем|е</short_descr>
-      <type name="potion">
-        <level>20</level>
-        <spell0>gas breath</spell0>
-      </type>
-      <wear_flags>take</wear_flags>
-      <weight>50</weight>
-    </node>
-    <node name="5313">
-      <cost>270</cost>
-      <description>Бледно-голубые травы (herbs) разбросаны вокруг.</description>
-      <gender>p</gender>
-      <level>1</level>
-      <material>grass</material>
-      <name>bluish herbs голубые травы бледно-голубые</name>
-      <short_descr>бледно-голубы|е|х|м|е|ми|х трав|ы||ам|ы|ами|ах</short_descr>
-      <type name="pill">
-        <level>20</level>
-        <spell2>bless</spell2>
-      </type>
-      <wear_flags>take</wear_flags>
-      <weight>10</weight>
-    </node>
-    <node name="5314">
-      <cost>250</cost>
-      <description>Багряные травы (herbs) разбросаны вокруг.</description>
-      <gender>p</gender>
-      <level>1</level>
-      <material>grass</material>
-      <name>purplish herbs багряные травы</name>
-      <short_descr>багряны|е|х|м|е|ми|х трав|ы||ам|ы|ами|ах</short_descr>
-      <type name="pill">
-        <level>20</level>
-        <spell0>detect invis</spell0>
-        <spell1>detect hidden</spell1>
-      </type>
-      <wear_flags>take</wear_flags>
-      <weight>10</weight>
-    </node>
-    <node name="5315">
-      <cost>360</cost>
-      <description>Сероватые травы (herbs) разбросаны вокруг.</description>
-      <gender>p</gender>
-      <level>5</level>
-      <material>grass</material>
-      <name>grayish herbs сероватые травы</name>
-      <short_descr>сероваты|е|х|м|е|ми|х трав|ы||ам|ы|ами|ах</short_descr>
-      <type name="pill">
-        <level>25</level>
-        <spell1>giant strength</spell1>
-        <spell2>cure poison</spell2>
-      </type>
-      <wear_flags>take</wear_flags>
-      <weight>10</weight>
-    </node>
-    <node name="5316">
-      <cost>150</cost>
-      <description>Красно-желтые травы (herbs) разбросаны вокруг.</description>
-      <gender>p</gender>
-      <level>1</level>
-      <material>plant_organism</material>
-      <name>orangish herbs красно-желтые травы</name>
-      <short_descr>красно-желты|е|х|м|е|ми|х трав|ы||ам|ы|ами|ах</short_descr>
-      <type name="pill">
-        <level>25</level>
-        <spell0>cure light</spell0>
-        <spell1>cure light</spell1>
-        <spell2>cure light</spell2>
-      </type>
-      <wear_flags>take</wear_flags>
-      <weight>10</weight>
-    </node>
-    <node name="5317">
-      <affects>
-        <node>
-          <apply to="hitroll">2</apply>
-        </node>
-        <node>
-          <apply to="damroll">2</apply>
-        </node>
-      </affects>
-      <cost>1120</cost>
-      <description>Ты видишь меч гвардейца (sword).</description>
-      <extraDescr>
-        <node keyword="меч">Это меч искусной работы. На нем отпечатано:
-Компания Мерк
-</node>
-      </extraDescr>
-      <gender>m</gender>
-      <level>15</level>
-      <material>steel</material>
-      <name>sword меч</name>
-      <short_descr>меч||а|у||ом|е гвардейца</short_descr>
-      <type name="weapon">
-        <diceNumber>5</diceNumber>
-        <diceType>5</diceType>
-        <weapClass>sword</weapClass>
-        <weapType>slash</weapType>
-      </type>
-      <wear_flags>take wield</wear_flags>
-      <weight>50</weight>
-    </node>
-    <node name="5318">
-      <affects>
-        <node>
-          <apply to="hitroll">1</apply>
-        </node>
-        <node>
-          <apply to="damroll">2</apply>
-        </node>
-      </affects>
-      <cost>1180</cost>
-      <description>Ты видишь булаву (mace) гвардейца.</description>
-      <extraDescr>
-        <node keyword="булава">Это булава искусной работы. На ней отпечатано:
-Компания Мерк
-</node>
-      </extraDescr>
-      <gender>f</gender>
-      <level>15</level>
-      <material>mithril</material>
-      <name>mace булава</name>
-      <short_descr>булав|а|ы|е|у|ой|е гвардейца</short_descr>
-      <type name="weapon">
-        <diceNumber>5</diceNumber>
-        <diceType>5</diceType>
-        <weapClass>mace</weapClass>
-        <weapType>pound</weapType>
-      </type>
-      <wear_flags>take wield</wear_flags>
-      <weight>50</weight>
-    </node>
-    <node name="5319">
-      <cost>650</cost>
-      <description>Ты видишь нагрудник (chest) гвардейца.</description>
-      <extraDescr>
-        <node keyword="нагрудник">Это нагрудник искусной работы. Сбоку печать:
-Компания Мерк
-</node>
-      </extraDescr>
-      <gender>m</gender>
-      <level>10</level>
-      <material>mithril</material>
-      <name>chest plate нагрудник</name>
-      <short_descr>нагрудник||а|у||ом|е гвардейца</short_descr>
-      <type name="armor">
-        <ac bash="8" exotic="3" pierce="8" slash="8"/>
-      </type>
-      <wear_flags>take wear_body</wear_flags>
-      <weight>50</weight>
-    </node>
-    <node name="5320">
-      <cost>690</cost>
-      <description>Ты видишь щит (shield) гвардейца.</description>
-      <extraDescr>
-        <node keyword="щит">Это щит искусной работы. На нем отпечатано:
-Компания Мерк
-</node>
-      </extraDescr>
-      <gender>m</gender>
-      <level>10</level>
-      <material>mithril</material>
-      <name>shield щит</name>
-      <short_descr>щит гвардейца</short_descr>
-      <type name="armor">
-        <ac bash="5" exotic="2" pierce="5" slash="5"/>
-      </type>
-      <wear_flags>take wear_shield</wear_flags>
-      <weight>100</weight>
-    </node>
-    <node name="5321">
-      <cost>430</cost>
-      <description>Ты видишь мантию (cloak) гвардейца.</description>
-      <extraDescr>
-        <node keyword="мантия">Это мантия искусной работы с надписью:
-Компания Мерк
-</node>
-      </extraDescr>
-      <gender>m</gender>
-      <level>10</level>
-      <material>cloth</material>
-      <name>cloak мантия</name>
-      <short_descr>манти|я|и|и|ю|ей|и гвардейца</short_descr>
-      <type name="armor">
-        <ac bash="5" exotic="0" pierce="5" slash="5"/>
-      </type>
-      <wear_flags>take wear_neck</wear_flags>
-      <weight>50</weight>
-    </node>
-    <node name="5322">
-      <cost>430</cost>
-      <description>Ты видишь шлем (helm) гвардейца.</description>
-      <extraDescr>
-        <node keyword="шлем">Это шлем искусной работы. На нем отпечатано:
-Компания Мерк
-</node>
-      </extraDescr>
-      <gender>m</gender>
-      <level>10</level>
-      <material>mithril</material>
-      <name>helm шлем</name>
-      <short_descr>шлем гвардейца</short_descr>
-      <type name="armor">
-        <ac bash="5" exotic="0" pierce="5" slash="5"/>
-      </type>
-      <wear_flags>take wear_head</wear_flags>
-      <weight>50</weight>
-    </node>
-    <node name="5323">
-      <affects>
-        <node>
-          <apply to="hit">5</apply>
-          <bits table="affect_flags"></bits>
-        </node>
-        <node>
-          <apply to="damroll">1</apply>
-          <bits table="affect_flags"></bits>
-        </node>
-      </affects>
-      <cost>430</cost>
-      <description>Ты видишь пару краг (leggings) гвардейца.</description>
-      <extraDescr>
-        <node keyword="plate leggings краги">Это краги искусной работы. На них отпечатано:
-Компания Мерк
-</node>
-      </extraDescr>
-      <gender>f</gender>
-      <level>10</level>
-      <material>mithril</material>
-      <name>plate leggings краги</name>
-      <short_descr>пар|а|ы|е|у|ой|е краг гвардейца</short_descr>
-      <type name="armor">
-        <ac bash="5" exotic="0" pierce="5" slash="5"/>
-      </type>
-      <wear_flags>take wear_legs</wear_flags>
-      <weight>50</weight>
-    </node>
-    <node name="5324">
-      <cost>430</cost>
-      <description>Ты видишь пару сапогов (boots) гвардейца.</description>
-      <extraDescr>
-        <node keyword="plate boots сапоги">Это сапоги искусной работы. На них отпечатано:
-Компания Мерк
-</node>
-      </extraDescr>
-      <gender>f</gender>
-      <level>10</level>
-      <material>mithril</material>
-      <name>plate boots сапоги гвардейца</name>
-      <short_descr>пар|а|ы|е|у|ой|е сапогов гвардейца</short_descr>
-      <type name="armor">
-        <ac bash="5" exotic="0" pierce="5" slash="5"/>
-      </type>
-      <wear_flags>take wear_feet</wear_flags>
-      <weight>50</weight>
-    </node>
-    <node name="5325">
-      <cost>430</cost>
-      <description>Ты видишь пару перчаток гвардейца (gloves).</description>
-      <extraDescr>
-        <node keyword="plate gloves перчатки">Это перчатки искусной работы. На них отпечатано:
-Компания Мерк
-</node>
-      </extraDescr>
-      <gender>f</gender>
-      <level>10</level>
-      <material>mithril</material>
-      <name>plate gloves перчатки гвардейца</name>
-      <short_descr>пар|а|ы|е|у|ой|е перчаток гвардейца</short_descr>
-      <type name="armor">
-        <ac bash="5" exotic="0" pierce="5" slash="5"/>
-      </type>
-      <wear_flags>take wear_hands</wear_flags>
-      <weight>50</weight>
-    </node>
-    <node name="5326">
-      <cost>430</cost>
-      <description>Ты видишь пару наплечников гвардейца (sleeves).
-</description>
-      <extraDescr>
-        <node keyword="plate sleeves наплечники">Это наплечники искусной работы. На них отпечатано:
-Компания Мерк
-</node>
-      </extraDescr>
-      <gender>f</gender>
-      <level>10</level>
-      <material>mithril</material>
-      <name>plate sleeves пара наплечников гвардейца</name>
-      <short_descr>пар|а|ы|е|у|ой|е наплечников гвардейца</short_descr>
-      <type name="armor">
-        <ac bash="5" exotic="0" pierce="5" slash="5"/>
-      </type>
-      <wear_flags>take wear_arms</wear_flags>
-      <weight>50</weight>
-    </node>
-    <node name="5327">
-      <cost>430</cost>
-      <description>Ты видишь накидку гвардейца (cape).</description>
-      <extraDescr>
-        <node keyword="cape накидка">Это накидка искусной работы с надписью:
-Компания Мерк
-</node>
-      </extraDescr>
-      <gender>f</gender>
-      <level>10</level>
-      <material>silk</material>
-      <name>cape накидка</name>
-      <short_descr>накидк|а|и|е|у|ой|е гвардейца</short_descr>
-      <type name="armor">
-        <ac bash="5" exotic="0" pierce="5" slash="5"/>
-      </type>
-      <wear_flags>take wear_about</wear_flags>
-      <weight>50</weight>
-    </node>
-    <node name="5328">
-      <cost>430</cost>
-      <description>Ты видишь пояс гвардейца (belt).</description>
-      <extraDescr>
-        <node keyword="belt">Это пояс искусной работы с надписью:
-Компания Мерк
-</node>
-      </extraDescr>
-      <gender>m</gender>
-      <level>10</level>
-      <material>cloth</material>
-      <name>belt пояс</name>
-      <short_descr>пояс||а|у||ом|е гвардейца</short_descr>
-      <type name="armor">
-        <ac bash="5" exotic="0" pierce="5" slash="5"/>
-      </type>
-      <wear_flags>take wear_waist</wear_flags>
-      <weight>50</weight>
-    </node>
-    <node name="5329">
-      <cost>350</cost>
-      <description>Ты видишь металлический нарукавник гвардейца (bracer).</description>
-      <extraDescr>
-        <node keyword="metal bracer металлический нарукавник">Это пояс искусной работы с надписью:
-Компания Мерк
-</node>
-      </extraDescr>
-      <gender>m</gender>
-      <level>5</level>
-      <material>mithril</material>
-      <name>metal bracer металлический нарукавник</name>
-      <short_descr>металлическ|ий|ого|ому|ий|им|ом нарукавник||а|у||ом|е гвардейца</short_descr>
-      <type name="armor">
-        <ac bash="5" exotic="0" pierce="3" slash="5"/>
-      </type>
-      <wear_flags>take wear_wrist</wear_flags>
-      <weight>50</weight>
-    </node>
-    <node name="5330">
-      <affects>
-        <node>
-          <apply to="ac">-4</apply>
-        </node>
-        <node>
-          <apply to="saves">-1</apply>
-        </node>
-      </affects>
-      <cost>480</cost>
-      <description>Кольцо с печаткой (ring) лежит здесь.</description>
-      <gender>n</gender>
-      <level>16</level>
-      <material>ruby</material>
-      <name>ring signet кольцо с печаткой</name>
-      <short_descr>кольц|о|а|у|о|ом|е гвардейца</short_descr>
-      <type name="jewelry">
-      </type>
-      <wear_flags>take wear_finger</wear_flags>
-      <weight>10</weight>
-    </node>
-    <node name="5331">
-      <affects>
-        <node>
-          <apply to="saves">-2</apply>
-        </node>
-        <node>
-          <apply to="ac">-2</apply>
-        </node>
-      </affects>
-      <cost>440</cost>
-      <description>Военный стяг гвардейца (banner) лежит здесь.</description>
-      <extraDescr>
-        <node keyword="banner стяг">Это официальный гвардейский военный флаг.
-</node>
-      </extraDescr>
-      <extra_flags>glow</extra_flags>
-      <gender>m</gender>
-      <level>20</level>
-      <material>wood</material>
-      <name>imperial banner военный стяг гвардейца</name>
-      <short_descr>военн|ый|ого|ому|ый|ым|ом стяг||а|у||ом|е гвардейца</short_descr>
-      <type name="light">
-        <v2>-1</v2>
-      </type>
-      <wear_flags>take</wear_flags>
-      <weight>10</weight>
-    </node>
-    <node name="5332">
-      <affects>
-        <node>
-          <apply to="hitroll">-6</apply>
-        </node>
-        <node>
-          <apply to="damroll">7</apply>
-        </node>
-      </affects>
-      <cost>1700</cost>
-      <description>Неплохой двуручный меч (sword) оставлен здесь.</description>
-      <extra_flags>anti_evil</extra_flags>
-      <gender>m</gender>
-      <level>34</level>
-      <material>iron</material>
-      <name>two-handed two sword двуручный меч</name>
-      <short_descr>двуручн|ый|ого|ому|ый|ым|ом меч||а|у||ом|е</short_descr>
-      <type name="weapon">
-        <diceNumber>5</diceNumber>
-        <diceType>9</diceType>
-        <specType>sharp two_hands</specType>
-        <weapClass>sword</weapClass>
-        <weapType>cleave</weapType>
-      </type>
-      <wear_flags>take wield</wear_flags>
-      <weight>240</weight>
-    </node>
-    <node name="5333">
+    <node name="5383">
       <cost>1</cost>
       <description>Свернутая в рулон карта (map) лежит здесь.</description>
       <extraDescr>
@@ -2242,7 +749,7 @@ W - + - E            Temple altar
       <wear_flags>take</wear_flags>
       <weight>10</weight>
     </node>
-    <node name="5334">
+    <node name="5384">
       <description>Заросший тиной и ряской фонтан (fountain) распространяет нехороший запах.</description>
       <extraDescr>
         <node keyword="fountain old фонтан старый">Фонтан  сложен  из  старых  обшарпаных  камней.  В  его   центре  когда-то
@@ -2260,7 +767,7 @@ W - + - E            Temple altar
       </type>
       <weight>10000</weight>
     </node>
-    <node name="5335">
+    <node name="5385">
       <cost>75</cost>
       <description>Бочонок (barrel) лежит на земле.</description>
       <gender>m</gender>
@@ -2275,7 +782,7 @@ W - + - E            Temple altar
       <wear_flags>take</wear_flags>
       <weight>160</weight>
     </node>
-    <node name="5336">
+    <node name="5386">
       <cost>10</cost>
       <description>Свернутый в рулон, пожелтевший от времени свиток (scroll) брошен тут.</description>
       <extraDescr>
@@ -2299,2206 +806,12 @@ W - + - E            Temple altar
     </node>
   </objects>
   <rooms>
-    <node name="5300">
-      <description>Ты стоишь под аркой гигантских каменных ворот. Их нерушимые стены 
-изрисованы гравюрами. Из-за ворот доносятся смех и веселье. Очевидно,
-жизнь в городе бьет ключом. На воротах прибита маленькая дощечка (plaque)
-</description>
-      <exits>
-        <node name="east">
-          <description>Грустно покидать это красивое место.
-</description>
-          <target>5356</target>
-        </node>
-        <node name="west">
-          <description>Кругом сплошное счастье. Дома вокруг тебя. Непонятные создания бродят
-среди людей.
-</description>
-          <target>5301</target>
-        </node>
-      </exits>
-      <extraDescr>
-        <node keyword="plaque sign дощечка">Зона значительно модифицирована Kahn&apos;ом и Hatchet&apos;ом из MERC Industries
-и внедрена Kahn&apos;ом из MERC Industries
-(c) 1993
-Перевод: Шаватар, 2006.
-</node>
-      </extraDescr>
-      <name>Главные Ворота Талоса</name>
-      <resets>
-        <mob limit="20" maxHere="1" vnum="5301"/>
-        <equip to="neck_1" vnum="5300"/>
-        <mob limit="1" maxHere="1" vnum="5330"/>
-        <equip to="hold" vnum="5311"/>
-        <mob limit="2" maxHere="2" vnum="5321"/>
-        <equip to="light" vnum="5331"/>
-        <equip to="body" vnum="5319"/>
-        <equip to="head" vnum="5322"/>
-        <equip to="legs" vnum="5323"/>
-        <equip to="feet" vnum="5324"/>
-        <equip to="hands" vnum="5325"/>
-        <equip to="shield" vnum="5320"/>
-        <equip to="wield" vnum="5318"/>
-        <mob limit="2" maxHere="2" vnum="5321"/>
-        <equip to="light" vnum="5331"/>
-        <equip to="body" vnum="5319"/>
-        <equip to="feet" vnum="5324"/>
-        <equip to="hands" vnum="5325"/>
-        <equip to="arms" vnum="5326"/>
-        <equip to="shield" vnum="5320"/>
-        <equip to="wield" vnum="5317"/>
-        <mob limit="11" maxHere="1" vnum="5303"/>
-        <equip to="neck_2" vnum="5321"/>
-        <equip to="body" vnum="5319"/>
-        <equip to="about" vnum="5327"/>
-        <equip to="wrist_l" vnum="5329"/>
-        <equip to="wield" vnum="5318"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5301">
-      <description>Это красивая чистая улица.  Люди бродят туда-сюда,  от дому к дому,  легкий
-ветерок обдувает тебя. Весь город живет активной жизнью. Мощеная булыжником
-аллея ведет на север и юг. Играющие в салки дети путаются у тебя под ногами.
-</description>
-      <exits>
-        <node name="east">
-          <description>Вход в город.
-</description>
-          <target>5300</target>
-        </node>
-        <node name="north">
-          <description>Мощеная булыжником аллея.
-</description>
-          <target>5339</target>
-        </node>
-        <node name="south">
-          <description>Мощеная булыжником аллея.
-</description>
-          <target>5355</target>
-        </node>
-        <node name="west">
-          <description>Главная улица.
-</description>
-          <target>5302</target>
-        </node>
-      </exits>
-      <name>Главная улица</name>
-      <sector>city</sector>
-    </node>
-    <node name="5302">
-      <description>Это красивая чистая улица.  Люди бродят туда-сюда,  от дому к дому,  легкий
-ветерок обдувает тебя. Весь город живет активной жизнью. С одной стороны ты
-видишь красивый дом,  с другой  -  вход в большой особняк.  По  доносящимся
-оттуда звукам слышно, что в нем идет тяжелая работа.  Ближе к центру города
-ты видишь большое здание с куполом на вершине,  большое,  величественное  и
-очень красивое.
-</description>
-      <exits>
-        <node name="east">
-          <description>Главная улица продолжается на востоке.
-</description>
-          <target>5301</target>
-        </node>
-        <node name="north">
-          <description>Магазин.
-</description>
-          <target>5336</target>
-        </node>
-        <node name="south">
-          <description>Городская ратуша.
-</description>
-          <target>5332</target>
-        </node>
-        <node name="west">
-          <description>Пышный зеленый сад.
-</description>
-          <target>5303</target>
-        </node>
-      </exits>
-      <name>Главная улица</name>
-      <resets>
-        <mob limit="9" maxHere="1" vnum="5304"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5303">
-      <description>Дорожка кольцом огибает величественный храм в центре города.  По сторонам
-растут цветы,  а пышные зеленые деревья  сгибаются  под тяжестью фруктов.
-Стены храма, обвитые плющом и лозами винограда -- великолепное сочетание
-природы и искусства.
-</description>
-      <exits>
-        <node name="east">
-          <description>Главная улица ведет ко входу в город.
-</description>
-          <target>5302</target>
-        </node>
-        <node name="north">
-          <description>Дорожка идет дальше вокруг храма.
-</description>
-          <target>5304</target>
-        </node>
-        <node name="south">
-          <description>Дорожка идет дальше вокруг храма.
-</description>
-          <target>5306</target>
-        </node>
-        <node name="west">
-          <description>Из храма льется красивая музыка.
-</description>
-          <target>5350</target>
-        </node>
-      </exits>
-      <name>Дорожка в саду</name>
-      <sector>city</sector>
-    </node>
-    <node name="5304">
-      <description>Дорожка кольцом огибает величественный храм в центре города.  По сторонам
-растут цветы,  а пышные зеленые деревья  сгибаются  под тяжестью фруктов.
-Стены храма, обвитые плющом и лозами винограда -- великолепное сочетание
-природы и искусства.
-</description>
-      <exits>
-        <node name="north">
-          <description>Боковая улица выводит к северной части города.
-</description>
-          <target>5311</target>
-        </node>
-        <node name="south">
-          <description>Дорожка в саду вокруг здания.
-</description>
-          <target>5303</target>
-        </node>
-        <node name="west">
-          <description>Дорожка в саду вокруг здания.
-</description>
-          <target>5305</target>
-        </node>
-      </exits>
-      <name>Дорожка в саду</name>
-      <resets>
-        <mob limit="20" maxHere="1" vnum="5301"/>
-        <equip to="neck_1" vnum="5300"/>
-        <mob limit="11" maxHere="1" vnum="5303"/>
-        <equip to="neck_2" vnum="5321"/>
-        <equip to="body" vnum="5319"/>
-        <equip to="shield" vnum="5320"/>
-        <equip to="wield" vnum="5317"/>
-        <mob limit="9" maxHere="1" vnum="5302"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5305">
-      <description>Дорожка кольцом огибает величественный храм в центре города.  По сторонам
-растут цветы,  а пышные зеленые деревья  сгибаются  под тяжестью фруктов.
-Стены храма, обвитые плющом и лозами винограда -- великолепное сочетание
-природы и искусства.
-</description>
-      <exits>
-        <node name="east">
-          <description>Дорожка в саду вокруг здания.
-</description>
-          <target>5304</target>
-        </node>
-        <node name="south">
-          <description>Из храма слышна музыка.
-</description>
-          <target>5350</target>
-        </node>
-      </exits>
-      <name>Дорожка в саду</name>
-      <sector>city</sector>
-    </node>
-    <node name="5306">
-      <description>Дорожка кольцом огибает величественный храм в центре города.  По сторонам
-растут цветы,  а пышные зеленые деревья  сгибаются  под тяжестью фруктов.
-Стены храма, обвитые плющом и лозами винограда -- великолепное сочетание
-природы и искусства.
-</description>
-      <exits>
-        <node name="north">
-          <description>Дорожка в саду вокруг здания.
-</description>
-          <target>5303</target>
-        </node>
-        <node name="south">
-          <description>Боковая улочка ведет к южной части города.
-</description>
-          <target>5312</target>
-        </node>
-      </exits>
-      <name>Дорожка в саду</name>
-      <resets>
-        <mob limit="20" maxHere="1" vnum="5301"/>
-        <equip to="neck_1" vnum="5300"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5307">
-      <description>Ты стоишь в центре большой площади, по сторонам которой вытянулись ряды
-корзин,  тележек,  лотков  и  прилавков  всех  форм  и  размеров.   Маленькие
-магазинчики  переполнены  товарами  для  требовательных  и  придирчивых
-покупателей.
-</description>
-      <exits>
-        <node name="north">
-          <description>Маленький стол, завален драгоценностями и украшениями.
-</description>
-          <target>5325</target>
-        </node>
-        <node name="south">
-          <description>Фрукты и овощи лежат в коробках. Покупай и ешь.
-</description>
-          <target>5320</target>
-        </node>
-        <node name="west">
-          <description>Рыночная площадь продолжается.
-</description>
-          <target>5308</target>
-        </node>
-      </exits>
-      <name>Рыночная площадь</name>
-      <resets>
-        <mob limit="11" maxHere="1" vnum="5303"/>
-        <equip to="neck_2" vnum="5321"/>
-        <equip to="body" vnum="5319"/>
-        <equip to="waist" vnum="5328"/>
-        <equip to="wrist_l" vnum="5329"/>
-        <equip to="wield" vnum="5318"/>
-        <mob limit="9" maxHere="1" vnum="5304"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5308">
-      <description>Ты стоишь в центре большой площади, по сторонам которой вытянулись ряды
-корзин,  тележек,  лотков  и  прилавков  всех  форм  и  размеров.   Маленькие
-магазинчики  переполнены  товарами  для  требовательных  и  придирчивых
-покупателей.
-</description>
-      <exits>
-        <node name="east">
-          <description>Центр рыночной площади.
-</description>
-          <target>5307</target>
-        </node>
-        <node name="north">
-          <description>Красивые ковры и огромные кипы шелка пртиягивают взгляды горожан.
-</description>
-          <target>5322</target>
-        </node>
-        <node name="south">
-          <description>Запах мяса и птицы!
-</description>
-          <target>5317</target>
-        </node>
-      </exits>
-      <name>Рыночная площадь</name>
-      <resets>
-        <mob limit="9" maxHere="1" vnum="5302"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5309">
-      <description>Эта узкая улочка ведет на восток и запад к глухому переулку. На юге
-виден  красивый  храм.  Твое  внимание  привлекают  пронзительные
-веселые детские голоса, доносящиеся с разных сторон.
-</description>
-      <exits>
-        <node name="east">
-          <target>5343</target>
-        </node>
-        <node name="south">
-          <target>5310</target>
-        </node>
-        <node name="west">
-          <target>5328</target>
-        </node>
-      </exits>
-      <name>Боковая улица</name>
-      <sector>city</sector>
-    </node>
-    <node name="5310">
-      <description>Ты находишься в основной части города. Здания, сделанные из камня и глины,
-поражают своим великолепием.  Большинство зданий  настолько  красивы,  что
-глаз не отведешь.  Улица, заставленная с обеих сторон домами, продолжается
-на север и на юг.
-</description>
-      <exits>
-        <node name="east">
-          <description>Дверка в скромное зданьице.
-</description>
-          <flags>isdoor</flags>
-          <keyword>дверь door</keyword>
-          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
-          <target>5344</target>
-        </node>
-        <node name="north">
-          <target>5309</target>
-        </node>
-        <node name="south">
-          <target>5311</target>
-        </node>
-        <node name="west">
-          <description>Небольшой глиняный дом.
-</description>
-          <target>5326</target>
-        </node>
-      </exits>
-      <name>Боковая улица</name>
-      <resets>
-        <mob limit="20" maxHere="1" vnum="5301"/>
-        <equip to="neck_1" vnum="5300"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5311">
-      <description>Эта маленькая улочка выводит из сада.  Вокруг  тебя  много домов местных
-простолюдинов. Многие жители приветливо и непринужденно здороваются с
-тобой, с легкой улыбкой кивая головой. Ты чувствуешь себя как дома.
-</description>
-      <exits>
-        <node name="east">
-          <description>Необычайно  большое здание нависает над тобой.
-</description>
-          <target>5337</target>
-        </node>
-        <node name="north">
-          <target>5310</target>
-        </node>
-        <node name="south">
-          <description>Садовая дорожка огибает храм.
-</description>
-          <target>5304</target>
-        </node>
-        <node name="west">
-          <description>Небольшой каменный дом, покрытый соломой.
-</description>
-          <target>5327</target>
-        </node>
-      </exits>
-      <name>Боковая улица</name>
-      <sector>city</sector>
-    </node>
-    <node name="5312">
-      <description>Эта узкая улочка ведет на юг от храма к деловой части города. На
-востоке находится  Городская Ратуша Талоса.  Хорошо обученные
-стражники стоят в стойке &quot;смирно&quot;, наблюдая за происходящим
-вокруг Ратуши, хотя никакой угрозы ЭТОМУ городу, видимо, нет и
-в помине. На севере -- садовая дорожка, кузница на западе, а сама
-улица продолжается на юг.
-</description>
-      <exits>
-        <node name="east">
-          <description>Здание городской ратуши. Это самое искусно сделанное здание
-в Талосе.
-</description>
-          <flags>isdoor</flags>
-          <keyword>дверь door</keyword>
-          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
-          <target>5332</target>
-        </node>
-        <node name="north">
-          <description>Небольшая садовая дорожка огибает храм.
-</description>
-          <target>5306</target>
-        </node>
-        <node name="south">
-          <target>5313</target>
-        </node>
-        <node name="west">
-          <description>Внутри здания ты видишь куски металла, жаровню и наковальню.
-Явно там кузница.
-</description>
-          <target>5321</target>
-        </node>
-      </exits>
-      <name>Боковая улица</name>
-      <resets>
-        <mob limit="9" maxHere="1" vnum="5304"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5313">
-      <description>На этой  улице  много  очень  красивых  зданий.  На севере  находится
-величественный храм, на востоке -- вход в маленькую уютную таверну.
-Улица продолжается на север и юг.
-</description>
-      <exits>
-        <node name="east">
-          <description>Большое жилое двухэтажное здание. Весь первый этаж покрыт мрамроными
-плитами.
-</description>
-          <target>5330</target>
-        </node>
-        <node name="north">
-          <target>5312</target>
-        </node>
-        <node name="south">
-          <target>5314</target>
-        </node>
-        <node name="west">
-          <description>Кажется, это единственная гильдия во всем городе. Ты чувствуешь себя
-неловко.
-</description>
-          <target>5319</target>
-        </node>
-      </exits>
-      <name>Боковая улица</name>
-      <resets>
-        <mob limit="11" maxHere="1" vnum="5303"/>
-        <equip to="finger_l" vnum="5330"/>
-        <equip to="neck_2" vnum="5321"/>
-        <equip to="body" vnum="5319"/>
-        <equip to="shield" vnum="5320"/>
-        <equip to="wield" vnum="5317"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5314">
-      <description>Ты в конце длинной улицы, ведущей к центру города. Длинная аллея
-уходит на восток и запад.
-</description>
-      <exits>
-        <node name="east">
-          <target>5351</target>
-        </node>
-        <node name="north">
-          <target>5313</target>
-        </node>
-        <node name="south">
-          <target>5329</target>
-        </node>
-        <node name="west">
-          <target>5318</target>
-        </node>
-      </exits>
-      <name>Боковая улица</name>
-      <resets>
-        <mob limit="20" maxHere="1" vnum="5301"/>
-        <equip to="neck_1" vnum="5300"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5315">
-      <description>Ты с тоишь  у  основания  высокой  обвитой плющом  сторожевой башни,
-построенной для защиты города от завоевателей. Здесь ты чувствуешь
-себя в полной безопасности.
-</description>
-      <exits>
-        <node name="east">
-          <target>5318</target>
-        </node>
-        <node name="north">
-          <target>5316</target>
-        </node>
-        <node name="up">
-          <target>5347</target>
-        </node>
-      </exits>
-      <name>У высокой сторожевый башни</name>
-      <resets>
-        <mob limit="11" maxHere="1" vnum="5303"/>
-        <equip to="neck_2" vnum="5321"/>
-        <equip to="body" vnum="5319"/>
-        <equip to="about" vnum="5327"/>
-        <equip to="waist" vnum="5328"/>
-        <equip to="wield" vnum="5318"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5316">
-      <description>Эта аллея ведет к тыльной стороне мясного прилавка. Твои ноздри
-втягивают приятные запахи свежего и печеного мяса, а руки
-вытирают слюну с подбородка.
-</description>
-      <exits>
-        <node name="north">
-          <description>Задняя сторона мясного прилавка.
-</description>
-          <target>5317</target>
-        </node>
-        <node name="south">
-          <description>Высокая башня на бессонном боевом дежурстве.
-</description>
-          <target>5315</target>
-        </node>
-      </exits>
-      <name>Боковая улица</name>
-      <resets>
-        <mob limit="20" maxHere="1" vnum="5301"/>
-        <equip to="neck_1" vnum="5300"/>
-        <mob limit="9" maxHere="1" vnum="5302"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5317">
-      <description>Это большой прилавок с металлическими крюками и деревянными полками.
-На  крюках  развешаны  огромные  куски  мяса.  Прилавок  битком  набит
-товаром. Внезапный взрыв смеха заставляют за мгновение удивиться, до
-тех пор, пока ты не замечаешь толпу ребятишек, играющих прямо у твоих
-лодыжек.
-</description>
-      <exits>
-        <node name="east">
-          <description>Тележка, полная свежих овощей и фруктов. Большой соблазн стащить
-что-нибудь.
-</description>
-          <target>5320</target>
-        </node>
-        <node name="north">
-          <description>Рыночная площадь.
-</description>
-          <target>5308</target>
-        </node>
-        <node name="south">
-          <target>5316</target>
-        </node>
-      </exits>
-      <name>Мясной прилавок</name>
-      <resets>
-        <mob limit="1" maxHere="1" vnum="5311"/>
-        <give vnum="5219"/>
-        <equip to="wield" vnum="601"/>
-        <give vnum="602"/>
-        <give vnum="603"/>
-        <give vnum="604"/>
-        <give vnum="605"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5318">
-      <description>Узкий переулок ведет на восток -- на улицу и на запад --
-к одной из городских сторожевых башен.
-</description>
-      <exits>
-        <node name="east">
-          <description>Небольшая боковая улица приглашает тебя.
-</description>
-          <target>5314</target>
-        </node>
-        <node name="west">
-          <description>Высокая сторожевая башня на бессонном боевом дежурстве.
-</description>
-          <target>5315</target>
-        </node>
-      </exits>
-      <name>Глухой переулок</name>
-      <sector>city</sector>
-    </node>
-    <node name="5319">
-      <description>Ты стоишь в здании  единственной гильдии  города.  Столы и стулья
-расставлены с максимальным удобством. Оружие аккуратно сложено
-в  оружейной  стойке.  Каждое  оружие  смазано,  отполировано  и
-наточено.  Стену украшает портьера в виде гордого знамени Талоса.
-</description>
-      <exits>
-        <node name="east">
-          <description>Небольшая улочка бежит мимо здания.
-</description>
-          <target>5313</target>
-        </node>
-      </exits>
-      <flags>indoors</flags>
-      <name>Гильдия</name>
-      <resets>
-        <mob limit="1" maxHere="1" vnum="5306"/>
-        <equip to="neck_1" vnum="5218"/>
-        <equip to="about" vnum="5222"/>
-        <equip to="wield" vnum="5252"/>
-        <equip to="hold" vnum="5239"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5320">
-      <description>Это большая повозка со свежими фруктами и овощами.  Вокруг
-некоторых торговцев толпится детвора в ожидании подаренных
-вкусностей.
-</description>
-      <exits>
-        <node name="north">
-          <description>Рыночная площадь заполнена снующими людьми.
-</description>
-          <target>5307</target>
-        </node>
-        <node name="west">
-          <description>Крепкий аромат исходит из мясного прилавка.
-</description>
-          <target>5317</target>
-        </node>
-      </exits>
-      <name>Плодоовощной прилавок</name>
-      <resets>
-        <mob limit="20" maxHere="1" vnum="5301"/>
-        <equip to="neck_1" vnum="5300"/>
-        <mob limit="1" maxHere="1" vnum="5312"/>
-        <give vnum="609"/>
-        <give vnum="610"/>
-        <give vnum="611"/>
-        <give vnum="612"/>
-        <give vnum="613"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5321">
-      <description>Здесь можно найти кузнечные инструменты и наковальни, используемые
-для изготовления оружия и доспехов. По стенам развешаны отдельные
-предметы брони и вооружения.
-</description>
-      <exits>
-        <node name="east">
-          <description>Небольшая улочка.
-</description>
-          <target>5312</target>
-        </node>
-      </exits>
-      <flags>indoors</flags>
-      <name>Кузница</name>
-      <resets>
-        <mob limit="1" maxHere="1" vnum="5314"/>
-        <give vnum="601"/>
-        <give vnum="615"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5322">
-      <description>Здесь повсюду развешаны красивые гобелены и ковры. Прекрасные
-платья  и  другие  предметы одежды  выставлены  на  продажу.  Ты
-вглядываешься в каждый предмет, поражаясь тому, сколько труда и
-усердия вложено в их создание.
-</description>
-      <exits>
-        <node name="east">
-          <description>Прекрасная ювелирная лавка.
-</description>
-          <target>5325</target>
-        </node>
-        <node name="north">
-          <target>5323</target>
-        </node>
-        <node name="south">
-          <description>На рыночной площади толпится народ.
-</description>
-          <target>5308</target>
-        </node>
-      </exits>
-      <name>Текстильная палатка</name>
-      <resets>
-        <mob limit="20" maxHere="1" vnum="5301"/>
-        <equip to="neck_1" vnum="5300"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5323">
-      <description>Узкий переулок ведет на север к одной из городских сторожевых
-башен.  На юге -- богатая палатка с дорогими одеждами и коврами.
-</description>
-      <exits>
-        <node name="north">
-          <description>Высокая сторожевая башня на бессонном боевом дежурстве.
-</description>
-          <target>5324</target>
-        </node>
-        <node name="south">
-          <target>5322</target>
-        </node>
-      </exits>
-      <name>Глухой переулок</name>
-      <sector>city</sector>
-    </node>
-    <node name="5324">
-      <description>Ты стоишь под одной из городских сторожевых башен, построенных
-для защиты города  от завоевателей.  Ты знаешь,  что здесь тебе не
-грозит никакая опасность.
-</description>
-      <exits>
-        <node name="east">
-          <target>5328</target>
-        </node>
-        <node name="south">
-          <target>5323</target>
-        </node>
-        <node name="up">
-          <description>Над тобой сторожевая башня.
-</description>
-          <target>5346</target>
-        </node>
-      </exits>
-      <name>У сторожевой башни</name>
-      <resets>
-        <mob limit="11" maxHere="1" vnum="5303"/>
-        <equip to="neck_2" vnum="5321"/>
-        <equip to="body" vnum="5319"/>
-        <equip to="shield" vnum="5320"/>
-        <equip to="wield" vnum="5317"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5325">
-      <description>На столе разложены дорогие украшения и драгоценные камни.
-Ювелир берет каждую вещицу из своей коллекции, тщательно
-чистит и полирует, кладет обратно и берет следующую.  И так
-до бесконечности.
-</description>
-      <exits>
-        <node name="south">
-          <description>Рыночная площадь заполнена людьми, все в делах.
-</description>
-          <target>5307</target>
-        </node>
-        <node name="west">
-          <description>Перед тобой прилавок с одеждами и дорогими коврами.
-</description>
-          <target>5322</target>
-        </node>
-      </exits>
-      <name>Ювелирный прилавок</name>
-      <sector>city</sector>
-    </node>
-    <node name="5326">
-      <description>Обыкновенный домик с нексолькими стульями и кроватью.
-Тепло в доме и горящий очаг говорят о том, что домик в
-настоящее время обитаем. Лучше уходи, пока не пришли
-хозяева.
-</description>
-      <exits>
-        <node name="east">
-          <description>Боковая улица.
-</description>
-          <target>5310</target>
-        </node>
-      </exits>
-      <flags>indoors</flags>
-      <name>Простое глиняное жилище.</name>
-      <resets>
-        <mob limit="20" maxHere="1" vnum="5301"/>
-        <equip to="neck_1" vnum="5300"/>
-        <mob limit="9" maxHere="1" vnum="5304"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5327">
-      <description>Этот дом -- уютное жилище простого жителя Талоса. Несколько
-балок держат крышу, покрытую соломой.
-</description>
-      <exits>
-        <node name="east">
-          <description>Боковая улица
-</description>
-          <target>5311</target>
-        </node>
-      </exits>
-      <name>Каменное здание</name>
-      <resets>
-        <mob limit="9" maxHere="1" vnum="5302"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5328">
-      <description>Узкий переулок ведет на восток к одной из городских сторожевых
-башен и на запад -- к боковой улице.
-</description>
-      <exits>
-        <node name="east">
-          <target>5309</target>
-        </node>
-        <node name="west">
-          <target>5324</target>
-        </node>
-      </exits>
-      <name>Глухой переулок</name>
-      <resets>
-        <mob limit="20" maxHere="1" vnum="5301"/>
-        <equip to="neck_1" vnum="5300"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5329">
-      <description>Снаружи это обычное здание, а внутри -- тесное помещение, которое
-является  магазином  по продаже брони,  оружия и прочих вещей. На
-стене висит бумажка, развевающаяся на ветру.
-</description>
-      <exits>
-        <node name="north">
-          <description>Боковая улица.
-</description>
-          <target>5314</target>
-        </node>
-      </exits>
-      <flags>indoors</flags>
-      <name>Оживленный магазин</name>
-      <resets>
-        <mob limit="1" maxHere="1" vnum="5313"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5330">
-      <description>Знаменитая таверна, второй дом для многих жителей Талоса. Столы и стулья
-расставлены в ряды, стаканы и бутылки наполнены, есть даже сцена для 
-концертов и представлений. Возле сцены лежат музыкальные инструменты.
-</description>
-      <exits>
-        <node name="west">
-          <description>Боковая улица.
-</description>
-          <target>5313</target>
-        </node>
-      </exits>
-      <name>Таверна Солнца</name>
-      <resets>
-        <mob limit="2" maxHere="2" vnum="5329"/>
-        <equip to="hold" vnum="5309"/>
-        <mob limit="2" maxHere="2" vnum="5329"/>
-        <equip to="hold" vnum="5310"/>
-        <mob limit="1" maxHere="1" vnum="5310"/>
-        <give vnum="648"/>
-        <give vnum="649"/>
-        <give vnum="650"/>
-        <mob limit="9" maxHere="1" vnum="5304"/>
-        <mob limit="9" maxHere="1" vnum="5302"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5331">
-      <description>Ты стоишь в большой комнате,  примыкающей  к концу коридора,
-ведущего  на север в приемную.  На стенах для обозрения висят
-драгоценности. Здесь расставлены стулья и большой деревянный
-стол. На востоке увитая лозами винограда арка ведет в закрытый
-внутренний двор.
-</description>
-      <exits>
-        <node name="east">
-          <target>5334</target>
-        </node>
-        <node name="north">
-          <description>Длинный коридор ведет в главную приемную городской ратуши.
-</description>
-          <target>5332</target>
-        </node>
-      </exits>
-      <flags>indoors</flags>
-      <name>Южное крыло городской ратуши</name>
-      <resets>
-        <mob limit="1" maxHere="1" vnum="5309"/>
-        <equip to="hold" vnum="5224"/>
-        <drop vnum="5307"/>
-        <put in="5307" limit="4" maxHere="1" vnum="5304"/>
-        <put in="5307" limit="4" maxHere="1" vnum="5305"/>
-        <put in="5307" limit="9" maxHere="1" vnum="5231"/>
-        <mob limit="11" maxHere="1" vnum="5303"/>
-        <equip to="body" vnum="5319"/>
-        <equip to="about" vnum="5327"/>
-        <equip to="waist" vnum="5328"/>
-        <equip to="wrist_l" vnum="5329"/>
-        <equip to="wield" vnum="5318"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5332">
-      <description>Это главная приемная зала городской ратуши Талоса. Стены выкрашены
-в белоснежный цвет, а пол покрыт полосками тонких пышных ковров.
-Дверь на западе приглашает тебя пройтись по одной из городских
-улиц. Коридоры ведут на юг и восток.
-</description>
-      <exits>
-        <node name="east">
-          <description>Коридор ведет в восточное крыло городской ратуши.
-</description>
-          <target>5333</target>
-        </node>
-        <node name="north">
-          <description>Главная улица.
-</description>
-          <target>5302</target>
-        </node>
-        <node name="south">
-          <description>Коридор ведет в южное крыло городской ратуши.
-</description>
-          <target>5331</target>
-        </node>
-        <node name="west">
-          <flags>isdoor</flags>
-          <keyword>дверь door</keyword>
-          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
-          <target>5312</target>
-        </node>
-      </exits>
-      <flags>indoors</flags>
-      <name>Городская ратуша</name>
-      <resets>
-        <mob limit="20" maxHere="1" vnum="5301"/>
-        <equip to="neck_1" vnum="5300"/>
-        <mob limit="9" maxHere="1" vnum="5304"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5333">
-      <description>Здесь находится стильный рабочий кабинет, возможно мэра. Шикарная
-мебель, зеленые растения делают этот кабинет просто изумительным.
-У стены стоит стеклянный шкаф. Длинный коридор выводит в приемную
-залу, а обвитый плющом сводчатый проход ведет на юг в закрытый
-внутренний двор.
-</description>
-      <exits>
-        <node name="south">
-          <target>5334</target>
-        </node>
-        <node name="west">
-          <target>5332</target>
-        </node>
-      </exits>
-      <flags>indoors</flags>
-      <name>Восточное крыло городской ратуши</name>
-      <resets>
-        <drop vnum="5308"/>
-        <put in="5308" limit="8" maxHere="1" vnum="3105"/>
-        <put in="5308" limit="8" maxHere="1" vnum="5214"/>
-        <put in="5308" limit="1" maxHere="1" vnum="5230"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5334">
-      <description>Ты завороженно смотришь на эту красоту и не можешь оторвать глаз.
-Экзотические цветы и деревья растут ровными рядами. Вдоль дорожек
-расставлены лавочки. В центре стоит большой мраморный фонтан.
-Над садом этим возвышается одна из четырех сторожевых башен.
-Сводчатые проходы выводят на север и запад в городскую ратушу.
-</description>
-      <exits>
-        <node name="north">
-          <target>5333</target>
-        </node>
-        <node name="west">
-          <target>5331</target>
-        </node>
-      </exits>
-      <name>Закрытый сад и внутренний двор Талоса</name>
-      <resets>
-        <mob limit="20" maxHere="1" vnum="5301"/>
-        <equip to="neck_1" vnum="5300"/>
-        <drop vnum="5306"/>
-        <mob limit="11" maxHere="1" vnum="5303"/>
-        <equip to="finger_l" vnum="5330"/>
-        <equip to="neck_2" vnum="5321"/>
-        <equip to="body" vnum="5319"/>
-        <equip to="shield" vnum="5320"/>
-        <equip to="wield" vnum="5317"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5335">
-      <description>Это бараки для гвардейцев Талоса. Стражники живущие в этой лачуге,
-готовы и способны отразить любое нападение. Эта небольшая хижина
-охраняет одновременно вход в город и здание ратуши.
-</description>
-      <exits>
-        <node name="east">
-          <description>Переулок.
-</description>
-          <target>5355</target>
-        </node>
-      </exits>
-      <name>Небольшой домик охраны</name>
-      <resets>
-        <mob limit="3" maxHere="3" vnum="5320"/>
-        <equip to="finger_l" vnum="5330"/>
-        <equip to="neck_2" vnum="5321"/>
-        <equip to="body" vnum="5319"/>
-        <equip to="about" vnum="5327"/>
-        <equip to="waist" vnum="5328"/>
-        <equip to="wield" vnum="5317"/>
-        <mob limit="3" maxHere="3" vnum="5320"/>
-        <equip to="finger_l" vnum="5330"/>
-        <equip to="neck_2" vnum="5321"/>
-        <equip to="body" vnum="5319"/>
-        <equip to="about" vnum="5327"/>
-        <equip to="wrist_l" vnum="5329"/>
-        <equip to="wield" vnum="5318"/>
-        <mob limit="3" maxHere="3" vnum="5320"/>
-        <equip to="neck_2" vnum="5321"/>
-        <equip to="body" vnum="5319"/>
-        <equip to="about" vnum="5327"/>
-        <equip to="waist" vnum="5328"/>
-        <equip to="wrist_l" vnum="5329"/>
-        <equip to="wield" vnum="5317"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5336">
-      <description>Этот дом является жилищем Храбреца Гордона, Защитника Талоса.
-Он олицетворяет все доброе и хорошее в этом городе. Он -- настоящая
-боевая машина -- является командиром охраны Талоса.
-</description>
-      <exits>
-        <node name="south">
-          <description>Главная улица.
-</description>
-          <target>5302</target>
-        </node>
-      </exits>
-      <name>Внушительный дом</name>
-      <resets>
-        <mob limit="1" maxHere="1" vnum="5305"/>
-        <equip to="feet" vnum="5204"/>
-        <equip to="arms" vnum="5203"/>
-        <equip to="legs" vnum="5205"/>
-        <equip to="waist" vnum="5206"/>
-        <equip to="head" vnum="5201"/>
-        <equip to="hands" vnum="5202"/>
-        <equip to="body" vnum="5301"/>
-        <equip to="wield" vnum="5332"/>
-        <equip to="hold" vnum="5226"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5337">
-      <description>Это, кажется, самое высокое строение в городе. Ряды книг выстроены
-на полках высотой 20 футов. Возникает чувство спокойной безмятежности.
-</description>
-      <exits>
-        <node name="east">
-          <description>Другая комната библиотеки.
-</description>
-          <target>5338</target>
-        </node>
-        <node name="up">
-          <description>Второй этаж библиотеки.
-</description>
-          <target>5345</target>
-        </node>
-        <node name="west">
-          <description>Боковая улица.
-</description>
-          <target>5311</target>
-        </node>
-      </exits>
-      <flags>indoors</flags>
-      <name>Публичная библиотека</name>
-      <resets>
-        <mob limit="1" maxHere="1" vnum="5315"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5338">
-      <description>Здесь еще больше полок и столов. В одной из секций аккуратно расставлены
-бутылочки со странными снадобьями, в другой -- книги и другие предметы.
-Выход находится на востоке.
-</description>
-      <exits>
-        <node name="west">
-          <description>Главный зал библиотеки.
-</description>
-          <target>5337</target>
-        </node>
-      </exits>
-      <flags>indoors</flags>
-      <name>Дополнительный зал библиотеки</name>
-      <resets>
-        <mob limit="20" maxHere="1" vnum="5301"/>
-        <equip to="neck_1" vnum="5300"/>
-        <mob limit="1" maxHere="1" vnum="5317"/>
-        <mob limit="9" maxHere="1" vnum="5302"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5339">
-      <description>Узкий переулок ведет на юг на главную улицу и на север к сторожевой
-башне. Люди спокойно проходят мимо тебя.
-</description>
-      <exits>
-        <node name="north">
-          <description>Могучая башня.
-</description>
-          <target>5340</target>
-        </node>
-        <node name="south">
-          <description>Главная улица.
-</description>
-          <target>5301</target>
-        </node>
-      </exits>
-      <name>Глухой переулок</name>
-      <sector>city</sector>
-    </node>
-    <node name="5340">
-      <description>Узкий переулок ведет на север к одной из сторожевых башен и на юг
-на главную улицу. Тень от башни очень освежает.
-</description>
-      <exits>
-        <node name="north">
-          <description>Высокая сторожевая башня на бессонном боевом дежурстве.
-</description>
-          <target>5341</target>
-        </node>
-        <node name="south">
-          <description>Мощеная аллея продолжается.
-</description>
-          <target>5339</target>
-        </node>
-      </exits>
-      <name>Глухой переулок</name>
-      <resets>
-        <mob limit="20" maxHere="1" vnum="5301"/>
-        <equip to="neck_1" vnum="5300"/>
-        <mob limit="9" maxHere="1" vnum="5304"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5341">
-      <description>Ты стоишь под высокой башней. Узкие переулки ведут на запад
-и юг. Прочная лестница поднимается наверх башни.
-</description>
-      <exits>
-        <node name="south">
-          <target>5340</target>
-        </node>
-        <node name="up">
-          <description>Крепкая сторожевая башня.
-</description>
-          <target>5348</target>
-        </node>
-        <node name="west">
-          <target>5343</target>
-        </node>
-      </exits>
-      <name>Под сторожевой башней</name>
-      <resets>
-        <mob limit="11" maxHere="1" vnum="5303"/>
-        <equip to="neck_2" vnum="5321"/>
-        <equip to="body" vnum="5319"/>
-        <equip to="about" vnum="5327"/>
-        <equip to="wield" vnum="5318"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5342">
-      <description>Это баня для жителей горожа. Горячий пар поднимается из отверстия
-в полу. Очевидно, там бьет теплый источник, расположенный под
-землей (это объясняет, почему город построен именно в этом месте).
-На западе другая комната.
-</description>
-      <exits>
-        <node name="north">
-          <description>Мощеная аллея.
-</description>
-          <target>5343</target>
-        </node>
-        <node name="west">
-          <description>Еще одна комната отдыха.
-</description>
-          <target>5344</target>
-        </node>
-      </exits>
-      <flags>indoors</flags>
-      <name>Баня</name>
-      <resets>
-        <mob limit="2" maxHere="2" vnum="5319"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5343">
-      <description>Узкий переулок ведет на запад к боковой улочке и на восток к
-одной из городских сторожевых башен. Из здания на юге
-клубится пар. Выглядит заманчиво.
-</description>
-      <exits>
-        <node name="east">
-          <description>Высокая сторожевая башня на бессонном боевом дежурстве.
-</description>
-          <target>5341</target>
-        </node>
-        <node name="south">
-          <description>Ты слышишь смех и всплески.
-</description>
-          <target>5342</target>
-        </node>
-        <node name="west">
-          <description>Боковая улица встречает тебя.
-</description>
-          <target>5309</target>
-        </node>
-      </exits>
-      <name>Глухой переулок</name>
-      <sector>city</sector>
-    </node>
-    <node name="5344">
-      <description>Ты в комнате отдыха. На полу постелены мягкие маты, на которых
-люди лежат расслабившись. Спокойствие этого места так соблазнительно,
-что ты хочешь присоединиться к ним. Из дыры на востоке вырываются
-клубы пара.
-</description>
-      <exits>
-        <node name="east">
-          <target>5342</target>
-        </node>
-        <node name="west">
-          <description>Боковая улица.
-</description>
-          <target>5310</target>
-        </node>
-      </exits>
-      <flags>indoors</flags>
-      <name>Комната отдыха</name>
-      <resets>
-        <mob limit="20" maxHere="1" vnum="5301"/>
-        <equip to="neck_1" vnum="5300"/>
-        <mob limit="4" maxHere="4" vnum="5318"/>
-        <mob limit="9" maxHere="1" vnum="5302"/>
-        <mob limit="9" maxHere="1" vnum="5304"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5345">
-      <description>Здесь море книг. Из окна восхитительный вид на близлежащую бухту.
-Мимо окна летают птицы.
-</description>
-      <exits>
-        <node name="down">
-          <target>5337</target>
-        </node>
-      </exits>
-      <name>На втором этаже библиотеки</name>
-      <resets>
-        <mob limit="2" maxHere="2" vnum="5316"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5346">
-      <description>Ты стоишь на вершине одной из городских сторожевых башен. Вид отсюда
-впечатляет. Также взгляду открыты все дороги к западным горам. Ты в полной
-уверенности, что эта башня будет стоять вечно.
-</description>
-      <exits>
-        <node name="down">
-          <description>Город лежит внизу.
-</description>
-          <target>5324</target>
-        </node>
-      </exits>
-      <name>Северо-западная сторожевая башня</name>
-      <resets>
-        <mob limit="20" maxHere="1" vnum="5301"/>
-        <equip to="neck_1" vnum="5300"/>
-        <mob limit="8" maxHere="2" vnum="5308"/>
-        <equip to="wield" vnum="5221"/>
-        <equip to="hold" vnum="5233"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5347">
-      <description>Ты стоишь на вершине одной из городских сторожевых башен. Вид отсюда
-впечатляет. Также взгляду открыты все дороги к западным горам. На юг
-до самого горизонта простираются степи. Ты в полной уверенности, что эта
-башня будет стоять вечно.
-</description>
-      <exits>
-        <node name="down">
-          <description>Город лежит внизу.
-</description>
-          <target>5315</target>
-        </node>
-      </exits>
-      <name>Юго-западная сторожевая башня</name>
-      <resets>
-        <mob limit="8" maxHere="2" vnum="5308"/>
-        <equip to="wield" vnum="5221"/>
-        <equip to="hold" vnum="5232"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5348">
-      <description>Ты стоишь на вершине одной из городских сторожевых башен. Вид отсюда
-впечатляет -- вплость до самого горизонта простираются зеленые луга.
-Ты в полной уверенности, что эта башня будет стоять вечно.
-</description>
-      <exits>
-        <node name="down">
-          <description>Город лежит внизу.
-</description>
-          <target>5341</target>
-        </node>
-      </exits>
-      <name>Северо-восточная сторожевая башня</name>
-      <resets>
-        <mob limit="20" maxHere="1" vnum="5301"/>
-        <equip to="neck_1" vnum="5300"/>
-        <mob limit="8" maxHere="2" vnum="5308"/>
-        <equip to="wield" vnum="5221"/>
-        <equip to="hold" vnum="5235"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5349">
-      <description>Огромная  ангарная  комната, уходящая  в бесконечность,  со штабелями
-ячеек-хранилищ. В  каждой можно  увидеть грустного  голема, ожидающего
-своего хозяина.
-</description>
-      <exits>
-        <node name="east">
-          <key>0</key>
-          <target>5404</target>
-        </node>
-        <node name="north">
-          <key>0</key>
-          <target>5400</target>
-        </node>
-        <node name="south">
-          <key>0</key>
-          <target>5394</target>
-        </node>
-        <node name="west">
-          <key>0</key>
-          <target>5403</target>
-        </node>
-      </exits>
-      <flags>no_vanish indoors nosummon</flags>
-      <guilds>necromancer</guilds>
-      <name>Фабрика Големов </name>
-      <sector>inside</sector>
-    </node>
-    <node name="5350">
-      <description>Ты стоишь в одном из святейших мест мира. В этом великолепным куполообразном
-храме совершают богослужения множество верующих города. Длинные ряды скамейки
-выстроены перед алтарем, сверкающим золотой и платиновой мозаикой. Стены и
-крыша сделаны из керамики, поэтому они хорошо отражают солнечный свет.
-Зеленые насаждения вокруг храма -- великолепное сочетание природы и искусства.
-</description>
-      <exits>
-        <node name="east">
-          <description>Главная улица выводит к городским воротам.
-</description>
-          <target>5303</target>
-        </node>
-        <node name="north">
-          <description>Боковая улица ведет к северной части города.
-</description>
-          <target>5305</target>
-        </node>
-      </exits>
-      <flags>indoors</flags>
-      <name>Храм Талоса</name>
-      <resets>
-        <mob limit="1" maxHere="1" vnum="5300"/>
-        <equip to="hold" vnum="5243"/>
-        <mob limit="1" maxHere="1" vnum="5307"/>
-        <equip to="hold" vnum="5302"/>
-        <equip to="neck_1" vnum="5223"/>
-        <mob limit="20" maxHere="1" vnum="5301"/>
-        <equip to="neck_1" vnum="5300"/>
-        <mob limit="11" maxHere="1" vnum="5303"/>
-        <equip to="neck_2" vnum="5321"/>
-        <equip to="body" vnum="5319"/>
-        <equip to="shield" vnum="5320"/>
-        <equip to="wield" vnum="5317"/>
-        <mob limit="9" maxHere="1" vnum="5302"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5351">
-      <description>Узкий переулок ведет на восток к более широкой улице и на
-запад к одной из сторожевых башен. Ребятня играет в салки
-вокруг тебя.
-</description>
-      <exits>
-        <node name="east">
-          <description>Высокая сторожевая башня на бессонном боевом дежурстве.
-</description>
-          <target>5352</target>
-        </node>
-        <node name="west">
-          <description>Боковая улица встречает тебя.
-</description>
-          <target>5314</target>
-        </node>
-      </exits>
-      <name>Глухой переулок</name>
-      <sector>city</sector>
-    </node>
-    <node name="5352">
-      <description>Ты стоишь у основания высокой сторожевой башни, что защищает
-город от захватчиков. Видно, что она отлично справляется со своей
-задачей.
-</description>
-      <exits>
-        <node name="north">
-          <target>5353</target>
-        </node>
-        <node name="up">
-          <target>5354</target>
-        </node>
-        <node name="west">
-          <target>5351</target>
-        </node>
-      </exits>
-      <name>Под сторожевой башней</name>
-      <resets>
-        <mob limit="20" maxHere="1" vnum="5301"/>
-        <equip to="neck_1" vnum="5300"/>
-        <mob limit="11" maxHere="1" vnum="5303"/>
-        <equip to="finger_l" vnum="5330"/>
-        <equip to="body" vnum="5319"/>
-        <equip to="about" vnum="5327"/>
-        <equip to="waist" vnum="5328"/>
-        <equip to="wield" vnum="5318"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5353">
-      <description>Узкий переулок ведет на юг к одной из сторожевых башен.
-</description>
-      <exits>
-        <node name="north">
-          <description>Переулок продолжается на севере.
-</description>
-          <target>5355</target>
-        </node>
-        <node name="south">
-          <description>Высокая сторожевая башня на бессонном боевом дежурстве.
-</description>
-          <target>5352</target>
-        </node>
-      </exits>
-      <name>Глухой переулок</name>
-      <sector>city</sector>
-    </node>
-    <node name="5354">
-      <description>Ты стоишь на вершине одной из городских сторожевых башен. Вид отсюда
-впечатляет. Также взгляду открыты все дороги к западным горам. На юге
-видна степь. Ты в полной уверенности, что эта башня будет стоять вечно.
-</description>
-      <exits>
-        <node name="down">
-          <description>Город лежит внизу.
-</description>
-          <target>5352</target>
-        </node>
-      </exits>
-      <name>Юго-восточная сторожевая башня</name>
-      <resets>
-        <mob limit="20" maxHere="1" vnum="5301"/>
-        <equip to="neck_1" vnum="5300"/>
-        <mob limit="8" maxHere="2" vnum="5308"/>
-        <equip to="wield" vnum="5221"/>
-        <equip to="hold" vnum="5237"/>
-      </resets>
-      <sector>city</sector>
-    </node>
-    <node name="5355">
-      <description>Узкий переулок ведет на север к главной улице и на юг к высокой башне.
-На западе --  строение.
-</description>
-      <exits>
-        <node name="north">
-          <description>Главная улица.
-</description>
-          <target>5301</target>
-        </node>
-        <node name="south">
-          <target>5353</target>
-        </node>
-        <node name="west">
-          <description>Маленький домик.
-</description>
-          <target>5335</target>
-        </node>
-      </exits>
-      <name>Глухой переулок</name>
-      <sector>city</sector>
-    </node>
-    <node name="5356">
-      <description>Тропа оканчивается здесь, окруженная высокими зелеными лиственным
-деревьями. На западе ты видишь огромный красивый и ослепительный
-город. Что-то в нем есть такое, что успокаивает тебя и расслабляет.
-</description>
-      <exits>
-        <node name="east">
-          <description>Тропинка.
-</description>
-          <target>5357</target>
-        </node>
-        <node name="west">
-          <description>Там Талос!
-</description>
-          <target>5300</target>
-        </node>
-      </exits>
-      <name>Тропа у края дварфийского леса</name>
-      <resets>
-        <mob limit="4" maxHere="2" vnum="5326"/>
-      </resets>
-      <sector>field</sector>
-    </node>
-    <node name="5357">
-      <description>Ответвление тропы выводит из дварфийского леса. Здесь явно
-тише и спокойней. Тропа уводит на восток.
-</description>
-      <exits>
-        <node name="east">
-          <description>Поворот.
-</description>
-          <target>5358</target>
-        </node>
-        <node name="west">
-          <description>Тропинка продолжается.
-</description>
-          <target>5356</target>
-        </node>
-      </exits>
-      <name>Тропа у края дварфийского леса</name>
-      <sector>field</sector>
-    </node>
-    <node name="5358">
-      <description>Вокруг тебя высокие могучие зеленые деревья. Тропа сворачивает
-на север и запад отсюда.
-</description>
-      <exits>
-        <node name="north">
-          <description>Тропинка поворачивает на север.
-</description>
-          <target>5359</target>
-        </node>
-        <node name="west">
-          <description>Тропинка поворачивает на запад.
-</description>
-          <target>5357</target>
-        </node>
-      </exits>
-      <name>Дварфийский лес</name>
-      <resets>
-        <mob limit="3" maxHere="2" vnum="5323"/>
-      </resets>
-      <sector>forest</sector>
-    </node>
-    <node name="5359">
-      <description>Кругом большие зеленые деревья. Кажется, сами боги благословили это
-место быть красивым и спокойным. Тропа уходит на север и юг.
-</description>
-      <exits>
-        <node name="north">
-          <description>Тропика продолжается на север.
-</description>
-          <target>5360</target>
-        </node>
-        <node name="south">
-          <description>Тропинка уходит на юг.
-</description>
-          <target>5358</target>
-        </node>
-      </exits>
-      <name>Дварфийский лес</name>
-      <sector>forest</sector>
-    </node>
-    <node name="5360">
-      <description>Кругом большие зеленые деревья. Кажется, сами боги благословили это
-место быть красивым и спокойным. Тропа уходит на север и юг.
-</description>
-      <exits>
-        <node name="north">
-          <description>Тропика продолжается на север.
-</description>
-          <target>5361</target>
-        </node>
-        <node name="south">
-          <description>Тропинка уходит на юг.
-</description>
-          <target>5359</target>
-        </node>
-      </exits>
-      <name>Дварфийский лес</name>
-      <sector>forest</sector>
-    </node>
-    <node name="5361">
-      <description>Здесь много больших деревьев, покрытых густой листвой. Земля покрыта
-мягким травяным покровом.
-</description>
-      <exits>
-        <node name="north">
-          <description>Тропика продолжается на север.
-</description>
-          <target>5362</target>
-        </node>
-        <node name="south">
-          <description>Тропинка уходит на юг.
-</description>
-          <target>5360</target>
-        </node>
-      </exits>
-      <name>Дварфийский лес</name>
-      <resets>
-        <mob limit="9" maxHere="1" vnum="5304"/>
-      </resets>
-      <sector>forest</sector>
-    </node>
-    <node name="5362">
-      <description>Ты стоишь на перекрестке двух дорог. Старый Мидгаард к западу отсюда,  а на
-востоке видны величественные дубы и тополя  Священной Рощи.  Широкая дорога
-ведет к югу через дварфийский лес. На севере - заброшенная тропа.
-</description>
-      <exits>
-        <node name="east">
-          <target>5369</target>
-        </node>
-        <node name="north">
-          <target>5363</target>
-        </node>
-        <node name="south">
-          <target>5361</target>
-        </node>
-        <node name="west">
-          <target>5364</target>
-        </node>
-      </exits>
-      <name>Перекресток дорог</name>
-      <sector>city</sector>
-    </node>
-    <node name="5363">
-      <description>Ты прогуливаешься по уютной, затененной аллее. По обе стороны дороги
-высятся величественные деревья, создавая атмосферу покоя и безмятежности. 
-Дорога ведет на север и на юг.            
-</description>
-      <exits>
-        <node name="north">
-          <target>5365</target>
-        </node>
-        <node name="south">
-          <target>5362</target>
-        </node>
-      </exits>
-      <name>Аллея</name>
-      <sector>city</sector>
-    </node>
-    <node name="5364">
-      <description>Ты стоишь на окраине Старого Мидгаарда, перенесенного сюда из прошлого вместе
-с Талосом. Этот город когда-то процветал, но подвергся нападению нежити из леса,
-что к западу от города. Жители пытались сдерживать отдельные атаки, однако в
-итоге пали в неравной борьбе. Скоро и Талос постигнет та же судьба, но об этом
-известно лишь немногим. Дорога ведет обратно на восток к равнинам, а на западе
-видны ворота города.
-</description>
-      <exits>
-        <node name="east">
-          <target>5362</target>
-        </node>
-        <node name="north">
-          <target>34100</target>
-        </node>
-        <node name="west">
-          <target>5385</target>
-        </node>
-      </exits>
-      <flags>no_mob</flags>
-      <name>Вход в город</name>
-      <sector>city</sector>
-    </node>
-    <node name="5365">
-      <description>Вокруг  тебя  - обширные  и безлюдные  равнины. Ветер  завывает во  всю, не
-встречая на  своем пути  никаких препятствий,  кроме твоей  скромной особы.
-Однако ты замечаешь, что до тебя здесь  кто-то был  и оставил  следы. Следы
-образуют тропку, которая выглядит заброшенной  и вряд  ли ведет  в какое-то
-важное место.  Однако по  какой-то причине  эта тропка  уводит к  холмам на
-севере.  Пройдя  по  тропинке  несколько  шагов,  ты теряешь  ее из  виду и
-решаешь, что тут очень легко заблудиться.
-</description>
-      <exits>
-        <node name="down">
-          <flags>isdoor closed</flags>
-          <keyword>door дверь</keyword>
-          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
-          <target>3603</target>
-        </node>
-        <node name="north">
-          <description>Ты видишь осенний лес.
-</description>
-          <flags>isdoor</flags>
-          <key>10306</key>
-          <keyword>дверь door</keyword>
-          <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
-          <target>10130</target>
-        </node>
-        <node name="south">
-          <target>5363</target>
-        </node>
-        <node name="west">
-          <description>Дорога к крепости.
-</description>
-          <target>15700</target>
-        </node>
-      </exits>
-      <name>Равнины</name>
-      <sector>field</sector>
-    </node>
-    <node name="5366">
-      <description>Ты стоишь среди древних дубов и тополей священной рощи. Странное чувство
-удовлетворения  и  блаженства  пронизывает  тебя. Ты чувствуешь, что у тебя
-будто гора с плеч свалилась.
-   Отсюда ведут два пути - на юг и на восток.
-</description>
-      <exits>
-        <node name="east">
-          <description>Конец дороги теряется в высоких деревьях.
-</description>
-          <target>5367</target>
-        </node>
-        <node name="south">
-          <description>Конец дороги теряется в высоких деревьях.
-</description>
-          <target>5369</target>
-        </node>
-      </exits>
-      <name>Священная Роща</name>
-      <sector>forest</sector>
-    </node>
-    <node name="5367">
-      <description>Ты стоишь среди древних дубов и тополей священной рощи. Странное чувство
-удовлетворения  и  блаженства  пронизывает  тебя. Ты чувствуешь, что у тебя
-будто гора с плеч свалилась.
-   Отсюда ведут пути на юг, на восток и на запад.
-</description>
-      <exits>
-        <node name="east">
-          <description>Тропа ведет к слабо заметному просвету меж деревьями.</description>
-          <target>5368</target>
-        </node>
-        <node name="south">
-          <description>Тропа петляет между высокими деревьями к слабо заметному просвету.
-</description>
-          <target>5370</target>
-        </node>
-        <node name="west">
-          <description>Конец дороги исчезает из виду за высокими деревьями.
-</description>
-          <target>5366</target>
-        </node>
-      </exits>
-      <name>Священная Роща</name>
-      <resets>
-        <mob limit="9" maxHere="9" vnum="5302"/>
-        <mob limit="2" maxHere="2" vnum="5322"/>
-      </resets>
-      <sector>forest</sector>
-    </node>
-    <node name="5368">
-      <description>Ты стоишь на поляне посреди леса. Это место СИЛЬНО отличается от остального
-леса, как будто что-то нарушило саму структуру окружающей реальности.
-</description>
-      <exits>
-        <node name="north">
-          <description>Небольшая  узкая  тропа,  ведущая  на  север, быстро теряется в кустарнике.
-Природа там выглядит гораздо более дикой!</description>
-          <target>5375</target>
-        </node>
-        <node name="south">
-          <description>Тропа, ведущая на юг, теряется из поля зрения приблизительно через 100 ярдов.
-</description>
-          <target>5371</target>
-        </node>
-        <node name="west">
-          <description>Тропа ведет на запад сквозь высокие деревья.
-</description>
-          <target>5367</target>
-        </node>
-      </exits>
-      <flags>no_mob</flags>
-      <name>Поляна в лесу</name>
-      <resets>
-        <mob limit="2" maxHere="1" vnum="5327"/>
-        <give vnum="5313"/>
-      </resets>
-      <sector>forest</sector>
-    </node>
-    <node name="5369">
-      <description>Ты стоишь среди древних дубов  и тополей  священной рощи.  Странное чувство
-удовлетворения и  блаженства пронизывает  тебя. Ты  чувствуешь, что  у тебя
-будто гора с плеч свалилась. Отсюда ведут пути на север, на восток и на юг.
-На западе ты замечаешь дорогу к огромной стройке Мидгаарда.
-</description>
-      <exits>
-        <node name="east">
-          <description>Тропа петляет между высокими деревьями к слабо заметному просвету.
-</description>
-          <target>5370</target>
-        </node>
-        <node name="north">
-          <description>Тропа петляет между высокими деревьями, постепенно исчезая из виду.
-</description>
-          <target>5366</target>
-        </node>
-        <node name="south">
-          <description>Тропа петляет между высокими деревьями к роще.
-</description>
-          <target>5372</target>
-        </node>
-        <node name="west">
-          <description>Сквозь деревья просматривается дорога, ведущая в Мидгаард. Далеко
-к западу ты едва можешь разобрать очертания стройки.                
-</description>
-          <target>5362</target>
-        </node>
-      </exits>
-      <flags>no_mob</flags>
-      <name>Священная роща</name>
-      <resets>
-        <mob limit="1" maxHere="1" vnum="5324"/>
-      </resets>
-      <sector>forest</sector>
-    </node>
-    <node name="5370">
-      <description>Ты стоишь в середине священной поляны, где граждане Талоса празднуют весну,
-где фермеры воздают благодарность за обильный урожай по осени, а влюбленные
-прогуливаются  летними  вечерами.  Нахлынувшие  воспоминания  о  счастливых
-временах уносят далеко твои печали и заботы, делая тебя спокойным и бодрым,
-готовым к новым свершениям. Пути ведут в Священную Рощу на восток, на север
-и на запад, в  то время  как на  юге широкое,  солнечное поле  спускается к
-искрящейся воде озера.
-</description>
-      <exits>
-        <node name="east">
-          <description>Тропа петляет между высокими деревьями, постепенно исчезая из виду.
-</description>
-          <target>5371</target>
-        </node>
-        <node name="north">
-          <description>Тропа ведет к северу между высокими деревьями, постепенно исчезая из виду.
-</description>
-          <target>5367</target>
-        </node>
-        <node name="south">
-          <description>На  юге раскинулось широкое, солнечное поле, ведущее вниз к ярко блестящему
-озеру.
-</description>
-          <target>5373</target>
-        </node>
-        <node name="west">
-          <description>Дорога петляет на запад между тополей и необхватных дубов.
-</description>
-          <target>5369</target>
-        </node>
-      </exits>
-      <name>Священная поляна</name>
-      <resets>
-        <mob limit="3" maxHere="2" vnum="5323"/>
-      </resets>
-      <sector>forest</sector>
-    </node>
-    <node name="5371">
-      <description>Ты стоишь среди древних дубов и тополей священной рощи. Странное чувство
-удовлетворения  и  блаженства  пронизывает  тебя. Ты чувствуешь, что у тебя
-будто гора с плеч свалилась.
-   Отсюда ведут пути на север и на запад. На юге видна открытая местность.
-</description>
-      <exits>
-        <node name="north">
-          <description>Тропа петляет между высокими деревьями, постепенно исчезая из виду.
-</description>
-          <target>5368</target>
-        </node>
-        <node name="south">
-          <description>На  юге,  сразу за  деревьями, ты  видишь мерцающую  зеленую лужайку,  а на
-лужайке  -  мерцающий  радужный  купол, закрывающий  фундамент (foundation)
-постройки.
-</description>
-          <target>5374</target>
-        </node>
-        <node name="west">
-          <description>Тропа петляет между высокими деревьями, постепенно исчезая из виду.
-</description>
-          <target>5370</target>
-        </node>
-      </exits>
-      <extraDescr>
-        <node keyword="foundation фундамент">Фундамент заготовлен для обширного, двухэтажного  здания с  тремя крыльями.
-На земле свалены стройматериалы. Их можно было бы  принять за  мрамор, если
-бы  мрамору было  свойственно непрерывно  менять свой  цвет по  всей широте
-цветового  спектра.  Свеженарезанные оконные  стекла сложены  стопкой возле
-одного из углов будущей постройки.
-</node>
-      </extraDescr>
-      <name>Священная роща</name>
-      <resets>
-        <mob limit="2" maxHere="1" vnum="5327"/>
-        <give vnum="5315"/>
-      </resets>
-      <sector>forest</sector>
-    </node>
-    <node name="5372">
-      <description>Ты стоишь среди высоких и величественных деревьев  в южной  части священной
-рощи. Дорога ведет на север и на восток. К востоку виднеется обширное поле,
-которое плавно  спускается к  искрящемуся озеру.  По непонятной  причине ты
-чувствуешь себя  счастливым, как  будто мирские  заботы больше  не тревожат
-тебя.
-</description>
-      <exits>
-        <node name="east">
-          <description>На востоке дорога ведет к широкому солнечному полю, которая
-плавно спускается к красивому озеру. Позади поля видна стройка (construction),
-закладывающая фундамент здания, переливающегося всеми цветами радуги.
-</description>
-          <target>5373</target>
-        </node>
-        <node name="north">
-          <description>Дорога, ведущая на восток, быстро пропадает из виду
-среди древних тополей и дубов.                
-</description>
-          <target>5369</target>
-        </node>
-      </exits>
-      <extraDescr>
-        <node keyword="foundation construction фундамент стройка">Фундамент заготовлен для обширного, двухэтажного здания
-с тремя крыльями. На земле свалены стройматериалы. Их можно было бы принять за
-мрамор, если бы мрамору было свойственно непрерывно менять свой цвет по всей
-широте цветового спектра. Свеженарезанные оконные стекла сложены стопкой возле
-одного из углов будущей постройки.
-</node>
-      </extraDescr>
-      <name>Священная роща</name>
-      <resets>
-        <mob limit="2" maxHere="1" vnum="5328"/>
-        <give vnum="5316"/>
-        <mob limit="4" maxHere="2" vnum="5326"/>
-      </resets>
-      <sector>forest</sector>
-    </node>
-    <node name="5373">
-      <description>Ты  стоишь  посреди  широкого  летнего поля,  залитого солнечным  светом. В
-воздухе аромат весны, звуки лета  и ощущения  вечного субботнего  полдня. К
-югу  находится  прозрачное,  искристое  озеро,  а  на  севере  и  на западе
-простирается священная роща. На  окраине леса,  к востоку,  видна постройка
-(foundation), мягко переливающаяся цветами по всей ширине спектра. Ты  бы с
-удовольствием провел здесь остаток жизни, просто лежа  на спине  и наблюдая
-за тем, как плавно проплывают по небу узоры облаков.
-</description>
-      <exits>
-        <node name="north">
-          <description>Тропинка ведет на север к священной поляне.
-</description>
-          <target>5370</target>
-        </node>
-        <node name="west">
-          <description>Небольшая тропинка уводит в лес на западе.
-</description>
-          <target>5372</target>
-        </node>
-      </exits>
-      <extraDescr>
-        <node keyword="foundation construction фундамент стройка">Фундамент заготовлен для обширного, двухэтажного  здания с  тремя крыльями.
-На земле свалены стройматериалы. Их можно было бы  принять за  мрамор, если
-бы  мрамору было  свойственно непрерывно  менять свой  цвет по  всей широте
-цветового  спектра.  Свеженарезанные оконные  стекла сложены  стопкой возле
-одного из углов будущей постройки.
-</node>
-      </extraDescr>
-      <name>Солнечное поле</name>
-      <resets>
-        <mob limit="3" maxHere="3" vnum="5325"/>
-      </resets>
-      <sector>field</sector>
-    </node>
-    <node name="5374">
-      <description>Ты стоишь на безукоризненно вылизанном газоне, каким он может  стать только
-после 200 лет регулярного  ухода. Каменная  дорога вьется  от края  леса на
-севере  к мягко  мерцающему куполу  (dome), накрывшему  стройку на  юге. На
-такой лужайке здорово поваляться солнечным летом после полудня.
-</description>
-      <exits>
-        <node name="north">
-          <description>На севере каменная дорога, извиваясь, ведет в Священную рощу.
-</description>
-          <target>5371</target>
-        </node>
-      </exits>
-      <extraDescr>
-        <node keyword="dome construction купол стройка">Фундамент заготовлен для обширного, двухэтажного  здания с  тремя крыльями.
-На земле свалены стройматериалы. Их можно было бы  принять за  мрамор, если
-бы  мрамору было  свойственно непрерывно  менять свой  цвет по  всей широте
-цветового  спектра.  Свеженарезанные оконные  стекла сложены  стопкой возле
-одного из углов будущей постройки.
-</node>
-      </extraDescr>
-      <flags>no_mob</flags>
-      <name>Лужайка для крокета</name>
-      <resets>
-        <mob limit="2" maxHere="1" vnum="5328"/>
-        <give vnum="5314"/>
-      </resets>
-      <sector>field</sector>
-    </node>
-    <node name="5375">
-      <description>Ты стоишь посреди чего-то, что ты не можешь объяснить. Ты видишь
-звезды, но не можешь понять, на чем ты стоишь. Вроде бы не на земле,
-но и сказать, что летаешь - тоже нельзя. Время от временм звездное 
-&quot;небо&quot; растворяется в яркой расплывчатой радуге и снова возвращается
-в прежнее состояние. В середине этого места есть вертикальная лестница.
-</description>
-      <exits>
-        <node name="down">
-          <description>Звезды.
-</description>
-          <target>5376</target>
-        </node>
-        <node name="east">
-          <description>Звезды.
-</description>
-          <target>5378</target>
-        </node>
-        <node name="south">
-          <description>Расплывчатый портал, отдающий зеленым.
-</description>
-          <target>5368</target>
-        </node>
-        <node name="up">
-          <description>Звезды.
-</description>
-          <target>5376</target>
-        </node>
-        <node name="west">
-          <description>Звезды.
-</description>
-          <target>5378</target>
-        </node>
-      </exits>
-      <name>Пустота</name>
-      <resets>
-        <random maxDoor="5" minDoor="0"/>
-      </resets>
-      <sector>forest</sector>
-    </node>
-    <node name="5376">
-      <description>Ты стоишь посреди чего-то, что ты не можешь объяснить. Ты видишь
-звезды, но не можешь понять, на чем ты стоишь. Вроде бы не на земле,
-но и сказать, что летаешь - тоже нельзя. Время от временм звездное 
-&quot;небо&quot; растворяется в яркой расплывчатой радуге и снова возвращается
-в прежнее состояние. 
-</description>
-      <exits>
-        <node name="down">
-          <description>Звезды.
-</description>
-          <target>5375</target>
-        </node>
-        <node name="east">
-          <description>Звезды.
-</description>
-          <target>5376</target>
-        </node>
-        <node name="north">
-          <description>Звезды.
-</description>
-          <target>5377</target>
-        </node>
-        <node name="south">
-          <description>Звезды.
-</description>
-          <target>5377</target>
-        </node>
-        <node name="up">
-          <description>Звезды.
-</description>
-          <target>5375</target>
-        </node>
-        <node name="west">
-          <description>Звезды.
-</description>
-          <target>5376</target>
-        </node>
-      </exits>
-      <name>Пустота</name>
-      <resets>
-        <random maxDoor="6" minDoor="0"/>
-      </resets>
-      <sector>forest</sector>
-    </node>
-    <node name="5377">
-      <description>Ты стоишь посреди чего-то, что ты не можешь объяснить. Ты видишь
-звезды, но не можешь понять, на чем ты стоишь. Вроде бы не на земле,
-но и сказать, что летаешь - тоже нельзя. Время от временм звездное 
-&quot;небо&quot; растворяется в яркой расплывчатой радуге и снова возвращается
-в прежнее состояние. 
-</description>
-      <exits>
-        <node name="down">
-          <description>Звезды.
-</description>
-          <target>5378</target>
-        </node>
-        <node name="east">
-          <description>Звезды.
-</description>
-          <target>5377</target>
-        </node>
-        <node name="north">
-          <description>Звезды.
-</description>
-          <target>5376</target>
-        </node>
-        <node name="south">
-          <description>Звезды.
-</description>
-          <target>5376</target>
-        </node>
-        <node name="up">
-          <description>Звезды.
-</description>
-          <target>5378</target>
-        </node>
-        <node name="west">
-          <description>Звезды.
-</description>
-          <target>5377</target>
-        </node>
-      </exits>
-      <name>Пустота</name>
-      <resets>
-        <random maxDoor="6" minDoor="0"/>
-      </resets>
-      <sector>forest</sector>
-    </node>
-    <node name="5378">
-      <description>Ты стоишь посреди чего-то, что ты не можешь объяснить. Ты видишь
-звезды, но не можешь понять, на чем ты стоишь. Вроде бы не на земле,
-но и сказать, что летаешь - тоже нельзя. Время от временм звездное 
-&quot;небо&quot; растворяется в яркой расплывчатой радуге и снова возвращается
-в прежнее состояние. В середине этого места есть вертикальная лестница.
-</description>
-      <exits>
-        <node name="down">
-          <description>Звезды.
-</description>
-          <target>5377</target>
-        </node>
-        <node name="east">
-          <description>Звезды.
-</description>
-          <target>5375</target>
-        </node>
-        <node name="south">
-          <description>Расплывчатый портал, отдающий зеленым.
-</description>
-          <target>8903</target>
-        </node>
-        <node name="up">
-          <description>Звезды.
-</description>
-          <target>5377</target>
-        </node>
-        <node name="west">
-          <description>Звезды.
-</description>
-          <target>5375</target>
-        </node>
-      </exits>
-      <name>Пустота</name>
-      <resets>
-        <random maxDoor="5" minDoor="0"/>
-      </resets>
-      <sector>forest</sector>
-    </node>
     <node name="5379">
       <description>Ты стоишь в развалинах того, что когда-то было центральным храмом и местом
-поклонения  жителей  Старого Мидгаарда.  Стены покрыты слоями паутины,  а 
+поклонения  жителей Старого Мидгаарда. Стены покрыты слоями паутины, а 
 {Tdсолнечный{Tnлунный{x свет с трудом проникает сюда сквозь пыльные цветные
 витражи. По углам ютятся летучие мыши. К северу расположено капище, устроенное
-на месте алтаря. По небольшой лестнице вверх можно попасть в Зону Новичков.
-Гранитные ступени ведут обратно на юг, к Площади.
+на месте алтаря. Гранитные ступени ведут обратно на юг, к Площади.
 </description>
       <exits>
         <node name="north">
@@ -4506,9 +819,6 @@ W - + - E            Temple altar
         </node>
         <node name="south">
           <target>5380</target>
-        </node>
-        <node name="up">
-          <target>18600</target>
         </node>
       </exits>
       <flags>no_mob indoors</flags>
@@ -4538,9 +848,9 @@ W - + - E            Temple altar
       </exits>
       <name>Храмовая площадь</name>
       <resets>
-        <mob limit="2" maxHere="2" vnum="5332"/>
-        <drop vnum="5334"/>
-        <mob limit="1" maxHere="1" vnum="5341"/>
+        <mob limit="2" maxHere="2" vnum="5382"/>
+        <drop vnum="5384"/>
+        <mob limit="1" maxHere="1" vnum="5391"/>
       </resets>
       <sector>city</sector>
     </node>
@@ -4569,12 +879,13 @@ W - + - E            Temple altar
       </exits>
       <name>Рыночная площадь</name>
       <resets>
-        <mob limit="1" maxHere="1" vnum="5331"/>
+        <mob limit="1" maxHere="1" vnum="5381"/>
         <equip to="light" vnum="3365"/>
         <equip to="finger_l" vnum="3364"/>
-        <equip to="wield" vnum="3350"/>
+        <equip to="sheath" vnum="3350"/>
         <equip to="body" vnum="3353"/>
         <equip to="neck_2" vnum="3355"/>
+        <drop vnum="3726"/>
       </resets>
       <sector>city</sector>
     </node>
@@ -4601,7 +912,7 @@ W - + - E            Temple altar
       </exits>
       <name>Главная Улица</name>
       <resets>
-        <mob limit="3" maxHere="3" vnum="5333"/>
+        <mob limit="3" maxHere="3" vnum="5383"/>
       </resets>
       <sector>city</sector>
     </node>
@@ -4651,10 +962,10 @@ W - + - E            Temple altar
       </exits>
       <name>Внутри восточных ворот</name>
       <resets>
-        <mob limit="1" maxHere="1" vnum="5334"/>
+        <mob limit="1" maxHere="1" vnum="5384"/>
         <equip to="light" vnum="3365"/>
         <equip to="finger_l" vnum="3364"/>
-        <equip to="wield" vnum="3350"/>
+        <equip to="sheath" vnum="3350"/>
         <equip to="body" vnum="3353"/>
         <equip to="shield" vnum="3354"/>
       </resets>
@@ -4664,11 +975,11 @@ W - + - E            Temple altar
       <description>Когда-то здесь высились две сторожевые башни, соединенные мостом, а под ними
 были тяжелые дубовые ворота. Сейчас же остались одни развалины. Створки
 обветшалых ворот шатаются от ветра, однако сквозь них видна какая-то охрана.
-К востоку простираются равнины и дорога, ведущая в Талос.
+К востоку простирается дорога, ведущая на Равнины Севера.
 </description>
       <exits>
         <node name="east">
-          <target>5364</target>
+          <target>5401</target>
         </node>
         <node name="west">
           <flags>isdoor</flags>
@@ -4701,7 +1012,7 @@ W - + - E            Temple altar
       <manaRate>200</manaRate>
       <name>Нечистое капище</name>
       <resets>
-        <mob limit="1" maxHere="1" vnum="5342"/>
+        <mob limit="1" maxHere="1" vnum="5392"/>
         <drop vnum="3010"/>
         <drop vnum="3398"/>
       </resets>
@@ -4732,7 +1043,7 @@ W - + - E            Temple altar
       <flags>law</flags>
       <name>Булочная</name>
       <resets>
-        <mob limit="1" maxHere="1" vnum="5336"/>
+        <mob limit="1" maxHere="1" vnum="5386"/>
         <give vnum="3009"/>
         <give vnum="3011"/>
         <give vnum="3012"/>
@@ -4769,7 +1080,7 @@ W - + - E            Temple altar
       <flags>indoors</flags>
       <name>Хозтовары</name>
       <resets>
-        <mob limit="1" maxHere="1" vnum="5337"/>
+        <mob limit="1" maxHere="1" vnum="5387"/>
         <give vnum="3030"/>
         <give vnum="3031"/>
         <give vnum="3138"/>
@@ -4808,7 +1119,7 @@ W - + - E            Temple altar
       <flags>indoors</flags>
       <name>Магазин оружия</name>
       <resets>
-        <mob limit="1" maxHere="1" vnum="5338"/>
+        <mob limit="1" maxHere="1" vnum="5388"/>
         <give vnum="3020"/>
         <give vnum="3021"/>
         <give vnum="3022"/>
@@ -4819,7 +1130,7 @@ W - + - E            Temple altar
         <give vnum="3027"/>
         <give vnum="3028"/>
         <give vnum="3029"/>
-        <equip to="wield" vnum="3022"/>
+        <equip to="sheath" vnum="3022"/>
       </resets>
       <sector>inside</sector>
     </node>
@@ -4850,7 +1161,7 @@ W - + - E            Temple altar
       <flags>indoors</flags>
       <name>Магазин доспехов</name>
       <resets>
-        <mob limit="1" maxHere="1" vnum="5339"/>
+        <mob limit="1" maxHere="1" vnum="5389"/>
         <give vnum="3072"/>
         <give vnum="3073"/>
         <give vnum="3074"/>
@@ -4887,14 +1198,13 @@ W - + - E            Temple altar
         <node name="smell">Резкий запах специй и неизвестных веществ ударяет в нос.</node>
       </properties>
       <resets>
-        <mob limit="1" maxHere="1" vnum="5335"/>
+        <mob limit="1" maxHere="1" vnum="5385"/>
         <give vnum="3040"/>
         <give vnum="3041"/>
         <give vnum="3039"/>
         <give vnum="3042"/>
         <give vnum="3043"/>
         <give vnum="3044"/>
-        <give vnum="3399"/>
       </resets>
       <sector>inside</sector>
     </node>
@@ -4931,7 +1241,7 @@ W - + - E            Temple altar
       <flags>indoors</flags>
       <name>Ювелирная лавка</name>
       <resets>
-        <mob limit="1" maxHere="1" vnum="5340"/>
+        <mob limit="1" maxHere="1" vnum="5390"/>
         <give vnum="3378"/>
         <give vnum="3377"/>
         <give vnum="3376"/>
@@ -4970,12 +1280,9 @@ W - + - E            Temple altar
 Из глубины его в комнату проникают миазмы.
 </description>
       <exits>
-        <node name="down">
-          <target>7017</target>
-        </node>
         <node name="north">
           <key>0</key>
-          <target>5349</target>
+          <target>5413</target>
         </node>
         <node name="west">
           <target>5393</target>
@@ -4985,7 +1292,7 @@ W - + - E            Temple altar
       <guilds>necromancer</guilds>
       <name>Лаборатория некромантов</name>
       <resets>
-        <mob limit="1" maxHere="1" vnum="5343"/>
+        <mob limit="1" maxHere="1" vnum="5393"/>
       </resets>
       <sector>inside</sector>
     </node>
@@ -5026,7 +1333,7 @@ W - + - E            Temple altar
       <guilds>vampire</guilds>
       <name>Лаборатория Вампиров</name>
       <resets>
-        <mob limit="1" maxHere="1" vnum="5344"/>
+        <mob limit="1" maxHere="1" vnum="5394"/>
       </resets>
       <sector>inside</sector>
     </node>
@@ -5044,7 +1351,7 @@ W - + - E            Temple altar
       <manaRate>150</manaRate>
       <name>Библиотека</name>
       <resets>
-        <mob limit="1" maxHere="1" vnum="5345"/>
+        <mob limit="1" maxHere="1" vnum="5395"/>
         <drop vnum="28620"/>
       </resets>
       <sector>inside</sector>
@@ -5113,7 +1420,7 @@ W - + - E            Temple altar
         </node>
         <node name="south">
           <key>0</key>
-          <target>5349</target>
+          <target>5413</target>
         </node>
         <node name="west">
           <key>0</key>
@@ -5125,8 +1432,28 @@ W - + - E            Temple altar
       <sector>inside</sector>
     </node>
     <node name="5401">
+      <description>Ты стоишь на окраине Старого Мидгаарда. Этот городок был основан первыми людьми,
+пришедшими на просторы Тэры. После пары десятилетий мира город подвергся атаке
+нежити, спустившейся с темных гор на западе, где угнездилось Зло. Многие жители
+пали в неравной борьбе, и город захватили чудовища. Немногочисленные выжившие
+сбежали дальше на юго-восток, где и основали современный Мидгаард.
+Дорога ведет обратно на восток к равнинам, а на западе видны ворота города.
+</description>
+      <exits>
+        <node name="east">
+          <key>0</key>
+          <target>316</target>
+        </node>
+        <node name="north">
+          <target>34100</target>
+        </node>
+        <node name="west">
+          <target>5385</target>
+        </node>
+      </exits>
       <flags>no_mob</flags>
-      <sector>inside</sector>
+      <name>Вход в город</name>
+      <sector>city</sector>
     </node>
     <node name="5402">
       <description>Огромная  ангарная  комната, уходящая  в бесконечность,  со штабелями
@@ -5155,7 +1482,7 @@ W - + - E            Temple altar
       <exits>
         <node name="east">
           <key>0</key>
-          <target>5349</target>
+          <target>5413</target>
         </node>
         <node name="north">
           <key>0</key>
@@ -5178,7 +1505,7 @@ W - + - E            Temple altar
         </node>
         <node name="west">
           <key>0</key>
-          <target>5349</target>
+          <target>5413</target>
         </node>
       </exits>
       <flags>no_vanish indoors nosummon</flags>
@@ -5233,9 +1560,9 @@ W - + - E            Temple altar
     </node>
     <node name="5407">
       <description>В небольшом помещении на втором этаже гостиницы расположен филиал банка
-&quot;Nosferatu Financial&quot;. Банк без предрассудков обслужит любого персонажа,
-сдирая одинаковую комиссию независимо от расы и профессии. Небольшая вывеска
-приглашает тебя ознакомиться с &quot;справка банки&quot; и приступать к операциям.
+&quot;Носферату и сыновья&quot;. Банк без предрассудков обслужит любого персонажа,
+сдирая одинаковую комиссию независимо от расы и класса.
+Небольшая вывеска (sign) приглашает тебя ознакомиться доступными операциями.
 </description>
       <exits>
         <node name="down">
@@ -5243,10 +1570,16 @@ W - + - E            Temple altar
           <target>5406</target>
         </node>
       </exits>
+      <extraDescr>
+        <node keyword="sign вывеска">- дай вампиру-клерку им серебро, чтобы {hhобменять{x его на золото
+- напиши {hc{yнасчет{x или {hc{yсосчета{x для операций с {hh1086банковским счетом{x
+</node>
+      </extraDescr>
       <flags>indoors law</flags>
-      <name>Банк {r&quot;{WNosferatu Financial{r&quot;{x</name>
+      <name>Банк {r&quot;{WНосферату и сыновья{r&quot;{x</name>
       <resets>
-        <mob limit="1" maxHere="1" vnum="5346"/>
+        <mob limit="1" maxHere="1" vnum="5396"/>
+        <drop vnum="100"/>
       </resets>
       <sector>inside</sector>
     </node>
@@ -5273,8 +1606,8 @@ W - + - E            Temple altar
       <flags>indoors law</flags>
       <name>Бар &quot;Поющий Боров&quot;</name>
       <resets>
-        <mob limit="1" maxHere="1" vnum="5347"/>
-        <give vnum="5335"/>
+        <mob limit="1" maxHere="1" vnum="5397"/>
+        <give vnum="5385"/>
         <give vnum="3000"/>
       </resets>
       <sector>inside</sector>
@@ -5369,9 +1702,37 @@ W - + - E            Temple altar
       <guilds>anti-paladin</guilds>
       <name>Внутренний двор гильдии анти-паладинов</name>
       <resets>
-        <mob limit="1" maxHere="1" vnum="5348"/>
+        <mob limit="1" maxHere="1" vnum="5398"/>
       </resets>
       <sector>city</sector>
+    </node>
+    <node name="5413">
+      <description>Огромная  ангарная  комната, уходящая  в бесконечность,  со штабелями
+ячеек-хранилищ. В  каждой можно  увидеть грустного  голема, ожидающего
+своего хозяина.
+</description>
+      <exits>
+        <node name="east">
+          <key>0</key>
+          <target>5404</target>
+        </node>
+        <node name="north">
+          <key>0</key>
+          <target>5400</target>
+        </node>
+        <node name="south">
+          <key>0</key>
+          <target>5394</target>
+        </node>
+        <node name="west">
+          <key>0</key>
+          <target>5403</target>
+        </node>
+      </exits>
+      <flags>no_vanish indoors nosummon</flags>
+      <guilds>necromancer</guilds>
+      <name>Фабрика Големов </name>
+      <sector>inside</sector>
     </node>
   </rooms>
 </area>

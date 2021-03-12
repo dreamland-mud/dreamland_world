@@ -3,14 +3,27 @@
   <areadata>
     <authors>Yaegar</authors>
     <credits>The Village of Anon</credits>
-    <levelHigh>65</levelHigh>
-    <levelLow>1</levelLow>
-    <name>The Village of Anon</name>
+    <flags>easy</flags>
+    <levelHigh>100</levelHigh>
+    <levelLow>50</levelLow>
+    <name>Деревня Анон</name>
+    <resetMessage>Пахнет сеном, навозом и другими буколическими ароматами деревни.</resetMessage>
     <security>9</security>
-    <speedwalk>6e4s4w3s4wnws8w</speedwalk>
+    <speedwalk>6e6sws17w</speedwalk>
+    <translator>Fiorine</translator>
     <vnumHigh>24200</vnumHigh>
     <vnumLow>24100</vnumLow>
   </areadata>
+  <helps>
+    <node id="1871" keyword="'THE VILLAGE OF ANON' 'ANON VILLAGE' 'ДЕРЕВНЯ АНОН' VILLAGE" level="-1">Если пройти через западные ворота города {hh1423Анон{x, можно оказаться в его поистине
+&quot;историческом&quot; центре -- маленькой деревушке, из которой вырос весь этот
+огромный мегаполис.
+
+Жители деревни отрицают достижения цивилизации и живут первобытно-общинным
+строем. В своем единении с {hh81природой{x они достигли значительных успехов в
+приручении {hh15домашних любимцев{x.
+</node>
+  </helps>
   <mobiles>
     <node name="24100">
       <ac bash="-66" exotic="-33" pierce="-66" slash="-66"/>
@@ -20,21 +33,21 @@
       <dam_type>divine</dam_type>
       <damage>17d10+64</damage>
       <default_pos>stand</default_pos>
-      <description>The shaman is a well respected and devoted healer and mystic. He spends his
-time curing the ailments of the inhabitants of this village, or those of any
-strangers that may pass by.
+      <description>Шамана уважают по всей деревне -- ведь без него селяне давно загнулись бы от
+чумы, дизентерии и других последствий деревенской санитарии. Он с радостью
+исцелит и тебя.
 </description>
       <hit>50d10+20500</hit>
       <level>93</level>
-      <long_descr>The village shaman tends to the weak and infirm here.
+      <long_descr>Деревенский шаман (shaman) исцеляет больных и немощных.
 </long_descr>
       <mana>5d5+5000</mana>
       <material>0</material>
       <off add="dodge fast parry trip"/>
-      <player_name>shaman</player_name>
+      <player_name>деревенский шаман shaman</player_name>
       <race>human</race>
       <sex>male</sex>
-      <short_descr>the village shaman</short_descr>
+      <short_descr>деревенск|ий|ого|ому|ого|им|ом шаман||а|у|а|ом|е</short_descr>
       <size>medium</size>
       <spec>spec_cast_adept</spec>
       <start_pos>stand</start_pos>
@@ -45,26 +58,33 @@ strangers that may pass by.
       <act add="npc sentinel stay_area"/>
       <aff add="sanctuary protect_evil"/>
       <alignment>1000</alignment>
+      <behavior type="ShopTrader">
+        <buys>weapon gem recipe</buys>
+        <closeHour>23</closeHour>
+        <openHour>0</openHour>
+        <profitBuy>120</profitBuy>
+        <profitSell>40</profitSell>
+        <repairs>light scroll wand staff weapon lockpick keyring treasure armor potion clothing furniture trash container drink food money boat npc_corpse pc_corpse fountain pill map portal warp_stone gem jewelry spellbook tattoo textbook recipe parchment</repairs>
+      </behavior>
       <dam_type>pound</dam_type>
       <damage>17d10+64</damage>
       <default_pos>stand</default_pos>
-      <description>While the knapper&apos;s primary job is to craft tools for the village, such is
-his skill that he may also be able to repair your equipment. Contact with
-merchants from more advanced civilisations to the south have made him
-remarkably conversant with the properties of metals such as copper and silver 
-and alloys such as bronze.
+      <description>Издавна кременщик высекал из кремня грубые инструменты и наконечники оружия для
+жителей деревни. Он привык работать по камню, но торговцы и туристы из более
+цивилизованных частей Тэры обучили его работе с металлами -- так что он смог бы
+починить твои доспехи и оружие. Напиши {y{lrпочинить{lerepair{x, чтобы начать.
 </description>
       <hit>50d10+20500</hit>
       <level>73</level>
-      <long_descr>The village flint-knapper is here repairing crude tools.
+      <long_descr>Кременщик (flint-knapper) высекает из кремня наконечник стрелы.
 </long_descr>
       <mana>5d5+5000</mana>
       <material>0</material>
       <off add="dodge fast kick parry trip"/>
-      <player_name>flint knapper flint-knapper</player_name>
+      <player_name>flint knapper flint-knapper кременщик</player_name>
       <race>human</race>
       <sex>male</sex>
-      <short_descr>the village flint-knapper</short_descr>
+      <short_descr>кременщик||а|у|а|ом|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
       <wealth>1000</wealth>
@@ -84,22 +104,20 @@ and alloys such as bronze.
       <dam_type>pound</dam_type>
       <damage>17d10+64</damage>
       <default_pos>stand</default_pos>
-      <description>This fellow is possessed of much darker skin and eyes than his current
-neighbors, hailing as he does from the island kingdoms far to the south. He
-has brought with him a variety of bronze arms and armor, as well as the 
-occasional crude iron oddity.
+      <description>Судя по выговору и цвету кожи, он родом откуда-то с Пиратских Островов или даже
+Темного Континента. Продает он бронзовую броню и оружие.
 </description>
       <hit>50d10+20500</hit>
       <level>80</level>
-      <long_descr>A swarthy southern trader is here hawking his wares.
+      <long_descr>Смуглый торговец с востока (trader) бдительно следит за товаром.
 </long_descr>
       <mana>5d5+5000</mana>
       <material>0</material>
       <off add="dodge fast kick parry trip"/>
-      <player_name>trader</player_name>
+      <player_name>trader eastern торговец с востока</player_name>
       <race>human</race>
       <sex>male</sex>
-      <short_descr>a swarthy southern trader</short_descr>
+      <short_descr>торгов|ец|ца|цу|ца|цем|це с востока</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
       <wealth>1000</wealth>
@@ -119,19 +137,20 @@ occasional crude iron oddity.
       <dam_type>slash</dam_type>
       <damage>17d10+64</damage>
       <default_pos>stand</default_pos>
-      <description>Type list to see what he has to offer.
+      <description>За небольшие деньги ты сможешь нанять крепкого малого, который поможет тебе в
+бою. Напиши {y{lrсписок{lelist{x, чтобы начать.
 </description>
       <hit>50d10+20500</hit>
       <level>93</level>
-      <long_descr>A tough mercenary offers to hire out his men to you.
+      <long_descr>Мускулистый наемник (mercenary) предлагает тебе нанять кого-то из своего отряда.
 </long_descr>
       <mana>5d5+5000</mana>
       <material>0</material>
       <off add="dodge fast kick parry trip"/>
-      <player_name>merc</player_name>
+      <player_name>mercenary наемник</player_name>
       <race>human</race>
       <sex>male</sex>
-      <short_descr>a mercenary</short_descr>
+      <short_descr>наемник||а|у|а|ом|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
       <wealth>1000</wealth>
@@ -151,50 +170,49 @@ occasional crude iron oddity.
       <dam_type>pound</dam_type>
       <damage>17d10+64</damage>
       <default_pos>stand</default_pos>
-      <description>This young woman, one of the chief&apos;s many daughters, has travelled far and 
-wide, and gathered a variety of exotic herbs and roots that she blends into 
-marvellous potions. They taste even worse than they smell...
+      <description>Эта молодая девушка -- одна из многочисленных дочерей вождя племени.
+Ей посчастливилось посетить самые дальние уголки Тэры, где она узнала свойства
+целебных трав и кореньев. Впрочем, на самообразовании далеко не уедешь, поэтому
+к плодам ее &quot;мастерства&quot; стоит отнестись с осторожностью.
 </description>
       <hit>50d10+20500</hit>
       <level>83</level>
-      <long_descr>The village witchdoctor is here selling a variety of potions and brews.
+      <long_descr>Сельская знахарка (witchdoctor) продает зелья и припарки.
 </long_descr>
       <mana>5d5+5000</mana>
       <material>0</material>
       <off add="dodge fast kick parry trip"/>
-      <player_name>witchdoctor</player_name>
+      <player_name>witchdoctor знахарка</player_name>
       <race>human</race>
       <sex>female</sex>
-      <short_descr>the village witchdoctor</short_descr>
+      <short_descr>знахарк|а|и|е|у|ой|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
       <wealth>1000</wealth>
     </node>
     <node name="24105">
       <ac bash="-66" exotic="-33" pierce="-66" slash="-66"/>
-      <act add="npc sentinel stay_area"/>
+      <act add="npc sentinel stay_area sage"/>
       <aff add="sanctuary protect_evil"/>
       <alignment>1000</alignment>
       <dam_type>pound</dam_type>
       <damage>17d10+64</damage>
       <default_pos>stand</default_pos>
-      <description>Age may have taken what beauty this crone once possessed, but it hasn&apos;t 
-robbed her of her wits. She is more knowledgable in the properties of items
-than anyone else in the known world (which, admittedly, doesn&apos;t cover very
-much. In fact, to these villagers it is about as far as you can see on a 
-clear day).
+      <description>Время было безжалостно к красоте деревенской ведуньи, но зато пошло на пользу ее
+мудрости. Она сведуща в свойствах всех магических предметов и артефактов Тэры
+и сможет помочь тебе опознать почти любой предмет. Напиши {y{lrопознать{leidentify{x, чтоб начать.
 </description>
       <hit>50d10+20500</hit>
       <level>83</level>
-      <long_descr>The village wise woman cracks a toothless grin as you enter.
+      <long_descr>Деревенская ведунья (woman) загадочно скалится беззубыми деснами.
 </long_descr>
       <mana>5d5+5000</mana>
       <material>0</material>
       <off add="dodge fast kick parry trip"/>
-      <player_name>wise woman</player_name>
+      <player_name>wise woman ведунья</player_name>
       <race>human</race>
       <sex>female</sex>
-      <short_descr>the village wise woman</short_descr>
+      <short_descr>ведунь|я|и|е|ю|ей|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
       <wealth>1000</wealth>
@@ -214,21 +232,21 @@ clear day).
       <dam_type>pound</dam_type>
       <damage>17d10+64</damage>
       <default_pos>stand</default_pos>
-      <description>When he has the time, this impossibly huge man will gladly sell you a pet
-that he has domesticated, though from the look of it you may have doubts
-in his ability to exact obedience. That bear sure doesn&apos;t look tame...
+      <description>Этот огромный волосатый дядька с радостью продаст тебе одно из прирученных им
+диких животных. Впрочем, судя по их грозному рычанию, не такие уж они и ручные.
+Напиши {y{lrсписок{lelist{x, чтобы начать.
 </description>
       <hit>50d10+20500</hit>
       <level>80</level>
-      <long_descr>The village beastmaster is here wrestling with a large bear.
+      <long_descr>Деревенский зверолов (beastmaster) занимается армрестлингом с ручным медведем.
 </long_descr>
       <mana>5d5+5000</mana>
       <material>0</material>
       <off add="dodge fast kick parry trip"/>
-      <player_name>beastmaster</player_name>
+      <player_name>beastmaster зверолов</player_name>
       <race>human</race>
       <sex>male</sex>
-      <short_descr>the village beastmaster</short_descr>
+      <short_descr>зверолов||а|у|а|ом|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
       <wealth>1000</wealth>
@@ -248,20 +266,21 @@ in his ability to exact obedience. That bear sure doesn&apos;t look tame...
       <dam_type>pound</dam_type>
       <damage>17d10+64</damage>
       <default_pos>stand</default_pos>
-      <description>This stout hunter spends six months of the year trapping for fur, and the rest 
-of the year fashioning and selling basic equipment.
+      <description>Этот бородатый и мускулистый траппер проводит шесть месяцев в году, охотясь за
+пушным зверьем. Он охотно продаст тебе излишки своих запасов.
+Напиши {y{lrсписок{lelist{x, чтобы начать.
 </description>
       <hit>50d10+20500</hit>
       <level>83</level>
-      <long_descr>A grizzled northerner offers to sell you some supplies.
+      <long_descr>Торговец с севера (northerner) предлагает купить припасы.
 </long_descr>
       <mana>5d5+5000</mana>
       <material>0</material>
       <off add="dodge kick parry trip"/>
-      <player_name>trader northerner</player_name>
+      <player_name>trader northerner торговец северянин с севера</player_name>
       <race>human</race>
       <sex>male</sex>
-      <short_descr>a northern trader</short_descr>
+      <short_descr>северянин||а|у|а|ом|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
       <wealth>1000</wealth>
@@ -281,20 +300,21 @@ of the year fashioning and selling basic equipment.
       <dam_type>pound</dam_type>
       <damage>17d10+64</damage>
       <default_pos>stand</default_pos>
-      <description>The crop was good this year, and the villagers have sufficient to sell to
-travellers and other villagers.
+      <description>В этом году все уродилось на славу -- да и охотники не подкачали -- так что
+жителям деревни есть чем поделиться с гостями и туристами.
+Напиши {y{lrсписок{lelist{x, чтобы начать.
 </description>
       <hit>50d10+20500</hit>
       <level>80</level>
-      <long_descr>A daughter of the tribe is here selling food.
+      <long_descr>Дочь (daughter) племени продает здесь излишки урожая.
 </long_descr>
       <mana>5d5+5000</mana>
       <material>0</material>
       <off add="dodge kick parry trip"/>
-      <player_name>daughter woman girl</player_name>
+      <player_name>daughter woman girl дочь племени</player_name>
       <race>human</race>
       <sex>female</sex>
-      <short_descr>a daughter of the tribe</short_descr>
+      <short_descr>доч|ь|ери|ери|ь|ерью|ери племени</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
       <wealth>1000</wealth>
@@ -314,148 +334,168 @@ travellers and other villagers.
       <dam_type>pound</dam_type>
       <damage>17d10+64</damage>
       <default_pos>stand</default_pos>
-      <description>The art of brewing is held sacred by the northern tribes, and the brewers
-are considered holy men. In accordance with their beliefs, the brewers hand
-out samples of their sacred draught to all who pass by, and while there is
-no real cost, a small &quot;donation&quot; to the sacred coffer is expected. And when 
-the brewer is the size of a grizzly bear, few refuse.
+      <description>Назвать его &quot;пивоваром&quot; у тебя язык не повернется, но если тебя не смущает запах
+и вкус свежесваренной браги, то ты приш{Smел{Sfла{Sx по адресу. Согласно вере
+деревенских жителей, брага священна, а бражники, соответственно -- святые люди.
+Не обидь святого, отведай священной жидкости!
+Напиши {y{lrсписок{lelist{x, чтобы начать.
 </description>
       <hit>50d10+20500</hit>
       <level>85</level>
-      <long_descr>The village brewer is handing out samples of his sacred drink.
+      <long_descr>Сельский бражник (brewer) предлагает тебе дерябнуть своего варева.
 </long_descr>
       <mana>5d5+5000</mana>
       <material>0</material>
       <off add="dodge kick parry trip"/>
-      <player_name>brewer</player_name>
+      <player_name>brewer бражник</player_name>
       <race>human</race>
       <sex>male</sex>
-      <short_descr>the village brewer</short_descr>
+      <short_descr>бражник||а|у|а|ом|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
       <wealth>1000</wealth>
     </node>
     <node name="24110">
       <ac bash="6" exotic="9" pierce="6" slash="6"/>
+      <act add="warrior"/>
+      <aff add="protect_evil protect_good sneak haste regeneration"/>
       <alignment>400</alignment>
-      <behavior type="Pet">
+      <behavior type="LevelAdaptivePet">
       </behavior>
-      <dam_type>charge</dam_type>
+      <dam_type>spines</dam_type>
       <damage>1d5+1</damage>
       <default_pos>stand</default_pos>
-      <description>The hedgehog looks like a cute, little, fierce fighter.
+      <description>Этот питомец -- очень сильный и верный друг. Он послужит на славу.
 </description>
       <hit>2d7+46</hit>
+      <imm add="pierce"/>
       <level>4</level>
-      <long_descr>A hedgehog, well, does nothing at you.
+      <long_descr>Очень шустрый ежик (hedgehog) роет землю в явном нетерпении.
 </long_descr>
       <mana>5d5+100</mana>
       <material>0</material>
-      <off add="dodge"/>
-      <player_name>hedgehog</player_name>
+      <off add="berserk disarm dodge fast kick kick_dirt rescue trip crush"/>
+      <parts add="arms feet fingers ear eye tail claws fangs"/>
+      <player_name>hedgehog ежик</player_name>
       <race>hedgehog</race>
-      <sex>either</sex>
-      <short_descr>the hedgehog</short_descr>
+      <sex>male</sex>
+      <short_descr>ежик||а|у|а|ом|е {1{BСоник|{2|а{2|у{2|а{2|ом{2|е{2</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
       <wealth>1000</wealth>
     </node>
     <node name="24111">
       <ac bash="1" exotic="7" pierce="1" slash="1"/>
+      <act add="warrior"/>
+      <aff add="swim"/>
       <alignment>400</alignment>
       <behavior type="Pet">
       </behavior>
       <dam_type>claw</dam_type>
       <damage>2d4+2</damage>
       <default_pos>stand</default_pos>
-      <description>The otter looks like a fierce fighter.
+      <description>Этот питомец -- очень сильный и верный друг. Он послужит на славу.
 </description>
+      <form add="edible animal mammal" del="nonadoptable"/>
       <hit>2d7+121</hit>
+      <imm add="drowning"/>
       <level>10</level>
-      <long_descr>A loyal, sleek growls at you.
+      <long_descr>Изящная выдра (otter) потягивается у твоих ног.
 </long_descr>
       <mana>5d5+100</mana>
       <material>0</material>
-      <off add="dodge"/>
-      <player_name>otter</player_name>
+      <off add="berserk disarm dodge fast kick kick_dirt rescue trip crush"/>
+      <parts add="head arms legs heart brains guts feet fingers ear eye tail claws fangs"/>
+      <player_name>otter выдра</player_name>
       <race>unique</race>
-      <sex>either</sex>
-      <short_descr>the otter</short_descr>
+      <sex>female</sex>
+      <short_descr>выдр|а|ы|е|у|ой|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
-      <wealth>1000</wealth>
     </node>
     <node name="24112">
       <ac bash="-2" exotic="6" pierce="-2" slash="-2"/>
+      <act add="warrior rideable"/>
+      <aff add="protect_evil protect_good"/>
       <alignment>400</alignment>
-      <behavior type="Pet">
+      <behavior type="LevelAdaptivePet">
       </behavior>
-      <dam_type>claw</dam_type>
+      <dam_type>peckb</dam_type>
       <damage>2d6+3</damage>
       <default_pos>stand</default_pos>
-      <description>The hawk looks like a fierce fighter.
+      <description>Этот питомец -- очень сильный и верный друг. Он послужит на славу.
 </description>
       <hit>3d9+208</hit>
+      <imm add="sound"/>
       <level>15</level>
-      <long_descr>A fierce but loyal hawk is here.
+      <long_descr>Верный ястреб (hawk) парит у тебя над головой.
 </long_descr>
       <mana>5d5+100</mana>
       <material>0</material>
-      <player_name>hawk</player_name>
+      <off add="berserk disarm fast rescue crush"/>
+      <player_name>hawk ястреб</player_name>
       <race>bird</race>
-      <sex>either</sex>
-      <short_descr>the hawk</short_descr>
+      <res add="lightning"/>
+      <sex>male</sex>
+      <short_descr>ястреб||а|у|а|ом|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
       <wealth>1000</wealth>
     </node>
     <node name="24113">
       <ac bash="-4" exotic="5" pierce="-4" slash="-4"/>
+      <act add="warrior"/>
       <behavior type="Pet">
       </behavior>
       <dam_type>claw</dam_type>
       <damage>2d8+5</damage>
       <default_pos>stand</default_pos>
-      <description>The grizzly bear looks like a strong, fierce fighter.
+      <description>Этот питомец -- очень сильный и верный друг. Он послужит на славу.
 </description>
       <hit>3d9+333</hit>
       <level>20</level>
-      <long_descr>A large, loyal grizzly bear is here.
+      <long_descr>Медведь гризли (bear) угрожающе возвышается над тобой.
 </long_descr>
       <mana>5d5+1000</mana>
       <material>0</material>
       <off add="bash dodge"/>
-      <player_name>grizzly bear</player_name>
+      <player_name>grizzly bear медведь гризли</player_name>
       <race>bear</race>
-      <sex>either</sex>
-      <short_descr>the grizzly bear</short_descr>
-      <size>medium</size>
+      <sex>male</sex>
+      <short_descr>гризли</short_descr>
+      <size>large</size>
       <start_pos>stand</start_pos>
       <wealth>1000</wealth>
     </node>
     <node name="24114">
       <ac bash="-9" exotic="3" pierce="-9" slash="-9"/>
-      <behavior type="Pet">
+      <act add="cleric"/>
+      <aff add="sanctuary protect_evil protect_good haste"/>
+      <behavior type="LevelAdaptivePet">
       </behavior>
       <dam_type>charge</dam_type>
       <damage>4d6+8</damage>
       <default_pos>stand</default_pos>
-      <description>The aurochs is a BAD ASS.
+      <description>Этот питомец -- очень сильный и верный друг. Он послужит на славу.
 </description>
+      <detection add="invis hidden"/>
+      <form add="magical"/>
       <hit>6d12+853</hit>
+      <imm add="holy"/>
       <level>30</level>
-      <long_descr>A HUGE Aurochs stomps its feet and lowers its head to charge.
+      <long_descr>Огромный белый тур (aurochs) окружен странной магической аурой.
 </long_descr>
       <mana>5d5+1000</mana>
       <material>0</material>
-      <off add="dodge"/>
-      <player_name>aurochs</player_name>
-      <race>unique</race>
-      <sex>either</sex>
-      <short_descr>the aurochs</short_descr>
-      <size>medium</size>
+      <off add="berserk dodge fast crush"/>
+      <parts add="arms legs guts fingers horns"/>
+      <player_name>aurochs белый тур</player_name>
+      <race>hoofed</race>
+      <res add="light"/>
+      <sex>male</sex>
+      <short_descr>{1{Wбел|ый|ого|ому|ого|ым|ом {2тур||а|у|а|ом|е</short_descr>
+      <size>large</size>
       <start_pos>stand</start_pos>
-      <wealth>1000</wealth>
     </node>
     <node name="24115">
       <ac bash="-76" exotic="-33" pierce="-76" slash="-76"/>
@@ -464,20 +504,20 @@ the brewer is the size of a grizzly bear, few refuse.
       <dam_type>crush</dam_type>
       <damage>18d10+64</damage>
       <default_pos>stand</default_pos>
-      <description>The village champion once tore the head off a rabid Mastodon with his thumbs.
-Imagine what he could do to you...
+      <description>По слухам этот силач как-то оторвал башку снежному червю из ледяных пустошей
+Махн-Тора. Голыми руками. Представь, что он может сделать с тобой...
 </description>
-      <form add="nonadoptable undead mist centaur"/>
+      <detection add="hidden"/>
       <hit>50d10+20500</hit>
       <level>93</level>
-      <long_descr>The village champion flexes his mighty thews and grins at you.
+      <long_descr>Хранитель (champion) деревни разминает могучие плечи и улыбается тебе.
 </long_descr>
       <mana>5d5+5000</mana>
       <material>0</material>
-      <player_name>champion</player_name>
+      <player_name>champion хранитель чемпион</player_name>
       <race>human</race>
       <sex>male</sex>
-      <short_descr>the village champion</short_descr>
+      <short_descr>хранител|ь|я|ю|я|ем|е деревни</short_descr>
       <size>medium</size>
       <spec>spec_executioner</spec>
       <start_pos>stand</start_pos>
@@ -497,21 +537,22 @@ Imagine what he could do to you...
       <dam_type>pound</dam_type>
       <damage>8d6+28</damage>
       <default_pos>stand</default_pos>
-      <description>This fellow may not speak your language well, but the language he does know
-very well makes conversation suddenly become much simpler- MONEY.
+      <description>Судя по всему, это один из кочевников Песков, решивший переквалифицироваться на
+странствующего торговца. Он очень плохо говорит на всеобщем языке, но отлично
+понимает универсальный язык денег. Слава Фили!
 </description>
       <detection add="invis hidden"/>
       <hit>50d10+6750</hit>
       <level>60</level>
-      <long_descr>A hook-nosed merchant from the desert kingdoms rubs his hands together.
+      <long_descr>Носатый купец (merchant) из Песков Скорби жадно потирает руки.
 </long_descr>
       <mana>5d5+5000</mana>
       <material>0</material>
       <off add="dodge fast kick parry trip"/>
-      <player_name>merchant</player_name>
+      <player_name>merchant носатый купец</player_name>
       <race>human</race>
       <sex>male</sex>
-      <short_descr>a hook-nosed merchant</short_descr>
+      <short_descr>носат|ый|ого|ому|ого|ым|ом куп|ец|ца|цу|ца|цом|це</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
       <wealth>1000</wealth>
@@ -524,25 +565,24 @@ very well makes conversation suddenly become much simpler- MONEY.
       <dam_type>pound</dam_type>
       <damage>8d6+28</damage>
       <default_pos>stand</default_pos>
-      <description>This strapping giant of a woman has flaming red hair and biceps bigger than
-your thighs. She has ruled this village wisely for many years, through lean 
-times and times of plenty, and her people have the utmost faith in her
-ability. Time and the birth of many children have not softened her 
-well-muscled frame - she is still a very attractive woman, and the men of the 
-village (and some women too) vie for her favours.
+      <description>Перед тобой гигантская женщина с огненно-рыжей копной волос и бицепсами толще,
+чем твои ляжки. Под ее мудрым руководством племя пережило голод и нужду, и ее
+авторитет в деревне почти непререкаем -- как и ее красота. Все мужчины деревни
+добиваются ее благосклонности и, судя по количеству рыжих детей, играющих в
+грязи, многие таки добиваются успеха.
 </description>
       <detection add="evil invis"/>
       <hit>50d10+6750</hit>
       <level>60</level>
-      <long_descr>The village chieftain welcomes you to her village.
+      <long_descr>Вождь (chieftain) племени гостеприимно приветствует тебя в своей деревне.
 </long_descr>
       <mana>5d5+5000</mana>
       <material>0</material>
       <off add="dodge kick parry trip"/>
-      <player_name>chieftain</player_name>
+      <player_name>chieftain вождь племени деревни</player_name>
       <race>human</race>
       <sex>female</sex>
-      <short_descr>the village chieftain</short_descr>
+      <short_descr>вожд|ь|я|ю|я|ем|е племени</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
       <wealth>1000</wealth>
@@ -553,20 +593,21 @@ village (and some women too) vie for her favours.
       <dam_type>punch</dam_type>
       <damage>1d5+1</damage>
       <default_pos>stand</default_pos>
-      <description>The villagers are a hardy lot, toughened by their environment and their
-rugged lifestyle, and you marvel at their good condition as they pass.
+      <description>Жители этой деревни выглядят очень крепкими и здоровыми, несмотря на ужасные
+санитарные условия. Вероятно, работа на свежем воздухе и регулярное употребление
+знаменитой местной браги поддерживает их в отличной форме.
 </description>
       <hit>2d7+46</hit>
       <level>4</level>
-      <long_descr>A fur-clad villager hurries by.
+      <long_descr>Селянин (villager) в одежде из шкур проходит мимо.
 </long_descr>
       <mana>5d5+100</mana>
       <material>0</material>
       <off add="dodge"/>
-      <player_name>villager</player_name>
+      <player_name>villager селянин</player_name>
       <race>human</race>
       <sex>male</sex>
-      <short_descr>a villager</short_descr>
+      <short_descr>селянин||а|у|а|ом|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
       <wealth>1000</wealth>
@@ -577,20 +618,21 @@ rugged lifestyle, and you marvel at their good condition as they pass.
       <dam_type>punch</dam_type>
       <damage>1d5+1</damage>
       <default_pos>stand</default_pos>
-      <description>The villagers are a hardy lot, toughened by their environment and their
-rugged lifestyle, and you marvel at their good condition as they pass.
+      <description>Жители этой деревни выглядят очень крепкими и здоровыми, несмотря на ужасные
+санитарные условия. Вероятно, работа на свежем воздухе и регулярное употребление
+знаменитой местной браги поддерживает их в отличной форме.
 </description>
       <hit>2d7+46</hit>
       <level>4</level>
-      <long_descr>A fur-clad villager hurries by.
+      <long_descr>Молодая селянка (villager) кутается в меха.
 </long_descr>
       <mana>5d5+100</mana>
       <material>0</material>
       <off add="dodge"/>
-      <player_name>villager</player_name>
+      <player_name>villager селянка</player_name>
       <race>human</race>
       <sex>female</sex>
-      <short_descr>a villager</short_descr>
+      <short_descr>селянк|а|и|е|у|ой|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
       <wealth>1000</wealth>
@@ -601,20 +643,20 @@ rugged lifestyle, and you marvel at their good condition as they pass.
       <dam_type>punch</dam_type>
       <damage>1d5+1</damage>
       <default_pos>stand</default_pos>
-      <description>The children of the village are a rough and tumble lot, used to working hard
-and playing harder.
+      <description>Дети в этой деревне не уступают взрослым в силе и здоровье -- хоть, впрочем, и
+отстают в объемах потребления браги.
 </description>
       <hit>2d7+46</hit>
       <level>3</level>
-      <long_descr>A child engages in rough horse play with other village children.
+      <long_descr>Дитя (child) жизнерадостно мутузит сверстников в грязи.
 </long_descr>
       <mana>5d5+100</mana>
       <material>0</material>
       <off add="dodge"/>
-      <player_name>child</player_name>
+      <player_name>child дитя</player_name>
       <race>human</race>
-      <sex>male</sex>
-      <short_descr>a child</short_descr>
+      <sex>either</sex>
+      <short_descr>дит|я|яти|яте|ятю|ятей|яте</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
       <wealth>1000</wealth>
@@ -625,41 +667,43 @@ and playing harder.
       <dam_type>punch</dam_type>
       <damage>1d5+1</damage>
       <default_pos>stand</default_pos>
-      <description>When he was young, this poor fellow had his skull staved in by a horse kick.
+      <description>В каждой уважающей себя деревне должен быть свой идиот -- и этот, несомненно,
+является достойным экземпляром. По слухам, он стал идиотом, попав по копыта
+одному из стражников Анона. Ох уж это тлетворное влияние цивилизации...
 </description>
       <hit>2d7+46</hit>
       <level>4</level>
-      <long_descr>The village idiot gawks at you.
+      <long_descr>Деревенский идиот (idiot) пялится на тебя, пуская слюни.
 </long_descr>
       <mana>5d5+100</mana>
       <material>0</material>
-      <player_name>idiot</player_name>
+      <player_name>idiot деревенский идиот</player_name>
       <race>human</race>
       <sex>male</sex>
-      <short_descr>the village idiot</short_descr>
+      <short_descr>деревенск|ий|ого|ому|ого|им|ом идиот||а|у|а|ом|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
       <wealth>1000</wealth>
     </node>
     <node name="24122">
       <ac bash="6" exotic="9" pierce="6" slash="6"/>
-      <act add="npc stay_area"/>
+      <act add="npc scavenger stay_area"/>
       <alignment>400</alignment>
       <dam_type>punch</dam_type>
       <damage>1d5+1</damage>
       <default_pos>stand</default_pos>
-      <description>This fellow has evidently made many generous donations to the village brewer.
+      <description>Очевидно, один из лучших клиентов деревенского бражника.
 </description>
       <hit>2d7+46</hit>
       <level>4</level>
-      <long_descr>A village drunk.
+      <long_descr>Деревенский алкаш (drunk) валяется в луже блевотины.
 </long_descr>
       <mana>5d5+100</mana>
       <material>0</material>
-      <player_name>drunk</player_name>
+      <player_name>drunk алкаш</player_name>
       <race>human</race>
       <sex>male</sex>
-      <short_descr>a village drunk</short_descr>
+      <short_descr>алкаш||а|у|а|ом|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
       <wealth>1000</wealth>
@@ -671,45 +715,47 @@ and playing harder.
       <dam_type>punch</dam_type>
       <damage>1d5+1</damage>
       <default_pos>stand</default_pos>
-      <description>The inhabitants of this village are a tough lot, but not ungenerous, and it
-is likely that this fellow will have a roof over his head soon, provided by
-one of the more prosperous villagers.
+      <description>Жители деревни уважают и поддерживают друг друга в самые сложные моменты, в горе
+и в радости, в здоровье и... в похмелье.
 </description>
       <hit>2d7+46</hit>
       <level>3</level>
-      <long_descr>A beggar sits in the dirt asking for donations.
+      <long_descr>Попрошайка (beggar) выпрашивает серебро на опохмел.
 </long_descr>
       <mana>5d5+100</mana>
       <material>0</material>
       <off add="dodge"/>
-      <player_name>beggar</player_name>
+      <player_name>beggar попрошайка</player_name>
       <race>human</race>
-      <sex>male</sex>
-      <short_descr>a beggar</short_descr>
+      <sex>either</sex>
+      <short_descr>попрошайк|а|и|е|у|ой|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
       <wealth>1000</wealth>
     </node>
     <node name="24124">
       <ac bash="1" exotic="7" pierce="1" slash="1"/>
-      <act add="npc stay_area wimpy"/>
-      <aff add="invisible sneak hide pass_door"/>
-      <dam_type>punch</dam_type>
+      <act add="npc stay_area wimpy thief"/>
+      <aff add="invisible sneak hide"/>
+      <dam_type>pierce</dam_type>
       <damage>2d4+2</damage>
       <default_pos>stand</default_pos>
-      <description>This unsavory fellow preys on the rich foreign merchants from the south.
+      <description>Жители деревни стоят друг за друга горой, и этому воришке никогда не пришло бы
+в голову воровать у своих. Так что кормиться ему приходится только на заезжих
+купцах и туристах.
 </description>
+      <detection add="hidden"/>
       <hit>2d7+121</hit>
       <level>10</level>
-      <long_descr>A thief adroitly cuts the strings of another fat merchant&apos;s purse.
+      <long_descr>Ворюга (thief) ловко срезает кошель у зазевавшегося торговца.
 </long_descr>
       <mana>5d5+100</mana>
       <material>0</material>
       <off add="dodge kick trip"/>
-      <player_name>thief</player_name>
+      <player_name>thief ворюга</player_name>
       <race>human</race>
       <sex>male</sex>
-      <short_descr>a thief</short_descr>
+      <short_descr>ворюг|а|и|е|у|ой|е</short_descr>
       <size>medium</size>
       <spec>spec_thief</spec>
       <start_pos>stand</start_pos>
@@ -717,24 +763,24 @@ one of the more prosperous villagers.
     </node>
     <node name="24125">
       <ac bash="6" exotic="9" pierce="6" slash="6"/>
-      <act add="npc stay_area wimpy"/>
+      <act add="npc scavenger stay_area wimpy"/>
       <dam_type>bite</dam_type>
       <damage>1d5+1</damage>
       <default_pos>stand</default_pos>
-      <description>This wolf has strayed in from the wild, driven by hunger. The villagers are
-quick to repel such unwelcome wildlife, and it is only a matter of time
-before the militia run it off.
+      <description>Этот шерстяной волчара не очень хорош, и его лапищи давно отощали. Обитатели
+деревни не очень-то жалуют непрошенную живность, и волк скоро окажется или на
+рогатине ополченцев, или в ошейнике зверолова.
 </description>
       <hit>2d7+46</hit>
       <level>5</level>
-      <long_descr>A scrawny wolf is here looking for food.
+      <long_descr>Тощий волчара (wolf) тоскливо озирается в поисках добычи.
 </long_descr>
       <mana>5d5+100</mana>
       <material>0</material>
-      <player_name>wolf</player_name>
+      <player_name>wolf тощий волчара</player_name>
       <race>wolf</race>
-      <sex>either</sex>
-      <short_descr>a scrawny wolf</short_descr>
+      <sex>male</sex>
+      <short_descr>тощ|ий|его|ему|его|им|ем волчар|а|ы|е|у|ой|е</short_descr>
       <size>medium</size>
       <spec>spec_fido</spec>
       <start_pos>stand</start_pos>
@@ -743,24 +789,23 @@ before the militia run it off.
     <node name="24126">
       <ac bash="6" exotic="9" pierce="6" slash="6"/>
       <act add="npc stay_area wimpy"/>
-      <dam_type>charge</dam_type>
+      <aff add="plague"/>
+      <dam_type>disease</dam_type>
       <damage>1d5+1</damage>
       <default_pos>stand</default_pos>
-      <description>These mangy black rodents came with the merchants from the south, hidden
-amongst their goods, and have quickly become a nuisance, being scavengers
-and carriers of disease.
+      <description>Крысы пришли из соседнего города Анон, и теперь разносят заразу по всей деревне.
 </description>
       <hit>2d7+26</hit>
       <level>2</level>
-      <long_descr>A black rat.
+      <long_descr>Простая черная крыса (rat) перебегает дорогу.
 </long_descr>
       <mana>5d5+100</mana>
       <material>0</material>
       <off add="dodge"/>
-      <player_name>rat</player_name>
+      <player_name>rat крыса</player_name>
       <race>rat</race>
-      <sex>either</sex>
-      <short_descr>a rat</short_descr>
+      <sex>female</sex>
+      <short_descr>крыс|а|ы|е|у|ой|е</short_descr>
       <size>medium</size>
       <spec>spec_fido</spec>
       <start_pos>stand</start_pos>
@@ -772,22 +817,27 @@ and carriers of disease.
       <dam_type>bite</dam_type>
       <damage>1d5+1</damage>
       <default_pos>stand</default_pos>
-      <description>This mongrel is the unwanted offspring of some hunter&apos;s sled dogs, left to 
-fend for itself here in the village.
+      <description>Даже таким любителям живности как местному зверолову не хватает припасов, чтобы
+прокормить всех желающих. Поэтому самые слабые щенки из помета оказываются на
+улице и вынуждены добывать пропитание самостоятельно.
 </description>
+      <form add="poison" del="canine"/>
       <hit>2d7+46</hit>
       <level>3</level>
-      <long_descr>A stray dog whines piteously at you.
+      <long_descr>Бродячий пес (dog) жалобно скулит у твоих ног.
 </long_descr>
       <mana>5d5+100</mana>
       <material>0</material>
-      <player_name>dog</player_name>
-      <race>fido</race>
-      <sex>female</sex>
-      <short_descr>a dog</short_descr>
+      <off add="dodge assist_race" del="fast"/>
+      <parts add="tail" del="claws"/>
+      <player_name>dog бродячий пес</player_name>
+      <race>dog</race>
+      <sex>male</sex>
+      <short_descr>бродяч|ий|его|ему|его|им|ем п|ес|са|су|са|сом|се</short_descr>
       <size>medium</size>
       <spec>spec_fido</spec>
       <start_pos>stand</start_pos>
+      <vuln add="spell"/>
       <wealth>1000</wealth>
     </node>
     <node name="24128">
@@ -798,22 +848,22 @@ fend for itself here in the village.
       <dam_type>pound</dam_type>
       <damage>5d8+19</damage>
       <default_pos>stand</default_pos>
-      <description>Like most civilizations of the time, the northern villagers have no organised
-standing military or police force. However, the recent influx of foreigners
-and bandits has necessitated the introduction of a militia to keep the peace.
+      <description>Когда-то жителям деревни и в голову бы не пришло носить оружие -- не на охоту, а
+в повседневной жизни. Но чем больше туристов и заезжих купцов начинает шастать
+по округе, тем больше племя начинает понимать пользу от регулярного ополчения.
 </description>
       <detection add="evil"/>
       <hit>50d10+4250</hit>
       <level>50</level>
-      <long_descr>A member of the village militia eyes you suspiciously.
+      <long_descr>Деревенский ополченец (militia) подозрительно косится на тебя.
 </long_descr>
       <mana>5d5+5000</mana>
       <material>0</material>
       <off add="disarm dodge kick parry trip"/>
-      <player_name>militia member</player_name>
+      <player_name>militia member деревенский ополченец</player_name>
       <race>human</race>
       <sex>male</sex>
-      <short_descr>a member of the village militia</short_descr>
+      <short_descr>деревенск|ий|ого|ому|ого|им|ом ополчен|ец|ца|цу|ца|цем|це</short_descr>
       <size>medium</size>
       <spec>spec_guard</spec>
       <start_pos>stand</start_pos>
@@ -827,22 +877,22 @@ and bandits has necessitated the introduction of a militia to keep the peace.
       <dam_type>pound</dam_type>
       <damage>5d8+19</damage>
       <default_pos>stand</default_pos>
-      <description>Like most civilizations of the time, the northern villagers have no organised
-standing military or police force. However, the recent influx of foreigners
-and bandits has necessitated the introduction of a militia to keep the peace.
+      <description>Когда-то жителям деревни и в голову бы не пришло носить оружие -- не на охоту, а
+в повседневной жизни. Но чем больше туристов и заезжих купцов начинает шастать
+по округе, тем больше племя начинает понимать пользу от регулярного ополчения.
 </description>
       <detection add="evil"/>
       <hit>50d10+4250</hit>
       <level>50</level>
-      <long_descr>A member of the village militia eyes you suspiciously.
+      <long_descr>Деревенский ополченец (militia) подозрительно косится на тебя.
 </long_descr>
       <mana>5d5+5000</mana>
       <material>0</material>
       <off add="bash disarm dodge kick parry trip"/>
-      <player_name>militia member</player_name>
+      <player_name>militia member деревенский ополченец</player_name>
       <race>human</race>
       <sex>male</sex>
-      <short_descr>a member of the village militia</short_descr>
+      <short_descr>деревенск|ий|ого|ому|ого|им|ом ополчен|ец|ца|цу|ца|цем|це</short_descr>
       <size>medium</size>
       <spec>spec_guard</spec>
       <start_pos>stand</start_pos>
@@ -856,22 +906,22 @@ and bandits has necessitated the introduction of a militia to keep the peace.
       <dam_type>pound</dam_type>
       <damage>5d8+19</damage>
       <default_pos>stand</default_pos>
-      <description>Like most civilizations of the time, the northern villagers have no organised
-standing military or police force. However, the recent influx of foreigners
-and bandits has necessitated the introduction of a militia to keep the peace.
+      <description>Когда-то жителям деревни и в голову бы не пришло носить оружие -- не на охоту, а
+в повседневной жизни. Но чем больше туристов и заезжих купцов начинает шастать
+по округе, тем больше племя начинает понимать пользу от регулярного ополчения.
 </description>
       <detection add="evil"/>
       <hit>50d10+4250</hit>
       <level>50</level>
-      <long_descr>A member of the village militia hefts a large club and eyes you suspiciously.
+      <long_descr>Деревенская ополченка (militia) подозрительно косится на тебя.
 </long_descr>
       <mana>5d5+5000</mana>
       <material>0</material>
       <off add="bash disarm dodge kick parry trip"/>
-      <player_name>militia member</player_name>
+      <player_name>militia member деревенская ополченка</player_name>
       <race>human</race>
-      <sex>male</sex>
-      <short_descr>a member of the village militia</short_descr>
+      <sex>female</sex>
+      <short_descr>деревенск|ая|ой|ой|ую|ой|ой ополченк|а|и|е|у|ой|е</short_descr>
       <size>medium</size>
       <spec>spec_guard</spec>
       <start_pos>stand</start_pos>
@@ -879,164 +929,180 @@ and bandits has necessitated the introduction of a militia to keep the peace.
     </node>
     <node name="24131">
       <ac bash="-2" exotic="6" pierce="-2" slash="-2"/>
+      <act add="warrior"/>
       <behavior type="Pet">
       </behavior>
-      <dam_type>pound</dam_type>
+      <dam_type>thrust</dam_type>
       <damage>2d6+3</damage>
       <default_pos>stand</default_pos>
-      <description>This Merc looks big and tough. Better be careful.
+      <description>Этот наемник выглядит большим и опасным.
 </description>
       <detection add="hidden"/>
       <hit>3d9+208</hit>
       <level>15</level>
-      <long_descr>A Minoan mercenary scowls menacingly at you.
+      <long_descr>Троянский наемник (mercenary) угрожающе потрясает копьем.
 </long_descr>
       <mana>5d5+100</mana>
       <material>0</material>
-      <off add="bash berserk dodge kick kick_dirt parry"/>
-      <player_name>minoan merc merc1</player_name>
+      <off add="area_attack bash berserk dodge kick kick_dirt parry rescue crush"/>
+      <player_name>trojan merc1 mercenary троянский наемник</player_name>
       <race>human</race>
-      <sex>female</sex>
-      <short_descr>minoan mercenary</short_descr>
+      <sex>male</sex>
+      <short_descr>троянск|ий|ого|ому|ого|им|ом наемник||а|у|а|ом|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
       <wealth>1000</wealth>
     </node>
     <node name="24132">
       <ac bash="-4" exotic="5" pierce="-4" slash="-4"/>
+      <act add="thief warrior"/>
+      <aff add="sneak"/>
       <behavior type="Pet">
       </behavior>
-      <dam_type>pound</dam_type>
+      <dam_type>beating</dam_type>
       <damage>2d8+5</damage>
       <default_pos>stand</default_pos>
-      <description>This Merc looks big and tough. Better be careful.
+      <description>Этот наемник выглядит большим и опасным.
 </description>
       <detection add="invis"/>
       <hit>3d9+333</hit>
       <level>20</level>
-      <long_descr>An Assyrian Mercenary scowls menacingly at you.
+      <long_descr>Шаолиньский наемник (mercenary) встает в боевую стойку.
 </long_descr>
       <mana>5d5+1000</mana>
       <material>0</material>
-      <off add="dodge kick kick_dirt parry trip"/>
-      <player_name>assyrian merc merc2</player_name>
+      <off add="backstab disarm dodge kick kick_dirt parry rescue trip"/>
+      <player_name>shaolin mercenary merc2 шаолиньский наемник</player_name>
       <race>human</race>
+      <res add="slash"/>
       <sex>male</sex>
-      <short_descr>Assyrian mercenary</short_descr>
+      <short_descr>шаолиньск|ий|ого|ому|ого|им|ом наемник||а|у|а|ом|е</short_descr>
       <size>medium</size>
+      <spec>spec_assassinater</spec>
       <start_pos>stand</start_pos>
-      <wealth>1000</wealth>
     </node>
     <node name="24133">
       <ac bash="-7" exotic="4" pierce="-7" slash="-7"/>
-      <aff add="protect_evil"/>
+      <act add="necromancer"/>
+      <aff add="protect_evil protect_good"/>
       <behavior type="Pet">
       </behavior>
-      <dam_type>pound</dam_type>
+      <dam_type>drain</dam_type>
       <damage>2d10+7</damage>
       <default_pos>stand</default_pos>
-      <description>This Merc looks big and tough. Better be careful.
+      <description>Эта наемница выглядит весьма опасной.
 </description>
       <hit>5d10+550</hit>
+      <imm add="negative"/>
       <level>25</level>
-      <long_descr>An Egyptian mercenary scowls menacingly at you.
+      <long_descr>Пустынная наемница (mercenary) накладывает темные чары.
 </long_descr>
       <mana>5d5+1000</mana>
       <material>0</material>
-      <off add="dodge kick parry trip"/>
-      <player_name>egyptian merc merc3</player_name>
+      <off add="dodge fast kick parry trip"/>
+      <player_name>desert mercenary merc3 пустынная наемница</player_name>
       <race>human</race>
-      <sex>male</sex>
-      <short_descr>Egyptian mercenary</short_descr>
+      <sex>female</sex>
+      <short_descr>пустынн|ая|ой|ой|ую|ой|ой наемниц|а|ы|е|у|ей|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
-      <wealth>1000</wealth>
     </node>
     <node name="24134">
       <ac bash="-9" exotic="3" pierce="-9" slash="-9"/>
-      <aff add="protect_evil"/>
-      <behavior type="Pet">
+      <act add="thief warrior"/>
+      <aff add="protect_good haste regeneration" del="infrared"/>
+      <behavior type="LevelAdaptivePet">
       </behavior>
       <dam_type>slash</dam_type>
       <damage>4d6+8</damage>
       <default_pos>stand</default_pos>
-      <description>This Merc looks big and tough. Better be careful.
+      <description>Эта наемница выглядит весьма опасной.
 </description>
+      <detection add="invis hidden"/>
       <hit>6d12+853</hit>
+      <imm add="poison"/>
       <level>30</level>
-      <long_descr>A Trojan mercenary scowls menacingly at you.
+      <long_descr>Наемница дроу (mercenary) мрачно смазывает ядом клинок.
 </long_descr>
       <mana>5d5+1000</mana>
       <material>0</material>
-      <off add="dodge kick kick_dirt parry"/>
-      <player_name>trojan merc merc4</player_name>
-      <race>human</race>
-      <sex>male</sex>
-      <short_descr>Trojan mercenary</short_descr>
+      <off add="dodge fast kick kick_dirt parry rescue trip"/>
+      <player_name>drow mercenary merc4 наемница дроу</player_name>
+      <race>drow</race>
+      <res del="poison"/>
+      <sex>female</sex>
+      <short_descr>наемниц|а|ы|е|у|ей|е дроу</short_descr>
       <size>medium</size>
+      <spec>spec_poison</spec>
       <start_pos>stand</start_pos>
+      <vuln del="light mithril"/>
       <wealth>1000</wealth>
     </node>
     <node name="24135">
       <ac bash="-11" exotic="3" pierce="-11" slash="-11"/>
-      <aff add="protect_evil"/>
-      <behavior type="Pet">
+      <act add="mage"/>
+      <aff add="sanctuary protect_evil protect_good" del="infrared sneak"/>
+      <behavior type="LevelAdaptivePet">
       </behavior>
-      <dam_type>slash</dam_type>
+      <dam_type>magic</dam_type>
       <damage>4d7+11</damage>
       <default_pos>stand</default_pos>
-      <description>This Merc looks big and tough. Better be careful.
+      <description>Этот наемник выглядит большим и опасным.
 </description>
       <hit>10d10+1300</hit>
       <level>35</level>
-      <long_descr>A Nubian mercenary scowls menacingly at you.
+      <long_descr>Наемник дракири (mercenary) накладывает защитные чары.
 </long_descr>
       <mana>5d5+1000</mana>
       <material>0</material>
       <off add="dodge kick parry trip"/>
-      <player_name>nubian merc merc5</player_name>
-      <race>human</race>
+      <player_name>drakyri mercenary merc5 наемник дракири</player_name>
+      <race>elf</race>
+      <res add="magic" del="charm"/>
       <sex>male</sex>
-      <short_descr>nubian Mercenary</short_descr>
+      <short_descr>наемник||а|у|а|ом|е дракири</short_descr>
       <size>medium</size>
+      <spec>spec_breath_lightning</spec>
       <start_pos>stand</start_pos>
-      <wealth>1000</wealth>
+      <vuln del="negative iron"/>
     </node>
     <node name="24136">
       <ac bash="-13" exotic="3" pierce="-13" slash="-13"/>
-      <aff add="flying"/>
+      <act add="cleric warrior"/>
+      <aff add="sanctuary protect_evil haste regeneration"/>
+      <alignment>1000</alignment>
       <behavior type="Pet">
       </behavior>
-      <dam_type>slash</dam_type>
+      <dam_type>divine</dam_type>
       <damage>4d8+13</damage>
       <default_pos>stand</default_pos>
-      <description>This Merc looks big and tough. Better be careful.
+      <description>Этот наемник выглядит большим и опасным.
 </description>
       <detection add="invis hidden"/>
       <hit>15d10+1850</hit>
-      <level>40</level>
-      <long_descr>A Mycenaean mercenary scowls menacingly at you.
+      <imm add="holy"/>
+      <level>45</level>
+      <long_descr>Наемник из Герихельма (mercenary) набожно целует клинок перед битвой.
 </long_descr>
       <mana>5d5+1000</mana>
       <material>0</material>
-      <off add="dodge kick parry trip"/>
-      <player_name>mycenaean merc merc6</player_name>
+      <off add="area_attack berserk disarm dodge fast kick parry rescue trip crush"/>
+      <player_name>gerighelm mercenary merc6 наемник из герихельма</player_name>
       <race>human</race>
+      <res add="negative"/>
       <sex>male</sex>
-      <short_descr>Mycenaean mercenary</short_descr>
-      <size>medium</size>
+      <short_descr>наемник||а|у|а|ом|е из Герихельма</short_descr>
+      <size>large</size>
       <start_pos>stand</start_pos>
-      <wealth>1000</wealth>
     </node>
   </mobiles>
   <objects>
     <node name="24100">
-      <description>The key to the village gates.
-</description>
+      <description>Костяной ключ (key) от ворот деревни лежит тут.</description>
       <gender>m</gender>
       <material>bone</material>
-      <name>key</name>
-      <short_descr>a bone key</short_descr>
+      <name>key bone костяной ключ</name>
+      <short_descr>костян|ой|ого|ому|ой|ым|ом ключ||а|у||ом|е</short_descr>
       <type name="key">
         <rotGround>1</rotGround>
         <rotInv>1</rotInv>
@@ -1046,29 +1112,28 @@ and bandits has necessitated the introduction of a militia to keep the peace.
     </node>
     <node name="24101">
       <cost>60</cost>
-      <description>A beer barrel has been left here.
-</description>
-      <gender>m</gender>
+      <description>Бочка (barrel) пива оставлена здесь каким-то благодетелем.</description>
+      <gender>f</gender>
       <level>1</level>
       <material>wood</material>
-      <name>barrel beer</name>
-      <short_descr>a barrel of beer</short_descr>
+      <name>barrel beer бочка пива пиво</name>
+      <short_descr>бочк|а|и|е|у|ой|е пива</short_descr>
       <type name="drink">
-        <left>30</left>
+        <left>100</left>
         <liquid>beer</liquid>
-        <total>30</total>
+        <total>100</total>
       </type>
       <wear_flags>take</wear_flags>
       <weight>60</weight>
     </node>
     <node name="24102">
       <cost>60</cost>
-      <description>A beer bottle has been left here.</description>
-      <gender>m</gender>
+      <description>Бутылка (bottle) деревенского пива лежит тут.</description>
+      <gender>f</gender>
       <level>1</level>
       <material>glass</material>
-      <name>bottle beer</name>
-      <short_descr>a bottle of rough beer</short_descr>
+      <name>bottle beer бутылка пива деревенское</name>
+      <short_descr>бутылк|а|и|е|у|ой|е пива &quot;{1{yДеревенское{2&quot;</short_descr>
       <type name="drink">
         <left>4</left>
         <liquid>beer</liquid>
@@ -1079,14 +1144,14 @@ and bandits has necessitated the introduction of a militia to keep the peace.
     </node>
     <node name="24103">
       <cost>59</cost>
-      <description>A dark bottle of ale has been left here.</description>
-      <gender>m</gender>
+      <description>Бутылка (bottle) ароматного темного эля &quot;траппист&quot; лежит тут.</description>
+      <gender>f</gender>
       <level>1</level>
-      <name>bottle ale</name>
-      <short_descr>a bottle of home brew ale</short_descr>
+      <name>bottle ale бутылка эля траппист</name>
+      <short_descr>бутылк|а|и|е|у|ой|е эля &quot;{1{gТр{Gа{gпп{Gи{gст{2&quot;</short_descr>
       <type name="drink">
         <left>5</left>
-        <liquid>ale</liquid>
+        <liquid>dark ale</liquid>
         <total>5</total>
       </type>
       <wear_flags>take</wear_flags>
@@ -1094,11 +1159,11 @@ and bandits has necessitated the introduction of a militia to keep the peace.
     </node>
     <node name="24104">
       <cost>61</cost>
-      <description>A firebreather has been left here.</description>
-      <gender>m</gender>
+      <description>Бутыль перцовой настойки (firebreather) лежит тут.</description>
+      <gender>f</gender>
       <level>1</level>
-      <name>bottle firebreather</name>
-      <short_descr>a bottle of rough spirits</short_descr>
+      <name>bottle firebreather бутыль перцовая настойка перцовой настойки</name>
+      <short_descr>бутыл|ь|и|и|ь|ью|и перцовой настойки</short_descr>
       <type name="drink">
         <left>8</left>
         <liquid>firebreather</liquid>
@@ -1109,11 +1174,11 @@ and bandits has necessitated the introduction of a militia to keep the peace.
     </node>
     <node name="24105">
       <cost>59</cost>
-      <description>A dark bottle has been left here.</description>
-      <gender>m</gender>
+      <description>Бутыль (bottle) с ароматнейшей брагой лежит тут.</description>
+      <gender>f</gender>
       <level>1</level>
-      <name>bottle local</name>
-      <short_descr>a bottle of brewer&apos;s specialty (&quot;Holy Water&quot;)</short_descr>
+      <name>bottle local бутыль знаменитой деревенской браги</name>
+      <short_descr>бутыл|ь|и|и|ь|ью|и знаменитой деревенской {1{Wбраги{2</short_descr>
       <type name="drink">
         <left>8</left>
         <liquid>local specialty</liquid>
@@ -1124,12 +1189,12 @@ and bandits has necessitated the introduction of a militia to keep the peace.
     </node>
     <node name="24106">
       <cost>59</cost>
-      <description>A large torch.</description>
+      <description>Большой факел (torch) коптит на земле.</description>
       <gender>m</gender>
       <level>1</level>
       <material>wood</material>
-      <name>torch</name>
-      <short_descr>a torch</short_descr>
+      <name>torch факел</name>
+      <short_descr>факел||а|у||ом|е</short_descr>
       <type name="light">
         <v2>24</v2>
       </type>
@@ -1148,12 +1213,12 @@ and bandits has necessitated the introduction of a militia to keep the peace.
         </node>
       </affects>
       <cost>60</cost>
-      <description>A stone lamp that uses animal fat as fuel has been left here.</description>
+      <description>Каменная лампада (lamp), наполненная коровьим жиром, лежит тут.</description>
       <gender>f</gender>
       <level>60</level>
       <material>stone</material>
-      <name>lamp</name>
-      <short_descr>a stone lamp</short_descr>
+      <name>lamp лампада</name>
+      <short_descr>лампад|а|ы|е|у|ой|е</short_descr>
       <type name="light">
         <v2>-1</v2>
       </type>
@@ -1163,26 +1228,27 @@ and bandits has necessitated the introduction of a militia to keep the peace.
     <node name="24108">
       <cost>8</cost>
       <description>A yellow brew.</description>
-      <gender>m</gender>
+      <gender>n</gender>
       <level>8</level>
       <material>drink</material>
-      <name>brew yellow</name>
-      <short_descr>a yellow brew</short_descr>
+      <name>brew yellow желтое варево</name>
+      <short_descr>желт|ое|ого|ому|ое|ым|ом варев|о|а|у|о|ом|е</short_descr>
       <type name="potion">
         <level>12</level>
         <spell0>bless</spell0>
+        <spell1>remove curse</spell1>
       </type>
       <wear_flags>take</wear_flags>
       <weight>1</weight>
     </node>
     <node name="24109">
       <cost>8</cost>
-      <description>A buffalo water skin is on the floor.</description>
+      <description>Простой бурдюк (skin) оставлен здесь.</description>
       <gender>m</gender>
       <level>8</level>
       <material>leather</material>
-      <name>skin water buffalo</name>
-      <short_descr>a buffalo water skin</short_descr>
+      <name>skin water buffalo бурдюк</name>
+      <short_descr>бурдюк||а|у||ом|е</short_descr>
       <type name="drink">
         <left>25</left>
         <liquid>water</liquid>
@@ -1193,13 +1259,13 @@ and bandits has necessitated the introduction of a militia to keep the peace.
     </node>
     <node name="24110">
       <cost>8</cost>
-      <description>A large jug of water sloshes on the floor.</description>
-      <extra_flags>glow</extra_flags>
+      <description>Большой кувшин (jug) расплескал тут немного воды.</description>
+      <extra_flags>burn_proof</extra_flags>
       <gender>m</gender>
       <level>8</level>
       <material>clay</material>
-      <name>jug water</name>
-      <short_descr>a jug of water</short_descr>
+      <name>jug water кувшин для воды</name>
+      <short_descr>кувшин||а|у||ом|е для воды</short_descr>
       <type name="drink">
         <left>60</left>
         <liquid>water</liquid>
@@ -1211,18 +1277,19 @@ and bandits has necessitated the introduction of a militia to keep the peace.
     <node name="24111">
       <affects>
         <node>
-          <apply to="damroll">4</apply>
+          <apply to="hitroll">-2</apply>
         </node>
         <node>
-          <apply to="hitroll">-2</apply>
+          <apply to="damroll">4</apply>
         </node>
       </affects>
       <cost>13</cost>
-      <description>A heavy club sheathed in lead lies here.</description>
-      <gender>m</gender>
+      <description>Тяжелая освинцованная дубинка (club) лежит тут.</description>
+      <gender>f</gender>
       <level>12</level>
-      <name>club</name>
-      <short_descr>a heavy lead-sheathed club</short_descr>
+      <material>lead</material>
+      <name>club освинцованная дубинка</name>
+      <short_descr>освинцованн|ая|ой|ой|ую|ой|ой дубинк|а|и|е|у|ой|е</short_descr>
       <type name="weapon">
         <diceNumber>5</diceNumber>
         <diceType>3</diceType>
@@ -1235,19 +1302,20 @@ and bandits has necessitated the introduction of a militia to keep the peace.
     <node name="24112">
       <affects>
         <node>
-          <apply to="hitroll">-1</apply>
+          <apply to="damroll">3</apply>
+          <bits table="affect_flags"></bits>
         </node>
         <node>
-          <apply to="damroll">1</apply>
+          <apply to="hitroll">-1</apply>
         </node>
       </affects>
       <cost>4</cost>
-      <description>A bone mace lies here.</description>
+      <description>Костяная булава (mace) забыта тут.</description>
       <gender>m</gender>
       <level>5</level>
       <material>bone</material>
-      <name>mace</name>
-      <short_descr>a bone mace</short_descr>
+      <name>mace костяная булава</name>
+      <short_descr>костян|ая|ой|ой|ую|ой|ой булав|а|ы|е|у|ой|е</short_descr>
       <type name="weapon">
         <diceNumber>3</diceNumber>
         <diceType>3</diceType>
@@ -1260,19 +1328,17 @@ and bandits has necessitated the introduction of a militia to keep the peace.
     <node name="24113">
       <affects>
         <node>
-          <apply to="hitroll">-1</apply>
-        </node>
-        <node>
-          <apply to="damroll">-1</apply>
+          <apply to="hitroll">2</apply>
+          <bits table="affect_flags"></bits>
         </node>
       </affects>
       <cost>6</cost>
-      <description>A bronze dagger lies here.</description>
+      <description>Бронзовый кинжал (dagger) оставлен здесь.</description>
       <gender>m</gender>
       <level>5</level>
       <material>bronze</material>
-      <name>dagger</name>
-      <short_descr>a bronze dagger</short_descr>
+      <name>dagger bronze бронзовый кинжал</name>
+      <short_descr>бронзов|ый|ого|ому|ый|ым|ом кинжал||а|у||ом|е</short_descr>
       <type name="weapon">
         <diceNumber>3</diceNumber>
         <diceType>3</diceType>
@@ -1285,22 +1351,19 @@ and bandits has necessitated the introduction of a militia to keep the peace.
     <node name="24114">
       <affects>
         <node>
-          <apply to="hitroll">-2</apply>
-        </node>
-        <node>
           <apply to="damroll">2</apply>
         </node>
       </affects>
       <cost>6</cost>
-      <description>A broad, heavy bronze blade lies here.</description>
+      <description>Широкий и тяжелый бронзовый меч (sword) лежит тут.</description>
       <gender>m</gender>
       <level>6</level>
       <material>bronze</material>
-      <name>blade sword</name>
-      <short_descr>a bronze sword</short_descr>
+      <name>blade sword bronze бронзовый меч</name>
+      <short_descr>бронзов|ый|ого|ому|ый|ым|ом меч||а|у||ом|е</short_descr>
       <type name="weapon">
         <diceNumber>3</diceNumber>
-        <diceType>3</diceType>
+        <diceType>4</diceType>
         <weapClass>sword</weapClass>
         <weapType>slash</weapType>
       </type>
@@ -1308,13 +1371,19 @@ and bandits has necessitated the introduction of a militia to keep the peace.
       <weight>25</weight>
     </node>
     <node name="24115">
+      <affects>
+        <node>
+          <apply to="move">50</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
       <cost>6</cost>
-      <description>A pair of sandals lies here.</description>
-      <gender>m</gender>
+      <description>Пара кожаных сандалей (sandals) стоит тут.</description>
+      <gender>p</gender>
       <level>6</level>
       <material>leather</material>
-      <name>sandals</name>
-      <short_descr>a pair of sandals</short_descr>
+      <name>sandals сандали</name>
+      <short_descr>сандал|и|ей|ям|и|ями|ях</short_descr>
       <type name="armor">
         <ac bash="4" exotic="0" pierce="4" slash="4"/>
       </type>
@@ -1333,12 +1402,12 @@ and bandits has necessitated the introduction of a militia to keep the peace.
         </node>
       </affects>
       <cost>6</cost>
-      <description>A belt crafted of hide is curled up here.</description>
+      <description>Пояс (belt) из дубленой кожи лежит тут.</description>
       <gender>m</gender>
       <level>6</level>
       <material>leather</material>
-      <name>belt</name>
-      <short_descr>a hide belt</short_descr>
+      <name>belt hide дубленый пояс</name>
+      <short_descr>дублен|ый|ого|ому|ый|ым|ом пояс||а|у||ом|е</short_descr>
       <type name="armor">
         <ac bash="4" exotic="0" pierce="4" slash="4"/>
       </type>
@@ -1348,19 +1417,17 @@ and bandits has necessitated the introduction of a militia to keep the peace.
     <node name="24117">
       <affects>
         <node>
-          <apply to="ac">-2</apply>
-        </node>
-        <node>
-          <apply to="ac">-2</apply>
+          <apply to="ac">-10</apply>
+          <bits table="affect_flags"></bits>
         </node>
       </affects>
       <cost>15</cost>
-      <description>A bronze helm.</description>
+      <description>Бронзовый шлем (helm) лежит тут.</description>
       <gender>m</gender>
       <level>15</level>
       <material>bronze</material>
-      <name>bronze helm</name>
-      <short_descr>a bronze helm</short_descr>
+      <name>bronze helm бронзовый шлем</name>
+      <short_descr>бронзов|ый|ого|ому|ый|ым|ом шлем||а|у||ом|е</short_descr>
       <type name="armor">
         <ac bash="6" exotic="0" pierce="6" slash="6"/>
       </type>
@@ -1377,12 +1444,12 @@ and bandits has necessitated the introduction of a militia to keep the peace.
         </node>
       </affects>
       <cost>9</cost>
-      <description>A rough fur cloak is here.</description>
-      <gender>m</gender>
+      <description>Грубая меховая накидка (cloak) лежит тут.</description>
+      <gender>f</gender>
       <level>8</level>
       <material>fur</material>
-      <name>cloak</name>
-      <short_descr>a rough fur cloak</short_descr>
+      <name>cloak fur меховая накидка</name>
+      <short_descr>мехов|ая|ой|ой|ую|ой|ой накидк|а|и|е|у|ой|е</short_descr>
       <type name="armor">
         <ac bash="4" exotic="0" pierce="4" slash="4"/>
       </type>
@@ -1391,13 +1458,13 @@ and bandits has necessitated the introduction of a militia to keep the peace.
     </node>
     <node name="24119">
       <cost>9</cost>
-      <description>A bronze ring.</description>
+      <description>Бронзовое кольцо (ring) с печаткой лежит тут.</description>
       <extra_flags>glow</extra_flags>
-      <gender>m</gender>
+      <gender>n</gender>
       <level>8</level>
       <material>bronze</material>
-      <name>ring</name>
-      <short_descr>a bronze ring</short_descr>
+      <name>ring bronze бронзовое кольцо</name>
+      <short_descr>бронзов|ое|ого|ому|ое|ым|ом кольц|о|а|у|о|ом|е</short_descr>
       <type name="key">
         <rotGround>1</rotGround>
         <rotInv>1</rotInv>
@@ -1407,12 +1474,12 @@ and bandits has necessitated the introduction of a militia to keep the peace.
     </node>
     <node name="24120">
       <cost>9</cost>
-      <description>Black bread.</description>
+      <description>Буханка черного ржаного хлеба (bread) лежит тут.</description>
       <gender>m</gender>
       <level>8</level>
       <material>food</material>
-      <name>black bread</name>
-      <short_descr>black bread</short_descr>
+      <name>black bread ржаной хлеб</name>
+      <short_descr>ржан|ой|ого|ому|ой|ым|ом хлеб||а|у||ом|е</short_descr>
       <type name="food">
         <foodHours>5</foodHours>
       </type>
@@ -1421,12 +1488,12 @@ and bandits has necessitated the introduction of a militia to keep the peace.
     </node>
     <node name="24121">
       <cost>8</cost>
-      <description>A sour cheese.</description>
-      <gender>m</gender>
+      <description>Головка овечьего сыра (cheese) лежит тут.</description>
+      <gender>f</gender>
       <level>1</level>
       <material>food</material>
-      <name>cheese</name>
-      <short_descr>cheese</short_descr>
+      <name>cheese головка овечьего сыра</name>
+      <short_descr>головк|а|и|е|у|ой|е овечьего сыра</short_descr>
       <type name="food">
         <foodHours>8</foodHours>
       </type>
@@ -1435,12 +1502,12 @@ and bandits has necessitated the introduction of a militia to keep the peace.
     </node>
     <node name="24122">
       <cost>7</cost>
-      <description>A strip of unidentifiable dried meat.</description>
-      <gender>m</gender>
+      <description>Полоска вяленого мяса (meat) неизвестного происхождения лежит тут.</description>
+      <gender>n</gender>
       <level>1</level>
       <material>food</material>
-      <name>dried meat</name>
-      <short_descr>a strip of dried meat</short_descr>
+      <name>dried meat вяленое мясо</name>
+      <short_descr>вялен|ое|ого|ому|ое|ым|ом мяс|о|а|у|о|ом|е</short_descr>
       <type name="food">
         <foodHours>10</foodHours>
       </type>
@@ -1449,12 +1516,12 @@ and bandits has necessitated the introduction of a militia to keep the peace.
     </node>
     <node name="24123">
       <cost>8</cost>
-      <description>An egg (raw), warm from the nest.</description>
-      <gender>m</gender>
+      <description>Свежее сырое яйцо (egg) все еще хранит тепло куриного гнезда.</description>
+      <gender>n</gender>
       <level>1</level>
       <material>food</material>
-      <name>egg</name>
-      <short_descr>an egg</short_descr>
+      <name>egg свежее яйцо</name>
+      <short_descr>свеж|ее|его|ему|ее|им|ем яйц|о|а|у|о|ом|е</short_descr>
       <type name="food">
         <foodHours>4</foodHours>
       </type>
@@ -1463,12 +1530,13 @@ and bandits has necessitated the introduction of a militia to keep the peace.
     </node>
     <node name="24124">
       <cost>4</cost>
-      <description>A foul potion rolls around here.</description>
+      <description>Вонючее зелье (potion) лежит на земле.</description>
       <extra_flags>glow hum</extra_flags>
-      <gender>m</gender>
+      <gender>n</gender>
       <level>4</level>
-      <name>potion</name>
-      <short_descr>a foul potion</short_descr>
+      <material>glass</material>
+      <name>potion foul вонючее зелье</name>
+      <short_descr>вонюч|ее|его|ему|ее|им|ем зель|е|я|ю|е|ем|е</short_descr>
       <type name="potion">
         <level>10</level>
         <spell0>invisibility</spell0>
@@ -1479,11 +1547,11 @@ and bandits has necessitated the introduction of a militia to keep the peace.
       <weight>2</weight>
     </node>
     <node name="24125">
-      <description>The village totem stands here.</description>
+      <description>Племенной тотем (totem), гордость деревни, стоит тут.</description>
       <gender>m</gender>
       <material>wood</material>
-      <name>totem</name>
-      <short_descr>the village totem</short_descr>
+      <name>totem племенной тотем</name>
+      <short_descr>племенн|ой|ого|ому|ой|ым|ом тотем||а|у||ом|е</short_descr>
       <type name="furniture">
         <heal>0</heal>
         <mana>0</mana>
@@ -1498,13 +1566,12 @@ and bandits has necessitated the introduction of a militia to keep the peace.
           <apply to="hit">250</apply>
         </node>
       </affects>
-      <description>The champion&apos;s wolf&apos;s head is here.
-</description>
-      <gender>m</gender>
+      <description>Волчья голова (head) угрожающе скалится на земле.</description>
+      <gender>f</gender>
       <level>90</level>
       <material>flesh</material>
-      <name>wolf head</name>
-      <short_descr>a wolf&apos;s head</short_descr>
+      <name>wolf head волчья голова</name>
+      <short_descr>волчь|я|ей|ей|ю|ей|ей голов|а|ы|е|у|ой|е</short_descr>
       <type name="armor">
         <ac bash="21" exotic="0" pierce="21" slash="21"/>
       </type>
@@ -1514,25 +1581,29 @@ and bandits has necessitated the introduction of a militia to keep the peace.
     <node name="24127">
       <affects>
         <node>
-          <apply to="ac">-15</apply>
+          <apply to="damroll">8</apply>
+          <bits table="affect_flags"></bits>
         </node>
         <node>
-          <apply to="damroll">6</apply>
+          <apply to="hitroll">7</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="ac">-15</apply>
         </node>
         <node>
           <apply to="saving_breath">-3</apply>
         </node>
       </affects>
-      <description>The chief&apos;s oak club is lying here in the dirt.
-</description>
-      <gender>m</gender>
+      <description>Дубовая дубина вождя племени (club) лежит на земле.</description>
+      <gender>f</gender>
       <level>60</level>
       <material>oak</material>
-      <name>club</name>
-      <short_descr>the chief&apos;s club</short_descr>
+      <name>club chieftain дубина вождя</name>
+      <short_descr>дубин|а|ы|е|у|ой|е вождя</short_descr>
       <type name="weapon">
-        <diceNumber>17</diceNumber>
-        <diceType>3</diceType>
+        <diceNumber>16</diceNumber>
+        <diceType>5</diceType>
         <weapClass>mace</weapClass>
         <weapType>crush</weapType>
       </type>
@@ -1540,16 +1611,20 @@ and bandits has necessitated the introduction of a militia to keep the peace.
       <weight>25</weight>
     </node>
     <node name="24128">
-      <description>A wooden stick.</description>
-      <gender>m</gender>
+      <description>Деревянная палка (stick) валяется тут.</description>
+      <gender>f</gender>
       <level>4</level>
       <material>wood</material>
-      <name>stick</name>
-      <short_descr>a stick</short_descr>
+      <name>stick палка</name>
+      <properties>
+        <node name="bestTier">3</node>
+        <node name="random">true</node>
+      </properties>
+      <short_descr>палк|а|и|е|у|ой|е</short_descr>
       <type name="weapon">
         <diceNumber>3</diceNumber>
         <diceType>3</diceType>
-        <weapClass>dagger</weapClass>
+        <weapClass>exotic</weapClass>
         <weapType>pound</weapType>
       </type>
       <wear_flags>take wield</wear_flags>
@@ -1561,12 +1636,16 @@ and bandits has necessitated the introduction of a militia to keep the peace.
           <apply to="damroll">6</apply>
         </node>
       </affects>
-      <description>A wooden club is lying here.</description>
-      <gender>m</gender>
+      <description>Деревянная дубинка (club) лежит тут.</description>
+      <gender>f</gender>
       <level>50</level>
       <material>wood</material>
-      <name>wooden club</name>
-      <short_descr>a wooden club</short_descr>
+      <name>wooden club деревянная дубинка</name>
+      <properties>
+        <node name="bestTier">3</node>
+        <node name="random">true</node>
+      </properties>
+      <short_descr>деревянн|ая|ой|ой|ую|ой|ой дубинк|а|и|е|у|ой|е</short_descr>
       <type name="weapon">
         <diceNumber>14</diceNumber>
         <diceType>3</diceType>
@@ -1597,12 +1676,12 @@ and bandits has necessitated the introduction of a militia to keep the peace.
           <apply to="con">2</apply>
         </node>
       </affects>
-      <description>A boiled leather jerkin is lying here.</description>
+      <description>Уплотненный кожаный нагрудник (jerkin) оставлен здесь.</description>
       <gender>m</gender>
       <level>50</level>
       <material>leather</material>
-      <name>boiled leather jerkin</name>
-      <short_descr>a boiled leather jerkin</short_descr>
+      <name>boiled leather jerkin уплотненный кожаный нагрудник</name>
+      <short_descr>уплотненн|ый|ого|ому|ый|ым|ом кожан|ый|ого|ому|ый|ым|ом нагрудник||а|у||ом|е</short_descr>
       <type name="armor">
         <ac bash="13" exotic="0" pierce="13" slash="13"/>
       </type>
@@ -1611,6 +1690,10 @@ and bandits has necessitated the introduction of a militia to keep the peace.
     </node>
     <node name="24131">
       <affects>
+        <node>
+          <apply to="saves">-3</apply>
+          <bits table="affect_flags"></bits>
+        </node>
         <node>
           <apply to="hit">50</apply>
           <bits table="affect_flags"></bits>
@@ -1627,12 +1710,12 @@ and bandits has necessitated the introduction of a militia to keep the peace.
           <apply to="dex">1</apply>
         </node>
       </affects>
-      <description>A rune-covered bone bracelet is lying here.</description>
+      <description>Костяной браслет (bracelet) испещренный рунами лежит тут.</description>
       <gender>m</gender>
       <level>50</level>
       <material>bone</material>
-      <name>bone bracelet</name>
-      <short_descr>a rune-covered bone bracelet</short_descr>
+      <name>bone bracelet костяной браслет</name>
+      <short_descr>костян|ой|ого|ому|ой|ым|ом браслет||а|у||ом|е с рунами</short_descr>
       <type name="armor">
         <ac bash="13" exotic="0" pierce="13" slash="13"/>
       </type>
@@ -1657,12 +1740,12 @@ and bandits has necessitated the introduction of a militia to keep the peace.
           <apply to="mana">25</apply>
         </node>
       </affects>
-      <description>A fur cloak is lying here.</description>
-      <gender>m</gender>
+      <description>Прочная меховая накидка (cloak) лежит тут.</description>
+      <gender>f</gender>
       <level>50</level>
       <material>fur</material>
-      <name>fur cloak</name>
-      <short_descr>a fur cloak</short_descr>
+      <name>fur cloak прочная меховая накидка</name>
+      <short_descr>прочн|ая|ой|ой|ую|ой|ой мехов|ая|ой|ой|ую|ой|ой накидк|а|и|е|у|ой|е</short_descr>
       <type name="armor">
         <ac bash="13" exotic="0" pierce="13" slash="13"/>
       </type>
@@ -1672,15 +1755,19 @@ and bandits has necessitated the introduction of a militia to keep the peace.
     <node name="24133">
       <affects>
         <node>
-          <apply to="ac">-10</apply>
+          <bits table="affect_flags">regeneration</bits>
+        </node>
+        <node>
+          <apply to="ac">-100</apply>
+          <bits table="affect_flags"></bits>
         </node>
       </affects>
-      <description>A boar tusk helm lies here.</description>
+      <description>Шлем (helm) с кабаньими клыками лежит тут.</description>
       <gender>m</gender>
       <level>50</level>
       <material>bone</material>
-      <name>helm</name>
-      <short_descr>a boar tusk helm</short_descr>
+      <name>helm boar tusk шлем с кабаньми клыками</name>
+      <short_descr>шлем||а|у||ом|е с кабаньми клыками</short_descr>
       <type name="armor">
         <ac bash="13" exotic="0" pierce="13" slash="13"/>
       </type>
@@ -1701,13 +1788,12 @@ and bandits has necessitated the introduction of a militia to keep the peace.
           <bits table="affect_flags"></bits>
         </node>
       </affects>
-      <description>An ox-hide shield lies here.
-</description>
+      <description>Щит (shield) из бычьей кожи лежит тут.</description>
       <gender>m</gender>
       <level>50</level>
       <material>leather</material>
-      <name>shield</name>
-      <short_descr>an ox-hide shield</short_descr>
+      <name>shield ox hide щит из бычьей кожи</name>
+      <short_descr>щит||а|у||ом|е из бычьей кожи</short_descr>
       <type name="armor">
         <ac bash="13" exotic="0" pierce="13" slash="13"/>
       </type>
@@ -1723,13 +1809,12 @@ and bandits has necessitated the introduction of a militia to keep the peace.
           <apply to="hitroll">2</apply>
         </node>
       </affects>
-      <description>A sturdy throwing spear has been thrust into the ground here.
-</description>
-      <gender>m</gender>
+      <description>Странное метательное копье (spear) воткнуто в землю.</description>
+      <gender>n</gender>
       <level>50</level>
       <material>metal</material>
-      <name>spear</name>
-      <short_descr>a throwing spear</short_descr>
+      <name>spear throwing странное метательное копье</name>
+      <short_descr>странн|ое|ого|ому|ое|ым|ом метательн|ое|ого|ому|ое|ым|ом копь|е|я|ю|е|ем|е</short_descr>
       <type name="warp_stone">
       </type>
       <wear_flags>take hold</wear_flags>
@@ -1737,13 +1822,12 @@ and bandits has necessitated the introduction of a militia to keep the peace.
     </node>
     <node name="24136">
       <cost>75</cost>
-      <description>A blank papyrus is here.
-</description>
+      <description>Свиток папируса (papyrus) лежит тут.</description>
       <gender>m</gender>
       <level>50</level>
       <material>paper</material>
-      <name>papyrus</name>
-      <short_descr>a blank papyrus</short_descr>
+      <name>papyrus свиток папируса</name>
+      <short_descr>свит|ок|ка|ку|ок|ком|ке папируса</short_descr>
       <type name="scroll">
         <level>0</level>
       </type>
@@ -1752,12 +1836,12 @@ and bandits has necessitated the introduction of a militia to keep the peace.
     </node>
     <node name="24137">
       <cost>12</cost>
-      <description>A shimmering potion is here.
-</description>
-      <gender>m</gender>
+      <description>Мерцающее зелье (potion) забыто тут.</description>
+      <gender>n</gender>
       <level>11</level>
-      <name>potion</name>
-      <short_descr>a shimmering potion</short_descr>
+      <material>glass</material>
+      <name>potion shimmering мерцающее зелье</name>
+      <short_descr>мерцающ|ее|его|ему|ее|им|ем зель|е|я|ю|е|ем|е</short_descr>
       <type name="potion">
         <level>5</level>
         <spell0>mind light</spell0>
@@ -1768,21 +1852,23 @@ and bandits has necessitated the introduction of a militia to keep the peace.
       <weight>1</weight>
     </node>
     <node name="24138">
-      <description>A magical stone gate allows one to pass through to other worlds.</description>
-      <gender>m</gender>
+      <description>Врата (gate) в иные миры стоят здесь.</description>
+      <gender>p</gender>
       <material>stone</material>
-      <name>gate</name>
-      <short_descr>a stone gate</short_descr>
-      <type name="jewelry">
-        <v0>31144</v0>
+      <name>gate врата</name>
+      <short_descr>врат|а||ам|а|ами|ах</short_descr>
+      <type name="portal">
+        <charges>0</charges>
+        <exitFlags>hidden</exitFlags>
+        <portalFlags>normal_exit nocurse</portalFlags>
+        <target>9330</target>
       </type>
-      <weight>1</weight>
     </node>
   </objects>
   <rooms>
     <node name="24100">
-      <description>You are standing outside the wooden hut where the Shaman of the village
-resides. Paths stretch out to the east, south and west from here.
+      <description>Ты стоишь на небольшой площадке возле хижины шамана.
+Пути уходят на восток, на юг и на запад.
 </description>
       <exits>
         <node name="east">
@@ -1801,13 +1887,13 @@ resides. Paths stretch out to the east, south and west from here.
           <target>24102</target>
         </node>
       </exits>
-      <name>Outside the Shaman&apos;s Hut</name>
+      <name>Возле хижины шамана</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="24115"/>
         <equip to="head" vnum="24126"/>
         <drop vnum="24125"/>
         <mob limit="8" maxHere="1" vnum="24128"/>
-        <equip to="wield" vnum="24129"/>
+        <equip to="sheath" vnum="24129"/>
         <equip to="body" vnum="24130"/>
         <equip to="wrist_l" vnum="24131"/>
         <equip to="wrist_r" vnum="24131"/>
@@ -1819,11 +1905,10 @@ resides. Paths stretch out to the east, south and west from here.
       <sector>city</sector>
     </node>
     <node name="24101">
-      <description>You cough as you enter the smoky interior of this cramped hut, your eyes
-watering as the odor of some bubbling concoction in an iron cauldron wafts
-toward you. In the center of this hut the shaman awaits, quietly meditating.
-A variety of furs, bones, charms and trinkets line the walls, doubtless
-serving as focii for the shaman&apos;s mystic powers.
+      <description>Только войдя в эту насквозь продымленную хижину, ты заходишься в диком кашле.
+Твои глаза слезятся от адского варева, булькающего в котле посреди хижины.
+Пол устлан шкурами, повсюду разбросаны кости, перья и амулеты, несомненно
+усиливающие мистическую силу шамана.
 </description>
       <exits>
         <node name="south">
@@ -1833,8 +1918,8 @@ serving as focii for the shaman&apos;s mystic powers.
           <target>24100</target>
         </node>
       </exits>
-      <flags>indoors safe</flags>
-      <name>The Interior of the Shaman&apos;s Hut</name>
+      <flags>indoors</flags>
+      <name>В гостях у шамана</name>
       <resets>
         <drop vnum="24138"/>
         <mob limit="1" maxHere="1" vnum="24100"/>
@@ -1842,10 +1927,10 @@ serving as focii for the shaman&apos;s mystic powers.
       <sector>inside</sector>
     </node>
     <node name="24102">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. На обочине в грязи играют чумазые дети вперемешку с
+поросятами. Очень мило, но жить бы ты тут, пожалуй, не стал{Sfа{Sx.
 </description>
       <exits>
         <node name="east">
@@ -1855,13 +1940,14 @@ a hot meal and a comfortable bed this evening.
           <target>24105</target>
         </node>
       </exits>
-      <flags>indoors</flags>
-      <name>A Path in the Village</name>
-      <sector>inside</sector>
+      <name>Тропа в деревне</name>
+      <sector>field</sector>
     </node>
     <node name="24103">
-      <description>You are walking along a path of packed earth that heads north toward the
-Shaman&apos;s hut.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. Слышен лязг металла и зычные голоса деревенских ополченцев.
+На север, к хижине шамана уходит широкая утоптанная тропа.
 </description>
       <exits>
         <node name="north">
@@ -1871,15 +1957,14 @@ Shaman&apos;s hut.
           <target>24106</target>
         </node>
       </exits>
-      <flags>indoors</flags>
-      <name>A Path in the Village</name>
-      <sector>inside</sector>
+      <name>Тропа в деревне</name>
+      <sector>field</sector>
     </node>
     <node name="24104">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. На обочине в грязи играют чумазые дети вперемешку с
+поросятами. Очень мило, но жить бы ты тут, пожалуй, не стал{Sfа{Sx.
 </description>
       <exits>
         <node name="east">
@@ -1889,15 +1974,14 @@ a hot meal and a comfortable bed this evening.
           <target>24100</target>
         </node>
       </exits>
-      <flags>indoors</flags>
-      <name>A Path in the Village</name>
-      <sector>inside</sector>
+      <name>Тропа в деревне</name>
+      <sector>field</sector>
     </node>
     <node name="24105">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. На обочине в грязи играют чумазые дети вперемешку с
+поросятами. Очень мило, но жить бы ты тут, пожалуй, не стал{Sfа{Sx.
 </description>
       <exits>
         <node name="east">
@@ -1913,15 +1997,14 @@ a hot meal and a comfortable bed this evening.
           <target>24108</target>
         </node>
       </exits>
-      <flags>indoors</flags>
-      <name>A Path in the Village</name>
-      <sector>inside</sector>
+      <name>Тропа в деревне</name>
+      <sector>field</sector>
     </node>
     <node name="24106">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. На обочине в грязи играют чумазые дети вперемешку с
+поросятами. Очень мило, но жить бы ты тут, пожалуй, не стал{Sfа{Sx.
 </description>
       <exits>
         <node name="east">
@@ -1937,18 +2020,16 @@ a hot meal and a comfortable bed this evening.
           <target>24161</target>
         </node>
       </exits>
-      <flags>indoors</flags>
-      <name>A Path in the Village</name>
+      <name>Тропа в деревне</name>
       <resets>
         <mob limit="6" maxHere="1" vnum="24127"/>
       </resets>
-      <sector>inside</sector>
+      <sector>field</sector>
     </node>
     <node name="24107">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. Слышен лязг металла и зычные голоса деревенских ополченцев.
 </description>
       <exits>
         <node name="east">
@@ -1964,15 +2045,14 @@ a hot meal and a comfortable bed this evening.
           <target>24104</target>
         </node>
       </exits>
-      <flags>indoors</flags>
-      <name>A Path in the Village</name>
-      <sector>inside</sector>
+      <name>Тропа в деревне</name>
+      <sector>field</sector>
     </node>
     <node name="24108">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. На обочине в грязи играют чумазые дети вперемешку с
+поросятами. Очень мило, но жить бы ты тут, пожалуй, не стал{Sfа{Sx.
 </description>
       <exits>
         <node name="east">
@@ -1982,16 +2062,15 @@ a hot meal and a comfortable bed this evening.
           <target>24111</target>
         </node>
       </exits>
-      <flags>indoors</flags>
-      <name>A Path in the Village</name>
-      <sector>inside</sector>
+      <name>Тропа в деревне</name>
+      <sector>field</sector>
     </node>
     <node name="24109">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening. The village square outside
-the Shaman&apos;s hut lies a short way to the north of here.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. На обочине в грязи играют чумазые дети вперемешку с
+поросятами. Очень мило, но жить бы ты тут, пожалуй, не стал{Sfа{Sx.
+На севере виднеется что-то похожее на площадь.
 </description>
       <exits>
         <node name="north">
@@ -2001,15 +2080,13 @@ the Shaman&apos;s hut lies a short way to the north of here.
           <target>24133</target>
         </node>
       </exits>
-      <flags>indoors</flags>
-      <name>A Path in the Village</name>
-      <sector>inside</sector>
+      <name>Тропа в деревне</name>
+      <sector>field</sector>
     </node>
     <node name="24110">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. Слышен лязг металла и зычные голоса деревенских ополченцев.
 </description>
       <exits>
         <node name="east">
@@ -2019,15 +2096,14 @@ a hot meal and a comfortable bed this evening.
           <target>24107</target>
         </node>
       </exits>
-      <flags>indoors</flags>
-      <name>A Path in the Village</name>
-      <sector>inside</sector>
+      <name>Тропа в деревне</name>
+      <sector>field</sector>
     </node>
     <node name="24111">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. На обочине в грязи играют чумазые дети вперемешку с
+поросятами. Очень мило, но жить бы ты тут, пожалуй, не стал{Sfа{Sx.
 </description>
       <exits>
         <node name="east">
@@ -2037,20 +2113,18 @@ a hot meal and a comfortable bed this evening.
           <target>24113</target>
         </node>
       </exits>
-      <flags>indoors</flags>
-      <name>A Path in the Village</name>
+      <name>Тропа в деревне</name>
       <resets>
         <mob limit="3" maxHere="1" vnum="24123"/>
       </resets>
-      <sector>inside</sector>
+      <sector>field</sector>
     </node>
     <node name="24112">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening. Several children suddenly
-rush by, immersed in some strange activity, the rules of which are quite
-unfathomable to you.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. Слышен лязг металла и зычные голоса деревенских ополченцев.
+Дети внезапно начинают перебрасываться увесистыми булыжниками -- наверное, это
+у них такая игра.
 </description>
       <exits>
         <node name="east">
@@ -2060,17 +2134,15 @@ unfathomable to you.
           <target>24110</target>
         </node>
       </exits>
-      <flags>indoors</flags>
-      <name>A Path in the Village</name>
+      <name>Тропа в деревне</name>
       <resets>
         <mob limit="3" maxHere="1" vnum="24120"/>
       </resets>
-      <sector>inside</sector>
+      <sector>field</sector>
     </node>
     <node name="24113">
-      <description>You are approaching the western gates of the village, which are constantly
-patrolled by the militia. There is no-one else about here, as the 
-concentration of residences and shops is nearer to the center of the village.
+      <description>Ты приближаешься к западным воротам деревни. Вокруг патрулируют бдительные
+ополченцы. Жилых хижин здесь нет, как и самих жителей -- ищи их к востоку.
 </description>
       <exits>
         <node name="east">
@@ -2080,17 +2152,15 @@ concentration of residences and shops is nearer to the center of the village.
           <target>24115</target>
         </node>
       </exits>
-      <flags>indoors</flags>
-      <name>Approaching the Western Gate</name>
+      <name>На подходе к западным воротам</name>
       <resets>
         <mob limit="3" maxHere="1" vnum="24119"/>
       </resets>
-      <sector>inside</sector>
+      <sector>field</sector>
     </node>
     <node name="24114">
-      <description>You are approaching the eastern gates of the village, which are constantly
-patrolled by the militia. There is no-one else about here, as the 
-concentration of residences and shops is nearer to the center of the village.
+      <description>Ты приближаешься к восточным воротам деревни. Вокруг патрулируют бдительные
+ополченцы. Жилых хижин здесь нет, как и самих жителей -- ищи их к западу.
 </description>
       <exits>
         <node name="east">
@@ -2100,15 +2170,14 @@ concentration of residences and shops is nearer to the center of the village.
           <target>24112</target>
         </node>
       </exits>
-      <flags>indoors</flags>
-      <name>Approaching the Eastern Gate</name>
-      <sector>inside</sector>
+      <name>На подходе к восточным воротам</name>
+      <sector>field</sector>
     </node>
     <node name="24115">
-      <description>You have reached the westernmost extent of the village. To the west lie the
-stout wooden gates, set in the wooden barrier that surrounds the village.
-Members of the militia, on the lookout for bandits and wolves, grant you
-a cursory nod as they go about their duties.
+      <description>Ты находишься на крайнем западной стороне деревни. Перед тобой мощные деревянные
+ворота в высоком частоколе, окружающем селение. За воротами лежит долина и тропа
+вокруг стены. Ополченцы, стоящие на страже, окидывают тебя ленивым взглядом и
+возвращаются к своим обязанностям.
 </description>
       <exits>
         <node name="east">
@@ -2122,11 +2191,10 @@ a cursory nod as they go about their duties.
           <target>24117</target>
         </node>
       </exits>
-      <flags>indoors</flags>
-      <name>Inside the Western Gates</name>
+      <name>Западные ворота деревни</name>
       <resets>
         <mob limit="8" maxHere="1" vnum="24130"/>
-        <equip to="wield" vnum="24129"/>
+        <equip to="sheath" vnum="24129"/>
         <equip to="body" vnum="24130"/>
         <equip to="wrist_l" vnum="24131"/>
         <equip to="wrist_r" vnum="24131"/>
@@ -2135,13 +2203,13 @@ a cursory nod as they go about their duties.
         <equip to="shield" vnum="24134"/>
         <equip to="hold" vnum="24135"/>
       </resets>
-      <sector>inside</sector>
+      <sector>field</sector>
     </node>
     <node name="24116">
-      <description>You have reached the easternmost extent of the village. To the east lie the
-stout wooden gates, set in the wooden barrier that surrounds the village.
-Members of the militia, on the lookout for bandits and wolves, grant you
-a cursory nod as they go about their duties.
+      <description>Ты находишься на восточной стороне деревни. Перед тобой мощные деревянные ворота
+в высоком частоколе, окружающем селение. За воротами лежит дорога в город Анон.
+Ополченцы, стоящие на страже, окидывают тебя ленивым взглядом и возвращаются к
+своим обязанностям.
 </description>
       <exits>
         <node name="east">
@@ -2155,11 +2223,10 @@ a cursory nod as they go about their duties.
           <target>24114</target>
         </node>
       </exits>
-      <flags>indoors</flags>
-      <name>Inside the Eastern Gates</name>
+      <name>Восточные ворота деревни</name>
       <resets>
         <mob limit="8" maxHere="1" vnum="24130"/>
-        <equip to="wield" vnum="24129"/>
+        <equip to="sheath" vnum="24129"/>
         <equip to="body" vnum="24130"/>
         <equip to="wrist_l" vnum="24131"/>
         <equip to="wrist_r" vnum="24131"/>
@@ -2168,13 +2235,12 @@ a cursory nod as they go about their duties.
         <equip to="shield" vnum="24134"/>
         <equip to="hold" vnum="24135"/>
       </resets>
-      <sector>inside</sector>
+      <sector>field</sector>
     </node>
     <node name="24117">
-      <description>You are standing outside the Gates at the western end of town. They currently
-stand open, but the militia are ready at a moment&apos;s notice to slam them shut
-and bar them with heavy wooden crossbeams bound with rare iron imported from
-the south.
+      <description>Ты стоишь за воротами деревни Анон. Перед тобой высится частокол, на верхних
+уровнях которого несут стражу ополченцы. Увесистые ворота сейчас открыты, но
+петли так хорошо смазаны, что, похоже, их можно захлопнуть всего за секунду.
 </description>
       <exits>
         <node name="east">
@@ -2192,14 +2258,13 @@ the south.
         </node>
       </exits>
       <flags>no_mob</flags>
-      <name>Outside the Western Gates</name>
+      <name>За воротами деревни</name>
       <sector>field</sector>
     </node>
     <node name="24118">
-      <description>You are standing outside the Gates at the eastern end of town. They currently
-stand open, but the militia are ready at a moment&apos;s notice to slam them shut
-and bar them with heavy wooden crossbeams bound with rare iron imported from
-the south.
+      <description>Ты стоишь за воротами деревни Анон. Перед тобой высится частокол, на верхних
+уровнях которого несут стражу ополченцы. Увесистые ворота сейчас открыты, но
+петли так хорошо смазаны, что, похоже, их можно захлопнуть всего за секунду.
 </description>
       <exits>
         <node name="east">
@@ -2220,14 +2285,12 @@ the south.
         </node>
       </exits>
       <flags>no_mob</flags>
-      <name>Outside the Eastern Gates</name>
+      <name>За воротами деревни</name>
       <sector>field</sector>
     </node>
     <node name="24119">
-      <description>You are travelling along a broad path comprised of hard earth packed down
-by the steps of thousands of travellers over the many years. This path  
-circles the wooden walls of the village, and from here you can see some of
-the larger structures within.
+      <description>Ты бредешь по сильно утоптанной тропинке вокруг частокола деревни Анон.
+Из-за стены доносятся приглушенные голоса селян и блеяние овец.
 </description>
       <exits>
         <node name="north">
@@ -2237,14 +2300,12 @@ the larger structures within.
           <target>24117</target>
         </node>
       </exits>
-      <name>A Dirt Path</name>
+      <name>Грязная тропинка</name>
       <sector>field</sector>
     </node>
     <node name="24120">
-      <description>You are travelling along a broad path comprised of hard earth packed down
-by the steps of thousands of travellers over the many years. This path  
-circles the wooden walls of the village, and from here you can see some of
-the larger structures within.
+      <description>Ты бредешь по сильно утоптанной тропинке вокруг частокола деревни Анон.
+Из-за стены доносятся приглушенные голоса селян и блеяние овец.
 </description>
       <exits>
         <node name="east">
@@ -2254,14 +2315,12 @@ the larger structures within.
           <target>24119</target>
         </node>
       </exits>
-      <name>A Dirt Path</name>
+      <name>Грязная тропинка</name>
       <sector>field</sector>
     </node>
     <node name="24121">
-      <description>You are travelling along a broad path comprised of hard earth packed down
-by the steps of thousands of travellers over the many years. This path  
-circles the wooden walls of the village, and from here you can see some of
-the larger structures within.
+      <description>Ты бредешь по сильно утоптанной тропинке вокруг частокола деревни Анон.
+Из-за стены доносятся приглушенные голоса селян и блеяние овец.
 </description>
       <exits>
         <node name="east">
@@ -2271,16 +2330,12 @@ the larger structures within.
           <target>24120</target>
         </node>
       </exits>
-      <name>A Dirt Path</name>
+      <name>Грязная тропинка</name>
       <sector>field</sector>
     </node>
     <node name="24122">
-      <description>You are travelling along a broad path comprised of hard earth packed down
-by the steps of thousands of travellers over the many years. This path  
-circles the wooden walls of the village, and from here you can see some of
-the larger structures within.
-
-There is a path running up a hill here which you may ascend.
+      <description>Ты бредешь по сильно утоптанной тропинке вокруг частокола деревни Анон.
+Из-за стены доносятся приглушенные голоса селян и блеяние овец.
 </description>
       <exits>
         <node name="east">
@@ -2290,15 +2345,12 @@ There is a path running up a hill here which you may ascend.
           <target>24121</target>
         </node>
       </exits>
-      <flags>no_mob</flags>
-      <name>A Dirt Path</name>
+      <name>Грязная тропинка</name>
       <sector>field</sector>
     </node>
     <node name="24123">
-      <description>You are travelling along a broad path comprised of hard earth packed down
-by the steps of thousands of travellers over the many years. This path  
-circles the wooden walls of the village, and from here you can see some of
-the larger structures within.
+      <description>Ты бредешь по сильно утоптанной тропинке вокруг частокола деревни Анон.
+Из-за стены доносятся приглушенные голоса селян и блеяние овец.
 </description>
       <exits>
         <node name="east">
@@ -2308,14 +2360,12 @@ the larger structures within.
           <target>24122</target>
         </node>
       </exits>
-      <name>A Dirt Path</name>
+      <name>Грязная тропинка</name>
       <sector>field</sector>
     </node>
     <node name="24124">
-      <description>You are travelling along a broad path comprised of hard earth packed down
-by the steps of thousands of travellers over the many years. This path  
-circles the wooden walls of the village, and from here you can see some of
-the larger structures within.
+      <description>Ты бредешь по сильно утоптанной тропинке вокруг частокола деревни Анон.
+Из-за стены доносятся приглушенные голоса селян и блеяние овец.
 </description>
       <exits>
         <node name="south">
@@ -2325,14 +2375,12 @@ the larger structures within.
           <target>24123</target>
         </node>
       </exits>
-      <name>A Dirt Path</name>
+      <name>Грязная тропинка</name>
       <sector>field</sector>
     </node>
     <node name="24125">
-      <description>You are travelling along a broad path comprised of hard earth packed down
-by the steps of thousands of travellers over the many years. This path  
-circles the wooden walls of the village, and from here you can see some of
-the larger structures within.
+      <description>Ты бредешь по сильно утоптанной тропинке вокруг частокола деревни Анон.
+Из-за стены доносятся приглушенные голоса селян и блеяние овец.
 </description>
       <exits>
         <node name="north">
@@ -2342,14 +2390,12 @@ the larger structures within.
           <target>24118</target>
         </node>
       </exits>
-      <name>A Dirt Path</name>
+      <name>Грязная тропинка</name>
       <sector>field</sector>
     </node>
     <node name="24126">
-      <description>You are travelling along a broad path comprised of hard earth packed down
-by the steps of thousands of travellers over the many years. This path  
-circles the wooden walls of the village, and from here you can see some of
-the larger structures within.
+      <description>Ты бредешь по сильно утоптанной тропинке вокруг частокола деревни Анон.
+Из-за стены доносятся приглушенные голоса селян и блеяние овец.
 </description>
       <exits>
         <node name="north">
@@ -2359,14 +2405,12 @@ the larger structures within.
           <target>24127</target>
         </node>
       </exits>
-      <name>A Dirt Path</name>
+      <name>Грязная тропинка</name>
       <sector>field</sector>
     </node>
     <node name="24127">
-      <description>You are travelling along a broad path comprised of hard earth packed down
-by the steps of thousands of travellers over the many years. This path  
-circles the wooden walls of the village, and from here you can see some of
-the larger structures within.
+      <description>Ты бредешь по сильно утоптанной тропинке вокруг частокола деревни Анон.
+Из-за стены доносятся приглушенные голоса селян и блеяние овец.
 </description>
       <exits>
         <node name="north">
@@ -2376,14 +2420,12 @@ the larger structures within.
           <target>24128</target>
         </node>
       </exits>
-      <name>A Dirt Path</name>
+      <name>Грязная тропинка</name>
       <sector>field</sector>
     </node>
     <node name="24128">
-      <description>You are travelling along a broad path comprised of hard earth packed down
-by the steps of thousands of travellers over the many years. This path  
-circles the wooden walls of the village, and from here you can see some of
-the larger structures within.
+      <description>Ты бредешь по сильно утоптанной тропинке вокруг частокола деревни Анон.
+Из-за стены доносятся приглушенные голоса селян и блеяние овец.
 </description>
       <exits>
         <node name="east">
@@ -2393,14 +2435,12 @@ the larger structures within.
           <target>24129</target>
         </node>
       </exits>
-      <name>A Dirt Path</name>
+      <name>Грязная тропинка</name>
       <sector>field</sector>
     </node>
     <node name="24129">
-      <description>You are travelling along a broad path comprised of hard earth packed down
-by the steps of thousands of travellers over the many years. This path  
-circles the wooden walls of the village, and from here you can see some of
-the larger structures within.
+      <description>Ты бредешь по сильно утоптанной тропинке вокруг частокола деревни Анон.
+Из-за стены доносятся приглушенные голоса селян и блеяние овец.
 </description>
       <exits>
         <node name="east">
@@ -2410,14 +2450,12 @@ the larger structures within.
           <target>24130</target>
         </node>
       </exits>
-      <name>A Dirt Path</name>
+      <name>Грязная тропинка</name>
       <sector>field</sector>
     </node>
     <node name="24130">
-      <description>You are travelling along a broad path comprised of hard earth packed down
-by the steps of thousands of travellers over the many years. This path  
-circles the wooden walls of the village, and from here you can see some of
-the larger structures within.
+      <description>Ты бредешь по сильно утоптанной тропинке вокруг частокола деревни Анон.
+Из-за стены доносятся приглушенные голоса селян и блеяние овец.
 </description>
       <exits>
         <node name="east">
@@ -2427,14 +2465,12 @@ the larger structures within.
           <target>24131</target>
         </node>
       </exits>
-      <name>A Dirt Path</name>
+      <name>Грязная тропинка</name>
       <sector>field</sector>
     </node>
     <node name="24131">
-      <description>You are travelling along a broad path comprised of hard earth packed down
-by the steps of thousands of travellers over the many years. This path  
-circles the wooden walls of the village, and from here you can see some of
-the larger structures within.
+      <description>Ты бредешь по сильно утоптанной тропинке вокруг частокола деревни Анон.
+Из-за стены доносятся приглушенные голоса селян и блеяние овец.
 </description>
       <exits>
         <node name="east">
@@ -2444,14 +2480,12 @@ the larger structures within.
           <target>24132</target>
         </node>
       </exits>
-      <name>A Dirt Path</name>
+      <name>Грязная тропинка</name>
       <sector>field</sector>
     </node>
     <node name="24132">
-      <description>You are travelling along a broad path comprised of hard earth packed down
-by the steps of thousands of travellers over the many years. This path  
-circles the wooden walls of the village, and from here you can see some of
-the larger structures within.
+      <description>Ты бредешь по сильно утоптанной тропинке вокруг частокола деревни Анон.
+Из-за стены доносятся приглушенные голоса селян и блеяние овец.
 </description>
       <exits>
         <node name="north">
@@ -2461,14 +2495,15 @@ the larger structures within.
           <target>24131</target>
         </node>
       </exits>
-      <name>A Dirt Path</name>
+      <name>Грязная тропинка</name>
       <sector>field</sector>
     </node>
     <node name="24133">
-      <description>You are standing outside a hut in the village. It is a wooden walled structure
-with a thatched roof, and a sturdy oak door. Occasionally a villager enters
-or exits the hut, sparing you a curious glance as they do. A crude etching
-upon the doors of this hut marks it as the Horse Clan hut.
+      <description>Ты стоишь на пороге большой хижины -- в таких обычно живет целый клан.
+Стены у этой хижины деревянные, крыша устлана свежими снопами пшеницы, а на
+входе стоит увесистая дубовая дверь. Селяне снуют туда-сюда, одаривая тебя
+любопытными взглядами. Над дверями висит грубо размалеванная табличка с подписью
+&quot;Клан Лошади&quot;.
 </description>
       <exits>
         <node name="north">
@@ -2481,14 +2516,14 @@ upon the doors of this hut marks it as the Horse Clan hut.
           <target>24134</target>
         </node>
       </exits>
-      <name>Outside a Village Clan Hut</name>
+      <name>На пороге клановой хижины</name>
       <sector>city</sector>
     </node>
     <node name="24134">
-      <description>You are standing inside the hut. The sounds and smells of cooking emanate
-from the east, while quiet conversation can be heard to the west. You feel
-slightly nervous about intruding upon this clan, but then again that&apos;s
-what your profession is all about, really. Intruding.
+      <description>Ты заходишь в просторную деревянную хижину. С востока доносится булькание
+котелка и приятные запахи будущего обеда. С запада доносятся приглушенные
+голоса. Ты начинаешь нервничать, осознав, что вторгаешься в личное пространство
+целой семьи. Хотя, что с вас, приключенцев, возьмешь...
 </description>
       <exits>
         <node name="east">
@@ -2505,14 +2540,14 @@ what your profession is all about, really. Intruding.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>Inside the Hut</name>
+      <name>Внутри хижины</name>
       <sector>inside</sector>
     </node>
     <node name="24135">
-      <description>You have entered the common room of this hut. Several villagers sit about,
-sipping at their ales and chatting quietly with each other. As you enter
-they smile and bid you welcome, and ask you to stay and enjoy some good
-conversation for a while.
+      <description>Ты входишь в просторную комнату, предназначенную для клановых переговоров или
+просто семейных посиделок. Несколько селян сидят на шкурах вдоль стены, хлебают
+эль и тихо переговариваются. При виде тебя они удивленно поднимают брови, но
+затем приветливо улыбаются, приглашая тебя погостить немного.
 </description>
       <exits>
         <node name="east">
@@ -2520,13 +2555,13 @@ conversation for a while.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>The Meeting Room</name>
+      <name>Зал для бесед</name>
       <sector>inside</sector>
     </node>
     <node name="24136">
-      <description>In here several teenagers of both sexes rush about preparing the evening
-meal under the watchful eye of a hefty cook, who helps them along with the
-occasional shout or cuff on the ear.
+      <description>Очаг -- сердце любого жилища. На закопченных дочерна камнях умиротворяюще
+булькает котел, пахнет тушеным мясом и кореньями. У стены мускулистый селянин
+разделывает тушу теленка, а рядом молодая девушка чистит какие-то корнеплоды.
 </description>
       <exits>
         <node name="west">
@@ -2534,16 +2569,15 @@ occasional shout or cuff on the ear.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>The Kitchen</name>
+      <name>У очага хижины</name>
       <sector>inside</sector>
     </node>
     <node name="24137">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening.
-
-The chieftain&apos;s lodge lies to the west of here.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. На обочине в грязи играют чумазые дети вперемешку с
+поросятами. Очень мило, но жить бы ты тут, пожалуй, не стал{Sfа{Sx.
+На западе ты видишь хижину вождя.
 </description>
       <exits>
         <node name="north">
@@ -2559,14 +2593,14 @@ The chieftain&apos;s lodge lies to the west of here.
           <target>24138</target>
         </node>
       </exits>
-      <name>A Path in the Village</name>
+      <name>Тропа в деревне</name>
       <sector>city</sector>
     </node>
     <node name="24138">
-      <description>This is where the chieftain resides. It may seem to be a small dwelling
-for a figure of such importance, but it should be remembered that she has
-it to herself, while most other villagers live with their clans in groups of
-up to thirty, residing in three room lodges.
+      <description>Почему-то ты всегда представлял{Sfа{Sx себе, что вожди должны жить в самых больших и
+шикарных хижинах, но нет -- здешний вождь, похоже, обладает должной скромностью.
+Впрочем, в отличие от набитых детьми и курами клановых хижин, здесь хотя бы
+тихо. Судя по развешанным вокруг предметам туалета, здешний вождь -- женщина.
 </description>
       <exits>
         <node name="east">
@@ -2577,7 +2611,7 @@ up to thirty, residing in three room lodges.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>The Chieftain&apos;s Lodge</name>
+      <name>Хижина вождя племени</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="24117"/>
         <equip to="wield" vnum="24127"/>
@@ -2585,12 +2619,10 @@ up to thirty, residing in three room lodges.
       <sector>inside</sector>
     </node>
     <node name="24139">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening.
-
-The flint-knepper practices his trade to the west of here.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. Слышен лязг металла и зычные голоса деревенских ополченцев.
+На западе ты видишь хижину кременщика.
 </description>
       <exits>
         <node name="north">
@@ -2603,17 +2635,15 @@ The flint-knepper practices his trade to the west of here.
           <target>24140</target>
         </node>
       </exits>
-      <name>A Path in the Village</name>
+      <name>Тропа в деревне</name>
       <sector>city</sector>
     </node>
     <node name="24140">
-      <description>You are greeted with a sudden blast of heat from the furnace as you enter
-the smithy. Wiping sweat from your brow, you gaze about, taking the place
-in. Various items of armor in various stages of repair line the walls. A
-huge, muscular man is using a massive hammer to beat the dents out of a
-suit of rather battered-looking bronze plate. The flint-knepper has learnt
-skills far more advanced than his contemporaries, thanks to the many
-visitors this village attracts, and his forge shows evidence of this.
+      <description>Зайдя в хижину, ты чувствуешь удар плотного и горячего воздуха из жарко пылающей
+кузни. Да, за прошедшие годы местный кременщик натаскался не только вытачивать
+наконечники стрел и копий, но и ковать настоящие доспехи и бронзовые клинки.
+Многочисленные продукты его работы в разных стадиях готовности расставлены вдоль
+стен и разложены на земле.
 </description>
       <exits>
         <node name="east">
@@ -2621,17 +2651,17 @@ visitors this village attracts, and his forge shows evidence of this.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>The Flint-Knepper</name>
+      <name>Жилище кременщика</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="24101"/>
       </resets>
       <sector>inside</sector>
     </node>
     <node name="24141">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. На обочине в грязи играют чумазые дети вперемешку с
+поросятами. Очень мило, но жить бы ты тут, пожалуй, не стал{Sfа{Sx.
 </description>
       <exits>
         <node name="east">
@@ -2644,13 +2674,13 @@ a hot meal and a comfortable bed this evening.
           <target>24107</target>
         </node>
       </exits>
-      <name>A Path in the Village</name>
+      <name>Тропа в деревне</name>
       <sector>city</sector>
     </node>
     <node name="24142">
-      <description>This hut is used to store the goods of the many merchants that come to this
-village. It currently holds little of interest, being filled largely with
-bales of hay and coils of hemp rope.
+      <description>В этой хижине хранятся не только пожитки селян, но и запас товаров всех пришлых
+торговцев и купцов. Сейчас, к сожалению, тут пусто -- почти все раскупили.
+Ну это и к лучшему: попробуешь что-то украсть -- ополченцы мигом заметят.
 </description>
       <exits>
         <node name="west">
@@ -2658,14 +2688,13 @@ bales of hay and coils of hemp rope.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>A Storage Hut</name>
+      <name>Амбарная хижина</name>
       <sector>inside</sector>
     </node>
     <node name="24143">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. Слышен лязг металла и зычные голоса деревенских ополченцев.
 </description>
       <exits>
         <node name="east">
@@ -2678,13 +2707,13 @@ a hot meal and a comfortable bed this evening.
           <target>24165</target>
         </node>
       </exits>
-      <name>A Path in the Village</name>
+      <name>Тропа в деревне</name>
       <sector>city</sector>
     </node>
     <node name="24144">
-      <description>This hut has been loaned by the chieftain to a travelling arms specialist,
-who is currently doing a roaring trade with the locals, who are eager to
-acquire the rare metal weapons he has bought with him from the south.
+      <description>Эту хижину вождь племени милостиво предоставила заезжему торговцу в качестве
+временного магазина. Прямо сейчас купец отчаянно торгуется с целой оравой селян.
+Он продает оружие и доспехи из металла -- в деревне это большая редкость.
 </description>
       <exits>
         <node name="west">
@@ -2692,7 +2721,7 @@ acquire the rare metal weapons he has bought with him from the south.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>A Trader&apos;s Den</name>
+      <name>Хижина купца</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="24102"/>
         <give vnum="24115"/>
@@ -2708,10 +2737,10 @@ acquire the rare metal weapons he has bought with him from the south.
       <sector>inside</sector>
     </node>
     <node name="24145">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. На обочине в грязи играют чумазые дети вперемешку с
+поросятами. Очень мило, но жить бы ты тут, пожалуй, не стал{Sfа{Sx.
 </description>
       <exits>
         <node name="east">
@@ -2727,10 +2756,10 @@ a hot meal and a comfortable bed this evening.
           <target>24181</target>
         </node>
       </exits>
-      <name>A Path in the Village</name>
+      <name>Тропа в деревне</name>
       <resets>
         <mob limit="8" maxHere="1" vnum="24128"/>
-        <equip to="wield" vnum="24129"/>
+        <equip to="sheath" vnum="24129"/>
         <equip to="body" vnum="24130"/>
         <equip to="wrist_l" vnum="24131"/>
         <equip to="wrist_r" vnum="24131"/>
@@ -2745,9 +2774,9 @@ a hot meal and a comfortable bed this evening.
       <behavior type="PetShopRoom">
         <storageVnum>24147</storageVnum>
       </behavior>
-      <description>Here the foreign mercenaries who have come to the north looking for 
-employment gather. You may take advantage of their services for a sizeable
-sum of gold should you wish to.
+      <description>Ополченцы гостеприимно предоставили свою хижину-бараки для заезжего отряда
+наемников с востока. За разумные деньги они с удовольствием присоединятся к
+тебе и помогут в грядущих боях.
 </description>
       <exits>
         <node name="south">
@@ -2755,7 +2784,7 @@ sum of gold should you wish to.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>Militia Hut</name>
+      <name>Хижина ополченцев</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="24103"/>
       </resets>
@@ -2764,13 +2793,10 @@ sum of gold should you wish to.
     <node name="24147">
       <behavior type="PetShopStorage">
       </behavior>
-      <description>You shouldn&apos;t be here. Go Away. Or I&apos;ll Tell.
-
-Oh look- a garbled transmission from Outer Space-
-and a large fries.
+      <description>Тебе тут быть не положено.
 </description>
-      <flags>no_mob indoors</flags>
-      <name>Merc Store</name>
+      <flags>no_vanish no_mob indoors no_recall nosummon</flags>
+      <name>Барак наемников</name>
       <resets>
         <mob limit="-1" maxHere="1" vnum="24131"/>
         <mob limit="-1" maxHere="1" vnum="24132"/>
@@ -2782,12 +2808,10 @@ and a large fries.
       <sector>inside</sector>
     </node>
     <node name="24148">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening.
-
-The witchdoctor&apos;s hut is to the north of here.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. Слышен лязг металла и зычные голоса деревенских ополченцев.
+На севере видна хижина знахарки.
 </description>
       <exits>
         <node name="east">
@@ -2800,14 +2824,14 @@ The witchdoctor&apos;s hut is to the north of here.
           <target>24145</target>
         </node>
       </exits>
-      <name>A Path in the Village</name>
+      <name>Тропа в деревне</name>
       <sector>city</sector>
     </node>
     <node name="24149">
-      <description>This hut is cram-packed with magical artefacts, items and spell components
-of every type imaginable (and several unimaginable). Forcing your way through
-the clutter, you eventually find an assistant, a raven-haired witch doctor who 
-smiles sweetly and welcomes you to her hut.
+      <description>Эта хижина битком набиты какими-то магическими безделушками, свитками, зельями
+и самым разнообразными компонентами для заклинаний -- зачастую весьма жуткого и
+неприглядного вида. Сквозь весь этот беспорядок ты с трудом можешь разглядеть
+хозяйку -- черноволосую женщину, которая приветливо улыбается тебе в ответ.
 </description>
       <exits>
         <node name="south">
@@ -2815,7 +2839,7 @@ smiles sweetly and welcomes you to her hut.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>The Witch Doctor&apos;s Hut</name>
+      <name>Жилище знахарки</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="24104"/>
         <give vnum="24108"/>
@@ -2826,10 +2850,9 @@ smiles sweetly and welcomes you to her hut.
       <sector>inside</sector>
     </node>
     <node name="24150">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. Слышен лязг металла и зычные голоса деревенских ополченцев.
 </description>
       <exits>
         <node name="east">
@@ -2842,19 +2865,18 @@ a hot meal and a comfortable bed this evening.
           <target>24148</target>
         </node>
       </exits>
-      <name>A Path in the Village</name>
+      <name>Тропа в деревне</name>
       <resets>
         <mob limit="5" maxHere="1" vnum="24125"/>
       </resets>
       <sector>city</sector>
     </node>
     <node name="24151">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening.
-
-The wise woman&apos;s hut is to the north.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. На обочине в грязи играют чумазые дети вперемешку с
+поросятами. Очень мило, но жить бы ты тут, пожалуй, не стал{Sfа{Sx.
+На севере ты видишь дом ведуньи.
 </description>
       <exits>
         <node name="east">
@@ -2867,33 +2889,31 @@ The wise woman&apos;s hut is to the north.
           <target>24150</target>
         </node>
       </exits>
-      <name>A Path in the Village</name>
+      <name>Тропа в деревне</name>
       <sector>city</sector>
     </node>
     <node name="24152">
-      <description>The Wise Woman of the village lives in this run-down old hut. People come
-to her to avail themselves of her remarkable ability to determine the nature
-of items of all types (there&apos;s no other reason to come here, really).
+      <description>Ведунья живет в старом полуразвалившемся домике на отшибе у самого частокола.
+Мало кто заходит сюда, ведь ее ремесло -- определять свойства магических вещей,
+а у селян, сам{Sfа{Sx понимаешь, артефактов за душой немного.
 </description>
       <exits>
         <node name="south">
           <target>24151</target>
         </node>
       </exits>
-      <flags>no_mob indoors</flags>
-      <name>The Wise Woman&apos;s Residence</name>
+      <flags>indoors</flags>
+      <name>Дом ведуньи</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="24105"/>
       </resets>
       <sector>inside</sector>
     </node>
     <node name="24153">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening.
-
-The beastmaster&apos;s hut is to the north.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. Слышен лязг металла и зычные голоса деревенских ополченцев.
+На севере видна хижина зверолова.
 </description>
       <exits>
         <node name="east">
@@ -2909,10 +2929,10 @@ The beastmaster&apos;s hut is to the north.
           <target>24151</target>
         </node>
       </exits>
-      <name>A Path in the Village</name>
+      <name>Тропа в деревне</name>
       <resets>
         <mob limit="8" maxHere="1" vnum="24129"/>
-        <equip to="wield" vnum="24129"/>
+        <equip to="sheath" vnum="24129"/>
         <equip to="body" vnum="24130"/>
         <equip to="wrist_l" vnum="24131"/>
         <equip to="wrist_r" vnum="24131"/>
@@ -2927,10 +2947,9 @@ The beastmaster&apos;s hut is to the north.
       <behavior type="PetShopRoom">
         <storageVnum>24155</storageVnum>
       </behavior>
-      <description>The Beastmaster captures and trains the wild animals of the north, and then
-sells them to the merchants from the south. It is a very profitable but
-extremely dangerous profession, as the many scars on his brawny body
-suggest.
+      <description>Тут остро пахнет самым разнообразным зверьем, которое владельцу хижину удалось
+наловить на просторах Тэры. Вдоль стен расставлены разнообразные капканы и
+ловчий инструмент.
 </description>
       <exits>
         <node name="south">
@@ -2938,7 +2957,7 @@ suggest.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>The Beastmaster&apos;s Hut</name>
+      <name>Хижина зверолова</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="24106"/>
       </resets>
@@ -2947,18 +2966,10 @@ suggest.
     <node name="24155">
       <behavior type="PetShopStorage">
       </behavior>
-      <description>You shouldn&apos;t be here. Go Away. Or I&apos;ll Tell.
-
-
-
-
-
-
-
-NOW!
+      <description>Тебе тут быть не положено.
 </description>
-      <flags>no_mob indoors</flags>
-      <name>Pet Store Storage</name>
+      <flags>no_vanish no_mob indoors no_recall nosummon</flags>
+      <name>Клетка со зверьем</name>
       <resets>
         <mob limit="-1" maxHere="1" vnum="24110"/>
         <mob limit="-1" maxHere="1" vnum="24111"/>
@@ -2969,10 +2980,11 @@ NOW!
       <sector>inside</sector>
     </node>
     <node name="24156">
-      <description>You are standing outside a hut in the village. It is a wooden walled structure
-with a thatched roof, and a sturdy oak door. Occasionally a villager enters
-or exits the hut, sparing you a curious glance as they do. A crude etching
-upon the doors of this hut marks it as the Bear Clan hut.
+      <description>Ты стоишь на пороге большой хижины -- в таких обычно живет целый клан.
+Стены у этой хижины деревянные, крыша устлана свежими снопами пшеницы, а на
+входе стоит увесистая дубовая дверь. Селяне снуют туда-сюда, одаривая тебя
+любопытными взглядами. Над дверями висит грубо размалеванная табличка с подписью
+&quot;Клан Медведя&quot;.
 </description>
       <exits>
         <node name="north">
@@ -2982,14 +2994,14 @@ upon the doors of this hut marks it as the Bear Clan hut.
           <target>24150</target>
         </node>
       </exits>
-      <name>Outside a Village Clan Hut</name>
+      <name>На пороге клановой хижины</name>
       <sector>city</sector>
     </node>
     <node name="24157">
-      <description>You are standing inside the hut. The sounds and smells of cooking emanate
-from the east, while quiet conversation can be heard to the west. You feel
-slightly nervous about intruding upon this clan, but then again that&apos;s
-what your profession is all about, really. Intruding.
+      <description>Ты заходишь в просторную деревянную хижину. С востока доносится булькание
+котелка и приятные запахи будущего обеда. С запада доносятся приглушенные
+голоса. Ты начинаешь нервничать, осознав, что вторгаешься в личное пространство
+целой семьи. Хотя, что с вас, приключенцев, возьмешь...
 </description>
       <exits>
         <node name="east">
@@ -3003,14 +3015,14 @@ what your profession is all about, really. Intruding.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>Inside the Hut</name>
+      <name>Внутри хижины</name>
       <sector>inside</sector>
     </node>
     <node name="24158">
-      <description>You have entered the common room of this hut. Several villagers sit about,
-sipping at their ales and chatting quietly with each other. As you enter
-they smile and bid you welcome, and ask you to stay and enjoy some good
-conversation for a while.
+      <description>Ты входишь в просторную комнату, предназначенную для клановых переговоров или
+просто семейных посиделок. Несколько селян сидят на шкурах вдоль стены, хлебают
+эль и тихо переговариваются. При виде тебя они удивленно поднимают брови, но
+затем приветливо улыбаются, приглашая тебя погостить немного.
 </description>
       <exits>
         <node name="west">
@@ -3018,13 +3030,13 @@ conversation for a while.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>The Meeting Room</name>
+      <name>Зал для бесед</name>
       <sector>inside</sector>
     </node>
     <node name="24159">
-      <description>In here several teenagers of both sexes rush about preparing the evening
-meal under the watchful eye of a hefty cook, who helps them along with the
-occasional shout or cuff on the ear.
+      <description>Очаг -- сердце любого жилища. На закопченных дочерна камнях умиротворяюще
+булькает котел, пахнет тушеным мясом и кореньями. У стены мускулистый селянин
+разделывает тушу теленка, а рядом молодая девушка чистит какие-то корнеплоды.
 </description>
       <exits>
         <node name="east">
@@ -3032,14 +3044,14 @@ occasional shout or cuff on the ear.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>The Kitchen</name>
+      <name>У очага хижины</name>
       <sector>inside</sector>
     </node>
     <node name="24160">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. На обочине в грязи играют чумазые дети вперемешку с
+поросятами. Очень мило, но жить бы ты тут, пожалуй, не стал{Sfа{Sx.
 </description>
       <exits>
         <node name="east">
@@ -3052,16 +3064,14 @@ a hot meal and a comfortable bed this evening.
           <target>24167</target>
         </node>
       </exits>
-      <name>A Path in the Village</name>
+      <name>Тропа в деревне</name>
       <sector>city</sector>
     </node>
     <node name="24161">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening.
-
-A trapper is selling his goods to the south.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. Слышен лязг металла и зычные голоса деревенских ополченцев.
+На юге ты видишь хижину траппера.
 </description>
       <exits>
         <node name="east">
@@ -3074,16 +3084,15 @@ A trapper is selling his goods to the south.
           <target>24160</target>
         </node>
       </exits>
-      <name>A Path in the Village</name>
+      <name>Тропа в деревне</name>
       <resets>
         <mob limit="3" maxHere="1" vnum="24119"/>
       </resets>
       <sector>city</sector>
     </node>
     <node name="24162">
-      <description>A trapper has set up a business here, where he sells goods that he has
-fashioned or acquired during his expeditions into the wilds. His stock is
-usually rather low, as the villagers quickly buy up for the winter.
+      <description>Здесь продает свои припасы мускулистый траппер-северянин. Он не принадлежит к
+племени, но к нему уже все так привыкли, что считают своим.
 </description>
       <exits>
         <node name="north">
@@ -3091,7 +3100,7 @@ usually rather low, as the villagers quickly buy up for the winter.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>A Hut</name>
+      <name>Хижина траппера</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="24107"/>
         <give vnum="24106"/>
@@ -3102,12 +3111,11 @@ usually rather low, as the villagers quickly buy up for the winter.
       <sector>inside</sector>
     </node>
     <node name="24163">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening.
-
-Food is in fact available to the south of here, though it isn&apos;t hot.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. На обочине в грязи играют чумазые дети вперемешку с
+поросятами. Очень мило, но жить бы ты тут, пожалуй, не стал{Sfа{Sx.
+На юге можно раздобыть еды.
 </description>
       <exits>
         <node name="east">
@@ -3120,13 +3128,12 @@ Food is in fact available to the south of here, though it isn&apos;t hot.
           <target>24106</target>
         </node>
       </exits>
-      <name>A Path in the Village</name>
+      <name>Тропа в деревне</name>
       <sector>city</sector>
     </node>
     <node name="24164">
-      <description>Some enterprising young women have set up a small shop here, where they
-sell off the surplus food that is not required to provision their Clans.
-You may purchase supplies for your travels here.
+      <description>Молодая дочь вождя продает здесь излишки урожая и охоты, которые не понадобились
+селянам и их кланам. 
 </description>
       <exits>
         <node name="north">
@@ -3134,7 +3141,7 @@ You may purchase supplies for your travels here.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>A Supply Hut</name>
+      <name>Склад припасов</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="24108"/>
         <give vnum="24120"/>
@@ -3145,12 +3152,10 @@ You may purchase supplies for your travels here.
       <sector>inside</sector>
     </node>
     <node name="24165">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening.
-
-The brewer&apos;s hut is south of here.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. Слышен лязг металла и зычные голоса деревенских ополченцев.
+С юга доносятся манящие ароматы свежесваренного алкоголя.
 </description>
       <exits>
         <node name="east">
@@ -3166,10 +3171,10 @@ The brewer&apos;s hut is south of here.
           <target>24163</target>
         </node>
       </exits>
-      <name>A Path in the Village</name>
+      <name>Тропа в деревне</name>
       <resets>
         <mob limit="8" maxHere="1" vnum="24128"/>
-        <equip to="wield" vnum="24129"/>
+        <equip to="sheath" vnum="24129"/>
         <equip to="body" vnum="24130"/>
         <equip to="wrist_l" vnum="24131"/>
         <equip to="wrist_r" vnum="24131"/>
@@ -3181,9 +3186,8 @@ The brewer&apos;s hut is south of here.
       <sector>city</sector>
     </node>
     <node name="24166">
-      <description>It is here that the village Brewer practices his holy trade. Should you
-wish to indulge, you may obtain alcohol from the Brewer, though a small
-donation is in order.
+      <description>Находиться здесь дольше, чем несколько минут, просто невозможно -- от густого
+запаха браги и хмеля глаза вылазят на лоб, а язык начинает заплетаться.
 </description>
       <exits>
         <node name="north">
@@ -3191,7 +3195,7 @@ donation is in order.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>The Brewer&apos;s Hut</name>
+      <name>Дом бражника</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="24109"/>
         <give vnum="24101"/>
@@ -3203,10 +3207,10 @@ donation is in order.
       <sector>inside</sector>
     </node>
     <node name="24167">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. На обочине в грязи играют чумазые дети вперемешку с
+поросятами. Очень мило, но жить бы ты тут, пожалуй, не стал{Sfа{Sx.
 </description>
       <exits>
         <node name="east">
@@ -3216,14 +3220,13 @@ a hot meal and a comfortable bed this evening.
           <target>24168</target>
         </node>
       </exits>
-      <name>A Path in the Village</name>
+      <name>Тропа в деревне</name>
       <sector>city</sector>
     </node>
     <node name="24168">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. Слышен лязг металла и зычные голоса деревенских ополченцев.
 </description>
       <exits>
         <node name="east">
@@ -3233,14 +3236,14 @@ a hot meal and a comfortable bed this evening.
           <target>24169</target>
         </node>
       </exits>
-      <name>A Path in the Village</name>
+      <name>Тропа в деревне</name>
       <sector>city</sector>
     </node>
     <node name="24169">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. На обочине в грязи играют чумазые дети вперемешку с
+поросятами. Очень мило, но жить бы ты тут, пожалуй, не стал{Sfа{Sx.
 </description>
       <exits>
         <node name="east">
@@ -3250,11 +3253,11 @@ a hot meal and a comfortable bed this evening.
           <target>24170</target>
         </node>
       </exits>
-      <name>A Path in the Village</name>
+      <name>Тропа в деревне</name>
       <resets>
         <mob limit="3" maxHere="1" vnum="24118"/>
         <mob limit="8" maxHere="1" vnum="24129"/>
-        <equip to="wield" vnum="24129"/>
+        <equip to="sheath" vnum="24129"/>
         <equip to="body" vnum="24130"/>
         <equip to="wrist_l" vnum="24131"/>
         <equip to="wrist_r" vnum="24131"/>
@@ -3266,10 +3269,11 @@ a hot meal and a comfortable bed this evening.
       <sector>city</sector>
     </node>
     <node name="24170">
-      <description>You are standing outside a hut in the village. It is a wooden walled structure
-with a thatched roof, and a sturdy oak door. Occasionally a villager enters
-or exits the hut, sparing you a curious glance as they do. A crude etching
-upon the doors of this hut marks it as the Eagle Clan hut.
+      <description>Ты стоишь на пороге большой хижины -- в таких обычно живет целый клан.
+Стены у этой хижины деревянные, крыша устлана свежими снопами пшеницы, а на
+входе стоит увесистая дубовая дверь. Селяне снуют туда-сюда, одаривая тебя
+любопытными взглядами. Над дверями висит грубо размалеванная табличка с подписью
+&quot;Клан Орла&quot;.
 </description>
       <exits>
         <node name="north">
@@ -3282,14 +3286,14 @@ upon the doors of this hut marks it as the Eagle Clan hut.
           <target>24171</target>
         </node>
       </exits>
-      <name>Outside a Village Clan Hut</name>
+      <name>На пороге клановой хижины</name>
       <sector>city</sector>
     </node>
     <node name="24171">
-      <description>You are standing inside the hut. The sounds and smells of cooking emanate
-from the east, while quiet conversation can be heard to the west. You feel
-slightly nervous about intruding upon this clan, but then again that&apos;s
-what your profession is all about, really. Intruding.
+      <description>Ты заходишь в просторную деревянную хижину. С востока доносится булькание
+котелка и приятные запахи будущего обеда. С запада доносятся приглушенные
+голоса. Ты начинаешь нервничать, осознав, что вторгаешься в личное пространство
+целой семьи. Хотя, что с вас, приключенцев, возьмешь...
 </description>
       <exits>
         <node name="east">
@@ -3305,17 +3309,18 @@ what your profession is all about, really. Intruding.
           <target>24172</target>
         </node>
       </exits>
-      <name>Inside the Hut</name>
+      <flags>indoors</flags>
+      <name>Внутри хижины</name>
       <resets>
         <mob limit="6" maxHere="1" vnum="24122"/>
       </resets>
-      <sector>city</sector>
+      <sector>inside</sector>
     </node>
     <node name="24172">
-      <description>You have entered the common room of this hut. Several villagers sit about,
-sipping at their ales and chatting quietly with each other. As you enter
-they smile and bid you welcome, and ask you to stay and enjoy some good
-conversation for a while.
+      <description>Ты входишь в просторную комнату, предназначенную для клановых переговоров или
+просто семейных посиделок. Несколько селян сидят на шкурах вдоль стены, хлебают
+эль и тихо переговариваются. При виде тебя они удивленно поднимают брови, но
+затем приветливо улыбаются, приглашая тебя погостить немного.
 </description>
       <exits>
         <node name="east">
@@ -3323,13 +3328,13 @@ conversation for a while.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>The Meeting Room</name>
+      <name>Зал для бесед</name>
       <sector>inside</sector>
     </node>
     <node name="24173">
-      <description>In here several teenagers of both sexes rush about preparing the evening
-meal under the watchful eye of a hefty cook, who helps them along with the
-occasional shout or cuff on the ear.
+      <description>Очаг -- сердце любого жилища. На закопченных дочерна камнях умиротворяюще
+булькает котел, пахнет тушеным мясом и кореньями. У стены мускулистый селянин
+разделывает тушу теленка, а рядом молодая девушка чистит какие-то корнеплоды.
 </description>
       <exits>
         <node name="west">
@@ -3337,14 +3342,14 @@ occasional shout or cuff on the ear.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>The Kitchen</name>
+      <name>У очага хижины</name>
       <sector>inside</sector>
     </node>
     <node name="24174">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. На обочине в грязи играют чумазые дети вперемешку с
+поросятами. Очень мило, но жить бы ты тут, пожалуй, не стал{Sfа{Sx.
 </description>
       <exits>
         <node name="east">
@@ -3354,7 +3359,7 @@ a hot meal and a comfortable bed this evening.
           <target>24165</target>
         </node>
       </exits>
-      <name>A Path in the Village</name>
+      <name>Тропа в деревне</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="24116"/>
         <give vnum="24124"/>
@@ -3362,10 +3367,9 @@ a hot meal and a comfortable bed this evening.
       <sector>city</sector>
     </node>
     <node name="24175">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. Слышен лязг металла и зычные голоса деревенских ополченцев.
 </description>
       <exits>
         <node name="east">
@@ -3375,18 +3379,18 @@ a hot meal and a comfortable bed this evening.
           <target>24174</target>
         </node>
       </exits>
-      <name>A Path in the Village</name>
+      <name>Тропа в деревне</name>
       <resets>
         <mob limit="2" maxHere="1" vnum="24121"/>
-        <equip to="wield" vnum="24128"/>
+        <equip to="sheath" vnum="24128"/>
       </resets>
       <sector>city</sector>
     </node>
     <node name="24176">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. На обочине в грязи играют чумазые дети вперемешку с
+поросятами. Очень мило, но жить бы ты тут, пожалуй, не стал{Sfа{Sx.
 </description>
       <exits>
         <node name="south">
@@ -3396,17 +3400,18 @@ a hot meal and a comfortable bed this evening.
           <target>24175</target>
         </node>
       </exits>
-      <name>A Path in the Village</name>
+      <name>Тропа в деревне</name>
       <resets>
         <mob limit="6" maxHere="1" vnum="24126"/>
       </resets>
       <sector>city</sector>
     </node>
     <node name="24177">
-      <description>You are standing outside a hut in the village. It is a wooden walled structure
-with a thatched roof, and a sturdy oak door. Occasionally a villager enters
-or exits the hut, sparing you a curious glance as they do. A crude etching
-upon the doors of this hut marks it as the Wolf Clan hut.
+      <description>Ты стоишь на пороге большой хижины -- в таких обычно живет целый клан.
+Стены у этой хижины деревянные, крыша устлана свежими снопами пшеницы, а на
+входе стоит увесистая дубовая дверь. Селяне снуют туда-сюда, одаривая тебя
+любопытными взглядами. Над дверями висит грубо размалеванная табличка с подписью
+&quot;Клан Волка&quot;.
 </description>
       <exits>
         <node name="north">
@@ -3419,17 +3424,17 @@ upon the doors of this hut marks it as the Wolf Clan hut.
           <target>24178</target>
         </node>
       </exits>
-      <name>Outside a Village Clan Hut</name>
+      <name>На пороге клановой хижины</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="24124"/>
       </resets>
       <sector>city</sector>
     </node>
     <node name="24178">
-      <description>You are standing inside the hut. The sounds and smells of cooking emanate
-from the east, while quiet conversation can be heard to the west. You feel
-slightly nervous about intruding upon this clan, but then again that&apos;s
-what your profession is all about, really. Intruding.
+      <description>Ты заходишь в просторную деревянную хижину. С востока доносится булькание
+котелка и приятные запахи будущего обеда. С запада доносятся приглушенные
+голоса. Ты начинаешь нервничать, осознав, что вторгаешься в личное пространство
+целой семьи. Хотя, что с вас, приключенцев, возьмешь...
 </description>
       <exits>
         <node name="east">
@@ -3446,13 +3451,13 @@ what your profession is all about, really. Intruding.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>Inside the Hut</name>
+      <name>Внутри хижины</name>
       <sector>inside</sector>
     </node>
     <node name="24179">
-      <description>In here several teenagers of both sexes rush about preparing the evening
-meal under the watchful eye of a hefty cook, who helps them along with the
-occasional shout or cuff on the ear.
+      <description>Очаг -- сердце любого жилища. На закопченных дочерна камнях умиротворяюще
+булькает котел, пахнет тушеным мясом и кореньями. У стены мускулистый селянин
+разделывает тушу теленка, а рядом молодая девушка чистит какие-то корнеплоды.
 </description>
       <exits>
         <node name="west">
@@ -3460,14 +3465,14 @@ occasional shout or cuff on the ear.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>The Kitchen</name>
+      <name>У очага хижины</name>
       <sector>inside</sector>
     </node>
     <node name="24180">
-      <description>You have entered the common room of this hut. Several villagers sit about,
-sipping at their ales and chatting quietly with each other. As you enter
-they smile and bid you welcome, and ask you to stay and enjoy some good
-conversation for a while.
+      <description>Ты входишь в просторную комнату, предназначенную для клановых переговоров или
+просто семейных посиделок. Несколько селян сидят на шкурах вдоль стены, хлебают
+эль и тихо переговариваются. При виде тебя они удивленно поднимают брови, но
+затем приветливо улыбаются, приглашая тебя погостить немного.
 </description>
       <exits>
         <node name="east">
@@ -3475,14 +3480,15 @@ conversation for a while.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>The Meeting Room</name>
+      <name>Зал для бесед</name>
       <sector>inside</sector>
     </node>
     <node name="24181">
-      <description>You are standing outside a hut in the village. It is a wooden walled structure
-with a thatched roof, and a sturdy oak door. Occasionally a villager enters
-or exits the hut, sparing you a curious glance as they do. A crude etching
-upon the doors of this hut marks it as the Boar Clan hut.
+      <description>Ты стоишь на пороге большой хижины -- в таких обычно живет целый клан.
+Стены у этой хижины деревянные, крыша устлана свежими снопами пшеницы, а на
+входе стоит увесистая дубовая дверь. Селяне снуют туда-сюда, одаривая тебя
+любопытными взглядами. Над дверями висит грубо размалеванная табличка с подписью
+&quot;Клан Кабана&quot;.
 </description>
       <exits>
         <node name="east">
@@ -3495,12 +3501,13 @@ upon the doors of this hut marks it as the Boar Clan hut.
           <target>24185</target>
         </node>
       </exits>
-      <name>Outside a Village Clan Hut</name>
+      <name>На пороге клановой хижины</name>
       <sector>city</sector>
     </node>
     <node name="24182">
-      <description>These rooms are used by locals and foreigners alike to relax, sing songs and
-enjoy each other&apos;s company. Feel free to stay as long as you wish.
+      <description>Здесь, в этих просторных чертогах селяне встречают хлебом-солью (и, разумеется,
+брагой) гостей и туристов своей деревни, веселятся, танцуют и поют.
+Оставайся, чувствуй себя как дома!
 </description>
       <exits>
         <node name="north">
@@ -3514,12 +3521,13 @@ enjoy each other&apos;s company. Feel free to stay as long as you wish.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>The Common Hall</name>
+      <name>Чертог гостеприимства</name>
       <sector>inside</sector>
     </node>
     <node name="24183">
-      <description>These rooms are used by locals and foreigners alike to relax, sing songs and
-enjoy each other&apos;s company. Feel free to stay as long as you wish.
+      <description>Здесь, в этих просторных чертогах селяне встречают хлебом-солью (и, разумеется,
+брагой) гостей и туристов своей деревни, веселятся, танцуют и поют.
+Оставайся, чувствуй себя как дома!
 </description>
       <exits>
         <node name="south">
@@ -3527,12 +3535,13 @@ enjoy each other&apos;s company. Feel free to stay as long as you wish.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>The Common Hall</name>
+      <name>Чертог гостеприимства</name>
       <sector>inside</sector>
     </node>
     <node name="24184">
-      <description>These rooms are used by locals and foreigners alike to relax, sing songs and
-enjoy each other&apos;s company. Feel free to stay as long as you wish.
+      <description>Здесь, в этих просторных чертогах селяне встречают хлебом-солью (и, разумеется,
+брагой) гостей и туристов своей деревни, веселятся, танцуют и поют.
+Оставайся, чувствуй себя как дома!
 </description>
       <exits>
         <node name="north">
@@ -3540,14 +3549,14 @@ enjoy each other&apos;s company. Feel free to stay as long as you wish.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>The Common Hall</name>
+      <name>Чертог гостеприимства</name>
       <sector>inside</sector>
     </node>
     <node name="24185">
-      <description>You are standing inside the hut. The sounds and smells of cooking emanate
-from the east, while quiet conversation can be heard to the west. You feel
-slightly nervous about intruding upon this clan, but then again that&apos;s
-what your profession is all about, really. Intruding.
+      <description>Ты заходишь в просторную деревянную хижину. С востока доносится булькание
+котелка и приятные запахи будущего обеда. С запада доносятся приглушенные
+голоса. Ты начинаешь нервничать, осознав, что вторгаешься в личное пространство
+целой семьи. Хотя, что с вас, приключенцев, возьмешь...
 </description>
       <exits>
         <node name="east">
@@ -3564,14 +3573,14 @@ what your profession is all about, really. Intruding.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>Inside the Hut</name>
+      <name>Внутри хижины</name>
       <sector>inside</sector>
     </node>
     <node name="24186">
-      <description>You have entered the common room of this hut. Several villagers sit about,
-sipping at their ales and chatting quietly with each other. As you enter
-they smile and bid you welcome, and ask you to stay and enjoy some good
-conversation for a while.
+      <description>Ты входишь в просторную комнату, предназначенную для клановых переговоров или
+просто семейных посиделок. Несколько селян сидят на шкурах вдоль стены, хлебают
+эль и тихо переговариваются. При виде тебя они удивленно поднимают брови, но
+затем приветливо улыбаются, приглашая тебя погостить немного.
 </description>
       <exits>
         <node name="east">
@@ -3579,13 +3588,13 @@ conversation for a while.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>The Meeting Room</name>
+      <name>Зал для бесед</name>
       <sector>inside</sector>
     </node>
     <node name="24187">
-      <description>In here several teenagers of both sexes rush about preparing the evening
-meal under the watchful eye of a hefty cook, who helps them along with the
-occasional shout or cuff on the ear.
+      <description>Очаг -- сердце любого жилища. На закопченных дочерна камнях умиротворяюще
+булькает котел, пахнет тушеным мясом и кореньями. У стены мускулистый селянин
+разделывает тушу теленка, а рядом молодая девушка чистит какие-то корнеплоды.
 </description>
       <exits>
         <node name="west">
@@ -3593,14 +3602,13 @@ occasional shout or cuff on the ear.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>The Kitchen</name>
+      <name>У очага хижины</name>
       <sector>inside</sector>
     </node>
     <node name="24188">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. Слышен лязг металла и зычные голоса деревенских ополченцев.
 </description>
       <exits>
         <node name="east">
@@ -3610,14 +3618,14 @@ a hot meal and a comfortable bed this evening.
           <target>24153</target>
         </node>
       </exits>
-      <name>A Path in the Village</name>
+      <name>Тропа в деревне</name>
       <sector>city</sector>
     </node>
     <node name="24189">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. На обочине в грязи играют чумазые дети вперемешку с
+поросятами. Очень мило, но жить бы ты тут, пожалуй, не стал{Sfа{Sx.
 </description>
       <exits>
         <node name="east">
@@ -3627,19 +3635,17 @@ a hot meal and a comfortable bed this evening.
           <target>24188</target>
         </node>
       </exits>
-      <name>A Path in the Village</name>
+      <name>Тропа в деревне</name>
       <resets>
         <mob limit="3" maxHere="1" vnum="24118"/>
       </resets>
       <sector>city</sector>
     </node>
     <node name="24190">
-      <description>You are strolling along a path in the village. Flecks of white snow are blown
-about on the hard ground by a chill northern breeze that blows in from the
-icy mountains far to the north. You hope that you will be able to find
-a hot meal and a comfortable bed this evening.
-
-The Common Halls lie to the east.
+      <description>Ты бредешь по тропе в деревне Анон. Отовсюду доносятся жизнерадостные голоса
+селян, пахнет дымом костра, сеном и домашним скотом. Вокруг натыканы грубые
+соломенные хижины. Слышен лязг металла и зычные голоса деревенских ополченцев.
+На востоке ты видишь просторный Чертог Гостеприимства.
 </description>
       <exits>
         <node name="east">
@@ -3652,14 +3658,15 @@ The Common Halls lie to the east.
           <target>24189</target>
         </node>
       </exits>
-      <name>A Path in the Village</name>
+      <name>Тропа в деревне</name>
       <sector>city</sector>
     </node>
     <node name="24191">
-      <description>You are standing outside a hut in the village. It is a wooden walled structure
-with a thatched roof, and a sturdy oak door. Occasionally a villager enters
-or exits the hut, sparing you a curious glance as they do. A crude etching
-upon the doors of this hut marks it as the Deer Clan hut.
+      <description>Ты стоишь на пороге большой хижины -- в таких обычно живет целый клан.
+Стены у этой хижины деревянные, крыша устлана свежими снопами пшеницы, а на
+входе стоит увесистая дубовая дверь. Селяне снуют туда-сюда, одаривая тебя
+любопытными взглядами. Над дверями висит грубо размалеванная табличка с подписью
+&quot;Клан Оленя&quot;.
 </description>
       <exits>
         <node name="north">
@@ -3669,14 +3676,14 @@ upon the doors of this hut marks it as the Deer Clan hut.
           <target>24190</target>
         </node>
       </exits>
-      <name>Outside a Village Clan Hut</name>
+      <name>На пороге клановой хижины</name>
       <sector>city</sector>
     </node>
     <node name="24192">
-      <description>You are standing inside the hut. The sounds and smells of cooking emanate
-from the east, while quiet conversation can be heard to the west. You feel
-slightly nervous about intruding upon this clan, but then again that&apos;s
-what your profession is all about, really. Intruding.
+      <description>Ты заходишь в просторную деревянную хижину. С востока доносится булькание
+котелка и приятные запахи будущего обеда. С запада доносятся приглушенные
+голоса. Ты начинаешь нервничать, осознав, что вторгаешься в личное пространство
+целой семьи. Хотя, что с вас, приключенцев, возьмешь...
 </description>
       <exits>
         <node name="east">
@@ -3690,14 +3697,14 @@ what your profession is all about, really. Intruding.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>Inside the Hut</name>
+      <name>Внутри хижины</name>
       <sector>inside</sector>
     </node>
     <node name="24193">
-      <description>You have entered the common room of this hut. Several villagers sit about,
-sipping at their ales and chatting quietly with each other. As you enter
-they smile and bid you welcome, and ask you to stay and enjoy some good
-conversation for a while.
+      <description>Ты входишь в просторную комнату, предназначенную для клановых переговоров или
+просто семейных посиделок. Несколько селян сидят на шкурах вдоль стены, хлебают
+эль и тихо переговариваются. При виде тебя они удивленно поднимают брови, но
+затем приветливо улыбаются, приглашая тебя погостить немного.
 </description>
       <exits>
         <node name="east">
@@ -3705,13 +3712,13 @@ conversation for a while.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>The Meeting Room</name>
+      <name>Зал для бесед</name>
       <sector>inside</sector>
     </node>
     <node name="24194">
-      <description>In here several teenagers of both sexes rush about preparing the evening
-meal under the watchful eye of a hefty cook, who helps them along with the
-occasional shout or cuff on the ear.
+      <description>Очаг -- сердце любого жилища. На закопченных дочерна камнях умиротворяюще
+булькает котел, пахнет тушеным мясом и кореньями. У стены мускулистый селянин
+разделывает тушу теленка, а рядом молодая девушка чистит какие-то корнеплоды.
 </description>
       <exits>
         <node name="west">
@@ -3719,7 +3726,7 @@ occasional shout or cuff on the ear.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>The Kitchen</name>
+      <name>У очага хижины</name>
       <sector>inside</sector>
     </node>
   </rooms>

@@ -2,15 +2,31 @@
 <area>
   <areadata>
     <authors>Yaegar</authors>
-    <credits>The Walls of Anon</credits>
+    <credits>Anon Walls</credits>
+    <flags>easy</flags>
     <levelHigh>65</levelHigh>
     <levelLow>50</levelLow>
-    <name>The Walls of Anon</name>
+    <name>Стены Анона</name>
+    <resetMessage>Ты слышишь лязг доспехов стражи, патрулирующей стены Анона.</resetMessage>
     <security>9</security>
-    <speedwalk>через все Guard Towers в The City of Anon</speedwalk>
+    <speedwalk>через сторожевые башни в городе {hh1423Анон{x</speedwalk>
     <vnumHigh>31400</vnumHigh>
     <vnumLow>31200</vnumLow>
   </areadata>
+  <helps>
+    <node id="1872" keyword="'СТЕНЫ АНОНА' 'ANON WALLS' 'WALLS OF ANON'" level="-1">Город-крепость {hh1423Анон{x обнесен высокими стенами и защищен мощной многоуровневой
+системой фортификаций. Стены круглосуточно патрулируются гвардейцами и боевыми
+магами.
+
+Жизнь гвардейцев тяжела и полна ответственности, они -- пример для всего города.
+По легенде, один из сержантов стражи когда-то был непобедимым воином.
+Его клинок разил без промаха, а его волшебный доспех был непроницаем для врагов.
+Но гордыня и зло очернили его сердце. Однажды он надругался над молодой девушкой
+и хладнокровно убил ее. Сержант был пойман, предан справедливому суду и жестокой
+казни. А боги прокляли его душу и обрекли ее вечно скитаться на месте своего
+преступления...
+</node>
+  </helps>
   <mobiles>
     <node name="31200">
       <ac bash="-20" exotic="0" pierce="-20" slash="-20"/>
@@ -440,7 +456,7 @@ her neck. Her spirit remains here, tormented by its misery.
 </long_descr>
       <mana>5d5+5000</mana>
       <material>0</material>
-      <off add="disarm dodge"/>
+      <off add="disarm"/>
       <player_name>ghost</player_name>
       <race>ghost</race>
       <sex>female</sex>
@@ -641,6 +657,7 @@ is simply waiting till its time to go.
         </node>
       </affects>
       <description>An ornate Longsword is lying here.</description>
+      <extra_flags>deleted</extra_flags>
       <gender>m</gender>
       <level>50</level>
       <material>iron</material>
@@ -680,12 +697,12 @@ is simply waiting till its time to go.
           <apply to="con">2</apply>
         </node>
       </affects>
-      <description>An ornate Breastplate with a black and gold coat of arms is lying here.</description>
+      <description>Изукрашенный панцирь (breastplate) c черно-золотым гербом Анона лежит тут.</description>
       <gender>m</gender>
       <level>50</level>
-      <material>iron</material>
-      <name>breastplate plate</name>
-      <short_descr>an ornate Breastplate</short_descr>
+      <material>steel</material>
+      <name>breastplate plate ornate изукрашенный панцирь стража стены</name>
+      <short_descr>изукрашенн|ый|ого|ому|ый|ым|ом панцир|ь|я|ю|ь|ем|е стража Стены</short_descr>
       <type name="armor">
         <ac bash="13" exotic="0" pierce="13" slash="13"/>
       </type>
@@ -699,12 +716,12 @@ is simply waiting till its time to go.
           <bits table="affect_flags"></bits>
         </node>
       </affects>
-      <description>An ornate Bracer with a black and gold coat of arms is lying here.</description>
+      <description>Изукрашенный браслет (bracer) c черно-золотым гербом Анона лежит тут.</description>
       <gender>m</gender>
       <level>50</level>
-      <material>iron</material>
-      <name>bracer</name>
-      <short_descr>an ornate Bracer</short_descr>
+      <material>leather, gold</material>
+      <name>bracer ornate изукрашенный браслет стража стены</name>
+      <short_descr>изукрашенн|ый|ого|ому|ый|ым|ом браслет||а|у||ом|е стража Стены</short_descr>
       <type name="armor">
         <ac bash="13" exotic="0" pierce="13" slash="13"/>
       </type>
@@ -732,12 +749,13 @@ is simply waiting till its time to go.
           <apply to="mana">25</apply>
         </node>
       </affects>
-      <description>A black cloak with Gold Trim is lying here.</description>
+      <cost>10</cost>
+      <description>Черный плащ (cloak) с золотой оторочкой лежит тут.</description>
       <gender>m</gender>
       <level>50</level>
       <material>cloth</material>
-      <name>cloak</name>
-      <short_descr>a black cloak with gold trim</short_descr>
+      <name>cloak black trim черный плащ с золотой оторочкой и тесьмой</name>
+      <short_descr>черн|ый|ого|ому|ый|ым|ом плащ||а|у||ом|е с золотой оторочкой и тесьмой</short_descr>
       <type name="armor">
         <ac bash="13" exotic="0" pierce="13" slash="13"/>
       </type>
@@ -756,12 +774,12 @@ is simply waiting till its time to go.
           <apply to="ac">-20</apply>
         </node>
       </affects>
-      <description>An ornate helm bearing a black and gold coat of arms lies here.</description>
+      <description>Узорчатый шлем (helm) c черно-золотым гербом Анона лежит тут.</description>
       <gender>m</gender>
       <level>50</level>
-      <material>iron</material>
-      <name>helm</name>
-      <short_descr>an ornate helm</short_descr>
+      <material>steel, gold</material>
+      <name>helm ornate узорчатый шлем стража стены</name>
+      <short_descr>узорчат|ый|ого|ому|ый|ым|ом шлем||а|у||ом|е стража Стены</short_descr>
       <type name="armor">
         <ac bash="13" exotic="0" pierce="13" slash="13"/>
       </type>
@@ -790,12 +808,13 @@ is simply waiting till its time to go.
           <apply to="ac">-20</apply>
         </node>
       </affects>
-      <description>A shield bearing the crest of the House of Lenny lies here.</description>
+      <description>Узорчатый щит (shield) c черно-золотым гербом Анона лежит тут.
+</description>
       <gender>m</gender>
       <level>50</level>
-      <material>iron</material>
-      <name>shield</name>
-      <short_descr>an ornate shield</short_descr>
+      <material>steel</material>
+      <name>shield ornate узорчатый щит стража стены</name>
+      <short_descr>узорчат|ый|ого|ому|ый|ым|ом щит||а|у||ом|е стража Стены</short_descr>
       <type name="armor">
         <ac bash="13" exotic="0" pierce="13" slash="13"/>
       </type>
@@ -811,12 +830,16 @@ is simply waiting till its time to go.
           <apply to="hitroll">2</apply>
         </node>
       </affects>
-      <description>A sturdy throwing spear has been thrust into the ground here.</description>
+      <description>Прочное метательное копье (spear) воткнуто в землю.</description>
       <gender>m</gender>
       <level>50</level>
-      <material>iron</material>
-      <name>spear</name>
-      <short_descr>a throwing spear</short_descr>
+      <material>steel</material>
+      <name>spear throwing anon метательное копье Анона</name>
+      <properties>
+        <node name="bestTier">3</node>
+        <node name="random">true</node>
+      </properties>
+      <short_descr>метательн|ое|ого|ому|ое|ым|ом копь|е|я|ю|е|ем|е Анона</short_descr>
       <type name="warp_stone">
       </type>
       <wear_flags>take hold</wear_flags>
@@ -893,16 +916,17 @@ is simply waiting till its time to go.
     <node name="31209">
       <affects>
         <node>
-          <apply to="hitroll">8</apply>
+          <apply to="damroll">8</apply>
         </node>
         <node>
-          <apply to="damroll">8</apply>
+          <apply to="hitroll">8</apply>
         </node>
       </affects>
       <description>A knight&apos;s broadsword lies here.</description>
-      <extra_flags>glow anti_evil</extra_flags>
+      <extra_flags>glow anti_evil deleted</extra_flags>
       <gender>m</gender>
       <level>58</level>
+      <material>steel</material>
       <name>broadsword</name>
       <short_descr>a finely-made broadsword</short_descr>
       <type name="weapon">
@@ -1155,7 +1179,7 @@ boiling oil can be poured onto attackers below.</node>
       <type name="weapon">
         <diceNumber>14</diceNumber>
         <diceType>3</diceType>
-        <weapClass>exotic</weapClass>
+        <weapClass>bow</weapClass>
         <weapType>pierce</weapType>
       </type>
       <wear_flags>take wield no_sac</wear_flags>
@@ -1208,7 +1232,7 @@ boiling oil can be poured onto attackers below.</node>
     <node name="31222">
       <affects>
         <node>
-          <apply to="none">20</apply>
+          <apply to="learned">20</apply>
           <global registry="skill">bow</global>
         </node>
         <node>
@@ -1363,7 +1387,12 @@ use it well&quot;
       <description>A belaying pin lies here.</description>
       <gender>m</gender>
       <level>8</level>
+      <material>stone</material>
       <name>belaying pin</name>
+      <properties>
+        <node name="bestTier">3</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>a belaying pin</short_descr>
       <type name="weapon">
         <diceNumber>4</diceNumber>
@@ -1441,6 +1470,7 @@ use it well&quot;
       <type name="container">
         <capacity>100</capacity>
         <flags>closeable</flags>
+        <maxWeight>100</maxWeight>
         <weightMult>0</weightMult>
       </type>
       <wear_flags>take wear_about</wear_flags>
@@ -1516,13 +1546,13 @@ use it well&quot;
           <apply to="int">2</apply>
         </node>
       </affects>
-      <description>A ring of wizardry has been left here.</description>
+      <description>Маленькое колечко (ring) излучает мощную магическую ауру.</description>
       <extra_flags>glow magic</extra_flags>
       <gender>m</gender>
       <level>56</level>
       <material>metal</material>
-      <name>ring wizardry</name>
-      <short_descr>a ring of wizardry</short_descr>
+      <name>ring wizardry кольцо кудесников</name>
+      <short_descr>кольцо {1{Cкудесников{2</short_descr>
       <type name="armor">
         <ac bash="14" exotic="0" pierce="14" slash="14"/>
       </type>
@@ -1610,14 +1640,14 @@ use it well&quot;
           <apply to="dex">3</apply>
         </node>
       </affects>
-      <description>A pair of boots of speed lie here.</description>
+      <description>Пара магических ботинок (boots) скорости лежит тут.</description>
       <extra_flags>glow</extra_flags>
       <gender>p</gender>
       <level>56</level>
       <limit>2</limit>
       <material>leather</material>
-      <name>boots speed</name>
-      <short_descr>a pair of boots of speed</short_descr>
+      <name>boots speed ботинки скорости</name>
+      <short_descr>{1{yБотин|ки|ок|кам|ки|ками|ках {CС{Yк{Cо{Yр{Cо{Yс{Cт{Yи{2</short_descr>
       <type name="armor">
         <ac bash="14" exotic="0" pierce="14" slash="14"/>
       </type>
@@ -1627,10 +1657,13 @@ use it well&quot;
     <node name="31245">
       <affects>
         <node>
-          <bits table="res_flags">weapon</bits>
+          <apply to="con">4</apply>
         </node>
         <node>
-          <apply to="hit">66</apply>
+          <apply to="str">4</apply>
+        </node>
+        <node>
+          <apply to="hitroll">9</apply>
           <bits table="affect_flags"></bits>
         </node>
         <node>
@@ -1638,20 +1671,18 @@ use it well&quot;
           <bits table="affect_flags"></bits>
         </node>
         <node>
-          <apply to="hitroll">9</apply>
+          <apply to="hit">66</apply>
           <bits table="affect_flags"></bits>
         </node>
         <node>
-          <apply to="str">4</apply>
-        </node>
-        <node>
-          <apply to="con">4</apply>
+          <bits table="res_flags">weapon</bits>
         </node>
       </affects>
+      <cost>5000</cost>
       <description>Комплект брони (plate) выглядит абсолютно идеально -- ни царапинки!
 </description>
-      <extra_flags>hum dark evil invis nodrop anti_good anti_neutral noremove</extra_flags>
-      <gender>m</gender>
+      <extra_flags>hum dark evil invis nodrop anti_good anti_neutral noremove nolocate nofind</extra_flags>
+      <gender>f</gender>
       <level>60</level>
       <limit>1</limit>
       <material>iron</material>
@@ -2490,7 +2521,7 @@ onto the battlements.
       <name>South Tower, Western Gatehouse</name>
       <resets>
         <mob limit="4" maxHere="1" vnum="31200"/>
-        <equip to="wield" vnum="31200"/>
+        <equip bestTier="3" rand="rand_all" to="sheath" vnum="104"/>
         <equip to="body" vnum="31201"/>
         <equip to="wrist_l" vnum="31202"/>
         <equip to="wrist_r" vnum="31202"/>
@@ -3408,7 +3439,7 @@ wonder if there is another raiding party coming.
       <name>Atop the Gatehouse</name>
       <resets>
         <mob limit="4" maxHere="1" vnum="31203"/>
-        <equip to="wield" vnum="31200"/>
+        <equip bestTier="3" rand="rand_all" to="sheath" vnum="104"/>
         <equip to="body" vnum="31201"/>
         <equip to="wrist_l" vnum="31202"/>
         <equip to="wrist_r" vnum="31202"/>
@@ -3528,7 +3559,7 @@ Shire.
       <name>Heading Along the Battlements</name>
       <resets>
         <mob limit="4" maxHere="1" vnum="31200"/>
-        <equip to="wield" vnum="31200"/>
+        <equip bestTier="3" rand="rand_all" to="sheath" vnum="104"/>
         <equip to="body" vnum="31201"/>
         <equip to="wrist_l" vnum="31202"/>
         <equip to="wrist_r" vnum="31202"/>
@@ -3541,13 +3572,15 @@ Shire.
       <sector>city</sector>
     </node>
     <node name="31275">
-      <description>This collection of buildings serves as the dock for the city on the Anon
-River. As most of the city&apos;s trade comes in by caravan, the docks are not
-very large.
+      <description>Просторная и хорошо организованная гавань Анона, выходящая на Кровавое Море,
+принимает десятки кораблей каждый день. В далеком прошлом город полагался больше
+на караваны с востока, но после разрушения Талоса торговцы предпочли морское
+сообщение сухопутному.
 </description>
       <exits>
         <node name="north">
-          <target>31028</target>
+          <key>0</key>
+          <target>31030</target>
         </node>
         <node name="south">
           <target>31278</target>
@@ -3556,7 +3589,7 @@ very large.
           <target>31281</target>
         </node>
       </exits>
-      <name>The Anon Docks</name>
+      <name>Гавань Анона</name>
       <resets>
         <mob limit="4" maxHere="1" vnum="31217"/>
         <equip to="wield" vnum="31240"/>
@@ -3605,7 +3638,7 @@ their work.
       <name>Heading Along the Battlements</name>
       <resets>
         <mob limit="4" maxHere="1" vnum="31200"/>
-        <equip to="wield" vnum="31200"/>
+        <equip bestTier="3" rand="rand_all" to="sheath" vnum="104"/>
         <equip to="body" vnum="31201"/>
         <equip to="wrist_l" vnum="31202"/>
         <equip to="wrist_r" vnum="31202"/>
@@ -3618,19 +3651,24 @@ their work.
       <sector>city</sector>
     </node>
     <node name="31278">
-      <description>Several small punts and a couple of larger scows are moored at the jetty
-here. A couple of burly laborers work at moving several heavy barrels onto
-one of the scows. They grunt in greeting as you watch.
+      <description>Ты оказываешься на причалах гавани Анона. На юге простирается Кровавое Море.
+Большой залив продолжается на юго-востоке, где в дымке виднеются мрачные отроги
+Южных Гор. 
+К причалам пришвартованы несколько плоскодонок и пара грузовых барж. Бородатые
+грузчики с матерками переносят тяжелые ящики и бочки. Они бурчат что-то условно
+приветственное при твоем появлении и продолжают работу.
 </description>
       <exits>
         <node name="north">
           <target>31275</target>
         </node>
       </exits>
-      <name>The Pier</name>
+      <flags>near_water</flags>
+      <liquid>salt water</liquid>
+      <name>Причалы Анона</name>
       <resets>
         <mob limit="4" maxHere="1" vnum="31216"/>
-        <equip to="wield" vnum="31231"/>
+        <equip to="sheath" vnum="31231"/>
         <give vnum="31232"/>
         <drop vnum="31232"/>
         <drop vnum="31233"/>
@@ -3680,7 +3718,7 @@ to the south wall, heading off into a thick forest.
       <name>Heading Along the Battlements</name>
       <resets>
         <mob limit="4" maxHere="1" vnum="31203"/>
-        <equip to="wield" vnum="31200"/>
+        <equip bestTier="3" rand="rand_all" to="sheath" vnum="104"/>
         <equip to="body" vnum="31201"/>
         <equip to="wrist_l" vnum="31202"/>
         <equip to="wrist_r" vnum="31202"/>
@@ -3752,7 +3790,7 @@ Charming terrain.
       <name>Heading Along the Battlements</name>
       <resets>
         <mob limit="4" maxHere="1" vnum="31203"/>
-        <equip to="wield" vnum="31200"/>
+        <equip bestTier="3" rand="rand_all" to="sheath" vnum="104"/>
         <equip to="body" vnum="31201"/>
         <equip to="wrist_l" vnum="31202"/>
         <equip to="wrist_r" vnum="31202"/>
@@ -3839,7 +3877,7 @@ A door leads west into northwest tower.
       <name>Heading Along the Battlements</name>
       <resets>
         <mob limit="4" maxHere="1" vnum="31202"/>
-        <equip to="wield" vnum="31200"/>
+        <equip bestTier="3" rand="rand_all" to="sheath" vnum="104"/>
         <equip to="body" vnum="31201"/>
         <equip to="wrist_l" vnum="31202"/>
         <equip to="wrist_r" vnum="31202"/>
@@ -3946,7 +3984,7 @@ may be found in there...?
       <name>Heading Along the Battlements</name>
       <resets>
         <mob limit="4" maxHere="1" vnum="31202"/>
-        <equip to="wield" vnum="31200"/>
+        <equip bestTier="3" rand="rand_all" to="sheath" vnum="104"/>
         <equip to="body" vnum="31201"/>
         <equip to="wrist_l" vnum="31202"/>
         <equip to="wrist_r" vnum="31202"/>
@@ -3956,7 +3994,7 @@ may be found in there...?
         <equip to="hold" vnum="31206"/>
         <equip to="finger_l" vnum="31207"/>
         <mob limit="1" maxHere="1" vnum="31206"/>
-        <equip to="wield" vnum="31200"/>
+        <equip bestTier="3" rand="rand_all" to="sheath" vnum="104"/>
         <equip to="body" vnum="31201"/>
         <equip to="wrist_l" vnum="31202"/>
         <equip to="wrist_r" vnum="31202"/>
@@ -4070,7 +4108,7 @@ A door leads east into northeast tower. There is a sign tacked to it.
       <name>Heading Along the Battlements</name>
       <resets>
         <mob limit="4" maxHere="1" vnum="31202"/>
-        <equip to="wield" vnum="31200"/>
+        <equip bestTier="3" rand="rand_all" to="sheath" vnum="104"/>
         <equip to="body" vnum="31201"/>
         <equip to="wrist_l" vnum="31202"/>
         <equip to="wrist_r" vnum="31202"/>
@@ -4105,7 +4143,7 @@ A door to the west leads into southwest tower.
       <name>Heading Along the Battlements</name>
       <resets>
         <mob limit="4" maxHere="1" vnum="31201"/>
-        <equip to="wield" vnum="31200"/>
+        <equip bestTier="3" rand="rand_all" to="sheath" vnum="104"/>
         <equip to="body" vnum="31201"/>
         <equip to="wrist_l" vnum="31202"/>
         <equip to="wrist_r" vnum="31202"/>
@@ -4171,7 +4209,7 @@ wall. You smile, relax and enjoy the walk.
       <name>Heading Along the Battlements</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="31205"/>
-        <equip to="wield" vnum="31200"/>
+        <equip bestTier="3" rand="rand_all" to="sheath" vnum="104"/>
         <equip to="body" vnum="31201"/>
         <equip to="wrist_l" vnum="31202"/>
         <equip to="wrist_r" vnum="31202"/>
@@ -4219,7 +4257,7 @@ wall. You smile, relax and enjoy the walk.
       <name>Heading Along the Battlements</name>
       <resets>
         <mob limit="4" maxHere="1" vnum="31201"/>
-        <equip to="wield" vnum="31200"/>
+        <equip bestTier="3" rand="rand_all" to="sheath" vnum="104"/>
         <equip to="body" vnum="31201"/>
         <equip to="wrist_l" vnum="31202"/>
         <equip to="wrist_r" vnum="31202"/>
@@ -4326,7 +4364,7 @@ A door to the east leads into southeast tower.
       <name>Heading Along the Battlements</name>
       <resets>
         <mob limit="4" maxHere="1" vnum="31201"/>
-        <equip to="wield" vnum="31200"/>
+        <equip bestTier="3" rand="rand_all" to="sheath" vnum="104"/>
         <equip to="body" vnum="31201"/>
         <equip to="wrist_l" vnum="31202"/>
         <equip to="wrist_r" vnum="31202"/>
@@ -4356,7 +4394,7 @@ and a throw rug lies near the staircase.
       <name>Northwest Tower</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="31204"/>
-        <equip to="wield" vnum="31200"/>
+        <equip bestTier="3" rand="rand_all" to="sheath" vnum="104"/>
         <equip to="body" vnum="31201"/>
         <equip to="wrist_l" vnum="31202"/>
         <equip to="wrist_r" vnum="31202"/>
@@ -4388,7 +4426,7 @@ from Lenny.
       <resets>
         <mob limit="1" maxHere="1" vnum="31208"/>
         <equip to="body" vnum="31208"/>
-        <equip to="wield" vnum="31209"/>
+        <equip bestTier="3" rand="rand_all" to="sheath" vnum="104"/>
         <equip to="shield" vnum="31210"/>
         <equip to="head" vnum="31211"/>
         <equip to="hands" vnum="31212"/>
@@ -4414,7 +4452,7 @@ and a throw rug lies near the staircase.
       <name>Southeast Tower</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="31207"/>
-        <equip to="wield" vnum="31200"/>
+        <equip bestTier="3" rand="rand_all" to="sheath" vnum="104"/>
         <equip to="body" vnum="31201"/>
         <equip to="wrist_l" vnum="31202"/>
         <equip to="wrist_r" vnum="31202"/>
@@ -4655,11 +4693,10 @@ owners. You feel quite comfortable in this simple yet pleasant workshop.
       <sector>inside</sector>
     </node>
     <node name="31321">
-      <description>This old shop is filled with old wooden shelves crammed with books, the
-furniture strained to breaking point by the many tomes stacked upon it. In
-front of these shelves an ancient man sits reading an ancient text. As you
-enter he welcomes you and offers to show you some of his stock- abridged
-versions of some of the greatest works of Anonian literature.
+      <description>Этот старый книжный магазинчик полностью заставлен высоченными полками с
+фолиантами, манускриптами и инкунабулами всех сортов и размеров.
+Перед тобой за шаткой конторкой сидит владелец магазинчика и читает какую-то
+интересную книгу. Обязательно прочти тома по истории и общественном укладе!
 </description>
       <exits>
         <node name="west">
@@ -4670,7 +4707,7 @@ versions of some of the greatest works of Anonian literature.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>The Book Shoppe</name>
+      <name>Книжный магазинчик Ксанафакса</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="31059"/>
         <give vnum="31086"/>
@@ -4682,9 +4719,9 @@ versions of some of the greatest works of Anonian literature.
       <sector>inside</sector>
     </node>
     <node name="31322">
-      <description>In this shop sits a small fat dwarf who is busy making locks and keys. He 
-will also purchase your keys if you don&apos;t want them, for a good price. 
-You marvel at all the strange technology about you.
+      <description>В тесной мастерской усердно трудится маленький толстенький дварф, изготавливая
+самые разные ключи и отмычки. По всей мастерской расставлены самые удивительные
+станки и инструменты для слесарного мастерства.
 </description>
       <exits>
         <node name="east">
@@ -4695,7 +4732,7 @@ You marvel at all the strange technology about you.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>The Locksmith</name>
+      <name>Мастерская ключника</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="31060"/>
         <give vnum="31001"/>
@@ -4704,9 +4741,9 @@ You marvel at all the strange technology about you.
       <sector>inside</sector>
     </node>
     <node name="31323">
-      <description>In this small shop you can enhance your statistics, with the aid of one 
-Thom, the enhancer. He stands ready to help you behind a massive oak desk.
-There are several degrees and diplomas affixed to the walls here.
+      <description>На стене у тренера развешаны многочисленные дипломы и медали с различных
+спортивных соревнований.
+Тренер Том дружелюбно машет рукой и приглашает тебя натренировать параметры.
 </description>
       <exits>
         <node name="north">
@@ -4714,7 +4751,7 @@ There are several degrees and diplomas affixed to the walls here.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>Enhancing Shop</name>
+      <name>Дом тренера</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="31061"/>
       </resets>

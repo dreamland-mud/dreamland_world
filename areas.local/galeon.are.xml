@@ -2,9 +2,9 @@
 <area>
   <areadata>
     <authors>Ruffina,Miyamoto</authors>
-    <flags>noquest nogate popular</flags>
-    <levelHigh>5</levelHigh>
-    <levelLow>1</levelLow>
+    <flags>noquest nogate popular safe</flags>
+    <levelHigh>0</levelHigh>
+    <levelLow>0</levelLow>
     <name>Галеон</name>
     <resetMessage>Ты слышишь скрип мачт и крики чаек.</resetMessage>
     <security>9</security>
@@ -13,7 +13,7 @@
     <vnumLow>40000</vnumLow>
   </areadata>
   <helps>
-    <node id="1560" keyword="GALEON ГАЛЕОН КОРАБЛЬ" labels="area" level="1">Во время плаванья на этом корабле можно получить базовые навыки для
+    <node id="1560" keyword="GALEON ГАЛЕОН" labels="area" level="-1">Во время плаванья на этом корабле можно получить базовые навыки для
 дальнейших путешествий по миру, а также поломать голову над различными
 заданиями.
 %PAUSE%
@@ -21,7 +21,19 @@
   {Y*{x Повар просит помочь в приготовлении блюда. 
   {Y*{x Дварф хочет расследовать кражу рома. 
   {Y*{x Капитан просит починить его шляпу. 
-  {Y*{x Лекарь не может найти свое пенсне. 
+  {Y*{x Лекарь Кацман не может найти свое пенсне. 
+%RESUME%
+
+{GТинуэль{x и {GЭткин{x смогут {hh1353натренировать{x твои {hh41параметры{x. Доктор {GКацман{x бесплатно 
+{hh1365вылечит{x, {hh766благословит{x и наложит заклинание {hh556брони{x. {GКапитан{x поможет выбрать свой
+{hh29родной город{x -- без этого покинуть корабль нельзя.
+
+Говорят, что можно забраться на мачты корабля, но для этого придется чуть лучше
+разобраться с командами перемещения.
+
+P.S. Когда-то давно новичков перевозил по морю маленький ветхий фрегат.
+Силами трудолюбивых приключенцев был выстроен новый, расширенный и более
+комфортабельный корабль -- галеон.
 </node>
   </helps>
   <mobiles>
@@ -33,20 +45,21 @@
       <damage>5d7+26</damage>
       <default_pos>stand</default_pos>
       <description>Изящный и стройный полу-эльф, он долгое время не мог найти себе места ни среди
-людей, ни среди эльфов, всюду оставаясь чужаком. Однако жизнь морского волка оказалась ему под стать.
-Дослужившись из простого юнги до капитана, он управляет кораблем уверенной рукой. 
+людей, ни среди эльфов, всюду оставаясь чужаком. Однако жизнь морского волка
+оказалась ему под стать. Дослужившись из простого юнги до капитана, он управляет
+кораблем уверенной рукой. 
 </description>
       <hit>43d10+4900</hit>
       <hitroll>5</hitroll>
       <level>50</level>
-      <long_descr>Капитан (captain) прокладывает путь по картам.
+      <long_descr>{1{GКапитан{2 (captain) прокладывает путь по картам.
 </long_descr>
       <mana>35d23+1775</mana>
       <material>none</material>
       <player_name>капитан captain</player_name>
       <race>half-elf</race>
       <sex>male</sex>
-      <short_descr>Капитан||а|у|а|ом|е</short_descr>
+      <short_descr>{1{GКапитан||а|у|а|ом|е{2</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
     </node>
@@ -64,14 +77,14 @@
       <hit>5d11+924</hit>
       <hitroll>50</hitroll>
       <level>30</level>
-      <long_descr>Повар Кук (cook) всегда рад угостить тебя &apos;чем-то&apos;.
+      <long_descr>Повар {1{GКук{2 (cook) всегда рад угостить тебя &quot;чем-то&quot;. Съедобность не гарантирует!
 </long_descr>
       <mana>28d5+445</mana>
       <material>none</material>
       <player_name>кук cook повар</player_name>
       <race>human</race>
       <sex>male</sex>
-      <short_descr>повар||а|у|а|ом|е Кук||а|у|а|ом|е</short_descr>
+      <short_descr>повар||а|у|а|ом|е {1{GКук||а|у|а|ом|е{2</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
     </node>
@@ -84,25 +97,28 @@
       <dam_type>beating</dam_type>
       <damage>2d4+30</damage>
       <default_pos>stand</default_pos>
-      <description>Человек с умно-хитрыми глазками.
-Нанят на корабль вместо лоцмана.
+      <description>Человек с умно-хитрыми глазками. Нанят на корабль вместо лоцмана.
 Медицинского образования не имеет.
+Доктор поможет тебе повысить свои характеристики: напиши {hc{yтренировать{x.
+А еще доктор научит тебя пользоваться магией (если она доступна твоему классу).
+Напиши {hc{yзаклинания{x, чтобы увидеть доступные магические умения, а потом
+практикуйся. Например, чтобы научиться выпускать волшебные стрелы, напиши:
+{y{hcпрак волш{x
 </description>
       <detection add="observation"/>
       <hit>1d1+999</hit>
       <hitroll>10</hitroll>
       <level>30</level>
-      <long_descr>Добрый корабельный доктор (healer) Кацман скучает в ожидании пациентов.
+      <long_descr>Добрый корабельный доктор (healer) {1{GКацман{2 скучает в ожидании пациентов.
 </long_descr>
       <mana>1d1+999</mana>
       <material>none</material>
       <off add="disarm fast kick"/>
       <player_name>доктор healer doctor лекарь katzman кацман</player_name>
-      <practicer registry="skillGroup">illusion none enhancement meditation maladictions attack detection beguiling harmful combat curative creation benedictions protective healing we
-ather</practicer>
+      <practicer registry="skillGroup">fightmaster illusion defensive transportation enhancement enchantment maladictions attack suddendeath detection beguiling nature necromancy combat curative creation weaponsmaster arcane adventure benedictions protective draconian healing meditation</practicer>
       <race>human</race>
       <sex>male</sex>
-      <short_descr>доктор||а|у|а|ом|е Кацман||а|у|а|ом|е</short_descr>
+      <short_descr>доктор||а|у|а|ом|е {1{GКацман||а|у|а|ом|е{2</short_descr>
       <size>medium</size>
       <spec>spec_cast_adept</spec>
       <start_pos>stand</start_pos>
@@ -117,22 +133,22 @@ ather</practicer>
       <default_pos>stand</default_pos>
       <description>Огромный седой великан, глядя на которого, сразу понимаешь, что с ним шутки плохи.
 Однако к зеленым новичкам, вроде тебя, он приветлив и всегда готов помочь.
-Эткин может потренировать тебя: используй команду {hc{yтренировать{x или {hc{ytrain{x,
-чтобы узнать, какие характеристики ты можешь улучшить. А по команде {hc{yпракт {Dумение{x
-({hc{ypra {Dумение{x) он обучит тебя владению оружием и некоторым боевым приемам.
+Эткин может потренировать тебя: используй команду {hc{y{lrтренировать{letrain{x,
+чтобы узнать, какие статы ты можешь улучшить. А по команде {hc{y{lrпракт{leprac{x он
+обучит тебя владению оружием и боевым приемчикам: например, {hc{y{lrпрак кинжал{lepra dagger{x.
 </description>
       <hit>13d14+2621</hit>
       <hitroll>2</hitroll>
       <level>40</level>
-      <long_descr>Старый вояка Эткин (Etkin) точит кинжал.
+      <long_descr>Старый вояка {1{GЭткин{2 (Etkin) точит кинжал.
 </long_descr>
       <mana>42d9+641</mana>
       <material>none</material>
       <player_name>soldier солдат etkin эткин</player_name>
-      <practicer registry="skillGroup">fightmaster defensive none weaponsmaster</practicer>
+      <practicer registry="skillGroup">fightmaster illusion defensive transportation enhancement enchantment maladictions attack suddendeath detection beguiling nature necromancy combat curative creation weaponsmaster arcane adventure benedictions protective draconian healing meditation</practicer>
       <race>giant</race>
       <sex>male</sex>
-      <short_descr>Эткин||а|у|а|ом|е</short_descr>
+      <short_descr>{GЭткин||а|у|а|ом|е{x</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
     </node>
@@ -156,14 +172,14 @@ ather</practicer>
       <hit>43d10+4900</hit>
       <hitroll>5</hitroll>
       <level>50</level>
-      <long_descr>Тинуэль (Tinuel) стоит, обпершись о штурвал.
+      <long_descr>{1{GТинуэль{2 (Tinuel) стоит, опершись о штурвал.
 </long_descr>
       <mana>35d23+1775</mana>
       <material>none</material>
       <player_name>tinuel тинуэль</player_name>
       <race>elf</race>
       <sex>male</sex>
-      <short_descr>Тинуэл|ь|я|ю|я|ем|е</short_descr>
+      <short_descr>{1{GТинуэл|ь|я|ю|я|ем|е{2</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
     </node>
@@ -237,14 +253,14 @@ ather</practicer>
       <hit>43d10+4900</hit>
       <hitroll>5</hitroll>
       <level>40</level>
-      <long_descr>Дварф (dwarf), заведующий корабельными складами, встречает тебя на палубе.
+      <long_descr>{1{GДварф{2 (dwarf), заведующий корабельными складами, встречает тебя на палубе.
 </long_descr>
       <mana>35d23+1775</mana>
       <material>none</material>
       <player_name>dwarf ezerobkhelad khuludbarak дварф эзеробхкелад кхулудбарак</player_name>
       <race>dwarf</race>
       <sex>male</sex>
-      <short_descr>дварф||а|у|а|ом|е</short_descr>
+      <short_descr>{1{Gдварф||а|у|а|ом|е{2</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
     </node>
@@ -255,14 +271,12 @@ ather</practicer>
       <alignment>-100</alignment>
       <dam_type>punch</dam_type>
       <damage>1d6+4</damage>
-      <default_pos>stand</default_pos>
-      <description>Этот матрос - обладатель опухшей и небритой физиономии, взъерошенных волос
-и неряшливой униформы, засаленной и покрытой пятнами.
-От него всегда несет стойким перегаром, в чем можно убедиться, просто понюхав
-его: {hc{yнюхать матрос{x ({hc{ysmell sailor{x).
-Чаще всего матроса можно застать дрыхнущим где-то в углу. Он очень не любит,
-когда его будят всякие салаги вроде тебя, и если ты не похож на капитана, можешь
-нарваться на неприятности. Впрочем, можешь рискнуть: {hc{yразбудить матрос{x ({hc{ywake sailor{x).
+      <default_pos>sleep</default_pos>
+      <description>Этот матрос -- обладатель опухшей и небритой физиономии, взъерошенных волос
+и неряшливой униформы, засаленной и покрытой пятнами. От него несет стойким
+перегаром, в чем можно убедиться, просто понюхав его: напиши {hc{y{lrнюхать матрос{lesmell sailor{x.
+Он очень не любит, когда его будят всякие салаги, и {Gесли ты не похож{Sfа{Sx на капитана{x,
+можешь нарваться на неприятности. Рискни: напиши {hc{y{lrразбудить матрос{lewake sailor{x.
 </description>
       <hit>5d5+30</hit>
       <hitroll>2</hitroll>
@@ -279,7 +293,7 @@ ather</practicer>
       <size>medium</size>
       <smell>Тебе в нос ударяет резкий запах {yрома{x.
 </smell>
-      <start_pos>stand</start_pos>
+      <start_pos>sleep</start_pos>
       <wealth>1000</wealth>
     </node>
     <node name="40010">
@@ -372,7 +386,7 @@ ather</practicer>
       <mana>1d1+99</mana>
       <material>0</material>
       <off add="disarm parry"/>
-      <player_name>комар mosquito</player_name>
+      <player_name>маленький комарик агрессивный кровопивец москит mosquito</player_name>
       <race>insect</race>
       <sex>male</sex>
       <short_descr>маленьк|ий|ого|ому|ого|им|ом комарик||а|у|а|ом|е</short_descr>
@@ -388,7 +402,7 @@ ather</practicer>
       <dam_type>sting</dam_type>
       <damage>1d2+0</damage>
       <default_pos>stand</default_pos>
-      <description>Насекомое неторопливо плетет свою вечную паутину.
+      <description>Паук неторопливо плетет свою вечную паутину.
 </description>
       <hit>1d1+7</hit>
       <level>1</level>
@@ -440,7 +454,7 @@ ather</practicer>
       <default_pos>stand</default_pos>
       <description>Эту чайку повар умудрился прикормить объедками с кухни, и теперь она
 не покидает палубу. В перерывах между поглощением еды из камбуза, она
-не брезгует тащить все, что плохо лежит.
+не брезгует тащить все, что плохо лежит -- особенно, {Gвсякие блестяшки{x.
 </description>
       <hit>2d6+20</hit>
       <level>5</level>
@@ -466,7 +480,7 @@ ather</practicer>
       <default_pos>stand</default_pos>
       <description>Эту чайку повар умудрился прикормить объедками с кухни, и теперь она
 не покидает палубу. В перерывах между поглощением еды из камбуза, она
-не брезгует тащить все, что плохо лежит.
+не брезгует тащить все, что плохо лежит -- особенно, {Gвсякие блестяшки{x.
 </description>
       <hit>2d6+59</hit>
       <level>5</level>
@@ -487,10 +501,18 @@ ather</practicer>
   <objects>
     <node name="40000">
       <description>Изящная тонкая бровь (eyebrow) почти незаметна на земле.</description>
+      <extraDescr>
+        <node keyword="left mosquito eyebrow левая комариная бровь">На изящной точеной брови, сделавшей честь любой красавице Востока, ты замечаешь
+крохотные частицы свежей комариной плоти! Похоже, опытный кок смог бы сообразить
+из этого какое-нибудь блюдо...
+</node>
+      </extraDescr>
       <gender>f</gender>
       <material>flesh</material>
       <name>left mosquito eyebrow левая комариная бровь</name>
       <short_descr>лев|ая|ую|ой|ую|ой|ой комарин|ая|ую|ой|ую|ой|ой бров|ь|и|и|ь|ью|и</short_descr>
+      <smell>Пахнет комарятиной.</smell>
+      <sound>Кажется, ты все еще можешь различить чей-то противный писк.</sound>
       <type name="trash">
       </type>
       <wear_flags>take</wear_flags>
@@ -499,17 +521,11 @@ ather</practicer>
     <node name="40001">
       <description>Пеньковый гамак (hammock) подвешен тут.</description>
       <extraDescr>
-        <node keyword="hammock гамак">Один из гамаков сейчас не занят, так что можешь попробовать присесть в него:
-{hc{yсесть гамак{x({hc{ysit hammock{x), расположиться для отдыха: {hc{yотдых гамак{x({hc{yrest hammock{x)
-или  просто {hc{yотдых{x({hc{yrest{x), если ты  уже в нем сидишь), прикорнуть: {hc{yспать{x({hc{ysleep{x),
-и неизбежно проснуться ({hc{ywake{x). Когда захочешь идти дальше, встанешь на ноги: {hc{yвстать{x({hc{ystand{x).
-Проделывать эти приседания можно и прямо на полу, например, {hc{yсесть{x({hc{ysit{x), {hc{yспать{x({hc{ysleep{x).
-Разбудить кого-то спящего можно с помощью {yразбудить {Dперсонаж{x({ywake {Dперсонаж{x).
-{x
-Когда ты отдыхаешь или спишь, ты быстрее восстанавливаешь здоровье, ману
-и шаги. Некоторые предметы мебели отличаются повышенной комфортностью, так
-что здоровье или мана в них будет восстанавливаться гораздо быстрее, чем на
-голом полу.
+        <node keyword="hammock гамак">Один из гамаков сейчас не занят, так что можешь попробовать прикорнуть в нем:
+{hc{y{lrспать гамак{lesleep hammock{x. А когда отоспишься, напиши {hc{y{lrпроснуться{lewake{x.
+Когда ты отдыхаешь или спишь, здоровье, мана и шаги восстанавливаются быстрее.
+
+Чтобы узнать больше, почитай {y{hcсправка спать{x.
 </node>
       </extraDescr>
       <gender>m</gender>
@@ -524,11 +540,18 @@ ather</practicer>
       <weight>1</weight>
     </node>
     <node name="40002">
-      <description>Этот казан (pot) настолько огромен, что в него можно залезть! {w({yвойти казан{w или {yenter pot{w){x</description>
+      <description>Этот казан (pot) настолько огромен, что в него можно залезть! {1({y{lrвойти казан{leenter pot{x{2)</description>
+      <extraDescr>
+        <node keyword="казан pot">Огромный казан вероятно не мыли испокон веков. Стенки закопчены и покрыты сажей,
+засохшим жиром и еще какой-то неведомой мерзостью.
+</node>
+      </extraDescr>
       <gender>m</gender>
       <material>steel</material>
       <name>казан pot</name>
       <short_descr>огромн|ый|ого|ому|ый|ым|ом грязн|ый|ого|ому|ый|ым|ом казан||а|у||ом|е</short_descr>
+      <smell>ФФФФУУУУУ!</smell>
+      <sound>Внутри казана кажется что-то шевелится! О, ужас!!!</sound>
       <type name="portal">
         <charges>0</charges>
         <portalFlags>normal_exit</portalFlags>
@@ -539,16 +562,20 @@ ather</practicer>
     <node name="40003">
       <description>Бочка (barrel) стоит здесь.</description>
       <extraDescr>
-        <node keyword="barrel бочка">На этикетке значится:
-{x         &apos;{yР{xом&apos;
-и ниже, мелкими буквами:
-{x         &apos;изготовлено и разлито в {cВольной Гавани{x&apos;
+        <node keyword="barrel бочка">На этикетке строгим почерком дварфа выведено &quot;{RРОМ{x&quot;. А ниже, мелкими буквами:
+&quot;Изготовлено и разлито в {cВольной Гавани{x&quot;.
+
+Чтобы выпить, напиши {hc{y{lrпить бочка{ledrink barrel{x. Если ты захватил{Sfа{Sx с собой флягу,
+можешь наполнить ее из бочки: {hc{y{lrнаполнить фляга бочка{lefill flask barrel{x.
+А не понравится -- выльешь: {hc{y{lrвылить фляга{lepour flask out{x.
 </node>
       </extraDescr>
       <gender>m</gender>
       <material>wood</material>
       <name>бочка barrel</name>
       <short_descr>бочк|а|и|е|у|ой|е</short_descr>
+      <smell>Пахнет каким-то крепким алкоголем!</smell>
+      <sound>Внутри бочки что-то приятственно булькает.</sound>
       <type name="fountain">
         <left>1000</left>
         <liquid>rum</liquid>
@@ -559,7 +586,7 @@ ather</practicer>
     <node name="40004">
       <description>Бочка (barrel) стоит здесь.</description>
       <extraDescr>
-        <node keyword="barrel бочка">Ты замечаешь, что крышка этой бочки была вырвана &apos;с мясом&apos;, а потом кое-как
+        <node keyword="barrel бочка">Ты замечаешь, что крышка этой бочки была вырвана с мясом, а потом кое-как
 прилажена на место.
 На этикетке значится:
 {x         &apos;{yР{xом&apos;
@@ -571,6 +598,8 @@ ather</practicer>
       <material>wood</material>
       <name>бочка barrel</name>
       <short_descr>бочк|а|и|е|у|ой|е</short_descr>
+      <smell>Из этой бочки почему-то пахнет соленым морем.</smell>
+      <sound>Внутри бочки что-то булькает.</sound>
       <type name="fountain">
         <left>1000</left>
         <liquid>salt water</liquid>
@@ -580,10 +609,17 @@ ather</practicer>
     </node>
     <node name="40005">
       <description>Мешок (sack) с тряпьем валяется в углу.</description>
+      <extraDescr>
+        <node keyword="мешок sack">В куче тряпья, похоже, может найтись что-то полезное. Попробуй в нее заглянуть:
+напиши {hc{yизучить мешок{x.
+</node>
+      </extraDescr>
       <gender>m</gender>
       <material>wool</material>
       <name>мешок sack</name>
       <short_descr>меш|ок|ка|ку|ок|ком|ке с тряпьем</short_descr>
+      <smell>Пахнет застарелым потом и небритыми подмышками.</smell>
+      <sound>Ты прикладываешь ухо к мешку с тряпьем. Ничего не слышно, но довольно мягко.</sound>
       <type name="container">
         <capacity>100</capacity>
         <maxWeight>100</maxWeight>
@@ -591,11 +627,28 @@ ather</practicer>
       </type>
     </node>
     <node name="40006">
+      <affects>
+        <node>
+          <apply to="mana">5</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="cha">1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
       <description>Цветастая бандана (bandana) валяется тут.</description>
-      <gender>m</gender>
+      <extraDescr>
+        <node keyword="бандана bandana">На бандане ты замечаешь полустертое изображение какого-то волосатого дядьки с
+гитарой. Эх, послушать бы, что он играет...
+</node>
+      </extraDescr>
+      <gender>f</gender>
       <material>cloth</material>
       <name>бандана bandana</name>
       <short_descr>бандан|а|ы|е|у|ой|е</short_descr>
+      <smell>Пахнет чьим-то морщинистым лбом.</smell>
+      <sound>Из глубины банданы доносятся приглушенные звуки акустического концерта &quot;Нирваны&quot;!</sound>
       <type name="armor">
         <ac bash="1" exotic="0" pierce="1" slash="1"/>
       </type>
@@ -605,21 +658,16 @@ ather</practicer>
     <node name="40007">
       <description>Деревянный рундук (locker) стоит тут.</description>
       <extraDescr>
-        <node keyword="рундук locker">Это деревянный рундук со сломанной крышкой. Непохоже, что в нем хранится что-либо
-ценное.
-Можешь заглянуть в него {hc{yсм в рундук{x ({hc{ylook in locker{x) или {hc{yизучить рундук{x ({hc{yexamine locker{x),
-взять то, что понравится {yвзять {Dпредмет{y рундук{w ({ytake {Dпредмет{y locker{x),
-рассмотреть предмет: {yсм {Dпредмет{w ({ylook {Dпредмет{x),
-попробовать примерить: {yнадеть {Dпредмет{x ({ywear {Dпредмет{x)
-или положить на место: {yположить {Dпредмет{y рундук{w ({yput {Dпредмет{y locker{x).
-Если контейнеров несколько, а тебя интересует второй по счету, указывай его номер
-перед именем, например: {hc{yсмотреть в 2.рундук{w{x ({hc{ylook in 2.locker{x).
-{x
-Иногда такие контейнеры бывают закрыты, тогда не получится заглянуть в них,
-предварительно не открыв: {yоткрыть {Dконтейнер{x({yopen {Dконтейнер{w){x.
-Закрыть обратно: {yзакрыть {Dконтейнер{x({yclose {Dконтейнер){x.
-Запертые на ключ контейнеры можно отпереть: {yотпереть {Dконтейнер{x({yunlock {Dконтейнер{x){x,
-если у тебя, конечно же, есть нужный ключ.
+        <node keyword="рундук locker">Это деревянный рундук со сломанной крышкой. Пока никто не видит, в нем можно как
+следует покопошиться.
+
+Чтобы заглянуть в него, напиши {hc{y{lrизучить рундук{leexamine locker{x.
+А потом напиши {hc{y{lrвзять все рундук{letake all locker{x, чтобы достать из него все вещи.
+
+Если видишь больше одного предмета с одинаковым именем, а тебя интересует второй
+по счету, указывай его номер, когда смотришь, например: {hc{y{lrсмотреть 2.рундук{lelook 2.locker{x.
+
+Заодно можешь почитать {hc{yсправка смотреть{x и {hc{yсправка взять{x, чтобы узнать больше.
 </node>
       </extraDescr>
       <gender>m</gender>
@@ -637,10 +685,12 @@ ather</practicer>
       <cost>3</cost>
       <description>Жестяная фляга (flask) лежит на земле.</description>
       <extraDescr>
-        <node keyword="flask флага">Из этой фляги удобно пить разные жидкости: {hc{yпить фляга{x({hc{ydrink flask{x).
-Но сначала надо найти где-то фонтан или бочку, и наполнить оттуда флягу:
-{yнаполнить фляга бочка{x({yfill flask barrel{x).
-          </node>
+        <node keyword="flask флага">Флягу можно наполнить чем-то, если найти фонтан или бочку с чем-то жидким:
+{hc{y{lrнаполнить фляга бочка{lefill flask barrel{x.
+А потом из нее будет удобно утолять жажду в путешествиях: {hc{y{lrпить фляга{ledrink flask{x.
+
+          
+</node>
       </extraDescr>
       <gender>f</gender>
       <material>tin</material>
@@ -657,36 +707,16 @@ ather</practicer>
     <node name="40009">
       <description>Деревянный рундук (locker) стоит тут.</description>
       <extraDescr>
-        <node keyword="рундук locker">Это деревянный рундук со сломанной крышкой. Непохоже, что в нем хранится что-либо
-ценное.
-Можешь заглянуть в него {hc{yсм в рундук{x ({hc{ylook in locker{x) или {hc{yизучить рундук{x ({hc{yexamine locker{x),
-взять то, что понравится {yвзять {Dпредмет{y рундук{w ({ytake {Dпредмет{y locker{x),
-рассмотреть предмет: {yсм {Dпредмет{w ({ylook {Dпредмет{x),
-попробовать примерить: {yнадеть {Dпредмет{x ({ywear {Dпредмет{x)
-или положить на место: {yположить {Dпредмет{y рундук{w ({yput {Dпредмет{y locker{x).
-Если контейнеров несколько, а тебя интересует второй по счету, указывай его номер
-перед именем, например: {hc{yсмотреть в 2.рундук{w{x ({hc{ylook in 2.locker{x).
-{x
-Иногда такие контейнеры бывают закрыты, тогда не получится заглянуть в них,
-предварительно не открыв: {yоткрыть {Dконтейнер{x({yopen {Dконтейнер{w){x.
-Закрыть обратно: {yзакрыть {Dконтейнер{x({yclose {Dконтейнер){x.
-Запертые на ключ контейнеры можно отпереть: {yотпереть {Dконтейнер{x({yunlock {Dконтейнер{x){x,
-если у тебя, конечно же, есть нужный ключ.
-</node>
-        <node keyword="ящик crate">Это деревянный ящик со сломанной крышкой. Непохоже, что в нем хранится что-либо
-ценное. Можешь заглянуть в него {hc{yсм в ящик{x({hc{ylook in crate{x) или {hc{yизучить ящик{x({hc{yexamine crate{x),
-взять то, что понравится {yвзять {Dпредмет{y ящик{w({ytake {Dпредмет{y crate{x),
-рассмотреть предмет: {yсм {Dпредмет{w({ylook {Dпредмет{x),
-попробовать примерить: {yнадеть {Dпредмет{x({ywear {Dпредмет{x)
-или положить на место: {yположить {Dпредмет{y ящик{w ({yput {Dпредмет{y crate{x).
-Если ящиков несколько, а тебя интересует второй по счету, указывай его номер
-перед именем, например: {hc{yсмотреть в 2.ящик{w({hc{ylook in 2.crate{x).
-{x
-Иногда такие контейнеры бывают закрыты, тогда не получится заглянуть в них, 
-предварительно не открыв: {yоткрыть {Dконтейнер{x({yopen {Dконтейнер{w){x.
-Закрыть обратно: {yзакрыть {Dконтейнер{x({yclose {Dконтейнер){x.
-Запертые на ключ контейнеры можно отпереть: {yотпереть {Dконтейнер{x({yunlock {Dконтейнер{x){x,
-если у тебя, конечно же, есть нужный ключ.
+        <node keyword="рундук locker">Это деревянный рундук со сломанной крышкой. Пока никто не видит, в нем можно как
+следует покопошиться.
+
+Чтобы заглянуть в него, напиши {hc{y{lrизучить рундук{leexamine locker{x.
+А потом напиши {hc{y{lrвзять все рундук{letake all locker{x, чтобы достать из него все вещи.
+
+Заодно можешь почитать {hc{yсправка смотреть{x и {hc{yсправка взять{x, чтобы узнать больше.
+
+Иногда сундуки, ящики и другие контейнеры -- а заодно и двери -- бывают закрыты
+или даже заперты на ключ. Чтобы узнать об этом побольше напиши {hc{yсправка открыть{x.
 </node>
       </extraDescr>
       <gender>m</gender>
@@ -704,19 +734,19 @@ ather</practicer>
     <node name="40010">
       <affects>
         <node>
-          <apply to="saves">-1</apply>
+          <apply to="ac">-1</apply>
           <bits table="affect_flags"></bits>
         </node>
         <node>
-          <apply to="ac">-1</apply>
+          <apply to="saves">-1</apply>
           <bits table="affect_flags"></bits>
         </node>
       </affects>
       <cost>80</cost>
       <description>Смоляной факел (torch) торчит из стены.</description>
       <extraDescr>
-        <node keyword="факел torch">Этот факел поможет увидеть вокруг себя в темноте, если его надеть: {hc{yнадеть факел{x({hc{ywear torch{x).
-          </node>
+        <node keyword="факел torch">Этот факел поможет увидеть вокруг себя в темноте, если его надеть: {hc{y{lrнадеть факел{lewear torch{x.
+</node>
       </extraDescr>
       <extra_flags>glow</extra_flags>
       <gender>m</gender>
@@ -724,6 +754,7 @@ ather</practicer>
       <material>wood</material>
       <name>факел torch</name>
       <short_descr>смолян|ой|ого|ому|ой|ым|ом факел||а|у||ом|е</short_descr>
+      <smell>Факел тихонько потрескивает.</smell>
       <type name="light">
         <v2>300</v2>
       </type>
@@ -735,12 +766,16 @@ ather</practicer>
       <description>Кусок черствого хлеба (rusk) выброшен кем-то здесь.</description>
       <extraDescr>
         <node keyword="rusk сухарик черствый">Таким сухариком не побрезгует ни чайка, ни даже ты. А что делать, больше-то кушать нечего.
-Cъесть сухарик можно так: {hc{yесть сухарик{x({hc{yeat rusk{x), а выбросить на пол: {hc{yбросить сухарик{x({hc{ydrop rusk{x).</node>
+Чтобы съесть его, напиши: {hc{y{lrесть сухарик{leeat rusk{x.
+Чтобы бросить на пол (например, чтобы накормить чайку): {hc{y{lrбросить сухарик{ledrop rusk{x.
+</node>
       </extraDescr>
       <gender>m</gender>
       <material>food</material>
       <name>сухарик rusk</name>
       <short_descr>черств|ый|ого|ому|ый|ым|ом сухарик||а|у||ом|е</short_descr>
+      <smell>Пахнет черствым ржаным хлебом.</smell>
+      <sound>Сухарик тихонько похрустывает.</sound>
       <type name="food">
         <foodHours>15</foodHours>
         <fullHours>35</fullHours>
@@ -750,10 +785,19 @@ Cъесть сухарик можно так: {hc{yесть сухарик{x({hc
     </node>
     <node name="40012">
       <description>Массивный шкаф (case) из красного дерева заполнен свитками и картами.</description>
+      <extraDescr>
+        <node keyword="шкаф case">В шкафу полным-полно карт -- в основном, крупных городов мира.
+Карта Мидгаарда выглядит самой потрепанной -- похоже, большинство новичков
+выбирают именно этот город. Чтобы покопаться в шкафу повнимательнее, напиши
+{hc{yизучить шкаф{x.
+</node>
+      </extraDescr>
       <gender>m</gender>
       <material>redwood</material>
       <name>шкаф case</name>
       <short_descr>шкаф||а|у||ом|е</short_descr>
+      <smell>Шкаф приятно пахнет красным деревом и старыми бумагами.</smell>
+      <sound>Одна из дверц шкафа противно поскрипывает.</sound>
       <type name="container">
         <capacity>1000</capacity>
         <maxWeight>1000</maxWeight>
@@ -762,18 +806,32 @@ Cъесть сухарик можно так: {hc{yесть сухарик{x({hc
       <weight>100</weight>
     </node>
     <node name="40013">
+      <affects>
+        <node>
+          <apply to="damroll">3</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
       <cost>100</cost>
       <description>Опасного вида монтировка (crow bar) выброшена кем-то.</description>
+      <extraDescr>
+        <node keyword="crow bar монтировка">Солидное оружие. Похоже, такой монтировкой можно как следует кого-то огреть.
+Монтировка -- экзотическое оружие. Чтобы узнать подробнее, что это значит,
+почитай справку под номером 122: {hc{y? 122{x.
+</node>
+      </extraDescr>
       <gender>f</gender>
       <level>1</level>
       <material>steel</material>
       <name>crow bar монтировка</name>
       <short_descr>монтировк|а|и|е|у|ой|е</short_descr>
+      <smell>Пахнет серьезными неприятностями!</smell>
+      <sound>Ты прикладываешь ухо к монтировке. Мммм, холодненькая!</sound>
       <type name="weapon">
-        <diceNumber>5</diceNumber>
-        <diceType>2</diceType>
-        <weapClass>dagger</weapClass>
-        <weapType>pound</weapType>
+        <diceNumber>1</diceNumber>
+        <diceType>15</diceType>
+        <weapClass>exotic</weapClass>
+        <weapType>thwack</weapType>
       </type>
       <wear_flags>take wield</wear_flags>
       <weight>8</weight>
@@ -781,11 +839,7 @@ Cъесть сухарик можно так: {hc{yесть сухарик{x({hc
     <node name="40014">
       <affects>
         <node>
-          <apply to="damroll">1</apply>
-          <bits table="affect_flags"></bits>
-        </node>
-        <node>
-          <apply to="hitroll">1</apply>
+          <apply to="hit">5</apply>
           <bits table="affect_flags"></bits>
         </node>
         <node>
@@ -793,7 +847,11 @@ Cъесть сухарик можно так: {hc{yесть сухарик{x({hc
           <bits table="affect_flags"></bits>
         </node>
         <node>
-          <apply to="hit">5</apply>
+          <apply to="hitroll">1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="damroll">1</apply>
           <bits table="affect_flags"></bits>
         </node>
       </affects>
@@ -808,6 +866,8 @@ Cъесть сухарик можно так: {hc{yесть сухарик{x({hc
       <material>leather</material>
       <name>captain hat шляпа капитана</name>
       <short_descr>шляп|а|ы|е|у|ой|е капитана</short_descr>
+      <smell>Пахнет морскими приключениями!</smell>
+      <sound>Не проще ли будет ее надеть?</sound>
       <type name="armor">
         <ac bash="4" exotic="2" pierce="4" slash="4"/>
       </type>
@@ -817,16 +877,19 @@ Cъесть сухарик можно так: {hc{yесть сухарик{x({hc
     <node name="40015">
       <affects>
         <node>
-          <apply to="wis">1</apply>
+          <apply to="con">1</apply>
         </node>
         <node>
-          <apply to="con">1</apply>
+          <apply to="wis">1</apply>
         </node>
       </affects>
       <cost>340</cost>
       <description>Красивая жемчужина (pearl) оставлена здесь.</description>
       <extraDescr>
-        <node keyword="жемчужина pearl">Эта жемчужина добыта в схватке с гигантским моллюском.
+        <node keyword="жемчужина pearl">Ты чувствуешь исходящую от жемчужины силу -- похоже, она обладает какой-то
+магией. Многие вещи в мире изменяют твои параметры или характеристики, если их
+надеть. Попробуй написать {hc{yнадеть жемчужина{x, а потом загляни в {hc{yсчет{x -- какие
+параметры изменились?
 </node>
       </extraDescr>
       <extra_flags>melt_drop</extra_flags>
@@ -834,6 +897,8 @@ Cъесть сухарик можно так: {hc{yесть сухарик{x({hc
       <material>pearl</material>
       <name>жемчужина pearl</name>
       <short_descr>жемчужин|а|ы|е|у|ой|е</short_descr>
+      <smell>Пахнет бренными останками свежеубиенного моллюска.</smell>
+      <sound>Ты засовываешь жемчужину в ухо, а затем еле-еле достаешь ее обратно. Это победа.</sound>
       <type name="treasure">
       </type>
       <wear_flags>take hold</wear_flags>
@@ -842,23 +907,34 @@ Cъесть сухарик можно так: {hc{yесть сухарик{x({hc
     <node name="40016">
       <description>Весло (ram) ожидает здесь правильного использования.</description>
       <extraDescr>
-        <node keyword="ram весло">Что, не спится?! На погреби.
+        <node keyword="ram весло">Что, не спится?! На, погреби.
+Серьезно, можно пора использовать весло по назначению? Напиши {hc{yисп весло{x.
 </node>
       </extraDescr>
       <gender>n</gender>
       <material>wood</material>
       <name>ram весло</name>
       <short_descr>весл|о|а|у|о|ом|е</short_descr>
+      <smell>Пахнет просоленным деревом.</smell>
+      <sound>Ты прикладываешь ухо к жесткому дубовому веслу, на мгновение изображая из себя знаменитую статую.</sound>
       <type name="trash">
       </type>
       <weight>10</weight>
     </node>
     <node name="40017">
       <description>Изящная тонкая бровь (eyebrow) почти незаметна на земле.</description>
+      <extraDescr>
+        <node keyword="right mosq eyebrow правая комар бровь">На изящной точеной брови, сделавшей честь любой красавице Востока, ты замечаешь
+крохотные частицы свежей комариной плоти! Похоже, опытный кок смог бы сообразить
+из этого какое-нибудь блюдо...
+</node>
+      </extraDescr>
       <gender>f</gender>
       <material>flesh</material>
       <name>right mosquito eyebrow правая комариная бровь</name>
       <short_descr>прав|ая|ую|ой|ую|ой|ой комарин|ая|ую|ой|ую|ой|ой бров|ь|и|и|ь|ью|и</short_descr>
+      <smell>Пахнет комарятинкой!</smell>
+      <sound>Кажется, ты все еще можешь различить чей-то противный писк.</sound>
       <type name="trash">
       </type>
       <wear_flags>take</wear_flags>
@@ -866,10 +942,17 @@ Cъесть сухарик можно так: {hc{yесть сухарик{x({hc
     </node>
     <node name="40018">
       <description>Пакет (pack) вкусных корабельных сухариков стоит тут.</description>
+      <extraDescr>
+        <node keyword="pack rusk пакет сухарей">Похоже, этого пакета хватит тебе надолго! Когда почувствуешь голод, просто
+достань сухарик из пакета ({y{hcвзять сухарик пакет{x), потом съешь: {y{hcесть сухарик{x.
+</node>
+      </extraDescr>
       <gender>m</gender>
       <material>paper</material>
       <name>pack rusk пакет сухарей</name>
       <short_descr>пакет||а|у||ом|е сухарей</short_descr>
+      <smell>Пахнет вкусными сухариками!</smell>
+      <sound>При нажатии пакет приятно похрустывает.</sound>
       <type name="container">
         <capacity>30</capacity>
         <maxWeight>5</maxWeight>
@@ -879,10 +962,15 @@ Cъесть сухарик можно так: {hc{yесть сухарик{x({hc
     </node>
     <node name="40019">
       <description>Соленый сухарик (rusk) валяется на полу.</description>
+      <extraDescr>
+        <node keyword="salt rusk соленый сухарик">Когда почувствуешь голод, просто напиши: {y{hcесть сухарик{x.
+</node>
+      </extraDescr>
       <gender>m</gender>
       <material>bread</material>
       <name>salt rusk соленый сухарик</name>
       <short_descr>солен|ый|ого|ому|ый|ым|ом сухарик||а|у||ом|е</short_descr>
+      <smell>Пахнет черствым, но все же съедобным хлебом.</smell>
       <type name="food">
         <foodHours>20</foodHours>
         <fullHours>40</fullHours>
@@ -893,10 +981,18 @@ Cъесть сухарик можно так: {hc{yесть сухарик{x({hc
     <node name="40020">
       <cost>1000</cost>
       <description>Пустая роговая оправа (rims) от пенсне пялится на тебя.</description>
+      <extraDescr>
+        <node keyword="rims оправа">В пенсне отсутствуют стекла. Похоже, кто-то или что-то их утащил. Ну вот кому
+могут понравится блестящие стеклышки?! В общем, если вдруг найдешь, попробуй
+вставить их на место: {hc{yположить стекло пенсне{x
+</node>
+      </extraDescr>
       <gender>f</gender>
       <material>bone</material>
       <name>rims оправа</name>
       <short_descr>рогов|ая|ой|ой|ую|ой|ой оправ|а|ы|е|у|ой|е</short_descr>
+      <smell>Пахнет чьим-то длинным носом и кучерявыми пейсами.</smell>
+      <sound>Ты пытаешься подвесить пенсне на ухо, но выглядит это довольно глупо.</sound>
       <type name="container">
         <capacity>10</capacity>
         <maxWeight>100</maxWeight>
@@ -907,10 +1003,16 @@ Cъесть сухарик можно так: {hc{yесть сухарик{x({hc
     <node name="40021">
       <cost>50</cost>
       <description>Стеклышко (glass) от чьих-то очков выпало на пол.</description>
+      <extraDescr>
+        <node keyword="glass стеклышко">Попробуй вставить стекло в пенсне: {hc{yположить стекло пенсне{x
+</node>
+      </extraDescr>
       <gender>n</gender>
       <material>glass</material>
       <name>glass стеклышко</name>
       <short_descr>стеклышк|о|а|у|о|ом|е от очков</short_descr>
+      <smell>Это стекло, в отличие от всех других стекол, которые тебе попадались, почему-то ничем не пахнет! Удивительно.</smell>
+      <sound>Ты прикладываешь стекло к уху. Оно немного запотевает.</sound>
       <type name="trash">
       </type>
       <wear_flags>take</wear_flags>
@@ -922,32 +1024,47 @@ Cъесть сухарик можно так: {hc{yесть сухарик{x({hc
           <apply to="wis">1</apply>
           <bits table="affect_flags"></bits>
         </node>
+        <node>
+          <bits table="affect_flags">infrared</bits>
+        </node>
+        <node>
+          <bits table="detect_flags">observation</bits>
+        </node>
       </affects>
       <cost>1500</cost>
       <description>Осторожно, не наступи на любимое пенсне (pince-nez) доктора Кацмана!</description>
+      <extraDescr>
+        <node keyword="pince-nez пенсне">Некоторые вещи даруют тебе всякие интересные эффекты или способности.
+Попробуй {hc{yнадеть пенсне{x и написать {hc{yэффекты{x.
+</node>
+      </extraDescr>
       <gender>n</gender>
       <level>30</level>
       <material>bone,glass</material>
       <name>pince-nez пенсне</name>
       <short_descr>пенсне</short_descr>
+      <smell>Пахнет победой! Наконец-то его удалось починить!</smell>
+      <sound>Пенсне молча выдерживает твои издевательства.</sound>
       <type name="jewelry">
       </type>
       <wear_flags>take wear_face</wear_flags>
-      <weight>70</weight>
+      <weight>20</weight>
     </node>
     <node name="40023">
       <cost>500</cost>
       <description>Бинокль (spyglass) в черепаховой оправе лежит на полу.</description>
       <extraDescr>
-        <node keyword="spyglass бинокль">Небольшой бинокль в черепаховой оправе. С его помощью можно увидеть,
-что происходит вдали от тебя, если {yиспользовать{x ({yuse{x) бинокль
-в нужном направлении, например, {hc{yисп бинокль запад{x({hc{yuse spyglass west{x).
+        <node keyword="spyglass бинокль">Небольшой бинокль в черепаховой оправе.
+С его помощью можно увидеть, что происходит вдали от тебя, если использовать его
+с указанием нужного направления. Например, {hc{y{lrисп бинокль запад{leuse spyglass west{x.
 </node>
       </extraDescr>
       <gender>m</gender>
       <material>shell,glass</material>
       <name>spyglass бинокль</name>
       <short_descr>бинокл|ь|я|ю|ь|ем|е</short_descr>
+      <smell>Пахнет дальними странствиями и приключениями!</smell>
+      <sound>Чем пахнут бинокли? Нет, ну правда? Вот какого результата ты ожидал{Sfа{Sx?</sound>
       <type name="treasure">
       </type>
       <wear_flags>take hold</wear_flags>
@@ -1159,105 +1276,6 @@ C-З конец                        |              Площадь            
                                 (Миден&apos;нир)
                        (Изумрудный лес)  (Крепость Гоблинов)
       </node>
-        <node keyword="page04 стр04">{x                         * * * СЕВЕРНАЯ ТЭРА * * *           
-                           = = ============== = =
-
-                               Троя, Олимп     
-                                   |       ,Облачная Гора
-                      King&apos;s       |      /    
-            Аркадия   Castle       |     /       Офкол и Нов.Офкол
-               |        |          |    /              |
-               |        |          |   /               | 
-  Огненная--Долина------+------Сев.Равнины--------Перекресток------Камелот
-    Гора    Эльфов                 |                   |          
-                             ______+______             |
-                            |             |        Пик Драконов
-                            |  Мидгаард   |            |
-                            |_____________|      Пиратские Острова
-
-
-На этой карте очень приблизительно и без соблюдения масштаба изображены зоны
-северной части Тэры. Цель карты -- показать относительное расположение зон по
-отношению друг к другу. 
-
-См. также {hc? зоны{x, {hc? тэра{x
-</node>
-        <node keyword="page05 стр05">{x                         * * * ВОСТОЧНАЯ ТЭРА * * *          
-                           = = =============== = =
-
-            Дьявольский
-             Монастырь
-                 | 
-      Blight-----+
-                 |                                   Старый
-               Мория    Катакомбы         Нирвана   Мидгаард
-              /  |       /                   |     /
-             /   |      /                    | (void)     
-       Подземье  +--Корол.--Детсад           |   /                              
-     (Underdark) |  Дварфов                  |  /           Армагеддон        
-                 |               Деревня  Cвященная             |           
-                 +--Корол.       Смурфов   Роща     Шаолинь   Вольная
-                 |  Зеркал          |        |         |      Гавань         
-Восточн.         |                  |        |         |        |                
-Ворота------Перекресток-----Восточная-Дорога-+----Новый-Талос--Море-----Земля       
-Мидгаарда       Дорог                        |         |     Драконов  Гоблинов
-                 |                        Деревня      |        |         |   
-                 |       Шабаш             Гномов      |     Темный     Страна
-                 |         |                          / \    Контин.    Чудес       
-Руины--------Дварфийский---+---Мах&apos;н-Тор             /   \           
-Талоса     /    Лес               |     \        Базар   Город   
-          /      |                |      \              Призраков
-      Город      +--Вивернова   Башня   Пещеры
-      Дроу       |    башня     Лича       \
-               Каньон                       \
-               Стихий                        Ад
-                 |   \
-               Абисс  Ааракокран
-
-
-На этой карте очень приблизительно и без соблюдения масштаба изображены зоны
-восточной части Тэры. Цель карты -- показать относительное расположение зон по
-отношению друг к другу. 
-
-См. также {hc? зоны{x, {hc? тэра{x
-      
-</node>
-        <node keyword="page06 стр06">{x                         * * * ЗАПАДНАЯ И ЮЖНАЯ ТЭРА * * *
-                          = = ================== = =
-        Mage 
-Dragon  Tower						Plains
-Tower    |   	 		Ciquala&apos;s Lair		   |
- |       |  Galaxy    Titans    /			   |
- --- Shadow-/		|___ _/                            |
-     Grove   Yggdrasil 	|	     	  	         Northern           
-      | 	/  	|  	Greater	      Shire        Midg.            
-      \      Arachnos 	|	Gerighelm       |           |  / 
-        \        \ 	|    	 / 	   	|           | / 
-      Forest Of Haon Dor-------/----+--------------------Midgaard--------Cross
-	  	/    |		|	     Chessboard -/|\| |		 Roads
-	      /	     |		|	                  | |\|
-     	    Old    Troll Den	|    	 		 /| | | \ 
-	    Marsh    		|		    Sewer | | |  Goblin Str.hold
-			  Drakyri Isle		 Prison --| | \
-							    |   \	             
-				Redferne&apos;s-----Chain----Southern  \      
-			     /  Residence		Midgaard    Midgaard 
-			   /	   |			/  /|\    	 River
-		      Divided	   |	      Gang Land  /  |  Graveyard   /
-		      Souls	Clouds  	      Zoo   |	  |      /
-			       (Harpie)			Miden&apos;nir |  Sands of
-					  		(Goblins) |   Sorrow
-					           	         /       
-						            Church              
-						           Catacombs       
-
-На этой карте очень приблизительно и без соблюдения масштаба изображены зоны
-западной и южной частей Тэры. Цель карты -- показать относительное расположение
-зон по отношению друг к другу. 
-
-См. также {hc? зоны{x, {hc? тэра{x
-      
-</node>
         <node keyword="page07 стр07">{x         * * * **************** New Thalos ***************** * * *
                    &quot;Not Thalos or Old Thalos but New Thalos&quot;
             = = =============================================== = =
@@ -1826,25 +1844,21 @@ Dungeon_|                        Dryad                       |
         <node keyword="atlas атлас">Эта солидная тяжелая книга в кожаном переплете содержит несколько очень полезных
 карт. Каждой карте посвящена отдельная страница, на которую можно {yсмотреть{x ({ylook{x).
 
+{RВНИМАНИЕ:
+{C*{x На сайте можно порассматривать новую красивую карту всего мира:
+  {y{hlhttps://dreamland.rocks/maps.html{x
+{C*{x Почитать про все части Тэры (мира) и как куда дойти можно в {y{hcсправка тэра{x
+
 {cОГЛАВЛЕНИЕ{x
-
-{x  {c*{x Карта Галеона                            ({hc{y{lRсм стр00{lEl page00{x)
-
-{x  {c*{x Карта центрального Мидгаарда             ({hc{y{lRсм стр01{lEl page01{x)
-{x  {c*{x Карта северного Мидгаарда                ({hc{y{lRсм стр02{lEl page02{x)
-{x  {c*{x Карта южного Мидгаарда                   ({hc{y{lRсм стр03{lEl page03{x)
-{x  {c*{x Карта Северной Тэры                      ({hc{y{lRсм стр04{lEl page04{x)
-{x  {c*{x Карта Восточной Тэры                     ({hc{y{lRсм стр05{lEl page05{x)
-{x  {c*{x Карта Южной и Западной Тэры              ({hc{y{lRсм стр06{lEl page06{x)
-{x  {c*{x Карта зеркальной части Мира Грез         ({hc{y{lRсм стр21{lEl page21{x)
+{x  {c*{x Карта Мидгаарда                          ({hl{yhttps://dreamland.rocks/maps/midgaard.html{x)
 {x  {c*{x Карта Нового Талоса                      ({hc{y{lRсм стр07{lEl page07{x)
 {x  {c*{x Карта Долины Титанов                     ({hc{y{lRсм стр08{lEl page08{x)
 {x  {c*{x Карта Шира                               ({hc{y{lRсм стр09{lEl page09{x)
-{x  {c*{x Карта Соласа                             ({hc{y{lRсм стр10{lEl page10{x)
+{x  {c*{x Карта Утехи                              ({hc{y{lRсм стр10{lEl page10{x)
 {x  {c*{x Карта Герихельма                         ({hc{y{lRсм стр11{lEl page11{x)
 {x  {c*{x Карта Старого Мидгаарда                  ({hc{y{lRсм стр12{lEl page12{x)
 
-См. также {hc? тэра{x, {hc? зоны{x
+См. также {y{hcсправка зоны{x
 </node>
       </extraDescr>
       <extra_flags>glow hum burn_proof</extra_flags>
@@ -1858,6 +1872,79 @@ Dungeon_|                        Dryad                       |
       <wear_flags>take</wear_flags>
       <weight>20</weight>
     </node>
+    <node name="40025">
+      <cost>1</cost>
+      <description>Свернутая в рулон карта (map) Галеона, корабля новичков, валяется здесь.</description>
+      <extraDescr>
+        <node keyword="map galeon карта галеона">{CКАРТА ГАЛЕОНА (корабля новичков)                    {Yсевер  вверх{x
+                                                        {W| /{x
+Гавань--------Причал ({Y*{x): {D. . . .               {Yзапад {W&lt; + &gt; {Yвосток{x
+              (тут напиши         {D.                   {W/ |{x          
+              {y{hcидти трап{x)            {D.             {Yвниз  юг{x         
+                                      {D.
+                                        {D.
+                             {DФор-марс     .       Грот-марс       Кройс-марс{x             
+                                {D.          .           .              .{x          
+                                {D.          .           .              .{x          
+                             {DФок-мачта     .      Грот-мачта     Палуба полуюта{x      
+                                {D.         {x({Y*{x)          {D.        .{x            
+{DБушприт-----Гальюн-----Палуба   .      {xНа палубе       {D.       .{x     
+                     {Dполубака   .      {xу {Gдварфа{D        .  {xШканцы у----------Каюта
+                           {D.    .          {x|           {D.  {GТинуэля        Капитана{x 
+                            {D.   .          {x|           {D.   {x/      
+                             {D.  .          {x|           {D.  {x/
+            Камбуз---------Палуба у-----Палуба--------Палуба у------------Часовня
+          {Gповара{x Кука      фок-мачты   /   |        грот-мачты                /
+                                      /    |                                 /
+                                     /     |                                /
+                             {Y(вниз) {x/   Палуба по                   {Y(вниз){x /
+                                   /    бакборту                          /
+                                  /                                      /
+            В кубрике---------В кубрике------------Арсенал-------Лазарет доктора
+            у гамаков        у рундуков             {GЭткина          Кацмана{x
+                              /                                       /
+                             /                                       / 
+Темный закуток       {Y(вниз){x /     Трюм,             Трюм,           / {Y(вниз){x
+    в трюме                /    правый борт------правый борт       /
+      |                   /          |                 |          /
+      |                  /           |                 |         /
+   Проход            Возле         Центр               |        /
+между рядами---------бочек---------трюма-----------В трюме-----В трюме
+                                     |                 |       у трапа
+                                     |                 |
+                                   Трюм,             Трюм,
+                                 левый борт--------левый борт
+
+
+{GПРИМЕЧАНИЕ:{x В некоторые места корабля можно попасть только используя команду
+{hhидти{x -- например, {y{hcидти мачта{x. Лазить на мачты совсем не обязательно для заданий,
+но весело!
+</node>
+      </extraDescr>
+      <gender>f</gender>
+      <material>paper</material>
+      <name>map galeon frigate ship карта галеона фрегата корабля корабль</name>
+      <short_descr>карт|а|ы|е|у|ой|е {1{WГалеона{2</short_descr>
+      <smell>Пахнет старым пергаментом и солеными морскими брызгами.</smell>
+      <sound>Ты подносишь карту к уху как морскую раковину, но, к сожалению, не слышишь ничего особенного.</sound>
+      <type name="map">
+        <v0>1</v0>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>1</weight>
+    </node>
+    <node name="40026">
+      <description>Одна золотая монета (coin) лежит тут.</description>
+      <gender>f</gender>
+      <material>gold</material>
+      <name>gold coin золотая монета</name>
+      <short_descr>золот|ая|ой|ой|ую|ой|ой монет|а|ы|е|у|ой|е</short_descr>
+      <type name="money">
+        <gold>1</gold>
+        <silver>0</silver>
+      </type>
+      <wear_flags>take</wear_flags>
+    </node>
     <node name="40100">
       <affects>
         <node>
@@ -1867,22 +1954,23 @@ Dungeon_|                        Dryad                       |
       <behavior type="SubissueWeapon">
       </behavior>
       <cost>50</cost>
-      <description>Тренировочная булава (mace) лежит здесь.</description>
+      <description>Ржавая гантеля (dumbbell) лежит здесь.</description>
       <extraDescr>
-        <node keyword="mace булава">Ты видишь булаву хорошего оружейника, но явно сделанную
-на малобюджетный заказ.
-На боку ее надпись: Сделано в DreamLand.
+        <node keyword="rusty dumbbell ржавая гантеля">Один из шаров гантели давно раскрутился и потерялся, что позволяет использовать
+ее как булаву. Под облупившейся черной краской просвечивает низкокачественное
+железо -- явно не дварфы делали. 
 </node>
       </extraDescr>
-      <extra_flags>melt_drop</extra_flags>
+      <extra_flags>nolocate sell_extract nofind noenchant</extra_flags>
       <gender>f</gender>
       <level>1</level>
       <material>bronze</material>
-      <name>mace sub merc булава</name>
-      <short_descr>тренировочн|ая|ой|ой|ую|ой|ой булав|а|ы|е|у|ой|е</short_descr>
+      <name>mace rusty dumbbell ржавая гантеля булава newbieweapon</name>
+      <short_descr>ржав|ая|ой|ой|ую|ой|ой гантел|я|и|е|ю|ей|е</short_descr>
+      <smell>Пахнет ржавчиной и юношеским задором.</smell>
       <type name="weapon">
-        <diceNumber>1</diceNumber>
-        <diceType>6</diceType>
+        <diceNumber>2</diceNumber>
+        <diceType>5</diceType>
         <weapClass>mace</weapClass>
         <weapType>pound</weapType>
       </type>
@@ -1898,21 +1986,22 @@ Dungeon_|                        Dryad                       |
       <behavior type="SubissueWeapon">
       </behavior>
       <cost>50</cost>
-      <description>Тренировочный кинжал (dagger) лежит здесь.</description>
+      <description>Старое шило (awl) лежит здесь.</description>
       <extraDescr>
-        <node keyword="dagger кинжал">Ты видишь кинжал хорошего оружейника, но явно сделанный
-на малобюджетный заказ.
-На рукояти его надпись: Сделано в DreamLand.
+        <node keyword="old awl старое шило">Острие шила давно затупилось и покрылось ржавчиной. Рукоять потрескалась и
+потемнела от времени.
 </node>
       </extraDescr>
-      <extra_flags>melt_drop</extra_flags>
-      <gender>m</gender>
+      <extra_flags>nolocate sell_extract nofind noenchant</extra_flags>
+      <gender>n</gender>
+      <level>1</level>
       <material>bronze</material>
-      <name>dagger sub merc кинжал</name>
-      <short_descr>тренировочн|ый|ого|ому|ый|ым|ом кинжа|л|ла|лу|л|лом|ле</short_descr>
+      <name>dagger old awl старое шило кинжал newbieweapon</name>
+      <short_descr>стар|ое|ого|ому|ое|ым|ом шил|о|а|у|о|ом|е</short_descr>
+      <smell>Пахнет чем-то непонятным. Не хочется даже думать, куда этим шилом тыкали.</smell>
       <type name="weapon">
-        <diceNumber>1</diceNumber>
-        <diceType>4</diceType>
+        <diceNumber>2</diceNumber>
+        <diceType>5</diceType>
         <weapClass>dagger</weapClass>
         <weapType>pierce</weapType>
       </type>
@@ -1928,22 +2017,22 @@ Dungeon_|                        Dryad                       |
       <behavior type="SubissueWeapon">
       </behavior>
       <cost>50</cost>
-      <description>Тренировочный меч (sword) лежит здесь.</description>
+      <description>Жестяная сабля (sabre) лежит здесь.</description>
       <extraDescr>
-        <node keyword="sword меч">Ты видишь меч хорошего оружейника, но явно сделанный
-на малобюджетный заказ.
-На рукояти его надпись: Сделано в DreamLand.
+        <node keyword="tin sabre sword жестяная сабля меч">Лезвие этой явно игрушечной сабли покрыто царапинами и зазубринами.
+На деревянной гарде видны отпечатки чьих-то детских зубов.
 </node>
       </extraDescr>
-      <extra_flags>melt_drop</extra_flags>
-      <gender>m</gender>
+      <extra_flags>nolocate sell_extract nofind noenchant</extra_flags>
+      <gender>f</gender>
       <level>1</level>
       <material>bronze</material>
-      <name>sword sub merc меч</name>
-      <short_descr>тренировочн|ый|ого|ому|ый|ым|ом ме|ч|ча|чу|ч|чом|че</short_descr>
+      <name>sword tin sabre жестяная сабля меч newbieweapon</name>
+      <short_descr>жестян|ая|ую|ой|ую|ой|ой сабл|я|и|е|ю|ей|е</short_descr>
+      <smell>Пахнет жестью, {Smбратан{Sfсестренка{Sx. Жизнь -- это жесть.</smell>
       <type name="weapon">
-        <diceNumber>1</diceNumber>
-        <diceType>6</diceType>
+        <diceNumber>2</diceNumber>
+        <diceType>5</diceType>
         <weapClass>sword</weapClass>
         <weapType>slash</weapType>
       </type>
@@ -2219,58 +2308,58 @@ Dungeon_|                        Dryad                       |
       <behavior type="SubissueWeapon">
       </behavior>
       <cost>11</cost>
-      <description>Тренировочное копье (spear) лебыто здесь.</description>
+      <description>Ручка швабры (mop) лежит здесь.</description>
       <extraDescr>
-        <node keyword="spear копье">Копье работы лучших мастеров с надписью: Сделано в DreamLand.
+        <node keyword="mop handle ручка швабры">Обломанный наконечник швабры предоставляет весьма сомнительную возможность
+кого-то или что-то этим проткнуть. Ну, или хотя бы пощекотать.
 </node>
       </extraDescr>
-      <extra_flags>melt_drop</extra_flags>
-      <gender>n</gender>
+      <extra_flags>nolocate sell_extract nofind noenchant</extra_flags>
+      <gender>f</gender>
       <level>1</level>
       <material>wood</material>
-      <name>spear sub merc копье</name>
-      <short_descr>тренировочн|ое|ого|ому|ое|ым|ом копь|е|я|ю|е|ем|е</short_descr>
+      <name>spear mop handle ручка швабры копье newbieweapon</name>
+      <short_descr>ручк|а|у|е|у|ой|е швабры</short_descr>
+      <smell>Пахнет плесенью и каким-то дешевым моющим средством.</smell>
       <type name="weapon">
-        <diceNumber>1</diceNumber>
-        <diceType>6</diceType>
+        <diceNumber>2</diceNumber>
+        <diceType>5</diceType>
         <weapClass>spear</weapClass>
         <weapType>thrust</weapType>
       </type>
       <wear_flags>take wield</wear_flags>
-      <weight>50</weight>
+      <weight>20</weight>
     </node>
     <node name="40118">
       <affects>
         <node>
-          <apply to="hitroll">2</apply>
-        </node>
-        <node>
-          <apply to="damroll">1</apply>
+          <apply to="hitroll">1</apply>
         </node>
       </affects>
       <behavior type="SubissueWeapon">
       </behavior>
-      <cost>90</cost>
-      <description>Тренировочный посох (staff) забыт здесь.</description>
+      <cost>11</cost>
+      <description>Ручка швабры (mop) лежит здесь.</description>
       <extraDescr>
-        <node keyword="staff посох">Посох работы лучших мастеров с надписью: Сделано в DreamLand.
+        <node keyword="mop handle ручка швабры">Обломанный наконечник швабры предоставляет весьма сомнительную возможность
+кого-то или что-то этим проткнуть. Ну, или хотя бы пощекотать.
 </node>
       </extraDescr>
-      <extra_flags>melt_drop</extra_flags>
-      <gender>m</gender>
+      <extra_flags>nolocate sell_extract nofind noenchant</extra_flags>
+      <gender>f</gender>
       <level>1</level>
       <material>wood</material>
-      <name>staff sub merc посох</name>
-      <short_descr>тренировочн|ый|ого|ому|ый|ым|ом посо|х|ха|ху|х|хом|хе</short_descr>
+      <name>spear mop handle ручка швабры копье newbieweapon</name>
+      <short_descr>ручк|а|у|е|у|ой|е швабры</short_descr>
+      <smell>Пахнет плесенью и каким-то дешевым моющим средством.</smell>
       <type name="weapon">
-        <diceNumber>1</diceNumber>
+        <diceNumber>2</diceNumber>
         <diceType>5</diceType>
-        <specType>two_hands</specType>
         <weapClass>spear</weapClass>
-        <weapType>pound</weapType>
+        <weapType>thrust</weapType>
       </type>
       <wear_flags>take wield</wear_flags>
-      <weight>40</weight>
+      <weight>20</weight>
     </node>
     <node name="40119">
       <affects>
@@ -2281,25 +2370,28 @@ Dungeon_|                        Dryad                       |
       <behavior type="SubissueWeapon">
       </behavior>
       <cost>50</cost>
-      <description>Тренировочный топор (axe) забыт здесь.</description>
+      <description>Тупой тесак (cleaver) забыт здесь.</description>
       <extraDescr>
-        <node keyword="axe топор">Топор работы лучших мастеров с надписью: Сделано в DreamLand.
+        <node keyword="blunt cleaver тупой тесак">Лезвие -- если это можно так назвать -- давно затупилось и покрыто равномерным
+слоем ржавчины и потеков чего-то багрового, которое тебе совсем не хочется
+идентифицировать поподробнее.
 </node>
       </extraDescr>
-      <extra_flags>melt_drop</extra_flags>
+      <extra_flags>nolocate sell_extract nofind noenchant</extra_flags>
       <gender>m</gender>
       <level>1</level>
       <material>bronze</material>
-      <name>axe sub merc топор</name>
-      <short_descr>тренировочн|ый|ого|ому|ый|ым|ом топо|р|ра|ру|р|ром|ре</short_descr>
+      <name>axe blunt cleaver тупой тесак топор newbieweapon</name>
+      <short_descr>туп|ой|ого|ому|ой|ым|ом тесак||а|у||ом|е</short_descr>
+      <smell>Пахнет застарелым ароматом свеженарубленной собачины.</smell>
       <type name="weapon">
-        <diceNumber>1</diceNumber>
-        <diceType>6</diceType>
+        <diceNumber>2</diceNumber>
+        <diceType>5</diceType>
         <weapClass>axe</weapClass>
         <weapType>chop</weapType>
       </type>
       <wear_flags>take wield</wear_flags>
-      <weight>50</weight>
+      <weight>20</weight>
     </node>
     <node name="40120">
       <affects>
@@ -2310,25 +2402,27 @@ Dungeon_|                        Dryad                       |
       <behavior type="SubissueWeapon">
       </behavior>
       <cost>50</cost>
-      <description>Тренировочный цеп (flail) забыт здесь.</description>
+      <description>Якорная цепь (chain) забыта здесь.</description>
       <extraDescr>
-        <node keyword="flail цеп">Цеп работы лучших мастеров с надписью: Сделано в DreamLand.
+        <node keyword="anchor chain якорная цепь">Цепь покрыта водорослями и вся заросла ракушками -- что, впрочем, увеличивает
+ее убойную силу. Надеюсь, она не развалится от ржавчины при первом взмахе.
 </node>
       </extraDescr>
-      <extra_flags>melt_drop</extra_flags>
-      <gender>m</gender>
+      <extra_flags>nolocate sell_extract nofind noenchant</extra_flags>
+      <gender>f</gender>
       <level>1</level>
       <material>bronze</material>
-      <name>flail sub merc цеп</name>
-      <short_descr>тренировочн|ый|ого|ому|ый|ым|ом це|п|па|пу|п|пом|пе</short_descr>
+      <name>flail anchor chain якорная цепь newbieweapon</name>
+      <short_descr>якорн|ая|ой|ой|ую|ой|ой цеп|ь|и|и|ь|ью|и</short_descr>
+      <smell>Пахнет водорослями и ржавчиной.</smell>
       <type name="weapon">
-        <diceNumber>1</diceNumber>
+        <diceNumber>2</diceNumber>
         <diceType>5</diceType>
         <weapClass>flail</weapClass>
         <weapType>crush</weapType>
       </type>
       <wear_flags>take wield</wear_flags>
-      <weight>50</weight>
+      <weight>20</weight>
     </node>
     <node name="40121">
       <affects>
@@ -2339,20 +2433,22 @@ Dungeon_|                        Dryad                       |
       <behavior type="SubissueWeapon">
       </behavior>
       <cost>50</cost>
-      <description>Тренировочная плетка (whip) забыта здесь.</description>
+      <description>Лохматый трос (rope) забыт здесь.</description>
       <extraDescr>
-        <node keyword="whip плеть">Плеть работы лучших мастеров с надписью: Сделано в DreamLand.
+        <node keyword="rough rope лохматый трос">Старый обрезок троса длиной в полтора метра едва ли можно приспособить для
+чего-то полезного... ну разве что притвориться, что это плетка!
 </node>
       </extraDescr>
-      <extra_flags>melt_drop</extra_flags>
+      <extra_flags>nolocate sell_extract nofind noenchant</extra_flags>
       <gender>f</gender>
       <level>1</level>
-      <material>leather</material>
-      <name>whip sub merc плетка</name>
-      <short_descr>тренировочн|ая|ой|ой|ую|ой|ой плетк|а|и|е|у|ой|е</short_descr>
+      <material>fiber</material>
+      <name>whip rough rope лохматый трос плетка newbieweapon</name>
+      <short_descr>лохмат|ый|ого|ому|ый|ым|ом трос||а|у||ом|е</short_descr>
+      <smell>Пахнет потом и матросскими мозолями.</smell>
       <type name="weapon">
         <diceNumber>2</diceNumber>
-        <diceType>2</diceType>
+        <diceType>5</diceType>
         <weapClass>whip</weapClass>
         <weapType>whip</weapType>
       </type>
@@ -2368,26 +2464,28 @@ Dungeon_|                        Dryad                       |
       <behavior type="SubissueWeapon">
       </behavior>
       <cost>43</cost>
-      <description>Тренировочная алебарда (glaive) лежит здесь.</description>
+      <description>Обломок бушприта (sprit) валяется здесь.</description>
       <extraDescr>
-        <node keyword="glaive алебарда">Алебарда работы лучших мастеров с надписью: Сделано в DreamLand.
+        <node keyword="sprit stump обломок бушприта">С этого длинного и, во всей видимости, когда-то полированного куска дерева
+давно сошел весь лак, а тупой конец изгваздан в чем-то непрезентабельном.
+На поверхности ты замечаешь выцарапанную надпись &quot;Адьёс, амигос!&quot;
 </node>
       </extraDescr>
-      <extra_flags>melt_drop</extra_flags>
-      <gender>f</gender>
+      <extra_flags>nolocate sell_extract nofind noenchant</extra_flags>
+      <gender>m</gender>
       <level>1</level>
       <material>wood</material>
-      <name>glaive sub merc алебарда</name>
-      <short_descr>тренировочн|ая|ой|ой|ую|ой|ой алебард|а|ы|е|у|ой|е</short_descr>
+      <name>polearm обломок бушприта sprit stump алебарда newbieweapon</name>
+      <short_descr>облом|ок|ка|ку|ок|ом|е бушприта</short_descr>
+      <smell>Пахнет ромом и сатирскими ляжками.</smell>
       <type name="weapon">
-        <diceNumber>1</diceNumber>
-        <diceType>7</diceType>
-        <specType>two_hands</specType>
+        <diceNumber>2</diceNumber>
+        <diceType>5</diceType>
         <weapClass>polearm</weapClass>
-        <weapType>slash</weapType>
+        <weapType>beating</weapType>
       </type>
       <wear_flags>take wield</wear_flags>
-      <weight>80</weight>
+      <weight>30</weight>
     </node>
     <node name="40123">
       <affects>
@@ -2398,26 +2496,30 @@ Dungeon_|                        Dryad                       |
       <behavior type="SubissueWeapon">
       </behavior>
       <cost>43</cost>
-      <description>Тренировочный лук (bow) забыт здесь.</description>
+      <description>Детский лук (bow) забыт здесь.</description>
       <extraDescr>
-        <node keyword="bow лук">Лук работы лучших мастеров с надписью: Сделано в DreamLand.
+        <node keyword="bow лук">Сбоку на игрушечном луке нацарапано:
+    
+    Сделано в Деревне смурфов.
+    Смурфетта, вернись, я все прощу!!!
 </node>
       </extraDescr>
-      <extra_flags>melt_drop</extra_flags>
+      <extra_flags>nolocate sell_extract nofind noenchant</extra_flags>
       <gender>m</gender>
       <level>1</level>
       <material>wood</material>
-      <name>bow sub merc лук</name>
-      <short_descr>тренировочн|ый|ого|ому|ый|ым|ом лу|к|ка|ку|к|ком|ке</short_descr>
+      <name>bow child детский лук newbieweapon</name>
+      <short_descr>детск|ий|ого|ому|ий|им|ом лу|к|ка|ку|к|ком|ке</short_descr>
+      <smell>Пахнет луком и бессмысленной мета-иронией.</smell>
       <type name="weapon">
-        <diceNumber>1</diceNumber>
-        <diceType>7</diceType>
+        <diceNumber>2</diceNumber>
+        <diceType>5</diceType>
         <specType>two_hands</specType>
         <weapClass>bow</weapClass>
         <weapType>none</weapType>
       </type>
       <wear_flags>take wield</wear_flags>
-      <weight>80</weight>
+      <weight>30</weight>
     </node>
     <node name="40124">
       <affects>
@@ -2464,15 +2566,12 @@ Dungeon_|                        Dryad                       |
   <rooms>
     <node name="40000">
       <description>Ты стоишь в центре верхней палубы, между фок и грот-мачтами галеона. За обоими
-бортами раскинулись бескрайние воды, ни кусочка суши до самого  горизонта. Рано
-или поздно судно причалит к берегу, но сперва ты долж{Smен{Sfна{Sx многое узнать и многому
-научиться.
- Палуба продожается во всех направлениях, на {yсевере{x правый борт - штирборт, на
-{yюге{x - бакборт, отправившись по палубе на {yзапад{x, в  сторону  носа,  дойдешь  до
-бака, где расположен камбуз, на {yвостоке{x, в сторону  кормы  -  шканцы,  где  ты
-сможешь разыскать капитана.
- По центру палубы имеется люк с трапом, ведущий на  нижние  палубы.  Спускайся
-по трапу {hc{yвниз{x ({hc{ydown{x), и хорошенько их исследуй.
+бортами раскинулись бескрайние воды, ни кусочка суши до самого горизонта.
+Пока судно не причалит к берегу тебе стоит многое узнать и многому научиться.
+Палуба продолжается во все стороны. На {y{hcсевер{x -- пост {Gдварфа{x, на {y{hcюг{x -- бакборт,
+оттуда можно покинуть корабль на шлюпке. На {y{hcзапад{x -- нос и камбуз кока,
+на {y{hcвосток{x -- корма и шканцы, где ты сможешь разыскать {Gкапитана{x.
+{y{hcВниз{x, через люк с трапом, можно попасть на нижние палубы.
 </description>
       <exits>
         <node name="down">
@@ -2497,17 +2596,18 @@ Dungeon_|                        Dryad                       |
         </node>
       </exits>
       <flags>no_vanish no_mob nosummon</flags>
-      <name>На верхней палубе</name>
+      <name>Палуба</name>
       <sector>inside</sector>
     </node>
     <node name="40001">
-      <description>Ты  стоишь  на  верхней  палубе  у  правого  борта  галеона.  Перегнувшись через
-фальшборт, ты сможешь полюбоваться, как волны стонут и плачут  и бьются  о борт.
-Тут  валяется  несколько ящиков,  на которых  удобно расположились  матросы. Они
-режутся в кости, отлынивая от работы. Приземистый дварф  строгого вида  время от
-времени покрикивает на них, тщетно пытаясь воззвать  к совести.  Отправившись на
-юг, ты попадешь в центр палубы, откуда можешь попасть в остальные части галеона.
-Набери {hc{yю{x ({hc{ys{x), чтобы туда пойти.
+      <description>Ты стоишь на верхней палубе у штирборта, правого борта галеона. Обернувшись, ты
+видишь как портовые грузчики сноровисто убирают трап. Похоже, галеон уходит в
+море, и в гавань уже не вернуться...
+На палубе валяется несколько ящиков, на которых удобно расположились матросы.
+Они режутся в кости, отлынивая от работы. Приземистый дварф строгого вида время
+от времени покрикивает на них, тщетно пытаясь воззвать к совести. Отправившись
+на юг, ты попадешь в центр палубы, откуда можешь попасть в остальные части
+галеона. Набери {hc{y{lesouth{lrюг{x или просто {hc{y{lrю{les{x, чтобы туда пойти.
 </description>
       <exits>
         <node name="south">
@@ -2518,7 +2618,7 @@ Dungeon_|                        Dryad                       |
         </node>
       </exits>
       <flags>no_vanish no_mob nosummon</flags>
-      <name>На верхней палубе по штирботу</name>
+      <name>На палубе у дварфа</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="40008"/>
       </resets>
@@ -2527,10 +2627,10 @@ Dungeon_|                        Dryad                       |
     <node name="40002">
       <description>Ты входишь внутрь небольшой палатки, где старый корабельный лекарь проводит
 свои медосмотры. Если твои параметры тебя не устраивают, ты можешь попросить
-лекаря изменить их, поставив тебе другой &apos;диагноз&apos;. Набери {hc{yсчет{x ({hc{yscore{x),
-чтобы увидеть свои параметры. Лекарь как всегда спит, поэтому для начала 
-растолкай его: {hc{yговорить лекарь полундра{x или {hc{ytell healer polundra{x. 
-Когда закончишь, иди отсюда обратно на {hc{yюг{x.
+лекаря изменить их, поставив тебе другой &apos;диагноз&apos;. Набери {hc{y{lrсчет{lescore{x, чтобы 
+увидеть свои параметры. Лекарь как всегда спит, поэтому для начала растолкай 
+его: {hc{y{lrговорить лекарь полундра{letell healer polundra{x. 
+Когда закончишь, иди отсюда обратно на юг (команда: {hc{y{lrюг{lesouth{x).
 </description>
       <exits>
         <node name="south">
@@ -2538,7 +2638,7 @@ Dungeon_|                        Dryad                       |
           <target>40101</target>
         </node>
       </exits>
-      <flags>no_vanish no_mob safe nosummon</flags>
+      <flags>no_vanish no_mob safe no_recall nosummon</flags>
       <name>Палатка лекаря</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="40007"/>
@@ -2546,11 +2646,11 @@ Dungeon_|                        Dryad                       |
       <sector>city</sector>
     </node>
     <node name="40003">
-      <description>Ты стоишь на верхней палубе возле грот-мачты. Ветер  раздувает паруса и швыряет
-соленые брызги  тебе в  лицо. Трап  с дубовыми  перилами позволяет  {yподняться{x на
-шканцы,  к  штурвалу. Небольшой  проход на  {yвостоке{x под  трапом ведёт  в судовую
-часовню.
-Отправившись на {yзапад{x, в сторону носа, ты попадешь в центр палубы.
+      <description>Ты стоишь на верхней палубе. Над тобой возвышается {Wгрот-мачта{x. Ветер
+раздувает паруса и швыряет соленые брызги тебе в лицо. Трап с дубовыми перилами
+позволяет подняться на шканцы, к штурвалу. Небольшой проход на {y{hcвосток{x под
+трапом ведёт в судовую часовню. Отправившись на {y{hcзапад{x, в сторону носа,
+ты попадешь в центр палубы.
 </description>
       <exits>
         <node name="east">
@@ -2569,6 +2669,7 @@ Dungeon_|                        Dryad                       |
         <node name="мачта грот-мачта mainmast mast">
           <description>Главная (и потому самая высокая) мачта галеона. Похоже, постаравшись, можно
 вскарабкаться на мачту, и осмотреться сверху. Кажется, идея неплоха!
+Чтобы взобраться на мачту, напиши {y{hcидти мачта{x.
 </description>
           <key>0</key>
           <max_size_pass>gargantuan</max_size_pass>
@@ -2592,15 +2693,13 @@ Dungeon_|                        Dryad                       |
 Палуба продолжается на {yсевер{x. На {yюге{x - вход в небольшую часовню.
 </description>
       <flags>no_vanish no_mob nosummon</flags>
-      <name>На палубе</name>
+      <name>На палубе (Не используется)</name>
       <sector>inside</sector>
     </node>
     <node name="40005">
-      <description>Ты стоишь  на верхней  палубе у  бакборта -  левого борта  галеона. Перегнувшись
-через фальшборт, ты сможешь полюбоваться, как волны и стонут, и плачут, и плещут
-на  борт.  Штормтрап  (ladder) спускается  вниз к  шлюпке. Если  хочешь покинуть
-галеон - слезь по нему вниз {hc{yидти штормтрап{x ({hc{ywalk  ladder{x). Или  вернись назад,
-на {yсевер{x, в центр палубы.
+      <description>Ты стоишь на верхней палубе у бакборта, левого борта галеона. Перегнувшись через
+фальшборт, ты сможешь полюбоваться, как волны стонут и плещут солеными брыгами.
+На {y{hcсевер{x можно вернуться в центр палубы.
 </description>
       <exits>
         <node name="north">
@@ -2609,21 +2708,7 @@ Dungeon_|                        Dryad                       |
         </node>
       </exits>
       <extraExits>
-        <node name="laddet">
-          <key>0</key>
-          <max_size_pass>tiny</max_size_pass>
-        </node>
-        <node name="лестница ladder">
-          <max_size_pass>gargantuan</max_size_pass>
-          <moving_from>11</moving_from>
-          <moving_mode_from>11</moving_mode_from>
-          <moving_mode_to>11</moving_mode_to>
-          <moving_to>11</moving_to>
-          <short_desc_from>веревочной лестнице</short_desc_from>
-          <short_desc_to>веревочной лестнице</short_desc_to>
-          <target>40026</target>
-        </node>
-        <node name="штормтрап ladder">
+        <node name="штормтрап лестница ladder">
           <description>Веревочная лестница с деревянными балясинами опущена по наружному борту.
 </description>
           <max_size_pass>gargantuan</max_size_pass>
@@ -2631,24 +2716,26 @@ Dungeon_|                        Dryad                       |
           <moving_mode_from>11</moving_mode_from>
           <moving_mode_to>11</moving_mode_to>
           <moving_to>11</moving_to>
+          <room_description>{WШтормтрап{x (ladder) спускается вниз к шлюпке. Если хочешь покинуть галеон, напиши
+{hc{y{lrидти штормтрап{lewalk ladder{x.
+</room_description>
           <short_desc_from>веревочной лестнице</short_desc_from>
           <short_desc_to>веревочной лестнице</short_desc_to>
           <target>40026</target>
         </node>
       </extraExits>
       <flags>no_vanish no_mob nosummon</flags>
-      <name>На палубе по бакборту</name>
+      <name>На палубе у шлюпки</name>
       <sector>inside</sector>
     </node>
     <node name="40006">
-      <description>Ты стоишь на верхней палубе возле фок-мачты. Ветер раздувает паруса, заставляя
-скрипеть  мачты  и  такелаж.  Доски  палубы  стонут  в  такт  покачиванию судна.
-{yЗапад{xнее, в надстройке бака, расположен камбуз. Запахи, доносящиеся из-за двери,
-не под силу перебить  даже морскому  ветру. Однако, если ты  проголодал{Smся{Sfась{Sx, тебе
-именно туда - другой пищи на корабле не водится.
- Также можно отправится на {yвосток{x, в центр  палубы,  или  подняться  на  палубу 
-полубака, над камбузом по трапу ({y{hcсм трап{x).  
-
+      <description>Ты стоишь на верхней палубе возле {Wфок-мачты{x. Ветер раздувает паруса, заставляя
+скрипеть мачты и такелаж. Доски палубы стонут в такт покачиванию судна.
+Западнее ({y{hcз{x) на баке, расположен камбуз. Запахи, доносящиеся из-за двери,
+не под силу перебить даже морскому ветру. Однако, если ты проголодал{Smся{Sfась{Sx, тебе
+именно туда -- другой пищи на корабле не водится.
+Также можно отправится на восток ({y{hcв{x), в центр палубы, или подняться на палубу
+полубака, над камбузом по {Wтрапу{x ({hc{y{lrсм трап{lelook ladder{x).
 </description>
       <exits>
         <node name="east">
@@ -2662,7 +2749,8 @@ Dungeon_|                        Dryad                       |
       </exits>
       <extraExits>
         <node name="мачта фок-мачта foremast mast">
-          <description>Похоже, постаравшись, можно вскарабкаться на мачту, и осмотреться сверху. Кажется, идея неплоха!
+          <description>Похоже, постаравшись, можно вскарабкаться на мачту, и осмотреться сверху.
+Кажется, идея неплоха! Чтобы взобраться на мачту, напиши {y{hcидти мачта{x.
 </description>
           <key>0</key>
           <max_size_pass>gargantuan</max_size_pass>
@@ -2675,9 +2763,9 @@ Dungeon_|                        Dryad                       |
           <target>40029</target>
         </node>
         <node name="трап ladder">
-          <description>Обычный, ничем не примечательный, деревянный морской трап, ведущий на
-палубу полубака, расположенным над камбузом.
-Чтоб подняться введи {hc{yидти трап{x ({hc{ywalk ladder{x).
+          <description>Ничем особо не примечательный деревянный трап, ведущий на палубу полубака,
+расположенным над камбузом.
+Чтоб подняться, напиши {hc{y{lrидти трап{lewalk ladder{x.
 </description>
           <key>0</key>
           <max_size_pass>gargantuan</max_size_pass>
@@ -2697,9 +2785,9 @@ Dungeon_|                        Dryad                       |
     </node>
     <node name="40007">
       <description>Вот главное место на всем судне! Правда, пахнет здесь не очень. И кастрюли
-никто не мыл уже очень давно. Но что-то перекусить наверняка найдется.  Вот,
-местные тараканы и крысы находят же - значит и тебе повезет.
-Дверь на {yвосток{xе ведет обратно на свежий воздух.
+никто не мыл уже очень давно. Но что-то перекусить наверняка найдется. 
+Вот, местные тараканы и крысы находят же -- значит и тебе повезет.
+Дверь на востоке ({y{hcв{x) ведет обратно на свежий воздух.
 </description>
       <exits>
         <node name="east">
@@ -2708,7 +2796,7 @@ Dungeon_|                        Dryad                       |
         </node>
       </exits>
       <flags>no_vanish no_mob indoors nosummon</flags>
-      <name>Камбуз</name>
+      <name>Камбуз повара Кука</name>
       <resets>
         <drop vnum="40002"/>
         <mob limit="1" maxHere="1" vnum="40002"/>
@@ -2717,7 +2805,7 @@ Dungeon_|                        Dryad                       |
     </node>
     <node name="40008">
       <description>Именно  так  должна  выглядеть  изнутри  троллиная колыбель.  Вскарабкавшись по
-омерзительным стенкам наверх, ты снова обретешь свободу.
+омерзительным стенкам {y{hcвверх{x, ты снова обретешь свободу.
 </description>
       <exits>
         <node name="up">
@@ -2734,13 +2822,11 @@ Dungeon_|                        Dryad                       |
       <sector>inside</sector>
     </node>
     <node name="40009">
-      <description>С высоты шканцев открывается вид  на весь  корабль и  на окружающие  его  водные
-просторы. В центре возвышается огромный штурвал. Позади него - ют, где  находится
-каюта капитана. Сбоку от входа в каюту расположен дубовый трап ({y{hcсм трап{x), вeдущий 
-на палубу полуюта. Эльф, стоящий у руля, поможет тебе повысить твои  параметры  в
-обмен на тренировочные сессии. Для этого  используй  команду  {hc{yтренировать{x ({hc{ytrain{x). 
-Универсалы могут выбрать здесь свою первую  профессию,  просто  сказав  вслух  ее
-название.
+      <description>С высоты шканцев открывается вид  на весь корабль и на окружающие его водные
+просторы. В центре возвышается огромный штурвал. Позади него -- ют с каютой
+капитана. Сбоку от входа в каюту расположен дубовый {Wтрап{x ({y{hc{lrсм трап{lelook ladder{x), вeдущий 
+на палубу полуюта. Эльф, стоящий у руля, поможет тебе повысить твои параметры.
+Напиши {hc{y{lrтренировать{letrain{x, чтобы начать тренировку.
 </description>
       <exits>
         <node name="down">
@@ -2754,7 +2840,7 @@ Dungeon_|                        Dryad                       |
       <extraExits>
         <node name="трап ladder">
           <description>Деревянный трап с дубовыми перилами ведёт на палубу полуюта.
-Чтоб подняться введи {hc{yидти трап{x ({hc{ywalk ladder{x).
+Чтоб подняться,напиши {hc{y{lrидти трап{lewalk ladder{x.
 
 </description>
           <key>0</key>
@@ -2767,7 +2853,7 @@ Dungeon_|                        Dryad                       |
         </node>
       </extraExits>
       <flags>no_vanish nosummon</flags>
-      <name>На шканцах</name>
+      <name>На шканцах у Тинуэля</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="40005"/>
         <mob limit="1" maxHere="1" vnum="40016"/>
@@ -2775,11 +2861,12 @@ Dungeon_|                        Dryad                       |
       <sector>inside</sector>
     </node>
     <node name="40010">
-      <description>Ты попадаешь  в хорошо  освещенную комнату,  заваленную различными  картами и
+      <description>Ты попадаешь в хорошо освещенную комнату, заваленную различными картами и
 навигационными приборами. Здесь наверняка найдутся карты всех крупных портов и
-торговых городов DreamLand. Если ты еще не решил, куда плыть - самое время это
-сделать. На столе среди прочих бумаг ты замечаешь красочный буклет (booklet).
-Используй команду {hc{yчитать буклет{x ({hc{yread booklet{x), чтобы изучить его.
+торговых городов Мира Мечты. Если ты еще не решил{Sfа{Sx, куда плыть, самое время
+это сделать. На столе среди прочих бумаг ты замечаешь красочный буклет (booklet).
+Набери {y{hc{lrчитать буклет{leread booklet{x, чтобы изучить его.
+А когда будешь готов{Sfа{Sx, сообщи Капитану свой выбор, например: {hc{yсказать мидгаард{x.
 </description>
       <exits>
         <node name="west">
@@ -2788,26 +2875,27 @@ Dungeon_|                        Dryad                       |
         </node>
       </exits>
       <extraDescr>
-        <node keyword="booklet буклет">Корабль доставит тебя в твой родной город. Город -  это место,  где размещается
-твой храм. Боги переносят тебя в храм, если ты  их попросишь командой {yвозврат{x ({hc{yrecall{x).
-После твоей смерти твоя душа возрождается возле алтаря этого xрама, а в его яму
-для пожертвований попадут твои вещи, если ты не успеешь вовремя забрать их из
-своего трупа.  Со временем,  поднакопив квестовых  очков, ты  сможешь построить
-собственный дом в пригороде своего родного города. Ты можешь  жить в  одном из
-девяти городов, если он подходит для твоей расы, профессии и характера:
-{x Мидгаард         :  любой характер        : {hc{yск Мидгаард{x
-{x Новый Талос      :  любой характер        : {hc{yск Новый Талос{x
-{x Герихельм        :  незлой характер       : {hc{yск Герихельм{x
-{x Солас            :  незлой характер       : {hc{yск Солас{x
+        <node keyword="booklet буклет">Корабль доставит тебя в твой родной город -- место, где размещается твой храм.
+Боги переносят тебя в храм, если ты их попросишь командой {lr{yвозврат{x{le{yrecall{x.
+и после {hh12смерти{x ты будешь тоже попадать туда.
+
+Самый крупный и обустроенный город -- столица {CМидгаард{x, и там больше всего
+игроков. Чтобы жить в столице, напиши {lr{hc{yск Мидгаард{x{le{hc{ysay Midgaard{x{lx.
+
+Можно выбрать другие города, подходящие для твоей расы, класса и натуры:
+{x Новый Талос      :  любая натура          : {hc{yск Новый Талос{x
+{x Герихельм        :  незлой                : {hc{yск Герихельм{x
+{x Солас            :  незлой                : {hc{yск Солас{x
 {x Новый Офкол      :  нейтральный           : {hc{yск Новый Офкол{x
 {x Город Дроу       :  дроу, темные эльфы,   : {hc{yск Город Дроу{x
-                       злые полу-эльфы
-{x Старый Мидгаард  :  вампиры и некроманты  : {hc{yск Старый Мидгаард{x
+                     злые полу-эльфы
+{x Старый Мидгаард  :  вампиры, некроманты   : {hc{yск Старый Мидгаард{x
+                     анти-паладины
 {x Долина Титанов   :  все расы гигантов     : {hc{yск Долина Титанов{x
 {x Шир              :  хоббиты               : {hc{yск Шир{x
 {x
-Назови вслух город, в которым ты хочешь жить, и  Капитан доставит  тебя туда.
-Например, {hc{yск Мидгаард{x ({hc{ysay Midgaard{x). Выбор делается раз и навсегда.
+Назови вслух город, в которым ты хочешь жить, и Капитан доставит тебя туда.
+Выбор делается раз и навсегда.
 </node>
       </extraDescr>
       <flags>no_vanish no_mob indoors nosummon</flags>
@@ -2824,18 +2912,16 @@ Dungeon_|                        Dryad                       |
         <put in="40012" limit="-1" maxHere="1" vnum="7665"/>
         <put in="40012" limit="-1" maxHere="1" vnum="3162"/>
         <put in="40012" limit="-1" maxHere="1" vnum="3160"/>
-        <put in="40012" limit="-1" maxHere="1" vnum="3163"/>
-        <put in="40012" limit="-1" maxHere="1" vnum="3383"/>
-        <put in="40012" limit="-1" maxHere="1" vnum="3384"/>
+        <put in="40012" limit="1" maxHere="1" vnum="40025"/>
       </resets>
       <sector>inside</sector>
     </node>
     <node name="40011">
-      <description>Настоящие матросы спят стоя. Или в гамаке. Как раз несколько  таких плетеных
-изделий свисает с потолка. Выглядело бы уютно, если бы  не тряпье  и храпящие
-матросы, набросанные сверху. По одному взгляду на гамак становится понятно,
-как обращаться с ним и с мебелью вообще, так что {hc{yсм гамак{x ({hc{ylook hammock{x)!
-Единственный выход на восток.
+      <description>Настоящие матросы спят стоя. Или в гамаке. Как раз несколько таких плетеных
+изделий свисает с потолка. Выглядело бы уютно, если бы не храпящие матросы,
+набросанные сверху. Глядя на гамак становится понятно, как обращаться с ним и с
+мебелью вообще, так что скорее пиши {hc{y{lrсмотреть гамак{lelook hammock{x и просвещайся!
+Единственный выход на {hc{yвосток{x.
 </description>
       <exits>
         <node name="east">
@@ -2851,16 +2937,14 @@ Dungeon_|                        Dryad                       |
       <sector>inside</sector>
     </node>
     <node name="40012">
-      <description>Одно из немногих мест на корабле, содержащихся в абсолютном порядке.
-На  стенах  аккуратно  развешаны  копья, луки,  колчаны, в  оружейных стойках
-выстроились мечи и кинжалы. Старый вояка  ежедневно начищает  и точит  их. Он
-может научить тебя обращаться с  оружием, а  также некоторым  боевым приемам.
-Учти однако, что он умеет далеко не все, и в дальшейшем тебе  придется искать
-других учителей. Так, некоторым заклинаниям может научить корабельный доктор.
-Эткин может потренировать твои параметры - это поможет тебе быстрее учиться.
-Используй команду {hc{yтренировать{x ({hc{ytrain{x) для тренировки, {hc{yпрак все{x ({hc{ypra all{x)
-или {hc{yумения{x ({hc{yskills{x), чтобы увидеть доступные умения и {yпрак {Dумение{x
-({yprac {Dумение&gt;{x), чтобы практиковаться. Например, {yпрак кинжал{x ({ypra dagger{x).
+      <description>Одно из немногих мест на корабле, содержащихся в абсолютном порядке. На стенах
+аккуратно развешаны копья, луки, колчаны, в оружейных стойках выстроились мечи и
+кинжалы. Старый вояка Эткин ежедневно начищает и точит их.
+Эткин может потренировать твои параметры. Это поможет тебе быстрее учиться.
+Напиши {hc{y{lrтренировать{letrain{x, чтобы начать.
+Еще он может научить тебя обращаться с оружием, а также разным боевым навыкам.
+Напиши {hc{y{lrумения{leskills{x, чтобы увидеть доступные навыки, а потом начинай
+практиковаться. Например: {hc{y{lrпрак кинжал{leprac dagger{x.
 </description>
       <exits>
         <node name="east">
@@ -2873,7 +2957,7 @@ Dungeon_|                        Dryad                       |
         </node>
       </exits>
       <flags>no_vanish no_mob indoors nosummon</flags>
-      <name>Арсенал</name>
+      <name>Арсенал Эткина</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="40004"/>
       </resets>
@@ -2881,16 +2965,15 @@ Dungeon_|                        Dryad                       |
     </node>
     <node name="40013">
       <description>Острый запах лекарств ударяет тебе в нос, как только ты  переступаешь порог.
-И неудивительно - все стены этой  каморки заставлены  какими-то разноцветными
-баночками  и  скляночками.  Большинство  из  них  давно  лишилось  этикеток и
-покрылось  толстым  слоем  пыли.  Именно  здесь корабельный  доктор принимает
-страждущих. И тебя вылечит  - причем  бесплатно. Он  также может  помочь тебе
-попрактиковать заклинания и повысить свои характеристики. 
-Используй команду {hc{yтренировать{x ({hc{ytrain{x) для тренировки, {hc{yпрак все{x ({hc{ypra all{x)
-или {hc{yзаклинания{x ({hc{yspells{x), чтобы увидеть доступные тебе заклинания,
-и {yпрак {Dзаклинание{x ({yprac {Dзаклинание{x), чтобы практиковаться.
-Например, {yпрак волшеб{x ({yprac magic{x).
-Трапы ведут {yвверх{x в часовню и {yвниз{x в трюм.
+И неудивительно -- все стены этой каморки заставлены какими-то разноцветными
+баночками и скляночками. Большинство из них давно лишилось этикеток и покрыто
+толстым слоем пыли. Здесь корабельный доктор Кацман принимает страждущих. И тебя
+вылечит, причем бесплатно.
+Доктор поможет тебе повысить свои характеристики: напиши {hc{yтренировать{x.
+А еще доктор научит тебя пользоваться магией (если она доступна твоему классу).
+Напиши {hc{yзаклинания{x, чтобы увидеть доступные магические умения, а потом
+практикуйся. Например, чтобы научиться выпускать волшебные стрелы, напиши:
+{y{hcпрак волш{x
 </description>
       <exits>
         <node name="down">
@@ -2908,24 +2991,24 @@ Dungeon_|                        Dryad                       |
       <flags>no_vanish no_mob indoors nosummon</flags>
       <healRate>200</healRate>
       <manaRate>200</manaRate>
-      <name>Лазарет</name>
+      <name>Лазарет доктора Кацмана</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="40003"/>
       </resets>
       <sector>inside</sector>
     </node>
     <node name="40014">
-      <description>Ты находишься в помещении трюма, сыром и тусклом.  Доски пола  просмолены на
-тяп-ляп, кое-где даже образовались лужицы. Желтоватый свет твоего факела едва
-разгоняет  окружающий сумрак.  Здесь бегает  всякая живность,  можешь оценить
-свои  силы:  {yшансы {Dжертва{x  ({yconsider {Dжертва{x)  и   поохотиться:   {yубить {Dжертва{x
-({ykill {Dжертва{x). Если бой окажется не в твою пользу - убегай: {hc{yсбежать{x ({hc{yflee{x).
-Но будь осторожен, некоторые твари агрессивны и нападут на тебя как только ты
-подойдешь достаточно близко.
-Но перед тем как сражаться тебе нужно  потренироваться  и  научиться  владеть
-оружием. Если ты этого еще не сделал, в этом тебе  поможет  вояка  Эткин.  Ты
-можешь найти его арсенал на палубе выше, подняться на которую можно по  трапу
-на востоке. Трюм продолжается во всех направлениях.
+      <description>Ты находишься в помещении трюма, сыром и тусклом. Доски пола просмолены кое-как,
+кое-где даже образовались лужицы. Желтоватый свет твоего факела едва разгоняет
+окружающий сумрак. Здесь бегает всякая живность, на которую можно поохотиться,
+чтобы получить {Wопыт{x. Перед сражением желательно потренироваться и научиться
+владеть оружием и боевыми навыками -- в этом помогут {GЭткин{x и доктор {GКацман{x.
+Если ты у них еще не был{Sfа{Sx, иди на {hc{yвосток{x, потом вверх.
+
+Чтобы оценить свои силы перед боем со, скажем, пауком, пиши
+{hc{yшансы паук{x. А если готов{Sfа{Sx, смело пиши {hc{yубить паук{x!
+Удачной охоты! Ах да, и будь осторож{Smен{Sfна{Sx, некоторые твари агрессивны и
+нападут на тебя как только ты подойдешь достаточно близко.
 </description>
       <exits>
         <node name="east">
@@ -2966,7 +3049,7 @@ Dungeon_|                        Dryad                       |
         </node>
       </exits>
       <flags>no_vanish no_mob indoors nosummon</flags>
-      <name>В трюме у правого борта</name>
+      <name>Трюм, правый борт</name>
       <resets>
         <mob limit="4" maxHere="1" vnum="40012"/>
         <mob limit="4" maxHere="1" vnum="40014"/>
@@ -2974,10 +3057,10 @@ Dungeon_|                        Dryad                       |
       <sector>inside</sector>
     </node>
     <node name="40016">
-      <description>Ты находишься в помещении трюма, сыром и тусклом.  Доски пола  просмолены на
-тяп-ляп, кое-где даже образовались лужицы. Желтоватый свет твоего факела едва
-разгоняет окружающий сумрак. Здесь ты можешь  поохотиться  на  мух  и  другую
-живность, например, {hc{yубить муха{x ({hc{ykill fly{x). 
+      <description>Ты находишься в помещении трюма, сыром и тусклом. Доски пола просмолены кое-как,
+кое-где даже образовались лужицы. Желтоватый свет твоего факела едва разгоняет
+окружающий сумрак. Здесь ты можешь поохотиться на мух и другую живность.
+Начни, например, с мухи: {hc{y{lrубить муха{lekill fly{x.
 </description>
       <exits>
         <node name="north">
@@ -2990,18 +3073,19 @@ Dungeon_|                        Dryad                       |
         </node>
       </exits>
       <flags>no_vanish no_mob indoors nosummon</flags>
-      <name>В трюме у левого борта</name>
+      <name>Трюм, левый борт</name>
       <resets>
         <mob limit="4" maxHere="1" vnum="40011"/>
       </resets>
       <sector>inside</sector>
     </node>
     <node name="40017">
-      <description>Ты находишься в помещении трюма, сыром и тусклом.  Доски пола  просмолены  на
-тяп-ляп, под ногами хлюпает вода. Желтоватый свет твоего факела едва разгоняет
-окружающий сумрак. Здесь ты  можешь  поохотиться  на  мух  и  другую  живность,
-например, {hc{yубить муха{x ({hc{ykill fly{x). После удачной охоты, ты  сможешь  забрать  из 
-трупа врага то, что тебе понравится: {hc{yвз все труп{x ({hc{ytake all corpse{x). 
+      <description>Ты находишься в помещении трюма, сыром и тусклом. Доски пола просмолены кое-как,
+кое-где даже образовались лужицы. Желтоватый свет твоего факела едва разгоняет
+окружающий сумрак. Здесь ты можешь поохотиться на мух и другую живность.
+Начни, например, с мухи: {hc{y{lrубить муха{lekill fly{x.
+У некоторых врагов есть вещи, который можно снять с их трупов после победы.
+Для этого напиши {hc{y{lrвз все труп{letake all corpse{x.
 </description>
       <exits>
         <node name="east">
@@ -3014,7 +3098,7 @@ Dungeon_|                        Dryad                       |
         </node>
       </exits>
       <flags>no_vanish no_mob indoors nosummon</flags>
-      <name>В трюме у левого борта</name>
+      <name>Трюм, левый борт</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="40015"/>
         <give vnum="40015"/>
@@ -3023,10 +3107,10 @@ Dungeon_|                        Dryad                       |
       <sector>inside</sector>
     </node>
     <node name="40018">
-      <description>Ты находишься в помещении трюма, сыром и тусклом.  Доски пола  просмолены на
-тяп-ляп, кое-где даже образовались лужицы. Желтоватый свет твоего факела едва
-разгоняет окружающий сумрак. Здесь ты можешь  поохотиться  на  мух  и  другую
-живность, например, {hc{yубить муха{x ({hc{ykill fly{x). 
+      <description>Ты находишься в помещении трюма, сыром и тусклом. Доски пола просмолены кое-как,
+кое-где даже образовались лужицы. Желтоватый свет твоего факела едва разгоняет
+окружающий сумрак. Здесь ты можешь поохотиться на мух и другую живность.
+Начни, например, с мухи: {hc{y{lrубить муха{lekill fly{x.
 </description>
       <exits>
         <node name="east">
@@ -3046,7 +3130,7 @@ Dungeon_|                        Dryad                       |
         </node>
       </exits>
       <flags>no_vanish no_mob indoors nosummon</flags>
-      <name>В самом центре трюма</name>
+      <name>Центр трюма</name>
       <resets>
         <mob limit="4" maxHere="1" vnum="40011"/>
       </resets>
@@ -3069,7 +3153,7 @@ Dungeon_|                        Dryad                       |
         </node>
       </exits>
       <flags>no_vanish no_mob indoors nosummon</flags>
-      <name>В трюме у правого борта</name>
+      <name>Трюм, правый борт</name>
       <resets>
         <mob limit="4" maxHere="1" vnum="40014"/>
         <mob limit="2" maxHere="1" vnum="40013"/>
@@ -3077,13 +3161,14 @@ Dungeon_|                        Dryad                       |
       <sector>inside</sector>
     </node>
     <node name="40020">
-      <description>Ты находишься в кубрике, жилом помещении команды. Повсюду  стоят  рундуки,  и 
+      <description>Ты находишься в кубрике, жилом помещении команды. Повсюду стоят рундуки, и 
 навалены мешки с простым матросским скарбом. Можешь порыться в них, пока никто
-не видит. Посмотри на рундук: {hc{yсм рундук{x ({hc{ylook locker{x), чтобы узнать,  как  это
-делается. На западе ты видишь  несколько  гамаков,  в  которых  возможно  тебе 
-удасться выспаться. На востоке судовой арсенал, где у  Эткина  можно  улучшить 
+не видит. Посмотри на рундук: {hc{y{lrсм рундук{lelook locker{x, чтобы узнать, как это
+делается. На западе ты видишь несколько гамаков, в которых возможно тебе 
+удасться выспаться. На {hc{yвосток{x -- судовой арсенал, где у {GЭткина{x можно улучшить 
 свои боевые навыки.
- На полу деревянная решетка, которую можно открыть и попасть в трюм.
+На полу ты видишь люк, закрытый деревянной решеткой.
+Напиши {hc{yоткрыть люк{x, а потом {hc{yвниз{x, чтобы пройти в трюм.
 </description>
       <exits>
         <node name="down">
@@ -3112,23 +3197,21 @@ Dungeon_|                        Dryad                       |
       <name>В кубрике у рундуков</name>
       <resets>
         <drop vnum="40009"/>
-        <put in="40007" limit="1" maxHere="1" vnum="40008"/>
+        <put in="40009" limit="-1" maxHere="1" vnum="40008"/>
         <drop vnum="40007"/>
-        <put in="40005" limit="1" maxHere="1" vnum="40006"/>
+        <put in="40007" limit="1" maxHere="1" vnum="40026"/>
         <drop vnum="40005"/>
+        <put in="40005" limit="-1" maxHere="1" vnum="40006"/>
       </resets>
       <sector>inside</sector>
     </node>
     <node name="40021">
-      <description>Возле стены ты замечаешь несколько  пузатых бочек.  Вряд ли  в них  вода... Если
-хочешь проверить - просто выпей: {hc{yпить бочка{x ({hc{ydrink barrel{x). Если ты
-предусмотрительно захватил с собой флягу или  другую  емкость,  можешь  наполнить
-ее  из  бочки:  {hc{yнаполнить фляга бочка{x  ({hc{yfill flask barrel{x).  А  не   понравится -
-выльешь: {hc{yвылить фляга{x ({hc{ypour flask out{x).
- Трап ведёт вверх к люку закрытому деревянной решёткой. Если  хочешь  подняться -
-сперва открой его: {hc{yоткрыть люк{x ({hc{yopen trapdoor{x) или {hc{yоткрыть вверх{x ({hc{yopen up{x).
- Основное помещение трюма расположено на востоке, но ты можешь протиснуться между
-тюками, ящиками и бочками на запад.
+      <description>Возле стены ты замечаешь несколько пузатых бочек. Вряд ли в них вода...
+Давай-ка изучим их как следует: напиши {hc{y{lrсмотреть бочка{lelook barrel{x.
+Сразу станет понятно, как из нее пить (и стоит ли).
+Трап ведёт {hc{yвверх{x к люку, закрытому деревянной решёткой. Хочешь подняться?
+Сперва открой его: {hc{y{lrоткрыть вверх{leopen up{x.
+Между тюками, ящиками и бочками трюма можно протиснуться на {hc{yзапад{x или на {hc{yвосток{x.
 </description>
       <exits>
         <node name="east">
@@ -3150,7 +3233,7 @@ Dungeon_|                        Dryad                       |
         </node>
       </exits>
       <flags>no_vanish no_mob indoors nosummon</flags>
-      <name>В трюме возле бочек</name>
+      <name>Возле бочек</name>
       <resets>
         <drop vnum="40004"/>
         <drop vnum="40003"/>
@@ -3158,12 +3241,12 @@ Dungeon_|                        Dryad                       |
       <sector>inside</sector>
     </node>
     <node name="40022">
-      <description>Спустившись по деревянному трапу, ты попадаешь в трюм. Кажется,  он  довольно 
-обширный, но тебе виден только  маленький  кусочек,  освещенный  сверху  люком.
-Вокруг расставлены ящики и бочки, сквозь которые  ты  можешь  протиснуться  на
-запад. Или можешь воспользоваться трапом и подняться на верхние палубы.
- Для путешествия по темным помещениям тебе понадобится факел, который висит на 
-стене. Возьми его: {hc{yвзять факел{x ({hc{ytake torch{x) и зажги: {hc{yнадеть факел{x ({hc{ywear torch{x).
+      <description>Ты стоишь в трюме корабля. Он довольно обширны, но тебе виден только маленький 
+кусочек, освещаемый дырами в решетке люка над головой. Вокруг расставлены ящики
+и бочки, сквозь которые ты можешь протиснуться на {hc{yзапад{x. Или можешь пойти {hc{yвверх{x
+по трапу на верхние палубы.
+Для путешествия в темноте тебе понадобится факел, который висит на стене.
+Возьми его: {hc{y{lrвзять факел{letake torch{x и зажги: {hc{y{lrнадеть факел{lewear torch{x.
 </description>
       <exits>
         <node name="up">
@@ -3183,14 +3266,12 @@ Dungeon_|                        Dryad                       |
       <sector>inside</sector>
     </node>
     <node name="40023">
-      <description>Ты стоишь на деревянном решетчатом настиле, разделенным на две  части
-бушпритом, выступающим вперед из носа галеона. Под деревянной решеткой
-ты видишь море. Брызги морские волн, разбиваемых носом корабля,  то  и 
-дело окатывающих тебя с ног до  головы,  кажется, летят со всех сторон. 
-Не хотелось бы тебе оказаться  здесь  в  шторм, когда гальюн, зачастую, 
-полностью ныряет под воду. 
- Можешь отправиться по бушприту на запад, или вернуться на  восток  на
-палубу.
+      <description>Ты стоишь на деревянном решетчатом настиле, разделенном на две части бушпритом,
+выступающим вперед из носа галеона. Под деревянной решеткой ты видишь море.
+Брызги морских волн, разбиваемых носом корабля, летят со всех сторон, то и дело
+окатывая тебя с ног до головы. Не хотелось бы оказаться здесь в шторм, когда
+гальюн, зачастую, полностью ныряет под воду. 
+Можешь отправиться по бушприту на {hc{yзапад{x, или вернуться на {hc{yвосток{x на палубу.
 </description>
       <exits>
         <node name="east">
@@ -3207,14 +3288,12 @@ Dungeon_|                        Dryad                       |
       <sector>inside</sector>
     </node>
     <node name="40024">
-      <description>Ты поднял{Smся{Sfась{Sx на полубак. Мачты остались позади. Сверху стаксели. Впереди кливера.
-Вокруг открытое море. Лучший вид на галеоне, не считая марсов  на  мачтах,  куда
-еще нужно как-то забраться. Глядя вперед,  ты  видишь  как  форштевень,  взрезая  
-волны, подымает брызги, которые то и дело летят тебе в лицо. Перед  носом  судна,
-то там,  то  тут,  из  воды  выпрыгивают  дельфины,  сопроваждая  галеон  в  его
-путешествии.
-Ты можешь спуститься по трапу (ladder) на палубу, или пройти  вперёд,  на  запад, 
-на гальюн.
+      <description>Ты поднял{Smся{Sfась{Sx на полубак. Мачты остались позади. Вокруг открытое море.
+Лучший вид на галеоне, не считая марсов на мачтах,  куда еще нужно как-то
+забраться. Глядя вперед, ты видишь как форштевень, взрезая волны, подымает
+брызги, которые то и дело летят тебе в лицо. Перед носом  судна, то там, то тут,
+из воды выпрыгивают дельфины, сопровождая галеон в его путешествии.
+Ты можешь спуститься {hc{yвниз{x на палубу, или пройти на {hc{yзапад{x, к гальюну.
 </description>
       <exits>
         <node name="down">
@@ -3250,15 +3329,14 @@ Dungeon_|                        Dryad                       |
       <sector>inside</sector>
     </node>
     <node name="40025">
-      <description>Здесь тихо и спокойно. Изображения святых и морских покровителей на стенах
-мерно покачиваются в такт движению корабля. Несколько букетов  сухих цветов
-заткнуто в щели между досками. Если  ты очнешься  здесь после  смерти, твой
-труп будет лежать здесь, со всеми вещами внутри. Возьми их: {hc{yвзять  все труп{x
-({hc{ytake all corpse{x) и оденься: {hc{yнадеть все{x ({hc{ywear all{x). Затем можешь спуститься
-по лестнице {hc{yвниз{x ({hc{ydown{x) к доктору Кацману,  который обложит  тебя защитными
-заклинаниями.   Обстановка   вокруг   также   располагает  к   тому,  чтобы
-ознакомиться с самой концепцией смерти: прочти {hc{y? смерть{x.
- Проход на запад (west) ведет обратно на палубу.
+      <description>Здесь тихо и спокойно. Изображения святых и морских покровителей на стенах мерно
+покачиваются в такт движению корабля. Несколько букетов сухих цветов заткнуто в
+щели между досками. Если ты очнешься здесь после смерти, твой труп будет лежать
+здесь, со всеми вещами внутри. Возьми их ({hc{y{lrвзять все труп{letake all corpse{x) и оденься ({hc{y{lrнадеть все{lewear all{x).
+Затем можешь спуститься по лестнице {hc{yвниз{x к доктору Кацману, который обложит
+тебя защитными заклинаниями. Обстановка вокруг также располагает к тому, чтобы
+ознакомиться с самой концепцией смерти: прочти {hc{yсправка смерть{x.
+Проход на {hc{yзапад{x ведет обратно на палубу.
 </description>
       <exits>
         <node name="down">
@@ -3278,11 +3356,8 @@ Dungeon_|                        Dryad                       |
     </node>
     <node name="40026">
       <description>Ты спускаешься в тесную шлюпку, которая опасно покачивается на волнах.
-Веревочная лестница (ladder) болтается сверху, по ней ты можешь вскарабкаться
-обратно на борт: {hc{yидти лестница{x ({hc{ywalk ladder{x).
-Эту шлюпку спустили на воду, чтобы ты мог самостоятельно добраться до берега.
-Для этого придется поработать веслом, то бишь {yиспользовать{x ({yuse{x) его по
-назначению.
+Эту шлюпку спустили на воду, чтобы ты мог{Sfла{x самостоятельно добраться до берега.
+Для этого придется поработать веслами: напиши {hc{y{lrиспользовать весло{leuse ram{x.
 </description>
       <extraExits>
         <node name="ladder лестница">
@@ -3291,6 +3366,22 @@ Dungeon_|                        Dryad                       |
           <moving_mode_from>1</moving_mode_from>
           <moving_mode_to>11</moving_mode_to>
           <moving_to>1</moving_to>
+          <short_desc_from>палубу</short_desc_from>
+          <short_desc_to>веревочной лестнице</short_desc_to>
+          <target>40005</target>
+        </node>
+        <node name="ladder штормтрап лестница">
+          <description>{WШтормтрап{x (ladder) ведет вверх на палубу. Если хочешь вернуться на галеон,
+напиши {y{hcидти штормтрап{x.
+</description>
+          <max_size_pass>gargantuan</max_size_pass>
+          <moving_from>1</moving_from>
+          <moving_mode_from>1</moving_mode_from>
+          <moving_mode_to>11</moving_mode_to>
+          <moving_to>1</moving_to>
+          <room_description>{WШтормтрап{x (ladder) ведет вверх на палубу. Если хочешь вернуться на галеон,
+напиши {y{hcидти штормтрап{x.
+</room_description>
           <short_desc_from>палубу</short_desc_from>
           <short_desc_to>веревочной лестнице</short_desc_to>
           <target>40005</target>
@@ -3322,7 +3413,9 @@ Dungeon_|                        Dryad                       |
     </node>
     <node name="40028">
       <description>Это пыльный и темный закуток. Отовсюду свисает паутина. Пахнет чем-то гнилым
-и кислым. Похоже, сюда редко кто заглядывает.
+и кислым. Похоже, сюда редко кто заглядывает... кроме матросов, пытающихся
+скрыться от праведного гнева дварфа. Впрочем, матросы его любят, а вот {Gкапитана{x
+они побаиваются всерьез.
 </description>
       <exits>
         <node name="south">
@@ -3332,7 +3425,7 @@ Dungeon_|                        Dryad                       |
       <flags>dark no_vanish no_mob indoors nosummon</flags>
       <name>Темный закуток в трюме</name>
       <resets>
-        <mob limit="-1" maxHere="1" vnum="40009"/>
+        <mob limit="1" maxHere="1" vnum="40009"/>
         <equip to="wield" vnum="40013"/>
       </resets>
       <sector>inside</sector>
@@ -3340,7 +3433,7 @@ Dungeon_|                        Dryad                       |
     <node name="40029">
       <description>Приложив немало усилий и сноровки ты всё же взобрал{Smся{Sfась{Sx на мачту. Непонятно  для 
 чего тебя на нее понесло, но взглянув вниз с высоты, идея взобраться повыше уже
-не кажется тебя такой забавной. Теперь или спускайся или карабкайся дальше.
+не кажется тебя такой забавной. Теперь или спускайся {hc{yвниз{x, или лезь дальше.
 </description>
       <exits>
         <node name="down">
@@ -3349,12 +3442,10 @@ Dungeon_|                        Dryad                       |
         </node>
       </exits>
       <extraExits>
-        <node name="мачтa">
-          <key>0</key>
-          <max_size_pass>tiny</max_size_pass>
-        </node>
         <node name="мачта фок-мачта foremast mast">
-          <description>Похоже, приложив еще немного усилий, можно подняться, выше на деревянную площадку на верхушке мачты.
+          <description>Мачта продолжается еще выше, можно продолжать карабкаться: {hc{yидти мачта{x.
+Приложив еще немного усилий, можно подняться на деревянную площадку на самой
+верхушке мачты.
 </description>
           <key>0</key>
           <max_size_pass>gargantuan</max_size_pass>
@@ -3362,6 +3453,8 @@ Dungeon_|                        Dryad                       |
           <moving_mode_from>11</moving_mode_from>
           <moving_mode_to>11</moving_mode_to>
           <moving_to>1</moving_to>
+          <room_description>Мачта продолжается еще выше, можно продолжать карабкаться: {hc{yидти мачта{x.
+</room_description>
           <short_desc_from>мачте</short_desc_from>
           <short_desc_to>мачте</short_desc_to>
           <target>40030</target>
@@ -3372,13 +3465,13 @@ Dungeon_|                        Dryad                       |
       <sector>inside</sector>
     </node>
     <node name="40030">
-      <description>Ты взобрал{Smся{Sfась{Sx на марс - деревянную площадку на верхушке фок-мачты... до палубы
-лететь далеко. Ветер раздувает паруса, заставляя  скрипеть   мачты  и  такелаж. 
-Нельзя сказать, что эти звуки на такой высоте доставляют  тебе  много  радости,
-однако вид с это высоты просто потрясающий. Как говорил  классик:  &quot;Море  было 
-большое&quot;, и с марса ты видишь этот своими глазами.
- Теперь или оставайся и любуйся, или спускайся  вниз  на  палубу,  но  влезать 
-по стеньге выше ты не собираешься - это точно.
+      <description>Ты взобрал{Smся{Sfась{Sx на марс -- деревянную площадку на верхушке фок-мачты... до палубы
+лететь далеко. Ветер раздувает паруса, заставляя скрипеть мачты и такелаж. 
+Нельзя сказать, что эти звуки на такой высоте доставляют тебе много радости,
+однако вид просто потрясающий. Как говорил классик: &quot;Море было большое&quot;, и с
+марса ты видишь это своими глазами.
+Можешь полюбоваться, а потом спускайся {hc{yвниз{x на палубу.
+Влезать еще выше по стеньге ты не собираешься -- это точно.
 </description>
       <exits>
         <node name="down">
@@ -3393,7 +3486,7 @@ Dungeon_|                        Dryad                       |
     <node name="40031">
       <description>Приложив немало усилий и сноровки ты всё же взобрал{Smся{Sfась{Sx на мачту. Непонятно  для 
 чего тебя на нее понесло, но взглянув вниз с высоты, идея взобраться повыше уже
-не кажется тебя такой забавной. Теперь или спускайся или карабкайся дальше.
+не кажется тебя такой забавной. Теперь или спускайся {hc{yвниз{x, или лезь дальше.
 </description>
       <exits>
         <node name="down">
@@ -3421,14 +3514,13 @@ Dungeon_|                        Dryad                       |
       <sector>inside</sector>
     </node>
     <node name="40032">
-      <description>Ты взобрал{Smся{Sfась{Sx на марс - деревянную площадку на верхушке грот-мачты, главной, и
-самой высокой мачты галеона... до палубы лететь ОЧЕНЬ далеко. Ветер  раздувает
-паруса, заставляя стонать мачты и такелаж. Нельзя сказать, что  эти  звуки  на
-такой высоте  доставляют  тебе  много  радости,  однако  вид  от  сюда  просто 
-потрясающий. Сколько бы ни смотреть на  море (sea) - оно  никогда  не  надоест.
-Оно всегда разное, новое, невиданное.
- Теперь или оставайся и любуйся, или спускайся  вниз  на  палубу,  но  влезать 
-по стеньге выше ты не собираешься - это точно.
+      <description>Ты взобрал{Smся{Sfась{Sx на марс -- деревянную площадку на верхушке грот-мачты, главной, и
+самой высокой мачты галеона. До палубы лететь ОЧЕНЬ далеко. Ветер раздувает
+паруса, заставляя стонать мачты и такелаж. Нельзя сказать, что эти звуки на
+такой высоте доставляют тебе много радости, однако вид отсюда просто потрясный.
+Сколько бы ни смотри на море (sea), оно никогда не надоест. Оно всегда разное,
+новое, невиданное.
+Полюбуйся и спускайся {hc{yвниз{x на палубу.
 </description>
       <exits>
         <node name="down">
@@ -3464,15 +3556,14 @@ Dungeon_|                        Dryad                       |
       <sector>inside</sector>
     </node>
     <node name="40033">
-      <description>Ты прош{Smел{Sfла{Sx вперед по горизонтальному рангоутному древу, выступающее вперёд с 
-носа судна. Под бушпритом только морские волны, и ты  крепко  цепляешься  за 
-канаты  кливеров,  чтоб  не  свалиться  в  море.  Обернувшись,  ты  замечешь 
-деревянную фигуру обнаженной пышногрудой эльфийки, закрепленной под гальюном.
-В руках у эльфийки копьё, которым она как бы замахивается,  готовая  нанести 
-удар в спину дельфинам, то и дело выпрыгивающим из воды  перед  самым  носом 
-галеона.
-Единственный путь на восток, через гальюн, обратно  на  палубу.  Или  можешь
-сигануть в море.
+      <description>Ты прош{Smел{Sfла{Sx вперед по горизонтальному рангоутному древу, выступающему вперёд с 
+носа судна. Под бушпритом -- только волны, и ты крепко цепляешься за канаты
+кливеров, чтоб не свалиться в море. Обернувшись, ты замечаешь деревянную фигуру
+обнаженной пышногрудой эльфийки, закрепленной под гальюном. В руках у эльфийки
+копьё, которым она как бы замахивается, готовая нанести удар в спину дельфинам,
+то и дело выпрыгивающим из воды перед самым носом галеона.
+Единственный путь на {hc{yвосток{x, через гальюн, обратно на палубу. А вот купаться
+мы бы тебе точно не советовали.
 </description>
       <exits>
         <node name="east">
@@ -3485,11 +3576,11 @@ Dungeon_|                        Dryad                       |
       <sector>inside</sector>
     </node>
     <node name="40034">
-      <description>Ты стоишь на верхней палубе на корме судна, прямо над каютой  капитана.  Позади
-галеона, на голубой поверхности моря белой кипящей полосой остаётся кильватерный 
-след. Изящные чайки время от времени пикируют к нему выхватывая из воды рыбу.
-Ты  можешь  спуститься  по  трапу  на  шканцы,  или  попытаться  взобраться   по
-бизень-мачте (mizzenmast), установленной аккурат между полуютом и шканцами.
+      <description>Ты стоишь на корме судна, прямо над каютой капитана. Позади галеона, на голубой
+поверхности моря белой кипящей полосой остаётся кильватерный след. Изящные чайки
+время от времени пикируют к нему, выхватывая из воды рыбу. Ты можешь спуститься
+по трапу {hc{yвниз{x на  шканцы, или  попытаться взобраться по {Wбизань-мачте{x ({hc{yсм мачта{x),
+установленной в аккурат между полуютом и шканцами.
 </description>
       <exits>
         <node name="down">
@@ -3497,9 +3588,15 @@ Dungeon_|                        Dryad                       |
           <target>40009</target>
         </node>
       </exits>
+      <extraDescr>
+        <node keyword="мачта бизань-мачта mast">Самая короткая из трех мачт галеона. Похоже, ты легко на нее влезешь.
+Попробуй написать {hc{yидти мачта{x.
+</node>
+      </extraDescr>
       <extraExits>
-        <node name="мачта бизень бизень-мачта mizzenmast mast">
-          <description>Самая короткая из трех мачт галеона. Похоже ты легко на нее влезешь.
+        <node name="мачта бизань-мачта mast">
+          <description>Самая короткая из трех мачт галеона. Похоже, ты легко на нее влезешь.
+Попробуй написать {hc{yидти мачта{x.
 </description>
           <key>0</key>
           <max_size_pass>gargantuan</max_size_pass>
@@ -3517,16 +3614,15 @@ Dungeon_|                        Dryad                       |
       <sector>inside</sector>
     </node>
     <node name="40035">
-      <description>Ты без остановки вскорапкал{Smся{Sfась{Sx по бизань-мачте  сразу  на  деревянную  площадку 
-марса. Хоть мачта и самая невысокая на галеоне, спрыгнуть вниз было бы  большой
-ошибкой. Где-то внизу ты видишь палубу полуюта и шканцы  с  эльфом  у  штурвала.
-Весь вид прямо по курсу закрыт от тебя парусами  грот-мачты.  Но  и  без  этого
+      <description>Ты без остановки вскарабкал{Smся{Sfась{Sx по бизань-мачте сразу на деревянную площадку 
+марса. Где-то внизу ты видишь палубу полуюта и шканцы с эльфом у штурвала. Все
+поле зрения прямо по курсу закрыто от тебя парусами грот-мачты. Но и без этого
 открывающийся вокруг вид просто потрясающий. Бескрайнее море изумрудно-голубого  
-цвета, украшенное белой пеной бурунов,  переливаясь  мириадами  золотых  бликов, 
-раскинулось до самого горизонта.
- Можешь сидеть и любоваться морем и кильвареным следом  оставляемым  на  водной
-поверхности судном, можешь даже встретить тут рассвет, ведь это самая восточный
-марс галеона. Или можешь спуститься вниз, по мачте, на палубу.
+цвета, украшенное белой пеной бурунов, раскинулось до самого горизонта,
+переливаясь мириадами золотых бликов.
+Полюбуйся морем и кильватерным следом, оставляемым на водной поверхности судном.
+Можешь даже встретить тут рассвет, ведь это самый восточный марс галеона.
+Или можешь спуститься {hc{yвниз{x по мачте, на палубу.
 </description>
       <exits>
         <node name="down">
@@ -3542,9 +3638,10 @@ Dungeon_|                        Dryad                       |
       <description>Ты  находишься  в гавани,  откуда  начинают  свой  путь все  смертные, ищущие
 приключений  в  нашем мире.  Неподалеку к каменной пристани пришвартован
 корабль, который должен доставить тебя домой. Попасть к нему можно через арку
-на востоке, все остальные направления заволакивает густой туман. Под аркой 
-висит вырезанная из дерева эмблема розы ветров (rose). Если ноги еще плохо
-слушаются тебя, обязательно посмотри на нее: {hc{yсмотр роза{x (или {hc{ylook rose{x).
+на востоке, все остальные направления заволакивает густой туман.
+
+Под аркой висит деревянная {Yроза ветров{x (rose), эмблема направлений. 
+{GНАПИШИ{x {hc{y{lrсмотреть роза{lelook rose{x, {GЧТОБЫ НАУЧИТЬСЯ ПЕРЕДВИГАТЬСЯ.{x
 </description>
       <exits>
         <node name="east">
@@ -3552,27 +3649,29 @@ Dungeon_|                        Dryad                       |
         </node>
       </exits>
       <extraDescr>
-        <node keyword="rose wind emblem эмблема роза ветров">{Y                      north       up
-{Y                      север    {y/ {Yвверх
-{y                        |    / 
-{y                        |  /  
-{Y            запад {y_____/ \_____ {Yвосток 
-{Y            west       {y\ /       {Yeast 
-{y                     /  | 
-{y                   /    | 
-{Y            down {y/      {Yюг 
-{Y            вниз      south 
+        <node keyword="rose wind emblem эмблема роза ветров">Ходить можно туда, куда ведут выходы из текущего места.
+Выходы бывают на север, юг, запад, восток, вверх (не путать с севером) и вниз.
+
+                    {Y{lrсевер{lenorth{lx{y
+                        |  {Y{lrвверх{leup{lx{y
+                        | /
+                        |/
+              {Y{lrзапад{lewest{lx{y------+------{Y{lrвосток{leeast{lx{y
+                       /|
+                      / |
+                  {Y{lrвниз{ledown{lx{y  |
+                        {Y{lrюг{lesouth{lx{x
 {x
-Искуссно вырезанная из дерева роза ветров указывает на все возможные стороны
-света.
-Ты можешь двигаться в любом из этих направлений, если, конечно, из того места,
-где ты стоишь, имеется соответствующий выход.
-Для удобства, команды перемещения можно сокращать до одной буквы, например,
-по команде {hc{yв{x (или {hc{ye{x, east), ты уйдешь отсюда на восток к Причалу.
-Подробнее про перемещения, выходы и двери читай в {hc{W? движение{x ({hc{Whelp movement{x).
+Узнать, куда есть выходы из текущего места, можно по команде {hc{y{lrвыходы{leexits{x или
+{hc{y{lrсмотреть{lelook{x. Для удобства команды перемещения можно сокращать до одной буквы, например,
+по команде {hc{y{lrв{lee{x ({hc{y{lrвосток{leeast{x), ты уйдешь отсюда на восток к Причалу.
+
+Подробнее читай в {hh1022справке про перемещение{x ({hc{Whelp movement{x).
+Кстати, если тебе удобнее пользоваться английскими командами вместо русских
+просто напиши {hc{yнастройки рускоманд выкл{x.
 </node>
       </extraDescr>
-      <flags>no_vanish no_mob safe nosummon</flags>
+      <flags>no_vanish no_mob safe no_recall nosummon</flags>
       <name>Гавань</name>
       <sector>city</sector>
     </node>
@@ -3580,9 +3679,10 @@ Dungeon_|                        Dryad                       |
       <description>Весь причал завален множеством мешков, ящиков, коробок,  бочек, рассортированных
 и готовых к погрузке. Несколько матросов довольно быстро, даже почти без матов и
 совсем без перекуров, грузят это все на корабль. Скоро отплытие. Можно вернуться
-на запад ко входу на причал, или подняться на палубу  по откидному  трапу: {hc{yидти
-трап{x (или {hc{ywalk trap{x).  Если хочешь  изменить свои  начальные параметры,  иди на
-{hc{yсевер{x к лекарю.
+на запад ко входу на причал, или подняться на палубу по откидному трапу.
+Если хочешь изменить свои начальные параметры, иди на {hc{yсевер{x к лекарю.
+
+{GА ЧТОБЫ НАЧАТЬ ПРИКЛЮЧЕНИЯ НА КОРАБЛЕ {GНАПИШИ{x {y{hc{lrидти трап{lewalk trap{x.
 </description>
       <exits>
         <node name="north">
@@ -3605,7 +3705,7 @@ Dungeon_|                        Dryad                       |
           <target>40001</target>
         </node>
       </extraExits>
-      <flags>no_vanish no_mob safe nosummon</flags>
+      <flags>no_vanish no_mob safe no_recall nosummon</flags>
       <name>Причал</name>
       <sector>city</sector>
     </node>

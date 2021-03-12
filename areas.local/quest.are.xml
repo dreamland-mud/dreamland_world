@@ -3,15 +3,18 @@
   <areadata>
     <authors>Ruffina</authors>
     <credits>Quest</credits>
-    <flags>noquest hidden</flags>
-    <levelHigh>100</levelHigh>
-    <levelLow>1</levelLow>
+    <flags>noquest hidden system</flags>
+    <levelHigh>0</levelHigh>
+    <levelLow>0</levelLow>
     <name>Quest</name>
     <resetMessage></resetMessage>
     <security>9</security>
     <vnumHigh>28799</vnumHigh>
     <vnumLow>28000</vnumLow>
   </areadata>
+  <helps>
+    <node id="2110" keyword="QUEST" level="102"></node>
+  </helps>
   <mobiles>
     <node name="28000">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
@@ -80,34 +83,34 @@
     <node name="28004">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
       <act add="npc sentinel noeye cleric"/>
+      <aff add="swim"/>
       <alignment>500</alignment>
       <behavior type="Poliglot">
       </behavior>
       <dam_type>none</dam_type>
       <damage>10d10+1000</damage>
       <default_pos>stand</default_pos>
-      <description>{x     Не  смотря  на видимую  щуплость, сутулость  и невысокий  рост, сквозь
-каждое  движение  сквозит  мощь,  лучшая  характеристика которой  - вековая
-мудрость.  Кажется  сам  воздух  колеблется,  опасаясь  коснуться  пыльного
-балахона. Поровнявшись  с этой  фигурой, ты  невольно вглядываешься  в тень
-капюшона, ожидая  увидеть пару  горящих холодным  огнем древней  мудрости и
-одержимости  глаз  на надменном,  испрещенном морщинами  лице, напоминающим
-пергамент. Однако внезапно встречаешься с живым взглядом изумленных зеленых
-глаз  на  фоне  мягкого  овала  лица,  покрытого  веснушками.  Похоже,  она
-шокирована этой встречей не менее тебя, потому по инерции  сделав несколько
-шагов, вдруг споткнулась, и к твоим ногам упала сумка, которую до этого эта
-особа  прижимала  к  груди. Сумка  раскрылась, и  ее содержимое  - тетради,
-учебники и  свитки -  вывалились наружу.  Несколько конспектов  при падении
-раскрылось  и  тебе  стали  видны  ровные строчки  замысловатых иероглифов,
-начертаных  с  потрясающей  аккуратностью,  что  несколько  контрастирует с
-изобилием  наивных  картинок  на  полях.  Отойдя  от  шока,  леди бросилась
-подбирать свой багаж. Капюшон при этом откинулся и явил свету  яркую корону
-медно-змеиных  волос.  Упаковав все  обратно в  сумку, девушка  поднялась с
-колен и, опустив глаза вниз, проговорила &quot;я прошу прощения&quot;. Будь эта фраза
-сколь угодно длинной, тебе  бы все  равно не  удалось определить  акцент ее
-странно-изысканной речи; однако самое удивительное было в низком мелодичном
-голосе  -  тебя  словно  ударило  молнией,  затем огромной  морской волной,
-испепелило огнем, и в довершение обратило в камень пронизывающим холодом.
+      <description>Несмотря на видимую щуплость, сутулость и невысокий рост, сквозь каждое движение
+сквозит мощь, лучшая характеристика которой -- вековая мудрость. Кажется, сам
+воздух колеблется, опасаясь коснуться пыльного балахона. Поравнявшись с этой
+фигурой, ты невольно вглядываешься в тень капюшона, ожидая увидеть пару горящих
+холодным огнем древней мудрости и одержимости глаз на надменном, испещренном
+морщинами лице, напоминающем пергамент. Однако внезапно встречаешься с живым
+взглядом изумленных зеленых глаз на фоне мягкого овала лица, усеянного
+веснушками.  Похоже, она шокирована этой встречей не менее тебя! По инерции
+сделав несколько шагов, она спотыкается, и к твоим ногам падает сумка, которую 
+она до этого прижимала к груди. Содержимое сумки, тетради, учебники и свитки, 
+вываливаются наружу. Несколько конспектов при падении раскрываются и тебе стают
+видны ровные строчки замысловатых иероглифов, начертанных с потрясающей
+аккуратностью, что несколько контрастирует с сотнями наивных картинок на полях.
+
+Отойдя от шока, монашка бросается подбирать свой багаж. Капюшон откидывается и
+являет свету яркую корону змеящихся медью волос. Упаковав все обратно в сумку,
+девушка поднимается с колен и, опустив глаза, бормочет &quot;прошу прощения&quot;.
+Будь эта фраза сколь угодно длинной, тебе бы все равно не удалось определить 
+акцент ее странно-изысканной речи. Однако самое удивительное в ее низком
+мелодичном голосе -- тебя словно ударило молнией, затем огромной морской волной,
+испепелило огнем, и, в довершение, обратило в камень пронизывающим холодом.
 </description>
       <form del="edible sentient biped mammal"/>
       <hit>13d13+20000</hit>
@@ -119,10 +122,10 @@
       <mana>13d13+20000</mana>
       <material>none</material>
       <parts del="head arms legs heart brains guts hands feet fingers ear eye"/>
-      <player_name>monk wandering блуждающий монах</player_name>
+      <player_name>monk wandering блуждающий блуждающая бродячий бродячая монах монашка сутулая фигура</player_name>
       <race>human</race>
       <sex>female</sex>
-      <short_descr>блуждающ|ий|его|ему|его|им|ем монах||а|у|а|ом|е</short_descr>
+      <short_descr>блуждающ|ая|ей|ей|ую|ей|ей монашк|а|и|е|у|ой|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
     </node>
@@ -181,14 +184,10 @@
       <default_pos>stand</default_pos>
       <hit>1d1+1</hit>
       <imm add="summon charm drowning"/>
-      <long_descr>Крашащая бага (bug) острыми зубами подгрызает основы мироздания.
-</long_descr>
       <mana>0d0+0</mana>
       <material>none</material>
-      <player_name>crash bug крашащая бага</player_name>
       <race>unique</race>
       <sex>female</sex>
-      <short_descr>крашащ|ая|ей|ей|ую|ей|ей баг|а|и|е|у|ой|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
     </node>
@@ -1847,7 +1846,6 @@
 </long_descr>
       <mana>1d1+100000</mana>
       <material>none</material>
-      <off del="fade"/>
       <player_name>jack джек</player_name>
       <race>ghost</race>
       <sex>male</sex>
@@ -1942,7 +1940,6 @@
     <node name="28600">
       <ac bash="-300" exotic="-300" pierce="-300" slash="-300"/>
       <act add="npc sentinel stay_area nosteal nowhere nopurge nosavedrop notrack" del="undead"/>
-      <aff add="pass_door"/>
       <behavior type="Ghost">
       </behavior>
       <dam_type>wrath</dam_type>
@@ -1960,7 +1957,7 @@
 </long_descr>
       <mana>500d10+2000</mana>
       <material>none</material>
-      <off add="berserk" del="fade"/>
+      <off add="berserk"/>
       <player_name>призрак ghost</player_name>
       <race>ghost</race>
       <res del="weapon"/>
@@ -2224,7 +2221,7 @@
       <player_name>demon демон</player_name>
       <race>unique</race>
       <res add="negative"/>
-      <sex>either</sex>
+      <sex>male</sex>
       <short_descr>демон||а|у|а|ом|е с вилами</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
@@ -2314,7 +2311,7 @@
     <node name="28613">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
       <act add="npc sentinel nosteal nodemand nopurge nosavedrop" del="undead"/>
-      <aff add="infrared pass_door regeneration" del="flying"/>
+      <aff add="infrared regeneration" del="flying"/>
       <dam_type>drain</dam_type>
       <damage>0d0+0</damage>
       <default_pos>stand</default_pos>
@@ -2327,11 +2324,11 @@
 </long_descr>
       <mana>0d0+0</mana>
       <material>none</material>
-      <off add="disarm dodge parry assist_vnum"/>
+      <off add="disarm parry assist_vnum"/>
       <player_name>white ghost приведение белое</player_name>
       <race>ghost</race>
       <res add="negative"/>
-      <sex>either</sex>
+      <sex>neutral</sex>
       <short_descr>привидени|е|я|ю|е|ем|и в белой простыне</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
@@ -2875,14 +2872,14 @@
       <behavior type="GangKey">
       </behavior>
       <description>Ржавый ключ (key) валяется здесь. Похоже, им отпирают что-то важное!</description>
-      <extra_flags>hum nosac nolocate nofind nosell noident nosavedrop</extra_flags>
+      <extra_flags>hum nosac nolocate nofind nosell noident</extra_flags>
       <gender>m</gender>
       <material>steel</material>
       <name>rusty key ржавый ключ</name>
       <short_descr>ржав|ый|ого|ому|ый|ым|ом ключ||а|у||ом|е</short_descr>
       <type name="key">
         <rotGround>0</rotGround>
-        <rotInv>0</rotInv>
+        <rotInv>1</rotInv>
       </type>
       <wear_flags>take</wear_flags>
     </node>
@@ -2925,7 +2922,7 @@
     </node>
     <node name="28003">
       <description>(no description)</description>
-      <extra_flags>nolocate nofind noident</extra_flags>
+      <extra_flags>nopurge nosac nolocate nofind noident</extra_flags>
       <gender>f</gender>
       <material>ether</material>
       <name>no name</name>
@@ -3051,9 +3048,8 @@
     </node>
     <node name="28011">
       <description>Маленький кусочек радуги (rainbow) лежит здесь.</description>
-      <extra_flags>nolocate nofind nosell noident nosavedrop</extra_flags>
+      <extra_flags>nolocate nofind nosell noident</extra_flags>
       <gender>m</gender>
-      <limit>100</limit>
       <material>rainbow</material>
       <name>rainbow piece кусочек радуги</name>
       <short_descr>кусоч|ек|ка|ку|ек|ком|ке радуги</short_descr>
@@ -3074,7 +3070,7 @@
     </node>
     <node name="28013">
       <description>Искушение поддаться греху (sin) охватывает тебя.</description>
-      <extra_flags>nolocate nofind nosell noident nosavedrop</extra_flags>
+      <extra_flags>nolocate nofind nosell noident</extra_flags>
       <gender>m</gender>
       <material>soul</material>
       <name>sin deadly смертный грех</name>
@@ -3340,7 +3336,7 @@
     </node>
     <node name="28102">
       <description>Отмычка (lockpick) валяется на земле.</description>
-      <extra_flags>nosac nolocate nofind nosell</extra_flags>
+      <extra_flags>nopurge nosac nolocate nofind nosell</extra_flags>
       <gender>f</gender>
       <material>steel</material>
       <name>отмычка lockpick key ключ xsqkey</name>
@@ -3370,7 +3366,7 @@
     </node>
     <node name="28104">
       <description>Ржавый и погнутый ключ (key) валяется здесь.</description>
-      <extra_flags>hum nosac nolocate nofind nosell</extra_flags>
+      <extra_flags>hum nopurge nosac nolocate nofind nosell</extra_flags>
       <gender>m</gender>
       <material>steel</material>
       <name>key ключ xsqkey</name>
@@ -3399,7 +3395,7 @@
     </node>
     <node name="28106">
       <description>Серебряный ключик (key) тускло поблескивает с земли.</description>
-      <extra_flags>glow nolocate nofind nosell</extra_flags>
+      <extra_flags>glow nopurge nolocate nofind nosell</extra_flags>
       <gender>m</gender>
       <material>none</material>
       <name>silver key серебрянный ключ xsqkey</name>
@@ -3482,7 +3478,7 @@
     </node>
     <node name="28202">
       <description>Какой-то шулер обронил здесь рукава (sleeves).</description>
-      <gender>m</gender>
+      <gender>p</gender>
       <material>cloth</material>
       <name>sleeves shark рукава шулера</name>
       <short_descr>широк|ие|их|им|ие|ими|их рукав|а|ов|ам|а|ами|ах шулера</short_descr>
@@ -3590,23 +3586,23 @@
     <node name="28307">
       <affects>
         <node>
-          <apply to="hitroll">11</apply>
+          <apply to="damroll">10</apply>
           <bits table="affect_flags"></bits>
         </node>
         <node>
-          <apply to="damroll">11</apply>
-          <bits table="affect_flags"></bits>
-        </node>
-        <node>
-          <apply to="hit">120</apply>
-          <bits table="affect_flags"></bits>
-        </node>
-        <node>
-          <apply to="saves">-10</apply>
+          <apply to="hitroll">10</apply>
           <bits table="affect_flags"></bits>
         </node>
         <node>
           <apply to="mana">150</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hit">100</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="saves">-5</apply>
           <bits table="affect_flags"></bits>
         </node>
       </affects>
@@ -3614,7 +3610,7 @@
       <description>Золотые бараньи кудряшки (fleece) подозрительно подрагивают на земле.</description>
       <extra_flags>glow nopurge nosac burn_proof noenchant</extra_flags>
       <gender>n</gender>
-      <level>100</level>
+      <level>92</level>
       <material>platinum</material>
       <name>fleece golden руно золотое</name>
       <short_descr>{Yзоло{yт{Y|ое|ого|ому|ое|ым|ом {Wр{wу{Wн|о{x|а{x|у{x|о{x|ом{x|е{x</short_descr>
@@ -3627,7 +3623,15 @@
     <node name="28308">
       <affects>
         <node>
-          <apply to="hitroll">10</apply>
+          <apply to="saves">-4</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hit">90</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="mana">120</apply>
           <bits table="affect_flags"></bits>
         </node>
         <node>
@@ -3635,15 +3639,7 @@
           <bits table="affect_flags"></bits>
         </node>
         <node>
-          <apply to="hit">100</apply>
-          <bits table="affect_flags"></bits>
-        </node>
-        <node>
-          <apply to="saves">-8</apply>
-          <bits table="affect_flags"></bits>
-        </node>
-        <node>
-          <apply to="mana">120</apply>
+          <apply to="hitroll">10</apply>
           <bits table="affect_flags"></bits>
         </node>
       </affects>
@@ -3651,7 +3647,7 @@
       <description>Серебряные бараньи кудряшки (fleece) подозрительно подрагивают на земле.</description>
       <extra_flags>glow nopurge nosac burn_proof noenchant</extra_flags>
       <gender>n</gender>
-      <level>10</level>
+      <level>92</level>
       <material>platinum</material>
       <name>fleece silver руно серебряное</name>
       <short_descr>{Wс{wе{Wр{wе{Wбр{wян{W|о{wе|ого|ому|ое|ым|ом {Wр{wу{Wн|о{x|а{x|у{x|о{x|ом{x|е{x</short_descr>
@@ -3664,19 +3660,19 @@
     <node name="28309">
       <affects>
         <node>
-          <apply to="saves">-6</apply>
+          <apply to="saves">-3</apply>
           <bits table="affect_flags"></bits>
         </node>
         <node>
-          <apply to="hit">60</apply>
+          <apply to="hit">80</apply>
           <bits table="affect_flags"></bits>
         </node>
         <node>
-          <apply to="damroll">7</apply>
+          <apply to="damroll">10</apply>
           <bits table="affect_flags"></bits>
         </node>
         <node>
-          <apply to="hitroll">6</apply>
+          <apply to="hitroll">10</apply>
           <bits table="affect_flags"></bits>
         </node>
       </affects>
@@ -3684,7 +3680,7 @@
       <description>Медные бараньи кудряшки (fleece) подозрительно подрагивают на земле.</description>
       <extra_flags>glow nopurge nosac burn_proof noenchant</extra_flags>
       <gender>n</gender>
-      <level>69</level>
+      <level>92</level>
       <material>platinum</material>
       <name>fleece copper руно медное</name>
       <short_descr>{yмед{Yн{y|ое|ого|ому|ое|ым|ом {Wр{wу{Wн|о{x|а{x|у{x|о{x|ом{x|е{x</short_descr>
@@ -4185,7 +4181,7 @@
 Хочется отставить все заботы  и присоединиться  к их  стаду.. Ведь  это так
 просто - достаточно всего лишь произнести заветное &apos;I want to be Sven!&apos;.
 </description>
-      <flags>no_vanish no_mob indoors safe nosummon noquit</flags>
+      <flags>no_vanish no_mob indoors safe nosummon no_quest noquit</flags>
       <name>Трактир &quot;Овечий Хвостик&quot;</name>
       <sector>inside</sector>
     </node>

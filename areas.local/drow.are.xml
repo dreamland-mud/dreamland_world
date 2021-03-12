@@ -3,7 +3,7 @@
   <areadata>
     <authors>Drkside</authors>
     <credits>Drow City</credits>
-    <flags>hometown</flags>
+    <flags>hometown deadly</flags>
     <levelHigh>25</levelHigh>
     <levelLow>15</levelLow>
     <name>Город Дроу</name>
@@ -15,9 +15,15 @@
     <vnumLow>5100</vnumLow>
   </areadata>
   <helps>
-    <node id="1406" keyword="'DROW CITY' 'ГОРОД ДРОУ'" level="1">В Городе Дроу могут селиться темные эльфы, дроу и злые полу-эльфы. По соседству
+    <node id="1406" keyword="'DROW CITY' 'ГОРОД ДРОУ' LLOTH ЛЛОТ ЛЛОС" level="1">В Городе Дроу могут селиться темные эльфы, дроу и злые полу-эльфы. По соседству
 с городом располагаются пригороды, где можно построить собственный дом.
-Для всех остальных это не слишком дружелюбное место. 
+Для всех остальных это не слишком дружелюбное место -- дроу без колебаний
+нападут на чужаков.
+
+Культура народа дроу очень сурова и жестока, в угоду страшной покровительнице
+дроу, пауколикой богине =Ллос=. Матроны и священники Ллос обладают многими
+тайными умениями, основанными на паучьем {hh837яде{x и {hh1100атакующих{x молитвах.
+
 %PAUSE%
 {yЗадания{x:
   {Y*{x Йоклол в Храме выдает задания всем желающим (команда &apos;задание попросить&apos;).
@@ -514,6 +520,10 @@
       <level>11</level>
       <material>leather</material>
       <name>whip snake two-headed хлыст змея двухголовый</name>
+      <properties>
+        <node name="bestTier">3</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>змееголов|ый|ого|ому|ый|ым|ом хлыст||а|у||ом|е</short_descr>
       <type name="weapon">
         <diceNumber>2</diceNumber>
@@ -541,6 +551,10 @@
       <level>15</level>
       <material>leather</material>
       <name>whip snake three-headed хлыст змея трехголовый</name>
+      <properties>
+        <node name="bestTier">3</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>змееголов|ый|ого|ому|ый|ым|ом хлыст||а|у||ом|е</short_descr>
       <type name="weapon">
         <diceNumber>3</diceNumber>
@@ -567,6 +581,10 @@
       <level>24</level>
       <material>leather</material>
       <name>whip snake four-headed хлыст змея четырехголовый</name>
+      <properties>
+        <node name="bestTier">3</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>змееголов|ый|ого|ому|ый|ым|ом хлыст||а|у||ом|е</short_descr>
       <type name="weapon">
         <diceNumber>5</diceNumber>
@@ -580,10 +598,10 @@
     <node name="5105">
       <affects>
         <node>
-          <apply to="damroll">3</apply>
+          <apply to="hitroll">3</apply>
         </node>
         <node>
-          <apply to="hitroll">3</apply>
+          <apply to="damroll">3</apply>
         </node>
       </affects>
       <cost>1300</cost>
@@ -613,7 +631,7 @@
       </affects>
       <cost>10</cost>
       <description>Хлыст с пятью змеиными головами (snake) лежит здесь.</description>
-      <extra_flags>glow anti_good</extra_flags>
+      <extra_flags>glow anti_good deleted</extra_flags>
       <gender>m</gender>
       <level>14</level>
       <material>leather</material>
@@ -637,7 +655,7 @@
         </node>
       </affects>
       <description>Хлыст с шестью змеиными головами (snake) брошен здесь.</description>
-      <extra_flags>glow anti_good</extra_flags>
+      <extra_flags>glow anti_good deleted</extra_flags>
       <gender>m</gender>
       <level>13</level>
       <material>leather</material>
@@ -725,15 +743,15 @@
     <node name="5112">
       <affects>
         <node>
-          <apply to="hit">25</apply>
+          <apply to="level">1</apply>
+          <global registry="skillGroup">attack</global>
         </node>
         <node>
           <apply to="damroll">2</apply>
           <bits table="affect_flags"></bits>
         </node>
         <node>
-          <apply to="level">1</apply>
-          <global registry="skillGroup">harmful</global>
+          <apply to="hit">25</apply>
         </node>
       </affects>
       <cost>380</cost>
@@ -742,7 +760,7 @@
       <level>25</level>
       <material>ruby</material>
       <name>ring ruby кольцо рубиновое маленькое</name>
-      <short_descr>маленьк|ое|ого|ому|ое|им|ом рубинов|ое|ого|ому|ое|им|ом колечк|о|а|у|о|ом|е</short_descr>
+      <short_descr>маленьк|ое|ого|ому|ое|им|ом {1{rрубинов|ое|ого|ому|ое|им|ом {2колечк|о|а|у|о|ом|е</short_descr>
       <type name="jewelry">
       </type>
       <wear_flags>take wear_finger</wear_flags>
@@ -751,7 +769,8 @@
     <node name="5113">
       <affects>
         <node>
-          <apply to="damroll">5</apply>
+          <apply to="damroll">3</apply>
+          <bits table="affect_flags"></bits>
         </node>
         <node>
           <apply to="hitroll">3</apply>
@@ -762,14 +781,15 @@
       <extra_flags>anti_good</extra_flags>
       <gender>m</gender>
       <level>30</level>
-      <material>unknown</material>
-      <name>dagger sacrificial кинжал паук жертвенный</name>
+      <material>adamantite</material>
+      <name>dagger spider sacrificial жертвенный кинжал в форме паука</name>
       <short_descr>кинжал||а|у||ом|е в форме паука</short_descr>
       <type name="weapon">
-        <diceNumber>5</diceNumber>
-        <diceType>8</diceType>
+        <diceNumber>11</diceNumber>
+        <diceType>3</diceType>
+        <specType>poison</specType>
         <weapClass>dagger</weapClass>
-        <weapType>stab</weapType>
+        <weapType>poisonbite</weapType>
       </type>
       <wear_flags>take wield</wear_flags>
       <weight>25</weight>
@@ -805,6 +825,9 @@
     <node name="5115">
       <affects>
         <node>
+          <bits table="affect_flags">sneak</bits>
+        </node>
+        <node>
           <apply to="hitroll">5</apply>
         </node>
         <node>
@@ -815,21 +838,22 @@
       </behavior>
       <cost>1330</cost>
       <description>На земле лежит кнут (snake) с двумя Змеиными головами.</description>
-      <extra_flags>dark anti_good nosac nolocate</extra_flags>
+      <extra_flags>dark anti_good nosac nolocate nofind</extra_flags>
       <gender>m</gender>
       <level>24</level>
       <limit>1</limit>
       <material>snakeskin</material>
-      <name>whip snake skin кнут змея кожа голова две</name>
-      <short_descr>кнут||а|у||ом|е с двумя головами змей</short_descr>
+      <name>whip snake skin кнут с двумя головами змей</name>
+      <short_descr>{1{mКнут||а|у||ом|е {gс Двумя Головами {GЗмей{2</short_descr>
       <type name="weapon">
         <diceNumber>7</diceNumber>
-        <diceType>6</diceType>
+        <diceType>8</diceType>
+        <specType>poison</specType>
         <weapClass>whip</weapClass>
-        <weapType>whip</weapType>
+        <weapType>poisonbite</weapType>
       </type>
       <wear_flags>take wield</wear_flags>
-      <weight>140</weight>
+      <weight>30</weight>
     </node>
     <node name="5116">
       <condition>90</condition>
@@ -865,10 +889,10 @@
     <node name="5118">
       <affects>
         <node>
-          <apply to="hitroll">2</apply>
+          <apply to="damroll">2</apply>
         </node>
         <node>
-          <apply to="damroll">2</apply>
+          <apply to="hitroll">2</apply>
         </node>
       </affects>
       <cost>570</cost>
@@ -878,7 +902,7 @@
       <level>5</level>
       <material>obsidian</material>
       <name>dagger spider sacrificial кинжал паук жертвенный</name>
-      <short_descr>кинжал||а|у||ом|е в форме паука</short_descr>
+      <short_descr>мал|ый|ого|ому|ый|ым|ом кинжал||а|у||ом|е в форме паука</short_descr>
       <type name="weapon">
         <diceNumber>4</diceNumber>
         <diceType>4</diceType>
@@ -1004,9 +1028,9 @@
         <mob limit="4" maxHere="1" vnum="5102"/>
         <equip to="wield" vnum="5101"/>
         <mob limit="4" maxHere="1" vnum="5103"/>
-        <equip to="wield" vnum="5102"/>
+        <equip to="sheath" vnum="5102"/>
         <mob limit="4" maxHere="1" vnum="5104"/>
-        <equip to="wield" vnum="5103"/>
+        <equip to="sheath" vnum="5103"/>
       </resets>
       <sector>inside</sector>
     </node>
@@ -1026,7 +1050,7 @@
       <name>Тронный зал</name>
       <resets>
         <mob limit="3" maxHere="1" vnum="5107"/>
-        <equip to="wield" vnum="5104"/>
+        <equip to="sheath" vnum="5104"/>
         <equip to="head" vnum="5111"/>
       </resets>
       <sector>inside</sector>
@@ -1090,9 +1114,9 @@
         <mob limit="4" maxHere="1" vnum="5102"/>
         <equip to="wield" vnum="5101"/>
         <mob limit="4" maxHere="1" vnum="5103"/>
-        <equip to="wield" vnum="5102"/>
+        <equip to="sheath" vnum="5102"/>
         <mob limit="4" maxHere="1" vnum="5104"/>
-        <equip to="wield" vnum="5103"/>
+        <equip to="sheath" vnum="5103"/>
       </resets>
       <sector>inside</sector>
     </node>
@@ -1112,7 +1136,7 @@
       <name>Тронный зал</name>
       <resets>
         <mob limit="3" maxHere="1" vnum="5107"/>
-        <equip to="wield" vnum="5104"/>
+        <equip to="sheath" vnum="5104"/>
         <equip to="arms" vnum="5108"/>
       </resets>
       <sector>inside</sector>
@@ -1162,9 +1186,9 @@
         <mob limit="4" maxHere="1" vnum="5102"/>
         <equip to="wield" vnum="5101"/>
         <mob limit="4" maxHere="1" vnum="5103"/>
-        <equip to="wield" vnum="5102"/>
+        <equip to="sheath" vnum="5102"/>
         <mob limit="4" maxHere="1" vnum="5104"/>
-        <equip to="wield" vnum="5103"/>
+        <equip to="sheath" vnum="5103"/>
       </resets>
       <sector>inside</sector>
     </node>
@@ -1256,7 +1280,7 @@
       <name>Академия жриц</name>
       <resets>
         <mob limit="3" maxHere="1" vnum="5105"/>
-        <equip to="wield" vnum="5104"/>
+        <equip to="sheath" vnum="5104"/>
         <equip to="hold" vnum="5110"/>
       </resets>
       <sector>inside</sector>
@@ -1339,7 +1363,7 @@
       <name>Академия магов</name>
       <resets>
         <mob limit="3" maxHere="1" vnum="5105"/>
-        <equip to="wield" vnum="5104"/>
+        <equip to="sheath" vnum="5104"/>
         <equip to="hold" vnum="5110"/>
       </resets>
       <sector>inside</sector>
@@ -1431,9 +1455,9 @@
         <mob limit="4" maxHere="1" vnum="5102"/>
         <equip to="wield" vnum="5101"/>
         <mob limit="4" maxHere="1" vnum="5103"/>
-        <equip to="wield" vnum="5102"/>
+        <equip to="sheath" vnum="5102"/>
         <mob limit="4" maxHere="1" vnum="5104"/>
-        <equip to="wield" vnum="5103"/>
+        <equip to="sheath" vnum="5103"/>
       </resets>
       <sector>inside</sector>
     </node>
@@ -1450,7 +1474,7 @@
       <name>Тронный зал</name>
       <resets>
         <mob limit="3" maxHere="1" vnum="5107"/>
-        <equip to="wield" vnum="5104"/>
+        <equip to="sheath" vnum="5104"/>
         <equip to="head" vnum="5114"/>
       </resets>
       <sector>inside</sector>

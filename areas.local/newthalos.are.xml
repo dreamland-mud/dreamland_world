@@ -4,7 +4,7 @@
     <altname>New Thalos</altname>
     <authors>Conner</authors>
     <credits>New Thalos</credits>
-    <flags>hometown</flags>
+    <flags>hometown easy</flags>
     <levelHigh>35</levelHigh>
     <levelLow>10</levelLow>
     <name>Новый Талос</name>
@@ -17,8 +17,8 @@
   </areadata>
   <helps>
     <node id="1838" keyword="'NEW THALOS' 'НОВЫЙ ТАЛОС'" level="1">Новый Талос -- процветающий молодой город на востоке от {hh1392Мидгаарда{x, населенный
-беженцами из {hh1446Старого Талоса{x. Городом правит мудрый султан, и под его
-руководством в Новом Талосе процветает торговля и ремесла.
+беженцами из разрушенного монстрами {hh2129Старого Талоса{x. Городом правит мудрый
+султан, и под его руководством в Новом Талосе процветает торговля и ремесла.
 Советуем посетить местный базар!
 </node>
   </helps>
@@ -45,7 +45,7 @@
       <material>0</material>
       <off add="dodge fast trip"/>
       <player_name>mage guildmaster мастер гильдии маг</player_name>
-      <practicer registry="skillGroup">none detection harmful creation weather</practicer>
+      <practicer registry="skillGroup">attack detection nature creation adventure</practicer>
       <race>human</race>
       <sex>male</sex>
       <short_descr>мастер||а|у|а|ом|е гильдии</short_descr>
@@ -78,7 +78,7 @@
       <material>0</material>
       <off add="disarm dodge fade kick parry"/>
       <player_name>cleric guildmaster мастер гильдии</player_name>
-      <practicer registry="skillGroup">none detection harmful creation weather</practicer>
+      <practicer registry="skillGroup">attack detection nature creation adventure</practicer>
       <race>human</race>
       <sex>male</sex>
       <short_descr>мастер||а|у|а|ом|е гильдии</short_descr>
@@ -107,7 +107,7 @@
       <material>0</material>
       <off add="area_attack bash disarm dodge fast kick parry"/>
       <player_name>warrior guildmaster мастер гильдии</player_name>
-      <practicer registry="skillGroup">none detection harmful creation weather</practicer>
+      <practicer registry="skillGroup">attack detection nature creation adventure</practicer>
       <race>human</race>
       <sex>male</sex>
       <short_descr>мастер||а|у|а|ом|е гильдии</short_descr>
@@ -146,7 +146,7 @@
       <material>0</material>
       <off add="backstab disarm dodge fast kick_dirt parry trip"/>
       <player_name>thief guildmaster мастер гильдии</player_name>
-      <practicer registry="skillGroup">none detection harmful creation weather</practicer>
+      <practicer registry="skillGroup">attack detection nature creation adventure</practicer>
       <race>elf</race>
       <sex>male</sex>
       <short_descr>мастер||а|у|а|ом|е гильдии</short_descr>
@@ -420,7 +420,7 @@
       <act add="npc sentinel nopurge indoors"/>
       <alignment>800</alignment>
       <behavior type="ShopTrader">
-        <buys>treasure armor clothing</buys>
+        <buys>weapon treasure armor clothing recipe</buys>
         <closeHour>23</closeHour>
         <openHour>0</openHour>
         <profitBuy>200</profitBuy>
@@ -714,7 +714,7 @@
       <off add="disarm kick parry assist_vnum"/>
       <player_name>statue bastian статуя бастиан</player_name>
       <race>unique</race>
-      <sex>male</sex>
+      <sex>female</sex>
       <short_descr>стату|я|и|е|ю|ей|е Бастиана</short_descr>
       <size>huge</size>
       <start_pos>stand</start_pos>
@@ -740,7 +740,7 @@
       <off add="disarm kick parry assist_vnum"/>
       <player_name>statue dwarkin статуя дворкин</player_name>
       <race>unique</race>
-      <sex>male</sex>
+      <sex>female</sex>
       <short_descr>стату|я|и|е|ю|ей|е Дворкина</short_descr>
       <size>small</size>
       <start_pos>stand</start_pos>
@@ -766,7 +766,7 @@
       <off add="disarm kick parry assist_vnum"/>
       <player_name>statue razer статуя разер</player_name>
       <race>unique</race>
-      <sex>male</sex>
+      <sex>female</sex>
       <short_descr>стату|я|и|е|ю|ей|е Разера</short_descr>
       <size>huge</size>
       <start_pos>stand</start_pos>
@@ -845,7 +845,7 @@
       <off add="disarm kick parry assist_vnum"/>
       <player_name>statue cradya статуя крадя</player_name>
       <race>unique</race>
-      <sex>male</sex>
+      <sex>female</sex>
       <short_descr>стату|я|и|е|ю|ей|е Кради</short_descr>
       <size>huge</size>
       <start_pos>stand</start_pos>
@@ -869,8 +869,9 @@
       <material>0</material>
       <off add="disarm kick parry assist_vnum"/>
       <player_name>statue taiphoen статуя тайфоэн</player_name>
+      <practicer registry="skillGroup">suddendeath</practicer>
       <race>unique</race>
-      <sex>male</sex>
+      <sex>female</sex>
       <short_descr>стату|я|и|е|ю|ей|е Тайфоэн</short_descr>
       <size>huge</size>
       <start_pos>stand</start_pos>
@@ -1526,7 +1527,7 @@
       <parts del="hands feet fingers ear eye"/>
       <player_name>eunuch евнух</player_name>
       <race>human</race>
-      <sex>either</sex>
+      <sex>male</sex>
       <short_descr>евнух||а|у|а|ом|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
@@ -1584,7 +1585,7 @@
       <player_name>prophet doomsday ahuramazda пророк ахурамазда последних дней</player_name>
       <race>human</race>
       <religion registry="religion">ahuramazda</religion>
-      <sex>either</sex>
+      <sex>male</sex>
       <short_descr>пророк||а|у|а|ом|е Ахурамазды и Судного Дня</short_descr>
       <size>large</size>
       <start_pos>rest</start_pos>
@@ -1977,7 +1978,7 @@
       <off add="disarm dodge trip assist_vnum"/>
       <player_name>cryohydra криогидра</player_name>
       <race>unique</race>
-      <sex>either</sex>
+      <sex>female</sex>
       <short_descr>криогидр|а|ы|е|у|ой|е</short_descr>
       <size>medium</size>
       <spec>spec_breath_frost</spec>
@@ -2001,7 +2002,7 @@
       <off add="disarm dodge trip assist_race"/>
       <player_name>giant minotaur lizard минотавр ящерица</player_name>
       <race>lizard</race>
-      <sex>either</sex>
+      <sex>female</sex>
       <short_descr>минотавров|ая|ой|ой|ую|ой|ой ящериц|а|ы|е|у|ей|е</short_descr>
       <size>small</size>
       <start_pos>stand</start_pos>
@@ -2024,7 +2025,7 @@
       <off add="disarm dodge trip assist_race"/>
       <player_name>dog death собака смерть</player_name>
       <race>dog</race>
-      <sex>either</sex>
+      <sex>female</sex>
       <short_descr>смертельн|ая|ой|ой|ую|ой|ой собак|а|и|е|у|ой|е</short_descr>
       <size>small</size>
       <start_pos>stand</start_pos>
@@ -2048,7 +2049,7 @@
       <parts del="feet ear eye"/>
       <player_name>lion spotted лев пятнистый</player_name>
       <race>lion</race>
-      <sex>either</sex>
+      <sex>male</sex>
       <short_descr>пятнист|ый|ого|ому|ого|ым|ом л|ев|ьва|ьву|ьва|ьвом|ьве</short_descr>
       <size>large</size>
       <start_pos>stand</start_pos>
@@ -2186,8 +2187,7 @@
     <node name="9579">
       <ac bash="-9" exotic="6" pierce="-9" slash="-9"/>
       <act add="npc sentinel mage nopurge indoors"/>
-      <behavior type="UniclassAdeptAndShopTrader">
-        <myclass>witch</myclass>
+      <behavior type="ShopTrader">
         <profitBuy>187</profitBuy>
         <profitSell>25</profitSell>
         <openHour>0</openHour>
@@ -2255,9 +2255,6 @@
       <act add="npc sentinel cleric"/>
       <aff add="sanctuary"/>
       <alignment>1000</alignment>
-      <behavior type="UniclassAdept">
-        <myclass>cleric</myclass>
-      </behavior>
       <dam_type>none</dam_type>
       <damage>4d6+8</damage>
       <default_pos>stand</default_pos>
@@ -2552,7 +2549,7 @@
       <off add="disarm dodge trip assist_vnum"/>
       <player_name>ixitxachitl акситксачитл</player_name>
       <race>unique</race>
-      <sex>either</sex>
+      <sex>male</sex>
       <short_descr>Акситксачитл||а|у|а|ом|е</short_descr>
       <size>huge</size>
       <start_pos>stand</start_pos>
@@ -2692,7 +2689,7 @@
       <ac bash="-100" exotic="-60" pierce="-100" slash="-100"/>
       <act add="npc sentinel practice mage nopurge notrack"/>
       <alignment>1000</alignment>
-      <behavior type="SamuraiUniclassAdept">
+      <behavior type="Trainer">
       </behavior>
       <dam_type>slash</dam_type>
       <damage>43d48+64</damage>
@@ -2809,29 +2806,36 @@
       <level>10</level>
       <material>wood, iron</material>
       <name>morning star morningstar утренняя звезда</name>
+      <properties>
+        <node name="bestTier">4</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>утренн|яя|ей|ей|юю|ей|ей звезд|а|ы|е|у|ой|а</short_descr>
       <type name="weapon">
         <diceNumber>6</diceNumber>
         <diceType>3</diceType>
         <weapClass>flail</weapClass>
-        <weapType>blast</weapType>
+        <weapType>pound</weapType>
       </type>
       <wear_flags>take wield</wear_flags>
       <weight>50</weight>
     </node>
     <node name="9504">
       <cost>108</cost>
-      <description>Пика-шило (awl-pike) лежит здесь.
-</description>
+      <description>Пика-альшпис (awl pike) лежит здесь.</description>
       <gender>f</gender>
-      <level>6</level>
+      <level>10</level>
       <material>iron</material>
-      <name>awl pike awl-pike пика шило пика-шило</name>
-      <short_descr>пик|а|и|е|у|ой|е - шил|о|а|у|о|ом|е</short_descr>
+      <name>awl pike альшпис</name>
+      <properties>
+        <node name="bestTier">5</node>
+        <node name="random">true</node>
+      </properties>
+      <short_descr>альшпис||а|у||ом|е</short_descr>
       <type name="weapon">
         <diceNumber>1</diceNumber>
         <diceType>17</diceType>
-        <weapClass>exotic</weapClass>
+        <weapClass>lance</weapClass>
         <weapType>pierce</weapType>
       </type>
       <wear_flags>take wield</wear_flags>
@@ -2840,6 +2844,7 @@
     <node name="9505">
       <cost>170</cost>
       <description>Бердыш (bardiche) лешит здесь.</description>
+      <extra_flags>deleted</extra_flags>
       <gender>m</gender>
       <level>8</level>
       <material>steel</material>
@@ -2857,17 +2862,21 @@
     </node>
     <node name="9506">
       <cost>148</cost>
-      <description>Полукруглое долото (bec-de-corbine) лежит здесь.</description>
+      <description>Топор-клевец (bec-de-corbine) лежит здесь.</description>
       <gender>m</gender>
       <level>2</level>
       <material>steel</material>
-      <name>bec corbin bec-de-corbin полукруглое долото</name>
-      <short_descr>полукругл|ое|ого|ому|ое|ым|ом долот|о|а|у|о|ом|е</short_descr>
+      <name>bec corbin bec-de-corbin клевец топор</name>
+      <properties>
+        <node name="bestTier">5</node>
+        <node name="random">true</node>
+      </properties>
+      <short_descr>клев|ец|ца|цу|ец|цом|це</short_descr>
       <type name="weapon">
         <diceNumber>1</diceNumber>
         <diceType>8</diceType>
         <specType>two_hands</specType>
-        <weapClass>polearm</weapClass>
+        <weapClass>axe</weapClass>
         <weapType>pierce</weapType>
       </type>
       <wear_flags>take wield</wear_flags>
@@ -2876,6 +2885,7 @@
     <node name="9507">
       <cost>48</cost>
       <description>A bill-guisarme lies here.</description>
+      <extra_flags>nosavedrop deleted</extra_flags>
       <gender>m</gender>
       <level>2</level>
       <material>iron</material>
@@ -2898,6 +2908,10 @@
       <level>2</level>
       <material>mithril</material>
       <name>fauchard коса</name>
+      <properties>
+        <node name="bestTier">5</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>кос|а|ы|е|у|ой|е</short_descr>
       <type name="weapon">
         <diceNumber>1</diceNumber>
@@ -2912,6 +2926,7 @@
     <node name="9509">
       <cost>92</cost>
       <description>Глефа (glaive) лежит здесь.</description>
+      <extra_flags>deleted</extra_flags>
       <gender>m</gender>
       <level>4</level>
       <material>iron</material>
@@ -2935,6 +2950,10 @@
       <level>3</level>
       <material>steel</material>
       <name>guisarme гвизарма коса</name>
+      <properties>
+        <node name="bestTier">5</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>гвизар|ма|мы|ме|му|мой|ме</short_descr>
       <type name="weapon">
         <diceNumber>2</diceNumber>
@@ -2952,11 +2971,15 @@
       <gender>m</gender>
       <material>steel</material>
       <name>sickle серп</name>
+      <properties>
+        <node name="bestTier">5</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>серп||а|у||ом|е</short_descr>
       <type name="weapon">
         <diceNumber>1</diceNumber>
         <diceType>4</diceType>
-        <weapClass>sword</weapClass>
+        <weapClass>axe</weapClass>
         <weapType>slash</weapType>
       </type>
       <wear_flags>take wield</wear_flags>
@@ -2985,6 +3008,10 @@
       <level>13</level>
       <material>iron</material>
       <name>bastard two sword меч бастард двуручный</name>
+      <properties>
+        <node name="bestTier">4</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>двуручный меч-бастард</short_descr>
       <type name="weapon">
         <diceNumber>5</diceNumber>
@@ -3003,6 +3030,10 @@
       <level>5</level>
       <material>iron</material>
       <name>scimitar ятаган</name>
+      <properties>
+        <node name="bestTier">5</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>ятаган||а|е||ом|е</short_descr>
       <type name="weapon">
         <diceNumber>1</diceNumber>
@@ -3020,6 +3051,10 @@
       <level>11</level>
       <material>steel</material>
       <name>rapier рапира</name>
+      <properties>
+        <node name="bestTier">5</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>рапир|а|ы|е|у|ой|е</short_descr>
       <type name="weapon">
         <diceNumber>4</diceNumber>
@@ -3031,13 +3066,31 @@
       <weight>100</weight>
     </node>
     <node name="9515">
+      <affects>
+        <node>
+          <apply to="move">-50</apply>
+        </node>
+        <node>
+          <apply to="ac">-100</apply>
+        </node>
+        <node>
+          <apply to="hit">30</apply>
+        </node>
+        <node>
+          <apply to="hitroll">3</apply>
+        </node>
+        <node>
+          <apply to="damroll">5</apply>
+        </node>
+      </affects>
       <cost>500</cost>
-      <description>A suit of banded mail lies here.</description>
+      <description>Ламинарный доспех (banded mail) лежит тут.</description>
       <gender>m</gender>
       <level>20</level>
+      <limit>2</limit>
       <material>iron</material>
-      <name>banded mail suit</name>
-      <short_descr>a suit of banded mail</short_descr>
+      <name>banded mail suit ламинарный доспех карамона</name>
+      <short_descr>{1{Wламинарн|ый|ого|ому|ый|ым|ом доспех||а|у||ом|е {yКарамона{2</short_descr>
       <type name="armor">
         <ac bash="20" exotic="0" pierce="20" slash="20"/>
       </type>
@@ -3047,6 +3100,7 @@
     <node name="9516">
       <cost>600</cost>
       <description>A suit of brigandine lies here.</description>
+      <extra_flags>deleted</extra_flags>
       <gender>m</gender>
       <level>20</level>
       <material>steel</material>
@@ -3061,7 +3115,7 @@
     <node name="9517">
       <cost>600</cost>
       <description>A suit of field plate lies here.</description>
-      <extra_flags>invis bless anti_evil anti_neutral</extra_flags>
+      <extra_flags>invis bless anti_evil anti_neutral deleted</extra_flags>
       <gender>m</gender>
       <level>25</level>
       <material>iron</material>
@@ -3076,15 +3130,25 @@
     <node name="9518">
       <affects>
         <node>
+          <apply to="ac">-20</apply>
+        </node>
+        <node>
+          <apply to="hit">5</apply>
+        </node>
+        <node>
+          <apply to="move">-20</apply>
+        </node>
+        <node>
           <apply to="mana">-20</apply>
         </node>
       </affects>
       <cost>176</cost>
       <description>Кольчужная рубаха (ringmail) лежит здесь.</description>
-      <gender>m</gender>
+      <gender>f</gender>
+      <level>1</level>
       <material>iron</material>
       <name>ringmail ring mail suit кольчуга</name>
-      <short_descr>кольчуг|а|и|е|у|ой|е</short_descr>
+      <short_descr>кольчуг|а|и|е|у|ой|е Нового Талоса</short_descr>
       <type name="armor">
         <ac bash="10" exotic="0" pierce="10" slash="10"/>
       </type>
@@ -3094,16 +3158,19 @@
     <node name="9519">
       <affects>
         <node>
+          <apply to="ac">-15</apply>
+        </node>
+        <node>
           <apply to="mana">-10</apply>
         </node>
       </affects>
       <cost>780</cost>
-      <description>A suit of splintmail armor lies here.</description>
+      <description>Пластинчатый доспех (splintmail) лежит тут.</description>
       <gender>m</gender>
       <level>8</level>
       <material>steel</material>
-      <name>splintmail splint mail suit</name>
-      <short_descr>a suit of splintmail</short_descr>
+      <name>splintmail splint mail suit пластинчатый доспех</name>
+      <short_descr>пластинчат|ый|ого|ому|ый|ым|ом доспех||а|у||ом|е</short_descr>
       <type name="armor">
         <ac bash="15" exotic="0" pierce="15" slash="15"/>
       </type>
@@ -3124,13 +3191,18 @@
       <weight>40</weight>
     </node>
     <node name="9521">
+      <affects>
+        <node>
+          <apply to="ac">-10</apply>
+        </node>
+      </affects>
       <cost>310</cost>
-      <description>A splinted shield lies here.</description>
+      <description>Пластинчатый щит (shield) лежит тут.</description>
       <gender>m</gender>
       <level>5</level>
       <material>steel</material>
-      <name>splinted shield</name>
-      <short_descr>a splinted shield</short_descr>
+      <name>shield splinted пластинчатый щит</name>
+      <short_descr>пластинчат|ый|ого|ому|ый|ым|ом щит||а|у||ом|е</short_descr>
       <type name="armor">
         <ac bash="8" exotic="0" pierce="8" slash="8"/>
       </type>
@@ -4048,11 +4120,15 @@
       <level>5</level>
       <material>steel</material>
       <name>sewing shears ножницы</name>
+      <properties>
+        <node name="bestTier">4</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>пар|а|ы|е|у|ой|е портняжных ножниц</short_descr>
       <type name="weapon">
         <diceNumber>2</diceNumber>
         <diceType>5</diceType>
-        <weapClass>dagger</weapClass>
+        <weapClass>exotic</weapClass>
         <weapType>chop</weapType>
       </type>
       <wear_flags>take wield</wear_flags>
@@ -4083,15 +4159,15 @@
 </node>
       </extraDescr>
       <extra_flags>hum</extra_flags>
-      <gender>m</gender>
+      <gender>f</gender>
       <level>11</level>
       <material>marble</material>
-      <name>fountain pen ручка</name>
+      <name>fountain pen чернильная ручка</name>
       <short_descr>чернильн|ая|ой|ой|ую|ой|ой ручк|а|и|е|у|ой|е</short_descr>
       <type name="weapon">
         <diceNumber>2</diceNumber>
         <diceType>8</diceType>
-        <weapClass>dagger</weapClass>
+        <weapClass>exotic</weapClass>
         <weapType>stab</weapType>
       </type>
       <wear_flags>take wield</wear_flags>
@@ -4167,8 +4243,9 @@
       <cost>105</cost>
       <description>Кнут (crop) для верховой езды лежит здесь.</description>
       <gender>m</gender>
+      <level>7</level>
       <material>leather</material>
-      <name>crop riding кнут</name>
+      <name>crop riding кнут верховой</name>
       <short_descr>кнут||а|у||ом|е для верховой езды</short_descr>
       <type name="weapon">
         <diceNumber>1</diceNumber>
@@ -4185,13 +4262,14 @@
       <extraDescr>
         <node keyword="chessboard шахматы board доска"></node>
       </extraDescr>
-      <gender>m</gender>
+      <gender>f</gender>
+      <level>1</level>
       <material>wood</material>
-      <name>chessboard шахматы board доска</name>
+      <name>chessboard шахматная board доска</name>
       <short_descr>шахматн|ая|ой|ой|ую|ой|ой доск|а|и|е|у|ой|е</short_descr>
       <type name="weapon">
         <diceNumber>1</diceNumber>
-        <diceType>6</diceType>
+        <diceType>12</diceType>
         <weapClass>exotic</weapClass>
         <weapType>crush</weapType>
       </type>
@@ -4307,20 +4385,22 @@
     <node name="9598">
       <affects>
         <node>
-          <apply to="hitroll">-2</apply>
+          <apply to="damroll">4</apply>
+          <bits table="affect_flags"></bits>
         </node>
       </affects>
       <cost>520</cost>
-      <description>Коготь (claw) какого-то животного лежит здесь.</description>
-      <extra_flags>hum</extra_flags>
+      <description>Изогнутый черный коготь (claw) какого-то чудовища лежит здесь.</description>
+      <extra_flags>hum anti_good</extra_flags>
       <gender>m</gender>
       <level>14</level>
       <material>bone</material>
-      <name>daemon claw коготь демона</name>
+      <name>demon claw коготь демона</name>
       <short_descr>когот|ь|я|ю|ь|ем|е Демона</short_descr>
       <type name="weapon">
-        <diceNumber>5</diceNumber>
-        <diceType>5</diceType>
+        <diceNumber>2</diceNumber>
+        <diceType>12</diceType>
+        <specType>vampiric</specType>
         <weapClass>exotic</weapClass>
         <weapType>claw</weapType>
       </type>
@@ -4336,6 +4416,10 @@
       <level>15</level>
       <material>bone</material>
       <name>wolverine claw коготь росомахи перчатка glove</name>
+      <properties>
+        <node name="bestTier">3</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>ког|оть|тя|тю|оть|тем|те Росомахи</short_descr>
       <type name="weapon">
         <diceNumber>5</diceNumber>
@@ -4357,7 +4441,7 @@
       </affects>
       <cost>240</cost>
       <description>Могущественная алебарда (halberd) лежит возле стены.</description>
-      <extra_flags>bless</extra_flags>
+      <extra_flags>bless deleted</extra_flags>
       <gender>f</gender>
       <level>22</level>
       <material>iron</material>
@@ -4483,10 +4567,7 @@
       <material>paper</material>
       <name>spellbook book книга заклинаний</name>
       <short_descr>книг|а|и|е|у|ой|е заклинаний</short_descr>
-      <type name="spellbook">
-        <quality>90</quality>
-        <total>10</total>
-        <used>0</used>
+      <type name="trash">
       </type>
       <wear_flags>take</wear_flags>
       <weight>200</weight>
@@ -4703,12 +4784,12 @@
     </node>
     <node name="9622">
       <cost>150</cost>
-      <description>Отмычка (lockpick) марки &apos;соловей&apos; запоет в умелых руках.</description>
-      <gender>m</gender>
+      <description>Эта отмычка (lockpick) запоет в умелых руках.</description>
+      <gender>f</gender>
       <level>1</level>
       <material>steel</material>
       <name>nightingale соловей lockpick отмычка</name>
-      <short_descr>&apos;солов|ей&apos;|ья&apos;|ью&apos;|ья&apos;|ье&apos;|ьем&apos;</short_descr>
+      <short_descr>отмычк|а|и|е|у|ой|е марки {1{D&quot;{cсоловей{D&quot;{2</short_descr>
       <type name="lockpick">
         <v0>6</v0>
         <v1>65</v1>
@@ -4992,7 +5073,7 @@
       <resets>
         <mob limit="1" maxHere="1" vnum="9539"/>
         <equip to="body" vnum="9515"/>
-        <equip to="wield" vnum="9600"/>
+        <equip bestTier="3" rand="rand_all" to="sheath" vnum="104"/>
       </resets>
       <sector>city</sector>
     </node>
@@ -5003,7 +5084,7 @@
 покупая все что ты только можешь себе  представить.  Может  и  тебе  стоит
 заглянуть в одну из лавок разбросанных по рыночку Нового Талоса.
 
-{YБольшая, имеющая очень странный вид статуя (statue) стоит в центре площади{x.
+{YБольшая, имеющая очень странный вид статуя{x (statue) {Yстоит в центре площади{x.
 </description>
       <exits>
         <node name="east">
@@ -5022,7 +5103,7 @@
       <extraDescr>
         <node keyword="statue">Перед тобой статуя Могущественного Наблюдателя!
 Большое животное с множеством светящихся, красных, злых глаз.
-(beholder) Могущественный Наблюдатель male {Cв прекрасном состоЯнии.{x
+(beholder) Могущественный Наблюдатель male {Cв прекрасном состоянии{x.
 </node>
       </extraDescr>
       <name>В Центре Рыночной Площади</name>
@@ -5146,6 +5227,7 @@
           <target>9536</target>
         </node>
       </exits>
+      <flags>near_water</flags>
       <name>На Общей Площади</name>
       <resets>
         <drop vnum="9604"/>
@@ -5208,6 +5290,7 @@
           <target>9513</target>
         </node>
       </exits>
+      <flags>near_water</flags>
       <name>На Южном Мосту</name>
       <resets>
         <mob limit="32" maxHere="2" vnum="9561"/>
@@ -5236,6 +5319,7 @@
           <target>9511</target>
         </node>
       </exits>
+      <flags>near_water</flags>
       <name>Внутри Южных Ворот Нового Талоса</name>
       <resets>
         <mob limit="20" maxHere="5" vnum="9562"/>
@@ -5782,6 +5866,7 @@
           <target>9640</target>
         </node>
       </exits>
+      <flags>near_water</flags>
       <name>В Западной Части Иштар Драйв</name>
       <resets>
         <mob limit="18" maxHere="6" vnum="9536"/>
@@ -5806,6 +5891,7 @@
           <target>9533</target>
         </node>
       </exits>
+      <flags>near_water</flags>
       <name>В Западной Части Иштар Драйв</name>
       <resets>
         <mob limit="18" maxHere="6" vnum="9536"/>
@@ -5834,6 +5920,7 @@
           <target>9534</target>
         </node>
       </exits>
+      <flags>near_water</flags>
       <name>В Западной Части Иштар Драйв</name>
       <resets>
         <mob limit="18" maxHere="3" vnum="9536"/>
@@ -5853,6 +5940,7 @@
           <target>9535</target>
         </node>
       </exits>
+      <flags>near_water</flags>
       <name>В Западной Части Иштар Драйв</name>
       <sector>city</sector>
     </node>
@@ -5874,6 +5962,7 @@
           <target>9510</target>
         </node>
       </exits>
+      <flags>near_water</flags>
       <name>В Восточной Части Иштар Драйв</name>
       <sector>city</sector>
     </node>
@@ -5889,6 +5978,7 @@
           <target>9539</target>
         </node>
       </exits>
+      <flags>near_water</flags>
       <name>В Восточной Части Иштар Драйв</name>
       <sector>city</sector>
     </node>
@@ -5909,6 +5999,7 @@
           <target>9537</target>
         </node>
       </exits>
+      <flags>near_water</flags>
       <name>В Восточной Части Иштар Драйв</name>
       <sector>city</sector>
     </node>
@@ -5931,6 +6022,7 @@
           <target>9538</target>
         </node>
       </exits>
+      <flags>near_water</flags>
       <name>В Восточной Части Иштар Драйв</name>
       <sector>city</sector>
     </node>
@@ -5951,6 +6043,7 @@
           <target>9540</target>
         </node>
       </exits>
+      <flags>near_water</flags>
       <name>В Восточной Части Иштар Драйв</name>
       <sector>inside</sector>
     </node>
@@ -5978,6 +6071,7 @@
 ==========================================================================
 </node>
       </extraDescr>
+      <flags>near_water</flags>
       <name>В Восточной Части Иштар Драйв</name>
       <sector>city</sector>
     </node>
@@ -5995,6 +6089,7 @@
           <target>9586</target>
         </node>
       </exits>
+      <flags>near_water</flags>
       <name>На Причале</name>
       <resets>
         <mob limit="18" maxHere="3" vnum="9536"/>
@@ -6796,9 +6891,6 @@
         <node name="east">
           <target>9583</target>
         </node>
-        <node name="north">
-          <target>8100</target>
-        </node>
         <node name="west">
           <target>9585</target>
         </node>
@@ -6871,9 +6963,6 @@
       <exits>
         <node name="east">
           <target>9589</target>
-        </node>
-        <node name="west">
-          <target>31019</target>
         </node>
       </exits>
       <flags>dark indoors</flags>
@@ -7296,7 +7385,7 @@ drafting table.
     </node>
     <node name="9608">
       <description>Ты находишься внутри Храма. Это место всегда выглядит безукоризненно.
-На севери ты видишь комнату Первосвященника и знак на двери с БОЛЬШИМИ
+На севере ты видишь комнату Первосвященника и знак на двери с БОЛЬШИМИ
 буквами &quot;НЕ БЕСПОКОИТЬ!!!&quot;. На юге вход в Гильдию Монахов.
 </description>
       <exits>
@@ -7418,9 +7507,6 @@ drafting table.
 готовы защитить себя, в случае если город опять окажется в осаде.
 </description>
       <exits>
-        <node name="down">
-          <target>9620</target>
-        </node>
         <node name="north">
           <target>9609</target>
         </node>
@@ -7461,7 +7547,7 @@ BUY   : ЛЮБИМАЯ команда Ахкима позволит тебе к�
         <mob limit="13" maxHere="3" vnum="9543"/>
         <mob limit="22" maxHere="3" vnum="9542"/>
         <mob limit="1" maxHere="1" vnum="9513"/>
-        <equip to="wield" vnum="9583"/>
+        <give vnum="9583"/>
         <give vnum="9555"/>
         <give vnum="9554"/>
         <give vnum="9553"/>
@@ -7600,9 +7686,9 @@ BUY   : Купить у Веры овощи.
       <sector>inside</sector>
     </node>
     <node name="9620">
-      <description>Ты стоишь на площади где собираются те, кто стремиться к праведной жизни.
-Монахи, барды, паладины и жрецы заполняют площадь; каждый проповедует или
-слушая чью-то проповедь. Огромные мраморные ступени ведут вверх к воротам
+      <description>Ты стоишь на площади, где собираются те, кто стремится к праведной жизни.
+Монахи, барды, паладины и жрецы заполняют площадь. Каждый проповедует или
+слушает чью-то проповедь. Огромные мраморные ступени ведут к воротам
 храма. Главная Улица проходит на юге.
 </description>
       <exits>
@@ -7611,9 +7697,6 @@ BUY   : Купить у Веры овощи.
         </node>
         <node name="south">
           <target>9524</target>
-        </node>
-        <node name="up">
-          <target>9613</target>
         </node>
       </exits>
       <flags>law</flags>
@@ -7701,7 +7784,7 @@ BUY   : Любимая команда Эльвиры, позволяющая к�
 </node>
       </extraDescr>
       <flags>indoors</flags>
-      <name>В {w&quot;{gВедьмином Зелье{w&quot;{x</name>
+      <name>В &quot;Ведьмином Зелье&quot;</name>
       <resets>
         <mob limit="20" maxHere="2" vnum="9544"/>
         <mob limit="1" maxHere="1" vnum="9579"/>
@@ -7739,7 +7822,6 @@ BUY  - Позволяет тебе избавиться от лишней нал
         <mob limit="20" maxHere="2" vnum="9544"/>
         <mob limit="14" maxHere="2" vnum="9592"/>
         <mob limit="1" maxHere="1" vnum="9580"/>
-        <give vnum="9608"/>
         <give vnum="9582"/>
         <give vnum="9581"/>
         <give vnum="9579"/>
@@ -7855,13 +7937,8 @@ BUY   : ЛЮБИМАЯ команда Абдула позволит тебе к�
       <name>В Магазине Доспехов Абдула</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="9516"/>
-        <give vnum="9521"/>
         <give vnum="9520"/>
-        <give vnum="9519"/>
         <give vnum="9518"/>
-        <give vnum="9517"/>
-        <give vnum="9516"/>
-        <give vnum="9515"/>
       </resets>
       <sector>inside</sector>
     </node>
@@ -8030,11 +8107,10 @@ BUY   : Любимая команда Игоря, позволит тебе ку
         <give vnum="9512"/>
         <give vnum="9511"/>
         <give vnum="9510"/>
-        <give vnum="9509"/>
+        <give bestTier="5" rand="rand_all" vnum="104"/>
         <give vnum="9508"/>
-        <give vnum="9507"/>
         <give vnum="9506"/>
-        <give vnum="9505"/>
+        <give bestTier="5" rand="rand_all" vnum="104"/>
         <give vnum="9504"/>
         <give vnum="9503"/>
       </resets>
@@ -8222,7 +8298,7 @@ BUY :   любимая команда капитана позволит тебе
 
 </node>
       </extraDescr>
-      <flags>indoors</flags>
+      <flags>indoors near_water</flags>
       <name>У Судоверфи</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="9565"/>
@@ -8369,9 +8445,9 @@ BUY   : купить товар у кузнеца по справедливой 
       <sector>inside</sector>
     </node>
     <node name="9649">
-      <description>Не такой большой как те которые ты видел в деревне. Этот сеновал служит
-хранилищем для лошадей в конюшнях. Паренек с совком, которого ты видел 
-раньше, устроил на втором ярусе Сеновала свою &quot;резиденцию&quot;.
+      <description>Не такой большой как те, которые ты видел{Sfа{Sx в деревне. Этот сеновал служит
+хранилищем для лошадей в конюшнях. Паренек с совком, которого ты видел{Sfа{Sx
+раньше, устроил на втором ярусе сеновала свою &quot;резиденцию&quot;.
 </description>
       <exits>
         <node name="west">
@@ -8519,11 +8595,11 @@ BUY   : купить товар у кузнеца по справедливой 
       <sector>inside</sector>
     </node>
     <node name="9656">
-      <description>Без сомнения Дварфы работающие здесь знают толк в своем деле. Их помощь
-в строительстве столь  прекрасного  города  стала  неоценимой.  Здесь  они
-делают лучше что могут. Молот работает с небывалой быстротой,  превращаясь
-в размытое пятно  в  руках  настоящих  мастеров  изготавливающих  фигурные 
-кирпичи, колоны, опоры и различные другие формы.
+      <description>Работающие здесь дварфы без сомнения знают толк в своем деле. Их помощь в
+строительстве столь прекрасного города стала неоценимой. Прямо сейчас они делают
+город еще красивее. Молоты работают с небывалой быстротой, превращаясь в
+размытые пятна в руках настоящих мастеров, изготавливающих фигурные кирпичи,
+колонны, опоры и другие архитектурные формы.
 </description>
       <exits>
         <node name="west">
@@ -8531,7 +8607,7 @@ BUY   : купить товар у кузнеца по справедливой 
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>У Каменьщиков</name>
+      <name>У каменщиков</name>
       <sector>inside</sector>
     </node>
     <node name="9657">
@@ -8681,9 +8757,9 @@ BUY   : купить товар у кузнеца по справедливой 
       <sector>inside</sector>
     </node>
     <node name="9665">
-      <description>You have come to the eastern end of the northern hallway. The only exit
-is west except for the simple wooden door to the north. There is a
-golden plaque above the door.
+      <description>Длинный коридор, застеленный красным ковром, ведет на запад.
+У стен установлены скамеечки и растения в горшках. На севере ты видишь
+дверь с прикрепленной табличкой (plaque).
 </description>
       <exits>
         <node name="north">
@@ -8697,8 +8773,7 @@ golden plaque above the door.
         </node>
       </exits>
       <extraDescr>
-        <node keyword="plaque">Святая усыпальница Бога
-
+        <node keyword="plaque табличка">Святая усыпальница Бога
 </node>
       </extraDescr>
       <flags>indoors</flags>
@@ -8706,9 +8781,9 @@ golden plaque above the door.
       <sector>inside</sector>
     </node>
     <node name="9666">
-      <description>Тебе кажется, что как только ты  входишь  в  эту  комнату  ты  покидаешь
-материальный  план.  Стена  здесь  украшена   прекрасными,   разноцветными
-изразцами. В воздухе вокруг тебя ощущается какую-то странную неподвижность.
+      <description>Тебе кажется, что как только ты входишь в эту комнату, ты покидаешь измерение
+реальности. Стена здесь украшена прекрасными, разноцветными изразцами. В воздухе
+вокруг тебя ощущается какая-то странная неподвижность.
 Ты ощущаешь присутствие всемогущего существа.
 </description>
       <exits>
@@ -8720,7 +8795,7 @@ golden plaque above the door.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>В Усыпальнице Бога</name>
+      <name>В Усыпальнице Ахурамазды</name>
       <sector>inside</sector>
     </node>
     <node name="9667">
@@ -9005,9 +9080,9 @@ golden plaque above the door.
       <sector>field</sector>
     </node>
     <node name="9679">
-      <description>Длинный коридор тянется с запада  на  восток.  Красный  ковер  лежит  по
-центру коридора. У стен установлены скамеечки и  растения  в  горшках.  На
-севере ты видишь дверь с плакатом (plaque), прикрепленным к ней.
+      <description>Длинный коридор, застеленный красным ковром, тянется с запада на восток.
+У стен установлены скамеечки и растения в горшках. На севере ты видишь
+дверь с прикрепленной табличкой (plaque).
 </description>
       <exits>
         <node name="east">
@@ -9299,10 +9374,10 @@ as much stuff as you possibly can and run for the door.
       <sector>inside</sector>
     </node>
     <node name="9691">
-      <description>Climbing down the old wooden ladder you enter a small cave-like
-room. There is a small bench with some old magazines and a low
-burning candle sitting off to one side. A door is set into the
-stone on the east wall, and the steel grating opens up above.
+      <description>Ты оказываешься в маленькой пещере, вырезанной в скале под Новым Талосом.
+Наверх ведет шаткая деревянная лестница. В комнате очень скудное убранство:
+скамья с парой старых журналов и тусклая свеча для освещения.
+На востоке массивная решетка преграждает вход в тюремные камеры.
 </description>
       <exits>
         <node name="east">
@@ -9327,8 +9402,9 @@ stone on the east wall, and the steel grating opens up above.
       <sector>inside</sector>
     </node>
     <node name="9692">
-      <description>You stand in a roughly hewn stone tunnel with cells to the north and
-south. The tunnel continues east.
+      <description>Ты стоишь в грубо пробитом туннеле глубоко в подземельях темницы Нового Талоса.
+На севере и юге видны входы в тюремные камеры.
+Туннель продолжается на запад и восток.
 </description>
       <exits>
         <node name="east">
@@ -9360,8 +9436,9 @@ south. The tunnel continues east.
       <sector>inside</sector>
     </node>
     <node name="9693">
-      <description>You stand in a roughly hewn stone tunnel with cells to the north and
-south. The tunnel continues east and west.
+      <description>Ты стоишь в грубо пробитом туннеле глубоко в подземельях темницы Нового Талоса.
+На севере и юге видны входы в тюремные камеры.
+Туннель продолжается на запад и восток.
 </description>
       <exits>
         <node name="east">
@@ -9390,8 +9467,9 @@ south. The tunnel continues east and west.
       <sector>inside</sector>
     </node>
     <node name="9694">
-      <description>You stand in a roughly hewn stone tunnel with cells to the north and
-south. The tunnel continues east and west.
+      <description>Ты стоишь в грубо пробитом туннеле глубоко в подземельях темницы Нового Талоса.
+На севере и юге видны входы в тюремные камеры.
+Туннель продолжается на запад и восток.
 </description>
       <exits>
         <node name="east">
@@ -9420,9 +9498,10 @@ south. The tunnel continues east and west.
       <sector>inside</sector>
     </node>
     <node name="9695">
-      <description>You stand in a roughly hewn stone tunnel with cells to the north and
-south. The tunnel continues west and you notice a small crack in the
-stone to the east.
+      <description>Ты стоишь в грубо пробитом туннеле глубоко в подземельях темницы Нового Талоса.
+На севере и юге видны входы в тюремные камеры.
+Туннель продолжается на запад, а на востоке ты видишь темный провал какого-то
+логова или пещеры.
 </description>
       <exits>
         <node name="east">
@@ -9455,10 +9534,11 @@ stone to the east.
       <sector>inside</sector>
     </node>
     <node name="9696">
-      <description>This room seems more like a lair than a cell. Small bits of hay lie
-strewn about the floor covering bones of unkown origin. Spatterd blood
-and tufts of grey hair lie matted in one corner. As you turn to leave
-you notice a pair of small red eyes peering at you from the darkness.
+      <description>Эта комната больше похожа на логово, чем на камеру темницы. По полу разбросаны
+клочки сена и множество обглоданных костей неизвестного происхождения.
+Стены покрыты пятнами засохшей крови и странными длинными царапинами -- по три
+за раз. В углу ты видишь груду серого меха, и в тот момент, когда ты уже 
+собираешься уйти, в этой груде загорается пара кроваво-алых глаз!
 </description>
       <exits>
         <node name="west">
@@ -9473,12 +9553,13 @@ you notice a pair of small red eyes peering at you from the darkness.
       <name>Секретная Камера</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="9587"/>
-        <equip to="wield" vnum="9599"/>
+        <equip to="sheath" vnum="9599"/>
       </resets>
       <sector>inside</sector>
     </node>
     <node name="9697">
-      <description>You are in a cold, cramped chamber with only one exit.
+      <description>Ты стоишь в тесной, сырой и холодной тюремной камере с единственной дверью
+наружу. Здесь пахнет плесенью, болью и отчаянием.
 </description>
       <exits>
         <node name="south">
@@ -9497,7 +9578,8 @@ you notice a pair of small red eyes peering at you from the darkness.
       <sector>inside</sector>
     </node>
     <node name="9698">
-      <description>You are in a cold, cramped chamber with only one exit.
+      <description>Ты стоишь в тесной, сырой и холодной тюремной камере с единственной дверью
+наружу. Здесь пахнет плесенью, болью и отчаянием.
 </description>
       <exits>
         <node name="south">
@@ -9516,7 +9598,8 @@ you notice a pair of small red eyes peering at you from the darkness.
       <sector>inside</sector>
     </node>
     <node name="9699">
-      <description>You are in a cold, cramped chamber with only one exit.
+      <description>Ты стоишь в тесной, сырой и холодной тюремной камере с единственной дверью
+наружу. Здесь пахнет плесенью, болью и отчаянием.
 </description>
       <exits>
         <node name="south">
@@ -9539,7 +9622,8 @@ you notice a pair of small red eyes peering at you from the darkness.
       <sector>inside</sector>
     </node>
     <node name="9700">
-      <description>You are in a cold, cramped chamber with only one exit.
+      <description>Ты стоишь в тесной, сырой и холодной тюремной камере с единственной дверью
+наружу. Здесь пахнет плесенью, болью и отчаянием.
 </description>
       <exits>
         <node name="south">
@@ -9558,7 +9642,8 @@ you notice a pair of small red eyes peering at you from the darkness.
       <sector>inside</sector>
     </node>
     <node name="9701">
-      <description>You are in a cold, cramped chamber with only one exit.
+      <description>Ты стоишь в тесной, сырой и холодной тюремной камере с единственной дверью
+наружу. Здесь пахнет плесенью, болью и отчаянием.
 </description>
       <exits>
         <node name="north">
@@ -9577,7 +9662,8 @@ you notice a pair of small red eyes peering at you from the darkness.
       <sector>inside</sector>
     </node>
     <node name="9702">
-      <description>You are in a cold, cramped chamber with only one exit.
+      <description>Ты стоишь в тесной, сырой и холодной тюремной камере с единственной дверью
+наружу. Здесь пахнет плесенью, болью и отчаянием.
 </description>
       <exits>
         <node name="north">
@@ -9596,7 +9682,8 @@ you notice a pair of small red eyes peering at you from the darkness.
       <sector>inside</sector>
     </node>
     <node name="9703">
-      <description>You are in a cold, cramped chamber with only one exit.
+      <description>Ты стоишь в тесной, сырой и холодной тюремной камере с единственной дверью
+наружу. Здесь пахнет плесенью, болью и отчаянием.
 </description>
       <exits>
         <node name="north">
@@ -9615,7 +9702,8 @@ you notice a pair of small red eyes peering at you from the darkness.
       <sector>inside</sector>
     </node>
     <node name="9704">
-      <description>You are in a cold, cramped chamber with only one exit.
+      <description>Ты стоишь в тесной, сырой и холодной тюремной камере с единственной дверью
+наружу. Здесь пахнет плесенью, болью и отчаянием.
 </description>
       <exits>
         <node name="north">
@@ -9816,15 +9904,16 @@ Statue использует:
 среди скал вверх по склону.
 </description>
       <exits>
-        <node name="east">
+        <node name="south">
           <key>0</key>
-          <target>9739</target>
+          <target>9737</target>
         </node>
         <node name="up">
           <key>0</key>
           <target>9711</target>
         </node>
       </exits>
+      <flags>near_water</flags>
       <name>Тропа среди камней</name>
       <sector>inside</sector>
     </node>
@@ -9854,12 +9943,12 @@ papasan chairs, and choose a title that strikes you.
       <sector>inside</sector>
     </node>
     <node name="9711">
-      <description>Взобравшись по тропе на вершину скалы, ты  оказываешься  на  ровной  площадке, 
-усеяной каменюками (rocks) побольше и поменьше. Внизу ты   видишь  реку,  чуть 
-дальше на востоке - Новый Талос, за ним море Дракона. Прямо  перед  тобой,  на 
-севере, сливаясь с камнями, стоит замок, с тропы принятый тобой  за  еще  одну 
-скалу. По виду замок заброшен и необитаем. Можешь попытаться в него зайти, или 
-спуститься вниз по тропе ведущей к реке.
+      <description>Взобравшись по тропе на вершину скалы, ты оказываешься на ровной площадке, 
+усеянной каменюками (rocks) разных размеров. Внизу ты видишь реку, которая
+уходит далеко на восток в сторону Нового Талоса. Прямо перед тобой, на севере,
+сливаясь с камнями, стоит замок, с тропы принятый тобой за еще одну скалу.
+По виду замок заброшен и необитаем. Можешь попытаться в него зайти, или 
+спуститься вниз по тропе, ведущей к реке.
 </description>
       <exits>
         <node name="down">
@@ -9875,12 +9964,15 @@ papasan chairs, and choose a title that strikes you.
         </node>
       </exits>
       <extraDescr>
-        <node keyword="rocks">Камни всевозможных форм и размеров навалены на площадке. Не мало,
-но и пройти не наступая на них вполне возможно. Один  из  камней 
-отличается по цвету,  и  формой  больше  напоминает  рукотворный 
-булыжник (cobblestone).
+        <node keyword="cobblestone булыжник">Перевернув булыжник, ты замечаешь аккуратную надпись, выцарапанную темными
+рунами богини Тайфоэн: &quot;А иногда, доченька, описания -- это просто описания.&quot;
+</node>
+        <node keyword="rocks каменюки каменюками">Камни всевозможных форм и размеров навалены на площадке. Не мало, но и пройти
+не наступая на них вполне возможно. Один из камней отличается по цвету, и формой
+больше напоминает рукотворный булыжник (cobblestone).
 </node>
       </extraDescr>
+      <flags>near_water</flags>
       <name>Ровная площадка на скале</name>
       <resets>
         <drop vnum="9502"/>
@@ -10039,6 +10131,25 @@ papasan chairs, and choose a title that strikes you.
       <name>В Море Дракона</name>
       <sector>water_noswim</sector>
     </node>
+    <node name="9718">
+      <description>В этом месте река поворачивает к югу, по-прежнему разделяя Хаон Дор и Изумрудный
+Лес. На юго-востоке сквозь деревья виднеются очертания разрушенного монастыря,
+но высадится здесь не представляется возможным.
+</description>
+      <exits>
+        <node name="east">
+          <key>0</key>
+          <target>9773</target>
+        </node>
+        <node name="south">
+          <key>0</key>
+          <target>9727</target>
+        </node>
+      </exits>
+      <flags>gods_only</flags>
+      <name>На Темной Реке</name>
+      <sector>water_swim</sector>
+    </node>
     <node name="9719">
       <description>The waters of the swamp pool in this low area and begin to flow southward.
 </description>
@@ -10051,9 +10162,9 @@ papasan chairs, and choose a title that strikes you.
       <sector>water_noswim</sector>
     </node>
     <node name="9720">
-      <description>Река немного успокаивается после стремительного спуска во внутренностях
-горы.  Несмотря на то, что вокруг голые камни, и кроме них ничего нет, на
-востоке едва различимы полосы зелени.  
+      <description>Река немного успокаивается после порогов и разлива на западе. На востоке река
+выходит на просторы Песков Скорби, протекая среди дюн. На севере ты видишь
+холмы. Склоны холмов опалены каким-то жарким пламенем.
 </description>
       <exits>
         <node name="east">
@@ -10067,8 +10178,9 @@ papasan chairs, and choose a title that strikes you.
       <sector>water_noswim</sector>
     </node>
     <node name="9721">
-      <description>Река течет с запада на восток через холмы.  На севере виден большой
-вулкан.  
+      <description>Иштар неторопливо течет через жаркие Пески Скорби, с севера и юга окруженная
+огромными песчаными дюнами. Между дюнами на севере просматриваются очертания
+огромной Пирамиды, затерянной в песках.
 </description>
       <exits>
         <node name="east">
@@ -10082,7 +10194,8 @@ papasan chairs, and choose a title that strikes you.
       <sector>water_noswim</sector>
     </node>
     <node name="9722">
-      <description>Река начинает выходить из гор и продолжает течь на восток.  
+      <description>Иштар неторопливо течет через жаркие Пески Скорби, с севера и юга окруженная
+огромными песчаными дюнами.
 </description>
       <exits>
         <node name="east">
@@ -10096,8 +10209,8 @@ papasan chairs, and choose a title that strikes you.
       <sector>water_noswim</sector>
     </node>
     <node name="9723">
-      <description>Река течет под городской стеной на восток, оставляя далеко далеко позади
-высокие заснеженные горы, что высятся на западе.  
+      <description>Река течет под городской стеной Нового Талоса на восток, оставляя далеко позади
+шумные доки Базара на западе.
 </description>
       <exits>
         <node name="east">
@@ -10111,10 +10224,11 @@ papasan chairs, and choose a title that strikes you.
       <sector>water_noswim</sector>
     </node>
     <node name="9724">
-      <description>Река течет из города в длинную, открытую всем ветрам лощину перед Морем
-Дракона.  На юге лежит большая восточная пустыня, а на севере - большие
-открытые пространства, покрытые травой.  Также можно заметить дорогу, идущую
-параллельно реке, но берег слишком крут и ты не можешь видеть далеко.  
+      <description>Река течет из города в длинную, открытую всем ветрам равнину перед Морем
+Дракона.  На юге начинаются отроги гор, примыкающие к Пескам Скорби. На севере
+ты видишь большие открытые пространства, покрытые травой и небольшими
+поселениями -- пригороды Нового Талоса. Также можно заметить дорогу, идущую
+параллельно реке, но берег слишком крут и ты не можешь видеть далеко.
 </description>
       <exits>
         <node name="east">
@@ -10128,9 +10242,11 @@ papasan chairs, and choose a title that strikes you.
       <sector>water_noswim</sector>
     </node>
     <node name="9725">
-      <description>Река продолжает спускаться в низины, течение такое плавное - всегда
-строго на восток.  Трудно поверить, что это та самая река, что стремительно
-неслась вниз по скнону горы, образуя водопады и пороги.  
+      <description>Река продолжает спускаться в низины, течение такое плавное -- всегда строго на
+восток. Трудно поверить, что это та самая река, что стремительно неслась вниз по
+склону Восточных Гор, образуя водопады и пороги.  
+Далеко на юго-западе через просвет в отрогах гор, ты видишь очертания небольшого
+храма. На севере ты видишь поселения -- пригороды Нового Талоса.
 </description>
       <exits>
         <node name="east">
@@ -10158,6 +10274,44 @@ papasan chairs, and choose a title that strikes you.
       </exits>
       <name>Река Иштар</name>
       <sector>water_noswim</sector>
+    </node>
+    <node name="9727">
+      <description>Река поворачивает с севера на запад. На юге начинаются отроги поросших лесом
+гор. На северном берегу реки продолжается Хаон Дор.
+</description>
+      <exits>
+        <node name="north">
+          <key>0</key>
+          <target>9718</target>
+        </node>
+        <node name="west">
+          <key>0</key>
+          <target>9774</target>
+        </node>
+      </exits>
+      <flags>gods_only</flags>
+      <name>На Темной Реке</name>
+      <sector>water_swim</sector>
+    </node>
+    <node name="9728">
+      <description>На западном берегу реки простирается огромное болото, затянутое туманом.
+В глубине мглистой дымки завораживающе мерцают болотные огоньки. На севере ты
+видишь излучину реки, ведущую на восток. На юге река расширяется, огибая
+какой-то остров.
+</description>
+      <exits>
+        <node name="north">
+          <key>0</key>
+          <target>9774</target>
+        </node>
+        <node name="south">
+          <key>0</key>
+          <target>9775</target>
+        </node>
+      </exits>
+      <flags>gods_only</flags>
+      <name>На Темной Реке у болота</name>
+      <sector>water_swim</sector>
     </node>
     <node name="9734">
       <description>The river flows south through a valley in the mountains. You can see a
@@ -10191,70 +10345,83 @@ of the valley close in to the south.
     </node>
     <node name="9736">
       <description>Река начинает набирать скорость, бурля на порогах и небольших водопадах,
-течет все ниже в горной расщелине.  Высоко над тобой веревочный мост
-раскачивается на ветру.  
+течет все ниже в горной расщелине. На востоке за порогами ты видишь большой
+разлив, где в Иштар впадает Река Потерянных Душ. Высоко над тобой веревочный
+мост раскачивается на ветру. 
 </description>
       <exits>
-        <node name="south">
+        <node name="east">
+          <key>0</key>
+          <target>9739</target>
+        </node>
+        <node name="west">
+          <key>0</key>
           <target>9737</target>
         </node>
       </exits>
-      <name>Река Потерянных Душ</name>
+      <name>Река Иштар</name>
       <sector>water_noswim</sector>
     </node>
     <node name="9737">
-      <description>Река очень быстро течет вниз на юг в ущелье на склоне горы.
+      <description>Течение Иштар здесь начинает ускоряться, выходя к бурным порогам на востоке.
 Ты надеешься, что успеешь услышать рев бурлящей воды на порогах и немного
-подправить курс, прежде чем разобьешься о камни.
+подправить курс, прежде чем разобьешься о камни. На севере ты видишь небольшой
+каменистый пляж -- здесь, кажется, можно высадиться.
 </description>
       <exits>
-        <node name="north">
+        <node name="east">
+          <key>0</key>
           <target>9736</target>
         </node>
-        <node name="south">
+        <node name="north">
+          <key>0</key>
+          <target>9709</target>
+        </node>
+        <node name="west">
+          <key>0</key>
           <target>9738</target>
         </node>
       </exits>
-      <name>Река Потерянных Душ</name>
+      <name>Река Иштар</name>
       <sector>water_noswim</sector>
     </node>
     <node name="9738">
-      <description>Река выглядит немного спокойнее, в расширяющемся и сужающемся ущелье,
-которое мертвой хваткой держит воду в своем русле.  Река продолжается на юг
-и на север в ущелье.  
+      <description>Река выглядит вполне спокойной, в расширяющемся и сужающемся ущелье, которое
+мертвой хваткой держит воду в своем русле. На западе река входит под своды
+большой пещеры у горном хребте. На востоке ты слышишь шум порогов.
 </description>
       <exits>
-        <node name="north">
+        <node name="east">
+          <key>0</key>
           <target>9737</target>
         </node>
-        <node name="south">
-          <target>9739</target>
+        <node name="west">
+          <key>0</key>
+          <target>5005</target>
         </node>
       </exits>
-      <name>Река Потерянных Душ</name>
+      <name>Река Иштар, у Восточных Гор</name>
       <sector>water_noswim</sector>
     </node>
     <node name="9739">
-      <description>Воды реки с ревом устремляются вниз на камни, разделяясь на два рукава:
-один продолжает течь на север, другой поворачивает на восток.  На западе
-замечаешь пустое пространство, отклонившись от курса, ты можешь пристать к
-камням.  Река Потерянных Душ продолжается на север.  
+      <description>Ты оказываешься на широком разливе, где в Реку Иштар с юга впадает мрачная и
+малоизученная Река Потерянных Душ. Узнавать, как она получила свое название,
+тебе почему-то совсем не хочется. На западе Иштар спускается с гор, проходя
+через бурные потоки.
 </description>
       <exits>
         <node name="east">
           <target>9720</target>
-        </node>
-        <node name="north">
-          <target>9738</target>
         </node>
         <node name="south">
           <target>9740</target>
         </node>
         <node name="west">
           <key>0</key>
-          <target>9709</target>
+          <target>9736</target>
         </node>
       </exits>
+      <flags>near_water</flags>
       <name>Разлив</name>
       <sector>water_noswim</sector>
     </node>
@@ -10302,19 +10469,24 @@ of the valley close in to the south.
     </node>
     <node name="9743">
       <description>Река образует здесь крутой изгиб, притекая с огромной горы на востоке и
-устремляя свои воды в долину на севере.  
+устремляя свои воды в долину на севере. На западе ты видишь небольшой каменистый
+пляж, куда можно высадиться. Вдали ты замечаешь какие-то темные руины.
 </description>
       <exits>
         <node name="north">
           <target>9742</target>
+        </node>
+        <node name="west">
+          <key>0</key>
+          <target>8100</target>
         </node>
       </exits>
       <name>Река Потерянных Душ</name>
       <sector>water_noswim</sector>
     </node>
     <node name="9744">
-      <description>Здесь река расширяется, больше не ограничиваемая камнями, и течет к
-равнинам на востоке.  
+      <description>Иштар неторопливо течет через жаркие Пески Скорби, с севера и юга окруженная
+огромными песчаными дюнами.
 </description>
       <exits>
         <node name="east">
@@ -10328,7 +10500,9 @@ of the valley close in to the south.
       <sector>water_noswim</sector>
     </node>
     <node name="9745">
-      <description>Река течет с запада на восток.  На севере можно высадиться на берег.  
+      <description>Река течет с запада на восток через бескрайние Пески Скорби. На северо-западе
+между гигантскими песчаными дюнами виднеются очертания огромной Пирамиды.
+Далеко на западе высится хребет Восточных Гор.
 </description>
       <exits>
         <node name="east">
@@ -10342,8 +10516,9 @@ of the valley close in to the south.
       <sector>water_noswim</sector>
     </node>
     <node name="9746">
-      <description>Река извивается и петляет в предгории гор, что на востоке.  Воздух
-становится суше в этой части континента и немного теплей.  
+      <description>Река извивается и петляет через Пески Скорби, подступая ближе к предгорьям
+Восточных Гор на западе. Воздух становится суше в этой части континента и
+намного жарче.
 </description>
       <exits>
         <node name="east">
@@ -10357,9 +10532,9 @@ of the valley close in to the south.
       <sector>water_noswim</sector>
     </node>
     <node name="9747">
-      <description>Река продолжает свое путешествие на восток, протекая через равнины.
-На западе видны заснеженные горные вершины, а на востоке виднеются
-очертания большого города.
+      <description>Река продолжает свое путешествие на восток, протекая через Пески Скорби.
+Далеко на западе видны заснеженные горные вершины, а на востоке виднеются
+очертания Базара.
 </description>
       <exits>
         <node name="east">
@@ -10373,11 +10548,18 @@ of the valley close in to the south.
       <sector>water_noswim</sector>
     </node>
     <node name="9748">
-      <description>Река течет с запада на восток.                                                
+      <description>Река течет с запада на восток через бескрайние пустоши Песков Скорби.                                                
+На севере ты видишь шумные доки Базара, где сотни рабочих и торговцев разгружают
+товары и готовят их к продаже. Река в этом месте битком набита лодками, джонками
+и торговыми судами всех цветов и калибров.
 </description>
       <exits>
         <node name="east">
           <target>9749</target>
+        </node>
+        <node name="north">
+          <key>0</key>
+          <target>14247</target>
         </node>
         <node name="west">
           <target>9747</target>
@@ -10387,15 +10569,13 @@ of the valley close in to the south.
       <sector>water_noswim</sector>
     </node>
     <node name="9749">
-      <description>С расширением реки ее течение еще больше замедляется, русло петляет в
-низине.  Небольшой причал на севере позволяет высадиться на берег.  
+      <description>С расширением реки ее течение еще больше замедляется, русло петляет в низине.
+На северо-западе ты видишь опаляемые жарким солнцем стены Базара. Река ведет
+на восток, в Новый Талос.
 </description>
       <exits>
         <node name="east">
           <target>9723</target>
-        </node>
-        <node name="north">
-          <target>14247</target>
         </node>
         <node name="west">
           <target>9748</target>
@@ -10415,79 +10595,74 @@ of the valley close in to the south.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>Igor&apos;s Secret Chamber</name>
+      <name>Тайная комната Игоря</name>
       <resets>
         <drop vnum="9598"/>
       </resets>
       <sector>inside</sector>
     </node>
     <node name="9772">
-      <description>The river flows to the east under the walls of Midgaard and west
-snaking through a dark forest.
+      <description>Ты плывешь по Темной Реке. На востоке река проходит через массивную решетку в
+стенах Мидгаарда. За западе река змеится сквозь темные чащи Хаон Дора.
 </description>
       <exits>
-        <node name="east">
-          <target>3200</target>
-        </node>
         <node name="west">
           <target>9773</target>
         </node>
       </exits>
+      <flags>gods_only</flags>
       <name>На Темной Реке</name>
       <sector>water_noswim</sector>
     </node>
     <node name="9773">
-      <description>The river continues east and west meandering through the woods.
+      <description>Река прихотливо вьется между исполинских деревьев, разделяя Хаон Дор на севере 
+и Изумрудный Лес на юге. Течение ведет на запад. Вдалеке на востоке сквозь
+деревья виднеются стены Мидгаарда.
 </description>
       <exits>
         <node name="east">
           <target>9772</target>
         </node>
         <node name="west">
-          <target>9774</target>
+          <key>0</key>
+          <target>9718</target>
         </node>
       </exits>
-      <flags>dark</flags>
+      <flags>dark gods_only</flags>
       <name>На Темной Реке</name>
       <sector>water_noswim</sector>
     </node>
     <node name="9774">
-      <description>The river continues east and west meandering through the woods. You
-hear the sounds of chopping wood far off in the distance.
+      <description>Река сворачивает круто к югу. На севере ты видишь небольшую песчаную отмель,
+куда можно высадиться. С холмов на северо-востоке доносится ужасное зловоние,
+а за поворотом реки на юго-западе кажется виднеется болото.
 </description>
       <exits>
         <node name="east">
-          <target>9773</target>
+          <key>0</key>
+          <target>9727</target>
         </node>
-        <node name="north">
-          <target>6123</target>
-        </node>
-        <node name="west">
-          <target>9775</target>
+        <node name="south">
+          <key>0</key>
+          <target>9728</target>
         </node>
       </exits>
-      <flags>dark</flags>
+      <flags>dark gods_only</flags>
       <name>На Темной Реке</name>
       <sector>water_noswim</sector>
     </node>
     <node name="9775">
-      <description>The river continues east meandering through the woods.  To the west, you
-are able to make out the shore of a tiny island, covered with a thin layer
-of mist.  
+      <description>Ты сплавляешься по Темной Реке с севера на юг. Река здесь расширяется, готовясь
+выйти к морю. На западе ты видишь небольшой, но вполне милый островок, затянутый
+туманом. Интересно, что там?
 </description>
       <exits>
-        <node name="east">
-          <target>9774</target>
-        </node>
-        <node name="south">
+        <node name="north">
           <key>0</key>
-          <target>38122</target>
-        </node>
-        <node name="west">
-          <target>2700</target>
+          <target>9728</target>
         </node>
       </exits>
-      <flags>dark</flags>
+      <flags>dark gods_only</flags>
       <name>На Темной Реке</name>
       <sector>water_noswim</sector>
     </node>
@@ -10548,8 +10723,8 @@ euphoria as you freefall the 200 + feet to your death.
     </node>
     <node name="9784">
       <description>Река здесь становится более широкой и темной.  С востока доносится запах
-соленой воды.  Море Дракона близко.  На востоке едва различим неотчетливый
-пригод, а на севере видны обширные степные пространства.  
+соленой воды. Море Дракона близко. Также можно заметить дорогу, идущую
+параллельно реке, но берег слишком крут и ты не можешь видеть далеко.
 </description>
       <exits>
         <node name="east">
@@ -10581,12 +10756,16 @@ euphoria as you freefall the 200 + feet to your death.
       <sector>water_noswim</sector>
     </node>
     <node name="9786">
-      <description>Ты находишься посреди кристальной синевы вод Моря Дракона.  Вода
-окружает тебя со всех сторон и простирается до самого горизонта.  Тебе
-кажется, что вдалеке на севере ты можешь разглядеть небольшую пристань.  
+      <description>Ты находишься посреди кристальной синевы вод Моря Дракона. Вода окружает тебя со
+всех сторон и простирается до самого горизонта. Тебе кажется, что вдалеке на
+севере ты можешь разглядеть небольшую пристань.  
+
+Путь на восток закрывает клубящееся марево с надписью &quot;{MТеРрИтОрИя ХаОсА{x&quot;.
+Осторожно, клановый страж безжалостно расправится с чужаками...
 </description>
       <exits>
         <node name="east">
+          <flags>isdoor closed</flags>
           <target>550</target>
         </node>
         <node name="north">
@@ -10687,6 +10866,7 @@ euphoria as you freefall the 200 + feet to your death.
           <target>9790</target>
         </node>
       </exits>
+      <flags>near_water</flags>
       <name>На дороге</name>
       <sector>city</sector>
     </node>
@@ -10703,6 +10883,7 @@ euphoria as you freefall the 200 + feet to your death.
           <target>9791</target>
         </node>
       </exits>
+      <flags>near_water</flags>
       <name>На дороге</name>
       <sector>city</sector>
     </node>
@@ -10720,6 +10901,7 @@ euphoria as you freefall the 200 + feet to your death.
           <target>9792</target>
         </node>
       </exits>
+      <flags>near_water</flags>
       <name>На дороге</name>
       <sector>city</sector>
     </node>
@@ -10736,6 +10918,7 @@ euphoria as you freefall the 200 + feet to your death.
           <target>9793</target>
         </node>
       </exits>
+      <flags>near_water</flags>
       <name>Возле Берега</name>
       <sector>city</sector>
     </node>
@@ -10759,6 +10942,7 @@ euphoria as you freefall the 200 + feet to your death.
           <target>9794</target>
         </node>
       </exits>
+      <flags>near_water</flags>
       <name>В Доке</name>
       <sector>inside</sector>
     </node>

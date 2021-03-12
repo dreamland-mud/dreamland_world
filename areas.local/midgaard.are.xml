@@ -4,8 +4,8 @@
     <altname>Midgaard</altname>
     <authors>Diku</authors>
     <credits>Midgaard</credits>
-    <flags>hometown</flags>
-    <levelHigh>100</levelHigh>
+    <flags>hometown easy</flags>
+    <levelHigh>20</levelHigh>
     <levelLow>1</levelLow>
     <name>Мидгаард</name>
     <resetMessage>Ты слышишь мелодичный перезвон колокольчиков...</resetMessage>
@@ -15,18 +15,27 @@
     <vnumLow>3000</vnumLow>
   </areadata>
   <helps>
-    <node id="1392" keyword="MIDGAARD МИДГААРД 'МИДГААРД (СТОЛИЦА)'" level="-1">Мидгаард -- столица {hh82Тэры{x. Здесь расположены {hh44гильдии{x, {hh1храмы{x, {hh1056магазины{x, библиотеки,
-на его улицах постоянно кипит жизнь. Все дороги, так или иначе, приводят сюда.
+    <node id="1392" keyword="MIDGAARD МИДГААРД 'МИДГААРД (СТОЛИЦА)' " level="-1">Мидгаард -- столица {hh82Тэры{x. Все дороги, так или иначе, приводят сюда -- и все
+{hh1078пути{x обычно начинаются с Рыночной площади ({c{lrмсм{lemsm{x).
 В храмах всех остальных крупных городов установлены порталы, ведущие в
 центральный храм Мидгаарда, посвященный богу {hh1576Лео{x.
-Этот город, как и Новый Талос, может стать родным для персонажей любого 
-алигмента (кроме гигантов, {hh144вампиров{x и {hh143некромантов{x, которым полагается жить
-отдельно). Однако, в отличие от Нового Талоса, представители каждой {hh33натуры{x
-будут приписаны к отдельному храму (Храм Лео, Темный Храм, Храм Солнца).
+
+На улицах Мидгаарда постоянно кипит жизнь, и приключенцы могут получить здесь
+множество полезных товаров и услуг:
+%A% {hh1056магазины{x доспехов, оружия и волшебных предметов
+%A% {hh44гильдии{x большинства классов
+%A% =Бюро Находок=, куда попадут потерянные квестовые и личные вещи
+%A% {hh2088Библиотека{x, где можно прочитать много интересного
+%A% {hh1храмы{x для представителей разных натур: при использовании возврата
+  нейтральные персонажи попадут в Храм Лео, злые -- в Темный Храм, а добрые --
+  в Храм Солнца
+
+О прочих важных локациях Мидгаарда можно прочесть в {hh82Атласе Тэры{x.
+
 %PAUSE%
 {yЗадания{x:
-  {Y*{x Поиск камня кассандры. Квест начинается с прочтения старой книги в магазине Меланхолика. 
-    Ограничения: нет. 
+  {Y*{x Поиск {gкамня кассандры{x. Квест начинается с прочтения старой книги в магазине Меланхолика. 
+    Ограничения: нет.
 </node>
   </helps>
   <mobiles>
@@ -59,7 +68,7 @@
       <material>0</material>
       <off add="area_attack dodge"/>
       <player_name>wizard колдун</player_name>
-      <practicer registry="skillGroup">wizard</practicer>
+      <practicer registry="skillGroup">arcane</practicer>
       <race>human</race>
       <res add="weapon"/>
       <sex>male</sex>
@@ -110,7 +119,7 @@
       <aff add="sanctuary protect_evil"/>
       <alignment>900</alignment>
       <behavior type="ShopTrader">
-        <buys>light treasure trash container food jewelry</buys>
+        <buys>light wand weapon lockpick keyring treasure clothing furniture trash container drink food boat map portal warp_stone gem jewelry tattoo recipe parchment</buys>
         <closeHour>23</closeHour>
         <openHour>0</openHour>
         <profitBuy>150</profitBuy>
@@ -412,7 +421,7 @@
     <node name="3011">
       <ac bash="-970" exotic="-950" pierce="-970" slash="-970"/>
       <act add="npc sentinel warrior nopurge notrack"/>
-      <aff add="haste"/>
+      <aff add="infrared sneak haste" del="swim"/>
       <alignment>1000</alignment>
       <behavior type="DefaultQuestMaster">
       </behavior>
@@ -426,24 +435,26 @@
 Еще полезно прочесть справку по темам &apos;{hhквестор{x&apos; и &apos;{hhвиды заданий{x&apos;.
 </description>
       <detection add="evil invis hidden dark_vision"/>
+      <form add="sentient biped mammal" del="animal amphibian cold_blood"/>
       <group>3000</group>
       <hit>1d1+28999</hit>
       <hitroll>300</hitroll>
-      <imm add="summon charm spell weapon bash pierce slash fire cold acid poison negative holy energy mental disease drowning sound wood silver iron"/>
+      <imm add="summon charm spell weapon bash pierce slash fire cold acid poison negative holy energy mental drowning sound wood silver iron"/>
       <level>100</level>
       <long_descr>Русалка (Mermaid) сидит на краю фонтана, раздавая задания (quests).
 </long_descr>
       <mana>1d1+1499</mana>
       <material>0</material>
-      <off add="area_attack bash berserk disarm dodge fade fast kick_dirt parry rescue tail trip crush"/>
+      <off add="area_attack bash berserk disarm dodge fade kick_dirt parry rescue tail trip crush"/>
+      <parts add="arms hands feet fingers ear"/>
       <player_name>mermaid questor русалка квестор</player_name>
-      <race>elf</race>
-      <res add="spell weapon fire cold"/>
+      <race>amphibia</race>
+      <res add="charm spell weapon fire cold"/>
       <sex>female</sex>
       <short_descr>русалк|а|и|е|у|ой|е</short_descr>
       <size>huge</size>
       <start_pos>stand</start_pos>
-      <vuln add="lightning mental"/>
+      <vuln add="lightning negative mental iron" del="cold"/>
     </node>
     <node name="3012">
       <ac bash="-150" exotic="-100" pierce="-150" slash="-150"/>
@@ -551,7 +562,7 @@
     </node>
     <node name="3013">
       <ac bash="-65" exotic="-35" pierce="-65" slash="-65"/>
-      <act add="npc sentinel nosteal nopurge sage"/>
+      <act add="npc sentinel nosteal nopurge"/>
       <alignment>900</alignment>
       <behavior type="MansionKeyMaker">
         <price type="QuestPointPrice">
@@ -680,7 +691,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer registry="skillGroup">none detection harmful creation weather</practicer>
+      <practicer registry="skillGroup">nature creation adventure detection attack</practicer>
       <race>elf</race>
       <res add="spell"/>
       <sex>female</sex>
@@ -710,7 +721,7 @@
       <material>0</material>
       <off add="disarm dodge fast kick parry"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer registry="skillGroup">none detection harmful creation weather</practicer>
+      <practicer registry="skillGroup">nature creation adventure detection attack</practicer>
       <race>human</race>
       <res add="spell"/>
       <sex>male</sex>
@@ -746,7 +757,7 @@
       <material>0</material>
       <off add="backstab disarm dodge fast kick_dirt trip"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer registry="skillGroup">none detection harmful creation weather</practicer>
+      <practicer registry="skillGroup">nature creation adventure detection attack</practicer>
       <race>human</race>
       <res add="spell"/>
       <sex>female</sex>
@@ -775,7 +786,7 @@
       <material>0</material>
       <off add="area_attack bash berserk disarm kick parry"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer registry="skillGroup">none detection harmful creation weather</practicer>
+      <practicer registry="skillGroup">nature creation adventure detection attack</practicer>
       <race>dwarf</race>
       <res add="spell"/>
       <sex>male</sex>
@@ -875,7 +886,6 @@
       <sex>male</sex>
       <short_descr>убийц|а|ы|е|у|ей|е</short_descr>
       <size>medium</size>
-      <spec>spec_assassinater</spec>
       <start_pos>stand</start_pos>
       <wealth>2000</wealth>
     </node>
@@ -1311,7 +1321,7 @@
       <dam_type>punch</dam_type>
       <damage>10d4+4</damage>
       <default_pos>stand</default_pos>
-      <description>Большой, сильный, полезный, заслужиающий доверия охранник ворот.
+      <description>Большой, сильный, полезный, заслуживающий доверия охранник ворот.
 </description>
       <group>3000</group>
       <hit>50d15+160</hit>
@@ -1410,8 +1420,7 @@
       <hit>1d1+29599</hit>
       <imm add="summon charm"/>
       <level>92</level>
-      <long_descr>Старик (old man) смотрит на тебя жадным взглядом.
-Старик произносит: &quot;Хотел бы ты приобрести прекрасное зелье?&quot;
+      <long_descr>Старик (old man) жадно оглядывает тебя, желая продать побольше товара.
 </long_descr>
       <mana>1d1+999</mana>
       <material>0</material>
@@ -1991,7 +2000,7 @@
     </node>
     <node name="3143">
       <ac bash="-25" exotic="-20" pierce="-25" slash="-25"/>
-      <act add="npc sentinel notrack"/>
+      <act add="npc notrack"/>
       <aff add="protect_evil"/>
       <alignment>900</alignment>
       <dam_type>punch</dam_type>
@@ -2009,11 +2018,11 @@
       <mana>1d1+199</mana>
       <material>0</material>
       <off add="disarm dodge trip assist_players"/>
-      <player_name>mayor мэр</player_name>
+      <player_name>mayor midgaard мэр мидгаарда</player_name>
       <race>human</race>
       <res add="spell weapon"/>
       <sex>male</sex>
-      <short_descr>мэ|р|ра|ру|ра|ром|ре</short_descr>
+      <short_descr>мэ|р|ра|ру|ра|ром|ре Мидгаарда</short_descr>
       <size>medium</size>
       <spec>spec_mayor</spec>
       <start_pos>stand</start_pos>
@@ -2403,7 +2412,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer registry="skillGroup">none detection harmful creation weather</practicer>
+      <practicer registry="skillGroup">nature creation adventure detection attack</practicer>
       <race>human</race>
       <res add="spell"/>
       <sex>male</sex>
@@ -2430,7 +2439,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer registry="skillGroup">none detection harmful creation weather</practicer>
+      <practicer registry="skillGroup">nature creation adventure detection attack</practicer>
       <race>human</race>
       <res add="spell weapon"/>
       <sex>male</sex>
@@ -2466,7 +2475,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer registry="skillGroup">none detection harmful creation weather</practicer>
+      <practicer registry="skillGroup">nature creation adventure detection attack</practicer>
       <race>dark-elf</race>
       <res add="spell weapon"/>
       <sex>male</sex>
@@ -2495,7 +2504,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer registry="skillGroup">none detection harmful creation weather</practicer>
+      <practicer registry="skillGroup">nature creation adventure detection attack</practicer>
       <race>elf</race>
       <res add="spell"/>
       <sex>female</sex>
@@ -2526,7 +2535,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>guildmaster master мастер</player_name>
-      <practicer registry="skillGroup">none detection harmful creation weather</practicer>
+      <practicer registry="skillGroup">nature creation adventure detection attack</practicer>
       <race>human</race>
       <res add="spell"/>
       <sex>male</sex>
@@ -2568,7 +2577,7 @@
       <player_name>templeman священник</player_name>
       <practicer registry="skillGroup">benedictions</practicer>
       <race>human</race>
-      <religion registry="religion">dwarkin kind cradya mihail leo varda hauzer nofate fili allanon bastian irlana tirna turlok karmina tananda mephisto ruffina razer bast godiva taiphoen</religion>
+      <religion registry="religion">irlana karmina fili godiva bastian dwarkin hauzer kind leo varda bast ruffina taiphoen nofate allanon cradya razer tananda mihail turlok mephisto tirna</religion>
       <res add="weapon"/>
       <sex>male</sex>
       <short_descr>священник||а|у|а|ом|е</short_descr>
@@ -2580,30 +2589,29 @@
     <node name="3173">
       <ac bash="-80" exotic="-30" pierce="-80" slash="-80"/>
       <act add="npc sentinel practice mage nopurge notrack"/>
-      <behavior type="DwarkinAdept">
-      </behavior>
       <dam_type>slash</dam_type>
       <damage>20d48+64</damage>
       <default_pos>stand</default_pos>
-      <description>Маленький карлик с безумно горящими глазами...
-Кого-то он тебе напоминает!
+      <description>Ты видишь маленького древнего карлика на последнем издыхании. У него зеленоватая
+кожа и огромные уши, покрытые длинными седыми волосами. Когда-то давно он был
+адептом бога Дворкина и учителем племени идеальных существ, универсалов.
+Но универсалы покинули этот мир, и дни карлика сочтены.
 </description>
       <detection add="invis magic hidden dark_vision"/>
       <hit>1d1+29099</hit>
       <imm add="summon charm"/>
       <level>96</level>
-      <long_descr>В углу ты замечаешь сгорбленного карлика (adept)
-  ..он подозрительно оглядывает тебя с головы до ног.
+      <long_descr>В углу ты замечаешь дряхлого карлика (adept), доживающего последние дни.
 </long_descr>
       <mana>1d1+999</mana>
       <material>0</material>
       <off add="dodge fade"/>
-      <player_name>adept guildmaster адепт карлик</player_name>
-      <practicer registry="skillGroup">none detection harmful creation weather</practicer>
+      <player_name>adept guildmaster dwarkin адепт карлик</player_name>
+      <practicer registry="skillGroup">nature creation adventure detection attack</practicer>
       <race>duergar</race>
       <res add="weapon"/>
       <sex>male</sex>
-      <short_descr>адепт||а|у|а|ом|е Дворкина и универсалов</short_descr>
+      <short_descr>адепт||а|у|а|ом|е Дворкина в отставке</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
     </node>
@@ -2672,14 +2680,14 @@
         <liquid>beer</liquid>
         <total>300</total>
       </type>
-      <wear_flags>take</wear_flags>
+      <wear_flags>take hold</wear_flags>
       <weight>160</weight>
     </node>
     <node name="3001">
       <cost>5</cost>
       <description>Бутылка (bottle) пива лежит на земле.</description>
       <gender>f</gender>
-      <material>glass</material>
+      <material>glass, metal, wood</material>
       <name>бутылка пиво bottle beer</name>
       <short_descr>бутылк|а|и|е|у|ой|е пива</short_descr>
       <type name="drink">
@@ -2743,11 +2751,15 @@
       <level>100</level>
       <material>adamantite</material>
       <name>квест меч клинок quest blade sword</name>
+      <properties>
+        <node name="bestTier">3</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>квестов|ый|ого|ому|ый|ым|ом ме|ч|ча|чу|ч|чом|че</short_descr>
       <type name="weapon">
         <diceNumber>7</diceNumber>
         <diceType>18</diceType>
-        <specType>sharp vorpal two_hands shocking</specType>
+        <specType>sharp two_hands shocking</specType>
         <weapClass>sword</weapClass>
         <weapType>cleave</weapType>
       </type>
@@ -2768,7 +2780,7 @@
       <weight>20</weight>
     </node>
     <node name="3007">
-      <description>Старый стол (table) завален свитками и книгами заклинаний.</description>
+      <description>Старый стол (table) покрыт пылью и дохлыми мухами.</description>
       <gender>m</gender>
       <material>wood</material>
       <name>table old старый стол</name>
@@ -2948,10 +2960,10 @@
     <node name="3019">
       <affects>
         <node>
-          <apply to="hitroll">1</apply>
+          <apply to="damroll">1</apply>
         </node>
         <node>
-          <apply to="damroll">1</apply>
+          <apply to="hitroll">1</apply>
         </node>
       </affects>
       <condition>40</condition>
@@ -2979,6 +2991,10 @@
       <gender>m</gender>
       <material>steel</material>
       <name>кинжал dagger</name>
+      <properties>
+        <node name="bestTier">5</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>кинжа|л|ла|лу|л|лом|ле</short_descr>
       <type name="weapon">
         <diceNumber>1</diceNumber>
@@ -2996,6 +3012,10 @@
       <gender>m</gender>
       <material>steel</material>
       <name>меч малый sword small</name>
+      <properties>
+        <node name="bestTier">5</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>мал|ый|ого|ому|ый|ым|ом ме|ч|ча|чу|ч|чом|че</short_descr>
       <type name="weapon">
         <diceNumber>1</diceNumber>
@@ -3014,6 +3034,10 @@
       <level>7</level>
       <material>steel</material>
       <name>длинный меч sword long</name>
+      <properties>
+        <node name="bestTier">3</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>длинн|ый|ого|ому|ый|ым|ом ме|ч|ча|чу|ч|чом|че</short_descr>
       <type name="weapon">
         <diceNumber>5</diceNumber>
@@ -3037,6 +3061,10 @@
       <level>3</level>
       <material>wood</material>
       <name>дубинка club</name>
+      <properties>
+        <node name="bestTier">5</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>дубинк|а|и|е|у|ой|е</short_descr>
       <type name="weapon">
         <diceNumber>1</diceNumber>
@@ -3060,6 +3088,10 @@
       <level>6</level>
       <material>iron</material>
       <name>булава mace heavy</name>
+      <properties>
+        <node name="bestTier">5</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>булав|а|ы|е|у|ой|е</short_descr>
       <type name="weapon">
         <diceNumber>5</diceNumber>
@@ -3077,10 +3109,14 @@
       <gender>m</gender>
       <level>1</level>
       <material>iron</material>
-      <name>топор axe hand</name>
-      <short_descr>ручн|ой|ого|ому|ой|ым|ом топо|р|ра|ру|р|ром|ре</short_descr>
+      <name>топорик ручной axe hand</name>
+      <properties>
+        <node name="bestTier">5</node>
+        <node name="random">true</node>
+      </properties>
+      <short_descr>ручн|ой|ого|ому|ой|ым|ом топорик||а|у||ом|е</short_descr>
       <type name="weapon">
-        <diceNumber>1</diceNumber>
+        <diceNumber>2</diceNumber>
         <diceType>6</diceType>
         <weapClass>axe</weapClass>
         <weapType>chop</weapType>
@@ -3096,6 +3132,10 @@
       <level>5</level>
       <material>steel</material>
       <name>топор axe battle</name>
+      <properties>
+        <node name="bestTier">4</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>боев|ой|ого|ому|ой|ым|ом топо|р|ра|ру|р|ром|ре</short_descr>
       <type name="weapon">
         <diceNumber>5</diceNumber>
@@ -3115,6 +3155,10 @@
       <level>4</level>
       <material>steel</material>
       <name>копье spear</name>
+      <properties>
+        <node name="bestTier">5</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>копь|е|я|ю|е|ем|е</short_descr>
       <type name="weapon">
         <diceNumber>1</diceNumber>
@@ -3138,12 +3182,16 @@
       <level>9</level>
       <material>wood</material>
       <name>посох staff</name>
+      <properties>
+        <node name="bestTier">5</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>деревянн|ый|ого|ому|ый|ым|ом посо|х|ха|ху|х|хом|хе</short_descr>
       <type name="weapon">
         <diceNumber>6</diceNumber>
         <diceType>2</diceType>
         <specType>two_hands</specType>
-        <weapClass>exotic</weapClass>
+        <weapClass>spear</weapClass>
         <weapType>pound</weapType>
       </type>
       <wear_flags>take wield</wear_flags>
@@ -3159,10 +3207,14 @@
       <cost>77</cost>
       <description>Малый железный цеп (flail) лежит здесь.</description>
       <gender>m</gender>
-      <level>1</level>
+      <level>10</level>
       <material>iron</material>
-      <name>цеп flail</name>
-      <short_descr>це|п|па|пу|п|пом|пе</short_descr>
+      <name>flail moria цеп морийский</name>
+      <properties>
+        <node name="bestTier">5</node>
+        <node name="random">true</node>
+      </properties>
+      <short_descr>морийск|ий|ого|ому|ий|им|ом це|п|па|пу|п|пом|пе</short_descr>
       <type name="weapon">
         <diceNumber>1</diceNumber>
         <diceType>8</diceType>
@@ -3277,7 +3329,7 @@
       <level>9</level>
       <material>vellum</material>
       <name>свиток scroll cancellation</name>
-      <short_descr>свито|к|ка|ку|к|ком|ке очищения</short_descr>
+      <short_descr>свит|ок|ка|ку|ок|ком|ке очищения</short_descr>
       <type name="scroll">
         <level>15</level>
         <spell0>cancellation</spell0>
@@ -4079,10 +4131,10 @@
     <node name="3096">
       <affects>
         <node>
-          <apply to="damroll">4</apply>
+          <apply to="hitroll">4</apply>
         </node>
         <node>
-          <apply to="hitroll">4</apply>
+          <apply to="damroll">4</apply>
         </node>
       </affects>
       <cost>500</cost>
@@ -4096,7 +4148,7 @@
         <diceNumber>9</diceNumber>
         <diceType>10</diceType>
         <weapClass>arrow</weapClass>
-        <weapType>pierce</weapType>
+        <weapType>charm</weapType>
       </type>
       <wear_flags>take hold</wear_flags>
       <weight>20</weight>
@@ -4166,9 +4218,9 @@
       <name>вода чашка water cup</name>
       <short_descr>чашк|а|и|е|у|ой|е воды</short_descr>
       <type name="drink">
-        <left>10</left>
+        <left>100</left>
         <liquid>water</liquid>
-        <total>10</total>
+        <total>100</total>
       </type>
       <wear_flags>take</wear_flags>
       <weight>10</weight>
@@ -4438,8 +4490,12 @@
       <gender>m</gender>
       <level>26</level>
       <material>steel</material>
-      <name>меч sword long</name>
-      <short_descr>длинн|ый|ого|ому|ый|ым|ом ме|ч|ча|чу|ч|чом|че</short_descr>
+      <name>sword long mayor длинный меч мэра</name>
+      <properties>
+        <node name="bestTier">3</node>
+        <node name="random">true</node>
+      </properties>
+      <short_descr>длинн|ый|ого|ому|ый|ым|ом ме|ч|ча|чу|ч|чом|че мэра</short_descr>
       <type name="weapon">
         <diceNumber>3</diceNumber>
         <diceType>10</diceType>
@@ -4618,24 +4674,25 @@
       <weight>40</weight>
     </node>
     <node name="3139">
-      <description>The receptionist&apos;s letter of resignation is taped to the wall.</description>
+      <description>Письмо (letter) об отставке клерка отеля пришпилено на стену.</description>
       <extraDescr>
-        <node keyword="letter resignation">The letter is written in a bold and feminine Carolinian hand.
+        <node keyword="letter письмо объявление">Письмо написано очень мелким и ровным почерком, на который способны только
+клерки отелей.
 
-    To whom it may concern,
-
-        Merc Industries has installed a new no-rent save and quit
-        system.  Apparently one can now save and quit at any time
-        from anywhere inside a town or out.  My services here are
-        no longer required.
-
-    Diana the Receptionist
+    ОБЪЯВЛЕНИЕ
+    
+    В связи с полной ликвидацией ренты ({hhrent{x) и предоставления
+    неблагодарным жителям сего мира выходить и покидать его когда им
+    заблагорассудится, услуги отелей -- а, следовательно, и мои услуги
+    более не нужны. Я ухожу на пенсию!
+    
+    Диана, клерк
 </node>
       </extraDescr>
-      <gender>m</gender>
+      <gender>n</gender>
       <material>paper</material>
-      <name>letter resignation</name>
-      <short_descr>the receptionist&apos;s letter of resignation</short_descr>
+      <name>letter resignation объявление письмо об отставке</name>
+      <short_descr>письм|о|а|у|о|ом|е об отставке</short_descr>
       <type name="furniture">
         <heal>0</heal>
         <mana>0</mana>
@@ -6571,6 +6628,7 @@ Warrior&apos;s                  Bread   Medina  Igor&apos;s  Leather  |         
         <node keyword="long sword меч">Довольно острый и хорошо отбалансированный меч.
 </node>
       </extraDescr>
+      <extra_flags>deleted</extra_flags>
       <gender>m</gender>
       <level>29</level>
       <material>steel</material>
@@ -6602,6 +6660,10 @@ Warrior&apos;s                  Bread   Medina  Igor&apos;s  Leather  |         
       <level>16</level>
       <material>steel</material>
       <name>меч sword standard merc</name>
+      <properties>
+        <node name="bestTier">4</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>обыкновенн|ый|ого|ому|ый|ым|ом ме|ч|ча|чу|ч|чом|че</short_descr>
       <type name="weapon">
         <diceNumber>3</diceNumber>
@@ -6615,10 +6677,10 @@ Warrior&apos;s                  Bread   Medina  Igor&apos;s  Leather  |         
     <node name="3351">
       <affects>
         <node>
-          <apply to="damroll">1</apply>
+          <apply to="hitroll">1</apply>
         </node>
         <node>
-          <apply to="hitroll">1</apply>
+          <apply to="damroll">1</apply>
         </node>
       </affects>
       <cost>590</cost>
@@ -7991,7 +8053,7 @@ Affects dexterity by 3.
       <cost>20000</cost>
       <description>Старинная книга (book) без названия.</description>
       <extraDescr>
-        <node keyword="книга old book">{CЛЕГЕНДА О КАССАНДРЕ{x
+        <node keyword="old book kassandra старая книга кассандра">{CЛЕГЕНДА О КАССАНДРЕ{x
 Давным-давно, когда мои волосы еще не были белее снега, я услышала  эту легенду
 от одного таинственного незнакомца. Он рассказал мне о  древнем камне  по имени
 {GК{gассандра{x, обладающем могучей  магией. Но  чтобы добыть  этот камень,  мой юный
@@ -8066,6 +8128,8 @@ Affects dexterity by 3.
       </type>
     </node>
     <node name="3399">
+      <behavior type="SpellBook">
+      </behavior>
       <cost>2000</cost>
       <description>Книга заклинаний (spellbook) забыта здесь.</description>
       <extra_flags>burn_proof</extra_flags>
@@ -8084,20 +8148,40 @@ Affects dexterity by 3.
   </objects>
   <rooms>
     <node name="3000">
-      <flags>no_mob law</flags>
-      <sector>inside</sector>
-    </node>
-    <node name="3001">
-      <description>Ты  находишься  в Храме Лео,  в южном конце зала.  Храм был  построен из
-гигантских  мраморных  блоков,  практически  вечных. Стены покрыты древними
-картинами, изображающими богов,  гигантов и крестьян. Большие ступени ведут
-вниз, через огромные ворота храма, спускаясь к площади, расположенной ниже
-храма.
-   Такие  же большие  ступени  ведут  через  маленькую дверь  в  MUD Школу. 
-(набери &apos;up&apos;, чтобы идти в MUD Школу.)
-   Маленькая табличка (plaque) прибита на стене.
+      <description>Ты паришь в воздухе под массивными сводами Храма Лео. Кладка здесь расписана
+прекрасными древними фресками времен Первой Эпохи. Фрески изображают давно
+почивших героев прошлого, память о которых сохранилась лишь в легендах.
 </description>
       <exits>
+        <node name="down">
+          <key>0</key>
+          <target>3001</target>
+        </node>
+      </exits>
+      <flags>no_mob indoors law</flags>
+      <name>Под сводами Храма</name>
+      <sector>air</sector>
+    </node>
+    <node name="3001">
+      <description>Ты находишься у входа в Храм Лео. Построенный из гигантских мраморных блоков,
+Храм выдержал многие столетия и эпохи -- с самого основания Мидгаарда. Стены
+покрыты древними картинами, изображающими Лео, Варду и других богов и богинь.
+На {y{hcюг{x через огромные ворота ведет путь в город, на Храмовую Площадь.
+На {y{hcзапад{x ведет проход к небольшой храмовой школе для новичков.
+Пройдя к мрачному зданию на {y{hcвосток{x, попадешь в Зону Новичков.
+А если спуститься {y{hcвниз{x по винтовой лестнице -- попадешь на {RАрену,{x где можно
+поохотиться на разных зверушек и попробовать свои боевые умения на практике.
+Маленькая табличка (plaque) прибита на стене.
+</description>
+      <exits>
+        <node name="down">
+          <key>0</key>
+          <target>3760</target>
+        </node>
+        <node name="east">
+          <key>0</key>
+          <target>18600</target>
+        </node>
         <node name="north">
           <description>В северном конце Храмового зала расположены - статуя и гигантский алтарь.
 </description>
@@ -8109,15 +8193,19 @@ Affects dexterity by 3.
           <target>3005</target>
         </node>
         <node name="up">
-          <description>Ты видишь вход в MUD Школу.
-</description>
+          <key>0</key>
+          <target>3000</target>
+        </node>
+        <node name="west">
+          <key>0</key>
           <target>3700</target>
         </node>
       </exits>
       <extraDescr>
-        <node keyword="plaque (табличка)">Этот  Мир  еще  далек  от совершенства! Поэтому он постоянно редактируется,
-дополняется....   постоянно  изменяется.  Огромное  спасибо  всем  игрокам,
-которые принимают участие в его улучшении.
+        <node keyword="plaque табличка">Мир Мечты еще далек от совершенства -- он постоянно редактируется, дополняется и
+изменяется. Огромное спасибо всем игрокам, которые принимают участие в его
+улучшении! Чтобы пообщаться с другими игроками и разработчиками даже когда их
+нет в мире, заходи к нам в чат -- набери {hc{yсправка контакт{x, чтобы узнать больше.
 </node>
       </extraDescr>
       <flags>no_mob indoors law</flags>
@@ -8212,7 +8300,7 @@ Affects dexterity by 3.
         <mob limit="18" maxHere="2" vnum="3060"/>
         <equip to="light" vnum="3365"/>
         <equip to="finger_l" vnum="3364"/>
-        <equip to="wield" vnum="3350"/>
+        <equip to="sheath" vnum="3350"/>
         <equip to="body" vnum="3353"/>
         <equip to="neck_2" vnum="3355"/>
       </resets>
@@ -8255,7 +8343,7 @@ Affects dexterity by 3.
       <name>Храмовая площадь</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="3011"/>
-        <equip to="wield" vnum="3005"/>
+        <equip to="sheath" vnum="3005"/>
         <drop vnum="3199"/>
       </resets>
       <sector>city</sector>
@@ -8290,10 +8378,10 @@ Affects dexterity by 3.
       <sector>inside</sector>
     </node>
     <node name="3007">
-      <description>Ты стоишь  в баре.  Бар находится напротив северной стены.  Потолок бара
-покрыт   старыми  архаичными  письменами  (writing),  резьбой  (carving)  и
-символами  (symbols).  В  западную  стену  встроен  камин.  Через  окно  на
-юго-востоке  видна  Храмовая  площадь.  Здесь  ты чувствуешь себя как дома.
+      <description>Ты стоишь в баре. Бар находится напротив северной стены. Потолок бара покрыт
+архаичными письменами (writing), резьбой (carving) и символами  (symbols).
+В восточную стену, покрытую большими трещинами, встроен камин. Через окно на
+западе видна Храмовая площадь. Здесь ты чувствуешь себя как дома.
 Маленький листок (sign) с большими буквами приколот к бару.
 </description>
       <exits>
@@ -8323,7 +8411,7 @@ Affects dexterity by 3.
       <flags>indoors law</flags>
       <name>Хрюкающий Кабан</name>
       <resets>
-        <mob limit="1" maxHere="1" vnum="3040"/>
+        <mob limit="3" maxHere="1" vnum="3040"/>
         <give vnum="3000"/>
         <give vnum="3001"/>
         <equip to="wield" vnum="3022"/>
@@ -8425,6 +8513,7 @@ Affects dexterity by 3.
         <give vnum="3015"/>
         <give vnum="27027"/>
         <give vnum="3017"/>
+        <give vnum="2108"/>
       </resets>
       <sector>inside</sector>
     </node>
@@ -8575,7 +8664,7 @@ Affects dexterity by 3.
         <mob limit="18" maxHere="2" vnum="3060"/>
         <equip to="light" vnum="3365"/>
         <equip to="finger_l" vnum="3364"/>
-        <equip to="wield" vnum="3350"/>
+        <equip to="sheath" vnum="3350"/>
         <equip to="body" vnum="3353"/>
         <equip to="head" vnum="3356"/>
         <mob limit="1" maxHere="1" vnum="3076"/>
@@ -8668,7 +8757,7 @@ Affects dexterity by 3.
         <mob limit="18" maxHere="2" vnum="3060"/>
         <equip to="light" vnum="3365"/>
         <equip to="finger_l" vnum="3364"/>
-        <equip to="wield" vnum="3350"/>
+        <equip to="sheath" vnum="3350"/>
         <equip to="body" vnum="3353"/>
         <equip to="legs" vnum="3357"/>
       </resets>
@@ -8802,11 +8891,11 @@ Affects dexterity by 3.
       <name>Входной Зал в Гильдию Мечников</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="3027"/>
-        <equip to="wield" vnum="3349"/>
+        <equip bestTier="3" rand="rand_all" to="sheath" vnum="104"/>
         <mob limit="18" maxHere="2" vnum="3060"/>
         <equip to="light" vnum="3365"/>
         <equip to="finger_l" vnum="3364"/>
-        <equip to="wield" vnum="3350"/>
+        <equip to="sheath" vnum="3350"/>
         <equip to="body" vnum="3353"/>
         <equip to="feet" vnum="3358"/>
       </resets>
@@ -9009,11 +9098,11 @@ Affects dexterity by 3.
       <name>Входной Зал в Гильдию Воров</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="3026"/>
-        <equip to="wield" vnum="3349"/>
+        <equip bestTier="3" rand="rand_all" to="sheath" vnum="104"/>
         <mob limit="18" maxHere="2" vnum="3060"/>
         <equip to="light" vnum="3365"/>
         <equip to="finger_l" vnum="3364"/>
-        <equip to="wield" vnum="3350"/>
+        <equip to="sheath" vnum="3350"/>
         <equip to="body" vnum="3353"/>
         <equip to="hands" vnum="3359"/>
         <mob limit="4" maxHere="2" vnum="3005"/>
@@ -9108,7 +9197,7 @@ Affects dexterity by 3.
           <target>34500</target>
         </node>
       </exits>
-      <flags>no_mob law</flags>
+      <flags>no_mob law near_water</flags>
       <name>Свалка</name>
       <sector>field</sector>
     </node>
@@ -9208,7 +9297,6 @@ Affects dexterity by 3.
         <give vnum="3042"/>
         <give vnum="3043"/>
         <give vnum="3044"/>
-        <give vnum="3399"/>
       </resets>
       <sector>inside</sector>
     </node>
@@ -9385,7 +9473,7 @@ Affects dexterity by 3.
         <node keyword="sign табличка">Здесь ты можешь купить ключ от дома, если он у тебя, конечно же, есть.
                     Бездомных не обслуживаем!
        Используй команду {y{lRключи список{lEmkey list{x для списка твоих ключей,
-     и команду {y{lRключи купить{lEmkey list{x{D &lt;название ключа&gt;{x для покупки ключа из списка.
+     и команду {y{lRключи купить{lEmkey buy{x{D &lt;название ключа&gt;{x для покупки ключа из списка.
 </node>
       </extraDescr>
       <flags>indoors law</flags>
@@ -9449,13 +9537,13 @@ Affects dexterity by 3.
         <mob limit="2" maxHere="2" vnum="3068"/>
         <equip to="light" vnum="3365"/>
         <equip to="finger_l" vnum="3364"/>
-        <equip to="wield" vnum="3350"/>
+        <equip to="sheath" vnum="3350"/>
         <equip to="body" vnum="3353"/>
         <equip to="about" vnum="3361"/>
         <mob limit="2" maxHere="2" vnum="3068"/>
         <equip to="light" vnum="3365"/>
         <equip to="finger_l" vnum="3364"/>
-        <equip to="wield" vnum="3350"/>
+        <equip to="sheath" vnum="3350"/>
         <equip to="body" vnum="3353"/>
         <equip to="waist" vnum="3362"/>
       </resets>
@@ -9515,13 +9603,13 @@ Affects dexterity by 3.
         <mob limit="2" maxHere="2" vnum="3067"/>
         <equip to="light" vnum="3365"/>
         <equip to="finger_l" vnum="3364"/>
-        <equip to="wield" vnum="3350"/>
+        <equip to="sheath" vnum="3350"/>
         <equip to="body" vnum="3353"/>
         <equip to="arms" vnum="3360"/>
         <mob limit="2" maxHere="2" vnum="3067"/>
         <equip to="light" vnum="3365"/>
         <equip to="finger_l" vnum="3364"/>
-        <equip to="wield" vnum="3350"/>
+        <equip to="sheath" vnum="3350"/>
         <equip to="body" vnum="3353"/>
         <equip to="shield" vnum="3354"/>
       </resets>
@@ -9655,7 +9743,7 @@ Affects dexterity by 3.
           <target>3026</target>
         </node>
       </exits>
-      <flags>law</flags>
+      <flags>law near_water</flags>
       <name>Набережная Аллея</name>
       <resets>
         <mob limit="5" maxHere="5" vnum="3063"/>
@@ -9722,7 +9810,7 @@ Affects dexterity by 3.
 каким-то известковым раствором. Она слишком высока, чтобы залезть на нее.
 </node>
       </extraDescr>
-      <flags>law</flags>
+      <flags>law near_water</flags>
       <name>Дорога у Стены</name>
       <sector>city</sector>
     </node>
@@ -9776,7 +9864,7 @@ Affects dexterity by 3.
           <target>3203</target>
         </node>
       </exits>
-      <flags>law</flags>
+      <flags>law near_water</flags>
       <name>Набережная</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="3006"/>
@@ -9838,7 +9926,7 @@ Affects dexterity by 3.
 каким-то известковым раствором, также как городская стена.
 </node>
       </extraDescr>
-      <flags>law</flags>
+      <flags>law near_water</flags>
       <name>На Мосту</name>
       <sector>city</sector>
     </node>
@@ -9979,6 +10067,27 @@ Affects dexterity by 3.
       </resets>
       <sector>inside</sector>
     </node>
+    <node name="3055">
+      <description>Ты плывешь по Темной Реке, продолжающейся на восток. За западе от тебя
+возвышаются стены Мидгаарда. Река проходит сквозь массивную решетку, через
+которую, впрочем, ты можешь пролезть безо всякого труда.
+Ты внезапно задумываешься: интересно, от каких же гигантских водоплавающих
+тварей пытались защититься древние строители города?
+</description>
+      <exits>
+        <node name="east">
+          <key>0</key>
+          <target>3058</target>
+        </node>
+        <node name="west">
+          <key>0</key>
+          <target>3205</target>
+        </node>
+      </exits>
+      <flags>law</flags>
+      <name>На Темной Реке</name>
+      <sector>water_swim</sector>
+    </node>
     <node name="3056">
       <description>Старик  ходит  из стороны  в  сторону позади прилавка, смешивая странные
 любовные микстуры  и  отворотные зелья.  Как только  ты подходишь ближе, он
@@ -10032,6 +10141,49 @@ Affects dexterity by 3.
       <flags>no_mob law</flags>
       <name>В Воздухе...</name>
       <sector>air</sector>
+    </node>
+    <node name="3058">
+      <description>Ты плывешь по Темной Реке, которая входит под сень Дварфийского Леса.
+Течение идет на запад, в сторону Мидгаарда. На востоке через реку переброшен
+небольшой мостик.
+</description>
+      <exits>
+        <node name="east">
+          <key>0</key>
+          <target>3059</target>
+        </node>
+        <node name="west">
+          <key>0</key>
+          <target>3055</target>
+        </node>
+      </exits>
+      <flags>law</flags>
+      <name>На Темной Реке</name>
+      <sector>water_swim</sector>
+    </node>
+    <node name="3059">
+      <description>Ты проплываешь под опорами деревянного мостика в Дварфийском Лесу.
+Опоры основательно подточены насекомыми и покрыты плесенью, но все еще держатся.
+Река продолжается с востока на запад. Если высадиться на берег, то можно взойти
+вверх на мост.
+</description>
+      <exits>
+        <node name="east">
+          <key>0</key>
+          <target>3079</target>
+        </node>
+        <node name="up">
+          <key>0</key>
+          <target>5261</target>
+        </node>
+        <node name="west">
+          <key>0</key>
+          <target>3058</target>
+        </node>
+      </exits>
+      <flags>law</flags>
+      <name>Под мостом в Дварфийском Лесу</name>
+      <sector>water_swim</sector>
     </node>
     <node name="3060">
       <description>Ты стоишь  на входе  в гильдию,  на западе Тренировочный двор. Это место
@@ -10180,7 +10332,8 @@ Affects dexterity by 3.
           <target>3067</target>
         </node>
         <node name="west">
-          <target>3078</target>
+          <key>0</key>
+          <target>3083</target>
         </node>
       </exits>
       <flags>law</flags>
@@ -10381,7 +10534,7 @@ reads...   ???.
           <target>3071</target>
         </node>
       </exits>
-      <flags>no_mob indoors law</flags>
+      <flags>no_mob indoors law no_cast</flags>
       <healRate>200</healRate>
       <manaRate>200</manaRate>
       <name>У Храмового Алтаря</name>
@@ -10523,17 +10676,127 @@ reads...   ???.
       <sector>inside</sector>
     </node>
     <node name="3078">
-      <description>Место, куда жители Мидгаарда стаскивают потерянные кем-то и найденные ими вещи.
-Смотри внимательнее - быть может тут завалялся зонтик, который ты забыл в таверне в прошлом году?
+      <description>Эта часть бюро выглядит гораздо более мрачной, пыльной и заброшенной, похоже,
+что вещи, скопившиеся здесь, никто не трогал годами и десятилетиями.
+Выход ведет на восток в более светлую часть помещения, а маленькая дверца к
+югу намертво заколочена досками.
 </description>
       <exits>
         <node name="east">
-          <target>3065</target>
+          <key>0</key>
+          <target>3083</target>
+        </node>
+        <node name="south">
+          <flags>isdoor closed locked pickproof nopass</flags>
+          <key>0</key>
+          <target>3084</target>
         </node>
       </exits>
-      <flags>no_mob law</flags>
+      <flags>no_mob indoors law</flags>
       <name>Бюро Находок</name>
       <sector>city</sector>
+    </node>
+    <node name="3079">
+      <description>Ты плывешь по Темной Реке посреди Дварфийского Леса. Деревья выглядят умирающими
+и в воздухе царит почти полная тишина, прерываемая шумом порогов на востоке.
+Река продолжается на запад.
+</description>
+      <exits>
+        <node name="east">
+          <key>0</key>
+          <target>3080</target>
+        </node>
+        <node name="west">
+          <key>0</key>
+          <target>3059</target>
+        </node>
+      </exits>
+      <flags>law</flags>
+      <name>На Темной Реке</name>
+      <sector>water_swim</sector>
+    </node>
+    <node name="3080">
+      <description>Темная Река здесь разливается и выходит из Дварфийского Леса через небольшие
+скалистые пороги. Вплавь их преодолевать не стоит, но вот сплавиться на лодке
+будет в самый раз! На западе река уходит под сень Леса, а на востоке она
+протекает через какую-то милую деревушку.
+</description>
+      <exits>
+        <node name="east">
+          <key>0</key>
+          <target>1521</target>
+        </node>
+        <node name="west">
+          <key>0</key>
+          <target>3079</target>
+        </node>
+      </exits>
+      <flags>law</flags>
+      <name>На порогах Темной Реки</name>
+      <sector>water_noswim</sector>
+    </node>
+    <node name="3081">
+      <description>На юге Темная Река река спускается с отрогов Восточных Гор, проходя через узкую
+горную теснину. На западе река выходит на травянистую равнину.
+</description>
+      <exits>
+        <node name="south">
+          <key>0</key>
+          <target>3082</target>
+        </node>
+      </exits>
+      <flags>gods_only law</flags>
+      <name>Темная Река, за деревней</name>
+      <sector>water_noswim</sector>
+    </node>
+    <node name="3082">
+      <description>Ты плывешь по Темной Реке посреди горного ущелья. Далеко в небе кружит одинокий
+орел. Откуда-то с запада тянет какой-то ужасной вонью. На западе река проходит
+через массивные ворота, выходя откуда-то из глубины горы.
+</description>
+      <exits>
+        <node name="north">
+          <key>0</key>
+          <target>3081</target>
+        </node>
+      </exits>
+      <flags>gods_only law</flags>
+      <name>Темная Река, у Восточных Гор</name>
+      <sector>water_noswim</sector>
+    </node>
+    <node name="3083">
+      <description>Место, куда жители Мидгаарда стаскивают потерянные кем-то и найденные ими вещи.
+Смотри внимательнее - быть может тут завалялся зонтик, который ты забыл в таверне в прошлом году?
+Помещение продолжается дальше на запад, на востоке выход обратно на площадь.
+</description>
+      <exits>
+        <node name="east">
+          <key>0</key>
+          <target>3065</target>
+        </node>
+        <node name="west">
+          <key>0</key>
+          <target>3078</target>
+        </node>
+      </exits>
+      <flags>no_mob indoors law</flags>
+      <name>Бюро Находок</name>
+      <sector>city</sector>
+    </node>
+    <node name="3084">
+      <description>Помещение заставлено сундуками и тумбами самых разных форм и размеров,
+на что хватало фантазии их хозяев.
+</description>
+      <exits>
+        <node name="north">
+          <flags>isdoor closed locked pickproof nopass</flags>
+          <key>0</key>
+          <target>3078</target>
+        </node>
+      </exits>
+      <flags>no_vanish indoors gods_only law</flags>
+      <name>Склад сундуков</name>
+      <sector>inside</sector>
     </node>
     <node name="3100">
       <description>Ты стоишь  на  многолюдной улице,  городская стена  недалеко на западе. 
@@ -10562,7 +10825,7 @@ reads...   ???.
           <target>32000</target>
         </node>
       </exits>
-      <flags>law</flags>
+      <flags>law near_water</flags>
       <name>Северо-западный конец Многолюдной Улицы</name>
       <sector>city</sector>
     </node>
@@ -10588,7 +10851,7 @@ reads...   ???.
           <target>3100</target>
         </node>
       </exits>
-      <flags>law</flags>
+      <flags>law near_water</flags>
       <name>Променад</name>
       <resets>
         <drop vnum="3134"/>
@@ -10625,7 +10888,7 @@ reads...   ???.
           <target>3101</target>
         </node>
       </exits>
-      <flags>law</flags>
+      <flags>law near_water</flags>
       <name>Променад</name>
       <resets>
         <drop vnum="3134"/>
@@ -10661,7 +10924,7 @@ reads...   ???.
           <target>3102</target>
         </node>
       </exits>
-      <flags>law</flags>
+      <flags>law near_water</flags>
       <name>Площадь Астрал</name>
       <resets>
         <drop vnum="3134"/>
@@ -10698,7 +10961,7 @@ reads...   ???.
 каким-то известковым раствором. Она слишком высока, чтобы залезть на нее.
 </node>
       </extraDescr>
-      <flags>law</flags>
+      <flags>law near_water</flags>
       <name>Северо-восточный Конец Многолюдной Улицы</name>
       <sector>city</sector>
     </node>
@@ -10769,7 +11032,7 @@ reads...   ???.
       </exits>
       <flags>law</flags>
       <name>Маленькая Дорожка через Парк</name>
-      <sector>city</sector>
+      <sector>forest</sector>
     </node>
     <node name="3108">
       <description>Ты стоишь  на маленькой дорожке внутри парка.  Вход  в  парк недалеко на 
@@ -10791,7 +11054,7 @@ reads...   ???.
       </exits>
       <flags>law</flags>
       <name>Маленькая Дорожка в Парке</name>
-      <sector>city</sector>
+      <sector>forest</sector>
     </node>
     <node name="3109">
       <description>Ты стоишь на маленькой  дорожке  идущей сквозь парк. Она продолжается на
@@ -10812,11 +11075,11 @@ reads...   ???.
         <mob limit="18" maxHere="1" vnum="3060"/>
         <equip to="light" vnum="3365"/>
         <equip to="finger_l" vnum="3364"/>
-        <equip to="wield" vnum="3350"/>
+        <equip to="sheath" vnum="3350"/>
         <equip to="body" vnum="3353"/>
         <equip to="wrist_r" vnum="3363"/>
       </resets>
-      <sector>city</sector>
+      <sector>forest</sector>
     </node>
     <node name="3110">
       <description>Ты  внутри  аккуратного  кабинета.  Большой стол,  сделанный  из темного 
@@ -10882,13 +11145,13 @@ reads...   ???.
         <mob limit="18" maxHere="4" vnum="3060"/>
         <equip to="light" vnum="3365"/>
         <equip to="finger_l" vnum="3364"/>
-        <equip to="wield" vnum="3350"/>
+        <equip to="sheath" vnum="3350"/>
         <equip to="body" vnum="3353"/>
         <give vnum="3120"/>
         <mob limit="18" maxHere="4" vnum="3060"/>
         <equip to="light" vnum="3365"/>
         <equip to="finger_l" vnum="3364"/>
-        <equip to="wield" vnum="3350"/>
+        <equip to="sheath" vnum="3350"/>
         <equip to="body" vnum="3353"/>
         <equip to="wrist_r" vnum="3363"/>
       </resets>
@@ -10934,7 +11197,7 @@ reads...   ???.
       <resets>
         <mob limit="2" maxHere="1" vnum="3124"/>
       </resets>
-      <sector>city</sector>
+      <sector>forest</sector>
     </node>
     <node name="3114">
       <description>Ты плаваешь  по  пруду, чувствуя себя при этом довольно глупо. Ты можешь
@@ -10988,7 +11251,7 @@ reads...   ???.
       <resets>
         <mob limit="2" maxHere="1" vnum="3124"/>
       </resets>
-      <sector>city</sector>
+      <sector>forest</sector>
     </node>
     <node name="3116">
       <description>Ты стоишь  в восточном  конце парка. Небольшая тропинка ведет на запад в
@@ -11032,7 +11295,7 @@ reads...   ???.
         <mob limit="18" maxHere="1" vnum="3060"/>
         <equip to="light" vnum="3365"/>
         <equip to="finger_l" vnum="3364"/>
-        <equip to="wield" vnum="3350"/>
+        <equip to="sheath" vnum="3350"/>
         <equip to="body" vnum="3353"/>
       </resets>
       <sector>city</sector>
@@ -11115,7 +11378,7 @@ reads...   ???.
 
 Кто-то дописал красной краской следующее:
 
-   На верх (Up)  - Летающая Цитадель (Redferne&apos;s Flying Citadel).
+   Наверх (Up)   - Резиденция Редферна (Замок Нарис)
 </node>
       </extraDescr>
       <flags>law</flags>
@@ -11124,7 +11387,7 @@ reads...   ???.
         <mob limit="18" maxHere="1" vnum="3060"/>
         <equip to="light" vnum="3365"/>
         <equip to="finger_l" vnum="3364"/>
-        <equip to="wield" vnum="3350"/>
+        <equip to="sheath" vnum="3350"/>
         <equip to="body" vnum="3353"/>
         <mob limit="1" maxHere="1" vnum="3144"/>
       </resets>
@@ -11185,10 +11448,10 @@ reads...   ???.
       <sector>city</sector>
     </node>
     <node name="3124">
-      <description>Ты  находишься недалеко от конца улицы Вязов.  Здесь растут старые вязы 
-(elm tree). Тяжелая  железная ограда  на  юге, окружает городское кладбище.
-Ты видишь  табличку (sign),  которая прикреплена  к воротам (grate).  Улица 
-Вязов идет дальше на восток, а конец улицы внизу соседствует с трущобами.
+      <description>Ты находишься недалеко от конца улицы Вязов. Здесь растут старые вязы (elm).
+Тяжелая железная ограда на юге окружает городское кладбище.
+Ты видишь табличку (sign), которая прикреплена к решетке (grate) ворот.
+Улица  Вязов идет дальше на восток, а конец улицы внизу соседствует с трущобами.
 </description>
       <exits>
         <node name="east">
@@ -11219,15 +11482,17 @@ reads...   ???.
 </node>
         <node keyword="sign табличка">Табличка гласит:
  
-                          Кладбище Мидгаарда
+                          {WКладбище Мидгаарда{x
  
     Многие славные путешественники нашли свой последний приют здесь.
       Пожалуйста, отнеситесь с уважением и не беспокойте их могилы.
  
-На прибитой поверх таблички бумажке от руки дописано:
- Ушел обедать. Буду через 15 минут(зачеркнуто), полчаса(зачеркнуто), когда-нибудь!  Ваш могильщик.
+На прибитой поверх таблички бумажке от руки дописано:{y
+    Ушел обедать в Закусочную Кати или в Парковое Кафе.
+    Буду через 15 минут(зачеркнуто), полчаса(зачеркнуто), когда-нибудь!
+    Ваш могильщик.{x
 </node>
-        <node keyword="grate grating ворота">Выглядят внушительно. Небольшая табличка на них.
+        <node keyword="grate grating ворота">Выглядят внушительно. На воротах прикреплена небольшая табличка (sign).
 </node>
       </extraDescr>
       <flags>law</flags>
@@ -11252,7 +11517,7 @@ reads...   ???.
         <mob limit="18" maxHere="1" vnum="3060"/>
         <equip to="light" vnum="3365"/>
         <equip to="finger_l" vnum="3364"/>
-        <equip to="wield" vnum="3350"/>
+        <equip to="sheath" vnum="3350"/>
         <equip to="body" vnum="3353"/>
       </resets>
       <sector>city</sector>
@@ -11536,25 +11801,25 @@ reads...   ???.
       <name>Кабинет Мэра</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="3143"/>
-        <equip to="wield" vnum="3124"/>
+        <equip to="sheath" vnum="3124"/>
         <give vnum="3379"/>
         <give vnum="3379"/>
         <mob limit="4" maxHere="4" vnum="3069"/>
         <equip to="light" vnum="3365"/>
         <equip to="finger_l" vnum="3364"/>
-        <equip to="wield" vnum="3350"/>
+        <equip to="sheath" vnum="3350"/>
         <mob limit="4" maxHere="4" vnum="3069"/>
         <equip to="light" vnum="3365"/>
         <equip to="finger_l" vnum="3364"/>
-        <equip to="wield" vnum="3350"/>
+        <equip to="sheath" vnum="3350"/>
         <mob limit="4" maxHere="4" vnum="3069"/>
         <equip to="light" vnum="3365"/>
         <equip to="finger_l" vnum="3364"/>
-        <equip to="wield" vnum="3350"/>
+        <equip to="sheath" vnum="3350"/>
         <mob limit="4" maxHere="4" vnum="3069"/>
         <equip to="light" vnum="3365"/>
         <equip to="finger_l" vnum="3364"/>
-        <equip to="wield" vnum="3350"/>
+        <equip to="sheath" vnum="3350"/>
       </resets>
       <sector>inside</sector>
     </node>
@@ -11644,17 +11909,17 @@ reads...   ???.
       <name>Кабинет Капитана</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="3140"/>
-        <equip to="wield" vnum="3350"/>
+        <equip to="sheath" vnum="3350"/>
         <give vnum="3122"/>
         <give vnum="3137"/>
         <mob limit="4" maxHere="4" vnum="3141"/>
-        <equip to="wield" vnum="3350"/>
+        <equip to="sheath" vnum="3350"/>
         <mob limit="4" maxHere="4" vnum="3141"/>
-        <equip to="wield" vnum="3350"/>
+        <equip to="sheath" vnum="3350"/>
         <mob limit="4" maxHere="4" vnum="3141"/>
-        <equip to="wield" vnum="3350"/>
+        <equip to="sheath" vnum="3350"/>
         <mob limit="4" maxHere="4" vnum="3141"/>
-        <equip to="wield" vnum="3350"/>
+        <equip to="sheath" vnum="3350"/>
         <drop vnum="3130"/>
         <put in="3130" limit="1" maxHere="1" vnum="3123"/>
         <drop vnum="3131"/>
@@ -11809,15 +12074,15 @@ reads...   ???.
         <give vnum="3167"/>
         <give vnum="3166"/>
         <give vnum="3165"/>
-        <give vnum="3384"/>
-        <give vnum="3171"/>
-        <give vnum="3383"/>
-        <give vnum="3163"/>
         <give vnum="3164"/>
         <give vnum="3162"/>
         <give vnum="3160"/>
+        <give vnum="31086"/>
+        <give vnum="31087"/>
+        <give vnum="31088"/>
         <give vnum="40024"/>
         <mob limit="1" maxHere="1" vnum="3161"/>
+        <give vnum="3161"/>
       </resets>
       <sector>inside</sector>
     </node>
@@ -11896,10 +12161,8 @@ reads...   ???.
           <target>3201</target>
         </node>
         <node name="west">
-          <description>Ты видишь реку, которая течет на запад через лес под
-названием Хаон-Дор.
-</description>
-          <target>9772</target>
+          <key>0</key>
+          <target>3372</target>
         </node>
       </exits>
       <extraDescr>
@@ -11993,11 +12256,8 @@ reads...   ???.
 </description>
       <exits>
         <node name="east">
-          <description>Железные  засовы  расшатаны,  открывая  проход  сквозь отверстие в стене. За
-стеной, через засовы виднеется темный туннель.
-</description>
-          <keyword>bars</keyword>
-          <target>5001</target>
+          <key>0</key>
+          <target>3055</target>
         </node>
         <node name="west">
           <target>3204</target>
@@ -12073,7 +12333,7 @@ reads...   ???.
           <target>3253</target>
         </node>
       </exits>
-      <flags>law</flags>
+      <flags>law near_water</flags>
       <name>Дорога у Стены</name>
       <sector>city</sector>
     </node>
@@ -12101,7 +12361,7 @@ reads...   ???.
 для того, чтобы свободна проплыла лодки или может быть баржа.
 </node>
       </extraDescr>
-      <flags>law</flags>
+      <flags>law near_water</flags>
       <name>На Мосту</name>
       <sector>city</sector>
     </node>
@@ -12123,7 +12383,7 @@ reads...   ???.
           <target>3102</target>
         </node>
       </exits>
-      <flags>law</flags>
+      <flags>law near_water</flags>
       <name>Южный Мост</name>
       <sector>city</sector>
     </node>
@@ -12162,13 +12422,13 @@ reads...   ???.
         <mob limit="2" maxHere="2" vnum="3071"/>
         <equip to="light" vnum="3365"/>
         <equip to="finger_l" vnum="3364"/>
-        <equip to="wield" vnum="3350"/>
+        <equip to="sheath" vnum="3350"/>
         <equip to="body" vnum="3353"/>
         <equip to="about" vnum="3361"/>
         <mob limit="2" maxHere="2" vnum="3071"/>
         <equip to="light" vnum="3365"/>
         <equip to="finger_l" vnum="3364"/>
-        <equip to="wield" vnum="3350"/>
+        <equip to="sheath" vnum="3350"/>
         <equip to="body" vnum="3353"/>
         <equip to="waist" vnum="3362"/>
       </resets>
@@ -12349,7 +12609,7 @@ reads...   ???.
         <mob limit="1" maxHere="1" vnum="3072"/>
         <equip to="light" vnum="3365"/>
         <equip to="finger_l" vnum="3364"/>
-        <equip to="wield" vnum="3350"/>
+        <equip to="sheath" vnum="3350"/>
         <equip to="body" vnum="3353"/>
         <equip to="shield" vnum="3354"/>
       </resets>
@@ -12763,6 +13023,63 @@ reads...   ???.
       <name>Клановая Дорога</name>
       <sector>city</sector>
     </node>
+    <node name="3318">
+      <description>В этом месте река поворачивает к югу, по-прежнему разделяя Хаон Дор и Изумрудный
+Лес. На юго-востоке сквозь деревья виднеются очертания разрушенного монастыря,
+но высадится здесь не представляется возможным.
+</description>
+      <exits>
+        <node name="east">
+          <key>0</key>
+          <target>3373</target>
+        </node>
+        <node name="south">
+          <key>0</key>
+          <target>3327</target>
+        </node>
+      </exits>
+      <flags>law</flags>
+      <name>На Темной Реке</name>
+      <sector>water_swim</sector>
+    </node>
+    <node name="3327">
+      <description>Река поворачивает с севера на запад. На юге начинаются отроги поросших лесом
+гор. На северном берегу реки продолжается Хаон Дор.
+</description>
+      <exits>
+        <node name="north">
+          <key>0</key>
+          <target>3318</target>
+        </node>
+        <node name="west">
+          <key>0</key>
+          <target>3374</target>
+        </node>
+      </exits>
+      <flags>law</flags>
+      <name>На Темной Реке</name>
+      <sector>water_swim</sector>
+    </node>
+    <node name="3328">
+      <description>На западном берегу реки простирается огромное болото, затянутое туманом.
+В глубине мглистой дымки завораживающе мерцают болотные огоньки. На севере ты
+видишь излучину реки, ведущую на восток. На юге река расширяется, огибая
+какой-то остров.
+</description>
+      <exits>
+        <node name="north">
+          <key>0</key>
+          <target>3374</target>
+        </node>
+        <node name="south">
+          <key>0</key>
+          <target>3375</target>
+        </node>
+      </exits>
+      <flags>law</flags>
+      <name>На Темной Реке у болота</name>
+      <sector>water_swim</sector>
+    </node>
     <node name="3334">
       <description>Несколько фонарей расположенных  под  самым потолком  прекрасно освещают
 комнату,  в  которую через маленькие окна солнечный свет почти не попадает.
@@ -12793,9 +13110,9 @@ reads...   ???.
     </node>
     <node name="3335">
       <description>Здесь делают рестринги. А ты что подумал?
-На стене, на такой высоте, чтобы было очень трудно дотянуться вандалам
-(то есть почти под потолком), прибита написанная мелким почерком
-табличка (price list).
+На стене, на такой высоте, чтобы было очень трудно дотянуться вандалам,
+то есть почти под потолком, прибита написанная мелким почерком
+табличка (list).
 </description>
       <exits>
         <node name="north">
@@ -12962,6 +13279,15 @@ reads...   ???.
       </extraDescr>
       <flags>indoors law</flags>
       <name>Бар</name>
+      <resets>
+        <mob limit="3" maxHere="1" vnum="3040"/>
+        <give vnum="3000"/>
+        <give vnum="3004"/>
+        <give vnum="3003"/>
+        <give vnum="3002"/>
+        <give vnum="3001"/>
+        <mob limit="10" maxHere="1" vnum="3064"/>
+      </resets>
       <sector>inside</sector>
     </node>
     <node name="3358">
@@ -12985,6 +13311,15 @@ reads...   ???.
       </extraDescr>
       <flags>indoors law</flags>
       <name>Бар</name>
+      <resets>
+        <mob limit="3" maxHere="1" vnum="3040"/>
+        <give vnum="3004"/>
+        <give vnum="3003"/>
+        <give vnum="3002"/>
+        <give vnum="3001"/>
+        <give vnum="3000"/>
+        <mob limit="10" maxHere="1" vnum="3064"/>
+      </resets>
       <sector>inside</sector>
     </node>
     <node name="3359">
@@ -13029,9 +13364,8 @@ reads...   ???.
       <sector>inside</sector>
     </node>
     <node name="3361">
-      <description>Непонятно, откуда взялась здесь эта пещера... Видно, что ее обитатель
-поселился здесь совсем недавно. Несколько стульев, старый стол, и диван
-делают обстановку довольно комфортной.
+      <description>Пещера покрыта пылью и плесенью, в воздухе застоялся тяжелый запах. Похоже,
+сюда очень давно никто не заходил. У стен валяются развалины мебели.
 На стене гвоздем нацарапана надпись (inscription).
 </description>
       <exits>
@@ -13042,39 +13376,104 @@ reads...   ???.
         </node>
       </exits>
       <extraDescr>
-        <node keyword="inscription надпись">Для  выбора  временной  профессии ты должен  найти в  мире представителя  этой 
-профессии и спросить позволения стать на время одним из них. Для этого подойди
-к нему и произнеси &apos;{gЯ хочу стать &lt;имя класса&gt;{x&apos; или &apos;{gI wish to become a
-&lt;имя класса&gt;{x&apos;. Выбор нового пути ничего не стоит, однако отказ от предыдущего
-стоит {Y50{x qp. Изменение можно производить не чаще, чем раз в сутки ({Y24{x минуты).
+        <node keyword="inscription надпись">Когда-то давным-давно по воле великого {hh1577Дворкина{x в мире прогремел страшный
+Катаклизм, и все сущее было стерто с лица Тэры. А пустые просторы мира начали
+заселять новые идеальные существа -- универсалы.
 
-Вот список представителей:
-{yПрофессия          Имя                                 Зона{x
-{lEWitch {lRВедьма{lx          Эльвира                             Новый Талос
-{lECleric{lRКлерик{lx          Первосвященник                      Новый Талос
-{lEThief{lRВор  {lx           Глава Гильдии Воров                 Подземье
-{lEWarrior{lRВоин   {lx         Хеймдалль                           Вальгалла
-{lEWarlock{lRКолдун {lx         Волшебник                           Долина Титанов
-{lERanger  {lRРейнджер{lx        Лорд-Рейнджер                       Изумрудный Лес
-{lENinja {lRНиндзя{lx          Глава Гильдии Ассасинов             Подземье
-{lEAnti-Paladin{lRАнти-Паладин{lx    Анти-Паладин                        Долина Титанов
-{lEPaladin{lRПаладин{lx         Государь Паладинов                  Редферн
-{lESamurai{lRСамурай{lx         Самурай-мастер оружия               Новый Талос
-{lENecromancer{lRНекромант  {lx     Некромантка                         Подземье
+По легенде универсалы умели все -- они могли освоить любую профессию и выучить
+любой навык на лету. Мощь их была столь велика, что боги немедля стали
+ограничивать их способности. Поколение за поколением универсалы слабели и 
+вымирали, пока наконец не ушли в легенды и предания.
 
-Если хочешь получить способность к быстрому обучению, скажи об этом Адепту 
-(произнеси &apos;{gЯ хочу быстрее учиться{x&apos; или &apos;{gI wish to learn quicker{x&apos;).
-Эта способность дается на {Y3{x года жизни и стоит {Y1000{x qp.
+Эта пещера -- последнее, что осталось от воли сумасшедшего Художника.
+Почти его волю и помни об универсалах, путешественни{Smк{Sfца{Sx...
 </node>
       </extraDescr>
       <flags>no_vanish no_mob indoors law nosummon</flags>
-      <name>Пещера</name>
+      <name>Разрушенная пещера</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="3173"/>
         <drop vnum="3007"/>
-        <put in="3007" limit="2" maxHere="2" vnum="3399"/>
       </resets>
       <sector>inside</sector>
+    </node>
+    <node name="3372">
+      <description>Ты плывешь по Темной Реке. На востоке река проходит через массивную решетку в
+стенах Мидгаарда. За западе река змеится сквозь темные чащи Хаон Дора.
+</description>
+      <exits>
+        <node name="east">
+          <target>3200</target>
+        </node>
+        <node name="west">
+          <target>3373</target>
+        </node>
+      </exits>
+      <flags>law</flags>
+      <name>На Темной Реке</name>
+      <sector>water_noswim</sector>
+    </node>
+    <node name="3373">
+      <description>Река прихотливо вьется между исполинских деревьев, разделяя Хаон Дор на севере 
+и Изумрудный Лес на юге. Течение ведет на запад. Вдалеке на востоке сквозь
+деревья виднеются стены Мидгаарда.
+</description>
+      <exits>
+        <node name="east">
+          <target>3372</target>
+        </node>
+        <node name="west">
+          <key>0</key>
+          <target>3318</target>
+        </node>
+      </exits>
+      <flags>dark law</flags>
+      <name>На Темной Реке</name>
+      <sector>water_noswim</sector>
+    </node>
+    <node name="3374">
+      <description>Река сворачивает круто к югу. На севере ты видишь небольшую песчаную отмель,
+куда можно высадиться. С холмов на северо-востоке доносится ужасное зловоние,
+а за поворотом реки на юго-западе кажется виднеется болото.
+</description>
+      <exits>
+        <node name="east">
+          <key>0</key>
+          <target>3327</target>
+        </node>
+        <node name="north">
+          <target>6123</target>
+        </node>
+        <node name="south">
+          <key>0</key>
+          <target>3328</target>
+        </node>
+      </exits>
+      <flags>dark law</flags>
+      <name>На Темной Реке</name>
+      <sector>water_noswim</sector>
+    </node>
+    <node name="3375">
+      <description>Ты сплавляешься по Темной Реке с севера на юг. Река здесь расширяется, готовясь
+выйти к морю. На западе ты видишь небольшой, но вполне милый островок, затянутый
+туманом. Интересно, что там?
+</description>
+      <exits>
+        <node name="north">
+          <key>0</key>
+          <target>3328</target>
+        </node>
+        <node name="south">
+          <key>0</key>
+          <target>38122</target>
+        </node>
+        <node name="west">
+          <target>2700</target>
+        </node>
+      </exits>
+      <flags>dark law</flags>
+      <name>На Темной Реке</name>
+      <sector>water_noswim</sector>
     </node>
   </rooms>
 </area>

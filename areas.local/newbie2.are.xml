@@ -3,19 +3,21 @@
   <areadata>
     <authors>Maynard</authors>
     <credits>Newbie Zone</credits>
+    <flags>easy</flags>
     <levelHigh>10</levelHigh>
     <levelLow>1</levelLow>
     <name>Зона Новичков</name>
-    <resetMessage></resetMessage>
+    <resetMessage>Из окрестных коридоров доносится возбужденное бормотание новичков.</resetMessage>
     <security>9</security>
-    <speedwalk>2nu3s;enter portal</speedwalk>
+    <speedwalk>2ne</speedwalk>
     <translator>Unknown, Ruffina</translator>
     <vnumHigh>18699</vnumHigh>
     <vnumLow>18600</vnumLow>
   </areadata>
   <helps>
-    <node id="1435" keyword="NEWBIE ZONE" level="102">Converted to standard Envy 1.x by Jason Huang (god@sure.net)
-Further conversion to Rom 2.4 by Jaceks and Chicken&apos;s Den Staff</node>
+    <node id="1435" keyword="'NEWBIE ZONE' 'ЗОНА НОВИЧКОВ'" level="-1">Зона Новичков -- прекрасное место, чтобы попрактиковаться с исследовании
+локаций, раздобыть неплохие вещички и получить опыт. Очень рекомендуем!
+</node>
   </helps>
   <mobiles>
     <node name="18601">
@@ -272,7 +274,7 @@ Further conversion to Rom 2.4 by Jaceks and Chicken&apos;s Den Staff</node>
       <off add="kick_dirt"/>
       <player_name>spectre ghost призрак зловещий</player_name>
       <race>ghost</race>
-      <sex>either</sex>
+      <sex>male</sex>
       <short_descr>зловещ|ий|его|ему|ий|им|ем призрак||а|у||ом|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
@@ -392,7 +394,7 @@ Further conversion to Rom 2.4 by Jaceks and Chicken&apos;s Den Staff</node>
       <group>500</group>
       <hit>2d6+60</hit>
       <level>5</level>
-      <long_descr>Ньюб-умник (smart newbie) стоит здесь, излучая уверенность в себе.
+      <long_descr>Ньюб-умник (smart newbie) стоит здесь, перечитывая статьи справки.
 </long_descr>
       <mana>49d1+1</mana>
       <material>0</material>
@@ -421,10 +423,10 @@ Further conversion to Rom 2.4 by Jaceks and Chicken&apos;s Den Staff</node>
       <level>4</level>
       <material>steel</material>
       <name>sword newbie меч ньюбский</name>
-      <short_descr>сияющ|ий|его|ему|его|им|ем меч||а|у||ом|е</short_descr>
+      <short_descr>ньюбск|ий|ого|ому|ий|им|ом меч||а|у||ом|е</short_descr>
       <type name="weapon">
-        <diceNumber>4</diceNumber>
-        <diceType>3</diceType>
+        <diceNumber>2</diceNumber>
+        <diceType>6</diceType>
         <weapClass>sword</weapClass>
         <weapType>slash</weapType>
       </type>
@@ -780,20 +782,24 @@ Further conversion to Rom 2.4 by Jaceks and Chicken&apos;s Den Staff</node>
   </objects>
   <rooms>
     <node name="18600">
-      <description>Ого...  Вход в зону новичков! Как раз то место, которое ты искал. Хорошо,
-когда будешь готов, можешь идти на север.
-   Около входа стоит маленькая табличка (tablet).
+      <description>Ты стоишь перед мрачным особняком, на котором корявыми буквами выведено:
+
+                            {BЗОНА НАВИЧКОФ{x
+                      {bзахади ни бойсо выхади ни плач{x
+                            
+Хм. Судя по всему, здесь новички Мира Мечты могут потренироваться в навыках 
+выживания в более опасных условиях. Когда будешь готов{Sfа{x, можешь идти на {hc{yсевер{x.
+Около входа стоит маленькая табличка (tablet).
 </description>
       <exits>
-        <node name="down">
-          <description>Вход в школу - НЕ ТУДА. Что, уже страшно?
-</description>
-          <target>5379</target>
-        </node>
         <node name="north">
           <description>Ты видишь начало зоны новичков.
 </description>
           <target>18601</target>
+        </node>
+        <node name="west">
+          <key>0</key>
+          <target>3001</target>
         </node>
       </exits>
       <extraDescr>
@@ -1038,9 +1044,8 @@ Further conversion to Rom 2.4 by Jaceks and Chicken&apos;s Den Staff</node>
       <sector>inside</sector>
     </node>
     <node name="18608">
-      <description>В  конце концов  ты вышел  на открытое  место. Как  же хорошо  опять дышать
-свежим воздухом! Ты можешь вернуться назад в душный коридор на  востоке. На
-запад простирается большое поле, но туда невозможно попасть.
+      <description>Ты упираешься в тупик коридора. Интересно, кто же его прокопал и зачем?
+Ты можешь вернуться назад в душный коридор на востоке. На западе -- стена.
 </description>
       <exits>
         <node name="east">
@@ -1049,13 +1054,25 @@ Further conversion to Rom 2.4 by Jaceks and Chicken&apos;s Den Staff</node>
           <target>18609</target>
         </node>
       </exits>
+      <extraExits>
+        <node name="crack трещина">
+          <description>На западной стене видна {Wтрещина{x{le (crack){x, через которую, кажется, можно пролезть.
+</description>
+          <key>0</key>
+          <max_size_pass>medium</max_size_pass>
+          <room_description>На западной стене видна {Wтрещина{x{le (crack){x, через которую, кажется, можно пролезть.
+</room_description>
+          <target>3007</target>
+        </node>
+      </extraExits>
       <flags>no_mob</flags>
-      <name>Небольшой Участок Великого Поля</name>
+      <name>В тупике у стены</name>
       <sector>inside</sector>
     </node>
     <node name="18609">
-      <description>Уфф, наконец-то конец коридора.  Ты можешь выйти на свежий воздух на
-западе или вернуться на восток и будь уверен, ты ничего не потеряешь.
+      <description>Ты бредешь по узкому коридору в недрах Зоны Новичков. Этот коридор непохож на
+остальные проходы -- чистые и аккуратные. Похоже, этот путь кто-то прокапывал
+в тайне...
 </description>
       <exits>
         <node name="east">
@@ -1077,8 +1094,9 @@ Further conversion to Rom 2.4 by Jaceks and Chicken&apos;s Den Staff</node>
       <sector>inside</sector>
     </node>
     <node name="18610">
-      <description>Коридор тянется  с востока на запад. Похоже, на западе все же немного
-светлее.
+      <description>Ты бредешь по узкому коридору в недрах Зоны Новичков. Этот коридор непохож на
+остальные проходы -- чистые и аккуратные. Похоже, этот путь кто-то прокапывал
+в тайне.
 </description>
       <exits>
         <node name="east">
@@ -1093,7 +1111,7 @@ Further conversion to Rom 2.4 by Jaceks and Chicken&apos;s Den Staff</node>
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>Cветлый Коридор</name>
+      <name>Грязный коридор</name>
       <sector>inside</sector>
     </node>
     <node name="18611">
@@ -1157,10 +1175,10 @@ Further conversion to Rom 2.4 by Jaceks and Chicken&apos;s Den Staff</node>
         </node>
       </exits>
       <extraDescr>
-        <node keyword="sign stairs stairway знак лестница ступеньки">Знак возле лестницы гласит:
+        <node keyword="sign знак">Знак возле лестницы гласит:
 
-Если ты мал уровнем и гуляешь один без группы, не приходи ко мне плакаться, когда умрешь!
-
+Если ты небольшого уровня и гуляешь без группы, не приходи ко мне плакаться,
+когда умрешь!
 </node>
       </extraDescr>
       <flags>indoors</flags>
@@ -1348,9 +1366,9 @@ Further conversion to Rom 2.4 by Jaceks and Chicken&apos;s Den Staff</node>
       <sector>inside</sector>
     </node>
     <node name="18629">
-      <description>Ты не сразу понимаешь, что свечение исходит  из красного  портала (portal),
-нарисованного на полу. Выглядит так, будто кто-то  прямо на  полу изобразил
-проселочную дорогу, бегущую через поля. Картина настолько  реалистична, что
+      <description>Ты не сразу понимаешь, что свечение исходит из красного портала (portal),
+нарисованного на полу. Выглядит так, будто кто-то прямо на полу изобразил
+проселочную дорогу, бегущую через поля. Картина настолько реалистична, что
 ты ощущаешь легкий ветерок, доносящийся с поля.
 </description>
       <exits>
@@ -1362,7 +1380,8 @@ Further conversion to Rom 2.4 by Jaceks and Chicken&apos;s Den Staff</node>
         </node>
       </exits>
       <extraDescr>
-        <node keyword="portal floor портал пол">Пройти-то можно, но неясно, где ты окажешься и сможешь ли вернуться назад.
+        <node keyword="portal floor портал пол">Возможно, когда-то здесь и была какая-то особая магия, но теперь это просто
+рисунок -- пусть даже и очень реалистичный. Войти в него, боюсь, не получится.
 </node>
       </extraDescr>
       <flags>dark indoors</flags>
@@ -1688,10 +1707,10 @@ Further conversion to Rom 2.4 by Jaceks and Chicken&apos;s Den Staff</node>
       <sector>inside</sector>
     </node>
     <node name="18643">
-      <description>С  этого  балкона можно  легко обозреть  окружающий мир.  Балкон полукругом
-охватывает купол комнаты, позволяя  выглянуть в  любом направлении.  Из его
-северной части хорошо видны равнины к северу от Старого  Мидгаарда, ведущие
-в сторону Озера Кристалмир и Соласа.
+      <description>Балкон выходит на восточную часть здания, отсюда можно насладиться прекрасным
+видом поверх городских стен Мидгаарда. На восток тянется широкий торговый тракт,
+далеко на горизонте упирающийся в марево великих Песков Скорби.
+На северо-востоке у самых стен города виден тенистый парк.
 </description>
       <exits>
         <node name="down">
@@ -1742,10 +1761,10 @@ Further conversion to Rom 2.4 by Jaceks and Chicken&apos;s Den Staff</node>
       <sector>inside</sector>
     </node>
     <node name="18645">
-      <description>С  этого  балкона можно  легко обозреть  окружающий мир.  Балкон полукругом
-обхватывает купол комнаты, позволяя выглянуть в  любом направлении.  Из его
-южной части хорошо видны развалины Старого Мидгаарда, которые  находятся на
-юго-западе.
+      <description>Балкон выходит на восточную часть здания, отсюда можно насладиться прекрасным
+видом поверх городских стен Мидгаарда. На восток тянется широкий торговый тракт,
+далеко на горизонте упирающийся в марево великих Песков Скорби.
+Вдали на юго-востоке видны вымершие пространства Дварфийского Леса.
 </description>
       <exits>
         <node name="down">

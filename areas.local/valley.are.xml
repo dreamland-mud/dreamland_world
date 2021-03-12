@@ -3,14 +3,23 @@
   <areadata>
     <authors>Hatchet</authors>
     <credits>Valley of the Elves</credits>
+    <flags>hard</flags>
     <levelHigh>20</levelHigh>
     <levelLow>5</levelLow>
-    <name>Valley of the Elves</name>
+    <name>Долина Эльфов</name>
+    <resetMessage>Ты чувствуешь как за тобой наблюдает множество внимательных глаз.</resetMessage>
     <security>9</security>
     <speedwalk>4e3n2w5nwn</speedwalk>
+    <translator>Nimoa, Fiorine</translator>
     <vnumHigh>7899</vnumHigh>
     <vnumLow>7800</vnumLow>
   </areadata>
+  <helps>
+    <node id="2067" keyword="'VALLEY OF THE ELVES' 'ELVEN VALLEY' 'ДОЛИНА ЭЛЬФОВ' 'ЭЛЬФИЙСКАЯ ДОЛИНА'" level="-1">На северо-западе {hh1859Равнин Севера{x начинается хорошо охраняемая и скрытая от
+постороннего взора долина Перворожденных. Вытесненные с большинства южных земель
+Тэры, многие древние рода эльфов укрылись на севере.
+</node>
+  </helps>
   <mobiles>
     <node name="7800">
       <ac bash="5" exotic="9" pierce="5" slash="5"/>
@@ -19,160 +28,166 @@
       <dam_type>none</dam_type>
       <damage>1d6+1</damage>
       <default_pos>stand</default_pos>
-      <description>A beast is the size of the largest common dog.  It has a greenish coat with
-brown spots.  Its shape, along with its colors, make this cooshee almost
-undetectable as it moves.
+      <description>Это существо похоже на огромную лохматую собаку. Кусидхэ также называют Ку Ши в
+некоторых частях Тэры. Зеленовато-коричневая шерсть полностью скрывает кусидхэ
+в высокой траве, предоставляя идеальный камуфляж.
 </description>
       <hit>2d6+60</hit>
       <level>5</level>
-      <long_descr>A rather large dog is here, wandering the valley.
+      <long_descr>Кусидхэ (dog) сопровождает эльфов в странствиях.
 </long_descr>
       <mana>2d9+100</mana>
       <material>0</material>
       <off add="disarm dodge trip assist_race"/>
-      <player_name>dog cooshee</player_name>
+      <player_name>dog cooshee cusidhe пес куши кусидха</player_name>
       <race>dog</race>
       <sex>either</sex>
-      <short_descr>a cooshee</short_descr>
+      <short_descr>кусидхэ</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
     </node>
     <node name="7801">
       <ac bash="3" exotic="9" pierce="3" slash="3"/>
       <act add="npc scavenger aggressive stay_area wimpy"/>
-      <dam_type>none</dam_type>
+      <dam_type>punch</dam_type>
       <damage>1d7+2</damage>
       <default_pos>stand</default_pos>
-      <description>This elf is almost as tall as you are, but much slimmer and agile.  You see
-hatred in his eyes, and you try to avoid his stare.  His tense body looks ready
-to spring upon you, like a mountain lion stalking its prey.  He sees you
-noticing him, and quietly disappears.
+      <description>Ростом эльфы Долины примерно с человека, но более изящно сложены. Эльф смотрит
+на тебя с большим недоверием -- ведь его предкам, проигравшим великую войну с
+людьми и дварфами, пришлось покинуть свои земли и переселиться сюда, подальше
+от чужаков. Эльфы неусыпно патрулируют Долину, охраняя ее от незванных гостей --
+и, похоже, уже записали тебя в эту категорию.
 </description>
       <hit>2d7+96</hit>
       <level>8</level>
-      <long_descr>A valley elf wanders here, cautious of your intrusion.
+      <long_descr>Эльф (elf) Долины подозрительно косится на тебя.
 </long_descr>
       <mana>4d9+100</mana>
       <material>0</material>
       <off add="disarm dodge trip assist_race"/>
-      <player_name>elf valley</player_name>
+      <player_name>elf valley эльф долины</player_name>
       <race>elf</race>
       <sex>male</sex>
-      <short_descr>a valley elf</short_descr>
+      <short_descr>эльф||а|у|а|ом|е Долины</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
     </node>
     <node name="7802">
       <ac bash="3" exotic="9" pierce="3" slash="3"/>
       <act add="npc scavenger aggressive stay_area wimpy"/>
-      <dam_type>none</dam_type>
+      <dam_type>punch</dam_type>
       <damage>1d7+2</damage>
       <default_pos>stand</default_pos>
-      <description>This elf is almost as tall as you are, but much slimmer and more agile.
-She glares at you, then quickly disappears before you see more of her.
+      <description>Ростом эльфы Долины примерно с человека, но более изящно сложены. Она смотрит
+на тебя с большим недоверием -- ведь ее предкам, проигравшим великую войну с
+людьми и дварфами, пришлось покинуть свои земли и переселиться сюда, подальше
+от чужаков. Эльфы неусыпно патрулируют Долину, охраняя ее от незванных гостей --
+и, похоже, уже записали тебя в эту категорию.
 </description>
       <hit>2d7+96</hit>
       <level>8</level>
-      <long_descr>A female valley elf wanders here, skirting between the tall grasses.
+      <long_descr>Эльфийка (elf) пробирается среди пучков высокой травы.
 </long_descr>
       <mana>4d9+100</mana>
       <material>0</material>
       <off add="disarm dodge trip assist_race"/>
-      <player_name>elf valley</player_name>
+      <player_name>elf valley эльфийка долины</player_name>
       <race>elf</race>
       <sex>female</sex>
-      <short_descr>a valley elf</short_descr>
+      <short_descr>эльфийк|а|и|е|у|ой|е Долины</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
     </node>
     <node name="7803">
       <ac bash="4" exotic="9" pierce="4" slash="4"/>
       <act add="npc sentinel aggressive"/>
-      <dam_type>none</dam_type>
+      <dam_type>beating</dam_type>
       <damage>1d8+1</damage>
       <default_pos>stand</default_pos>
-      <description>This elf is almost as tall as you are, but much slimmer and more agile.
-He glares at your intrusion and attacks with menace.
+      <description>Ростом эльфы Долины примерно с человека, но более изящно сложены. Эльфы неусыпно
+патрулируют Долину, охраняя ее от незванных гостей. Часовой смотрит на тебя с
+ненавистью и немедленно атакует.
 </description>
       <hit>2d6+85</hit>
       <level>7</level>
-      <long_descr>A valley elf sentry stands here, then noticing you, attacks quickly!
+      <long_descr>Эльф-часовой (elf) стоит на страже Долины.
 </long_descr>
       <mana>3d9+100</mana>
       <material>0</material>
       <off add="disarm dodge trip assist_race"/>
-      <player_name>elf sentry valley</player_name>
+      <player_name>elf sentry valley эльф-часовой часовой долины</player_name>
       <race>elf</race>
       <sex>male</sex>
-      <short_descr>a valley elf sentry</short_descr>
+      <short_descr>часов|ой|ого|ому|ого|ым|ом Долины</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
     </node>
     <node name="7804">
       <ac bash="4" exotic="9" pierce="4" slash="4"/>
       <act add="npc sentinel aggressive"/>
-      <dam_type>none</dam_type>
+      <dam_type>beating</dam_type>
       <damage>1d8+1</damage>
       <default_pos>stand</default_pos>
-      <description>This elf is almost as tall as you are, but much slimmer and more agile.
-She glares at your intrusion and attacks with menace.
+      <description>остом эльфы Долины примерно с человека, но более изящно сложены. Эльфы неусыпно
+патрулируют Долину, охраняя ее от незванных гостей. Стражница смотрит на тебя с
+ненавистью и немедленно атакует.
 </description>
       <hit>2d6+85</hit>
       <level>7</level>
-      <long_descr>A valley elf sentry stands here, then noticing you, attacks quickly!
+      <long_descr>Эльфийка-стражница (elf) Долины охраняет покой жителей.
 </long_descr>
       <mana>3d9+100</mana>
       <material>0</material>
       <off add="disarm dodge trip assist_race"/>
-      <player_name>elf sentry valley</player_name>
+      <player_name>elf sentry valley эльфийка-стражница стражница долины</player_name>
       <race>elf</race>
       <sex>female</sex>
-      <short_descr>a valley elf sentry</short_descr>
+      <short_descr>стражниц|а|ы|е|у|ей|е Долины</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
     </node>
     <node name="7805">
       <ac bash="4" exotic="9" pierce="4" slash="4"/>
       <act add="npc scavenger aggressive stay_area"/>
-      <dam_type>none</dam_type>
+      <dam_type>stab</dam_type>
       <damage>1d7+1</damage>
       <default_pos>stand</default_pos>
-      <description>The elf notices your intrusion and attacks with determination.
+      <description>Эти эльфы знают каждую тропинку в окружающих Долину холмах и замечают малейшие
+следы на их склонах.
 </description>
       <hit>2d7+71</hit>
       <level>6</level>
-      <long_descr>A valley elf scout wanders the valley, searching for intruders like you!
+      <long_descr>Разведчик (scout) Долины Эльфов высматривает здесь незванных гостей вроде тебя.
 </long_descr>
       <mana>3d9+100</mana>
       <material>0</material>
       <off add="disarm dodge trip assist_race"/>
-      <player_name>elf scout valley</player_name>
+      <player_name>elf scout valley разведчик долины</player_name>
       <race>elf</race>
       <sex>male</sex>
-      <short_descr>a valley elf scout</short_descr>
+      <short_descr>разведчик||а|у|а|ом|е Долины</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
     </node>
     <node name="7806">
       <ac bash="4" exotic="9" pierce="4" slash="4"/>
       <act add="npc stay_area wimpy"/>
-      <dam_type>none</dam_type>
+      <dam_type>punch</dam_type>
       <damage>1d7+1</damage>
       <default_pos>stand</default_pos>
-      <description>She is currently doing some menial chores, and ignores your intrusion except
-when you are in her way.
+      <description>Она поглощена работой по хозяйству и, кажется, не замечает твоего присутствия.
 </description>
       <hit>2d7+71</hit>
       <level>6</level>
-      <long_descr>A valley elf is here, doing her duties.
+      <long_descr>Эльфийка (elf) хлопочет по хозяйству.
 </long_descr>
       <mana>3d9+100</mana>
       <material>0</material>
       <off add="disarm dodge trip assist_race"/>
-      <player_name>elf valley</player_name>
+      <player_name>elf valley эльфийка</player_name>
       <race>elf</race>
       <sex>female</sex>
-      <short_descr>a valley elf</short_descr>
+      <short_descr>эльфийк|а|и|е|у|ой|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
     </node>
@@ -180,24 +195,24 @@ when you are in her way.
       <ac bash="-2" exotic="6" pierce="-2" slash="-2"/>
       <act add="npc sentinel scavenger aggressive cleric"/>
       <aff add="sanctuary protect_evil"/>
-      <dam_type>none</dam_type>
+      <dam_type>magic</dam_type>
       <damage>2d5+3</damage>
       <default_pos>stand</default_pos>
-      <description>This elf looks quite old, probably twenty or more times your age.  He looks
-quite potent, though.
+      <description>Этот эльф выглядит очень старым -- пожалуй, раз в двадцать старше тебя.
+При виде тебя он резво вскакивает на ноги и выкрикивает заклятие, готовясь
+напасть на тебя!
 </description>
       <hit>3d9+208</hit>
       <level>15</level>
-      <long_descr>A valley elf elder is here, studying. He notices you.
-A valley elf elder shouts &apos;You have intruded wrongly.  Be prepared to die!&apos;
+      <long_descr>Старейшина (elder) Долины Эльфов изучает древние манускрипты.
 </long_descr>
       <mana>15d9+100</mana>
       <material>0</material>
       <off add="disarm kick parry assist_race"/>
-      <player_name>elf elder valley</player_name>
+      <player_name>elf elder valley старейшина долины</player_name>
       <race>elf</race>
       <sex>male</sex>
-      <short_descr>a valley elf elder</short_descr>
+      <short_descr>старейшин|а|ы|е|у|ой|е Долины</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
     </node>
@@ -205,175 +220,195 @@ A valley elf elder shouts &apos;You have intruded wrongly.  Be prepared to die!&
       <ac bash="-1" exotic="5" pierce="-1" slash="-1"/>
       <act add="npc sentinel scavenger aggressive mage"/>
       <aff add="protect_evil"/>
-      <dam_type>none</dam_type>
+      <dam_type>magic</dam_type>
       <damage>1d10+3</damage>
       <default_pos>stand</default_pos>
-      <description>This elf looks quite old, probably twenty or more times your age.  She looks
-quite potent, though.
+      <description>Эта эльфийка выглядит очень старой -- пожалуй, раз в двадцать старше тебя.
+При виде тебя она угрожающе приподнимается и нараспев выкрикивает чары, готовясь
+напасть на тебя!
 </description>
       <hit>2d10+190</hit>
       <level>15</level>
-      <long_descr>A valley elf elder is here, studying. She notices you.
-A valley elf elder says &apos;Your arrogance will be your end, human.&apos;
+      <long_descr>Волшебница (elder) Долины Эльфов зачаровывает клинок.
 </long_descr>
       <mana>15d9+100</mana>
       <material>0</material>
       <off add="dodge assist_race"/>
-      <player_name>elf elder valley</player_name>
+      <player_name>elf elder valley волшебница долины</player_name>
       <race>elf</race>
       <sex>female</sex>
-      <short_descr>a valley elf elder</short_descr>
+      <short_descr>волшебниц|а|ы|е|у|ей|е Долины</short_descr>
       <size>medium</size>
+      <spec>spec_breath_lightning</spec>
       <start_pos>stand</start_pos>
     </node>
     <node name="7809">
       <ac bash="-4" exotic="7" pierce="-4" slash="-4"/>
       <act add="npc sentinel aggressive"/>
-      <dam_type>none</dam_type>
+      <dam_type>flbite</dam_type>
       <damage>2d8+5</damage>
       <default_pos>stand</default_pos>
-      <description>This big beast looks like a small red dragon, but has many more heads than a
-regular dragon, too.  It doesn&apos;t look happy.
+      <description>Огненная гидра -- это огромный древний ящер, похожий на красного дракона, но с
+гораздо большим количеством гораздо более кровожадных голов и пастей.
 </description>
+      <detection add="invis"/>
+      <form add="nonadoptable" del="edible animal reptile cold_blood"/>
       <hit>3d9+333</hit>
+      <imm add="fire"/>
       <level>20</level>
-      <long_descr>A big beast with many heads, each breathing fire, stares at you with malice.
+      <long_descr>Огромная огненная гидра (pyrohydra) пышет жаром, готовясь испепелить тебя!
 </long_descr>
       <mana>10d9+100</mana>
       <material>0</material>
       <off add="disarm dodge trip assist_vnum"/>
-      <player_name>pyrohydra pyro hydra</player_name>
-      <race>unique</race>
-      <sex>either</sex>
-      <short_descr>the pyrohydra</short_descr>
-      <size>medium</size>
+      <parts del="head legs heart brains guts feet eye tail fangs"/>
+      <player_name>pyrohydra pyro hydra огненная гидра</player_name>
+      <race>lizard</race>
+      <res del="poison"/>
+      <sex>female</sex>
+      <short_descr>огненн|ая|ой|ой|ую|ой|ой гидр|а|ы|е|у|ой|е</short_descr>
+      <size>large</size>
       <spec>spec_breath_fire</spec>
       <start_pos>stand</start_pos>
     </node>
     <node name="7810">
       <ac bash="7" exotic="10" pierce="7" slash="7"/>
       <act add="npc sentinel scavenger wimpy"/>
-      <dam_type>none</dam_type>
+      <dam_type>punch</dam_type>
       <damage>1d6+0</damage>
       <default_pos>stand</default_pos>
-      <description>He looks old and feeble.
+      <description>Он стар и дряхл. Непонятно, как ему удалось прибиться к эльфам, но вот уже много
+лет он живет в Долине, скрываясь от тягот и забот большой Тэры.
 </description>
       <hit>2d6+35</hit>
       <level>3</level>
-      <long_descr>An old hermit sits here, smoking a pipe.
+      <long_descr>Старый отшельник (hermit) раскуривает трубку.
 </long_descr>
       <mana>1d9+100</mana>
       <material>0</material>
       <off add="disarm dodge trip assist_vnum"/>
-      <player_name>hermit man old</player_name>
+      <player_name>hermit man old старый отшельник</player_name>
       <race>human</race>
       <sex>male</sex>
-      <short_descr>an old hermit</short_descr>
+      <short_descr>стар|ый|ого|ому|ого|ым|ом отшельник||а|у|а|ом|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
     </node>
     <node name="7811">
       <ac bash="-6" exotic="2" pierce="-6" slash="-6"/>
       <act add="npc sentinel scavenger aggressive mage"/>
-      <dam_type>none</dam_type>
+      <aff add="sanctuary"/>
+      <dam_type>wrath</dam_type>
       <damage>4d4+6</damage>
       <default_pos>stand</default_pos>
-      <description>Talemon looks harmless, but the fireballs he throws at you don&apos;t.
+      <description>Этот могучий волшебник сражался на стороне эльфов в великих войнах древности, и
+до сих пор оберегает Долину своими чарами. 
 </description>
+      <detection add="invis hidden"/>
       <hit>5d10+500</hit>
       <level>25</level>
-      <long_descr>An old mage busies himself with some chemicals.
+      <long_descr>Пожилой маг (mage) смешивает компоненты какого-то зелья.
 </long_descr>
       <mana>25d9+100</mana>
       <material>0</material>
-      <off add="dodge assist_vnum"/>
-      <player_name>talemon wizard mage</player_name>
+      <off add="dodge fast parry assist_vnum"/>
+      <player_name>talemon wizard mage маг талемон</player_name>
       <race>human</race>
+      <res add="spell"/>
       <sex>male</sex>
-      <short_descr>Talemon</short_descr>
+      <short_descr>Талемон||а|у|а|ом|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
       <wealth>50</wealth>
     </node>
     <node name="7812">
       <ac bash="-7" exotic="6" pierce="-7" slash="-7"/>
-      <act add="npc sentinel aggressive"/>
+      <act add="npc sentinel aggressive warrior"/>
       <alignment>-500</alignment>
-      <dam_type>none</dam_type>
+      <dam_type>drain</dam_type>
       <damage>2d10+7</damage>
       <default_pos>stand</default_pos>
-      <description>This daemon is unhappy with its summoned job, and is willing to take out it&apos;s
-anger at you!
+      <description>Он рычит и поворачивает огромную рогатую башку в твою сторону, готовясь напасть.
 </description>
+      <detection add="invis"/>
+      <form add="nonadoptable"/>
       <hit>5d10+550</hit>
       <level>25</level>
-      <long_descr>A huge guardian daemon is here, watching the treasure.
+      <long_descr>Огромный сторожевой демон (daemon) охраняет сокровища.
 </long_descr>
       <mana>12d9+100</mana>
       <material>0</material>
-      <off add="disarm dodge trip assist_vnum"/>
-      <player_name>guardian daemon</player_name>
-      <race>unique</race>
-      <sex>either</sex>
-      <short_descr>the guardian daemon</short_descr>
-      <size>medium</size>
+      <off add="berserk disarm dodge kick_dirt parry tail trip assist_vnum"/>
+      <player_name>guardian daemon сторожевой демон</player_name>
+      <race>demon</race>
+      <sex>male</sex>
+      <short_descr>сторожев|ой|ого|ому|ого|ым|ом демон||а|у|а|ом|е</short_descr>
+      <size>large</size>
       <start_pos>stand</start_pos>
     </node>
     <node name="7813">
       <ac bash="6" exotic="9" pierce="6" slash="6"/>
       <act add="npc aggressive wimpy"/>
-      <dam_type>none</dam_type>
+      <dam_type>tearbite</dam_type>
       <damage>1d5+1</damage>
       <default_pos>stand</default_pos>
-      <description>The wolf is covered with brown hair.  It looks at you with fright.
+      <description>Бурый волчара смотрит на тебя с явной злобой, оценивая твою калорийность.
 </description>
       <hit>2d7+46</hit>
       <level>4</level>
-      <long_descr>A wolf is here, looking for small prey.
+      <long_descr>Волк (wolf) охотится на мелкую живность.
 </long_descr>
       <mana>2d9+100</mana>
       <material>0</material>
       <off add="disarm trip assist_race"/>
-      <player_name>wolf</player_name>
+      <player_name>wolf волк</player_name>
       <race>wolf</race>
-      <sex>either</sex>
-      <short_descr>a wolf</short_descr>
+      <sex>male</sex>
+      <short_descr>волк||а|у|а|ом|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
     </node>
     <node name="7814">
       <ac bash="4" exotic="9" pierce="4" slash="4"/>
       <act add="npc"/>
-      <dam_type>none</dam_type>
+      <dam_type>hooves</dam_type>
       <damage>1d7+1</damage>
       <default_pos>stand</default_pos>
-      <description>With horns and spots over coarse, brown hair, this beast is the spit and
-image of ... an antelope.
+      <description>Охотники Долины тщательно следят за поголовьем антилоп в Долине и не убивают их
+понапрасну. Говорят, что их мясо -- один из лучших деликатесов Северной Тэры.
 </description>
       <hit>2d7+71</hit>
       <level>6</level>
-      <long_descr>An antelope is here, peacefully munching on grass.
+      <long_descr>Антилопа (antelope) пасется здесь, мирно щипля травку.
 </long_descr>
       <mana>3d9+100</mana>
       <material>0</material>
       <off add="disarm dodge trip assist_vnum"/>
-      <player_name>antelope</player_name>
+      <player_name>antelope антилопа</player_name>
       <race>deer</race>
-      <sex>either</sex>
-      <short_descr>an antelope</short_descr>
+      <sex>female</sex>
+      <short_descr>антилоп|а|ы|е|у|ой|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
     </node>
   </mobiles>
   <objects>
     <node name="7800">
+      <affects>
+        <node>
+          <apply to="mana">10</apply>
+        </node>
+        <node>
+          <apply to="damroll">1</apply>
+        </node>
+      </affects>
       <cost>680</cost>
-      <description>A shiny metallic shirt is on the floor.</description>
-      <gender>m</gender>
+      <description>Блестящая металлическая кольчуга (chainmail) эльфийской работы лежит тут.</description>
+      <gender>f</gender>
       <level>5</level>
-      <material>iron</material>
-      <name>chainmail elven chain mail</name>
-      <short_descr>elven chainmail</short_descr>
+      <material>mithril</material>
+      <name>chainmail elven chain mail эльфийская кольчуга</name>
+      <short_descr>эльфийск|ая|ой|ой|ую|ой|ой кольчуг|а|и|е|у|ой|е</short_descr>
       <type name="armor">
         <ac bash="4" exotic="2" pierce="4" slash="4"/>
       </type>
@@ -383,24 +418,24 @@ image of ... an antelope.
     <node name="7801">
       <affects>
         <node>
-          <apply to="mana">15</apply>
-          <bits table="affect_flags"></bits>
+          <apply to="move">5</apply>
         </node>
         <node>
           <apply to="hitroll">1</apply>
           <bits table="affect_flags"></bits>
         </node>
         <node>
-          <apply to="move">5</apply>
+          <apply to="mana">15</apply>
+          <bits table="affect_flags"></bits>
         </node>
       </affects>
       <cost>190</cost>
-      <description>Some soft boots are on the floor.</description>
-      <gender>m</gender>
+      <description>Мягкие сапоги (boots) прекрасной выделки лежат здесь.</description>
+      <gender>p</gender>
       <level>7</level>
-      <material>steel</material>
-      <name>boots elven</name>
-      <short_descr>elven boots</short_descr>
+      <material>leather</material>
+      <name>boots elven эльфийские сапоги</name>
+      <short_descr>эльфийски|е|х|м|е|ми|х сапог|и|ов|ам|и|ами|ах</short_descr>
       <type name="armor">
         <ac bash="3" exotic="0" pierce="3" slash="3"/>
       </type>
@@ -414,12 +449,12 @@ image of ... an antelope.
         </node>
       </affects>
       <cost>270</cost>
-      <description>A shiny blade is on the floor.</description>
+      <description>Сияющий клинок (longsword) эльфийской работы лежит тут.</description>
       <gender>m</gender>
       <level>7</level>
-      <material>steel</material>
-      <name>longsword elven sword long</name>
-      <short_descr>an elven longsword</short_descr>
+      <material>silver</material>
+      <name>longsword elven sword long эльфийский клинок</name>
+      <short_descr>эльфийск|ий|ого|ому|ий|им|ом клин|ок|ка|ку|ок|ком|ке</short_descr>
       <type name="weapon">
         <diceNumber>3</diceNumber>
         <diceType>4</diceType>
@@ -436,12 +471,12 @@ image of ... an antelope.
         </node>
       </affects>
       <cost>400</cost>
-      <description>A pile of brown cloth is on the floor.</description>
-      <gender>m</gender>
+      <description>Груда бурой ткани (cloak) свалена тут.</description>
+      <gender>f</gender>
       <level>7</level>
       <material>cloth</material>
-      <name>cloak brown</name>
-      <short_descr>a brown cloak</short_descr>
+      <name>cloak brown бурая накидка</name>
+      <short_descr>бур|ая|ой|ой|ую|ой|ой накидк|а|и|е|у|ой|е</short_descr>
       <type name="armor">
         <ac bash="3" exotic="0" pierce="3" slash="3"/>
       </type>
@@ -449,11 +484,11 @@ image of ... an antelope.
       <weight>30</weight>
     </node>
     <node name="7804">
-      <description>A shiny key is on the floor.</description>
+      <description>Блестящий ключ (key) забыт здесь.</description>
       <gender>m</gender>
       <material>bronze</material>
-      <name>key</name>
-      <short_descr>a key</short_descr>
+      <name>key bronze бронзовый ключ</name>
+      <short_descr>бронзов|ый|ого|ому|ый|ым|ом ключ||а|у||ом|е</short_descr>
       <type name="key">
         <rotGround>1</rotGround>
         <rotInv>1</rotInv>
@@ -462,11 +497,12 @@ image of ... an antelope.
       <weight>10</weight>
     </node>
     <node name="7805">
-      <description>A shiny key is on the floor.</description>
+      <description>Деревянный ключ (key) валяется здесь.</description>
       <gender>m</gender>
+      <level>1</level>
       <material>wood</material>
-      <name>key</name>
-      <short_descr>a key</short_descr>
+      <name>key wooden деревянный ключ</name>
+      <short_descr>деревянн|ый|ого|ому|ый|ым|ом ключ||а|у||ом|е</short_descr>
       <type name="key">
         <rotGround>1</rotGround>
         <rotInv>1</rotInv>
@@ -495,7 +531,7 @@ image of ... an antelope.
       <cost>10</cost>
       <description>Яркое золотое кольцо (ring) испускает маленькую струйку дыма на полу.</description>
       <extra_flags>magic nolocate nofind</extra_flags>
-      <gender>m</gender>
+      <gender>n</gender>
       <level>5</level>
       <limit>1</limit>
       <material>gold</material>
@@ -513,12 +549,12 @@ image of ... an antelope.
         </node>
       </affects>
       <cost>270</cost>
-      <description>A quarterstaff is on the floor.</description>
+      <description>Боевой посох (quarterstaff) лежит на земле.</description>
       <gender>m</gender>
       <level>21</level>
       <material>wood</material>
-      <name>quarterstaff staff two-handed</name>
-      <short_descr>a quarterstaff</short_descr>
+      <name>quarterstaff staff two-handed боевой посох</name>
+      <short_descr>боев|ой|ого|ому|ой|ым|ом посох||а|у||ом|е</short_descr>
       <type name="weapon">
         <diceNumber>6</diceNumber>
         <diceType>5</diceType>
@@ -531,11 +567,11 @@ image of ... an antelope.
     </node>
     <node name="7808">
       <cost>100</cost>
-      <description>A potion is on the floor.</description>
-      <gender>m</gender>
+      <description>Какое-то зелье (potion) пылится здесь.</description>
+      <gender>n</gender>
       <material>glass</material>
-      <name>potion</name>
-      <short_descr>a potion</short_descr>
+      <name>potion warding охранное зелье</name>
+      <short_descr>охранн|ое|ого|ому|ое|ым|ом зель|е|я|ю|е|ем|е</short_descr>
       <type name="potion">
         <level>5</level>
         <spell0>armor</spell0>
@@ -546,43 +582,45 @@ image of ... an antelope.
     </node>
     <node name="7809">
       <cost>180</cost>
-      <description>A potion is on the floor.</description>
-      <gender>m</gender>
+      <description>Какое-то зелье (potion) пылится здесь.</description>
+      <gender>n</gender>
       <level>8</level>
       <material>glass</material>
-      <name>potion</name>
-      <short_descr>a potion</short_descr>
+      <name>potion dark темное зелье</name>
+      <short_descr>темн|ое|ого|ому|ое|ым|ом зель|е|я|ю|е|ем|е</short_descr>
       <type name="potion">
         <level>10</level>
         <spell0>energy drain</spell0>
+        <spell1>dark shroud</spell1>
       </type>
       <wear_flags>take</wear_flags>
       <weight>10</weight>
     </node>
     <node name="7810">
       <cost>90</cost>
-      <description>A potion is on the floor.</description>
-      <gender>m</gender>
+      <description>Какое-то зелье (potion) пылится здесь.</description>
+      <gender>n</gender>
       <level>4</level>
       <material>glass</material>
-      <name>potion</name>
-      <short_descr>a potion</short_descr>
+      <name>potion clear чистое зелье</name>
+      <short_descr>чист|ое|ого|ому|ое|ым|ом зель|е|я|ю|е|ем|е</short_descr>
       <type name="potion">
-        <level>3</level>
+        <level>5</level>
         <spell0>detect hidden</spell0>
         <spell1>detect magic</spell1>
+        <spell2>detect invis</spell2>
       </type>
       <wear_flags>take</wear_flags>
       <weight>10</weight>
     </node>
     <node name="7811">
       <cost>180</cost>
-      <description>A potion is on the floor.</description>
-      <gender>m</gender>
+      <description>Какое-то зелье (potion) пылится здесь.</description>
+      <gender>n</gender>
       <level>6</level>
       <material>glass</material>
-      <name>potion</name>
-      <short_descr>a potion</short_descr>
+      <name>potion sparkling бурлящее зелье</name>
+      <short_descr>бурлящ|ее|его|ему|ее|им|ем зель|е|я|ю|е|ем|е</short_descr>
       <type name="potion">
         <level>50</level>
         <spell0>dispel affects</spell0>
@@ -594,103 +632,113 @@ image of ... an antelope.
     </node>
     <node name="7812">
       <cost>40</cost>
-      <description>A potion is on the floor.</description>
-      <gender>m</gender>
+      <description>Какое-то зелье (potion) пылится здесь.</description>
+      <gender>n</gender>
       <level>2</level>
       <material>glass</material>
-      <name>potion</name>
-      <short_descr>a potion</short_descr>
+      <name>potion light светлое зелье</name>
+      <short_descr>светл|ое|ого|ому|ое|ым|ом зель|е|я|ю|е|ем|е</short_descr>
       <type name="potion">
-        <level>1</level>
+        <level>10</level>
         <spell0>refresh</spell0>
         <spell1>protection evil</spell1>
+        <spell2>learning</spell2>
       </type>
       <wear_flags>take</wear_flags>
       <weight>10</weight>
     </node>
     <node name="7813">
       <cost>50</cost>
-      <description>A potion is on the floor.</description>
-      <gender>m</gender>
+      <description>Какое-то зелье (potion) пылится здесь.</description>
+      <gender>n</gender>
       <level>1</level>
       <material>glass</material>
-      <name>potion</name>
-      <short_descr>a potion</short_descr>
+      <name>potion murky мутное зелье</name>
+      <short_descr>мутн|ое|ого|ому|ое|ым|ом зель|е|я|ю|е|ем|е</short_descr>
       <type name="potion">
         <level>10</level>
         <spell0>sleep</spell0>
+        <spell1>sleep</spell1>
+        <spell2>haste</spell2>
+        <spell3>frenzy</spell3>
       </type>
       <wear_flags>take</wear_flags>
       <weight>10</weight>
     </node>
     <node name="7814">
       <cost>20</cost>
-      <description>A potion is on the floor.</description>
-      <gender>m</gender>
+      <description>Какое-то зелье (potion) пылится здесь.</description>
+      <gender>n</gender>
       <level>1</level>
       <material>glass</material>
-      <name>potion</name>
-      <short_descr>a potion</short_descr>
+      <name>potion holy священное зелье</name>
+      <short_descr>священн|ое|ого|ому|ое|ым|ом зель|е|я|ю|е|ем|е</short_descr>
       <type name="potion">
-        <level>3</level>
+        <level>10</level>
         <spell0>bless</spell0>
+        <spell1>remove curse</spell1>
+        <spell2>cure disease</spell2>
+        <spell3>cure poison</spell3>
       </type>
       <wear_flags>take</wear_flags>
       <weight>10</weight>
     </node>
     <node name="7815">
       <cost>30</cost>
-      <description>A potion is on the floor.</description>
-      <gender>m</gender>
+      <description>Какое-то зелье (potion) пылится здесь.</description>
+      <gender>n</gender>
       <level>5</level>
       <material>glass</material>
-      <name>potion</name>
-      <short_descr>a potion</short_descr>
+      <name>potion healing лечебное зелье</name>
+      <short_descr>лечебн|ое|ого|ому|ое|ым|ом зель|е|я|ю|е|ем|е</short_descr>
       <type name="potion">
-        <level>5</level>
-        <spell0>cure critical</spell0>
+        <level>10</level>
+        <spell0>superior heal</spell0>
       </type>
       <wear_flags>take</wear_flags>
       <weight>10</weight>
     </node>
     <node name="7816">
       <cost>120</cost>
-      <description>A potion is on the floor.</description>
-      <gender>m</gender>
+      <description>Какое-то зелье (potion) пылится здесь.</description>
+      <gender>n</gender>
       <level>6</level>
       <material>glass</material>
-      <name>potion</name>
-      <short_descr>a potion</short_descr>
+      <name>potion farsight орлиное зелье</name>
+      <short_descr>орлин|ое|ого|ому|ое|ым|ом зель|е|я|ю|е|ем|е</short_descr>
       <type name="potion">
-        <level>3</level>
+        <level>10</level>
         <spell0>farsight</spell0>
+        <spell1>fly</spell1>
+        <spell2>detect hidden</spell2>
       </type>
       <wear_flags>take</wear_flags>
       <weight>10</weight>
     </node>
     <node name="7817">
       <cost>160</cost>
-      <description>A scroll is on the floor.</description>
+      <description>Загадочный свиток (scroll) лежит тут.</description>
       <gender>m</gender>
       <level>5</level>
       <material>vellum</material>
-      <name>scroll</name>
-      <short_descr>a scroll</short_descr>
+      <name>scroll свиток</name>
+      <short_descr>свит|ок|ка|ку|ок|ком|ке</short_descr>
       <type name="scroll">
-        <level>5</level>
+        <level>10</level>
         <spell0>cure critical</spell0>
+        <spell1>superior heal</spell1>
       </type>
       <wear_flags>take</wear_flags>
       <weight>10</weight>
     </node>
     <node name="7818">
       <cost>590</cost>
-      <description>A scroll is on the floor.</description>
+      <description>Загадочный свиток (scroll) лежит тут.</description>
       <gender>m</gender>
       <level>8</level>
       <material>vellum</material>
-      <name>scroll</name>
-      <short_descr>a scroll</short_descr>
+      <name>scroll свиток</name>
+      <short_descr>свит|ок|ка|ку|ок|ком|ке</short_descr>
       <type name="scroll">
         <level>13</level>
         <spell0>enchant armor</spell0>
@@ -700,71 +748,77 @@ image of ... an antelope.
     </node>
     <node name="7819">
       <cost>100</cost>
-      <description>A scroll is on the floor.</description>
+      <description>Загадочный свиток (scroll) лежит тут.</description>
       <gender>m</gender>
       <material>vellum</material>
-      <name>scroll</name>
-      <short_descr>a scroll</short_descr>
+      <name>scroll свиток</name>
+      <short_descr>свит|ок|ка|ку|ок|ком|ке</short_descr>
       <type name="scroll">
         <level>5</level>
         <spell0>detect evil</spell0>
+        <spell1>detect good</spell1>
+        <spell2>detect magic</spell2>
       </type>
       <wear_flags>take</wear_flags>
       <weight>10</weight>
     </node>
     <node name="7820">
       <cost>100</cost>
-      <description>A scroll is on the floor.</description>
+      <description>Загадочный свиток (scroll) лежит тут.</description>
       <gender>m</gender>
       <material>vellum</material>
-      <name>scroll</name>
-      <short_descr>a scroll</short_descr>
+      <name>scroll свиток</name>
+      <short_descr>свит|ок|ка|ку|ок|ком|ке</short_descr>
       <type name="scroll">
         <level>5</level>
-        <spell0>create water</spell0>
+        <spell0>create spring</spell0>
+        <spell1>create food</spell1>
       </type>
       <wear_flags>take</wear_flags>
       <weight>10</weight>
     </node>
     <node name="7821">
       <cost>100</cost>
-      <description>A scroll is on the floor.</description>
+      <description>Загадочный свиток (scroll) лежит тут.</description>
       <gender>m</gender>
       <material>vellum</material>
-      <name>scroll</name>
-      <short_descr>a scroll</short_descr>
+      <name>scroll свиток</name>
+      <short_descr>свит|ок|ка|ку|ок|ком|ке</short_descr>
       <type name="scroll">
-        <level>5</level>
+        <level>8</level>
         <spell0>magic missile</spell0>
+        <spell1>magic missile</spell1>
       </type>
       <wear_flags>take</wear_flags>
       <weight>10</weight>
     </node>
     <node name="7822">
       <cost>100</cost>
-      <description>A scroll is on the floor.</description>
+      <description>Загадочный свиток (scroll) лежит тут.</description>
       <gender>m</gender>
       <material>vellum</material>
-      <name>scroll</name>
-      <short_descr>a scroll</short_descr>
+      <name>scroll свиток</name>
+      <short_descr>свит|ок|ка|ку|ок|ком|ке</short_descr>
       <type name="scroll">
         <level>5</level>
         <spell0>chill touch</spell0>
+        <spell1>burning hands</spell1>
       </type>
       <wear_flags>take</wear_flags>
       <weight>10</weight>
     </node>
     <node name="7823">
       <cost>360</cost>
-      <description>A scroll is on the floor.</description>
+      <description>Загадочный свиток (scroll) лежит тут.</description>
       <gender>m</gender>
       <level>11</level>
       <material>vellum</material>
-      <name>scroll</name>
-      <short_descr>a scroll</short_descr>
+      <name>scroll свиток</name>
+      <short_descr>свит|ок|ка|ку|ок|ком|ке</short_descr>
       <type name="scroll">
         <level>6</level>
         <spell0>heal</spell0>
+        <spell1>heal</spell1>
       </type>
       <wear_flags>take</wear_flags>
       <weight>10</weight>
@@ -779,12 +833,12 @@ image of ... an antelope.
         </node>
       </affects>
       <cost>110</cost>
-      <description>A quarterstaff is on the floor.</description>
+      <description>Боевой посох (quarterstaff) лежит на земле.</description>
       <gender>m</gender>
       <level>14</level>
       <material>wood</material>
-      <name>quarterstaff staff two-handed</name>
-      <short_descr>a quarterstaff</short_descr>
+      <name>quarterstaff staff two-handed боевой посох</name>
+      <short_descr>боев|ой|ого|ому|ой|ым|ом посох||а|у||ом|е</short_descr>
       <type name="weapon">
         <diceNumber>4</diceNumber>
         <diceType>7</diceType>
@@ -798,9 +852,8 @@ image of ... an antelope.
   </objects>
   <rooms>
     <node name="7800">
-      <description>You are on a path away from the Plains of Ofcol.  The path doesn&apos;t look well
-tread, but it is relatively well kept.  To the south are the Plains of Ofcol,
-while this path leads north.
+      <description>Ты бредешь по узкой дорожке, уходящей на север от великих Равнин. Тропа довольно
+узкая, но на удивление хорошо ухожена -- похоже, за ней следят и убирают мусор.
 </description>
       <exits>
         <node name="north">
@@ -813,17 +866,14 @@ while this path leads north.
 </description>
           <target>323</target>
         </node>
-        <node name="west">
-          <target>8829</target>
-        </node>
       </exits>
-      <name>A Path from the Plains</name>
+      <name>Равнинная тропа</name>
       <sector>field</sector>
     </node>
     <node name="7801">
-      <description>You are on the path away from the Plains of Ofcol.  The main path leads north
-to an overlook and south back toward the Plains of Ofcol.  Western and eastern
-side paths can be seen, probably deer trails by the width of them.
+      <description>Дорога с Равнин здесь разветвляется, и ты оказываешься на небольшом перепутье.
+На севере ты видишь широкий уступ над устьем долины. На запад и восток убегают
+тонкие тропки, похоже, протоптанные оленями или другой живностью.
 </description>
       <exits>
         <node name="east">
@@ -847,13 +897,19 @@ side paths can be seen, probably deer trails by the width of them.
           <target>7802</target>
         </node>
       </exits>
-      <name>Along the Path</name>
+      <name>На пути в Долину</name>
       <sector>field</sector>
     </node>
     <node name="7802">
-      <description>This small deer trail leads north and east.
+      <description>Узкая звериная тропинка ведет на север и восток.
+У подножия холма виднеется обширная зеленая поляна. Вниз по склону холма к ней
+спускается тонкая тропка.
 </description>
       <exits>
+        <node name="down">
+          <key>0</key>
+          <target>33307</target>
+        </node>
         <node name="east">
           <description>The main path is to the east.
 </description>
@@ -865,11 +921,11 @@ side paths can be seen, probably deer trails by the width of them.
           <target>7867</target>
         </node>
       </exits>
-      <name>A Small Trail</name>
+      <name>Звериная тропинка</name>
       <sector>field</sector>
     </node>
     <node name="7803">
-      <description>This small deer trail leads north and west.
+      <description>Узкая звериная тропинка ведет с севера на запад.
 </description>
       <exits>
         <node name="north">
@@ -883,33 +939,31 @@ side paths can be seen, probably deer trails by the width of them.
           <target>7801</target>
         </node>
       </exits>
-      <name>A Small Trail</name>
+      <name>Звериная тропинка</name>
       <sector>field</sector>
     </node>
     <node name="7804">
-      <description>You are above a large valley.  Below you, you see humanoid forms wandering
-around the valley.  Rich green grass covers the valley, with some small trees
-dotting the landscape.  To the south is the trail back toward Ofcol.
+      <description>Тропа обрывается на уступе, с которого открывается прекрасный вид на уютную
+зеленую долину, зажатую между поросшими высокой травой холмами. То там, то сям 
+ты замечаешь фигурки жителей, бредущих по своим делам. 
+На юг ведет дорога назад на Равнины.
 </description>
       <exits>
         <node name="down">
-          <description>You see the entrance to the valley.
-</description>
           <target>7805</target>
         </node>
         <node name="south">
-          <description>You see the path back toward Ofcol.
-</description>
           <target>7801</target>
         </node>
       </exits>
-      <name>The Overlook</name>
+      <name>Уступ над Долиной</name>
       <sector>field</sector>
     </node>
     <node name="7805">
-      <description>You are at the entrance to the Valley of the Elves.  Elves stare at your
-intrusion, but most are too busy to bother with you.  The valley spreads to
-the north, while enlarging toward the east and west.
+      <description>Тропа спускается с холма и расширяется, проходя между двумя древними менгирами,
+образующими будто бы ворота в Долину Эльфов. Жители недоверчиво косятся в твою
+сторону, но, впрочем, тревоги пока не поднимают. Долина продолжается на север,
+запад и восток.
 </description>
       <exits>
         <node name="east">
@@ -933,7 +987,7 @@ the north, while enlarging toward the east and west.
           <target>7806</target>
         </node>
       </exits>
-      <name>The Entrance to the Valley of the Elves</name>
+      <name>Проход в Долину Эльфов</name>
       <resets>
         <mob limit="6" maxHere="1" vnum="7801"/>
         <equip to="wield" vnum="7802"/>
@@ -941,8 +995,9 @@ the north, while enlarging toward the east and west.
       <sector>field</sector>
     </node>
     <node name="7806">
-      <description>You are at the edge of the Valley of the Elves.  High above you, you see a small
-trail circling the entire valley.  The valley continues north and east.
+      <description>Ты стоишь на краю Долины Эльфов, в тени огромных отвесных холмов, опоясывающих
+ее со всех сторон. Задрав голову, ты замечаешь тонкую тропку, вьющуюся по
+склонам высоко вверху.
 </description>
       <exits>
         <node name="east">
@@ -956,15 +1011,16 @@ trail circling the entire valley.  The valley continues north and east.
           <target>7809</target>
         </node>
       </exits>
-      <name>The Edge of the Valley</name>
+      <name>На краю Долины</name>
       <resets>
         <mob limit="6" maxHere="1" vnum="7800"/>
       </resets>
       <sector>field</sector>
     </node>
     <node name="7807">
-      <description>You are at the edge of the Valley of the Elves.  High above you, you see a small
-trail circling the entire valley.  The valley continues north and west.
+      <description>Ты стоишь на краю Долины Эльфов, в тени огромных отвесных холмов, опоясывающих
+ее со всех сторон. Задрав голову, ты замечаешь тонкую тропку, вьющуюся по
+склонам высоко вверху.
 </description>
       <exits>
         <node name="north">
@@ -978,15 +1034,16 @@ trail circling the entire valley.  The valley continues north and west.
           <target>7805</target>
         </node>
       </exits>
-      <name>The Edge of the Valley</name>
+      <name>На краю Долины</name>
       <resets>
         <mob limit="6" maxHere="1" vnum="7800"/>
       </resets>
       <sector>field</sector>
     </node>
     <node name="7808">
-      <description>You are at the edge of the Valley of the Elves.  High above you, you see a small
-trail circling the entire valley.  The valley continues north and east.
+      <description>Ты стоишь на краю Долины Эльфов, в тени огромных отвесных холмов, опоясывающих
+ее со всех сторон. Задрав голову, ты замечаешь тонкую тропку, вьющуюся по
+склонам высоко вверху.
 </description>
       <exits>
         <node name="east">
@@ -1000,11 +1057,13 @@ trail circling the entire valley.  The valley continues north and east.
           <target>7813</target>
         </node>
       </exits>
-      <name>The Edge of the Valley</name>
+      <name>На краю Долины</name>
       <sector>field</sector>
     </node>
     <node name="7809">
-      <description>You are in the Valley of the Elves.  The valley continues in all directions.
+      <description>Ты бредешь по просторной травяной долине, населенной эльфийским народом.
+Когда-то в давние времена их племена были вытеснены людьми и дварфами, и эльфам
+пришлось переселиться на север, в эту укромную Долину среди высоких холмов.
 </description>
       <exits>
         <node name="east">
@@ -1028,12 +1087,14 @@ trail circling the entire valley.  The valley continues north and east.
           <target>7808</target>
         </node>
       </exits>
-      <name>The Valley of the Elves</name>
+      <name>В Долине Эльфов</name>
       <sector>field</sector>
     </node>
     <node name="7810">
-      <description>You are in the Valley of the Elves.  The valley continues in all directions.
-The entrance to the valley is towards the south.
+      <description>Ты бредешь по просторной травяной долине, населенной эльфийским народом.
+Когда-то в давние времена их племена были вытеснены людьми и дварфами, и эльфам
+пришлось переселиться на север, в эту укромную Долину среди высоких холмов.
+На юге ты видишь два огромных менгира, будто образующие ворота в Долину.
 </description>
       <exits>
         <node name="east">
@@ -1057,11 +1118,13 @@ The entrance to the valley is towards the south.
           <target>7809</target>
         </node>
       </exits>
-      <name>The Valley of the Elves</name>
+      <name>В Долине Эльфов</name>
       <sector>field</sector>
     </node>
     <node name="7811">
-      <description>You are in the Valley of the Elves.  The valley continues in all directions.
+      <description>Ты бредешь по просторной травяной долине, населенной эльфийским народом.
+Когда-то в давние времена их племена были вытеснены людьми и дварфами, и эльфам
+пришлось переселиться на север, в эту укромную Долину среди высоких холмов.
 </description>
       <exits>
         <node name="east">
@@ -1085,7 +1148,7 @@ The entrance to the valley is towards the south.
           <target>7810</target>
         </node>
       </exits>
-      <name>The Valley of the Elves</name>
+      <name>В Долине Эльфов</name>
       <resets>
         <mob limit="6" maxHere="1" vnum="7802"/>
         <equip to="wield" vnum="7802"/>
@@ -1093,8 +1156,9 @@ The entrance to the valley is towards the south.
       <sector>field</sector>
     </node>
     <node name="7812">
-      <description>You are at the edge of the Valley of the Elves.  High above you, you see a small
-trail circling the entire valley.  The valley continues north and west.
+      <description>Ты стоишь на краю Долины Эльфов, в тени огромных отвесных холмов, опоясывающих
+ее со всех сторон. Задрав голову, ты замечаешь тонкую тропку, вьющуюся по
+склонам высоко вверху.
 </description>
       <exits>
         <node name="north">
@@ -1108,13 +1172,13 @@ trail circling the entire valley.  The valley continues north and west.
           <target>7811</target>
         </node>
       </exits>
-      <name>The Edge of the Valley</name>
+      <name>На краю Долины</name>
       <sector>field</sector>
     </node>
     <node name="7813">
-      <description>You are at the edge of the Valley of the Elves.  A steep trail leads up toward
-the deer trail circling the valley.  The valley continues north, south, and
-east.
+      <description>Ты стоишь на краю Долины Эльфов, в тени огромных отвесных холмов, опоясывающих
+ее со всех сторон. Задрав голову, ты замечаешь тонкую тропку, вьющуюся по
+склонам высоко вверху. В этом месте на нее, кажется, можно взобраться.
 </description>
       <exits>
         <node name="east">
@@ -1138,11 +1202,13 @@ east.
           <target>7863</target>
         </node>
       </exits>
-      <name>The Edge of the Valley</name>
+      <name>На краю Долины</name>
       <sector>field</sector>
     </node>
     <node name="7814">
-      <description>You are in the Valley of the Elves.  The valley continues in all directions.
+      <description>Ты бредешь по просторной травяной долине, населенной эльфийским народом.
+Обитателей почти не видно -- они не особо гостеприимны и не очень любят чужаков.
+Впридачу, их осталось не так уж и много...
 </description>
       <exits>
         <node name="east">
@@ -1166,11 +1232,13 @@ east.
           <target>7813</target>
         </node>
       </exits>
-      <name>The Valley of the Elves</name>
+      <name>В Долине Эльфов</name>
       <sector>field</sector>
     </node>
     <node name="7815">
-      <description>You are in the Valley of the Elves.  The valley continues in all directions.
+      <description>Ты бредешь по просторной травяной долине, населенной эльфийским народом.
+Обитателей почти не видно -- они не особо гостеприимны и не очень любят чужаков.
+Впридачу, их осталось не так уж и много...
 </description>
       <exits>
         <node name="east">
@@ -1194,14 +1262,16 @@ east.
           <target>7814</target>
         </node>
       </exits>
-      <name>The Valley of the Elves</name>
+      <name>В Долине Эльфов</name>
       <resets>
         <mob limit="3" maxHere="1" vnum="7814"/>
       </resets>
       <sector>field</sector>
     </node>
     <node name="7816">
-      <description>You are in the Valley of the Elves.  The valley continues in all directions.
+      <description>Ты бредешь по просторной травяной долине, населенной эльфийским народом.
+Обитателей почти не видно -- они не особо гостеприимны и не очень любят чужаков.
+Впридачу, их осталось не так уж и много...
 </description>
       <exits>
         <node name="east">
@@ -1225,7 +1295,7 @@ east.
           <target>7815</target>
         </node>
       </exits>
-      <name>The Valley of the Elves</name>
+      <name>В Долине Эльфов</name>
       <resets>
         <mob limit="6" maxHere="1" vnum="7801"/>
         <equip to="wield" vnum="7802"/>
@@ -1233,9 +1303,9 @@ east.
       <sector>field</sector>
     </node>
     <node name="7817">
-      <description>You are at the edge of the Valley of the Elves.  A steep trail leads up toward
-the deer trail circling the valley.  The valley continues north, south, and
-west.
+      <description>Ты стоишь на краю Долины Эльфов, в тени огромных отвесных холмов, опоясывающих
+ее со всех сторон. Задрав голову, ты замечаешь тонкую тропку, вьющуюся по
+склонам высоко вверху. В этом месте на нее, кажется, можно взобраться.
 </description>
       <exits>
         <node name="north">
@@ -1259,12 +1329,13 @@ west.
           <target>7816</target>
         </node>
       </exits>
-      <name>The Edge of the Valley</name>
+      <name>На краю Долины</name>
       <sector>field</sector>
     </node>
     <node name="7818">
-      <description>You are at the edge of the Valley of the Elves.  High above you, you see a
-small trail circling the entire valley.  The valley continues south and east.
+      <description>Ты стоишь на краю Долины Эльфов, в тени огромных отвесных холмов, опоясывающих
+ее со всех сторон. Задрав голову, ты замечаешь тонкую тропку, вьющуюся по
+склонам высоко вверху.
 </description>
       <exits>
         <node name="east">
@@ -1278,7 +1349,7 @@ small trail circling the entire valley.  The valley continues south and east.
           <target>7813</target>
         </node>
       </exits>
-      <name>The Edge of the Valley</name>
+      <name>На краю Долины</name>
       <resets>
         <mob limit="6" maxHere="1" vnum="7801"/>
         <equip to="wield" vnum="7802"/>
@@ -1287,7 +1358,9 @@ small trail circling the entire valley.  The valley continues south and east.
       <sector>field</sector>
     </node>
     <node name="7819">
-      <description>You are in the Valley of the Elves.  The valley continues in all directions.
+      <description>Ты бредешь по просторной травяной долине, населенной эльфийским народом.
+Когда-то в давние времена их племена были вытеснены людьми и дварфами, и эльфам
+пришлось переселиться на север, в эту укромную Долину среди высоких холмов.
 </description>
       <exits>
         <node name="east">
@@ -1311,11 +1384,13 @@ small trail circling the entire valley.  The valley continues south and east.
           <target>7818</target>
         </node>
       </exits>
-      <name>The Valley of the Elves</name>
+      <name>В Долине Эльфов</name>
       <sector>field</sector>
     </node>
     <node name="7820">
-      <description>You are in the Valley of the Elves.  The valley continues in all directions.
+      <description>Ты бредешь по просторной травяной долине, населенной эльфийским народом.
+Когда-то в давние времена их племена были вытеснены людьми и дварфами, и эльфам
+пришлось переселиться на север, в эту укромную Долину среди высоких холмов.
 </description>
       <exits>
         <node name="east">
@@ -1339,7 +1414,7 @@ small trail circling the entire valley.  The valley continues south and east.
           <target>7819</target>
         </node>
       </exits>
-      <name>The Valley of the Elves</name>
+      <name>В Долине Эльфов</name>
       <resets>
         <mob limit="6" maxHere="1" vnum="7801"/>
         <equip to="wield" vnum="7802"/>
@@ -1349,7 +1424,9 @@ small trail circling the entire valley.  The valley continues south and east.
       <sector>field</sector>
     </node>
     <node name="7821">
-      <description>You are in the Valley of the Elves.  The valley continues in all directions.
+      <description>Ты бредешь по просторной травяной долине, населенной эльфийским народом.
+Когда-то в давние времена их племена были вытеснены людьми и дварфами, и эльфам
+пришлось переселиться на север, в эту укромную Долину среди высоких холмов.
 </description>
       <exits>
         <node name="east">
@@ -1373,12 +1450,13 @@ small trail circling the entire valley.  The valley continues south and east.
           <target>7820</target>
         </node>
       </exits>
-      <name>The Valley of the Elves</name>
+      <name>В Долине Эльфов</name>
       <sector>field</sector>
     </node>
     <node name="7822">
-      <description>You are at the edge of the Valley of the Elves.  High above you, you see a small
-trail circling the entire valley.  The valley continues south and west.
+      <description>Ты стоишь на краю Долины Эльфов, в тени огромных отвесных холмов, опоясывающих
+ее со всех сторон. Задрав голову, ты замечаешь тонкую тропку, вьющуюся по
+склонам высоко вверху.
 </description>
       <exits>
         <node name="south">
@@ -1392,12 +1470,13 @@ trail circling the entire valley.  The valley continues south and west.
           <target>7821</target>
         </node>
       </exits>
-      <name>The Edge of the Valley</name>
+      <name>На краю Долины</name>
       <sector>field</sector>
     </node>
     <node name="7823">
-      <description>You are at the edge of the Valley of the Elves.  High above you, you see a small
-trail circling the entire valley.  The valley continues south and east.
+      <description>Ты стоишь на краю Долины Эльфов, в тени огромных отвесных холмов, опоясывающих
+ее со всех сторон. Задрав голову, ты замечаешь тонкую тропку, вьющуюся по
+склонам высоко вверху.
 </description>
       <exits>
         <node name="east">
@@ -1411,15 +1490,16 @@ trail circling the entire valley.  The valley continues south and east.
           <target>7819</target>
         </node>
       </exits>
-      <name>The Edge of the Valley</name>
+      <name>На краю Долины</name>
       <resets>
         <mob limit="6" maxHere="1" vnum="7800"/>
       </resets>
       <sector>field</sector>
     </node>
     <node name="7824">
-      <description>You are in the Valley of the Elves.  The valley continues in all directions.
-To the north, a small, narrow trail leads away from the valley.
+      <description>Ты стоишь на краю Долины Эльфов, в тени огромных отвесных холмов, опоясывающих
+ее со всех сторон. Долина продолжается на юг, а на север, прячась в тени холмов,
+уходит тонкая тропа.
 </description>
       <exits>
         <node name="east">
@@ -1443,12 +1523,13 @@ To the north, a small, narrow trail leads away from the valley.
           <target>7823</target>
         </node>
       </exits>
-      <name>The Edge of the Valley</name>
+      <name>В конце Долины</name>
       <sector>field</sector>
     </node>
     <node name="7825">
-      <description>You are at the edge of the Valley of the Elves.  High above you, you see a small
-trail circling the entire valley.  The valley continues south and west.
+      <description>Ты стоишь на краю Долины Эльфов, в тени огромных отвесных холмов, опоясывающих
+ее со всех сторон. Задрав голову, ты замечаешь тонкую тропку, вьющуюся по
+склонам высоко вверху.
 </description>
       <exits>
         <node name="south">
@@ -1462,15 +1543,18 @@ trail circling the entire valley.  The valley continues south and west.
           <target>7824</target>
         </node>
       </exits>
-      <name>The Edge of the Valley</name>
+      <name>На краю Долины</name>
       <resets>
         <mob limit="3" maxHere="1" vnum="7814"/>
       </resets>
       <sector>field</sector>
     </node>
     <node name="7826">
-      <description>You are on a narrow trail leading away from the Valley of the Elves.  This
-trail leads north and south.  A rope ladder leads up to a rope bridge.
+      <description>Ты идешь по узкой тропе, ведущей на север из Долины Эльфов. По сторонам тропы
+возвышаются отвесные стены холмов, образуя что-то вроде небольшого каньона.
+Наверху, на головокружительной высоте ты замечаешь тонкий веревочный мостик,
+переброшенный между холмами. А на стене ты видишь веревочную лестницу, ведущую
+наверх, к мосту.
 </description>
       <exits>
         <node name="north">
@@ -1489,13 +1573,13 @@ trail leads north and south.  A rope ladder leads up to a rope bridge.
           <target>7858</target>
         </node>
       </exits>
-      <name>A Trail Leading from the Valley</name>
+      <name>На тонкой тропе из Долины</name>
       <sector>field</sector>
     </node>
     <node name="7827">
-      <description>You are on the trail away from the Valley of the Elves.  The hills around you
-keep this trail narrow.  The trail continues east, south, west and north.
-You see the the field beyond the north trail.
+      <description>Ты стоишь на перепутье узких тропинок к северу от Долины Эльфов. Незаметные
+дорожки уходят на запад и восток, петляя между высокими тенистыми холмами.
+На север уходит широкая дорога, ведущая в Аркадию.
 </description>
       <exits>
         <node name="east">
@@ -1519,7 +1603,7 @@ You see the the field beyond the north trail.
           <target>7868</target>
         </node>
       </exits>
-      <name>Along the Trail</name>
+      <name>На перекресте тропинок</name>
       <resets>
         <mob limit="5" maxHere="1" vnum="7805"/>
         <equip to="feet" vnum="7801"/>
@@ -1529,8 +1613,9 @@ You see the the field beyond the north trail.
       <sector>field</sector>
     </node>
     <node name="7828">
-      <description>You are on the trail away from the Valley of the Elves.  The hills around you
-keep this trail narrow.  The trail continues north and back west.
+      <description>Ты идешь по петляющей дорожке, которая уводит тебя все дальше от основной 
+долины. Тропинка становится все уже и уже, забираясь вглубь холмов. Интересно,
+куда она ведет?..
 </description>
       <exits>
         <node name="north">
@@ -1544,13 +1629,13 @@ keep this trail narrow.  The trail continues north and back west.
           <target>7827</target>
         </node>
       </exits>
-      <name>A Bend in the Trail</name>
+      <name>Поворот тропинки</name>
       <sector>field</sector>
     </node>
     <node name="7829">
-      <description>You are in another valley within these hills. To the north, you can see a
-building, and to the south you see the trail away from this valley.  The
-west and east paths surround this building.
+      <description>Ты оказываешься в еще одной долине, находящейся в этих холмах. На севере ты 
+видишь здание, а на юге виден путь из этой долины. Западная и восточная дорожки 
+ведут к зданию. 
 </description>
       <exits>
         <node name="east">
@@ -1577,12 +1662,12 @@ west and east paths surround this building.
           <target>7830</target>
         </node>
       </exits>
-      <name>A Smaller Valley</name>
+      <name>Маленькая долина</name>
       <sector>field</sector>
     </node>
     <node name="7830">
-      <description>You are on the trail in the Valley of the Elves.  This trail leads north and
-east.  To the north-east is a building.
+      <description>Ты бредешь по узкой тропе, затерявшейся среди холмов к северу от Долины Эльфов.
+Тропа петляет по склонам, огибая небольшое здание в низине у подножия.
 </description>
       <exits>
         <node name="east">
@@ -1596,15 +1681,15 @@ east.  To the north-east is a building.
           <target>7832</target>
         </node>
       </exits>
-      <name>A Trail in the Valley</name>
+      <name>Узкая тропка в Долине</name>
       <resets>
         <mob limit="3" maxHere="1" vnum="7813"/>
       </resets>
       <sector>field</sector>
     </node>
     <node name="7831">
-      <description>You are on the trail in the Valley of the Elves.  This trail leads west and
-east.  To the north is a building.
+      <description>Ты бредешь по узкой тропе, затерявшейся среди холмов к северу от Долины Эльфов.
+Тропа петляет по склонам, огибая небольшое здание в низине у подножия.
 </description>
       <exits>
         <node name="east">
@@ -1618,12 +1703,12 @@ east.  To the north is a building.
           <target>7829</target>
         </node>
       </exits>
-      <name>A Trail in the Valley</name>
+      <name>Узкая тропка в Долине</name>
       <sector>field</sector>
     </node>
     <node name="7832">
-      <description>You are on the trail in the Valley of the Elves.  This trail leads north and
-south.  To the east is a building.
+      <description>Ты бредешь по узкой тропе, затерявшейся среди холмов к северу от Долины Эльфов.
+Тропа петляет по склонам, огибая небольшое здание в низине у подножия.
 </description>
       <exits>
         <node name="north">
@@ -1637,12 +1722,12 @@ south.  To the east is a building.
           <target>7830</target>
         </node>
       </exits>
-      <name>A Trail in the Valley</name>
+      <name>Узкая тропка в Долине</name>
       <sector>field</sector>
     </node>
     <node name="7833">
-      <description>You are on the trail in the Valley of the Elves.  This trail leads north and
-west.  To the north-west is a building.
+      <description>Ты бредешь по узкой тропе, затерявшейся среди холмов к северу от Долины Эльфов.
+Тропа петляет по склонам, огибая небольшое здание в низине у подножия.
 </description>
       <exits>
         <node name="north">
@@ -1656,15 +1741,16 @@ west.  To the north-west is a building.
           <target>7831</target>
         </node>
       </exits>
-      <name>A Trail in the Valley</name>
+      <name>Узкая тропка в Долине</name>
       <resets>
         <mob limit="6" maxHere="1" vnum="7800"/>
       </resets>
       <sector>field</sector>
     </node>
     <node name="7834">
-      <description>You are in the home of the valley elves.  The building continues to the north
-and the east, and the exit is to the south.
+      <description>Ты оказываешь в аккуратном домике, построенном эльфами Долины. Здешние жители не
+настолько прекрасные мастера как их собратья, сидхэ из Аркадии, но тем не менее
+домик очень изящен и выглядит весьма удобным для жизни.
 </description>
       <exits>
         <node name="east">
@@ -1687,14 +1773,14 @@ and the east, and the exit is to the south.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>The Elf Home</name>
+      <name>Эльфийское жилище</name>
       <sector>inside</sector>
     </node>
     <node name="7835">
-      <description>You are in a community kitchen for this valley elven home.  Pots and pans line
-the walls, along with shelves filled with many foodstuffs.  A big oven is to one
-side, and you can smell elfcakes being baked.
-There is a doorway to the north and one to the west.
+      <description>Кастрюли и сковородки аккуратно развешены по стенам, стопки тарелок и чашек
+возвышаются на полках. У стены можно заметить большую печь, из которой
+умопомрачительно пахнет чем-то вкусным. 
+Деревянные двери ведут на запад и на север.
 </description>
       <exits>
         <node name="north">
@@ -1709,15 +1795,15 @@ There is a doorway to the north and one to the west.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>The Kitchen</name>
+      <name>Кухня</name>
       <resets>
         <mob limit="5" maxHere="1" vnum="7806"/>
       </resets>
       <sector>inside</sector>
     </node>
     <node name="7836">
-      <description>You are on the trail in the Valley of the Elves.  This trail leads north and
-south.  To the west is a building.
+      <description>Ты бредешь по узкой тропе, затерявшейся среди холмов к северу от Долины Эльфов.
+Тропа петляет по склонам, огибая небольшое здание в низине у подножия.
 </description>
       <exits>
         <node name="north">
@@ -1731,12 +1817,12 @@ south.  To the west is a building.
           <target>7833</target>
         </node>
       </exits>
-      <name>A Trail in the Valley</name>
+      <name>Узкая тропка в Долине</name>
       <sector>field</sector>
     </node>
     <node name="7837">
-      <description>You are on the trail in the Valley of the Elves.  This trail leads north and
-south.  To the east is a building.
+      <description>Ты бредешь по узкой тропе, затерявшейся среди холмов к северу от Долины Эльфов.
+Тропа петляет по склонам, огибая небольшое здание в низине у подножия.
 </description>
       <exits>
         <node name="north">
@@ -1750,16 +1836,16 @@ south.  To the east is a building.
           <target>7832</target>
         </node>
       </exits>
-      <name>A Trail in the Valley</name>
+      <name>Узкая тропка в Долине</name>
       <resets>
         <mob limit="6" maxHere="1" vnum="7800"/>
       </resets>
       <sector>field</sector>
     </node>
     <node name="7838">
-      <description>You are in the living room of the elven home.  Mats cover the floor, and a
-on a table is a bowl full of fruits.  Through the window you can see the
-valley, with its wild flowers and tall, green grasses.
+      <description>Сквозь резные окна в комнату врывается солнечный свет, освещая все самые темные
+уголки. Узорчатые коврики на полах, на столах лежат миски с фруктами и вазы с
+полевыми цветами. Из окон видны высокие холмы, опоясывающие эту укрытую низину.
 </description>
       <exits>
         <node name="east">
@@ -1774,16 +1860,16 @@ valley, with its wild flowers and tall, green grasses.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>The Living Room</name>
+      <name>Гостиная</name>
       <resets>
         <mob limit="5" maxHere="1" vnum="7806"/>
       </resets>
       <sector>inside</sector>
     </node>
     <node name="7839">
-      <description>You are in the storage room of the elven home.  Sacks of flour cover one side,
-and cleaning accessories cover the other side.  You find nothing of use here.
-A staircase leads up.
+      <description>Похоже ты попал{Sfа{Sx в кладовку. В одном углу лежат мешки с мукой, а в другом ты
+видишь швабры, ведра, метлы и прочие приспособления для уборки.
+Вряд ли тут найдется что-то интересное. Лучше подняться по лестнице наверх. 
 </description>
       <exits>
         <node name="south">
@@ -1803,15 +1889,15 @@ A staircase leads up.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>The Storage Room</name>
+      <name>Кладовка</name>
       <resets>
         <mob limit="5" maxHere="1" vnum="7806"/>
       </resets>
       <sector>inside</sector>
     </node>
     <node name="7840">
-      <description>You are on the trail in the Valley of the Elves.  This trail leads north and
-south.  To the west is a building.
+      <description>Ты бредешь по узкой тропе, затерявшейся среди холмов к северу от Долины Эльфов.
+Тропа петляет по склонам, огибая небольшое здание в низине у подножия.
 </description>
       <exits>
         <node name="north">
@@ -1825,12 +1911,12 @@ south.  To the west is a building.
           <target>7836</target>
         </node>
       </exits>
-      <name>A Trail in the Valley</name>
+      <name>Узкая тропка в Долине</name>
       <sector>field</sector>
     </node>
     <node name="7841">
-      <description>You are on the trail in the Valley of the Elves.  This trail leads south and
-east.  To the south-east is a building.
+      <description>Ты бредешь по узкой тропе, затерявшейся среди холмов к северу от Долины Эльфов.
+Тропа петляет по склонам, огибая небольшое здание в низине у подножия.
 </description>
       <exits>
         <node name="east">
@@ -1844,12 +1930,12 @@ east.  To the south-east is a building.
           <target>7837</target>
         </node>
       </exits>
-      <name>A Trail in the Valley</name>
+      <name>Узкая тропка в Долине</name>
       <sector>field</sector>
     </node>
     <node name="7842">
-      <description>You are on the trail in the Valley of the Elves.  This trail leads west and
-east.  To the south is a building.
+      <description>Ты бредешь по узкой тропе, затерявшейся среди холмов к северу от Долины Эльфов.
+Тропа петляет по склонам, огибая небольшое здание в низине у подножия.
 </description>
       <exits>
         <node name="east">
@@ -1863,7 +1949,7 @@ east.  To the south is a building.
           <target>7841</target>
         </node>
       </exits>
-      <name>A Trail in the Valley</name>
+      <name>Узкая тропка в Долине</name>
       <resets>
         <mob limit="6" maxHere="1" vnum="7802"/>
         <equip to="wield" vnum="7802"/>
@@ -1875,8 +1961,8 @@ east.  To the south is a building.
       <sector>field</sector>
     </node>
     <node name="7843">
-      <description>You are on the trail in the Valley of the Elves.  This trail leads east and
-west.  To the south is a building.
+      <description>Ты бредешь по узкой тропе, затерявшейся среди холмов к северу от Долины Эльфов.
+Тропа петляет по склонам, огибая небольшое здание в низине у подножия.
 </description>
       <exits>
         <node name="east">
@@ -1890,12 +1976,12 @@ west.  To the south is a building.
           <target>7842</target>
         </node>
       </exits>
-      <name>A Trail in the Valley</name>
+      <name>Узкая тропка в Долине</name>
       <sector>field</sector>
     </node>
     <node name="7844">
-      <description>You are on the trail in the Valley of the Elves.  This trail leads south and
-west.  To the south-west is a building.
+      <description>Ты бредешь по узкой тропе, затерявшейся среди холмов к северу от Долины Эльфов.
+Тропа петляет по склонам, огибая небольшое здание в низине у подножия.
 </description>
       <exits>
         <node name="south">
@@ -1909,7 +1995,7 @@ west.  To the south-west is a building.
           <target>7843</target>
         </node>
       </exits>
-      <name>A Trail in the Valley</name>
+      <name>Узкая тропка в Долине</name>
       <resets>
         <mob limit="6" maxHere="1" vnum="7801"/>
         <equip to="wield" vnum="7802"/>
@@ -1917,9 +2003,9 @@ west.  To the south-west is a building.
       <sector>field</sector>
     </node>
     <node name="7845">
-      <description>You are in the room of the valley elf elders.  Books written in strange
-languages line the numerous shelves, and scrolls cover a table.  There is a
-smooth spheric object in the center of the room.
+      <description>Кабинет эльфийских старейшин небольшой, но уютный. Мягкие кресла, стол и полки,
+заставленные книгами на неизвестных языках. В центре комнаты находится гладкая
+до зеркального блеска сфера. 
 </description>
       <exits>
         <node name="east">
@@ -1941,7 +2027,7 @@ smooth spheric object in the center of the room.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>The Elders&apos; Room</name>
+      <name>Кабинет старейшин</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="7807"/>
         <give vnum="7804"/>
@@ -1954,7 +2040,8 @@ smooth spheric object in the center of the room.
       <sector>inside</sector>
     </node>
     <node name="7846">
-      <description>You are in a storage room.  Many useless (to you) items fill this room.
+      <description>Полки и стеллажи, нагроможденные разным хламов, тянутся во все стороны, занимают
+почти все свободное пространство в комнате, кроме узких проходов между ними.
 </description>
       <exits>
         <node name="north">
@@ -1977,7 +2064,7 @@ smooth spheric object in the center of the room.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>The Storage Room</name>
+      <name>Кладовка</name>
       <resets>
         <drop vnum="7809"/>
         <drop vnum="7823"/>
@@ -1990,9 +2077,9 @@ smooth spheric object in the center of the room.
       <sector>inside</sector>
     </node>
     <node name="7847">
-      <description>You are in the sleeping quarters of the valley elves.  Cots line the floor,
-with two windows showing a view of the valley.  Books in strange languages
-line the shelves, but nothing of interest is here.
+      <description>Ты находишься в большой спальне, рассчитанную на несколько эльфов. Кровати
+расставленные у стен, полки с книгами на непонятном языке и два больших окна, из
+которых открывается вид на долину. 
 </description>
       <exits>
         <node name="east">
@@ -2013,7 +2100,7 @@ line the shelves, but nothing of interest is here.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>The Sleeping Quarters</name>
+      <name>Большая спальня</name>
       <resets>
         <mob limit="5" maxHere="2" vnum="7806"/>
         <mob limit="5" maxHere="2" vnum="7806"/>
@@ -2021,10 +2108,9 @@ line the shelves, but nothing of interest is here.
       <sector>inside</sector>
     </node>
     <node name="7848">
-      <description>You are in the study room of the valley elves.  Comfortable mats are on the
-floor, and musical instruments are neatly stacked on shelves.  Books in
-strange languages line some other elves.  A stairway leads down to the
-first floor.
+      <description>Учебная комната эльфов. Удобные коврики и подушки для сидения на полу,
+музыкальные инструменты аккуратно разложены на полках. На стеллажах замечаешь
+книги на неизвестных языках.  Деревянная лестница ведет вниз на первый этаж. 
 </description>
       <exits>
         <node name="down">
@@ -2051,7 +2137,7 @@ first floor.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>Study</name>
+      <name>Учебная комната</name>
       <resets>
         <mob limit="4" maxHere="1" vnum="7803"/>
         <equip to="body" vnum="7800"/>
@@ -2067,8 +2153,9 @@ first floor.
       <sector>inside</sector>
     </node>
     <node name="7849">
-      <description>You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
-you can see the valley, filled with wild flowers and tall, green grasses.
+      <description>Ты стоишь на узкой тропинке на краю Долины Эльфов. Есть время немного
+полюбоваться раскинувшимся перед тобой пейзажем. Высокая изумрудно-зеленая трава
+качается под порывами ветра и яркой россыпью раскиданы полевые цветы.
 </description>
       <exits>
         <node name="down">
@@ -2083,12 +2170,13 @@ you can see the valley, filled with wild flowers and tall, green grasses.
           <target>7803</target>
         </node>
       </exits>
-      <name>Along a Windy Trail on the Rim of the Valley</name>
+      <name>По извилистой тропинке на краю долины</name>
       <sector>field</sector>
     </node>
     <node name="7850">
-      <description>You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
-you can see the valley, filled with wild flowers and tall, green grasses.
+      <description>Ты стоишь на узкой тропинке на краю Долины Эльфов. Есть время немного
+полюбоваться раскинувшимся перед тобой пейзажем. Высокая изумрудно-зеленая трава
+качается под порывами ветра и яркой россыпью раскиданы полевые цветы.
 </description>
       <exits>
         <node name="down">
@@ -2103,7 +2191,7 @@ you can see the valley, filled with wild flowers and tall, green grasses.
           <target>7849</target>
         </node>
       </exits>
-      <name>Along a Windy Trail on the Rim of the Valley</name>
+      <name>По извилистой тропинке на краю долины</name>
       <resets>
         <mob limit="4" maxHere="1" vnum="7804"/>
         <equip to="body" vnum="7800"/>
@@ -2114,8 +2202,9 @@ you can see the valley, filled with wild flowers and tall, green grasses.
       <sector>field</sector>
     </node>
     <node name="7851">
-      <description>You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
-you can see the valley, filled with wild flowers and tall, green grasses.
+      <description>Ты стоишь на узкой тропинке на краю Долины Эльфов. Есть время немного
+полюбоваться раскинувшимся перед тобой пейзажем. Высокая изумрудно-зеленая трава
+качается под порывами ветра и яркой россыпью раскиданы полевые цветы.
 </description>
       <exits>
         <node name="down">
@@ -2130,12 +2219,13 @@ you can see the valley, filled with wild flowers and tall, green grasses.
           <target>7850</target>
         </node>
       </exits>
-      <name>Along a Windy Trail on the Rim of the Valley</name>
+      <name>По извилистой тропинке на краю долины</name>
       <sector>field</sector>
     </node>
     <node name="7852">
-      <description>You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
-you can see the valley, filled with wild flowers and tall, green grasses.
+      <description>Ты стоишь на узкой тропинке на краю Долины Эльфов. Есть время немного
+полюбоваться раскинувшимся перед тобой пейзажем. Высокая изумрудно-зеленая трава
+качается под порывами ветра и яркой россыпью раскиданы полевые цветы.
 </description>
       <exits>
         <node name="down">
@@ -2150,7 +2240,7 @@ you can see the valley, filled with wild flowers and tall, green grasses.
           <target>7851</target>
         </node>
       </exits>
-      <name>Along a Windy Trail on the Rim of the Valley</name>
+      <name>По извилистой тропинке на краю долины</name>
       <resets>
         <mob limit="5" maxHere="1" vnum="7805"/>
         <equip to="feet" vnum="7801"/>
@@ -2161,9 +2251,9 @@ you can see the valley, filled with wild flowers and tall, green grasses.
       <sector>field</sector>
     </node>
     <node name="7853">
-      <description>You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
-you can see the valley, filled with wild flowers and tall, green grasses.
-A safe trail leads down into the valley.
+      <description>Ты стоишь на узкой тропинке на краю Долины Эльфов. Есть время немного
+полюбоваться раскинувшимся перед тобой пейзажем. Высокая изумрудно-зеленая трава
+качается под порывами ветра и яркой россыпью раскиданы полевые цветы.
 </description>
       <exits>
         <node name="down">
@@ -2178,7 +2268,7 @@ A safe trail leads down into the valley.
           <target>7852</target>
         </node>
       </exits>
-      <name>Along a Windy Trail on the Rim of the Valley</name>
+      <name>По извилистой тропинке на краю долины</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="7803"/>
         <equip to="body" vnum="7800"/>
@@ -2189,14 +2279,21 @@ A safe trail leads down into the valley.
       <sector>field</sector>
     </node>
     <node name="7854">
-      <description>You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
-you can see the valley, filled with wild flowers and tall, green grasses.
+      <description>Ты стоишь на узкой тропинке на краю Долины Эльфов. Есть время немного
+полюбоваться раскинувшимся перед тобой пейзажем. Высокая изумрудно-зеленая трава
+качается под порывами ветра и яркой россыпью раскиданы полевые цветы.
+На севере возвышается гигантский вулкан с дымящейся вершиной. У его подножия
+ты замечаешь небольшую речушку и множество пещер.
 </description>
       <exits>
         <node name="down">
           <description>The trail down doesn&apos;t look safe to travel on at all.
 </description>
           <target>7883</target>
+        </node>
+        <node name="north">
+          <key>0</key>
+          <target>5735</target>
         </node>
         <node name="south">
           <target>7853</target>
@@ -2205,7 +2302,7 @@ you can see the valley, filled with wild flowers and tall, green grasses.
           <target>7855</target>
         </node>
       </exits>
-      <name>Along a Windy Trail on the Rim of the Valley</name>
+      <name>По извилистой тропинке на краю долины</name>
       <resets>
         <mob limit="6" maxHere="1" vnum="7802"/>
         <equip to="wield" vnum="7802"/>
@@ -2213,8 +2310,9 @@ you can see the valley, filled with wild flowers and tall, green grasses.
       <sector>field</sector>
     </node>
     <node name="7855">
-      <description>You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
-you can see the valley, filled with wild flowers and tall, green grasses.
+      <description>Ты стоишь на узкой тропинке на краю Долины Эльфов. Есть время немного
+полюбоваться раскинувшимся перед тобой пейзажем. Высокая изумрудно-зеленая трава
+качается под порывами ветра и яркой россыпью раскиданы полевые цветы.
 </description>
       <exits>
         <node name="down">
@@ -2229,12 +2327,13 @@ you can see the valley, filled with wild flowers and tall, green grasses.
           <target>7856</target>
         </node>
       </exits>
-      <name>Along a Windy Trail on the Rim of the Valley</name>
+      <name>По извилистой тропинке на краю долины</name>
       <sector>field</sector>
     </node>
     <node name="7856">
-      <description>You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
-you can see the valley, filled with wild flowers and tall, green grasses.
+      <description>Ты стоишь на узкой тропинке на краю Долины Эльфов. Есть время немного
+полюбоваться раскинувшимся перед тобой пейзажем. Высокая изумрудно-зеленая трава
+качается под порывами ветра и яркой россыпью раскиданы полевые цветы.
 </description>
       <exits>
         <node name="down">
@@ -2249,7 +2348,7 @@ you can see the valley, filled with wild flowers and tall, green grasses.
           <target>7857</target>
         </node>
       </exits>
-      <name>Along a Windy Trail on the Rim of the Valley</name>
+      <name>По извилистой тропинке на краю долины</name>
       <resets>
         <mob limit="4" maxHere="1" vnum="7804"/>
         <equip to="body" vnum="7800"/>
@@ -2260,8 +2359,9 @@ you can see the valley, filled with wild flowers and tall, green grasses.
       <sector>field</sector>
     </node>
     <node name="7857">
-      <description>You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
-you can see the valley, filled with wild flowers and tall, green grasses.
+      <description>Ты стоишь на узкой тропинке на краю Долины Эльфов. Есть время немного
+полюбоваться раскинувшимся перед тобой пейзажем. Высокая изумрудно-зеленая трава
+качается под порывами ветра и яркой россыпью раскиданы полевые цветы.
 </description>
       <exits>
         <node name="down">
@@ -2277,15 +2377,16 @@ you can see the valley, filled with wild flowers and tall, green grasses.
           <target>7858</target>
         </node>
       </exits>
-      <name>Along a Windy Trail on the Rim of the Valley</name>
+      <name>По извилистой тропинке на краю долины</name>
       <sector>field</sector>
     </node>
     <node name="7858">
-      <description>You are on the rope bridge.  From here, you can see the whole Valley of the
-Elves.  To the south, you see the main valley.  To the north-east, you see a
-smaller valley with a building in the center of it.  To the north-west, you
-can see a very small valley with a shack in it&apos;s center.  A rope ladder
-leads down into a trail.
+      <description>Ты оказываешься на узком веревочном мосту, переброшенном через каньон между
+двумя холмами на головокружительной высоте. Вниз в каньон спускается веревочная
+лестница. Отсюда открываются прекрасные виды на все окрестности.
+К югу простирается основная Долина Эльфов, поросшая высокой зеленой травой.
+На северо-востоке ты видишь небольшую низину в окружении холмов.
+На северо-западе ты видишь долину поменьше с хижиной в центре.
 </description>
       <exits>
         <node name="down">
@@ -2300,12 +2401,13 @@ leads down into a trail.
           <target>7859</target>
         </node>
       </exits>
-      <name>On the Rope Bridge</name>
+      <name>На веревочном мосту</name>
       <sector>field</sector>
     </node>
     <node name="7859">
-      <description>You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
-you can see the valley, filled with wild flowers and tall, green grasses.
+      <description>Ты стоишь на узкой тропинке на краю Долины Эльфов. Есть время немного
+полюбоваться раскинувшимся перед тобой пейзажем. Высокая изумрудно-зеленая трава
+качается под порывами ветра и яркой россыпью раскиданы полевые цветы.
 </description>
       <exits>
         <node name="down">
@@ -2322,12 +2424,13 @@ you can see the valley, filled with wild flowers and tall, green grasses.
           <target>7860</target>
         </node>
       </exits>
-      <name>Along a Windy Trail on the Rim of the Valley</name>
+      <name>По извилистой тропинке на краю долины</name>
       <sector>field</sector>
     </node>
     <node name="7860">
-      <description>You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
-you can see the valley, filled with wild flowers and tall, green grasses.
+      <description>Ты стоишь на узкой тропинке на краю Долины Эльфов. Есть время немного
+полюбоваться раскинувшимся перед тобой пейзажем. Высокая изумрудно-зеленая трава
+качается под порывами ветра и яркой россыпью раскиданы полевые цветы.
 </description>
       <exits>
         <node name="down">
@@ -2341,11 +2444,8 @@ you can see the valley, filled with wild flowers and tall, green grasses.
         <node name="south">
           <target>7861</target>
         </node>
-        <node name="west">
-          <target>8800</target>
-        </node>
       </exits>
-      <name>Along a Windy Trail on the Rim of the Valley</name>
+      <name>По извилистой тропинке на краю долины</name>
       <resets>
         <mob limit="4" maxHere="1" vnum="7803"/>
         <equip to="body" vnum="7800"/>
@@ -2357,8 +2457,9 @@ you can see the valley, filled with wild flowers and tall, green grasses.
       <sector>field</sector>
     </node>
     <node name="7861">
-      <description>You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
-you can see the valley, filled with wild flowers and tall, green grasses.
+      <description>Ты стоишь на узкой тропинке на краю Долины Эльфов. Есть время немного
+полюбоваться раскинувшимся перед тобой пейзажем. Высокая изумрудно-зеленая трава
+качается под порывами ветра и яркой россыпью раскиданы полевые цветы.
 </description>
       <exits>
         <node name="down">
@@ -2373,12 +2474,13 @@ you can see the valley, filled with wild flowers and tall, green grasses.
           <target>7862</target>
         </node>
       </exits>
-      <name>Along a Windy Trail on the Rim of the Valley</name>
+      <name>По извилистой тропинке на краю долины</name>
       <sector>field</sector>
     </node>
     <node name="7862">
-      <description>You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
-you can see the valley, filled with wild flowers and tall, green grasses.
+      <description>Ты стоишь на узкой тропинке на краю Долины Эльфов. Есть время немного
+полюбоваться раскинувшимся перед тобой пейзажем. Высокая изумрудно-зеленая трава
+качается под порывами ветра и яркой россыпью раскиданы полевые цветы.
 </description>
       <exits>
         <node name="down">
@@ -2393,7 +2495,7 @@ you can see the valley, filled with wild flowers and tall, green grasses.
           <target>7863</target>
         </node>
       </exits>
-      <name>Along a Windy Trail on the Rim of the Valley</name>
+      <name>По Извилистой тропинке на краю долины</name>
       <resets>
         <mob limit="5" maxHere="1" vnum="7805"/>
         <equip to="feet" vnum="7801"/>
@@ -2403,9 +2505,9 @@ you can see the valley, filled with wild flowers and tall, green grasses.
       <sector>field</sector>
     </node>
     <node name="7863">
-      <description>You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
-you can see the valley, filled with wild flowers and tall, green grasses.
-A safe trail leads down into the valley.
+      <description>Ты стоишь на узкой тропинке на краю Долины Эльфов. Есть время немного
+полюбоваться раскинувшимся перед тобой пейзажем. Высокая изумрудно-зеленая трава
+качается под порывами ветра и яркой россыпью раскиданы полевые цветы.
 </description>
       <exits>
         <node name="down">
@@ -2420,7 +2522,7 @@ A safe trail leads down into the valley.
           <target>7864</target>
         </node>
       </exits>
-      <name>Along a Windy Trail on the Rim of the Valley</name>
+      <name>По извилистой тропинке на краю долины</name>
       <resets>
         <mob limit="4" maxHere="1" vnum="7804"/>
         <equip to="body" vnum="7800"/>
@@ -2431,8 +2533,9 @@ A safe trail leads down into the valley.
       <sector>field</sector>
     </node>
     <node name="7864">
-      <description>You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
-you can see the valley, filled with wild flowers and tall, green grasses.
+      <description>Ты стоишь на узкой тропинке на краю Долины Эльфов. Есть время немного
+полюбоваться раскинувшимся перед тобой пейзажем. Высокая изумрудно-зеленая трава
+качается под порывами ветра и яркой россыпью раскиданы полевые цветы.
 </description>
       <exits>
         <node name="down">
@@ -2447,12 +2550,13 @@ you can see the valley, filled with wild flowers and tall, green grasses.
           <target>7863</target>
         </node>
       </exits>
-      <name>Along a Windy Trail on the Rim of the Valley</name>
+      <name>По извилистой тропинке на краю долины</name>
       <sector>field</sector>
     </node>
     <node name="7865">
-      <description>You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
-you can see the valley, filled with wild flowers and tall, green grasses.
+      <description>Ты стоишь на узкой тропинке на краю Долины Эльфов. Есть время немного
+полюбоваться раскинувшимся перед тобой пейзажем. Высокая изумрудно-зеленая трава
+качается под порывами ветра и яркой россыпью раскиданы полевые цветы.
 </description>
       <exits>
         <node name="down">
@@ -2467,7 +2571,7 @@ you can see the valley, filled with wild flowers and tall, green grasses.
           <target>7864</target>
         </node>
       </exits>
-      <name>Along a Windy Trail on the Rim of the Valley</name>
+      <name>По извилистой тропинке на краю долины</name>
       <resets>
         <mob limit="6" maxHere="1" vnum="7802"/>
         <equip to="wield" vnum="7802"/>
@@ -2475,8 +2579,9 @@ you can see the valley, filled with wild flowers and tall, green grasses.
       <sector>field</sector>
     </node>
     <node name="7866">
-      <description>You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
-you can see the valley, filled with wild flowers and tall, green grasses.
+      <description>Ты стоишь на узкой тропинке на краю Долины Эльфов. Есть время немного
+полюбоваться раскинувшимся перед тобой пейзажем. Высокая изумрудно-зеленая трава
+качается под порывами ветра и яркой россыпью раскиданы полевые цветы.
 </description>
       <exits>
         <node name="down">
@@ -2491,7 +2596,7 @@ you can see the valley, filled with wild flowers and tall, green grasses.
           <target>7865</target>
         </node>
       </exits>
-      <name>Along a Windy Trail on the Rim of the Valley</name>
+      <name>По извилистой тропинке на краю долины</name>
       <resets>
         <mob limit="4" maxHere="1" vnum="7803"/>
         <equip to="body" vnum="7800"/>
@@ -2502,8 +2607,9 @@ you can see the valley, filled with wild flowers and tall, green grasses.
       <sector>field</sector>
     </node>
     <node name="7867">
-      <description>You are on a narrow trail on the rim of the Valley of the Elves.  Below you,
-you can see the valley, filled with wild flowers and tall, green grasses.
+      <description>Ты стоишь на узкой тропинке на краю Долины Эльфов. Есть время немного
+полюбоваться раскинувшимся перед тобой пейзажем. Высокая изумрудно-зеленая трава
+качается под порывами ветра и яркой россыпью раскиданы полевые цветы.
 </description>
       <exits>
         <node name="down">
@@ -2518,12 +2624,13 @@ you can see the valley, filled with wild flowers and tall, green grasses.
           <target>7866</target>
         </node>
       </exits>
-      <name>Along a Windy Trail on the Rim of the Valley</name>
+      <name>По извилистой тропинке на краю долины</name>
       <sector>field</sector>
     </node>
     <node name="7868">
-      <description>You are on a bend in the trail leading from the main valley.  The hills around
-you make this trail quite narrow.
+      <description>Ты идешь по петляющей дорожке, которая уводит тебя все дальше от основной 
+долины. Тропинка становится все уже и уже, забираясь вглубь холмов. Интересно,
+куда она ведет?..
 </description>
       <exits>
         <node name="east">
@@ -2537,7 +2644,7 @@ you make this trail quite narrow.
           <target>7869</target>
         </node>
       </exits>
-      <name>A Bend in the Trail</name>
+      <name>Поворот тропинки</name>
       <resets>
         <mob limit="6" maxHere="1" vnum="7802"/>
         <equip to="wield" vnum="7802"/>
@@ -2545,9 +2652,10 @@ you make this trail quite narrow.
       <sector>field</sector>
     </node>
     <node name="7869">
-      <description>You are on a bend in the trail leading from the main valley.  The hills around
-you make this trail quite narrow.  To the west, you can see an even smaller
-valley, with looks like a small shack in the center of it.
+      <description>Ты идешь по петляющей дорожке, которая уводит тебя все дальше от основной 
+долины. Чем дальше в холме, тем уже становится тропинка и вдруг на западе 
+видишь перед собой другую, совсем крошечную долину. Если приглядеться, то 
+можно заметить среди стволов деревьев хижину. 
 </description>
       <exits>
         <node name="south">
@@ -2561,13 +2669,14 @@ valley, with looks like a small shack in the center of it.
           <target>7870</target>
         </node>
       </exits>
-      <name>A Bend in the Trail</name>
+      <name>Поворот на тропинке</name>
       <sector>field</sector>
     </node>
     <node name="7870">
-      <description>You are in the small valley.  Strangely, tall trees grow here, almost as if some
-magic was used to help them grow.  The exit from this valley is to the east, and
-the entrance to the shack is to the west.
+      <description>Удивительно, но в этой маленькой долине, в отличие от соседней, растут огромные 
+деревья, словно подпирающие небо. Явно не обошлось без магии! 
+Выход из долины виден на востоке, а на западе среди деревьев можно заметиться 
+хижину. 
 </description>
       <exits>
         <node name="east">
@@ -2594,12 +2703,13 @@ the entrance to the shack is to the west.
           <target>7878</target>
         </node>
       </exits>
-      <name>The Small Valley</name>
+      <name>Маленькая Долина</name>
       <sector>field</sector>
     </node>
     <node name="7871">
-      <description>You are in the small valley.  Strangely, tall trees grow here, almost as if some
-magic was used to help them grow.  To the south-west is a small shack.
+      <description>Удивительно, но в этой маленькой долине, в отличие от соседней, растут огромные 
+деревья, словно подпирающие небо. Явно не обошлось без магии! 
+На юго-западе среди деревьев можно заметить маленькую хижину
 </description>
       <exits>
         <node name="south">
@@ -2613,12 +2723,13 @@ magic was used to help them grow.  To the south-west is a small shack.
           <target>7873</target>
         </node>
       </exits>
-      <name>The Small Valley</name>
+      <name>Маленькая Долина</name>
       <sector>field</sector>
     </node>
     <node name="7872">
-      <description>You are in the small valley.  Strangely, tall trees grow here, almost as if some
-magic was used to help them grow.  To the north-west is a small shack.
+      <description>Удивительно, но в этой маленькой долине, в отличие от соседней, растут огромные 
+деревья, словно подпирающие небо. Явно не обошлось без магии! 
+На севере-западе, среди необъятных стволов, притулилась маленькая хижина. 
 </description>
       <exits>
         <node name="north">
@@ -2632,12 +2743,13 @@ magic was used to help them grow.  To the north-west is a small shack.
           <target>7877</target>
         </node>
       </exits>
-      <name>The Small Valley</name>
+      <name>Маленькая Долина</name>
       <sector>field</sector>
     </node>
     <node name="7873">
-      <description>You are in the small valley.  Strangely, tall trees grow here, almost as if some
-magic was used to help them grow.  To the south is a small shack.
+      <description>Удивительно, но в этой маленькой долине, в отличие от соседней, растут огромные 
+деревья, словно подпирающие небо. Явно не обошлось без магии! 
+На юге виднеется маленькая хижина. 
 </description>
       <exits>
         <node name="east">
@@ -2651,16 +2763,16 @@ magic was used to help them grow.  To the south is a small shack.
           <target>7874</target>
         </node>
       </exits>
-      <name>The Small Valley</name>
+      <name>Маленькая Долина</name>
       <resets>
         <mob limit="6" maxHere="1" vnum="7800"/>
       </resets>
       <sector>field</sector>
     </node>
     <node name="7874">
-      <description>You are in the small valley.  Strangely, tall trees grow here, almost as if some
-magic was used to help them grow.  To the south-east is a small shack.  
-To the north is the oak doors of an high tower.
+      <description>Удивительно, но в этой маленькой долине, в отличие от соседней, растут огромные 
+деревья, словно подпирающие небо. Явно не обошлось без магии! 
+На юго-востоке, среди необъятных стволов, притулилась маленькая хижина. 
 </description>
       <exits>
         <node name="east">
@@ -2674,12 +2786,13 @@ To the north is the oak doors of an high tower.
           <target>7875</target>
         </node>
       </exits>
-      <name>The Small Valley</name>
+      <name>Маленькая Долина</name>
       <sector>field</sector>
     </node>
     <node name="7875">
-      <description>You are in the small valley.  Strangely, tall trees grow here, almost as if some
-magic was used to help them grow.  To the east is a small shack.
+      <description>Удивительно, но в этой маленькой долине, в отличие от соседней, растут огромные 
+деревья, словно подпирающие небо. Явно не обошлось без магии! 
+На востоке среди деревьев можно заметить маленькую хижину. 
 </description>
       <exits>
         <node name="north">
@@ -2693,12 +2806,13 @@ magic was used to help them grow.  To the east is a small shack.
           <target>7876</target>
         </node>
       </exits>
-      <name>The Small Valley</name>
+      <name>Маленькая Долина</name>
       <sector>field</sector>
     </node>
     <node name="7876">
-      <description>You are in the small valley.  Strangely, tall trees grow here, almost as if some
-magic was used to help them grow.  To the north-east is a small shack.
+      <description>Удивительно, но в этой маленькой долине, в отличие от соседней, растут огромные 
+деревья, словно подпирающие небо. Явно не обошлось без магии! 
+На севере-востоке, среди необъятных стволов, притулилась маленькая хижина. 
 </description>
       <exits>
         <node name="east">
@@ -2712,7 +2826,7 @@ magic was used to help them grow.  To the north-east is a small shack.
           <target>7875</target>
         </node>
       </exits>
-      <name>The Small Valley</name>
+      <name>Маленькая Долина</name>
       <resets>
         <mob limit="5" maxHere="1" vnum="7805"/>
         <equip to="feet" vnum="7801"/>
@@ -2722,8 +2836,9 @@ magic was used to help them grow.  To the north-east is a small shack.
       <sector>field</sector>
     </node>
     <node name="7877">
-      <description>You are in the small valley.  Strangely, tall trees grow here, almost as if some
-magic was used to help them grow.  To the north is a small shack.
+      <description>Удивительно, но в этой маленькой долине, в отличие от соседней, растут огромные 
+деревья, словно подпирающие небо. Явно не обошлось без магии! 
+На севере можно заметить небольшую избушку. 
 </description>
       <exits>
         <node name="east">
@@ -2737,7 +2852,7 @@ magic was used to help them grow.  To the north is a small shack.
           <target>7876</target>
         </node>
       </exits>
-      <name>The Small Valley</name>
+      <name>Маленькая Долина</name>
       <resets>
         <mob limit="6" maxHere="1" vnum="7801"/>
         <equip to="wield" vnum="7802"/>
@@ -2745,8 +2860,8 @@ magic was used to help them grow.  To the north is a small shack.
       <sector>field</sector>
     </node>
     <node name="7878">
-      <description>You are inside the small shack.  A small stove is on the side, with soup
-cooking over it.  You see nothing valuable.
+      <description>Пригибаясь, заходишь в маленькую хижину. У одной стены маленькая печка, на которой 
+готовится котелок с едой, лежанка - у другой. Аскетично.
 </description>
       <exits>
         <node name="down">
@@ -2767,15 +2882,15 @@ cooking over it.  You see nothing valuable.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>Inside the Small Shack</name>
+      <name>Маленькая избушка</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="7810"/>
       </resets>
       <sector>inside</sector>
     </node>
     <node name="7879">
-      <description>You are beneath the small shack, in a tunnel that leads south.  It feels
-quite warm down here.
+      <description>Ты находишься в туннеле под маленькой хижиной, который идет на юг. Ты чувствуешь, 
+что становится неуютно жарко.
 </description>
       <exits>
         <node name="south">
@@ -2793,12 +2908,12 @@ quite warm down here.
         </node>
       </exits>
       <flags>dark indoors</flags>
-      <name>Beneath the Small Shack</name>
+      <name>Под маленькой избушкой</name>
       <sector>inside</sector>
     </node>
     <node name="7880">
-      <description>You are in the den of the pyrohydra.  All the walls are charred, and this
-room is filled with a smell close to that of burning tar.
+      <description>Черные обугленные стены и удушающих запах гари наводят тебя на мысль, что ты 
+оказался в логове огненной гидры. 
 </description>
       <exits>
         <node name="east">
@@ -2826,7 +2941,7 @@ room is filled with a smell close to that of burning tar.
         </node>
       </exits>
       <flags>dark indoors</flags>
-      <name>The Den of the Pyrohydra</name>
+      <name>Логово Огненной гидры</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="7809"/>
         <give vnum="7805"/>
@@ -2834,10 +2949,8 @@ room is filled with a smell close to that of burning tar.
       <sector>inside</sector>
     </node>
     <node name="7881">
-      <description>This room looks like it is used for magical studies.  Potions bubble over
-burners, and the whole room spells of herbs and dead animal flesh.  A furnace
-to the side casts a bright light in this room.  The whole room radiates with
-a magical aura.
+      <description>Большая просторная комната, заставленная котлами, столами с пробирками, змеевиками 
+и прочими непонятными штуками. Все кипит, гудит, светится, издает странные запахи. 
 </description>
       <exits>
         <node name="east">
@@ -2849,7 +2962,7 @@ a magical aura.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>The Workroom</name>
+      <name>Рабочая комната</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="7811"/>
         <equip to="finger_l" vnum="7806"/>
@@ -2858,8 +2971,8 @@ a magical aura.
       <sector>inside</sector>
     </node>
     <node name="7882">
-      <description>This room is used to store scrolls, potions, and other magical items.  The
-whole room radiates with a magical aura.
+      <description>Это комната используется как склад свитков, зелий и других магических предметов. 
+Их волшебные ауры заливают все помещение мягкий светом. 
 </description>
       <exits>
         <node name="west">
@@ -2871,7 +2984,7 @@ whole room radiates with a magical aura.
         </node>
       </exits>
       <flags>indoors</flags>
-      <name>The Storage Room</name>
+      <name>Склад Волшебных Вещей</name>
       <resets>
         <drop vnum="7808"/>
         <drop vnum="7822"/>
@@ -2890,13 +3003,12 @@ whole room radiates with a magical aura.
       <sector>inside</sector>
     </node>
     <node name="7883">
-      <description>You have fallen trying to go down this steep hill.  Maybe that wasn&apos;t that
-good an idea, huh?
-
-You&apos;ve fallen, and you can&apos;t get up!
+      <description>Оступившись на узкой тропинке, ты соскальзываешь по отвесному склону в глубокий
+овраг на противоположной от Долины стороне холма! Ох нет, похоже, что выбраться
+отсюда так просто не получится. Придется молиться богам о возвращении...
 </description>
       <flags>no_mob</flags>
-      <name>WAY Far Down into the Valley</name>
+      <name>Провалившись в овраг</name>
       <sector>inside</sector>
     </node>
   </rooms>

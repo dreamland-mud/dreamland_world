@@ -4,17 +4,25 @@
     <altname>Valley of Titans</altname>
     <authors>Xavier</authors>
     <credits>Valley of the Titans</credits>
-    <flags>hometown</flags>
+    <flags>hometown easy</flags>
     <levelHigh>50</levelHigh>
     <levelLow>25</levelLow>
     <name>Долина Титанов</name>
-    <resetMessage></resetMessage>
+    <resetMessage>Земля сотрясается от чьей-то тяжелой поступи...</resetMessage>
     <security>9</security>
     <speedwalk>13w2nen</speedwalk>
     <translator>Varda</translator>
     <vnumHigh>18150</vnumHigh>
     <vnumLow>18000</vnumLow>
   </areadata>
+  <helps>
+    <node id="2071" keyword="'VALLEY OF THE TITANS' 'ДОЛИНА ТИТАНОВ' ТИТАНЫ" level="-1">На крайнем западе Тэры, далеко за пределами лесов {hh1862Хаон Дора{x расположено исконное
+обиталище Великих Титанов, что помогали {hh981Одину{x и {hh1565Варде{x в далекой древности
+творить и обустраивать этот мир. Город Титанов скрыт в уютной, хорошо охраняемой
+Долине, в которой не очень-то привечают чужаков -- кроме, пожалуй, гигантов,
+далеких потомков жителей Долины.
+</node>
+  </helps>
   <mobiles>
     <node name="18001">
       <ac bash="-15" exotic="4" pierce="-15" slash="-15"/>
@@ -71,7 +79,7 @@
       <player_name>кот ally cat</player_name>
       <race>cat</race>
       <res add="holy"/>
-      <sex>either</sex>
+      <sex>male</sex>
       <short_descr>бродяч|ий|его|ему|его|им|ем ко|т|та|ту|та|том|те</short_descr>
       <size>large</size>
       <start_pos>stand</start_pos>
@@ -876,13 +884,12 @@
       <ac bash="-51" exotic="-30" pierce="-51" slash="-51"/>
       <act add="npc sentinel warrior"/>
       <alignment>-100</alignment>
-      <behavior type="UniclassAdeptAndShopTrader">
-        <myclass>warlock</myclass>
+      <behavior type="ShopTrader">
         <profitBuy>150</profitBuy>
         <profitSell>21</profitSell>
         <openHour>0</openHour>
         <closeHour>23</closeHour>
-        <buys>light scroll staff wand pill</buys>
+        <buys>light scroll wand staff pill jewelry spellbook tattoo textbook</buys>
       </behavior>
       <dam_type>slash</dam_type>
       <damage>4d7+21</damage>
@@ -1180,9 +1187,6 @@
       <act add="npc sentinel mage"/>
       <aff add="sanctuary infrared"/>
       <alignment>-1000</alignment>
-      <behavior type="UniclassAdept">
-        <myclass>anti-paladin</myclass>
-      </behavior>
       <dam_type>pierce</dam_type>
       <damage>5d6+12</damage>
       <default_pos>stand</default_pos>
@@ -1327,7 +1331,7 @@
       <player_name>дерево evil tree</player_name>
       <race>plant</race>
       <res add="lightning mental"/>
-      <sex>either</sex>
+      <sex>neutral</sex>
       <short_descr>Дерев|о|а|у|о|ом|е Зла</short_descr>
       <size>large</size>
       <spec>spec_breath_any</spec>
@@ -1356,7 +1360,7 @@
       <off add="berserk disarm dodge fade fast rescue"/>
       <player_name>облако deadly rain cloud</player_name>
       <race>unique</race>
-      <sex>either</sex>
+      <sex>neutral</sex>
       <short_descr>смертельн|ое|ого|ому|ое|ым|ом дождев|ое|ого|ому|ое|ым|ом облак|о|а|у|о|ом|е</short_descr>
       <size>large</size>
       <start_pos>stand</start_pos>
@@ -1388,7 +1392,7 @@
       <player_name>демон demon fire</player_name>
       <race>unique</race>
       <res add="poison"/>
-      <sex>either</sex>
+      <sex>male</sex>
       <short_descr>Демо|н|на|ну|на|ном|не Огня</short_descr>
       <size>large</size>
       <start_pos>stand</start_pos>
@@ -1418,7 +1422,7 @@
       <player_name>демон demon water</player_name>
       <race>unique</race>
       <res add="bash mental"/>
-      <sex>either</sex>
+      <sex>male</sex>
       <short_descr>Демо|н|на|ну|на|ном|не Воды</short_descr>
       <size>large</size>
       <start_pos>stand</start_pos>
@@ -1448,7 +1452,7 @@
       <player_name>демон demon air</player_name>
       <race>unique</race>
       <res add="holy"/>
-      <sex>either</sex>
+      <sex>male</sex>
       <short_descr>Демо|н|на|ну|на|ном|не Воздуха</short_descr>
       <size>large</size>
       <start_pos>stand</start_pos>
@@ -1478,7 +1482,7 @@
       <player_name>демон demon earth</player_name>
       <race>unique</race>
       <res add="charm"/>
-      <sex>either</sex>
+      <sex>male</sex>
       <short_descr>Демо|н|на|ну|на|ном|не Земли</short_descr>
       <size>large</size>
       <start_pos>stand</start_pos>
@@ -1508,7 +1512,7 @@
       <player_name>демон demon wood</player_name>
       <race>unique</race>
       <res add="mental"/>
-      <sex>either</sex>
+      <sex>male</sex>
       <short_descr>Демо|н|на|ну|на|ном|не Леса</short_descr>
       <size>large</size>
       <start_pos>stand</start_pos>
@@ -1538,7 +1542,7 @@
       <player_name>демон demon stone</player_name>
       <race>unique</race>
       <res add="bash energy disease drowning"/>
-      <sex>either</sex>
+      <sex>male</sex>
       <short_descr>Демо|н|на|ну|на|ном|не Камня</short_descr>
       <size>large</size>
       <start_pos>stand</start_pos>
@@ -1764,7 +1768,7 @@
     <node name="18055">
       <ac bash="-15" exotic="3" pierce="-15" slash="-15"/>
       <act add="warrior"/>
-      <aff add="sanctuary pass_door haste"/>
+      <aff add="sanctuary pass_door haste swim"/>
       <alignment>1000</alignment>
       <behavior type="Pet">
       </behavior>
@@ -1775,6 +1779,7 @@
 момента, чтоб сожрать тебя.
 </description>
       <detection add="invis hidden"/>
+      <form add="amphibian cold_blood"/>
       <hit>25d10+2100</hit>
       <hitroll>1</hitroll>
       <imm add="fire"/>
@@ -1784,10 +1789,11 @@
       <mana>1d1+102</mana>
       <material>0</material>
       <off add="disarm trip"/>
+      <parts add="head heart eye tentacles scales"/>
       <player_name>кракен kraken pet</player_name>
       <race>unique</race>
       <res add="slash cold lightning acid"/>
-      <sex>either</sex>
+      <sex>male</sex>
       <short_descr>кровожадн|ый|ого|ому|ого|ым|ом Краке|н|на|ну|на|ном|не</short_descr>
       <size>large</size>
       <start_pos>stand</start_pos>
@@ -2034,7 +2040,6 @@
       <sex>male</sex>
       <short_descr>убийц|а|ы|е|у|ей|е</short_descr>
       <size>large</size>
-      <spec>spec_assassinater</spec>
       <start_pos>stand</start_pos>
       <vuln add="acid"/>
       <wealth>8990</wealth>
@@ -2998,13 +3003,13 @@
     <node name="18010">
       <affects>
         <node>
-          <apply to="hitroll">2</apply>
+          <apply to="con">1</apply>
         </node>
         <node>
           <apply to="damroll">3</apply>
         </node>
         <node>
-          <apply to="con">1</apply>
+          <apply to="hitroll">2</apply>
         </node>
       </affects>
       <condition>90</condition>
@@ -3015,12 +3020,16 @@
       <level>24</level>
       <material>wood</material>
       <name>барабан bongo drum</name>
+      <properties>
+        <node name="bestTier">3</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>барабан||а|у||ом|е</short_descr>
       <type name="weapon">
         <diceNumber>6</diceNumber>
         <diceType>6</diceType>
         <weapClass>exotic</weapClass>
-        <weapType>pound</weapType>
+        <weapType>cacophony</weapType>
       </type>
       <wear_flags>take wield</wear_flags>
       <weight>200</weight>
@@ -3055,10 +3064,10 @@
     <node name="18012">
       <affects>
         <node>
-          <apply to="hitroll">3</apply>
+          <apply to="damroll">4</apply>
         </node>
         <node>
-          <apply to="damroll">4</apply>
+          <apply to="hitroll">3</apply>
         </node>
       </affects>
       <condition>90</condition>
@@ -3069,12 +3078,16 @@
       <level>25</level>
       <material>wood</material>
       <name>свирель pipe wind windpipe</name>
+      <properties>
+        <node name="bestTier">3</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>свирел|ь|и|и|ь|ью|и</short_descr>
       <type name="weapon">
         <diceNumber>6</diceNumber>
         <diceType>4</diceType>
         <weapClass>exotic</weapClass>
-        <weapType>slash</weapType>
+        <weapType>sound</weapType>
       </type>
       <wear_flags>take wield</wear_flags>
       <weight>120</weight>
@@ -3123,7 +3136,6 @@
     <node name="18015">
       <cost>100</cost>
       <description>Печенье (cookies) лежит здесь.</description>
-      <extra_flags>glow</extra_flags>
       <gender>n</gender>
       <level>20</level>
       <material>cake</material>
@@ -3237,13 +3249,14 @@
     <node name="18022">
       <affects>
         <node>
-          <apply to="hitroll">2</apply>
-        </node>
-        <node>
-          <apply to="damroll">1</apply>
+          <apply to="damroll">4</apply>
+          <bits table="affect_flags"></bits>
         </node>
         <node>
           <apply to="saving_petri">-1</apply>
+        </node>
+        <node>
+          <apply to="hitroll">2</apply>
         </node>
       </affects>
       <cost>1007</cost>
@@ -3252,13 +3265,13 @@
       <gender>n</gender>
       <level>35</level>
       <material>stone</material>
-      <name>оружие standard weapon combat tournament</name>
+      <name>weapon standard combat tournament штатное оружие для турниров</name>
       <short_descr>штатн|ое|ого|ому|ое|ым|ом оружи|е|я|ю|е|ем|и для турниров</short_descr>
       <type name="weapon">
-        <diceNumber>5</diceNumber>
-        <diceType>8</diceType>
+        <diceNumber>8</diceNumber>
+        <diceType>5</diceType>
         <weapClass>flail</weapClass>
-        <weapType>cleave</weapType>
+        <weapType>smash</weapType>
       </type>
       <wear_flags>take wield</wear_flags>
       <weight>200</weight>
@@ -3667,7 +3680,11 @@
       <gender>m</gender>
       <level>25</level>
       <material>silver</material>
-      <name>меч серебряный titan sword silver</name>
+      <name>меч серебряный титанов titan sword silver</name>
+      <properties>
+        <node name="bestTier">4</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>Серебрян|ый|ого|ому|ый|ым|ом Ме|ч|ча|чу|ч|чом|че Титанов</short_descr>
       <type name="weapon">
         <diceNumber>6</diceNumber>
@@ -3690,7 +3707,11 @@
       <gender>m</gender>
       <level>25</level>
       <material>silver</material>
-      <name>булава серебряная titan mace silver</name>
+      <name>булава серебряная титанов titan mace silver</name>
+      <properties>
+        <node name="bestTier">4</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>Серебрян|ая|ой|ой|ую|ой|ой Булав|а|ы|е|у|ой|е Титанов</short_descr>
       <type name="weapon">
         <diceNumber>6</diceNumber>
@@ -3716,7 +3737,11 @@
       <gender>m</gender>
       <level>25</level>
       <material>silver</material>
-      <name>топор серебряный titan axe silver</name>
+      <name>топор серебряный титанов titan axe silver</name>
+      <properties>
+        <node name="bestTier">4</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>Серебрян|ый|ого|ому|ый|ым|ом Топо|р|ра|ру|р|ром|ре Титанов</short_descr>
       <type name="weapon">
         <diceNumber>6</diceNumber>
@@ -3742,7 +3767,11 @@
       <gender>m</gender>
       <level>25</level>
       <material>silver</material>
-      <name>копье серебряное titan silver spear</name>
+      <name>копье серебряное титанов titan silver spear</name>
+      <properties>
+        <node name="bestTier">4</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>Серебрян|ое|ого|ому|ое|ым|ом Копь|е|я|ю|е|ем|е Титанов</short_descr>
       <type name="weapon">
         <diceNumber>6</diceNumber>
@@ -3769,6 +3798,10 @@
       <level>30</level>
       <material>silver</material>
       <name>titan silver whip оплетенная серебром плетка титанов</name>
+      <properties>
+        <node name="bestTier">4</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>Оплетенн|ая|ой|ой|ую|ой|ой Серебром Плетк|а|и|е|у|ой|е Титанов</short_descr>
       <type name="weapon">
         <diceNumber>6</diceNumber>
@@ -4049,7 +4082,11 @@
       <gender>f</gender>
       <level>39</level>
       <material>stone</material>
-      <name>дубинка patrol guard club</name>
+      <name>club patrol guard дубинка патрульного</name>
+      <properties>
+        <node name="bestTier">3</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>дубинк|а|и|е|у|ой|е патрульного</short_descr>
       <type name="weapon">
         <diceNumber>8</diceNumber>
@@ -4441,11 +4478,10 @@
     <node name="18083">
       <affects>
         <node>
-          <apply to="cha">2</apply>
-          <bits table="affect_flags"></bits>
+          <apply to="hit">10</apply>
         </node>
         <node>
-          <apply to="saves">-3</apply>
+          <apply to="hitroll">1</apply>
           <bits table="affect_flags"></bits>
         </node>
         <node>
@@ -4453,11 +4489,12 @@
           <bits table="affect_flags"></bits>
         </node>
         <node>
-          <apply to="hitroll">1</apply>
+          <apply to="saves">-3</apply>
           <bits table="affect_flags"></bits>
         </node>
         <node>
-          <apply to="hit">10</apply>
+          <apply to="cha">2</apply>
+          <bits table="affect_flags"></bits>
         </node>
       </affects>
       <condition>90</condition>
@@ -4503,17 +4540,21 @@
       <cost>1430</cost>
       <description>Темное оружие демонов (weapon) лежит на земле.</description>
       <extra_flags>glow hum dark</extra_flags>
-      <gender>m</gender>
+      <gender>n</gender>
       <level>35</level>
       <material>stone</material>
-      <name>оружие standard weapon</name>
+      <name>weapon standard demon штатное оружие демонов</name>
+      <properties>
+        <node name="bestTier">3</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>штатн|ое|ого|ому|ое|ым|ом вооружени|е|я|ю|е|ем|и демонов</short_descr>
       <type name="weapon">
         <diceNumber>6</diceNumber>
         <diceType>9</diceType>
         <specType>vampiric two_hands</specType>
         <weapClass>exotic</weapClass>
-        <weapType>wrath</weapType>
+        <weapType>drain</weapType>
       </type>
       <wear_flags>take wield</wear_flags>
       <weight>200</weight>
@@ -4521,10 +4562,12 @@
     <node name="18086">
       <affects>
         <node>
-          <apply to="hitroll">3</apply>
+          <apply to="hitroll">6</apply>
+          <bits table="affect_flags"></bits>
         </node>
         <node>
-          <apply to="damroll">3</apply>
+          <apply to="damroll">6</apply>
+          <bits table="affect_flags"></bits>
         </node>
         <node>
           <apply to="saving_petri">-2</apply>
@@ -4536,13 +4579,14 @@
       <gender>n</gender>
       <level>48</level>
       <material>stone</material>
-      <name>оружие weapon combat tournament</name>
-      <short_descr>усовершенствован|ое|ого|ому|ое|ым|ом оружи|е|я|ю|е|ем|и для турниров</short_descr>
+      <name>weapon improved combat tournament усовершенствованное оружие для турниров</name>
+      <short_descr>усовершенствованн|ое|ого|ому|ое|ым|ом оружи|е|я|ю|е|ем|и для турниров</short_descr>
       <type name="weapon">
-        <diceNumber>6</diceNumber>
-        <diceType>8</diceType>
+        <diceNumber>13</diceNumber>
+        <diceType>5</diceType>
+        <specType>sharp</specType>
         <weapClass>flail</weapClass>
-        <weapType>cleave</weapType>
+        <weapType>thwack</weapType>
       </type>
       <wear_flags>take wield</wear_flags>
       <weight>200</weight>
@@ -4703,7 +4747,7 @@
       <short_descr>подарочн|ая|ой|ой|ую|ой|ой коробк|а|и|е|у|ой|е</short_descr>
       <type name="container">
         <capacity>500</capacity>
-        <flags>closeable</flags>
+        <flags>pit</flags>
         <maxWeight>500</maxWeight>
         <weightMult>60</weightMult>
       </type>
@@ -4801,7 +4845,7 @@
           <target>18003</target>
         </node>
       </exits>
-      <flags>dark</flags>
+      <flags>dark near_water</flags>
       <name>Длинная Пыльная Тропа</name>
       <sector>forest</sector>
     </node>
@@ -4878,7 +4922,7 @@
           <target>18007</target>
         </node>
       </exits>
-      <flags>dark</flags>
+      <flags>dark near_water</flags>
       <name>Рядом с Бурным Водопадом</name>
       <sector>forest</sector>
     </node>
@@ -4981,7 +5025,7 @@
           <target>18011</target>
         </node>
       </exits>
-      <flags>dark</flags>
+      <flags>dark near_water</flags>
       <name>У Небольшого Причудливого Моста</name>
       <sector>forest</sector>
     </node>
@@ -5005,7 +5049,7 @@
           <target>18010</target>
         </node>
       </exits>
-      <flags>dark</flags>
+      <flags>dark near_water</flags>
       <name>На Небольшом Причудливом Мосту</name>
       <sector>forest</sector>
     </node>
@@ -5031,7 +5075,7 @@
           <target>18013</target>
         </node>
       </exits>
-      <flags>dark</flags>
+      <flags>dark near_water</flags>
       <name>На Другой Стороне Ручья</name>
       <sector>forest</sector>
     </node>
@@ -5058,7 +5102,7 @@
           <target>18014</target>
         </node>
       </exits>
-      <flags>dark</flags>
+      <flags>dark near_water</flags>
       <name>Продолжение Длинного Пути</name>
       <sector>forest</sector>
     </node>
@@ -5083,7 +5127,7 @@
           <target>18015</target>
         </node>
       </exits>
-      <flags>dark</flags>
+      <flags>dark near_water</flags>
       <name>Большая Обзорная Площадка</name>
       <sector>forest</sector>
     </node>
@@ -5114,7 +5158,7 @@
           <target>18016</target>
         </node>
       </exits>
-      <flags>dark</flags>
+      <flags>dark near_water</flags>
       <name>В Начале Моста</name>
       <sector>forest</sector>
     </node>
@@ -5136,7 +5180,7 @@
           <target>18018</target>
         </node>
       </exits>
-      <flags>dark</flags>
+      <flags>dark near_water</flags>
       <name>На Середине Моста</name>
       <sector>forest</sector>
     </node>
@@ -5191,7 +5235,7 @@
           <target>18019</target>
         </node>
       </exits>
-      <flags>dark</flags>
+      <flags>dark near_water</flags>
       <name>В Конце Моста</name>
       <sector>forest</sector>
     </node>
@@ -5218,7 +5262,7 @@
           <target>18020</target>
         </node>
       </exits>
-      <flags>dark</flags>
+      <flags>dark near_water</flags>
       <name>Назад на Главную Дорогу</name>
       <sector>forest</sector>
     </node>
@@ -5260,7 +5304,7 @@
 |/________________________________________________________\|
 </node>
       </extraDescr>
-      <flags>dark</flags>
+      <flags>dark near_water</flags>
       <name>Вход в Долину</name>
       <sector>forest</sector>
     </node>
@@ -5372,7 +5416,7 @@
     </node>
     <node name="18025">
       <description>Ты  снова  входишь  в  густой  пышный  лес  долины.  На севере виднеется
-массивное  озеро,  блестящее  в  лучах  солнца.  Недалеко  от тебя олениха,
+огромное Древо, уходящее ввысь за самые облака.  Недалеко  от тебя олениха,
 пугливо  озираясь по  сторонам,  пьет  из  лужи  дождевую  воду.  Это место
 очень  красиво,  но  начинает   темнеть   и   тебе надо поторопиться, чтобы
 попасть в деревню, пока совсем не стемнело.
@@ -5384,13 +5428,17 @@
 </description>
           <target>18024</target>
         </node>
+        <node name="north">
+          <key>0</key>
+          <target>2900</target>
+        </node>
         <node name="west">
           <description>Дорога продолжается...
 </description>
           <target>18026</target>
         </node>
       </exits>
-      <flags>dark</flags>
+      <flags>dark near_water</flags>
       <name>Назад в Густой Лес</name>
       <sector>forest</sector>
     </node>
@@ -5415,7 +5463,7 @@
           <target>18027</target>
         </node>
       </exits>
-      <flags>dark</flags>
+      <flags>dark near_water</flags>
       <name>Недалеко от Деревни</name>
       <sector>forest</sector>
     </node>
@@ -5443,7 +5491,7 @@
           <target>18028</target>
         </node>
       </exits>
-      <flags>dark</flags>
+      <flags>dark near_water</flags>
       <name>У Моста с Воротами</name>
       <resets>
         <mob limit="10" maxHere="2" vnum="18001"/>
@@ -5476,7 +5524,7 @@
           <target>18029</target>
         </node>
       </exits>
-      <flags>dark</flags>
+      <flags>dark near_water</flags>
       <name>В Начале Моста</name>
       <resets>
         <mob limit="10" maxHere="2" vnum="18001"/>
@@ -5506,7 +5554,7 @@
           <target>18030</target>
         </node>
       </exits>
-      <flags>dark</flags>
+      <flags>dark near_water</flags>
       <name>По мосту</name>
       <sector>inside</sector>
     </node>
@@ -5530,7 +5578,7 @@
           <target>18031</target>
         </node>
       </exits>
-      <flags>dark</flags>
+      <flags>dark near_water</flags>
       <name>По мосту</name>
       <sector>inside</sector>
     </node>
@@ -5554,7 +5602,7 @@
           <target>18032</target>
         </node>
       </exits>
-      <flags>dark</flags>
+      <flags>dark near_water</flags>
       <name>Середина Моста</name>
       <sector>inside</sector>
     </node>
@@ -5579,7 +5627,7 @@
           <target>18033</target>
         </node>
       </exits>
-      <flags>dark</flags>
+      <flags>dark near_water</flags>
       <name>На Западной Стороне Моста</name>
       <resets>
         <mob limit="10" maxHere="2" vnum="18001"/>
@@ -5619,7 +5667,7 @@
           <target>18035</target>
         </node>
       </exits>
-      <flags>dark</flags>
+      <flags>dark near_water</flags>
       <name>Вход в Город</name>
       <resets>
         <mob limit="3" maxHere="2" vnum="18099"/>
@@ -5643,7 +5691,7 @@
           <target>18033</target>
         </node>
       </exits>
-      <flags>dark</flags>
+      <flags>dark near_water</flags>
       <name>Восточная Конюшня</name>
       <sector>inside</sector>
     </node>
@@ -5663,7 +5711,7 @@
           <target>18033</target>
         </node>
       </exits>
-      <flags>dark</flags>
+      <flags>dark near_water</flags>
       <name>Западная Конюшня</name>
       <resets>
         <mob limit="7" maxHere="2" vnum="18002"/>
@@ -6277,7 +6325,7 @@
           <target>18055</target>
         </node>
       </exits>
-      <flags>dark</flags>
+      <flags>dark near_water</flags>
       <name>Скрытая Оранжерея</name>
       <sector>forest</sector>
     </node>
@@ -6366,11 +6414,11 @@
         <mob limit="3" maxHere="2" vnum="18099"/>
         <give vnum="18025"/>
         <mob limit="1" maxHere="1" vnum="18003"/>
-        <equip to="wield" vnum="18010"/>
+        <equip to="sheath" vnum="18010"/>
         <mob limit="1" maxHere="1" vnum="18004"/>
         <equip to="wield" vnum="18011"/>
         <mob limit="1" maxHere="1" vnum="18005"/>
-        <equip to="wield" vnum="18012"/>
+        <equip to="sheath" vnum="18012"/>
         <mob limit="4" maxHere="2" vnum="18028"/>
         <equip to="feet" vnum="18060"/>
       </resets>
@@ -6414,7 +6462,7 @@
       <name>Южный Переулок</name>
       <resets>
         <mob limit="2" maxHere="2" vnum="18032"/>
-        <equip to="wield" vnum="18061"/>
+        <equip to="sheath" vnum="18061"/>
         <mob limit="3" maxHere="2" vnum="18033"/>
       </resets>
       <sector>forest</sector>
@@ -6505,12 +6553,12 @@
       <sector>forest</sector>
     </node>
     <node name="18064">
-      <description>Ты попал в большую мастерскую,  которая находится под  магазином оружия.
+      <description>Ты попадаешь в большую мастерскую,  которая находится под  магазином оружия.
 Эта  мастерская находится  в  том же  помещении,  что и мастерская магазина  
 доспехов.  Эти два магазина  наверное принадлежат одному человеку, так  как 
 мастерские  и  склады у них общие.  Эти мастерские  открыты для посетителей 
 жаждущих узнать как изготовляют оружие.
-   Лестница ведет наверх, а на западе - мастерская доспехов.
+   Лестница ведет наверх, а на востоке - мастерская доспехов.
 </description>
       <exits>
         <node name="east">
@@ -6529,7 +6577,7 @@
       <resets>
         <mob limit="1" maxHere="1" vnum="18078"/>
       </resets>
-      <sector>forest</sector>
+      <sector>inside</sector>
     </node>
     <node name="18065">
       <description>Ты находишься на большой винтовой лестнице ведущей вниз. Ярко синий ковер
@@ -7261,7 +7309,7 @@
         <mob limit="4" maxHere="2" vnum="18028"/>
         <equip to="feet" vnum="18060"/>
         <mob limit="2" maxHere="2" vnum="18032"/>
-        <equip to="wield" vnum="18061"/>
+        <equip to="sheath" vnum="18061"/>
         <mob limit="3" maxHere="2" vnum="18065"/>
       </resets>
       <sector>forest</sector>
@@ -7826,7 +7874,7 @@
 их  от  воров  и  разбойников,  которые  в любой момент могут повредить их,
 пытаясь добыть кусок золота.
    На западе ты видишь Королевскую площадь, на востоке - Дворцовую площадь,
-на юге расположен Храм долины Титанов.
+на севере расположен Храм Долины Титанов.
 </description>
       <exits>
         <node name="east">
@@ -8061,7 +8109,7 @@
         <equip to="wield" vnum="18022"/>
         <mob limit="1" maxHere="1" vnum="18040"/>
         <mob limit="1" maxHere="1" vnum="18047"/>
-        <equip to="wield" vnum="18085"/>
+        <equip to="sheath" vnum="18085"/>
       </resets>
       <sector>forest</sector>
     </node>
@@ -8124,9 +8172,9 @@
         <mob limit="1" maxHere="1" vnum="18037"/>
         <equip to="wield" vnum="18022"/>
         <mob limit="1" maxHere="1" vnum="18042"/>
-        <equip to="wield" vnum="18085"/>
+        <equip to="sheath" vnum="18085"/>
         <mob limit="1" maxHere="1" vnum="18043"/>
-        <equip to="wield" vnum="18085"/>
+        <equip to="sheath" vnum="18085"/>
       </resets>
       <sector>forest</sector>
     </node>
@@ -8160,7 +8208,7 @@
         <mob limit="1" maxHere="1" vnum="18038"/>
         <equip to="wield" vnum="18022"/>
         <mob limit="1" maxHere="1" vnum="18044"/>
-        <equip to="wield" vnum="18085"/>
+        <equip to="sheath" vnum="18085"/>
       </resets>
       <sector>forest</sector>
     </node>
@@ -8187,9 +8235,9 @@
       <name>Северо-Восточная Сторона Тренировочной Площадки</name>
       <resets>
         <mob limit="1" maxHere="1" vnum="18045"/>
-        <equip to="wield" vnum="18085"/>
+        <equip to="sheath" vnum="18085"/>
         <mob limit="1" maxHere="1" vnum="18046"/>
-        <equip to="wield" vnum="18085"/>
+        <equip to="sheath" vnum="18085"/>
       </resets>
       <sector>forest</sector>
     </node>

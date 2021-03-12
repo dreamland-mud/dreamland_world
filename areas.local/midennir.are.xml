@@ -2,10 +2,12 @@
 <area>
   <areadata>
     <authors>Copper</authors>
-    <credits>Miden&apos;nir</credits>
+    <credits>Midennir</credits>
+    <flags>hard</flags>
     <levelHigh>15</levelHigh>
     <levelLow>5</levelLow>
-    <name>Миден&apos;нир</name>
+    <name>Миденнир</name>
+    <resetMessage>Ты слышишь лязг оружия и грубые голоса откуда-то совсем неподалеку.</resetMessage>
     <security>9</security>
     <speedwalk>3e8s2w2s</speedwalk>
     <translator>Zav</translator>
@@ -13,7 +15,7 @@
     <vnumLow>3500</vnumLow>
   </areadata>
   <helps>
-    <node id="1441" keyword="MIDENIR MIDENNIR МИДЕНИР МИДЕННИР" level="1">Большой лес к югу от {hh1392Мидгаарда{x, населенный туповатыми и агрессивными гоблинами.
+    <node id="1441" keyword="MIDENIR MIDENNIR МИДЕНИР МИДЕННИР МИДЕН'НИР ТРАКТИР MIDDENNIR МИДДЕННИР МИДДЕНИР" level="1">Большой лес к югу от {hh1392Мидгаарда{x, населенный туповатыми и агрессивными гоблинами.
 В его западной части располагается небольшой трактир, который с трудом 
 сводит концы с концами. 
 %PAUSE%
@@ -21,7 +23,7 @@
   {Y*{x Трактирщик дает два поручения подряд. 
     Ограничения: нет. Как часто: раз в час.
   {Y*{x Бродячий певец просит отомстить гоблинам. 
-    Ограничения: добрый или нейтральный характер. Как часто: раз в час.
+    Ограничения: добрая или нейтральная натура. Как часто: раз в час.
 </node>
   </helps>
   <mobiles>
@@ -379,6 +381,10 @@
     <node name="3505">
       <affects>
         <node>
+          <apply to="damroll">1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
           <apply to="hitroll">2</apply>
         </node>
       </affects>
@@ -394,11 +400,11 @@
       <gender>m</gender>
       <level>5</level>
       <material>mithril</material>
-      <name>нож кинжал knife dagger</name>
+      <name>knife runed покрытый рунами нож</name>
       <short_descr>покрыт|ый|ого|ому|ый|ым|ом рунами но|ж|жа|жу|ж|жом|же</short_descr>
       <type name="weapon">
-        <diceNumber>2</diceNumber>
-        <diceType>5</diceType>
+        <diceNumber>8</diceNumber>
+        <diceType>1</diceType>
         <weapClass>dagger</weapClass>
         <weapType>stab</weapType>
       </type>
@@ -611,6 +617,26 @@
       <name>Вход в город</name>
       <sector>city</sector>
     </node>
+    <node name="3504">
+      <description>Ты идешь по Северному Тракту -- хорошо обустроенной и ровной дороге, вымощенной
+гладко вытесанными каменными плитами. Дорога ведет с юга на север, в сторону
+города Утехи и озера Кристалмир. Вокруг простираются холмы, поросшие вереском.
+На западе за холмами ты видишь очертания большой рощи. На востоке простираются
+Пески Скорби. На юге ты видишь укрепленную заставу на пересечении дорог.
+</description>
+      <exits>
+        <node name="north">
+          <key>0</key>
+          <target>3524</target>
+        </node>
+        <node name="south">
+          <key>0</key>
+          <target>3527</target>
+        </node>
+      </exits>
+      <name>Северный Тракт</name>
+      <sector>hills</sector>
+    </node>
     <node name="3505">
       <description>Ты идешь по редкому лесу.  Путь ведет далее на юг, но и на восток пройти
 достаточно несложно.  К западу заметны  дымы,  поднимающиеся над верхушками
@@ -647,7 +673,7 @@
 +-------------------------------------------------+
 </node>
       </extraDescr>
-      <name>Тропа в Миден&apos;нир</name>
+      <name>Тропа в Миденнир</name>
       <sector>forest</sector>
     </node>
     <node name="3506">
@@ -670,7 +696,7 @@
           <target>3505</target>
         </node>
       </exits>
-      <name>Миден&apos;нир</name>
+      <name>Миденнир</name>
       <resets>
         <mob limit="10" maxHere="2" vnum="3501"/>
         <equip to="wield" vnum="3500"/>
@@ -700,7 +726,7 @@
           <target>3508</target>
         </node>
       </exits>
-      <name>Миден&apos;нир</name>
+      <name>Миденнир</name>
       <sector>forest</sector>
     </node>
     <node name="3508">
@@ -745,7 +771,7 @@
           <target>3514</target>
         </node>
       </exits>
-      <name>Миден&apos;нир</name>
+      <name>Миденнир</name>
       <resets>
         <mob limit="10" maxHere="2" vnum="3501"/>
         <equip to="wield" vnum="3500"/>
@@ -826,7 +852,7 @@
           <target>3509</target>
         </node>
       </exits>
-      <name>Миден&apos;нир</name>
+      <name>Миденнир</name>
       <resets>
         <mob limit="8" maxHere="2" vnum="3501"/>
         <equip to="wield" vnum="3500"/>
@@ -859,7 +885,7 @@
           <target>3514</target>
         </node>
       </exits>
-      <name>Миден&apos;нир</name>
+      <name>Миденнир</name>
       <resets>
         <mob limit="10" maxHere="2" vnum="3501"/>
         <equip to="wield" vnum="3500"/>
@@ -1075,8 +1101,7 @@
       <flags>dark</flags>
       <name>Место резни</name>
       <resets>
-        <mob limit="2" maxHere="2" vnum="3500"/>
-        <mob limit="2" maxHere="2" vnum="3500"/>
+        <mob limit="10" maxHere="2" vnum="3500"/>
       </resets>
       <sector>forest</sector>
     </node>
@@ -1097,7 +1122,7 @@
           <target>3518</target>
         </node>
       </exits>
-      <name>Глубоко в лесу Миден&apos;нира</name>
+      <name>Глубоко в лесу Миденнира</name>
       <sector>forest</sector>
     </node>
     <node name="3523">
@@ -1122,6 +1147,26 @@
       </exits>
       <name>Темный лес</name>
       <sector>forest</sector>
+    </node>
+    <node name="3524">
+      <description>Ты идешь по Северному Тракту -- хорошо обустроенной и ровной дороге, вымощенной
+гладко вытесанными каменными плитами. Дорога ведет с юга на север, в сторону
+города Утехи и озера Кристалмир. Вокруг простираются холмы, поросшие вереском.
+На западе за холмами ты видишь очертания большой рощи. На востоке простираются
+Пески Скорби.
+</description>
+      <exits>
+        <node name="north">
+          <key>0</key>
+          <target>3533</target>
+        </node>
+        <node name="south">
+          <key>0</key>
+          <target>3504</target>
+        </node>
+      </exits>
+      <name>Северный Тракт</name>
+      <sector>hills</sector>
     </node>
     <node name="3525">
       <description>Ты идешь  по утоптанной широкой дороге, ведущей из Мидгаарда в восточные
@@ -1179,16 +1224,21 @@
       <sector>city</sector>
     </node>
     <node name="3527">
-      <description>Возле хорошо укрепленной заставы  ты  встречен группой тяжеловооруженных
-рыцарей.  Они закованы в сверкающие латы. Они проверяют твои вещи в поисках
-контрабанды  и  один  из них предостерегает тебя - не стоит идти в пустыню,
-там очень просто потеряться и сгинуть....
+      <description>Возле хорошо укрепленной заставы тебя встречает группа тяжеловооруженных
+рыцарей, закованных в сверкающие латы. Они проверяют твои вещи в поисках
+контрабанды и один из них предостерегает тебя -- не стоит идти в пустыню,
+там очень просто потеряться и сгинуть. На север уходит гораздо более ухоженная
+и безопасная с виду каменная дорога.
 </description>
       <exits>
         <node name="east">
           <description>Дорога ведет на восток к Новому Талосу.
 </description>
           <target>3528</target>
+        </node>
+        <node name="north">
+          <key>0</key>
+          <target>3504</target>
         </node>
         <node name="west">
           <description>Дорога ведет на запал к Мидгаарду.
@@ -1308,6 +1358,46 @@
       <name>В предместьях Нового Талоса</name>
       <sector>desert</sector>
     </node>
+    <node name="3533">
+      <description>Ты идешь по Северному Тракту -- хорошо обустроенной и ровной дороге, вымощенной
+гладко вытесанными каменными плитами. Дорога ведет с юга на север, в сторону
+города Утехи и озера Кристалмир. Вокруг простираются холмы, поросшие вереском.
+На западе за холмами ты видишь странное призрачное марево. На востоке ты видишь
+начало безымянного горного хребта, уходящего на северо-восток.
+</description>
+      <exits>
+        <node name="north">
+          <key>0</key>
+          <target>3534</target>
+        </node>
+        <node name="south">
+          <key>0</key>
+          <target>3524</target>
+        </node>
+      </exits>
+      <name>Северный Тракт</name>
+      <sector>hills</sector>
+    </node>
+    <node name="3534">
+      <description>Ты идешь по Северному Тракту -- хорошо обустроенной и ровной дороге, вымощенной
+гладко вытесанными каменными плитами. Дорога ведет с юга на север, в сторону
+города Утехи и озера Кристалмир. Судя по всему, ясеневые леса на севере -- это
+уже самое преддверие тех краев. Холмы вокруг заканчиваются, и с запада на восток
+тянется огромный лесной массив.
+</description>
+      <exits>
+        <node name="north">
+          <key>0</key>
+          <target>10130</target>
+        </node>
+        <node name="south">
+          <key>0</key>
+          <target>3533</target>
+        </node>
+      </exits>
+      <name>Северный Тракт, на опушке</name>
+      <sector>forest</sector>
+    </node>
     <node name="3550">
       <description>Ты у подножия гор,  на востоке и на севере дорога спускается вниз, а на
 юге и на западе зеленеет пышный лес Миден&apos;нира..
@@ -1342,7 +1432,7 @@
         </node>
       </exits>
       <flags>dark</flags>
-      <name>Глубоко в лесу Миден&apos;нира</name>
+      <name>Глубоко в лесу Миденнира</name>
       <resets>
         <mob limit="4" maxHere="2" vnum="3506"/>
         <equip to="head" vnum="3502"/>

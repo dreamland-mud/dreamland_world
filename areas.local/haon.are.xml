@@ -3,6 +3,7 @@
   <areadata>
     <authors>Diku</authors>
     <credits>Haon Dor</credits>
+    <flags>hard</flags>
     <levelHigh>10</levelHigh>
     <levelLow>5</levelLow>
     <name>Леса Королевства Хаон</name>
@@ -14,7 +15,7 @@
     <vnumLow>6000</vnumLow>
   </areadata>
   <helps>
-    <node id="1862" keyword="'HAON DOR' 'ЛЕСА КОРОЛЕВСТВА ХАОН' HAONDOR ХАОНДОР 'ХАОН ДОР'" level="1">На запад от Мидгаарда простирается огромный лес Хаон Дор -- по легенде, лишь
+    <node id="1862" keyword="'HAON DOR' 'ЛЕСА КОРОЛЕВСТВА ХАОН' HAONDOR ХАОНДОР 'ХАОН ДОР' ХАОН-ДОР HAON-DOR" level="1">На запад от Мидгаарда простирается огромный лес Хаон Дор -- по легенде, лишь
 последний остаток исполинского лесного массива, который задолго до появления
 людей простирался от Закатных Пределов до Моря Дракона на востоке.
 Говорят, что этот лес стал первым королевством детей {hh1565Варды{x, эльфов, еще до
@@ -273,16 +274,18 @@
       <dam_type>cleave</dam_type>
       <damage>100d100+1000</damage>
       <default_pos>stand</default_pos>
-      <description>Невероятно костлявый старикашка со  сморщенной сухой  кожей и  горящими глазами
+      <description>Невероятно костлявый старикашка со сморщенной сухой кожей и горящими глазами
 полностью поглощен шахматной партией. Отвлекается он на тебя с большой неохотой
-и откровенной неприязнью,  торопясь поскорее  вернуться к  прерванному занятию.
-Этот старик прожил всего одну, но невероятно долгую жизнь, найдя  где-то секрет
-бессмертия. Поговаривают, что  Баба Яга  - его  давняя пассия.  Скопив огромное
-количество  всевозможных  материальных  благ,  Кощей утратил  к ним  интерес, а
-пещеру  свою  не  разгромождает  то  ли  из-за  лени,  то  ли   из-за  простого
-скупердяйства. Единственное, к  чему он  питает страсть  (хотя и  старается это
-скрыть) -- это чужая слава и победы. Взамен он готов отдать весьма ценные вещи.
-Если ты, конечно, готов заплатить его цену.
+и откровенной неприязнью, торопясь поскорее вернуться к прерванному занятию.
+Этот старик прожил всего одну, но невероятно долгую жизнь, найдя где-то секрет
+бессмертия. Поговаривают, что Баба Яга -- его давняя пассия. Скопив огромное
+количество всевозможных материальных благ, Кощей утратил к ним интерес, а
+пещеру свою не расчищает то ли из-за лени, то ли из-за простого скупердяйства.
+Единственное, к чему он питает страсть (хотя и старается это скрыть) -- это
+чужая слава и победы. Взамен он готов отдать весьма ценные вещи. Если ты,
+конечно, готов{Sfа{Sx заплатить его цену.
+
+Прочитай {y{hcсправка перерождение{x, чтобы узнать больше.
 </description>
       <detection add="imp_invis fade invis hidden sneak acute_vision"/>
       <hit>100d100+1000</hit>
@@ -397,32 +400,34 @@
     </node>
     <node name="6112">
       <ac bash="-27" exotic="-10" pierce="-27" slash="-27"/>
-      <act add="npc sentinel aggressive stay_area"/>
+      <act add="npc sentinel stay_area"/>
       <alignment>-1000</alignment>
       <dam_type>none</dam_type>
       <damage>2d40+20</damage>
       <default_pos>stand</default_pos>
-      <description>Этот гигантский крылатый змей покрыт темно-зеленой чешуей, которая
-защищает почти всю его огромную тушу. Многочисленные дырки в его больших
+      <description>Эта гигантская крылатая тварь покрыта темно-зеленой чешуей, которая
+защищает почти всю ее огромную тушу. Многочисленные дырки в ее больших
 крыльях  могли бы рассказать тебе о многих боях также, как и трещины на
-рогах, растущих  у  него  на  голове. Его  узкие зеленые  глаза светятся
-яростью. Из его ноздрей вырывается дым - это настоящий Дракон.
+рогах, растущих  у  нее  на  голове. Ее  узкие зеленые  глаза светятся
+яростью. Из ее ноздрей вырывается дым -- это настоящий Дракон.
 </description>
+      <form del="edible"/>
       <hit>5d10+1550</hit>
       <hitroll>50</hitroll>
-      <level>45</level>
+      <level>32</level>
       <long_descr>Громадная зеленая драконица (green dragon) разлеглась здесь.
 
 </long_descr>
       <mana>12d9+400</mana>
       <material>0</material>
-      <off add="disarm dodge trip assist_race"/>
+      <off add="disarm dodge tail trip crush assist_race"/>
+      <parts del="hands fingers"/>
       <player_name>dragon green громадная драконица змей зеленая</player_name>
       <race>dragon</race>
       <sex>female</sex>
       <short_descr>громадн|ая|ой|ой|ую|ой|ой {1{Gзелен|ая|ой|ой|ую|ой|ой {2дракониц|а|ы|е|у|ей|е</short_descr>
-      <size>large</size>
-      <spec>spec_breath_gas</spec>
+      <size>huge</size>
+      <spec>spec_poison</spec>
       <start_pos>stand</start_pos>
       <wealth>2500</wealth>
     </node>
@@ -499,7 +504,7 @@
       <material>0</material>
       <off add="dodge fade"/>
       <player_name>guildmaster master мастер гильдия</player_name>
-      <practicer registry="skillGroup">none detection harmful creation weather</practicer>
+      <practicer registry="skillGroup">attack detection nature creation adventure</practicer>
       <race>human</race>
       <res add="spell"/>
       <sex>male</sex>
@@ -512,7 +517,20 @@
     <node name="6000">
       <affects>
         <node>
-          <apply to="hitroll">-4</apply>
+          <apply to="str">1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="con">1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="hitroll">-1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="damroll">1</apply>
+          <bits table="affect_flags"></bits>
         </node>
       </affects>
       <cost>820</cost>
@@ -524,12 +542,12 @@
       <gender>m</gender>
       <level>8</level>
       <material>iron</material>
-      <name>axe lumber two-handed топор двуручный</name>
+      <name>axe lumber two-handed топор дровосека двуручный</name>
       <short_descr>топор||а|у||ом|е дровосека</short_descr>
       <type name="weapon">
-        <diceNumber>3</diceNumber>
+        <diceNumber>5</diceNumber>
         <diceType>6</diceType>
-        <specType>two_hands</specType>
+        <specType>sharp two_hands</specType>
         <weapClass>axe</weapClass>
         <weapType>chop</weapType>
       </type>
@@ -761,11 +779,15 @@
       <level>6</level>
       <material>wood</material>
       <name>branch ветка сук</name>
+      <properties>
+        <node name="bestTier">4</node>
+        <node name="random">true</node>
+      </properties>
       <short_descr>длинн|ая|ой|ой|ую|ой|ой сер|ая|ой|ой|ую|ой|ой ветк|а|и|е|у|ой|е</short_descr>
       <type name="weapon">
         <diceNumber>5</diceNumber>
         <diceType>2</diceType>
-        <weapClass>mace</weapClass>
+        <weapClass>exotic</weapClass>
         <weapType>pound</weapType>
       </type>
       <wear_flags>take wield</wear_flags>
@@ -938,17 +960,27 @@
       <weight>10</weight>
     </node>
     <node name="6155">
+      <affects>
+        <node>
+          <apply to="hitroll">1</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+        <node>
+          <apply to="damroll">2</apply>
+          <bits table="affect_flags"></bits>
+        </node>
+      </affects>
       <cost>250</cost>
-      <description>Булава, под названием &quot;Утренняя Звезда&quot; (morning star), лежит в пыли.</description>
-      <gender>f</gender>
+      <description>Моргенштерн (morningstar) жрицы лежит в пыли.</description>
+      <gender>m</gender>
       <level>15</level>
-      <material>wood, iron</material>
-      <name>morning-star star morning булава утро звезда</name>
-      <short_descr>булав|а|ы|е|у|ой|е &quot;Утренняя Звезда&quot;</short_descr>
+      <material>wood</material>
+      <name>morningstar моргенштерн жрицы</name>
+      <short_descr>моргенштерн||а|у||ом|е жрицы</short_descr>
       <type name="weapon">
-        <diceNumber>3</diceNumber>
-        <diceType>8</diceType>
-        <weapClass>mace</weapClass>
+        <diceNumber>4</diceNumber>
+        <diceType>5</diceType>
+        <weapClass>flail</weapClass>
         <weapType>crush</weapType>
       </type>
       <wear_flags>take wield</wear_flags>
@@ -1580,11 +1612,6 @@
 </description>
           <target>6016</target>
         </node>
-        <node name="south">
-          <description>Дорожка бежит среди деревьев.
-</description>
-          <target>11800</target>
-        </node>
         <node name="west">
           <description>Небольшая дорожка бежит на запад, выводя тебя из чащи.
 </description>
@@ -1785,6 +1812,9 @@
     <node name="6024">
       <description>Ты  находишься на едва заметной в кустах тропе, ведущей к пещерному лазу
 в скале. Ты ФИЗИЧЕСКИ ощущаешь опасность, исходящую оттуда!
+
+Лаз закрывает плита с надписью &quot;{gТерритория Львов{x&quot;.
+Осторожно, клановый страж безжалостно расправится с чужаками...
 </description>
       <exits>
         <node name="down">
@@ -2631,9 +2661,8 @@
           <target>6122</target>
         </node>
         <node name="south">
-          <description>Ты видишь воды темной реки.
-</description>
-          <target>9774</target>
+          <key>0</key>
+          <target>3374</target>
         </node>
         <node name="west">
           <description>Узкая дорожка бежит на запад, петляя между деревьями.
@@ -2659,8 +2688,8 @@
     <node name="6124">
       <description>Ты стоишь на узкой  дорожке, идущей  сквозь темную чащу леса. Древний
 лес растет здесь настолько густо, что дорожка просто теряется в пыльных
-корнях. На юге темная река (river) течет с востока на запад. Единственный выход
-отсюда, кажется, есть только на западе.
+корнях. На юге ты видишь вход в какую-то темную пещеру в холме, откуда несет
+жуткой вонью. За холмом темная река (river) течет с востока на запад.
 </description>
       <exits>
         <node name="south">
@@ -3100,7 +3129,7 @@
     <node name="6137">
       <description>Ты стоишь на пыльной тропе, идущей сквозь темную чащу леса. Древние
 мрачные деревья возвышаются вокруг тебя.  На севере ты видишь мрачный
-лес. Другие выходы ведут на юг и восток.
+лес. Тропа ведет на восток.
 </description>
       <exits>
         <node name="east">
@@ -3112,9 +3141,6 @@
           <description>На севере виднеется темная роща.
 </description>
           <target>1300</target>
-        </node>
-        <node name="south">
-          <target>8838</target>
         </node>
       </exits>
       <extraDescr>
@@ -3290,7 +3316,7 @@
     <node name="6153">
       <description>Ты находишься внутри дерева и отсюда можешь пойти вниз, в мрак,
 или  выйти  наружу, на  запад. На севере  находится вход в логово
-Ciquala.
+жуткой Сайкуалы.
 </description>
       <exits>
         <node name="down">
@@ -3361,7 +3387,6 @@ Ciquala.
 Мыслящим существам здесь не рады, и ты чувствуешь себя не очень хорошо, когда
 решаешь провести здесь немного больше времени.
 Деревянный алтарь (altar) едва заметно мерцает с момента твоего прихода.
-Отсюда только два выхода - на север, в подземных ход, и на юг - в Бездну.
 </description>
       <exits>
         <node name="north">
@@ -3371,11 +3396,6 @@ Ciquala.
           <keyword>дверь door</keyword>
           <short_descr>двер|ь|и|и|ь|ью|и</short_descr>
           <target>6154</target>
-        </node>
-        <node name="south">
-          <description>Путь в Бездну.
-</description>
-          <target>25004</target>
         </node>
       </exits>
       <extraDescr>

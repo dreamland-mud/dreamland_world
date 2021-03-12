@@ -3,12 +3,13 @@
   <areadata>
     <authors>Diku</authors>
     <credits>Limbo</credits>
-    <flags>noquest hidden</flags>
-    <levelHigh>110</levelHigh>
-    <levelLow>1</levelLow>
+    <flags>noquest hidden system</flags>
+    <levelHigh>0</levelHigh>
+    <levelLow>0</levelLow>
     <name>Лимбо</name>
     <resetMessage>Ты не слышишь абсолютно ничего -- в этом месте нет ни пространства, ни времени.</resetMessage>
     <security>9</security>
+    <speedwalk>в разные комнаты Лимбо попадают по-разному</speedwalk>
     <vnumHigh>199</vnumHigh>
     <vnumLow>0</vnumLow>
   </areadata>
@@ -95,7 +96,7 @@
       <off add="trip"/>
       <player_name>bear медведь</player_name>
       <race>bear</race>
-      <sex>either</sex>
+      <sex>male</sex>
       <short_descr>медвед|ь|я|ю|я|ем|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
@@ -134,17 +135,18 @@
     <node name="14">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
       <act add="npc undead warrior"/>
-      <aff add="infrared"/>
+      <aff add="sneak swim"/>
       <alignment>-750</alignment>
       <behavior type="ClanSummonedCreature">
       </behavior>
-      <dam_type>punch</dam_type>
+      <dam_type>drain</dam_type>
       <damage>5d3+20</damage>
       <default_pos>stand</default_pos>
       <description>Призванная {Dночная тень{x выглядит ужасно. Её налитые кровью глаза 
 прожигают тебя насквозь. 
 </description>
-      <detection add="invis hidden"/>
+      <detection add="fade invis hidden"/>
+      <form add="mist biped" del="edible mammal dragon"/>
       <hit>16d15+240</hit>
       <hitroll>3</hitroll>
       <level>20</level>
@@ -153,14 +155,15 @@
       <mana>1d1+152</mana>
       <material>0</material>
       <off add="berserk disarm kick_dirt"/>
+      <parts del="heart brains guts"/>
       <player_name>nightwalker ночная тень</player_name>
-      <race>human</race>
-      <res add="summon charm slash"/>
-      <sex>male</sex>
+      <race>shadow dragon</race>
+      <res add="summon slash" del="bash negative"/>
+      <sex>female</sex>
       <short_descr>{Dночн|ая|ой|ой|ую|ой|ой тен|ь{x|и{x|и{x|ь{x|ью{x|и{x</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
-      <vuln add="negative"/>
+      <vuln add="holy" del="pierce light"/>
     </node>
     <node name="15">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
@@ -190,7 +193,6 @@
       <short_descr>сталкер||а|у|а|ом|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
-      <vuln add="negative"/>
     </node>
     <node name="16">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
@@ -217,7 +219,7 @@
       <race>human</race>
       <res add="summon charm"/>
       <sex>male</sex>
-      <short_descr>оруженосец||а|у|а|ем|е</short_descr>
+      <short_descr>оруженос|ец|ца|цу|ца|цем|це</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
       <vuln add="negative"/>
@@ -249,25 +251,31 @@
     <node name="18">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
       <act add="npc"/>
-      <dam_type>pound</dam_type>
+      <aff add="infrared" del="slow"/>
+      <dam_type>tearbite</dam_type>
       <damage>3d10+12</damage>
       <default_pos>stand</default_pos>
-      <description>Пренеприятнейшее зрелище, однако!
-Ну да ничего - скоро умрет окончательно.
+      <description>Гниющий полуразвалившийся зомби? Пренеприятнейшее зрелище, однако!
+Ну да ничего -- скоро умрет окончательно.
 </description>
+      <detection add="evil good life"/>
+      <form del="nonadoptable biped"/>
       <hit>1d1+1</hit>
       <hitroll>1</hitroll>
-      <long_descr>Оживленный труп (corpse) %s стоит, слегка покачиваясь.
+      <imm del="charm"/>
+      <long_descr>Зомби (zombie) %s мычит, выпрашивая чьи-то мозги.
 </long_descr>
       <mana>1d1+1</mana>
       <material>0</material>
       <off add="trip"/>
-      <player_name>undead оживленный %s</player_name>
-      <race>undead</race>
+      <player_name>zombie зомби %s</player_name>
+      <race>zombie</race>
+      <res del="pierce cold"/>
       <sex>male</sex>
-      <short_descr>оживленн|ый|ого|ому|ый|ым|ом труп||а|у||ом|е %s</short_descr>
+      <short_descr>зомби %s</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
+      <vuln del="fire"/>
     </node>
     <node name="19">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
@@ -288,10 +296,42 @@
       <off add="trip"/>
       <player_name>lion лев охотничий</player_name>
       <race>lion</race>
-      <sex>either</sex>
+      <sex>male</sex>
       <short_descr>л|ев|ьва|ьву|ьва|ьвом|ьве</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
+    </node>
+    <node name="190">
+      <ac bash="-77" exotic="-40" pierce="-77" slash="-70"/>
+      <act add="npc sentinel stay_area warrior"/>
+      <aff add="invisible hide"/>
+      <alignment>-1000</alignment>
+      <dam_type>wrath</dam_type>
+      <damage>20d15+95</damage>
+      <default_pos>stand</default_pos>
+      <description>Казалось бы, это невозможно, но окружающая тебя тьма и пустота концентрируется
+в особо непроглядный сгусток густого чернильного мрака. У него нет ни формы,
+ни очертаний, но каким-то образом ты чувствуешь, что он движется по направлению
+к тебе...
+</description>
+      <detection add="imp_invis fade invis hidden good acute_vision"/>
+      <form add="biped" del="dragon"/>
+      <hit>50d10+28000</hit>
+      <level>100</level>
+      <long_descr>{1{DСгусток мрака надвигается на тебя из пустоты.{2
+</long_descr>
+      <mana>10d10+10203</mana>
+      <material>0</material>
+      <off add="bash berserk disarm dodge kick parry trip"/>
+      <player_name>blob darkness сгусток мрака</player_name>
+      <race>shadow dragon</race>
+      <res del="charm bash negative"/>
+      <sex>male</sex>
+      <short_descr>{1{Dсгуст|ок|ка|ку|ок|ком|ке мрака{2</short_descr>
+      <size>large</size>
+      <start_pos>stand</start_pos>
+      <vuln del="pierce light"/>
+      <wealth>300</wealth>
     </node>
     <node name="20">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
@@ -342,7 +382,7 @@
       <off add="disarm dodge crush"/>
       <player_name>golem lesser малый голем</player_name>
       <race>golem</race>
-      <sex>either</sex>
+      <sex>male</sex>
       <short_descr>мал|ый|ого|ому|ого|ым|ом голем||а|у|а|ом|е</short_descr>
       <size>small</size>
       <start_pos>stand</start_pos>
@@ -368,7 +408,7 @@
       <off add="disarm dodge crush"/>
       <player_name>golem stone каменный голем</player_name>
       <race>golem</race>
-      <sex>either</sex>
+      <sex>male</sex>
       <short_descr>каменн|ый|ого|ому|ого|ым|ом голем||а|у|а|ом|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
@@ -395,7 +435,7 @@
       <off add="disarm dodge crush"/>
       <player_name>golem iron железный голем</player_name>
       <race>golem</race>
-      <sex>either</sex>
+      <sex>male</sex>
       <short_descr>железн|ый|ого|ому|ого|ым|ом голем||а|у|а|ом|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
@@ -421,7 +461,7 @@
       <off add="disarm dodge crush"/>
       <player_name>golem adamantite адамантитовый голем</player_name>
       <race>golem</race>
-      <sex>either</sex>
+      <sex>male</sex>
       <short_descr>адамантитов|ый|ого|ому|ого|ым|ом голем||а|у|а|ом|е</short_descr>
       <size>large</size>
       <start_pos>stand</start_pos>
@@ -452,30 +492,33 @@
     <node name="26">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
       <act add="npc sentinel undead"/>
+      <aff add="sneak flying" del="infrared"/>
       <behavior type="NecroCreature">
       </behavior>
-      <dam_type>claw</dam_type>
+      <dam_type>drain</dam_type>
       <damage>3d10+12</damage>
       <default_pos>stand</default_pos>
       <description>Ты видишь НЕЧТО.
 </description>
-      <form add="edible animal mammal"/>
+      <detection del="evil good"/>
+      <form add="magical instant_decay mist" del="undead"/>
       <hit>1d1+1</hit>
       <hitroll>1</hitroll>
-      <imm add="negative"/>
+      <imm add="negative" del="drowning"/>
       <long_descr>Тёмная призванная тень (shadow) застыла здесь.
 </long_descr>
       <mana>1d1+1</mana>
       <material>0</material>
-      <off add="dodge fast trip"/>
-      <parts add="head legs heart brains guts feet ear eye tail claws fangs"/>
+      <off add="disarm dodge fast rescue"/>
+      <parts del="head arms legs heart brains guts hands feet fingers ear eye"/>
       <player_name>shadow summonned тень призванная</player_name>
-      <race>unique</race>
-      <res add="weapon"/>
-      <sex>male</sex>
-      <short_descr>призванн|ая|ой|ой|ую|ой|ой тен|ь|и|и|ь|ью|и</short_descr>
+      <race>undead</race>
+      <res add="weapon drowning sound" del="negative"/>
+      <sex>female</sex>
+      <short_descr>призванн|ая|ой|ой|ую|ой|ой {Dтен|ь{x|и{x|и{x|ь{x|ью{x|и{x</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
+      <vuln add="prayer" del="holy light silver"/>
     </node>
     <node name="27">
       <ac bash="-65" exotic="-25" pierce="-65" slash="-65"/>
@@ -669,6 +712,30 @@
       <size>medium</size>
       <start_pos>stand</start_pos>
     </node>
+    <node name="31">
+      <ac bash="-1000" exotic="0" pierce="-1000" slash="-1000"/>
+      <act add="npc sentinel mage"/>
+      <alignment>-1000</alignment>
+      <dam_type>slap</dam_type>
+      <damage>100d100+1000</damage>
+      <default_pos>stand</default_pos>
+      <description>Лица сидящего за столом человека тебе разглядеть не удается - в круг
+света попадает лишь кончик седой бороды и вышитые рукава халата.
+</description>
+      <detection add="imp_invis fade invis hidden sneak acute_vision"/>
+      <hit>100d100+1000</hit>
+      <level>120</level>
+      <long_descr>Седой старик (oldman) склонился над Книгой Имен.
+</long_descr>
+      <mana>100d100+1000</mana>
+      <material>none</material>
+      <player_name>архивариус archivarius oldman старик</player_name>
+      <race>elf</race>
+      <sex>male</sex>
+      <short_descr>архивариус||а|у|а|ом|е</short_descr>
+      <size>medium</size>
+      <start_pos>stand</start_pos>
+    </node>
     <node name="5">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
       <act add="npc"/>
@@ -687,7 +754,7 @@
       <player_name>gluk глюк</player_name>
       <race>arial</race>
       <res add="poison negative energy disease"/>
-      <sex>either</sex>
+      <sex>male</sex>
       <short_descr>глюк||а|у||ом|е</short_descr>
       <size>medium</size>
       <start_pos>stand</start_pos>
@@ -794,24 +861,33 @@
     </node>
     <node name="100">
       <condition>90</condition>
-      <description>Банковский аппарат (teller machine, atm) установлен здесь.</description>
+      <description>Банкомат (atm) установлен здесь.</description>
       <extraDescr>
-        <node keyword="atm teller machine">Маленькая табличка на аппарате гласит:
+        <node keyword="atm банкомат">Маленькая табличка на аппарате гласит:
 
-{YИспользуй команды &apos;BALANCE&apos; 
-                  &apos;WITHDRAW &lt;сумма gold|silver&gt;&apos;
-                  &apos;DEPOSIT &lt;сумма gold|silver&gt;&apos;
+{y{lewithdraw{lrсосчета{x {Dчисло{x {y{lesilver{lrсеребро{x
+{y{lewithdraw{lrсосчета{x {Dчисло{x {y{legold{lrзолото{x
+Снять указанную сумму со счета.
 
+{y{ledeposit{lrнасчет{x {Dчисло{x {y{lesilver{lrсеребро{x
+{y{ledeposit{lrнасчет{x {Dчисло{x {y{legold{lrзолото{x
+Поместить деньги на личный счет.
 
-{x                          Компания -=Обдиралов и сын=-                                       
+{y{ledeposit{lrнасчет{x {Dчисло{x {y{lesilver{lrсеребро{x {Dадресат{x
+{y{ledeposit{lrнасчет{x {Dчисло{x {y{legold{lrзолото{x {Dадресат{x
+Можно положить деньги на чужой счет, при этом адресат перевода должен
+находиться в мире. Просто замени слово &quot;адресат&quot; его или ее именем.
+
+{y{lebalance{lrбаланс{x
+Узнать, сколько денег у тебя есть в банке.
 </node>
       </extraDescr>
       <gender>m</gender>
       <material>iron</material>
-      <name>аппарат atm teller mashine</name>
-      <short_descr>банковск|ий|ого|ому|ий|им|ом аппарат||а|у||ом|е</short_descr>
+      <name>atm банкомат</name>
+      <short_descr>банкомат||а|у||ом|е</short_descr>
       <type name="furniture">
-        <flags>stand_on sit_on rest_on sleep_on</flags>
+        <flags>stand_on sit_on rest_on</flags>
         <maxPeople>3</maxPeople>
         <maxWeight>2000</maxWeight>
       </type>
@@ -846,7 +922,6 @@
     <node name="102">
       <behavior type="QuestReward">
       </behavior>
-      <condition>90</condition>
       <description>Хрустальный шар (orb) с таинственным существом внутри лежит здесь.</description>
       <extraDescr>
         <node keyword="orb ball pager хрустальный шар">Небольшой  хрустальный  шар  с  таинственным  существом  внутри.   Существо,
@@ -864,7 +939,7 @@
       <gender>m</gender>
       <material>crystal</material>
       <name>orb crystal ball хрустальный шар</name>
-      <short_descr>хрустальн|ый|ого|ому|ый|ым|ом шар||а|у||ом|е</short_descr>
+      <short_descr>{1{Cхрустальн|ый|ого|ому|ый|ым|ом {2шар||а|у||ом|е</short_descr>
       <type name="furniture">
         <maxPeople>3</maxPeople>
         <maxWeight>20</maxWeight>
@@ -883,9 +958,9 @@
       <name>сумка bag hero big</name>
       <short_descr>%s Сумк|а|и|е|у|ой|е %s</short_descr>
       <type name="container">
-        <capacity>1000</capacity>
+        <capacity>10000</capacity>
         <flags>closeable pickproof</flags>
-        <maxWeight>1000</maxWeight>
+        <maxWeight>10000</maxWeight>
         <weightMult>25</weightMult>
       </type>
       <wear_flags>take no_sac wear_float</wear_flags>
@@ -893,7 +968,6 @@
     </node>
     <node name="104">
       <description>-</description>
-      <extra_flags>deleted</extra_flags>
       <gender>m</gender>
       <material>-</material>
       <name>-</name>
@@ -905,11 +979,12 @@
         <weapType>none</weapType>
       </type>
       <wear_flags>take wield</wear_flags>
+      <weight>10</weight>
     </node>
     <node name="105">
       <condition>90</condition>
       <extraDescr>
-        <node keyword="monument"></node>
+        <node keyword="monument памятник"></node>
       </extraDescr>
       <gender>m</gender>
       <material>wood</material>
@@ -1217,7 +1292,6 @@
       </affects>
       <behavior type="QuestGirth">
       </behavior>
-      <condition>90</condition>
       <cost>100000</cost>
       <description>Огромный пояс (girth), увешанный брелоками, лежит здесь, излучая могущество.</description>
       <extra_flags>glow bless nopurge nolocate burn_proof nosell noenchant</extra_flags>
@@ -1244,6 +1318,24 @@
       </type>
       <wear_flags>take</wear_flags>
       <weight>50</weight>
+    </node>
+    <node name="120">
+      <cost>15000</cost>
+      <description>Огромный чемодан (suitcase) полон вещей %s.</description>
+      <extra_flags>nopurge nosac nolocate nofind burn_proof nouncurse nosell noenchant</extra_flags>
+      <gender>m</gender>
+      <level>20</level>
+      <material>leather</material>
+      <name>suitcase чемодан %s</name>
+      <short_descr>чемодан||а|у||ом|е с вещами %s</short_descr>
+      <type name="container">
+        <capacity>10000</capacity>
+        <flags>closeable pickproof closed locked with_pockets</flags>
+        <maxWeight>10000</maxWeight>
+        <weightMult>25</weightMult>
+      </type>
+      <wear_flags>take</wear_flags>
+      <weight>25</weight>
     </node>
     <node name="13">
       <condition>25</condition>
@@ -1538,6 +1630,8 @@
       </type>
     </node>
     <node name="31">
+      <behavior type="SpellBook">
+      </behavior>
       <description>Книга (spellbook), с записанными в ней заклинаниями, лежит здесь.</description>
       <gender>f</gender>
       <material>paper</material>
@@ -2026,7 +2120,7 @@
     <node name="70">
       <affects>
         <node>
-          <bits table="detect_flags">imp_invis invis hidden</bits>
+          <bits table="imm_flags">charm</bits>
         </node>
       </affects>
       <description>Серебряный символ (badge) забыт здесь.</description>
@@ -2134,8 +2228,8 @@
     <node name="8">
       <description>{x</description>
       <extraDescr>
-        <node keyword="wall стена">Стена покрыта толстым слоем копоти, сквозь которую проступают глубокие
-царапины. Штукатурка местами отвалилась, однако, если приглядеться, все еще
+        <node keyword="walls стена стены">Стена покрыта толстым слоем копоти, сквозь которую проступают глубокие царапины.
+Штукатурка местами отвалилась, однако, если {Wизучить{x повнимательнее, все еще
 можно различить контуры скалистого берега, нескольких птиц и сооружение,
 напоминающее маяк. Рисунок сделан быстрой уверенной рукой профессионала.
 Несмотря на плачевное состояние изображения, от него веет силой.
@@ -2144,8 +2238,9 @@
       <extra_flags>nolocate nofind noident</extra_flags>
       <gender>f</gender>
       <material>stone</material>
-      <name>wall стена</name>
+      <name>walls стена стены</name>
       <short_descr>стен|а|ы|е|у|ой|е</short_descr>
+      <smell>Стена пахнет плесенью... а еще ты почему-то различаешь тонкий запах соленого моря.</smell>
       <type name="furniture">
         <heal>0</heal>
         <mana>0</mana>
@@ -2168,7 +2263,7 @@
         <diceType>1</diceType>
         <specType>sharp</specType>
         <weapClass>dagger</weapClass>
-        <weapType>none</weapType>
+        <weapType>pierce</weapType>
       </type>
       <wear_flags>take wield</wear_flags>
       <weight>80</weight>
@@ -2187,7 +2282,7 @@
         <diceNumber>11</diceNumber>
         <diceType>1</diceType>
         <weapClass>mace</weapClass>
-        <weapType>none</weapType>
+        <weapType>crush</weapType>
       </type>
       <wear_flags>take wield</wear_flags>
       <weight>200</weight>
@@ -2232,7 +2327,7 @@
         <diceType>1</diceType>
         <specType>sharp</specType>
         <weapClass>sword</weapClass>
-        <weapType>none</weapType>
+        <weapType>slash</weapType>
       </type>
       <wear_flags>take wield</wear_flags>
       <weight>80</weight>
@@ -2280,7 +2375,7 @@
     <node name="89">
       <affects>
         <node>
-          <apply to="hit">25</apply>
+          <apply to="mana">50</apply>
           <bits table="affect_flags"></bits>
         </node>
         <node>
@@ -2288,7 +2383,7 @@
           <bits table="affect_flags"></bits>
         </node>
         <node>
-          <apply to="mana">50</apply>
+          <apply to="hit">25</apply>
           <bits table="affect_flags"></bits>
         </node>
       </affects>
@@ -2390,7 +2485,6 @@
     <node name="94">
       <behavior type="QuestGirth">
       </behavior>
-      <condition>90</condition>
       <cost>100000</cost>
       <description>Огромный пояс (GIRTH) лежит здесь, излучая могущество.</description>
       <extra_flags>glow bless nopurge nolocate burn_proof nosell noenchant</extra_flags>
@@ -2409,7 +2503,6 @@
     <node name="95">
       <behavior type="QuestRing">
       </behavior>
-      <condition>90</condition>
       <cost>100000</cost>
       <description>Огромное кольцо (RING) лежит здесь, излучая могущество.</description>
       <extra_flags>glow bless nopurge nolocate burn_proof nosell noenchant</extra_flags>
@@ -2428,7 +2521,6 @@
     <node name="96">
       <behavior type="QuestWeapon">
       </behavior>
-      <condition>90</condition>
       <cost>100000</cost>
       <description>Сверкающее оружие (weapon) лежит здесь, излучая могущество.</description>
       <extra_flags>glow nodrop bless nopurge nolocate burn_proof nouncurse nosell noenchant</extra_flags>
@@ -2506,7 +2598,7 @@
         <diceType>1</diceType>
         <specType>sharp</specType>
         <weapClass>lance</weapClass>
-        <weapType>none</weapType>
+        <weapType>thrust</weapType>
       </type>
       <wear_flags>take wield</wear_flags>
       <weight>80</weight>
@@ -2514,11 +2606,18 @@
   </objects>
   <rooms>
     <node name="1">
-      <description>Ты паришь за пределами реальности.
+      <description>{DТы висишь в пустоте. Твои органы чувств не сообщают тебе практически ничего
+об окружающей тебя безбрежной и бесформенной Тьме. Ты полностью дезориетирован{Sfа{Sx.
+Пос{bт{Dепен{bно{D твои {bгла{Dза {bначинают {Dпри{bвыкать к темно{Dте,{b и ты начинаешь {cра{bзличать
+{cсмут{bные {cочерта{bния {cкаких-то объектов вокруг тебя. Кажется, они шевелятся...{x
 </description>
-      <flags>no_mob indoors</flags>
-      <name>The Void</name>
-      <sector>city</sector>
+      <flags>dark no_vanish no_mob no_recall nowhere nosummon</flags>
+      <liquid>ink</liquid>
+      <name>{DТьма и пустота{x</name>
+      <resets>
+        <mob limit="2" maxHere="2" vnum="190"/>
+      </resets>
+      <sector>air</sector>
     </node>
     <node name="10">
       <description>Стены из холодного сырого заплесневелого камня... Ни одного окошка...
@@ -2536,6 +2635,54 @@
       </resets>
       <sector>inside</sector>
     </node>
+    <node name="100">
+      <flags>no_vanish indoors nowhere chat</flags>
+      <name>Склад вещей #1</name>
+      <sector>inside</sector>
+    </node>
+    <node name="101">
+      <flags>no_vanish indoors nowhere chat</flags>
+      <name>Склад вещей #2</name>
+      <sector>inside</sector>
+    </node>
+    <node name="102">
+      <flags>no_vanish indoors nowhere chat</flags>
+      <name>Склад вещей #3</name>
+      <sector>inside</sector>
+    </node>
+    <node name="103">
+      <flags>no_vanish indoors nowhere chat</flags>
+      <name>Склад вещей #4</name>
+      <sector>inside</sector>
+    </node>
+    <node name="104">
+      <flags>no_vanish indoors nowhere chat</flags>
+      <name>Склад вещей #5</name>
+      <sector>inside</sector>
+    </node>
+    <node name="105">
+      <flags>no_vanish indoors nowhere chat</flags>
+      <name>Склад вещей #6</name>
+      <sector>inside</sector>
+    </node>
+    <node name="106">
+      <flags>no_vanish indoors nowhere chat</flags>
+      <name>Склад вещей #7</name>
+      <sector>inside</sector>
+    </node>
+    <node name="107">
+      <flags>no_vanish indoors nowhere chat</flags>
+      <name>Склад вещей #8</name>
+      <sector>inside</sector>
+    </node>
+    <node name="11">
+      <flags>no_vanish no_mob indoors nowhere dumb</flags>
+      <name>Резервная копия всемирного архива</name>
+      <resets>
+        <mob limit="1" maxHere="1" vnum="31"/>
+      </resets>
+      <sector>inside</sector>
+    </node>
     <node name="2">
       <description>Ты плывёшь в бесформенной пустоте, оторванн{Smый{Sfая{Sx ото всех ощущений физического
 мира, окружённ{Smый{Sfая{Sx пульсирующими сгустками света, постепенно растворяющимися в почти полную
@@ -2548,7 +2695,7 @@
         </node>
       </exits>
       <flags>indoors noquit</flags>
-      <name>Limbo</name>
+      <name>Лимбо</name>
       <sector>city</sector>
     </node>
     <node name="3">
@@ -2566,17 +2713,18 @@
       <sector>inside</sector>
     </node>
     <node name="4">
-      <description>Стены из холодного сырого заплесневелого камня... Ни одного окошка...
-Забльована пiдлога... Всюду грязь и шныряют крысы. Откуда им тут взяться?
-Вокруг не видно ни единой щели,  чтобы  даже  проскользнуть  таракану...
-Здесь даже нет дверей! Вся  обстановка  состоит  из  нар,  сделанных  из
-прогнившего дерева, бочки с тухлой водой и ящика с  зеленым  от  плесени
-хлебом. Ты задумываешься: а откуда берется эта вода и хлеб?
+      <description>Ты оказываешься в тесной тюремной камере без единого окна.
+Холодная каменная {Wстена{x камеры наощупь сырая и заплесневелая, под плесенью видны
+царапины и отметины, вероятно оставленные бывшими узниками. Пол покрыт грязью, 
+под стенами шныряют крысы. Откуда им тут взяться? В стенах ни единой щели --
+даже таракану не проскользнуть... Здесь даже нет дверей! Вся обстановка состоит
+из нар, сделанных из прогнившего дерева, бочки с тухлой водой и ящика с зеленым
+от плесени хлебом. Ты задумываешься: а откуда берется эта вода и хлеб?
 </description>
       <flags>dark no_mob indoors nodamage safe no_recall nowhere nosummon</flags>
       <healRate>50</healRate>
       <manaRate>50</manaRate>
-      <name>Тюрьма Земли Снов</name>
+      <name>Забытая тюремная камера</name>
       <resets>
         <drop vnum="8"/>
         <drop vnum="35"/>
@@ -2596,27 +2744,24 @@
 затянуты бычьим пузырем, а за ним - хаос, страх и завывания демонов. 
 Пол-избы занимает печь, на которой бабка в свободное время греет свои старые
 кости.  Оглядываясь в поисках хоть чего-нибудь, что объяснило бы, зачем ты сюда
-попал, ты замечаешь медную табличку (plaque), украшающую одну из бревенчатых
+попал{Sfа{x, ты замечаешь медную табличку (plaque), украшающую одну из бревенчатых
 стен избушки.  
 </description>
       <extraDescr>
-        <node keyword="plaque табличка">/-----------------------------------------------------------------------------\
-|                                                                             |
-| Каждая прожитая тобой жизнь имеет цену. Цену имеют и те вещи, которые хочет |
-| тебе сейчас отдать Яга. Обычно за одну жизнь можно попросить у нее одну из  |
-| вещей, например, плюс один параметр или плюс один уровень. Цветной претитул |
-| оценивается двумя жизнями, а здоровье (50 очков), мана (100) или скилпоинты |
-| (500) стоят полжизни.                                                       |
-| Общаться с бабой Ягой нетрудно, просто говори ей, чего ты хочешь: например  |
-| &quot;хочу здоровье&quot; или (если передумаешь что-то брать) &quot;возвращаю силу&quot;.       |
-| Бабка поймет и по-английски, скажем, &quot;i want con&quot;, &quot;take dex&quot;.              |
-| Посмотреть, что уже приобретено, можно командой mlt (она пригодится тебе    |
-| и в дальнейшей жизни). Полезно также изучить help remort.                   |
-| Когда у бабки в руках ничего не останется, и ты будешь доволен выбором,     |
-| скажи ей &quot;basta&quot; (&quot;хватит&quot;) и она тебя отпустит. После этого дороги назад   |
-| не будет, так что не торопись покидать избушку.                             |
-|                                                                             |
-\-----------------------------------------------------------------------------/
+        <node keyword="plaque табличка">Каждая прожитая тобой жизнь имеет цену. Цену имеют и те плюшки, которые хочет
+тебе сейчас отдать Яга. Обычно за одну жизнь можно попросить у нее одну из
+плюшек, например, плюс один параметр или плюс один уровень. Цветной {hhпретитул{x оценивается
+двумя жизнями, а здоровье (50 очков) или мана (100) стоят полжизни.                                                       |
+
+Общаться с бабой Ягой нетрудно, просто скажи, чего ты хочешь. Например, 
+&quot;{y{hcсказать хочу здоровье{x&quot; или, если передумаешь что-то брать,&quot;{y{hcсказать возвращаю силу{x&quot;.      
+           
+Посмотреть, что уже приобретено, можно командой {y{hcmlt{x (она пригодится тебе   
+и в дальнейшей жизни). Полезно также изучить {y{hc{lrсправка реморт{lehelp remort{x.
+
+Когда у бабки в руках ничего не останется, и ты будешь довол{Smен{Sfьна{Sx выбором,    
+скажи &quot;{gbasta{x&quot; (&quot;{gхватит{x&quot;), и она тебя отпустит. После этого дороги назад  
+не будет, так что не торопись покидать избушку.
 </node>
       </extraDescr>
       <flags>no_vanish no_mob indoors nodamage safe no_recall nowhere nosummon</flags>

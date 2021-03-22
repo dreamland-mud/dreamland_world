@@ -4,7 +4,7 @@
  { "name": "oldstyle", "burns": 0, "floats": 0, "type": "none", "flags": "", "vuln": "", "rname": "неизвестный материал" },
 
  // metals
- { "name": "adamantite", "burns": 0, "floats": -1, "type": "metal", "flags": "", "vuln": "", "rname": "адамантит" }, // "dull, heavy and dense" (c) adnd
+ { "name": "adamantite", "burns": 0, "floats": -1, "type": "metal", "flags": "tough", "vuln": "", "rname": "адамантит" }, // "dull, heavy and dense" (c) adnd
  { "name": "aluminum", "burns": 0, "floats": -1, "type": "metal", "flags": "", "vuln": "", "rname": "алюминий" },
  { "name": "brass", "burns": 0, "floats": -1, "type": "metal", "flags": "", "vuln": "", "rname": "латунь" },
  { "name": "bronze", "burns": 0, "floats": -1, "type": "metal", "flags": "", "vuln": "", "rname": "бронза" },
@@ -13,7 +13,7 @@
  { "name": "iron", "burns": 0, "floats": -1, "type": "metal", "flags": "", "vuln": "iron", "rname": "железо" },
  { "name": "lead", "burns": 0, "floats": -1, "type": "metal", "flags": "", "vuln": "", "rname": "свинец" },
  { "name": "metal", "burns": 0, "floats": -1, "type": "metal", "flags": "", "vuln": "", "rname": "металл" },
- { "name": "mithril", "burns": 0, "floats": -1, "type": "metal", "flags": "", "vuln": "mithril", "rname": "мифрил" }, // "reflective, light and pure" (c) adnd
+ { "name": "mithril", "burns": 0, "floats": -1, "type": "metal", "flags": "tough", "vuln": "mithril", "rname": "мифрил" }, // "reflective, light and pure" (c) adnd
  { "name": "platinum",  "burns": 0, "floats": -1, "type": "metal", "flags": "indestr", "vuln": "", "rname": "платина" }, 
  { "name": "silver", "burns": 0, "floats": -1, "type": "metal", "flags": "", "vuln": "silver", "rname": "серебро" },
  { "name": "steel", "burns": 0, "floats": -1, "type": "metal", "flags": "", "vuln": "iron", "rname": "сталь" },
@@ -21,20 +21,20 @@
  { "name": "titanium",  "burns": 0, "floats": -1, "type": "metal", "flags": "tough", "vuln": "", "rname": "титан" },
 
  // gems
- { "name": "amethyst", "burns": 0, "floats": -1, "type": "gem", "flags": "", "vuln": "", "rname": "аметист" },
- { "name": "diamond", "burns": 0, "floats": -1, "type": "gem", "flags": "", "vuln": "", "rname": "алмаз" },
- { "name": "emerald", "burns": 0, "floats": -1, "type": "gem", "flags": "", "vuln": "", "rname": "изумруд" },
- { "name": "gem", "burns": 0, "floats": -1, "type": "gem", "flags": "", "vuln": "", "rname": "драгоценный камень" },
- { "name": "jade", "burns": 0, "floats": -1, "type": "gem", "flags": "", "vuln": "", "rname": "нефрит" },
- { "name": "lapis", "burns": 0, "floats": -1, "type": "gem", "flags": "", "vuln": "", "rname": "лазурит" },
- { "name": "malachite", "burns": 0, "floats": -1, "type": "gem", "flags": "", "vuln": "", "rname": "малахит" },
- { "name": "moonstone", "burns": 0, "floats": -1, "type": "gem", "flags": "", "vuln": "", "rname": "лунный камень" },
- { "name": "onyx", "burns": 0, "floats": -1, "type": "gem", "flags": "", "vuln": "", "rname": "оникс" },
- { "name": "opal", "burns": 0, "floats": -1, "type": "gem", "flags": "", "vuln": "", "rname": "опал" },
- { "name": "ruby", "burns": 0, "floats": -1, "type": "gem", "flags": "", "vuln": "", "rname": "рубин" },
- { "name": "sandstone", "burns": 0, "floats": -1, "type": "gem", "flags": "", "vuln": "", "rname": "песчаник" },
- { "name": "sapphire", "burns": 0, "floats": -1, "type": "gem", "flags": "", "vuln": "", "rname": "сапфир" },
- { "name": "topaz", "burns": 0, "floats": -1, "type": "gem", "flags": "", "vuln": "", "rname": "топаз" },
+ { "name": "amethyst", "burns": 0, "floats": -1, "type": "gem mineral", "flags": "", "vuln": "", "rname": "аметист" },
+ { "name": "diamond", "burns": 0, "floats": -1, "type": "gem mineral", "flags": "tough", "vuln": "", "rname": "алмаз" },
+ { "name": "emerald", "burns": 0, "floats": -1, "type": "gem mineral", "flags": "", "vuln": "", "rname": "изумруд" },
+ { "name": "gem", "burns": 0, "floats": -1, "type": "gem mineral", "flags": "", "vuln": "", "rname": "драгоценный камень" },
+ { "name": "jade", "burns": 0, "floats": -1, "type": "gem mineral", "flags": "", "vuln": "", "rname": "нефрит" },
+ { "name": "lapis", "burns": 0, "floats": -1, "type": "gem mineral", "flags": "", "vuln": "", "rname": "лазурит" },
+ { "name": "malachite", "burns": 0, "floats": -1, "type": "gem mineral", "flags": "", "vuln": "", "rname": "малахит" },
+ { "name": "moonstone", "burns": 0, "floats": -1, "type": "gem mineral", "flags": "", "vuln": "", "rname": "лунный камень" },
+ { "name": "onyx", "burns": 0, "floats": -1, "type": "gem mineral", "flags": "", "vuln": "", "rname": "оникс" },
+ { "name": "opal", "burns": 0, "floats": -1, "type": "gem mineral", "flags": "", "vuln": "", "rname": "опал" },
+ { "name": "ruby", "burns": 0, "floats": -1, "type": "gem mineral", "flags": "", "vuln": "", "rname": "рубин" },
+ { "name": "sapphire", "burns": 0, "floats": -1, "type": "gem mineral", "flags": "", "vuln": "", "rname": "сапфир" },
+ { "name": "topaz", "burns": 0, "floats": -1, "type": "gem mineral", "flags": "", "vuln": "", "rname": "топаз" },
+ { "name": "amber", "burns": 0, "floats": 0, "type": "gem organic mineral", "flags": "", "vuln": "", "rname": "янтарь" }, 
 
  // wood
  { "name": "ash", "burns": 7, "floats": 1, "type": "organic wood", "flags": "", "vuln": "wood", "rname": "ясень" },
@@ -47,6 +47,7 @@
  { "name": "softwood", "burns": 5, "floats": 1, "type": "organic wood", "flags": "", "vuln": "wood", "rname": "мягкое дерево" },
  { "name": "wood", "burns": 5, "floats": 1, "type": "organic wood", "flags": "", "vuln": "wood", "rname": "древесина" },
  { "name": "yew", "burns": 5, "floats": 1, "type": "organic wood", "flags": "", "vuln": "wood", "rname": "тис" },
+ { "name": "root", "burns": 6, "floats": 1, "type": "organic wood", "flags": "", "vuln": "wood", "rname": "корень" }, 
 
  // cloth
  { "name": "canvas", "burns": 5, "floats": 1, "type": "cloth", "flags": "", "vuln": "", "rname": "брезент||а|у||ом|е" },
@@ -77,31 +78,31 @@
                    
  // minerals       
  { "name": "brick", "burns": 0, "floats": -1, "type": "mineral", "flags": "", "vuln": "", "rname": "кирпич" },
- { "name": "ceramics", "burns": 0, "floats": 0, "type": "mineral", "flags": "", "vuln": "", "rname": "керамика" },
+ { "name": "ceramics", "burns": 0, "floats": -1, "type": "mineral", "flags": "fragile", "vuln": "", "rname": "керамика" },
  { "name": "clay", "burns": 0, "floats": 0, "type": "mineral", "flags": "", "vuln": "", "rname": "глина" },       
- { "name": "corund", "burns": 0, "floats": 0, "type": "mineral", "flags": "", "vuln": "", "rname": "корунд" },
- { "name": "crystal", "burns": 0, "floats": 0, "type": "mineral", "flags": "", "vuln": "", "rname": "хрусталь" },
- { "name": "glass",    "burns": 0,  "floats": 0, "type": "mineral",   "flags": "fragile", "vuln": "", "rname": "стекло" },
+ { "name": "corund", "burns": 0, "floats": -1, "type": "mineral", "flags": "", "vuln": "", "rname": "корунд" },
+ { "name": "crystal", "burns": 0, "floats": -1, "type": "mineral", "flags": "", "vuln": "", "rname": "хрусталь" },
+ { "name": "glass",    "burns": 0,  "floats": -1, "type": "mineral",   "flags": "fragile", "vuln": "", "rname": "стекло" },
  { "name": "granite", "burns": 0, "floats": -1, "type": "mineral", "flags": "", "vuln": "", "rname": "гранит" },
  { "name": "ground", "burns": -1, "floats": 0, "type": "mineral", "flags": "", "vuln": "", "rname": "грунт" },
  { "name": "marble", "burns": 0, "floats": -1, "type": "mineral", "flags": "", "vuln": "", "rname": "мрамор" },
  { "name": "obsidian", "burns": 0, "floats": -1, "type": "mineral", "flags": "", "vuln": "", "rname": "обсидиан, вулк. стекло" },
- { "name": "parafin", "burns": 0, "floats": 1, "type": "mineral", "flags": "", "vuln": "", "rname": "парафин" },
- { "name": "plastic", "burns": 2, "floats": 0, "type": "mineral", "flags": "", "vuln": "", "rname": "пластик" },
- { "name": "porcelain", "burns": 0, "floats": 0, "type": "mineral", "flags": "", "vuln": "", "rname": "фарфор" },
- { "name": "quartz", "burns": 0, "floats": 0, "type": "mineral", "flags": "", "vuln": "", "rname": "кварц" },
- { "name": "stone", "burns": 0, "floats": 0, "type": "mineral", "flags": "", "vuln": "", "rname": "камень" },
+ { "name": "parafin", "burns": 0, "floats": 1, "type": "mineral", "flags": "melting", "vuln": "", "rname": "парафин" },
+ { "name": "plastic", "burns": 2, "floats": 1, "type": "mineral", "flags": "", "vuln": "", "rname": "пластик" },
+ { "name": "porcelain", "burns": 0, "floats": -1, "type": "mineral", "flags": "fragile", "vuln": "", "rname": "фарфор" },
+ { "name": "quartz", "burns": 0, "floats": -1, "type": "mineral", "flags": "", "vuln": "", "rname": "кварц" },
+ { "name": "stone", "burns": 0, "floats": -1, "type": "mineral", "flags": "", "vuln": "", "rname": "камень" },
  { "name": "sulfur", "burns": 2, "floats": 1, "type": "mineral", "flags": "", "vuln": "", "rname": "сера" },
+ { "name": "chalk", "burns": 0, "floats": -1, "type": "mineral", "flags": "", "vuln": "", "rname": "мел" },
+ { "name": "sandstone", "burns": 0, "floats": -1, "type": "mineral", "flags": "fragile", "vuln": "", "rname": "песчаник" }, 
                    
  // organics       
- { "name": "amber", "burns": 0, "floats": 0, "type": "organic", "flags": "", "vuln": "", "rname": "янтарь" },
- { "name": "chalk", "burns": 0, "floats": 0, "type": "organic", "flags": "", "vuln": "", "rname": "мел" },
- { "name": "coal", "burns": 8, "floats": 0, "type": "organic", "flags": "", "vuln": "", "rname": "уголь" },
- { "name": "coral", "burns": 0, "floats": 0, "type": "organic", "flags": "", "vuln": "", "rname": "коралл" },
+ { "name": "coal", "burns": 8, "floats": 0, "type": "organic mineral", "flags": "", "vuln": "", "rname": "уголь" },
+ { "name": "coral", "burns": 0, "floats": 0, "type": "organic mineral", "flags": "", "vuln": "", "rname": "коралл" },
  { "name": "fiber", "burns": 4, "floats": 0, "type": "organic", "flags": "", "vuln": "", "rname": "волокно" },
- { "name": "pearl", "burns": 0, "floats": -1, "type": "organic", "flags": "", "vuln": "", "rname": "жемчуг" },
+ { "name": "pearl", "burns": 0, "floats": -1, "type": "organic mineral", "flags": "", "vuln": "", "rname": "жемчуг" },
  { "name": "rubber", "burns": 3, "floats": 0, "type": "organic", "flags": "", "vuln": "", "rname": "каучук" },
- { "name": "shell", "burns": 0, "floats": 0, "type": "organic", "flags": "", "vuln": "", "rname": "скорлупа" },
+ { "name": "shell", "burns": 0, "floats": 0, "type": "organic mineral", "flags": "", "vuln": "", "rname": "скорлупа" },
  { "name": "wax",   "burns":    0,  "floats": 0, "type": "organic",   "flags": "melting", "vuln": "", "rname": "воск" },
                    
  // papers
@@ -135,32 +136,31 @@
  { "name": "grass", "burns": 1, "floats": 1, "type": "organic", "flags": "", "vuln": "", "rname": "трава" },
  { "name": "hay", "burns": 1, "floats": 1, "type": "organic", "flags": "", "vuln": "", "rname": "сено" },
  { "name": "hemp", "burns": 1, "floats": 1, "type": "organic", "flags": "", "vuln": "", "rname": "конопля" },
- { "name": "moss", "burns": 1, "floats": 1, "type": "organic", "flags": "", "vuln": "", "rname": "мох" },
+ { "name": "moss", "burns": 4, "floats": 1, "type": "organic", "flags": "", "vuln": "", "rname": "мох" },
  { "name": "plant", "burns": 1, "floats": 1, "type": "organic", "flags": "", "vuln": "", "rname": "растение" },
  { "name": "plant_organism", "burns": 1, "floats": 1, "type": "organic", "flags": "", "vuln": "", "rname": "растительный организм" },
  { "name": "pollen", "burns": 1, "floats": 1, "type": "organic", "flags": "", "vuln": "", "rname": "пыльца" },
- { "name": "root", "burns": 1, "floats": 1, "type": "organic", "flags": "", "vuln": "", "rname": "корень" },
  { "name": "straw", "burns": 1, "floats": 1, "type": "organic", "flags": "", "vuln": "", "rname": "солома" },
                    
  // meal           
- { "name": "bread", "burns": 1, "floats": 0, "type": "organic", "flags": "", "vuln": "", "rname": "хлеб" },
- { "name": "cake", "burns": 1, "floats": 0, "type": "organic", "flags": "", "vuln": "", "rname": "печеное тесто" },
- { "name": "pastry", "burns": 1, "floats": 0, "type": "organic", "flags": "", "vuln": "", "rname": "печеное тесто" },
+ { "name": "bread", "burns": 2, "floats": 0, "type": "organic", "flags": "", "vuln": "", "rname": "хлеб" },
+ { "name": "cake", "burns": 2, "floats": 0, "type": "organic", "flags": "", "vuln": "", "rname": "печеное тесто" },
+ { "name": "pastry", "burns": 2, "floats": 0, "type": "organic", "flags": "", "vuln": "", "rname": "печеное тесто" },
  { "name": "drink", "burns": -1, "floats": 0, "type": "organic", "flags": "", "vuln": "", "rname": "питье" },
  { "name": "flour", "burns": 1, "floats": 0, "type": "organic", "flags": "", "vuln": "", "rname": "мука" },
  { "name": "food", "burns": 2, "floats": 0, "type": "organic", "flags": "", "vuln": "", "rname": "пища" },
- { "name": "meat", "burns": 1, "floats": 0, "type": "organic", "flags": "", "vuln": "", "rname": "мясо" },
+ { "name": "meat", "burns": 2, "floats": 0, "type": "organic", "flags": "", "vuln": "", "rname": "мясо" },
                    
  // abstract       
- { "name": "darkness", "burns": 0, "floats": 1, "type": "abstract", "flags": "", "vuln": "", "rname": "тьма" },
+ { "name": "darkness", "burns": 0, "floats": 1, "type": "abstract", "flags": "", "vuln": "negative", "rname": "тьма" },
  { "name": "energy", "burns": 0, "floats": 1, "type": "abstract", "flags": "", "vuln": "energy", "rname": "энергия" },
- { "name": "entropia", "burns": 0, "floats": 1, "type": "abstract", "flags": "", "vuln": "", "rname": "энтропия" },
- { "name": "ethereal",   "burns": 0, "floats": 1, "type": "abstract",   "flags": "", "vuln": "",  "rname": "" },
- { "name": "etherealness",   "burns": 0, "floats": 1, "type": "abstract",   "flags": "", "vuln": "",  "rname": "" },
- { "name": "evil", "burns": 0, "floats": 1, "type": "abstract", "flags": "", "vuln": "", "rname": "зло" },
+ { "name": "entropia", "burns": 0, "floats": 1, "type": "abstract", "flags": "", "vuln": "energy", "rname": "энтропия" },
+ { "name": "ethereal",   "burns": 0, "floats": 1, "type": "abstract",   "flags": "", "vuln": "energy",  "rname": "" },
+ { "name": "etherealness",   "burns": 0, "floats": 1, "type": "abstract",   "flags": "", "vuln": "energy",  "rname": "" },
+ { "name": "evil", "burns": 0, "floats": 1, "type": "abstract", "flags": "", "vuln": "negative", "rname": "зло" },
  { "name": "magic", "burns": 0, "floats": 1, "type": "abstract", "flags": "", "vuln": "magic", "rname": "магия" },
- { "name": "nothingness", "burns": 0, "floats": 1, "type": "abstract", "flags": "", "vuln": "", "rname": "ничего" },
- { "name": "shadow", "burns": 0, "floats": 1, "type": "abstract", "flags": "", "vuln": "", "rname": "тень" },
- { "name": "vacuum", "burns": 0, "floats": 1, "type": "abstract", "flags": "", "vuln": "", "rname": "вакуум" }
+ { "name": "nothingness", "burns": -1, "floats": 1, "type": "abstract", "flags": "", "vuln": "", "rname": "ничего" },
+ { "name": "shadow", "burns": 0, "floats": 1, "type": "abstract", "flags": "", "vuln": "negative", "rname": "тень" },
+ { "name": "vacuum", "burns": -1, "floats": 1, "type": "abstract", "flags": "", "vuln": "drowning", "rname": "вакуум" }
 
 ]

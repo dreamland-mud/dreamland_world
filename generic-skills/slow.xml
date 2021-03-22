@@ -56,17 +56,19 @@
 А если в такой ситуации надеть вещь с ускорением, то аффект замедления будет
 по-прежнему висеть в {hh997списке{x, но ничего плохого уже не сделает.
 </help>
-  <mana>30</mana>
+  <mana>40</mana>
   <mob>
     <professional>true</professional>
   </mob>
   <nameRus>замедление</nameRus>
   <spell type="SPELL(Slow)">
-    <ranged>false</ranged>     
-    <damtype>none</damtype>
+    <damflags>water</damflags>
+    <damtype>drowning</damtype>
     <flags>magic prayer</flags>
     <position>fight</position>
+    <ranged>false</ranged>
     <target>char_room</target>
+    <tier>3</tier>
     <type>offensive</type>
   </spell>
 </skill>

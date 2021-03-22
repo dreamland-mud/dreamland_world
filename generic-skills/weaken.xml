@@ -40,17 +40,18 @@
 
 Это коварное проклятие уменьшает силу жертвы.
 </help>
-  <mana>20</mana>
+  <mana>40</mana>
   <mob>
     <professional>true</professional>
   </mob>
   <nameRus>слабость</nameRus>
   <spell type="SPELL(Weaken)">
-    <ranged>false</ranged>     
-    <damtype>none</damtype>
+    <damtype>negative</damtype>
     <flags>magic prayer</flags>
     <position>fight</position>
+    <ranged>false</ranged>
     <target>char_room</target>
+    <tier>3</tier>
     <type>offensive</type>
   </spell>
 </skill>

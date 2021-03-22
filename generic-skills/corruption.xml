@@ -6,6 +6,7 @@
     <wearoff>Ужасные гниющие раны затягиваются, и ты чувствуешь себя здоровее.</wearoff>
     <wearoffDispel>%1$^C1 выглядит здоровее и больше не страдает от гниющих ран.</wearoffDispel>
   </affect>
+  <align>neutral evil</align>
   <beats>12</beats>
   <classes>
     <node name="necromancer">
@@ -29,11 +30,12 @@
   </mob>
   <nameRus>гниение</nameRus>
   <spell type="SPELL(Corruption)">
-    <ranged>false</ranged>     
-    <damtype>none</damtype>
+    <damtype>negative</damtype>
     <flags>magic</flags>
     <position>fight</position>
+    <ranged>false</ranged>
     <target>char_room</target>
+    <tier>3</tier>
     <type>offensive</type>
   </spell>
 </skill>

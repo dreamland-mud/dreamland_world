@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
-    <wearoff>Ты чувствуешь, что Боги прощают тебя.</wearoff>
+    <cancelled>true</cancelled>
+    <wearoff>Ужасная анафема забывается, и боги прощают тебя.</wearoff>
   </affect>
   <beats>12</beats>
   <classes>
+    <node name="anti-paladin">
+      <level>65</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
     <node name="paladin">
       <level>65</level>
       <maximum>100</maximum>
@@ -22,17 +28,18 @@
 
 %SA% %H% [(cast,колдовать)]
 </help>
-  <mana>80</mana>
+  <mana>150</mana>
   <mob>
     <professional>true</professional>
   </mob>
   <nameRus>анафема</nameRus>
   <spell type="SPELL(Anathema)">
-    <ranged>false</ranged>     
-    <damtype>none</damtype>
+    <damtype>holy</damtype>
     <flags>prayer</flags>
     <position>stand</position>
+    <ranged>false</ranged>
     <target>char_room</target>
+    <tier>2</tier>
     <type>offensive</type>
   </spell>
 </skill>

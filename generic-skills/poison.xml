@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="AFFECT(Poison)">
-    <wearoff>Твое отравление проходит.</wearoff>
-    <wearoffDispel>%1$^C1 выглядит намного лучше.</wearoffDispel>
-    <wearoffObj>Яд, отравлявший %1$O4, исчезает.</wearoffObj>
+    <wearoff>Тебя перестает тошнить от отравления, и ты чувствуешь себя гораздо лучше!</wearoff>
+    <wearoffDispel>%1$^C1 выглядит здоровее, когда %1$Gего|его|ее отравление проходит.</wearoffDispel>
+    <wearoffObj>Яд, отравлявший %1$O4, испаряется и высыхает.</wearoffObj>
   </affect>
   <beats>12</beats>
   <classes>
@@ -22,11 +22,6 @@
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
-    <node name="warlock">
-      <level>27</level>
-      <maximum>100</maximum>
-      <rating>1</rating>
-    </node>
     <node name="witch">
       <level>27</level>
       <maximum>100</maximum>
@@ -35,8 +30,7 @@
   </classes>
   <dammsg mg="n">отравление</dammsg>
   <group registry="skillGroup">maladictions</group>
-  <help id="837" keyword="ОТРАВЛЕНИЕ" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
-%FMT% *%SPELL%* _%OBJ%_
+  <help aka="ОТРАВЛЕНИЕ" id="837" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
 Эффект яда отравляет жертву и наносит ей весомые повреждения каждый {hh16тик{x,
 а также сильно {hh39ослабляет{x ее и препятствует быстрому восстановлению очков
@@ -44,23 +38,28 @@
 начнет наносить еще больше урона.
 
 В состоянии {hh705замедления{x яд гораздо медленнее распространяется по жилам жертвы.
+Высокое {hh36телосложение{x помогает бороться с отравлением.
 
-Отравить можно еду, питье и оружие, но эффективность отравления при этом будет
-меньше. Рана, нанесенная отравленным оружием может привести к заражению ядом.
+Умершая от твоего отравления жертва засчитается тебе -- в {hh32ПК{x или в {hh125квестах{x.
+
+%FMT% *%SPELL%* _%OBJ%_
+Отравить также можно еду, контейнеры для питья, фонтаны и оружие.
+Рана, нанесенная отравленным оружием может привести к заражению ядом.
 
 %SA% %H% [(envenom,отравить)]
 </help>
-  <mana>10</mana>
+  <mana>40</mana>
   <mob>
     <professional>true</professional>
   </mob>
   <nameRus>яд</nameRus>
   <spell type="SPELL(Poison)">
-    <ranged>false</ranged>     
-    <damtype>none</damtype>
+    <damtype>poison</damtype>
     <flags>magic prayer</flags>
     <position>fight</position>
+    <ranged>false</ranged>
     <target>char_room obj_inv obj_room</target>
+    <tier>3</tier>
     <type>offensive</type>
   </spell>
 </skill>

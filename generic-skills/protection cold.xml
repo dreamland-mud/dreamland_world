@@ -3,8 +3,9 @@
   <affect type="DefaultAffectHandler">
     <cancelled>true</cancelled>
     <dispelled>true</dispelled>
-    <wearoff>Твоя защищенность от воздействия низких температур понижается.</wearoff>
-    <wearoffDispel>%1$^C1 теряет защиту от холода.</wearoffDispel>
+    <wearoff>Ты теряешь защиту от воздействия низких температур.</wearoff>
+    <wearoffDispel>%1$^C1 теряет защиту от воздействия низких температур.</wearoffDispel>
+    <wearoffObj>%1$^O1 теряет термоизоляцию.</wearoffObj>
   </affect>
   <beats>12</beats>
   <classes>
@@ -35,12 +36,12 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group registry="skillGroup">enhancement</group>
+  <group registry="skillGroup">enhancement enchantment</group>
   <help id="774" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
 Это заклинание дает тебе {hh101сопротивляемость{x к урону холодом и ледяным заклятиям.
 </help>
-  <mana>5</mana>
+  <mana>40</mana>
   <mob>
     <professional>true</professional>
   </mob>
@@ -49,7 +50,7 @@
     <damtype>none</damtype>
     <flags>magic prayer</flags>
     <position>stand</position>
-    <target>char_self</target>
+    <target>char_self obj_inv obj_equip</target>
     <type>defensive</type>
   </spell>
 </skill>

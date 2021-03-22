@@ -8,24 +8,25 @@
       <rating>1</rating>
     </node>
   </classes>
-  <dammsg>разогрев металла</dammsg>
+  <dammsg>накаливание</dammsg>
   <group registry="skillGroup">attack</group>
   <help id="682" keyword="'ЖИДКИЙ МЕТАЛЛ'" level="-1" type="SkillHelp">Заклинание нагревает доспехи противника до высокой температуры, заставляя его
 сбрасывать на землю предметы из {hh1015экипировки{x, сделанные из {hh1001металлических{x
 материалов. Существа с {hh101иммунитетом{x к огню не подвержены этому заклинанию.
 Также от него можно защититься с помощью заклятия {hh867огнеупорности{x.
 </help>
-  <mana>25</mana>
+  <mana>40</mana>
   <mob>
     <professional>true</professional>
   </mob>
-  <nameRus>разогрев металла</nameRus>
+  <nameRus>накаливание</nameRus>
   <spell type="SPELL(HeatMetal)">
-    <ranged>false</ranged>     
-    <damtype>none</damtype>
+    <damtype>fire</damtype>
     <flags>prayer</flags>
     <position>fight</position>
+    <ranged>false</ranged>
     <target>char_room</target>
+    <tier>5</tier>
     <type>offensive</type>
   </spell>
 </skill>

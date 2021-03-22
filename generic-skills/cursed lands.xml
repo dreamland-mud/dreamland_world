@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="AFFECT(CursedLands)">
+    <wearoff>Ты снова можешь проклинать земли.</wearoff>
+    <wearoffRoom>Гнет проклятия над этой местностью исчезает, и все ее обитатели радуются.</wearoffRoom>
   </affect>
+  <align>neutral evil</align>
   <beats>24</beats>
   <classes>
+    <node name="anti-paladin">
+      <level>70</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
     <node name="cleric">
       <level>41</level>
       <maximum>100</maximum>
@@ -22,13 +30,14 @@
 Это заклинание позволяет проклясть определенную комнату, предотвращая
 использование {hh862возврата{x и {hh1126транспортных{x умений из этой комнаты.
 </help>
-  <mana>200</mana>
+  <mana>150</mana>
   <nameRus>проклятые земли</nameRus>
   <spell type="SPELL(CursedLands)">
-    <damtype>none</damtype>
+    <damtype>negative</damtype>
     <flags>magic prayer</flags>
     <position>stand</position>
     <target>room</target>
+    <tier>3</tier>
     <type>offensive</type>
   </spell>
 </skill>

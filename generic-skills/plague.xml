@@ -11,13 +11,13 @@
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
-    <node name="necromancer">
-      <level>36</level>
+    <node name="cleric">
+      <level>33</level>
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
-    <node name="warlock">
-      <level>33</level>
+    <node name="necromancer">
+      <level>36</level>
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
@@ -27,28 +27,36 @@
       <rating>1</rating>
     </node>
   </classes>
-  <dammsg mg="f">болезнь</dammsg>
+  <dammsg mg="f">чума</dammsg>
   <group registry="skillGroup">maladictions</group>
   <help id="614" keyword="ЧУМУ" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
-Чума - опасная болезнь, часто с летальным исходом.
-Жертва бьется в конвульсиях, заражая всех кто находится рядом.
-Поэтому чума очень быстро распространяется.
-Будь осторожен, насылая ее на врага... 
+Заражение чумой наносит сильные повреждения жертве каждый {hh16тик{x, а также сильно
+{hh39ослабляет{x ее. Жертва не восстанавливает очки здоровья и маны, а наоборот,
+теряет. Эффект болезни может суммироваться: при повторном заражении болезнь
+начнет наносить еще больше урона. Высокое {hh36телосложение{x помогает бороться
+с болезнью.
+
+Чума очень быстро распространяется! Жертва заражает всех, кто находится рядом.
+Заразиться напрямую от жертвы ты не сможешь, но вот от зараженных ею -- уже да.
+Поосторожней с патогенами!.. 
+
+Умершая от насланной тобой чумы жертва засчитается тебе -- в {hh32ПК{x или в {hh125квестах{x.
 
 %SA% %H% [(cast,колдовать)], [(cure disease,лечить болезнь)]
 </help>
-  <mana>20</mana>
+  <mana>40</mana>
   <mob>
     <professional>true</professional>
   </mob>
   <nameRus>чума</nameRus>
   <spell type="SPELL(Plague)">
-    <ranged>false</ranged>     
-    <damtype>none</damtype>
-    <flags>magic</flags>
+    <damtype>disease</damtype>
+    <flags>magic prayer</flags>
     <position>fight</position>
+    <ranged>false</ranged>
     <target>char_room</target>
+    <tier>3</tier>
     <type>offensive</type>
   </spell>
 </skill>

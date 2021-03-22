@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="AFFECT(LethargicMist)">
+    <wearoff>Ты вновь можешь создавать замедляющий туман.</wearoff>
+    <wearoffRoom>Замедляющий туман вокруг тебя наконец-то рассеивается.</wearoffRoom>
   </affect>
   <beats>24</beats>
   <classes>
@@ -28,13 +30,15 @@
 провале {hh2035спасброска{x, {hh705замедляет{x движения всех, кто там находится. Не действует на
 игроков вне твоего {hh32ПК-диапазона{x.
 </help>
-  <mana>200</mana>
-  <nameRus>летаргический туман</nameRus>
+  <mana>150</mana>
+  <nameRus>замедляющий туман</nameRus>
   <spell type="SPELL(LethargicMist)">
-    <damtype>none</damtype>
+    <damflags>water</damflags>
+    <damtype>drowning</damtype>
     <flags>magic</flags>
     <position>stand</position>
     <target>room</target>
+    <tier>3</tier>
     <type>offensive</type>
   </spell>
 </skill>

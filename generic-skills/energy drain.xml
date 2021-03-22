@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
+  <align>neutral evil</align>
   <beats>12</beats>
   <classes>
     <node name="anti-paladin">
@@ -35,16 +36,18 @@
 Это заклинание наносит урон темной энергией, а при провале {hh2035спасброска{x отнимает
 {hh59ману{x и {hh60очки движения{x у жертвы.
 </help>
-  <mana>35</mana>
+  <mana>40</mana>
   <mob>
     <professional>true</professional>
   </mob>
   <nameRus>утечка энергии</nameRus>
   <spell type="SPELL(EnergyDrain)">
-    <damtype>none</damtype>
+    <damtype>negative</damtype>
     <flags>magic prayer</flags>
     <position>fight</position>
+    <ranged>false</ranged>
     <target>char_room</target>
+    <tier>3</tier>
     <type>offensive</type>
   </spell>
 </skill>

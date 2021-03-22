@@ -14,7 +14,7 @@
       <rating>1</rating>
     </node>
     <node name="paladin">
-      <level>63</level>
+      <level>53</level>
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
@@ -32,16 +32,17 @@
 Под спокойствием нельзя получить эффект {hh829берсерка{x или молитвы {hh619неистовства{x.
 И наоборот, нельзя наложить эффект спокойствия на тех, кто сейчас в ярости.
 </help>
-  <mana>30</mana>
+  <mana>80</mana>
   <mob>
     <professional>true</professional>
   </mob>
-  <nameRus>спокойствие</nameRus>
+  <move>50</move>
+  <nameRus>умиротворить</nameRus>
   <spell type="SPELL(Calm)">
-    <damtype>none</damtype>
+    <damtype>mental</damtype>
     <flags>prayer</flags>
     <position>fight</position>
     <target>people</target>
-    <type>none</type>
+    <type>defensive</type>
   </spell>
 </skill>

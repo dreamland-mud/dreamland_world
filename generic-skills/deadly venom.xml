@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="AFFECT(DeadlyVenom)">
+    <wearoff>Ты вновь можешь создавать ядовитые пары.</wearoff>
+    <wearoffRoom>Ядовитые пары вокруг тебя наконец-то рассеиваются.</wearoffRoom>
   </affect>
+  <align>neutral evil</align>
   <beats>24</beats>
   <classes>
     <node name="anti-paladin">
@@ -15,15 +18,18 @@
   <help id="787" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
 Это заклинание позволяет отравить местность ядовитыми испарениями -- все, кто
-войдут туда, могут {hh837отравиться{x. Не действует на игроков вне твоего {hh32ПК-диапазона{x.
+находятся там, могут {hh837отравиться{x. Не действует на игроков вне твоего {hh32ПК-диапазона{x.
+
+Умершие от ядовитых паров жертвы засчитаются тебе -- в ПК или в {hh125квестах{x.
 </help>
-  <mana>200</mana>
-  <nameRus>смертельный яд</nameRus>
+  <mana>150</mana>
+  <nameRus>ядовитые пары</nameRus>
   <spell type="SPELL(DeadlyVenom)">
-    <damtype>none</damtype>
+    <damtype>poison</damtype>
     <flags>magic</flags>
     <position>stand</position>
     <target>room</target>
+    <tier>3</tier>
     <type>offensive</type>
   </spell>
 </skill>

@@ -3,6 +3,7 @@
   <affect type="DefaultAffectHandler">
     <wearoff>Ты вновь можешь обратить Зло в бегство.</wearoff>
   </affect>
+  <align>good neutral</align>
   <beats>12</beats>
   <classes>
     <node name="paladin">
@@ -16,16 +17,17 @@
   <help id="716" level="-1" type="SkillHelp">Это заклинание (данное паладину богами для их праведной миссии) 
 святой энергии, заставляющее всех злых тварей в ужасе бежать от него.
 </help>
-  <mana>50</mana>
+  <mana>100</mana>
   <mob>
     <professional>true</professional>
   </mob>
-  <nameRus>обратить в бегство</nameRus>
+  <nameRus>обратить</nameRus>
   <spell type="SPELL(Turn)">
-    <damtype>none</damtype>
+    <damtype>light</damtype>
     <flags>prayer</flags>
     <position>fight</position>
     <target>people</target>
+    <tier>4</tier>
     <type>offensive</type>
   </spell>
 </skill>

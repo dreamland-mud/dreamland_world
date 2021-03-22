@@ -2,14 +2,10 @@
 <skill type="GenericSkill">
   <affect type="AFFECT(ShockingTrap)">
     <wearoff>Теперь ты вновь можешь наполнять комнаты силовыми волнами.</wearoff>
+    <wearoffRoom>Силовые волны, наполнявшие эту местность, растворяются и исчезают.</wearoffRoom>
   </affect>
   <beats>24</beats>
   <classes>
-    <node name="necromancer">
-      <level>37</level>
-      <maximum>100</maximum>
-      <rating>1</rating>
-    </node>
     <node name="warlock">
       <level>40</level>
       <maximum>100</maximum>
@@ -25,16 +21,17 @@
   <group registry="skillGroup">combat</group>
   <help id="848" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
-Некроманты, ведьмы и колдуны могут соорудить магическую ловушку, которая нанесет
-электрические повреждения всем, кто попытается пройти в эту местность.
+Силовая ловушка нанесет энергетический урон и {hh120задержит{x персонажей в твоем
+{hh32ПК-интервале{x или существ, которые идут за тобой по следу.
 </help>
   <mana>150</mana>
-  <nameRus>электрическая ловушка</nameRus>
+  <nameRus>силовая ловушка</nameRus>
   <spell type="SPELL(ShockingTrap)">
-    <damtype>none</damtype>
+    <damtype>energy</damtype>
     <flags>magic</flags>
     <position>stand</position>
     <target>room</target>
+    <tier>1</tier>
     <type>offensive</type>
   </spell>
 </skill>

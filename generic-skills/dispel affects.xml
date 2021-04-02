@@ -35,7 +35,7 @@
   </classes>
   <dammsg></dammsg>
   <group registry="skillGroup">arcane</group>
-  <help id="808" keyword="'РАЗВЕЯТЬ ЧАРЫ' ДИСПЕЛ 'СНЯТЬ ЗАКЛИНАНИЕ' 'СНЯТЬ ЗАКЛИНАНИЯ'" level="-1" type="SkillHelp">Для снятия временных магических {hh997воздействий{x используются заклинания или молитвы
+  <help aka="'DISPEL MAGIC' ДИСПЕЛ 'РАЗВЕЯТЬ ЧАРЫ' 'СНЯТЬ ЗАКЛИНАНИЕ' 'СНЯТЬ ЗАКЛИНАНИЯ'" id="808" level="-1" type="SkillHelp">Для снятия временных магических {hh997воздействий{x используются заклинания или молитвы
 =развеивания={le (dispel affects){x или {hh821отмены{x{le (cancellation){x.
 
 %FMT% *%SPELL%* _%VICT%_
@@ -55,10 +55,10 @@
   </mob>
   <nameRus>снятие воздействий</nameRus>
   <spell type="SPELL(DispelAffects)">
-    <ranged>false</ranged>    
     <damtype>none</damtype>
     <flags>magic prayer</flags>
     <position>fight</position>
+    <ranged>false</ranged>
     <target>char_room</target>
     <type>offensive</type>
   </spell>

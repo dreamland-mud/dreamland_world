@@ -1,9 +1,9 @@
-.get_mob_index(@vnum@).@trig@ = function(mob, attacker, dam, dam_type, wield, dam_flag, skillName) {
-   // dam_type - один из .tables.damage_table
-   // attacker - кто бьет моба
+.AffectHandler(@name@).@trig@ = function(ch, af, attacker, dam, dam_type, wield, dam_flag, skillName) {
+   // attacker - кто бьет ch 
    // dam - текущий размер повреждений
-   // dam_flag - флаги повреждений из таблицы .table.damage_flags
+   // dam_type - один из .tables.damage_table
    // wield - оружие наносящее повреждение (в экипировке или стрела), или null
+   // dam_flag - флаги повреждений из таблицы .table.damage_flags
    // skillName - название умения, которым наносят повреждения, или ""
    // вернуть надо результирующие повреждения
 

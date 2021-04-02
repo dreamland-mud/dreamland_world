@@ -1,0 +1,12 @@
+.AffectHandler(@name@).@trig@ = function(obj, af, ch) {
+    // Уронить на землю, если не владелец. Если взять не получилось, надо вернуть true.
+    if (ch.is_npc() || ch.name != obj.owner) {
+        ch.act("Глубоко порезав руку, ты роняешь %O4 на землю.", obj);
+        ch.recho("%^C1 вскрикивает от боли и роняет %O4 на землю.", ch, obj);
+        obj.obj_to_room(ch.in_room);
+        return true;
+    }
+    
+    return false;
+}
+

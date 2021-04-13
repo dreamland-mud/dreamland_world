@@ -4,6 +4,7 @@
     <cancelled>true</cancelled>
     <dispelled>true</dispelled>
     <wearoff>Ты остаешься без святой защиты.</wearoff>
+    <wearoffDispel>%1$C1 остается без святой защиты.</wearoffDispel>
   </affect>
   <beats>12</beats>
   <clans>
@@ -17,11 +18,18 @@
     </node>
   </clans>
   <dammsg></dammsg>
-  <help aka="'СВЯТАЯ БРОНЯ' 'СВЯЩЕННЫЙ ДОСПЕХ'" id="936" level="-1" type="SkillHelp">Святая защита, понижает твой {hhклаcс защиты{x (ac).
+  <help aka="'СВЯТАЯ БРОНЯ' 'СВЯЩЕННЫЙ ДОСПЕХ'" id="936" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+%FMT% *%SPELL%* _%CHAR%_
+
+Это заклинание улучшает {hh83класс защиты{x персонажа, увеличивает уровень всех
+защитных умений и добавляет небольшой шанс полностью заблокировать урон против
+злых противников.
 </help>
-  <mana>20</mana>
+  <mana>40</mana>
   <nameRus>священная броня</nameRus>
   <spell type="SPELL(HolyArmor)">
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
     <position>rest</position>
     <target>char_self</target>
     <type>defensive</type>

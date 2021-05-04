@@ -17,6 +17,7 @@
     </node>
   </classes>
   <command type="SKILL(detect)">
+    <argtype>undef</argtype>
     <cat>class</cat>
     <hint>(воры, ниндзи) замечать скрытое</hint>
     <name>detect</name>
@@ -26,7 +27,7 @@
     </russian>
   </command>
   <dammsg></dammsg>
-  <group>detection</group>
+  <group registry="skillGroup">detection</group>
   <hard>4</hard>
   <help aka="'DETECT HIDDEN' 'ОБНАРУЖЕНИЕ СКРЫТОГО' 'ОБНАРУЖИТЬ СКРЫТОЕ' СПРЯТАННОЕ" id="540" level="-1" type="SkillHelp">%FMT% *%CMD%*
 
@@ -34,7 +35,7 @@
 
 Также это умение даруют некоторые {hh121снадобья, свитки{x и редкие артефакты.
 </help>
-  <mana>5</mana>
+  <mana>40</mana>
   <mob>
     <bonus>20</bonus>
     <dice>2</dice>

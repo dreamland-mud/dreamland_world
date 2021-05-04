@@ -30,13 +30,16 @@
   </classes>
   <dammsg></dammsg>
   <group registry="skillGroup">detection</group>
-  <help id="707" keyword="ЛОКАТОР" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%OBJ%_
+  <help aka="'ПОИСК ПРЕДМЕТА'" id="707" keyword="ЛОКАТОР" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%OBJ%_
 
-Это заклинание показывает местоположение всех вещей в мире с данным именем.
-Некоторые вещи защищены от заклинаний локации, их отыскать не получится.
+Это заклинание показывает местоположение всех вещей в мире, у которых в названии
+или описании встречается заданная последовательность символов.
+
+Некоторые вещи защищены от заклинаний локации, их отыскать не получится. Также
+не удастся увидеть вещи на игроках из своего {hh32ПК-диапазона{x или их {hh15чармисах{x.
 </help>
-  <mana>20</mana>
-  <nameRus>поиск предмета</nameRus>
+  <mana>100</mana>
+  <nameRus>локатор</nameRus>
   <spell type="SPELL(LocateObject)">
     <damtype>none</damtype>
     <flags>magic prayer</flags>

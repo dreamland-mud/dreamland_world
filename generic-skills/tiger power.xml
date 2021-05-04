@@ -12,8 +12,9 @@
     </node>
   </classes>
   <command type="SKILL(tiger)">
+    <argtype>char_self</argtype>
     <cat>class</cat>
-    <extra>keep_hide ghost</extra>
+    <extra>keep_hide</extra>
     <hint>(рейнджеры) позвать мощь десяти тигров</hint>
     <name>tiger</name>
     <position>fight</position>
@@ -22,13 +23,14 @@
     </russian>
   </command>
   <dammsg></dammsg>
-  <group>nature</group>
+  <group registry="skillGroup">nature</group>
   <hard>2</hard>
   <help id="822" level="-1" type="SkillHelp">%FMT% *(tiger,тигры)*
 
 Призывает силу десяти тигров, делая рейнджера более метким и опасным,
 но в то же время чуть более уязвимым.
 </help>
-  <mana>50</mana>
+  <mana>40</mana>
+  <move>50</move>
   <nameRus>тигриная мощь</nameRus>
 </skill>

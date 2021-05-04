@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="AFFECT(MysteriousDream)">
+    <wearoffRoom>Ты вновь можешь создавать усыпляющий туман.</wearoffRoom>
   </affect>
   <beats>24</beats>
   <classes>
@@ -33,12 +34,14 @@
 Каждый, кто зайдет туда и не выбросит {hh2035спасбросок{x, погрузится в глубокий сон.
 </help>
   <mana>200</mana>
-  <nameRus>таинственный сон</nameRus>
+  <nameRus>усыпляющий туман</nameRus>
   <spell type="SPELL(MysteriousDream)">
-    <damtype>none</damtype>
+    <damflags>magic</damflags>
+    <damtype>mental</damtype>
     <flags>magic</flags>
     <position>stand</position>
     <target>room</target>
+    <tier>3</tier>
     <type>offensive</type>
   </spell>
 </skill>

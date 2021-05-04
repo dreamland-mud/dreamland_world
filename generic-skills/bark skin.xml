@@ -3,7 +3,8 @@
   <affect type="DefaultAffectHandler">
     <cancelled>true</cancelled>
     <dispelled>true</dispelled>
-    <wearoff>Кора с твоей кожи исчезает.</wearoff>
+    <wearoff>Твоя кожа теряет свойства древесной коры.</wearoff>
+    <wearoffDispel>Кожа %1$C2 теряет свойства древесной коры.</wearoffDispel>
   </affect>
   <beats>12</beats>
   <classes>
@@ -14,8 +15,12 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group registry="skillGroup">protective</group>
-  <help id="608" level="-1" type="SkillHelp">Защитное заклинание, покрывающее твою кожу прочной корой.
+  <group registry="skillGroup">nature protective</group>
+  <help id="608" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+
+Это заклинание покрывает твою кожу прочной древесной корой, которая уменьшает
+(улучшает) {hh83класс защиты{x персонажа, дает сопротивляемости и уязвимости к
+некоторым {hh101типам урона{x, а также поглощает часть нанесенного тебе физического урона.
 </help>
   <mana>40</mana>
   <mob>

@@ -8,7 +8,7 @@
       <rating>1</rating>
     </node>
     <node name="warlock">
-      <level>21</level>
+      <level>11</level>
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
@@ -19,11 +19,11 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group registry="skillGroup">creation</group>
-  <help id="857" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+  <group registry="skillGroup">enchantment</group>
+  <help id="857" keyword="СВЕТ" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
 Это заклинание создает светящийся шар, который можно использовать как источник
-света. Шар будет существовать неопределенно долго.
+света. Шар улучшит твое здоровье и ману, а через какое-то время исчезнет.
 
 Если светящийся шар недостаточно подходит к твоему гардеробу, можно купить
 {hh56рестринг-купон{x и попросить Богов переименовать его во что-то интересное!
@@ -31,15 +31,15 @@
 
 %FMT% *%SPELL%* _%OBJ%_
 
-Оно также может быть использовано, чтобы заставить светиться любой предмет.
-Помни, что флаг ({hh96Пылает{x) помогает увидеть саму вещь в темноте, но осветить все 
-остальное в кромешной темноте не получится.
+Оно также может быть использовано, чтобы заставить светиться любой предмет или
+снять невидимость с невидимых вещей. Помни, что флаг ({hh96Пылает{x) помогает увидеть
+саму вещь в темноте, но осветить все остальное в кромешной темноте не получится.
 </help>
   <mana>20</mana>
   <mob>
     <professional>true</professional>
   </mob>
-  <nameRus>постоянный свет</nameRus>
+  <nameRus>свет</nameRus>
   <spell type="SPELL(ContinualLight)">
     <damtype>none</damtype>
     <flags>magic prayer</flags>

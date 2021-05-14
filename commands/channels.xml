@@ -34,7 +34,7 @@
     <node type="RoomChannel">
       <cat>comm</cat>
       <extra>keep_hide ghost</extra>
-      <hint>выдать сообщения всем в комнате</hint>
+      <hint>выдать сообщение всем в комнате</hint>
       <level>104</level>
       <log>1</log>
       <msgOther>%2$s</msgOther>
@@ -141,8 +141,8 @@
       <hook>true</hook>
       <ignore>true</ignore>
       <isolate>true</isolate>
-      <msgOff>Канал gossip теперь выключен.</msgOff>
-      <msgOn>Канал gossip теперь включен.</msgOn>
+      <msgOff>Ты теперь не услышишь {1{Rгромких криков{2.</msgOff>
+      <msgOn>Ты теперь слышишь {1{Rгромкие крики{2.</msgOn>
       <msgOther>%1$^C1 громко крич%1$nит|ат &apos;{R%2$s{x&apos;</msgOther>
       <msgSelf>Ты громко кричишь &apos;{R%2$s{x&apos;</msgSelf>
       <name>gossip</name>
@@ -168,16 +168,16 @@
       <garble>true</garble>
       <help level="-1" refby="channels" type="CommandHelp">
       </help>
-      <hint>болтать о чем-то на весь мир</hint>
+      <hint>ролевая болтовня на весь мир</hint>
       <hook>true</hook>
       <ignore>true</ignore>
       <isolate>true</isolate>
-      <msgOff>Канал InChar теперь выключен.</msgOff>
-      <msgOn>Канал InChar теперь включен.</msgOn>
-      <msgOther>{Y[{Gic{Y]{W %1$^C1{x : &apos;{M%2$s{x&apos;</msgOther>
-      <msgOtherMild>{Y[{Gic{Y]{W %1$^C1{x : &apos;{g%2$s{x&apos;</msgOtherMild>
-      <msgSelf>{Y[{Gic{Y]{x &apos;{M%2$s{x&apos;</msgSelf>
-      <msgSelfMild>{Y[{Gic{Y]{x &apos;{g%2$s{x&apos;</msgSelfMild>
+      <msgOff>Ты теперь не услышишь {1{Mролевой болтовни{2.</msgOff>
+      <msgOn>Ты теперь слышишь {1{Mролевую болтовню{2.</msgOn>
+      <msgOther>{Y[{G{leic{lrРП{lx{Y]{W %1$^C1{x : &apos;{M%2$s{x&apos;</msgOther>
+      <msgOtherMild>{Y[{G{leic{lrРП{lx{Y]{W %1$^C1{x : &apos;{g%2$s{x&apos;</msgOtherMild>
+      <msgSelf>{Y[{G{leic{lrРП{lx{Y]{x &apos;{M%2$s{x&apos;</msgSelf>
+      <msgSelfMild>{Y[{G{leic{lrРП{lx{Y]{x &apos;{g%2$s{x&apos;</msgSelfMild>
       <name>ic</name>
       <nochannel>true</nochannel>
       <nomob>true</nomob>
@@ -197,8 +197,8 @@
       <extra>keep_hide ghost hidden</extra>
       <hint>сюда боги сообщают о божественных заданиях</hint>
       <hook>true</hook>
-      <msgOther>{Y[{cQuest Info{Y]{x &apos;{G%2$s{x&apos;</msgOther>
-      <msgSelf>{Y[{cQuest Info{Y]{x &apos;{G%2$s{x&apos;</msgSelf>
+      <msgOther>{Y[{c{leQuest Info{lrБожественный Квест{lx{Y]{x &apos;{G%2$s{x&apos;</msgOther>
+      <msgSelf>{Y[{c{leQuest Info{lrБожественный Квест{lx{Y]{x &apos;{G%2$s{x&apos;</msgSelf>
       <name>qinfo</name>
       <nochannel>true</nochannel>
       <nomob>true</nomob>
@@ -448,10 +448,10 @@
       <hook>true</hook>
       <ignore>true</ignore>
       <isolate>true</isolate>
-      <msgOther>{Y[{Rooc{Y]{W %1$#^C1{x : &apos;{C%2$s{x&apos;</msgOther>
-      <msgOtherMild>{Y[{Rooc{Y]{W %1$#^C1{x : &apos;{r%2$s{x&apos;</msgOtherMild>
-      <msgSelf>{Y[{Rooc{Y]{x &apos;{C%2$s{x&apos;</msgSelf>
-      <msgSelfMild>{Y[{Rooc{Y]{x &apos;{r%2$s{x&apos;</msgSelfMild>
+      <msgOther>{Y[{R{leooc{lrтреп{lx{Y]{W %1$#^C1{x : &apos;{C%2$s{x&apos;</msgOther>
+      <msgOtherMild>{Y[{R{leooc{lrтреп{lx{Y]{W %1$#^C1{x : &apos;{r%2$s{x&apos;</msgOtherMild>
+      <msgSelf>{Y[{R{leooc{lrтреп{lx{Y]{x &apos;{C%2$s{x&apos;</msgSelf>
+      <msgSelfMild>{Y[{R{leooc{lrтреп{lx{Y]{x &apos;{r%2$s{x&apos;</msgSelfMild>
       <name>ooc</name>
       <nochannel>true</nochannel>
       <nomob>true</nomob>
@@ -491,7 +491,7 @@
 	   
 =Глобальные каналы= {Wслышны сразу всем игрокам.{x
 *(ooc      ,треп     )*- главный канал для внеролевого общения (говоришь от лица игрока)
-*(ic       ,болтать  )*- главный канал для {hh31ролевого{x общения (говоришь от лица персонажа)
+*(ic       ,болтать  )*- главный канал для РП, {hh31ролевого{x общения (говоришь от лица персонажа)
 *(grats    ,поздрав  )*- поздравить кого-то -- например, с получением {hh14уровня{x
 *(auction  ,аукцион  )*- сообщения {hh994аукциона{x, реклама своего товара
 *(music    ,петь     )*- спеть что-то на весь мир

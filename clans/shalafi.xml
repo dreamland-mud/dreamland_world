@@ -12,30 +12,6 @@
   <enemies>
     <node>battlerager</node>
   </enemies>
-  <faculties>
-   <node name="occultism">
-    <shortDescr>Факультет Материй Оккультизма</shortDescr>
-    <classes>
-      <node>warrior</node>
-      <node>samurai</node>
-      <node>ranger</node>
-    </classes>
-   </node>
-   <node name="mysticism">
-    <shortDescr>Факультет Шаманизма и Мистицизма</shortDescr>
-    <classes>
-      <node>ninja</node>
-      <node>thief</node>
-    </classes>
-   </node>
-   <node name="apatheism">
-    <shortDescr>Факультет Радикального Апатеизма</shortDescr>
-    <classes>
-      <node>witch</node>
-      <node>warlock</node>
-    </classes>
-   </node>
-  </faculties>  
   <hidden>false</hidden>
   <induct>
     <node allow="false">
@@ -67,6 +43,24 @@
   <orgs/>
   <nameRus>{BОрден||а|у||ом|е Шалафи{x</nameRus>   
   <padName>{B     Шалафи{x</padName>
+  <orgs type="ClanOrgs">
+    <node name="occultism" type="ShalafiFaculty">
+      <classes>warrior samurai ranger</classes>
+      <name>occultism</name>
+      <shortDescr>Факультет Материй Оккультизма</shortDescr>
+    </node>
+    <node name="mysticism" type="ShalafiFaculty">
+      <classes>ninja thief</classes>
+      <name>mysticism</name>
+      <shortDescr>Факультет Шаманизма и Мистицизма</shortDescr>
+    </node>
+    <node name="apatheism" type="ShalafiFaculty">
+      <classes>witch warlock cleric</classes>
+      <name>apatheism</name>
+      <shortDescr>Факультет Радикального Апатеизма</shortDescr>
+    </node>
+    <name mg="m">факультет||а|у||ом|е</name>
+  </orgs>
   <recallVnum>5712</recallVnum>
   <recruiter>7</recruiter>
   <shortName>SHALAFI</shortName>

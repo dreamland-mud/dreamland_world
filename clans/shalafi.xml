@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Clan type="DefaultClan">
+<Clan type="ShalafiClan">
   <channel>true</channel>
   <channelPattern>{B[SHALAFI] %1$#C1: {c%2$s{x</channelPattern>
   <color>B</color>
@@ -12,6 +12,30 @@
   <enemies>
     <node>battlerager</node>
   </enemies>
+  <faculties>
+   <node name="occultism">
+    <shortDescr>Факультет Материй Оккультизма</shortDescr>
+    <classes>
+      <node>warrior</node>
+      <node>samurai</node>
+      <node>ranger</node>
+    </classes>
+   </node>
+   <node name="mysticism">
+    <shortDescr>Факультет Шаманизма и Мистицизма</shortDescr>
+    <classes>
+      <node>ninja</node>
+      <node>thief</node>
+    </classes>
+   </node>
+   <node name="apatheism">
+    <shortDescr>Факультет Радикального Апатеизма</shortDescr>
+    <classes>
+      <node>witch</node>
+      <node>warlock</node>
+    </classes>
+   </node>
+  </faculties>  
   <hidden>false</hidden>
   <induct>
     <node allow="false">

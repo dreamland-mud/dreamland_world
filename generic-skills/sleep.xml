@@ -24,21 +24,23 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group registry="skillGroup">beguiling</group>
+  <group registry="skillGroup">suddendeath beguiling</group>
   <help aka="УСЫПИТЬ" id="741" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
-Это заклинание погружает жертву в глубокий и продолжительный сон. Спящую жертву
-можно обложить разнообразными {hh1117проклятиями{x, но при нападении или нанесении урона
+Это заклинание погружает жертву в глубокий сон, продолжительность которого
+зависит от разницы интеллектов заклинателя и жертвы. Спящую жертву можно
+обложить разнообразными {hh1117проклятиями{x, но при нападении или нанесении урона
 жертва, разумеется, проснется.
 </help>
-  <mana>15</mana>
+  <mana>80</mana>
   <nameRus>сон</nameRus>
   <spell type="SPELL(Sleep)">
-    <ranged>false</ranged>     
-    <damtype>none</damtype>
+    <damtype>mental</damtype>
     <flags>magic</flags>
     <position>stand</position>
+    <ranged>false</ranged>
     <target>char_room</target>
+    <tier>2</tier>
     <type>offensive</type>
   </spell>
 </skill>

@@ -29,12 +29,17 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group registry="skillGroup">creation</group>
-  <help id="757" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%OBJ%_
+  <group registry="skillGroup">nature</group>
+  <help aka="'СОТВОРИТЬ ВОДУ' 'СОЗДАТЬ ВОДУ'" id="757" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%емкость%_
 
-Это заклинание наполняет пустую {hh1075емкость{x питьевой водой.
+Это заклинание наполняет пустую {hh1075емкость{x питьевой водой. Священники и
+паладины вдобавок освящают емкость, создавая тем самым святую воду.
+
+%FMT% *%SPELL%* _%OBJ%_
+
+Этим же заклинанием можно потушить {hh4раскаленный{x предмет или горящий {hh825костер{x.
 </help>
-  <mana>5</mana>
+  <mana>20</mana>
   <nameRus>сотворить воду</nameRus>
   <spell type="SPELL(CreateWater)">
     <damtype>none</damtype>

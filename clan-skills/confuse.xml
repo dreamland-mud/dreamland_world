@@ -16,6 +16,7 @@
     </node>
   </clans>
   <dammsg></dammsg>
+  <group registry="skillGroup">clan</group>
   <help id="929" level="-1" type="SkillHelp">Тот, на кого произнесено это заклинание, начисто теряет способность 
 ориентации, и его попытки двигаться целенаправленно заведомо обречены 
 на провал.
@@ -23,8 +24,10 @@
   <mana>20</mana>
   <nameRus>сбить с толку</nameRus>
   <spell type="SPELL(Confuse)">
-    <ranged>false</ranged>     
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <position>fight</position>
+    <ranged>false</ranged>
     <target>char_room</target>
     <type>offensive</type>
   </spell>

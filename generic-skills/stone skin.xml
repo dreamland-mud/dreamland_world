@@ -18,16 +18,6 @@
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
-    <node name="ninja">
-      <level>35</level>
-      <maximum>100</maximum>
-      <rating>1</rating>
-    </node>
-    <node name="samurai">
-      <level>53</level>
-      <maximum>100</maximum>
-      <rating>1</rating>
-    </node>
     <node name="vampire">
       <level>60</level>
       <maximum>100</maximum>
@@ -48,13 +38,11 @@
   <group registry="skillGroup">protective</group>
   <help id="785" level="-1" type="SkillHelp">%FMT% *%SPELL%* 
 
-Это заклинание превратит твою кожу в камень, тем самым уменьшая (усиливая)
-твой класс брони. Уровень защиты растет с уровнем произнесенного заклинания
-и составляет от 40 до 75 очков.
-
-%SA% %H% [(cast,колдовать)]
+Это заклинание покрывает твою кожу каменной коркой, которая уменьшает (улучшает)
+{hh83класс защиты{x персонажа, а также поглощает какую-то часть нанесенного тебе
+физического урона.
 </help>
-  <mana>12</mana>
+  <mana>40</mana>
   <mob>
     <professional>true</professional>
   </mob>

@@ -15,6 +15,7 @@
     </node>
   </clans>
   <dammsg></dammsg>
+  <group registry="skillGroup">clan</group>
   <help id="917" keyword="'ВЫЗОВ СТРАЖЕЙ' 'ПОЗВАТЬ СТРАЖНИКОВ'" level="-1" type="SkillHelp">Вызвать двух бравых стражников для расправы над провинившимся.
 См. также {W? перепризыв{x.
 </help>
@@ -22,6 +23,8 @@
   <nameRus>вызов охранников</nameRus>
   <spell type="SPELL(GuardCall)">
     <castMobCount>2</castMobCount>
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <maxMobCount>2</maxMobCount>
     <mobVnum>11</mobVnum>
     <msgCreateAttemptArea>Стража! Стража!</msgCreateAttemptArea>

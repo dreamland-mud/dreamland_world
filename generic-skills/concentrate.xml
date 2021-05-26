@@ -5,6 +5,11 @@
   </affect>
   <beats>18</beats>
   <classes>
+    <node name="ranger">
+      <level>59</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
     <node name="samurai">
       <level>65</level>
       <maximum>100</maximum>
@@ -17,8 +22,9 @@
     </node>
   </classes>
   <command type="SKILL(concentrate)">
+    <argtype>undef</argtype>
     <cat>class</cat>
-    <hint>(воины, самураи) сосредоточиться перед битвой</hint>
+    <hint>(воинские классы) сосредоточиться перед битвой</hint>
     <name>concentrate</name>
     <position>stand</position>
     <russian>
@@ -26,19 +32,19 @@
     </russian>
   </command>
   <dammsg></dammsg>
-  <group>defensive</group>
+  <group registry="skillGroup">fightmaster defensive</group>
   <hard>2</hard>
   <help id="728" keyword="КОНЦЕНТРИРОВАТЬСЯ КОНЦЕНТРАЦИЯ" level="-1" type="SkillHelp">%FMT% *(concentrate,сосредоточиться)*	  
 	  
-Приготовление к битве, обдумывание военной стратегии увеличит твои
-шансы в бою с врагом, сделает тебя сильнее духом и телом.
-Умение увеличивает твой урон и точность.
+Приготовление к битве, обдумывание военной стратегии увеличит твои шансы в бою с
+врагом, увеличит твой урон и точность, улучшит владение боевыми умениями.
 </help>
-  <mana>50</mana>
+  <mana>80</mana>
   <mob>
     <bonus>10</bonus>
     <dice>3</dice>
     <professional>true</professional>
   </mob>
+  <move>80</move>
   <nameRus>сосредоточиться</nameRus>
 </skill>

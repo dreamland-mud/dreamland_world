@@ -1,0 +1,30 @@
+.apply(function() {
+
+    .SkillCommand(@name@).run = function() {
+        // Основной код команды умения.
+    };
+
+
+    .SkillCommand(@name@).apply = function() {
+        // Выполнить действие умения без предварительных проверок,
+        // например, повесить аффект; либо же выполнить пассивное
+        // умение (area attack, rear kick).
+
+        /*
+            var af;
+
+            af = .Affect();
+            af.type = skill.name;
+            af.level = level;
+            af.duration  = (10 + level / 3);
+            af.location = .tables.apply_flags.str;
+            af.modifier  = .max(2, level / 10);
+            victim.affectAdd(af);
+
+            victim.act("Ты становишься намного сильнее!");
+            victim.recho("%^C1 становится намного сильнее.", victim);
+        */
+    };
+
+})
+

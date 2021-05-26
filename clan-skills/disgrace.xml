@@ -16,14 +16,17 @@
     </node>
   </clans>
   <dammsg></dammsg>
+  <group registry="skillGroup">clan</group>
   <help id="901" level="-1" type="SkillHelp">Заклинание, делающее из игрока нечто такое, что по сравнению с ним самый
 уродливый троль будет выглядеть красавцем.  
 </help>
   <mana>500</mana>
   <nameRus>скомпрометировать</nameRus>
   <spell type="SPELL(Disgrace)">
-    <ranged>false</ranged>     
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <position>stand</position>
+    <ranged>false</ranged>
     <target>char_room</target>
     <type>offensive</type>
   </spell>

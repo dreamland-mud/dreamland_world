@@ -3,7 +3,7 @@
   <beats>12</beats>
   <clans>
     <node name="shalafi">
-      <level>29</level>
+      <level>101</level>
       <maxLevel>100</maxLevel>
       <maximum>100</maximum>
       <needItem>true</needItem>
@@ -12,6 +12,7 @@
     </node>
   </clans>
   <dammsg></dammsg>
+  <group registry="skillGroup">clan</group>
   <help id="919" level="-1" type="SkillHelp">Заклинание, переносящее тебя вместе со всей группой к цели. Целью может быть
 моб или чар. Некоторые мобы не могут быть выбраны целью переноса, также нельзя
 перенестись в norecall зону.
@@ -19,6 +20,8 @@
   <mana>150</mana>
   <nameRus>тессеракт</nameRus>
   <spell type="GateSpell">
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <gateShadow>true</gateShadow>
     <gateViolent>true</gateViolent>
     <levelDiff>10</levelDiff>

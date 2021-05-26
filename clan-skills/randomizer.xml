@@ -15,6 +15,7 @@
     </node>
   </clans>
   <dammsg></dammsg>
+  <group registry="skillGroup">clan</group>
   <help id="900" level="-1" type="SkillHelp">Вносит частичку хаоса в порядок дорог.
 Выходы из комнаты, где произнесено заклинания, на некоторое время 
 перепутываются и ведут не туда, куда обычно.
@@ -22,6 +23,8 @@
   <mana>200</mana>
   <nameRus>рандомайзер</nameRus>
   <spell type="SPELL(Randomizer)">
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <position>stand</position>
     <target>room</target>
     <type>offensive</type>

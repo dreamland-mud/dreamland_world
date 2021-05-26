@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
-  <beats>12</beats>
   <classes>
     <node name="ranger">
       <level>45</level>
@@ -8,26 +7,13 @@
       <rating>1</rating>
     </node>
   </classes>
-  <command type="SKILL(forest)">
-    <cat>class</cat>
-    <hint>(рейнджеры) задать стиль лесного боя</hint>
-    <name>forest</name>
-    <position>fight</position>
-    <russian>
-      <node>лес</node>
-    </russian>
-  </command>
   <dammsg></dammsg>
   <group registry="skillGroup">nature</group>
   <hard>7</hard>
-  <help id="590" level="-1" type="SkillHelp">%FMT% *(forest,лес)* attack|defense|normal
-
-Опытный рейнджер может использовать в бою свои знания о природе. 
-Выбор режима attack делает его более сильным, а defense -- более защищенным во
-время сражений в лесах и горах. Опция normal сбрасывает настройки и возвращает
-персонажа в обычное состояние.
+  <help id="590" level="-1" type="SkillHelp">Опытный рейнджер лучше сражается в дикой местности. В лесу, горах и так далее у
+рейнджера больше атак и выше вероятность срабатывания защитных умений, таких как
+парирование, уворот или блок щитом.
 </help>
-  <mana>50</mana>
   <mob>
     <bonus>10</bonus>
     <dice>1</dice>

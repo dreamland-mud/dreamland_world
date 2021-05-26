@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<skill type="ClanSkill">
+<skill type="ClanOrgSkill">
   <affect type="DefaultAffectHandler">
     <cancelled>true</cancelled>
     <dispelled>true</dispelled>
     <wearoff>Жажда чужих душ стихает внутри тебя.</wearoff>
   </affect>
   <clans>
+    <node name="invader">
+      <level>10</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>false</needPractice>
+      <rating>1</rating>
+    </node>
   </clans>
   <dammsg></dammsg>
-  <help id="2154" level="102" type="SkillHelp"></help>
+  <group registry="skillGroup">clan</group>
+  <help id="2154" level="102" type="SkillHelp">
+  </help>
   <nameRus>жажда душ</nameRus>
+  <organizations>
+    <node name="orden">
+      <clanLevel>0</clanLevel>
+      <name>adepts</name>
+    </node>
+  </organizations>
 </skill>

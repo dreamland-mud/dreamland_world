@@ -6,6 +6,7 @@
     <wearoff>{DТемная аура{x вокруг тебя исчезает.</wearoff>
     <wearoffDispel>{DТемная аура{x, окружавшая %1$C4, исчезает.</wearoffDispel>
   </affect>
+  <align>evil</align>
   <beats>12</beats>
   <classes>
     <node name="anti-paladin">
@@ -19,17 +20,19 @@
       <rating>1</rating>
     </node>
     <node name="vampire">
-      <level>50</level>
+      <level>51</level>
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
   </classes>
   <dammsg></dammsg>
   <group registry="skillGroup">protective</group>
-  <help id="571" level="-1" type="SkillHelp">Антипаладины и некроманты умеют накладывать немного ослабленную версию молитвы
-{hh656святилища{x -- {Dтемную ауру{x. Аура уменьшает принятые повреждения на 40%.
+  <help id="571" level="-1" type="SkillHelp">Антипаладины, вампиры и некроманты умеют накладывать немного ослабленную версию
+молитвы {hh656святилища{x -- {Dтемную ауру{x.
+
+Аура уменьшает полученный урон на 40% и защищает вампиров от солнечного света.
 </help>
-  <mana>75</mana>
+  <mana>80</mana>
   <mob>
     <professional>true</professional>
   </mob>

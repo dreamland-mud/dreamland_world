@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
-  <beats>12</beats>
+  <affect type="DefaultAffectHandler">
+  </affect>
+  <beats>24</beats>
   <classes>
     <node name="cleric">
       <level>28</level>
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
-    <node name="necromancer">
-      <level>24</level>
-      <maximum>100</maximum>
-      <rating>1</rating>
-    </node>
     <node name="vampire">
-      <level>24</level>
+      <level>32</level>
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
@@ -35,12 +32,15 @@
 Это заклинание изменяет текущую {hh1028погоду{x к лучшему (ясное небо, солнце) или к
 худшему (дожди и ураганы). Некоторые боевые заклинания (например, {hh650вызов молнии{x)
 работают только при плохой погоде.
+
+Шанс изменить погоду зависит от твоего уровня заклинаний и от текущей погоды --
+например, улучшить грозу с молниями будет сложнее, чем просто облачное небо.
 </help>
-  <mana>25</mana>
+  <mana>80</mana>
   <mob>
     <professional>true</professional>
   </mob>
-  <nameRus>изменить погоду</nameRus>
+  <nameRus>погода</nameRus>
   <raceBonuses>
     <node name="storm giant">
       <bonus>100</bonus>

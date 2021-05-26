@@ -82,29 +82,6 @@
       <trustHear>102</trustHear>
       <trustSpeak>102</trustSpeak>
     </node>
-    <node type="WorldChannel">
-      <aliases>
-        <node>&quot;</node>
-        <node>ctalk</node>
-      </aliases>
-      <cat>comm</cat>
-      <extra>keep_hide ghost</extra>
-      <hint>общение с кодерами</hint>
-      <level>110</level>
-      <msgOff>Кодерский базар выключен.</msgOff>
-      <msgOn>Кодерский базар включен.</msgOn>
-      <msgOther>{C[{c%1$#C1{C]: {c%2$s{x</msgOther>
-      <msgSelf>{C[{c%1$#C1{C]: {c%2$s{x</msgSelf>
-      <name>codertalk</name>
-      <off>noctalk</off>
-      <position>dead</position>
-      <positionOther>dead</positionOther>
-      <russian>
-        <node>кодерканал</node>
-      </russian>
-      <trustHear>110</trustHear>
-      <trustSpeak>110</trustSpeak>
-    </node>
     <node type="SpeechChannel">
       <aliases>
         <node>&apos;</node>
@@ -141,9 +118,9 @@
       <hook>true</hook>
       <ignore>true</ignore>
       <isolate>true</isolate>
-      <msgOff>Ты теперь не услышишь {1{Rгромких криков{2.</msgOff>
-      <msgOn>Ты теперь слышишь {1{Rгромкие крики{2.</msgOn>
-      <msgOther>%1$^C1 громко крич%1$nит|ат &apos;{R%2$s{x&apos;</msgOther>
+      <msgOff>Ты теперь не услышишь {Rгромких криков{x.</msgOff>
+      <msgOn>Ты теперь слышишь {Rгромкие крики{x.</msgOn>
+      <msgOther>{W%1$^C1{x громко крич%1$nит|ат &apos;{R%2$s{x&apos;</msgOther>
       <msgSelf>Ты громко кричишь &apos;{R%2$s{x&apos;</msgSelf>
       <name>gossip</name>
       <nochannel>true</nochannel>
@@ -154,7 +131,6 @@
       <russian>
         <node>кричать</node>
         <node>орать</node>
-        <node>гкричать</node>
       </russian>
       <soap>true</soap>
       <translate>true</translate>
@@ -172,12 +148,10 @@
       <hook>true</hook>
       <ignore>true</ignore>
       <isolate>true</isolate>
-      <msgOff>Ты теперь не услышишь {1{Mролевой болтовни{2.</msgOff>
-      <msgOn>Ты теперь слышишь {1{Mролевую болтовню{2.</msgOn>
-      <msgOther>{Y[{G{leic{lrРП{lx{Y]{W %1$^C1{x : &apos;{M%2$s{x&apos;</msgOther>
-      <msgOtherMild>{Y[{G{leic{lrРП{lx{Y]{W %1$^C1{x : &apos;{g%2$s{x&apos;</msgOtherMild>
-      <msgSelf>{Y[{G{leic{lrРП{lx{Y]{x &apos;{M%2$s{x&apos;</msgSelf>
-      <msgSelfMild>{Y[{G{leic{lrРП{lx{Y]{x &apos;{g%2$s{x&apos;</msgSelfMild>
+      <msgOff>Ты теперь не услышишь {Mролевой болтовни{x.</msgOff>
+      <msgOn>Ты теперь слышишь {Mролевую болтовню{x.</msgOn>
+      <msgOther>{W%1$^C1{x болта%1$nет|ют &apos;{M%2$s{x&apos;</msgOther>
+      <msgSelf>Ты болтаешь &apos;{M%2$s{x&apos;</msgSelf>
       <name>ic</name>
       <nochannel>true</nochannel>
       <nomob>true</nomob>
@@ -194,26 +168,6 @@
     </node>
     <node type="WorldChannel">
       <cat>comm</cat>
-      <extra>keep_hide ghost hidden</extra>
-      <hint>сюда боги сообщают о божественных заданиях</hint>
-      <hook>true</hook>
-      <msgOther>{Y[{c{leQuest Info{lrБожественный Квест{lx{Y]{x &apos;{G%2$s{x&apos;</msgOther>
-      <msgSelf>{Y[{c{leQuest Info{lrБожественный Квест{lx{Y]{x &apos;{G%2$s{x&apos;</msgSelf>
-      <name>qinfo</name>
-      <nochannel>true</nochannel>
-      <nomob>true</nomob>
-      <off>noqinfo</off>
-      <order>player_only</order>
-      <position>sleep</position>
-      <positionOther>dead</positionOther>
-      <quiet>true</quiet>
-      <russian>
-        <node>квестканал</node>
-      </russian>
-      <trustSpeak>102</trustSpeak>
-    </node>
-    <node type="WorldChannel">
-      <cat>comm</cat>
       <extra>keep_hide ghost</extra>
       <help level="-1" refby="channels" type="CommandHelp">
       </help>
@@ -221,7 +175,7 @@
       <hook>true</hook>
       <ignore>true</ignore>
       <isolate>true</isolate>
-      <msgOther>%1$^C1 поздравляет &apos;{M%2$s{x&apos;</msgOther>
+      <msgOther>{W%1$^C1{x поздравляет &apos;{M%2$s{x&apos;</msgOther>
       <msgSelf>Ты поздравляешь &apos;{M%2$s{x&apos;</msgSelf>
       <name>grats</name>
       <nochannel>true</nochannel>
@@ -246,7 +200,7 @@
       <hook>true</hook>
       <ignore>true</ignore>
       <isolate>true</isolate>
-      <msgOther>%1$#^C1 {CП{MО{GЕ{RТ{x: &apos;{c%2$s{x&apos;</msgOther>
+      <msgOther>{W%1$#^C1{x {CП{MО{GЕ{RТ{x: &apos;{c%2$s{x&apos;</msgOther>
       <msgSelf>Ты {CП{MО{GЕ{RШ{CЬ{x: &apos;{c%2$s{x&apos;</msgSelf>
       <name>music</name>
       <nochannel>true</nochannel>
@@ -326,9 +280,6 @@
       </aliases>
       <cat>comm</cat>
       <extra>keep_hide ghost manacles</extra>
-      <help id="1062" keyword="DELETETHIS OLDRACETALK" level="102" title="DELETETHIS OLDRACETALK" type="CommandHelp">Канал *(rtalk,расговорить)* предназначен для общения с представителями своей расы.
-Его слышат только ваши соплеменники и Боги.
-      </help>
       <hint>общение с собратьями по расе</hint>
       <ignore>true</ignore>
       <isolate>true</isolate>
@@ -372,39 +323,6 @@
         <node>говорить</node>
       </russian>
     </node>
-    <node type="PageChannel">
-      <aliases>
-        <node>orb</node>
-      </aliases>
-      <cat>comm</cat>
-      <extra>keep_hide ghost hidden</extra>
-      <help level="-1" refby="channels" type="CommandHelp">
-      </help>
-      <hint>отправить сообщение через хрустальный шар</hint>
-      <isolate>true</isolate>
-      <msgAuto>Существо из Хрустального Шара вздыхает, думая о том, как тебе одиноко.</msgAuto>
-      <msgChar>Твое сообщение отправлено.</msgChar>
-      <msgNoArg>Послать какое сообщение?</msgNoArg>
-      <msgNoName>Послать сообщение кому?</msgNoName>
-      <msgNochan>Существо из Хрустального Шара отказывается передавать твое сообщение</msgNochan>
-      <msgOther>{*{CТихий голос из %4$O2: {WСообщение от %1$C1 для всех:
-[%2$s{W]{x</msgOther>
-      <msgSelf>Твое сообщение отправлено всем, имеющим хрустальный шар.</msgSelf>
-      <msgSelfNoarg>Какое сообщение ты хочешь отправить?</msgSelfNoarg>
-      <msgVict>{CТихий голос из %4$O2: {*{WСообщение от %1$C1 для тебя:
-[%2$s{W]{x</msgVict>
-      <name>page</name>
-      <nochannel>true</nochannel>
-      <nomob>true</nomob>
-      <order>player_only</order>
-      <position>rest</position>
-      <positionOther>sleep</positionOther>
-      <quiet>true</quiet>
-      <russian>
-        <node>шар</node>
-      </russian>
-      <soap>true</soap>
-    </node>
     <node type="ReplyChannel">
       <cat>comm</cat>
       <deafen>true</deafen>
@@ -439,7 +357,7 @@
 этим персонажем. И наоборот, можно трепаться &quot;{Cу меня лаги{x&quot; или &quot;{Cя сейчас отойду
 от компа{x&quot;, но это выглядит странно от лица твоего фентезийного персонажа.
 
-Для =внеролевого общения= используй канал {Y[{Rooc{Y]{x (*(ooc,трепаться)*) или уютные
+Для =внеролевого общения= используй канал {Y[{Rooc{Y]{x (*(ooc,внероли)*) или уютные
 чатики в {hh66Телеграме и Дискорде{x. А вот для ролевого общения можно и нужно
 использовать все остальные. За злостное нарушение правил общения можно получить
 {hh2146молчанку{x от Богов.
@@ -448,10 +366,10 @@
       <hook>true</hook>
       <ignore>true</ignore>
       <isolate>true</isolate>
-      <msgOther>{Y[{R{leooc{lrтреп{lx{Y]{W %1$#^C1{x : &apos;{C%2$s{x&apos;</msgOther>
-      <msgOtherMild>{Y[{R{leooc{lrтреп{lx{Y]{W %1$#^C1{x : &apos;{r%2$s{x&apos;</msgOtherMild>
-      <msgSelf>{Y[{R{leooc{lrтреп{lx{Y]{x &apos;{C%2$s{x&apos;</msgSelf>
-      <msgSelfMild>{Y[{R{leooc{lrтреп{lx{Y]{x &apos;{r%2$s{x&apos;</msgSelfMild>
+      <msgOther>{Y[{R{leooc{lrвнероли{lx{Y]{W %1$#^C1{x: &apos;{C%2$s{x&apos;</msgOther>
+      <msgOtherMild>{Y[{R{leooc{lrвнероли{lx{Y]{W %1$#^C1{x: &apos;{r%2$s{x&apos;</msgOtherMild>
+      <msgSelf>{Y[{R{leooc{lrвнероли{lx{Y]{x &apos;{C%2$s{x&apos;</msgSelf>
+      <msgSelfMild>{Y[{R{leooc{lrвнероли{lx{Y]{x &apos;{r%2$s{x&apos;</msgSelfMild>
       <name>ooc</name>
       <nochannel>true</nochannel>
       <nomob>true</nomob>
@@ -462,8 +380,8 @@
       <positionOther>dead</positionOther>
       <quiet>true</quiet>
       <russian>
-        <node>трепаться</node>
         <node>внероли</node>
+        <node>трепаться</node>
         <node>ооц</node>
         <node>оос</node>
       </russian>
@@ -471,7 +389,7 @@
     </node>
   </channels>
   <extra>keep_hide ghost afk</extra>
-  <help aka="COMMUNICATION RACETALK RTALK SPEAK ОБЩЕНИЕ ЯЗЫКИ РАСГОВОРИТЬ РАЗГОВАРИВАТЬ РАЗГОВОР РГОВОРИТЬ СПЕТЬ" id="1059" labels="comm" level="-1" ref="gossip grats ic music page reply say tell yell" title="{CОбщение:{x каналы общения и коммуникаций" type="CommandHelp">Чтобы разговаривать с другими существами в мире есть много =каналов общения=.
+  <help aka="COMMUNICATION RACETALK RTALK SPEAK ОБЩЕНИЕ ЯЗЫКИ РАСГОВОРИТЬ РАЗГОВАРИВАТЬ РАЗГОВОР РГОВОРИТЬ СПЕТЬ" id="1059" labels="comm" level="-1" ref="gossip grats ic music reply say tell yell" title="{CОбщение:{x каналы общения и коммуникаций" type="CommandHelp">Чтобы разговаривать с другими существами в мире есть много =каналов общения=.
 Разные каналы используются для разных целей и разных групп собеседников.
 Во время общения придерживайся {hh68правил поведения{x в нашем мире.
 
@@ -485,19 +403,14 @@
          - сказать что-то конкретному персонажу, если он, конечно, не спит.
 *(reply    ,вответ   )*- посылает сообщение последнему, кто говорил тебе что-то приватом;
            так можно отвечать невидимым собеседникам и богам.
-*(orb,шар)* _персонаж_ _реплика_ 
-         - существо из твоего {hh64хрустального шара{x передаст личное сообщение
-	   такому же существу в шаре адресата (если у адресата есть шар).
 	   
 =Глобальные каналы= {Wслышны сразу всем игрокам.{x
-*(ooc      ,треп     )*- главный канал для внеролевого общения (говоришь от лица игрока)
+*(ooc      ,внероли  )*- главный канал для внеролевого общения (говоришь от лица игрока)
 *(ic       ,болтать  )*- главный канал для РП, {hh31ролевого{x общения (говоришь от лица персонажа)
 *(grats    ,поздрав  )*- поздравить кого-то -- например, с получением {hh14уровня{x
 *(auction  ,аукцион  )*- сообщения {hh994аукциона{x, реклама своего товара
 *(music    ,петь     )*- спеть что-то на весь мир
 *(gossip   ,орать    )*- услышат все {hh1082неглухие{x персонажи.
-*(orb all  ,шар все  )*- существо из твоего хрустального шара передаст сообщения
-           в другие хрустальные шары по всему миру 
 
 =Ограниченные каналы= {Wуслышат только определенные группы игроков.{x
 *(gtell    ,гговорить)*- услышат только члены твоей {hh1378группы{x

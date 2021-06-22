@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Command>
+  <cat></cat>
+  <extra>ghost</extra>
+  <help id="1065" level="109" type="CommandHelp">=Работа с профайлами игроков=  
+
+%FMT%  *profile backup* _имя игрока_
+Сохраняет обычный и xml-ный профайл игрока в каталоги var/db/backup и var/db/oldstyle/backup, а также в /tmp.
+Профайлы восстанавливаются командой *profile recover*.
+
+Для того, чтобы поменять что-то в xml-профайле руками, необходимо:
+- profile backup _имя_ 
+- на сервере:  cd /home/dreamland/var/db/backup; vi _имя_.xml
+- profile recover _имя_
+
+%FMT%  *profile recover* _имя игрока_
+Восстанавливает профайлы, сохраненные командой *backup*.
+
+%FMT%  *profile unremort* _имя игрока_ _номер реморта_
+Восстанавливает неудачно ремортнутых игроков.
+Для первого реморта _номер реморта_ %PAUSE%= 0, для 2-го = 1  и тд.%RESUME%
+
+%FMT%  *profile undelete* _имя игрока_
+Восстанавливает автоматически удаленных или удаленных командой *delete* игроков.
+
+%FMT%  *profile buildplot* _имя игрока_
+На стройплощадке копирует профайлы игрока из /tmp, если его еще не существует.
+Назначает уровень OLC и Fenia security, достаточных для работы. Выдает права OLC на весь диапазон внумов.
+
+</help>
+  <hint>работа с профайлами</hint>
+  <level>109</level>
+  <log>1</log>
+  <name>profile</name>
+  <position>dead</position>
+</Command>

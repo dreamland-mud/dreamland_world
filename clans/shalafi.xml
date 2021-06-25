@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Clan type="DefaultClan">
+<Clan type="ShalafiClan">
   <channel>true</channel>
   <channelPattern>{B[SHALAFI] %1$#C1: {c%2$s{x</channelPattern>
   <color>B</color>
@@ -15,12 +15,18 @@
   <hidden>false</hidden>
   <induct>
     <node allow="false">
-      <node invert="false" type="XMLPCEthosPredicate">chaotic</node>
-    </node>
-    <node allow="false">
-      <node invert="true" type="XMLPCClassPredicate">warlock</node>
-      <node invert="true" type="XMLPCClassPredicate">witch</node>
-      <node invert="true" type="XMLPCClassPredicate">necromancer</node>
+      <node invert="false" type="XMLPCClassPredicate">paladin</node>
+      <node invert="false" type="XMLPCClassPredicate">anti-paladin</node>
+      <node invert="false" type="XMLPCClassPredicate">vampire</node>
+      <node invert="false" type="XMLPCClassPredicate">necromancer</node>
+      <node invert="false" type="XMLPCRacePredicate">elf</node>
+      <node invert="false" type="XMLPCRacePredicate">storm giant</node>
+      <node invert="false" type="XMLPCRacePredicate">dark-elf</node>
+      <node invert="false" type="XMLPCRacePredicate">drow</node>
+      <node invert="false" type="XMLPCRacePredicate">urukhai</node>
+      <node invert="false" type="XMLPCRacePredicate">githyanki</node>
+      <node invert="false" type="XMLPCRacePredicate">duergar</node>
+      <node invert="false" type="XMLPCRacePredicate">troll</node>
     </node>
   </induct>
   <leader>8</leader>
@@ -37,6 +43,24 @@
   <orgs/>
   <nameRus>{BОрден||а|у||ом|е Шалафи{x</nameRus>   
   <padName>{B     Шалафи{x</padName>
+  <orgs type="ClanOrgs">
+    <node name="occultism" type="ShalafiFaculty">
+      <classes>warrior samurai ranger</classes>
+      <name>occultism</name>
+      <shortDescr>Факультет Материй Оккультизма</shortDescr>
+    </node>
+    <node name="mysticism" type="ShalafiFaculty">
+      <classes>ninja thief</classes>
+      <name>mysticism</name>
+      <shortDescr>Факультет Шаманизма и Мистицизма</shortDescr>
+    </node>
+    <node name="apatheism" type="ShalafiFaculty">
+      <classes>witch warlock cleric</classes>
+      <name>apatheism</name>
+      <shortDescr>Факультет Радикального Апатеизма</shortDescr>
+    </node>
+    <name mg="m">факультет||а|у||ом|е</name>
+  </orgs>
   <recallVnum>5712</recallVnum>
   <recruiter>7</recruiter>
   <shortName>SHALAFI</shortName>

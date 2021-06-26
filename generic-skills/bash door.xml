@@ -39,6 +39,7 @@
     </node>
   </classes>
   <command type="SKILL(bashdoor)">
+    <argtype>undef</argtype>
     <cat>class</cat>
     <hint>(воинские профессии) выбить дверь</hint>
     <name>bashdoor</name>
@@ -48,8 +49,8 @@
     </russian>
   </command>
   <dammsg>удар об дверь</dammsg>
-  <group>adventure</group>
-  <help id="833" level="-1" type="SkillHelp">%FMT%  *(bashdoor,выбить)* _направление_  
+  <group registry="skillGroup">adventure</group>
+  <help aka="'ВЗЛОМАТЬ ДВЕРЬ'" id="833" level="-1" type="SkillHelp">%FMT%  *(bashdoor,выбить)* _направление_  
 
 Умение вышибать собой двери. Если попытка не удалась, вышибатель получает 
 повреждения и падает на пол. Затем он вынужден вставать и начинать все заново.

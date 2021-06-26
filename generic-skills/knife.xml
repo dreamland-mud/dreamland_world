@@ -9,6 +9,7 @@
     </node>
   </classes>
   <command type="SKILL(knife)">
+    <argtype>undef</argtype>
     <cat>class</cat>
     <hint>(воры) пырнуть ножом</hint>
     <name>knife</name>
@@ -18,10 +19,11 @@
     </russian>
   </command>
   <dammsg>удар ножом</dammsg>
-  <group>fightmaster</group>
+  <group registry="skillGroup">fightmaster</group>
   <help id="809" level="-1" type="SkillHelp">Типичный воровской прием - пырнуть ножом или кинжалом. Атаковать можно
 только того, кто в данный момент не сражается. Повреждения от пырка,
 как правило, сильнее, чем от обычного удара.
 </help>
+  <move>20</move>
   <nameRus>пырнуть ножом</nameRus>
 </skill>

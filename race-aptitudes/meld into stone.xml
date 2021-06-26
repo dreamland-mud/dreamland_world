@@ -3,18 +3,20 @@
   <affect type="DefaultAffectHandler">
     <cancelled>true</cancelled>
     <dispelled>true</dispelled>
-    <wearoff>Камень с твоей кожи осыпается пылью.</wearoff>
+    <wearoff>Твое тело теряет прочность камня.</wearoff>
+    <wearoffDispel>Тело %1$C2 теряет прочность камня.</wearoffDispel>
   </affect>
   <beats>18</beats>
   <dammsg></dammsg>
-  <group>protective</group>
-  <help id="870" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+  <group registry="skillGroup">protective</group>
+  <help id="870" level="-1" type="SkillHelp">%FMT% *%SPELL%* 
 
 Это уникальное заклинание позволяет {hh164роксирам{x сливаться с камнем, наделяя их
-кожу {hh101сопротивляемостью{x к колющим и рубящим ударам, но сильно {hh705замедляя{x скорость
-реакции и метаболизм. Вдобавок, заклинание уменьшает (усиливает) {hh83класс брони{x.
+тело {hh101сопротивляемостью{x к колющим и рубящим ударам и увеличивая телосложение, но
+сильно {hh705замедляя{x скорость реакции и метаболизм. Вдобавок, заклинание уменьшает
+(усиливает) {hh83класс брони{x.
 </help>
-  <mana>12</mana>
+  <mana>40</mana>
   <mob>
   </mob>
   <nameRus>слиться с камнями</nameRus>
@@ -24,6 +26,8 @@
     </node>
   </races>
   <spell type="SPELL(MeldIntoStone)">
+    <damtype>none</damtype>
+    <flags>magic</flags>
     <position>stand</position>
     <target>char_self</target>
     <type>defensive</type>

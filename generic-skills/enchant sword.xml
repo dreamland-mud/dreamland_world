@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoffObj>Улучшения %1$O2, приданные закалкой, исчезают, и клинок снова затупляется.</wearoffObj>
+  </affect>
   <beats>24</beats>
   <classes>
     <node name="samurai">
@@ -9,24 +12,28 @@
     </node>
   </classes>
   <command type="SKILL(enchant)">
+    <argtype>obj_carry</argtype>
     <cat>class</cat>
-    <hint>(самураи) заточить меч</hint>
+    <hint>(самураи) закалить меч</hint>
     <name>enchant</name>
     <position>rest</position>
     <russian>
-      <node>заточить</node>
+      <node>закалить</node>
     </russian>
   </command>
   <dammsg></dammsg>
-  <group>weaponsmaster</group>
+  <group registry="skillGroup">weaponsmaster</group>
   <hard>4</hard>
-  <help id="598" level="-1" type="SkillHelp">%FMT% *%CMD%* _меч_
+  <help aka="ЗАТОЧИТЬ" id="598" level="-1" type="SkillHelp">%FMT% *%CMD%* _меч_
 
-Опытный самурай может улучшать мечи, увеличивая при этом их {hh47урон и точность{x.
+Опытный самурай может временно закалять мечи в огне {hh1023костра{x, увеличивая при этом
+их {hh47урон и точность{x.
 
-При каждом успешном улучшении урон, точность и уровень вещи увеличиваются
-на единицу. Неудачное или многократное использование может сломать предмет.
+Степень улучшения, продолжительность и шанс успеха зависят от многих параметров:
+уровней предмета и персонажа, интеллекта или мудрости, владения умением и
+многого другого. Последователи {hh974Энки{x и те, кого обуяла {hh725жажда творить{x, улучшат
+предмет сильнее.
 </help>
   <mana>100</mana>
-  <nameRus>заточить меч</nameRus>
+  <nameRus>закалить</nameRus>
 </skill>

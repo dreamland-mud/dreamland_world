@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoffObj>%1$^O1 затухает и перестает излучать энергию. Кажется, пора перезарядить.</wearoffObj>
+  </affect>
   <beats>24</beats>
   <classes>
     <node name="warlock">
-      <level>29</level>
+      <level>25</level>
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
     <node name="witch">
-      <level>29</level>
+      <level>15</level>
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
@@ -18,15 +21,20 @@
   <help id="600" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%OBJ%_
 
 Заклинание для восстановления истощившейся магической силы {hh121посохов и жезлов{x.
-Перезаряжать один и тот же жезл можно только один раз.
+Последователи {hh974Энки{x могут перезаряжать неограниченное количество раз, а
+все остальные -- лишь один раз.
+
+Шанс восстановления зависит от владения умением, уровня заклинателя, уровня вещи
+и степени разряженности волшебного предмета. В случае неудачи попробовать еще
+раз перезарядить удастся нескоро.
 </help>
-  <mana>60</mana>
+  <mana>100</mana>
   <nameRus>перезарядка</nameRus>
   <spell type="SPELL(Recharge)">
     <damtype>none</damtype>
     <flags>magic</flags>
     <position>stand</position>
-    <target>obj_inv</target>
+    <target>obj_inv obj_equip</target>
     <type>none</type>
   </spell>
 </skill>

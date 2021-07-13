@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="BasicSkill">
   <affect type="DefaultAffectHandler">
-    <cancelled>true</cancelled>
-    <dispelled>true</dispelled>
     <wearoff>Ты перестаешь замечать скрытые детали в окружающей обстановке.</wearoff>
   </affect>
   <beats>12</beats>
   <dammsg></dammsg>
   <help aka="СПРЯТАННОЕ" id="617" keyword="OLDDETECTHIDDEN DELETHIS" level="102" type="SkillHelp">
   </help>
-  <mana>5</mana>
   <nameRus>обнаружить скрытое</nameRus>
   <spell type="SPELL(DetectHidden)">
+    <damtype>none</damtype>
     <position>stand</position>
     <target>char_self</target>
     <type>defensive</type>

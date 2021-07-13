@@ -3,7 +3,8 @@
   <affect type="DefaultAffectHandler">
     <cancelled>true</cancelled>
     <dispelled>true</dispelled>
-    <wearoff>Заклинания вновь имеют полную силу против тебя.</wearoff>
+    <wearoff>Энергетический кокон, защищающий тебя от заклинаний, пропадает.</wearoff>
+    <wearoffDispel>Энергетический кокон, защищающий %1$C4 от заклинаний, пропадает.</wearoffDispel>
   </affect>
   <beats>24</beats>
   <classes>
@@ -24,10 +25,11 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group registry="skillGroup">enhancement</group>
+  <group registry="skillGroup">enhancement protective</group>
   <help aka="'ОТПОР ЗАКЛИНАНИЙ'" id="811" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
-Это заклинание дарует {hh101сопротивляемость{x к {hh1361магии{x (но не молитвам).
+Это мощное заклинание дарует {hh101сопротивляемость{x ко всем заклинаниям, но
+{hh808развеять{x эту защиту легче, чем другие аффекты.
 </help>
   <mana>200</mana>
   <mob>

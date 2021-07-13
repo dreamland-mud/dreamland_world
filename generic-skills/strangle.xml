@@ -3,7 +3,7 @@
   <affect type="SleepAffectHandler">
     <wearoff>Циркуляция крови в твоем мозгу восстанавливается, и ты снова можешь проснуться.</wearoff>
   </affect>
-  <beats>8</beats>
+  <beats>12</beats>
   <classes>
     <node name="ninja">
       <level>26</level>
@@ -12,6 +12,7 @@
     </node>
   </classes>
   <command type="SKILL(strangle)">
+    <argtype>undef</argtype>
     <cat>class</cat>
     <extra>keep_hide</extra>
     <hint>(ниндзи) задушить, погрузив в сон</hint>
@@ -34,5 +35,6 @@
 Успех зависит от {hh37ловкости{x ниндзя, {hh36телосложения{x и {hh26размера жертвы{x,
 а также других факторов.
 </help>
+  <move>20</move>
   <nameRus>придушить</nameRus>
 </skill>

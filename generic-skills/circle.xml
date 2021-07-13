@@ -9,6 +9,7 @@
     </node>
   </classes>
   <command type="SKILL(circle)">
+    <argtype>undef</argtype>
     <cat>class</cat>
     <hint>(воры) нанести круговой удар кинжалом</hint>
     <name>circle</name>
@@ -19,7 +20,7 @@
     </russian>
   </command>
   <dammsg>круговой удар</dammsg>
-  <group>fightmaster</group>
+  <group registry="skillGroup">fightmaster</group>
   <help id="744" keyword="'CIRCLE STAB' 'CIRCLESTAB'" level="-1" type="SkillHelp">%FMT% *%CMD%*
     
 Техника боя, широко используемая ворами. Вор, который непосредственно
@@ -28,5 +29,6 @@
 
 %SA% %H% [(dagger,кинжал)]
 </help>
+  <move>50</move>
   <nameRus>круговой удар</nameRus>
 </skill>

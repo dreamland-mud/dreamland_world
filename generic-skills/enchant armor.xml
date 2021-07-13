@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoffObj>Аура зачарования вокруг %1$O2 исчезает.</wearoffObj>
+  </affect>
   <beats>24</beats>
   <classes>
     <node name="cleric">
@@ -7,8 +10,8 @@
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
-    <node name="paladin">
-      <level>30</level>
+    <node name="warlock">
+      <level>37</level>
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
@@ -20,20 +23,18 @@
   </classes>
   <dammsg></dammsg>
   <group registry="skillGroup">enchantment</group>
-  <help id="635" keyword="'ЗАЧАРОВАТЬ БРОНЮ'" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%OBJ%_
+  <help id="635" keyword="'ЗАЧАРОВАТЬ БРОНЮ' 'ЗАКОЛДОВАТЬ БРОНЮ'" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%OBJ%_
 
-Это заклинание или молитва улучшает класс защиты предмета с типом {yдоспех{x.
+Это заклинание позволяет временно улучшить {hh65доспехи{x, усиливая их параметры урона,
+точности, здоровья или маны.
 
-Успешное использование улучшает (уменьшает) {hh83класс защиты{x на несколько пунктов,
-но неудачное или многократное использование может сломать предмет.
-При каждом успешном зачаровывании уровень вещи увеличивается на 1.
-{hh96Пылающие{x и священные доспехи зачаровать сложнее.
-
-Говорят, что если сильный клерик или ведьма накладывает это заклинание 
-на мощную броню, ее свойства могут поменяться...
+Степень улучшения, продолжительность и шанс успеха зависят от многих параметров:
+уровней предмета и заклинателя, интеллекта или мудрости, владения умением и
+многого другого. Последователи {hh974Энки{x и те, кого обуяла {hh725жажда творить{x, получают
+бонусы к зачарованию.
 </help>
   <mana>100</mana>
-  <nameRus>заколдовать броню</nameRus>
+  <nameRus>зачаровать броню</nameRus>
   <raceBonuses>
     <node name="gnome">
       <bonus>100</bonus>
@@ -46,6 +47,6 @@
     <flags>magic prayer</flags>
     <position>stand</position>
     <target>obj_inv</target>
-    <type>none</type>
+    <type>defensive</type>
   </spell>
 </skill>

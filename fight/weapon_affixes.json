@@ -3,7 +3,7 @@
 "flag": {
   "values": [
     {"value": "vorpal",   "price": 60, "tier": 1, "extra": "noenchant", "align": [-349,1000], "align_bonus": "good", "adjectives": ["смертельн(ое,ый,ая2,ые)", "стрижающ(ее,ий1,ая1,ие)", "ворпальн(ое,ый,ая2,ые)"] },
-    {"value": "fading",   "price": 55, "tier": 2, "conflicts": ["holy", "anti_evil", "protect_evil"], "extra": "invis noenchant", "align": [-1000,349], "align_bonus": "evil", "adjectives": ["призрачн(ое,ый,ая2,ые)"] },
+    {"value": "fading",   "price": 55, "tier": 2, "conflicts": ["holy", "anti_evil", "protect_evil"], "extra": "invis noenchant magic", "align": [-1000,349], "align_bonus": "evil", "adjectives": ["призрачн(ое,ый,ая2,ые)"] },
     {"value": "shocking", "price": 35, "tier": 2, "extra": "hum",   "adjectives": ["искрист(ое,ый,ая2,ые)"] },
     {"value": "holy",     "price": 30, "tier": 2, "extra": "bless noenchant", "align": [349,1000], "align_bonus": "good", "conflicts": ["poison", "vampiric"], "adjectives": ["священн(ое,ый,ая2,ые)"] },
     {"value": "flaming",  "price": 20, "tier": 3, "extra": "glow burn_proof", "align_bonus": "good", "conflicts": ["frost", "fading", "wood", "ice"], "adjectives": ["пылающ(ее,ий1,ая1,ие)"] },
@@ -55,7 +55,7 @@
     {"value": "-saves","price": -10, "stack": 2, "mult": 0.1},
     {"value": "ac",    "price":  5,  "stack": 2, "mult": -1, "align_bonus": "good", "nouns": ["брони"]},
     {"value": "-ac",   "price": -5,  "stack": 2, "mult": 1},
-    {"value": "slevel", "price": 35,  "mod": 1, "nouns": ["колдовства"]},    
+    {"value": "slevel", "price": 35,  "mod": 1, "extra": "magic", "nouns": ["колдовства"]},    
     {"value": "level", "price": 50,  "mod": 1, "nouns": ["мастерства"]}
 ]},
 
@@ -95,10 +95,10 @@
 // Суффиксы аффектов, изменяющих поле affected_by. Поле value из таблицы affect_flags.
 "affects_with_bits": {
   "values": [
-    {"value": "haste",        "price": 40, "extra": "noenchant", "nouns": ["скорости", "ускорения"]},
-    {"value": "protect_good", "price": 40, "align": [-1000,349], "align_bonus": "evil", "extra": "evil noenchant",  "conflicts": ["protect_evil"], "nouns": ["зла", "тьмы"]},
-    {"value": "regeneration", "price": 30, "extra": "noenchant", "nouns": ["регенерации", "троллей"]},
-    {"value": "protect_evil", "price": 40, "align": [-349,1000], "align_bonus": "good", "extra": "bless noenchant", "conflicts": ["protect_good"], "nouns": ["добра", "света"]}
+    {"value": "haste",        "price": 40, "extra": "noenchant magic", "nouns": ["скорости", "ускорения"]},
+    {"value": "protect_good", "price": 40, "align": [-1000,349], "align_bonus": "evil", "extra": "evil noenchant magic",  "conflicts": ["protect_evil"], "nouns": ["зла", "тьмы"]},
+    {"value": "regeneration", "price": 30, "extra": "noenchant magic", "nouns": ["регенерации", "троллей"]},
+    {"value": "protect_evil", "price": 40, "align": [-349,1000], "align_bonus": "good", "extra": "bless noenchant magic", "conflicts": ["protect_good"], "nouns": ["добра", "света"]}
 ]},
 
 // Суффиксы аффектов, дающих бонусы к уровню умений группы. Поле value - название группы.
@@ -107,8 +107,8 @@
     {"value": "defensive",     "price": 30, "mod": 1, "align_bonus": "good", "nouns": ["защитника"]},
     {"value": "fightmaster",   "price": 30, "mod": 1, "align_bonus": "evil", "nouns": ["дуэлянта"]},
     {"value": "adventure",     "price": 20, "mod": 1, "nouns": ["приключенца"]},
-    {"value": "arcane",        "price": 15, "mod": 1, "nouns": ["артефактов"]},
-    {"value": "maladictions",  "price": 30, "mod": 1, "align_bonus": "evil", "nouns": ["проклятий"]},
+    {"value": "arcane",        "price": 15, "mod": 1, "extra": "magic", "nouns": ["артефактов"]},
+    {"value": "maladictions",  "price": 30, "mod": 1, "extra": "magic", "align_bonus": "evil", "nouns": ["проклятий"]},
     {"value": "benedictions",  "price": 30, "mod": 1, "align_bonus": "good", "nouns": ["благости"]},    
     {"value": "weaponsmaster", "price": 20, "mod": 1, "align_bonus": "neutral", "nouns": ["оружейника"]}
 ]},
@@ -117,7 +117,7 @@
 "player": {
   "needs_player": true,
   "values": [
-    {"value": "skillgroup", "price": 20, "mod": 1, "nouns": ["умения"]} // +1 к уровню любой доступной персонажу группы умений
+    {"value": "skillgroup", "price": 40, "mod": 1, "nouns": ["умения"]} // +1 к уровню любой доступной персонажу группы умений
 ]}
 
 }

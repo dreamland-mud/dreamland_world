@@ -2,7 +2,7 @@
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
     <cancelled>true</cancelled>
-    <wearoff>Безумие проходит.</wearoff>
+    <wearoff>Застилавшее твои глаза кровавое безумие проходит.</wearoff>
   </affect>
   <beats>24</beats>
   <classes>
@@ -17,18 +17,20 @@
   <help id="685" keyword="CRAZY СУМАСШЕСТВИЕ" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
 Опытные некроманты хранят секрет этого заклинания. Жертва становится {hh942кровожадной{x
-и полностью невменяемой, бросаясь на все, что движется или стоит.
+и полностью невменяемой, бросаясь на все, что движется или стоит. 
 
-Однако применять его можно только на игроков.
+Это заклинание нельзя применить в кланах, в безопасных или защищенных законом
+зонах или местностях -- или на существ родом из таких мест.
 </help>
   <mana>100</mana>
   <nameRus>безумие</nameRus>
   <spell type="SPELL(Insanity)">
-    <ranged>false</ranged>     
-    <damtype>none</damtype>
+    <damtype>mental</damtype>
     <flags>magic</flags>
     <position>stand</position>
+    <ranged>false</ranged>
     <target>char_room</target>
+    <tier>2</tier>
     <type>offensive</type>
   </spell>
 </skill>

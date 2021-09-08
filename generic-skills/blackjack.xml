@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="SleepAffectHandler">
-    <wearoff>Сознание возвращается к тебе после удара по черепу, и ты снова можешь проснуться.</wearoff>
+    <wearoff>Сознание возвращается к тебе после удара по черепу, попробуй {y{hcпроснуться{x.</wearoff>
+    <wearoffDispel>%1^$C1 начинает дышать глубже и, кажется, снова может проснуться.</wearoffDispel>
   </affect>
   <beats>8</beats>
   <classes>
@@ -12,6 +13,7 @@
     </node>
   </classes>
   <command type="SKILL(blackjack)">
+    <argtype>undef</argtype>
     <cat>class</cat>
     <extra>keep_hide</extra>
     <hint>(воры) ударить тяжелым мешочком по голове</hint>

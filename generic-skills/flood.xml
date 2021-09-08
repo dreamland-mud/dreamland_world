@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoffRoom>Вода высыхает, и местность возвращается к своему нормальному состоянию.</wearoffRoom>
+  </affect>
+  <align>neutral</align>
+  <beats>32</beats>
+  <classes>
+    <node name="druid">
+      <level>20</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <dammsg></dammsg>
+  <group registry="skillGroup">nature</group>
+  <help id="177" level="-1" type="SkillHelp">
+  </help>
+  <mana>100</mana>
+  <nameRus>затопить</nameRus>
+  <spell type="DefaultSpell">
+    <damtype>none</damtype>
+    <flags>prayer</flags>
+    <position>stand</position>
+    <target>room</target>
+    <type>none</type>
+  </spell>
+</skill>

@@ -24,11 +24,13 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group registry="skillGroup">beguiling</group>
+  <group registry="skillGroup">illusion</group>
   <help aka="НЕОТРАЗИМОСТЬ ОЧАРОВАТЬ ЗАЧАРМИТЬ ЧАРМИТЬ" id="729" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
 Это заклинание заставляет жертву следовать за тобой и исполнять твои {hh1091приказы{x.
-Успех его использования зависит от {hh2035защиты от заклинаний жертвы{x.
+Успех его использования зависит от {hh1359прокачки{x умения, {hh2035защиты от заклинаний жертвы{x,
+а также разницы в уровнях, ума и обаяния. Нельзя очаровывать нежить, конструкции
+и подобных бескровных и бездушных существ. Игроков очаровать сложнее, чем мобов.
 
 %A% Состояние &quot;очарования&quot; распространяется на любых мобов, следующих за тобой
   и исполняющих приказы (очаров, чармисов), включая {hh15петов{x, {hh545големов{x, призванных
@@ -48,14 +50,15 @@
 %A% Каждые 30 уровней опыта добавляют одного чармиса
 %A% Максимальное количество чармисов при уме 28 на 100-м уровне равно 10.
 </help>
-  <mana>5</mana>
+  <mana>100</mana>
   <nameRus>очарование</nameRus>
   <spell type="SPELL(CharmPerson)">
-    <damtype>none</damtype>
+    <damtype>charm</damtype>
     <flags>magic</flags>
     <position>stand</position>
     <ranged>false</ranged>
     <target>char_room</target>
+    <tier>2</tier>
     <type>offensive</type>
   </spell>
 </skill>

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Жажда убийства снова наполняет тебя.</wearoff>
+  </affect>
   <beats>24</beats>
   <classes>
     <node name="ranger">
@@ -9,16 +12,13 @@
     </node>
   </classes>
   <command type="SKILL(soothe)">
-    <argtype>char_fight</argtype>
+    <argtype>char_room</argtype>
     <cat>class</cat>
     <extra>nodungeon</extra>
-    <hint>(рейнджеры) приручить агрессивных животных</hint>
+    <hint>(рейнджеры) успокоить агрессивных животных</hint>
     <name>soothe</name>
     <order>player_only</order>
     <position>fight</position>
-    <russian>
-      <node>приручить</node>
-    </russian>
   </command>
   <dammsg></dammsg>
   <group registry="skillGroup">nature</group>

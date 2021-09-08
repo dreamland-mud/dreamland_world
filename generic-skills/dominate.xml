@@ -3,6 +3,7 @@
   <affect type="DefaultAffectHandler">
     <wearoff>Ты чувствуешь, что снова можешь подчинить кого-то своей воле.</wearoff>
   </affect>
+  <align>neutral evil</align>
   <beats>12</beats>
   <classes>
     <node name="vampire">
@@ -15,10 +16,11 @@
     <aliases>
       <node>control</node>
     </aliases>
-    <argtype>undef</argtype>
+    <argtype>char_room</argtype>
     <cat>class</cat>
     <hint>(вампиры) подчинить кого-то своей воле</hint>
     <name>dominate</name>
+    <order>player_only</order>
     <position>stand</position>
     <russian>
       <node>доминировать</node>
@@ -26,14 +28,18 @@
     </russian>
   </command>
   <dammsg></dammsg>
-  <group registry="skillGroup">beguiling</group>
+  <group registry="skillGroup">illusion</group>
   <hard>2</hard>
   <help id="819" keyword="ДОМИНИРОВАНИЕ ДОМИНАЦИЯ" level="-1" type="SkillHelp">%FMT% *%CMD%* _%VICT%_
 
 Опытные вампиры запросто подчиняют различных существ своей воле, после чего те
-беспрекословно выполняют все приказы вампира. Шанс подчинить зависит как
-от личного обаяния, так и от разницы интеллекта и уровней вампира и жертвы.
+беспрекословно выполняют все приказы вампира. Успех его использования зависит от
+{hh1359прокачки{x умения, {hh2035защиты от заклинаний жертвы{x, а также разницы в уровнях, ума и обаяния.
+Также есть ограничения на максимальное число чармисов: см. {y{hc? очарование{x.
+
+Нельзя доминировать над игроками (для этого есть другие умения), а также над
+нежитью, конструкциями и подобными бескровными и бездушными существами.
 </help>
-  <mana>5</mana>
+  <mana>80</mana>
   <nameRus>доминировать</nameRus>
 </skill>

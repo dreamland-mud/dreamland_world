@@ -10,6 +10,7 @@ clone:
 
 steps:
 - name: start_agent
+  commands:
   - eval `ssh-agent -s`
   - ssh-add /home/dreamland/.ssh/drone
 - name: commit_latest
@@ -19,6 +20,6 @@ steps:
   - git commit -m 'Latest changes from hosting'
   - git pull --rebase
   - git push
-
 - name: stop_agent
+  commands:
   - kill $SSH_AGENT_PID

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты перестаешь отчаянно чесаться, когда последние комары и мошки улетают прочь.</wearoff>
+  </affect>
+  <align>neutral evil</align>
+  <beats>18</beats>
+  <classes>
+    <node name="druid">
+      <level>40</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <dammsg mg="n">{1{Dоблако {yгнуса{2</dammsg>
+  <group registry="skillGroup">nature</group>
+  <help id="186" level="-1" type="SkillHelp">
+  </help>
+  <mana>80</mana>
+  <nameRus>гнус</nameRus>
+  <spell type="DefaultSpell">
+    <damtype>poison</damtype>
+    <flags>prayer</flags>
+    <position>fight</position>
+    <ranged>false</ranged>
+    <target>char_room</target>
+    <tier>3</tier>
+    <type>offensive</type>
+  </spell>
+</skill>

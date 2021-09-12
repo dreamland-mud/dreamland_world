@@ -1,0 +1,150 @@
+travelInit = function() {
+    PriceListWall = function(vnum) {
+	this = .get_obj_index(vnum);
+
+	onExtraDescr = function(obj, ch, arg) {
+	    var desc, prices;
+	    
+	    if (!arg.is_name(obj.name))
+		return null;
+	    
+	    desc = obj.get_extra_descr(obj.name);
+	    if (desc == null || desc == "")
+		return null;
+	    
+	    prices = .get_mob_index(3175).makePriceList(ch);
+	    return ch.print(desc, prices[0], prices[1],
+			     prices[2], prices[3],
+			     prices[4], prices[5]);
+	};
+    };
+    
+    TravelPoint = function(name, rname, room, coef) {
+	this = .Map();
+	this.name = name;
+	this.rname = rname;
+	this.room = room;
+	this.coef = coef;
+
+	getPrice = function(ch) {
+	    return coef * ch.getRealLevel() * 10;
+	};
+	
+	checkPrice = function(ch) {
+	    return (ch.gold >= getPrice(ch));
+	};
+
+	return this;
+    };
+
+    TravelMaster = function(vnum) {
+	var points;
+
+	points = .List().add(
+	    TravelPoint("new thalos",       "Новый Талос",    9506,  2),
+	    TravelPoint("valley of titans", "Долин|а|ы|е|у|ой|е Титанов", 18059, 8),
+	    TravelPoint("ofcol",            "Офкол",          601,   4),
+	    TravelPoint("city of anon",     "Анон",           31000, 7),
+	    TravelPoint("solace",           "Солас",          10205,   9),
+	    TravelPoint("gerighelm",        "Геригхельм",     7612,   3));
+	
+	this = .get_mob_index(vnum);
+	this.points = points;
+	
+	badRooms = .tmp.system.RandomArray(.List().add(
+			21828, 11740, 32724, 21820));
+
+	makePriceList = function(ch) {
+	    var priceList;
+
+	    priceList = .Array();
+	    points.forEach(function(ch, list) {
+		list[list.size()] = getPrice(ch);
+	    }, ch, priceList);
+
+	    return priceList;
+	};
+	
+	getMachine = function(mob) {
+	    var obj;
+
+	    for (obj = mob.in_room.contents; obj != null; obj = obj.next_content)
+		if (obj.pIndexData.vnum == 3302)
+		    return obj;
+
+	    return null;
+	};
+	
+	transfer = function(mob, ch, point) {
+	    var mach;
+
+	    mach = getMachine(mob);
+	    if (mach == null) {
+		mob.interpret_raw("say", "Я куда-то подевал свой аппарат..");
+		return;
+	    }
+
+	    mob.in_room.ppl.call.act("%^C1 крутит какие-то ручки %O2 и дергает за рычаг.", mob, mach);
+	    mob.interpret_raw("say", "Машина готова - торопитесь!");
+	    mach.value3 = point.room;
+	    mach.description = "На ящике (box) странного вида горит надпись {G\"{gПункт назначения - " + point.rname.ruscase(1) + "{G\"{x.";
+	    
+	    ch.gold = ch.gold - point.getPrice(ch);
+	    
+	    .scheduler.Thread(function(mach, badRoom) {
+		.tmp.system.sleep(40);
+		mach.value3 = badRoom;
+		mach.description = mach.pIndexData.description;
+		mach.in_room.ppl.call.act("Внутри %O2 что-то угрожающе щелкает, и красная надпись загорается снова.", mach);
+	    }, mach, badRooms.random()).start();
+	};
+
+	onSpeech = function(mob, ch, arg) {
+	    if (ch.is_npc())
+		return;
+	    
+	    if (arg == "random" || arg.match("куда.*глаз.*гляд")) {
+		var array, randomPoint;
+		
+		array = .Array();
+		points.forEach(function(ch, array) {
+		    if (checkPrice(ch))
+			array[array.size()] = this;
+		}, ch, array);
+
+		if (array.size() != 0) {
+		    randomPoint = array[.number_range(0, array.size() - 1)];
+		    transfer(mob, ch, randomPoint);
+		}
+		else
+		    mob.interpret_raw("say",
+			"У тебя не хватит золота даже для самого дешевого путешествия.");
+
+		return;			
+	    }
+		
+	    try {
+		points.forEach(function(ch, mob, arg) {
+		    if (arg.is_name(name) || arg.is_name(rname.ruscase(1))) {
+			if (checkPrice(ch))
+			    mob.pIndexData.transfer(mob, ch, this);
+			else
+			    mob.interpret_raw("say", 
+				"У тебя недостаточно денег для путешествия в " +
+				rname.ruscase(3));
+
+			throw "done";
+		    }
+		}, ch, mob, arg);
+	    }
+	    catch (e) {
+		if (e != "done")
+		    .print("Travel: " + e);
+	    }
+	};
+    };
+
+    TravelMaster(3175);
+    PriceListWall(3301);
+}
+

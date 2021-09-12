@@ -17,7 +17,7 @@ steps:
   commands:
   - cd /home/dreamland/runtime/share/DL
   - git add .
-  - git commit -m 'Latest changes from hosting'
+  - git commit -m 'Latest changes from hosting' || echo 'No changes to commit'
   - git pull --rebase
   - git push
 - name: stop_agent

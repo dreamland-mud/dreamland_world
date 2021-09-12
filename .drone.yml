@@ -9,17 +9,13 @@ clone:
   disable: true
 
 steps:
-- name: start_agent
+- name: refresh
   commands:
   - eval `ssh-agent -s`
   - ssh-add /home/dreamland/.ssh/drone
-- name: commit_latest
-  commands:
   - cd /home/dreamland/runtime/share/DL
   - git add .
   - git commit -m 'Latest changes from hosting' || echo 'No changes to commit'
   - git pull --rebase
   - git push
-- name: stop_agent
-  commands:
   - kill $SSH_AGENT_PID

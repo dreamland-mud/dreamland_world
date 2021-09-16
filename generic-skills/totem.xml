@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
+    <wearoff>Ты больше не чувствуешь тотемной силы.</wearoff>
+    <wearoffDispel>Аура тотемной силы вокруг %1$C2 исчезает. </wearoffDispel>
+  </affect>
+  <beats>24</beats>
+  <classes>
+    <node name="druid">
+      <level>15</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <dammsg></dammsg>
+  <group registry="skillGroup">nature</group>
+  <help id="191" level="-1" type="SkillHelp">
+  </help>
+  <mana>100</mana>
+  <nameRus>тотем</nameRus>
+  <spell type="DefaultSpell">
+    <damtype>drowning</damtype>
+    <flags>prayer</flags>
+    <position>stand</position>
+    <target>create_obj</target>
+    <tier>2</tier>
+    <type>offensive</type>
+  </spell>
+</skill>

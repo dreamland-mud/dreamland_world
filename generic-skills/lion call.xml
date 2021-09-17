@@ -3,8 +3,13 @@
   <affect type="DefaultAffectHandler">
     <wearoff>Ты снова чувствуешь в себе силы призывать львов.</wearoff>
   </affect>
-  <beats>12</beats>
+  <beats>16</beats>
   <classes>
+    <node name="druid">
+      <level>29</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
     <node name="ranger">
       <level>55</level>
       <maximum>100</maximum>
@@ -12,8 +17,9 @@
     </node>
   </classes>
   <command type="SKILL(lioncall)">
+    <argtype>undef</argtype>
     <cat>class</cat>
-    <hint>(рейнджеры) позвать двух львов на помощь</hint>
+    <hint>(рейнджеры, друиды) позвать двух львов на помощь</hint>
     <name>lioncall</name>
     <position>fight</position>
     <russian>
@@ -21,10 +27,10 @@
     </russian>
   </command>
   <dammsg></dammsg>
-  <group>nature</group>
+  <group registry="skillGroup">nature</group>
   <help aka="ВЫЗВАТЬ" id="648" level="-1" type="SkillHelp">%FMT% *%CMD%*
 
-Это умение похоже на призыв медведей (bear call), и вызывает 2 львов тебе на помощь.
+Это умение похоже на {hh646призыв медведей{x, и вызывает двух львов тебе на помощь.
 Опять же, работает только в лесу.
 
 См. также {W? перепризыв{x.
@@ -34,6 +40,7 @@
   <spell type="SPELL(LionCall)">
     <castMobCount>2</castMobCount>
     <casted>false</casted>
+    <damtype>none</damtype>
     <maxMobCount>2</maxMobCount>
     <mobVnum>19</mobVnum>
     <msgCreateAttemptRoom>%^C1 издает львиный клич.</msgCreateAttemptRoom>

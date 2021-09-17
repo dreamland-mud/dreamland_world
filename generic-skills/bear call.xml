@@ -3,7 +3,13 @@
   <affect type="DefaultAffectHandler">
     <wearoff>У тебя снова появились силы позвать медведей.</wearoff>
   </affect>
+  <beats>16</beats>
   <classes>
+    <node name="druid">
+      <level>17</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
     <node name="ranger">
       <level>31</level>
       <maximum>100</maximum>
@@ -11,8 +17,9 @@
     </node>
   </classes>
   <command type="SKILL(bearcall)">
+    <argtype>undef</argtype>
     <cat>class</cat>
-    <hint>(рейнджеры) позвать двух медведей на помощь</hint>
+    <hint>(рейнджеры, друиды) позвать двух медведей на помощь</hint>
     <name>bearcall</name>
     <position>fight</position>
     <russian>
@@ -20,11 +27,12 @@
     </russian>
   </command>
   <dammsg></dammsg>
-  <group>nature</group>
+  <group registry="skillGroup">nature</group>
   <help aka="ВЫЗВАТЬ" id="646" level="-1" type="SkillHelp">%FMT% *%CMD%*
 
-Вызывает 2 сильных медведей тебе в помощь. Понятное дело, медведи выйдут к тебе
-только в лесу. Кричать медведям в городе - бесполезно.
+Вызывает двух сильных медведей тебе в помощь. Понятное дело, медведи выйдут к
+тебе только в лесу. Кричать медведям в городе -- бесполезно.
+
 См. также {W? перепризыв{x.
 </help>
   <mana>125</mana>
@@ -32,6 +40,7 @@
   <spell type="SPELL(BearCall)">
     <castMobCount>2</castMobCount>
     <casted>false</casted>
+    <damtype>none</damtype>
     <maxMobCount>2</maxMobCount>
     <mobVnum>12</mobVnum>
     <msgCreateAttemptRoom>%^C1 издает медвежий клич.</msgCreateAttemptRoom>

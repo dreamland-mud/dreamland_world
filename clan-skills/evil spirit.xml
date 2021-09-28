@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="ClanSkill">
   <affect type="AFFECT(EvilSpirit)">
-    <wearoff>Твое тело вновь исполняется гармонии духа.</wearoff>
+    <wearoff>Частица зла, терзавшая тебя, наконец покидает твое тело.</wearoff>
+    <wearoffRoom>Средоточие Зла, омрачавшее эту местность, наконец растворяется и исчезает.</wearoffRoom>
   </affect>
-  <beats>36</beats>
+  <align>evil</align>
+  <beats>28</beats>
   <clans>
     <node name="invader">
       <level>33</level>
@@ -23,12 +25,14 @@
 Используется только в {hh32ПК{x.
 </help>
   <mana>500</mana>
-  <nameRus>злой дух</nameRus>
+  <nameRus>средоточие зла</nameRus>
   <spell type="SPELL(EvilSpirit)">
-    <damtype>none</damtype>
+    <damtype>mental</damtype>
     <flags>magic</flags>
+    <order>player_only</order>
     <position>stand</position>
     <target>room</target>
+    <tier>1</tier>
     <type>offensive</type>
   </spell>
 </skill>

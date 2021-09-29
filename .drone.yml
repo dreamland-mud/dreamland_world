@@ -18,7 +18,7 @@ steps:
   - git commit -m 'Latest changes from hosting' || echo 'No changes to commit'
   - git pull --rebase
   - git push
-  - kill $SSH_AGENT_PID
+  - kill -9 $SSH_AGENT_PID
   
 - name: discord_failure
   commands:
@@ -37,3 +37,9 @@ steps:
   when:
     status:
       - success
+
+trigger:
+  branch:
+  - master
+  event:
+  - push

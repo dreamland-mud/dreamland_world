@@ -12,15 +12,19 @@
     </node>
   </clans>
   <dammsg></dammsg>
-  <group registry="skillGroup">clan</group>
-  <help id="932" level="-1" type="SkillHelp">Создать магическое лезвие Хаоса. Лезвие в бою может произносить заклинания
-Хаоса, когда ему заблагорассудится. Через некоторое время возвращается в Хаос.
+  <ethos>chaotic</ethos>
+  <group registry="skillGroup">enchantment clan</group>
+  <help id="932" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+
+На время призвать один или два клинка Хаоса. В бою клинки могут колдовать
+заклинания Хаоса, когда им заблагорассудится. Их параметры тоже случайны.
 </help>
-  <mana>60</mana>
+  <mana>80</mana>
   <nameRus>клинок хаоса</nameRus>
   <spell type="SPELL(ChaosBlade)">
     <damtype>none</damtype>
     <flags>magic</flags>
+    <order>player_only</order>
     <position>stand</position>
     <target>create_obj</target>
     <type>none</type>

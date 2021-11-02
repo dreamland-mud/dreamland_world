@@ -9,6 +9,7 @@
     </node>
   </classes>
   <command type="SKILL(ambush)">
+    <argtype>undef</argtype>
     <cat>class</cat>
     <hint>(рейнджер) напасть из засады</hint>
     <name>ambush</name>
@@ -19,7 +20,7 @@
     </russian>
   </command>
   <dammsg mg="f">атака из засады</dammsg>
-  <group>suddendeath</group>
+  <group registry="skillGroup">suddendeath</group>
   <help id="689" level="-1" type="SkillHelp">%FMT% *%CMD%* _имя жертвы_
 
 Камуфлированный персонаж может напасть на кого-либо из засады, но только

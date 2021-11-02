@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Теперь ты снова можешь создать посох рейнджера.</wearoff>
+  </affect>
   <beats>12</beats>
   <classes>
     <node name="ranger">
@@ -16,12 +19,13 @@
 разведчиков. Чем рейнджер опытнее, тем сильнее получится посох.
 В бою посох рейнджера будет лечить своего владельца.
 </help>
-  <mana>75</mana>
+  <mana>80</mana>
   <nameRus>посох рейнджера</nameRus>
   <spell type="SPELL(RangerStaff)">
     <damtype>none</damtype>
     <flags>magic</flags>
-    <position>fight</position>
+    <order>player_only</order>
+    <position>stand</position>
     <target>create_obj</target>
     <type>none</type>
   </spell>

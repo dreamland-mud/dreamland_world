@@ -15,16 +15,20 @@
     </node>
   </clans>
   <dammsg></dammsg>
-  <group registry="skillGroup">clan</group>
-  <help id="941" level="-1" type="SkillHelp">Заклинание, уничтожающее все чужие светящиеся объекты в комнате.
+  <group registry="skillGroup">enchantment clan</group>
+  <help aka="НАЙТФОЛЛ 'ЗАВЕСА ТЬМЫ'" id="941" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+
+Это заклинание Захватчиков призывает волну Тьмы, которая разрушает большинство
+чужих светильников в данной местности и насылает на нее темноту.
 </help>
-  <mana>50</mana>
-  <nameRus>завеса тьмы</nameRus>
+  <mana>40</mana>
+  <nameRus>затемнить</nameRus>
   <spell type="SPELL(Nightfall)">
-    <damtype>none</damtype>
+    <damtype>negative</damtype>
     <flags>magic</flags>
     <position>stand</position>
     <target>people</target>
+    <tier>4</tier>
     <type>offensive</type>
   </spell>
 </skill>

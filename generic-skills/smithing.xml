@@ -9,6 +9,7 @@
     </node>
   </classes>
   <command type="SKILL(smithing)">
+    <argtype>undef</argtype>
     <cat>class</cat>
     <hint>(воины) отремонтировать вещь</hint>
     <name>smithing</name>
@@ -18,17 +19,15 @@
     </russian>
   </command>
   <dammsg></dammsg>
-  <group>adventure</group>
+  <group registry="skillGroup">adventure</group>
   <hard>6</hard>
   <help id="670" level="-1" type="SkillHelp">%FMT% *(smithing,ремонт)* _вещь_
 
 С помощью этого умения воин может восстанавливать поврежденные предметы не хуже
 официальных {hh1055ремонтников{x крупных городов. При этом в руках надо держать
-специальный молот кузнеца (hammer).
+специальный {Rкузнечный{x молот.
 
 Стоит поискать этот молот можно у одного торговца в {hh2060Королевстве Дварфов{x.
-Это инструмент, а не оружие, и немного отличается от боевых молотов на
-вооружении у дварфов-охранников.
 </help>
   <mana>10</mana>
   <nameRus>ремонт</nameRus>

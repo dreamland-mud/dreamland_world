@@ -3,6 +3,7 @@
   <affect type="DefaultAffectHandler">
     <wearoff>Силы Тьмы и Хаоса снова позволяют тебе оживлять трупы.</wearoff>
   </affect>
+  <align>evil</align>
   <beats>12</beats>
   <classes>
     <node name="necromancer">
@@ -18,23 +19,26 @@
   </classes>
   <dammsg></dammsg>
   <group registry="skillGroup">necromancy</group>
-  <help aka="'ANIMATE UNDEAD' 'RAISE DEAD' ZOMBIE 'ОЖИВИТЬ ТРУП' 'ОЖИВЛЕННЫЙ ТРУП' 'ПОДНЯТЬ СКЕЛЕТ' 'ПОДНЯТЬ ТРУП' ЗОМБИ" id="732" keyword="'ANIMATE DEAD' 'ОЖИВЛЕНИЕ МЕРТВЕЦА'" level="-1" type="SkillHelp">%FMT% *%SPELL%* _труп_
+  <help aka="'ANIMATE UNDEAD' 'RAISE DEAD' ZOMBIE 'ОЖИВИТЬ ТРУП' 'ОЖИВЛЕННЫЙ ТРУП' 'ПОДНЯТЬ ТРУП' ЗОМБИ" id="732" keyword="'ANIMATE DEAD' 'ОЖИВЛЕНИЕ МЕРТВЕЦА'" level="-1" type="SkillHelp">%FMT% *%SPELL%* _труп_
 
 Зомби, оживленное с помощью этого заклинания, будет {hh15служить{x своему новому
 хозяину до смерти. Здоровье зомби зависит от исходного... ммм... материала, а
 вот уровень получившегося существа зависит от самого колдуна: чем выше твой
 {hh2036уровень заклинаний{x, тем выше будет уровень зомби.
 
-По традиции, зомби больше всего на свете жаждут свежих мозгов.
+Зомби перенимает определенные умения и характеристики исходного существа, а его
+общая боеспособность улучшается у последователей {hh968Королевы Воронов{x.
+
+По традиции, зомби больше всего на свете жаждут {hh62свежих мозгов{x.
 Вовремя накормленный мозгами зомби восстанавливает силы.
 </help>
-  <mana>50</mana>
+  <mana>100</mana>
   <nameRus>оживление мертвеца</nameRus>
   <spell type="SPELL(AnimateDead)">
     <damtype>none</damtype>
     <flags>magic</flags>
     <position>stand</position>
-    <target>obj_inv obj_room</target>
+    <target>obj_room</target>
     <type>none</type>
   </spell>
 </skill>

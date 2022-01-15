@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
-    <wearoff>Ты снова можешь воззвать за помощью к теням.</wearoff>
+    <wearoff>Ты снова можешь вызвать своего теневого двойника.</wearoff>
   </affect>
+  <align>evil</align>
   <beats>24</beats>
   <classes>
     <node name="necromancer">
@@ -15,16 +16,16 @@
   <group registry="skillGroup">necromancy</group>
   <help aka="SUMMONED ПРИЗВАННАЯ ПРИЗВАТЬ ТЕНЬ" id="551" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
-Это заклинание призывает отражение некроманта из мира теней и подчиняет его
-воле. Созданная тень по своим параметрам здоровья и маны напоминает хозяина.
+Это заклинание оживляет тень некроманта, превращая ее в теневого двойника.
+Созданная тень по своим параметрам здоровья и маны напоминает хозяина.
 Тень устойчива к оружию, владеет многими заклинаниями из репертуара некроманта
-и может {hh1361колдовать{x их по {hh1091приказу{x.
+и может {hh1361колдовать{x их по {hh1091приказу{x -- и даже по собственной воле.
 
 {RВНИМАНИЕ: {xпрочитай справку про {hh63переподчинение{x -- это поможет заново взять
 это существо под контроль после {hh922выхода{x из мира.
 </help>
   <mana>200</mana>
-  <nameRus>вызов тени</nameRus>
+  <nameRus>теневой двойник</nameRus>
   <spell type="SPELL(SummonShadow)">
     <castMobCount>1</castMobCount>
     <damtype>none</damtype>

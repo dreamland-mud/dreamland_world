@@ -17,10 +17,14 @@
     </node>
   </classes>
   <command type="SKILL(lioncall)">
+    <aliases>
+      <node>lions</node>
+    </aliases>
     <argtype>undef</argtype>
     <cat>class</cat>
     <hint>(рейнджеры, друиды) позвать двух львов на помощь</hint>
     <name>lioncall</name>
+    <order>player_only</order>
     <position>fight</position>
     <russian>
       <node>львы</node>
@@ -31,36 +35,11 @@
   <help aka="ВЫЗВАТЬ" id="648" level="-1" type="SkillHelp">%FMT% *%CMD%*
 
 Это умение похоже на {hh646призыв медведей{x, и вызывает двух львов тебе на помощь.
-Опять же, работает только в лесу.
+Опять же, работает только на лоне природы.
 
 {RВНИМАНИЕ: {xпрочитай справку про {hh63переподчинение{x -- это поможет заново взять
 это существо под контроль после {hh922выхода{x из мира.
 </help>
-  <mana>125</mana>
-  <nameRus>вызов львов</nameRus>
-  <spell type="SPELL(LionCall)">
-    <castMobCount>2</castMobCount>
-    <casted>false</casted>
-    <damtype>none</damtype>
-    <maxMobCount>2</maxMobCount>
-    <mobVnum>19</mobVnum>
-    <msgCreateAttemptRoom>%^C1 издает львиный клич.</msgCreateAttemptRoom>
-    <msgCreateAttemptSelf>Ты издаешь львиный клич.</msgCreateAttemptSelf>
-    <msgCreateRoom>Два льва приходят на помощь %C3!</msgCreateRoom>
-    <msgCreateRoomOne>Лев приходит на помощь %C3!</msgCreateRoomOne>
-    <msgCreateSelf>Два льва приходят тебе на помощь!</msgCreateSelf>
-    <msgCreateSelfOne>Лев приходит тебе на помощь!</msgCreateSelfOne>
-    <msgNotRecognizeRoom>%2$^C1 зевает на %1$C4.</msgNotRecognizeRoom>
-    <msgNotRecognizeSelf>%2$^C1 зевает на тебя, показывая зубы.</msgNotRecognizeSelf>
-    <msgReattachAttemptRoom>%1$^C1 подманивает %2$C4.</msgReattachAttemptRoom>
-    <msgReattachAttemptSelf>Ты подманиваешь %C4.</msgReattachAttemptSelf>
-    <msgReattachRoom>%2$^C1 подходит к %1$C3 и усаживатся рядом.</msgReattachRoom>
-    <msgReattachSelf>%^C1 подходит к тебе и усаживается рядом.</msgReattachSelf>
-    <msgStillAffected>Ты не можешь найти в себе силы справиться с большим количеством львов.</msgStillAffected>
-    <msgTooManyMobiles>А что не так с теми львами, которые у тебя уже есть?</msgTooManyMobiles>
-    <position>fight</position>
-    <postaffectDuration>24</postaffectDuration>
-    <target>create_mob</target>
-    <type>none</type>
-  </spell>
+  <mana>100</mana>
+  <nameRus>львы</nameRus>
 </skill>

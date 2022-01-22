@@ -3,6 +3,7 @@
   <affect type="DefaultAffectHandler">
     <wearoff>Ты вновь можешь вызвать оруженосца.</wearoff>
   </affect>
+  <align>good</align>
   <beats>12</beats>
   <clans>
     <node name="knight">
@@ -14,36 +15,34 @@
       <rating>1</rating>
     </node>
   </clans>
+  <command type="DefaultSkillCommand">
+    <argtype>string</argtype>
+    <cat></cat>
+    <hint>(Рыцари) вызвать оруженосца на помощь</hint>
+    <name>squire</name>
+    <order>player_only</order>
+    <position>stand</position>
+    <russian>
+      <node>оруженосец</node>
+    </russian>
+  </command>
   <dammsg></dammsg>
   <group registry="skillGroup">clan</group>
-  <help id="892" level="-1" type="SkillHelp">Призвать оруженосца.
+  <help id="892" level="-1" type="SkillHelp">%FMT% *%SKILL%*
 
-{RВНИМАНИЕ: {xпрочитай справку про {hh63переподчинение{x -- это поможет заново взять
-это существо под контроль после {hh922выхода{x из мира.
+Вызывает оруженосца для Рыцаря.
+
+Помимо обычных боевых умений, он будет пытаться автоматически {hh613спасти{x хозяина
+в бою и подставить себя под удар.
+
+{CСВОЙСТВА{x
+{C%A%{x {hh63Призванное существо{x, надо =переподчинять= после {hh922выхода{x из мира
+{C%A%{x Можно призывать только днем
+{C%A%{x Призывается на неделю
+{C%A%{x Можно одеть в полную экипировку
+{C%A%{x Максимум можно контролировать =одного=, призывается один за раз
+  Общее число {hh15последователей{x тоже ограничено -- читай {y{hcсправка очарование{x.
 </help>
   <mana>100</mana>
   <nameRus>оруженосец</nameRus>
-  <spell type="SPELL(Squire)">
-    <castMobCount>1</castMobCount>
-    <damtype>none</damtype>
-    <flags>magic</flags>
-    <maxMobCount>1</maxMobCount>
-    <mobVnum>16</mobVnum>
-    <msgCreateAttemptRoom>%^C1 пытается вызвать оруженосца.</msgCreateAttemptRoom>
-    <msgCreateAttemptSelf>Ты пытаешься вызвать оруженосца.</msgCreateAttemptSelf>
-    <msgCreateRoom>Из ниоткуда появляется оруженосец!</msgCreateRoom>
-    <msgCreateSelf>Из ниоткуда появляется оруженосец!</msgCreateSelf>
-    <msgNotRecognizeRoom>%2$^C1 произносит, обращаясь к %1$C3 &apos;{gУвы, я никогда не бы%2$Gло|л|ла Вашим оруженосцем.{x&apos;</msgNotRecognizeRoom>
-    <msgNotRecognizeSelf>%2$^C1 произносит &apos;{gУвы, я никогда не бы%2$Gло|л|ла Вашим оруженосцем.{x&apos;</msgNotRecognizeSelf>
-    <msgReattachAttemptRoom>%1$^C1 призывает %2$C4 вновь служить под %1$P2 знаменами.</msgReattachAttemptRoom>
-    <msgReattachAttemptSelf>Ты призываешь %C4 вновь служить под твоими знаменами.</msgReattachAttemptSelf>
-    <msgReattachRoom>%2$^C1 вытягивается по стойке смирно, готов%2$Gое|ый|ая выполнять приказы.</msgReattachRoom>
-    <msgReattachSelf>%1$^C1 вытягивается по стойке смирно, готов%1$Gое|ый|ая выполнять приказы.</msgReattachSelf>
-    <msgStillAffected>Сейчас ты не можешь командовать другим оруженосцем.</msgStillAffected>
-    <msgTooManyMobiles>Два оруженосца - это больше, чем тебе необходимо!</msgTooManyMobiles>
-    <position>stand</position>
-    <postaffectDuration>24</postaffectDuration>
-    <target>create_mob</target>
-    <type>none</type>
-  </spell>
 </skill>

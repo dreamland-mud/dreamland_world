@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="ClanSkill">
+  <align>evil</align>
   <beats>24</beats>
   <clans>
     <node name="invader">
@@ -12,6 +13,7 @@
     </node>
   </clans>
   <command type="SKILL(fade)">
+    <argtype>undef</argtype>
     <cat>clan</cat>
     <extra>keep_hide</extra>
     <hint>(захватчики) спрятаться во тьму</hint>
@@ -32,6 +34,7 @@
 </help>
   <mob>
     <bonus>100</bonus>
-  </mob>  
+    <offense>fade</offense>
+  </mob>
   <nameRus>спрятаться</nameRus>
 </skill>

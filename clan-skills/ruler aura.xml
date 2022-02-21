@@ -3,7 +3,8 @@
   <affect type="DefaultAffectHandler">
     <cancelled>true</cancelled>
     <dispelled>true</dispelled>
-    <wearoff>Аура Рулера исчезает.</wearoff>
+    <wearoff>Аура Правителя исчезает, и ты теряешь возможность видеть незримое иным.</wearoff>
+    <wearoffDispel>Жемчужно-серая аура вокруг %C2 растворяется и исчезает.</wearoffDispel>
   </affect>
   <beats>12</beats>
   <clans>
@@ -17,13 +18,14 @@
     </node>
   </clans>
   <dammsg></dammsg>
+  <ethos>lawful</ethos>
   <group registry="skillGroup">clan</group>
   <help id="891" level="-1" type="SkillHelp">%FMT% %SPELL%
 
 Дает Правителю способность видеть персонажей во всех формах невидимости,
 скрытности или камуфляжа. От закона не скроешься!
 </help>
-  <mana>20</mana>
+  <mana>80</mana>
   <nameRus>аура правителя</nameRus>
   <spell type="SPELL(RulerAura)">
     <damtype>none</damtype>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
-  <affect type="AFFECT(Camp)">
+  <affect type="DefaultAffectHandler">
     <wearoff>Ты снова чувствуешь в себе силы разбить полевой лагерь.</wearoff>
   </affect>
   <beats>24</beats>
@@ -11,7 +11,7 @@
       <rating>1</rating>
     </node>
   </classes>
-  <command type="SKILL(camp)">
+  <command type="DefaultSkillCommand">
     <argtype>char_self</argtype>
     <cat>class</cat>
     <hint>(рейнджеры) разбить лагерь</hint>

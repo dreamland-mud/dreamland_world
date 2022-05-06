@@ -15,19 +15,29 @@
   <hidden>false</hidden>
   <induct>
     <node allow="false">
-      <node invert="false" type="XMLPCEthosPredicate">chaotic</node>
-    </node>
+      <node invert="false" type="XMLPCClassPredicate">anti-paladin</node>
+      <node invert="false" type="XMLPCClassPredicate">paladin</node>
+      <node invert="false" type="XMLPCClassPredicate">vampire</node>
+      <node invert="false" type="XMLPCClassPredicate">necromancer</node>
+      <node invert="false" type="XMLPCClassPredicate">druid</node>
+	</node>
     <node allow="false">
-      <node invert="true" type="XMLPCClassPredicate">warlock</node>
-      <node invert="true" type="XMLPCClassPredicate">witch</node>
-      <node invert="true" type="XMLPCClassPredicate">necromancer</node>
-    </node>
+      <node invert="false" type="XMLPCRacePredicate">elf</node>
+      <node invert="false" type="XMLPCRacePredicate">dark-elf</node>
+      <node invert="false" type="XMLPCRacePredicate">drow</node>
+      <node invert="false" type="XMLPCRacePredicate">githyanki</node>
+      <node invert="false" type="XMLPCRacePredicate">troll</node>
+      <node invert="false" type="XMLPCRacePredicate">duergar</node>
+      <node invert="false" type="XMLPCRacePredicate">urukhai</node>
+      <node invert="false" type="XMLPCRacePredicate">storm giant</node>
+      <node invert="false" type="XMLPCRacePredicate">elf</node>
+	</node>	  
   </induct>
   <leader>8</leader>
   <longName>{hh1479Хранители Магии и Разума{x</longName>
   <membership type="ClanMembership">
     <minLevel>10</minLevel>
-    <mode>verify</mode>
+	<mode>always</mode>
     <removable>true</removable>
     <removeBy>none</removeBy>
     <removeSelf>none</removeSelf>
@@ -50,11 +60,11 @@
       <male>искатель</male>
     </node>
     <node>
-      <female>библиотекарь</female>
-      <male>библиотекарь</male>
+      <female>мистика</female>
+      <male>мистик</male>
     </node>
     <node>
-      <female>астролог</female>
+      <female>астрологиня</female>
       <male>астролог</male>
     </node>
     <node>
@@ -62,8 +72,8 @@
       <male>ясновидящий</male>
     </node>
     <node>
-      <female>заклинательница</female>
-      <male>заклинатель</male>
+      <female>дервиш</female>
+      <male>дервиш</male>
     </node>
     <node>
       <female>наставница</female>

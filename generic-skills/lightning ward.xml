@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
-  <affect type="AFFECT(LightningShield)">
+  <affect type="DefaultAffectHandler">
     <wearoff>Ты вновь можешь защитить местность, начертав оберег молний.</wearoff>
     <wearoffRoom>Защищавший эту местность оберег молний рассеивается.</wearoffRoom>
   </affect>
@@ -34,7 +34,7 @@
 </help>
   <mana>150</mana>
   <nameRus>оберег молний</nameRus>
-  <spell type="SPELL(LightningShield)">
+  <spell type="DefaultSpell">
     <damtype>lightning</damtype>
     <flags>magic</flags>
     <position>stand</position>

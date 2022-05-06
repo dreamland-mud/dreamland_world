@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
-  <affect type="AFFECT(Plague)">
+  <affect type="DefaultAffectHandler">
     <wearoff>Ты выздоравливаешь от чумы.</wearoff>
     <wearoffDispel>%1$^C1 выздоравливает от чумы.</wearoffDispel>
   </affect>
@@ -50,7 +50,7 @@
     <professional>true</professional>
   </mob>
   <nameRus>чума</nameRus>
-  <spell type="SPELL(Plague)">
+  <spell type="DefaultSpell">
     <damtype>disease</damtype>
     <flags>magic prayer</flags>
     <position>fight</position>

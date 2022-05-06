@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
-  <affect type="AFFECT(Settraps)">
+  <affect type="DefaultAffectHandler">
     <wearoff>Ты вновь можешь устраивать ловушки.</wearoff>
   </affect>
   <beats>24</beats>
@@ -11,7 +11,7 @@
       <rating>1</rating>
     </node>
   </classes>
-  <command type="SKILL(settraps)">
+  <command type="DefaultSkillCommand">
     <argtype>undef</argtype>
     <cat>class</cat>
     <hint>(воры) установить ловушку</hint>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="ClanSkill">
-  <affect type="AFFECT(EvilSpirit)">
+  <affect type="DefaultAffectHandler">
     <wearoff>Частица зла, терзавшая тебя, наконец покидает твое тело.</wearoff>
     <wearoffRoom>Средоточие Зла, омрачавшее эту местность, наконец растворяется и исчезает.</wearoffRoom>
   </affect>
@@ -26,7 +26,7 @@
 </help>
   <mana>500</mana>
   <nameRus>средоточие зла</nameRus>
-  <spell type="SPELL(EvilSpirit)">
+  <spell type="DefaultSpell">
     <damtype>mental</damtype>
     <flags>magic</flags>
     <order>player_only</order>

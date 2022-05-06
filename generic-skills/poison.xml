@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
-  <affect type="AFFECT(Poison)">
+  <affect type="DefaultAffectHandler">
     <wearoff>Тебя перестает тошнить от отравления, и ты чувствуешь себя гораздо лучше!</wearoff>
     <wearoffDispel>%1$^C1 выглядит здоровее, когда %1$Gего|его|ее отравление проходит.</wearoffDispel>
     <wearoffObj>Яд, отравлявший %1$O4, испаряется и высыхает.</wearoffObj>
@@ -53,7 +53,7 @@
     <professional>true</professional>
   </mob>
   <nameRus>яд</nameRus>
-  <spell type="SPELL(Poison)">
+  <spell type="DefaultSpell">
     <damtype>poison</damtype>
     <flags>magic prayer</flags>
     <position>fight</position>

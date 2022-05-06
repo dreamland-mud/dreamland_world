@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
-  <affect type="AFFECT(DeadlyVenom)">
+  <affect type="DefaultAffectHandler">
     <wearoff>Ты вновь можешь создавать ядовитые пары.</wearoff>
     <wearoffRoom>Ядовитые пары вокруг тебя наконец-то рассеиваются.</wearoffRoom>
   </affect>
@@ -24,7 +24,7 @@
 </help>
   <mana>150</mana>
   <nameRus>пары яда</nameRus>
-  <spell type="SPELL(DeadlyVenom)">
+  <spell type="DefaultSpell">
     <damtype>poison</damtype>
     <flags>magic</flags>
     <position>stand</position>

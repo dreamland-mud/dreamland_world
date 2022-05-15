@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="ClanSkill">
-  <affect type="AFFECT(EvilSpirit)">
-    <wearoff>Твое тело вновь исполняется гармонии духа.</wearoff>
+  <affect type="DefaultAffectHandler">
+    <wearoff>Частица зла, терзавшая тебя, наконец покидает твое тело.</wearoff>
+    <wearoffRoom>Средоточие Зла, омрачавшее эту местность, наконец растворяется и исчезает.</wearoffRoom>
   </affect>
-  <beats>36</beats>
+  <align>evil</align>
+  <beats>28</beats>
   <clans>
     <node name="invader">
       <level>33</level>
@@ -14,21 +16,23 @@
       <rating>1</rating>
     </node>
   </clans>
-  <dammsg>evil spirit</dammsg>
-  <group registry="skillGroup">clan</group>
-  <help id="895" level="-1" type="SkillHelp">Заклинание, выпускающее злых духов по всей текущей {hh998локации{x.
-Злые духи проникают во всех игроков из твоего ПК-интервала в данной зоне, 
-нанося им повреждения сводя их с ума.
+  <dammsg mg="p">{1{Dщупальца Великой Тьмы{2</dammsg>
+  <group registry="skillGroup">maladictions clan</group>
+  <help aka="ДУХ ДУХИ СОСРЕДОТОЧИЕ СРЕДОТОЧИЯ ТЬМЫ ВЕЛИКОЙ ЗЛОЙ ЗЛЫЕ ЩУПАЛЬЦА" id="895" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
-Используется только в {hh32ПК{x.
+Опытные Захватчики способны призвать в текущую {hh998локацию{x средоточие Зла --
+жуткие щупальца, проникающие в мозг всех не-дружественных Захватчику существ в
+зоне, нанося им повреждения и сводя их с ума.
 </help>
-  <mana>1000</mana>
-  <nameRus>злой дух</nameRus>
-  <spell type="SPELL(EvilSpirit)">
-    <damtype>none</damtype>
+  <mana>500</mana>
+  <nameRus>средоточие зла</nameRus>
+  <spell type="DefaultSpell">
+    <damtype>mental</damtype>
     <flags>magic</flags>
+    <order>player_only</order>
     <position>stand</position>
     <target>room</target>
+    <tier>1</tier>
     <type>offensive</type>
   </spell>
 </skill>

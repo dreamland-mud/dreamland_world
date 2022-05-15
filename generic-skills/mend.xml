@@ -18,15 +18,16 @@
   <help id="844" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%OBJ%_
 
 Это заклинание похоже на магический аналог навыка {hh670починки{x у воинов, помогая
-восстанавливать поврежденные предметы, оружие и доспехи.
+восстанавливать поврежденные предметы, оружие и доспехи. Также помогает убирать
+{hh2168коррозию{x с предметов.
 </help>
   <mana>150</mana>
   <nameRus>починка</nameRus>
-  <spell type="SPELL(Mend)">
+  <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>magic</flags>
     <position>stand</position>
-    <target>obj_inv</target>
+    <target>obj_inv obj_equip</target>
     <type>none</type>
   </spell>
 </skill>

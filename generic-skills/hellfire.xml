@@ -9,7 +9,7 @@
     </node>
   </classes>
   <dammsg>адский огонь</dammsg>
-  <group registry="skillGroup">attack</group>
+  <group registry="skillGroup">combat</group>
   <help id="630" level="-1" type="SkillHelp">Это заклинание причиняет повреждения огнем ада жертве. Чем больше
 уровень - тем сильнее повреждения.
 </help>
@@ -18,12 +18,10 @@
     <professional>true</professional>
   </mob>
   <nameRus>адский огонь</nameRus>
-  <spell type="AnatoliaCombatSpell">
+  <spell type="DefaultSpell">
     <damtype>fire</damtype>
-    <dice>7</dice>
     <flags>prayer</flags>
     <position>fight</position>
-    <savesCheck>false</savesCheck>
     <target>char_room</target>
     <tier>4</tier>
     <type>offensive</type>

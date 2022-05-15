@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
-  <affect type="DefaultAffectHandler">
-    <cancelled>true</cancelled>
-    <dispelled>true</dispelled>
-    <wearoff>Теперь окружающие видят тебя.</wearoff>
-    <wearoffDispel>%1$^C1 появляется из ниоткуда.</wearoffDispel>
-  </affect>
   <beats>24</beats>
   <classes>
     <node name="warlock">
-      <level>42</level>
+      <level>52</level>
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
     <node name="witch">
-      <level>42</level>
+      <level>51</level>
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
@@ -23,16 +17,18 @@
   <group registry="skillGroup">illusion</group>
   <help id="583" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
-Это заклинание накладывает {hh607невидимость{x на колдуна и всех, кто в его {hh1378группе{x.
+Это заклинание накладывает {hh607невидимость{x и {hh85улучшенную невидимость{x на колдуна
+и всех, кто в его {hh1378группе{x.
 </help>
-  <mana>20</mana>
+  <mana>120</mana>
   <mob>
     <professional>true</professional>
   </mob>
   <nameRus>всеобщая невидимость</nameRus>
-  <spell type="SPELL(MassInvis)">
+  <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>magic</flags>
+    <order>player_only</order>
     <position>stand</position>
     <target>people</target>
     <type>defensive</type>

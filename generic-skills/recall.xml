@@ -15,6 +15,11 @@
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
+    <node name="druid">
+      <level>1</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
     <node name="necromancer">
       <level>1</level>
       <maximum>100</maximum>
@@ -70,10 +75,11 @@
     <aliases>
       <node>/</node>
     </aliases>
+    <argtype>undef</argtype>
     <cat>move</cat>
     <hint>попросить богов о перемещении в храм</hint>
     <name>recall</name>
-    <order>allow_ruler</order>
+    <order>allow_ruler player_only</order>
     <position>fight</position>
     <russian>
       <node>возврат</node>
@@ -81,7 +87,7 @@
     </russian>
   </command>
   <dammsg></dammsg>
-  <group>adventure</group>
+  <group registry="skillGroup">adventure</group>
   <hard>6</hard>
   <help id="862" level="-1" type="SkillHelp">Это умение возносит молитвы к Богам с просьбами транспортировать тебя с твоего
 текущего положения в {hh29родной город{x. Удачный возврат переносит тебя в храм

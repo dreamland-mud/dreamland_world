@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Race type="DefaultRace">
-  <donates>centaur </donates>
+  <act>npc rideable</act>
+  <donates registry="race">centaur</donates>
   <form>edible animal mammal</form>
   <nameFemale>лошадь</nameFemale>
   <nameMale>конь</nameMale>
-  <off>dodge fast kick</off>
+  <off>kick crush assist_players</off>
   <parts>head heart brains guts ear eye tail four_hooves</parts>
-  <size>medium</size>
-  <wearloc>finger_l second_wield neck_2 neck_1 finger_r wrist_r wrist_l body light shield head legs feet hands arms about waist wield hold float tattoo face </wearloc>
+  <size>large</size>
+  <stats>
+    <str>3</str>
+    <int>-2</int>
+    <wis>-1</wis>
+    <dex>-3</dex>
+    <con>3</con>
+  </stats>
+  <vuln>charm sound</vuln>
+  <wearloc registry="wearlocation">neck_2 neck_1 light head about waist float tail horse hooves</wearloc>
 </Race>

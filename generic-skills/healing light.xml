@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
-  <affect type="AFFECT(HealingLight)">
+  <affect type="DefaultAffectHandler">
     <wearoff>Теперь ты снова можешь освещать местность целебным светом.</wearoff>
     <wearoffRoom>Целебный свет, освещавший эту местность, мерцает и гаснет.</wearoffRoom>
   </affect>
+  <align>good neutral</align>
   <beats>24</beats>
   <classes>
     <node name="cleric">
       <level>41</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="druid">
+      <level>44</level>
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
@@ -28,7 +34,7 @@
     <professional>true</professional>
   </mob>
   <nameRus>целебный свет</nameRus>
-  <spell type="SPELL(HealingLight)">
+  <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>prayer</flags>
     <position>stand</position>

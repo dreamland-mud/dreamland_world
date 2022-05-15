@@ -1,10 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SkillGroup type="DefaultSkillGroup">
   <autoHelp>true</autoHelp>
-  <help id="1110" keyword="'УЛУЧШЕНИЕ ПРЕДМЕТОВ'" level="0" type="SkillGroupHelp">Заклинания или молитвы, позволяющие улучшить или наделить новыми свойствами
-предметы.
+  <gods registry="religion">prometheus enki</gods>
+  <help id="1110" keyword="'УЛУЧШЕНИЕ ПРЕДМЕТОВ' 'ПРЕДМЕТНАЯ МАГИЯ'" level="0" type="SkillGroupHelp">Заклинания или молитвы, позволяющие создать из ничего, улучшить или наделить
+новыми свойствами предметы -- обычно искусственного происхождения.
 </help>
   <hidden>false</hidden>
-  <nameRus>заклинания улучшения</nameRus>
+  <msgRoom>
+    <node>%1$^C1 неторопливо плетет чары, нараспев произнося слова силы.</node>
+    <node>Пальцы %1$C2 светятся {1{cголубым,{2 когда %1$P1 вычерчивает в воздухе тайные руны.</node>
+  </msgRoom>
+  <msgSelf>
+    <node>Ты неторопливо плетешь чары, нараспев произнося слова силы.</node>
+    <node>Твои пальцы светятся {1{cголубым,{2 когда ты вычерчиваешь в воздухе тайные руны.</node>
+  </msgSelf>
+  <msgVict>
+    <node>%1$^C1 неторопливо плетет чары, нараспев произнося слова силы.</node>
+    <node>Пальцы %1$C2 светятся {1{cголубым,{2 когда %1$P1 вычерчивает в воздухе тайные руны.</node>
+  </msgVict>
+  <nameRus>предметная магия</nameRus>
+  <path>reason society</path>
   <practicer>1334</practicer>
 </SkillGroup>

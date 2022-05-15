@@ -1,47 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
+  <align>good neutral</align>
   <beats>12</beats>
   <classes>
     <node name="paladin">
-      <level>51</level>
+      <level>71</level>
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
   </classes>
   <dammsg></dammsg>
   <group registry="skillGroup">transportation</group>
-  <help id="631" level="-1" type="SkillHelp">%FMT% *%SPELL%* _цель_
+  <help id="631" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%CHAR%_
       
-Солнечный полет - это могущественное транспортное заклинание, открывающее
-волшебные врата между паладином и любым существом в мире. Через такие врата
-можете пройти только паладин - домашнее животное и члены группы остаются на
-месте. Персонажи имеют некоторую сопротивляемость к этому заклинанию и полный
-иммунитет, если они на 1 уровень старше, чем уровень произнесенного заклинания.
-
-Солнечный полет работает только в дневное время.
+Солнечный полет -- мощная транспортная молитва, переносящая паладина и его
+верного {hh15любимца{x к любому существу в мире. Разумеется, солнечный полет
+работает только в дневное время и только если и ты, и цель находитесь на улице.
 
 На это заклинание действуют те же ограничения, что и на другие из группы
-магии перемещения. Подробнее смотрите в справке о заклинании врат.
+магии перемещения -- см. {y{hcсправка врата{x.
 
-%SA% %H% [(cast,колдовать)] [(gate,врата)] 
+%SA% %H% [(cast,колдовать)] [(gate,врата)]
 </help>
-  <mana>80</mana>
+  <mana>150</mana>
   <nameRus>солнечный полет</nameRus>
-  <spell type="SPELL(SolarFlight)">
+  <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>prayer</flags>
-    <gateShadow>true</gateShadow>
-    <gateViolent>false</gateViolent>
-    <levelDiff>1</levelDiff>
-    <msgGroupEnter></msgGroupEnter>
-    <msgGroupLeave></msgGroupLeave>
-    <msgRoomEnter>Появление %1$C2 сопровождается ослепительной вспышкой света!</msgRoomEnter>
-    <msgRoomLeave>%1$^C1 исчезает в ослепительной вспышке света!</msgRoomLeave>
-    <msgSelfEnter></msgSelfEnter>
-    <msgSelfLeave>Ты исчезаешь в ослепительной вспышке света!</msgSelfLeave>
     <position>fight</position>
-    <takeGroup>false</takeGroup>
-    <takePet>false</takePet>
     <target>char_world</target>
     <type>none</type>
   </spell>

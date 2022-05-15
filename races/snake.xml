@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Race type="DefaultRace">
-  <form>edible animal reptile snake cold_blood</form>
-  <nameFemale>самка змеи</nameFemale>
-  <nameMale>самец змеи</nameMale>
+  <act>npc</act>
+  <aff>sneak</aff>
+  <form>poison animal reptile snake cold_blood</form>
+  <imm>poison</imm>
+  <nameFemale>змея</nameFemale>
+  <nameMale>змей</nameMale>
+  <off>dodge fast tail</off>
   <parts>head heart brains guts eye long_tongue tail fangs scales</parts>
-  <res>poison</res>
-  <size>medium</size>
-  <vuln>cold</vuln>
-  <wearloc>finger_l second_wield neck_2 neck_1 finger_r wrist_r wrist_l body light shield head legs feet hands arms about waist wield hold float tattoo face </wearloc>
+  <size>small</size>
+  <stats>
+    <str>1</str>
+    <wis>2</wis>
+    <dex>1</dex>
+    <con>3</con>
+    <cha>-2</cha>
+  </stats>
+  <vuln>fire</vuln>
+  <wearloc registry="wearlocation">neck_2 neck_1 body light head about waist float</wearloc>
 </Race>

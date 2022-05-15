@@ -19,6 +19,7 @@
       <node invert="false" type="XMLPCClassPredicate">anti-paladin</node>
       <node invert="false" type="XMLPCClassPredicate">vampire</node>
       <node invert="false" type="XMLPCClassPredicate">necromancer</node>
+      <node invert="false" type="XMLPCClassPredicate">druid</node>
       <node invert="false" type="XMLPCRacePredicate">elf</node>
       <node invert="false" type="XMLPCRacePredicate">storm giant</node>
       <node invert="false" type="XMLPCRacePredicate">dark-elf</node>
@@ -33,10 +34,10 @@
   <longName>{hh1479Хранители Магии и Разума{x</longName>
   <membership type="ClanMembership">
     <minLevel>10</minLevel>
-    <mode>verify</mode>
+	<mode>always</mode>
     <removable>true</removable>
-    <removeBy>exile</removeBy>
-    <removeSelf>outsider</removeSelf>
+    <removeBy>none</removeBy>
+    <removeSelf>none</removeSelf>
   </membership>
   <monument>{YПугало огородное из костей {B%1$#C2{Y, сделанное {R%2$#C5{Y и одетое в магический колпак, стоит здесь.{x</monument>
   <monumentName>пугало огородное магический колпак scarecrow magic cap</monumentName>
@@ -74,11 +75,11 @@
       <male>искатель</male>
     </node>
     <node>
-      <female>библиотекарь</female>
-      <male>библиотекарь</male>
+      <female>мистика</female>
+      <male>мистик</male>
     </node>
     <node>
-      <female>астролог</female>
+      <female>астрологиня</female>
       <male>астролог</male>
     </node>
     <node>
@@ -86,8 +87,8 @@
       <male>ясновидящий</male>
     </node>
     <node>
-      <female>заклинательница</female>
-      <male>заклинатель</male>
+      <female>дервиш</female>
+      <male>дервиш</male>
     </node>
     <node>
       <female>наставница</female>

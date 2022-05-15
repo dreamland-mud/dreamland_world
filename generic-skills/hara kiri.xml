@@ -12,6 +12,7 @@
     </node>
   </classes>
   <command type="SKILL(harakiri)">
+    <argtype>undef</argtype>
     <cat>class</cat>
     <hint>(самураи) сделать харакири</hint>
     <name>harakiri</name>
@@ -21,7 +22,7 @@
     </russian>
   </command>
   <dammsg></dammsg>
-  <group>adventure</group>
+  <group registry="skillGroup">adventure</group>
   <hard>2</hard>
   <help id="743" level="-1" type="SkillHelp">%FMT% *%CMD%*
 
@@ -29,6 +30,6 @@
 Очки жизни, маны и движения падают до 1, но после этого восстанавливаются
 гораздо быстрее.
 </help>
-  <mana>50</mana>
+  <mana>40</mana>
   <nameRus>харакири</nameRus>
 </skill>

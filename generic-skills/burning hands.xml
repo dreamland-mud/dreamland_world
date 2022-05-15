@@ -25,7 +25,7 @@
   </classes>
   <dammsg mg="p">горящие руки</dammsg>
   <group registry="skillGroup">combat</group>
-  <help id="839" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
+  <help aka="ДЛАНИ ДЛАНЬ ПЫЛАЮЩАЯ ПЫЛАЮЩИЙ РУКА РУКИ" id="839" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
 Магическое заклинание, наносящее урон жертве вблизи огнем в зависимости от уровня
 заклинания. Если у жертвы срабатывает {hh2035спасбросок{x, урон уменьшается вдвое.
@@ -35,20 +35,23 @@
 снять раскаленные вещи или даже сбросить на землю.
 
 Подобным эффектом (но гораздо сильнее) обладает молитва {hh682раскаления{x.
+
+%FMT% *%SPELL%* _%OBJ%_
+
+Если бросить горючий предмет на землю и использовать заклинание на него, можно
+быстро развести небольшой {hh1023костер{x.
 </help>
   <mana>40</mana>
   <mob>
     <professional>true</professional>
   </mob>
   <nameRus>горящие руки</nameRus>
-  <spell type="AnatoliaCombatSpell">
+  <spell type="DefaultSpell">
     <damtype>fire</damtype>
-    <dice>2</dice>
-    <diceBonus>7</diceBonus>
     <flags>magic</flags>
     <position>fight</position>
     <ranged>false</ranged>
-    <target>char_room</target>
+    <target>char_room obj_room</target>
     <tier>3</tier>
     <type>offensive</type>
   </spell>

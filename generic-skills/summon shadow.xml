@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
-    <wearoff>Ты снова можешь воззвать за помощью к теням.</wearoff>
+    <wearoff>Ты снова можешь вызвать своего теневого двойника.</wearoff>
   </affect>
+  <align>evil</align>
   <beats>24</beats>
   <classes>
     <node name="necromancer">
@@ -15,35 +16,25 @@
   <group registry="skillGroup">necromancy</group>
   <help aka="SUMMONED ПРИЗВАННАЯ ПРИЗВАТЬ ТЕНЬ" id="551" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
-Это заклинание призывает отражение некроманта из мира теней и подчиняет его
-воле. Созданная тень по своим параметрам здоровья и маны напоминает хозяина.
+Это заклинание оживляет тень некроманта, превращая ее в теневого двойника.
+Созданная тень по своим параметрам здоровья и маны напоминает хозяина.
 Тень устойчива к оружию, владеет многими заклинаниями из репертуара некроманта
-и может колдовать их по приказу.
+и может {hh1361колдовать{x их по {hh1091приказу{x -- и даже по собственной воле.
 
-%SA% %H% [(cast,колдовать)] [(resummon,перепризыв)] [(order,приказать)]
+{CСВОЙСТВА{x
+{C%A%{x {hh63Призванное существо{x, надо =переподчинять= после {hh922выхода{x из мира
+{C%A%{x Призывается только ночью, при свете искусственного светильника
+{C%A%{x Призывается на неделю
+{C%A%{x Ничего не может надеть, и ему ничего нельзя дать. 
+{C%A%{x Максимум можно контролировать =одного=, призывается один за раз
+  Общее число {hh15последователей{x тоже ограничено -- читай {y{hcсправка очарование{x.
 </help>
   <mana>200</mana>
-  <nameRus>вызов тени</nameRus>
-  <spell type="SPELL(SummonShadow)">
-    <castMobCount>1</castMobCount>
+  <nameRus>теневой двойник</nameRus>
+  <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>magic</flags>
-    <maxMobCount>1</maxMobCount>
-    <mobVnum>26</mobVnum>
-    <msgCreateAttemptRoom>%^C1 пытается призвать тень.</msgCreateAttemptRoom>
-    <msgCreateAttemptSelf>Ты пытаешься призвать тень.</msgCreateAttemptSelf>
-    <msgCreateRoom>Тень появляется, вызванная заклинанием %1$C2!</msgCreateRoom>
-    <msgCreateSelf>Тень появляется, вызванная твоим заклинанием!</msgCreateSelf>
-    <msgNotRecognizeRoom>%2$^C1 отказывается повиноваться %1$C3.</msgNotRecognizeRoom>
-    <msgNotRecognizeSelf>%2$^C1 отказывается повиноваться тебе.</msgNotRecognizeSelf>
-    <msgReattachAttemptRoom>%1$^C1 приказывает %2$C3 вновь следовать за %1$P5.</msgReattachAttemptRoom>
-    <msgReattachAttemptSelf>Ты приказываешь %C3 вновь следовать за тобой.</msgReattachAttemptSelf>
-    <msgReattachRoom>%2$^C1 подчиняется приказу %1$C2.</msgReattachRoom>
-    <msgReattachSelf>%^C1 подчиняется твоему приказу.</msgReattachSelf>
-    <msgStillAffected>У тебя сейчас не хватает сил призвать тень.</msgStillAffected>
-    <msgTooManyMobiles>Ты не сможешь контролировать более одной тени!</msgTooManyMobiles>
     <position>stand</position>
-    <postaffectDuration>24</postaffectDuration>
     <target>create_mob</target>
     <type>none</type>
   </spell>

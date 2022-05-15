@@ -7,6 +7,11 @@
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
+    <node name="druid">
+      <level>15</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
     <node name="necromancer">
       <level>6</level>
       <maximum>100</maximum>
@@ -30,16 +35,19 @@
   </classes>
   <dammsg></dammsg>
   <group registry="skillGroup">healing</group>
-  <help id="736" keyword="УСТАЛОСТЬ" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%CHAR%_
+  <help aka="ОСВЕЖЕНИЕ 'СНЯТЬ УСТАЛОСТЬ'" id="736" keyword="ОСВЕЖИТЬСЯ" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%CHAR%_
 
 Это заклинание восстанавливает {hh60очки движения{x персонажа.
+
+Опытные волшебники также могут попытаться с помощью этого заклинания снять
+состояние {hh97усталости{x.
 </help>
-  <mana>12</mana>
+  <mana>20</mana>
   <mob>
     <professional>true</professional>
   </mob>
-  <nameRus>снять усталость</nameRus>
-  <spell type="SPELL(Refresh)">
+  <nameRus>освежиться</nameRus>
+  <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>magic prayer</flags>
     <position>stand</position>

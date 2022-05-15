@@ -3,10 +3,16 @@
   <affect type="DefaultAffectHandler">
     <cancelled>true</cancelled>
     <dispelled>true</dispelled>
-    <wearoff>Заклинания вновь имеют полную силу против тебя.</wearoff>
+    <wearoff>Энергетический кокон, защищающий тебя от заклинаний, пропадает.</wearoff>
+    <wearoffDispel>Энергетический кокон, защищающий %1$C4 от заклинаний, пропадает.</wearoffDispel>
   </affect>
   <beats>24</beats>
   <classes>
+    <node name="druid">
+      <level>74</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
     <node name="necromancer">
       <level>69</level>
       <maximum>100</maximum>
@@ -24,17 +30,18 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group registry="skillGroup">enhancement</group>
-  <help aka="'ОТПОР ЗАКЛИНАНИЙ'" id="811" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+  <group registry="skillGroup">enhancement protective</group>
+  <help aka="'PROTECTION MAGIC' 'ОТПОР ЗАКЛИНАНИЙ'" id="811" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
-Это заклинание дарует {hh101сопротивляемость{x к {hh1361магии{x (но не молитвам).
+Это мощное заклинание дарует {hh101сопротивляемость{x ко всем заклинаниям, но
+{hh808развеять{x эту защиту легче, чем другие аффекты.
 </help>
   <mana>200</mana>
   <mob>
     <professional>true</professional>
   </mob>
   <nameRus>отпор заклятий</nameRus>
-  <spell type="SPELL(SpellResistance)">
+  <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>magic</flags>
     <position>stand</position>

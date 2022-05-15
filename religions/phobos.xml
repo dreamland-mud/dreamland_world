@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Religion type="DefaultReligion">
   <align>neutral evil</align>
+  <classes registry="profession">ranger anti-paladin necromancer thief vampire witch warlock ninja paladin samurai warrior cleric</classes>
   <description>Бог страха и безумия</description>
   <ethos></ethos>
   <flags>cult</flags>
@@ -10,14 +11,14 @@
 Изображают Фобоса в виде кошмарного чудовища с головой льва, клыкастой пастью и
 пылающими алыми буркалами.
 
-%A% =Пути:= {DЗло{x, {YОбщество{x
+%A% =Пути:= {MХаос{x, {RЯрость{x
 %A% =Дары:= в бою знак Фобоса нашлет страх ({hh740fear{x) на твоих противников и исказит
   их разум ({hh651mind wrench{x). Древняя легенда гласит, что объединившись вместе,
   последователи Фобоса и Деймоса смогут нанести поистине ужасные повреждения.
 %A% =Ограничения:= только {hh33не-добрые{x
-%A% =Жертвоприношения:= Фобос предпочитает волшебные предметы с заклинаниями
-  группы лечения ран и боевой магии. Фобосу нравится, когда ему в жертву
-  приносят хорошее оружие. Из напитков предпочитает вина.
+%A% =Жертвоприношения:= Фобос предпочитает волшебные предметы с боевой магией, мороками
+  или чарами. Фобосу нравится, когда ему в жертву приносят хорошее оружие.
+  Из напитков предпочитает вина.
 
 По легенде, древнейшими последователями культа Фобоса является раса иллитидов,
 называемых на всеобщем языке мозгодерами. Говорят, что остатки этого жуткого
@@ -28,9 +29,10 @@
   <likes>
     <items>weapon recipe</items>
     <liquidFlags>wine</liquidFlags>
-    <skillGroups registry="skillGroup">combat healing</skillGroups>
+    <skillGroups registry="skillGroup">illusion combat</skillGroups>
   </likes>
   <nameRus>Фобос||а|у|а|ом|е</nameRus>
+  <nameRusFemale></nameRusFemale>
   <sex>male</sex>
   <shortDescr>Phobos</shortDescr>
   <tattooVnum>27309</tattooVnum>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
-    <wearoffObj>%1$^O1 больше не пылает священным огнем.</wearoffObj>
+    <wearoffObj>Пламя Веры в %1$O6 затухает.</wearoffObj>
   </affect>
   <beats>12</beats>
   <classes>
@@ -13,19 +13,19 @@
   </classes>
   <dammsg></dammsg>
   <group registry="skillGroup">enchantment</group>
-  <help aka="'СВЯЩЕННЫЙ ОГОНЬ'" id="577" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%OBJ%_
+  <help aka="'СВЯЩЕННЫЙ ОГОНЬ'" id="577" keyword="'ПЛАМЯ ВЕРЫ'" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%OBJ%_
 
 Эта мощная молитва наделяет оружие священным огнем. В бою такое оружие будет
 иногда обжигать противников жарким пламенем.
 
-{RОСТОРОЖНО: {xв случае неудачи молитва может полностью разрушить твое оружие!
+В случае неудачи молитва может надолго раскалить оружие.
 Успех молитвы зависит от твоего уровня, уровня вещи и от навыка владения.
-Молитву нельзя наложить на оружие с {hh96флагами{x дьявольское, темное, вампирическое
-или не для добрых.
+Молитву нельзя наложить на оружие с {hh96флагами{x дьявольское, темное, вампирическое,
+пылающее, обмораживающее или не для добрых.
 </help>
   <mana>150</mana>
-  <nameRus>божественный огонь</nameRus>
-  <spell type="SPELL(FlameOfGod)">
+  <nameRus>пламя веры</nameRus>
+  <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>prayer</flags>
     <position>stand</position>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты снова чувствуешь в себе силы подружиться с кем-то.</wearoff>
+  </affect>
+  <align>good neutral</align>
+  <beats>24</beats>
+  <classes>
+    <node name="druid">
+      <level>17</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <dammsg></dammsg>
+  <group registry="skillGroup">nature</group>
+  <help id="175" keyword="ПОДРУЖИТЬСЯ" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
+
+Друиды могут подружиться с большинством живых неразумных существ, после чего те
+беспрекословно выполнят все просьбы друида. Как и у других подобных умений, есть
+ограничение на максимальное число чармисов: см. {y{hc? очарование{x.
+
+Умение нельзя использовать на любых разумных существ, включая игроков, нежить
+или конструкции.
+</help>
+  <mana>80</mana>
+  <nameRus>подружиться</nameRus>
+  <spell type="DefaultSpell">
+    <damtype>mental</damtype>
+    <flags>prayer</flags>
+    <position>stand</position>
+    <ranged>false</ranged>
+    <target>char_room</target>
+    <tier>3</tier>
+    <type>none</type>
+  </spell>
+</skill>

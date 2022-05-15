@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Religion type="DefaultReligion">
   <align>neutral evil</align>
+  <classes registry="profession">ranger anti-paladin necromancer thief vampire witch warlock ninja paladin samurai warrior cleric</classes>
   <description>Бог-дракон, сеющий войну и разрушения</description>
   <ethos>neutral chaotic</ethos>
   <flags>cult</flags>
-  <help id="967" keyword="СЭТ" level="-1" type="ReligionHelp">{CСет{x (Seth) -- бог ярости, песчаных бурь, войны и смерти, разрушения и хаоса, Бич
+  <help aka="СЭТ" id="967" level="-1" type="ReligionHelp">{CСет{x (Seth) -- бог ярости, песчаных бурь, войны и смерти, разрушения и хаоса, Бич
 Сущего, испепеляющий города и народы. По легенде, Сет вывел расу драконов, чтобы
 повелевать ими и вести их армии на погибель всему живому. Но {hh1576Лео{x даровал
 драконам разум и свободу воли, а {hh974Энки{x вдохнул в них магию, и с тех пор драконы
@@ -17,7 +18,7 @@
   увеличивая урон, силу и точность.
 %A% =Ограничения:= только {hh30не-законопослушные{x {hh33не-добрые{x
 %A% =Жертвоприношения:= Сет предпочитает волшебные предметы с заклинаниями
-  группы драконьей магии, кожи дракона и силы дракона. 
+  группы боевой магии. 
 
 Изгнанные с Пика Драконов и лишенные власти над расой драконидов, последние
 священники культа Сета укрылись во мраке {hh1856Подземья{x.
@@ -27,8 +28,7 @@
   <likes>
     <items></items>
     <liquidFlags></liquidFlags>
-    <skillGroups registry="skillGroup">draconian</skillGroups>
-    <skills registry="skill">&apos;dragon strength&apos; &apos;dragon skin&apos;</skills>
+    <skillGroups registry="skillGroup">combat</skillGroups>
   </likes>
   <nameRus>Сет||а|у|а|ом|е</nameRus>
   <nameRusFemale></nameRusFemale>

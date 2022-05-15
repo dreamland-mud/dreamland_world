@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Race type="DefaultRace">
-  <form>edible sentient biped mammal</form>
-  <help aka="FIREGIANT 'ОГНЕННАЯ ВЕЛИКАНША' ОГНЕННЫЙ ОГВЕЛ ВЕЛИКАН'" id="161" keyword="'FIRE GIANTS' 'ОГНЕННЫЕ ВЕЛИКАНЫ'" level="1" type="RaceHelp">Огненные великаны -- злобные, беспощадные и воинственные создания. Ростом они
+  <act>npc warrior</act>
+  <form>poison sentient biped mammal</form>
+  <help aka="FIREGIANT ГИГАНТ 'ОГНЕННАЯ ВЕЛИКАНША' ОГНЕННЫЙ ОГВЕЛ ВЕЛИКАН ВЕЛИКАН'" id="161" keyword="'FIRE GIANTS' 'ОГНЕННЫЕ ВЕЛИКАНЫ'" level="1" type="RaceHelp">Огненные великаны -- злобные, беспощадные и воинственные создания. Ростом они
 достигают трех метров, однако в целом приземистей и крепче сбиты, чем другие их
 сородичи-великаны. По телосложению напоминают огромных дварфов.
 Их кожа -- угольно-черного цвета, волосы часто имеют огненно-красный или ярко-
@@ -19,9 +20,18 @@
   <nameFemale>огненн|ая|ую|ой|ую|ой|ой великанш|а|и|е|у|ей|е</nameFemale>
   <nameMale>огненн|ый|ого|ому|ого|ым|ом великан||а|у|а|ом|е</nameMale>
   <nameMlt>огненн|ые|ых|ым|ых|ыми|ых великан|ы|ов|ам|ов|ами|ах</nameMlt>
+  <off>area_attack bash berserk disarm kick kick_dirt parry crush assist_race</off>
   <parts>head arms legs heart brains guts hands feet fingers ear eye</parts>
   <res>fire</res>
   <size>huge</size>
+  <stats>
+    <str>5</str>
+    <int>-4</int>
+    <wis>-2</wis>
+    <dex>-5</dex>
+    <con>5</con>
+    <cha>-2</cha>
+  </stats>
   <vuln>cold</vuln>
   <wearloc registry="wearlocation">finger_l second_wield neck_2 neck_1 finger_r wrist_r wrist_l body light shield head legs feet hands arms about waist wield hold float tattoo face</wearloc>
 </Race>

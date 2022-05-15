@@ -24,14 +24,19 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group registry="skillGroup">detection</group>
+  <group registry="skillGroup">enchantment detection</group>
   <help id="603" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%OBJ%_
 
 Заклинание, позволяющее {hh1001опознать{x свойства предмета -- удобный способ
-сэкономить золотишко на услугах мудрецов.
+сэкономить золотишко на услугах мудрецов. Работает на предметы в инвентаре,
+экипировке или на земле около тебя.
 
-Не забудь, что в мире существуют объекты, о которых нельзя ничего узнать даже
-таким способом.
+Для опознания бонусных воздействий и зарядов заклинаний на {hh121волшебных предметах{x
+нужно будет сначала обзавестись {hh814обнаружением магии{x.
+
+Последователи {hh974Энки{x, {hh1576Лео{x и {hh1570Нофейта{x, а также {hh1479Шалафи{x получат в процессе опознания
+новые и секретные сведения об опознаваемом объекте. Впрочем, в мире существуют
+объекты, защищенные от опознания даже ними.
 </help>
   <mana>100</mana>
   <nameRus>опознание</nameRus>
@@ -47,11 +52,11 @@
       <professional>false</professional>
     </node>
   </raceBonuses>
-  <spell type="SPELL(Identify)">
+  <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>magic prayer</flags>
     <position>stand</position>
-    <target>obj_inv obj_room</target>
+    <target>obj_inv obj_equip obj_room</target>
     <type>none</type>
   </spell>
 </skill>

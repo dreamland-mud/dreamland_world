@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="ClanSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты вновь можешь призвать оружие Дракона.</wearoff>
+  </affect>
+  <align>good</align>
   <beats>12</beats>
   <clans>
     <node name="knight">
@@ -12,20 +16,25 @@
     </node>
   </clans>
   <dammsg></dammsg>
-  <group registry="skillGroup">clan</group>
-  <help aka="'DRAGON WEAPON' 'DRAGONSWORD SWORD' 'ОРУЖИЕ РЫЦАРЕЙ'" id="922" keyword="'ОРУЖИЕ ДРАКОНА' 'МЕЧ ДРАКОНА'" level="-1" type="SkillHelp">%FMT% %SPELL% _(sword,меч)_
-%FMT% %SPELL% _(dagger,кинжал)_
-%FMT% %SPELL% _(mace,булава)_
-%FMT% %SPELL% _(lance,пика)_
+  <group registry="skillGroup">clan enchantment</group>
+  <help aka="'DRAGON WEAPON' 'DRAGONSWORD SWORD' БУЛАВА ДРАГОНСВОРД ДРАКОНА КИНЖАЛ КИСТЕНЬ МЕЧ ОРУЖИЕ ПИКА РЫЦАРЕЙ" id="922" keyword="'ОРУЖИЕ ДРАКОНА'" level="-1" type="SkillHelp">%FMT% *%SPELL%* _(sword,меч)_
+%FMT% *%SPELL%* _(dagger,кинжал)_
+%FMT% *%SPELL%* _(mace,булава)_
+%FMT% *%SPELL%* _(flail,кистень)_
+%FMT% *%SPELL%* _(lance,пика)_
 
-Создать Святое Оружие {hh1468Рыцаря{x. В зависимости от того, какое оружие нужно,
-можно создать булаву, меч, {hh952пику{x или кинжал.
+Позволяет призвать святое оружие {hh1468Рыцаря{x. В зависимости от того, какое оружие
+нужно, можно призвать булаву, кистень, меч, {hh952пику{x или кинжал.
+
+По легенде, волей золотого дракона Бахамута это оружие может исцелить Рыцаря в
+бою или даже воскресить в случае внезапной гибели.
 </help>
-  <mana>70</mana>
+  <mana>100</mana>
   <nameRus>оружие дракона</nameRus>
-  <spell type="SPELL(Dragonsword)">
+  <spell type="DefaultSpell">
     <damtype>none</damtype>
-    <flags>magic</flags>
+    <flags>magic prayer</flags>
+    <order>player_only</order>
     <position>stand</position>
     <target>create_obj</target>
     <type>none</type>

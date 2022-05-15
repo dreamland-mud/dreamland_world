@@ -7,8 +7,13 @@
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
+    <node name="ranger">
+      <level>16</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
     <node name="samurai">
-      <level>23</level>
+      <level>15</level>
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
@@ -18,29 +23,33 @@
       <rating>1</rating>
     </node>
   </classes>
-  <command type="SKILL(rescue)">
+  <command type="DefaultSkillCommand">
+    <argtype>char_room</argtype>
     <cat>class</cat>
-    <hint>(воинские профессии) спасти из битвы, ловушки</hint>
+    <hint>подставиться под удары вместо согруппника в бою</hint>
     <name>rescue</name>
+    <order>fight_only</order>
     <position>fight</position>
     <russian>
       <node>спасти</node>
     </russian>
   </command>
   <dammsg></dammsg>
-  <group>defensive</group>
-  <help id="613" level="-1" type="SkillHelp">Друг познается в беде. Если твой друг воин, он может спасти тебя, 
-прикрыв своим телом. Это умение позволяет защитить более слабого
-от нанесения телесных повреждений. Научившись этому умению и ты 
-сможешь кого-нибудь спасти.
+  <group registry="skillGroup">defensive</group>
+  <help id="613" level="-1" type="SkillHelp">%FMT% *%SKILL%* _%CHAR%_
 
-Спасти кого-либо из ловушки можно, даже не обладая специальными навыками.
+Этот воинский навык позволяет вывести {hh1378согруппника{x из-под атаки, подставившись
+под удары его противника. Вероятность успеха зависит от прокачки навыка и от
+разницы уровней между тобой и будущим противником.
+
+ВНИМАНИЕ: навсегда вывести из-под атаку не получится -- большинство противников
+рано или поздно снова начнут атаковать исходного противника.
 </help>
   <mob>
-    <bonus>40</bonus>
-    <dice>1</dice>
+    <bonus>75</bonus>
     <offense>rescue</offense>
     <professional>true</professional>
   </mob>
+  <move>40</move>
   <nameRus>спасти</nameRus>
 </skill>

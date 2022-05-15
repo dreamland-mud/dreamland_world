@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill type="ClanSkill">
+  <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
+    <wearoff>Твой призрачный двойник растворяется в потоках эфира.</wearoff>
+    <wearoffDispel>Призрачный двойник %1C2 растворяется в потоках эфира.</wearoffDispel>
+  </affect>
+  <beats>18</beats>
+  <clans>
+    <node name="shalafi">
+      <level>101</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <dammsg>призрачный удар</dammsg>
+  <group registry="skillGroup">transportation clan</group>
+  <help id="5" level="-1" type="SkillHelp">
+  </help>
+  <mana>80</mana>
+  <nameRus>призрачный удар</nameRus>
+  <spell type="DefaultSpell">
+    <damflags>weapon magic</damflags>
+    <damtype>bash</damtype>
+    <flags>magic</flags>
+    <order>player_only</order>
+    <position>stand</position>
+    <target>char_self</target>
+    <tier>1</tier>
+    <type>defensive</type>
+  </spell>
+</skill>

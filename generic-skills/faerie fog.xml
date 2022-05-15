@@ -7,6 +7,11 @@
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
+    <node name="druid">
+      <level>24</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
     <node name="warlock">
       <level>27</level>
       <maximum>100</maximum>
@@ -20,7 +25,7 @@
   </classes>
   <dammsg></dammsg>
   <group registry="skillGroup">nature</group>
-  <help id="790" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+  <help aka="FAIRY FOG" id="790" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
 Это весьма полезное заклинание позволяет обнаружить всех невидимых, скрытых,
 спрятанных или замаскированных существ в данной местности.
@@ -37,7 +42,7 @@
       <professional>false</professional>
     </node>
   </raceBonuses>
-  <spell type="SPELL(FaerieFog)">
+  <spell type="DefaultSpell">
     <damflags>water</damflags>
     <damtype>drowning</damtype>
     <flags>magic</flags>

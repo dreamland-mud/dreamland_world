@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SkillGroup type="DefaultSkillGroup">
   <autoHelp>true</autoHelp>
-  <help id="1120" level="0" type="SkillGroupHelp">Черная магия создания нежити и оживления мертвецов. Удел Зла и Хаоса.
+  <gods registry="religion">lloth &apos;raven queen&apos; karmina</gods>
+  <help id="1120" keyword="'МАГИЯ СМЕРТИ'" level="0" type="SkillGroupHelp">Черная магия создания нежити и оживления мертвецов. Удел Зла и Хаоса.
 </help>
   <hidden>false</hidden>
-  <nameRus>некромантия</nameRus>
-  <shortDescr>Некромантия</shortDescr>
+  <msgRoom>
+    <node>%1$^C1 издает странные шипящие звуки, фокусируя темную энергию.</node>
+    <node>Зрачки %1$C2 заполняет {DТьма,{x когда %1$P1 медленно выговаривает жуткий наговор.</node>
+    <node>%1$^C1 взывает к силам {1{DТьмы{2 и {1{MХаоса{2, концентрируясь на магии смерти.</node>
+  </msgRoom>
+  <msgSelf>
+    <node>Ты издаешь странные шипящие звуки, фокусируя темную энергию.</node>
+    <node>Твои зрачки заполняет {1{DТьма,{2 когда ты медленно выговариваешь жуткий наговор.</node>
+    <node>Ты взываешь к силам {1{DТьмы{2 и {1{MХаоса{2, концентрируясь на магии смерти.</node>
+  </msgSelf>
+  <msgVict>
+    <node>%1$^C1 издает странные шипящие звуки, указывая на тебя в зловещем жесте.</node>
+    <node>Зрачки %1$C2 заполняет {DТьма,{x когда %1$P1 медленно выговаривает жуткий наговор.</node>
+    <node>%1$^C1 взывает к силам {1{DТьмы{2 и {1{MХаоса{2, концентрируясь на магии смерти.</node>
+  </msgVict>
+  <nameRus>магия смерти</nameRus>
+  <path>darkness chaos</path>
 </SkillGroup>

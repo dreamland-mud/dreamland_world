@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="ClanSkill">
   <affect type="DefaultAffectHandler">
-    <wearoff>Ты можешь создать еще один щит Льва.</wearoff>
+    <wearoff>Ты снова можешь призвать щит Прайда Львов.</wearoff>
   </affect>
   <beats>12</beats>
   <clans>
@@ -15,17 +15,26 @@
     </node>
   </clans>
   <dammsg>львиный щит</dammsg>
-  <group registry="skillGroup">clan</group>
-  <help id="924" level="-1" type="SkillHelp">Создает великолепный щит, по форме напоминающий голову Льва.
-Через определенное время щит распадается.
+  <group registry="skillGroup">clan nature</group>
+  <help id="924" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+
+Создает великолепный щит, по форме напоминающий голову Льва. Параметры щита 
+зависят от твоего класса: воинам щит даст больше урона, колдунам -- больше
+очков здоровья, и так далее. Через определенное время щит распадается.
+
+%FMT% *%SPELL%* _%CHAR%_
+
+Добрые Львы также могут одарить своим щитом какого-то {hh1053новичка{x -- в этом
+случае, разумеется, щит будет создан под параметры и нужды новичка, а не Льва.
 </help>
   <mana>200</mana>
   <nameRus>щит льва</nameRus>
-  <spell type="SPELL(LionShield)">
+  <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>magic</flags>
+    <order>player_only</order>
     <position>stand</position>
     <target>create_obj</target>
-    <type>none</type>
+    <type>defensive</type>
   </spell>
 </skill>

@@ -29,6 +29,7 @@
     </node>
   </classes>
   <command type="SKILL(lash)">
+    <argtype>undef</argtype>
     <cat>class</cat>
     <hint>ударить хлыстом</hint>
     <name>lash</name>
@@ -40,7 +41,7 @@
     </russian>
   </command>
   <dammsg>удар хлыстом</dammsg>
-  <group>weaponsmaster</group>
+  <group registry="skillGroup">weaponsmaster</group>
   <help id="818" level="-1" type="SkillHelp">%FMT% *%CMD%* _%VICT%_
 
 Некоторые классы, умеющие обращаться с хлыстами, могут нанести
@@ -48,7 +49,7 @@
 </help>
   <mob>
     <bonus>10</bonus>
-    <dice>2</dice>      
+    <dice>2</dice>
     <professional>true</professional>
   </mob>
   <nameRus>хлестать</nameRus>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
   <cat>info</cat>
-  <extra>keep_hide ghost manacles</extra>
-  <help aka="СОСТОЯНИЕ СТАТУС" id="999" level="-1" ref="experience oscore worth" title="Состояние персонажа, текущие параметры" type="CommandHelp">%FMT%  *(score,счет)*
+  <extra>keep_hide ghost manacles afk</extra>
+  <help aka="ДОБРЫХ СОСТОЯНИЕ СТАТУС УБИТО ЗЛЫХ" id="999" level="-1" ref="experience oscore worth" title="Состояние персонажа, текущие параметры" type="CommandHelp">%FMT%  *(score,счет)*
 %FFF%  *(oscore,ссчет)*
 Показывает твои текущие параметры в наиболее полном объеме.
 Первая команда отобразит удобно и красиво, вторая -- более подробно.
@@ -16,12 +16,14 @@
 все текущие воздействия (%H% [(affects,эффекты)]).
 
 %FMT%  *(worth,доход)*
-Покажет, сколько у тебя денег, очков опыта, а также сколько существ твоего и
-противоположной {hh33натуры{x было тобой убито до этих пор.
+Покажет, сколько у тебя денег, очков опыта, а также сколько существ твоей {hh33натуры{x и
+всех остальных было тобой убито до этих пор. {hh138Анти-паладинам{x важно знать, сколько
+существ именно противоположной натуры (то есть, добрых) они убили, но этого
+команда, к сожалению, пока не показывает.
 </help>
   <hint>увидеть свои параметры</hint>
   <name>score</name>
-  <order>player_only</order>  
+  <order>player_only</order>
   <position>dead</position>
   <russian>
     <node>счет</node>

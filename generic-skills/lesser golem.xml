@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
-    <wearoff>Ты чувствуешь в себе силы к созданию малого голема.</wearoff>
+    <wearoff>Теперь ты снова можешь создать глиняного голема.</wearoff>
   </affect>
+  <align>neutral evil</align>
   <beats>32</beats>
   <classes>
     <node name="necromancer">
@@ -13,43 +14,31 @@
   </classes>
   <dammsg></dammsg>
   <group registry="skillGroup">necromancy</group>
-  <help aka="'СОЗДАТЬ ГОЛЕМА'" id="545" keyword="GOLEMS ГОЛЕМЫ" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+  <help aka="ГЛИНЯНЫЙ ГОЛЕМ МАЛЫЙ 'СОЗДАТЬ ГОЛЕМА'" id="545" keyword="GOLEMS ГОЛЕМЫ" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
-Малый голем -- самый базовый голем, которого учатся создавать некроманты.
-Это существо будет {hh15служить{x хозяину верой и правдой. Как и все големы, в бою он
-умеет {hh812разоружать{x противника и {hh2138сокрушать{x его мощным ударом. Големы {hh101уязвимы{x к 
-заклинаниям и ментальным атакам, но хорошо сопротивляются ударам оружия. Яд и
-чума им не страшны. Големов, как и других призванных существ, можно одевать
-и вооружать.
-
-Одновременно некроманты могут контролировать не более трех малых големов.
+Глиняный голем -- самый базовый голем, которого учатся создавать некроманты.
+Это существо будет {hh15служить{x хозяину верой и правдой. Как и все големы, в бою
+он умеет {hh812разоружать{x противника и {hh2138сокрушать{x его мощным ударом.
 Также некроманты могут создавать {hh547каменного{x, {hh868железного{x и {hh861адамантитового{x големов.
 
-%SA% %H% [(cast,колдовать)] [(resummon,перепризыв)]
+Големы {hh101уязвимы{x к заклинаниям и ментальным атакам, но хорошо сопротивляются
+ударам оружия. Яд и чума им не страшны. 
+
+{CСВОЙСТВА{x
+{C%A%{x {hh63Призванное существо{x, надо =переподчинять= после {hh922выхода{x из мира
+{C%A%{x Требует ингредиент для создания
+{C%A%{x Призывается на неделю, можно =перезаряжать= -- дать голему его ингредиент
+{C%A%{x Можно дать одно оружие и надеть броню, шлем и щит
+{C%A%{x Максимум можно контролировать =трех=, призывается один за раз
+  Общее число {hh15последователей{x тоже ограничено -- читай {y{hcсправка очарование{x.
 </help>
-  <mana>200</mana>
-  <nameRus>малый голем</nameRus>
-  <spell type="SPELL(LesserGolem)">
-    <castMobCount>1</castMobCount>
+  <mana>100</mana>
+  <nameRus>глиняный голем</nameRus>
+  <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>magic</flags>
-    <maxMobCount>3</maxMobCount>
-    <mobVnum>21</mobVnum>
-    <msgCreateAttemptRoom>%^C1 пытается создать малого голема.</msgCreateAttemptRoom>
-    <msgCreateAttemptSelf>Ты пытаешься создать малого голема.</msgCreateAttemptSelf>
-    <msgCreateRoom>%^C1 создает малого голема!</msgCreateRoom>
-    <msgCreateSelf>Ты создаешь малого голема!</msgCreateSelf>
-    <msgNotRecognizeRoom>%2$^C1 отказывается повиноваться %1$C3.</msgNotRecognizeRoom>
-    <msgNotRecognizeSelf>%2$^C1 отказывается повиноваться тебе.</msgNotRecognizeSelf>
-    <msgReattachAttemptRoom>%1$^C1 приказывает %2$C3 вновь следовать за %1$P5.</msgReattachAttemptRoom>
-    <msgReattachAttemptSelf>Ты приказываешь %C3 вновь следовать за тобой.</msgReattachAttemptSelf>
-    <msgReattachRoom>%2$^C1 подчиняется приказу %1$C2.</msgReattachRoom>
-    <msgReattachSelf>%^C1 подчиняется твоему приказу.</msgReattachSelf>
-    <msgStillAffected>У тебя не хватает сил создать сейчас другого голема.</msgStillAffected>
-    <msgTooManyMobiles>Ты не сможешь управлять большим количеством големов!</msgTooManyMobiles>
+    <order>player_only</order>
     <position>stand</position>
-    <postaffectDuration>24</postaffectDuration>
-    <storageVnums>5400 5402 5403 5404 5405 5413</storageVnums>
     <target>create_mob</target>
     <type>none</type>
   </spell>

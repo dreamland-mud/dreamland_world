@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
-  <beats>36</beats>
+  <beats>18</beats>
   <classes>
     <node name="anti-paladin">
       <level>20</level>
@@ -43,8 +43,8 @@
       <rating>2</rating>
     </node>
   </classes>
-  <command type="SKILL(lore)">
-    <argtype>undef</argtype>
+  <command type="DefaultSkillCommand">
+    <argtype>obj_carry</argtype>
     <cat>class</cat>
     <extra>undig</extra>
     <hint>узнать из легенд о свойствах предмета</hint>
@@ -55,18 +55,19 @@
     </russian>
   </command>
   <dammsg></dammsg>
-  <group registry="skillGroup">detection adventure</group>
+  <group registry="skillGroup">adventure detection</group>
   <hard>7</hard>
   <help aka="ЛЕГЕНДА ЛОРЕ" id="644" keyword="'ЗНАНИЕ ЛЕГЕНД'" level="-1" type="SkillHelp">%FMT% *%CMD%* _вещь_
 
 Это умение позволяет использовать твои знания мифов и легенд, чтобы получить 
 информацию о предмете. Чем старательнее ты практикуешься в этом умении, 
-тем больше будешь узнавать.
+тем больше будешь узнавать. Самые интересные и тайные знания можно получить
+лишь при {hh1359прокачке{x выше 80-90%.
 
 В отличие от {hh1001опознания{x, навык легенд позволяет узнать некоторые тайные или
 скрытые свойства вещей и древних артефактов.
 </help>
-  <mana>30</mana>
+  <mana>40</mana>
   <nameRus>легенды</nameRus>
   <raceBonuses>
     <node name="kender">

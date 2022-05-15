@@ -39,6 +39,7 @@
     </node>
   </classes>
   <command type="SKILL(disarm)">
+    <argtype>undef</argtype>
     <cat>class</cat>
     <hint>(воинские профессии) обезоружить противника</hint>
     <name>disarm</name>
@@ -49,7 +50,7 @@
     </russian>
   </command>
   <dammsg></dammsg>
-  <group>weaponsmaster</group>
+  <group registry="skillGroup">weaponsmaster</group>
   <help aka="'ОБЕЗОРУЖИВАТЬ ПРОТИВНИКОВ'" id="812" level="-1" type="SkillHelp">%FMT% *%CMD%*
 
 Обезоружив врага, ты лишаешь его возможности наносить тебе удары оружием.

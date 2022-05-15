@@ -8,21 +8,17 @@
       <rating>1</rating>
     </node>
   </classes>
-  <command type="SKILL(makebow)">
-    <cat>class</cat>
-    <extra>hidden</extra>
-    <hint>(рейнджеры) изготовить лук</hint>
-    <name>makebow</name>
-    <position>stand</position>
-  </command>
   <dammsg></dammsg>
-  <group>weaponsmaster</group>
-  <help id="850" level="-1" type="SkillHelp">%FMT% *(make bow,изготовить лук)*
+  <group registry="skillGroup">weaponsmaster</group>
+  <help id="850" level="-1" type="SkillHelp">%FMT% *(craft bow,смастерить лук)*
 
-Лесные воины могут изготовить лук, и затем использовать его для вооружения
-и стрельбы стрелами. Для изготовления лука необходимо находиться в лесной местности.
+Это умение помогает {hh140рейнджерам{x смастерить {hh810лук для стрельбы{x -- даже если они не
+владеют {hh230ремеслом плотника{x. Впрочем, для изготовления все равно понадобится
+{hh784топорик{x, чертеж (его можно достать у {hh44гильдмастера{x) и нужные ингредиенты.
+Для изготовления лука необходимо находиться в лесной местности.
+
 %SA% %H% [(make arrow,изготовить стрелы)], %H% [(shoot,стрелять)].
 </help>
-  <mana>200</mana>
-  <nameRus>изготовить лук</nameRus>
+  <move>100</move>
+  <nameRus>изготовление лука</nameRus>
 </skill>

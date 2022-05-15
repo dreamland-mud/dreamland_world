@@ -44,11 +44,12 @@
     </node>
   </classes>
   <command type="SKILL(zap)">
+    <argtype>undef</argtype>
     <cat>magic</cat>
     <extra>undig</extra>
     <hint>взмахнуть волшебной палочкой</hint>
     <name>zap</name>
-    <order>player_only</order>  
+    <order>player_only</order>
     <position>rest</position>
     <russian>
       <node>поразить</node>
@@ -56,7 +57,7 @@
     </russian>
   </command>
   <dammsg></dammsg>
-  <group>arcane</group>
+  <group registry="skillGroup">arcane</group>
   <help aka="ПАЛОЧКА ПАЛОЧКИ" id="2143" level="-1" type="SkillHelp">Это умение позволяет использовать жезлы или волшебные палочки.
 Подробно об использовании жезлов читай в статье &quot;{hh121Волшебные предметы{x&quot;.
 
@@ -76,4 +77,3 @@
     </node>
   </raceBonuses>
 </skill>
-

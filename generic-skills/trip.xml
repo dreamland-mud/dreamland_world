@@ -12,6 +12,11 @@
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
+    <node name="ranger">
+      <level>12</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
     <node name="samurai">
       <level>9</level>
       <maximum>100</maximum>
@@ -22,17 +27,12 @@
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
-    <node name="warrior">
-      <level>25</level>
-      <maximum>100</maximum>
-      <rating>1</rating>
-    </node>
   </classes>
-  <command type="SKILL(trip)">
+  <command type="DefaultSkillCommand">
+    <argtype>char_fight</argtype>
     <cat>class</cat>
     <hint>(воинские профессии) сделать подножку</hint>
     <name>trip</name>
-    <order>fight_only</order>
     <position>fight</position>
     <russian>
       <node>подножка</node>
@@ -40,19 +40,22 @@
     </russian>
   </command>
   <dammsg mg="f">подножка</dammsg>
-  <group>fightmaster</group>
-  <help id="582" level="-1" type="SkillHelp">%FMT% *(trip, подножка)* _жертва_
-%FFF% *(trip, подножка)*
+  <group registry="skillGroup">fightmaster</group>
+  <help id="582" level="-1" type="SkillHelp">%FMT% *%SKILL%*
+%FFF% *%SKILL%* _%VICT%_
 
-Подсекая врага, ты повергаешь его наземь, не давая ему возможности 
-произнести заклинание или сбить с ног тебя. Но если противник попался 
-порхающий, как бабочка, вряд ли тебе удастся подсечь его.
+Подсечка -- прекрасный навык воров, ниндзя и некоторых других классов, который
+позволяет сбить противника {hh1020с ног{x, нанести урон и вызвать {hh120задержку{x.
+Вероятность успеха зависит от многих факторов: текущей местности, наличия или
+отсутствия нужных частей тела, ловкости, разницы в {hh26размере{x между тобой и жертвой
+и других.
 </help>
   <mob>
-    <bonus>10</bonus>
+    <bonus>40</bonus>
     <dice>3</dice>
     <offense>trip</offense>
-    <professional>true</professional>
+    <professional>false</professional>
   </mob>
+  <move>20</move>
   <nameRus>подножка</nameRus>
 </skill>

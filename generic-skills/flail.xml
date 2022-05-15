@@ -11,6 +11,11 @@
       <maximum>100</maximum>
       <rating>2</rating>
     </node>
+    <node name="druid">
+      <level>10</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
     <node name="paladin">
       <level>10</level>
       <maximum>100</maximum>
@@ -23,7 +28,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group>weaponsmaster</group>
+  <group registry="skillGroup">weaponsmaster</group>
   <hard>5</hard>
   <help id="615" level="-1" type="SkillHelp">Цепы и моргенштерны на цепи - довольно редкий вид оружия, орудовать которым
 могут не только лишь все, мало кто может это делать. Атаку цепом невозможно
@@ -33,8 +38,7 @@
 %SA% [(parry,парирование)], [(dodge,увертка)]
 </help>
   <mob>
-    <bonus>40</bonus>
-    <dice>3</dice>
+    <bonus>100</bonus>
     <professional>false</professional>
   </mob>
   <nameRus>цеп</nameRus>

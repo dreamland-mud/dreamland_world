@@ -2,6 +2,11 @@
 <skill type="GenericSkill">
   <beats>12</beats>
   <classes>
+    <node name="cleric">
+      <level>31</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
     <node name="paladin">
       <level>32</level>
       <maximum>100</maximum>
@@ -9,17 +14,16 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group registry="skillGroup">curative</group>
-  <help id="715" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
+  <group registry="skillGroup">healing</group>
+  <help id="715" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%CHAR%_
 
-Боги дают паладину силу будить спящих нездоровым сном. Однако, заклинания сна
-на пациенте должны быть не сильнее, чем само заклинание пробуждения.
-
-%SA% %H% [(cast,колдовать)]
+Эта мощная молитва при удаче позволяет разбудить спящих нездоровым сном --
+например, от {hh709удара мешочком{x, {hh769прикосновения вампира{x, {hh782удушения ниндзя{x или просто
+{hh741заклинания сна{x.
 </help>
-  <mana>20</mana>
+  <mana>40</mana>
   <nameRus>пробуждение</nameRus>
-  <spell type="SPELL(Awakening)">
+  <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>prayer</flags>
     <position>fight</position>

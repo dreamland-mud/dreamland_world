@@ -4,10 +4,21 @@
     <cancelled>true</cancelled>
     <dispelled>true</dispelled>
     <wearoff>Ужас, застилающий твой разум, наконец проходит.</wearoff>
-    <wearoffDispel>%1$^C1 становится немного смелее.</wearoffDispel>
+    <wearoffDispel>%1$^C1 перестает дрожать от страха.</wearoffDispel>
   </affect>
+  <align>neutral evil</align>
   <beats>12</beats>
   <classes>
+    <node name="anti-paladin">
+      <level>61</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="necromancer">
+      <level>51</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
     <node name="witch">
       <level>73</level>
       <maximum>100</maximum>
@@ -15,22 +26,25 @@
     </node>
   </classes>
   <dammsg>ужас</dammsg>
-  <group registry="skillGroup">illusion</group>
+  <group registry="skillGroup">illusion maladictions</group>
   <help id="740" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
-Ужас, проникший в саму плоть жертвы, заставляет ее {hh1025убегать{x от источника этого 
-ужасного заклинания помимо воли.
+Это мощное заклинание вызывает ужас у жертв, ослабляя их в бою и заставляя
+{hh1025убегать{x от заклинателя. Страх также способен вывести жертв из состояний
+{hh829боевой ярости{x, {hh619неистовства{x или {hh822тигриной мощи{x.
 
 Опытные {hh136самураи{x не подвержены страху, на них заклинание не подействует.
+Также не удастся запугать нежить или конструкции вроде големов.
 </help>
-  <mana>50</mana>
+  <mana>80</mana>
   <nameRus>страх</nameRus>
-  <spell type="SPELL(Fear)">
-    <ranged>false</ranged>     
-    <damtype>none</damtype>
+  <spell type="DefaultSpell">
+    <damtype>mental</damtype>
     <flags>magic</flags>
-    <position>stand</position>
+    <position>fight</position>
+    <ranged>false</ranged>
     <target>char_room</target>
+    <tier>2</tier>
     <type>offensive</type>
   </spell>
 </skill>

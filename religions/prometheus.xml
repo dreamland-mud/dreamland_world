@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Religion type="DefaultReligion">
   <align>good neutral evil</align>
+  <classes registry="profession">ranger anti-paladin necromancer thief vampire witch warlock ninja paladin samurai warrior cleric</classes>
   <description>Бог огня и ремесел</description>
   <ethos>lawful neutral chaotic</ethos>
   <flags>cult</flags>
@@ -15,10 +16,11 @@
 помогают ему в кузнечном деле.
 
 %A% =Дары:= знак Прометея будет периодически {hh1055чинить{x и восстанавливать твои
-  доспехи, а в бою выстрелит в твоего противника огненным шаром ({hhfireball{x)
+  доспехи, а в бою выстрелит в твоего противника огненным шаром ({hhfireball{x).
+  Также знак Прометея помогает при {hh1055починке{x и создании вещей ремесленниками.
 %A% =Жертвоприношения:= Прометей предпочитает волшебные предметы с заклинаниями
-  группы лечения ран. Прометею нравится, когда ему в жертву приносят книги,
-  свитки, учебники и книги заклинаний.
+  предметной магии. Прометею нравится, когда ему в жертву приносят книги,
+  свитки, учебники и книги заклинаний. а также хорошее оружие.
 
 По легенде, старые боги {hh1864Олимпа{x заточили Прометея в темнице, но один из его
 последователей помог своему патрону бежать и занял его место в тюремной камере.
@@ -26,12 +28,12 @@
 %SA% %H% {hhВосемь Путей{x
 </help>
   <likes>
-    <items>scroll furniture spellbook parchment</items>
+    <items>scroll weapon furniture spellbook recipe parchment</items>
     <liquidFlags></liquidFlags>
-    <skillGroups registry="skillGroup">healing</skillGroups>
-    <skills registry="skill">&apos;dispel evil&apos; &apos;dispel good&apos; &apos;lightning bolt&apos;</skills>
+    <skillGroups registry="skillGroup">enchantment</skillGroups>
   </likes>
   <nameRus>Промете|й|я|ю|я|ем|е</nameRus>
+  <nameRusFemale></nameRusFemale>
   <sex>male</sex>
   <shortDescr>Prometheus</shortDescr>
   <tattooVnum>27316</tattooVnum>

@@ -3,9 +3,10 @@
   <affect type="DefaultAffectHandler">
     <cancelled>true</cancelled>
     <dispelled>true</dispelled>
-    <wearoff>Ты беззащит%1$Gно|ен|на перед {Yдобром{x.</wearoff>
-    <wearoffDispel>%1$^C1 теряет защиту от сил добра.</wearoffDispel>
+    <wearoff>Темный щит вокруг тебя, защищающий от добрых существ, мерцает и исчезает.</wearoff>
+    <wearoffDispel>Темный щит вокруг %1$C2, защищающий от добрых существ, мерцает и исчезает.</wearoffDispel>
   </affect>
+  <align>good evil</align>
   <beats>12</beats>
   <classes>
     <node name="anti-paladin">
@@ -40,7 +41,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group registry="skillGroup">enhancement</group>
+  <group registry="skillGroup">enhancement protective</group>
   <help aka="'ЗАЩИТА ОТ СИЛ ДОБРА'" id="572" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
 Эта мощная аура на четверть снижает почти любые повреждения от добрых персонажей
@@ -48,12 +49,12 @@
 {hh33Нейтральные{x персонажи не смогут использовать эту защиту -- не стоит даже тратить
 практики.
 </help>
-  <mana>5</mana>
+  <mana>20</mana>
   <mob>
     <professional>true</professional>
   </mob>
   <nameRus>защита от добра</nameRus>
-  <spell type="SPELL(ProtectionGood)">
+  <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>magic prayer</flags>
     <position>stand</position>

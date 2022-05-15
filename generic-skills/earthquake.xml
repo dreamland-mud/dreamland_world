@@ -7,6 +7,11 @@
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
+    <node name="druid">
+      <level>12</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
   </classes>
   <dammsg mg="n">землетрясение</dammsg>
   <group registry="skillGroup">nature</group>
@@ -15,16 +20,16 @@
 Землетрясение -- мощное заклинание, причиняющее большие повреждения всем в
 данной местности. Осторожней! Также позволяет выкапывать из {hh652могил{x вампиров.
 </help>
-  <mana>100</mana>
+  <mana>80</mana>
   <mob>
     <professional>true</professional>
   </mob>
   <nameRus>землетрясение</nameRus>
-  <spell type="SPELL(Earthquake)">
-    <ranged>false</ranged>     
+  <spell type="DefaultSpell">
     <damtype>bash</damtype>
     <flags>prayer</flags>
     <position>fight</position>
+    <ranged>false</ranged>
     <target>people</target>
     <tier>4</tier>
     <type>offensive</type>

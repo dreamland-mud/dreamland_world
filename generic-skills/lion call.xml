@@ -3,56 +3,47 @@
   <affect type="DefaultAffectHandler">
     <wearoff>Ты снова чувствуешь в себе силы призывать львов.</wearoff>
   </affect>
-  <beats>12</beats>
+  <beats>16</beats>
   <classes>
+    <node name="druid">
+      <level>29</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
     <node name="ranger">
       <level>55</level>
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
   </classes>
-  <command type="SKILL(lioncall)">
+  <command type="DefaultSkillCommand">
+    <aliases>
+      <node>lions</node>
+    </aliases>
+    <argtype>undef</argtype>
     <cat>class</cat>
-    <hint>(рейнджеры) позвать двух львов на помощь</hint>
+    <hint>(рейнджеры, друиды) позвать двух львов на помощь</hint>
     <name>lioncall</name>
+    <order>player_only</order>
     <position>fight</position>
     <russian>
       <node>львы</node>
     </russian>
   </command>
   <dammsg></dammsg>
-  <group>nature</group>
+  <group registry="skillGroup">nature</group>
   <help aka="ВЫЗВАТЬ" id="648" level="-1" type="SkillHelp">%FMT% *%CMD%*
 
-Это умение похоже на призыв медведей (bear call), и вызывает 2 львов тебе на помощь.
-Опять же, работает только в лесу.
+Это умение похоже на {hh646призыв медведей{x, и вызывает двух львов тебе на помощь.
 
-См. также {W? перепризыв{x.
+{CСВОЙСТВА{x
+{C%A%{x {hh63Призванное существо{x, надо =переподчинять= после {hh922выхода{x из мира
+{C%A%{x Можно призывать только на лоне природы
+{C%A%{x Призывается на неделю
+{C%A%{x Можно частично одеть (слоты экипировки ограничены)
+{C%A%{x Максимум можно контролировать =двух=, призывается два за раз
+  Общее число {hh15последователей{x тоже ограничено -- читай {y{hcсправка очарование{x.
 </help>
-  <mana>125</mana>
-  <nameRus>вызов львов</nameRus>
-  <spell type="SPELL(LionCall)">
-    <castMobCount>2</castMobCount>
-    <casted>false</casted>
-    <maxMobCount>2</maxMobCount>
-    <mobVnum>19</mobVnum>
-    <msgCreateAttemptRoom>%^C1 издает львиный клич.</msgCreateAttemptRoom>
-    <msgCreateAttemptSelf>Ты издаешь львиный клич.</msgCreateAttemptSelf>
-    <msgCreateRoom>Два льва приходят на помощь %C3!</msgCreateRoom>
-    <msgCreateRoomOne>Лев приходит на помощь %C3!</msgCreateRoomOne>
-    <msgCreateSelf>Два льва приходят тебе на помощь!</msgCreateSelf>
-    <msgCreateSelfOne>Лев приходит тебе на помощь!</msgCreateSelfOne>
-    <msgNotRecognizeRoom>%2$^C1 зевает на %1$C4.</msgNotRecognizeRoom>
-    <msgNotRecognizeSelf>%2$^C1 зевает на тебя, показывая зубы.</msgNotRecognizeSelf>
-    <msgReattachAttemptRoom>%1$^C1 подманивает %2$C4.</msgReattachAttemptRoom>
-    <msgReattachAttemptSelf>Ты подманиваешь %C4.</msgReattachAttemptSelf>
-    <msgReattachRoom>%2$^C1 подходит к %1$C3 и усаживатся рядом.</msgReattachRoom>
-    <msgReattachSelf>%^C1 подходит к тебе и усаживается рядом.</msgReattachSelf>
-    <msgStillAffected>Ты не можешь найти в себе силы справиться с большим количеством львов.</msgStillAffected>
-    <msgTooManyMobiles>А что не так с теми львами, которые у тебя уже есть?</msgTooManyMobiles>
-    <position>fight</position>
-    <postaffectDuration>24</postaffectDuration>
-    <target>create_mob</target>
-    <type>none</type>
-  </spell>
+  <mana>100</mana>
+  <nameRus>львы</nameRus>
 </skill>

@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
+  <align>good neutral</align>
   <beats>12</beats>
   <classes>
     <node name="cleric">
       <level>38</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="druid">
+      <level>43</level>
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
@@ -29,7 +35,7 @@
     <professional>true</professional>
   </mob>
   <nameRus>высшее лечение</nameRus>
-  <spell type="SPELL(SuperiorHeal)">
+  <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>prayer</flags>
     <order>player_only</order>

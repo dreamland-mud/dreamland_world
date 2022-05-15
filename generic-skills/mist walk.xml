@@ -10,36 +10,22 @@
   </classes>
   <dammsg></dammsg>
   <group registry="skillGroup">transportation</group>
-  <help id="856" keyword="ТУМАННАЯ" level="-1" type="SkillHelp">%FMT% *%SPELL%* _цель_
+  <help aka="ТРОПА ТУМАННАЯ" id="856" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%CHAR%_
       
-Туманный путь - это могущественное транспортное заклинание, открывающее
-волшебные врата между вампиром и любым существом в мире. Через такие врата
-также переносится домашнее животное, но не члены группы. Персонажи имеют
-некоторую сопротивляемость к этому заклинанию и полный иммунитет, если они
-на 3 уровня старше, чем уровень произнесенного заклинания.
+Туманный путь -- мощное транспортное заклинание, позволяющее вампиру и его
+{hh15любимцу{x перенестись к любому существу в мире. 
 
 На это заклинание действуют те же ограничения, что и на другие из группы
-магии перемещения. Подробнее смотрите в справке о заклинании врат.
+магии перемещения -- см. {y{hcсправка врата{x.
 
 %SA% %H% [(cast,колдовать)] [(gate,врата)] 
 </help>
   <mana>80</mana>
   <nameRus>туманный путь</nameRus>
-  <spell type="GateSpell">
+  <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>magic</flags>
-    <gateShadow>true</gateShadow>
-    <gateViolent>false</gateViolent>
-    <levelDiff>3</levelDiff>
-    <msgGroupEnter></msgGroupEnter>
-    <msgGroupLeave></msgGroupLeave>
-    <msgRoomEnter>Из внезапно возникшего перед тобой туманного облачка появляется %1$C1!</msgRoomEnter>
-    <msgRoomLeave>%1$^C1 превращается в мерцающий туман и исчезает!</msgRoomLeave>
-    <msgSelfEnter></msgSelfEnter>
-    <msgSelfLeave>Ты превращаешься в туманное облачко и плывешь к цели.</msgSelfLeave>
     <position>fight</position>
-    <takeGroup>false</takeGroup>
-    <takePet>true</takePet>
     <target>char_world</target>
     <type>none</type>
   </spell>

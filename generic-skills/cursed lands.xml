@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
-  <affect type="AFFECT(CursedLands)">
+  <affect type="DefaultAffectHandler">
     <wearoff>Ты снова можешь проклинать земли.</wearoff>
     <wearoffRoom>Гнет проклятия над этой местностью исчезает, и все ее обитатели радуются.</wearoffRoom>
   </affect>
@@ -32,7 +32,7 @@
 </help>
   <mana>150</mana>
   <nameRus>проклятые земли</nameRus>
-  <spell type="SPELL(CursedLands)">
+  <spell type="DefaultSpell">
     <damtype>negative</damtype>
     <flags>magic prayer</flags>
     <position>stand</position>

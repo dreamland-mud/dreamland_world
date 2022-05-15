@@ -13,6 +13,11 @@
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
+    <node name="druid">
+      <level>5</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
     <node name="necromancer">
       <level>5</level>
       <maximum>100</maximum>
@@ -31,7 +36,7 @@
   </classes>
   <dammsg mg="n">ледяное касание</dammsg>
   <group registry="skillGroup">combat</group>
-  <help aka="ОБМОРОЖЕНИЕ ЗАЛЕДЕНЕЙ" id="610" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
+  <help aka="ЛЕДЯНОЕ ОБМОРОЖЕНИЕ ПРИКОСНОВЕНИЕ ЗАЛЕДЕНЕЙ" id="610" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
 Это заклинание наносит повреждения жертве, а также обмораживает, уменьшая силу.
 Похожий аффект дают {hh96обмораживающие{x оружия и большинство заклинаний, наносящих
@@ -43,7 +48,7 @@
     <professional>true</professional>
   </mob>
   <nameRus>ледяное касание</nameRus>
-  <spell type="SPELL(ChillTouch)">
+  <spell type="DefaultSpell">
     <damtype>cold</damtype>
     <flags>magic</flags>
     <position>fight</position>

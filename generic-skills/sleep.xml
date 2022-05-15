@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
-  <affect type="SleepAffectHandler">
+  <affect type="DefaultAffectHandler">
     <cancelled>true</cancelled>
     <wearoff>Твоя сонливость проходит.</wearoff>
     <wearoffDispel>Чары сна вокруг %1$C2 рассеиваются.</wearoffDispel>
@@ -24,7 +24,7 @@
     </node>
   </classes>
   <dammsg></dammsg>
-  <group registry="skillGroup">suddendeath beguiling</group>
+  <group registry="skillGroup">suddendeath</group>
   <help aka="УСЫПИТЬ" id="741" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
 
 Это заклинание погружает жертву в глубокий сон, продолжительность которого
@@ -34,7 +34,7 @@
 </help>
   <mana>80</mana>
   <nameRus>сон</nameRus>
-  <spell type="SPELL(Sleep)">
+  <spell type="DefaultSpell">
     <damtype>mental</damtype>
     <flags>magic</flags>
     <position>stand</position>

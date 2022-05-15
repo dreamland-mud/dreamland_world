@@ -2,6 +2,11 @@
 <skill type="GenericSkill">
   <beats>24</beats>
   <classes>
+    <node name="druid">
+      <level>19</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
     <node name="ranger">
       <level>4</level>
       <maximum>100</maximum>
@@ -9,8 +14,9 @@
     </node>
   </classes>
   <command type="SKILL(camouflage)">
+    <argtype>undef</argtype>
     <cat>class</cat>
-    <hint>(рейнджеры) спрятаться в кустах</hint>
+    <hint>(рейнджеры, друиды) спрятаться в кустах</hint>
     <name>camouflage</name>
     <position>stand</position>
     <russian>

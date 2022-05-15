@@ -7,6 +7,11 @@
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
+    <node name="druid">
+      <level>67</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
     <node name="paladin">
       <level>75</level>
       <maximum>100</maximum>
@@ -15,7 +20,7 @@
   </classes>
   <dammsg></dammsg>
   <group registry="skillGroup">healing</group>
-  <help id="721" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+  <help aka="'ГРУППОВОЕ ЛЕЧЕНИЕ' 'ЛЕЧЕНИЕ ГРУППЫ'" id="721" level="-1" type="SkillHelp">%FMT% *%SPELL%*
 
 Опытные клерики и паладины обладают умением лечить сразу всех членов своей группы.
 Лечебная молитва будет выбрана из числа доступных: это может быть мастерское лечение,
@@ -23,12 +28,12 @@
 
 %SA% %H% [(cast,колдовать)], [(refresh,снять усталость)], [(superior heal,высшее лечение)]
 </help>
-  <mana>200</mana>
+  <mana>80</mana>
   <mob>
     <professional>true</professional>
   </mob>
   <nameRus>излечить группу</nameRus>
-  <spell type="SPELL(GroupHeal)">
+  <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>prayer</flags>
     <position>fight</position>

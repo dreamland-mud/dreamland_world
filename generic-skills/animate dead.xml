@@ -3,6 +3,7 @@
   <affect type="DefaultAffectHandler">
     <wearoff>Силы Тьмы и Хаоса снова позволяют тебе оживлять трупы.</wearoff>
   </affect>
+  <align>evil</align>
   <beats>12</beats>
   <classes>
     <node name="necromancer">
@@ -25,16 +26,21 @@
 вот уровень получившегося существа зависит от самого колдуна: чем выше твой
 {hh2036уровень заклинаний{x, тем выше будет уровень зомби.
 
-По традиции, зомби больше всего на свете жаждут свежих мозгов.
+Зомби перенимает определенные умения и характеристики исходного существа, а его
+общая боеспособность и отзывчивость на приказы улучшается у последователей
+{hh968Королевы Воронов{x -- приказы всех остальных же туповатый зомби не всегда
+сможет понять.
+
+По традиции, зомби больше всего на свете жаждут {hh62свежих мозгов{x.
 Вовремя накормленный мозгами зомби восстанавливает силы.
 </help>
-  <mana>50</mana>
+  <mana>100</mana>
   <nameRus>оживление мертвеца</nameRus>
-  <spell type="SPELL(AnimateDead)">
+  <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>magic</flags>
     <position>stand</position>
-    <target>obj_inv obj_room</target>
+    <target>obj_room</target>
     <type>none</type>
   </spell>
 </skill>

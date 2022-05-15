@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill type="ClanSkill">
+  <affect type="DefaultAffectHandler">
+    <dispelled>true</dispelled>
+    <wearoff>Ты снова обретаешь телесность, возвращаясь в свое обычное состояние.</wearoff>
+    <wearoffDispel>%1$^C1 снова обретает телесность, возвращаясь в свое обычное состояние.</wearoffDispel>
+  </affect>
+  <beats>12</beats>
+  <clans>
+    <node name="shalafi">
+      <level>101</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <dammsg></dammsg>
+  <group registry="skillGroup">clan enhancement</group>
+  <help id="91" level="-1" type="SkillHelp">
+  </help>
+  <mana>400</mana>
+  <nameRus>состояние потока</nameRus>
+  <spell type="DefaultSpell">
+    <damtype>none</damtype>
+    <flags>magic</flags>
+    <position>fight</position>
+    <target>char_self</target>
+    <type>defensive</type>
+  </spell>
+</skill>

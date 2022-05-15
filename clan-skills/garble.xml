@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="ClanSkill">
   <affect type="DefaultAffectHandler">
-    <cancelled>true</cancelled>
     <wearoff>Ты снова обретаешь дар речи.</wearoff>
   </affect>
   <beats>12</beats>
@@ -16,19 +15,22 @@
     </node>
   </clans>
   <dammsg></dammsg>
+  <ethos>chaotic</ethos>
   <group registry="skillGroup">clan</group>
   <help id="909" level="-1" type="SkillHelp">Поделится частицей Хаоса с языком противника, в результате чего язык его
 заплетается, и сказать он ничего толком не может. При попытке произнести
 заклинание он в половине случаев не сможет настроиться на правильную интонацию.
 </help>
-  <mana>30</mana>
+  <mana>40</mana>
   <nameRus>спутать язык</nameRus>
-  <spell type="SPELL(Garble)">
-    <damtype>none</damtype>
+  <spell type="DefaultSpell">
+    <damflags>magic prayer</damflags>
+    <damtype>other</damtype>
     <flags>magic</flags>
     <position>fight</position>
     <ranged>false</ranged>
     <target>char_room</target>
+    <tier>2</tier>
     <type>offensive</type>
   </spell>
 </skill>

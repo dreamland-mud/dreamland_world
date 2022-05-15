@@ -10,32 +10,35 @@
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
-    <node name="samurai">
-      <level>36</level>
+    <node name="thief">
+      <level>21</level>
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
   </classes>
-  <command type="SKILL(caltraps)">
+  <command type="DefaultSkillCommand">
+    <argtype>char_fight</argtype>
     <cat>class</cat>
-    <hint>(самураи, ниндзи) бросить шипы под ноги</hint>
+    <hint>(воры, ниндзи) бросить шипы под ноги</hint>
     <name>caltraps</name>
+    <order>fight_only</order>
     <position>fight</position>
     <russian>
       <node>шипы</node>
     </russian>
   </command>
   <dammsg mg="p">шипы</dammsg>
-  <group>fightmaster</group>
+  <group registry="skillGroup">fightmaster</group>
   <help id="562" keyword="КИДАТЬ ХРОМАТЬ ХРОМОТА" level="-1" type="SkillHelp">%FMT% *%SKILL%* _%VICT%_
 
-Ниндзя совсем не чужды подлые приемчики, которые сделали бы честь и ворам.
-Например, ниндзя кидают под ноги противнику горстку маленьких шипов, чтобы те
-начали хромать. Повреждения от шипов невелики, но вот ловкость, {hh47точность и урон{x
-хромой жертвы значительно уменьшаются.
+Подлые ниндзя и воры умеют бросить под ноги жертве горстку маленьких шипов,
+чтобы та начала хромать. Жертва с хромотой {hh705замедляется{x, а ее ловкость, {hh47точность
+и урон{x значительно уменьшаются.
 
-Успех зависит от разницы {hh37ловкости{x ниндзя и жертвы, ее {hh26размера{x,
+Успех зависит от разницы {hh37ловкости{x атакующего и жертвы, ее {hh26размера{x,
 а также других факторов.
 </help>
+  <mana>20</mana>
+  <move>20</move>
   <nameRus>шипы</nameRus>
 </skill>

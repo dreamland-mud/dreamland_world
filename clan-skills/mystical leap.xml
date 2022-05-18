@@ -3,7 +3,7 @@
   <beats>12</beats>
   <clans>
     <node name="shalafi">
-      <level>101</level>
+      <level>25</level>
       <maxLevel>100</maxLevel>
       <maximum>100</maximum>
       <needItem>true</needItem>
@@ -13,10 +13,22 @@
   </clans>
   <dammsg></dammsg>
   <group registry="skillGroup">transportation clan</group>
-  <help id="87" level="-1" type="SkillHelp">
-  </help>
+  <help id="87" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
+
+Транспортное заклинание {hh28ловкачей{x в составе {hh1479Ордена Шалафи{x, позволяющее им
+мгновенно настичь своего противника в пределах данной зоны.
+
+Против игроков {hh32в ПК{x сработает только если их жилы наполняет адреналин от
+сражения с тобой.
+</help>
   <mana>150</mana>
   <nameRus>мистический скачок</nameRus>
+  <organizations>
+    <node name="orden">
+      <clanLevel>0</clanLevel>
+      <name>mysticism</name>
+    </node>
+  </organizations>
   <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>magic</flags>

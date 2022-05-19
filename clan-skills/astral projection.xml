@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="ClanOrgSkill">
   <affect type="DefaultAffectHandler">
+    <wearoff>Ты перестаешь создавать астральную проекцию своего тела.</wearoff>
   </affect>
   <beats>36</beats>
   <clans>
     <node name="shalafi">
-      <level>101</level>
+      <level>25</level>
       <maxLevel>100</maxLevel>
       <maximum>100</maximum>
       <needItem>true</needItem>
@@ -15,10 +16,23 @@
   </clans>
   <dammsg></dammsg>
   <group registry="skillGroup">clan protective</group>
-  <help id="89" level="-1" type="SkillHelp">
-  </help>
+  <help id="89" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+
+Опытные колдуны {hh1479Ордена Шалафи{x могут создать астральную проекцию своего тела,
+которая может ввести в заблуждение нападающих и с некоторой вероятностью отбить
+их первую атаку оружием, перенося заклинателя в безопасное место неподалеку.
+
+Эффективность защиты зависит от превосходства разума Шалафи над силой или
+ловкостью нападающих и степени прокачки умения.
+</help>
   <mana>150</mana>
   <nameRus>астральная проекция</nameRus>
+  <organizations>
+    <node name="orden">
+      <clanLevel>0</clanLevel>
+      <name>apatheism</name>
+    </node>
+  </organizations>
   <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>magic</flags>

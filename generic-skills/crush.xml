@@ -2,13 +2,15 @@
 <skill type="GenericSkill">
   <beats>18</beats>
   <command type="SKILL(crush)">
-    <argtype>undef</argtype>
+    <argtype>char_fight</argtype>
     <cat>class</cat>
     <extra>hidden</extra>
-    <hint>(мобы) сбить с ног мощным ударом</hint>
+    <hint>(мобы) попытаться раздавить цель меньше себя</hint>
     <name>crush</name>
-    <order>player_only</order>
-    <position>stand</position>
+    <position>fight</position>
+    <russian>
+      <node>сокрушить</node>
+    </russian>
   </command>
   <dammsg>сокрушающий удар</dammsg>
   <group registry="skillGroup">fightmaster</group>
@@ -26,5 +28,5 @@
     <professional>false</professional>
   </mob>
   <move>20</move>
-  <nameRus>сокрушить</nameRus>
+  <nameRus>раздавить</nameRus>
 </skill>

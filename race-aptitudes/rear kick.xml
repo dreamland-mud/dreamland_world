@@ -2,21 +2,27 @@
 <skill type="RaceAptitude">
   <beats>12</beats>
   <command type="SKILL(rearkick)">
-    <argtype>undef</argtype>
+    <argtype>char_room</argtype>
     <cat></cat>
     <extra>nointerp</extra>
     <name>rearkick</name>
-    <position>dead</position>
+    <position>stand</position>
   </command>
   <dammsg>удар задними копытами</dammsg>
   <group registry="skillGroup">fightmaster</group>
-  <help id="869" level="-1" type="SkillHelp">Умение кентавров неожиданно и больно дать задним копытом по лбу тому,
-кто подкрадывается к ним сзади с целью свернуть шею или усыпить.
+  <help id="869" level="-1" type="SkillHelp">Умение кентавров неожиданно и больно дать задними копытами по лбу тому,
+кто подкрадывается к ним сзади с целью {hh782придушить{x, {hh709ударить мешочком{x или
+{hh769усыпить прикосновением{x. Шанс успеха зависит от прокачки навыка, размера
+жертвы и других факторов.
+
+{RВНИМАНИЕ:{x Это умение работает автоматически, но при этом не считается {Cпассивным{x.
+Да, такое бывает.
 </help>
   <mob>
     <bonus>20</bonus>
     <dice>2</dice>
   </mob>
+  <move>40</move>
   <nameRus>удар задними копытами</nameRus>
   <races>
     <node name="centaur">

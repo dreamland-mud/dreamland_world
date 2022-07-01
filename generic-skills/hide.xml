@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <wearoff>Ты перестаешь скрываться в тенях.</wearoff>
+  </affect>
+  <beats>8</beats>
   <classes>
     <node name="ninja">
       <level>10</level>
@@ -13,16 +17,16 @@
     </node>
   </classes>
   <command type="SKILL(hide)">
-    <argtype>undef</argtype>
+    <argtype>char_self</argtype>
     <cat>class</cat>
     <extra>keep_hide</extra>
-    <hint>(воры, ниндзи) спрятаться в тенях</hint>
+    <hint>(воры, ниндзи) скрыться в тенях</hint>
     <name>hide</name>
     <order>thief_only</order>
     <position>rest</position>
     <russian>
       <node>укрыться</node>
-      <node>скрываться</node>
+      <node>скрыться</node>
     </russian>
   </command>
   <dammsg></dammsg>
@@ -30,9 +34,10 @@
   <hard>3</hard>
   <help aka="ИСЧЕЗАТЬ НЕЗАМЕТНО СКРЫТНОСТЬ СКРЫТЬСЯ СПРЯТАТЬСЯ" id="798" level="-1" title="Скрытность" type="SkillHelp">%FMT% *%CMD%*
 
-Умение скрываться позволяет тебе остаться незамеченным. Для того, чтобы
-скрыться, воры и нинзи используют тени, ниши и всякие укрытия, поэтому
-гораздо проще так спрятаться в городе, чем на открытой местности.
+Умение скрываться в тенях позволяет тебе остаться незамеченным -- в тех местах,
+где это возможно, разумеется. Шанс скрыться зависит от {hh86типа местности{x и степени
+освещенности вокруг. Спрятаться в воде можно только если умеешь {hh2128плавать{x.
+
 Многие действия выведут тебя из укрытия, сделав заметным для окружающих.
 
 Говорят, что где-то в {hh2065Ааракокране{x существует одна из древнейших гильдий воров,
@@ -46,6 +51,7 @@
     <dice>2</dice>
     <professional>true</professional>
   </mob>
+  <move>40</move>
   <nameRus>скрываться</nameRus>
   <raceBonuses>
     <node name="drow">

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="ClanSkill">
   <affect type="AFFECT(Randomizer)">
-    <wearoff>Ты снова можешь использовать Магические Силы Хаоса.</wearoff>
+    <wearoff>Ты снова перепутать дороги на местности силами Хаоса.</wearoff>
   </affect>
   <beats>24</beats>
   <clans>
@@ -15,18 +15,21 @@
     </node>
   </clans>
   <dammsg></dammsg>
-  <group registry="skillGroup">clan</group>
-  <help id="900" level="-1" type="SkillHelp">Вносит частичку хаоса в порядок дорог.
-Выходы из комнаты, где произнесено заклинания, на некоторое время 
-перепутываются и ведут не туда, куда обычно.
+  <ethos>chaotic</ethos>
+  <group registry="skillGroup">illusion clan</group>
+  <help aka="РАНДОМАЙЗЕР" id="900" keyword="'ЩУПАЛЬЦА ХАОСА'" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+
+Созданные хаоситами щупальца могут перепутать все дороги и выходы из данной
+местности, направив их не туда, куда обычно.
 </help>
   <mana>200</mana>
-  <nameRus>рандомайзер</nameRus>
+  <nameRus>щупальца Хаоса</nameRus>
   <spell type="SPELL(Randomizer)">
-    <damtype>none</damtype>
+    <damtype>mental</damtype>
     <flags>magic</flags>
     <position>stand</position>
     <target>room</target>
+    <tier>2</tier>
     <type>offensive</type>
   </spell>
 </skill>

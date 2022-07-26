@@ -2,7 +2,7 @@
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
     <wearoff>Ты перестаешь скрываться в тенях.</wearoff>
-    <wearoffRoom>%1$C1 перестает скрываться в тенях.</wearoffRoom>
+    <wearoffRoom>%1$C1 переста%1$nет|ют скрываться в тенях.</wearoffRoom>
   </affect>
   <beats>8</beats>
   <classes>
@@ -17,7 +17,7 @@
       <rating>1</rating>
     </node>
   </classes>
-  <command type="DefaultSkillCommand">
+  <command type="SKILL(hide)">
     <argtype>char_self</argtype>
     <cat>class</cat>
     <extra>keep_hide</extra>

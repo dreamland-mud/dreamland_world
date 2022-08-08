@@ -3,8 +3,8 @@
   <affect type="DefaultAffectHandler">
     <cancelled>true</cancelled>
     <dispelled>true</dispelled>
-    <removeCharSelf>Ты больше не чувствуешь божественного благословения.</removeCharSelf>
     <removeCharOthers>%1$^C1 теряет божественное благословение.</removeCharOthers>
+    <removeCharSelf>Ты больше не чувствуешь божественного благословения.</removeCharSelf>
     <removeObj>Аура благословения вокруг %1$O2 исчезает.</removeObj>
   </affect>
   <beats>12</beats>
@@ -41,7 +41,7 @@
     <damtype>none</damtype>
     <flags>prayer</flags>
     <position>stand</position>
-    <target>char_room obj_inv obj_room</target>
+    <target>char_room obj_inv obj_equip obj_room</target>
     <type>defensive</type>
   </spell>
 </skill>

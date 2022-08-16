@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <removeCharOthers>%1$^C1 станов%1$nится|ятся более заметн%1$Gым|ым|ой|ыми, переставая {1{gмаскироваться{2.</removeCharOthers>
+    <removeCharSelf>Ты перестаешь маскироваться на местности.</removeCharSelf>
+  </affect>
   <beats>24</beats>
   <classes>
     <node name="druid">
@@ -14,12 +18,14 @@
     </node>
   </classes>
   <command type="SKILL(camouflage)">
-    <argtype>undef</argtype>
+    <argtype>char_self</argtype>
     <cat>class</cat>
-    <hint>(рейнджеры, друиды) спрятаться в кустах</hint>
+    <extra>keep_hide</extra>
+    <hint>(рейнджеры, друиды) замаскироваться на природе</hint>
     <name>camouflage</name>
     <position>stand</position>
     <russian>
+      <node>замаскироваться</node>
       <node>камуфляж</node>
     </russian>
   </command>
@@ -36,7 +42,7 @@
     <professional>true</professional>
   </mob>
   <move>40</move>
-  <nameRus>камуфляж</nameRus>
+  <nameRus>замаскироваться</nameRus>
   <raceBonuses>
     <node name="satyr">
       <bonus>100</bonus>

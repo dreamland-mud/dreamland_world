@@ -1,0 +1,14 @@
+.AffectHandler(@name@).@trig@ = function(ch, verbose) {
+    /* 
+        Called when a character with this race/proto affect is created or updated during char_update (once per minute).
+        In most cases just need to check if char is not fighting and re-apply:
+
+        if (!ch.adrenaline && ch.position == .tables.position_table.stand)
+            .Skill("hide").apply(ch, ch, 0);
+
+        
+        
+            
+    */
+    return false;
+}

@@ -34,21 +34,25 @@
     </node>
   </classes>
   <command type="DefaultSkillCommand">
-    <argtype>undef</argtype>
+    <argtype>string</argtype>
     <cat>class</cat>
     <hint>(воинские профессии) выбить дверь</hint>
     <name>bashdoor</name>
-    <position>fight</position>
+    <position>stand</position>
     <russian>
       <node>выбить</node>
     </russian>
   </command>
-  <dammsg>удар об дверь</dammsg>
+  <dammsg mg="f">попытка выбить проход</dammsg>
   <group registry="skillGroup">adventure</group>
-  <help aka="'ВЗЛОМАТЬ ДВЕРЬ'" id="833" level="-1" type="SkillHelp">%FMT%  *(bashdoor,выбить)* _направление_  
+  <help aka="'ВЗЛОМАТЬ ДВЕРЬ'" id="833" level="-1" type="SkillHelp">%FMT%  *(bashdoor,выбить)* _%DIR%_  
 
-Умение вышибать собой двери. Если попытка не удалась, вышибатель получает 
-повреждения и падает на пол. Затем он вынужден вставать и начинать все заново.
+С помощью этого навыка можно попробовать разогнаться и вышибить запертую дверь,
+проход или {hh1016экстра-выход{x. Успех зависит от твоей силы и размера, а также от числа
+существ выше тебя уровнем, которые &quot;охраняют&quot; проход. 
+
+В случае неудачи можно больно ушибиться, а окружающие существа могут на тебя
+напасть.
 </help>
   <mana>20</mana>
   <mob>

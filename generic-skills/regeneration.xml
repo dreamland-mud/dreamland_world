@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
+    <removeCharOthers>%1$^C1 вздрагива%1$nет|ют от холода, когда способность к регенерации покидает %1$P2 тело.</removeCharOthers>
+    <removeCharSelf>Ты вздрагиваешь от холода, когда способность к регенерации покидает твое тело.</removeCharSelf>
+  </affect>
   <beats>18</beats>
+  <classes>
+    <node name="druid">
+      <level>46</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
   <dammsg></dammsg>
   <group registry="skillGroup">healing</group>
   <help id="2187" keyword="РЕГЕНЕРАЦИЯ" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%CHAR%_
 
+Эта мощная молитва дарует друидам способность к быстрой регенерации, обычно
+доступной лишь от специфических умений, магических артефактов или просто от
+рождения (например, у {hh157троллей{x или у нежити). Впрочем, врожденный дар
+регенерации все равно сильнее вызванного молитвой или артефактами.
+
+Регенерация сильно ускоряет {hh2130восстановление жизни{x. {hh837Отравление{x и {hh541гниение{x
+полностью останавливают процессы регенерации.
 </help>
   <mana>200</mana>
   <mob>

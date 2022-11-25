@@ -3,8 +3,9 @@
   <affect type="DefaultAffectHandler">
     <cancelled>true</cancelled>
     <dispelled>true</dispelled>
+    <removeCharOthers>%1$^C1 переста%1$nет|ют дрожать от холода.</removeCharOthers>
     <removeCharSelf>Ощущение холода проходит.</removeCharSelf>
-    <removeCharOthers>%1$^C1 перестает дрожать от холода.</removeCharOthers>
+    <removeObj>%1$^O1 постепенно оттаива%1$nет|ют.</removeObj>
   </affect>
   <beats>12</beats>
   <classes>
@@ -42,6 +43,14 @@
 Похожий аффект дают {hh96обмораживающие{x оружия и большинство заклинаний, наносящих
 урон {hh101холодом{x или льдом. Чтобы избавиться от обморожения можно погреться {hh1023у костра{x
 или в {hh86пустыне{x. Ну или получить огненным шаром в лоб.
+
+%FMT% *%SPELL%* _%OBJ%_
+
+Этим же заклинанием можно замораживать самые разные вещи! Можно заморозить
+некоторые жидкости в {hh1075емкостях и фонтанах{x -- тогда из них временно нельзя пить. 
+Можно временно заморозить что-то непостоянное и органическое (например, части
+тела) -- чтобы сохранить их подольше. Растопить или согреть замороженные вещи
+можно {hh839горящими руками{x. Заморозкой также можно остудить {hh4раскаленные{x вещи на земле. 
 </help>
   <mana>80</mana>
   <mob>
@@ -53,7 +62,7 @@
     <flags>magic</flags>
     <position>fight</position>
     <ranged>false</ranged>
-    <target>char_room</target>
+    <target>char_room obj_room</target>
     <tier>2</tier>
     <type>offensive</type>
   </spell>

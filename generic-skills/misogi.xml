@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <removeCharSelf>Ты снова можешь попытаться пройти обряд очищения.</removeCharSelf>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="samurai">
+      <level>25</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <command type="DefaultSkillCommand">
+    <argtype>char_self</argtype>
+    <cat></cat>
+    <name>misogi</name>
+    <position>rest</position>
+    <russian>
+      <node>мисоги</node>
+    </russian>
+  </command>
+  <dammsg></dammsg>
+  <group registry="skillGroup">adventure</group>
+  <help id="211" level="-1" type="SkillHelp">%FMT% *%CMD%*
+
+{x  Мисоги представляет из себя ритуал очищения для достижения обновления.
+На лоне природы, вблизи водоёмов, рек и водопадов, самурай может совершить
+обряд омовения, и в случае успеха впадёт в транс, во время которого будут
+очищены и обновлены шесть элементов из которых состоит существо, пять чувств 
+и сознание.
+
+{x  Особой формой мисоги считается {hh743харакири{x, смысл которого в смывании 
+кровью позора.
+</help>
+  <mana>40</mana>
+  <move>100</move>
+  <nameRus>мисоги</nameRus>
+</skill>

@@ -39,9 +39,9 @@
     </node>
   </classes>
   <command type="SKILL(disarm)">
-    <argtype>undef</argtype>
+    <argtype>char_fight</argtype>
     <cat>class</cat>
-    <hint>(воинские профессии) обезоружить противника</hint>
+    <hint>обезоружить противника</hint>
     <name>disarm</name>
     <order>fight_only</order>
     <position>fight</position>
@@ -53,9 +53,13 @@
   <group registry="skillGroup">weaponsmaster</group>
   <help aka="'ОБЕЗОРУЖИВАТЬ ПРОТИВНИКОВ'" id="812" level="-1" type="SkillHelp">%FMT% *%CMD%*
 
-Обезоружив врага, ты лишаешь его возможности наносить тебе удары оружием.
-Противник начинает хуже отражать твои атаки. Умение обезоруживания зависит
-также и от навыков владения оружием противника.
+Это важное боевое умение позволяет лишить противника наносить тебе удары оружием
+или парировать им. Безоружные противники гораздо слабее бьют и хуже отражают
+твои атаки.
+
+Шанс успеха зависит от прокачки этого умения и твоего навыка владения оружием,
+типа и веса оружия противников, {hh28архетипа{x, размера, силы и/или ловкости
+бойцов и многих других факторов.
 </help>
   <mob>
     <bonus>20</bonus>
@@ -63,6 +67,6 @@
     <offense>disarm</offense>
     <professional>true</professional>
   </mob>
-  <move>80</move>
+  <move>40</move>
   <nameRus>обезоружить</nameRus>
 </skill>

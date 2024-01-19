@@ -1,0 +1,292 @@
+.apply(function() {
+    
+    if (.tmp.room == null) .tmp.room = .Map();
+
+    // "Smart" echo in the room: accounts for blindness, sleep etc.
+    .tmp.room.echo = function(room, msg) {
+	if (room == null) return;
+	
+	for (rch in room.ppl) {
+	    if (.tmp.mob.awake(rch) && !.tmp.mob.isBlind(rch))
+		rch.act(msg);
+	}
+    };
+
+    // Returns "на землю" depending on the sector_type for dropped items 
+    .tmp.room.dropWhere = function(room) {
+	var msg; msg = "на землю";
+	if (room != null) {
+	    var sect; sect = room.sector_type;
+	    if (room.isWater()) {
+		if (room.liquid != null) {
+		    var liq; liq = room.liquid.short_descr;
+		    if (liq != null && liq != "")
+			msg = .fmt("в $1$N4", liq);
+		    else msg = "в воду";
+		} else msg = "в воду";
+	    }
+	    else if (sect == .tables.sector_table.inside) msg = "на пол";
+	    else if (sect == .tables.sector_table.hills) msg = "в траву";
+	    else if (sect == .tables.sector_table.forest) msg = "в кусты";
+	    else if (sect == .tables.sector_table.mountain) msg = "на камни";
+	    else if (sect == .tables.sector_table.desert) msg = "в песок";
+	    else if (sect == .tables.sector_table.air) msg = "в воздух";
+	}   
+	return msg;
+    };
+
+    // Determine if room has puddles of liquid: harder to dirt, louder to sneak by
+    .tmp.room.hasPuddles = function(room) {
+	var sect;
+	if (room != null) sect = room.sector_type;  
+	else return false;
+	var puddle; puddle = room.get_obj_vnum(75);
+    
+	return ((room.isOutside() && .sky >= 2) ||
+		(room.isWater()) ||
+		(sect != .tables.sector_table.air && puddle != null) );
+    };
+
+    // Determine if ch can move vict (or themselves): from_room -> to_room
+    .tmp.room.canMove = function(ch, vict, from_room, to_room, verbose) {
+	var msg; msg = "";
+	if (!ch.can_see_room(to_room)) {
+	    if (ch == vict) msg = "Жаль, но ты не можешь туда идти.";
+	    else msg = .fmt("Жаль, но %1$C1 не мо%1$nжет|гут туда идти.", vict);
+	}
+	else if (from_room == to_room) {
+	    if (ch == vict) msg = "Ты пробуешь переместиться... но почему-то оказываешься на том же месте.";
+	    else msg = .fmt("%1$^C1 пробу%1$nет|ют переместиться... но почему-то оказыва%1$nется|ются на том же месте.", vict);
+	}
+	else if (vict.is_npc() && .tmp.transport.isProtectedRoom(to_room) &&
+		 (vict.act & .tables.act_flags.aggressive ||
+		  vict.affected_by & .tables.affect_flags.bloodthirst) ) {
+	    if (ch == vict) msg = "Тебе запрещен вход в эту мирную местность.";
+	    else msg = .fmt("%1$^C3 запрещен вход в эту мирную местность", vict);	    
+	}
+	else if (!.tmp.transport.canFitInto(vict, to_room)) {
+	    if (ch == vict) msg = "Для тебя там сейчас нет места.";
+	    else msg = .fmt("Для %1$C2 там сейчас нет места.", vict);	    
+	}
+	else if (to_room.guilds != "" && !vict.is_npc()) {
+	    if (!to_room.guilds.contains(vict.profession.name)) {
+		if (ch == vict) msg = "Ты не можешь войти в чужую гильдию.";
+		else msg = .fmt("%1$^C4 не впустят в чужую гильдию.", vict);		    
+	    }
+	    if (vict.adrenaline || vict.PK_time_v > 0) {
+		if (ch == vict) msg = "С кровью на руках тебе там не найти укрытия.";
+		else msg = .fmt("С кровью на руках %1$C3 там не найти укрытия.", vict);			    
+	    } 
+	}
+	else if (to_room.room_flags & .tables.room_flags.safe) {
+	    if (!vict.is_npc() && (vict.adrenaline || vict.PK_time_v > 0)) {
+		if (ch == vict) msg = "С кровью на руках тебе там не найти укрытия.";
+		else msg = .fmt("С кровью на руках %1$C3 там не найти укрытия.", vict);			    
+	    }	    
+	}
+	else if (to_room.sector_type == .tables.sector_table.air) {
+	    if (!vict.flying) {
+		if (ch == vict) msg = "Чтобы попасть туда, тебе сначала надо взлететь.";
+		else msg = .fmt("Чтобы попасть туда, %1$C3 сначала надо взлететь.", vict);
+	    }    
+	}
+	else if (to_room.sector_type == .tables.sector_table.water_noswim) {
+	    if (!vict.flying && vict.boat == null &&
+		!(vict.affected_by & .tables.affect_flags.swim)) {
+		if (ch == vict) msg = "Чтобы попасть туда, тебе нужна лодка, способность плавать или полет.";
+		else msg = .fmt("Чтобы попасть туда, %1$C3 нужна лодка, способность плавать или полет.", vict);	        
+	    }    
+	}
+	else if (to_room.sector_type == .tables.sector_table.underwater) {
+	    if (!(vict.affected_by & .tables.affect_flags.swim)) {
+		if (ch == vict) msg = "Чтобы попасть {hh2128под воду{x, тебе нужны жабры или акваланг.";
+		else msg = .fmt("Чтобы попасть {hh2128под воду{x, %1$C3 нужны жабры или акваланг.", vict);	        
+	    }    
+	}
+	else if (vict.form & .tables.form_flags.fish) {
+	    if (from_room.isWater() && !to_room.isWater()) {
+		if (ch == vict) msg = "Ты -- рыба, а не амфибия, тебе нельзя выходить на сушу.";
+		else msg = .fmt("%1$^C1 -- рыба, а не амфибия, %1$P3 нельзя выходить на сушу.", vict);		        
+	    }
+	}
+	else if (vict.detection & .tables.detect_flags.web) {
+	    if (ch == vict) msg = "Ты пробуешь переместиться, но паутина удерживает тебя на месте.";
+	    else msg = .fmt("%1$^C1 не мо%1$nжет|гут переместиться, паутина удерживает %1$P2 на месте.", vict);	    
+	}
+	else if (vict.isAffected("entangle")) {
+	    if (ch == vict) msg = "Ты пробуешь переместиться, но корни терновника удерживают тебя на месте.";
+	    else msg = .fmt("%1$^C1 не мо%1$nжет|гут переместиться, корни терновника удерживают %1$P2 на месте.", vict);	    
+	}
+	else if (vict.detection & .tables.detect_flags.immobilized) {
+	    if (ch == vict) msg = "Ты не можешь переместиться, когда тебя обездвижили.";
+	    else msg = .fmt("%1$^C1 не мо%1$nжет|гут переместиться -- %1$P2 обездвижили.", vict);	    
+	}
+	else if (vict.isAffected("manacles") && ch.getClan() != "RULER") {
+	    if (ch == vict) msg = "Ты не можешь переместиться в кандалах.";
+	    else msg = .fmt("%1$^C1 не мо%1$nжет|гут переместиться -- %1$P2 заковали в кандалы.", vict);	    
+	}
+    
+	if (msg != "") {
+	    if (verbose) ch.act(msg); // allow silent check, e.g., for teleport
+	    return false;
+	}
+    
+	return true;
+    };
+
+
+    .tmp.room.dirNames = .List().add(
+	"north",
+	"east",
+	"south",
+	"west",
+	"up",
+	"down");
+	
+    .tmp.room.dirRusNames = .List().add(
+	"на север",
+	"на восток",
+	"на юг",
+	"на запад",
+	"вверх",
+	"вниз");
+
+    .tmp.room.moveTypes = .Array();
+    .tmp.room.MoveType = function(name, enter, leave) {
+	this = .Map();
+	this.name = name;
+	this.enter = enter;
+	this.leave = leave;
+	.tmp.room.moveTypes[name] = this;
+	return this;
+    };
+    .tmp.room.MoveType("swimming", "приплы%1$Gло|л|ла", "уплы%1$Gло|л|ла");
+    .tmp.room.MoveType("waterwalk", "приш%1$Gло|ел|ла по воде", "уш%1$Gло|ел|ла по воде");
+    .tmp.room.MoveType("slink", "припол%1$Gзло|з|зла", "упол%1$Gзло|з|зла");
+    .tmp.room.MoveType("crawl", "прокрал%1$Gось|ся|ась", "прокрал%1$Gось|ся|ась");
+    .tmp.room.MoveType("normal", "приш%1$Gло|ел|ла", "уш%1$Gло|ел|ла");
+    .tmp.room.MoveType("quickly", "еще нету", "еще нету");
+    .tmp.room.MoveType("running", "прибежа%1$Gло|л|ла", "убежа%1$Gло|л|ла");
+    .tmp.room.MoveType("flee", "прибежа%1$Gло|л|ла", "сбежа%1$Gло|л|ла");
+    .tmp.room.MoveType("riding", "прискака%1$Gло|л|ла", "ускака%1$Gло|л|ла");
+    .tmp.room.MoveType("flying", "прилете%1$Gло|л|ла", "улете%1$Gло|л|ла");
+
+
+    .tmp.room.Trap = function(vnum) {
+	this = .get_room_index(vnum);
+    
+	msgTrapSelf  = "";
+	msgTrapOther = "";
+	msgDiveSelf = "";
+	msgDiveOther = "";
+	msgMoveSelf = "";
+	msgMoveOther = "";
+	msgTargetOther = "Внезапно появляется %C1.";
+	trapShortDescr =  "";
+	trapTarget = null;
+	divingSpeed = 0;
+	surfaceQuality = 0;
+	optimalMove = 2; // danger normal
+	moreSpeedOK = false;
+	lessSpeedOK = false;
+
+	onDive = function(ch, movedanger) {
+	    if (!trapMatches(ch, movedanger))
+		return false;
+	
+	    trapCapture(ch);
+	    trapWork(ch);
+	    return true;
+	};
+
+	onDiveUpdate = function() {
+	    ppl.forEach(function() {
+		if (death_ground_delay > 0)
+		    in_room.trapWork(this);
+	    });
+	};
+
+	trapCondition = function(ch) { return true; };
+    
+	setTarget = function(tvnum) {
+	    trapTarget = .get_room_index(tvnum);
+	};
+
+	toString = function() {
+	    var t;
+
+	    if (target == null) t = "null";
+	    else t = "[" + target.vnum + "] " + target.name;
+
+	    return 
+		"trapShortDescr   [" + trapShortDescr + "]\n" +
+		"msgTrapSelf  [" + msgTrapSelf + "]\n" +
+		"msgTrapOther [" + msgTrapOther + "]\n" +
+		"msgDiveSelf  [" + msgDiveSelf + "]\n" +
+		"msgDiveOther [" + msgDiveOther + "]\n" +
+		"msgMoveSelf  [" + msgMoveSelf + "]\n" +
+		"msgMoveOther [" + msgMoveOther + "]\n" +
+		"msgTargetOther [" + msgTargetOther + "]\n" +
+		"divingSpeed = " + divingSpeed + "\n" +
+		"surfaceQuality = " + surfaceQuality + "\n" +
+		"trapTarget = " + t + "\n" +
+		"trapCondition = " + trapCondition;
+	};
+
+	trapMatches = function(ch, movedanger) {
+	    var chance;
+	
+	    if (ch.is_immortal()) return false;
+
+	    if (surfaceQuality >= 100) return false;
+
+	    if (!trapCondition(ch)) return false;
+
+	    chance = 20 * (optimalMove - movedanger);
+	    if (moreSpeedOK)
+		if (.number_percent() + chance <= surfaceQuality)
+		    return false;
+
+	    if (lessSpeedOK)
+		if (.number_percent() - chance <= surfaceQuality)
+		    return false;
+
+	    if (.number_percent() + .abs(chance) <= surfaceQuality)
+		return false;
+
+	    return true;
+	};
+    
+	trapCapture = function(ch) {
+	    if (!ch.is_npc()) ch.eraseAttribute("speedwalk");
+
+	    if (msgTrapSelf != "") ch.act(msgTrapSelf, ch);
+	    if (msgTrapOther != "") recho(msgTrapOther, ch);
+
+	    ch.death_ground_delay = divingSpeed;
+	    ch.trap = trapFlags;
+	};
+
+	trapWork = function(ch) {
+	    if (msgDiveSelf != "") ch.act(msgDiveSelf, ch);
+	
+	    if (msgDiveOther != "") ppl.sub(ch).call.act(msgDiveOther, ch);
+
+	    ch.death_ground_delay = ch.death_ground_delay - 1;
+	    if (ch.death_ground_delay > 0) return;
+
+	    ch.death_ground_delay = 0;
+	    ch.trap = 0;
+	
+	    if (msgMoveSelf != "") ch.act(msgMoveSelf, ch);
+	    if (msgMoveOther != "") recho(msgMoveOther, ch);
+
+	    if (trapTarget == null) 
+		ch.raw_kill(-1, ch, "room");
+	    else
+		ch.transfer(trapTarget, ch, "", "", msgTargetOther, "");
+	};
+
+	return this;
+    };
+})

@@ -1,0 +1,36 @@
+.apply(function() {
+    
+    // Core helper to calculate character's probability to do something
+    // accounting for their race, religion, calendar bonuses, luck etc.
+    // Use this for advanced probability calculations, e.g., skill success.
+    .tmp.chance = function(base_chance, ch) {
+	var success; success = base_chance; // default
+	var msg; msg = ""; // special success/failure messages
+	
+	// TO-DO: Bonuses should work for NPC thieves too
+	// TO-DO for RUFFINA: .Bonus("thief skills").active(ch) должен проверять на вора, но не проверяет, поэтому добавлен костыль проверки профы
+	if (!ch.is_npc() 
+	    && .Bonus("thief skills").active(ch) 
+	    && ch.profession.name == "thief") {
+	    var bonus; bonus = .number_range(1, 10);
+	    if (bonus > 5) // Notify about particularly good bonus.
+		msg = msg + "{1{GПохоже, ворам сегодня фартит больше обычного.{2{/"; 
+	    success = success + bonus;
+	}
+	
+	if (ch.race.name == "hobbit") {
+	    if (.chance(5)) 
+		msg = msg + "{1{GОх уж эти везучие хоббитцы!{2{/"; 
+	    success = success + 2; // static +2% luck, pesky hobbitses
+	}
+	
+	success = .urange(1, success, 99); // there's always a chance!
+	
+	if (.chance(success)) {
+	    if (msg != "") ch.act(msg);
+	    return true;
+	}
+	return false;
+    };
+
+})

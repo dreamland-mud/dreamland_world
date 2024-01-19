@@ -1,0 +1,35 @@
+.Spell("armor").runVict = function() {
+    var msg;
+    if (vict.isAffected(skill.name)) {
+	if (ch == vict) msg = .fmt("Ты уже под воздействием заклинания брони.", ch);
+	else msg = .fmt("%1$^C1 уже под воздействием заклинания брони.", vict);		
+    }
+    
+    if (msg != null) {
+	ch.act(msg);
+	ch.echoMaster(msg);	
+	return;
+    }
+    
+    if (ch.profession.flags(ch) & .tables.prof_flags.divine) {
+	vict.act("Тебя окружает священная броня, дарованная {1{C%N5{2.", rel);
+	vict.recho("%^C4 окружает священная броня, дарованная {1{C%N5{2.", vict, rel);
+    } // Если молитва, пишем, от какого божества
+    else {
+	vict.act("Тебя окружает магическая броня, улучшающая защитные навыки.");
+	vict.recho("%^C4 окружает магическая броня, улучшающая защитные навыки.", vict);
+    }
+
+    var af; af = .Affect();
+    af.type      = skill.name;
+    af.level     = level;
+    af.duration  = 7 + level / 6;
+    af.location  = .tables.apply_flags.ac;
+    af.modifier  = -1 * level / 3;
+    vict.affectAdd(af);
+    af.location = .tables.apply_flags.learned;
+    af.where = .tables.affwhere_flags.skill_groups;
+    af.global = "defensive"; // множественные значения можно задать через пробел 
+    af.modifier  = level/25;
+    vict.affectAdd(af);	
+}

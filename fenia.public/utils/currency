@@ -1,0 +1,233 @@
+.apply(function() {
+    if (.tmp.currency == null)
+	.tmp.currency = .Map();
+
+    this = .tmp.currency;
+
+    // These helpers are agnostic of .tmp.currency -- used elsewhere
+    // Calculate if character can afford to pay an amount sum in silver
+    canAfford = function(ch, amount) {
+	return (ch.gold * 100 + ch.silver >= amount);    
+    };
+
+    // Adjust prices based on newbie, class and religion
+    adjustPrice = function(ch, dealer, amount) {
+	if (ch.is_npc()) return amount;
+	if (ch.newbie) amount = amount / 10;
+	else {
+	    if (ch.profession.name == "druid")
+		amount = amount * 2;
+	    else if (.tmp.religion.hasPatron(ch, "fili", false))
+		amount = amount / 4;
+	    else if (dealer.getClan().toLower() != "none" &&
+		     dealer.getClan().toLower() == ch.getClan().toLower())
+		amount = amount / 2;
+	}
+	return amount;
+    };
+	
+    // Process payment in any available currency, converted from amount in silver
+    pay = function(ch, amount, verbose) {
+	// Use negative amount to add/deposit gold to character
+	var silver_amount, gold_amount, silver_msg, gold_msg;
+	gold_amount = amount / 100;
+	silver_amount = amount % 100;
+	silver_msg=''; gold_msg='';
+	if (amount <= 0) {
+	    ch.silver = ch.silver - silver_amount;
+	    ch.gold = ch.gold - gold_amount;
+	    if (verbose) {
+		if(gold_amount!=0) {
+		    gold_msg = .fmt('{1{Y%1$d{2 золот%1$Iой|ых|ых', .abs(gold_amount));
+		}
+		if(silver_amount!=0) {
+		    silver_msg = .fmt('{1{W%1$d{2 серебрянн%1$Iую|ых|ых моне%1$Iту|ты|т', .abs(silver_amount));
+		    if(gold_amount!=0) silver_msg = .fmt(' и %s', silver_msg);
+		}
+		ch.act("{yТвой кошелек становится тяжелее на %1$s%2$s.{x", gold_msg, silver_msg);
+	    }
+	    return;
+	}
+	if (.tmp.currency.canAfford(ch, amount)) {
+	    var remains; remains = amount;
+	    
+	    // pay in silver first
+	    remains = remains - .min(ch.silver, remains); 
+	    ch.silver = ch.silver - (amount - remains); 
+
+	    ch.gold = ch.gold - remains / 100; 
+	    remains = remains - (remains / 100) * 100; 
+
+	    if (remains > 0) { 
+		ch.gold = ch.gold - 1; 
+		ch.silver = ch.silver + (100 - remains); 
+	    }
+
+	    if (verbose) {
+		if(gold_amount!=0) {
+		    gold_msg = .fmt('{1{Y%1$d{2 золот%1$Iой|ых|ых', .abs(gold_amount));
+		}
+		if(silver_amount!=0) {
+		    silver_msg = .fmt('{1{W%1$d{2 серебрянн%1$Iую|ых|ых моне%1$Iту|ты|т', .abs(silver_amount));
+		    if(gold_amount!=0) silver_msg = .fmt(' и %s', silver_msg);
+		}
+		ch.act("{yТы вздыхаешь, выплачивая %1$s%2$s.{x", gold_msg, silver_msg);
+	    }
+	    return;	 	        
+	}
+    };
+    
+    /*
+     * base class for currency
+     */
+    Currency = function(name, aliases, format, whom) {
+	this = .Map();
+	this.name = name;       // symbolic name
+	this.aliases = aliases; // pattern to match names against
+	this.format = format;   // pattern to format amounts of currency
+	this.whom = whom;       // genitive case plural 
+	
+	matches = function(str) {
+	    return str.match(aliases);
+	};
+	toString = function(value) { 
+	    return .fmt(format, value);
+	};
+	balance = function(ch) {
+	    return 0;
+	};
+	deposit = function(ch, value) {
+	};
+	withdraw = function(ch, value) {
+	    return false;
+	};
+	
+	return this;
+    };
+    
+    /*
+     * quest points
+     */
+    QuestPoints = function() {
+	this = Currency("qp", "qp|questpoints|кп", 
+			 "%1$d квестов%1$Iую|ые|ых едини%1$Iцу|цы|ц",
+			 "квестпоинтов");
+
+	balance = function(ch) {
+	    return ch.questpoints;
+	};
+	deposit = function(ch, value) {
+	    ch.questpoints = ch.questpoints + value;
+	};
+	withdraw = function(ch, value) {
+	    if (ch.questpoints < value)
+		return false;
+	    ch.questpoints = ch.questpoints - value;
+	    return true;
+	};
+	return this;
+    };
+    
+    /*
+     * silver coins
+     */
+    Silver = function() {
+	this = Currency("silver", "silver|coin|серебр[ао]",
+			 "%1$d серебрян%1$Iый|ых|ых", "серебра");
+	balance = function(ch) {
+	    return ch.silver;
+	};
+	deposit = function(ch, value) {
+	    ch.silver = ch.silver + value;
+	};
+	withdraw = function(ch, value) {
+	    if (ch.silver < value)
+		return false;
+	    ch.silver = ch.silver - value;
+	    return true;
+	};
+	return this;
+    };
+    
+    /*
+     * gold coins
+     */
+    Gold = function() {
+	this = Currency("gold", "gold|золот[ао]",
+			 "%1$d золот%1$Iой|ых|ых", "золота");
+	balance = function(ch) {
+	    return ch.gold;
+	};
+	deposit = function(ch, value) {
+	    ch.gold = ch.gold + value;
+	};
+	withdraw = function(ch, value) {
+	    if (ch.gold < value)
+		return false;
+	    ch.gold = ch.gold - value;
+	    return true;
+	};
+	return this;
+    };
+    
+    /*
+     * items as currency (e.g. diamonds)
+     */
+    Item = function(aliases, format, whom, vnum) {
+	this = Currency("" + vnum, aliases, format, whom);
+	this.vnum = vnum;
+	pObjIndex = .get_obj_index(vnum);
+
+	balance = function(ch) {
+	    var o, cnt;
+	    cnt = 0;
+	    for (o = ch.carrying; o != null; o = o.next_content)
+		if (o.vnum == vnum)
+		    cnt = cnt + 1;
+
+	    return cnt;
+	};
+	deposit = function(ch, value) {
+	    var i;
+	    for (i = 0; i < value; i = i + 1) 
+		pObjIndex.create().obj_to_char(ch);
+	};
+	withdraw = function(ch, value) {
+	    var i, o;
+	    for (i = 0; i < value; i = i + 1) {
+		o = ch.get_obj_carry_vnum(vnum);
+		if (o == null) 
+		    return false;
+		o.extract(true);
+	    }
+	    return true;
+	};
+	return this;
+    };
+    
+    /*
+     * base class to represent actual cost and payer 
+     */
+    Price = function(ch, amount, currency) {
+	this = .Map();
+	this.ch = ch;
+	this.amount = amount;
+	this.currency = currency;
+	
+	toString = function() {
+	    return currency.toString(amount);
+	};
+	deposit = function() {
+	    currency.deposit(ch, amount);
+	};
+	withdraw = function() {
+	    if (currency.balance(ch) < amount)
+		return false;
+	    currency.withdraw(ch, amount);
+	    return true;
+	};
+	
+	return this;
+    };
+})
+

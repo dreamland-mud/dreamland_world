@@ -1,0 +1,312 @@
+.apply(function() {
+    if (.tmp.object == null) .tmp.object = .Map();
+
+    /////////////////////////////////////////////////////////////
+    ////////////////////// BASIC HELPERS ////////////////////////
+    /////////////////////////////////////////////////////////////
+    
+    // Basic helper to check if the obj "exists"
+    .tmp.object.valid = function(obj) {
+	return (obj != null && !obj.dead && obj.condition > 0);
+    };
+    
+    // TO-DO (Ruffina): move this to fenia API
+    .tmp.object.indestructible = function(obj) {
+	return ((obj.item_type == .tables.item_table.pc_corpse) ||
+		(obj.extra_flags & .tables.extra_flags.nopurge) ||
+		(obj.material.indestructible) ||				
+		(obj.timer <= 0 && obj.owner != "") ||
+		(obj.personal != null) ||
+		(obj.pIndexData.limit > -1) ||
+		(obj.material.hardness <= 0));
+    };
+
+    .tmp.object.isElastic = function(obj) {
+	return (obj.material.cloth || obj.material.leather);
+    };
+
+    // Determine whether an item can be removed if worn
+    .tmp.object.canRemove = function(obj) {
+	return (.tmp.object.valid(obj) && obj.worn &&
+		!(obj.extra_flags & .tables.extra_flags.noremove) &&
+		!(obj.wear_flags & .tables.wear_flags.wear_tattoo));
+    };
+    
+    // Determine if character has enough strength to kick/throw an object
+    .tmp.object.movable = function(ch, obj) {
+	return (.tmp.object.valid(obj) &&
+		(obj.wear_flags & .tables.wear_flags.take) &&
+		obj.weight <= 200 + .urange(-20, (ch.cur_str - 20) * 3, 20));
+    };		
+    
+    // Create a .List() of worn items that can be removed.
+    .tmp.object.removableEquip = function(ch) {
+	var eq; eq = .List();
+	for (item in ch.equipment) {
+	    if (!.tmp.object.canRemove(obj)) continue;
+	    eq.add(item);
+	}
+	return eq;
+    };
+
+    /////////////////////////////////////////////////////////////
+    ////////////////////// WEAPONS //////////////////////////////
+    /////////////////////////////////////////////////////////////
+    
+    // simple helper to check if the obj is weapon (shorter than checking flags)
+    .tmp.object.isWeapon = function(obj) {
+	return (.tmp.object.valid(obj) && 
+		obj.item_type == .tables.item_table.weapon);
+    };	
+    
+    // Return obj weapon class as a string
+    .tmp.object.getWeaponClass = function(obj) {
+	if (.tmp.object.isWeapon(obj))
+	    return .tables.weapon_class.names(obj.value0);
+	else return "";
+    };
+    
+    // Does this weapon have blade?
+    .tmp.object.hasBlade = function(obj) {
+	var class; class = .tmp.object.getWeaponClass(obj);
+	return (class != "" &&
+		( (obj.attack_damage == "pierce" || obj.attack_damage == "slash") ||
+		  (class == "sword" || class == "dagger" || class == "axe" ||
+		   class == "spear" || class == "polearm" || class == "arrow") ));
+    };
+    
+    // Does this weapon have pole?
+    .tmp.object.hasPole = function(obj) {
+	var class; class = .tmp.object.getWeaponClass(obj);
+	return (class != "" &&
+		(class == "axe" || class == "spear" || class == "polearm" ||
+		 class == "lance" || class == "arrow"));
+    };
+
+    /////////////////////////////////////////////////////////////
+    ////////////////// COST, WEIGHT, SIZE, AC ///////////////////
+    /////////////////////////////////////////////////////////////
+    
+    .tmp.object.calculateWeight = function(obj) {
+	if (!.tmp.object.valid(obj)) return 0;
+	var size; size = .tmp.object.dimensions(obj);
+	
+	var volume; // calculate volume in cubic millimeters
+	volume = size.length * size.width * size.thickness * size.quantity;
+	volume = .max(1, volume / 1000); // volume in cubic centimeters
+
+	var weight; // calculate weight in grams
+	// volume / 1000 = volume in cm3, rho / 1000 = density in g/cm3
+	weight = .max(1, (volume * obj.material.rho) / 1000);
+	
+	// Now convert into MUD "units" -- 1/10 of pound currently
+	weight = .max(1, (weight * 10) / 454); // weight in 1/10 of a pound
+	
+	return weight;
+    };
+	
+    // Adjust AC gain based on the item size
+    .tmp.object.armorCoef = function(obj) {
+	if (!.tmp.object.valid(obj)) return 1;
+	var size; size = .tmp.object.dimensions(obj);
+	
+	var volume; 
+	volume = size.length * size.width * size.thickness * size.quantity;
+	volume = .max(1, volume / 1000); // volume in cubic centimeters
+	
+	return .max(1, volume / 300); // more matter = more AC
+    };
+	
+    .tmp.object.getTrueAC = function(obj) {
+	if (!.tmp.object.valid(obj)) return 0;
+	var ac, armorCoef; ac = .Map();
+	armorCoef = .tmp.object.armorCoef(obj);
+	ac.value0 = 0; ac.value2 = 0; ac.value3 = 0; ac.value4 = 0;
+	if (obj.item_type & .tables.item_table.armor) {
+	    ac.value0 = obj.value0 * armorCoef;
+	    ac.value1 = obj.value1 * armorCoef;
+	    ac.value2 = obj.value2 * armorCoef;
+	    ac.value3 = obj.value3 * armorCoef;
+	} 
+	return ac;
+    };
+    
+    // Calculate cost based on level, tier and weight
+    // Weight adds no more than 5-6 gold
+    // cost = (10 silver * level) * (6 - tier) ^ 2 + weight
+    // Example 1: tier 3, level 10 item  = 100  * 3^2 = 9 gold + weight
+    // Example 2: tier 1, level 100 item = 1000 * 5^2 = 250 gold + weight
+    .tmp.object.calculateCost = function(obj, tier) {
+	if (!.tmp.object.valid(obj)) return 0;
+	// cap at 300 gold
+	return .min(10 * obj.level * (6 - tier) * (6 - tier) + obj.weight, 30000);
+    };
+    
+    /////////////////////////////////////////////////////////////
+    ////////////////////// DAMAGE / DESTRUCTION /////////////////
+    /////////////////////////////////////////////////////////////
+    
+    // Smart functions to handle advanced item destruction, e.g., containers.
+    // Add uniform destruction messages here rather than in spells/use
+    
+    // Methods so far:
+    // * fire (burning hands, torches)
+    // * force (axe chop, earthquake etc.)
+    // FORCE:
+    // Containers, NPC corpses: spill items out
+    // Drinks, fountains: spill liquid out, make a pool/puddle
+    // FIRE (in behavior/fire):
+    // Containers: burn flammable items, put non-flammable inside a fire
+    // NPC corpses: perform a "ritual" (TBD), then same as containers
+    // Drinks, fountains: kill fire (if non-alcohol), otherwise strengthen it
+    
+    // Can obj1 damage obj2 upon collision?
+    .tmp.object.canDamageObj = function(obj1, obj2) {
+	return (.tmp.object.valid(obj1) && .tmp.object.valid(obj2) &&
+		!.tmp.object.indestructible(obj2) &&
+		obj1.material.hardness > 0 &&
+		!.tmp.object.isElastic(obj1) &&
+		(.abs(obj1.material.hardness) - .abs(obj2.material.hardness) > 0));
+    };
+    
+    .tmp.object.damageObj = function(obj, percent, verbose) {
+	try {
+	// sanity check
+	if (!.tmp.object.valid(obj)) return false;
+	var room; room = obj.getRoom();
+	if (room == null) return false;
+	if (percent == null) percent = 1;
+	
+	if (.tmp.object.indestructible(obj) || room == null) return false;
+	// +10% damage for each point of hardness below 5, -10% for each point above
+	percent = percent + percent * (50 - obj.material.hardness * 10) / 100;
+	percent = .urange(1, percent, 100);
+	
+	if (obj.condition <= percent) .tmp.object.breakByForce(obj, verbose);
+	else {
+	    obj.condition = obj.condition - percent;
+	    // TO-DO: add more material specific messages
+	    var msg; msg = "Состояние %O2 ухудшается.";
+	    if (obj.material.metal)
+		msg = "На %O6 возникают глубокие вмятины и засечки, ухудшая состояние.";
+	    else if (obj.material.mineral)
+		msg = "%1$^O1 покрыва%1$nется|ются сетью трещин, теряя прочность.";
+	    else if (obj.material.wood)
+		msg = "От %O2 отлетает несколько крупных щепок, оставляя глубокие повреждения.";
+	    if (verbose) 
+		room.echo(msg, obj);
+	}
+	return true;
+	}
+	catch(e) {
+	.get_char_world('Taiphoen').ptc(e);	
+	}
+    };
+    
+    .tmp.object.breakByForce = function(obj, verbose) {
+	try {
+	// sanity check
+	if (!.tmp.object.valid(obj)) return false;
+	var room; room = obj.getRoom();
+	if (room == null) return false;
+
+	// TO-DO: add more material specific messages
+	var msg; msg = .fmt("%1$^O1 распада%1$nется|ются на части.", obj);
+	if (obj.material.metal)
+	    msg = .fmt("%1$^O1 раскалыва%1$nется|ются на куски.", obj);
+	else if (obj.material.mineral)
+	    msg = .fmt("%1$^O1 рассыпа%1$nется|ются на крошечные осколки.", obj);
+	else if (obj.material.wood)
+	    msg = .fmt("%1$^O1 превраща%1$nется|ются в труху и опилки.", obj);
+	    
+	if (verbose) .tmp.room.echo(obj.getRoom(), msg);
+	
+	////////////////////// CONTAINERS //////////////////////
+	if (obj.item_type == .tables.item_table.container ||
+	    obj.item_type == .tables.item_table.npc_corpse) {
+	    if (obj.items.size() > 0) {
+		// TO-DO (Taiphoen): add sector-specific messages, handle sector air
+		obj.getRoom().echo("Содержимое %O2 вываливается наружу.", obj);
+		for (item in obj.items)
+		    item.obj_to_room(room);
+	    }
+	}
+	
+	//////////////////////// DRINKS ////////////////////////
+	// TO-DO (Taiphoen): add fountain destruction with spill out
+	if (obj.item_type == .tables.item_table.drink && obj.value1 > 0)
+	    obj.pour_out();
+
+	//obj.extract(true);
+	.tmp.system.trueExtract(obj);
+	return true; 
+	}
+	catch(e) {
+	.get_char_world('Taiphoen').ptc(e);	
+	}
+    };
+
+    /////////////////////////////////////////////////////////////
+    ////////////////////// MAGIC ////////////////////////////////
+    /////////////////////////////////////////////////////////////
+    
+    // Chance to dispel object affects
+    .tmp.object.savesDispel = function(dispel_level, affect_level, duration) {
+	var save;
+	// much harder to dispel permanent affects
+	if (duration == -2) affect_level = affect_level + 10;
+	// harder to dispel "native" mob affects
+	if (duration == -1) affect_level = affect_level + 5;
+	
+	// each level diff adds/subtracts 5% chance to dispel
+	save = 50 + (affect_level - dispel_level) * 5;
+	save = .urange(5, save, 95);
+	if (.chance(save))
+	    return true;
+
+	return false;
+    };
+    
+    // Return level on which the item will auto-cast in onFight.
+    .tmp.object.castLevel = function(obj) {
+	if (!.tmp.object.valid(obj)) return 1;
+	var ch; ch = obj.carried_by;
+	if (ch.is_npc()) return obj.level;
+	else return ch.modifyLevel;
+    };
+    
+    /////////////////////////////////////////////////////////////
+    ////////////////////// OTHER ////////////////////////////////
+    /////////////////////////////////////////////////////////////
+    
+    // Create a puddle of any liquid
+    // TO-DO: possibly replace with C++ implementation
+    .tmp.object.create_puddle = function(liquid, room) {
+	if (room == null) return;
+	var liq; 
+	try {
+	    liq = .Liquid(liquid);
+	} catch (e);
+	if (liq == null) return;
+	
+	// TO-DO (RUFFINA): Temporarily change room liquid instead
+	if (room.isWater()) {
+	    room.ppl.forEach(function(liq1, liq2) {
+		if (.tmp.mob.isBlind(this)) {
+		    liq1 = "что-то"; liq2 = "чем-то";
+		}
+		act("%^s постепенно перемешивается с %s в этой местности и исчезает.",
+		    liq1, liq2);
+	    }, liq.short_descr.ruscase(1), room.liquid.short_descr.ruscase(5));
+	    return;
+	}
+	
+	var puddle; puddle = .get_obj_index(75).create();
+	puddle.short_descr = "луж|а|и|е|у|ей|е " + liq.short_descr.ruscase(2);
+	puddle.description = "{xЛужа (puddle) " + liq.short_descr.ruscase(2) + " разлита тут.";
+	puddle.name = "puddle лужа " + liquid + " " + liq.short_descr.ruscase(2).stripColour();
+	puddle.timer = .number_range(1, 3);
+	puddle.value2 = liq.index;
+	puddle.obj_to_room(room);
+    };	
+})

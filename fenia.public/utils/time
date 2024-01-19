@@ -1,0 +1,92 @@
+// Convert real time units into ticks -- mostly to set long-term timers.
+// Example: obj.timer = .tmp.time.weeks(2) -- should set the timer to 2 weeks
+
+// 1 tick = 1 real-time minute = 20 battlerounds = 60 seconds = 60 * 4 pulses
+// beats/waits/dazes are specified in pulses.
+// .current_time / world time is specified in seconds
+// affect timers are specified in ticks
+	
+.apply(function() {
+    if (.tmp.time == null) .tmp.time = .Map();
+
+    // Use these helpers for .current_time operations -- measured in seconds
+    .tmp.time.days_to_seconds = function(duration) {
+	return .tmp.time.hours_to_seconds(duration * 24);		
+    };
+    
+    .tmp.time.hours_to_seconds = function(duration) {
+	return .tmp.time.minutes_to_seconds(duration * 60);		
+    };
+
+    .tmp.time.minutes_to_seconds = function(duration) {
+	return duration * 60;		
+    };
+
+    // Convert and output seconds to days, hours and minutes.
+    .tmp.time.print = function(time) {
+	var msg, days, hours, minutes; msg = "";
+
+	time = time / 60; // convert seconds to minutes
+	
+	//  < 60    -- minutes
+	// >= 60    -- hours
+	// >= 1440  -- days
+
+	if (time >= 1440) {
+	    days = (time / 60) / 24;
+	    msg = msg + .fmt("%1$d д%1$Iень|ня|ней", days);
+	    // calculating remaining hours
+	    hours = (time - days * 24 * 60) / 60;
+	    msg = msg + .fmt(", %1$d час%1$I|а|ов", hours);
+	    // calculating remaining minutes
+	    if (hours > 0) {
+		minutes = time - days * 24 * 60 - hours * 60;
+		msg = msg + .fmt(" и %1$d мину%1$Iту|ты|т", minutes);
+	    }
+	}
+	else if (time >= 60) {
+	    hours = time / 60;
+	    minutes = time - hours * 60;
+	    msg = msg + .fmt("%1$d час%1$I|а|ов", hours);
+	    if (minutes > 0)
+		msg = msg + .fmt(" и %1$d мину%1$Iту|ты|т", minutes);
+	}
+	else
+	    msg = msg + .fmt("%1$d мину%1$Iту|ты|т", time);    
+	    
+	msg = msg + " реального времени";
+	return msg;		
+    };
+
+    // These helper functions operate in ticks -- for timers and affects.
+    .tmp.time.hours = function(duration) {
+	return duration * 60;		
+    };
+
+    .tmp.time.days = function(duration) {
+	return .tmp.time.hours(duration * 24);		
+    };
+    
+    .tmp.time.weeks = function(duration) {
+	return .tmp.time.days(duration * 7);		
+    };
+    
+    .tmp.time.months = function(duration) {
+	return .tmp.time.days(duration * 30);		
+    };
+
+    // Select an appropriate timer for each weapon tier
+    // TO-DO (RUFFINA): read this from fedit weapon_tiers
+    .tmp.time.tier = function(tier) {
+	if (tier == 1) return .tmp.time.weeks(2);
+	if (tier == 2) return .tmp.time.weeks(3);
+	if (tier == 3) return .tmp.time.weeks(5);
+	if (tier == 4) return .tmp.time.weeks(10);
+	return 0;
+    };
+    
+    // And this one converts seconds into pulses -- for beats/waits/dazes.
+    .tmp.time.seconds = function(duration) {
+	return duration * 4;		
+    };
+})

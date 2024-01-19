@@ -1,0 +1,61 @@
+.apply(function() {
+    .SkillCommand("camp").run = function() {
+	if (ch.isAffected(skill.name)) {
+	    ch.act("Ты пока не можешь разбить лагерь, подожди немного.");
+	    return;
+	}
+	var room; room = ch.in_room;
+	if (!room.isNature()) {
+	    ch.act("Разбить полевой лагерь можно только на лоне природы.");
+	    return;        
+	}
+	if (room.isAffected(skill.name)) {
+	    ch.act("Здесь уже разбит полевой лагерь.");
+	    return;
+	}	
+    
+	if (!.chance(skill.effective(ch))) {
+	    ch.act("Ты пытаешься разбить лагерь, но у тебя ничего не получается.");
+	    skill.improve(ch, false);
+	    return;        
+	}
+	
+	skill.improve(ch, true);
+	skill.apply(ch);
+    };
+
+
+    .SkillCommand("camp").apply = function() {
+	var room; room = ch.in_room;	    
+	
+	var level; level = skill.level(ch);
+	var af; af = .Affect();
+	af.type             = skill.name;
+	af.level            = level;
+	af.duration         = .sqrt(level) + 1;
+	ch.affectAdd(af); // Вешаем аффект-кулдаун на игрока
+	af.location         = .tables.apply_flags.mana_gain;
+	af.modifier         = level * 4;
+	room.affectAdd(af);
+	af.location         = .tables.apply_flags.heal_gain;
+	af.modifier         = level * 4;
+	room.affectAdd(af);	// Вешаем аффект на комнату
+
+	ch.act("Ты сноровисто разбиваешь полевой лагерь.");
+	ch.recho("%1$^C1 сноровисто разбива%1$nет|ют полевой лагерь.", ch);
+	
+	if (room.get_obj_vnum(39001) != null) {
+	    ch.act("Ты собирал{Smся{Sfась{x было разжечь костер, но кто-то его уже развел до тебя!"); 
+	    return;
+	}
+
+	ch.act("Ты находишь дерево для растопки костра и быстро разводишь огонь.");
+	ch.recho("%1$^C1 наход%1$nит|ят дерево для растопки костра и быстро развод%1$nит|ят огонь.", ch); 
+
+	// Создаем бревно и разводим из него костер
+	var wood; wood = .get_obj_index(28037).create();
+	.tmp.fire.createFire(ch.in_room, wood, ch);
+    };
+
+})
+

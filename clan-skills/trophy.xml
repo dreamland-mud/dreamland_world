@@ -15,10 +15,11 @@
     </node>
   </clans>
   <command type="SKILL(trophy)">
-    <argtype>undef</argtype>
+    <argtype>string</argtype>
     <cat>clan</cat>
     <hint>(клан ярости) изготовить пончо</hint>
     <name>trophy</name>
+    <order>player_only</order>
     <position>stand</position>
     <russian>
       <node>трофей</node>
@@ -26,15 +27,11 @@
   </command>
   <dammsg></dammsg>
   <group registry="skillGroup">clan</group>
-  <help aka="PONCHO ПОНЧО" id="897" level="-1" type="SkillHelp">%FMT%  *%CMD%* _часть тела_
+  <help aka="PONCHO ПОНЧО" id="897" level="-1" type="SkillHelp">%FMT%  *%CMD%* {D{lebodypart{lrчастьтела {D{lecorpse{lrтруп{x
 
-Делает отличнейшую накидку из части тела поверженного врага, чтобы напомнить
-тебе о твоей победе. Полученное пончо обладает некоторыми полезными свойствами.
-
-Накидку можно сделать из головы{le (head){x, руки{le (arm){x или ноги{le (leg){x противника.
-Все эти части тела можно заблаговременно отсечь от трупа.
-
-%SA% %H% [(chop,отсечь)]
+Воины Клана Ярости умеют отсекать любую {hh62часть тела{x из трупа поверженного врага
+и {hh1055шить{x из нее прекрасную накидку, чтобы похвастаться всем своей победой. 
+Полученное пончо обладает некоторыми полезными свойствами.
 </help>
   <mana>30</mana>
   <move>100</move>

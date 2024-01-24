@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <NoteThread>
-  <cat>note</cat>
-  <extra>keep_hide ghost</extra>
-  <gender>male</gender>
-  <godsSeeAlways>true</godsSeeAlways>
+  <command type="NoteCommand">
+    <extra>keep_hide ghost</extra>
+    <hint>публикуемые кланом Правителей наказания</hint>
+  <hint>приснить кому-то сон</hint>
+  <name>dream</name>
+    <cat>note</cat>
+    <order>never</order>
+    <position>dead</position>
+    <russian>
+      <node>сон</node>
+    </russian>
   <help aka="DREAMS СНЫ" id="2045" labels="comm" level="-1" title="{CСообщения:{x сны, вещие и не очень" type="NoteHelp">Когда твой персонаж ложится спать, тебе могут присниться {hh1020новые умения{x, а могут
 привидеться сны, навеянные кем-то из игроков... или Богами. Сны могут быть
 простой шуткой, а могут приносить пророческие вести об изменениях Мироздания.
@@ -34,7 +41,10 @@
 %FMT% *(dream +,сон +)* _строка_    : добавляет строку к концу сна
 %FFF% *(dream -,сон -)*             : стирает последнюю написанную строку сна
 </help>
-  <hint>приснить кому-то сон</hint>
+  </command>
+
+  <gender>male</gender>
+  <godsSeeAlways>true</godsSeeAlways>
   <keepDays>0</keepDays>
   <msgNoCurrent>Ты не пишешь никакого сна.</msgNoCurrent>
   <msgNoRecepient>Укажи, кому должен присниться этот сон.</msgNoRecepient>
@@ -46,7 +56,6 @@
   <name>dream</name>
   <nameMlt>dreams</nameMlt>
   <readLevel>102</readLevel>
-  <rusCommand>сон</rusCommand>
   <rusName>с|он|на|ну|он|ном|не</rusName>
   <rusNameMlt>сн|ы|ов|ам|ы|ами|ах</rusNameMlt>
   <writeLevel>1</writeLevel>

@@ -1,4 +1,5 @@
 .get_mob_index(@vnum@).@trig@ = function(mob, ch, victim, social) {
-    // Вызывается в следующий пульс после применения социала social персонажем ch (возможно на жертву victim).
+    if (.tmp.quest.active(ch, "@quest.vnum@", @quest.step@)) {
+    }
 }
 

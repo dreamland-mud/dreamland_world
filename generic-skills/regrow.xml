@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill type="GenericSkill">
+  <beats>18</beats>
+  <classes>
+    <node name="cleric">
+      <level>70</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="druid">
+      <level>75</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <dammsg></dammsg>
+  <group registry="skillGroup">healing</group>
+  <healthPenalty>5</healthPenalty>
+  <help id="46" keyword="ЗАЖИВИТЬ" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+%FFF% *%SPELL%* _%CHAR%_
+
+Попытаться отрастить {hh62части тела{x или {hh1015слоты экипировки{x, отрубленные {hh627отсеканием{x или
+другими подобными умениями.
+
+У паладинов, верующих в определенных богов {hh6Света{x или {hh49Природы{x тоже есть шанс
+отрастить отрубленное {hh593наложением рук{x.
+</help>
+  <manaPenalty>5</manaPenalty>
+  <nameRus>заживить</nameRus>
+  <spell type="DefaultSpell">
+    <damtype>none</damtype>
+    <flags>prayer</flags>
+    <order>player_only</order>
+    <position>stand</position>
+    <target>char_room</target>
+    <type>defensive</type>
+  </spell>
+</skill>

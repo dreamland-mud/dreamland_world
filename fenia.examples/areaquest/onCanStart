@@ -1,3 +1,13 @@
 .AreaQuest(@vnum@).@trig@ = function(ch) {
-    return true;
+    // This trigger is invoked at the very end, after all level/align/race checks are successful
+    // Return non-empty string on error, empty string if ch can participate.
+
+    // if (some condition)
+    //     return "too late";
+
+    // if (some condition)
+    //     return "too windy";
+
+
+    return ""; // success, can start
 }

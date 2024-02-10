@@ -36,17 +36,19 @@
   </classes>
   <dammsg></dammsg>
   <group registry="skillGroup">enhancement detection</group>
-  <help aka="'DARK VISION' 'NIGHT VISION' NIGHTVISION ИНФРАЗРЕНИЕ 'НОЧНОЕ ЗРЕНИЕ' 'ТЕМНОЕ ЗРЕНИЕ'" id="830" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%CHAR%_
+  <help aka="'DARK VISION' 'NIGHT VISION' NIGHTVISION ИНФРАЗРЕНИЕ НОЧНОЕ ОБНАРУЖЕНИЕ ТЕМНОТЕ ВИДЕНИЕ ЗРЕНИЕ" id="830" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%CHAR%_
 
 Это заклинание позволяет цели видеть теплокровных существ в темноте и замечать,
 как те выходят или заходят в данную комнату.
+
+{hh720Обнаружение жизненных форм{x у вампиров также работает похожим образом.
 </help>
   <mana>20</mana>
   <mob>
     <professional>true</professional>
   </mob>
   <nameRus>тепловое зрение</nameRus>
-  <raceBonuses>dark-elf drow duergar dwarf elf felar half-elf rockseer svirfnebli urukhai</raceBonuses>
+  <raceBonuses registry="race">felar dwarf rockseer dark-elf elf urukhai svirfnebli duergar drow half-elf</raceBonuses>
   <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>magic prayer</flags>

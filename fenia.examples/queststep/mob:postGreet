@@ -1,3 +1,12 @@
 .get_mob_index(@vnum@).@trig@ = function(mob, ch) {
+	if (ch.is_npc() || !.tmp.mob.canGreet(mob, ch) || !.tmp.mob.canSpeak(mob))
+		return; // double-check if speech capability is needed in this scenario
+		
+	var q; q = .AreaQuest(XXXX);
+	
+	mob.recho("%1$^C1 поднима%1$nется|ются на дыбы и стремительно оборачива%1$nется|ются к тебе!", mob);
+	if (!.tmp.quest.cutscene(1, mob, ch, q)) return; // this only works in "post" triggers
+		
+	mob.say("Какой-то трусливый приключенец спер у меня несколько чешуек, пока я спала.");
+	mob.say("Поможешь мне их найти?");
 }
-

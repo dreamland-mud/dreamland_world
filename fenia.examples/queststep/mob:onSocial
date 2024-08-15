@@ -1,3 +1,16 @@
 .get_mob_index(@vnum@).@trig@ = function(mob, ch, victim, social) {
-}
+	if (!.tmp.mob.canActAmbient(mob) || social != "hug" || actor.is_npc() || victim != mob) 
+		return false; // No trigger
+	
+	if (!mob.can_see_mob(actor)) { 
+		mob.recho("%^C1 не видит, кто %1$P2 обнял, и настороженно оглядывается.", mob);
+		return true; // Successful trigger, but no positive outcome	    
+	}
+	
+	if (mob.can_see_obj(neckchain)) {
+		mob.interpret_raw("remove", "neckchain"); 
+		return true; // Successful trigger, positive outcome
+	}
 
+	return false; // No trigger, failsafe
+}

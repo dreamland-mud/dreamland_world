@@ -1,3 +1,18 @@
 .get_mob_index(@vnum@).@trig@ = function(mob, ch, speech) {
+	var q; q = .AreaQuest(XXX);
+    
+	if (speech.match("^нет|не хочу|не буду|не помогу|^no|отвали")) {
+		mob.interpret("sigh");
+		mob.say("Ладно, попрошу кого-то другого.");
+		q.cancel(ch);
+		return false;
+	}
+
+	if (!speech.match("хочу|^да|помогу|конечно|^yes|подсоблю")) {
+		mob.say("Так что -- поможешь? Надо просто {1{y{hcсказать да{x{2.");
+		return false;
+	}
+
+	return true;
 }
 

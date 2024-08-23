@@ -1,5 +1,5 @@
 .get_mob_index(@vnum@).@trig@ = function(mob, ch) {
-	if (ch.is_npc() || !.tmp.mob.canGreet(mob, ch) || !.tmp.mob.canSpeak(mob))
+	if (!.tmp.mob.canGreet(mob, ch) || !.tmp.mob.canSpeak(mob))
 		return false;
 	
 	mob.recho("%1$^C1 вскакива%1$nет|ют на ноги и стремительно оборачива%1$nется|ются к тебе!", mob);

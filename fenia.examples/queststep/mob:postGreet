@@ -1,5 +1,5 @@
 .get_mob_index(@vnum@).@trig@ = function(mob, ch) {
-	if (ch.is_npc() || !.tmp.mob.canGreet(mob, ch) || !.tmp.mob.canSpeak(mob))
+	if (!.tmp.mob.canGreet(mob, ch) || !.tmp.mob.canSpeak(mob))
 		return; // double-check if speech capability is needed in this scenario
 		
 	var q; q = .AreaQuest(XXXX);

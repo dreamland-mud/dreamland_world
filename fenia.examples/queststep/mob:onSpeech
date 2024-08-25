@@ -1,4 +1,7 @@
 .get_mob_index(@vnum@).@trig@ = function(mob, ch, speech) {
+	if (!.tmp.mob.canGreet(mob, ch) || !.tmp.mob.canSpeak(mob))
+		return false;
+
 	var q; q = .AreaQuest(XXX);
     
 	if (speech.match("^нет|не хочу|не буду|не помогу|^no|отвали")) {

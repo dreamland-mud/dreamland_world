@@ -1,4 +1,4 @@
-.get_obj_index(3803).onGet = function(obj, ch) {
+.get_obj_index(@vnum@).@trig@ = function(obj, ch) {
     // Уронить на землю, если не владелец. Если взять не получилось, надо вернуть true.
     if (ch.is_npc() || ch.name != obj.owner) {
         ch.act("Глубоко порезав руку, ты роняешь %O4 на землю.", obj);

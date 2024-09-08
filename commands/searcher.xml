@@ -36,7 +36,7 @@ tier {D(уровень крутости для рандомного оружия
 
 Строковые поля предметов: name, type/itemtype, extra, wear, aff, vuln, res, 
 imm, det, fenia {D(список тригеров){x, slevel {D(уровень каких умений и групп повышает){x, 
-learned {D(знание каких умений и групп повышает){x, material.
+learned {D(знание каких умений и групп повышает){x, material, behavior {D(список поведений){x.
 Строковые поля оружия: wclass {D(dagger, sword){x, wflags {D(vampiric, vorpal){x, damage {D(название
 повреждение, olchelp weapon_flags){x.
 Строковые поля волшебных предметов: spells {D(список заклинаний на предмете, разделенный пробелами){x
@@ -54,6 +54,7 @@ learned {D(знание каких умений и групп повышает){
 {ysearcher wq lvl=1 and ed{x - всё оружие на 1й уровень с экстра-описанием
 {ysearcher wq random and tier&gt;3{x - всё оружие rand_stat с тиером 2
 {ysearcher sq spells=&quot;*heal*&quot; and power&gt;10{x - все лечилки с уровнем больше 10
+{ysearcher q behavior=&quot;*noriva*&quot;{x - все предметы комплекта Noriva
 </help>
   <hint>поиск предметов и сохранение базы на диск</hint>
   <level>106</level>

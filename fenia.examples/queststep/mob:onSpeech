@@ -2,17 +2,19 @@
 	if (!.tmp.mob.canGreet(mob, ch) || !.tmp.mob.canSpeak(mob))
 		return false;
 
-	var q; q = .AreaQuest(XXX);
-    
+	var q; q = .AreaQuest(XXXX);
+	
 	if (speech.match("^нет|не хочу|не буду|не помогу|^no|отвали")) {
 		mob.interpret("sigh");
-		mob.say("Ладно, попрошу кого-то другого.");
+		ch.recho("%1$^C1 что-то говор%1$nит|ят %2$C3.", mob, ch);
+		mob.psay(ch, "Ладно, попрошу кого-то другого.");
 		q.cancel(ch);
 		return false;
 	}
 
 	if (!speech.match("хочу|^да|помогу|конечно|^yes|подсоблю")) {
-		mob.say("Так что -- поможешь? Надо просто {1{y{hcсказать да{x{2.");
+	    ch.recho("%1$^C1 что-то говор%1$nит|ят %2$C3.", mob, ch);
+		mob.psay(ch, "Так что -- поможешь? Надо просто {1{y{hcсказать да{x{2.");
 		return false;
 	}
 

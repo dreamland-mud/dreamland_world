@@ -2,8 +2,7 @@
  // Density (rho): measured in SI kg/m3, converted into g/cm3 in fenia
  // Hardness: abstract scale (roughly Mohs), measured from -1 to 10
  // -1 means "indestructible", 0 means 100% elastic (water), 8-10 means "tough"
-
- // metals
+ // metals: 0-13
  { "name": "adamantite", "rho": 6100, "hardness": 9, "burns": 0, "floats": -1, "type": "metal", "flags": "tough", "vuln": "", "rname": "адамантит||а|у||ом|е" }, // "dull, heavy and dense" (c) adnd
  { "name": "brass", "rho": 8600, "hardness": 3, "burns": 0, "floats": -1, "type": "metal", "flags": "", "vuln": "", "rname": "латун|ь|и|и|ь|ью|и" },
  { "name": "bronze", "rho": 8770, "hardness": 4, "burns": 0, "floats": -1, "type": "metal", "flags": "", "vuln": "", "rname": "бронз|а|ы|е|у|ой|е" },
@@ -19,7 +18,7 @@
  { "name": "tin", "rho": 7310, "hardness": 2, "burns": 0, "floats": -1, "type": "metal", "flags": "", "vuln": "", "rname": "олов|о|а|у|о|ом|е" },
  { "name": "titanium",  "rho": 4540, "hardness": 8, "burns": 0, "floats": -1, "type": "metal", "flags": "tough", "vuln": "", "rname": "титан||а|у||ом|е" },
 
- // gems
+ // gems: 14-27
  { "name": "amethyst", "rho": 2650, "hardness": 7, "burns": 0, "floats": -1, "type": "gem mineral", "flags": "", "vuln": "", "rname": "аметист||а|у||ом|е" },
  { "name": "diamond", "rho": 3500, "hardness": 9, "burns": 0, "floats": -1, "type": "gem mineral", "flags": "tough", "vuln": "", "rname": "алмаз||а|у||ом|е" },
  { "name": "emerald", "rho": 1850, "hardness": 8, "burns": 0, "floats": -1, "type": "gem mineral", "flags": "", "vuln": "", "rname": "изумруд||а|у||ом|е" },
@@ -35,7 +34,7 @@
  { "name": "amber", "rho": 1070, "hardness": 3, "burns": 0, "floats": 0, "type": "gem organic mineral", "flags": "", "vuln": "", "rname": "янтар|ь|я|ю|ь|ем|е" }, 
  { "name": "crystal", "rho": 2650, "hardness": 7, "burns": 0, "floats": -1, "type": "gem mineral", "flags": "", "vuln": "", "rname": "хрустал|ь|я|ю|ь|ем|е" },
  
- // minerals       
+ // minerals: 28-43   
  { "name": "ceramics", "rho": 2400, "hardness": 2, "burns": 0, "floats": -1, "type": "mineral", "flags": "fragile", "vuln": "", "rname": "керамик|а|и|е|у|ой|е" },
  { "name": "clay", "rho": 2000, "hardness": 2, "burns": 0, "floats": 0, "type": "mineral", "flags": "", "vuln": "", "rname": "глин|а|ы|е|у|ой|е" },       
  { "name": "corund", "rho": 4020, "hardness": 9, "burns": 0, "floats": -1, "type": "mineral", "flags": "", "vuln": "", "rname": "корунд||а|у||ом|е" },
@@ -43,7 +42,7 @@
  { "name": "granite", "rho": 2700, "hardness": 6, "burns": 0, "floats": -1, "type": "mineral", "flags": "", "vuln": "", "rname": "гранит||а|у||ом|е" },
  { "name": "ground", "rho": 1600, "hardness": 1, "burns": 0, "floats": 0, "type": "mineral", "flags": "", "vuln": "", "rname": "грунт||а|у||ом|е" },
  { "name": "marble", "rho": 2710, "hardness": 6, "burns": 0, "floats": -1, "type": "mineral", "flags": "", "vuln": "", "rname": "мрамор||а|у||ом|е" },
- { "name": "obsidian", "rho": 2550, "hardness": 3, "burns": 0, "floats": -1, "type": "mineral", "flags": "", "vuln": "", "rname": "обсидиан||а|у||ом|е" },
+ { "name": "obsidian", "rho": 2550, "hardness": 3, "burns": 0, "floats": -1, "type": "mineral", "flags": "fragile", "vuln": "", "rname": "обсидиан||а|у||ом|е" },
  { "name": "paraben", "rho": 930, "hardness": 1, "burns": 1, "floats": 1, "type": "mineral", "flags": "melting", "vuln": "", "rname": "парафин||а|у||ом|е" },
  { "name": "plastic", "rho": 1175, "hardness": 3, "burns": 2, "floats": 1, "type": "mineral", "flags": "", "vuln": "", "rname": "пластик||а|у||ом|е" },
  { "name": "porcelain", "rho": 2400, "hardness": 2, "burns": 0, "floats": -1, "type": "mineral", "flags": "fragile", "vuln": "", "rname": "фарфор||а|у||ом|е" },

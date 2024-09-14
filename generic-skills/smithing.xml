@@ -2,6 +2,11 @@
 <skill type="GenericSkill">
   <beats>24</beats>
   <classes>
+    <node name="samurai">
+      <level>60</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
     <node name="warrior">
       <level>50</level>
       <maximum>100</maximum>
@@ -9,11 +14,11 @@
     </node>
   </classes>
   <command type="SKILL(smithing)">
-    <argtype>undef</argtype>
+    <argtype>obj_carry</argtype>
     <cat>class</cat>
-    <hint>(воины) отремонтировать вещь</hint>
+    <hint>(воины/самураи) отремонтировать вещь</hint>
     <name>smithing</name>
-    <position>rest</position>
+    <position>stand</position>
     <russian>
       <node>ремонт</node>
     </russian>
@@ -21,13 +26,14 @@
   <dammsg></dammsg>
   <group registry="skillGroup">adventure</group>
   <hard>6</hard>
-  <help id="670" level="-1" type="SkillHelp">%FMT% *(smithing,ремонт)* _вещь_
+  <help id="670" level="-1" type="SkillHelp">%FMT% *(smithing,ремонт)* _%OBJ%_
 
-С помощью этого умения воин может восстанавливать поврежденные предметы не хуже
-официальных {hh1055ремонтников{x крупных городов. При этом в руках надо держать
-специальный {Rкузнечный{x молот.
+С помощью этого умения воины и самураи могут восстанавливать поврежденные
+предметы не хуже официальных {hh1055ремонтников{x крупных городов. 
+Вещь нужно раскалить в пламени {hh1023костра{x и обработать кузнечным молотом.
 
-Стоит поискать этот молот у одного торговца в {hh2060Королевстве Дварфов{x.
+Самый простенький молот можно найти у одного торговца в {hh2060Королевстве Дварфов{x.
+Более качественные молоты позволят восстанавливать вещи лучше и быстрее.
 </help>
   <mana>40</mana>
   <move>100</move>

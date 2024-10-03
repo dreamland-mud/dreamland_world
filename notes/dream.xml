@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <NoteThread>
   <command type="NoteCommand">
-    <extra>keep_hide ghost</extra>
-    <hint>публикуемые кланом Правителей наказания</hint>
-  <hint>приснить кому-то сон</hint>
-  <name>dream</name>
     <cat>note</cat>
-    <order>never</order>
-    <position>dead</position>
-    <russian>
-      <node>сон</node>
-    </russian>
-  <help aka="DREAMS СНЫ" id="2045" labels="comm" level="-1" title="{CСообщения:{x сны, вещие и не очень" type="NoteHelp">Когда твой персонаж ложится спать, тебе могут присниться {hh1020новые умения{x, а могут
+    <extra>keep_hide ghost</extra>
+    <help aka="DREAMS СНЫ" id="2045" labels="comm" level="-1" title="{CСообщения:{x сны, вещие и не очень" type="NoteHelp">Когда твой персонаж ложится спать, тебе могут присниться {hh1020новые умения{x, а могут
 привидеться сны, навеянные кем-то из игроков... или Богами. Сны могут быть
 простой шуткой, а могут приносить пророческие вести об изменениях Мироздания.
 Приятных кошмаров!
@@ -41,8 +33,18 @@
 %FMT% *(dream +,сон +)* _строка_    : добавляет строку к концу сна
 %FFF% *(dream -,сон -)*             : стирает последнюю написанную строку сна
 </help>
+    <hint l="en"></hint>
+    <hint l="ru">приснить кому-то сон</hint>
+    <hint l="ua"></hint>
+    <name l="en">dream</name>
+    <name l="ru">сон</name>
+    <name l="ua"></name>
+    <order>never</order>
+    <position>dead</position>
+    <xaliases l="en"></xaliases>
+    <xaliases l="ru"></xaliases>
+    <xaliases l="ua"></xaliases>
   </command>
-
   <gender>male</gender>
   <godsSeeAlways>true</godsSeeAlways>
   <keepDays>0</keepDays>

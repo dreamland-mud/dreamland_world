@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
-  <aliases>
-    <node>slook</node>
-  </aliases>
   <cat>learn</cat>
   <extra>keep_hide ghost afk hidden</extra>
   <help aka="ПОКАЗАТЬУМЕНИЕ" id="1357" labels="skill" level="-1" title="{CУмения:{x сводная информация" type="CommandHelp">%FMT% *%CMD%* _название_
@@ -13,11 +10,15 @@
 
 На данный момент все эти детали также видны и в справке по умению.
 </help>
-  <hint>посмотреть детали по данному умению</hint>
-  <name>showskill</name>
+  <hint l="en"></hint>
+  <hint l="ru">посмотреть детали по данному умению</hint>
+  <hint l="ua"></hint>
+  <name l="en">showskill</name>
+  <name l="ru">показатьумение</name>
+  <name l="ua"></name>
   <order>player_only</order>
   <position>sleep</position>
-  <russian>
-    <node>показатьумение</node>
-  </russian>
+  <xaliases l="en">slook</xaliases>
+  <xaliases l="ru"></xaliases>
+  <xaliases l="ua"></xaliases>
 </Command>

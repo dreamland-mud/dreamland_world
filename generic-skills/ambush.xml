@@ -11,13 +11,17 @@
   <command type="SKILL(ambush)">
     <argtype>undef</argtype>
     <cat>class</cat>
-    <hint>(рейнджер) напасть из засады</hint>
-    <name>ambush</name>
+    <hint l="en"></hint>
+    <hint l="ru">(рейнджер) напасть из засады</hint>
+    <hint l="ua"></hint>
+    <name l="en">ambush</name>
+    <name l="ru">засада</name>
+    <name l="ua"></name>
     <order>player_only</order>
     <position>stand</position>
-    <russian>
-      <node>засада</node>
-    </russian>
+    <xaliases l="en"></xaliases>
+    <xaliases l="ru"></xaliases>
+    <xaliases l="ua"></xaliases>
   </command>
   <dammsg mg="f">атака из засады</dammsg>
   <group registry="skillGroup">suddendeath</group>
@@ -32,5 +36,5 @@
   <mana>20</mana>
   <move>100</move>
   <nameRus>засада</nameRus>
-  <raceBonuses>satyr</raceBonuses>
+  <raceBonuses registry="race">satyr</raceBonuses>
 </skill>

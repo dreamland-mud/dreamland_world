@@ -5,87 +5,113 @@
     <node type="WorldChannel">
       <cat>comm</cat>
       <extra>keep_hide ghost manacles afk</extra>
-      <hint>выдать сообщение на весь мир</hint>
+      <hint l="en"></hint>
+      <hint l="ru">выдать сообщение на весь мир</hint>
+      <hint l="ua"></hint>
       <level>106</level>
       <log>1</log>
       <msgOther>%2$s</msgOther>
       <msgSelf>global&gt; %2$s</msgSelf>
       <msgSelfNoarg>Global echo what?</msgSelfNoarg>
-      <name>gecho</name>
+      <name l="en">gecho</name>
+      <name l="ru"></name>
+      <name l="ua"></name>
       <position>dead</position>
       <positionOther>dead</positionOther>
       <trustSpeak>106</trustSpeak>
+      <xaliases l="en"></xaliases>
+      <xaliases l="ru"></xaliases>
+      <xaliases l="ua"></xaliases>
     </node>
     <node type="PersonalChannel">
       <cat>comm</cat>
       <extra>keep_hide ghost manacles afk</extra>
-      <hint>выдать сообщение лично кому-то</hint>
+      <hint l="en"></hint>
+      <hint l="ru">выдать сообщение лично кому-то</hint>
+      <hint l="ua"></hint>
       <level>106</level>
       <log>1</log>
       <msgChar>personal&gt; %2$s</msgChar>
       <msgNoArg>Personal echo what?</msgNoArg>
       <msgNoName>Personal echo what?</msgNoName>
       <msgVict>%2$s</msgVict>
-      <name>pecho</name>
+      <name l="en">pecho</name>
+      <name l="ru"></name>
+      <name l="ua"></name>
       <position>dead</position>
       <positionOther>dead</positionOther>
       <trustSpeak>106</trustSpeak>
+      <xaliases l="en"></xaliases>
+      <xaliases l="ru"></xaliases>
+      <xaliases l="ua"></xaliases>
     </node>
     <node type="RoomChannel">
       <cat>comm</cat>
       <extra>keep_hide ghost manacles afk</extra>
-      <hint>выдать сообщение всем в комнате</hint>
+      <hint l="en"></hint>
+      <hint l="ru">выдать сообщение всем в комнате</hint>
+      <hint l="ua"></hint>
       <level>104</level>
       <log>1</log>
       <msgOther>%2$s</msgOther>
       <msgSelf>local&gt; %2$s</msgSelf>
       <msgSelfNoarg>Local echo what?</msgSelfNoarg>
-      <name>echo</name>
+      <name l="en">echo</name>
+      <name l="ru"></name>
+      <name l="ua"></name>
       <position>dead</position>
       <positionOther>dead</positionOther>
       <trustSpeak>104</trustSpeak>
+      <xaliases l="en"></xaliases>
+      <xaliases l="ru"></xaliases>
+      <xaliases l="ua"></xaliases>
     </node>
     <node type="AreaChannel">
       <cat>comm</cat>
       <extra>keep_hide ghost manacles afk</extra>
-      <hint>выдать сообщение всем в арии</hint>
+      <hint l="en"></hint>
+      <hint l="ru">выдать сообщение всем в арии</hint>
+      <hint l="ua"></hint>
       <level>106</level>
       <log>1</log>
       <msgOther>%2$s</msgOther>
       <msgSelf>zone&gt; %2$s</msgSelf>
       <msgSelfNoarg>Zone echo what?</msgSelfNoarg>
-      <name>zecho</name>
+      <name l="en">zecho</name>
+      <name l="ru"></name>
+      <name l="ua"></name>
       <position>dead</position>
       <positionOther>dead</positionOther>
       <trustSpeak>106</trustSpeak>
+      <xaliases l="en"></xaliases>
+      <xaliases l="ru"></xaliases>
+      <xaliases l="ua"></xaliases>
     </node>
     <node type="WorldChannel">
-      <aliases>
-        <node>:</node>
-      </aliases>
       <cat>comm</cat>
       <extra>keep_hide ghost manacles afk</extra>
-      <hint>общение с коллегами по облаку</hint>
+      <hint l="en"></hint>
+      <hint l="ru">общение с коллегами по облаку</hint>
+      <hint l="ua"></hint>
       <ignore>true</ignore>
       <level>102</level>
       <msgOff>Ты больше не слышишь воплей Бессмертных.</msgOff>
       <msgOn>Immortal channel is now ON</msgOn>
       <msgOther>{C[{Y%1$C1{C]{x: {C%2$s{x</msgOther>
       <msgSelf>{C[{Y%1$C1{C]{x: {C%2$s{x</msgSelf>
-      <name>immtalk</name>
+      <name l="en">immtalk</name>
+      <name l="ru">иммканал</name>
+      <name l="ua"></name>
       <off>nowiz</off>
       <position>dead</position>
       <positionOther>dead</positionOther>
-      <russian>
-        <node>иммканал</node>
-      </russian>
       <trustHear>102</trustHear>
       <trustSpeak>102</trustSpeak>
+      <xaliases l="en">:</xaliases>
+      <xaliases l="ru"></xaliases>
+      <xaliases l="ua"></xaliases>
     </node>
     <node type="SpeechChannel">
-      <aliases>
-        <node>&apos;</node>
-      </aliases>
       <cat>comm</cat>
       <deafen>true</deafen>
       <deafenOther>true</deafenOther>
@@ -94,18 +120,22 @@
       <garble>true</garble>
       <help level="-1" refby="channels" type="CommandHelp">
       </help>
-      <hint>произнести реплику вслух</hint>
+      <hint l="en"></hint>
+      <hint l="ru">произнести реплику вслух</hint>
+      <hint l="ua"></hint>
       <ignore>true</ignore>
       <msgOther>%1$^C1 произнос%1$nит|ят &apos;{g%2$s{x&apos;</msgOther>
       <msgSelf>Ты произносишь &apos;{g%2$s{x&apos;</msgSelf>
       <msgSelfNoarg>Произнести что?</msgSelfNoarg>
-      <name>say</name>
+      <name l="en">say</name>
+      <name l="ru">сказать</name>
+      <name l="ua"></name>
       <position>rest</position>
       <positionOther>rest</positionOther>
-      <russian>
-        <node>сказать</node>
-      </russian>
       <translate>true</translate>
+      <xaliases l="en">&apos;</xaliases>
+      <xaliases l="ru"></xaliases>
+      <xaliases l="ua"></xaliases>
     </node>
     <node type="WorldChannel">
       <cat>comm</cat>
@@ -114,7 +144,9 @@
       <garble>true</garble>
       <help level="-1" refby="channels" type="CommandHelp">
       </help>
-      <hint>громко прокричать на весь мир</hint>
+      <hint l="en"></hint>
+      <hint l="ru">громко прокричать на весь мир</hint>
+      <hint l="ua"></hint>
       <hook>true</hook>
       <ignore>true</ignore>
       <isolate>true</isolate>
@@ -122,29 +154,29 @@
       <msgOn>Ты теперь слышишь {Rгромкие крики{x.</msgOn>
       <msgOther>{W%1$^C1{x громко крич%1$nит|ат &apos;{R%2$s{x&apos;</msgOther>
       <msgSelf>Ты громко кричишь &apos;{R%2$s{x&apos;</msgSelf>
-      <name>gossip</name>
+      <name l="en">gossip</name>
+      <name l="ru">кричать</name>
+      <name l="ua"></name>
       <nochannel>true</nochannel>
       <off>nogossip</off>
       <position>rest</position>
       <positionOther>sleep</positionOther>
       <quiet>true</quiet>
-      <russian>
-        <node>кричать</node>
-        <node>орать</node>
-      </russian>
       <soap>true</soap>
       <translate>true</translate>
+      <xaliases l="en"></xaliases>
+      <xaliases l="ru">орать</xaliases>
+      <xaliases l="ua"></xaliases>
     </node>
     <node type="WorldChannel">
-      <aliases>
-        <node>.</node>
-      </aliases>
       <cat>comm</cat>
       <extra>manacles</extra>
       <garble>true</garble>
       <help level="-1" refby="channels" type="CommandHelp">
       </help>
-      <hint>ролевая болтовня на весь мир</hint>
+      <hint l="en"></hint>
+      <hint l="ru">ролевая болтовня на весь мир</hint>
+      <hint l="ua"></hint>
       <hook>true</hook>
       <ignore>true</ignore>
       <isolate>true</isolate>
@@ -152,7 +184,9 @@
       <msgOn>Ты теперь слышишь {Mролевую болтовню{x.</msgOn>
       <msgOther>{W%1$^C1{x болта%1$nет|ют &apos;{M%2$s{x&apos;</msgOther>
       <msgSelf>Ты болтаешь &apos;{M%2$s{x&apos;</msgSelf>
-      <name>ic</name>
+      <name l="en">ic</name>
+      <name l="ru">болтать</name>
+      <name l="ua"></name>
       <nochannel>true</nochannel>
       <nomob>true</nomob>
       <off>noic</off>
@@ -160,24 +194,28 @@
       <position>rest</position>
       <positionOther>sleep</positionOther>
       <quiet>true</quiet>
-      <russian>
-        <node>болтать</node>
-      </russian>
       <soap>true</soap>
       <translate>true</translate>
+      <xaliases l="en">.</xaliases>
+      <xaliases l="ru"></xaliases>
+      <xaliases l="ua"></xaliases>
     </node>
     <node type="WorldChannel">
       <cat>comm</cat>
       <extra>ghost manacles afk</extra>
       <help level="-1" refby="channels" type="CommandHelp">
       </help>
-      <hint>поздравить кого-то на весь мир</hint>
+      <hint l="en"></hint>
+      <hint l="ru">поздравить кого-то на весь мир</hint>
+      <hint l="ua"></hint>
       <hook>true</hook>
       <ignore>true</ignore>
       <isolate>true</isolate>
       <msgOther>{W%1$^C1{x поздравляет &apos;{M%2$s{x&apos;</msgOther>
       <msgSelf>Ты поздравляешь &apos;{M%2$s{x&apos;</msgSelf>
-      <name>grats</name>
+      <name l="en">grats</name>
+      <name l="ru">поздравить</name>
+      <name l="ua"></name>
       <nochannel>true</nochannel>
       <nomob>true</nomob>
       <off>nograts</off>
@@ -185,24 +223,28 @@
       <position>rest</position>
       <positionOther>sleep</positionOther>
       <quiet>true</quiet>
-      <russian>
-        <node>поздравить</node>
-      </russian>
       <soap>true</soap>
       <translate>true</translate>
+      <xaliases l="en"></xaliases>
+      <xaliases l="ru"></xaliases>
+      <xaliases l="ua"></xaliases>
     </node>
     <node type="WorldChannel">
       <cat>comm</cat>
       <extra>ghost manacles afk</extra>
       <help level="-1" refby="channels" type="CommandHelp">
       </help>
-      <hint>спеть песню на весь мир</hint>
+      <hint l="en"></hint>
+      <hint l="ru">спеть песню на весь мир</hint>
+      <hint l="ua"></hint>
       <hook>true</hook>
       <ignore>true</ignore>
       <isolate>true</isolate>
       <msgOther>{W%1$#^C1{x {CП{MО{GЕ{RТ{x: &apos;{c%2$s{x&apos;</msgOther>
       <msgSelf>Ты {CП{MО{GЕ{RШ{CЬ{x: &apos;{c%2$s{x&apos;</msgSelf>
-      <name>music</name>
+      <name l="en">music</name>
+      <name l="ru">петь</name>
+      <name l="ua"></name>
       <nochannel>true</nochannel>
       <nomob>true</nomob>
       <off>nomusic</off>
@@ -211,12 +253,11 @@
       <position>rest</position>
       <positionOther>sleep</positionOther>
       <quiet>true</quiet>
-      <russian>
-        <node>петь</node>
-        <node>музицировать</node>
-      </russian>
       <soap>true</soap>
       <translate>true</translate>
+      <xaliases l="en"></xaliases>
+      <xaliases l="ru">музицировать</xaliases>
+      <xaliases l="ua"></xaliases>
     </node>
     <node type="AreaChannel">
       <cat>comm</cat>
@@ -227,27 +268,27 @@
       <garble>true</garble>
       <help level="-1" refby="channels" type="CommandHelp">
       </help>
-      <hint>пронзительно кричать на всю арию</hint>
+      <hint l="en"></hint>
+      <hint l="ru">пронзительно кричать на всю арию</hint>
+      <hint l="ua"></hint>
       <ignore>true</ignore>
       <isolate>true</isolate>
       <msgOther>%1$^C1 пронзительно крич%1$nит|ат &apos;{Y%2$s{x&apos;</msgOther>
       <msgSelf>Ты пронзительно кричишь &apos;{Y%2$s{x&apos;</msgSelf>
       <msgSelfNoarg>Пронзительно крикнуть что?</msgSelfNoarg>
-      <name>yell</name>
+      <name l="en">yell</name>
+      <name l="ru">вопить</name>
+      <name l="ua"></name>
       <position>rest</position>
       <positionOther>sleep</positionOther>
       <quiet>true</quiet>
-      <russian>
-        <node>вопить</node>
-        <node>пкричать</node>
-      </russian>
       <soap>true</soap>
       <translate>true</translate>
+      <xaliases l="en"></xaliases>
+      <xaliases l="ru">пкричать</xaliases>
+      <xaliases l="ua"></xaliases>
     </node>
     <node type="EmoteChannel">
-      <aliases>
-        <node>,</node>
-      </aliases>
       <cat>comm</cat>
       <extra>ghost nanny</extra>
       <help aka="ЭМОЦИИ" id="1061" level="-1" title="{CОтыгрыш:{x выражение эмоций в свободной форме" type="CommandHelp">%FMT% *%CMD%* _строка_
@@ -261,32 +302,37 @@
 
 Запятая *,* - синоним этой команды.
 </help>
-      <hint>выразить какую-то эмоцию</hint>
+      <hint l="en"></hint>
+      <hint l="ru">выразить какую-то эмоцию</hint>
+      <hint l="ua"></hint>
       <log>2</log>
       <msgOther>%1$^C1 %2$s{x</msgOther>
       <msgSelf>%1$^C1 %2$s{x</msgSelf>
       <msgSelfNoarg>Какие именно эмоции тебя обуревают?</msgSelfNoarg>
-      <name>emote</name>
+      <name l="en">emote</name>
+      <name l="ru">эмоция</name>
+      <name l="ua"></name>
       <position>rest</position>
       <positionOther>rest</positionOther>
-      <russian>
-        <node>эмоция</node>
-      </russian>
+      <xaliases l="en">,</xaliases>
+      <xaliases l="ru"></xaliases>
+      <xaliases l="ua"></xaliases>
     </node>
     <node type="RaceChannel">
-      <aliases>
-        <node>racetalk</node>
-      </aliases>
       <cat>comm</cat>
       <extra>keep_hide ghost manacles</extra>
-      <hint>общение с собратьями по расе</hint>
+      <hint l="en"></hint>
+      <hint l="ru">общение с собратьями по расе</hint>
+      <hint l="ua"></hint>
       <ignore>true</ignore>
       <isolate>true</isolate>
       <msgOff>Ты больше не слышишь расовых разговоров.</msgOff>
       <msgOn>Теперь ты слышишь расовые разговоры.</msgOn>
       <msgOther>%1$^C1 говор%1$nит|ят %2$N3 &apos;{g%3$s{x&apos;</msgOther>
       <msgSelf>Ты говоришь %2$N3 &apos;{g%3$s{x&apos;</msgSelf>
-      <name>rtalk</name>
+      <name l="en">rtalk</name>
+      <name l="ru">расговорить</name>
+      <name l="ua"></name>
       <nochannel>true</nochannel>
       <nomob>true</nomob>
       <off>noracetalk</off>
@@ -294,12 +340,11 @@
       <position>rest</position>
       <positionOther>dead</positionOther>
       <quiet>true</quiet>
-      <russian>
-        <node>расговорить</node>
-        <node>рговорить</node>
-      </russian>
       <soap>true</soap>
       <translate>true</translate>
+      <xaliases l="en">racetalk</xaliases>
+      <xaliases l="ru">рговорить</xaliases>
+      <xaliases l="ua"></xaliases>
     </node>
     <node type="TellChannel">
       <cat>comm</cat>
@@ -307,20 +352,24 @@
       <extra>keep_hide ghost manacles</extra>
       <help level="-1" refby="channels" type="CommandHelp">
       </help>
-      <hint>сказать реплику лично персонажу</hint>
+      <hint l="en"></hint>
+      <hint l="ru">сказать реплику лично персонажу</hint>
+      <hint l="ua"></hint>
       <ignore>true</ignore>
       <msgAuto>Ты говоришь себе &apos;{G%2$s{x&apos;</msgAuto>
       <msgChar>Ты говоришь %3$#C3 &apos;{G%2$s{x&apos;</msgChar>
       <msgNoArg>Говорить кому и что?</msgNoArg>
       <msgNoName>Говорить кому и что?</msgNoName>
       <msgVict>%1$#^C1 говор%1$nит|ят тебе &apos;{G%2$s{x&apos;</msgVict>
-      <name>tell</name>
+      <name l="en">tell</name>
+      <name l="ru">говорить</name>
+      <name l="ua"></name>
       <order>player_only</order>
       <position>rest</position>
       <positionOther>rest</positionOther>
-      <russian>
-        <node>говорить</node>
-      </russian>
+      <xaliases l="en"></xaliases>
+      <xaliases l="ru"></xaliases>
+      <xaliases l="ua"></xaliases>
     </node>
     <node type="ReplyChannel">
       <cat>comm</cat>
@@ -328,21 +377,23 @@
       <extra>keep_hide ghost manacles</extra>
       <help level="-1" refby="channels" type="CommandHelp">
       </help>
-      <hint>послать реплику в ответ на чей-то tell</hint>
+      <hint l="en"></hint>
+      <hint l="ru">послать реплику в ответ на чей-то tell</hint>
+      <hint l="ua"></hint>
       <ignore>true</ignore>
       <msgAuto>Ты говоришь себе &apos;{G%2$s{x&apos;</msgAuto>
       <msgChar>Ты говоришь %3$C3 &apos;{G%2$s{x&apos;</msgChar>
       <msgNoArg>Ответить что?</msgNoArg>
       <msgVict>%1$^C1 говор%1$nит|ят тебе &apos;{G%2$s{x&apos;</msgVict>
-      <name>reply</name>
+      <name l="en">reply</name>
+      <name l="ru">ответить</name>
+      <name l="ua"></name>
       <order>player_only</order>
       <position>rest</position>
       <positionOther>rest</positionOther>
-      <russian>
-        <node>ответить</node>
-        <node>вответ</node>
-        <node>реплика</node>
-      </russian>
+      <xaliases l="en"></xaliases>
+      <xaliases l="ru">вответ реплика</xaliases>
+      <xaliases l="ua"></xaliases>
     </node>
     <node type="WorldChannel">
       <cat>comm</cat>
@@ -361,7 +412,9 @@
 использовать все остальные. За злостное нарушение правил общения можно получить
 {hh2146молчанку{x от Богов.
 </help>
-      <hint>треп вне своей роли, от имени игрока</hint>
+      <hint l="en"></hint>
+      <hint l="ru">треп вне своей роли, от имени игрока</hint>
+      <hint l="ua"></hint>
       <hook>true</hook>
       <ignore>true</ignore>
       <isolate>true</isolate>
@@ -369,7 +422,9 @@
       <msgOtherMild>{Y[{R{leooc{lrвнероли{lx{Y]{W %1$#^C1{x: &apos;{r%2$s{x&apos;</msgOtherMild>
       <msgSelf>{Y[{R{leooc{lrвнероли{lx{Y]{x &apos;{C%2$s{x&apos;</msgSelf>
       <msgSelfMild>{Y[{R{leooc{lrвнероли{lx{Y]{x &apos;{r%2$s{x&apos;</msgSelfMild>
-      <name>ooc</name>
+      <name l="en">ooc</name>
+      <name l="ru">трепаться</name>
+      <name l="ua"></name>
       <nochannel>true</nochannel>
       <nomob>true</nomob>
       <off>noooc</off>
@@ -378,13 +433,10 @@
       <position>dead</position>
       <positionOther>dead</positionOther>
       <quiet>true</quiet>
-      <russian>
-        <node>трепаться</node>
-        <node>внероли</node>
-        <node>ооц</node>
-        <node>оос</node>
-      </russian>
       <soap>true</soap>
+      <xaliases l="en"></xaliases>
+      <xaliases l="ru">внероли ооц оос</xaliases>
+      <xaliases l="ua"></xaliases>
     </node>
   </channels>
   <extra>keep_hide ghost afk</extra>
@@ -423,11 +475,15 @@
 
 %SA% %H% {hh1081тишина{x, [(socials,социалы)], [(mysocial,мойсоциал)]
 </help>
-  <hint>список и состояние всех каналов</hint>
-  <name>channels</name>
+  <hint l="en"></hint>
+  <hint l="ru">список и состояние всех каналов</hint>
+  <hint l="ua"></hint>
+  <name l="en">channels</name>
+  <name l="ru">каналы</name>
+  <name l="ua"></name>
   <order>player_only</order>
   <position>dead</position>
-  <russian>
-    <node>каналы</node>
-  </russian>
+  <xaliases l="en"></xaliases>
+  <xaliases l="ru"></xaliases>
+  <xaliases l="ua"></xaliases>
 </Command>

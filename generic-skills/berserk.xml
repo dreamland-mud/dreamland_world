@@ -24,15 +24,19 @@
   <command type="DefaultSkillCommand">
     <argtype>undef</argtype>
     <cat>class</cat>
-    <hint>(воины, самураи) впасть в берсерк</hint>
-    <name>berserk</name>
+    <hint l="en"></hint>
+    <hint l="ru">(воины, самураи) впасть в берсерк</hint>
+    <hint l="ua"></hint>
+    <name l="en">berserk</name>
+    <name l="ru">берсерк</name>
+    <name l="ua"></name>
     <position>fight</position>
-    <russian>
-      <node>берсерк</node>
-    </russian>
+    <xaliases l="en"></xaliases>
+    <xaliases l="ru"></xaliases>
+    <xaliases l="ua"></xaliases>
   </command>
   <dammsg></dammsg>
-  <group registry="skillGroup">fightmaster defensive</group>
+  <group registry="skillGroup">defensive fightmaster</group>
   <hard>2</hard>
   <help id="829" keyword="'БОЕВАЯ ЯРОСТЬ'" level="-1" type="SkillHelp">%FMT% *(berserk,ярость)*
 
@@ -54,5 +58,5 @@
   </mob>
   <move>100</move>
   <nameRus>берсерк</nameRus>
-  <raceBonuses registry="race">dwarf urukhai duergar</raceBonuses>
+  <raceBonuses registry="race">dwarf duergar urukhai</raceBonuses>
 </skill>

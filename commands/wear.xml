@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
-  <aliases>
-    <node>hold</node>
-    <node>wield</node>
-  </aliases>
   <cat>item</cat>
   <extra>undig</extra>
   <help aka="ХВОСТ 'СНЯТЬ ВЕЩЬ' ВОЛОСЫ ВПЛЕСТИ ВПЛЕТАТЬ" id="990" level="-1" ref="remove" title="{CВещи: {xкак надевать и снимать" type="CommandHelp">Чтобы оружие или броня начали улучшать твои параметры и помогать в бою, их надо
@@ -41,13 +37,14 @@
 
 %SA% %H% [(get,взять)], [(equipment,снаряжение)], [(dual,вторичное)], [(strength,сила)].
 </help>
-  <hint>надеть вещь на себя, вооружиться</hint>
-  <name>wear</name>
+  <hint l="en"></hint>
+  <hint l="ru">надеть вещь на себя, вооружиться</hint>
+  <hint l="ua"></hint>
+  <name l="en">wear</name>
+  <name l="ru">надеть</name>
+  <name l="ua"></name>
   <position>rest</position>
-  <russian>
-    <node>надеть</node>
-    <node>вооружиться</node>
-    <node>зажать</node>
-    <node>одеть</node>
-  </russian>
+  <xaliases l="en">hold wield</xaliases>
+  <xaliases l="ru">вооружиться зажать одеть</xaliases>
+  <xaliases l="ua"></xaliases>
 </Command>

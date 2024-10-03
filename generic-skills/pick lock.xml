@@ -12,14 +12,17 @@
     <argtype>undef</argtype>
     <cat>class</cat>
     <extra>keep_hide</extra>
-    <hint>(воры) взломать запертый замок</hint>
-    <name>pick</name>
+    <hint l="en"></hint>
+    <hint l="ru">(воры) взломать запертый замок</hint>
+    <hint l="ua"></hint>
+    <name l="en">pick</name>
+    <name l="ru">взломать</name>
+    <name l="ua"></name>
     <order>thief_only</order>
     <position>rest</position>
-    <russian>
-      <node>взломать</node>
-      <node>вскрыть</node>
-    </russian>
+    <xaliases l="en"></xaliases>
+    <xaliases l="ru">вскрыть</xaliases>
+    <xaliases l="ua"></xaliases>
   </command>
   <dammsg></dammsg>
   <group registry="skillGroup">adventure</group>
@@ -40,5 +43,5 @@
   </mob>
   <move>100</move>
   <nameRus>взлом замка</nameRus>
-  <raceBonuses>duergar kender</raceBonuses>
+  <raceBonuses registry="race">duergar kender</raceBonuses>
 </skill>

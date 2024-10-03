@@ -21,13 +21,17 @@
   <command type="SKILL(shoot)">
     <argtype>undef</argtype>
     <cat>fight</cat>
-    <hint>(рейнджеры) выстрелить из лука</hint>
-    <name>shoot</name>
+    <hint l="en"></hint>
+    <hint l="ru">(рейнджеры) выстрелить из лука</hint>
+    <hint l="ua"></hint>
+    <name l="en">shoot</name>
+    <name l="ru">стрелять</name>
+    <name l="ua"></name>
     <order>player_only</order>
     <position>stand</position>
-    <russian>
-      <node>стрелять</node>
-    </russian>
+    <xaliases l="en"></xaliases>
+    <xaliases l="ru"></xaliases>
+    <xaliases l="ua"></xaliases>
   </command>
   <dammsg>лук</dammsg>
   <group registry="skillGroup">weaponsmaster</group>
@@ -58,5 +62,5 @@
   </mob>
   <move>20</move>
   <nameRus>лук</nameRus>
-  <raceBonuses>centaur elf</raceBonuses>
+  <raceBonuses registry="race">centaur elf</raceBonuses>
 </skill>

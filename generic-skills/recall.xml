@@ -72,19 +72,19 @@
     </node>
   </classes>
   <command type="SKILL(recall)">
-    <aliases>
-      <node>/</node>
-    </aliases>
     <argtype>undef</argtype>
     <cat>move</cat>
-    <hint>попросить богов о перемещении в храм</hint>
-    <name>recall</name>
+    <hint l="en"></hint>
+    <hint l="ru">попросить богов о перемещении в храм</hint>
+    <hint l="ua"></hint>
+    <name l="en">recall</name>
+    <name l="ru">возврат</name>
+    <name l="ua"></name>
     <order>allow_ruler player_only</order>
     <position>fight</position>
-    <russian>
-      <node>возврат</node>
-      <node>вернуться</node>
-    </russian>
+    <xaliases l="en">/</xaliases>
+    <xaliases l="ru">вернуться</xaliases>
+    <xaliases l="ua"></xaliases>
   </command>
   <dammsg></dammsg>
   <group registry="skillGroup">adventure</group>

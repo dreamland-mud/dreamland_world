@@ -31,15 +31,17 @@
   <command type="DefaultSkillCommand">
     <argtype>char_fight</argtype>
     <cat>class</cat>
-    <hint>(воинские классы) сбить ударом щита или корпуса</hint>
-    <name>bash</name>
+    <hint l="en"></hint>
+    <hint l="ru">(воинские классы) сбить ударом щита или корпуса</hint>
+    <hint l="ua"></hint>
+    <name l="en">bash</name>
+    <name l="ru">толчок</name>
+    <name l="ua"></name>
     <order>fight_only</order>
     <position>fight</position>
-    <russian>
-      <node>толчок</node>
-      <node>сбить</node>
-      <node>толкнуть</node>
-    </russian>
+    <xaliases l="en"></xaliases>
+    <xaliases l="ru">сбить толкнуть</xaliases>
+    <xaliases l="ua"></xaliases>
   </command>
   <dammsg>толчок</dammsg>
   <group registry="skillGroup">fightmaster</group>
@@ -63,5 +65,5 @@
   </mob>
   <move>40</move>
   <nameRus>толчок</nameRus>
-  <raceBonuses>'cloud giant' 'storm giant'</raceBonuses>
+  <raceBonuses registry="race">&apos;storm giant&apos; &apos;cloud giant&apos;</raceBonuses>
 </skill>

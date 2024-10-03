@@ -47,15 +47,19 @@
     <argtype>obj_carry</argtype>
     <cat>class</cat>
     <extra>undig</extra>
-    <hint>узнать из легенд о свойствах предмета</hint>
-    <name>lore</name>
+    <hint l="en"></hint>
+    <hint l="ru">узнать из легенд о свойствах предмета</hint>
+    <hint l="ua"></hint>
+    <name l="en">lore</name>
+    <name l="ru">легенды</name>
+    <name l="ua"></name>
     <position>rest</position>
-    <russian>
-      <node>легенды</node>
-    </russian>
+    <xaliases l="en"></xaliases>
+    <xaliases l="ru"></xaliases>
+    <xaliases l="ua"></xaliases>
   </command>
   <dammsg></dammsg>
-  <group registry="skillGroup">detection adventure</group>
+  <group registry="skillGroup">adventure detection</group>
   <hard>7</hard>
   <help aka="ЛЕГЕНДА ЛОРЕ" id="644" keyword="'ЗНАНИЕ ЛЕГЕНД'" level="-1" type="SkillHelp">%FMT% *%CMD%* _вещь_
 
@@ -70,5 +74,5 @@
   <mana>40</mana>
   <move>10</move>
   <nameRus>легенды</nameRus>
-  <raceBonuses registry="race">kender svirfnebli gnome</raceBonuses>
+  <raceBonuses registry="race">gnome kender svirfnebli</raceBonuses>
 </skill>

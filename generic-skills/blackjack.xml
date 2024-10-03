@@ -13,20 +13,20 @@
     </node>
   </classes>
   <command type="DefaultSkillCommand">
-    <aliases>
-      <node>bj</node>
-    </aliases>
     <argtype>char_room</argtype>
     <cat>class</cat>
     <extra>keep_hide</extra>
-    <hint>(воры) оглушить жертву зажатым в руке предметом</hint>
-    <name>blackjack</name>
+    <hint l="en"></hint>
+    <hint l="ru">(воры) оглушить жертву зажатым в руке предметом</hint>
+    <hint l="ua"></hint>
+    <name l="en">blackjack</name>
+    <name l="ru">оглушить</name>
+    <name l="ua"></name>
     <order>player_only</order>
     <position>stand</position>
-    <russian>
-      <node>оглушить</node>
-      <node>мешочек</node>
-    </russian>
+    <xaliases l="en">bj</xaliases>
+    <xaliases l="ru">мешочек</xaliases>
+    <xaliases l="ua"></xaliases>
   </command>
   <dammsg>оглушающий удар</dammsg>
   <group registry="skillGroup">suddendeath adventure</group>

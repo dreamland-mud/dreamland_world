@@ -2,7 +2,7 @@
 <Command type="CommandElement">
   <cat>position</cat>
   <extra>undig</extra>
-  <help id="227" level="-1" type="CommandHelp" ref="dismount" aka="MOUNTED RIDEABLE ЕЗДОВЫЕ КОНЬ НАЕЗДНИК ВЕРХОМ 'ВЕРХОВАЯ ЕЗДА' ВСАДНИК" keyword="RIDING 'ЕЗДА ВЕРХОМ'" labels="move" title="{CПеремещение: {xверховая езда">На некоторых {hh15последователях{x можно ездить верхом. Всадники могут путешествовать
+  <help aka="MOUNTED RIDEABLE ЕЗДОВЫЕ КОНЬ НАЕЗДНИК ВЕРХОМ 'ВЕРХОВАЯ ЕЗДА' ВСАДНИК" id="227" keyword="RIDING 'ЕЗДА ВЕРХОМ'" labels="move" level="-1" ref="dismount" title="{CПеремещение: {xверховая езда" type="CommandHelp">На некоторых {hh15последователях{x можно ездить верхом. Всадники могут путешествовать
 верхом на дальние расстояния, а скакуны с соответствующими умениями позволят
 тебе {hh2128переплывать{x или {hh575взлетать{x над преградами.
 
@@ -40,11 +40,15 @@
 клану. Если сейчас ездить можно всем, убрать указанного персонажа/клан из списка
 запрещенных ездоков.
 </help>
-  <hint>сесть верхом на персонажа</hint>
-  <name>mount</name>
+  <hint l="en"></hint>
+  <hint l="ru">сесть верхом на персонажа</hint>
+  <hint l="ua"></hint>
+  <name l="en">mount</name>
+  <name l="ru">оседлать</name>
+  <name l="ua"></name>
   <order>allow_ruler player_only</order>
   <position>fight</position>
-  <russian>
-    <node>оседлать</node>
-  </russian>
+  <xaliases l="en"></xaliases>
+  <xaliases l="ru"></xaliases>
+  <xaliases l="ua"></xaliases>
 </Command>

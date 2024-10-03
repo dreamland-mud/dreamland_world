@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
-  <aliases>
-    <node>take</node>
-  </aliases>
   <cat>item</cat>
   <extra>keep_hide undig</extra>
   <help aka="CONTAINERS ХРАНЕНИЕ ХРАНИТЬ КОНТЕЙНЕРЫ КОРОБКА ОТДАТЬ ПАКЕТ ПЕРЕДАТЬ ЯЩИКИ 'СНИЖЕНИЕ ВЕСА' СУМКИ" id="1024" level="-1" ref="drop give present put" title="{CВещи: {xхранение и перемещение" type="CommandHelp">Чтобы вещи попали к тебе в {hh1015инвентарь{x, их надо взять. Вещи могут лежать просто на
@@ -57,10 +54,14 @@
 
 %SA% %H% [(pockets,карманы)]
 </help>
-  <hint>взять предмет с пола или из контейнера</hint>
-  <name>get</name>
+  <hint l="en"></hint>
+  <hint l="ru">взять предмет с пола или из контейнера</hint>
+  <hint l="ua"></hint>
+  <name l="en">get</name>
+  <name l="ru">взять</name>
+  <name l="ua"></name>
   <position>rest</position>
-  <russian>
-    <node>взять</node>
-  </russian>
+  <xaliases l="en">take</xaliases>
+  <xaliases l="ru"></xaliases>
+  <xaliases l="ua"></xaliases>
 </Command>

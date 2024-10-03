@@ -21,15 +21,17 @@
     <argtype>char_self</argtype>
     <cat>class</cat>
     <extra>keep_hide</extra>
-    <hint>(воры, ниндзи) скрыться в тенях</hint>
-    <name>hide</name>
+    <hint l="en"></hint>
+    <hint l="ru">(воры, ниндзи) скрыться в тенях</hint>
+    <hint l="ua"></hint>
+    <name l="en">hide</name>
+    <name l="ru">укрыться</name>
+    <name l="ua"></name>
     <order>thief_only</order>
     <position>rest</position>
-    <russian>
-      <node>укрыться</node>
-      <node>скрыться</node>
-      <node>скрываться</node>
-    </russian>
+    <xaliases l="en"></xaliases>
+    <xaliases l="ru">скрыться скрываться</xaliases>
+    <xaliases l="ua"></xaliases>
   </command>
   <dammsg></dammsg>
   <group registry="skillGroup">adventure</group>
@@ -55,16 +57,5 @@
   </mob>
   <move>40</move>
   <nameRus>укрыться</nameRus>
-  <raceBonuses>
-    <node name="drow">
-      <bonus>100</bonus>
-      <level>1</level>
-      <professional>false</professional>
-    </node>
-    <node name="hobbit">
-      <bonus>100</bonus>
-      <level>1</level>
-      <professional>false</professional>
-    </node>
-  </raceBonuses>
+  <raceBonuses registry="race">node</raceBonuses>
 </skill>

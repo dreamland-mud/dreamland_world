@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
-  <aliases>
-    <node>clantalk</node>
-  </aliases>
   <cat>clan</cat>
   <extra>keep_hide ghost manacles</extra>
   <help aka="'CLAN CHANNEL' 'CLAN TALK' 'КЛАНОВЫЙ КАНАЛ'" id="1364" labels="comm" level="-1" title="{CОбщение: {xклановый канал" type="CommandHelp">%FMT% *%CMD%* _сообщение_
@@ -14,11 +11,14 @@
 
 Если написать *%CMD%* без параметра, это включает или выключает весь канал.
 </help>
-  <hint>общение с соклановиками</hint>
-  <name>cb</name>
+  <hint l="en"></hint>
+  <hint l="ru">общение с соклановиками</hint>
+  <hint l="ua"></hint>
+  <name l="en">cb</name>
+  <name l="ru">кланканал</name>
+  <name l="ua"></name>
   <position>rest</position>
-  <russian>
-    <node>кланканал</node>
-    <node>кк</node>
-  </russian>
+  <xaliases l="en">clantalk</xaliases>
+  <xaliases l="ru">кк</xaliases>
+  <xaliases l="ua"></xaliases>
 </Command>

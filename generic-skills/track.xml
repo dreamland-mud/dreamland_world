@@ -11,12 +11,16 @@
   <command type="SKILL(track)">
     <argtype>undef</argtype>
     <cat>class</cat>
-    <hint>(рейнджеры) идти по чьим-то следам</hint>
-    <name>track</name>
+    <hint l="en"></hint>
+    <hint l="ru">(рейнджеры) идти по чьим-то следам</hint>
+    <hint l="ua"></hint>
+    <name l="en">track</name>
+    <name l="ru">выследить</name>
+    <name l="ua"></name>
     <position>stand</position>
-    <russian>
-      <node>выследить</node>
-    </russian>
+    <xaliases l="en"></xaliases>
+    <xaliases l="ru"></xaliases>
+    <xaliases l="ua"></xaliases>
   </command>
   <dammsg></dammsg>
   <group registry="skillGroup">adventure</group>
@@ -29,5 +33,5 @@
   <mana>10</mana>
   <move>20</move>
   <nameRus>выслеживание</nameRus>
-  <raceBonuses>mawg</raceBonuses>
+  <raceBonuses registry="race">mawg</raceBonuses>
 </skill>

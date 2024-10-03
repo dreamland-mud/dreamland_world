@@ -71,14 +71,17 @@
   <command type="DefaultSkillCommand">
     <argtype>string</argtype>
     <cat>class</cat>
-    <hint>пнуть персонажа или предмет</hint>
-    <name>kick</name>
+    <hint l="en"></hint>
+    <hint l="ru">пнуть персонажа или предмет</hint>
+    <hint l="ua"></hint>
+    <name l="en">kick</name>
+    <name l="ru">пинок</name>
+    <name l="ua"></name>
     <order>fight_only</order>
     <position>fight</position>
-    <russian>
-      <node>пинок</node>
-      <node>пнуть</node>
-    </russian>
+    <xaliases l="en"></xaliases>
+    <xaliases l="ru">пнуть</xaliases>
+    <xaliases l="ua"></xaliases>
   </command>
   <dammsg>пинок</dammsg>
   <group registry="skillGroup">fightmaster</group>
@@ -125,5 +128,5 @@
   </mob>
   <move>20</move>
   <nameRus>пинок</nameRus>
-  <raceBonuses>centaur</raceBonuses>
+  <raceBonuses registry="race">centaur</raceBonuses>
 </skill>

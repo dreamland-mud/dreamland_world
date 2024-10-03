@@ -47,14 +47,17 @@
     <argtype>undef</argtype>
     <cat>magic</cat>
     <extra>undig</extra>
-    <hint>взмахнуть волшебной палочкой</hint>
-    <name>zap</name>
+    <hint l="en"></hint>
+    <hint l="ru">взмахнуть волшебной палочкой</hint>
+    <hint l="ua"></hint>
+    <name l="en">zap</name>
+    <name l="ru">поразить</name>
+    <name l="ua"></name>
     <order>player_only</order>
     <position>rest</position>
-    <russian>
-      <node>поразить</node>
-      <node>тереть</node>
-    </russian>
+    <xaliases l="en"></xaliases>
+    <xaliases l="ru">тереть</xaliases>
+    <xaliases l="ua"></xaliases>
   </command>
   <dammsg></dammsg>
   <group registry="skillGroup">arcane</group>
@@ -70,5 +73,5 @@
   </mob>
   <move>20</move>
   <nameRus>жезлы</nameRus>
-  <raceBonuses>rockseer</raceBonuses>
+  <raceBonuses registry="race">rockseer</raceBonuses>
 </skill>

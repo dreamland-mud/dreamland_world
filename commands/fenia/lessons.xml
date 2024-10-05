@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command type="CommandElement">
+  <aliases l="en"></aliases>
+  <aliases l="ru"></aliases>
+  <aliases l="ua"></aliases>
   <cat>quest</cat>
   <extra>keep_hide ghost afk</extra>
-  <help id="270" level="-1" type="CommandHelp">
-  </help>
+  <help aka="КОЖЕВЕННИК 'СТАРОЕ ШИЛО'" id="270" keyword="УРОКИ LESSONS ОБУЧЕНИЕ" level="-1" title="{CКвесты:{x Уроки для новичков" type="CommandHelp">После того как {hh2127новички{x высаживаются с {hh1560Галеона{x в город, их ждет цепочка простых
+обучающих заданий, называемых =уроками=. Проходить их необязательно, но очень
+полезно -- можно получить много {hh14очков опыта{x и заодно разобраться в важных
+механиках нашего мира.
+
+Чтобы увидеть задание текущего урока, напиши {hc{y{lrурок{lelesson{x.
+
+%FMT% *%CMD%* все*
+Посмотреть список всех уроков.
+
+%FMT% *%CMD%* _номер_
+Посмотреть описание урока под данным номером.
+
+%FMT% *%CMD%* старт*
+Пройти уроки сначала.
+
+%SA% %H% *(квесты,quests)*
+</help>
   <hint l="en"></hint>
   <hint l="ru">начальные уроки</hint>
   <hint l="ua"></hint>
@@ -12,7 +31,4 @@
   <name l="ua"></name>
   <order>player_only</order>
   <position>dead</position>
-  <aliases l="en"></aliases>
-  <aliases l="ru"></aliases>
-  <aliases l="ua"></aliases>
 </Command>

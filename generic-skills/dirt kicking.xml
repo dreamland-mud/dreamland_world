@@ -47,7 +47,12 @@
   <dammsg>бросок грязью</dammsg>
   <group registry="skillGroup">fightmaster</group>
   <hard>2</hard>
-  <help aka="БРОСИТЬ ГРЯЗЬ" id="783" level="-1" type="SkillHelp">%FMT% *%CMD%* _%VICT%_
+  <help id="783" level="-1" type="SkillHelp">
+    <extra l="en"></extra>
+    <extra l="ru">бросить грязь</extra>
+    <extra l="ua"></extra>
+    <text l="en"></text>
+    <text l="ru">%FMT% *%CMD%* _%VICT%_
 %FFF% *%CMD%*
 
 С помощью этого умения можно попытаться ослепить жертву броском грязи в глаза --
@@ -61,7 +66,9 @@
 {hh86типа местности{x, в которой ты сейчас находишься. Во время дождя навык сработает
 чаще, но есть шанс подскользнуться в дождевых лужах -- или в {hh1075вылитых{x кем-то
 лужах в помещении.
-</help>
+</text>
+    <text l="ua"></text>
+  </help>
   <mob>
     <bonus>20</bonus>
     <dice>3</dice>

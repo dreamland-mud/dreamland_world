@@ -33,7 +33,12 @@
   </classes>
   <dammsg></dammsg>
   <group registry="skillGroup">enchantment</group>
-  <help aka="BURNPROOF 'ЗАЩИТА ОТ ОГНЯ' 'ЗАЩИТНАЯ АУРА'" id="867" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%OBJ%_
+  <help id="867" level="-1" type="SkillHelp">
+    <extra l="en">burnproof</extra>
+    <extra l="ru">&apos;защита от огня&apos; &apos;защитная аура&apos;</extra>
+    <extra l="ua"></extra>
+    <text l="en"></text>
+    <text l="ru">%FMT% *%SPELL%* _%OBJ%_
 
 Это заклинание на короткое время предотвращает разрушение предмета {hh101огнем{x или
 кислотой. Также помогает от молитвы {hh682накаливания{x. Некоторые вещи обладают
@@ -42,7 +47,9 @@
 {RВНИМАНИЕ:{x огнеупорность -- не то же самое, что {hh633защита от высоких температур{x.
 Огнеупорность защищает в первую очередь от воспламенения, а не таяния, и в том
 числе помогает от травления кислотой.
-</help>
+</text>
+    <text l="ua"></text>
+  </help>
   <mana>40</mana>
   <nameRus>огнеупорность</nameRus>
   <spell type="DefaultSpell">

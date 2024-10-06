@@ -2,7 +2,12 @@
 <Command>
   <cat></cat>
   <extra>keep_hide ghost</extra>
-  <help aka="'SET OBJ'" id="1052" level="102" type="CommandHelp">%FMT%  *set mob* _%MOB%_ _field_ _value_
+  <help id="1052" level="102" type="CommandHelp">
+    <extra l="en">&apos;set obj&apos;</extra>
+    <extra l="ru"></extra>
+    <extra l="ua"></extra>
+    <text l="en"></text>
+    <text l="ru">%FMT%  *set mob* _%MOB%_ _field_ _value_
 %FFF%  *set room* _number_ _field_ _value_
 %FFF%  *set skill* _%CHAR%_ _name_ _rating_
 %FFF%  *set skill* _%CHAR%_ *all* _rating_
@@ -55,7 +60,9 @@
 
 %RESUME%
 %SA% %H% [string], [stat]
-</help>
+</text>
+    <text l="ua"></text>
+  </help>
   <hint l="en"></hint>
   <hint l="ru">установить параметры предметам и персонажам</hint>
   <hint l="ua"></hint>

@@ -52,7 +52,12 @@
   </command>
   <dammsg></dammsg>
   <group registry="skillGroup">weaponsmaster</group>
-  <help aka="'ОБЕЗОРУЖИВАТЬ ПРОТИВНИКОВ'" id="812" level="-1" type="SkillHelp">%FMT% *%CMD%*
+  <help id="812" level="-1" type="SkillHelp">
+    <extra l="en"></extra>
+    <extra l="ru">&apos;обезоруживать противников&apos;</extra>
+    <extra l="ua"></extra>
+    <text l="en"></text>
+    <text l="ru">%FMT% *%CMD%*
 
 Это важное боевое умение позволяет лишить противника наносить тебе удары оружием
 или парировать им. Безоружные противники гораздо слабее бьют и хуже отражают
@@ -61,7 +66,9 @@
 Шанс успеха зависит от прокачки этого умения и твоего навыка владения оружием,
 типа и веса оружия противников, {hh28архетипа{x, размера, силы и/или ловкости
 бойцов и многих других факторов.
-</help>
+</text>
+    <text l="ua"></text>
+  </help>
   <mob>
     <bonus>20</bonus>
     <dice>3</dice>

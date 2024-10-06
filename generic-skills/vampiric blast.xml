@@ -11,14 +11,21 @@
   </classes>
   <dammsg mg="n">проклятие вампира</dammsg>
   <group registry="skillGroup">vampiric</group>
-  <help id="591" keyword="'ПРОКЛЯТЬЕ ВАМПИРА'" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
+  <help id="591" level="-1" type="SkillHelp">
+    <keyword l="en"></keyword>
+    <keyword l="ru">&apos;проклятье вампира&apos;</keyword>
+    <keyword l="ua"></keyword>
+    <text l="en"></text>
+    <text l="ru">%FMT% *%SPELL%* _%VICT%_
 
 Вампир, используя секреты древней магии, может поражать своих противников
 ударом темной энергии. Сила повреждений возрастает с уровнем заклинания.
 При провале спасброска жертва может быть {hh704ослаблена{x.
 
 %SA% %H% [(cast,колдовать)]
-</help>
+</text>
+    <text l="ua"></text>
+  </help>
   <mana>20</mana>
   <mob>
     <professional>true</professional>

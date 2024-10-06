@@ -2,7 +2,12 @@
 <Command>
   <cat>info</cat>
   <extra>keep_hide ghost afk</extra>
-  <help aka="DAY EVENING MORNING NIGHT TODAY ДЕНЬ НОЧЬ СЕГОДНЯ УТРО ВЕЧЕР 'ВРЕМЯ ДНЯ' 'ВРЕМЯ СУТОК'" id="1029" level="-1" title="Время суток" type="CommandHelp">Время суток (день или ночь) влияет на многие события в игре. Например, ночью без
+  <help id="1029" level="-1" type="CommandHelp">
+    <extra l="en">day evening morning night today</extra>
+    <extra l="ru">день ночь сегодня утро вечер &apos;время дня&apos; &apos;время суток&apos;</extra>
+    <extra l="ua"></extra>
+    <text l="en"></text>
+    <text l="ru">Время суток (день или ночь) влияет на многие события в игре. Например, ночью без
 {hh65фонаря{x или {hh830инфравидения{x нельзя ничего разглядеть в комнате, а даже с фонарем
 не видно {hh1021соседние выходы{x. Днем на улице {hh144вампиров{x обжигают лучи солнца. 
 
@@ -15,7 +20,12 @@
 (%H% [(prompt,подсказка)]).
 
 %SA% %H% [(reset,обновление)], [(calendar,календарь)]
-</help>
+</text>
+    <text l="ua"></text>
+    <title l="en"></title>
+    <title l="ru">Время суток</title>
+    <title l="ua"></title>
+  </help>
   <hint l="en"></hint>
   <hint l="ru">узнать время суток и дату</hint>
   <hint l="ua"></hint>

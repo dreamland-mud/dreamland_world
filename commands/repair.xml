@@ -2,7 +2,12 @@
 <Command>
   <cat>shop</cat>
   <extra>ghost</extra>
-  <help aka="CONDITION ДОСПЕШНИК 'МАГАЗИН ДОСПЕХОВ' 'ОРУЖЕЙНАЯ ЛАВКА' ОРУЖЕЙНИК ПОЧИНИТЬ ПОЧИНКА ПРЕДМЕТОВ ПРОЧНОСТЬ СОСТОЯНИЕ" id="1055" labels="item" level="-1" ref="estimate" title="{CВещи: {xпочинка, прочность" type="CommandHelp">Во время сражений твое оружие и {hh1015экипировка{x получают повреждения.
+  <help id="1055" labels="item" level="-1" ref="estimate" type="CommandHelp">
+    <extra l="en">condition</extra>
+    <extra l="ru">доспешник &apos;магазин доспехов&apos; &apos;оружейная лавка&apos; оружейник починить починка предметов прочность состояние</extra>
+    <extra l="ua"></extra>
+    <text l="en"></text>
+    <text l="ru">Во время сражений твое оружие и {hh1015экипировка{x получают повреждения.
 Степень их пригодности ({cпрочность{x) указывается в квадратных скобках после
 названия вещи -- например, %PAUSE%[{Rуж.{x]%RESUME% значит, что вещь в ужасном состоянии и скоро
 окончательно разрушится и пропадет.
@@ -27,7 +32,12 @@
 
 %FMT% {y{lrоценить{leestimate{x _%OBJ%_
 Узнать стоимость будущего ремонта.
-</help>
+</text>
+    <text l="ua"></text>
+    <title l="en"></title>
+    <title l="ru">{CВещи: {xпочинка, прочность</title>
+    <title l="ua"></title>
+  </help>
   <hint l="en"></hint>
   <hint l="ru">починить вещь у ремонтника</hint>
   <hint l="ua"></hint>

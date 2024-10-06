@@ -22,7 +22,15 @@
   </command>
   <dammsg>заход в бубен</dammsg>
   <group registry="skillGroup">fightmaster</group>
-  <help aka="'УДАР В ЛИЦО' 'ЗАХОД В БУБЕН'" id="700" keyword="ВРЕЗАТЬ" level="-1" type="SkillHelp">%FMT% *%CMD%* _%VICT%_
+  <help id="700" level="-1" type="SkillHelp">
+    <extra l="en"></extra>
+    <extra l="ru">&apos;удар в лицо&apos; &apos;заход в бубен&apos;</extra>
+    <extra l="ua"></extra>
+    <keyword l="en"></keyword>
+    <keyword l="ru">врезать</keyword>
+    <keyword l="ua"></keyword>
+    <text l="en"></text>
+    <text l="ru">%FMT% *%CMD%* _%VICT%_
 
 Воины -- и многие другие существа в мире -- любят решать проблемы крепким ударом
 в голову противника. Хорошо взвешенный заход в бубен наносит серьезный урон, 
@@ -39,7 +47,9 @@
 голову противника в бою -- с эффектом, аналогичным этому умению.
 
 %SA% %H% {hh676сбить{x
-</help>
+</text>
+    <text l="ua"></text>
+  </help>
   <mob>
     <bonus>10</bonus>
     <dice>3</dice>

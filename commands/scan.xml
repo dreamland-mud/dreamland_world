@@ -5,7 +5,12 @@
   <aliases l="ua"></aliases>
   <cat>move</cat>
   <extra>keep_hide ghost undig</extra>
-  <help aka="WHERE ГДЕ МЕСТОНАХОЖДЕНИЕ ВГЛЯДЫВАТЬСЯ ЗДЕСЬ" id="1021" level="-1" ref="exits" title="{CПеремещение: {xориентировка на местности" type="CommandHelp">Попав в незнакомую зону или местность, первым делом полезно узнать, где ты.
+  <help id="1021" level="-1" ref="exits" type="CommandHelp">
+    <extra l="en">where</extra>
+    <extra l="ru">где местонахождение вглядываться здесь</extra>
+    <extra l="ua"></extra>
+    <text l="en"></text>
+    <text l="ru">Попав в незнакомую зону или местность, первым делом полезно узнать, где ты.
 
 %FMT%  *(where,здесь)*{lR|*где*{lx
 Напишет, в какой ты зоне, и кто тут еще есть, кроме тебя.
@@ -29,7 +34,12 @@
 будут помечены звездочками. Также покажет {hh1016скрытые выходы{x -- если ты их видишь.
 Если включить настройку *(config autoexit,режим автовыходы)*, то выходы отображаются
 сразу после описания комнаты.
-</help>
+</text>
+    <text l="ua"></text>
+    <title l="en"></title>
+    <title l="ru">{CПеремещение: {xориентировка на местности</title>
+    <title l="ua"></title>
+  </help>
   <hint l="en"></hint>
   <hint l="ru">оглядеться по сторонам или по направлению</hint>
   <hint l="ua"></hint>

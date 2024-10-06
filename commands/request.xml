@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
   <cat>item</cat>
-  <help aka="GRATITUDE БЛАГОДАРНОСТЬ ПРОСИТЬ ПРОСЬБА ВЫПРАШИВАТЬ ВЫПРОСИТЬ" id="1002" level="-1" title="{CВещи: {xпопросить" type="CommandHelp">%FMT%  *%CMD%* _предмет_ _монстр_  
+  <help id="1002" level="-1" type="CommandHelp">
+    <extra l="en">gratitude</extra>
+    <extra l="ru">благодарность просить просьба выпрашивать выпросить</extra>
+    <extra l="ua"></extra>
+    <text l="en"></text>
+    <text l="ru">%FMT%  *%CMD%* _предмет_ _монстр_  
 
 {hh33Добрые{x персонажи могут использовать эту команду, чтобы попросить предмет из
 инвентаря или обмундирования монстра доброй {hh33натуры{x. {hh42Лимиты{x монстры, как
@@ -15,7 +20,12 @@
 другого кентавра (кентавры).
 
 %SA% %H% [(demand,требовать)]
-</help>
+</text>
+    <text l="ua"></text>
+    <title l="en"></title>
+    <title l="ru">{CВещи: {xпопросить</title>
+    <title l="ua"></title>
+  </help>
   <hint l="en"></hint>
   <hint l="ru">вежливо попросить вещь у кого-либо</hint>
   <hint l="ua"></hint>

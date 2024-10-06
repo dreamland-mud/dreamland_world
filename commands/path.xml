@@ -2,7 +2,12 @@
 <Command>
   <cat>move</cat>
   <extra>keep_hide ghost</extra>
-  <help aka="'КАК ДОБРАТЬСЯ' КОМАНДА МАРШРУТ ПУТЬ" id="2170" level="-1" type="CommandHelp">%FMT% *%CMD%* _название комнаты_
+  <help id="2170" level="-1" type="CommandHelp">
+    <extra l="en"></extra>
+    <extra l="ru">&apos;как добраться&apos; команда маршрут путь</extra>
+    <extra l="ua"></extra>
+    <text l="en"></text>
+    <text l="ru">%FMT% *%CMD%* _название комнаты_
 	
 Эта полезная команда помогает тем, кто по какой-то причине не может пользоваться
 картами в нашем {hh2133веб-клиенте{x, удобнее находить путь к любой комнате в текущей
@@ -16,7 +21,9 @@
 пригородах и других скрытых или специальных зонах, или если персонаж ослеплен. 
 
 %SA% %H% [(run,бежать)]
-</help>
+</text>
+    <text l="ua"></text>
+  </help>
   <hint l="en"></hint>
   <hint l="ru">проложить путь к комнате в текущей зоне</hint>
   <hint l="ua"></hint>

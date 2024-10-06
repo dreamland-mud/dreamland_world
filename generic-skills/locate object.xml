@@ -30,7 +30,15 @@
   </classes>
   <dammsg></dammsg>
   <group registry="skillGroup">detection</group>
-  <help aka="'ПОИСК ПРЕДМЕТА'" id="707" keyword="ЛОКАТОР" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%OBJ%_
+  <help id="707" level="-1" type="SkillHelp">
+    <extra l="en"></extra>
+    <extra l="ru">&apos;поиск предмета&apos;</extra>
+    <extra l="ua"></extra>
+    <keyword l="en"></keyword>
+    <keyword l="ru">локатор</keyword>
+    <keyword l="ua"></keyword>
+    <text l="en"></text>
+    <text l="ru">%FMT% *%SPELL%* _%OBJ%_
 
 Это заклинание показывает местоположение всех вещей в мире, у которых в названии
 или описании встречается заданная последовательность символов.
@@ -39,7 +47,9 @@
 не удастся увидеть вещи на игроках из своего {hh32ПК-диапазона{x или их {hh15чармисах{x.
 Для вещей, которые несут игроки или чармисы вне ПК-диапазона, не видно, в какой
 именно местности они сейчас находятся.
-</help>
+</text>
+    <text l="ua"></text>
+  </help>
   <mana>100</mana>
   <nameRus>локатор</nameRus>
   <spell type="DefaultSpell">

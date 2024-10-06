@@ -10,7 +10,9 @@
   </classes>
   <dammsg>квантовый скачок</dammsg>
   <group registry="skillGroup">combat</group>
-  <help id="691" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
+  <help id="691" level="-1" type="SkillHelp">
+    <text l="en"></text>
+    <text l="ru">%FMT% *%SPELL%* _%VICT%_
 
 Это жуткое заклинание колдунов расшатывает молекулярную структуру жертвы,
 вызывая мощные энергетические повреждения. Урон снижается, если у жертвы успешно
@@ -18,7 +20,9 @@
 есть шанс умереть на месте.
 
 %SA% %H% [(cast,колдовать)]
-</help>
+</text>
+    <text l="ua"></text>
+  </help>
   <mana>40</mana>
   <mob>
     <professional>true</professional>

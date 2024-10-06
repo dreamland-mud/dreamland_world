@@ -2,7 +2,9 @@
 <Command>
   <cat></cat>
   <extra>keep_hide ghost</extra>
-  <help id="2125" level="106" type="CommandHelp">%FMT% *%CMD%* *all* | *armor* | *weapon* | *magic* | *pets*
+  <help id="2125" level="106" type="CommandHelp">
+    <text l="en"></text>
+    <text l="ru">%FMT% *%CMD%* *all* | *armor* | *weapon* | *magic* | *pets*
 
 Сохранить базу предметов на диск, тут же делая ее доступной для поисковика на сайте.
 Автоматическое сохранение базы из мира происходит каждые 4 часа.
@@ -55,7 +57,9 @@ learned {D(знание каких умений и групп повышает){
 {ysearcher wq random and tier&gt;3{x - всё оружие rand_stat с тиером 2
 {ysearcher sq spells=&quot;*heal*&quot; and power&gt;10{x - все лечилки с уровнем больше 10
 {ysearcher q behavior=&quot;*noriva*&quot;{x - все предметы комплекта Noriva
-</help>
+</text>
+    <text l="ua"></text>
+  </help>
   <hint l="en"></hint>
   <hint l="ru">поиск предметов и сохранение базы на диск</hint>
   <hint l="ua"></hint>

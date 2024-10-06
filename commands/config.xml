@@ -292,7 +292,12 @@
       <name>Настройки соединения:</name>
     </node>
   </groups>
-  <help aka="AUTOASSIST AUTOEXIT AUTOGOLD AUTOLOOK AUTOLOOT AUTOSAC AUTOSPLIT AUTOSTORE АВТОБУФЕР АВТОДЕЛЕЖ АВТОГРАБЕЖ АВТОЛУТ АВТОМОНЕТЫ АВТОНАСТРОЙКА АВТОПОДБОР АВТОПОМОЩЬ АВТОЖЕРТВА АВТОВЫХОДЫ АВТОВЗГЛЯД" id="1087" labels="info" level="-1" title="{CНастройки{x игрового процесса, ввода-вывода" type="CommandHelp">Напиши *%CMD%*, чтобы увидеть список всех текущих настроек. 
+  <help id="1087" labels="info" level="-1" type="CommandHelp">
+    <extra l="en">autoassist autoexit autogold autolook autoloot autosac autosplit autostore</extra>
+    <extra l="ru">автобуфер автодележ автограбеж автолут автомонеты автонастройка автоподбор автопомощь автожертва автовыходы автовзгляд</extra>
+    <extra l="ua"></extra>
+    <text l="en"></text>
+    <text l="ru">Напиши *%CMD%*, чтобы увидеть список всех текущих настроек. 
 Чтобы переключить любую из них, напиши *%CMD%* _опция_ *%YES%*|*%NO%* --
 например, *%CMD%* _{leautoloot{lrавтограбеж{lx_ *%NO%*, чтобы перестать брать
 все подряд из трупов. 
@@ -317,7 +322,12 @@
 Включает-выключает указанную опцию.
 
 %SA% %H% [(brief,кратко)], [noiac]
-</help>
+</text>
+    <text l="ua"></text>
+    <title l="en"></title>
+    <title l="ru">{CНастройки{x игрового процесса, ввода-вывода</title>
+    <title l="ua"></title>
+  </help>
   <hint l="en"></hint>
   <hint l="ru">список всех настроек</hint>
   <hint l="ua"></hint>

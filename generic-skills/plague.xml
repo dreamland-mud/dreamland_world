@@ -29,7 +29,15 @@
   </classes>
   <dammsg mg="f">чума</dammsg>
   <group registry="skillGroup">maladictions</group>
-  <help aka="ЛИХОРАДКА" id="614" keyword="ЧУМУ" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
+  <help id="614" level="-1" type="SkillHelp">
+    <extra l="en"></extra>
+    <extra l="ru">лихорадка</extra>
+    <extra l="ua"></extra>
+    <keyword l="en"></keyword>
+    <keyword l="ru">чуму</keyword>
+    <keyword l="ua"></keyword>
+    <text l="en"></text>
+    <text l="ru">%FMT% *%SPELL%* _%VICT%_
 
 Заражение чумой наносит сильные повреждения жертве каждый {hh16тик{x, а также сильно
 {hh39ослабляет{x ее. Жертва не восстанавливает очки здоровья и маны, а наоборот,
@@ -44,7 +52,9 @@
 Умершая от насланной тобой чумы жертва засчитается тебе -- в {hh32ПК{x или в {hh125квестах{x.
 
 %SA% %H% [(cast,колдовать)], [(cure disease,лечить болезнь)]
-</help>
+</text>
+    <text l="ua"></text>
+  </help>
   <mana>40</mana>
   <mob>
     <professional>true</professional>

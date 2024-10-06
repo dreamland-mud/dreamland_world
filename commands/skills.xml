@@ -2,7 +2,12 @@
 <Command>
   <cat>learn</cat>
   <extra>keep_hide ghost afk</extra>
-  <help aka="'SKILLS ALL' 'SPELLS ALL' 'АКТИВНЫЕ УМЕНИЯ' НАВЫКИ 'ПАССИВНЫЕ УМЕНИЯ' СПИСОК УМЕНИЙ 'УМЕНИЯ ВСЕ' 'ЗАКЛИНАНИЯ ВСЕ'" id="1352" labels="skill" level="-1" ref="spells" title="{CУмения персонажа{x и их развитие" type="CommandHelp">Все умения делятся на =заклинания={le (spells){x и =навыки={le (skills){x.
+  <help id="1352" labels="skill" level="-1" ref="spells" type="CommandHelp">
+    <extra l="en">&apos;skills all&apos; &apos;spells all&apos;</extra>
+    <extra l="ru">&apos;активные умения&apos; навыки &apos;пассивные умения&apos; список умений &apos;умения все&apos; &apos;заклинания все&apos;</extra>
+    <extra l="ua"></extra>
+    <text l="en"></text>
+    <text l="ru">Все умения делятся на =заклинания={le (spells){x и =навыки={le (skills){x.
 Твой персонаж может владеть многими умениями в зависимости от {hh28класса{x, {hh24расы{x,
 {hh3клана{x или дополнительной {hh242профессии{x.
 
@@ -53,7 +58,12 @@
 
 %FMT% *%CMD%* *(sortby,сортировать)* *(name,имя)*|*(level,уровень)*|*(learned,изучено)*
 Сортирует список по уровню, по имени или по проценту раскачки.
-</help>
+</text>
+    <text l="ua"></text>
+    <title l="en"></title>
+    <title l="ru">{CУмения персонажа{x и их развитие</title>
+    <title l="ua"></title>
+  </help>
   <hint l="en"></hint>
   <hint l="ru">список всех доступных умений</hint>
   <hint l="ua"></hint>

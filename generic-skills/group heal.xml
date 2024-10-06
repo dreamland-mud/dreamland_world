@@ -20,14 +20,21 @@
   </classes>
   <dammsg></dammsg>
   <group registry="skillGroup">healing</group>
-  <help aka="'ГРУППОВОЕ ЛЕЧЕНИЕ' 'ЛЕЧЕНИЕ ГРУППЫ'" id="721" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+  <help id="721" level="-1" type="SkillHelp">
+    <extra l="en"></extra>
+    <extra l="ru">&apos;групповое лечение&apos; &apos;лечение группы&apos;</extra>
+    <extra l="ua"></extra>
+    <text l="en"></text>
+    <text l="ru">%FMT% *%SPELL%*
 
 Опытные клерики и паладины обладают умением лечить сразу всех членов своей группы.
 Лечебная молитва будет выбрана из числа доступных: это может быть мастерское лечение,
 высшее лечение или просто лечение. Также после этой молитвы у согруппников восстановятся силы.
 
 %SA% %H% [(cast,колдовать)], [(refresh,снять усталость)], [(superior heal,высшее лечение)]
-</help>
+</text>
+    <text l="ua"></text>
+  </help>
   <mana>80</mana>
   <mob>
     <professional>true</professional>

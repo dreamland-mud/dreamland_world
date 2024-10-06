@@ -30,7 +30,12 @@
   </classes>
   <dammsg mg="n">отравление</dammsg>
   <group registry="skillGroup">maladictions</group>
-  <help aka="ОТРАВЛЕНИЕ" id="837" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
+  <help id="837" level="-1" type="SkillHelp">
+    <extra l="en"></extra>
+    <extra l="ru">отравление</extra>
+    <extra l="ua"></extra>
+    <text l="en"></text>
+    <text l="ru">%FMT% *%SPELL%* _%VICT%_
 
 Эффект яда отравляет жертву и наносит ей весомые повреждения каждый {hh16тик{x,
 а также сильно {hh39ослабляет{x ее и препятствует быстрому восстановлению очков
@@ -47,7 +52,9 @@
 Рана, нанесенная отравленным оружием может привести к заражению ядом.
 
 %SA% %H% [(envenom,отравить)]
-</help>
+</text>
+    <text l="ua"></text>
+  </help>
   <mana>40</mana>
   <mob>
     <professional>true</professional>

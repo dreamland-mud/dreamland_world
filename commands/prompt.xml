@@ -2,7 +2,12 @@
 <Command>
   <cat>config</cat>
   <extra>keep_hide ghost afk</extra>
-  <help id="1012" keyword="ПРОМПТ СТРОКА СОСТОЯНИЯ MUDPROMPT СТАТУСА" labels="info" level="-1" ref="battleprompt" title="{CНастройка: {xстрока состояния, промпт" type="CommandHelp">*(prompt,подсказка)* без аргумента включает и выключает вывод строки состояния,
+  <help id="1012" labels="info" level="-1" ref="battleprompt" type="CommandHelp">
+    <keyword l="en">mudprompt</keyword>
+    <keyword l="ru">промпт состояния статуса строка</keyword>
+    <keyword l="ua"></keyword>
+    <text l="en"></text>
+    <text l="ru">*(prompt,подсказка)* без аргумента включает и выключает вывод строки состояния,
        а *(battleprompt,боеваяподсказка)* - строки состояния в бою.
  
 *(prompt,подсказка)* *%ALL%* - устанавливает стандартную строку состояния 
@@ -43,7 +48,12 @@
 
 *(battleprompt,боеваяподсказка)* &lt;%hhp %mm %vmv Opp:&lt;%o&gt;&gt;
 выводит строку состояния в бою в следующем виде: &quot;&lt;10hp 100m 100mv Opp:&lt;100%&gt;&quot;
-</help>
+</text>
+    <text l="ua"></text>
+    <title l="en"></title>
+    <title l="ru">{CНастройка: {xстрока состояния, промпт</title>
+    <title l="ua"></title>
+  </help>
   <hint l="en"></hint>
   <hint l="ru">задать вид подсказки</hint>
   <hint l="ua"></hint>

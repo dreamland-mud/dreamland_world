@@ -25,7 +25,12 @@
   </classes>
   <dammsg></dammsg>
   <group registry="skillGroup">detection</group>
-  <help aka="'ДАЛЬНЕЕ ЗРЕНИЕ' ДАЛЬНОВИДЕНИЕ" id="799" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%DIR%_
+  <help id="799" level="-1" type="SkillHelp">
+    <extra l="en"></extra>
+    <extra l="ru">&apos;дальнее зрение&apos; дальновидение</extra>
+    <extra l="ua"></extra>
+    <text l="en"></text>
+    <text l="ru">%FMT% *%SPELL%* _%DIR%_
 %FMT% *%SPELL%* _расстояние_._%DIR%_
 
 Это обостряющее зрение заклинание позволяет увидеть местность вдали от тебя по
@@ -38,7 +43,9 @@
 например, чтобы посмотреть через дверь на западе, напиши {y{lecast farsight w{lrк даль з{x.
 
 Бинокль, который {hh2127новички{x могут раздобыть на {hh1560Галеоне{x, работает похожим образом.
-</help>
+</text>
+    <text l="ua"></text>
+  </help>
   <mana>20</mana>
   <nameRus>дальновидение</nameRus>
   <spell type="DefaultSpell">

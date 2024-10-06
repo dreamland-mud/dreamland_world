@@ -26,7 +26,12 @@
   </command>
   <dammsg mg="n">прикосновение вампира</dammsg>
   <group registry="skillGroup">suddendeath vampiric</group>
-  <help aka="КАСАНИЕ ПРИКОСНОВЕНИЕ ВАМПИРА ВАМПИРСКОЕ" id="769" level="-1" type="SkillHelp">%FMT% *(touch,коснуться)* _жертва_
+  <help id="769" level="-1" type="SkillHelp">
+    <extra l="en"></extra>
+    <extra l="ru">касание прикосновение вампира вампирское</extra>
+    <extra l="ua"></extra>
+    <text l="en"></text>
+    <text l="ru">%FMT% *(touch,коснуться)* _жертва_
 
 Вампир прикасается к шее жертвы, и она забывается в ужасном кошмаре.
 После этого жертву можно укусить за шею и утолить свою жажду крови.
@@ -34,7 +39,9 @@
 факторов.
 
 %SA% %H% [(bite,кусать)], [(suck,сосать)], [(bloodlet,кровопускание)], [(vampiric form,форма вампира)]
-</help>
+</text>
+    <text l="ua"></text>
+  </help>
   <mana>100</mana>
   <mob>
     <bonus>20</bonus>

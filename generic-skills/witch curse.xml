@@ -13,7 +13,12 @@
   </classes>
   <dammsg mg="n">ведьминское проклятие</dammsg>
   <group registry="skillGroup">maladictions suddendeath</group>
-  <help aka="WITCHCURSE 'ПРОКЛЯТИЕ ВЕДЬМЫ' 'ВЕДЬМИНО ПРОКЛЯТЬЕ' 'ВЕДЬМИНСКОЕ ПРОКЛЯТЬЕ'" id="712" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
+  <help id="712" level="-1" type="SkillHelp">
+    <extra l="en">witchcurse</extra>
+    <extra l="ru">&apos;проклятие ведьмы&apos; &apos;ведьмино проклятье&apos; &apos;ведьминское проклятье&apos;</extra>
+    <extra l="ua"></extra>
+    <text l="en"></text>
+    <text l="ru">%FMT% *%SPELL%* _%VICT%_
 
 Мощное убийственное проклятие ведьм, которое нельзя {hh808снять{x или {hh821отменить{x.
 На сотворение этого заклинания ведьма отдает небольшую частицу своей жизни.
@@ -22,7 +27,9 @@
 Темп уменьшения зависит от уровня заклинаний ведьмы и ускоряется вдвое каждый
 тик. Выживет жертва или нет зависит от интеллекта ведьмы, телосложения жертвы и
 других факторов.
-</help>
+</text>
+    <text l="ua"></text>
+  </help>
   <mana>250</mana>
   <nameRus>ведьминское проклятие</nameRus>
   <spell type="DefaultSpell">

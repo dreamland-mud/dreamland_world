@@ -20,7 +20,12 @@
   </classes>
   <dammsg></dammsg>
   <group registry="skillGroup">maladictions</group>
-  <help aka="'ГНИЮЩИЕ РАНЫ' КОРРУПЦИЯ" id="541" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%VICT%_
+  <help id="541" level="-1" type="SkillHelp">
+    <extra l="en"></extra>
+    <extra l="ru">&apos;гниющие раны&apos; коррупция</extra>
+    <extra l="ua"></extra>
+    <text l="en"></text>
+    <text l="ru">%FMT% *%SPELL%* _%VICT%_
 
 Это заклинание вызывает ужасную болезнь у жертвы -- ее раны гниют и препятствуют
 {hh2130восстановлению здоровья{x, впридачу непрерывно нанося жертве урон.
@@ -30,7 +35,9 @@
 Скорость гниения и урон зависят от телосложения жертвы. Некоторые противники --
 например, конструкции или нежить -- разумеется, не будут испытывать боли от
 гниения и не получает урона вовсе.
-</help>
+</text>
+    <text l="ua"></text>
+  </help>
   <mana>100</mana>
   <mob>
     <professional>true</professional>

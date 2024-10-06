@@ -14,7 +14,12 @@
   </classes>
   <dammsg></dammsg>
   <group registry="skillGroup">necromancy</group>
-  <help aka="SUMMONED ПРИЗВАННАЯ ПРИЗВАТЬ ТЕНЬ" id="551" level="-1" type="SkillHelp">%FMT% *%SPELL%*
+  <help id="551" level="-1" type="SkillHelp">
+    <extra l="en">summoned</extra>
+    <extra l="ru">призванная призвать тень</extra>
+    <extra l="ua"></extra>
+    <text l="en"></text>
+    <text l="ru">%FMT% *%SPELL%*
 
 Это заклинание оживляет тень некроманта, превращая ее в теневого двойника.
 Созданная тень по своим параметрам здоровья и маны напоминает хозяина.
@@ -28,7 +33,9 @@
 {C%A%{x Ничего не может надеть, и ему ничего нельзя дать. 
 {C%A%{x Максимум можно контролировать =одного=, призывается один за раз
   Общее число {hh15последователей{x тоже ограничено -- читай {y{hcсправка очарование{x.
-</help>
+</text>
+    <text l="ua"></text>
+  </help>
   <mana>200</mana>
   <nameRus>теневой двойник</nameRus>
   <spell type="DefaultSpell">

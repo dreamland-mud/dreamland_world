@@ -3,7 +3,12 @@
   <command type="NoteCommand">
     <cat>note</cat>
     <extra>keep_hide ghost</extra>
-    <help aka="DREAMS СНЫ" id="2045" labels="comm" level="-1" title="{CСообщения:{x сны, вещие и не очень" type="NoteHelp">Когда твой персонаж ложится спать, тебе могут присниться {hh1020новые умения{x, а могут
+    <help id="2045" labels="comm" level="-1" type="NoteHelp">
+      <extra l="en">dreams</extra>
+      <extra l="ru">сны</extra>
+      <extra l="ua"></extra>
+      <text l="en"></text>
+      <text l="ru">Когда твой персонаж ложится спать, тебе могут присниться {hh1020новые умения{x, а могут
 привидеться сны, навеянные кем-то из игроков... или Богами. Сны могут быть
 простой шуткой, а могут приносить пророческие вести об изменениях Мироздания.
 Приятных кошмаров!
@@ -32,7 +37,12 @@
 Можно редактировать и писать без веб-редактора:
 %FMT% *(dream +,сон +)* _строка_    : добавляет строку к концу сна
 %FFF% *(dream -,сон -)*             : стирает последнюю написанную строку сна
-</help>
+</text>
+      <text l="ua"></text>
+      <title l="en"></title>
+      <title l="ru">{CСообщения:{x сны, вещие и не очень</title>
+      <title l="ua"></title>
+    </help>
     <hint l="en"></hint>
     <hint l="ru">приснить кому-то сон</hint>
     <hint l="ua"></hint>

@@ -19,7 +19,15 @@
   </classes>
   <dammsg></dammsg>
   <group registry="skillGroup">necromancy</group>
-  <help aka="'ANIMATE UNDEAD' 'RAISE DEAD' ZOMBIE 'ОЖИВИТЬ ТРУП' 'ОЖИВЛЕННЫЙ ТРУП' 'ПОДНЯТЬ ТРУП' ЗОМБИ" id="732" keyword="'ANIMATE DEAD' 'ОЖИВЛЕНИЕ МЕРТВЕЦА'" level="-1" type="SkillHelp">%FMT% *%SPELL%* _труп_
+  <help id="732" level="-1" type="SkillHelp">
+    <extra l="en">&apos;animate undead&apos; &apos;raise dead&apos; zombie</extra>
+    <extra l="ru">&apos;оживить труп&apos; &apos;оживленный труп&apos; &apos;поднять труп&apos; зомби</extra>
+    <extra l="ua"></extra>
+    <keyword l="en">&apos;animate dead&apos;</keyword>
+    <keyword l="ru">&apos;оживление мертвеца&apos;</keyword>
+    <keyword l="ua"></keyword>
+    <text l="en"></text>
+    <text l="ru">%FMT% *%SPELL%* _труп_
 
 Зомби, оживленное с помощью этого заклинания, будет {hh15служить{x своему новому
 хозяину до смерти. Здоровье зомби зависит от исходного... ммм... материала, а
@@ -33,7 +41,9 @@
 
 По традиции, зомби больше всего на свете жаждут {hh62свежих мозгов{x.
 Вовремя накормленный мозгами зомби восстанавливает силы.
-</help>
+</text>
+    <text l="ua"></text>
+  </help>
   <mana>100</mana>
   <nameRus>оживление мертвеца</nameRus>
   <spell type="DefaultSpell">

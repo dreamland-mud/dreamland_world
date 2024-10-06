@@ -4,7 +4,12 @@
   <cardLevel>0</cardLevel>
   <dammsg></dammsg>
   <hard>5</hard>
-  <help aka="'ИЗУЧИТЬ КАРТУ' 'ЗАГЛЯНУТЬ В КОЛОДУ'" id="525" level="-1" type="SkillHelp">%FMT% *(examine,изучить)* _карта_
+  <help id="525" level="-1" type="SkillHelp">
+    <extra l="en"></extra>
+    <extra l="ru">&apos;изучить карту&apos; &apos;заглянуть в колоду&apos;</extra>
+    <extra l="ua"></extra>
+    <text l="en"></text>
+    <text l="ru">%FMT% *(examine,изучить)* _карта_
 
 {hh526Вытащив карту{x с чьим-то изображением из колоды и тщательно ее рассмотрев,
 можно определить местоположение того, кто на ней нарисован.
@@ -12,7 +17,9 @@
 защищен богами или уже не состоит в колоде.
 
 Умение [(card vision,видения картежника)] позволяет также увидеть детали заднего плана.
-</help>
+</text>
+    <text l="ua"></text>
+  </help>
   <hint></hint>
   <mana>50</mana>
   <nameRus>заглянуть в карту</nameRus>

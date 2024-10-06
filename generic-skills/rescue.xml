@@ -37,7 +37,9 @@
   </command>
   <dammsg></dammsg>
   <group registry="skillGroup">defensive</group>
-  <help id="613" level="-1" type="SkillHelp">%FMT% *%SKILL%* _%CHAR%_
+  <help id="613" level="-1" type="SkillHelp">
+    <text l="en"></text>
+    <text l="ru">%FMT% *%SKILL%* _%CHAR%_
 
 Этот воинский навык позволяет вывести {hh1378согруппника{x из-под атаки, подставившись
 под удары его противника. Вероятность успеха зависит от прокачки навыка и от
@@ -47,7 +49,9 @@
 
 ВНИМАНИЕ: навсегда вывести из-под атаки не получится -- большинство противников
 рано или поздно снова начнут атаковать исходного противника. 
-</help>
+</text>
+    <text l="ua"></text>
+  </help>
   <mob>
     <bonus>100</bonus>
     <offense>rescue</offense>

@@ -2,7 +2,9 @@
 <Command>
   <cat></cat>
   <extra>keep_hide ghost spellout</extra>
-  <help id="1036" level="102" ref="shutdown" type="CommandHelp">%FMT%  *%CMD%* *now* 
+  <help id="1036" level="102" ref="shutdown" type="CommandHelp">
+    <text l="en"></text>
+    <text l="ru">%FMT%  *%CMD%* *now* 
 Перезагрузить mud-сервер немедленно.
 
 %FMT%  *%CMD%* _тиков_ 
@@ -19,7 +21,9 @@
 %FMT%  *shutdown*
 Завершает работу сервера и создает в текущем каталоге файл shutdown.txt,
 наличие которого не позволит миру загрузиться снова.
-</help>
+</text>
+    <text l="ua"></text>
+  </help>
   <hint l="en"></hint>
   <hint l="ru">перезагрузить мир</hint>
   <hint l="ua"></hint>

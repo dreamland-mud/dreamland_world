@@ -10,7 +10,12 @@
   </classes>
   <dammsg></dammsg>
   <group registry="skillGroup">transportation</group>
-  <help aka="ТРОПА ТУМАННАЯ" id="856" level="-1" type="SkillHelp">%FMT% *%SPELL%* _%CHAR%_
+  <help id="856" level="-1" type="SkillHelp">
+    <extra l="en"></extra>
+    <extra l="ru">тропа туманная</extra>
+    <extra l="ua"></extra>
+    <text l="en"></text>
+    <text l="ru">%FMT% *%SPELL%* _%CHAR%_
       
 Туманный путь -- мощное транспортное заклинание, позволяющее вампиру и его
 {hh15любимцу{x перенестись к любому существу в мире. 
@@ -19,7 +24,9 @@
 магии перемещения -- см. {y{hcсправка врата{x.
 
 %SA% %H% [(cast,колдовать)] [(gate,врата)] 
-</help>
+</text>
+    <text l="ua"></text>
+  </help>
   <mana>80</mana>
   <nameRus>туманный путь</nameRus>
   <spell type="DefaultSpell">

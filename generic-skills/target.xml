@@ -22,7 +22,12 @@
   </command>
   <dammsg></dammsg>
   <group registry="skillGroup">fightmaster</group>
-  <help aka="ПРОТИВНИКА СМЕНА" id="733" level="-1" type="SkillHelp">%FMT% *%CMD%* _%VICT%_
+  <help id="733" level="-1" type="SkillHelp">
+    <extra l="en"></extra>
+    <extra l="ru">противника смена</extra>
+    <extra l="ua"></extra>
+    <text l="en"></text>
+    <text l="ru">%FMT% *%CMD%* _%VICT%_
 
 Если самурай дерется с группой врагов, он может сфокусировать атаки на каком-то
 конкретном противнике. Вероятность успеха зависит от владения навыком и разницы
@@ -31,7 +36,9 @@
 {RВАЖНО:{x {hh2142Мобы{x делают это вне зависимости от класса. То есть если тебя {hh613спасут{x в бою
 твои {hh1378согруппники{x или {hh15чармисы{x -- моб-противник все равно рано или поздно сможет
 переключиться назад на тебя.
-</help>
+</text>
+    <text l="ua"></text>
+  </help>
   <mana>20</mana>
   <move>20</move>
   <nameRus>выбор цели</nameRus>

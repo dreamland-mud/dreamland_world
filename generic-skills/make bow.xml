@@ -10,7 +10,12 @@
   </classes>
   <dammsg></dammsg>
   <group registry="skillGroup">weaponsmaster</group>
-  <help aka="'ИЗГОТОВИТЬ ЛУК'" id="850" level="-1" type="SkillHelp">%FMT% *(craft bow,смастерить лук)*
+  <help id="850" level="-1" type="SkillHelp">
+    <extra l="en"></extra>
+    <extra l="ru">&apos;изготовить лук&apos;</extra>
+    <extra l="ua"></extra>
+    <text l="en"></text>
+    <text l="ru">%FMT% *(craft bow,смастерить лук)*
 
 Это умение помогает {hh140рейнджерам{x смастерить {hh810лук для стрельбы{x -- даже если они не
 владеют {hh230ремеслом плотника{x. Впрочем, для изготовления все равно понадобится
@@ -18,7 +23,9 @@
 Для изготовления лука необходимо находиться в лесной местности.
 
 %SA% %H% [(make arrow,изготовить стрелы)], %H% [(shoot,стрелять)].
-</help>
+</text>
+    <text l="ua"></text>
+  </help>
   <move>100</move>
   <nameRus>изготовление лука</nameRus>
 </skill>

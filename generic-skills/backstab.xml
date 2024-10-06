@@ -25,7 +25,12 @@
   </command>
   <dammsg>удар в спину</dammsg>
   <group registry="skillGroup">suddendeath adventure</group>
-  <help aka="STAB СТАБ ЗАКОЛОТЬ" id="609" level="-1" type="SkillHelp">%FMT% *%CMD%* _жертва_
+  <help id="609" level="-1" type="SkillHelp">
+    <extra l="en">stab</extra>
+    <extra l="ru">стаб заколоть</extra>
+    <extra l="ua"></extra>
+    <text l="en"></text>
+    <text l="ru">%FMT% *%CMD%* _жертва_
 %FMT% *bs* _жертва_
 	  
 Удар в спину -- любимая атака воров. Может быть выполнен любым колющим оружием.
@@ -36,7 +41,9 @@
 быть успешным вором.
 
 %SA% %H% [(dual backstab,двойной удар в спину)]
-</help>
+</text>
+    <text l="ua"></text>
+  </help>
   <mob>
     <bonus>20</bonus>
     <dice>2</dice>

@@ -27,7 +27,12 @@
   </command>
   <dammsg>захват</dammsg>
   <group registry="skillGroup">fightmaster</group>
-  <help aka="'БРОСОК ЧЕРЕЗ БЕДРО' 'БРОСОК ЧЕРЕЗ ПЛЕЧО' ОПРОКИНУТЬ" id="649" level="-1" type="SkillHelp">%FMT% *%SKILL%* _%VICT%_	  
+  <help id="649" level="-1" type="SkillHelp">
+    <extra l="en"></extra>
+    <extra l="ru">&apos;бросок через бедро&apos; &apos;бросок через плечо&apos; опрокинуть</extra>
+    <extra l="ua"></extra>
+    <text l="en"></text>
+    <text l="ru">%FMT% *%SKILL%* _%VICT%_	  
 
 Используя тайную технику нагэ-вадза, опытные ниндзя и самураи могут с силой
 бросить противника через плечо или через бедро, нанося немалый урон и накладывая
@@ -37,7 +42,9 @@
 Успех зависит от разницы {hh37ловкости{x ниндзя и жертвы, {hh26размера жертвы{x,
 а также других факторов. Бросать летучих противников или {hh227всадников{x сложнее, но
 успешный бросок {hh575приземляет{x их или сбрасывает с седла.
-</help>
+</text>
+    <text l="ua"></text>
+  </help>
   <move>40</move>
   <nameRus>захват</nameRus>
 </skill>

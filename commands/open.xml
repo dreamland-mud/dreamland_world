@@ -2,7 +2,12 @@
 <Command>
   <cat>locks</cat>
   <extra>keep_hide undig</extra>
-  <help aka="ДВЕРЬ ОТКРЫТЬ ОТКУПОРИТЬ СУНДУК ЗАКУПОРИТЬ" id="1013" labels="item move" level="-1" ref="close lock unlock" title="Как открывать и закрывать двери и сумки" type="CommandHelp">%FMT%  *(open,открыть)*|*(close,закрыть)* _%OBJ%_  
+  <help id="1013" labels="item move" level="-1" ref="close lock unlock" type="CommandHelp">
+    <extra l="en"></extra>
+    <extra l="ru">дверь открыть откупорить сундук закупорить</extra>
+    <extra l="ua"></extra>
+    <text l="en"></text>
+    <text l="ru">%FMT%  *(open,открыть)*|*(close,закрыть)* _%OBJ%_  
 %FMT%  *(open,открыть)*|*(close,закрыть)* _%DIR%_ 
 Открывает и закрывает дверь по указанному направлению, если таковая имеется.
 Некоторые {hh65предметы{x ({hh1016порталы{x, {hh1024контейнеры{x или {hh1075емкости для жидкости{x) тоже можно
@@ -18,7 +23,12 @@
   
 %FMT%  *(pick,взломать)* _%OBJ%_|_%DIR%_  
 Воры умеют {hh714взламывать замки{x с помощью специальных отмычек.
-</help>
+</text>
+    <text l="ua"></text>
+    <title l="en"></title>
+    <title l="ru">Как открывать и закрывать двери и сумки</title>
+    <title l="ua"></title>
+  </help>
   <hint l="en"></hint>
   <hint l="ru">открыть дверь или контейнер</hint>
   <hint l="ua"></hint>

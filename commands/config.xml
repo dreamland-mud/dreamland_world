@@ -92,9 +92,9 @@
     <node>
       <node type="ConfigElement">
         <bit table="add_comm_flags">nocancel</bit>
-        <hint>запрет не-соклановикам применять {lRзаклинание отмена{lEcancellation{lx</hint>
-        <msgOff>Заклинание &apos;{lRотмена{lEcancellation{lx&apos; на тебя смогут применить все.</msgOff>
-        <msgOn>Заклинание &apos;{lRотмена{lEcancellation{lx&apos; на тебя смогут применить только соклановцы.</msgOn>
+        <hint>запрет не-соклановикам применять заклинание отмена</hint>
+        <msgOff>Заклинание &apos;отмена&apos; на тебя смогут применить все.</msgOff>
+        <msgOn>Заклинание &apos;отмена&apos; на тебя смогут применить только соклановцы.</msgOn>
         <name>nocancel</name>
         <rname>неотменять</rname>
       </node>
@@ -128,9 +128,9 @@
       </node>
       <node type="ConfigElement">
         <bit table="comm_flags">show_affects</bit>
-        <hint>показывать аффекты по команде {lRсчет{lEscore{lx</hint>
-        <msgOff>Аффекты не видны по команде {lRсчет{lEscore{lx.</msgOff>
-        <msgOn>Аффекты видны по команде {lRсчет{lEscore{lx.</msgOn>
+        <hint>показывать аффекты по команде счет</hint>
+        <msgOff>Аффекты не видны по команде счет.</msgOff>
+        <msgOn>Аффекты видны по команде счет.</msgOn>
         <name>affects</name>
         <rname>аффекты</rname>
       </node>
@@ -185,8 +185,8 @@
       <node type="ConfigElement">
         <bit table="comm_flags">prompt</bit>
         <hint>выводить подсказку с параметрами персонажа</hint>
-        <msgOff>Вывод {hh1012строки подсказки{le (prompt){x отключен.</msgOff>
-        <msgOn>Вывод {hh1012строки подсказки{le (prompt){x включен.</msgOn>
+        <msgOff>Вывод {hh1012строки подсказки{x отключен.</msgOff>
+        <msgOn>Вывод {hh1012строки подсказки{x включен.</msgOn>
         <name>prompt</name>
         <rname>подсказка</rname>
       </node>
@@ -249,8 +249,8 @@
       <node type="ConfigElement">
         <bit table="config_flags">screenreader</bit>
         <hint>режим поддержки screen reader</hint>
-        <msgOff>Режим поддержки {lrчиталки для незрячих{lescreen reader{x выключен.</msgOff>
-        <msgOn>Режим поддержки {lrчиталки для незрячих{lescreen reader{x включен.</msgOn>
+        <msgOff>Режим поддержки читалки для незрячих{x выключен.</msgOff>
+        <msgOn>Режим поддержки читалки для незрячих{x включен.</msgOn>
         <name>screenreader</name>
         <rname>скринридер</rname>
       </node>
@@ -259,9 +259,9 @@
     <node>
       <node type="ConfigElement">
         <bit table="config_flags">autoafk</bit>
-        <hint>автоматическое {lRАФК{lEAFK{lx после 10 минут бездействия</hint>
-        <msgOff>Ты не будешь уходить в {lRАФК{lEAFK{lx после 10 минут бездействия.</msgOff>
-        <msgOn>Ты будешь уходить в {lRАФК{lEAFK{lx после 10 минут бездействия.</msgOn>
+        <hint>автоматическое АФК после 10 минут бездействия</hint>
+        <msgOff>Ты не будешь уходить в АФК после 10 минут бездействия.</msgOff>
+        <msgOn>Ты будешь уходить в АФК после 10 минут бездействия.</msgOn>
         <name>autoafk</name>
         <rname>автовок</rname>
       </node>
@@ -299,7 +299,7 @@
     <text l="en"></text>
     <text l="ru">Напиши *%CMD%*, чтобы увидеть список всех текущих настроек. 
 Чтобы переключить любую из них, напиши *%CMD%* _опция_ *%YES%*|*%NO%* --
-например, *%CMD%* _{leautoloot{lrавтограбеж{lx_ *%NO%*, чтобы перестать брать
+например, *%CMD%* _автограбеж_ *%NO%*, чтобы перестать брать
 все подряд из трупов. 
 
 *автопомощь* - позволяет твоему персонажу автоматически помогать игрокам

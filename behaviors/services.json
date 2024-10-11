@@ -1,4 +1,6 @@
 [
+ // Use -1 price for dynamic prices -- those are estimated and confirmed verbally 
+
  // healer services
  { "name": "refresh", "nameRus": "усталост|ь|и|и|ь|ью|и", "nameUkr": "втом|а|и|і|у|ою|і", "price_gold": 50, "price_qp": 0, "spell": "refresh", "behaviors": "healer", "target": "char", "npc_ok": 1}, 
  { "name": "heal", "nameRus": "ран|ы||ам|ы|ами|ах", "nameUkr": "ран|и||ам|и|ами|ах", "price_gold": 100, "price_qp": 0, "spell": "heal", "behaviors": "healer", "target": "char", "npc_ok": 1}, 
@@ -15,8 +17,8 @@
  { "name": "slice", "nameRus": "отрубленн|ое|ого|ому|ое|ым|ом", "nameUkr": "відрубан|е|ого|ому|е|им|ом", "price_gold": 1200, "price_qp": 0, "spell": "regrow", "behaviors": "healer", "target": "char", "npc_ok": 1}, 
  
  // blacksmith services
- { "name": "repair", "nameRus": "починк|а|и|е|у|ой|е", "nameUkr": "ремонт||а|у||ом|і", "price_gold": 100, "price_qp": 0, "spell": "", "behaviors": "blacksmith", "target": "object", "npc_ok": 1}, 
- { "name": "horseshoe", "nameRus": "подков|ы||ам|ы|ами|ах", "nameUkr": "підков|и||ам|и|ами|ах", "price_gold": 100, "price_qp": 0, "spell": "", "behaviors": "blacksmith", "target": "object", "npc_ok": 1}, 
+ { "name": "repair", "nameRus": "починк|а|и|е|у|ой|е", "nameUkr": "ремонт||а|у||ом|і", "price_gold": -1, "price_qp": 0, "spell": "", "behaviors": "blacksmith", "target": "object", "npc_ok": 1}, 
+ { "name": "horseshoe", "nameRus": "подков|ы||ам|ы|ами|ах", "nameUkr": "підков|и||ам|и|ами|ах", "price_gold": -1, "price_qp": 0, "spell": "", "behaviors": "blacksmith", "target": "object", "npc_ok": 1}, 
  { "name": "corrosion", "nameRus": "коррози|я|и|и|ю|ей|и", "nameUkr": "корозі|я|ї|ї|ю|єю|ї", "price_gold": 0, "price_qp": 100, "spell": "mend", "behaviors": "blacksmith", "target": "object", "npc_ok": 1}, 
 
  // enchanter services

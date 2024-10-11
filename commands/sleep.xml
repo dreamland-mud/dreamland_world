@@ -4,8 +4,44 @@
   <help id="1020" level="-1" ref="rest sit stand wake" type="CommandHelp">
     <extra l="en">position prone</extra>
     <extra l="ru">будить навзничь позиция приснилась приснилось разбудить</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">будити навзнаки позиція приснилася приснилося розбудити</extra>
+    <text l="en">Characters can have different =positions= -- standing, lying, sitting, and so on. Sometimes in
+combat you can be knocked down -- for example, by a {hh582sweep{x or {hh676push{x. A prone
+opponent has an impaired {hh83armor class{x -- easier to {hh47hit{x. And when you're resting
+or sleeping, you regenerate your health, energy, and movement points faster. 
+
+The chance of falling or being knocked down depends on your parameters and the {hh39weight{x of items.
+It's harder to unseat a {hh931rider{x, but easier for someone {hh120stunned or dazed{x. 
+{hh62Hooves and claws{x help maintain balance better. You cannot "fall" while swimming, flying, or being incorporeal.
+
+{CCOMMANDS TO CHANGE POSITION{x
+%FMT% *stand*|*sleep*|*sit*|*rest*|*wake up*
+
+To stand up or wake up, use *stand* or *wake up*.
+Many commands or skills can only be used while standing.
+
+%FMT% *stand*|*sleep*|*sit*|*rest* _furniture_
+%FFF% *stand*|*sleep*|*sit*|*rest* _fountain_
+
+You can also sleep, sit, rest on some piece of furniture or {hh1075fountain{x.
+Some recliners and chairs are so comfortable that life and energy regenerate
+several times faster when resting on them.
+
+%FMT% *wake* _%CHAR%_
+
+Wake a sleeping person. However, it is not possible to wake those who have fallen asleep under
+the influence of spells or other unnatural means.
+
+{CSKILLS IN DREAMS{x
+While sleeping, you may dream dreams: not only {hh2045interesting{x, but also skillful ones.
+You may dream of some spell or skill of another class,
+previously inaccessible to you. The dreamed skill will stay with you for one month (35 days)
+and will be as if {hh1359learned{x at 75%.
+%A% beginners {hh2127do not dream{x such dreams
+%A% skills MAY NOT BE USEFUL -- for example, you may dream of vampire skills
+  that cannot be used
+
+Elves may dream of the {hh858Secret of Sidhe{x, protecting them from {hh101vulnerability{x to iron.</text>
     <text l="ru">У персонажей бывает разная =позиция= -- стоя, лежа, сидя и так далее. Иногда в
 бою тебя могут сбить с ног -- например, {hh582подсечкой{x или {hh676толчком{x. У лежачего
 противника ухудшается {hh83класс брони{x -- по нему легче {hh47попасть{x. А когда ты отдыхаешь
@@ -45,16 +81,53 @@
 
 Эльфам может присниться {hh858секрет Сидхов{x, защищающий их от {hh101уязвимости{x к железу.
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">У персонажів може бути різна =позиція= -- стоячи, лежачи, сидячи тощо. Іноді в
+бою тебе можуть збити з ніг -- наприклад, {hh582підсічкою{x або {hh676поштовхом{x. У лежачого
+противника погіршується {hh83клас броні{x -- легше {hh47потрапити{x. А коли ти відпочиваєш
+або спиш, ти швидше {hh2130відновлюєш{x свої очки життя, енергії та рухів. 
+
+Шанс впасти або бути збитим з ніг залежить від твоїх параметрів і {hh39ваги{x речей.
+{hh931Вершника{x скинути складніше, а {hh120оглушеного чи враженого{x -- навпаки. 
+{hh62Копита та кігті{x допомагають краще утримати баланс. Не можна "упасти" на плаву, в
+польоті або будучи безплотним.
+
+{CКОМАНДИ ДЛЯ ЗМІНИ ПОЗИЦІЇ{x
+%FMT% *встати*|*спати*|*сісти*|*відпочивати*|*прокинутися*
+
+Щоб встати на ноги або прокинутися, використовуй *встати* або *прокинутися*.
+Багато команд або вмінь можна використовувати тільки стоячи.
+
+%FMT% *встати*|*спати*|*сісти*|*відпочивати* _меблі_
+%FFF% *встати*|*спати*|*сісти*|*відпочивати* _фонтан_
+
+Спати, сидіти, відпочивати також можна на якому-небудь предметі меблів або {hh1075фонтані{x.
+Деякі лежанки і крісла настільки зручні, що життя та енергія при відпочинку на
+них відновлюється у кілька разів швидше.
+
+%FMT% *пробудити* _%CHAR%_
+
+Пробудити сплячого. Однак таким чином неможливо пробудити тих, хто заснув під
+впливом заклинань або іншим не природнім способом.
+
+{CУМІННЯ У СНОВИДІННІ{x
+Під час сну можуть наснитися сни: не тільки {hh2045захоплюючі{x, але й вмілі.
+Може наснитися якесь заклинання або вміння іншого класу, раніше
+недоступне тобі. Наснилося вміння пробуде з тобою один місяць (35 днів)
+і буде ніби-то {hh1359вивчено{x на 75%.
+%A% такі сни не сняться {hh2127новачкам{x
+%A% вміння НЕ ОБОВ'ЯЗКОВО БУДУТЬ КОРИСНИМИ -- наприклад, можуть наснитися вміння
+  вампіра, які не можна буде використовувати
+
+Ельфам може наснитися {hh858секрет Сідхів{x, який захищає їх від {hh101вразливості{x до заліза.</text>
+    <title l="en">Body position: standing, sitting, resting, sleeping</title>
     <title l="ru">Позиция тела: стоя, сидя, отдых, сон</title>
-    <title l="ua"></title>
+    <title l="ua">Позиція тіла: стоячи, сидячи, відпочинок, сон</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">fall asleep on floor or furniture</hint>
   <hint l="ru">заснуть на полу или на мебели</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">заснути на підлозі або меблях</hint>
   <name l="en">sleep</name>
   <name l="ru">спать</name>
-  <name l="ua"></name>
+  <name l="ua">спати</name>
   <position>sleep</position>
 </Command>

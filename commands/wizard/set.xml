@@ -6,7 +6,55 @@
     <extra l="en">&apos;set obj&apos;</extra>
     <extra l="ru"></extra>
     <extra l="ua"></extra>
-    <text l="en"></text>
+    <text l="en">%FMT%  *set mob* _%MOB%_ _field_ _value_
+%FFF%  *set room* _number_ _field_ _value_
+%FFF%  *set skill* _%CHAR%_ _name_ _rating_
+%FFF%  *set skill* _%CHAR%_ *all* _rating_
+
+The *set* command is used to alter numerical values of various data structures. Enter *set* _type_ without arguments for a list of options.
+
+Entering *set skill all* (players only) will change all skills for the character based on the given value. Use *string* to change descriptions of objects and mobs.
+
+%FMT%   *set obj* _%OBJ%_ _field_ _value_
+
+Fields: value0 value1 value2 value3 value4 (v0-v4)
+      cost extra level material owner timer
+      wear weight personal
+%PAUSE%
+Explanation:
+  cost     : The cost of the object in silver coins;
+  extra    : Additional object flags ({W*{x);
+  level    : Object level;
+  material : Material from which the object is made ({W**{x);
+  owner    : Object owner (this field is critical for quest items and also
+             for objects that have been assigned owner programs for
+             picking named objects) ({W***{x);
+  timer    : Assign the object a lifespan in ticks;
+  v0 - v4  : Specific fields, the value is determined by the object type;
+  wear     : Object wear flags ({W*{x);
+  weight   : Object weight in pounds.
+  personal : Make the item a personal belonging (%H% [owner])
+  gender   : p|n|m|f, changes the grammatical gender of the object
+  property : &lt;key&gt; &lt;value&gt;, changes the special property field
+
+{W*{x - Flags can be set as numerical values or symbolic. Examples:
+  value = 1     - set the object flag to 1;
+  value = +1    - set the object flag to 1;
+  value = -1    - set the object flag to -1;
+  value = A     - set the object flag to A;
+  value = +A    - add flag A to the object flag;
+  value = -A    - remove flag A from the object flag;
+  value = +AB-C - add flags AB and remove flag C from the object flag (such
+               multi-mode flags MUST start with + or -).
+
+{W**{x - Preferably English value (at least for now), which is also
+     encountered in arias.
+
+{W***{x - The name must start with a capital letter. For example, for the character Teelak,
+      set the owner to Teelak.
+
+%RESUME%
+%SA% %H% [string], [stat]</text>
     <text l="ru">%FMT%  *set mob* _%MOB%_ _field_ _value_
 %FFF%  *set room* _number_ _field_ _value_
 %FFF%  *set skill* _%CHAR%_ _name_ _rating_
@@ -61,11 +109,62 @@
 %RESUME%
 %SA% %H% [string], [stat]
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT%  *set mob* _%MOB%_ _поле_ _значення_
+%FFF%  *set room* _номер_ _поле_ _значення_
+%FFF%  *set skill* _%CHAR%_ _назва_ _рейтинг_
+%FFF%  *set skill* _%CHAR%_ *всі* _рейтинг_
+
+Команда *set* використовується для зміни числових значень різних структур
+даних. Введіть *set* _тип_ без аргументів для отримання списку опцій.
+
+Введення *set skill all* (лише для гравців) змінить персонажеві всі навички 
+залежно від заданого значення. Використовуйте *string* для зміни описів
+об'єктів і мобів.
+
+%FMT%   *set obj* _%OBJ%_ _поле_ _значення_
+
+Поля: value0 value1 value2 value3 value4 (v0-v4)
+      cost extra level material owner timer
+      wear weight personal
+%PAUSE%
+Тлумачення:
+  cost     : Вартість об'єкта в срібних монетах;
+  extra    : Додаткові прапори об'єкта ({W*{x);
+  level    : Рівень об'єкта;
+  material : Матеріал, з якого виготовлений об'єкт ({W**{x);
+  owner    : Власник об'єкта (поле критично важливе для квестових речей, а також
+             для об'єктів, яким призначені обжпроги на
+             підняття іменних об'єктів) ({W***{x);
+  timer    : Призначити об'єкту час життя в тіках;
+  v0 - v4  : Специфічні поля, значення визначається типом об'єкта;
+  wear     : Прапори на одягання об'єкта ({W*{x);
+  weight   : Вага об'єкта у фунтах.
+  personal : Зробити предмет особистою річчю (%H% [owner])
+  gender   : p|n|m|f, змінює граматичний рід об'єкта
+  property : &lt;key&gt; &lt;value&gt;, змінює поле спец-властивості
+
+{W*{x - Прапори можна встановлювати як числовими значеннями, так і символьними. Приклади:
+  value = 1     - встановити прапор об'єкта рівним 1;
+  value = +1    - встановити прапор об'єкта рівним 1;
+  value = -1    - встановити прапор об'єкта рівним -1;
+  value = A     - встановити прапор об'єкта рівним A;
+  value = +A    - додати до прапора об'єкта прапор A;
+  value = -A    - прибрати у прапора об'єкта прапор A;
+  value = +AB-C - додати до прапора об'єкта прапори AB та прибрати прапор C (такі
+               багаторежимні прапори ОБОВ'ЯЗКОВО повинні починатися з + або -).
+
+{W**{x - Бажано англійське значення (принаймні поки), яке також
+     зустрічається в аріях.
+
+{W***{x - Ім'я має бути вказане з великої літери. Наприклад, для персонажа Тілак
+      власника треба встановлювати як Тілак.
+
+%RESUME%
+%SA% %H% [string], [stat]</text>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">set parameters for items and characters</hint>
   <hint l="ru">установить параметры предметам и персонажам</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">встановити параметри предметам та персонажам</hint>
   <level>106</level>
   <log>1</log>
   <name l="en">set</name>

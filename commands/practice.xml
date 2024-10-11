@@ -2,13 +2,62 @@
 <Command>
   <cat>learn</cat>
   <help id="1359" labels="skill" level="-1" type="CommandHelp">
-    <extra l="en"></extra>
+    <extra l="en">learning skill trainability practice skill percentage proficiency session</extra>
     <extra l="ru">изучения навыком обучаемость практика практики процент прокачка раскачка умением умениями уровень владение владения сессий сессия</extra>
-    <extra l="ua"></extra>
-    <keyword l="en"></keyword>
-    <keyword l="ru">&apos;развитие умений&apos;</keyword>
-    <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <extra l="ua">вивчення навичкою навченість практика практики відсоток прокачування розкачування вмінням вміннями рівень володіння сесій сесія</extra>
+    <keyword l="en">'skill development'</keyword>
+    <keyword l="ru">'развитие умений'</keyword>
+    <keyword l="ua">'розвиток вмінь'</keyword>
+    <text l="en">The mastery of your character's {hh1352skills{x is measured in percentages, from 1% to 100%. The higher the mastery of a spell or skill, the more often they trigger and the more effective they become. To increase skill mastery, it needs to be developed: =trained= through constant use or =practiced= with teachers. The degree of skill mastery is distinct from the {hh2036skill level{x.
+
+Skill training generally occurs both during successful use and failure. The speed of training (=learnability=) depends on your {hh38intelligence{x, {hh40wisdom{x, skill complexity, and other factors. You cannot start training an unlearned skill directly from 1% -- it must first be practiced.
+
+{C PRACTICING SKILLS{x 
+%FMT%  *%CMD%* _skill_
+Practice the selected skill or spell. The degree of learning ranges from 1%
+(unlearned) to 50% or 75%, depending on your class and {hh1064remort{x. 
+
+The higher your {hh38intelligence{x, the fewer practices are needed to learn a skill to 75%. Also, the speed of learning depends on the complexity of the skill. The higher your {hh40wisdom{x, the more practice sessions you will get upon reaching a new level. 
+
+To practice, you need to be near a teacher.
+Different skills and spells can be practiced with different teachers.
+
+{g Defensive skills    {G:{w Heimdall                : {hh2057Valhalla{x
+{g Martial arts        {G:{w Hasan                   : {hh1838New Talos{x
+{g Weapon mastery      {G:{w weapon master           : {hh1838New Talos{x
+{g Sudden death        {G:{w Typhoen's statue        : {hh1838New Talos{x
+{g Battle magic        {G:{w Battle Wizard           : {hh1867Canyon of Elements{x
+{g Item magic          {G:{w Master of Item Magic    : {hh1836High Tower{x
+{g Illusions and Charms{G:{w Master of Illusions     : {hh1836High Tower{x
+{g Transport magic     {G:{w Mistress of Magic       : {hh1836High Tower{x
+{g Defensive spells    {G:{w High Priest Gas         : {hh1423City of Anon{x
+{g Enhancements        {G:{w Librarian               : {hh2071Valley of Titans{x
+{g Healing             {G:{w Priestess Ofkol         : {hh1861New Ofkol{x
+{g Curses              {G:{w witch Liliana           : {hh1506Sabbath{x
+{g Natural forces      {G:{w druid Arankus           : {hh1859Northern Plains{x
+{g Vampirism           {G:{w Guild Master of Vampires: {hh1446Old Midgaard{x
+{g Blessings           {G:{w Priest                  : {hh1392Midgaard{x
+{g Basics of magic     {G:{w Sorcerer                : {hh1392Midgaard{x
+{g Card deck           {G:{w Card shark              : {hh1414Kingdom of Mirrors{x
+{g Tattoo master       {G:{w Master of tattoos       : {hh1850Prairies{x
+{g Ancient languages   {G:{w Wandering monk          : {xaround the world
+{g Detection           {G:{w Your {hh44guild master{x
+{g Necromancy          {G:{w Your {hh44guild master{x
+{g Miscellaneous       {G:{w Your {hh44guild master{x
+
+To find out which group a skill belongs to and where to find a teacher, read the help on that skill.
+
+%FMT%  *%CMD%* 
+Show all skills (skills and spells) you have managed to learn and their degree of learning.
+
+%FMT%  *%CMD%*
+Show all skills available to you at your current level, and their degree of learning.
+
+%FMT%  *%CMD%* {yhere{x
+Displays all the skills that can be learned from teachers in the current room. Additionally, you can practice near player-{hh1358teachers{x.
+
+%SA% %H% {hh1352skills{x, {hh44guild{x, {hh989attract{x
+</text>
     <text l="ru">Владение {hh1352умениями{x твоего персонажа измеряется в процентах, от 1% до 100%.
 Чем выше владение заклинанием или навыком, тем чаще они срабатывают и тем более
 эффективными становятся. Чтобы увеличить владение умением, его надо развивать:
@@ -32,28 +81,28 @@
 Для того, чтоб практиковаться, тебе необходимо находиться рядом с учителем.
 Разные умений и заклинаний можно практиковать у разных учителей.
 
-{g {sEDefensive         {sRЗащитные навыки      {x{G:{w Хеймдалль                : {hh2057Вальгалла{x
-{g {sEFightmaster       {sRВоинское искусство   {x{G:{w Хассан                   : {hh1838Новый Талос{x
-{g {sEWeaponsmaster     {sRМастер оружия        {x{G:{w мастер оружия            : {hh1838Новый Талос{x
-{g {sESuddendeath       {sRВнезапная смерть     {x{G:{w статуя Тайфоэн           : {hh1838Новый Талос{x
-{g {sECombat            {sRБоевая магия         {x{G:{w Боевой Волшебник         : {hh1867Каньон Стихий{x
-{g {sEEnchantment       {sRПредметная магия     {x{G:{w Мейстер Предметной Магии : {hh1836Высшая Башня{x
-{g {sEIllusion          {sRМороки и чары        {x{G:{w Мейстер Иллюзий          : {hh1836Высшая Башня{x
-{g {sETransportation    {sRТранспортная магия   {x{G:{w Повелительница Магии     : {hh1836Высшая Башня{x
-{g {sEProtective        {sRЗаклинания защиты    {x{G:{w Первосвященник Гас       : {hh1423Город Анон{x
-{g {sEEnhancement       {sRУсиления             {x{G:{w Библиотекарь             : {hh2071Долина Титанов{x
-{g {sEHealing           {sRЛечение              {x{G:{w Жрица Офкола             : {hh1861Новый Офкол{x
-{g {sEMaladictions      {sRПроклятия            {x{G:{w ведьма Лилиана           : {hh1506Шабаш{x
-{g {sENature            {sRПриродные силы       {x{G:{w друид Аранкус            : {hh1859Равнины Севера{x
-{g {sEVampiric          {sRВампиризм            {x{G:{w Мастер гильдии Вампиров  : {hh1446Старый Мидгаард{x
-{g {sEBenedictions      {sRБлагословления       {x{G:{w Священник                : {hh1392Мидгаард{x
-{g {sEArcane            {sRОсновы магии         {x{G:{w Колдун                   : {hh1392Мидгаард{x
-{g {sECard pack         {sRКарточная колода     {x{G:{w Карточный шулер          : {hh1414Королевство Зеркал{x
-{g {sETattoo Master     {sRТату-мастер          {x{G:{w Мастер татуировок        : {hh1850Прерии{x
-{g {sEAncient languages {sRДревние языки        {x{G:{w Блуждающий монах         : {xпо всему миру
-{g {sEDetection         {sRОбнаружение          {x{G:{w Твой {hh44гильдмастер{x
-{g {sENecromancy        {sRНекромантия          {x{G:{w Твой {hh44гильдмастер{x
-{g {sEAdventure         {sRРазное               {x{G:{w Твой {hh44гильдмастер{x
+{g Защитные навыки      {G:{w Хеймдалль                : {hh2057Вальгалла{x
+{g Воинское искусство   {G:{w Хассан                   : {hh1838Новый Талос{x
+{g Мастер оружия        {G:{w мастер оружия            : {hh1838Новый Талос{x
+{g Внезапная смерть     {G:{w статуя Тайфоэн           : {hh1838Новый Талос{x
+{g Боевая магия         {G:{w Боевой Волшебник         : {hh1867Каньон Стихий{x
+{g Предметная магия     {G:{w Мейстер Предметной Магии : {hh1836Высшая Башня{x
+{g Мороки и чары        {G:{w Мейстер Иллюзий          : {hh1836Высшая Башня{x
+{g Транспортная магия   {G:{w Повелительница Магии     : {hh1836Высшая Башня{x
+{g Заклинания защиты    {G:{w Первосвященник Гас       : {hh1423Город Анон{x
+{g Усиления             {G:{w Библиотекарь             : {hh2071Долина Титанов{x
+{g Лечение              {G:{w Жрица Офкола             : {hh1861Новый Офкол{x
+{g Проклятия            {G:{w ведьма Лилиана           : {hh1506Шабаш{x
+{g Природные силы       {G:{w друид Аранкус            : {hh1859Равнины Севера{x
+{g Вампиризм            {G:{w Мастер гильдии Вампиров  : {hh1446Старый Мидгаард{x
+{g Благословления       {G:{w Священник                : {hh1392Мидгаард{x
+{g Основы магии         {G:{w Колдун                   : {hh1392Мидгаард{x
+{g Карточная колода     {G:{w Карточный шулер          : {hh1414Королевство Зеркал{x
+{g Тату-мастер          {G:{w Мастер татуировок        : {hh1850Прерии{x
+{g Древние языки        {G:{w Блуждающий монах         : {xпо всему миру
+{g Обнаружение          {G:{w Твой {hh44гильдмастер{x
+{g Некромантия          {G:{w Твой {hh44гильдмастер{x
+{g Разное               {G:{w Твой {hh44гильдмастер{x
 
 Для того, чтобы выяснить, к какой группе относится умение и где искать учителя,
 читай справку по этому умению.
@@ -71,17 +120,77 @@
 
 %SA% %H% {hh1352умения{x, {hh44гильдии{x, {hh989привлечь{x
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">Володіння {hh1352вміннями{x вашого персонажа вимірюється у відсотках, від 1% до 100%.
+Чим вище знання заклинання або навички, тим частіше вони спрацьовують і тим більш
+ефективними стають. Щоб збільшити володіння вмінням, його потрібно розвивати:
+=прокачувати= за допомогою постійного використання або =практикувати= з вчителями.
+Ступінь володіння вмінням відрізняється від {hh2036рівня вміння{x.
+
+Прокачування вмінь зазвичай відбувається як при успішному використанні, так і при
+невдачі. Швидкість прокачування (=навченість=) залежить від вашого {hh38інтелекту{x, {hh40мудрості{x,
+складності вміння та інших факторів. Прокачувати непрокачане вміння прямо 
+від 1% -- неможливо, спочатку його потрібно опрактикувати.
+
+{CПРАКТИКУВАННЯ ВМІНЬ{x 
+%FMT%  *%CMD%* _вміння_
+Практикувати обрану навичку або заклинання. Ступень вивчення варіюється від 1%
+(не вивчено) до 50% або 75%, залежно від вашого класу та {hh1064реморта{x. 
+
+Чим вище ваш {hh38інтелект{x, тим менше практик потрібно, щоб вивчити вміння до 75%.
+Також швидкість вивчення залежить від складності навички. Чим вище ваша {hh40мудрість{x, тим
+більше сесій практики ви отримаєте при переході на новий рівень.
+
+Щоб практикуватися, необхідно знаходитися поруч із учителем.
+Різні вміння та заклинання можна практикувати у різних учителів.
+
+{g Захисні навики      {G:{w Хеймдалль                : {hh2057Вальгалла{x
+{g Військове мистецтво {G:{w Хассан                   : {hh1838Новий Талос{x
+{g Майстер зброї       {G:{w майстер зброї            : {hh1838Новий Талос{x
+{g Раптова смерть      {G:{w статуя Тайфоен          : {hh1838Новий Талос{x
+{g Бойова магія        {G:{w Бойовий Чарівник        : {hh1867Каньйон Стихій{x
+{g Магія предметів     {G:{w Майстер Магії Предметів : {hh1836Висока Вежа{x
+{g Ілюзії та Чари      {G:{w Майстер Ілюзій          : {hh1836Висока Вежа{x
+{g Транспортна магія   {G:{w Владичиця Магії         : {hh1836Висока Вежа{x
+{g Захисні заклинання  {G:{w Верховний Жрець Гас     : {hh1423Місто Анон{x
+{g Посилення           {G:{w Бібліотекар             : {hh2071Долина Титанів{x
+{g Лікування           {G:{w Жриця Офкола            : {hh1861Новий Офкол{x
+{g Прокляття           {G:{w відьма Ліліана          : {hh1506Шабаш{x
+{g Сили природи        {G:{w друїд Аранкус           : {hh1859Рівнини Півночі{x
+{g Вампіризм           {G:{w Майстер гільдії Вампірів: {hh1446Старий Мідгард{x
+{g Благословіння       {G:{w Священник               : {hh1392Мідгард{x
+{g Основи магії        {G:{w Чарівник                : {hh1392Мідгард{x
+{g Колода карт         {G:{w Картовий шулер          : {hh1414Королівство Дзеркал{x
+{g Тату-майстер        {G:{w Майстер татуювань       : {hh1850Прерії{x
+{g Стародавні мови     {G:{w Блукаючий монах         : {xпо всьому світу
+{g Виявлення           {G:{w Ваш {hh44гільдмайстер{x
+{g Некромантія         {G:{w Ваш {hh44гільдмайстер{x
+{g Різне               {G:{w Ваш {hh44гільдмайстер{x
+
+Щоб дізнатися, до якої групи належить вміння і де шукати учителя,
+читайте довідку про це вміння.
+
+%FMT%  *%CMD%* 
+Показати всі вміння (навички та заклинання), які ви встигли опанувати, і ступінь їх вивчення.
+
+%FMT%  *%CMD%*
+Показати всі доступні вам на даному рівні вміння і ступінь їх вивчення.
+
+%FMT%  *%CMD%* {yтут{x
+Показує всі вміння, які можна вивчити у вчителів в поточній кімнаті.
+Крім того, можна практикуватися поруч з гравцями-{hh1358учителями{x.
+
+%SA% %H% {hh1352вміння{x, {hh44гільдії{x, {hh989залучити{x
+</text>
+    <title l="en">{CSkills:{x development, practice, training</title>
     <title l="ru">{CУмения:{x развитие, практика, прокачка</title>
-    <title l="ua"></title>
+    <title l="ua">{CВміння:{x розвиток, практика, прокачування</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">list of skills, practice skill</hint>
   <hint l="ru">список умений, практиковать умение</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">список вмінь, практикувати вміння</hint>
   <name l="en">practice</name>
   <name l="ru">практиковать</name>
-  <name l="ua"></name>
+  <name l="ua">практикувати</name>
   <order>player_only</order>
   <position>sleep</position>
 </Command>

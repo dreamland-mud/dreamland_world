@@ -4,8 +4,22 @@
   <help id="1348" level="-1" ref="lover" type="CommandHelp">
     <extra l="en">sex</extra>
     <extra l="ru">любовь секс трахаться</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">любов, секс, кохатися</extra>
+    <text l="en">%FMT% *%CMD%* _%CHAR%_
+
+This command allows you to make love with someone. In the case of other players' characters, this is possible only if you are on their list of lovers. Once a year there are exceptions, and you can run around like a ram {hh2124chasing sheep{x and make them feel good without any lists.
+
+Note: you can't make love while asleep, during a fight, or near death. There is no need to add the target to your list of lovers - only the list of the target is checked. If you are on it - you are in luck.
+Also, as revealed by extensive testing, making love is very tiring ;)
+
+%FMT%  *lovers* *list*
+%FFF%  *lovers* *add* _%CHAR%_
+%FFF%  *lovers* *remove* _%CHAR%_
+	    
+Edits the list of lovers. 
+
+%SA% %H% {hh1349marriage{x
+</text>
     <text l="ru">%FMT% *%CMD%* _%CHAR%_
 
 По этой команде можно заняться с кем-то любовью. В случае с персонажами других
@@ -27,17 +41,31 @@
 
 %SA% %H% {hh1349брак{x
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">%FMT% *%CMD%* _%CHAR%_
+
+Ця команда дозволяє займатися з кимось любов'ю. У випадку з персонажами інших гравців це можливо лише якщо ви знаходитесь в їхньому списку коханців. Раз на рік бувають винятки, і можна як баран {hh2124бігати за вівцями{x і робити їм добре без усіляких списків.
+
+Примітка: не можна займатися любов'ю уві сні, під час бою і в стані при смерті. Немає необхідності додавати ціль у свій список коханців -- перевіряється тільки список у цілі. Якщо ти в ньому є -- тобі пощастило.
+Також, як виявилося в результаті багаторазового тестування, заняття любов'ю сильно втомлює ;)
+
+%FMT% *коханці* *список*
+%FFF% *коханці* *додати* _%CHAR%_
+%FFF% *коханці* *вилучити* _%CHAR%_
+
+Редагує список коханців. 
+
+%SA% %H% {hh1349шлюб{x
+</text>
+    <title l="en">Sex, Lovers</title>
     <title l="ru">Секс, любовники</title>
-    <title l="ua"></title>
+    <title l="ua">Секс, коханці</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">make love with someone</hint>
   <hint l="ru">заняться с кем-то любовью</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">займатися з кимось любов'ю</hint>
   <name l="en">mlove</name>
   <name l="ru">любить</name>
-  <name l="ua"></name>
+  <name l="ua">кохати</name>
   <order>player_only</order>
   <position>rest</position>
 </Command>

@@ -3,10 +3,21 @@
   <cat>learn</cat>
   <extra>keep_hide ghost hidden</extra>
   <help id="1354" labels="skill" level="-1" type="CommandHelp">
-    <extra l="en"></extra>
+    <extra l="en">group 'skill group' 'ability group' groups 'ability groups' skills abilities spells</extra>
     <extra l="ru">группа &apos;группа навыков&apos; &apos;группа умений&apos; группы &apos;группы умений&apos; навыков умений заклинаний</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">група 'група навичок' 'група вмінь' групи 'групи вмінь' навичок вмінь заклинань</extra>
+    <text l="en">All abilities (spells and skills) in the World of Dreams are divided into groups by meaning.
+Different groups have separate bonuses and features, and they are practiced by different teachers.
+
+%FMT% *%CMD%* _group_  
+
+Provides a list of abilities belonging to this group, as well as teachers of the group.
+The same information will be shown by the help for this group.
+
+%FMT% *%CMD%*
+
+Displays a list of all groups.
+</text>
     <text l="ru">Все умения (заклинания и навыки) в Мире Мечты делятся на группы по смыслу.
 Разные группы имеют отдельные бонусы и особенности, и их помогают {hh1359практиковать{x
 разные учителя.
@@ -20,17 +31,29 @@
 
 Показывает список всех групп.
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">Усі вміння (заклинання і навички) у Світі Мрії поділяються на групи за змістом.
+Різні групи мають окремі бонуси та особливості, і їх допомагають {hh1359практикувати{x
+різні вчителі.
+
+%FMT% *%CMD%* _група_  
+
+Видає список вмінь, що належать до цієї групи, а також вчителів групи.
+Ту ж інформацію покаже і довідка по цій групі.
+
+%FMT% *%CMD%*
+
+Показує список усіх груп.
+</text>
+    <title l="en">{CSkills:{x groups</title>
     <title l="ru">{CУмения:{x группы</title>
-    <title l="ua"></title>
+    <title l="ua">{CУміння:{x групи</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">list skills in the given group</hint>
   <hint l="ru">перечислить навыки в данной группе</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">перелічити навички у даній групі</hint>
   <name l="en">glist</name>
   <name l="ru">группаумений</name>
-  <name l="ua"></name>
+  <name l="ua">групавмінь</name>
   <order>player_only</order>
   <position>dead</position>
 </Command>

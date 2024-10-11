@@ -3,7 +3,17 @@
   <cat></cat>
   <extra>keep_hide ghost</extra>
   <help id="1045" level="102" type="CommandHelp">
-    <text l="en"></text>
+    <text l="en">%FMT%  *%CMD%* *mob* _vnum_
+%FFF%  *%CMD%* *obj* _vnum_
+
+This command is used to load new objects or mobs (use
+*clone* to create multiple objects or mobs). The vnum value can be
+found using the *vnum* command, or set using *stat obj*, *stat mob*.
+
+Created objects will appear in your inventory if they are wearable, otherwise
+they will be lying in the room. Mobs always appear in the same room
+where the God who creates them is located.
+</text>
     <text l="ru">%FMT%  *%CMD%* *mob* _vnum_
 %FFF%  *%CMD%* *obj* _vnum_
 
@@ -15,11 +25,21 @@
 они окажутся лежащими в комнате. Мобы всегда появляются в той же комнате,
 в которой находится создающий их Бог.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT%  *%CMD%* *mob* _vnum_
+%FFF%  *%CMD%* *obj* _vnum_
+
+Ця команда використовується для завантаження нових об'єктів або мобів (використовуй
+*clone* для створення кількох об'єктів або мобів). Значення vnum може бути
+з'ясоване за допомогою команди *vnum*, або встановлене за допомогою *stat obj*, *stat mob*.
+
+Створені об'єкти потраплять до тебе в інвентар, якщо вони носимі, в іншому випадку
+вони опиняться лежачими в кімнаті. Моби завжди з'являються в тій же кімнаті,
+в якій знаходиться Бог, що їх створює.
+</text>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">load a mob or object</hint>
   <hint l="ru">загрузить моба или предмет</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">завантажити моба або предмет</hint>
   <level>106</level>
   <log>1</log>
   <name l="en">load</name>

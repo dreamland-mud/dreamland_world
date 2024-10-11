@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
-  <aliases l="en"></aliases>
   <aliases l="ru">говсемье</aliases>
-  <aliases l="ua"></aliases>
+  <aliases l="ua">говсім'ї</aliases>
   <cat>family</cat>
   <extra>keep_hide ghost</extra>
   <help id="1349" level="-1" type="CommandHelp">
     <extra l="en">marriage</extra>
     <extra l="ru">брак семья свадьба</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">шлюб родина весілля</extra>
+    <text l="en">Marriage and divorce ceremonies are conducted by {hh92Gods{x.
+We have monogamy (at least for now), same-sex marriages are possible.
+The name of your beautiful/strong partner is displayed in *whois*, along with
+the number of your previous marriages. You can be sure {Sfа{Sx at least in
+one item from the list {hh1348lovers{x of your partner -- you will appear in it immediately
+after the wedding, and you cannot be removed from there until divorce.
+
+%FMT%  *%CMD%* _message_
+Sends a message to your partner if they are present in the world. Messages from
+spouses are always received: during sleep, during battle, in complete {hh1081silence{x mode.
+</text>
     <text l="ru">Обряды бракосочетания и развода проводят {hh92Боги{x.
 У нас моногамия (по крайней мере, пока), возможны однополые браки.
 Имя твоей прекрасной/сильной{ половины отображается в *ктоесть*, вместе с
@@ -21,17 +30,27 @@
 Посылает сообщение твоей половине, если он(а) присутствует в мире. Сообщения от
 супругов принимаются всегда: во сне, во время боя, в режиме полной {hh1081тишины{x.
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">Обряди шлюбу та розлучення проводять {hh92Боги{x.
+У нас моногамія (принаймні, поки), можливі одностатеві шлюби.
+Ім'я твоєї прекрасної/сильної половини відображається в *хтоє*, разом з
+кількістю твоїх попередніх шлюбів. Ти можеш бути впевнений{Sfа{Sx принаймні в
+одному пункті зі списку {hh1348коханців{x твого партнера -- ти потрапиш у нього одразу
+після весілля, і видалити тебе звідти не зможуть аж до розлучення.
+
+%FMT%  *%CMD%* _повідомлення_
+Відправляє повідомлення твоїй половині, якщо вона присутня у світі. Повідомлення від
+подружжя завжди приймаються: під час сну, битви, у режимі повної {hh1081тиші{x.
+</text>
+    <title l="en">Weddings, spouses</title>
     <title l="ru">Бракосочетания, супруги</title>
-    <title l="ua"></title>
+    <title l="ua">Шлюби, подружжя</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">communication with a wife or husband</hint>
   <hint l="ru">общение с женой или мужем</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">спілкування з дружиною або чоловіком</hint>
   <name l="en">mtalk</name>
   <name l="ru">гсемье</name>
-  <name l="ua"></name>
+  <name l="ua">гсім'ї</name>
   <order>player_only</order>
   <position>dead</position>
 </Command>

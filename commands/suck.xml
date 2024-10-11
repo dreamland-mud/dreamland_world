@@ -1,14 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
-  <aliases l="en"></aliases>
   <aliases l="ru">сосать</aliases>
-  <aliases l="ua"></aliases>
+  <aliases l="ua">смоктати</aliases>
   <cat>class</cat>
   <help id="697" labels="skill" level="-1" type="CommandHelp">
     <extra l="en">blood thirst</extra>
     <extra l="ru">&apos;пить кровь&apos; соснуть &apos;жажда крови&apos; высасывание высосать</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">&apos;пити кров&apos; смоктати &apos;спрага крові&apos; висмоктування висмоктати</extra>
+    <text l="en">Vampires do not consume ordinary food, they are not familiar with thirst and hunger: they are tormented only by {rblood thirst{x. It can be satisfied by drinking blood from the necks of victims or simply killing them.
+
+{R%A% {xWhen blood thirst is too high, during a {hh626bite{x, a hungry vampire tears the victim's neck, causing high damage.
+{R%A% {xIn other cases, the vampire bite makes two neat little holes in the victim's neck through which blood can be =sucked=.
+
+%FMT% *suck* _victim_
+
+Drink blood from an already bitten {hh769sleeping{x victim. Each sip quenches blood thirst, but the less this thirst, the greater the chance of waking the victim and getting hit yourself.
+
+To quickly increase their blood thirst, vampires perform {hh539bleeding{x on themselves.
+
+%SA% %H% {hh769touch{x, {hh836vampire form{x
+</text>
     <text l="ru">Вампиры не питаются обычной пищей, им незнакома жажда и голод: их терзает
 только {rжажда крови{x. Ее можно удовлетворить, выпивая кровь из шеи жертв или
 просто убивая их.
@@ -28,17 +39,35 @@
 
 %SA% %H% {hh769коснуться{x, {hh836форма вампира{x
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">Вампіри не вживають звичайної їжі, їм невідомі спрага і голод: їх терзає
+тільки {rспрага крові{x. Її можна задовольнити, вживаючи кров з шиї жертв або
+просто вбиваючи їх.
+
+{R%A% {xКоли спрага крові занадто висока, під час {hh626укусу{x голодний
+  вампір роздирає шию жертви, завдаючи значну шкоду.
+{R%A% {xВ інших випадках вампірський укус робить на шиї жертви дві
+  акуратні дірочки, через які можна =смоктати кров=.
+
+%FMT% *висмоктати* _жертва_
+
+Пити кров з вже укушеної {hh769сплячої{x жертви. Кожен ковток втамовує спрагу
+крові, але чим менше ця спрага, тим більше шансів розбудити жертву 
+і самому потрапити під удар.
+
+Щоб швидко збільшити свою спрагу крові, вампіри роблять собі {hh539кровопускання{x.
+
+%SA% %H% {hh769торкнутись{x, {hh836форма вампіра{x
+</text>
+    <title l="en">Vampires' blood thirst, blood sucking</title>
     <title l="ru">Жажда крови вампиров, высасывание крови </title>
-    <title l="ua"></title>
+    <title l="ua">Спрага крові вампірів, висмоктування крові</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">suck blood from neck (vampires)</hint>
   <hint l="ru">(вампиры) высосать кровь из шеи</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">смоктати кров з шиї (вампіри)</hint>
   <name l="en">suck</name>
   <name l="ru">высосать</name>
-  <name l="ua"></name>
+  <name l="ua">висмоктати</name>
   <order>player_only</order>
   <position>stand</position>
 </Command>

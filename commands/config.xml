@@ -2,7 +2,7 @@
 <Command>
   <aliases l="en"></aliases>
   <aliases l="ru">настройки конфиг</aliases>
-  <aliases l="ua"></aliases>
+  <aliases l="ua">налаштування конфіг</aliases>
   <cat>config</cat>
   <extra>keep_hide ghost afk</extra>
   <groups>
@@ -295,8 +295,32 @@
   <help id="1087" labels="info" level="-1" type="CommandHelp">
     <extra l="en">autoassist autoexit autogold autolook autoloot autosac autosplit autostore</extra>
     <extra l="ru">автобуфер автодележ автограбеж автолут автомонеты автонастройка автоподбор автопомощь автожертва автовыходы автовзгляд</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">автобуфер автоділ автограбунок автолут автомонети автонастройка автопідбір автодопомога автожертва автовиходи автовзгляд</extra>
+    <text l="en">Write *%CMD%* to see all current settings.
+To toggle any of them, write *%CMD%* _option_ *%YES%*|*%NO%* --
+for example, *%CMD%* _autoload_ *%NO%* to stop looting
+everything from corpses.
+
+*autoassist* - allows your character to automatically assist players
+             in your group in combat.
+*autoexit* - enables display of visible room exits.
+*autogold* - automatically takes money from the fallen enemies&apos; 
+             corpses.
+*autoloot* - automatically takes items from the fallen enemies&apos; 
+             corpses.
+*(autosac   ,aвтожертва)* - automatically sacrifices the corpse of a fallen enemy to the Gods.
+*autosplit * - automatically shares the money from fallen enemies&apos;
+             corpses among your group&apos;s players.
+*autostore * - allows you to view everything said to you by other players
+             after the battle ends.
+
+%FMT%  *%CMD%* _option_
+Shows the current state of the specified option.
+
+%FMT%  *%CMD%* _option_ *%YES%*|*%NO%*|*switch*
+Toggles the specified option.
+
+%SA% %H% {hh1088brief{x, [noiac]</text>
     <text l="ru">Напиши *%CMD%*, чтобы увидеть список всех текущих настроек. 
 Чтобы переключить любую из них, напиши *%CMD%* _опция_ *%YES%*|*%NO%* --
 например, *%CMD%* _автограбеж_ *%NO%*, чтобы перестать брать
@@ -323,17 +347,41 @@
 
 %SA% %H% {hh1088кратко{x, [noiac]
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">Напиши *%CMD%*, щоб побачити список усіх поточних налаштувань.
+Щоб переключити будь-яке з них, напиши *%CMD%* _опція_ *%YES%*|*%NO%* --
+наприклад, *%CMD%* _автограбунок_ *%NO%*, щоб перестати брати
+все підряд з трупів.
+
+*автодопомога* - дозволяє вашому персонажу автоматично допомагати гравцям
+             у вашій групі у бою.
+*автовиходи* - включає відображення видимих виходів із кімнати.
+*автомонети* - автоматично бере гроші з трупів повалених
+             вашим ворогів.
+*автограбунок* - автоматично бере речі з трупів повалених вами 
+             ворогів.
+*(autosac   ,автожертва)* - автоматично жертвує Богам труп поваленого вами ворога.
+*автоділ* - автоматично ділить гроші з трупів повалених вами
+             ворогів між гравцями вашої групи.
+*автобуфер * - дозволяє переглядати все, що сказано вам іншими гравцями,
+             після закінчення бою.
+
+%FMT%  *%CMD%* _опція_
+Показує поточний стан зазначеної опції.
+
+%FMT%  *%CMD%* _опція_ *%YES%*|*%NO%*|*переключити*
+Включає-виключає зазначену опцію.
+
+%SA% %H% {hh1088кратко{x, [noiac]</text>
+    <title l="en">Gameplay, Input-Output {CSettings{x</title>
     <title l="ru">{CНастройки{x игрового процесса, ввода-вывода</title>
-    <title l="ua"></title>
+    <title l="ua">Налаштування ігрового процесу, вводу-виводу</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">list of all settings</hint>
   <hint l="ru">список всех настроек</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">список всіх налаштувань</hint>
   <name l="en">config</name>
   <name l="ru">режим</name>
-  <name l="ua"></name>
+  <name l="ua">режим</name>
   <order>player_only</order>
   <position>dead</position>
 </Command>

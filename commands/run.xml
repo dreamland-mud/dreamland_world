@@ -1,15 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
-  <aliases l="en"></aliases>
   <aliases l="ru">бег</aliases>
-  <aliases l="ua"></aliases>
+  <aliases l="ua">біг</aliases>
   <cat>move</cat>
   <extra>keep_hide</extra>
   <help id="1078" level="-1" type="CommandHelp">
     <extra l="en">speedwalk</extra>
     <extra l="ru">спидволк</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">спідволк</extra>
+    <text l="en">%FMT% *%CMD%* _route_
+
+To move faster around the world, you can run. To run somewhere, you need to specify
+a =direction= or a =route=. Direction is indicated by the first letters of the compass,
+plus the letters P, O{x ({YП{yclimb{x and {YО{ydescend{x)
+
+%A% a capital letter ({YNSWEOP{x) means running all the way in that direction.
+  If you encounter an obstacle (a wall, a locked door), you will continue running along
+  the rest of the route.
+  For example: *%CMD%* {yN{x (run all the way north)
+            *%CMD%* {yEo{x (run east until you stop, then down)
+ 
+%A% a small letter ({Ynsweop{x), indicates one or more steps in
+  that direction -- you can specify exactly how many.
+  For example: *%CMD%* {y30e5nSo8nds{x
+
+Combinations of all this are called =speedwalks=. If you check the help of any
+area, for example, {y{hchelp dwarf village{x, you'll see a quick route to that area.
+
+While running, your character will automatically open regular doors, but any
+attack, {hh1013locked{x doors or traps will interrupt the run.
+
+If the run is interrupted but the route is not yet finished, the remaining path will be displayed
+to the character. If you need to urgently stop running without waiting for the end, use
+the command buffer clear symbol {y\{x.
+
+Remember that within an area you can use the command {y{hpath{x, which
+will show the route to any place in that area by its name.
+
+%SA% %H% {hh18crawl{x
+</text>
     <text l="ru">%FMT% *%CMD%* _маршрут_
 
 Чтобы перемещаться по миру быстрее, можно бегать. Для бега куда-то надо указать
@@ -41,17 +70,47 @@
 
 %SA% %H% {hh18ползти{x
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">%FMT% *%CMD%* _маршрут_
+
+Щоб переміщатися по світу швидше, можна бігати. Для бігу кудись треба вказати
+=напрямок= або =маршрут=. Напрямок вказується першими літерами сторін світу,
+плюс літери П,О{x ({YП{yіднятися{x і {YО{yпуститися{x)
+
+%A% велика літера ({YПдСЗВО{x) означає біг до упору в дану сторону.
+  Наткнувшись на перешкоду (стінку, зачинені двері), ти продовжиш бігти по
+  решті маршруту.
+  Наприклад: *%CMD%* {yП{x (бігти до упору на північ)
+            *%CMD%* {yВо{x (бігти на схід поки не впремося, потім вниз)
+ 
+%A% маленька літера ({Yпдсзвоп{x), означає один або декілька кроків у
+  даному напрямку -- можна вказати, скільки саме.
+  Наприклад: *%CMD%* {y30в5пЮо8пс{x
+
+Комбінації всього цього називаються =спідволки=. Якщо подивитися довідку по будь-якій
+зоні, наприклад, {y{hcдовідка село гномів{x, ти побачиш швидкий маршрут до цієї зони.
+
+На бігу твій персонаж буде автоматично відкривати звичайні двері, але будь-який
+напад, {hh1013зачинені{x двері або пастки перервуть пробіжку.
+
+Якщо біг перервався, але маршрут ще не завершений, залишок шляху буде показаний
+персонажу. Якщо треба терміново перервати біг, не чекаючи кінця, використовуй
+символ очищення буфера команд {y\{x.
+
+Не забудь, що в межах зони можна використовувати команду {y{hcшлях{x, яка
+покаже маршрут до будь-якого місця в даній зоні по його назві.
+
+%SA% %H% {hh18повзти{x
+</text>
+    <title l="en">{CMovement: {xrun, fast routes</title>
     <title l="ru">{CПеремещение: {xбег, быстрые маршруты</title>
-    <title l="ua"></title>
+    <title l="ua">{CПереміщення: {xбіг, швидкі маршрути</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">run along the specified route</hint>
   <hint l="ru">побежать по заданному маршруту</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">бігти за заданим маршрутом</hint>
   <name l="en">run</name>
   <name l="ru">бежать</name>
-  <name l="ua"></name>
+  <name l="ua">бігти</name>
   <order>player_only</order>
   <position>sleep</position>
 </Command>

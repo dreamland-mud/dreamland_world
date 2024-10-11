@@ -3,7 +3,15 @@
   <cat></cat>
   <extra>keep_hide ghost undig</extra>
   <help id="1049" level="102" type="CommandHelp">
-    <text l="en"></text>
+    <text l="en">%FMT%  *%CMD%* _location_ _command_  
+
+Executes the specified command (which may have arguments) in the specified
+location. The location can be specified as a vnum, as the name of a mob, or as the name
+of an object.  
+
+*%CMD%* temporarily moves you to the specified location, executes the command,
+and then moves you back (if after executing this command you are still
+in the world).</text>
     <text l="ru">%FMT%  *%CMD%* _место_ _команда_  
 
 Выполняет указанную команду (которая может иметь аргументы) в указанном
@@ -14,14 +22,22 @@
 и затем возвращает обратно (если после выполнения этой команды вы все еще
 находитесь в мире).
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT%  *%CMD%* _місце_ _команда_  
+
+Виконує зазначену команду (яка може мати аргументи) у вказаному
+місці. Місце може бути задане як vnum, як ім'я моба, або як найменування
+об'єкта.  
+
+*%CMD%* тимчасово переміщує вас до вказаного місця, виконує команду,
+і потім повертає назад (якщо після виконання цієї команди ви все ще
+знаходитесь у світі).</text>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">execute a command from a specified location</hint>
   <hint l="ru">выполнить команду из заданной локации</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">виконати команду з заданої локації</hint>
   <level>104</level>
   <name l="en">at</name>
   <name l="ru">у</name>
-  <name l="ua"></name>
+  <name l="ua">у</name>
   <position>dead</position>
 </Command>

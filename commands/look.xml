@@ -1,15 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
-  <aliases l="en"></aliases>
   <aliases l="ru">посмотреть</aliases>
-  <aliases l="ua"></aliases>
+  <aliases l="ua">подивитися</aliases>
   <cat>info</cat>
   <extra>keep_hide ghost undig manacles afk nanny</extra>
   <help id="1014" labels="item" level="-1" ref="examine read" type="CommandHelp">
-    <extra l="en"></extra>
+    <extra l="en">peek glance</extra>
     <extra l="ru">заглядывать заглянуть</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">заглядати зазирнути</extra>
+    <text l="en">%FMT%  *look*
+The Most Important Command. Displays the name and description of the area you
+are in, as well as all items and creatures around you. In the descriptions, you may
+sometimes find =additional descriptions=, which are marked by a white English word
+in brackets, like this: ({Wword{x). If you click on it in the {hh2133web client{x
+or type *look word{x*, you can learn a lot of very important and interesting
+details, hints for quests, {hh1016extra exits{x, and much more.
+
+%FMT%  *look* _%OBJ%_
+%FFF%  *look* _%CHAR%_
+%FFF%  *look* _%DIR%_
+%FMT%  *read* _keyword_
+Looking at any character, you will find out what things they are wearing.
+By looking at some items (but not all), you can discover some of their
+hidden properties -- *read* and *look* are synonyms for objects.
+Some things or characters can be {hh1084sniffed{x and {hh1085listened to{x.
+If there are two or more targets with the same name next to you (for example, two seagulls),
+to look at the second seagull, write *look 2.seagull{x*.
+
+%FMT%  *look into* _container or corpse_
+%FFF%  *examine* _container or corpse_
+Peek inside a container or inspect a corpse.
+*Examine*, *peek* is synonymous with *look into*.
+
+%FMT%  *examine* _character_
+Glance at a character to assess their condition.
+</text>
     <text l="ru">%FMT%  *смотреть*
 Самая Главная Команда. Показывает название и описание местности, в которой ты
 находишься, а также все предметы и существ рядом с тобой. В описаниях иногда
@@ -37,16 +62,42 @@
 %FMT%  *изучить* _персонаж_
 Бросить беглый взгляд на персонажа, для оценки его состояния.
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">%FMT%  *подивитися*
+Найважливіша команда. Показує назву і опис місцевості, в якій ти
+знаходишся, а також усі предмети та істоти поруч з тобою. В описах іноді
+зустрічаються =додаткові описи=, вони відзначаються білим англійським словом
+в дужках, приблизно так: ({Wслово{x). Якщо натиснути на нього у {hh2133веб-клієнті{x
+або написати *подивитися слово{x*, можна дізнатися багато дуже важливих і цікавих
+деталей, підказки до завдань, {hh1016додаткові виходи{x і багато іншого.
+
+%FMT%  *подивитися* _%OBJ%_
+%FFF%  *подивитися* _%CHAR%_
+%FFF%  *подивитися* _%DIR%_
+%FMT%  *читати* _ключове слово_
+Дивлячись на будь-якого персонажа, ти зможеш дізнатися, які речі на них одягнені.
+Дивлячись на деякі предмети (але далеко не всі), можна дізнатися про їхні
+приховані властивості -- *читати* і *дивитися* для речей синоніми.
+Деякі речі чи персонажів можна {hh1084нюхати{x і {hh1085слухати{x.
+Якщо поруч з тобою дві і більше цілей із однією назвою (наприклад, дві чайки), то
+щоб подивитися на другу чайку, напиши *дивитися 2.чайка{x*.
+
+%FMT%  *подивитися в* _контейнер або труп_
+%FFF%  *вивчити* _контейнер або труп_
+Зазирнути всередину контейнера або оглянути труп.
+*Вивчити*, *зазирнути* є синонімом для *подивитися в*.
+
+%FMT%  *вивчити* _персонаж_
+Кинути швидкий погляд на персонажа, щоб оцінити його стан.
+</text>
+    <title l="en">Look: The Most Important Command</title>
     <title l="ru">Смотреть: самая главная команда</title>
-    <title l="ua"></title>
+    <title l="ua">Подивитися: Найважливіша команда</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">look around with your head</hint>
   <hint l="ru">смотреть головой по сторонам</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">дивитися головою по сторонах</hint>
   <name l="en">look</name>
   <name l="ru">смотреть</name>
-  <name l="ua"></name>
+  <name l="ua">подивитися</name>
   <position>dead</position>
 </Command>

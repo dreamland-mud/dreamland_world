@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
-  <aliases l="en"></aliases>
   <aliases l="ru">тихо</aliases>
-  <aliases l="ua"></aliases>
+  <aliases l="ua">тихо</aliases>
   <cat>comm</cat>
   <extra>keep_hide ghost afk spellout</extra>
   <help id="1081" level="-1" type="CommandHelp">
-    <extra l="en">deaf mute twit</extra>
+    <extra l="en">deaf mute blacklist</extra>
     <extra l="ru">глухой игнорировать тишина жаба &apos;черный список&apos;</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">глухий ігнорувати тиша жаба &apos;чорний список&apos;</extra>
+    <text l="en">Sometimes, other players can be too noisy in {hh1059general channels{x and you just want to turn it down. Sometimes, you want to mute a particularly annoying player. There are several useful commands for this.
+
+%FMT% *quiet*
+You stop hearing general channels and only hear what is spoken near you.
+
+%FMT% *deaf*
+You stop hearing what others say to you directly using the *say* command.
+You can use the *reply* command to respond to someone who addressed you before you turned on deafness. Naturally, you cannot reply to someone who has activated deafness themselves until one of you decides to compromise.
+
+%FMT% *ignore* *add* _player_
+%FFF% *ignore* *remove* _player_
+%FFF% *ignore* *list*
+You can maintain a list of unpleasant players by adding them to "ignore". Once you add someone to the list, you stop hearing them in all channels. Of course, that player will not know they have been added to the ignore list.
+</text>
     <text l="ru">Иногда бывает, что другие игроки слишком шумят в {hh1059общих каналах{x и хочется сделать
 потише. Бывает, что хочется заткнуть какого-то особо надоедливого игрока.
 Для этого есть несколько полезных команд.
@@ -30,17 +42,34 @@
 список, ты перестаешь слышать их во всех каналах. Сам этот игрок, разумеется, не
 узнает, что его добавили в игнор.
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">Іноді буває, що інші гравці занадто шумлять в {hh1059загальних каналах{x і хочеться зробити тихіше. Буває, що хочеться заткнути якогось особливо докучливого гравця. Для цього є декілька корисних команд.
+
+%FMT% *тиша*
+Ти перестаєш чути загальні канали і чуєш тільки те, що говорять поруч з тобою.
+
+%FMT% *глухий*
+Ти перестаєш чути те, що тобі кажуть напряму командою *говорити*.
+Можна використовувати команду *відповісти* для відповіді тому, хто звертався до
+тебе до увімкнення глухоти. Звичайно, не можна відповісти тому, хто увімкнув у себе
+глухоту, доти, поки хтось з вас не піде на компроміс.
+
+%FMT% *ігнорувати* *додати* _гравець_
+%FFF% *ігнорувати* *видалити* _гравець_
+%FFF% *ігнорувати* *список*
+Можна вести список неприємних гравців, додаючи їх в &quot;ігнор&quot;. Додавши когось до
+списку, ти перестаєш чути їх у всіх каналах. Сам цей гравець, звісно, не
+дізнається, що його додали в ігнор.
+</text>
+    <title l="en">{CCommunication: {xhow to quiet down or stop hearing someone</title>
     <title l="ru">{CОбщение: {xкак сделать потише или перестать слышать кого-то</title>
-    <title l="ua"></title>
+    <title l="ua">{CСпілкування: {xяк зробити тихіше або перестати чути когось</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">not to hear public channels</hint>
   <hint l="ru">не слышать публичные каналы</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">не чути публічні канали</hint>
   <name l="en">quiet</name>
   <name l="ru">тишина</name>
-  <name l="ua"></name>
+  <name l="ua">тиша</name>
   <order>player_only</order>
   <position>sleep</position>
 </Command>

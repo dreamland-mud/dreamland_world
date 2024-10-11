@@ -4,8 +4,22 @@
   <help id="1002" level="-1" type="CommandHelp">
     <extra l="en">gratitude</extra>
     <extra l="ru">благодарность просить просьба выпрашивать выпросить</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">вдячність просити прохання випрошувати випросити</extra>
+    <text l="en">%FMT%  *%CMD%* _item_ _monster_  
+
+{hh33Kind{x characters can use this command to request an item from the
+inventory or gear of a kind-hearted {hh33monster{x. {hh42Limited{x monsters
+usually don't want to give away. 
+
+You can ask for an item from a monster approximately of your level. Once the
+item is given to you, you are filled with deep =gratitude=, and since
+begging is not easy, you cannot beg for anything else for {hh16ticks{x three.
+
+Centaurs of any nature can use this command to ask for something from any
+other centaur (centaurs).
+
+%SA% %H% {hh1000demand{x
+</text>
     <text l="ru">%FMT%  *%CMD%* _предмет_ _монстр_  
 
 {hh33Добрые{x персонажи могут использовать эту команду, чтобы попросить предмет из
@@ -21,17 +35,31 @@
 
 %SA% %H% {hh1000требовать{x
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">%FMT%  *%CMD%* _предмет_ _монстр_  
+
+{hh33Добрі{x персонажі можуть використовувати цю команду, щоб попросити предмет з
+інвентаря чи спорядження монстра доброї {hh33натури{x. {hh42Ліміти{x монстри, як правило,
+віддавати не хочуть. 
+
+Попросити річ ти можеш у монстра приблизно свого рівня. Після того, як
+річ тобі віддана, ти проймаєшся глибокою =вдячністю=, і так як
+випрошування -- справа важка, не можеш нічого випрошувати ще {hh16тика{x три.
+
+Кентаври будь-якої натури можуть за допомогою цієї команди попросити щось у будь-якого
+іншого кентавра (кентаври).
+
+%SA% %H% {hh1000вимагати{x
+</text>
+    <title l="en">{CItems: {xrequest</title>
     <title l="ru">{CВещи: {xпопросить</title>
-    <title l="ua"></title>
+    <title l="ua">{CРечі: {xпопросити</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">politely request an item from someone</hint>
   <hint l="ru">вежливо попросить вещь у кого-либо</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">ввічливо попросити річ у когось</hint>
   <name l="en">request</name>
   <name l="ru">попросить</name>
-  <name l="ua"></name>
+  <name l="ua">попросити</name>
   <order>player_only</order>
   <position>stand</position>
 </Command>

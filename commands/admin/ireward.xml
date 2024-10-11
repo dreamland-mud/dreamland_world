@@ -3,7 +3,19 @@
   <cat></cat>
   <extra>keep_hide ghost</extra>
   <help id="1070" level="102" type="CommandHelp">
-    <text l="en"></text>
+    <text l="en">%FMT%  *%CMD%* _%PLR%_ _qp_ _reason_
+
+Set a reward in the specified amount of quest points. The reason will
+be visible when notifying the player about the reward. The reward message and translation
+will happen immediately if the player is in the world, otherwise - on their next login.
+
+%FMT%  *%CMD%* _%PLR%_ *show*
+
+Show rewards that are set but not yet awarded.
+
+%FMT%  *%CMD%* _%PLR%_ *delete*
+
+Delete rewards that are not yet awarded.</text>
     <text l="ru">%FMT%  *%CMD%* _%PLR%_ _qp_ _причина_
 
 Установить награду в указанном количестве квестовых единиц. Причина будет
@@ -18,11 +30,23 @@
 
 Удалить еще не врученные награды.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT%  *%CMD%* _%PLR%_ _qp_ _причина_
+
+Встановити нагороду в зазначеній кількості квестових пунктів. Причина буде
+видна при повідомленні гравцю про нагороду. Повідомлення та переклад КП відбудеться
+відразу, якщо гравець у світі, інакше - при його наступному вході у світ.
+
+%FMT%  *%CMD%* _%PLR%_ *show*
+
+Показати встановлені, але ще не вручені нагороди.
+
+%FMT%  *%CMD%* _%PLR%_ *delete*
+
+Видалити ще не вручені нагороди.</text>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">reward the character with quest points for achievements</hint>
   <hint l="ru">наградить персонажа квестпоинтами за заслуги</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">нагородити персонажа квестпоінтами за заслуги</hint>
   <level>102</level>
   <log>1</log>
   <name l="en">ireward</name>

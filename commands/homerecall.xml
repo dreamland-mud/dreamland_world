@@ -4,8 +4,34 @@
   <help id="1347" labels="area char" level="-1" type="CommandHelp">
     <extra l="en">mkey</extra>
     <extra l="ru">ключи слесарь</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">ключі слюсар</extra>
+    <text l="en">Owners of {hh50houses{x can pray to the gods to be transported home.
+This return is similar to {hh862usual{x, but you cannot pray to return from battle and
+for about 20 seconds after it.
+
+%FMT% *%CMD%*
+%FMT% *%CMD%* _tag_
+
+Teleport to the main house or the house marked with this tag. The tag must
+be specified completely.
+
+If you have multiple houses, one will be the main one, and the others will be
+tagged. The place for return is set by the gods {hh51during construction{x.
+It cannot be inside the house, only outside -- for example, near the entrance.
+The right to return home can be granted to any character who is allowed
+to redeem the key to the front door.
+
+%FMT% *key* *buy* _key_
+%FMT% *key* *list*
+
+Purchase a key and display a list of available keys for personal houses.
+Keys are manufactured by the =locksmith= on Clan Road in Midgaard. You can allow
+someone to redeem keys to your house (this service is provided by the gods).
+
+%FMT% *%CMD%* *list*
+
+Display a list of your houses and their tags.
+</text>
     <text l="ru">Владельцы {hh50домов{x могут молиться богам с просьбой о перемещении к дому.
 Этот возврат похож на {hh862обычный{x, но нельзя молить о возвращении из битвы и
 примерно 20 секунд после нее.
@@ -33,17 +59,43 @@
 
 Вывести список твоих домов и их меток.
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">Власники {hh50будинків{x можуть молитися богам з проханням про переміщення до дому.
+Це повернення схоже на {hh862звичайне{x, але не можна молитися про повернення з битви і
+приблизно 20 секунд після неї.
+
+%FMT% *%CMD%*
+%FMT% *%CMD%* _мітка_
+
+Переміститися в основний будинок або в будинок, позначений даною міткою. Мітку треба
+вказувати повністю.
+
+Якщо у тебе кілька будинків, то один з них буде основним, а інші будуть
+позначені мітками. Місце для повернення встановлюється богами {hh51під час будівництва{x.
+Воно не може знаходитися всередині будинку, тільки ззовні -- наприклад, біля входу.
+Правом повертатися додому може володіти будь-який персонаж, якому дозволено
+викуповувати ключ від вхідних дверей.
+
+%FMT% *ключ* *придбати* _ключ_
+%FMT% *ключ* *список*
+
+Придбати ключ і показати список доступних ключів від особистих будинків.
+Ключі виготовляє =слюсар= на Клановій Дорозі в Мідгарді. Можна дозволити
+комусь викуповувати ключі від твого будинку (цю послугу надають боги).
+
+%FMT% *%CMD%* *список*
+
+Вивести список твоїх будинків і їх міток.
+</text>
+    <title l="en">{CPrivate Houses:{x keys, return home</title>
     <title l="ru">{CЛичные дома:{x ключи, возврат домой</title>
-    <title l="ua"></title>
+    <title l="ua">{CОсобисті будинки:{x ключі, повернення додому</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">ask the gods to be transported home</hint>
   <hint l="ru">попросить богов о перемещении домой</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">попросити богів про переміщення додому</hint>
   <name l="en">homerecall</name>
   <name l="ru">домой</name>
-  <name l="ua"></name>
+  <name l="ua">додому</name>
   <order>player_only</order>
   <position>stand</position>
 </Command>

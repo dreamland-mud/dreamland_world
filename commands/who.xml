@@ -5,8 +5,45 @@
   <help id="1093" level="-1" type="CommandHelp">
     <extra l="en">hero legendary nopretitle</extra>
     <extra l="ru">безпретитла герой легендарная легендарный супергерой</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">безпретитлу герой легендарний легендарна супергерой</extra>
+    <text l="en">%FMT% *%CMD%*
+Shows a list of all players currently present in the world. Displays separately
+all who hear common channels through the server {hh66Discord{hx.
+
+%PAUSE%Output format:
+|100 Human {YWar{x|({rPK{x)[{RB{x]{r({CL{r){x({M2{x)      ({RKT{x){WMad Nazar{x {C[{Rberserker{C]{x
+  1    2    3   4   5  6  7        8   9    10       11
+%RESUME%
+ 1 - {hh14player level{x
+ 2 - {hh54race{x
+ 3 - {hh28class{x
+ 4 - can attack you {hh32attack{x (PK)
+ 5 - {hh3clan{x
+ 6 - {hh7clan level{x: {r({CL{r){x leaders and {r({CR{r){x recruiters can accept into the clan
+ 7 - number of {hh1064reincarnations{x
+ 8 - {hh2146flags{x -- read more in {y{hcplayer flag help{x
+
+{hh32PK{x:     ({BV{x) attacked a player, ({RK{x) killed a player, ({RT{x) caught stealing
+{hh12Death{x: ({DG{x) ghost ({DS{x) killed by a player, ({DP{x) protected by gods
+Penalties: ({mN{x) without speech rights, ({mP{x) without writing rights
+{hh1461Rulers{x: ({mM{x) in {hh911shackles{x, ({RW{x) wanted, ({mJ{x) in {hh890prison{x    
+Others: ({CA{X) {hh1080AFK{x, ({gT{x) can {hh1358teach{x others, ({gU{x) not yet {hh1071confirmed{x by gods 
+
+ 9 - {hh1006pretitles{x  
+10 - player name
+11 - {hh1007title{x or clan rank 
+
+Players of the highest level (100) are called {csuperheroes{x.
+Level 101 in the times of {hh80past eras{x was received for {Wlegendary{x merits.
+Levels above 101 belong to {hh92gods{x.
+
+%FMT% *%CMD%* {Dpk{x
+Shows only players in your {hh32PK-range{x.
+
+%FMT% *%CMD%* {Dnpt{x
+%FMT% *%CMD%* {Dnopretitle{x
+Does not show the players' {hh1006pretitles{x.
+</text>
     <text l="ru">%FMT% *%CMD%*
 Показывает список всех игроков, присутствующих в мире. Отдельным списком выводит
 всех, кто слышит общие каналы через сервер {hh66Дискорда{hx.
@@ -45,17 +82,54 @@
 %FMT% *%CMD%* {Dбезпретитла{x
 Не показывает {hh1006претитулы{x игроков.
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">%FMT% *%CMD%*
+Показує список всіх гравців, присутніх у світі. Окремим списком виводить
+всіх, хто чує загальні канали через сервер {hh66Дискорда{hx.
+
+%PAUSE%Формат виводу:
+|100 Human {YВої{x|({rPK{x)[{RB{x]{r({CL{r){x({M2{x)      ({RKT{x){WMad Nazar{x {C[{Rберсерк{C]{x
+  1    2    3   4   5  6  7        8   9    10       11
+%RESUME%
+ 1 - {hh14рівень{x гравця
+ 2 - {hh54раса{x
+ 3 - {hh28клас{x
+ 4 - може на тебе {hh32напасти{x (PK)
+ 5 - {hh3клан{x
+ 6 - {hh7клановий рівень{x: {r({CL{r){x лідери та {r({CR{r){x рекрутери можуть приймати в клан
+ 7 - кількість {hh1064перероджень{x
+ 8 - {hh2146флаги{x -- докладніше читай у {y{hcдовідка прапори гравця{x
+
+{hh32ПК{x:     ({BV{x) напав на гравця, ({RK{x) вбив гравця, ({RT{x) застукали за крадіжкою
+{hh12Смерть{x: ({DG{x) привид ({DS{x) убитий гравцем, ({DP{x) захищений богами
+Штрафи: ({mN{x) без права спілкування, ({mP{x) без права листування
+{hh1461Володарі{x: ({mM{x) в {hh911кайданах{x, ({RW{x) в {hh903розшуку{x, ({mJ{x) в {hh890в'язниці{x    
+Інші: ({CA{X) {hh1080AFK{x, ({gT{x) може {hh1358навчати{x інших, ({gU{x) ще не {hh1071підтверджений{x богами 
+
+ 9 - {hh1006претитул{x  
+10 - ім'я гравця
+11 - {hh1007титул{x або кланове звання 
+  
+Персонажів найвищого рівня (100) називають {cсупергероями{x.
+Рівень 101 у часи {hh80минулих епох{x отримували за {Wлегендарні{x заслуги.
+Рівні вище 101-го належать {hh92богам{x.
+
+%FMT% *%CMD%* {Dпк{x
+Показує тільки гравців у твоєму {hh32ПК-діапазоні{x.
+
+%FMT% *%CMD%* {Dбп{x
+%FMT% *%CMD%* {Dбезпретитлу{x
+Не показує {hh1006претитули{x гравців.
+</text>
+    <title l="en">Who: list of online players</title>
     <title l="ru">Кто: список игроков онлайн</title>
-    <title l="ua"></title>
+    <title l="ua">Хто: список гравців онлайн</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">who is currently in the world</hint>
   <hint l="ru">кто сейчас есть в мире</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">хто зараз у світі</hint>
   <name l="en">who</name>
   <name l="ru">кто</name>
-  <name l="ua"></name>
+  <name l="ua">хто</name>
   <order>player_only</order>
   <position>dead</position>
 </Command>

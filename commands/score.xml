@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
-  <aliases l="en"></aliases>
   <aliases l="ru">параметры очки стат</aliases>
-  <aliases l="ua"></aliases>
+  <aliases l="ua">параметри очки стат</aliases>
   <cat>info</cat>
   <extra>keep_hide ghost manacles afk</extra>
   <help id="999" level="-1" ref="experience oscore worth" type="CommandHelp">
-    <extra l="en"></extra>
+    <extra l="en">good state status killed evil</extra>
     <extra l="ru">добрых состояние статус убито злых</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">добрих стан статус убито злих</extra>
+    <text l="en">%FMT%  *score*
+%FFF%  *detailed score*
+Shows your current stats most comprehensively.
+The first command will display nicely and beautifully, the second one in more detail.
+
+%FMT%  *score* _parameter_
+Will display information only for the specified parameter, among those mentioned
+in the full output of this command. Examples of parameters: health, mana, agility, race,
+weight, damage, silver, and so on.
+
+If *effects mode* is enabled, these commands will also display
+all current influences (%H% {hh997effects{x).
+
+%FMT%  *income*
+Shows how much money you have, experience points, as well as how many creatures of your {hh33nature{x and
+all others you have killed so far. {hh138Anti-paladins{x need to know how many
+creatures of the opposite nature (i.e., good) they have killed, but unfortunately
+the command does not show this yet.
+</text>
     <text l="ru">%FMT%  *счет*
 %FFF%  *ссчет*
 Показывает твои текущие параметры в наиболее полном объеме.
@@ -29,17 +46,35 @@
 существ именно противоположной натуры (то есть, добрых) они убили, но этого
 команда, к сожалению, пока не показывает.
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">%FMT%  *рахунок*
+%FFF%  *детальний рахунок*
+Показує твої поточні параметри в найповнішому обсязі.
+Перша команда відобразить зручно і красиво, друга -- більш детально.
+
+%FMT%  *рахунок* _параметр_
+Виведе лише інформацію за вказаним параметром, з тих, що згадуються
+у повному виводі цієї команди. Приклади параметрів: здоров'я, мана, спритність, раса,
+вага, шкода, срібло і так далі.
+
+Якщо ввімкнено *режим ефекти*, то ці команди також відобразять
+всі поточні впливи (%H% {hh997ефекти{x).
+
+%FMT%  *дохід*
+Покаже, скільки у тебе грошей, очок досвіду, а також скільки істот твоєї {hh33натури{x і
+всіх інших було тобою вбито до цих пір. {hh138Анти-паладинам{x важливо знати, скільки
+істот саме протилежної натури (тобто, добрих) вони вбили, але цього
+команда, на жаль, поки не показує.
+</text>
+    <title l="en">Character state, current parameters</title>
     <title l="ru">Состояние персонажа, текущие параметры</title>
-    <title l="ua"></title>
+    <title l="ua">Стан персонажа, поточні параметри</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">see your parameters</hint>
   <hint l="ru">увидеть свои параметры</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">побачити свої параметри</hint>
   <name l="en">score</name>
   <name l="ru">счет</name>
-  <name l="ua"></name>
+  <name l="ua">рахунок</name>
   <order>player_only</order>
   <position>dead</position>
 </Command>

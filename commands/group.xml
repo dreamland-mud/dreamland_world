@@ -5,8 +5,42 @@
   <help id="1378" level="-1" ref="follow nofollow nuke" type="CommandHelp">
     <extra l="en">party stopfollow</extra>
     <extra l="ru">&apos;добавить в группу&apos; &apos;групповой бой&apos; пати следуй</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">додати в групу, груповий бій, пать слідуй</extra>
+    <text l="en">%FMT%  *follow* _character_
+Start following another character: where they go, you go too.
+To stop following someone, follow yourself
+(follow &lt;your character's name&gt;).
+
+%FMT%  *dismiss* _character_
+%FMT%  *dismiss* _all_
+Remove someone from your followers--or all at once. 
+Dismissed {hh15pets and summoned creatures{x will disappear instantly, and {hh729charmed{x
+creatures will return home.
+
+%FMT%  *nofollow*
+To prohibit or allow others to follow you. When prohibited, all your
+followers will leave you, and you will stop following anyone.
+
+%FMT%  *group* _character_
+Makes someone following you a member of your group or excludes
+them from your group.
+
+%FMT%  *group*
+Shows statistics for each member of your group.
+
+Characters can form groups for more effective combat actions.
+There are restrictions on joining groups:
+%A% only characters with a level difference not greater than 8 can unite in a group
+%A% good cannot be in a group with evil
+%A% members of hostile clans cannot be in the same group
+
+Each group has a leader who accepts or excludes other members.
+Their leadership qualities will affect the experience gained (%H% {hh737leadership{x).
+Group members share experience points after defeating an enemy, can use
+a single communication channel (%H% {hh1379talk{x) and share money (%H% {hh1377share{x).
+If someone in your group is attacked, you will automatically join
+the battle (%H% {hh1087autoassist{x).
+</text>
     <text l="ru">%FMT%  *следовать* _персонаж_
 Начать следовать за другим персонажем: куда он -- туда и ты.
 Для того, чтобы перестать ходить за кем-то, последуй за сам{Smим{Sfой{Sx собой
@@ -42,17 +76,51 @@
 Если кто-нибудь из твоей группы будет атакован, ты автоматически вступишь
 в битву (%H% {hh1087автопомощь{x).
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">%FMT%  *слідувати* _персонаж_
+Почати слідувати за іншим персонажем: куди він -- туди і ти.
+Щоб припинити йти за кимось, слідуй за соб{Smим{Sfою{Sx собою
+(follow &lt;ім'я твого персонажа&gt;).
+
+%FMT%  *вигнати* _персонаж_
+%FMT%  *вигнати* _всіх_
+Виключити когось з числа твоїх послідовників -- або всіх одразу. 
+Виключені {hh15питомці і призвані істоти{x миттєво зникнуть, а {hh729зачаровані{x
+істоти повернуться додому.
+
+%FMT%  *неслідувати*
+Заборонити чи дозволити комусь слідувати за тобою. В момент заборони всі твої
+послідовники залишать тебе, і ти припиниш всяке слідування за кимось.
+
+%FMT%  *група* _персонаж_
+Робить когось, хто слідує за тобою, членом твоєї групи, або виключає його
+з твоєї групи.
+
+%FMT%  *група*
+Показує статистику для кожного учасника твоєї групи.
+
+Персонажі можуть об'єднуватися в групи для більш ефективних бойових дій.
+Існують обмеження на вступ до груп:
+%A% в групу можуть об'єднатися тільки персонажі з різницею рівнів не більше 8
+%A% добрі не можуть бути в групі з злими
+%A% члени ворожих кланів не можуть бути в одній групі
+
+У кожної групи є лідер, який приймає або виключає інших членів.
+Його лідерські якості будуть впливати на отриманий досвід (%H% {hh737лідерство{x).
+Члени групи ділять очки досвіду після вбивства ворога, можуть використовувати
+один канал спілкування (%H% {hh1379говорити{x) і ділити гроші (%H% {hh1377ділитися{x).
+Якщо хтось з твоєї групи буде атакований, ти автоматично вступиш
+в битву (%H% {hh1087автопоміч{x).
+</text>
+    <title l="en">Following and Groups</title>
     <title l="ru">Следование и группы</title>
-    <title l="ua"></title>
+    <title l="ua">Слідування і групи</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">list of group members, accept into group</hint>
   <hint l="ru">список членов группы, принять в группу</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">список членів групи, прийняти в групу</hint>
   <name l="en">group</name>
   <name l="ru">группа</name>
-  <name l="ua"></name>
+  <name l="ua">група</name>
   <order>player_only</order>
   <position>sleep</position>
 </Command>

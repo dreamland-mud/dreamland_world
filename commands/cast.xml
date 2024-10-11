@@ -4,11 +4,62 @@
   <help id="1361" labels="fight learn" level="-1" type="CommandHelp">
     <extra l="en">beats &apos;cast rate&apos; magic prayers &apos;ranged spells&apos; spell</extra>
     <extra l="ru">&apos;дальний бой&apos; дальнобойное &apos;как использовать умения&apos; кастовать &apos;магия и молитвы&apos; молитва молитвы &apos;на расстоянии&apos; плетения скорость волшебство заклинание заклинания</extra>
-    <extra l="ua"></extra>
+    <extra l="ua">'далекий бій' далекобійне 'як використовувати навички' кастувати 'магія і молитви' молитва молитви 'на відстані' плетіння швидкість чаклунство заклинання заклинання</extra>
     <keyword l="en">cast</keyword>
     <keyword l="ru">колдовать</keyword>
-    <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <keyword l="ua">чаклувати</keyword>
+    <text l="en">Spells in the World of Dreams are divided into prayers (mainly for clerics and paladins) and magic (for everyone else). Some magic and prayers are the same skill -- the only difference is who uses it. More details later in the article.
+
+{CCOMMAND{x
+The command is conveniently shortened to one letter: {yc{x instead of {yc{DAST{x.
+The names of spells, including those consisting of several words, can also be shortened.
+For example: {yc ki ud{x instead of {yc{DAST {yki{DEimpact {yu{DDamage{x
+
+{CTARGETS{x
+Different spells may have different possible targets (what you need to write after the name). Many spells that require a target will work on you yourself in peaceful time, and on your opponent in battle.
+Also, some spells work only in battle, some only in peaceful time, and some rituals are intended to start a battle. You can find out the required targets of a spell in the help for each skill: for example, {y{hc? connection{x.
+
+%FMT%  *%CMD%* _spell_
+%A% =Without a target:= Usually works on the whole room as a whole
+%A% =Only on oneself:= Some protective spells can only be cast on oneself. A target is not required.
+
+%FMT%  *%CMD%* _spell_ _target_
+%A% =On another:= Some spells can work on a friendly character (for protection and healing), an enemy (for combat spells and curses). You can also specify yourself as a target.
+
+%FMT%  *%CMD%* _spell_ _%DIR%_* *_%VICT%_
+%A% =On others, distant:= Most combat spells can be directed at a distance. To do this, you need to specify a direction, for example:
+  {yc &apos;fireball&apos; north wolf{x
+  You can find out if a spell works at a distance and other restrictions through simple experiments or from help.
+
+{CUSAGE{x
+To master spells, you need to {hh1359practice{x them. The higher the ownership percentage of the spell, the higher the likelihood of its successful application and the lower the likelihood of losing concentration. When casting, {hh59mana{x is expended. Using spells causes a {hh120delay{x for the player -- like other skills.
+You can increase =casting speed= by finding special effects and artifacts that reduce the delay from skills.
+
+Attacking spells are influenced by the target's {hh2035spell resistance{x, and there are separate {hh101resistances{x from magic and prayers.
+
+{CQUOTES{x
+In rare cases, the name needs to be written in quotes -- for clarity.
+For example, if a mage tries to cast dragons' breath on a dragon standing nearby, then {yc dragon breath{x will be interpreted as the full name of the spell and will ask for a target. To fix the ambiguity, you need to write {yc &apos;dragon breath&apos; dragon{x.
+
+{CMORE ABOUT THE DIFFERENCES BETWEEN MAGIC AND PRAYERS{x
+All classes that are good at spells are divided by the source of power into =magical= {D(warlock, witch, necromancer, anti-paladin, vampire){x and =divine= {D(cleric, paladin, druid).{x All spells can be either =only magic= {D(available only to magical classes),{x or =only prayers= {D(available only to divine){x or =mixed= -- this is specified in the help for each spell. For mixed spells, its type is determined by the spellcaster's class.
+
+For classes that are not good at sorcery {D(warriors, ninjas, etc.){x the type of spell is determined by the spell itself. In the case of a mixed spell, magic is chosen by definition.
+
+{WExamples:{x
+{C%A% {xWhen a witch creates {hh581food{x using magic, it turns into a magic mushroom. This is magic. And if a cleric asks his gods to grant food -- it is a prayer.
+{C%A% {xWhen a cleric uses the spell {hh616shield{x -- it is a prayer. The cleric calls upon his deity, and the deity, in turn, casts the spell.
+  {D(Note: {RClan of Rage{D asks to officially state that they do not agree with this{x)}x
+{C%A% {xWhen anti-paladins (a magical class) use {hh859holy word{x, they pray to the gods. Because the holy word is not a mixed spell, but only a prayer.
+{C%A% {xIf a paladin dreams of the {hh625fireball{x spell, then when used it will be considered magic, as it is not mixed.
+{C%A% {xIf a ninja reads a scroll with a shield spell - it turns out magic. And if with {hh656sanctuary aura{x -- a prayer.
+{C%A% {xSpells with {hh1signs of religions{x also take into account your character's class because the gods cast spells using your hands.
+  {D(Note: {RClan of Rage{D asks to officially state "pffffff"){x}
+  
+Using many prayers as {hh1atheist{x is possible, but often results in a much weakened result.
+
+%SA% %H% for each spell, %H% {hh121magic items{x
+</text>
     <text l="ru">Заклинания в Мире Мечты разделяют на молитвы (в основном у клериков и паладинов)
 и на магию (у всех остальных). Некоторая магия и молитвы являются одним и тем же 
 умением -- разница лишь в том, кто его использует. Подробнее -- дальше в статье.
@@ -93,16 +144,99 @@
 
 %SA% %H% для каждого заклинания, %H% {hh121волшебные предметы{x
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">Заклинання в Світі Мрій поділяють на молитви (в основному у кліриків і паладинів)
+і на магію (у всіх інших). Деяка магія і молитви є одним і тим же 
+умінням -- різниця лише в тому, хто його використовує. Докладніше -- далі в статті.
+
+{CКОМАНДА{x
+Команду зручно скорочувати до однієї літери: {yк{x замість {yк{Dолдовать{x.
+Назви заклинань, у тому числі з кількох слів, також можна скорочувати.
+Наприклад: {yк ки уд{x замість {yк{Dолдовать {yки{Dслотний {yу{Dдар{x
+
+{CЦІЛІ{x
+У різних заклинань можуть відрізнятися можливі цілі (те, що потрібно написати
+після назви). Багато заклинань, яким потрібна ціль, у мирний час
+спрацюють на тебе самого, а в битві -- на твого противника.
+Також, деякі заклинання працюють тільки в бою, деякі -- тільки в мирний
+час, а деякі ритуали призначені для того, щоб почати бій. Дізнатися
+потрібні цілі заклинання можна в довідці про кожне уміння: наприклад, {y{hc? зв'язок{x.
+
+%FMT%  *%CMD%* _заклинання_
+%A% =Без цілі:= Зазвичай працює на всю кімнату повністю
+%A% =Тільки на себе:= Деякі захисні заклинання можна накласти тільки на
+  себе. Ціль при цьому вказувати не обов'язково.
+
+%FMT%  *%CMD%* _заклинання_ _ціль_
+%A% =На іншого:= Частина заклинань може працювати на дружнього персонажа (для
+  захисту і лікування), на ворога (для бойових заклять і проклять). Себе також можна
+  вказати як ціль.
+
+%FMT%  *%CMD%* _заклинання_ _%DIR%_* *_%VICT%_
+%A% =На інших, далекобійне:= Більшість бойових заклять можна спрямовувати на
+  відстані. Щоб це зробити, треба вказати напрямок, наприклад:
+  {yк &apos;вогненний шар&apos; північ вовк{x
+  Дізнатися, чи працює заклинання на відстані та інші обмеження можна
+  шляхом простих експериментів або з довідки.
+
+{CВИКОРИСТАННЯ{x
+Щоб освоїти заклинання, їх потрібно {hh1359практикувати{x. Чим вищий відсоток
+володіння заклинанням, тим вища ймовірність його успішного застосування і менша
+ймовірність втратити концентрацію. Під час чаклування витрачається {hh59мана{x.
+Використання заклинань викликає у гравця {hh120затримку{x -- як і інші уміння.
+Можна збільшити =швидкість плетіння=, знаходячи спеціальні ефекти і артефакти,
+які зменшують затримку від уменій.
+
+На атакуючі заклинання впливає {hh2035захист від заклинань{x цілі, а від магії і
+молитв існують окремі {hh101опірності{x.
+
+{CКАВИЧКИ{x
+У рідкісних випадках назву потрібно написати в лапках -- для однозначності.
+Наприклад, якщо маг намагається скастувати дихання дракона на стоячого поруч дракона,
+то {yк дихан драк{x буде витлумачено як повне ім'я заклинання і попросить вказати ціль.
+Щоб виправити неоднозначність, потрібно писати {yк &apos;дихан драк&apos; дракон{x.
+
+{CДОКЛАДНІШЕ ПРО РІЗНИЦІ МАГІЇ І МОЛИТВ{x
+Усі класи, добре володіючі заклинаннями, діляться за джерелом сили на
+=магічні= {D(маг, відьма, некромант, анти-паладин, вампір){x і =божественні=
+{D(клірик, паладин, друїд).{x Усі заклинання можуть бути або =тільки магією= {D(доступні
+тільки магічним класам),{x або =тільки молитвами= {D(доступні тільки божественним){x
+або =змішаними= -- це вказується в довідці про кожне заклинання. У змішаних
+заклинань його тип визначається класом заклинателя. 
+
+У погано володіючих чаклунством класів {D(воїнів, ніндзей і т.д){x тип заклинання
+визначається самим заклинанням. У випадку змішаного заклинання, вибирається за
+визначенням магія.
+
+{WПриклади:{x
+{C%A% {xКоли відьма творить {hh581їжу{x за допомогою магії, виходить чарівний гриб.
+  Це магія. А якщо клірик просить своїх богів дарувати їжу -- це молитва.
+{C%A% {xКоли клірик використовує заклинання {hh616щита{x -- це молитва. Клірик звертається до
+  свого божества, а божество у свою чергу накладає заклинання.
+  {D(Примітка: {Rклан Ярості{D просить офіційно заявити, що не згоден із цим){x
+{C%A% {xКоли анти-паладини (магічний клас) використовують {hh859святе слово{x, вони творять молитву
+  богам. Тому що святе слово -- не змішане заклинання, а тільки молитва. 
+{C%A% {xЯкщо паладину приснилося заклинання {hh625вогненного шару{x, то при використанні воно
+  буде вважатись магією, оскільки не є змішаним.
+{C%A% {xЯкщо ніндзя прочитає сувій із заклинанням щита -- вийде магія. А якщо з
+  {hh656аурою святині{x -- молитва.
+{C%A% {xЗаклинання з {hh1знаками релігій{x також враховують клас твого персонажа, адже боги
+  творять заклинання твоїми руками.
+  {D(Примітка: {Rклан Ярості{D просить офіційно заявити "пфффффф"){x
+  
+Використовувати багато молитов, будучи {hh1атеїстом{x можливо, але зазвичай призводить до
+значно більш ослабленого результату.
+
+%SA% %H% для кожного заклинання, %H% {hh121чарівні предмети{x
+</text>
+    <title l="en">{CSpells: {xhow to cast, magic and prayers</title>
     <title l="ru">{CЗаклинания: {xкак колдовать, магия и молитвы</title>
-    <title l="ua"></title>
+    <title l="ua">{CЗаклинання: {xяк чаклувати, магія і молитви</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">cast a spell</hint>
   <hint l="ru">произнести заклинание</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">вимовити заклинання</hint>
   <name l="en">cast</name>
   <name l="ru">колдовать</name>
-  <name l="ua"></name>
+  <name l="ua">чаклувати</name>
   <position>fight</position>
 </Command>

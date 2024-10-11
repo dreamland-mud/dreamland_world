@@ -3,13 +3,19 @@
   <cat>learn</cat>
   <extra>keep_hide ghost</extra>
   <help id="1358" labels="skill" level="-1" ref="learn" type="CommandHelp">
-    <extra l="en"></extra>
+    <extra l="en">mentors teachers</extra>
     <extra l="ru">наставники учителя</extra>
-    <extra l="ua"></extra>
+    <extra l="ua">наставники вчителя</extra>
     <keyword l="en">teacher</keyword>
     <keyword l="ru">учитель</keyword>
-    <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <keyword l="ua">вчитель</keyword>
+    <text l="en">%FMT% *%CMD%*
+	
+A hero who has reached level 100 can use this command to become a teacher.
+After that, they will be able to teach others the skills they know perfectly.
+
+%SA% %H% {hh1359practice{x
+</text>
     <text l="ru">%FMT% *%CMD%*
 	
 Герой, достигший 100-го уровня, с помощью этой команды может стать учителем.
@@ -17,18 +23,24 @@
 
 %SA% %H% {hh1359практиковать{x
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">%FMT% *%CMD%*
+	
+Герой, який досяг 100-го рівня, за допомогою цієї команди може стати вчителем.
+Після цього він зможе навчати інших вмінням, які знає в досконалості.
+
+%SA% %H% {hh1359практикувати{x
+</text>
+    <title l="en">{CSkills: {xhero-teachers</title>
     <title l="ru">{CУмения: {xгерои-учителя</title>
-    <title l="ua"></title>
+    <title l="ua">{CВміння: {xгерої-вчителі</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">announce your readiness to teach others</hint>
   <hint l="ru">объявить о своей готовности учить других</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">оголосити про свою готовність навчати інших</hint>
   <level>100</level>
   <name l="en">teach</name>
   <name l="ru">учить</name>
-  <name l="ua"></name>
+  <name l="ua">вчити</name>
   <order>player_only</order>
   <position>stand</position>
 </Command>

@@ -8,8 +8,43 @@
   <help id="1024" level="-1" ref="drop give present put" type="CommandHelp">
     <extra l="en">containers</extra>
     <extra l="ru">хранение хранить контейнеры коробка отдать пакет передать ящики &apos;снижение веса&apos; сумки предмет</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">зберігання зберігати контейнери коробка віддати пакет передати ящики &apos;зниження ваги&apos; сумки предмет</extra>
+    <text l="en">To get items into your {hh1015inventory{x, you need to take them. Items might just be lying on the floor or in a =container:= such as a box, chest, biscuit bag, {hh12donations pit{x, or in the corpse of your defeated opponent.
+
+You can't carry too many items -- it's limited by your {hh37dexterity{x and {hh39strength{x. But to grab more, you can buy a =bag= and store gear in it. Containers allow you to carry more things, and magical bags reduce the weight of items stored in them. You can buy the best bag from {hh126questor{x.
+{hh22Key rings{x are also considered containers.
+
+%FMT%  *take* _%OBJ%_
+%FMT%  *take* _%OBJ%_ _container_
+%FMT%  *take* *all*  _container_
+Take the item lying on the ground. Pull something (or everything at once!) out of the container.
+It's currently impossible to take only a specific amount of money from a pile on the ground.
+
+%FMT%  *take* _%CHAR%_ _%OBJ%_
+In some cases, it is useful to grab someone by some part of their clothes -- for example, by the collar or leash.
+
+%FMT%  *drop* _%OBJ%_
+%FFF%  *drop* _number_ *gold*|*silver*
+Drop an item or several coins on the ground. If you drop it in the {hh2128water{x, the item will {Rsink!{x Fragile items made of glass and other {hh201minerals or metals{x might break, producing shards that can later be thrown at someone's {hh562feet{x.
+By tossing a coin (for example, {hc*drop* {y1 silver{x) or a die, you can play heads or tails or dice.
+
+%FMT%  *put* _%OBJ%_ _container_
+%FMT%  *put* _number_ *gold*|*silver* _container_
+Put an item or money in some container. Money can be put, for example, on an {hh1375altar{x or in a donation pit. If you place items in any container or simply leave them in a secluded spot, they will {Wnot disappear{x and will remain until you (or someone else) takes them.
+
+To *drop*, *take*, or *put* immediately all identical items, use *%ALL%.*_%OBJ%_: for example, *take* *%ALL%.sword* _corpse_
+If the name of the item consists of several words, use quotes: for example, *take* *%ALL%.&apos;long sword&apos;* _corpse_
+
+%FMT%  *give* _%OBJ%_ _%CHAR%_
+%FFF%  *give* _number_ *gold*|*silver* _%CHAR%_
+
+Give someone an item or money. Many beings in the course of different quests need to be given something specific. Some beings can be given items just like that -- for example, try feeding city dogs!
+
+%FMT%  *present* _%OBJ% or money_ _%CHAR%_
+If you present, rather than just give, it will look more solemn.
+
+%SA% %H% {hh19pockets{x
+</text>
     <text l="ru">Чтобы вещи попали к тебе в {hh1015инвентарь{x, их надо взять. Вещи могут лежать просто на
 полу или в =контейнере:= например, ящике, сундуке, пакете для сухарей, {hh12яме для
 пожертвований{x или в трупе твоего поверженного противника. 
@@ -62,16 +97,62 @@
 
 %SA% %H% {hh19карманы{x
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">Щоб речі потрапили до тебе в {hh1015інвентар{x, їх треба взяти. Речі можуть лежати просто на підлозі або в =контейнері:= наприклад, ящику, скрині, пакеті для сухарів, {hh12ямі для пожертв{x або в трупі твого переможеного противника.
+
+Забагато речей унести не вийде -- це обмежено твоєю {hh37спритністю{x та {hh39силою{x. Але щоб загребти більше, можна купити =сумку= і зберігати спорядження там.
+Контейнери дозволяють носити більше речей, а чарівні сумки знижують вагу речей, що зберігаються в них. Найкращу сумку можна купити у {hh126квестора{x.
+{hh22Ключі-кільця{x також вважаються контейнерами.
+
+%FMT%  *взяти* _%OBJ%_
+%FMT%  *взяти* _%OBJ%_ _контейнер_
+%FMT%  *взяти* *усі*  _контейнер_
+Взяти річ, що лежить на землі. Витягнути щось (або все одразу!) з контейнера.
+Взяти лише певну кількість грошей з купи на землі поки не можливо.
+
+%FMT%  *взяти* _%CHAR%_ _%OBJ%_
+У деяких випадках корисно взяти когось за якусь частину одягу -- наприклад, за комір або за нашийник.
+
+%FMT%  *кинути* _%OBJ%_
+%FFF%  *кинути* _кількість_ *золота*|*срібла*
+Кинути річ або декілька монет на землю. Якщо кинути у {hh2128воду{x, річ {Rпотоне!{x
+Крихкі речі зі скла та інших {hh201мінералів або металів{x можуть розбитися, утворюючи
+уламки, які потім можна кинути комусь {hh562під ноги{x.
+Кинувши монету (наприклад, {hc*кинути* {y1 срібла{x) або кубик, можна зіграти в орлянку або
+кинути кості.
+
+%FMT%  *покласти* _%OBJ%_ _контейнер_
+%FMT%  *покласти* _кількість_ *золота*|*срібла* _контейнер_
+Покласти річ або гроші в який-небудь контейнер. Гроші можна класти, наприклад,
+на {hh1375вівтар{x або в яму для пожертв. Якщо скласти речі в будь-який контейнер
+або просто залишити в затишному місці, то вони {Wніде не дінуться{x і будуть лежати,
+поки ти (або хтось інший) їх звідти не забере.
+
+Щоб *кинути*, *взяти* або *покласти* одразу всі однакові
+речі, використовуй *%ALL%.*_%OBJ%_: наприклад, *взяти* *%ALL%.меч* _труп_
+Якщо назва речі складається з декількох слів, використовуй лапки: наприклад,
+*взяти* *%ALL%.&apos;довгий меч&apos;* _труп_
+
+%FMT%  *дати* _%OBJ%_ _%CHAR%_
+%FFF%  *дати* _кількість_ *золота*|*срібла* _%CHAR%_
+
+Віддати комусь річ або гроші. Багатьом істотам у процесі різних завдань треба
+віддати щось специфічне. Деяким істотам можна давати предмети просто
+так -- наприклад, спробуй нагодувати міських собак!
+
+%FMT%  *дарувати* _%OBJ% або гроші_ _%CHAR%_
+Якщо подарувати, а не просто дати, з боку буде виглядати більш урочисто.
+
+%SA% %H% {hh19кишені{x
+</text>
+    <title l="en">Items: {xstorage and transportation</title>
     <title l="ru">{CВещи: {xхранение и перемещение</title>
-    <title l="ua"></title>
+    <title l="ua">{CРечі: {xзберігання та перевезення</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">take an item from the floor or container</hint>
   <hint l="ru">взять предмет с пола или из контейнера</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">взяти предмет з підлоги або з контейнера</hint>
   <name l="en">get</name>
   <name l="ru">взять</name>
-  <name l="ua"></name>
+  <name l="ua">взяти</name>
   <position>rest</position>
 </Command>

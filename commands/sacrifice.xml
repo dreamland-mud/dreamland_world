@@ -2,13 +2,48 @@
 <Command>
   <aliases l="en">junk</aliases>
   <aliases l="ru">прибрать</aliases>
-  <aliases l="ua"></aliases>
+  <aliases l="ua">прибрати</aliases>
   <cat>item religion</cat>
   <help id="1375" labels="religion" level="-1" type="CommandHelp">
-    <extra l="en">altar &apos;sacrifice altar&apos;</extra>
-    <extra l="ru">алтари алтарь пожертвование пожертвовать жертва &apos;жертвоприношение на алтаре&apos; жертвоприношения</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="en">altar 'sacrifice altar'</extra>
+    <extra l="ru">алтари алтарь пожертвование пожертвовать жертва 'жертвоприношение на алтаре' жертвоприношения</extra>
+    <extra l="ua">вівтарі вівтар пожертвування жертвувати жертва 'жертвоприношення на вівтарі' жертвоприношення</extra>
+    <text l="en">%FMT% *%CMD%* all
+%FMT% *%CMD%* _item_
+
+Sacrifices an item (or all items) on the ground to the gods -- the gods grant a bit of silver.
+Some things (like player corpses) cannot be sacrificed. Anti-paladins can gain
+{hh695magical{x energy from sacrifices.
+
+Altars can be constructed for the gods of ancient cults -- the gods and goddesses of the {hh1official
+pantheon{x do not accept sacrifices.
+
+%FMT% *altar*
+
+Build an altar to fill it with pious content. On the altar, you can
+{hh1024place{x items, money, corpses, jewels, weapons, and so on, hoping to please
+the deity and receive a reward in return.
+
+%A% Do not sacrifice worthless junk -- this can anger the deity.
+%A% The Gods of Light will not appreciate the sacrifice of a good creature's corpse, and vice versa.
+%A% You can sacrifice money, but you won't be able to pay off completely with money:
+  a hundred or two gold and the god will lose interest.
+%A% Similarly, with jewels and other items -- more is not always better.
+%A% Among all {hh121magical items{x (potions, staffs), gods prefer those whose
+  effects are close to their sign.
+%A% A typical sacrifice can consist of a hundred coins, a couple of corpses,
+  drinks, magical items, weapons, or books, food.
+
+%FMT% *%CMD%* _altar_ *experience*|*mana*|*learnability*
+
+Having gathered a worthy offering, you can perform a sacrifice with this command. In return, you can
+ask for a certain advantage: more experience from kills, spend less
+mana, learn faster (this request is unavailable to {hh145humans{x -- they learn quickly anyway).
+These bonuses, in case of a successful sacrifice, last for several days and can be seen
+with the commands *calendar*, *time*, and *score*.
+
+%SA% %H% {hh1religion{x, {hh1027calendar{x
+</text>
     <text l="ru">%FMT% *%CMD%* все 
 %FMT% *%CMD%* _предмет_  
 
@@ -46,17 +81,53 @@
 
 %SA% %H% {hh1религия{x, {hh1027календарь{x
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">%FMT% *%CMD%* все 
+%FMT% *%CMD%* _предмет_  
+
+Приносить предмет (або все) на землі в жертву богам -- боги дадуть трохи срібла.
+Деякі речі (наприклад, трупи гравців) жертвувати не можна. Анти-паладини можуть
+отримувати {hh695магічну{x енергію від жертв.
+
+Божествам стародавніх культів можна спорудити =вівтар= -- Боги і богині {hh1офіційного
+пантеону{x жертвоприношень не приймають.
+
+%FMT% *вівтар*
+
+Побудувати вівтар, щоб наповнити його благочестивим змістом. На вівтар можна
+{hh1024класти{x предмети, гроші, трупи, коштовності, зброю тощо, сподіваючись
+вгодити божеству та отримати від нього в винагороду.
+
+%A% Не принось у жертву непотрібне барахло -- це може роздратувати божество.
+%A% Боги Світла не оцінять принесеного в жертву трупа доброго істоти, і навпаки.
+%A% Можна жертвувати гроші, але повністю відкупитися грошима не вдасться:
+  сотня-дві золота і бог втратить інтерес.
+%A% Аналогічно є з коштовностями та іншими предметами -- багато не
+  завжди означає добре.
+%A% З усіх {hh121магічних предметів{x (зілля, палиці) боги надають перевагу тим, що
+  близькі за дією до їх знаку.
+%A% Типове жертвоприношення може складатися з сотні монет, кількох трупів,
+  напоїв, магічних предметів, зброї чи книг, їжі.
+  
+%FMT% *%CMD%* _вівтар_ *досвід*|*мана*|*навчуваність*
+
+Зібравши гідну жертву, можна здійснити приношення цією командою. В обмін можна
+попросити про ту чи іншу перевагу: більше досвіду за вбивства, менше витрачати
+мани, швидше навчатися (це прохання недоступне {hh145людям{x -- вони і так швидко навчаються).
+Такі бонуси в разі вдалого жертвоприношення даються на кілька днів і видно
+по команді *календар*, *час* і *рахунок*.
+
+%SA% %H% {hh1релігія{x, {hh1027календар{x
+</text>
+    <title l="en">{CItems: {xsacrifice, altars</title>
     <title l="ru">{CВещи: {xпожертвование, алтари</title>
-    <title l="ua"></title>
+    <title l="ua">{CРечі: {xпожертвування, вівтарі</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">sacrifice to the gods</hint>
   <hint l="ru">принести жертву богам</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">принести жертву богам</hint>
   <name l="en">sacrifice</name>
   <name l="ru">жертвовать</name>
-  <name l="ua"></name>
+  <name l="ua">жертвувати</name>
   <order>player_only</order>
   <position>rest</position>
 </Command>

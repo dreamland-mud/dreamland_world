@@ -2,11 +2,36 @@
 <Command>
   <aliases l="en">?</aliases>
   <aliases l="ru">справка</aliases>
-  <aliases l="ua"></aliases>
+  <aliases l="ua">довідка</aliases>
   <cat>info</cat>
   <extra>keep_hide ghost manacles afk nanny</extra>
   <help id="995" level="-1" type="CommandHelp">
-    <text l="en"></text>
+    <text l="en">We are very proud of our help system and put a lot of effort into its development.
+Our goal is to help you understand the intricacies of the gaming process in our world as quickly and conveniently as possible.
+
+The articles in the help use specific markup:
+ - different acceptable options are listed with a vertical bar |
+ - parameters for using the command such as target, direction, item, number, character name, etc., are indicated within angle brackets __
+ - words with existing help are highlighted in {Wwhite color{x or with links
+ - commands are highlighted in {ybrown color{x
+ - new concepts are highlighted in {cdark-blue{x
+
+The symbol *?* is a synonym for the command *%CMD%*.
+
+%FMT% *%CMD%* _keywords_
+Provides help for the requested words. Words can be abbreviated. If more than one help section is found by request, you will be provided a numbered list.
+
+%FMT% *%CMD%* skill|spell|class|zone|religion|clan _keywords_
+Filters the help output by the specified category.
+
+%FMT% *%CMD%*
+Provides a quick guide on the basic commands.
+
+If the help for your request is not found, it is automatically added to the list for developers, and we will try to fix it as soon as possible.
+If you want to suggest a new help section, use {hh996nohelp{x
+
+%SA% %H% {hh1079commands{x, %H% {hh1095socials{x
+</text>
     <text l="ru">Мы очень гордимся нашей справкой и вкладываем огромные усилия в ее развитие.
 Наша цель -- помочь тебе как можно быстрее и удобнее разобраться в тонкостях
 игрового процесса в нашем мире.
@@ -37,17 +62,46 @@
 
 %SA% %H% {hh1079команды{x, %H% {hh1095социалы{x
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">Ми дуже пишаємося нашою довідкою та докладаємо величезних зусиль для її розвитку.
+Наша мета -- допомогти тобі якнайшвидше і зручніше розібратися в тонкощах
+ігрового процесу в нашому світі.
+
+У статтях довідки використовується певна розмітка:
+ - через вертикальну риску | перелічуються різні допустимі варіанти
+ - в кутових дужках __ вказується параметр для використання команди: ціль, 
+напрямок, предмет, число, ім'я персонажа і так далі
+ - {Wбілим кольором{x чи посиланнями виділяються слова, по яким також є довідка
+ - {yкоричневим кольором{x виділяються команди
+ - {cтемно-блакитним{x виділяються нові поняття 
+
+Символ *?* -- синонім для команди *%CMD%*.
+
+%FMT% *%CMD%* _ключові слова_
+Видає довідку за запитаними словами. Слова можна скорочувати. Якщо за запитом знайдено більше
+одного розділу допомоги, буде запропонований пронумерований список.
+
+%FMT% *%CMD%* вміння|заклинання|клас|зона|релігія|клан _ключові слова_
+Фільтрує видачу довідки за заданою категорією.
+
+%FMT% *%CMD%*
+Надає короткий довідник по основним командам.
+
+Якщо довідка за твоїм запитом не знайдена, це автоматично вноситься до списку для
+розробників, і ми обов'язково спробуємо виправити це якнайшвидше.
+А якщо ти хочеш запропонувати новий розділ довідки, використовуй {hh996немаєдовідки{x
+
+%SA% %H% {hh1079команди{x, %H% {hh1095соціальні{x
+</text>
+    <title l="en">Help about Help</title>
     <title l="ru">Справка о справке</title>
-    <title l="ua"></title>
+    <title l="ua">Довідка про довідку</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">view help</hint>
   <hint l="ru">посмотреть справку</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">переглянути довідку</hint>
   <name l="en">help</name>
   <name l="ru">помощь</name>
-  <name l="ua"></name>
+  <name l="ua">допомога</name>
   <order>player_only</order>
   <position>dead</position>
 </Command>

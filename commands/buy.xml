@@ -4,8 +4,43 @@
   <help id="1056" labels="learn" level="-1" ref="list sell value" type="CommandHelp">
     <extra l="en">properties shops</extra>
     <extra l="ru">магазины приобрести продажа продавцы продавец свойства товар</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">магазини придбати продаж продавці продавець властивості товар</extra>
+    <text l="en">There are a huge number of shops in the world that sell all sorts of things -- 
+from {hh15pets{x to {hh122random weapons{x. Each seller only has a specific set of 
+{hh65types of items{x that they buy or sell. Some stores are open almost 24/7, while others 
+have limited hours. An aura appears next to the seller's name ({GVendor{x).
+
+%FMT%  *list*
+%FFF%  *list* _name_
+First, ask the vendor for a list of items for sale -- or immediately ask to 
+show items with the given _name_.
+
+%FMT%  *properties* _item_ 
+%FMT%  *properties* _number_
+%FMT%  *say* _number_ 
+It's helpful to know the properties of an item before purchasing. Sellers, of course, 
+won't describe them with the same accuracy as {hh1001sages{x -- but it's still useful. 
+Just say the number or name of the item aloud, and the vendor will respond.
+
+%FMT%  *buy* _item_
+%FMT%  *buy* _number_
+Purchase an item from the vendor by name or number. If several items with the 
+same name are for sale, write *buy* _number_*.*_item_.
+For example, if two different swords are being sold, *(buy 2.sword,купить 2.меч)* will buy the second. 
+If you want to buy several identical items, write *buy* _quantity_*%PAUSE%*%RESUME%*_item_
+For example, *(buy 5%PAUSE%*%RESUME%pie,купить 5%PAUSE%*%RESUME%пирог)* will buy 5 pies.
+
+%FMT%  *sell* _item_
+Sell an item to the vendor. Different vendors have different markups on goods. 
+Knowledge of the vendors to whom you can sell this type of item most profitably comes 
+with experience. {RYou cannot sell items from the {hh12donation pit{x{R -- they have no value.{x
+
+%FMT%  *price* _item_
+%FFF%  *price* *all*
+Ask the vendor how much they will pay for each item in your inventory or for a specific one.
+
+%SA% %H% {hh55personal shop{x, %H% {hh989attract{x, %H% {hh1055repair{x
+</text>
     <text l="ru">В мире есть огромное количество магазинов, которые продают всякую всячину --
 от {hh15питомцев{x до {hh122случайного оружия{x. У каждого продавца есть только
 определенный набор {hh65типов предметов{x, которые они продают или покупают. Некоторые
@@ -43,17 +78,53 @@
 
 %SA% %H% {hh55персональный магазин{x, %H% {hh989привлечь{x, %H% {hh1055чинить{x
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">У світі є величезна кількість магазинів, які продають різні речі --
+від {hh15питомців{x до {hh122випадкової зброї{x. У кожного продавця є лише
+певний набір {hh65типів предметів{x, які вони продають або купують. Деякі
+магазини працюють майже цілодобово, а деякі мають тільки обмежені
+години роботи. Біля імені продавців відображається аура ({GПродавець{x).
+
+%FMT%  *список*
+%FFF%  *список* _назва_
+Спочатку запитай у продавця список речей на продаж -- або відразу попроси
+показати речі з даною _назвою_.
+
+%FMT%  *властивості* _предмет_ 
+%FMT%  *властивості* _номер_
+%FMT%  *сказати* _номер_ 
+Перед покупкою корисно дізнатися властивості предмета. Продавці, звичайно,
+не будуть розповідати з тією ж точністю, що й {hh1001мудреці{x -- але все одно корисно.
+Можна просто назвати номер або назву предмета вголос, і продавець відповість.
+
+%FMT%  *купити* _предмет_
+%FMT%  *купити* _номер_
+Купити предмет у продавця за іменем або номером. Якщо у продажу кілька речей з
+однаковою назвою, напиши *купити* _номер_*.*_предмет_.
+Наприклад, якщо продається два різних мечі, *(buy 2.sword,купити 2.меч)* купить другий.
+Якщо хочеш купити кілька однакових речей, пиши *купити* _кількість_*%PAUSE%*%RESUME%*_предмет_
+Наприклад, *(buy 5%PAUSE%*%RESUME%pie,купити 5%PAUSE%*%RESUME%пиріг)* купить 5 пиріжків.
+
+%FMT%  *продати* _предмет_
+Продати предмет продавцю. У різних продавців різна націнка на товар. Знання
+продавців, яким можна продати даний тип предметів найбільш вигідно, приходить
+з досвідом. {RПродати речі з {hh12ями для пожертвувань{x{R не можна -- у них немає вартості.{x
+
+%FMT%  *ціна* _предмет_
+%FFF%  *ціна* *все*
+Запитати у продавця, скільки він заплатить за кожен предмет в інвентарі або за конкретний.
+
+%SA% %H% {hh55персональний магазин{x, %H% {hh989залучити{x, %H% {hh1055підремонтувати{x
+</text>
+    <title l="en">{CEconomy: {xbuying and selling, working with shops</title>
     <title l="ru">{CЭкономика: {xкупля-продажа, работа с магазинами</title>
-    <title l="ua"></title>
+    <title l="ua">{CЕкономіка: {xкупівля-продаж, робота з магазинами</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">buy an item in the store</hint>
   <hint l="ru">купить предмет в магазине</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">купити предмет в магазині</hint>
   <name l="en">buy</name>
   <name l="ru">купить</name>
-  <name l="ua"></name>
+  <name l="ua">купити</name>
   <order>player_only</order>
   <position>rest</position>
 </Command>

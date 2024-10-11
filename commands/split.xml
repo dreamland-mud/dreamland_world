@@ -2,7 +2,19 @@
 <Command>
   <cat>group</cat>
   <help id="1377" level="-1" type="CommandHelp">
-    <text l="en"></text>
+    <text l="en">Syntax: SPLIT &lt;silver&gt; &lt;gold&gt;
+
+The SPLIT command divides the coins you take between yourself and all the members
+of your group who are in the same room as you. It is usually
+used to share money taken from the corpse of a slain enemy. The first
+argument specifies the number of silver coins to be shared (0 if there are none), the second argument specifies the number of gold
+coins (can be omitted).
+
+Example:
+split 30     --&gt; split 30 silver coins
+split 20 50  --&gt; split 20 silver, 50 gold coins
+split  0 10  --&gt; split 10 gold coins
+  </text>
     <text l="ru">Синтаксис: SPLIT &lt;серебро (silver)&gt; &lt;золото (gold)&gt;
 
 Команда SPLIT делит взятые тобой монеты между тобой и всеми членами
@@ -17,14 +29,25 @@ split 30     --&gt; разделить 30 серебренных монет
 split 20 50  --&gt; разделить 20 серебренных, 50 золотых 
 split  0 10  --&gt; разделить 10 золотых 
   </text>
-    <text l="ua"></text>
+    <text l="ua">Синтаксис: SPLIT &lt;срібло (silver)&gt; &lt;золото (gold)&gt;
+
+Команда SPLIT ділить взяті тобою монети між тобою та всіма членами
+твоєї групи, які знаходяться в одній кімнаті з тобою. Зазвичай це використовується для поділу грошей, взятих з трупа вбитого ворога. Перший
+аргумент задає кількість срібних монет, призначених для поділу (0 - якщо їх немає), другий аргумент задає кількість золотих
+монет (може бути пропущеним).
+
+Приклад:
+split 30     --&gt; розділити 30 срібних монет
+split 20 50  --&gt; розділити 20 срібних, 50 золотих
+split  0 10  --&gt; розділити 10 золотих
+  </text>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">split money between group members</hint>
   <hint l="ru">разделить деньги между согрупниками</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">розділити гроші між учасниками групи</hint>
   <name l="en">split</name>
   <name l="ru">делиться</name>
-  <name l="ua"></name>
+  <name l="ua">ділитися</name>
   <order>player_only</order>
   <position>rest</position>
 </Command>

@@ -3,10 +3,25 @@
   <cat>locks</cat>
   <extra>keep_hide undig</extra>
   <help id="1013" labels="item move" level="-1" ref="close lock unlock" type="CommandHelp">
-    <extra l="en"></extra>
+    <extra l="en">door open unstopper chest stopper</extra>
     <extra l="ru">дверь открыть откупорить сундук закупорить</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">двері відкрити відкоркувати скриню закупорити</extra>
+    <text l="en">%FMT%  *open*|*close* _%OBJ%_  
+%FMT%  *open*|*close* _%DIR%_ 
+Opens and closes a door in the specified direction, if one exists.
+Some {hh65items{x ({hh1016portals{x, {hh1024containers{x or {hh1075liquid containers{x) can also
+be opened and closed. Sealed liquid containers, of course, are protected from
+{hh837poisons{x and other threats.
+
+%FMT%  *unlock*|*lock* _%OBJ%_ 
+%FMT%  *unlock*|*lock* _%DIR%_   
+Locks and unlocks objects and doors with locks, provided a corresponding key is present.
+The key can either be in the inventory or placed on a {hh22keyring{x. {hh57Named{x bags and personal chests are locked and
+unlocked only by the owner without a key.
+  
+%FMT%  *pick* _%OBJ%_|_%DIR%_  
+Thieves can {hh714pick locks{x using special lockpicks.
+</text>
     <text l="ru">%FMT%  *открыть*|*закрыть* _%OBJ%_  
 %FMT%  *открыть*|*закрыть* _%DIR%_ 
 Открывает и закрывает дверь по указанному направлению, если таковая имеется.
@@ -24,16 +39,32 @@
 %FMT%  *взломать* _%OBJ%_|_%DIR%_  
 Воры умеют {hh714взламывать замки{x с помощью специальных отмычек.
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">%FMT%  *відкрити*|*закрити* _%OBJ%_  
+%FMT%  *відкрити*|*закрити* _%DIR%_ 
+Відкриває і закриває двері у зазначеному напрямку, якщо така існує.
+Деякі {hh65предмети{x ({hh1016портали{x, {hh1024контейнери{x або {hh1075ємності для рідини{x) також можна
+відкрити та закрити. Закупорені ємності для рідини, звісно, захищені від
+{hh837отрут{x та інших небезпек.
+
+%FMT%  *відперти*|*заперти* _%OBJ%_ 
+%FMT%  *відперти*|*заперти* _%DIR%_   
+Замикає на ключ і відмикає ключем предмети та двері, які мають замок, за наявності
+відповідного ключа. Ключ може просто бути в інвентарі або бути
+нанизаним на {hh22брелок{x. {hh57Іменні{x сумки та особисті скрині замикаються і
+відмикаються лише власником без ключа.
+  
+%FMT%  *зламати* _%OBJ%_|_%DIR%_  
+Злодії вміють {hh714зламувати замки{x за допомогою спеціальних відмичок.
+</text>
+    <title l="en">How to open and close doors and bags</title>
     <title l="ru">Как открывать и закрывать двери и сумки</title>
-    <title l="ua"></title>
+    <title l="ua">Як відкривати і закривати двері та сумки</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">open a door or container</hint>
   <hint l="ru">открыть дверь или контейнер</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">відкрити двері або контейнер</hint>
   <name l="en">open</name>
   <name l="ru">открыть</name>
-  <name l="ua"></name>
+  <name l="ua">відкрити</name>
   <position>rest</position>
 </Command>

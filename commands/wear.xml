@@ -6,10 +6,36 @@
   <cat>item</cat>
   <extra>undig</extra>
   <help id="990" level="-1" ref="remove" type="CommandHelp">
-    <extra l="en"></extra>
+    <extra l="en">tail 'remove item' hair weave entangle</extra>
     <extra l="ru">хвост &apos;снять вещь&apos; волосы вплести вплетать</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">хвіст 'зняти річ' волосся вплести вплітати</extra>
+    <text l="en">In order for weapons or armor to start enhancing your stats and helping in battle, they must first be worn. There are many useful commands for this.
+
+%FMT%  *wear*|*wield*|*hold* _item_
+The specified item from the inventory will be worn, or held in the hand, or used as a weapon -- depending on the item itself.
+All these commands are equivalent for any type of equipment.
+
+%FMT%  *wear* *all*
+Try to wear every suitable item from the inventory. You may not be able to wear an item if it either doesn't suit your {hh33nature{x, or is too {hh39heavy{x for you, or you are not experienced enough to use it.
+
+%FMT% *wear* _item_ *on* _%VICT%_
+Try to wear an item (for example, a collar) on another character.
+This will not always work.
+
+%FMT% *wear* _item_ *on* *tail*
+%FMT% *wear* _item_ *in* *hair*
+Tailed races (felars, satyrs, centaurs, dogfolk) can wear something on their tail, and all characters can weave a light item into their hair.
+{RNOTE:{x Items woven into hair or worn on the tail DO NOT GIVE stats, and cannot be used or controlled by voice. But there is one unique item that works only when woven into hair.
+
+%FMT%  *remove* _item_
+Will remove the specified item from you (if it is not {hh864cursed{x) and put it back into the inventory.
+You can remove even {hh607invisible{x items by feeling.
+
+%FMT%  *remove* *all*
+Undress completely, removing all equipment.
+
+%SA% %H% {hh1024take{x, {hh1015equipment{x, {hh752secondary{x, {hh39strength{x.
+</text>
     <text l="ru">Чтобы оружие или броня начали улучшать твои параметры и помогать в бою, их надо
 сначала надеть. Для этого есть много полезных команд.
 
@@ -45,14 +71,40 @@
 
 %SA% %H% {hh1024взять{x, {hh1015снаряжение{x, {hh752вторичное{x, {hh39сила{x.
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">Для того, щоб зброя чи броня почали покращувати твої параметри і допомагати в бою, їх потрібно спочатку вдягнути. Для цього існує багато корисних команд.
+
+%FMT%  *вдягнути*|*озброїтися*|*затиснути* _річ_
+Вказаний предмет з інвентарю буде вдягнутий, або затиснутий у руці, або використаний як зброя -- в залежності від самого предмета.
+Усі ці команди рівнозначні для будь-яких типів спорядження.
+
+%FMT%  *вдягнути* *все*
+Спробувати вдягнути кожну підходящу річ з інвентарю. У тебе може не вийти вдягнути річ, якщо вона або не підходить тобі по {hh33натурі{x, або занадто {hh39важка{x для тебе, або ти ще недостатньо досвідчений для її використання.
+
+%FMT% *вдягнути* _річ_ *на* _%VICT%_
+Спробувати вдягнути річ (наприклад, нашийник) на іншого персонажа.
+Це не завжди спрацює.
+
+%FMT% *вдягнути* _річ_ *на* *хвіст*
+%FMT% *вдягнути* _річ_ *у* *волосся*
+Хвостаті раси (фелари, сатири, кентаври, чолобакі) можуть вдягнути щось собі на хвіст, а всі персонажі можуть вплести якусь легку річ у волосся. 
+{RУВАГА:{x вплетені у волосся або вдягнені на хвіст речі НЕ ДАЮТЬ параметри, їх не можна використовувати або керувати ними голосом. Але є один унікальний предмет, який навпаки -- працює тільки будучи вплетеним у волосся.
+
+%FMT%  *зняти* _річ_
+Зніме з тебе вказану річ (якщо вона не {hh864проклята{x) і покладе назад в інвентар.
+Так можна знімати наосліп навіть {hh607невидимі{x речі.
+
+%FMT%  *зняти* *все*
+Роздягтися повністю, знявши все обладнання.
+
+%SA% %H% {hh1024взяти{x, {hh1015спорядження{x, {hh752вторинне{x, {hh39сила{x.
+</text>
+    <title l="en">Items: how to wear and remove</title>
     <title l="ru">{CВещи: {xкак надевать и снимать</title>
-    <title l="ua"></title>
+    <title l="ua">{CРечі: {xяк вдягати та знімати</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">wear an item on yourself, arm yourself</hint>
   <hint l="ru">надеть вещь на себя, вооружиться</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">одягнути річ на себе, озброїтися</hint>
   <name l="en">wear</name>
   <name l="ru">надеть</name>
   <name l="ua">одягти</name>

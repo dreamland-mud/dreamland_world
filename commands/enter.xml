@@ -2,14 +2,40 @@
 <Command>
   <aliases l="en">walk leave go</aliases>
   <aliases l="ru">идти зайти покинуть</aliases>
-  <aliases l="ua"></aliases>
+  <aliases l="ua">йти зайти покинути</aliases>
   <cat>move</cat>
   <extra>ghost</extra>
   <help id="1016" level="-1" type="CommandHelp">
-    <extra l="en">&apos;extra exit&apos; extra-exit extraexit portal vacuum</extra>
-    <extra l="ru">&apos;дополнительный выход&apos; портал пройти &apos;скрытый выход&apos; вакуум &apos;экстра выход&apos;</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="en">'extra exit' extra-exit extraexit portal vacuum</extra>
+    <extra l="ru">'дополнительный выход' портал пройти 'скрытый выход' вакуум 'экстра выход'</extra>
+    <extra l="ua">'додатковий вихід' портал пройти 'прихований вихід' вакуум 'екстра вихід'</extra>
+    <text l="en">%FMT%  *%CMD%* _portal_  
+
+Enter a portal leading to unknown destinations.
+
+Most temples in major {hh29cities{x have secure portals to the Temple of Leo.
+They {hh96hum{x so loudly that you can find them by sound alone, even when {hh831blind{x.
+Additionally, there are temporary portals created by spells
+(%H% {hh838portal{x or {hh775nexus{x), portals leading to random places,
+{hh1542wandering{x portals, and even portable portals, such as a vacuum
+from the Divided Souls.
+
+%FMT% *%CMD%* _extra exit_
+%FMT% *go* _extra exit_
+
+Enter (go, dive, jump, fly) into a hidden or extra exit
+from a room (extra-exit).
+
+In our world, apart from the usual movement directions and portals, there are also
+{Chidden exits.{x Such exits are sometimes visible right away and sometimes only through
+a thorough inspection of the area. Sometimes, they can only be discovered using
+{hh675invisible{x or {hh540hidden{x detection...
+
+For example, you can only reach the magical {hh1534Cottage{x in the {hh1414Kingdom of Mirrors{x through
+a hidden exit.
+
+You cannot know in advance where a hidden exit leads -- venture at your own risk.
+</text>
     <text l="ru">%FMT%  *%CMD%* _портал_  
 
 Войти в портал, который ведет неведомо куда.
@@ -37,17 +63,43 @@
 
 Узнать заранее, куда ведет скрытый выход нельзя -- заходи на свой страх и риск.
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">%FMT%  *%CMD%* _портал_  
+
+Увійти у портал, який веде у невідомість.
+
+У більшості храмів великих {hh29міст{x встановлені надійні портали в Храм Лео.
+Вони {hh96гудуть{x так гучно, що в них можна увійти на слух, навіть у стані {hh831сліпоти{x.
+Крім того, існують тимчасові портали, створені за допомогою заклинань
+(%H% {hh838портал{x або {hh775нексус{x), портали, які ведуть у випадкове місце,
+{hh1542блукаючі{x портали, та навіть портативні портали, наприклад, вакуум
+із Розділених Душ.
+
+%FMT% *%CMD%* _додатковий вихід_
+%FMT% *пройти* _додатковий вихід_
+
+Увійти (пройти, пірнути, підскочити, злетіти) у прихований або додатковий вихід
+з кімнати (extra-exit).
+
+У нашому світі, окрім звичайних напрямків переміщення і порталів, зустрічаються
+ще {Cприховані виходи.{x Такі виходи інколи видно одразу, а іноді -- лише при
+ретельному огляді місцевості. Буває навіть, що виявити їх можна тільки за допомогою
+виявлення {hh675невидимого{x або {hh540схованого{x...
+
+Так, наприклад, у чарівну {hh1534Хатину{x в {hh1414Королівстві Дзеркал{x можна потрапити тільки через
+прихований вихід.
+
+Дізнатися заздалегідь, куди веде прихований вихід не можна -- йди на свій страх і ризик.
+</text>
+    <title l="en">{CMovement: {xportals and hidden exits</title>
     <title l="ru">{CПеремещение: {xпорталы и скрытые выходы</title>
-    <title l="ua"></title>
+    <title l="ua">{CПереміщення: {xпортали та приховані виходи</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">enter a portal or extra exit</hint>
   <hint l="ru">войти в портал или дополнительный выход</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">увійти в портал або додатковий вихід</hint>
   <name l="en">enter</name>
   <name l="ru">войти</name>
-  <name l="ua"></name>
+  <name l="ua">увійти</name>
   <order>allow_ruler</order>
   <position>stand</position>
 </Command>

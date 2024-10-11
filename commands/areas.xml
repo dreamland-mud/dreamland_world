@@ -8,11 +8,48 @@
   <help id="998" level="-1" type="CommandHelp">
     <extra l="en">aggressive agressive locations zones</extra>
     <extra l="ru">аггрессивные аггры агрессивные агры ареи арея арии ария &apos;где качаться&apos; локации локация локи опасно &apos;прокачка в зонах&apos; смертельно зона</extra>
-    <extra l="ua"></extra>
+    <extra l="ua">агресивні агри агресивні агри ареї арея арії арія &apos;де качатися&apos; локації локація локи небезпечно &apos;прокачка в зонах&apos; смертельно зона</extra>
     <keyword l="en">areas</keyword>
     <keyword l="ru">зоны</keyword>
-    <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <keyword l="ua">зони</keyword>
+    <text l="en">The entire {hh224geography{x of our world is divided into =zones=, also known as locations or areas.
+Each zone, in turn, is divided into {hh86areas{x (rooms, cells) which you can travel through.
+
+In some zones, you will encounter {Raggressive creatures{x (agro) that will attack
+you first if you are nearby.
+{R%A% {xAggros do not attack players older than {hh14level{x
+{R%A% {xAggros do not attack vampires in {hh836transformation{x state.
+The aggressiveness and abilities of the creatures in a zone determine its level of danger.
+The levels of creatures and items determine the level of the zone.
+
+{CLLEVELS OF DANGER{x
+%A% {Cpeaceful:{x in this zone, there is no one to fight with, and no one will harm you
+%A% {Geasy:{x opponents do not attack themselves, and they are easy to handle
+%A% {Yhard:{x =aggressive= creatures may be present, recommended for more experienced
+  players with good gear
+%A% {Rdangerous:{x many aggressive and especially dangerous creatures (such as wizards), 
+  only the most experienced players with very good equipment should venture here
+
+%FMT%  *%CMD%* 
+Shows a full list of zones around the world, indicating the level of danger and
+the range of creature levels in each of them. The level range shows at which
+levels it is best to {hh14train{x in this zone.
+
+{CADDITIONAL PARAMETERS{x
+%FMT%  *%CMD%* _string_
+Shows only those zones in the name of which the specified string occurs.
+
+%FMT%  *%CMD%* _level_
+Offers a list of zones suitable for character leveling of the specified level.
+
+%FMT%  *%CMD%* _min. level_ _max. level_
+Offers a list of zones for the specified level range.
+
+Each zone has its own help article, where you can read a lot
+of useful information. For example, {y{hchelp Midgaard{x.
+
+%SA% %H% {hh224terra{x
+</text>
     <text l="ru">Вся {hh224география{x в нашем мире разделена на =зоны,= также называемые локации или арии.
 Каждая зона, в свою очередь, делится на {hh86местности{x (комнаты, клетки), по которым
 можно путешествовать.
@@ -52,17 +89,55 @@
 
 %SA% %H% {hh224тэра{x
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">Вся {hh224географія{x в нашому світі розділена на =зони,= також звані локації або арії.
+Кожна зона, в свою чергу, поділяється на {hh86місцевості{x (кімнати, клітини), по яких
+можна подорожувати.
+
+У деяких зонах зустрічаються {Rагресивні істоти{x (агри), які нападуть на
+тебе першими, якщо ти виявишся поруч. 
+{R%A% {xАгри не нападають на гравців старше {hh14рівнем{x
+{R%A% {xАгри не нападають на вампірів у стані {hh836трансформації{x
+Агресивність та вміння істот у зоні визначають її рівень небезпеки.
+Рівні істот та предметів визначають рівень зони. 
+
+{CРІВНІ НЕБЕЗПЕКИ{x
+%A% {Cмирна:{x у цій зоні нема з ким битися, і ніхто тебе не образить
+%A% {Gлегко:{x противники самі не нападають, і з ними нескладно впоратися
+%A% {Yважко:{x можливі =агресивні= істоти, рекомендовано для більш досвідчених
+  гравців із гарним спорядженням
+%A% {Rнебезпечна:{x багато агресивних та особливо небезпечних істот (наприклад, чаклунів), 
+  сюди варто йти лише найдосвідченішим гравцям із дуже добрим спорядженням
+  
+%FMT%  *%CMD%* 
+Показує повний список зон усього світу, з зазначенням рівня небезпеки та
+діапазону рівнів істот у кожній з них. Діапазон рівнів показує, на яких
+рівнях у цій зоні краще {hh14качатися{x.
+
+{CДОДАТКОВІ ПАРАМЕТРИ{x
+%FMT%  *%CMD%* _рядок_
+Покаже лише ті зони, у назві яких зустрічається зазначений рядок.
+ 
+%FMT%  *%CMD%* _рівень_
+Видасть список зон, які підходять для прокачування персонажів певного рівня.
+
+%FMT%  *%CMD%* _мін. рівень_ _макс. рівень_
+Видасть список зон для зазначеного діапазону рівнів.
+
+Кожна зона має свою власну статтю довідки -- там можна прочитати багато
+корисної інформації. Наприклад, {y{hcдовідка Мідгаард{x.
+
+%SA% %H% {hh224тера{x
+</text>
+    <title l="en">Zones and their danger levels</title>
     <title l="ru">Зоны и их уровни опасности</title>
-    <title l="ua"></title>
+    <title l="ua">Зони та їх рівні небезпеки</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">list of all zones of the world, search for a suitable zone</hint>
   <hint l="ru">список всех зон мира, поиск подходящей зоны</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">список всіх зон світу, пошук відповідної зони</hint>
   <name l="en">areas</name>
   <name l="ru">зоны</name>
-  <name l="ua"></name>
+  <name l="ua">зони</name>
   <order>player_only</order>
   <position>dead</position>
 </Command>

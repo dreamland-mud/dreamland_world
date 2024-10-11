@@ -1,15 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
-  <aliases l="en"></aliases>
   <aliases l="ru">задание задания</aliases>
-  <aliases l="ua"></aliases>
+  <aliases l="ua">завдання завдання</aliases>
   <cat>quest</cat>
   <extra>keep_hide ghost</extra>
   <help id="1368" level="-1" type="CommandHelp">
-    <extra l="en">&apos;quest command&apos; &apos;quest complete&apos; &apos;quest find&apos; &apos;quest hint&apos; &apos;quest request&apos;</extra>
+    <extra l="en">'quest command' 'quest complete' 'quest find' 'quest hint' 'quest request'</extra>
     <extra l="ru">&apos; как взять квест&apos; &apos;команда квест&apos; &apos;купить практики&apos; квест &apos;квест команды&apos; &apos;квест найти&apos; &apos;квест попросить&apos; &apos;квест взять&apos; &apos;квестовое время&apos; опыт подсказка сдать</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">' як взяти квест' 'команда квест' 'купити практики' квест 'квест команди' 'квест знайти' 'квест попросити' 'квест взяти' 'квестовий час' досвід підказка здати</extra>
+    <text l="en">This command is used to display a list of all quests, for viewing details on each, or to cancel a quest.
+
+{CFOR QUESTORS' TASKS{x
+*%CMD%* *request*      : request a quest from the questor
+*%CMD%* *info  *       : show information about the task assigned to you
+*%CMD%* *time*         : show the remaining time to complete the task,
+                       or the time after which you can request a new one
+*%CMD%* *turn in*      : report to the questor about completing the task. 
+*%CMD%* *turn in exp*  : report completion, but request experience instead of qp
+
+=Something went wrong?=
+*%CMD%* *cancel    *   : cancel the task 
+*%CMD%* *find     *    : ask the questor for a hint
+
+Hints for {hh2127novices{x until you successfully complete the first 50 quests.
+
+=Having earned quest points, you can start buying goodies from questors:=
+*%CMD%* *list*    : request a list of {hh125quest items{x for purchase
+*%CMD%* *buy*     : buy an item or service for quest points 
+*%CMD%* *return*  : try to return a lost quest item
+*%CMD%* *points*  : show number of {hh125quest points{x
+*%CMD%* *stats*   : show the best questers of our world
+
+Only a quest ring or belt can be returned, and no more than three times!
+
+{CFOR ZONES' TASKS{x
+*%CMD%*            : list of all current tasks
+*%CMD%* _number_   : detailed description of the task
+*%CMD%* *cancel* _number_ : cancel this task
+
+%SA% %H% {hh125questor's tasks{x, %H% {hh124zone tasks{x</text>
     <text l="ru">Эта команда служит для отображения списка всех заданий, для просмотра подробностей
 по каждому или отмены задания. 
 
@@ -43,17 +72,48 @@
 
 %SA% %H% {hh125задания квестора{x, %H% {hh124задания зон{x
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">Ця команда служить для відображення списку всіх завдань, для перегляду деталей
+по кожному або скасування завдання.
+
+{CДЛЯ ЗАВДАНЬ КВЕСТОРІВ{x
+*%CMD%* *запросити*     : запросити завдання у квестора
+*%CMD%* *інфо  *        : показати інформацію про доручене тобі завдання
+*%CMD%* *час*           : показати час, що залишився на виконання завдання,
+                       або час, після закінчення якого можна запитати нове
+*%CMD%* *здати     *    : повідомити квестора про виконання завдання. 
+*%CMD%* *здати досвід* : повідомити про виконання, але попросити досвід замість qp
+
+=Щось пішло не так?=
+*%CMD%* *скасувати*     : скасувати завдання 
+*%CMD%* *знайти     *   : попросити у квестора підказку
+
+Підказки для {hh2127початківців{x поки не виконаєш перші 50 квестів успішно.
+
+=Заробивши квестові очки, можна почати купувати бонуси у квесторів:=
+*%CMD%* *список*   : попросити список {hh125квестових речей{x для покупки
+*%CMD%* *купити*   : купити річ або послугу за квестові очки 
+*%CMD%* *повернути* : спробувати повернути втрачену квестову річ
+*%CMD%* *очки  *   : показати кількість {hh125квестових очок{x
+*%CMD%* *стат*     : показати найкращих квестовиків нашого Світу
+
+Поверненню підлягають тільки квестове кільце або пояс, і не більше трьох разів!
+
+{CДЛЯ ЗАВДАНЬ У ЗОНАХ{x
+*%CMD%*            : список всіх поточних завдань
+*%CMD%* _номер_    : детальний опис завдання
+*%CMD%* *скасувати* _номер_ : скасувати це завдання
+
+%SA% %H% {hh125завдання квестора{x, %H% {hh124завдання зон{x</text>
+    <title l="en">{CQuests: {xcommands</title>
     <title l="ru">{CКвесты: {xкоманды</title>
-    <title l="ua"></title>
+    <title l="ua">{CКвести: {xкоманди</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">personal quests from questors or in zones</hint>
   <hint l="ru">персональные задания у квесторов или в зонах</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">персональні завдання у квесторів або в зонах</hint>
   <name l="en">quest</name>
   <name l="ru">квест</name>
-  <name l="ua"></name>
+  <name l="ua">квест</name>
   <order>player_only</order>
   <position>rest</position>
 </Command>

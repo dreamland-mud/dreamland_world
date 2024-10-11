@@ -1,15 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
-  <aliases l="en"></aliases>
   <aliases l="ru">алиас псевдоним</aliases>
-  <aliases l="ua"></aliases>
+  <aliases l="ua">аліас псевдонім</aliases>
   <cat>client</cat>
   <extra>keep_hide ghost afk</extra>
   <help id="1345" level="-1" ref="unalias" type="CommandHelp">
     <extra l="en">macros triggers</extra>
     <extra l="ru">макросы триггеры</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">макроси тригери</extra>
+    <text l="en">The *%CMD%* command is used to shorten long or composite commands.
+Using aliases is very convenient for quickly entering commands or
+command sequences that you use frequently.
+
+In the built-in {hh2133web client{x, you can also set up variables, macros, and triggers.
+
+{CUSAGE{x
+%FMT%  *%CMD%*  
+Displays a list of all your aliases.
+
+%FMT%  *%CMD%* _word_
+Shows the alias for this word if one exists.
+
+%FMT%  *%CMD%* _word_ _substitution_
+Creates a new alias.
+
+%FMT%  *%CMD%* *clear*
+Removes all aliases.
+
+%FMT%  *unalias* _word_
+Removes an unnecessary alias.
+
+{CLIMITATIONS{x
+The shortened command cannot contain other shortcuts, but can execute
+several commands if they are listed through *|*. Spaces cannot be placed around the pipe symbol.
+
+A word in the input line will be replaced only if it is at the very beginning.
+Commands *%CMD%* and *unalias* cannot be assigned to aliases.
+ 
+{EXAMPLES{x
+%CMD% wt take all corpse
+-- after this, typing wt will be equivalent to take all corpse
+%CMD% moln cast &apos;lightning bolt&apos;
+-- moln orc will be decoded as cast &apos;lightning bolt&apos; orc
+%CMD% lunch open bag || take pie bag || eat pie || close bag
+-- when typing lunch, these four commands will be executed in sequence.
+
+%SA% %H% {hh17command separator{x
+</text>
     <text l="ru">Команда *%CMD%* служит для сокращения длинных или составных команд. 
 Использование синонимов (алиасов) очень удобно для быстрого набора команд или
 последовательностей команд, которые ты часто используешь.
@@ -50,17 +87,56 @@
 
 %SA% %H% {hh17разделитель команд{x
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">Команда *%CMD%* служить для скорочення довгих або складених команд.
+Використання синонімів (аліасів) дуже зручно для швидкого набору команд або
+послідовностей команд, які ти часто використовуєш.
+
+У вбудованому {hh2133веб-клієнті{x можна також налаштувати змінні, макроси та тригери.
+
+{CВИКОРИСТАННЯ{x
+%FMT%  *%CMD%*  
+Показує список всіх твоїх синонімів.
+
+%FMT%  *%CMD%* _слово_
+Показує синонім для цього слова, якщо він існує.
+
+%FMT%  *%CMD%* _слово_ _підстановка_
+Створює новий синонім.
+
+%FMT%  *%CMD%* *очистити*
+Видаляє всі синоніми.
+
+%FMT%  *несинонім* _слово_
+Видаляє непотрібний синонім.
+
+{CОБМЕЖЕННЯ{x
+Скорочена команда не може містити інших скорочень, але може виконувати
+кілька команд, якщо їх перелічити через *|*. Навколо символу пайпа не можна
+ставити пробіли.
+
+Слово у введеній стрічці буде замінене, тільки якщо воно стоїть на самому початку.
+Команди *%CMD%* і *несинонім* не можна призначити синонімам.
+
+{CPРИКЛАДИ{x
+%CMD% вт взяти все труп
+-- після цього, написання вт буде еквівалентно взяти все труп
+%CMD% молн каст &apos;удар блискавки&apos;
+-- молн орк буде розшифровано як каст &apos;удар блискавки&apos; орк
+%CMD% обід відкр сумка || взяти пиріг сумка || з'їсти пиріг || закрити сумка
+-- при вводі обід будуть послідовно виконані ці чотири команди.
+
+%SA% %H% {hh17роздільник команд{x
+</text>
+    <title l="en">{CSettings: {xaliases, composite commands, triggers</title>
     <title l="ru">{CНастройки: {xсинонимы, составные команды, триггеры</title>
-    <title l="ua"></title>
+    <title l="ua">{CНалаштування: {xсиноніми, складені команди, тригери</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">set alias for commands</hint>
   <hint l="ru">задать синоним для команд</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">задати синонім для команд</hint>
   <name l="en">alias</name>
   <name l="ru">синоним</name>
-  <name l="ua"></name>
+  <name l="ua">сіноним</name>
   <order>player_only</order>
   <position>dead</position>
 </Command>

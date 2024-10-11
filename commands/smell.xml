@@ -3,10 +3,36 @@
   <cat>item</cat>
   <extra>keep_hide undig</extra>
   <help id="1084" level="-1" type="CommandHelp">
-    <extra l="en">&apos;poured liquid&apos; smell</extra>
-    <extra l="ru">нюхать обнюхивает обнюхивать обоняние &apos;вылитая жидкость&apos; &apos;запах крови&apos; запахи</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="en">'poured liquid' smell</extra>
+    <extra l="ru">нюхать обнюхивает обнюхивать обоняние 'вылитая жидкость' 'запах крови' запахи</extra>
+    <extra l="ua">нюхати обнюхує обнюхувати нюх 'вилита рідина' 'запах крові' запахи</extra>
+    <text l="en">Items, places, or characters can have =smells=. 
+%A% Sniffing an object can provide more information about it. For example, containers for {hh1075liquids{x
+  or fountains always have a characteristic smell of the liquid poured into them.
+%A% A character may smell, for example, after {hh1075pouring{x a sufficient amount of liquid on themselves
+  (this sometimes helps with {hh729spells{x), or by setting their own smell.
+%A% Sometimes, after killing opponents, their blood may splash onto your armor, and
+  this smell will drive the neighboring vampires and other undead crazy.
+%A% Sniffing the area helps to identify some malicious spells.
+
+{CSMELL COMMANDS{x
+
+%FMT% *%CMD%* 
+Smell what is in the environment.
+
+%FMT% *%CMD%* _%OBJ%_ 
+%FMT% *%CMD%* _%CHAR%_
+Sniff an item or character.
+
+%FMT% *%CMD%* *description* _line_
+You can set your own smell that others will notice when sniffing you.
+The subcommand must be written completely.
+
+%FMT% *%CMD%* *description*
+Show your current smell.
+
+%FMT% *%CMD%* *description* *clear*
+Clear the smell.</text>
     <text l="ru">Вещи, местности или персонажи могут иметь =запах=.
 %A% Обнюхав предмет, можно больше о нем узнать. Например, емкости для {hh1075жидкости{x
   или фонтаны всегда имеют характерный запах налитой туда жидкости. 
@@ -35,16 +61,42 @@
 %FMT% *%CMD%* *описание* *очистить*
 Очистить запах.
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">Речі, місцевості або персонажі можуть мати =запах=.
+%A% Обнюхавши предмет, можна дізнатися більше про нього. Наприклад, ємності для {hh1075рідини{x
+  або фонтани завжди мають характерний запах налитої туди рідини.
+%A% Персонаж може пахнути, наприклад, після {hh1075вилиття{x на себе достатньої кількості рідини
+  (це іноді допомагає з {hh729чарів{x), або задавши свій власний запах.
+%A% Іноді після вбивства противників їх кров може забризкати твою броню, і 
+  цей запах буде зводити з розуму сусідніх вампірів та іншу нежить.
+%A% Обнюхування місцевості допомагає визначити деякі зловмисливі чари.
+
+{CКОМАНДИ ДЛЯ ЗАПАХІВ{x
+
+%FMT% *%CMD%* 
+Відчути, чим пахне у даній місцевості.
+
+%FMT% *%CMD%* _%OBJ%_ 
+%FMT% *%CMD%* _%CHAR%_
+Обнюхати річ або персонажа.
+
+%FMT% *%CMD%* *опис* _рядок_
+Можна задати свій власний запах, який відчують усі, хто тебе нюхає.
+Підкоманду треба писати повністю.
+
+%FMT% *%CMD%* *опис*
+Показати поточний запах.
+
+%FMT% *%CMD%* *опис* *очистити*
+Очистити запах.</text>
+    <title l="en">{CItems: {xsniff</title>
     <title l="ru">{CВещи: {xобнюхивать</title>
-    <title l="ua"></title>
+    <title l="ua">{CРечі: {xобнюхувати</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">sniff a character or item</hint>
   <hint l="ru">обнюхать персонажа или предмет</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">обнюхати персонажа або предмет</hint>
   <name l="en">smell</name>
   <name l="ru">нюхать</name>
-  <name l="ua"></name>
+  <name l="ua">нюхати</name>
   <position>rest</position>
 </Command>

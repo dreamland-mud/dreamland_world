@@ -1,18 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
-  <aliases l="en"></aliases>
   <aliases l="ru">выпить</aliases>
-  <aliases l="ua"></aliases>
+  <aliases l="ua">випити</aliases>
   <cat>food</cat>
   <extra>undig manacles</extra>
   <help id="1074" labels="char cmd" level="-1" ref="eat vomit" type="CommandHelp">
     <extra l="en">food</extra>
     <extra l="ru">блевать еда &apos;голод и жажда&apos; кормить накормить насыщение питье пища сухарик сытость &apos;умираешь от голода&apos; вырвать</extra>
-    <extra l="ua"></extra>
+    <extra l="ua">блювати їжа &apos;голод і спрага&apos; годувати нагодувати насичення напій їжа сухарик ситість &apos;вмираєш від голоду&apos; вирвати</extra>
     <keyword l="en">hunger thirst</keyword>
     <keyword l="ru">голод жажда</keyword>
-    <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <keyword l="ua">голод спрага</keyword>
+    <text l="en">{GFOR BEGINNERS{x
+{G%A%{x Up to the 10th {hh14level{x your character will not experience hunger and thirst.
+
+%FMT%  *drink*
+%FMT%  *drink* _container or fountain_
+When you are thirsty, drink something. If there is a source of
+water at the current location (river, spring, lake, etc.), you do not need to specify a target -- just type
+*drink*. Most major cities have fountains. You can drink directly from
+them or {hh1075fill{x some container and take it with you. Some classes
+can {hh680create{x a magic water source. If you drink {hh2137alcohol{x, you can get drunk.
+
+%FMT%  *eat* _food_
+When you are hungry, eat something. Beginners on {hh1560Harillon{x can complete a cook's quest
+and receive a pack of nutritious crackers as a reward for the first time.
+Food can be bought in shops of major cities, obtained by hunting, or {hh581created{x.
+
+%FMT%  *eat* _prey_
+{hh166Felars{x can hunt mice, rats, and fish both to satisfy hunger,
+and for fun.
+
+{hh144Vampires{x do not feed on regular food, they do not know hunger or thirst: they are tormented
+only by {rthirst for blood{x. It can be satisfied by drinking blood from the necks of victims or
+from other sources.
+
+%FMT%  *vomit*
+Allows you to completely empty your stomach using the two-finger method, putting yourself in
+a state of complete hunger and thirst. This can be useful, for example, if you
+are thirsty, but your stomach is already full and you cannot drink more
+even a drop.
+
+You can check the level of thirst, hunger, or intoxication with the {y{hcscore{x command.
+
+%SA% %H% {hh1075liquids{x
+</text>
     <text l="ru">{GНОВИЧКАМ{x
 {G%A%{x До 10-го {hh14уровня{x твой персонаж не будет испытывать голода и жажды.
 
@@ -48,16 +80,50 @@
 %SA% %H% {hh1075жидкости{x
   
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">{GНОВИЧКАМ{x
+{G%A%{x До 10-го {hh14рівня{x твій персонаж не буде відчувати голоду і спраги.
+
+%FMT%  *пити*
+%FMT%  *пити* _ємність або фонтан_
+Коли у тебе спрага, попий щось. Якщо на поточній місцевості є джерело
+води (річка, джерело, озеро тощо), то мету вказувати не потрібно -- просто напиши
+*пити*. У більшості великих міст є фонтани. Можна пити прямо з
+них або {hh1075наповнити{x якусь ємність і взяти з собою. Деякі класи
+вміють {hh680творити{x магічне джерело води. Якщо пити {hh2137алкоголь{x, можна сп'яніти.
+
+%FMT%  *їсти* _їжа_
+Коли ти голодний, з'їж щось. Новачки на {hh1560Галеоні{x можуть виконати завдання
+кухаря і отримати в нагороду пакунок поживних сухариків на перший час.
+Їжу можна купити в магазинах великих міст, здобути полюванням або {hh581творити{x.
+
+%FMT%  *їсти* _жертва_
+{hh166Фелари{x можуть полювати на мишей, щурів та риб, як задля задоволення голоду,
+так і заради забави.
+
+{hh144Вампіри{x не харчуються звичайною їжею, їм не знайомі спрага і голод: їх мучить
+тільки {rжажда крові{x. Її можна задовольнити, випиваючи кров з шиї жертв або
+з інших джерел.
+
+%FMT%  *блювання*
+Дає можливість повністю очистити шлунок двопальцевим методом, привівши себе в
+стан повного голоду і спраги. Це може бути корисно, наприклад, якщо ти
+відчуваєш спрагу, але твій шлунок вже переповнений, і ти не можеш випити
+жодної краплі більше.
+
+Дізнатися рівень спраги, голоду або сп'яніння можна командою {y{hссчет{x.
+
+%SA% %H% {hh1075рідини{x
+  
+</text>
+    <title l="en">Hunger and Thirst</title>
     <title l="ru">Голод и жажда</title>
-    <title l="ua"></title>
+    <title l="ua">Голод і спрага</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">drink from a fountain or container</hint>
   <hint l="ru">попить из фонтана или емкости</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">попити з фонтана або ємності</hint>
   <name l="en">drink</name>
   <name l="ru">пить</name>
-  <name l="ua"></name>
+  <name l="ua">пити</name>
   <position>rest</position>
 </Command>

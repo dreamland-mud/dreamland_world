@@ -2,14 +2,38 @@
 <Command>
   <aliases l="en"></aliases>
   <aliases l="ru">осмотреться всмотреться</aliases>
-  <aliases l="ua"></aliases>
+  <aliases l="ua">озирнутися вдивитися</aliases>
   <cat>move</cat>
   <extra>keep_hide ghost undig</extra>
   <help id="1021" level="-1" ref="exits" type="CommandHelp">
     <extra l="en">where</extra>
     <extra l="ru">где местонахождение вглядываться здесь</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">де місцезнаходження вдивлятися тут</extra>
+    <text l="en">Upon entering an unfamiliar area or locality, it&apos;s useful to first find out where you are.
+
+%FMT%  *here*|*where*
+This will tell you which zone you are in and who else is there besides you.
+
+%FMT%  *where* _character name_
+%FMT%  *where pc* 
+This way, you can find out where in the zone a specific creature is located --
+for example, your {hh125quest target{x -- or treacherous enemies from your {hh32PC-range{x.
+
+%FMT%  *look around*
+Allows you to glance around, paying attention to locked doors, as well as
+characters in adjacent rooms.
+
+%FMT%  *inspect* _direction_
+A focused look in a given direction. The higher your level, the further you
+can inspect. %SA% %H% {hh799distant vision{x.
+The commands *look around* and *inspect* are synonymous.{x
+
+%FMT%  *exits*  
+Shows the exits from the room you are in. Closed and locked doors
+will be marked with asterisks. It will also show {hh1016hidden exits{x -- if you can see them.
+If you enable the &quot;auto-exit mode&quot; setting, exits are displayed
+right after the room description.
+</text>
     <text l="ru">Попав в незнакомую зону или местность, первым делом полезно узнать, где ты.
 
 %FMT%  *здесь*|*где*
@@ -35,17 +59,41 @@
 Если включить настройку *режим автовыходы*, то выходы отображаются
 сразу после описания комнаты.
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">Потрапивши в незнайому зону чи місцевість, в першу чергу корисно дізнатися, де ти знаходишся.
+
+%FMT%  *тут*|*де*
+Напише, в якій ти зоні, і хто тут ще є, крім тебе.
+
+%FMT%  *де* _ім&apos;я персонажа_
+%FMT%  *де ПК* 
+І так ти зможеш дізнатися, де в даній зоні знаходиться конкретна істота --
+наприклад, твоя {hh125ціль для квесту{x -- або підступні вороги з твого {hh32ПК-діапазону{x.
+
+%FMT%  *озирнутися*
+Дозволяє озирнутися навколо, звертаючи увагу на замкнені двері, а також на
+персонажів, які знаходяться у сусідніх кімнатах.
+
+%FMT%  *вдивитися* _напрямок_
+Пильно дивиться у заданому напрямку. Чим вищий твій рівень, тим далі
+можна вдивитися. %SA% %H% {hh799дальнє бачення{x.
+Команди *озирнутися* і *вдивитися* є синонімами.{x
+
+%FMT%  *виходи*  
+Показує виходи з кімнати, в якій ти знаходишся. Замкнені і закриті двері
+будуть позначені зірочками. Також покаже {hh1016приховані виходи{x -- якщо ти їх бачиш.
+Якщо ввімкнути налаштування *режим автовиходи*, то виходи відображаються
+відразу після опису кімнати.
+</text>
+    <title l="en">{CMovement: {xorientation on the ground</title>
     <title l="ru">{CПеремещение: {xориентировка на местности</title>
-    <title l="ua"></title>
+    <title l="ua">{CПереміщення: {xорієнтація на місцевості</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">look around or towards a direction</hint>
   <hint l="ru">оглядеться по сторонам или по направлению</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">озирнутися навколо або у напрямку</hint>
   <name l="en">scan</name>
   <name l="ru">оглядеться</name>
-  <name l="ua"></name>
+  <name l="ua">погляд</name>
   <order>player_only</order>
   <position>dead</position>
 </Command>

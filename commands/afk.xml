@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
-  <aliases l="en"></aliases>
   <aliases l="ru">афк</aliases>
-  <aliases l="ua"></aliases>
+  <aliases l="ua">афк</aliases>
   <cat>comm</cat>
   <extra>keep_hide ghost manacles afk</extra>
   <help id="1080" level="-1" ref="autostore replay" type="CommandHelp">
-    <text l="en"></text>
+    <text l="en">%FMT% *%CMD%*   
+AFK means "away from keyboard" -- "away from the keyboard", "I am not here".
+Use this command when you want to leave your character unattended
+for 5-10 minutes, but do not want to miss private messages addressed to you.
+It is better to leave unattended in a {hh86safe{x place, but even there your character
+may die from {hh1074thirst and hunger{x, {Rbe careful!{x It is better to write {hc*end*{x.
+This is also a good way to let other players know that you are not nearby:
+AFK status is visible with the commands *look around*, *where*, *who*.
+By the unwritten rule of etiquette, it is forbidden {hh32to attack{x players in AFK.
+
+%FMT% *%CMD%* _reason for absence_
+The specified reason will be displayed to anyone who tries to contact your character
+using *speak*.
+
+%FMT% *replay*
+Reproduces missed messages received either during AFK mode or when disconnected. With *autobuffer mode* enabled,
+all messages received in the heat of battle will also be remembered. This command
+can also replay all messages spoken in general channels or around,
+even while you were disconnected. Type {hc*(replay ?,listen ?)*{x.
+</text>
     <text l="ru">%FMT% *%CMD%*   
 AFK значит &quot;away from keyboard&quot; -- &quot;вдали от клавиатуры&quot;, &quot;меня тут нет&quot;.
 Используй эту команду, когда хочешь оставить твоего персонажа без присмотра
@@ -28,17 +46,37 @@ AFK значит &quot;away from keyboard&quot; -- &quot;вдали от кла�
 может воспроизвести все сообщения, произнесенные в общих каналах или вокруг,
 даже пока у тебя не было связи. Напиши {hc*(replay ?,прослушать ?)*{x.
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">%FMT% *%CMD%*   
+AFK означає "away from keyboard" -- "вдалині від клавіатури", "мене тут немає".
+Використовуй цю команду, коли хочеш залишити свого персонажа без нагляду
+на 5-10 хвилин, але не хочеш пропустити звернені до нього приватні репліки.
+Залишати без нагляду краще в {hh86безпечному{x місці, але навіть там твій персонаж
+може померти від {hh1074спраги та голоду{x, {Rбудь обережніше!{x Краще написати {hc*кінець*{x.
+Це також хороший спосіб дати знати іншим гравцям, що тебе немає поблизу:
+статус AFK видно за командами *оглянутися*, *де*, *хто*.
+За неписаним правилом гарного тону {hh32нападати{x на гравців в AFK заборонено.
+
+%FMT% *%CMD%* _причина відсутності_
+Вказана причина відобразиться всім, хто спробує звернутися до твого персонажа
+за допомогою *говорити*.
+
+%FMT% *прослухати*
+Відтворює пропущені повідомлення, отримані або під час знаходження в 
+режимі AFK, або при втраті зв'язку. При ввімкненому *режим автобуфер*
+всі репліки, отримані в запалі бою, також будуть запам'ятовані. Також ця команда
+може відтворити всі повідомлення, вимовлені в загальних каналах або навколо,
+навіть поки у тебе не було зв'язку. Напиши {hc*(replay ?,прослухати ?)*{x.
+</text>
+    <title l="en">{CCommunication: {xAFK, missed messages</title>
     <title l="ru">{CОбщение: {xАФК, пропущенные сообщения</title>
-    <title l="ua"></title>
+    <title l="ua">{CСпілкування: {xАФК, пропущені повідомлення</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">set AFK mode ('away')</hint>
   <hint l="ru">установить режим afk (&apos;отошел&apos;)</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">встановити режим afk ('відійшов')</hint>
   <name l="en">afk</name>
   <name l="ru">вок</name>
-  <name l="ua"></name>
+  <name l="ua">вок</name>
   <order>player_only</order>
   <position>dead</position>
 </Command>

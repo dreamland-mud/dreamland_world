@@ -2,7 +2,13 @@
 <Command>
   <cat>item</cat>
   <help id="1000" level="-1" type="CommandHelp">
-    <text l="en"></text>
+    <text l="en">%FMT%  *%CMD%* _%OBJ%_ _%MOB%_
+
+Anti-paladins can demand anything from anyone. The chance of getting smacked instead of receiving the expected item greatly depends on the level difference and the victim's {hh33nature{x.
+Evil creatures are more willing to part with their possessions in favor of the anti-paladin than good or neutral ones.
+
+%SA% %H% {hh1002request{x
+</text>
     <text l="ru">%FMT%  *%CMD%* _%OBJ%_ _%MOB%_
 
 Анти-паладины могут требовать что угодно у кого угодно. Шанс вместо ожидаемой
@@ -12,17 +18,25 @@
 
 %SA% %H% {hh1002попросить{x
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">%FMT%  *%CMD%* _%OBJ%_ _%MOB%_
+
+Анти-паладини можуть вимагати що завгодно у кого завгодно. Шанс замість очікуваної
+речі отримати по шолому сильно залежить від різниці рівнів і від {hh33вдачі{x жертви.
+Злі істоти охочіше розстануться зі своїми речами на користь анти-паладина, ніж
+добрі або нейтральні.
+
+%SA% %H% {hh1002попросити{x
+</text>
+    <title l="en">{CItems: {xdemand</title>
     <title l="ru">{CВещи: {xтребовать</title>
-    <title l="ua"></title>
+    <title l="ua">{CРечі: {xвимагати</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">(anti-paladins) demand an item for themselves</hint>
   <hint l="ru">(анти-паладины) потребовать себе вещь</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">(анти-паладіни) вимагати собі річ</hint>
   <name l="en">demand</name>
   <name l="ru">требовать</name>
-  <name l="ua"></name>
+  <name l="ua">вимагати</name>
   <order>player_only</order>
   <position>stand</position>
 </Command>

@@ -1,15 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
-  <aliases l="en"></aliases>
   <aliases l="ru">закончить</aliases>
-  <aliases l="ua"></aliases>
+  <aliases l="ua">закінчити</aliases>
   <cat>char</cat>
   <extra>keep_hide ghost undig manacles afk freeze nanny spellout</extra>
   <help id="992" level="-1" ref="rent" type="CommandHelp">
-    <extra l="en"></extra>
+    <extra l="en">hotel rent exit leave</extra>
     <extra l="ru">гостиница рента выход выйти</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">готель рента вихід вийти</extra>
+    <text l="en">%FMT% *%CMD%*   
+
+This command is used to leave the world. You can exit almost anywhere.
+=There is no rent= in our world. When you return, you will find yourself in
+the same room you were in{Sfа{Sx before leaving. All your belongings and
+parameters are automatically {hh991saved.{x
+
+{CWHEN YOU CANNOT EXIT{x
+%A% {hh32during PK{x: when adrenaline is rushing in your blood  {hh2146({BV{x), immediately after killing
+  a player ({RK{x) or after dying in PK ({DS{x)
+%A% while participating in the {hh994auction{x
+%A% if your {hh776soul is taken{x
+%A% while on someone else's {hh3clan territory{x
+
+After 20 {hh16ticks{x of inactivity, the character will attempt to leave the world automatically,
+but only if they are not inside {hh50a personal house{x or in {hh86the Pavilion{x in Midgaard.
+</text>
     <text l="ru">%FMT% *%CMD%*   
 
 Эта команда используется для выхода из мира. Выйти можно почти где угодно.
@@ -27,17 +42,33 @@
 После 20 {hh16тиков{x бездействия персонаж попытается покинуть мир автоматически,
 но только если он не находится внутри {hh50персонального дома{x или в {hh86Беседке{x в Мидгаарде.
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">%FMT% *%CMD%*   
+
+Ця команда використовується для виходу зі світу. Вийти можна майже всюди.
+=Ренти= (або плати за проживання) у нашому світі немає. Коли повернешся, ти опинишся в
+тій самій кімнаті, в якій був{Sfа{Sx перед виходом. Усі твої речі та
+параметри автоматично {hh991зберігаються.{x
+
+{CВ ЯКИХ ВИПАДКАХ НЕ МОЖНА ВИЙТИ{x
+%A% {hh32під час ПК{x: коли в крові вирує {hh2146адреналін{x ({BV{x), відразу після вбивства
+  гравця ({RK{x) або після смерті в ПК ({DS{x)
+%A% поки береш участь в {hh994аукціоні{x
+%A% якщо {hh776забрали душу{x
+%A% знаходячись на чужій {hh3клановій території{x
+
+Після 20 {hh16тиків{x бездіяльності персонаж спробує покинути світ автоматично,
+але тільки якщо він не знаходиться всередині {hh50персонального будинку{x або в {hh86Альтанці{x в Мідгаарді.
+</text>
+    <title l="en">Exit Game</title>
     <title l="ru">Выход из игры</title>
-    <title l="ua"></title>
+    <title l="ua">Вихід з гри</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">exit the world</hint>
   <hint l="ru">выйти из мира</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">вийти зі світу</hint>
   <name l="en">quit</name>
   <name l="ru">конец</name>
-  <name l="ua"></name>
+  <name l="ua">кінець</name>
   <order>player_only</order>
   <position>dead</position>
 </Command>

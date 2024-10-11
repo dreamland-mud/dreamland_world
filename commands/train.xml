@@ -2,16 +2,44 @@
 <Command>
   <aliases l="en">gain</aliases>
   <aliases l="ru">тренировки</aliases>
-  <aliases l="ua"></aliases>
+  <aliases l="ua">тренування</aliases>
   <cat>service</cat>
   <help id="1353" labels="char learn" level="-1" type="CommandHelp">
     <extra l="en">convert revert trainers</extra>
     <extra l="ru">как конвертация конвертировать &apos;купить тренировки&apos; &apos;купить тренировку&apos; моряк &apos;продать тренировку&apos; трейнеры &apos;тренер навыков&apos; тренеровать тренеры &apos;тренировать сложение кп&apos; &apos;тренировочные сессии&apos;</extra>
-    <extra l="ua"></extra>
+    <extra l="ua">як конвертація конвертувати &apos;купити тренування&apos; &apos;купити тренування&apos; моряк &apos;продати тренування&apos; тренери &apos;тренер навичок&apos; тренувати тренери &apos;тренувати складання кп&apos; &apos;тренувальні сесії&apos;</extra>
     <keyword l="en">trainers</keyword>
     <keyword l="ru">тренеры тренировка</keyword>
-    <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <keyword l="ua">тренери тренування</keyword>
+    <text l="en">You can train (increase) your stats with special characters in the world, =trainers=.
+Beginners can find trainers on the {hh1560Galleon{x or in the {hh1433School{x, while experienced adventurers
+should turn to the sailor in {hh1392Midgaard{x.
+
+%FMT%  *%CMD%* _parameter_
+%FFF%  *%CMD%* *sum* *hp*
+
+Increase one of the selected character parameters: strength (str), intelligence (int),
+wisdom (wis), dexterity (dex), constitution (con), charisma (cha).
+
+Increasing any parameter costs one training session, while
+the corresponding parameter increases by one. To train, you need
+to be next to the trainer. You receive training sessions when you level up
+every 5 levels, or you can buy them in exchange for practice sessions from
+any trainer:
+
+%FMT%  *%CMD%* *sell*
+Turns one training into 10 practice sessions.
+
+%FMT%  *%CMD%* *buy*
+Turns 10 practice sessions into one training.
+
+It is better to first train wisdom and constitution. Wisdom affects the number
+of practices you receive when leveling up. Constitution affects
+the amount of life you gain when leveling up. In the future,
+you can train all your parameters to the maximum.
+
+%SA% %H% {hh41parameters{x, {hh989attract{x
+</text>
     <text l="ru">Тренировать (повышать) параметры можно у специальных жителей мира, =тренеров=.
 Новички могут найти тренеров на {hh1560Галеоне{x или в {hh1433Школе{x, а опытным приключенцам
 стоит обратиться к моряку в {hh1392Мидгаарде{x.
@@ -41,17 +69,45 @@
 
 %SA% %H% {hh41параметры{x, {hh989привлечь{x
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">Тренувати (підвищувати) параметри можна у спеціальних жителів світу, =тренерів=.
+Новачки можуть знайти тренерів на {hh1560Галеоні{x або в {hh1433Школі{x, а досвідченим пригодникам
+варто звернутися до моряка в {hh1392Мідгаарді{x.
+
+%FMT%  *%CMD%* _параметр_
+%FFF%  *%CMD%* *складання* *кп*
+
+Підвищити один з обраних параметрів персонажа: силу (str), інтелект (int),
+мудрість (wis), спритність (dex), складання (con), харизму (cha).
+
+Підвищення будь-якого параметра коштує одну тренувальну сесію, при цьому
+відповідний параметр підвищується на одиницю. Для тренування необхідно
+стояти поруч з тренером. Тренувальні сесії ти отримуєш при переході на
+кожний 5-й рівень, або можеш купити їх у обмін на сесії практики у
+будь-якого тренера:
+
+%FMT%  *%CMD%* *продати*
+Перетворює одне тренування на 10 сесій практики.
+
+%FMT%  *%CMD%* *купити*
+Перетворює 10 сесій практики на одне тренування.
+
+Першими краще тренувати мудрість і складання. Від мудрості залежить кількість
+практик, отримуваних при переході з рівня на рівень. Від складання залежить
+кількість отриманого життя при переході на наступний рівень. У подальшому
+ти зможеш натренувати всі твої параметри до максимуму.
+
+%SA% %H% {hh41параметри{x, {hh989залучити{x
+</text>
+    <title l="en">{CCharacteristics:{x how to train</title>
     <title l="ru">{CХарактеристики:{x как тренировать</title>
-    <title l="ua"></title>
+    <title l="ua">{CХарактеристики:{x як тренувати</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">train your stats with a trainer</hint>
   <hint l="ru">тренировать свои параметры у тренера</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">тренувати свої параметри у тренера</hint>
   <name l="en">train</name>
   <name l="ru">тренировать</name>
-  <name l="ua"></name>
+  <name l="ua">тренувати</name>
   <order>player_only</order>
   <position>stand</position>
 </Command>

@@ -5,8 +5,41 @@
   <help id="1095" level="-1" type="CommandHelp">
     <extra l="en">mysocial</extra>
     <extra l="ru">мойсоциал</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">мойсоціал</extra>
+    <text l="en">Apart from {hh1061emotions{x, there are several dozen =socials= -- built-in public commands for interesting {hh31roleplay{x among other players, such as *hug*, *thank*, or *cluck*. Socials are indispensable for self-expression, creating an interesting game atmosphere, and roleplaying your character as a whole. Moreover, knowledge of socials is necessary in many {hh124quests{x and {hh2124missions{x.
+
+%FMT% *%CMD%*
+A list of all socials with Russian and English names and brief explanations. You can read help on each of them and see how the action of this social is visible to you and those around you. For example, %H% [hug], %H% [cry].
+
+{CPERSONAL SOCIALS{x
+If you lack the standard set of socials, you can add your own! Such a social can only be used by the author and their followers; otherwise, it will be no different from a regular one. You can suggest the most successful and witty socials to the Gods to replenish the standard collection.
+
+%FMT% *mysocial* _message type_ _social name_ _message_
+More about different types of messages:
+%PAUSE%
+1. {ynotarget_self{w and {ynotarget_others{w: you and those around you will see it if you use the social just like that, without a character as a target. Example:
+   mysocial notarget_self buff You polish your nails with a vacant look.
+   mysocial notarget_others buff $c1 polishes their nails with a nonchalant face!
+
+2. {yonself_self{w and {yonself_others{w: you and those around you will see it if you apply the social to yourself. Example:
+   mysocial onself_self ruffle You ruffle your hair, pretending to be neurotic.
+   mysocial onself_others ruffle $c1 ruffles their hair.
+ 
+3. {yontarget_victim{w, {yontarget_others{w and {yontarget_self{w: if you specify someone's name as a social's argument, these messages will be seen by the social's target, those around, and yourself, respectively. Example:
+   mysocial ontarget_victim pinch $c1 pinches you on the behind!
+   mysocial ontarget_others pinch $c1 pinches $C4 on the behind with a grin.
+   mysocial ontarget_self pinch You pinch $C4 on the behind with a grin.
+
+Macros $c1...$c6 will be replaced with your name in the necessary case, and symbols $C1...$C6 -- with the social's target name.
+%RESUME%
+Also, you can:
+%FMT% *mysocial* *list*             : show the list of all personal socials
+%FFF% *mysocial* *show* _name_     : show a specific example in detail
+%FFF% *mysocial* *delete* _name_       : delete a social
+%FFF% *mysocial* *rus* _name_ _synonym_ : assign a Russian synonym
+
+Social names must be entered in full when creating. If a personal social's name coincides with one of your {hh1345syonyms{x or existing commands, it will not work. Of course, any misuse intended to mislead those around you is caught and penalized.
+</text>
     <text l="ru">Помимо {hh1061эмоций{x существует несколько десятков =социалов= -- встроенных
 общественных команд для интересного {hh31отыгрыша{x среди других игроков, таких как
 *обнять*, *благодарить* или *кудахтать*. Социалы незаменимы для самовыражения,
@@ -58,17 +91,50 @@ $C1...$C6 -- именем цели социала.
 работать он не будет. Ну и, разумеется, разные злоупотребления с целью ввести в
 заблуждение  окружающих отлавливаются и наказываются.
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">Окрім {hh1061емоцій{x, існує кілька десятків =соціалів= -- вбудованих суспільних команд для цікавого {hh31відтворення{x серед інших гравців, таких як *обійняти*, *подякувати* або *кудахкати*. Соціали незамінні для самовираження, створення цікавої ігрової атмосфери та відтворення вашого персонажа в цілому. А ще знання соціалів необхідне в багатьох {hh124завданнях{x і {hh2124квестах{x.
+
+%FMT% *%CMD%*
+Список усіх соціалів з російськими та англійськими назвами та короткими поясненнями. Для кожного з них можна прочитати довідку і побачити, як дія цього соціалу видно тобі та оточуючим. Наприклад, %H% [обійняти], %H% [плакати].
+
+{CПЕРСОНАЛЬНІ СОЦІАЛИ{x
+Якщо тобі не вистачає стандартного набору соціалів, можна додати свій! Користуватися таким соціалом може лише автор і його послідовники, в іншому ж він нічим не відрізнятиметься від звичайних. Найуспішніші та дотепні соціали можеш запропонувати Богам для поповнення стандартної колекції.
+
+%FMT% *мойсоціал* _вид повідомлення_ _назва соціалу_ _повідомлення_
+Докладніше про різні види повідомлень:
+%PAUSE%
+1. {yбездомети_я{w і {yбездомети_інші{w: побачиш ти і оточуючі, якщо використовувати соціал просто так, без персонажа як цілі. Приклад:
+   мойсоц бездомети_я buff Ти поліруєш нігті з відсутнім виглядом.
+   мойсоц бездомети_інші buff $c1 полірує свої нігті з наплювательським виразом обличчя!
+
+2. {yнасебе_я{w і {yнасебе_інші{w: побачиш ти і оточуючі, якщо застосувати соціал на себе. Приклад:
+   мойсоц насебе_я ruffle Ти патлатиш своє волосся, вдаючи неврастеніка.
+   мойсоц насебе_інші ruffle $c1 патлатить своє волосся.
+ 
+3. {yнаціль_жертва{w, {yнаціль_інші{w і {yнаціль_я{w: якщо в аргументі соціалу вказати чиєсь ім'я, ці повідомлення побачать ціль соціалу, оточуючі та ти сам, відповідно. Приклад:
+   мойсоц націль_жертва pinch $c1 щипає тебе за попку!
+   мойсоц націль_інші pinch $c1 щипає $C4 за попку і усміхається.
+   мойсоц націль_я pinch Ти щипаєш $C4 за попку і усміхаєшся.
+
+Макроси $c1...$c6 будуть замінені твоїм ім'ям у потрібному відмінку, а символи $C1...$C6 -- ім'ям цілі соціалу.
+%RESUME%
+Крім того, можна:
+%FMT% *мойсоціал* *перелік*             : показати список усіх персональних соціалів
+%FFF% *мойсоціал* *показати* _ім'я_     : детально показати окремий екземпляр
+%FFF% *мойсоціал* *видалити* _ім'я_       : видалити соціал
+%FFF% *мойсоціал* *рус* _ім'я_ _синонім_ : присвоїти російський синонім
+
+Імена соціалів при створенні потрібно вводити повністю. Якщо назва персонального соціалу збігається з якимось із твоїх {hh1345синонімів{x або існуючих команд, він не працюватиме. Зрозуміло, будь-яке зловживання з метою вводу в оману оточуючих виявляється і карається.
+</text>
+    <title l="en">{CRoleplaying:{x socials, public actions</title>
     <title l="ru">{CОтыгрыш:{x социалы, общественные действия</title>
-    <title l="ua"></title>
+    <title l="ua">{CЛегендизація:{x соціали, суспільні дії</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">list of all socials with explanations</hint>
   <hint l="ru">список всех социалов с объяснениями</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">список усіх соціалів з поясненнями</hint>
   <name l="en">socials</name>
   <name l="ru">социалы</name>
-  <name l="ua"></name>
+  <name l="ua">соціали</name>
   <order>player_only</order>
   <position>dead</position>
 </Command>

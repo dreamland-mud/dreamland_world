@@ -5,11 +5,47 @@
   <help id="227" labels="move" level="-1" ref="dismount" type="CommandHelp">
     <extra l="en">mounted rideable</extra>
     <extra l="ru">ездовые конь наездник верхом &apos;верховая езда&apos; всадник</extra>
-    <extra l="ua"></extra>
+    <extra l="ua">їздові кінь наїзник верхи &apos;верхова їзда&apos; вершник</extra>
     <keyword l="en">riding</keyword>
     <keyword l="ru">&apos;езда верхом&apos;</keyword>
-    <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <keyword l="ua">&apos;їзда верхи&apos;</keyword>
+    <text l="en">You can ride some {hh15followers{x. Riders can travel
+long distances, and mounts with appropriate skills will allow
+you to {hh2128swim{x across or {hh575fly{x over obstacles.
+
+%FMT% *mount* _%CHAR%_: to mount someone
+%FFF% *dismount*: dismount, get off the mount
+
+Only {hh1466Knights{x have a special skill that allows them to {hh931fight mounted{x on
+specially trained horses from the Knight's Castle. All other riders
+will have to dismount as soon as the battle begins.
+
+{hh151Centaurs{x can carry others. Only those they permit can mount a centaur.
+
+{CCENTAUR COMMANDS{x
+*drop* - drop a rider from your back
+
+%FMT% *mount* *list*:
+Show a list of those who can currently ride you.
+
+%FMT% *mount* *permit* *%ALL%*:
+Allow everyone to ride, except those explicitly forbidden with the
+*mount* *forbid* command.
+
+%FMT% *mount* *forbid* *%ALL%*:
+Forbid everyone from riding, except those explicitly permitted with the
+*mount* *permit* command. By default, everyone is forbidden.
+
+%FMT% *mount* *forbid* _%CHAR%_|_clan_:
+If riding is currently allowed for everyone, forbid the specified character or clan.
+If riding is not allowed for anyone, remove the specified character/clan from the list
+of permitted riders.
+
+%FMT% *mount* *permit* _%CHAR%_|_clan_:
+If riding is not allowed for anyone, permit the specified character or
+clan. If riding is allowed for everyone, remove the specified character/clan from the list
+of forbidden riders.
+</text>
     <text l="ru">На некоторых {hh15последователях{x можно ездить верхом. Всадники могут путешествовать
 верхом на дальние расстояния, а скакуны с соответствующими умениями позволят
 тебе {hh2128переплывать{x или {hh575взлетать{x над преградами.
@@ -48,17 +84,54 @@
 клану. Если сейчас ездить можно всем, убрать указанного персонажа/клан из списка
 запрещенных ездоков.
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">На деяких {hh15послідовниках{x можна їздити верхи. Вершники можуть подорожувати
+на далекі відстані, а скакуни з відповідними навичками дозволять
+тобі {hh2128перепливати{x або {hh575злітати{x над перешкодами.
+
+%FMT% *осідлати* _%CHAR%_: осідлати когось
+%FFF% *злізти*: злізти, зійти зі скакуна
+
+Тільки {hh1466Лицарям{x доступне спеціальне вміння, що дозволяє {hh931битися верхи{x на
+спеціально навчених конях з Лицарського Замку. Всі інші наїзники
+повинні злізти, як тільки почнеться битва.
+
+{hh151Кентаври{x можуть возити на собі кого завгодно. Сідлати кентавра можуть лише ті,
+кому він чи вона дозволять.
+
+{CКОМАНДИ КЕНТАВРА{x
+*скинути* - скинути наїзника зі своєї спини
+
+%FMT% *осідлати* *список*:
+Показати список тих, кого зараз можна на тобі їздити.
+
+%FMT% *осідлати* *дозволити* *%ALL%*:
+Дозволити їздити всім, крім тих, кому було заборонено явно за допомогою команди
+*осідлати* *заборонити*.
+
+%FMT% *осідлати* *заборонити* *%ALL%*:
+Заборонити їздити всім, крім тих, кому було дозволено явно за допомогою команди
+*осідлати* *дозволити*. За замовчуванням заборонено всім.
+
+%FMT% *осідлати* *заборонити* _%CHAR%_|_клан_:
+Якщо зараз можна їздити всім, заборонити їзду вказаному персонажу або клану.
+Якщо зараз їздити не можна нікому, видалити вказаного персонажа/клан зі списку
+дозволених їздоків.
+
+%FMT% *осідлати* *дозволити* _%CHAR%_|_клан_:
+Якщо зараз їздити не можна нікому, дозволити їздити вказаному персонажу або
+клану. Якщо зараз їздити можна всім, видалити вказаного персонажа/клан зі списку
+заборонених їздоків.
+</text>
+    <title l="en">{CMovement: {xriding</title>
     <title l="ru">{CПеремещение: {xверховая езда</title>
-    <title l="ua"></title>
+    <title l="ua">{CПереміщення: {xверхова їзда</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">get on a character</hint>
   <hint l="ru">сесть верхом на персонажа</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">сісти верхи на персонажа</hint>
   <name l="en">mount</name>
   <name l="ru">оседлать</name>
-  <name l="ua"></name>
+  <name l="ua">осідлати</name>
   <order>allow_ruler player_only</order>
   <position>fight</position>
 </Command>

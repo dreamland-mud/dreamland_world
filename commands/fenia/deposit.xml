@@ -3,13 +3,31 @@
   <cat>bank</cat>
   <extra>keep_hide ghost</extra>
   <help id="1086" labels="info" level="-1" ref="balance withdraw" type="CommandHelp">
-    <extra l="en"></extra>
+    <extra l="en">bank account</extra>
     <extra l="ru">банковский счет</extra>
-    <extra l="ua"></extra>
+    <extra l="ua">банківський рахунок</extra>
     <keyword l="en">bank</keyword>
     <keyword l="ru">банки банкоматы</keyword>
-    <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <keyword l="ua">банки банкомати</keyword>
+    <text l="en">In the world, there are several banks where you can trust to keep your {hh13money{x safe. The most well-known ones are located in Midgaard and New Thalos. You can store gold or silver in an account -- and {hh3clan banks{x allow you to store diamonds as well. When withdrawing money from an account, the bank charges you a certain percentage.
+
+%FMT%  *deposit* _number_ *silver*
+%FFF%  *deposit* _number_ *gold*
+Deposit money into a personal account.
+
+%FMT%  *deposit* _number_ *silver* _recipient_
+%FFF%  *deposit* _number_ *gold* _recipient_
+You can deposit money into someone else's account, provided the recipient is in the world. Just mention their name in the *deposit* command.
+
+%FMT%  *withdraw* _number_ *silver*
+%FFF%  *withdraw* _number_ *gold*
+Withdraw the specified amount from the account.
+
+%FMT%  *balance*
+Check how much money you have in the bank.
+
+All these commands work only when inside a bank or next to an ATM.
+</text>
     <text l="ru">В Мире есть несколько банков, которым ты можешь доверить на сохранение твои
 {hh13деньги{x. Самые известные расположены в Мидгаарде и Новом Талосе. На счету можно
 хранить золото или серебро -- а {hh3клановые банки{x позволяют хранить и бриллианты.
@@ -34,17 +52,37 @@
 Все эти команды работают только в помещении банка или рядом с банковскими
 автоматами.
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">У світі існує декілька банків, яким ти можеш довірити зберігання своїх {hh13грошей{x. Найвідоміші розташовані у Мідгаарді та Новому Талосі. На рахунку можна зберігати золото чи срібло -- а {hh3кланові банки{x дозволяють зберігати також діаманти. При знятті грошей з рахунку банк стягує з тебе певну комісію.
+
+%FMT%  *насчет* _кількість_ *срібло*
+%FFF%  *насчет* _кількість_ *золото*
+Помістити гроші на особистий рахунок.
+
+%FMT%  *насчет* _кількість_ *срібло* _адресат_
+%FFF%  *насчет* _кількість_ *золото* _адресат_
+Можна покласти гроші на чужий рахунок, при цьому адресат переказу має
+знаходитися у світі. Просто вкажи його ім'я у команді *насчет*.
+
+%FMT%  *сосчета* _кількість_ *срібло*
+%FFF%  *сосчета* _кількість_ *золото*
+Зняти вказану суму з рахунку.
+
+%FMT%  *баланс*
+Дізнатися, скільки грошей у тебе є в банку.
+
+Усі ці команди працюють тільки у приміщенні банку або поряд з банківськими
+автоматами.
+</text>
+    <title l="en">{CEconomy: {xbank accounts</title>
     <title l="ru">{CЭкономика: {xбанковские счета</title>
-    <title l="ua"></title>
+    <title l="ua">{CЕкономіка: {xбанківські рахунки</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">deposit a sum of money into a bank account</hint>
   <hint l="ru">положить сумму денег на банковский счет</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">покласти суму грошей на банківський рахунок</hint>
   <name l="en">deposit</name>
   <name l="ru">насчет</name>
-  <name l="ua"></name>
+  <name l="ua">нарахунок</name>
   <order>player_only</order>
   <position>rest</position>
 </Command>

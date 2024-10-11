@@ -5,8 +5,20 @@
   <help id="1029" level="-1" type="CommandHelp">
     <extra l="en">day evening morning night today</extra>
     <extra l="ru">день ночь сегодня утро вечер &apos;время дня&apos; &apos;время суток&apos;</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">день ніч сьогодні ранок вечір &apos;час дня&apos; &apos;час доби&apos;</extra>
+    <text l="en">The time of day (day or night) affects many events in the game. For example, at night without a
+{hh65lantern{x or {hh830infrared vision{x you can't see anything in the room, and even with a lantern
+you can't see {hh1021adjacent exits{x. During the day outside, {hh144vampires{x are scorched by the sun's rays.
+
+You can leave messages that are only visible at certain times of the day
+(see %H% {hh61tags{x)
+
+%FMT% *%CMD%*
+This command shows the time of day and date. In some parts of our world, time flows differently. If you have a watch, the time of day can be seen in the status line
+(%H% {hh1012hint{x).
+
+%SA% %H% {hh16update{x, {hh1027calendar{x
+</text>
     <text l="ru">Время суток (день или ночь) влияет на многие события в игре. Например, ночью без
 {hh65фонаря{x или {hh830инфравидения{x нельзя ничего разглядеть в комнате, а даже с фонарем
 не видно {hh1021соседние выходы{x. Днем на улице {hh144вампиров{x обжигают лучи солнца. 
@@ -21,17 +33,30 @@
 
 %SA% %H% {hh16обновление{x, {hh1027календарь{x
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">Час доби (день або ніч) впливає на багато подій у грі. Наприклад, вночі без
+{hh65ліхтаря{x або {hh830інфравізора{x не можна нічого розглянути в кімнаті, а навіть із ліхтарем
+не видно {hh1021сусідні виходи{x. Вдень на вулиці {hh144вампірів{x обпалюють промені сонця.
+
+Можна залишати повідомлення, які видно тільки в певний час доби
+(див. %H% {hh61теги{x)
+
+%FMT% *%CMD%*
+Ця команда показує час доби та дату. У деяких точках нашого світу час
+тече по-іншому. Якщо у тебе є години, час доби можна бачити в рядку статусу
+(%H% {hh1012підказка{x).
+
+%SA% %H% {hh16оновлення{x, {hh1027календар{x
+</text>
+    <title l="en">Time of Day</title>
     <title l="ru">Время суток</title>
-    <title l="ua"></title>
+    <title l="ua">Час доби</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">find out the time of day and date</hint>
   <hint l="ru">узнать время суток и дату</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">дізнатися час доби та дату</hint>
   <name l="en">time</name>
   <name l="ru">время</name>
-  <name l="ua"></name>
+  <name l="ua">час</name>
   <order>player_only</order>
   <position>dead</position>
 </Command>

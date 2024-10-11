@@ -1,15 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
-  <aliases l="en"></aliases>
   <aliases l="ru">внешность</aliases>
-  <aliases l="ua"></aliases>
+  <aliases l="ua">зовнішність</aliases>
   <cat>config</cat>
   <extra>keep_hide ghost</extra>
   <help id="1083" level="-1" type="CommandHelp">
     <extra l="en">descriptions</extra>
     <extra l="ru">дескр &apos;описание персонажа&apos; описания &apos;смена описания&apos; &apos;удалить описание&apos;</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">дескр &apos;опис персонажа&apos; описи &apos;зміна опису&apos; &apos;видалити опис&apos;</extra>
+    <text l="en">=Description= -- a mandatory element for any character. Your description is how others see you. Agree, it's hard to see an empty place, so a description is mandatory. When creating a new character, we automatically generate a description for him based on {hh54race{x, {hh28class{x, and gender. You can change it at any time according to your {hh31roleplaying{x activities -- we warmly welcome creativity and imagination!
+
+Writing a description from our {hh2133web-client{x is very simple via the {hh1057web-editor{x:
+%A% (if there is already a description) type *%CMD%* *copy* to copy it
+%A% type {y{hcweb{x
+%A% create and save a description
+%A% type *%CMD%* *paste*
+
+Examples of good descriptions can be seen here:
+- {y{hlhttps://dreamland.rocks/gallery.html{x
+
+{CRULES FOR CREATING DESCRIPTIONS{x
+%A% A good description consists of one or two paragraphs of coherent text that tells about your appearance: facial features, body shape, posture, gait, hair/eye/skin color, and what stands out to those looking at you. Clothing can also be described, but remember your equipment will change with levels. For example, you can {hh56recolor{x one of the {hh126quest items{x and include it in your description.
+
+%A% Do not describe the thoughts, actions, and reactions of players looking at you -- it depends on them. Also, do not describe actions that you supposedly perform on the observer -- how you deftly kill or rob someone at every glance -- that makes no sense.
+
+%A% Many visually impaired players play in our world, and their screen-reading programs do not handle pseudo-graphics, ASCII art, and other strange symbols well -- please try not to use them. For ASCII art masterpieces created by you, gods may make an exception if they fit your character.
+
+%A% For similar reasons, try to write a description only in Ukrainian or Russian. If transliteration is the only encoding available to you, contact the gods for help in translating your description into a normal view. English descriptions are not very desirable -- not all players understand English. The gods will point out grammatical errors to you, but try to write correctly.
+
+%A% Empty or meaningless descriptions are prohibited. Profanity, rude words, and expressions in descriptions are forbidden. Anachronisms -- words and concepts that destroy the medieval atmosphere are highly undesirable.
+
+The Gods of the Dream World may revoke your character's verification (%H% {hh1071verification{x) if the description does not meet the requirements.
+
+Without a web editor, these commands are used to edit the description:
+%FMT%  *%CMD%*  
+%FMT%  *%CMD%* *show* 
+Shows your current description in its original form, including all color tags and markup.
+
+%FMT% *%CMD%* *+* _line_
+Adds a line to the description.
+
+%FMT% *%CMD%* *-*
+Removes the last line of the description.
+
+By the way, {hh15followers{x can {hh1091order{x a description change -- sometimes it's useful, for example, to quickly identify your {hh545golem{x in the faceless ranks of his brethren.
+
+%SA% %H% {hh43colors{x, %H% {hh61tags{x, %H% {hh1084smell{x</text>
     <text l="ru">=Описание= -- обязательный элемент любого персонажа. Твое описание -- это то,
 как тебя видят окружающие. Согласись, трудно увидеть пустое место, поэтому
 описание обязательно. При создании нового персонажа мы автоматически генерируем
@@ -75,16 +111,53 @@
 
 %SA% %H% {hh43цвета{x, %H% {hh61тэги{x, %H% {hh1084нюхать{x
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">=Опис= -- обов'язковий елемент будь-якого персонажа. Твій опис -- це те, як тебе бачать оточуючі. Погодься, важко побачити порожнє місце, тому опис обов'язковий. При створенні нового персонажа ми автоматично генеруємо йому опис, виходячи з {hh54раси{x, {hh28класу{x і статі. Ти можеш змінити його в будь-який момент згідно з твоїм {hh31рольовим відтворенням{x -- ми тепло вітаємо творчість і політ фантазії!
+
+Написати опис з нашого {hh2133веб-клієнта{x простіше простого через {hh1057веб-редактор{x:
+%A% (якщо опис вже є) напиши *%CMD%* *копіювати*, щоб його скопіювати
+%A% напиши {y{hcвеб{x
+%A% створи і збережи опис
+%A% напиши *%CMD%* *вставити*
+
+Побачити приклади хороших описів можна тут:
+- {y{hlhttps://dreamland.rocks/gallery.html{x
+
+{CПРАВИЛА СКЛАДАННЯ ОПИСІВ{x
+%A% Хороший опис складається з одного-двох абзаців зв'язного тексту, в якому розповідається про твою зовнішність: риси обличчя, фігуру, поставу, ходу, колір волосся/очей/шкіри, про те, що різко привертає увагу тих, хто дивиться на тебе. Одяг також можна описати, але не забувай, що твоє обладнання буде змінюватись з рівнями. Наприклад, можна {hh56перефарбувати{x одну з {hh126квестових речей{x і включити її в свій опис.
+
+%A% Не варто описувати думки, дії і реакції гравців, які дивляться на тебе -- це залежить від них самих. Також не варто описувати дії, які ти нібито виконуєш з тими, хто дивиться на тебе -- як ти їх спритно вбиваєш або обкрадаєш при кожному погляді на тебе -- це безглуздя.
+
+%A% У нашому світі грає багато незрячих гравців, і їх програми для екранного супроводу погано справляються з псевдографікою, ASCII-art і будь-якими іншими символами -- постарайся, будь ласка, їх не використовувати. Для ASCII-art шедеврів, створених безпосередньо тобою, боги можуть зробити виняток, якщо вони будуть відповідати твоєму персонажу.
+
+%A% З тієї ж причини постарайся писати опис тільки українською або російською мовою. Якщо єдине доступне тобі кодування -- це трансліт, звернись до богів за допомогою у перекладі твого опису в нормальний вигляд. Англійські описи не дуже бажані -- не всі гравці розуміють англійську. На граматичні помилки тобі вкажуть боги, однак старайся писати грамотно.
+
+%A% Заборонені порожні або безглузді описи. Заборонені нецензурні, грубі слова і вирази в описах. Сильно небажані анахронізми -- слова і поняття, що руйнують рольову обстановку середньовічної епохи.
+
+Боги Світу Мрій можуть позбавити твого персонажа підтвердження (%H% {hh1071підтвердження{x), якщо опис не відповідає вимогам.
+
+Без вебредактора для редагування опису використовуються такі команди:
+%FMT%  *%CMD%*  
+%FMT%  *%CMD%* *показати* 
+Показує твоє поточне опис в його початковому вигляді, тобто з усіма тагами кольорів і розмітки.
+
+%FMT% *%CMD%* *+* _рядок_
+Додає рядок до опису.
+
+%FMT% *%CMD%* *-*
+Видаляє останній рядок опису.
+
+До речі, {hh15послідовники{x можуть {hh1091наказати{x змінити опис -- іноді це корисно, наприклад, щоб швидко впізнати свого {hh545голема{x в безликому строю його братів.
+
+%SA% %H% {hh43кольори{x, %H% {hh61таги{x, %H% {hh1084нюхати{x</text>
+    <title l="en">{CRoleplay: {xCharacter Description</title>
     <title l="ru">{CОтыгрыш: {xОписание персонажа</title>
-    <title l="ua"></title>
+    <title l="ua">{CВідтворення ролі: {xОпис персонажа</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">edit your appearance description</hint>
   <hint l="ru">редактировать описание своей внешности</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">редагувати опис своєї зовнішності</hint>
   <name l="en">description</name>
   <name l="ru">описание</name>
-  <name l="ua"></name>
+  <name l="ua">опис</name>
   <position>dead</position>
 </Command>

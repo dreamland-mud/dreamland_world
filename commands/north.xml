@@ -1,12 +1,46 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <Command>
   <cat>move</cat>
   <extra>keep_hide ghost</extra>
   <help id="1022" labels="learn" level="-1" ref="down east south up west" type="CommandHelp">
     <extra l="en">movement</extra>
     <extra l="ru">движение ходить передвижение перемещение сокращение сокращения управление</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">рух пересування пересуватись переміщення скорочення управління</extra>
+    <text l="en">You can walk where the exits from the current location lead.
+The exits can be to the north, south, west, east, up (do not confuse with north), and down.
+To go north, you need to type {hc{ynorth{x and so on.
+%PAUSE%
+                    {Ynorth{y
+                        |  {Yup{y
+                        | /
+                        |/
+             {Ywest{y------+------{Yeast{y
+                       /|
+                      / |
+                  {Ydown{y  |
+                        {Ysouth{x
+{x%RESUME%
+For convenience, commands can be shortened to one letter: for example, by using the command
+{hc{ye{x ({hc{yeast{x), you'll go east.
+To go down or up, just type {ydo{x or {yu{x, 
+or {yt{x ({yto descend{x), {yu{x ({yto ascend{x).
+
+You can walk only in a standing position -- see %H% {hh1020sleep{x and other
+commands for body positioning.
+
+{CDON'T KNOW WHERE TO GO?{x
+You can find out where the exits from the current location are by using the command {hc{yexits{x or
+{hc{ylook{x. A room might not have an exit in one of the directions, or it might be
+closed, locked, or hidden. How to find such exits and how to deal with doors, read in %H% {hh1021exits{x, %H% {hh1013open{x.
+
+If you're lost or in trouble -- use {hh862return{x.
+
+Besides this, you can leave the area by entering a portal or additional exit:
+read %H% {hh1016enter{x. To find out which zone you're in and who is here from
+players, use the command {hc{ywhere{x. To find out which creatures are nearby,
+use the command {hc{ysurvey{x.
+
+%SA% %H% {hh18types of movement{x, %H% {hh1078run{x.
+</text>
     <text l="ru">Ходить можно туда, куда ведут выходы из текущего места.
 Выходы бывают на север, юг, запад, восток, вверх (не путать с севером) и вниз.
 Чтобы пойти на север, надо написать {hc{yсевер{x и так далее.
@@ -44,17 +78,53 @@
 
 %SA% %H% {hh18типы перемещения{x, %H% {hh1078бежать{x.
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">Ходити можна туди, куди ведуть виходи з поточного місця.
+Виходи можуть бути на північ, південь, захід, схід, вгору (не плутати з північчю) і вниз.
+Щоб йти на північ, потрібно написати {hc{yпівніч{x і так далі.
+%PAUSE%
+                    {Yпівніч{y
+                        |  {Yвгору{y
+                        | /
+                        |/
+             {Yзахід{y------+------{Yсхід{y
+                       /|
+                      / |
+                  {Yвниз{y  |
+                        {Yпівдень{x
+{x%RESUME%
+Для зручності команди можна скорочувати до однієї букви: наприклад, за командою
+{hc{yс{x ({hc{yсхід{x), ти підеш на схід.
+Щоб йти вниз або вгору, достатньо писати {yвн{x або {yвв{x, 
+або ж {yо{x ({yопуститися{x), {yп{x ({yпіднятися{x).
+
+Ходити можна тільки стоячи -- див. %H% {hh1020спати{x та інші
+команди положення в просторі.
+
+{CНЕ ЗНАЄШ, КУДИ ЙТИ?{x
+Дізнатися, куди є виходи з поточного місця, можна за командою {hc{yвиходи{x або
+{hc{yдивитися{x. У кімнати може не бути виходу в одному з напрямків, або він може бути
+закритий, замкнений або схований. Як виявити такі виходи і як
+звертатися з дверима, читай у %H% {hh1021виходи{x, %H% {hh1013відкрити{x.
+
+Якщо загубив{Smся{Sfалися{Sx або потрапив{Sfала{x в біду -- використовуй {hh862повернення{x.
+
+Крім цього, можна залишити місцевість, увійшовши в портал або додатковий вихід:
+читай %H% {hh1016увійти{x. Дізнатися, в якій ти зараз зоні, і хто тут є з
+гравців, можна командою {hc{yде{x. Дізнатися, які істоти є поруч,
+можна командою {hc{yоглянутися{x.
+
+%SA% %H% {hh18типи переміщення{x, %H% {hh1078бігти{x.
+</text>
+    <title l="en">Movement {CCommands{x</title>
     <title l="ru">Команды {Cперемещения{x</title>
-    <title l="ua"></title>
+    <title l="ua">Команди {Cпереміщення{x</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">go north</hint>
   <hint l="ru">пойти на север</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">йти на північ</hint>
   <log>2</log>
   <name l="en">north</name>
   <name l="ru">север</name>
-  <name l="ua"></name>
+  <name l="ua">північ</name>
   <position>stand</position>
 </Command>

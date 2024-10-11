@@ -3,7 +3,13 @@
   <cat></cat>
   <extra>keep_hide ghost</extra>
   <help id="104" level="106" type="CommandHelp">
-    <text l="en"></text>
+    <text l="en">%FMT% *%CMD%*
+%FMT% *%CMD%* _%VICT%_
+%FMT% *%CMD%* _%OBJ%_
+
+The purge command is used to clean the world. Without arguments, it destroys all NPC's and objects in the current room. Purge with an argument removes a character or object from anywhere in the world.
+
+Purge does not allow you to get rid of PC's, objects, or mobs with the NOPURGE flag (such as a donation pit, fountain, Hassan). Mobs or objects can be removed if specified by name.</text>
     <text l="ru">%FMT% *%CMD%*
 %FMT% *%CMD%* _%VICT%_
 %FMT% *%CMD%* _%OBJ%_
@@ -17,11 +23,17 @@ Purge не дает возможности избавится от PC&apos;s, о
 установленным флагом NOPURGE (например яма для пожертвований, фонтан, Хассан).
 Мобы или объекты могут быть удалены, если указать их по имени.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%CMD%*
+%FMT% *%CMD%* _%VICT%_
+%FMT% *%CMD%* _%OBJ%_
+
+Команда purge використовується для очищення світу. Без аргументів вона знищує всіх NPC та об'єкти у поточній кімнаті. Purge з аргументом видаляє персонажа або об'єкт з будь-якого місця у світі.
+
+Purge не дає можливості позбутися PC, об'єктів або мобів із встановленим прапором NOPURGE (наприклад, яма для пожертвувань, фонтан, Хассан). Моби або об'єкти можуть бути видалені, якщо вказати їх за іменем.</text>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">destroy mobs or clear the room</hint>
   <hint l="ru">уничтожить мобов или очистить комнату</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">знищити мобів або очистити кімнату</hint>
   <level>106</level>
   <log>1</log>
   <name l="en">purge</name>

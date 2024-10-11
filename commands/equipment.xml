@@ -1,15 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
-  <aliases l="en"></aliases>
   <aliases l="ru">экипировка одежда</aliases>
-  <aliases l="ua"></aliases>
+  <aliases l="ua">екіпірування одяг</aliases>
   <cat>item</cat>
   <extra>keep_hide ghost afk</extra>
   <help id="1015" level="-1" ref="inventory money" type="CommandHelp">
-    <extra l="en">earrings ears piercing &apos;wear locations&apos; wearlocs</extra>
-    <extra l="ru">хвост &apos;на копытах&apos; &apos;на лошадином теле&apos; нести пирсинг &apos;прокалывание ушей&apos; серьги слоты тащить уши &apos;вдето в уши&apos; веарлоки волосы &apos;запуталось в волосах&apos; &apos;зажато в руках&apos; шмот челе чело</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="en">earrings ears piercing 'wear locations' wearlocs</extra>
+    <extra l="ru">хвост 'на копытах' 'на лошадином теле' нести пирсинг 'прокалывание ушей' серьги слоты тащить уши 'вдето в уши' веарлоки волосы 'запуталось в волосах' 'зажато в руках' шмот челе чело</extra>
+    <extra l="ua">хвіст 'на копитах' 'на кінському тілі' нести пірсинг 'проколювання вух' сережки слоти тягнути вуха 'вдіто у вуха' веарлоки волосся 'заплуталося у волоссі' 'затиснуто в руках' шмот лоб лобний</extra>
+    <text l="en">%FMT%  *inventory*
+Everything you {hh1024pick up{x and carry with you is called =inventory=.
+This command shows you all the items you're carrying.
+You can't carry too many items--it depends on your {hh37dexterity{x and {hh39strength{x.
+
+%FMT%  *equipment*
+Everything you can {hh990wear{x is called =equipment=.
+This command displays all your gear and weapons.
+If some items in your equipment are invisible, and you cannot {hh675see invisible{x at the moment, they will appear as (something).
+
+You can equip (wear) items on many different places (slots, wear locations) on
+the body. Each item can usually be worn only in a specific place--
+for example, helmets are worn on the head, masks on the face, and so on. Of course,
+only with appropriate {hh62body parts{x.
+
+Some slots have specific restrictions or features:
+%A% =lights the way:= items in this slot will allow you to see in the dark
+%A% =held in hands:= some items and reagents must be held in hand for usage.
+  And {hh132ninjas{x must keep their hands free to use some abilities.
+%A% =pierced in ears:= to wear earrings and other decorations in this slot, ears must
+  be pierced first by a nearby {hh125questgiver{x
+%A% =tangled in hair:= items in hair are worn for beauty and do not
+  add any stats (see {hh990wear{x)
+%A% =worn on tail:= tailed races can put some knick-knacks on their tails
+  for decoration--such items also do not add stats (see {hh990wear{x)
+%A% =on hooves:= hoofed races (like {hh151centaurs{x) cannot wear regular
+  shoes but can acquire horseshoes from a {hh1366blacksmith{x or elsewhere
+%A% =on horse body:= centaurs can also wear a blanket on their horse
+  body--in addition to armor on the human body
+%A% =on brow:= a mark of your {hh1religion{x or cult is usually placed on the forehead
+
+Tattoos applied by a master {hh242tattooist{x will appear in corresponding slots:
+on the wrists, shoulder, or face.
+
+%SA% %H% {hh990wear{x
+</text>
     <text l="ru">%FMT%  *инвентарь*
 Все, что ты {hh1024подбираешь{x и таскаешь с собой, называется =инвентарь=.
 Эта команда показывает все вещи, которые ты несешь с собой.
@@ -48,17 +82,54 @@
 
 %SA% %H% {hh990надеть{x
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">%FMT%  *інвентар*
+Все, що ти {hh1024збираєш{x і носиш із собою, зветься =інвентар=.
+Ця команда показує всі речі, які ти носиш із собою.
+Занадто багато речей винести не вийде -- це обмежено твоєю {hh37спритністю{x і
+{hh39силою{x.
+
+%FMT%  *екіпірування*
+Все, що ти можеш {hh990надіти{x на себе, зветься =екіпірування=.
+Ця команда показує все твоє спорядження та озброєння.
+Якщо якісь речі в екіпіровці невидимі, а ти зараз не {hh675бачиш невидиме{x, вони
+будуть видні як (щось).
+
+Екіпірувати (надіти) речі можна на багато різних місць (слотів, wear locations) на
+тілі. Кожну річ зазвичай можна надіти тільки на конкретне місце -- 
+наприклад, шоломи надягають на голову, маски -- на обличчя, і так далі. Звісно,
+при наявності відповідних {hh62частин тіла{x.
+
+Деякі слоти мають специфічні обмеження або особливості:
+%A% =освітлює шлях:= предмети в цьому слоті дозволять тобі бачити в темряві
+%A% =затиснуто в руках:= деякі речі та реагенти треба затиснути в руці для використання.
+  А {hh132ніндзя{x повинні тримати руки вільними, щоб використовувати деякі здібності.
+%A% =вдіто у вуха:= щоб надіти сережки та інші прикраси в цей слот, вуха треба
+  спочатку проколоти у найближчого {hh125квестодавця{x
+%A% =заплуталося у волоссі:= речі у волоссі носяться просто для краси й не
+  додають жодних параметрів (див. {hh990надіти{x)
+%A% =надіто на хвіст:= хвостаті раси можуть причепити на хвіст якусь дрібничку
+  для краси -- такі речі теж не додадуть параметрів (див. {hh990надіти{x)
+%A% =на копитах:= копитні раси (наприклад, {hh151кентаври{x) не можуть носити звичайне
+  взуття, зате можуть отримати підкови у {hh1366коваля{x або в інших місцях
+%A% =на кінському тілі:= кентаври також можуть надіти попону на своє кінське
+  тіло -- на додаток до броні на людському
+%A% =на чолі:= знак твоєї {hh1релігії{x або культу зазвичай наноситься на лоб
+
+Татуювання, нанесені майстром {hh242татуювань{x, відобразяться у відповідних слотах:
+на зап'ястях, на плечі або на обличчі.
+
+%SA% %H% {hh990надіти{x
+</text>
+    <title l="en">{CItems: {xequipment, slots</title>
     <title l="ru">{CВещи: {xэкипировка, слоты</title>
-    <title l="ua"></title>
+    <title l="ua">{CРечі: {xекіпірування, слоти</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">view your equipment</hint>
   <hint l="ru">посмотреть свою экипировку</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">подивитися своє екіпірування</hint>
   <name l="en">equipment</name>
   <name l="ru">снаряжение</name>
-  <name l="ua"></name>
+  <name l="ua">спорядження</name>
   <order>player_only</order>
   <position>dead</position>
 </Command>

@@ -3,10 +3,19 @@
   <cat>move</cat>
   <extra>keep_hide ghost</extra>
   <help id="2170" level="-1" type="CommandHelp">
-    <extra l="en"></extra>
+    <extra l="en">'how to get' command route path</extra>
     <extra l="ru">&apos;как добраться&apos; команда маршрут путь</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">'як дістатися' команда маршрут шлях</extra>
+    <text l="en">%FMT% *%CMD%* _room name_
+
+This useful command helps those who, for some reason, cannot use the maps in our {hh2133web client{x, to find the path to any room in the current area by room name more conveniently -- even in partial or abbreviated form.
+
+For example, if standing on the Market Square of Midgaard you type {y{hcpath mag melan{x, you will see the path to the room "Melancholic Map Shop" -- {y{hcrun 3southwest{x.
+
+The command will find the path even through portals and {hh1016extra exits{x, but not through places where exits are confused by the influence of Chaos. It will also not work in clans, suburbs, and other hidden or special areas, or if the character is blinded.
+
+%SA% %H% {hh1078run{x
+</text>
     <text l="ru">%FMT% *%CMD%* _название комнаты_
 	
 Эта полезная команда помогает тем, кто по какой-то причине не может пользоваться
@@ -22,11 +31,20 @@
 
 %SA% %H% {hh1078бежать{x
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%CMD%* _назва кімнати_
+
+Ця корисна команда допомагає тим, хто з якоїсь причини не може користуватися картами в нашому {hh2133веб-клієнті{x, зручніше знаходити шлях до будь-якої кімнати в поточній зоні за назвою кімнати -- навіть у частковому чи скороченому вигляді.
+
+Наприклад, якщо стоячи на Ринковій площі Мідгарда написати {y{hcшлях маг меланх{x, то побачиш шлях до кімнати "Магазин Карт Меланхоліка" -- {y{hcбігти 3південно-захід{x.
+
+Команда знайде шлях навіть через портали та {hh1016екстра-виходи{x, але не через місця, де виходи сплутані впливом Хаосу. Також вона не спрацює в кланах, передмістях та інших прихованих або спеціальних зонах, або якщо персонаж засліплений.
+
+%SA% %H% {hh1078бігти{x
+</text>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">plot the path to the room in the current area</hint>
   <hint l="ru">проложить путь к комнате в текущей зоне</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">прокласти шлях до кімнати в поточній зоні</hint>
   <level>1</level>
   <name l="en">path</name>
   <name l="ru">путь</name>

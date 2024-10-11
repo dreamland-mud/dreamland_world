@@ -3,14 +3,67 @@
   <cat></cat>
   <extra>keep_hide ghost</extra>
   <help id="2125" level="106" type="CommandHelp">
-    <text l="en"></text>
+    <text l="en">%FMT% *%CMD%* *all* | *armor* | *weapon* | *magic* | *pets*
+
+Save the item database to disk, making it immediately available for the site's search engine.
+Automatic world database saving occurs every 4 hours.
+
+%FMT% *%CMD%* *q* _query_
+Find all items that satisfy the query and display them in the table.
+
+%FMT% *%CMD%* *wq* _query_
+Find all weapons that satisfy the query and display them in a table.
+
+%FMT% *%CMD%* *sq* _query_
+Find all magical items that satisfy the query and display them in a table.
+
+%FMT% *%CMD%* *mq* _query_
+Find all mobs that satisfy the query and display them in a table.
+%PAUSE%
+{CQUERY{x
+A query is an expression consisting of fields, operations, and parentheses.
+
+Fields can be {cnumeric{x, for which comparison operations such as {C&gt;{x, {C&gt;={x,
+{C&lt;{x, {C&lt;={x, {C={x, {C!={x are used.
+
+Numeric item fields: lvl/level, hr, dr, hp, mana, move, saves/svs, armor, 
+size, age, str, int, wis, dex, con, cha, heal_gain, mana_gain, beats.
+Numeric weapon fields: d1 {D(item value1){x, d2 {D(item value2){x, ave {D(average damage){x,
+tier {D(level of randomness for random weapons){x.
+Numeric magical item fields: power {D(level of spells on the item){x, charges {D(number of charges for wands and staves){x.
+
+For {cstring{x fields and {cflags{x, comparison and substring search operations 
+are applied: {C={x, {C!={x, and {C*xxx*{x, for example: wear=neck or name=&quot;*brace*&quot;.
+
+String item fields: name, type/itemtype, extra, wear, aff, vuln, res, 
+imm, det, fenia {D(list of triggers){x, slevel {D(level of skills and groups raises){x, 
+learned {D(raises knowledge of what skills and groups){x, material, behavior {D(list of behaviors){x.
+String weapon fields: wclass {D(dagger, sword){x, wflags {D(vampiric, vorpal){x, damage {D(name
+damage, olchelp weapon_flags){x.
+String magical item fields: spells {D(list of spells on the item, separated by spaces){x
+
+{cBoolean{x item fields: ed {D(if there are extra descriptions){x, random {D(are parameters generated randomly){x.
+
+Logical operations such as {Cand{x, {Cor{x, and parentheses {C({x {C){x are also used to group logical operations, see examples below.
+
+{CEXAMPLES{x
+{ysearcher q lvl&gt;0 and lvl&lt;=10 and type=drink{x - all drinks from 1st to 10th
+{ysearcher q imm!=&quot;&quot; or res!=&quot;&quot;{x - items that give immunity or resistance
+{ysearcher q fenia=&quot;*equip*&quot;{x - items with the onEquip trigger, among others.
+{ysearcher wq extra=&quot;*nosac*&quot; and level=100{x  - all weapons at level 100 that cannot be sacrificed
+{ysearcher q (wear=finger or wear=waist) and dr&gt;3{x - all belts OR rings with damroll &gt; 3.
+{ysearcher wq lvl=1 and ed{x - all weapons of level 1 with extra description
+{ysearcher wq random and tier&gt;3{x - all rand_stat weapons with tier 2
+{ysearcher sq spells=&quot;*heal*&quot; and power&gt;10{x - all healers with a level greater than 10
+{ysearcher q behavior=&quot;*noriva*&quot;{x - all items of the Noriva set
+</text>
     <text l="ru">%FMT% *%CMD%* *all* | *armor* | *weapon* | *magic* | *pets*
 
 Сохранить базу предметов на диск, тут же делая ее доступной для поисковика на сайте.
 Автоматическое сохранение базы из мира происходит каждые 4 часа.
 
 %FMT% *%CMD%* *q* _запрос_
-Найти все предметы, удовлетворящие запросу, и вывести их в таблицу.
+Найти все предметы, удовлетворяющие запросу, и вывести их в таблицу.
 
 %FMT% *%CMD%* *wq* _запрос_
 Найти всё оружие, удовлетворяющее запросу, и вывести в таблицу.
@@ -58,11 +111,64 @@ learned {D(знание каких умений и групп повышает){
 {ysearcher sq spells=&quot;*heal*&quot; and power&gt;10{x - все лечилки с уровнем больше 10
 {ysearcher q behavior=&quot;*noriva*&quot;{x - все предметы комплекта Noriva
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%CMD%* *all* | *armor* | *weapon* | *magic* | *pets*
+
+Зберегти базу предметів на диск, роблячи її одразу доступною для пошукової системи на сайті.
+Автоматичне збереження бази з світу відбувається кожні 4 години.
+
+%FMT% *%CMD%* *q* _запит_
+Знайти всі предмети, які відповідають запиту, і вивести їх у таблицю.
+
+%FMT% *%CMD%* *wq* _запит_
+Знайти всю зброю, яка відповідає запиту, і вивести в таблицю.
+
+%FMT% *%CMD%* *sq* _запит_
+Знайти всі магічні предмети, що відповідають запиту, і вивести в таблицю.
+
+%FMT% *%CMD%* *mq* _запит_
+Знайти всіх мобів, що відповідають запиту, і вивести в таблицю.
+%PAUSE%
+{CЗАПИТ{x
+Запит - це вираз, що складається з полів, операцій і дужок.
+
+Поля можуть бути {cчислові{x, для них працюють операції порівняння {C&gt;{x, {C&gt;={x,
+{C&lt;{x, {C&lt;={x, {C={x, {C!={x.
+
+Числові поля предметів: lvl/level, hr, dr, hp, mana, move, saves/svs, armor, 
+size, age, str, int, wis, dex, con, cha, heal_gain, mana_gain, beats.
+Числові поля зброї: d1 {D(значення1 предмета){x, d2 {D(значення2 предмета){x, ave {D(середній ушкодження){x,
+tier {D(рівень крутості для рандомної зброї){x.
+Числові поля магічних предметів: power {D(рівень заклинань на предметі){x, charges {D(кількість зарядів у паличок і жезлів){x.
+
+Для {cрядкових{x полів і {cпрапорів{x працюють операції порівняння і пошуку 
+підрядка: {C={x, {C!={x і {C*xxx*{x, наприклад: wear=neck або name=&quot;*нарук*&quot;.
+
+Рядкові поля предметів: name, type/itemtype, extra, wear, aff, vuln, res, 
+imm, det, fenia {D(список тригерів){x, slevel {D(рівень яких умінь і груп підвищує){x, 
+learned {D(знання яких умінь і груп підвищує){x, material, behavior {D(список поведінок){x.
+Рядкові поля зброї: wclass {D(dagger, sword){x, wflags {D(vampiric, vorpal){x, damage {D(назва
+ушкодження, olchelp weapon_flags){x.
+Рядкові поля магічних предметів: spells {D(список заклинань на предметі, розділений пробілами){x
+
+{cБулеві{x поля предметів: ed {D(чи є екстра-описи){x, random {D(чи генеруються параметри рандомно){x.
+
+Існують також логічні операції {Cand{x, {Cor{x і дужки {C({x {C){x для групування логічних операцій, див. приклади нижче.
+
+{CПРИКЛАДИ{x
+{ysearcher q lvl&gt;0 and lvl&lt;=10 and type=drink{x - всі напої з 1-го по 10-й
+{ysearcher q imm!=&quot;&quot; or res!=&quot;&quot;{x - предмети, що дають імунітет або опір
+{ysearcher q fenia=&quot;*equip*&quot;{x - предмети з тригером onEquip, серед інших.
+{ysearcher wq extra=&quot;*nosac*&quot; and level=100{x  - вся зброя на 100-му рівні, яку не можна жертвувати
+{ysearcher q (wear=finger or wear=waist) and dr&gt;3{x - всі пояси АБО кільця з damroll &gt; 3.
+{ysearcher wq lvl=1 and ed{x - вся зброя на 1-й рівень з екстра-описом
+{ysearcher wq random and tier&gt;3{x - вся зброя rand_stat з тиром 2
+{ysearcher sq spells=&quot;*heal*&quot; and power&gt;10{x - всі лікувальні предмети з рівнем більше 10
+{ysearcher q behavior=&quot;*noriva*&quot;{x - всі предмети комплекту Noriva
+</text>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">item search and save database to disk</hint>
   <hint l="ru">поиск предметов и сохранение базы на диск</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">пошук предметів і збереження бази на диск</hint>
   <level>106</level>
   <log>1</log>
   <name l="en">searcher</name>

@@ -6,10 +6,16 @@
   <cat>learn</cat>
   <extra>keep_hide ghost afk hidden</extra>
   <help id="1357" labels="skill" level="-1" type="CommandHelp">
-    <extra l="en"></extra>
+    <extra l="en">showsskill</extra>
     <extra l="ru">показатьумение</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">показатиуміння</extra>
+    <text l="en">%FMT% *%CMD%* _name_
+
+Displays summary information about any {hh1352skill{x, its {hh1354group{x, where it can be {hh1359practiced{x and other details.
+For {hh24racial abilities{x and {hh3clan{x skills, it will show which race or clan
+provides this skill.
+
+Currently, all these details are also visible in the skill help.</text>
     <text l="ru">%FMT% *%CMD%* _название_
  
 Выводит сводную информацию о любом {hh1352умении{x, его {hh1354группу{x, где можно {hh1359практиковаться{x и другие детали.
@@ -18,17 +24,23 @@
 
 На данный момент все эти детали также видны и в справке по умению.
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">%FMT% *%CMD%* _назва_
+
+Виводить зведену інформацію про будь-яке {hh1352уміння{x, його {hh1354групу{x, де можна {hh1359практикуватися{x та інші деталі.
+Для {hh24расових здібностей{x та {hh3кланових{x умений покаже, яка раса або який клан
+дає дане уміння.
+
+На даний момент всі ці деталі також видно і в довідці по умінню.</text>
+    <title l="en">Skills: summary information</title>
     <title l="ru">{CУмения:{x сводная информация</title>
-    <title l="ua"></title>
+    <title l="ua">{CУміння:{x зведена інформація</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">view details for this skill</hint>
   <hint l="ru">посмотреть детали по данному умению</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">переглянути деталі цього уміння</hint>
   <name l="en">showskill</name>
   <name l="ru">показатьумение</name>
-  <name l="ua"></name>
+  <name l="ua">показатиуміння</name>
   <order>player_only</order>
   <position>sleep</position>
 </Command>

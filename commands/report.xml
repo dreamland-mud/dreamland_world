@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
-  <aliases l="en"></aliases>
   <aliases l="ru">рапорт</aliases>
-  <aliases l="ua"></aliases>
+  <aliases l="ua">звіт</aliases>
   <cat>group</cat>
   <extra>ghost manacles</extra>
   <help id="1005" labels="info" level="-1" type="CommandHelp">
-    <text l="en"></text>
+    <text l="en">%FMT% *%CMD%*
+
+You verbally give a short report on your condition.
+
+%FMT% *command{x* _%CHAR%_ report{x
+%FMT% *command{x* _%CHAR%_ report all{x
+
+With {hh15followers{x this command works differently, displaying a full list of all skills,
+spells, and commands that the creature possesses - very useful!
+First thing upon getting a new follower {hh1091command{x them to give a report.
+</text>
     <text l="ru">%FMT% *%CMD%*
 
 Ты произносишь вслух краткий отчет о своем состоянии.
@@ -18,16 +27,26 @@
 заклинаний и команд, которыми владеет данное существо -- очень полезно!
 Первым делом при получении нового последователя {hh1091прикажи{x ему выдать рапорт.
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">%FMT% *%CMD%*
+
+Ти вголос робиш короткий звіт про свій стан.
+
+%FMT% *наказати{x* _%CHAR%_ звіт{x
+%FMT% *наказати{x* _%CHAR%_ звіт всі{x
+
+У {hh15послідовників{x ця команда працює інакше, виводячи повний список всіх навичок,
+заклинань і команд, якими володіє ця істота -- дуже корисно!
+Перше, що потрібно зробити при отриманні нового послідовника {hh1091накажи{x йому зробити звіт.
+</text>
+    <title l="en">{CFollowers: {xskill report</title>
     <title l="ru">{CПоследователи: {xрапорт об умениях</title>
-    <title l="ua"></title>
+    <title l="ua">{CПослідовники: {xзвіт про вміння</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">report to those around you about your condition</hint>
   <hint l="ru">отрапортовать окружающим о своем состоянии</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">звітувати оточуючим про свій стан</hint>
   <name l="en">report</name>
   <name l="ru">отчет</name>
-  <name l="ua"></name>
+  <name l="ua">звіт</name>
   <position>rest</position>
 </Command>

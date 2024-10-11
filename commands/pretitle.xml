@@ -2,11 +2,26 @@
 <Command>
   <aliases l="en"></aliases>
   <aliases l="ru">претитул</aliases>
-  <aliases l="ua"></aliases>
+  <aliases l="ua">претитул</aliases>
   <cat>config</cat>
   <extra>keep_hide ghost</extra>
   <help id="1006" level="-1" type="CommandHelp">
-    <text l="en"></text>
+    <text l="en">Pretitle -- a short inscription that will precede your name.
+Like {hh1007title{x, it is an important part of your {hh31roleplay{x. Using a pretitle
+is not necessary at all, but with its help you can achieve the effect of a two-word name,
+for example {WHon Gildon{x, where Hon is a pretitle, and Gildon is the character's name.
+
+A colored pretitle is a great honor. You can get it after {hh1064remort{x,
+spending 2 rebirth points on it.
+
+%FMT%  *%CMD%* _line_
+%FFF%  *%CMD%* *rus* _line_
+With the *rus* option, a Russian pretitle will be set, visible to those
+who have the *rusimena mode* turned on.
+
+%FMT%  *%CMD%* *clear*
+Clears both pretitles, Russian and English.
+</text>
     <text l="ru">Претитул -- короткая надпись, которая будет предшествовать твоему имени.
 Как и {hh1007титул{x, это является важной частью твоего {hh31отыгрыша{x. Использовать предтитул
 совсем необязательно, но с его помощью можно достичь эффекта имени из двух слов,
@@ -23,17 +38,32 @@
 %FMT%  *%CMD%* *очистить*
 Очищает оба претитула, и русский, и английский.
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">Претитул -- короткий напис, що буде перед вашим ім'ям.
+Як і {hh1007титул{x, це є важливою частиною вашого {hh31розіграш{x. Використання предтитула
+не є обов'язковим, але з його допомогою можна досягти ефекту імені з двох слів,
+наприклад {WХон Гільдон{x, де Хон -- предтитул, а Гільдон -- ім'я персонажа.
+
+Кольоровий предтитул -- велика честь. Отримати його можна після {hh1064реморта{x,
+витративши на це 2 очка переродження.
+
+%FMT%  *%CMD%* _рядок_
+%FFF%  *%CMD%* *рос* _рядок_
+З опцією *рос* буде встановлено російський претитул, його побачать ті,
+у кого увімкнено *режим російмен*.
+
+%FMT%  *%CMD%* *очистити*
+Очищає обидва претитули, і російський, і англійський.
+</text>
+    <title l="en">{CRoleplaying: {xCharacter Pretitle</title>
     <title l="ru">{CОтыгрыш: {xПредтитул персонажа</title>
-    <title l="ua"></title>
+    <title l="ua">{CРозіграш: {xПредтитул персонажа</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">come up with a pretitle</hint>
   <hint l="ru">придумать себе претитул</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">придумати собі претитул</hint>
   <name l="en">pretitle</name>
   <name l="ru">предтитул</name>
-  <name l="ua"></name>
+  <name l="ua">претитул</name>
   <order>player_only</order>
   <position>dead</position>
 </Command>

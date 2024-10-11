@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
-  <aliases l="en"></aliases>
   <aliases l="ru">осторожность</aliases>
-  <aliases l="ua"></aliases>
+  <aliases l="ua">обережність</aliases>
   <cat>fight</cat>
   <extra>keep_hide ghost afk</extra>
   <help id="1004" labels="learn" level="-1" type="CommandHelp">
-    <text l="en"></text>
+    <text l="en">%FMT% *%CMD%* _number_
+Sets the cowardice level. When your health in battle drops 
+below the cowardice level, you will automatically attempt to {hh1025flee{x.
+
+You will flee only if you haven't been {hh120stunned{x by the enemy and are not 
+in a delay state after using active combat skills ({hh582trip{x, {hh676bash{x) or spells.
+
+%FMT% *%CMD%*  
+Sets cowardice value to 20% of the maximum health.
+
+Some {hh2142mobs{x are cowardly and flee from battle.
+</text>
     <text l="ru">%FMT% *%CMD%* _число_
 Устанавливает уровень трусости. Когда у тебя в битве {hh58количество здоровья{x упадет
 ниже уровня трусости, ты автоматически попытаешься {hh1025сбежать{x.
@@ -20,17 +30,29 @@
 
 Некоторые {hh2142мобы{x трусливы и убегают из боя.
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">%FMT% *%CMD%* _число_
+Встановлює рівень боягузтва. Коли під час бою у тебе {hh58кількість здоров'я{x впаде
+нижче рівня боягузтва, ти автоматично спробуєш {hh1025втекти{x.
+
+Втечеш ти тільки якщо не був {hh120приголомшений{o ворогом і не знаходишся 
+в стані затримки після використання активних бойових навичок ({hh582підніжка{x,
+{hh676збити{x) або заклять.
+
+%FMT% *%CMD%*  
+Встановлює значення боягузтва на 20% від максимального здоров'я.
+
+Деякі {hh2142моби{x боязкі і тікають з бою.
+</text>
+    <title l="en">{CBattle: {xcowardice, auto-flee from battle</title>
     <title l="ru">{CБой: {xтрусость, авто-сбегание из боя</title>
-    <title l="ua"></title>
+    <title l="ua">{CБій: {xбоягузтво, авто-втеча з бою</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">attempt to flee at specified health</hint>
   <hint l="ru">пытаться сбежать при указанном здоровье</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">спробувати втекти при вказаному здоров'ї</hint>
   <name l="en">wimpy</name>
   <name l="ru">трусость</name>
-  <name l="ua"></name>
+  <name l="ua">боягузтво</name>
   <order>player_only</order>
   <position>dead</position>
 </Command>

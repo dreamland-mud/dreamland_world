@@ -2,14 +2,22 @@
 <Command>
   <aliases l="en">clantalk</aliases>
   <aliases l="ru">кк</aliases>
-  <aliases l="ua"></aliases>
+  <aliases l="ua">кк</aliases>
   <cat>clan</cat>
   <extra>keep_hide ghost manacles</extra>
   <help id="1364" labels="comm" level="-1" type="CommandHelp">
-    <extra l="en">&apos;clan channel&apos; &apos;clan talk&apos;</extra>
-    <extra l="ru">&apos;клановый канал&apos;</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="en">'clan channel' 'clan talk'</extra>
+    <extra l="ru">'клановый канал'</extra>
+    <extra l="ua">'клановий канал'</extra>
+    <text l="en">%FMT% *%CMD%* _message_
+
+Use this channel (shortened as *cc*) to communicate with {hh3clanmates{x.
+Each clan has its own channel color settings -- which can be changed by
+clan leaders. Also, your character's name will always be displayed in this channel --
+even if you are invisible{Sfа{Sx or in vampire form.
+
+If you use *%CMD%* without a parameter, it toggles the entire channel on or off.
+</text>
     <text l="ru">%FMT% *%CMD%* _сообщение_
 
 Используй этот канал (сокращенно *кк*) для общения с {hh3соклановиками{x.
@@ -19,16 +27,24 @@
 
 Если написать *%CMD%* без параметра, это включает или выключает весь канал.
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">%FMT% *%CMD%* _повідомлення_
+
+Використовуй цей канал (скорочено *кк*) для спілкування з {hh3соклановцями{x.
+Кожен клан має свої власні кольори кланового каналу -- їх можуть змінювати
+керівники кланів. Також, у цьому каналі завжди відображається ім'я твого
+персонажа -- навіть якщо ти невидимий{Sfа{Sx або у формі вампіра.
+
+Якщо написати *%CMD%* без параметра, це вмикає або вимикає весь канал.
+</text>
+    <title l="en">{CCommunication: {xclan channel</title>
     <title l="ru">{CОбщение: {xклановый канал</title>
-    <title l="ua"></title>
+    <title l="ua">{CСпілкування: {xклановий канал</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">communication with clanmates</hint>
   <hint l="ru">общение с соклановиками</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">спілкування з соклановцями</hint>
   <name l="en">cb</name>
   <name l="ru">кланканал</name>
-  <name l="ua"></name>
+  <name l="ua">кланканал</name>
   <position>rest</position>
 </Command>

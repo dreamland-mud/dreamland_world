@@ -1,18 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
-  <aliases l="en"></aliases>
   <aliases l="ru">налить</aliases>
-  <aliases l="ua"></aliases>
+  <aliases l="ua">налити</aliases>
   <cat>food</cat>
   <extra>keep_hide undig</extra>
   <help id="1075" level="-1" ref="fill pourout" type="CommandHelp">
     <extra l="en">barrels fountains</extra>
     <extra l="ru">&apos;бочонок пива&apos; бурдюк фляга фонтаны глоток &apos;набрать воды&apos; напитки облить обливать поливать</extra>
-    <extra l="ua"></extra>
+    <extra l="ua">'бочонок пива' бурдюк фляга фонтани ковток 'набрати води' напої облити обливати поливати</extra>
     <keyword l="en">liquids</keyword>
     <keyword l="ru">жидкости</keyword>
-    <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <keyword l="ua">рідкі речовини</keyword>
+    <text l="en">Liquids can be stored in =fountains= or =containers=.
+%A% Containers can usually be carried, so you have something to {hh1074drink{x from during travels.
+%A% Containers can sometimes be sealed with a cork.
+%A% Containers and fountains can be {hh837poisoned{x or {hh610frozen{x.
+%A% Fountains can't be picked up, but you can {hh1020sit{x, rest, or lie on or in them.
+%A% Not all fountains are infinite -- sometimes they can be emptied, and then you'll have 
+  to wait several hours for the fountain or container to slowly {hh16replenish{x.
+%A% Dried up fountains can be filled, but they won't replenish on their own 
+  and will continue to dry up.
+
+{CLIQUIDS{x
+Liquids vary in color, smell, and how well they quench thirst, and sometimes even hunger. They have different viscosities, and you can drink different amounts of sips at a time.
+
+{hh2137Alcohol{x (such as wine or beer) can make you drunk. The culture of Arcadia and many
+of their ancient {hh234languages{x are strongly tied to alcohol. Also, some {hh1gods{x
+encourage the consumption of alcohol. However, skills work a bit worse when drunk.
+You can check the level of current intoxication with the command {y{hccount{x.
+
+{CCOMMANDS FOR WORKING WITH LIQUIDS{x
+%FMT%  *fill* _container_
+%FFF%  *fill* _container_ _fountain_
+Fill a container with liquid. If there's a source of water (like a river, spring, or lake) in the current area, simply write *fill* _container_.
+If a lake, river, or sea is spacious enough, you can throw the container into the water and then pick it up already filled (if it doesn't sink, of course).
+To fill a container from a fountain, write *fill* _container_ _fountain_.
+Some containers, like a beer barrel from a tavern in Midgaard, hold more liquid than, say, a small flask.
+
+%FMT%  *pour* _container1_ _container2_
+%FFF%  *pour* _container1_ _fountain_
+Pour liquid from one vessel in the inventory to another vessel in the inventory or on the ground.
+
+%FMT%  *empty* _container_
+Empty a vessel by pouring all its contents onto the ground. If there's enough liquid, a puddle will remain, into which you can sit or drink from. If there's something {hh4red-hot{x underfoot, it can be cooled.
+
+%FMT%  *pour* _container_ _character_
+Pour liquid from a vessel onto someone. After such pouring, the victim may start to smell accordingly (%H% {hh1084smell{x).
+
+%FMT%  *pour* _container_ _character_
+Fill a glass held by someone with liquid.
+
+The commands *pour* and *empty* are synonyms.
+</text>
     <text l="ru">Жидкости могут храниться в =фонтанах= или =емкостях=.
 %A% Емкости обычно можно носить с собой, чтобы было из чего {hh1074пить{x в путешествиях.
 %A% Емкости иногда закрываются пробкой.
@@ -62,16 +101,64 @@
 
 Команды *перелить* и *налить* являются синонимами.
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">Рідини можуть зберігатися у =фонтанах= або =ємностях=.
+%A% Ємності зазвичай можна носити з собою, щоб було з чого {hh1074пити{x у подорожах.
+%A% Ємності іноді закриваються пробкою.
+%A% Ємності і фонтани можна {hh837отруїти{x або {hh610заморозити{x.
+%A% Фонтани не можна підняти, але на або в них можна {hh1020сидіти{x, відпочивати або лежати.
+%A% Не всі фонтани нескінченні -- іноді їх можна вичерпати, і тоді доведеться
+  чекати кілька годин, поки фонтан або ємність поступово не {hh16відновляться{x.
+%A% Висохлі фонтани можна наповнити, але самі по собі вони вже не відновляться,
+  а продовжать знову висихати.
+
+{CРІДКИ{x
+Рідини відрізняються кольором, запахом і тим, наскільки добре вони втамовують спрагу, 
+а іноді навіть голод. У рідин різна густота, і за один раз можна випити 
+різну кількість ковтків.
+
+{hh2137Алкоголем{x (наприклад, вином або пивом) можна напитися. Культура аркадії та багато 
+слів їхньої давньої {hh234мови{x сильно прив'язані до алкоголю. Також, деякі {hh1боги{x 
+заохочують вживання алкоголю. Проте, у п'яних дещо гірше працюють уміння.
+Дізнатися рівень поточного сп'яніння можна командою {y{hcоблік{x.
+
+{CКОМАНДИ ДЛЯ РОБОТИ З РІДИНАМИ{x
+%FMT%  *наповнити* _ємність_
+%FFF%  *наповнити* _ємність_ _фонтан_
+Наповнити ємність рідиною. Якщо у поточній місцевості є джерело води (річка,
+джерело, озеро і т.д.), то просто напиши *наповнити* _ємність_.
+Якщо озеро, річка або море достатньо просторе, можна кинути ємність у воду,
+а потім підняти вже наповнену (якщо вона не потоне, звісно).
+А щоб наповнити ємність з фонтана, напиши *наповнити* _ємність_ _фонтан_.
+Деякі ємності, наприклад, пивний барильце з таверни у Мідгаарді, вміщують більше 
+рідини, ніж, скажімо, маленька пляшка.
+
+%FMT%  *перелити* _ємність1_ _ємність2_
+%FFF%  *перелити* _ємність1_ _фонтан_
+Перелити рідину з судини в інвентарі на іншу судину в інвентарі або на землі.
+
+%FMT%  *вилити* _ємність_
+Спорожнити судину, виливши всі її вміст на землю. Якщо рідини достатньо 
+багато, залишиться калюжа, в яку можна буде сісти або з неї пити. Якщо під 
+ногами є щось {hh4розжарене{x, його можна буде охолодити.
+
+%FMT%  *вилити* _ємність_ _персонаж_
+Облити когось рідиною з судини. Можливо, після такого обливання жертва 
+почне відповідно пахнути (%H% {hh1084нюхати{x).
+
+%FMT%  *налити* _ємність_ _персонаж_
+Наповнити рідиною келих, який хтось тримає у руці.
+
+Команди *перелити* і *налити* є синонімами.
+</text>
+    <title l="en">{CLiquids{x and interactions with them</title>
     <title l="ru">{CЖидкости{x и взаимодействие с ними</title>
-    <title l="ua"></title>
+    <title l="ua">{CРідини{x та взаємодія з ними</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">pour or empty liquid from a container</hint>
   <hint l="ru">перелить или вылить жидкость из емкости</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">перелити або вилити рідину з ємності</hint>
   <name l="en">pour</name>
   <name l="ru">перелить</name>
-  <name l="ua"></name>
+  <name l="ua">перелити</name>
   <position>rest</position>
 </Command>

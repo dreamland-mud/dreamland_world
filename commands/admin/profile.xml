@@ -3,7 +3,32 @@
   <cat></cat>
   <extra>ghost</extra>
   <help id="1065" level="109" type="CommandHelp">
-    <text l="en"></text>
+    <text l="en">=Working with player profiles=
+
+%FMT%  *profile backup* _player name_
+Saves both the regular and XML player profile to the directories var/db/backup and var/db/oldstyle/backup, as well as to /tmp.
+Profiles are restored with the *profile recover* command.
+
+To manually change something in the XML profile, you need to:
+- profile backup _name_
+- on the server: cd /home/dreamland/var/db/backup; vi _name_.xml
+- profile recover _name_
+
+%FMT%  *profile recover* _player name_
+Restores profiles saved by the *backup* command.
+
+%FMT%  *profile unremort* _player name_ _remort number_
+Restores players who had an unsuccessful remort.
+For the first remort, _remort number_ %PAUSE%= 0, for the second = 1  and so on.%RESUME%
+
+%FMT%  *profile undelete* _player name_
+Restores players automatically deleted or deleted by the *delete* command.
+
+%FMT%  *profile buildplot* _player name_
+Copies player profiles from /tmp at the construction site if they do not already exist.
+Assigns OLC and Fenia security levels sufficient for work. Grants OLC rights to the entire vnum range.
+
+</text>
     <text l="ru">=Работа с профайлами игроков=  
 
 %FMT%  *profile backup* _имя игрока_
@@ -30,11 +55,36 @@
 Назначает уровень OLC и Fenia security, достаточных для работы. Выдает права OLC на весь диапазон внумов.
 
 </text>
-    <text l="ua"></text>
+    <text l="ua">=Робота з профілями гравців=
+
+%FMT%  *profile backup* _ім'я гравця_
+Зберігає звичайний та XML профіль гравця в каталоги var/db/backup і var/db/oldstyle/backup, а також у /tmp.
+Профілі відновлюються командою *profile recover*.
+
+Для того, щоб змінити щось в XML-профілі вручну, необхідно:
+- profile backup _ім'я_
+- на сервері: cd /home/dreamland/var/db/backup; vi _ім'я_.xml
+- profile recover _ім'я_
+
+%FMT%  *profile recover* _ім'я гравця_
+Відновлює профілі, збережені командою *backup*.
+
+%FMT%  *profile unremort* _ім'я гравця_ _номер реморту_
+Відновлює невдало ремортованих гравців.
+Для першого реморту _номер реморту_ %PAUSE%= 0, для другого = 1 і так далі.%RESUME%
+
+%FMT%  *profile undelete* _ім'я гравця_
+Відновлює автоматично видалених або видалених командою *delete* гравців.
+
+%FMT%  *profile buildplot* _ім'я гравця_
+На будівельному майданчику копіює профілі гравця з /tmp, якщо він ще не існує.
+Призначає рівень OLC і Fenia security, достатній для роботи. Надає права OLC на весь діапазон внумів.
+
+</text>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">working with profiles</hint>
   <hint l="ru">работа с профайлами</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">робота з профілями</hint>
   <level>109</level>
   <log>1</log>
   <name l="en">profile</name>

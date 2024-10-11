@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command type="CommandElement">
-  <aliases l="en"></aliases>
   <aliases l="ru">оценить</aliases>
-  <aliases l="ua"></aliases>
+  <aliases l="ua">оцінити</aliases>
   <cat>fight</cat>
   <extra>keep_hide</extra>
   <help id="223" level="-1" type="CommandHelp">
-    <text l="en"></text>
+    <text l="en">%FMT% *chances* _%CHAR%_
+
+This command allows you to roughly estimate the level difference between yourself and the given creature, its {hh33nature{x, some combat abilities (if any), as well as the {hh62body parts{x present.
+
+Of course, dealing with creatures that are incomparably or noticeably above your level can be deadly dangerous - especially when there are additional combat abilities!</text>
     <text l="ru">%FMT% *шансы* _%CHAR%_  
 
 Эта команда позволяет примерно оценить разницу в уровнях между тобой и данным
@@ -17,17 +20,24 @@
 уровня может быть смертельно опасно -- особенно при наличии дополнительных
 боевых способностей!
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">%FMT% *шанси* _%CHAR%_
+
+Ця команда дозволяє приблизно оцінити різницю в рівнях між тобою і даною
+істотою, також його {hh33натуру{x, деякі бойові здібності (якщо є), а також
+наявні {hh62части тела{x.
+
+Звичайно, що взаємодія з істотами незрівнянно або помітно вищого рівня може бути смертельно небезпечною -- особливо за наявності додаткових
+бойових здібностей!</text>
+    <title l="en">{CFight:{x chances, assess danger</title>
     <title l="ru">{CБой:{x шансы, оценить опасность</title>
-    <title l="ua"></title>
+    <title l="ua">{CБій:{x шанси, оцінити небезпеку</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">roughly assess the enemy's strength</hint>
   <hint l="ru">примерно оценить силы противника</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">приблизно оцінити сили противника</hint>
   <name l="en">consider</name>
   <name l="ru">шансы</name>
-  <name l="ua"></name>
+  <name l="ua">шанси</name>
   <order>player_only</order>
   <position>rest</position>
 </Command>

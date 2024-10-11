@@ -3,10 +3,46 @@
   <cat>learn</cat>
   <extra>keep_hide ghost afk</extra>
   <help id="1352" labels="skill" level="-1" ref="spells" type="CommandHelp">
-    <extra l="en">&apos;skills all&apos; &apos;spells all&apos;</extra>
-    <extra l="ru">&apos;активные умения&apos; навыки &apos;пассивные умения&apos; список умений &apos;умения все&apos; &apos;заклинания все&apos;</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="en">'skills all' 'spells all'</extra>
+    <extra l="ru">'активные умения' навыки 'пассивные умения' список умений 'умения все' 'заклинания все'</extra>
+    <extra l="ua">'активні вміння' навички 'пасивні вміння' список вмінь 'вміння всі' 'заклинання всі'</extra>
+    <text l="en">All abilities are divided into =spells= and =skills=.
+Your character can possess many abilities depending on their {hh28class{x, {hh24race{x,
+{hh3clan{x, or additional {hh242profession{x.
+
+%FMT% *%CMD%*
+%FMT% *%CMD%* _skills_
+%FMT% *%CMD%* _spells_
+To see the abilities available to your character, their level, study, and mana consumption, simply type *skills*. To filter only skills or spells, write it at the end.
+
+Skills are either =active= or =passive=. For active skills, you need to issue commands: for example, to use the combat skill &apos;{hh807kick{x&apos;, you need to type {hckick{x. To use magic, you need to type {hccast{x and the name of the spell -- see %H% {hh1361cast{x.
+
+By contrast, passive skills work on their own if they are sufficiently learned. For example, defensive skills work automatically and do not need commands: {hh726shield block{x, {hh754dodge{x, {hh576parry{x, etc.
+
+%FMT% *%CMD%* _active_
+%FMT% *%CMD%* _passive_
+Show only active skills (commands) or only passive ones.
+
+{CSKILL DEVELOPMENT{x
+Most skills become available at a certain {hh14level{x and need to be {hh1359practiced{x. Don't confuse practices with {hh1353training{x -- these are needed for developing your {hh41attributes{x.
+
+In addition to the {hh1359skill proficiency{x percentage (leveling), which is achieved through practice and skill use, you will see the skill's efficiency percentage. For example, if you see something like {cbackstab{x {C100{x({x65{x) -- it means the backstab skill is learned 100%, but for some reason, it only works at 65%. The opposite can also be true: the skill is not yet practiced, but already works at 100%. This can be due to some powerful artifacts, divine blessings or curses, {hh120shock{x state, and other factors.
+
+{COTHER FILTERS{x
+%FMT% *skills all* 
+A list of absolutely all the skills you can ever learn.
+
+%FMT% *%CMD%* _level1_ _level2_
+Shows all skills that appear from level1 to level2.
+
+%FMT% *%CMD%* _level_ 
+Shows all skills that appear exactly at this level.
+
+%FMT% *%CMD%* _group name_
+Shows the list of available skills in this group. 
+
+%FMT% *%CMD%* *sort* *name*|*level*|*learned*
+Sorts the list by level, name, or percentage of leveling.</text>
     <text l="ru">Все умения делятся на =заклинания= и =навыки=.
 Твой персонаж может владеть многими умениями в зависимости от {hh28класса{x, {hh24расы{x,
 {hh3клана{x или дополнительной {hh242профессии{x.
@@ -59,17 +95,67 @@
 %FMT% *%CMD%* *сортировать* *имя*|*уровень*|*изучено*
 Сортирует список по уровню, по имени или по проценту раскачки.
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">Усі вміння поділяються на =заклинання= і =навички=.
+Твій персонаж може володіти багатьма вміннями залежно від {hh28класу{x, {hh24раси{x,
+{hh3клану{x або додаткової {hh242професії{x.
+
+%FMT% *%CMD%*
+%FMT% *%CMD%* _навички_
+%FMT% *%CMD%* _заклинання_
+Щоб побачити вміння, доступні твоєму персонажу, їх рівень, вивченість та
+витрати мани, просто введи *вміння*. А щоб відфільтрувати окремо
+навички або заклинання, додай це в кінці.
+
+Навички бувають =активні= та =пасивні=. Для активних навичок потрібно набирати команди:
+наприклад, для використання бойової навички &apos;{hh807удар{x&apos;, треба написати {hcвдарити{x.
+Для використання магії треба написати {hcчаклувати{x і назву заклинання --
+читай %H% {hh1361чаклувати{x.
+
+Пасивні ж навички працюють самостійно, якщо вони достатньо вивчені.
+Наприклад, захисні навички працюють автоматично і не потребують команд:
+{hh726блок щитом{x, {hh754ухилення{x, {hh576парирування{x і т.д.
+
+%FMT% *%CMD%* _активні_
+%FMT% *%CMD%* _пасивні_
+Показати лише активні навички (команди) або тільки пасивні.
+
+{CРОЗВИТОК ВМІНЬ{x
+Більшість вмінь з'являються на певному {hh14рівні{x і їх потрібно {hh1359практикувати{x.
+Не плутай практики з {hh1353тренуваннями{x -- ці потрібні для розвитку твоїх {hh41параметрів{x.
+
+Окрім відсотка {hh1359володіння вмінням{x (прокачування), який досягається практикою
+та використанням вміння, ти побачиш відсоток ефективності вміння. Наприклад, якщо
+ти бачиш щось на зразок {cудар в спину{x {C100{x({x65{x) -- це означає, що
+навичка удару в спину вивчена на 100%, але з якихось причин працює тільки на
+65%. Буває і навпаки: навичка ще не відпрактикована, але вже працює на 100%.
+Таке буває через дії деяких потужних артефактів, божественного
+благословення або прокляття, {hh120шокового{x стану та інших факторів.
+
+{CІНШІ ФІЛЬТРИ{x
+%FMT% *вміння всі* 
+Список абсолютно всіх вмінь, які ти коли-небудь зможеш вивчити.
+
+%FMT% *%CMD%* _рівень1_ _рівень2_
+Показує всі вміння, які з'являються з рівня1 по рівень2.
+
+%FMT% *%CMD%* _рівень_ 
+Показує всі вміння, які з'являються саме на цьому рівні.
+
+%FMT% *%CMD%* _ім'я групи_
+Показує список доступних вмінь цієї групи. 
+
+%FMT% *%CMD%* *сортувати* *ім'я*|*рівень*|*вивчено*
+Сортує список за рівнем, ім'ям або відсотком прокачування.</text>
+    <title l="en">{CSkills of the character{x and their development</title>
     <title l="ru">{CУмения персонажа{x и их развитие</title>
-    <title l="ua"></title>
+    <title l="ua">{CВміння персонажа{x і їх розвиток</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">list of all available skills</hint>
   <hint l="ru">список всех доступных умений</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">список усіх доступних вмінь</hint>
   <name l="en">skills</name>
   <name l="ru">умения</name>
-  <name l="ua"></name>
+  <name l="ua">вміння</name>
   <order>player_only</order>
   <position>dead</position>
 </Command>

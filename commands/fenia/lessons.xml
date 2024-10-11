@@ -3,13 +3,27 @@
   <cat>quest</cat>
   <extra>keep_hide ghost afk</extra>
   <help id="270" level="-1" type="CommandHelp">
-    <extra l="en"></extra>
+    <extra l="en">leatherworker 'old awl'</extra>
     <extra l="ru">кожевенник &apos;старое шило&apos;</extra>
-    <extra l="ua"></extra>
+    <extra l="ua">кожівник 'старе шилу'</extra>
     <keyword l="en">lessons</keyword>
     <keyword l="ru">обучение уроки</keyword>
-    <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <keyword l="ua">навчання уроки</keyword>
+    <text l="en">After newbies disembark from the Galleon into the city, they encounter a series of simple tutorial tasks, called =lessons=. It is not mandatory to complete them, but very beneficial -- you can earn a lot of experience points and at the same time understand important mechanics of our world.
+
+To see the task of the current lesson, type lesson.
+
+%FMT% *%CMD%* all*
+See the list of all lessons.
+
+%FMT% *%CMD%* _number_
+View the description of the lesson under the given number.
+
+%FMT% *%CMD%* start*
+Start the lessons from the beginning.
+
+%SA% %H% *(quests,quests)*
+</text>
     <text l="ru">После того как {hh2127новички{x высаживаются с {hh1560Галеона{x в город, их ждет цепочка простых
 обучающих заданий, называемых =уроками=. Проходить их необязательно, но очень
 полезно -- можно получить много {hh14очков опыта{x и заодно разобраться в важных
@@ -28,17 +42,31 @@
 
 %SA% %H% *(квесты,quests)*
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">Після того як {hh2127новачки{x висаджуються з {hh1560Галеона{x в місто, на них чекає ланцюжок простих навчальних завдань, званих =уроками=. Проходити їх необов'язково, але дуже корисно -- можна отримати багато {hh14очок досвіду{x і заодно розібратися у важливих механіках нашого світу.
+
+Щоб побачити завдання поточного уроку, напиши {hc{yурок{x.
+
+%FMT% *%CMD%* всі*
+Подивитися список усіх уроків.
+
+%FMT% *%CMD%* _номер_
+Подивитися опис уроку під даним номером.
+
+%FMT% *%CMD%* старт*
+Пройти уроки з початку.
+
+%SA% %H% *(квести,quests)*
+</text>
+    <title l="en">{CQuests:{x Lessons for Beginners</title>
     <title l="ru">{CКвесты:{x Уроки для новичков</title>
-    <title l="ua"></title>
+    <title l="ua">{CКвести:{x Уроки для новачків</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">beginning lessons</hint>
   <hint l="ru">начальные уроки</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">початкові уроки</hint>
   <name l="en">lessons</name>
   <name l="ru">уроки</name>
-  <name l="ua"></name>
+  <name l="ua">уроки</name>
   <order>player_only</order>
   <position>dead</position>
 </Command>

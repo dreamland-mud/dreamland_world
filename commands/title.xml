@@ -5,8 +5,28 @@
   <help id="1007" level="-1" type="CommandHelp">
     <extra l="en">autotitle</extra>
     <extra l="ru">авто-титул автотитул</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">авто-титул автотитул</extra>
+    <text l="en">The title displays the role you play in this world -- it's one of the important
+components of your {hh31roleplay{x. The standard titles of your character reflect
+the growth of skill in your class. Clan members often use {hh3clan ranks{x
+as a title -- depending on the clan's charter, it may reflect the player's merits
+to the clan or the player's skill in {hh32PvP{x. If you wish, you can
+set anything as a title -- and it will become part of your game image.
+
+To change the title to anything, just type *%CMD%* _string_.
+%PAUSE%
+Some characters in the title string are interpreted as macros:
+* %a is replaced with the auto-title for your class and level
+  (precisely the title &quot;%a&quot; is set for everyone at the beginning of life).
+* %с is replaced with the clan rank in brackets -- for example, {C[{Rspirit of war{C]{x
+* %C is replaced with the clan rank with a capital letter
+%RESUME%
+
+%FMT%  *%CMD%* *clear*
+Removes the title, it can also be removed with the command: %CMD% {{x
+
+%SA% %H% {hh1006pretitel{x, %H% {hh43colors{x
+</text>
     <text l="ru">Титул отображает роль, которую ты играешь в этом мире -- это один из важных
 компонентов твоего {hh31отыгрыша{x. Стандартные титулы твоего персонажа отражают
 рост мастерства в твоем классе. Члены кланов часто используют {hh3клановые звания{x
@@ -29,17 +49,38 @@
 
 %SA% %H% {hh1006претитул{x, %H% {hh43цвета{x
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">Титул відображає роль, яку ти граєш у цьому світі -- це один з важливих
+компонентів твого {hh31відтворення{x. Стандартні титули твого персонажа відображають
+зростання майстерності у твоєму класі. Члени кланів часто використовують {hh3кланові звання{x
+в якості титулу -- залежно від статуту клану це може відображати заслуги
+гравця перед кланом або майстерність гравця в {hh32ПК{x. Якщо захочеш, ти можеш
+встановити в якості титулу що завгодно -- і це стане частиною твого ігрового
+образу.
+
+Щоб змінити титул на що завгодно, просто напиши *%CMD%* _рядок_.
+%PAUSE%
+Деякі символи в рядку титулу інтерпретуються як макроси:
+* %a замінюється на авто-титул для твого класу і рівня
+  (саме титул &quot;%a&quot; встановлюється всім на початку життя).
+* %с замінюється на кланове звання в дужках -- наприклад {C[{Rдух війни{C]{x
+* %C замінюється на кланове звання з великої літери
+%RESUME%
+
+%FMT%  *%CMD%* *очистити*
+Видаляє титул, також можна видалити його по команді: %CMD% {{x
+
+%SA% %H% {hh1006предтитул{x, %H% {hh43кольори{x
+</text>
+    <title l="en">{CRoleplay: {xCharacter's title</title>
     <title l="ru">{CОтыгрыш: {xТитул персонажа</title>
-    <title l="ua"></title>
+    <title l="ua">{CВідтворення: {xТитул персонажа</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">set your title</hint>
   <hint l="ru">установить себе титул</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">встановити собі титул</hint>
   <name l="en">title</name>
   <name l="ru">титул</name>
-  <name l="ua"></name>
+  <name l="ua">титул</name>
   <order>player_only</order>
   <position>dead</position>
 </Command>

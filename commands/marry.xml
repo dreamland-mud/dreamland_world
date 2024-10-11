@@ -3,10 +3,24 @@
   <cat></cat>
   <extra>keep_hide ghost</extra>
   <help id="1350" level="102" ref="divorce" type="CommandHelp">
-    <keyword l="en">&apos;marriage commands&apos;</keyword>
-    <keyword l="ru">&apos;свадебные команды&apos; жениться &apos;выйти замуж&apos;</keyword>
-    <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <keyword l="en">'marriage commands'</keyword>
+    <keyword l="ru">'свадебные команды' жениться 'выйти замуж'</keyword>
+    <keyword l="ua">'шлюбні команди' одружитися 'вийти заміж'</keyword>
+    <text l="en">%FMT%  *%CMD%* _victim1_ _victim2_
+
+Declares the victims husband and wife. Both must be in the same room with you.
+The first victim becomes {Whusband{x, the second {Wwife{x, 
+regardless of gender. Don't get confused &gt;8)
+
+%FMT%  *divorce* _victim1_ _victim2_
+
+Frees from marital ties. Both must be near you.
+
+%FMT%  *divorce* _victim1_
+
+Makes a widower or widow a free person (one becomes 
+a widow after the spouse's deletion).
+  </text>
     <text l="ru">%FMT%  *%CMD%* _жертва1_ _жертва2_
 
 Объявляет жертв мужем и женой. Оба должны находиться с вами в одной комнате.
@@ -22,15 +36,29 @@
 Делает вдовца или вдову свободным человеком (вдовами становятся
 после делита супруга).
   </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT%  *%CMD%* _жертва1_ _жертва2_
+
+Оголошує жертв чоловіком і дружиною. Обоє повинні бути в одній кімнаті з вами.
+При цьому перша жертва стає {Wчоловіком{x, друга {Wдружиною{x, 
+незалежно від статі. Не переплутайте &gt;8)
+
+%FMT%  *divorce* _жертва1_ _жертва2_
+
+Звільняє від шлюбних уз. Обоє повинні бути поруч з вами.
+
+%FMT%  *divorce* _жертва1_
+
+Робить вдівця або вдову вільною людиною (вдовами стають 
+після видалення супруга).
+  </text>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">declare as husband and wife</hint>
   <hint l="ru">объявить мужем и женой</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">оголосити чоловіком і дружиною</hint>
   <level>102</level>
   <log>1</log>
   <name l="en">marry</name>
-  <name l="ru"></name>
-  <name l="ua"></name>
+  <name l="ru">жениться</name>
+  <name l="ua">одружитися</name>
   <position>stand</position>
 </Command>

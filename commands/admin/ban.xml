@@ -3,7 +3,29 @@
   <cat></cat>
   <extra>keep_hide ghost</extra>
   <help id="1073" level="108" type="CommandHelp">
-    <text l="en"></text>
+    <text l="en">Set a ban on a host or subnet using one of the criteria.
+
+%FMT%  *%CMD%* *list* 
+Shows the list of active bans.
+
+%FMT%  *%CMD%* _pattern_|_number_
+Shows details about the ban.
+
+%FMT%  *%CMD%* _pattern_|_number_ *none*|*off*
+Remove the ban.
+
+%FMT%  *%CMD%* _pattern_|_number_ _type_ *expire* _time_ *comment* _reason_
+Set or change the ban.
+The type can be one of:
+*all* - ban everyone
+*player* - ban players
+*newbie* - ban creating new players
+*confirm* - ban sending confirmation requests
+*communicate* - ban using public channels and notes
+
+The time is specified in the format: 1d, 2h, 30min
+The reason is optional.
+</text>
     <text l="ru">Установить бан на хост или подсеть, по одному из критериев.
 
 %FMT%  *%CMD%* *list* 
@@ -27,11 +49,33 @@
 Время задается в формате: 1d, 2h, 30min
 Причину указывать не обязательно.
 </text>
-    <text l="ua"></text>
+    <text l="ua">Встановити бан на хост або підмережу, за одним із критеріїв.
+
+%FMT%  *%CMD%* *list* 
+Показує список активних банів.
+
+%FMT%  *%CMD%* _шаблон_|_номер_
+Показує подробиці про бан.
+
+%FMT%  *%CMD%* _шаблон_|_номер_ *none*|*off*
+Видалити бан.
+
+%FMT%  *%CMD%* _шаблон_|_номер_ _вид_ *expire* _час_ *comment* _причина_
+Встановити або змінити бан.
+Тип може бути одним з:
+*all* - заборона для всіх
+*player* - заборона для гравців
+*newbie* - заборона на створення нових гравців
+*confirm* - заборона на відправлення запиту на підтвердження
+*communicate* - заборона на використання громадських каналів та нот
+
+Час задається у форматі: 1d, 2h, 30min
+Причину вказувати не обов'язково.
+</text>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">set a ban on host</hint>
   <hint l="ru">установить бан на хост</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">встановити бан на хост</hint>
   <level>108</level>
   <log>1</log>
   <name l="en">ban</name>

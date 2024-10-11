@@ -2,14 +2,24 @@
 <Command>
   <aliases l="en">suicide</aliases>
   <aliases l="ru">суицид</aliases>
-  <aliases l="ua"></aliases>
+  <aliases l="ua">самогубство</aliases>
   <cat>char</cat>
   <extra>keep_hide ghost spellout</extra>
   <help id="993" level="-1" type="CommandHelp">
-    <extra l="en"></extra>
+    <extra l="en">suicide 'character deletion'</extra>
     <extra l="ru">самоубийство &apos;удаление персонажа&apos;</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">самогубство 'видалення персонажа'</extra>
+    <text l="en">%FMT%  *%CMD%*
+%FFF%  *%CMD%* _password_
+
+This command is used to delete your character. After deletion, your name can be used to create a new character. All personal belongings and 
+chests (%H% {hh57personal items{x, %H% {hh126reward{x) disappear at the moment of suicide.
+Suicidal characters cannot be restored.
+
+The command must be entered twice: the second time with the password for confirmation.
+If, after typing *%CMD%*, you suddenly reconsider {Sfyour{Sx decision to end your life by suicide,
+enter this command again WITHOUT the password.
+</text>
     <text l="ru">%FMT%  *%CMD%*
 %FFF%  *%CMD%* _пароль_
 
@@ -22,18 +32,29 @@
 Если, набрав *%CMD%*, ты вдруг передумал{Sfа{Sx оканчивать жизнь самоубийством,
 набери эту команду еще раз БЕЗ пароля.
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">%FMT%  *%CMD%*
+%FFF%  *%CMD%* _пароль_
+
+Ця команда використовується для видалення твого персонажа. Після видалення твоє
+ім'я може використовуватися для створення нового персонажа. Усі особисті речі та 
+скрині (%H% {hh57особисті речі{x, %H% {hh126нагорода{x) зникають у момент самогубства.
+Персонажі-самогубці не підлягають відновленню.
+
+Команду треба буде набрати двічі: другий раз -- з паролем для підтвердження.
+Якщо, набравши *%CMD%*, ти раптом передумав{Sfа{Sx закінчувати життя самогубством,
+набери цю команду ще раз БЕЗ пароля.
+</text>
+    <title l="en">Character Deletion</title>
     <title l="ru">Удаление персонажа</title>
-    <title l="ua"></title>
+    <title l="ua">Видалення персонажа</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">commit suicide (delete character)</hint>
   <hint l="ru">совершить суицид (удалить персонажа)</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">вчинити самогубство (видалити персонажа)</hint>
   <log>1</log>
   <name l="en">delete</name>
   <name l="ru">удалить</name>
-  <name l="ua"></name>
+  <name l="ua">видалити</name>
   <order>player_only</order>
   <position>dead</position>
 </Command>

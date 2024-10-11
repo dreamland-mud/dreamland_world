@@ -3,9 +3,45 @@
   <cat>group</cat>
   <help id="1091" level="-1" type="CommandHelp">
     <extra l="en">orders</extra>
-    <extra l="ru">&apos;приказать очару эффекты&apos; &apos;приказать рапорт&apos; &apos;приказать эффекты&apos; приказывать</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ru">'приказать очару эффекты' 'приказать рапорт' 'приказать эффекты' приказывать</extra>
+    <extra l="ua">'наказати чарів наслідки' 'наказати рапорт' 'наказати наслідки' наказувати</extra>
+    <text l="en">Your {hh15followers{x can be ordered to use spells, skills, or
+certain commands. To order, use the format *%CMD%* _%VICT%_ &lt;command&gt;. 
+For example, {ycommand rats laugh{x will make your rat giggle.
+
+%FMT% *%CMD%* _%VICT%_ report{x
+%FMT% *%CMD%* _%VICT%_ report all{x
+First of all, order your follower this command -- you will find out what exactly he
+can do.
+
+{CWHAT CAN AND CANNOT BE ORDERED{x
+{R%A% {xTo find out if you can order a command, write {hh1079command show{x
+{R%A% {xOrdering most aggressive actions (starting a fight, casting
+  combat magic, etc.) -- {Rnot allowed.{x
+{R%A% {xOrdering all followers at once -- {Rnot allowed.{x
+{G%A% {xPets have classes (see {y{hchelp pet{x), and they can only perform skills
+  available to this class -- and not all of them.
+{G%A% {xSome orders can only be given in battle -- for example, you can order
+  a charm {hh783throw dirt{x when he's already fighting, but not before the battle starts.
+  Remember that there is a {hh120delay{x of one {hh16combat round{x for the order in battle.
+{G%A% {xYou can order a pet to heal with {hh202healers{x -- you will be charged.
+{G%A% {xYou can order to change the description -- sometimes it is useful, for example, to quickly
+  identify your {hh545golem{x in a faceless line of its peers.
+{G%A% {xA follower can be ordered to execute the {hh997effects{x command, and he will show all
+  effects applied to him.
+
+{CREMINDER ABOUT CHARM{x
+%A% The "charm" state applies to any mobs that follow you
+  and take orders (charms, charmies), including {hh15pets{x, {hh545golems{x, summoned
+  {hh646animals{x and many other scenarios -- you can order all of them.
+%A% Charmed followers will join a fight on your side when you attack
+  someone else. Conversely, if someone attacks your charms, you will stand up
+  for them, just as for other members of your {hh1378group{x.
+%A% If you attack your own charm, the spell will wear off and the creature will enter the battle
+  already against you.
+
+Details: in {y{hcHelp charm{x.
+</text>
     <text l="ru">Твоим {hh15последователям{x можно приказать использовать заклинания, навыки или
 некоторые команды. Чтобы приказать, используй формат *%CMD%* _%VICT%_ &lt;команда&gt;. 
 Например, {yприказать крыс хихи{x заставит твоего крысенка хихикать.
@@ -32,7 +68,7 @@
   наложенные на него воздействия.
 
 {CНАПОМИНАЛКА ПРО ОЧАРОВАНИЕ{x
-%A% Состояние &quot;очарования&quot; распространяется на любых мобов, следующих за тобой
+%A% Состояние "очарования" распространяется на любых мобов, следующих за тобой
   и исполняющих приказы (очаров, чармисов), включая {hh15петов{x, {hh545големов{x, призванных
   {hh646животных{x и многие другие сценарии -- всем им можно отдавать приказы.
 %A% Очарованные последователи вступят в бой на твоей стороне, когда ты нападешь
@@ -43,17 +79,53 @@
 
 Подробности: в {y{hcсправка очаровать{x.
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">Твоїм {hh15послідовникам{x можна наказати використовувати заклинання, навички або
+деякі команди. Щоб наказати, використовуй формат *%CMD%* _%VICT%_ &lt;команда&gt;. 
+Наприклад, {yнаказати щурам хіхі{x змусить твою щурку хихикати.
+
+%FMT% *%CMD%* _%VICT%_ рапорт{x
+%FMT% *%CMD%* _%VICT%_ рапорт всі{x
+Спочатку накажи своєму послідовнику цю команду -- дізнаєшся, що саме він
+може робити.
+
+{CЩО МОЖНА І НЕ МОЖНА НАКАЗУВАТИ{x
+{R%A% {xЩоб дізнатися, чи можна наказати якусь команду, пиши {hh1079команда показати{x
+{R%A% {xНаказати виконувати більшість агресивних дій (розпочати бій, чаклувати
+  бойову магію та ін.) -- {Rнельзя.{x
+{R%A% {xНаказати одразу всім послідовникам -- {Rне можна.{x
+{G%A% {xУ петов є класи (див. {y{hcдовідка пет{x), і виконати вони зможуть лише уміння,
+  доступні цьому класу -- та й то не всі.
+{G%A% {xДеякі накази можна давати тільки в бою -- наприклад, можна наказати
+  чармису {hh783кидати бруд{x, коли він уже бореться, але не до початку бою.
+  Не забудь, що у наказу в бою є {hh120затримка{x в один {hh16бойовий раунд{x.
+{G%A% {xМожна наказати пету лікуватися у {hh202лікарів{x -- гроші знімуть з тебе.
+{G%A% {xМожна наказати змінити опис -- іноді це корисно, наприклад, щоб швидко
+  впізнати свого {hh545голема{x у безликому строю його побратимів.
+{G%A% {xМожна наказати послідовнику виконати команду {hh997афекти{x, і він покаже всі
+  накладені на нього впливи.
+
+{CНАГАДУВАННЯ ПРО ОЧАРУВАННЯ{x
+%A% Стан "очарування" поширюється на будь-яких мобів, що слідують за тобою
+  і виконують накази (очари, чармиси), включаючи {hh15петов{x, {hh545големов{x, призваних
+  {hh646тварин{x і багато інших сценаріїв -- усім їм можна віддавати накази.
+%A% Очаровані послідовники вступлять у бій на твоїй стороні, коли ти нападеш
+  на когось ще. І навпаки, якщо хтось нападе на твоїх очарів, ти заступишся
+  за них, як і за інших членів своєї {hh1378групи{x.
+%A% Якщо напасти на свого очара, то закляття спаде і істота вступить у бій
+  вже проти тебе.
+
+Подробиці: у {y{hcдовідка очарувати{x.
+</text>
+    <title l="en">{CFollowers: {xorders</title>
     <title l="ru">{CПоследователи: {xприказы</title>
-    <title l="ua"></title>
+    <title l="ua">{CПослідовники: {xнакази</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">give an order to a charmed follower</hint>
   <hint l="ru">отдать приказ очарованному последователю</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">дати наказ зачарованому послідовнику</hint>
   <name l="en">order</name>
   <name l="ru">приказать</name>
-  <name l="ua"></name>
+  <name l="ua">наказати</name>
   <order>player_only</order>
   <position>rest</position>
 </Command>

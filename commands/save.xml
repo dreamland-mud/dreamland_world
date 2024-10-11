@@ -3,7 +3,16 @@
   <cat>char</cat>
   <extra>keep_hide ghost afk</extra>
   <help id="991" level="-1" type="CommandHelp">
-    <text l="en"></text>
+    <text l="en">%FMT% *%CMD%*
+
+Saves your character, all items you use, and all your followers. Autosave occurs every 15 ticks, upon leaving the world, and after major changes in the character's life, such as leveling up. Therefore, this command is purely for reassurance.
+
+Entering command *%CMD%* blocks all other commands for about 20 seconds, so use it with caution.
+
+Some keys, maps, and certain items {Rare not saved{x with you.
+
+%SA% %H% {hh1051limits{x
+</text>
     <text l="ru">%FMT% *%CMD%*
 
 Сохраняет твоего персонажа, все используемые тобой предметы и всех твоих
@@ -18,17 +27,30 @@
 
 %SA% %H% {hh1051лимиты{x
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">%FMT% *%CMD%*
+
+Зберігає твого персонажа, всі предмети, які ти використовуєш, та всіх твоїх
+послідовників. Автозбереження відбувається кожні 15 тактів, при виході з світу,
+а також після важливих змін в житті персонажа, таких як підвищення рівня.
+Тому ця команда призначена виключно для перестрахування.
+
+Введення команди *%CMD%* блокує всі інші команди приблизно на 20 секунд, тож
+використовуй її обережно.
+
+Деякі ключі, карти та певні речі {Rне зберігаються{x разом з тобою.
+
+%SA% %H% {hh1051ліміти{x
+</text>
+    <title l="en">Character Save</title>
     <title l="ru">Сохранение персонажа</title>
-    <title l="ua"></title>
+    <title l="ua">Збереження персонажа</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">to save your character just in case</hint>
   <hint l="ru">лишний раз сохранить своего персонажа</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">зайвий раз зберегти свого персонажа</hint>
   <name l="en">save</name>
   <name l="ru">сохраниться</name>
-  <name l="ua"></name>
+  <name l="ua">зберегтися</name>
   <order>player_only</order>
   <position>dead</position>
 </Command>

@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
-  <aliases l="en"></aliases>
   <aliases l="ru">убежать</aliases>
-  <aliases l="ua"></aliases>
+  <aliases l="ua">втекти</aliases>
   <cat>fight</cat>
   <extra>afk</extra>
   <help id="1025" level="-1" type="CommandHelp">
-    <text l="en"></text>
+    <text l="en">%FMT% *%CMD%*
+
+You cannot leave the battle just by continuing in the desired direction. 
+If the battle is not going well for you, quickly type {hc*%CMD%*{x! 
+If you are in a {hh1378group{x with someone, you can ask to {hh613rescue{x.
+
+You can {hh862pray for return{x to escape the fight, but it works less effectively than fleeing.
+
+If the connection is lost during the battle, the character will continue to fight,
+but will occasionally try to flee or pray for a return.
+
+%SA% %H% {hh832flee{x
+</text>
     <text l="ru">%FMT% *%CMD%*
 
 Нельзя покинуть битву, просто продолжив путь в нужном направлении.
@@ -20,16 +31,28 @@
 
 %SA% %H% {hh832побег{x
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">%FMT% *%CMD%*
+
+Не можна покинути битву, просто продовживши шлях у потрібному напрямку.
+Якщо битва складається неуспішно для тебе, скоріше пиши {hc*%CMD%*{x!
+Якщо ти в {hh1378групі{x з кимось, то можеш попросити себе {hh613врятувати{x.
+
+Для втечі з бою можна {hh862молитися про повернення{x, але це буде менш ефективно, ніж втеча.
+
+Якщо під час битви втрачено зв'язок, персонаж залишиться битися, але 
+час від часу намагатиметься втекти або молитися про повернення.
+
+%SA% %H% {hh832втеча{x
+</text>
+    <title l="en">{CBattle: {xhow to escape from an unsuccessful duel</title>
     <title l="ru">{CБой: {xкак убежать из неудачного поединка</title>
-    <title l="ua"></title>
+    <title l="ua">{CБій: {xяк втекти з невдалого поєдинку</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">escape from battle</hint>
   <hint l="ru">сбежать из битвы</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">втекти з битви</hint>
   <name l="en">flee</name>
   <name l="ru">сбежать</name>
-  <name l="ua"></name>
+  <name l="ua">втекти</name>
   <position>fight</position>
 </Command>

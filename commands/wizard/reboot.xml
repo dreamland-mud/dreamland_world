@@ -3,7 +3,24 @@
   <cat></cat>
   <extra>keep_hide ghost spellout</extra>
   <help id="1036" level="102" ref="shutdown" type="CommandHelp">
-    <text l="en"></text>
+    <text l="en">%FMT%  *%CMD%* *now* 
+Restart the mud-server immediately.
+
+%FMT%  *%CMD%* _ticks_ 
+Restart the mud-server after the specified number of ticks.
+Every 10th, and starting from the 5th - each subsequent tick - Hassan and 
+Valkyrie will loudly warn about the upcoming reboot.
+
+%FMT%  *%CMD%* *cancel*
+Cancel the restart.
+
+%FMT%  *%CMD%* *status*
+See how many ticks are left until the restart.
+
+%FMT%  *shutdown*
+Shuts down the server and creates a shutdown.txt file in the current directory,
+the presence of which will prevent the world from loading again.
+</text>
     <text l="ru">%FMT%  *%CMD%* *now* 
 Перезагрузить mud-сервер немедленно.
 
@@ -22,11 +39,28 @@
 Завершает работу сервера и создает в текущем каталоге файл shutdown.txt,
 наличие которого не позволит миру загрузиться снова.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT%  *%CMD%* *now* 
+Перезавантажити mud-сервер негайно.
+
+%FMT%  *%CMD%* _тиків_ 
+Перезавантажити mud-сервер через вказану кількість тиків.
+Кожен 10-й, а починаючи з 5-го - кожен наступний тик - Хасан і 
+Валькірія голосно попереджатимуть про майбутню перезавантаження.
+
+%FMT%  *%CMD%* *cancel*
+Скасувати перезавантаження.
+
+%FMT%  *%CMD%* *status*
+Подивитися, скільки тиків залишилося до перезавантаження.
+
+%FMT%  *shutdown*
+Завершує роботу сервера і створює в поточному каталозі файл shutdown.txt,
+присутність якого не дозволить світу завантажитися знову.
+</text>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">reboot the world</hint>
   <hint l="ru">перезагрузить мир</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">перезавантажити світ</hint>
   <level>109</level>
   <log>1</log>
   <name l="en">reboot</name>

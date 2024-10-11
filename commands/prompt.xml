@@ -5,8 +5,49 @@
   <help id="1012" labels="info" level="-1" ref="battleprompt" type="CommandHelp">
     <keyword l="en">mudprompt</keyword>
     <keyword l="ru">промпт состояния статуса строка</keyword>
-    <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <keyword l="ua">підказка стану рядок</keyword>
+    <text l="en">*prompt* without an argument turns the status line display on and off,
+       and *battleprompt* - the status line during battle.
+ 
+*prompt* *%ALL%* - sets the default status line 
+               &quot;&lt;{r%h{x/{R%H{xhp {c%m{x/{C%M{xmana %v/%Vmv {W%X{xexp Exits:{g%d{x&gt;&quot;.
+
+*battleprompt* *%ALL%* - sets the default status line in battle
+ %PAUSE%              &quot;&lt;{r%h{x/{R%H{xhp {c%m{x/{C%M{xmana %v/%Vmv %Xexp Exits:{g%d{x&gt; [{r%y{x:{Y%o{x]&gt;&quot;.%RESUME%
+
+*prompt* *%SHOW%* and *battleprompt* *%SHOW%* - display the current status line
+
+        {Y%h{x :  Displays current health {hh58points{x (hit points, hp)
+        {Y%H{x :  Displays maximum health
+        {Y%m{x :  Displays current {hh59mana points{x (mana)
+        {Y%M{x :  Displays maximum mana
+        {Y%v{x :  Displays current {hh60movement points{x (moves)
+        {Y%V{x :  Displays maximum movement
+        {Y%W{x :  Displays ability delay in pulses
+        {Y%x{x :  Displays current {hh14experience points{x (experience)
+        {Y%X{x :  Displays experience points to next level
+        {Y%l{x :  Displays your level 
+        {Y%g{x :  Displays amount of {hh13gold{x you have
+        {Y%s{x :  Displays amount of silver you have
+        {Y%y{x :  Displays your current health status (percentages)
+        {Y%o{x :  Displays opponent's current health status (percentages)
+        {Y%r{x :  Displays name of the room you are in
+        {Y%e{x :  Displays exits from the room you are in  NESWUD
+        {Y%d{x :  (same as %e)
+        {Y%S{x :  Displays name of the terrain type; in brackets if indoors
+        {Y%c{x :  Sets newline (useful for multi-line prompts)
+        {Y%n{x :  Displays your name
+        {Y%L{x :  Displays lighting (dark, dawn, daylight, dusk)
+        {Y%t{x :  Displays quest time
+{Ii        {Y%R{w :  Displays the room number you are in (IMMORTAL ONLY)
+        {Y%z{w :  Displays the zone name you are in (IMMORTAL ONLY){Ix
+Example:  
+*prompt* &lt;%hhp %mm %vmv&gt;
+displays the status line as: &quot;&lt;10hp 100m 100mv&gt;&quot;
+
+*battleprompt* &lt;%hhp %mm %vmv Opp:&lt;%o&gt;&gt;
+displays the battle status line as: &quot;&lt;10hp 100m 100mv Opp:&lt;100%&gt;&quot;
+</text>
     <text l="ru">*подсказка* без аргумента включает и выключает вывод строки состояния,
        а *боеваяподсказка* - строки состояния в бою.
  
@@ -49,17 +90,58 @@
 *боеваяподсказка* &lt;%hhp %mm %vmv Opp:&lt;%o&gt;&gt;
 выводит строку состояния в бою в следующем виде: &quot;&lt;10hp 100m 100mv Opp:&lt;100%&gt;&quot;
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">*підказка* без аргументу вмикає та вимикає виведення рядка стану,
+       а *бойовапідказка* - рядка стану в бою.
+ 
+*підказка* *%ALL%* - встановлює стандартний рядок стану 
+               &quot;&lt;{r%h{x/{R%H{xзд {c%m{x/{C%M{xман %v/%Vшг {W%X{xоп Вих:{g%d{x&gt;&quot;.
+
+*бойовапідказка* *%ALL%* - встановлює стандартний рядок стану в бою
+ %PAUSE%              &quot;&lt;{r%h{x/{R%H{xзд {c%m{x/{C%M{xман %v/%Vшг %Xоп Вих:{g%d{x&gt; [{r%y{x:{Y%o{x]&gt;&quot;.%RESUME%
+
+*підказка* *%SHOW%* і *бойовапідказка* *%SHOW%* - показують поточний рядок стану
+
+        {Y%h{x :  Відображає поточний стан {hh58очок життя{x (hit points, hp)
+        {Y%H{x :  Відображає максимальну кількість життя
+        {Y%m{x :  Відображає поточний стан {hh59очок енергії{x (mana)
+        {Y%M{x :  Відображає максимальну кількість енергії
+        {Y%v{x :  Відображає поточний стан {hh60очок руху{x (moves)
+        {Y%V{x :  Відображає максимальну кількість руху
+        {Y%W{x :  Відображає затримки від умінь у пульсах
+        {Y%x{x :  Відображає поточну кількість {hh14очок досвіду{x (experience)
+        {Y%X{x :  Відображає кількість очок досвіду до наст. рівня
+        {Y%l{x :  Відображає твій рівень (level) 
+        {Y%g{x :  Відображає кількість наявного у тебе {hh13золота{x (gold)
+        {Y%s{x :  Відображає кількість наявного у тебе срібла (silver)
+        {Y%y{x :  Відображає поточний стан твоєї життя (у відсотках)
+        {Y%o{x :  Відображає поточний стан життя противника (у відсотках)
+        {Y%r{x :  Відображає назву кімнати, в якій ти знаходишся
+        {Y%e{x :  Відображає виходи з кімнати, в якій ти знаходишся  ПнСхПдЗхПдпВг
+        {Y%d{x :  (те ж, що %e)
+        {Y%S{x :  Відображає назву типу місцевості; в дужках, якщо всередині приміщення
+        {Y%c{x :  Встановлює перехід на новий рядок (корисно для багаторядкових підказок)
+        {Y%n{x :  Відображає твоє ім'я
+        {Y%L{x :  Відображає освітлення (темно, світає, світло, сутінки)
+        {Y%t{x :  Відображає квестовий час
+{Ii        {Y%R{w :  Відображає номер кімнати, в якій ти знаходишся (ТІЛЬКИ ДЛЯ БЕЗСМЕРТНИХ)
+        {Y%z{w :  Відображає назву зони, в якій ти знаходишся (ТІЛЬКИ ДЛЯ БЕЗСМЕРТНИХ){Ix
+Наприклад:  
+*підказка* &lt;%hhp %mm %vmv&gt;
+виводить рядок стану в такому вигляді: &quot;&lt;10hp 100m 100mv&gt;&quot;
+
+*бойовапідказка* &lt;%hhp %mm %vmv Opp:&lt;%o&gt;&gt;
+виводить рядок стану в бою в такому вигляді: &quot;&lt;10hp 100m 100mv Opp:&lt;100%&gt;&quot;
+</text>
+    <title l="en">{CConfiguration: {xstatus line, prompt</title>
     <title l="ru">{CНастройка: {xстрока состояния, промпт</title>
-    <title l="ua"></title>
+    <title l="ua">{CНалаштування: {xрядок стану, підказка</title>
   </help>
-  <hint l="en"></hint>
+  <hint l="en">set prompt appearance</hint>
   <hint l="ru">задать вид подсказки</hint>
-  <hint l="ua"></hint>
+  <hint l="ua">налаштувати вигляд підказки</hint>
   <name l="en">prompt</name>
   <name l="ru">подсказка</name>
-  <name l="ua"></name>
+  <name l="ua">підказка</name>
   <order>player_only</order>
   <position>dead</position>
 </Command>

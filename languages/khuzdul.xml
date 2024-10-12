@@ -8,16 +8,32 @@
     </node>
   </classes>
   <command type="LanguageCommand">
-    <aliases l="en"></aliases>
+    <aliases l="en">kuzdul</aliases>
     <aliases l="ru">куздул</aliases>
-    <aliases l="ua"></aliases>
+    <aliases l="ua">куздул</aliases>
     <cat>language</cat>
     <help id="2043" level="-1" type="LanguageHelp">
-      <keyword l="en"></keyword>
       <keyword l="ru">куздул</keyword>
-      <keyword l="ua"></keyword>
-      <text l="en"></text>
-      <text l="ru">{WKhuzdul{x ({Wкхуздул{x) - древнее наречие дварфов, хранящее отголоски старинных битв
+      <text l="en">{WKhuzdul{x - the ancient dialect of the dwarves, echoing with the sounds of old battles
+and past glory. The mighty clans have long disappeared, underground palaces
+and deep mines, and the dialect itself has been forgotten. The few fragments of words
+that have survived to our days carry within them the knowledge of ancient blacksmiths,
+who could create weapons of unprecedented power or easily repair armor.
+And those words that once served as part of battle cries and mottos are still
+capable of igniting the flames of battle rage in anyone who utters them aloud.
+
+{CCommand{x
+%FMT% *%CMD%* _word_
+%FFF% *%CMD%* _word_ _character_
+
+{CWord Actions{x
+%A% {cweapon spell{x: increases the damage and accuracy of the weapon you hold in your hand.
+%A% {c[ancient rage]{x: ignites the flame of rage in you, increasing damage or accuracy
+%A% {carmor repair{x: improves the appearance of your outfit
+
+%SA% %H% {hh234ancient languages{x.
+</text>
+      <text l="ru">{WКуздул{x ({Wкхуздул{x) - древнее наречие дварфов, хранящее отголоски старинных битв
 и былой славы. Давно исчезли могущественные кланы, подземные дворцы
 и глубокие шахты, забылось и само наречие. Немногие обрывки слов,
 дожившие до наших дней, хранят в себе знания древних кузнецов,
@@ -36,14 +52,32 @@
 
 %SA% %H% {hh234древние языки{x.
 </text>
-      <text l="ua"></text>
+      <text l="ua">{WКуздул{x ({Wкхуздул{x) - давній наріччя дворфів, що зберігає відгомони стародавніх битв
+та минулої слави. Давним-давно зникли могутні клани, підземні палаци
+та глибокі шахти, забулося й саме наріччя. Небагато уривків слів,
+що дожили до наших днів, зберігають у собі знання древніх ковалів,
+які могли створити зброю небаченої сили або з легкістю полагодити броню.
+А ті слова, що колись служили частиною бойових вигуків і девізів, досі
+здатні запалити полум'я бойової люті у будь-кого, хто їх виголошує вголос.
+
+{CКоманда{x
+%FMT% *%CMD%* _слово_
+%FFF% *%CMD%* _слово_ _персонаж_
+
+{CДії слів{x
+%A% {cзакляття зброї{x: підвищує шкоду і точність зброї, яку ти тримаєш у руці.
+%A% {c[древня лють]{x: запалює в тобі полум'я люті, збільшуючи шкоду або точність
+%A% {cремонт броні{x: покращить вигляд твого обмундирування
+
+%SA% %H% {hh234давні мови{x.
+</text>
     </help>
-    <hint l="en"></hint>
+    <hint l="en">utter in khuzdul</hint>
     <hint l="ru">изречь на кхуздуле</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">вимовити на кхуздулі</hint>
     <name l="en">khuzdul</name>
     <name l="ru">кхуздул</name>
-    <name l="ua"></name>
+    <name l="ua">кхуздул</name>
     <order>player_only</order>
     <position>rest</position>
   </command>

@@ -10,11 +10,26 @@
   <command type="LanguageCommand">
     <cat>language</cat>
     <help id="2040" level="-1" type="LanguageHelp">
-      <keyword l="en"></keyword>
       <keyword l="ru">ахаэнн ахенн</keyword>
-      <keyword l="ua"></keyword>
-      <text l="en"></text>
-      <text l="ru">{WАх&apos;энн{x ({Wahenn{x) -- язык, на котором когда-то говорили эльфы Эллери Ахе,
+      <text l="en">
+{WAh'enn{x ({Wahenn{x) - the language once spoken by the elves of Elleri Ahe,
+the People of Darkness, who, according to legend, were the only ones among the Firstborn who believed the Dark Gods and managed to see the true light of the stars. Even their distant descendants,
+the present dark elves, cannot fully revive this dialect; only occasionally do the words echo the ancient melody in their dreams. However, the power of inspiration, which once allowed the craftsmen and armorers of Elleri Ahe to create beautiful items, is still alive in the words of the language. The People of Darkness were completely wiped out in bloody battles, but their terrible dying curses are frozen in sounds and still strike down enemies to this day.
+
+{CCommand{x
+%FMT% *%CMD%* _word_
+%FFF% *%CMD%* _word_ _character_
+
+{CActions of words{x
+%A% [secret knowledge of the Sidhe]: will grant protection to races with innate {hh101vulnerability{x to iron
+%A% {cblessing{x: will temporarily enhance {hh2035spell resistance{x on one of your items
+%A% {chealing{x: will restore health and remove fatigue
+%A% {ccurse{x: will inflict several terrible curses
+%A% [thirst to create], {cinspiration{x: will make it much more effective to bless or enchant armor
+
+%SA% %H% {hh234ancient languages{x.
+    </text>
+      <text l="ru">{WАх&apos;энн{x -- язык, на котором когда-то говорили эльфы Эллери Ахе,
 Народ Тьмы, согласно легенде -- единственные из Перворожденных, поверившие
 Темным Богам и сумевшие увидеть истинный свет звезд. Даже их дальним потомкам,
 теперишним темным эльфам, не удается полностью воскресить это наречие: лишь
@@ -37,14 +52,31 @@
 
 %SA% %H% {hh234древние языки{x.
     </text>
-      <text l="ua"></text>
+      <text l="ua">
+{WАх'енн{x ({Wахен{x) - мова, якою колись розмовляли ельфи Еллері Ахе,
+Народ Темряви, який, згідно з легендою, був єдиним серед Першонароджених, хто повірив Темним Богам і зміг побачити істинне світло зірок. Навіть їхнім далеким нащадкам,
+сучасним темним ельфам, не вдається повністю відродити цей діалект; лише іноді відголоском давньої мелодії в їхніх снах звучать слова. Однак сила натхнення, яке колись дозволило ремісникам і зброярам Еллері Ахе створювати прекрасні предмети, досі жива у словах мови. Народ Темряви був повністю стертий з лиця землі у кривавих битвах, але їхні страшні смертні прокляття застигають у звуках і досі вражають ворогів.
+
+{CКоманда{x
+%FMT% *%CMD%* _слово_
+%FFF% *%CMD%* _слово_ _персонаж_
+
+{CДії слів{x
+%A% [таємне знання Сидхів]: надасть захист расам з вродженою {hh101вразливістю{x до заліза
+%A% {cблагословення{x: тимчасово покращить {hh2035захист від заклинань{x на одному з твоїх предметів
+%A% {cзцілення{x: відновить здоров'я і зніме втому
+%A% {cпрокляття{x: накладе кілька страшних проклять
+%A% [спрага творити], {cнатхнення{x: набагато ефективніше вийде благословити або зачарувати броню
+
+%SA% %H% {hh234давні мови{x.
+    </text>
     </help>
-    <hint l="en"></hint>
+    <hint l="en">speak in ah'enn</hint>
     <hint l="ru">изречь на ах&apos;энн</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">вимовити на ах'енн</hint>
     <name l="en">ahenn</name>
     <name l="ru">ахэнн</name>
-    <name l="ua"></name>
+    <name l="ua">ахен</name>
     <order>player_only</order>
     <position>rest</position>
   </command>

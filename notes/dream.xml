@@ -6,8 +6,26 @@
     <help id="2045" labels="comm" level="-1" type="NoteHelp">
       <extra l="en">dreams</extra>
       <extra l="ru">сны</extra>
-      <extra l="ua"></extra>
-      <text l="en"></text>
+      <extra l="ua">сни</extra>
+      <text l="en">When your character goes to sleep, you may dream of {hh1020new abilities{x, or you might have dreams inspired by one of the players... or the Gods. Dreams can be simple jokes or bring prophetic news about changes in the Cosmos. Pleasant nightmares!
+
+When the recipients next lie down to sleep, they will dream the next dream in sequence, without the possibility of knowing who sent it or reviewing it again. If you wake up before it ends, the dream will break, but if you manage to fall back asleep very quickly, you can continue the same dream.
+
+{CHOW TO SEND DREAMS{x
+You can dream (send) someone a dream using the *dream* command.
+First, you need to write the dream -- this process is exactly the same as writing other mail messages. The text of the dream is essentially a small story, so the requirements for {hh31roleplay{x are as follows: literate, no spam, and as much as possible in the spirit and atmosphere of the World of Dreams.
+
+It is convenient to open the {hh1057web editor{x right away and write in it. Once completed, you must press the Save button and paste the content of the editor into the letter.
+%FMT% *dream everyone   *  : select the dream recipient
+%FFF% *web editor     *  : open the editor and write text
+%FFF% *dream insert*  : insert the dream text from the web editor
+%FFF% *dream show *  : check if everything is in order
+%FFF% *dream send*  : send it!
+
+You can edit and write without the web editor:
+%FMT% *dream +* _line_    : adds a line to the end of the dream
+%FFF% *(dream -, dream -)*             : deletes the last written line of the dream
+</text>
       <text l="ru">Когда твой персонаж ложится спать, тебе могут присниться {hh1020новые умения{x, а могут
 привидеться сны, навеянные кем-то из игроков... или Богами. Сны могут быть
 простой шуткой, а могут приносить пророческие вести об изменениях Мироздания.
@@ -38,17 +56,46 @@
 %FMT% *сон +* _строка_    : добавляет строку к концу сна
 %FFF% *(dream -,сон -)*             : стирает последнюю написанную строку сна
 </text>
-      <text l="ua"></text>
-      <title l="en"></title>
+      <text l="ua">Коли твій персонаж лягає спати, тобі можуть наснитися {hh1020нові вміння{x, а можуть
+наснитися сни, натхненні кимось із гравців... чи Богами. Сни можуть бути
+простим жартом, а можуть приносити пророчі вісті про зміни у Світобудові.
+Приємних кошмарів!
+
+Коли отримувачі наступного разу ляжуть спати, їм насниться наступний за чергою
+сон, без можливості дізнатися, хто його наслав або переглянути його ще раз.
+Якщо прокинутися, не дочекавшись закінчення, сон обірветься, але якщо встигнути
+дуже швидко заснути знову, можна продовжити бачити той самий сон.
+
+{CЯК НАСИЛАТИ СНИ{x
+Можна наснити (наслати) комусь сон, використовуючи команду *сон*.
+Спочатку сон треба написати -- цей процес такий самий, як написання
+інших поштових повідомлень. Текст сну -- по суті маленька історія, тому
+вимоги до {hh31відтворення{x відповідні: літературно, без спаму і максимально
+в дусі та атмосфері Світу Мрії.
+
+Для написання зручно відразу відкрити {hh1057вебредактор{x і писати в ньому.
+Після завершення роботи потрібно натиснути кнопку Зберегти і вставити вміст
+редактора в лист.
+%FMT% *сон всім   *  : вибрати адресата сну
+%FFF% *вебредактор     *  : відкрити редактор і написати текст
+%FFF% *сон вставити*  : вставити текст сну з вебредактора
+%FFF% *сон показати *  : перевірити, чи все в порядку
+%FFF% *сон відправити*  : відправити!
+
+Можна редагувати і писати без вебредактора:
+%FMT% *son +* _рядок_    : додає рядок до кінця сну
+%FFF% *(dream -,сон -)*             : стирає останній написаний рядок сну
+</text>
+      <title l="en">{CMessages:{x Dreams, Prophetic and Not So</title>
       <title l="ru">{CСообщения:{x сны, вещие и не очень</title>
-      <title l="ua"></title>
+      <title l="ua">{CПовідомлення:{x сни, пророчі та не дуже</title>
     </help>
-    <hint l="en"></hint>
+    <hint l="en">sending someone a dream</hint>
     <hint l="ru">приснить кому-то сон</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">наснити комусь сон</hint>
     <name l="en">dream</name>
     <name l="ru">сон</name>
-    <name l="ua"></name>
+    <name l="ua">сон</name>
     <order>never</order>
     <position>dead</position>
   </command>

@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <Language>
   <beats>12</beats>
   <classes>
@@ -10,10 +9,23 @@
   <command type="LanguageCommand">
     <cat>language</cat>
     <help id="2044" level="-1" type="LanguageHelp">
-      <extra l="en"></extra>
+      <extra l="en">quenya</extra>
       <extra l="ru">квения</extra>
-      <extra l="ua"></extra>
-      <text l="en"></text>
+      <text l="en">=Quenya= -- is an ancient Elven dialect. Over the centuries, it was driven from everyday speech and became a lofty language of poetry, songs, and philosophical manuscripts, and then it was entirely forgotten. Resurrected fragments of ancient wisdom contain the secrets of Elven healers' medicine and the accuracy of Elven archers.
+
+{CCommand{x
+%FMT% *%CMD%* _word_
+%FFF% *%CMD%* _word_ _character_
+
+{CActions of words{x
+%A% [Sidhe secret knowledge]: grants protection to races with innate vulnerability to iron
+%A% {blessing{x: temporarily improves {hh2035spell defense{x on one of your items
+%A% {healing{x: restores health and removes fatigue
+%A% {goodwill{x: casts several defensive spells
+%A% [accuracy]: increases the damage from arrows and throwing weapons
+
+%SA% %H% {hh234ancient languages{x.
+    </text>
       <text l="ru">=Квенья= -- старинное эльфийское наречие. С веками оно было вытеснено
 из разговорного обихода и превратилось в возвышенный язык стихотворений,
 песен и философских манускриптов, а затем и вовсе забылось. Воскрешенные
@@ -33,14 +45,32 @@
 
 %SA% %H% {hh234древние языки{x.
     </text>
-      <text l="ua"></text>
+      <text l="ua">=Квенья= -- давнє ельфійське наріччя. З віками воно було витіснено
+з розмовної обіговості і перетворилося в піднесену мову віршів,
+пісень та філософських манускриптів, а потім і зовсім забулося. Відновлені
+з небуття частинки древньої мудрості містять секрети лікування ельфійських
+лікарів і таємницю влучності ельфійських лучників.
+
+{CКоманда{x
+%FMT% *%CMD%* _слово_
+%FFF% *%CMD%* _слово_ _персонаж_
+
+{CДії слів{x
+%A% [таємне знання Сидхів]: надасть захист расам з вродженою уразливістю до заліза
+%A% {cблагословіння{x: тимчасово покращить {hh2035захист від заклинань{x на одному з твоїх предметів
+%A% {cлікування{x: відновить здоров'я і зніме втому
+%A% {cблага{x: накладе декілька захисних заклинань
+%A% [влучність]: збільшить шкоду від стріл і метальної зброї
+
+%SA% %H% {hh234давні мови{x.
+    </text>
     </help>
-    <hint l="en"></hint>
+    <hint l="en">speak in quenya</hint>
     <hint l="ru">изречь на квенье</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">вимовити на квенья</hint>
     <name l="en">quenia</name>
     <name l="ru">квенья</name>
-    <name l="ua"></name>
+    <name l="ua">квенья</name>
     <order>player_only</order>
     <position>rest</position>
   </command>

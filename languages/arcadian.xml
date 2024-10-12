@@ -10,13 +10,45 @@
   <command type="LanguageCommand">
     <cat>language</cat>
     <help id="2041" level="-1" type="LanguageHelp">
-      <extra l="en">&apos;beer elemental&apos;</extra>
-      <extra l="ru">&apos;пивной элементаль&apos; толстокожесть</extra>
-      <extra l="ua"></extra>
+      <extra l="en">'beer elemental' toughness</extra>
+      <extra l="ru">'пивной элементаль' толстокожесть</extra>
+      <extra l="ua">'пивний елементаль' товстошкірість</extra>
       <keyword l="en"></keyword>
-      <keyword l="ru">&apos;язык аркади&apos;</keyword>
-      <keyword l="ua"></keyword>
-      <text l="en"></text>
+      <keyword l="ru">'язык аркади'</keyword>
+      <keyword l="ua">'мова аркаді'</keyword>
+      <text l="en">{WArcadian{x -- a language once spoken by the hoofed inhabitants of {hh1429Arcadia{x. 
+Everything you ever wanted to know about the effects of alcohol but were hesitant to try on yourself.
+
+%FMT% *%CMD%* _word_ _vessel_
+Words containing the secret of {cturning water into wine{x and {cbeer{x are spoken over
+a vessel with water.
+
+%FMT% *%CMD%* _word_ _vessel_
+%FFF% *drink* _vessel_
+A word with the secret of {cmaking a refreshing drink{x can be spoken over a vessel
+with wine and then drink this charged wine to restore health.
+
+%FMT% *%CMD%* _word_ _vessel_
+%FFF% *pour* _vessel_ ** _victim_
+Words containing the secrets of making {csoporifics{x, {cstimulating drinks{x
+or {csoothing drinks{x can be spoken over a vessel with wine, and then
+pour this vessel on someone, achieving the desired effect. Soporific will immerse
+the victim in {hh741sleep{x, a stimulating drink will awaken from sleep, and the soothing drink will act
+very {hh851pacifyingly{x, making one forget about battles and rage.
+
+%FMT% *%CMD%* _word_ _vessel_
+%FFF% *pour* _vessel_ ** _character_
+A word with the secret of {ctoughness{x is spoken over a barrel of beer, and then poured
+over oneself, covering with a {hh713protective film{x.
+
+%FMT% *%CMD%* _word_ _vessel_
+%FFF% *pour* _vessel_ **
+The word with the secret of {csummoning a beer elemental{x is spoken over a barrel of beer, and
+then pour the barrel onto the ground, summoning a beer elemental as assistance.
+If, of course, there is enough beer in the barrel to form the elemental.
+
+%SA% %H% {hh234ancient languages{x.
+    </text>
       <text l="ru">{WАркади{x -- язык, на котором когда-то говорило копытное население {hh1429Аркадии{x. 
 Все, что вы когда-либо хотели знать об эффектах алкоголя, но стеснялись попробовать на себе.
 
@@ -50,14 +82,46 @@
 
 %SA% %H% {hh234древние языки{x.
     </text>
-      <text l="ua"></text>
+      <text l="ua">{WАркаді{x -- мова, якою колись говорило копитне населення {hh1429Аркадії{x. 
+Усе, що ви коли-небудь хотіли знати про ефекти алкоголю, але соромилися спробувати на собі.
+
+%FMT% *%CMD%* _слово_ _сосуд_
+Слова, що містять секрет {cперетворення води у вино{x і {cпиво{x, виголошують над
+судиною з водою.
+
+%FMT% *%CMD%* _слово_ _сосуд_
+%FFF% *пити* _сосуд_
+Слово з секретом {cвиготовлення освіжаючого напою{x можна виголосити над судиною
+з вином, а потім випити це заряджене вино, відновивши здоров'я.
+
+%FMT% *%CMD%* _слово_ _сосуд_
+%FFF% *вилити* _сосуд_ ** _жертва_
+Слова, що містять секрети виготовлення {cснодійного{x, {cбадьористого напою{x
+чи {cзаспокійливого напою{x, можна виголосити над судиною з вином, а потім
+вилити цю судину на когось, досягнувши бажаного ефекту. Снодійне занурить
+жертву в {hh741сон{x, бадьористий напій пробудить від сну, а заспокійливе подіє
+дуже {hh851умиротворююче{x, змусивши забути про битви і лють.
+
+%FMT% *%CMD%* _слово_ _сосуд_
+%FFF% *вилити* _сосуд_ ** _персонаж_
+Слово з секретом {cтовстошкірість{x виголошують над бочонком пива, а потім виливають
+його на себе, покриваючись {hh713захисною плівкою{x.
+
+%FMT% *%CMD%* _слово_ _сосуд_
+%FFF% *вилити* _сосуд_ **
+Слово з секретом {cвиклику пивного елементаля{x виголошують на бочонок пива, а
+потім виливають бочонок на землю, викликаючи собі на допомогу пивного елементаля.
+Якщо, звичайно, в бочонку достатньо пива для формування елементаля.
+
+%SA% %H% {hh234древні мови{x.
+    </text>
     </help>
-    <hint l="en"></hint>
+    <hint l="en">speak in Arcadian</hint>
     <hint l="ru">изречь на аркади</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">промовити на аркаді</hint>
     <name l="en">arcadian</name>
     <name l="ru">аркади</name>
-    <name l="ua"></name>
+    <name l="ua">аркаді</name>
     <order>player_only</order>
     <position>rest</position>
   </command>

@@ -16,13 +16,18 @@
   <dammsg mg="m">огненный шар</dammsg>
   <group registry="skillGroup">combat</group>
   <help id="625" level="-1" type="SkillHelp">
-    <text l="en"></text>
+    <text l="en">%FMT% *%SPELL%* _%VICT%_
+
+A magical spell that deals damage to the victim with a fireball depending on the spell's level. If the victim successfully makes a {hh2035saving throw{x, the damage is halved.</text>
     <text l="ru">%FMT% *%SPELL%* _%VICT%_
 
 Магическое заклинание, наносящее урон жертве шаром огня в зависимости от уровня
 заклинания. Если у жертвы срабатывает {hh2035спасбросок{x, урон уменьшается вдвое.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%* _%VICT%_
+
+Магічне заклинання, яке завдає шкоди жертві вогняною кулею в залежності від рівня
+заклинання. Якщо у жертви спрацьовує {hh2035спасбросок{x, шкода зменшується вдвічі.</text>
   </help>
   <mana>40</mana>
   <mob>
@@ -30,7 +35,7 @@
   </mob>
   <name l="en">fireball</name>
   <name l="ru">огненный шар</name>
-  <name l="ua"></name>
+  <name l="ua">вогняна куля</name>
   <spell type="DefaultSpell">
     <damtype>fire</damtype>
     <flags>magic</flags>

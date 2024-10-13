@@ -15,15 +15,15 @@
   <command type="DefaultSkillCommand">
     <aliases l="en">control</aliases>
     <aliases l="ru">контролировать</aliases>
-    <aliases l="ua"></aliases>
+    <aliases l="ua">контролювати</aliases>
     <argtype>char_room</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">(vampires) exert one's will over someone</hint>
     <hint l="ru">(вампиры) подчинить кого-то своей воле</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(вампіри) підкорити когось своїй волі</hint>
     <name l="en">dominate</name>
     <name l="ru">доминировать</name>
-    <name l="ua"></name>
+    <name l="ua">домінувати</name>
     <order>player_only</order>
     <position>stand</position>
   </command>
@@ -31,10 +31,19 @@
   <group registry="skillGroup">illusion</group>
   <hard>2</hard>
   <help id="819" level="-1" type="SkillHelp">
-    <keyword l="en"></keyword>
+    <keyword l="en">dominate domination</keyword>
     <keyword l="ru">доминация доминирование</keyword>
-    <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <keyword l="ua">домінація домінування</keyword>
+    <text l="en">%FMT% *%CMD%* _%VICT%_
+
+Experienced vampires easily dominate various creatures with their will, causing them to
+obediently follow all orders of the vampire. Success in its use depends on
+{hh1359skill level{x, {hh2035victim's spell resistance{x, as well as the differences in levels, intelligence, and charisma.
+There are also limitations on the maximum number of charms: see {y{hc? charm{x.
+
+You cannot dominate players (there are other skills for this), as well as
+the undead, constructs, and similar bloodless and soulless creatures.
+</text>
     <text l="ru">%FMT% *%CMD%* _%VICT%_
 
 Опытные вампиры запросто подчиняют различных существ своей воле, после чего те
@@ -45,11 +54,20 @@
 Нельзя доминировать над игроками (для этого есть другие умения), а также над
 нежитью, конструкциями и подобными бескровными и бездушными существами.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%CMD%* _%VICT%_
+
+Досвідчені вампіри легко підкорюють різних істот своїй волі, після чого ті
+беззаперечно виконують усі накази вампіра. Успіх його використання залежить від
+{hh1359прокачування{x уміння, {hh2035захисту від заклять жертви{x, а також різниці в рівнях, розумі та чарівності.
+Також є обмеження на максимальну кількість чармісів: див. {y{hc? чарівність{x.
+
+Не можна домінувати над гравцями (для цього є інші вміння), а також над
+нежиттю, конструкціями та подібними безкровними та бездушними істотами.
+</text>
   </help>
   <mana>80</mana>
   <move>40</move>
   <name l="en">dominate</name>
   <name l="ru">доминировать</name>
-  <name l="ua"></name>
+  <name l="ua">домінувати</name>
 </skill>

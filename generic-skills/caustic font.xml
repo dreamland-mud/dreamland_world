@@ -16,7 +16,13 @@
   <dammsg mg="m">едкий источник</dammsg>
   <group registry="skillGroup">combat</group>
   <help id="847" level="-1" type="SkillHelp">
-    <text l="en"></text>
+    <text l="en">%FMT% *%SPELL%* _%VICT%_
+
+This combat spell strikes the victim with caustic acid. Damage is reduced
+if the victim has successfully saved against spells (saves vs spell).
+
+%SA% %H% {hh1361колдовать{x
+</text>
     <text l="ru">%FMT% *%SPELL%* _%VICT%_
 
 Это боевое заклинание поражает жертву едкой кислотой. Повреждения снижаются,
@@ -24,7 +30,13 @@
 
 %SA% %H% {hh1361колдовать{x
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%* _%VICT%_
+
+Це бойове заклинання вражає жертву їдкою кислотою. Пошкодження зменшуються,
+якщо у жертви успішно пройшов {hh2035захисний кидок{x проти заклинань (saves vs spell).
+
+%SA% %H% {hh1361колдовать{x
+</text>
   </help>
   <mana>80</mana>
   <mob>
@@ -32,7 +44,7 @@
   </mob>
   <name l="en">caustic font</name>
   <name l="ru">едкий источник</name>
-  <name l="ua"></name>
+  <name l="ua">їдке джерело</name>
   <spell type="DefaultSpell">
     <damflags>water</damflags>
     <damtype>drowning</damtype>

@@ -21,7 +21,14 @@
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">benedictions</group>
   <help id="594" level="-1" type="SkillHelp">
-    <text l="en"></text>
+    <text l="en">%FMT% *%SPELL%* 
+
+A cleric can illuminate the surroundings with healing light, thereby
+enhancing the regeneration of health and steps for everyone nearby.
+The rate of health regeneration will increase by a percentage equal to
+the level of the spell cast.
+
+%SA% %H% {hh1361cast{x</text>
     <text l="ru">%FMT% *%SPELL%* 
 
 Клерик может осветить местность вокруг себя излечивающим светом, тем самым
@@ -31,7 +38,15 @@
 
 %SA% %H% {hh1361колдовать{x
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%* 
+
+Клірик може освітлити місцевість навколо себе лікувальним світлом, тим самим
+покращуючи відновлення здоров'я і дій для всіх, хто знаходиться поруч.
+Швидкість відновлення здоров'я зросте на відсоток, рівний
+рівню виголошення заклинання.
+
+%SA% %H% {hh1361чаклувати{x
+</text>
   </help>
   <mana>200</mana>
   <mob>
@@ -39,7 +54,7 @@
   </mob>
   <name l="en">healing light</name>
   <name l="ru">целебный свет</name>
-  <name l="ua"></name>
+  <name l="ua">лікувальне світло</name>
   <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>prayer</flags>

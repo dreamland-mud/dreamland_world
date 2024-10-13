@@ -26,10 +26,25 @@
   <dammsg mg="p">горящие руки</dammsg>
   <group registry="skillGroup">combat</group>
   <help id="839" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">burning palm hand flaming hands</extra>
     <extra l="ru">длани длань пылающая пылающий рука руки</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">долоні долоню палаюча палаючий рука руки</extra>
+    <text l="en">%FMT% *%SPELL%* _%VICT%_
+
+A magic spell that deals damage to the victim nearby with fire depending on the level
+of the spell. If the victim makes a {hh2035saving throw{x, the damage is reduced by half.
+
+There is also a small chance to heat items in the victim's equipment to extremely high
+temperatures, dealing damage for each heated item, and forcing the victim to
+remove the heated items or even drop them on the ground.
+
+A similar effect (but much stronger) is possessed by the prayer of {hh682heating{x.
+
+%FMT% *%SPELL%* _%OBJ%_
+
+If you throw a combustible item on the ground and use the spell on it, you can
+quickly start a small {hh249fire{x.
+</text>
     <text l="ru">%FMT% *%SPELL%* _%VICT%_
 
 Магическое заклинание, наносящее урон жертве вблизи огнем в зависимости от уровня
@@ -46,7 +61,22 @@
 Если бросить горючий предмет на землю и использовать заклинание на него, можно
 быстро развести небольшой {hh249костер{x.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%* _%VICT%_
+
+Магічне заклинання, що завдає шкоди жертві поблизу вогнем залежно від рівня
+заклинання. Якщо у жертви спрацьовує {hh2035рятувальний кидок{x, урон зменшується вдвічі.
+
+Також є невеликий шанс розпечити предмети в екіпіровці жертви до надвисоких
+температур, завдаючи пошкоджень за кожен розпечений предмет, і змушуючи жертву
+зняти розпечені речі або навіть скинути їх на землю.
+
+Подібним ефектом (але набагато сильнішим) володіє молитва {hh682нагріву{x.
+
+%FMT% *%SPELL%* _%OBJ%_
+
+Якщо кинути горючий предмет на землю і використати заклинання на нього, можна
+швидко розвести невелике {hh249багаття{x.
+</text>
   </help>
   <mana>40</mana>
   <mob>
@@ -54,7 +84,7 @@
   </mob>
   <name l="en">burning hands</name>
   <name l="ru">горящие руки</name>
-  <name l="ua"></name>
+  <name l="ua">палаючі руки</name>
   <spell type="DefaultSpell">
     <damtype>fire</damtype>
     <flags>magic</flags>

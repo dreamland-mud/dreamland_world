@@ -2,26 +2,32 @@
 <skill type="GenericSkill">
   <beats>18</beats>
   <command type="DefaultSkillCommand">
-    <aliases l="en"></aliases>
+    <aliases l="en">crush</aliases>
     <aliases l="ru">раздавить</aliases>
-    <aliases l="ua"></aliases>
+    <aliases l="ua">розчавити</aliases>
     <argtype>char_fight</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">(mobs) try to crush a target smaller than itself</hint>
     <hint l="ru">(мобы) попытаться раздавить цель меньше себя</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(моби) спробувати розчавити ціль меншу за себе</hint>
     <name l="en">crush</name>
     <name l="ru">сокрушить</name>
-    <name l="ua"></name>
+    <name l="ua">сокрушити</name>
     <position>fight</position>
   </command>
   <dammsg mg="n">раздавливание</dammsg>
   <group registry="skillGroup">fightmaster</group>
   <help id="2138" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">crushing 'smash enemies'</extra>
     <extra l="ru">раздавливание &apos;сокрушать врагов&apos;</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">розчавлювання 'сокрушити ворогів'</extra>
+    <text l="en">Some creatures in the world may try to crush their opponents with a powerful
+blow from their foot, hoof, or even their entire body at once, imposing a {hh120delay{x on their actions
+and causing massive damage.
+
+This skill is not directly available to any of the {hh28classes{x, but it is said that it 
+can be obtained with the help of certain powerful artifacts...
+</text>
     <text l="ru">Некоторые существа в мире могут попытаться раздавить противников мощнейшим
 ударом ноги, копыта или всего тела сразу, накладывая {hh120задержку{x на их действия
 и нанося огромные повреждения.
@@ -29,7 +35,13 @@
 Напрямую это умение не доступно ни одному из {hh28классов{x, но говорят, что его
 можно получить с помощью некоторых мощных артефактов...
 </text>
-    <text l="ua"></text>
+    <text l="ua">Деякі істоти в світі можуть спробувати розчавити супротивників потужним
+ударом ноги, копита або всього тіла одразу, накладаючи {hh120затримку{x на їхні дії
+і завдаючи величезних ушкоджень.
+
+Ця навичка безпосередньо недоступна жодному з {hh28класів{x, але кажуть, що її
+можна отримати за допомогою деяких потужних артефактів...
+</text>
   </help>
   <mob>
     <bonus>40</bonus>
@@ -40,5 +52,5 @@
   <move>40</move>
   <name l="en">crush</name>
   <name l="ru">раздавить</name>
-  <name l="ua"></name>
+  <name l="ua">розчавити</name>
 </skill>

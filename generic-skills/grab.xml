@@ -16,22 +16,32 @@
   <command type="DefaultSkillCommand">
     <argtype>char_fight</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">(samurai, ninja) topple with a technique to the ground</hint>
     <hint l="ru">(самураи, ниндзи) опрокинуть приемом на пол</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(самураї, ніндзя) повалити прийомом на підлогу</hint>
     <name l="en">grab</name>
     <name l="ru">захват</name>
-    <name l="ua"></name>
+    <name l="ua">захоплення</name>
     <order>player_only</order>
     <position>fight</position>
   </command>
   <dammsg mg="m">захват</dammsg>
   <group registry="skillGroup">fightmaster</group>
   <help id="649" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">'throw over the hip' 'throw over the shoulder' topple</extra>
     <extra l="ru">&apos;бросок через бедро&apos; &apos;бросок через плечо&apos; опрокинуть</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">'кидок через стегно' 'кидок через плече' повалити</extra>
+    <text l="en">%FMT% *%SKILL%* _%VICT%_
+
+Using the secret nage-waza technique, experienced ninjas and samurais can
+forcefully throw an opponent over the shoulder or hip, inflicting considerable damage and
+applying a {hh120delay{x to their actions. This skill can be used if one
+or both hands are free.
+
+Success depends on the difference in {hh37agility{x between the ninja and the victim,
+{hh26size of the victim{x, and other factors. Throwing flying opponents or
+{hh227riders{x is more difficult, but a successful throw {hh575grounds{x them or unhorses them.
+</text>
     <text l="ru">%FMT% *%SKILL%* _%VICT%_	  
 
 Используя тайную технику нагэ-вадза, опытные ниндзя и самураи могут с силой
@@ -43,10 +53,20 @@
 а также других факторов. Бросать летучих противников или {hh227всадников{x сложнее, но
 успешный бросок {hh575приземляет{x их или сбрасывает с седла.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SKILL%* _%VICT%_
+
+Використовуючи таємну техніку нагэ-вадза, досвідчені ніндзя і самураї можуть з силою
+кинути противника через плече або стегно, завдаючи значної шкоди і накладаючи
+{hh120затримку{x на їх дії. Використовувати цей навик можна за наявності однієї
+або двох вільних рук.
+
+Успіх залежить від різниці в {hh37спритності{x між ніндзя і жертвою, {hh26розміру жертви{x,
+а також інших факторів. Кидати летючих противників або {hh227вершників{x складніше, але
+успішний кидок {hh575приземляє{x їх або скидає з сідла.
+</text>
   </help>
   <move>40</move>
   <name l="en">grab</name>
   <name l="ru">захват</name>
-  <name l="ua"></name>
+  <name l="ua">захоплення</name>
 </skill>

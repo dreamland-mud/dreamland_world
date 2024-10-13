@@ -14,19 +14,30 @@
   <command type="SKILL(bite)">
     <argtype>undef</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">Bite the victim's neck (vampires).</hint>
     <hint l="ru">(вампиры) укусить жертву за шею</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(вампіри) вкусити жертву за шию</hint>
     <name l="en">bite</name>
     <name l="ru">кусать</name>
-    <name l="ua"></name>
+    <name l="ua">кусати</name>
     <order>player_only</order>
     <position>stand</position>
   </command>
   <dammsg mg="m">укус вампира</dammsg>
   <group registry="skillGroup">vampiric</group>
   <help id="626" level="-1" type="SkillHelp">
-    <text l="en"></text>
+    <text l="en">Vampires do not consume regular food and are unfamiliar with thirst and hunger: they are tormented only by {rthirst for blood{x. This can be satisfied by drinking blood from the necks of victims or simply by killing them.
+
+%FMT% *bite* _victim_
+
+To bite a victim, you must first put them to sleep with {hh769vampiric touch{x.
+If the vampire is very hungry, he bites into the victim's throat with all his might, thereby waking her from sleep and initiating a fight. Otherwise, there is a chance not to awaken the victim and just make two neat little holes through which you can {hh697drink blood{x.
+
+The bite restores the vampire's health and mana.
+Vampire bite wounds can fester with some probability.
+
+%SA% %H% {hh539bloodletting{x, {hh836vampire form{x
+</text>
     <text l="ru">Вампиры не питаются обычной пищей, им незнакома жажда и голод: их терзает
 только {rжажда крови{x. Ее можно удовлетворить, выпивая кровь из шеи жертв или
 просто убивая их.
@@ -43,7 +54,22 @@
 
 %SA% %H% {hh539кровопускание{x, {hh836форма вампира{x
 </text>
-    <text l="ua"></text>
+    <text l="ua">Вампіри не харчуються звичайною їжею, їм невідомі спрага та голод: їх мучить
+лише {rспрага до крові{x. Її можна задовольнити, випиваючи кров з шиї жертв або
+просто вбиваючи їх.
+
+%FMT% *кусати* _жертва_
+
+Щоб вкусити жертву, її потрібно спершу приспати {hh769вампірським дотиком{x.
+Якщо вампір дуже голодний, він з усієї сили впивається в горло жертви, тим самим
+пробуджуючи її від сну і починаючи битву. В іншому випадку, є шанс не розбудити
+жертву, а зробити всього дві акуратні дірочки, через які можна {hh697пити кров{x. 
+
+Укус відновлює вампіру здоров'я та ману.
+Рани від укусу вампіра з певною ймовірністю можуть {hh541загноїтися{x.
+
+%SA% %H% {hh539кровопускання{x, {hh836форма вампіра{x
+</text>
   </help>
   <mana>40</mana>
   <mob>
@@ -54,5 +80,5 @@
   <move>40</move>
   <name l="en">vampiric bite</name>
   <name l="ru">укус вампира</name>
-  <name l="ua"></name>
+  <name l="ua">укус вампіра</name>
 </skill>

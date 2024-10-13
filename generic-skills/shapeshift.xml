@@ -15,25 +15,39 @@
   <command type="DefaultSkillCommand">
     <aliases l="en">shapeshift form</aliases>
     <aliases l="ru">форма</aliases>
-    <aliases l="ua"></aliases>
+    <aliases l="ua">форма</aliases>
     <argtype>string</argtype>
     <cat></cat>
-    <hint l="en"></hint>
+    <hint l="en">Druids can transform into a bear, wolverine, or lizard</hint>
     <hint l="ru">(друиды) превратиться в медведя, росомаху или ящера</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(друїди) перетворитися на ведмедя, росомаху або ящірку</hint>
     <name l="en">shape</name>
     <name l="ru">перекинуться</name>
-    <name l="ua"></name>
+    <name l="ua">перекинутися</name>
     <order>player_only</order>
     <position>fight</position>
   </command>
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">nature</group>
   <help id="185" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">form bear lizard wolverine</extra>
     <extra l="ru">форма медведь ящер росомаха</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">форма ведмідь ящірка росомаха</extra>
+    <text l="en">%FMT% *%CMD%* _bear_
+%FMT% *%CMD%* _lizard_
+%FMT% *%CMD%* _wolverine_
+
+During combat, druids can use a special ritual that allows them to
+enter a trance and assume the form of one of the sacred animals until the {hh184channeling{x
+is interrupted. A druid can use this ability no more than three times a day,
+so it's not worth interrupting the ritual unnecessarily.
+
+During the transformation, the druid retains all equipment worn, except for weapons,
+shield, and items held in hand -- because sharp claws grow instead of fingers.
+Like other druid skills, the transformation depends on the druid's rank in the circle.
+The lizard form helps the druid survive better, while the bear and especially the wolverine form
+will allow to tear the opponent to shreds in seconds.
+</text>
     <text l="ru">%FMT% *%CMD%* _медведь_
 %FMT% *%CMD%* _ящер_
 %FMT% *%CMD%* _росомаха_
@@ -49,11 +63,25 @@
 Форма ящера помогает друиду лучше выживать, а формы медведя и особенно росомахи
 позволят разорвать противника на клочки в считанные секунды.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%CMD%* _ведмідь_
+%FMT% *%CMD%* _ящірка_
+%FMT% *%CMD%* _росомаха_
+
+Під час бою друїди можуть використовувати спеціальний ритуал, що дозволяє їм
+увійти в транс і прийняти форму одного зі сакральних тварин, поки {hh184ченнелинг{x
+не перерветься. Використовувати це вміння друїд може не більше трьох разів на день,
+тому не варто переривати ритуал даремно.
+
+Під час трансформації друїд зберігає всю екіпіровку, крім зброї,
+щита і предметів у руці - адже замість пальців у нього виростають гострі кігті.
+Як і інші вміння друїда, трансформація залежить від рангу друїда в колі.
+Форма ящірки допомагає друїду краще виживати, а форма ведмедя і особливо росомахи
+дозволять розірвати супротивника на шматки за кілька секунд.
+</text>
   </help>
   <mana>40</mana>
   <move>80</move>
   <name l="en">shapeshift</name>
   <name l="ru">перекинуться</name>
-  <name l="ua"></name>
+  <name l="ua">перекинутися</name>
 </skill>

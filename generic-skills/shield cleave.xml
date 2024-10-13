@@ -46,21 +46,26 @@
   <command type="SKILL(shield)">
     <argtype>undef</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">(warrior professions) split the opponent's shield</hint>
     <hint l="ru">(воинские профессии) расколоть щит противника</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(військові професії) розколоти щит противника</hint>
     <name l="en">shield</name>
     <name l="ru">щит</name>
-    <name l="ua"></name>
+    <name l="ua">щит</name>
     <position>fight</position>
   </command>
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">weaponsmaster</group>
   <help id="659" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">break the shield</extra>
     <extra l="ru">разбить щит</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">розбити щит</extra>
+    <text l="en">%FMT% *shield*
+
+Professional warriors can chop (destroy) an opponent's shield using a sword, axe, or halberd. The chance of success depends on the weapon and shield skills (of the character and the victim, respectively), the item's level, and the character's size. {hh227Mounted{x splitting shields is easier. Cutting with a sword is more difficult than with an axe or halberd.
+
+If unsuccessful, the weapon bounces off the opponent's shield, temporarily {hh120stunning{x the warrior. Of course, it will not be possible to split a {hh42limited{x shield or a shield made of durable material.
+</text>
     <text l="ru">%FMT% *щит*
 
 Профессиональные воины могут разрубать (уничтожать) щит противника, используя 
@@ -72,11 +77,16 @@
 {hh120оглушая{x воина. Разумеется, разрубить {hh42лимитный{x щит или щит из прочного
 материала не удастся.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *щит*
+
+Професійні воїни можуть розрубувати (знищувати) щит противника, використовуючи меч, сокиру або алебарду. Шанс успіху залежить від навичок володіння зброєю і щитом (у персонажа та жертви відповідно), рівня речі, а також розміру персонажа. {hh227Верхи{x розрубувати щити легше. Мечем рубати складніше, ніж сокирою або алебардою.
+
+При невдалому використанні зброя відскакує від щита противника, ненадовго {hh120оглушаючи{x воїна. Розрубати {hh42лімітний{x щит або щит з міцного матеріалу, звісно, не вдасться.
+</text>
   </help>
   <mana>200</mana>
   <move>40</move>
   <name l="en">shield cleave</name>
   <name l="ru">расколоть щит</name>
-  <name l="ua"></name>
+  <name l="ua">розколоти щит</name>
 </skill>

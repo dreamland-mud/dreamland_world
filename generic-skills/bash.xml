@@ -29,27 +29,38 @@
     </node>
   </classes>
   <command type="DefaultSkillCommand">
-    <aliases l="en"></aliases>
+    <aliases l="en">knock push</aliases>
     <aliases l="ru">сбить толкнуть</aliases>
-    <aliases l="ua"></aliases>
+    <aliases l="ua">збити штовхнути</aliases>
     <argtype>char_fight</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">(warrior classes) knock with a shield or body</hint>
     <hint l="ru">(воинские классы) сбить ударом щита или корпуса</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(воїнські класи) збити ударом щита або корпусу</hint>
     <name l="en">bash</name>
     <name l="ru">толчок</name>
-    <name l="ua"></name>
+    <name l="ua">штовх</name>
     <order>fight_only</order>
     <position>fight</position>
   </command>
   <dammsg mg="m">толчок</dammsg>
   <group registry="skillGroup">fightmaster</group>
   <help id="676" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">'knock down' push bash 'shield strike'</extra>
     <extra l="ru">&apos;сбить с ног&apos; толкнуть толчок &apos;удар щитом&apos;</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">'збити з ніг' штовхнути штовх 'удар щитом'</extra>
+    <text l="en">%FMT% *%CMD%* _%VICT%_
+
+Warrior classes and many creatures in the world can attempt to knock an opponent off their feet
+with a strong push -- using a shield or their whole body. A successful push deals damage, knocks down
+and imposes a {hh120delay{x on the opponent. The success of the attack and its effect depend on
+numerous factors, such as strength, shield weight (if present), and size of the attacker
+and opponent.
+
+When striking with a shield, it becomes damaged depending on the inflicted damage to the opponent.
+
+%SA% %H% {hh700strike{x
+</text>
     <text l="ru">%FMT% *%CMD%* _%VICT%_
 
 Воинские классы и многие существа в мире могут попытаться сбить противника с ног
@@ -62,7 +73,18 @@
 
 %SA% %H% {hh700врезать{x
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%CMD%* _%VICT%_
+
+Воїнські класи та багато істот у світі можуть спробувати збити противника з ніг
+сильним штовхом -- щитом або всім тілом. Успішний штовх завдає шкоди, збиває
+з ніг і накладає {hh120затримку{x на противника. Успішність атаки та її ефект залежать від
+багатьох факторів, таких як сила, вага щита (якщо є) та розміри атакуючого
+і противника.
+
+При ударі щитом він пошкоджується залежно від нанесеної шкоди противнику.
+
+%SA% %H% {hh700вдарити{x
+</text>
   </help>
   <mob>
     <bonus>10</bonus>
@@ -73,6 +95,6 @@
   <move>40</move>
   <name l="en">bash</name>
   <name l="ru">толчок</name>
-  <name l="ua"></name>
+  <name l="ua">штовх</name>
   <raceBonuses registry="race">&apos;storm giant&apos; &apos;cloud giant&apos;</raceBonuses>
 </skill>

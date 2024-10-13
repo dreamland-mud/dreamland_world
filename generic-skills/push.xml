@@ -11,29 +11,38 @@
   <command type="DefaultSkillCommand">
     <argtype>string</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">push someone away</hint>
     <hint l="ru">(воры) вытолкать кого-то прочь</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(злодії) витіснити когось геть</hint>
     <name l="en">push</name>
     <name l="ru">вытолкать</name>
-    <name l="ua"></name>
+    <name l="ua">витіснити</name>
     <position>stand</position>
   </command>
   <dammsg mg="m">толчок</dammsg>
   <group registry="skillGroup">adventure</group>
   <hard>2</hard>
   <help id="666" level="-1" type="SkillHelp">
-    <text l="en"></text>
+    <text l="en">%FMT% *%CMD%* _%VICT%_ _direction_
+
+Thieves can attempt to push someone away in the specified direction.
+If the victim is not asleep and sees the thief, the chances of success decrease, of course.
+A failed attempt will result in justified aggression in response.</text>
     <text l="ru">%FMT% *%CMD%* _%VICT%_ _направление_
 
 Воры могут попытаться вытолкать кого-то прочь в указанном направлении.
 Если жертва не спит и видит вора, шансы на успех, конечно же, уменьшаются.
 А неудачная попытка вызовет в ответ обоснованную агрессию.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%CMD%* _%VICT%_ _напрямок_
+
+Злодії можуть спробувати витіснити когось геть у вказаному напрямку.
+Якщо жертва не спить і бачить злодія, шанси на успіх, звичайно ж, зменшуються.
+А невдала спроба викличе у відповідь обґрунтовану агресію.
+</text>
   </help>
   <move>50</move>
   <name l="en">push</name>
   <name l="ru">выталкивание</name>
-  <name l="ua"></name>
+  <name l="ua">витіснення</name>
 </skill>

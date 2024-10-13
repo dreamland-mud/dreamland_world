@@ -12,28 +12,36 @@
     </node>
   </classes>
   <command type="SKILL(strangle)">
-    <aliases l="en"></aliases>
+    <aliases l="en">strangle</aliases>
     <aliases l="ru">удавить</aliases>
-    <aliases l="ua"></aliases>
+    <aliases l="ua">задушити</aliases>
     <argtype>undef</argtype>
     <cat>class</cat>
     <extra>keep_hide</extra>
-    <hint l="en"></hint>
+    <hint l="en">(ninja) to strangle, engulf in sleep</hint>
     <hint l="ru">(ниндзи) задушить, погрузив в сон</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(ніндзя) задушити, занурив у сон</hint>
     <name l="en">strangle</name>
     <name l="ru">придушить</name>
-    <name l="ua"></name>
+    <name l="ua">придушити</name>
     <order>player_only</order>
     <position>stand</position>
   </command>
   <dammsg mg="f">попытка придушить</dammsg>
   <group registry="skillGroup">suddendeath fightmaster</group>
   <help id="782" level="-1" type="SkillHelp">
-    <keyword l="en"></keyword>
+    <keyword l="en">strangle choke suffocate</keyword>
     <keyword l="ru">душить удушить задушить</keyword>
-    <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <keyword l="ua">душити удавити задушити</keyword>
+    <text l="en">%FMT% *%SKILL%* _%VICT%_
+
+Using their natural speed and agility, a ninja can stealthily
+sneak up on an opponent and strangle them, compressing the carotid artery and sending
+them into a deep stupor for several ticks.
+
+Success depends on the ninja's {hh37agility{x, {hh36constitution{x, and the {hh26size of the victim{x,
+as well as other factors.
+</text>
     <text l="ru">%FMT% *%SKILL%* _%VICT%_
 
 Используя свою естественную скорость и ловкость, ниндзя способен незаметно
@@ -43,11 +51,19 @@
 Успех зависит от {hh37ловкости{x ниндзя, {hh36телосложения{x и {hh26размера жертвы{x,
 а также других факторов.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SKILL%* _%VICT%_
+
+Використовуючи свою природну швидкість і спритність, ніндзя здатний непомітно
+підкрастися до ворога і придушити, перетискаючи сонну артерію і відправляючи того
+в глибокий непритомність на кілька тиків.
+
+Успіх залежить від {hh37спритності{x ніндзя, {hh36тілесної будови{x і {hh26розміру жертви{x,
+а також інших факторів.
+</text>
   </help>
   <mana>20</mana>
   <move>100</move>
   <name l="en">strangle</name>
   <name l="ru">придушить</name>
-  <name l="ua"></name>
+  <name l="ua">придушити</name>
 </skill>

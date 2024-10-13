@@ -38,10 +38,12 @@
   <dammsg mg="n">ледяное касание</dammsg>
   <group registry="skillGroup">combat</group>
   <help id="610" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">frostbite chilling touch</extra>
     <extra l="ru">ледяное обморожение прикосновение заледеней</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">льодяне обмороження дотик заморожування</extra>
+    <text l="en">This spell does damage to the victim as well as frostbite, reducing strength. Similar effects are given by {hh96frostbiting{x weapons and most spells dealing damage {hh101by cold{x or ice. To get rid of frostbite, one can warm up {hh249by the fire{x or in the {hh86desert{x. Or, take a fireball to the face.
+
+This spell can also freeze various things! It can freeze some liquids in {hh1075containers and fountains{x, making them temporarily undrinkable. You can temporarily freeze something impermanent and organic (for example, body parts) to preserve them longer. Frozen items can be melted or warmed with {hh839burning hands{x. Freezing can also cool {hh4heated{x items on the ground.</text>
     <text l="ru">%FMT% *%SPELL%* _%VICT%_
 
 Это заклинание наносит повреждения жертве, а также обмораживает, уменьшая силу.
@@ -57,7 +59,20 @@
 тела) -- чтобы сохранить их подольше. Растопить или согреть замороженные вещи
 можно {hh839горящими руками{x. Заморозкой также можно остудить {hh4раскаленные{x вещи на земле. 
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%* _%VICT%_
+
+Це заклинання наносить шкоду жертві, а також обморожує, зменшуючи силу.
+Подібний ефект дають {hh96обморожуючі{x зброї та більшість заклинань, що завдають
+шкоди {hh101холодом{x або льодом. Щоб позбутися обмороження, можна погрітися {hh249біля багаття{x
+або в {hh86пустелі{x. Чи отримати вогняною кулею в лоб.
+
+%FMT% *%SPELL%* _%OBJ%_
+
+Цим же заклинанням можна заморожувати різноманітні речі! Можна заморозити
+деякі рідини в {hh1075ємностях і фонтани{x -- тоді з них тимчасово не можна пити. 
+Можна тимчасово заморозити щось непостійне й органічне (наприклад, частини
+тіла) -- щоб зберегти їх довше. Розтопити або зігріти заморожені речі
+можна {hh839палаючими руками{x. Заморозкою також можна охолодити {hh4розпечені{x речі на землі.</text>
   </help>
   <mana>80</mana>
   <mob>
@@ -65,7 +80,7 @@
   </mob>
   <name l="en">chill touch</name>
   <name l="ru">ледяное касание</name>
-  <name l="ua"></name>
+  <name l="ua">льодяний дотик</name>
   <spell type="DefaultSpell">
     <damtype>cold</damtype>
     <flags>magic</flags>

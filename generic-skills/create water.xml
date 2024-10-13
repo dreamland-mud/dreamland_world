@@ -31,10 +31,19 @@
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">nature</group>
   <help id="757" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">'create water' 'make water'</extra>
     <extra l="ru">&apos;сотворить воду&apos; &apos;создать воду&apos;</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">'створити воду' 'зробити воду'</extra>
+    <text l="en">%FMT% *%SPELL%* _container_
+%FFF% *%SPELL%* _fountain_
+
+This spell fills an empty {hh1075container{x or fountain with drinking water.
+Clerics and paladins additionally bless the container, thereby creating holy water.
+
+%FMT% *%SPELL%* _%OBJ%_
+
+This same spell can be used to extinguish a {hh4heated{x object or a burning {hh825campfire{x.
+</text>
     <text l="ru">%FMT% *%SPELL%* _емкость_
 %FFF% *%SPELL%* _фонтан_
 
@@ -45,12 +54,21 @@
 
 Этим же заклинанием можно потушить {hh4раскаленный{x предмет или горящий {hh825костер{x.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%* _ємкість_
+%FFF% *%SPELL%* _фонтан_
+
+Це заклинання наповнює пусту {hh1075ємкість{x або фонтан питною водою.
+Священики і паладини додатково освячують ємність, створюючи тим самим святу воду.
+
+%FMT% *%SPELL%* _%OBJ%_
+
+Цим же закляттям можна загасити {hh4розжарений{x предмет або палаючий {hh825багаття{x.
+</text>
   </help>
   <mana>20</mana>
   <name l="en">create water</name>
   <name l="ru">сотворить воду</name>
-  <name l="ua"></name>
+  <name l="ua">створити воду</name>
   <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>magic prayer</flags>

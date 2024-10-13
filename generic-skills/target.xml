@@ -11,22 +11,27 @@
   <command type="DefaultSkillCommand">
     <argtype>char_room</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">Switch the target in battle (samurai)</hint>
     <hint l="ru">(самураи) переключить цель в битве</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(самураї) переключити ціль у бою</hint>
     <name l="en">target</name>
     <name l="ru">цель</name>
-    <name l="ua"></name>
+    <name l="ua">ціль</name>
     <order>fight_only</order>
     <position>fight</position>
   </command>
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">fightmaster</group>
   <help id="733" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">switching opponent</extra>
     <extra l="ru">противника смена</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">зміна противника</extra>
+    <text l="en">%FMT% *%CMD%* _%VICT%_
+
+If a samurai is fighting with a group of enemies, they can focus attacks on a specific opponent. The success probability depends on the skill proficiency and the level difference between the samurai and the target.
+
+{RIMPORTANT:{x {hh2142Mobs{x do this regardless of class. So if your {hh613groupmates{x or {hh1378charmers{x save you in battle, the mob-enemy will still be able to switch back to you sooner or later.
+</text>
     <text l="ru">%FMT% *%CMD%* _%VICT%_
 
 Если самурай дерется с группой врагов, он может сфокусировать атаки на каком-то
@@ -37,11 +42,20 @@
 твои {hh1378согруппники{x или {hh15чармисы{x -- моб-противник все равно рано или поздно сможет
 переключиться назад на тебя.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%CMD%* _%VICT%_
+
+Якщо самурай бореться з групою ворогів, він може сфокусувати атаки на конкретному
+супернику. Ймовірність успіху залежить від володіння навичкою і різниці
+рівнів між самураєм і жертвою.
+
+{RВАЖЛИВО:{x {hh2142Моби{x роблять це незалежно від класу. Тобто якщо тебе {hh613врятують{x в бою
+твої {hh1378согрупники{x або {hh15чармисы{x -- моб-противник все одно рано чи пізно зможе
+переключитися назад на тебе.
+</text>
   </help>
   <mana>20</mana>
   <move>20</move>
   <name l="en">target</name>
   <name l="ru">выбор цели</name>
-  <name l="ua"></name>
+  <name l="ua">вибір цілі</name>
 </skill>

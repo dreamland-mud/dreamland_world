@@ -36,10 +36,22 @@
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">nature</group>
   <help id="581" level="-1" type="SkillHelp">
-    <keyword l="en"></keyword>
+    <keyword l="en">'magic mushroom' 'manna from heaven' 'create food'</keyword>
     <keyword l="ru">&apos;магический гриб&apos; &apos;манна небесная&apos; &apos;сотворить еду&apos;</keyword>
-    <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <keyword l="ua">'магічний гриб' 'манна небесна' 'створити їжу'</keyword>
+    <text l="en">%FMT% *%SPELL%*
+
+This skill creates food from your character's energy.
+Magical classes like witches and warlocks create spells for =magic mushrooms=.
+Clerics and paladins summon from their gods with prayer =manna from heaven=,
+and druids create ordinary apples.
+
+Mushrooms and manna are very filling and will help you quickly {hh1074satisfy your hunger{x.
+
+If you get tired of eating mushrooms, apples, or manna, you can buy a {hh56rename coupon{x and
+ask the Gods to rename it to something interesting! Read more at
+{y{hchelp rename{x.
+</text>
     <text l="ru">%FMT% *%SPELL%*
 
 Это умение создает пищу из энергии твоего персонажа.
@@ -53,7 +65,18 @@
 попросить Богов переименовать это во что-то интересное! Подробности читай по
 {y{hcсправка рестринг{x.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%*
+
+Це вміння створює їжу з енергії твого персонажа.
+Магічні класи, такі як відьми і чаклуни, створюють закляттям =магічні гриби=.
+Клерики і паладини за допомогою молитви викликають від своїх богів =манну небесну=,
+а друїди творять звичайні яблука.
+
+Гриби і манна -- дуже ситні і допоможуть тобі швидко {hh1074наїстися{x.
+
+Якщо тобі набридає їсти гриби, яблука чи манну, можна купити {hh56рестринг-купон{x і
+попросити Богів перейменувати це на щось цікаве! Подробиці читай за
+{y{hcдовідка рестринг{x.</text>
   </help>
   <mana>20</mana>
   <mob>
@@ -61,7 +84,7 @@
   </mob>
   <name l="en">create food</name>
   <name l="ru">сотворить пищу</name>
-  <name l="ua"></name>
+  <name l="ua">створити їжу</name>
   <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>magic prayer</flags>

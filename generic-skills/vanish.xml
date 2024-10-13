@@ -11,21 +11,35 @@
   <command type="SKILL(vanish)">
     <argtype>undef</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">(ninja) disappear in a cloud of smoke</hint>
     <hint l="ru">(ниндзи) скрыться в облаке дыма</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(ніндзя) зникнути у хмарі диму</hint>
     <name l="en">vanish</name>
     <name l="ru">исчезнуть</name>
-    <name l="ua"></name>
+    <name l="ua">зникнути</name>
     <position>fight</position>
   </command>
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">adventure</group>
   <help id="742" level="-1" type="SkillHelp">
-    <keyword l="en"></keyword>
+    <keyword l="en">kidnap abduction</keyword>
     <keyword l="ru">похитить похищение</keyword>
-    <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <keyword l="ua">викрасти викрадення</keyword>
+    <text l="en">%FMT% *%SKILL%*
+
+Using special chemicals, ninjas can create a bright flash in the room to distract 
+attention and quickly disappear, moving to a random room within the same zone. 
+You can vanish right from the fight, but this will be harder to execute. 
+There are some rooms you can't reach this way, and conversely, some places 
+from which you can't disappear.
+
+%FMT% *%SKILL%* _%VICT%_
+
+With the same trick, ninjas can =abduct= their victims away from loving pets, 
+{hh15followers{x and mercenaries for one-on-one encounters. Success depends on the 
+{hh37agility{x of the ninja, the {hh39strength{x and the {hh26size of the victim{x, 
+as well as other factors.
+</text>
     <text l="ru">%FMT% *%SKILL%*
 
 С помощью специальных химикатов ниндзя умеют создавать яркую вспышку в комнате 
@@ -40,11 +54,24 @@
 {hh15последователей{x и наемников, чтобы разделаться с ними один на один. Успех зависит
 от {hh37ловкости{x ниндзя, {hh39силы{x и {hh26размера жертвы{x, а также других факторов.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SKILL%*
+
+За допомогою спеціальних хімікатів ніндзя вміють створювати яскравий спалах у кімнаті
+для відволікання уваги і швидко зникати, переміщуючись у випадкову кімнату в
+цій же зоні. Можна зникнути прямо з бою, але провернути це буде важче.
+У деякі кімнати таким чином не можна потрапити і, навпаки, з деяких місць
+не можна зникнути.
+
+%FMT% *%SKILL%* _%VICT%_
+
+Завдяки цьому ж трюку ніндзя вміють =викрадати= своїх жертв від люблячих петов,
+{hh15послідовників{x і найманців, щоб розібратися з ними один на один. Успіх залежить
+від {hh37спритності{x ніндзя, {hh39сили{x і {hh26розміру жертви{x, а також інших факторів.
+</text>
   </help>
   <mana>20</mana>
   <move>100</move>
   <name l="en">vanish</name>
   <name l="ru">исчезновение</name>
-  <name l="ua"></name>
+  <name l="ua">зникнення</name>
 </skill>

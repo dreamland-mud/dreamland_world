@@ -25,8 +25,17 @@
   <help id="766" level="-1" type="SkillHelp">
     <extra l="en">holy water</extra>
     <extra l="ru">аура благословения благословления голубая святая вода</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">аура благословення голуба свята вода</extra>
+    <text l="en">This prayer increases {hh47accuracy{x and provides enhanced protection against {hh2035spells{x. The blessing prayer does not work simultaneously with a {hh860battle cry{x.
+
+%FMT% *%SPELL%* _%OBJ%_
+
+The prayer can also be used to temporarily bless items, imbuing them with a sacred aura:
+%A% {hh96blessed{x weapons deal more damage to demonic creatures
+%A% blessed items offer better protection against spells
+%A% blessing removes the demonic property ({hh96flag{x) from an item
+%A% =holy water= from a blessed {hh1075container or fountain{x is dangerous to vampires
+</text>
     <text l="ru">%FMT% *%SPELL%* _%CHAR%_
 
 Эта молитва увеличивает {hh47точность{x и увеличивает защиту от {hh2035заклинаний{x.
@@ -41,7 +50,19 @@
 %A% благословение снимает с предмета дьявольское свойство ({hh96флаг{x)
 %A% =святая вода= из благословленной {hh1075емкости или фонтана{x будет опасна для вампиров
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%* _%CHAR%_
+
+Ця молитва збільшує {hh47точність{x і збільшує захист від {hh2035заклинань{x.
+Молитва благословення не працює одночасно з {hh860бойовим криком{x.
+
+%FMT% *%SPELL%* _%OBJ%_
+
+Молитву також можна використовувати для тимчасового благословення речей, накладаючи на них священну ауру:
+%A% {hh96благословенна{x зброя завдає більше шкоди демонічним істотам
+%A% благословенні речі краще захищають тебе від заклинань
+%A% благословення знімає з предмета диявольське свято ({hh96прапор{x)
+%A% =свята вода= з благословленного {hh1075контейнера або фонтану{x буде небезпечною для вампірів
+</text>
   </help>
   <mana>20</mana>
   <mob>
@@ -49,7 +70,7 @@
   </mob>
   <name l="en">bless</name>
   <name l="ru">благословение</name>
-  <name l="ua"></name>
+  <name l="ua">благословення</name>
   <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>prayer</flags>

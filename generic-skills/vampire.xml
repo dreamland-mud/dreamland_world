@@ -15,16 +15,16 @@
   </classes>
   <command type="SKILL(vampire)">
     <aliases l="en">morph</aliases>
-    <aliases l="ru"></aliases>
-    <aliases l="ua"></aliases>
+    <aliases l="ru">перевоплощение</aliases>
+    <aliases l="ua">перевтілення</aliases>
     <argtype>char_self</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">transform into a vampire (only vampires)</hint>
     <hint l="ru">(вампиры) превратиться в вампира</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(вампіри) перетворитись на вампіра</hint>
     <name l="en">vampire</name>
     <name l="ru">вампир</name>
-    <name l="ua"></name>
+    <name l="ua">вампір</name>
     <order>player_only</order>
     <position>rest</position>
   </command>
@@ -33,8 +33,23 @@
   <help id="836" labels="cmd skill" level="-1" type="SkillHelp">
     <extra l="en">morph unmorph &apos;vampiric form&apos;</extra>
     <extra l="ru">&apos;форма вампира&apos; инициация невампир &apos;ритуал инициации&apos; вампир</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">"форма вампіра" ініціація невампір "ритуал ініціації" вампір</extra>
+    <text l="en">Every young vampire must once undergo an initiation ritual with their Master
+{hh44Guild{x (you need to {hh1095bow{x to them and pay 50 {hh125quest points{x).
+
+%FMT% *vampire*
+
+Transform into the vampire form. Upon changing form, the {hh26size{x and power of vampires
+increase, they gain the {hh703stalking{x skill, become {hh101immune{x to dark energy and are not susceptible to {hh729charm{x. However, at the same time, this form makes
+them vulnerable to light and holy attacks. Vampires in form are harmed by sunlight -- {hh1029during the day{x,
+without a {hh571dark aura{x and not in all types of {hh86localities{x. Most vampiric abilities
+are available only in form.
+
+%FMT% *non-vampire*
+
+Revert to ordinary appearance. The form can be switched at will.
+
+%SA% %H% {hh769touch{x, {hh626bite{x, {hh697suck{x, {hh539bloodletting{x</text>
     <text l="ru">Каждый молодой вампир должен один раз пройти ритуал инициации у своего Мастера
 {hh44Гильдии{x (нужно ему {hh1095поклониться{x и заплатить 50 {hh125квестовых очков{x).
 
@@ -53,14 +68,31 @@
 
 %SA% %H% {hh769коснуться{x, {hh626кусать{x, {hh697сосать{x, {hh539кровопускание{x
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">Кожен молодий вампір повинен один раз пройти ритуал ініціації у свого Майстра
+{hh44Гільдії{x (потрібно йому {hh1095вклонитися{x і заплатити 50 {hh125квестових балів{x).
+
+%FMT% *вампір*
+
+Переход у форму (вигляд) вампіра. При зміні вигляду {hh26розмір{x та міць вампірів
+збільшуються, вони отримують навичку {hh703підкрадання{x, стають {hh101імунними{x до темної енергії
+і не піддаються {hh729зачаруванню{x. Однак водночас ця форма робить їх
+уразливими до світла і святих атак. Вампірів у формі ранить сонячне світло -- {hh1029вдень{x,
+без {hh571темної аури{x і не в усіх {hh86типах місцевості{x. Більшість вампірських умінь
+доступні лише у формі.
+
+%FMT% *невампір*
+
+Знову повернути собі звичайний вигляд. Форму можна змінювати за бажанням.
+
+%SA% %H% {hh769доторкнутися{x, {hh626кусати{x, {hh697смоктати{x, {hh539кровопускання{x
+</text>
+    <title l="en">Vampire Form, Vampirism</title>
     <title l="ru">Форма вампира, вампиризм</title>
-    <title l="ua"></title>
+    <title l="ua">Форма вампіра, вампіризм</title>
   </help>
   <mana>100</mana>
   <move>40</move>
   <name l="en">vampire</name>
   <name l="ru">вампиризм</name>
-  <name l="ua"></name>
+  <name l="ua">вампіризм</name>
 </skill>

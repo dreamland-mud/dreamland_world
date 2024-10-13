@@ -18,26 +18,37 @@
   </classes>
   <command type="DefaultSkillCommand">
     <aliases l="en">lions</aliases>
-    <aliases l="ru"></aliases>
-    <aliases l="ua"></aliases>
+    <aliases l="ru">львы</aliases>
+    <aliases l="ua">леви</aliases>
     <argtype>undef</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">(rangers, druids) call two lions for assistance</hint>
     <hint l="ru">(рейнджеры, друиды) позвать двух львов на помощь</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(рейнджери, друїди) покликати двох левів на допомогу</hint>
     <name l="en">lioncall</name>
     <name l="ru">львы</name>
-    <name l="ua"></name>
+    <name l="ua">леви</name>
     <order>player_only</order>
     <position>fight</position>
   </command>
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">nature</group>
   <help id="648" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">lion summon</extra>
     <extra l="ru">львов вызвать</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">левів викликати</extra>
+    <text l="en">%FMT% *%CMD%*
+
+This skill is similar to {hh646bear summon{x, and calls two lions to your aid.
+
+{CCHARACTERISTICS{x
+{C%A%{x {hh63Summoned creature{x needs to be =reasserted= after {hh922exiting{x the world
+{C%A%{x Can summon only in the wild
+{C%A%{x Summoned for a week
+{C%A%{x Can be partially equipped (equipment slots are limited)
+{C%A%{x Maximum of =two= can be controlled, two summoned at a time
+  Total number of {hh15followers{x also limited -- see {y{hccharm help{x.
+</text>
     <text l="ru">%FMT% *%CMD%*
 
 Это умение похоже на {hh646призыв медведей{x, и вызывает двух львов тебе на помощь.
@@ -50,11 +61,22 @@
 {C%A%{x Максимум можно контролировать =двух=, призывается два за раз
   Общее число {hh15последователей{x тоже ограничено -- читай {y{hcсправка очарование{x.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%CMD%*
+
+Це вміння схоже на {hh646виклик ведмедів{x, і викликає двох левів тобі на допомогу.
+
+{CВЛАСТИВОСТІ{x
+{C%A%{x {hh63Викликане створіння{x, потрібно =підпорядковувати знову= після {hh922виходу{x з світу
+{C%A%{x Можна викликати лише на природі
+{C%A%{x Викликається на тиждень
+{C%A%{x Можна частково одягнути (слоти спорядження обмежені)
+{C%A%{x Максимум можна контролювати =двох=, викликається два за раз
+  Загальна кількість {hh15послідовників{x теж обмежена -- читай {y{hcpоміч чарами{x.
+</text>
   </help>
   <mana>100</mana>
   <move>20</move>
   <name l="en">lion call</name>
   <name l="ru">львы</name>
-  <name l="ua"></name>
+  <name l="ua">леви</name>
 </skill>

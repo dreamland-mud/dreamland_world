@@ -29,23 +29,31 @@
     </node>
   </classes>
   <command type="DefaultSkillCommand">
-    <aliases l="en"></aliases>
+    <aliases l="en">trip</aliases>
     <aliases l="ru">подсечь</aliases>
-    <aliases l="ua"></aliases>
+    <aliases l="ua">підсікати</aliases>
     <argtype>char_fight</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">(warrior classes) make a trip</hint>
     <hint l="ru">(воинские профессии) сделать подножку</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(військові професії) зробити підніжку</hint>
     <name l="en">trip</name>
     <name l="ru">подножка</name>
-    <name l="ua"></name>
+    <name l="ua">підніжка</name>
     <position>fight</position>
   </command>
   <dammsg mg="f">подножка</dammsg>
   <group registry="skillGroup">fightmaster</group>
   <help id="582" level="-1" type="SkillHelp">
-    <text l="en"></text>
+    <text l="en">%FMT% *%SKILL%*
+%FFF% *%SKILL%* _%VICT%_
+
+Trip is an excellent skill of thieves, ninjas, and some other classes that
+allows you to knock the opponent {hh1020to the ground{x, deal damage and cause a {hh120delay{x.
+The success rate depends on many factors: the current terrain, the presence or
+absence of necessary body parts, agility, the {hh26size{x difference between you and the victim,
+and others.
+</text>
     <text l="ru">%FMT% *%SKILL%*
 %FFF% *%SKILL%* _%VICT%_
 
@@ -55,7 +63,15 @@
 отсутствия нужных частей тела, ловкости, разницы в {hh26размере{x между тобой и жертвой
 и других.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SKILL%*
+%FFF% *%SKILL%* _%VICT%_
+
+Підсікачка -- прекрасний навик злодіїв, ніндзя та деяких інших класів, який
+дозволяє збити противника {hh1020з ніг{x, нанести шкоду і викликати {hh120затримку{x.
+Ймовірність успіху залежить від багатьох факторів: поточної місцевості, наявності
+або відсутності потрібних частин тіла, спритності, різниці в {hh26розмірі{x між тобою і жертвою
+та інших.
+</text>
   </help>
   <mob>
     <bonus>40</bonus>
@@ -66,5 +82,5 @@
   <move>20</move>
   <name l="en">trip</name>
   <name l="ru">подножка</name>
-  <name l="ua"></name>
+  <name l="ua">підніжка</name>
 </skill>

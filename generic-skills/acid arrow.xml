@@ -21,13 +21,21 @@
   <dammsg mg="f">кислотная стрела</dammsg>
   <group registry="skillGroup">combat</group>
   <help id="840" level="-1" type="SkillHelp">
-    <text l="en"></text>
+    <text l="en">%FMT% *%SPELL%* _%VICT%_
+
+A magical spell that deals damage to the victim with an acid arrow depending on the
+spell level. If the victim successfully makes a {hh2035saving throw{x, the damage is halved.
+</text>
     <text l="ru">%FMT% *%SPELL%* _%VICT%_
 
 Магическое заклинание, наносящее урон жертве стрелой кислоты в зависимости от
 уровня заклинания. Если у жертвы срабатывает {hh2035спасбросок{x, урон уменьшается вдвое.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%* _%VICT%_
+
+Магічне заклинання, що завдає шкоди жертві стрілою кислоти в залежності від
+рівня заклинання. Якщо у жертви спрацьовує {hh2035рятувальний кидок{x, шкода зменшується вдвічі.
+</text>
   </help>
   <mana>80</mana>
   <mob>
@@ -35,7 +43,7 @@
   </mob>
   <name l="en">acid arrow</name>
   <name l="ru">кислотная стрела</name>
-  <name l="ua"></name>
+  <name l="ua">кислотна стріла</name>
   <spell type="DefaultSpell">
     <damtype>acid</damtype>
     <flags>magic</flags>

@@ -11,18 +11,20 @@
   <command type="SKILL(blindness)">
     <argtype>undef</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">Create a blinding dust cloud (ninjas)</hint>
     <hint l="ru">(ниндзи) создать ослепляющее облако пыли</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(ніндзя) створити осліплюючу хмару пилу</hint>
     <name l="en">blindness</name>
     <name l="ru">облакопыли</name>
-    <name l="ua"></name>
+    <name l="ua">хмарапил</name>
     <position>fight</position>
   </command>
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">fightmaster</group>
   <help id="706" level="-1" type="SkillHelp">
-    <text l="en"></text>
+    <text l="en">Ninjas possess the secret of creating a special powder, which when dispersed, {hh831blinds{x everyone around. All nearby individuals to the ninja are affected unless they make a successful {hh2035saving throw{x. The powder will not affect party members.
+
+%SA% {hh831blindness{x</text>
     <text l="ru">%FMT% *%CMD%*
 
 Ниндзя владеют секретом создания особого порошка, который в распыленном
@@ -32,11 +34,16 @@
 
 %SA% {hh831слепота{x
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%CMD%*
+
+Ніндзя володіють секретом створення особливого порошку, який у розсіяному стані {hh831осліплює{x всіх навколо. Дії порошку піддаються всі, хто знаходиться поряд з ніндзя, якщо у них не пройшов {hh2035рятувальний кидок{x. Порошок не зачепить спільників.
+
+%SA% {hh831сліпота{x
+</text>
   </help>
   <mana>20</mana>
   <move>20</move>
   <name l="en">blindness dust</name>
   <name l="ru">облако пыли</name>
-  <name l="ua"></name>
+  <name l="ua">хмара пилу</name>
 </skill>

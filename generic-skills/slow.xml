@@ -42,7 +42,21 @@
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">maladictions</group>
   <help id="705" level="-1" type="SkillHelp">
-    <text l="en"></text>
+    <text l="en">%FMT% *%SPELL%* _%VICT%_
+
+This spell significantly slows the target's metabolism and reaction speed.
+Under the effect of slow, the target will deal fewer attacks in combat and will evade
+enemy hits worse, with all skill delays increasing. Many combat skills work worse and less frequently under slow.
+
+Slowed metabolism also has its pleasant sides: your health and mana will
+recover faster, and {hh837poison{x will spread through the veins more slowly.
+And when the slow effect wears off, your body will be filled with {hh99combat enthusiasm{x for one {hh16combat round{x.
+
+The {hh739speed{x and slow effects cancel each other out. For instance, if
+you cast speed on yourself over slow, the slow effect will wear off.
+And if in such a situation you wear an item with speed, the slow effect will
+still remain in the {hh997list{x, but won't do anything harmful anymore.
+</text>
     <text l="ru">%FMT% *%SPELL%* _%VICT%_
 
 Это заклинание сильно замедляет метаболизм и скорость реакции цели.
@@ -59,7 +73,22 @@
 А если в такой ситуации надеть вещь с ускорением, то аффект замедления будет
 по-прежнему висеть в {hh997списке{x, но ничего плохого уже не сделает.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%* _%VICT%_
+
+Це заклинання значно уповільнює метаболізм і швидкість реакції цілі.
+Під впливом уповільнення ціль завдаватиме менше атак у бою і гірше
+ухилятися від ворожих ударів, а всі затримки від умінь збільшаться. Багато бойових
+умінь працюють гірше і рідше під уповільненням.
+
+Уповільнений метаболізм має і приємні сторони: твої очки здоров'я і мани будуть
+відновлюватися швидше, а {hh837отрута{x повільніше поширюватиметься по жилах.
+А коли уповільнення пройде, твоє тіло насититься {hh99бойовим азартом{x на один {hh16бойовий раунд{x.
+
+Афекти {hh739прискорення{x та уповільнення скасовують дію одне одного. Наприклад, якщо
+накласти на себе прискорення поверх уповільнення, то афект уповільнення зникне.
+А якщо в такій ситуації одягти річ із прискоренням, то афект уповільнення буде
+як і раніше висіти в {hh997списку{x, але нічого поганого вже не зробить.
+</text>
   </help>
   <mana>40</mana>
   <mob>
@@ -67,7 +96,7 @@
   </mob>
   <name l="en">slow</name>
   <name l="ru">замедление</name>
-  <name l="ua"></name>
+  <name l="ua">уповільнення</name>
   <spell type="DefaultSpell">
     <damflags>water</damflags>
     <damtype>drowning</damtype>

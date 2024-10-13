@@ -22,10 +22,28 @@
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">enhancement</group>
   <help id="739" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">haste spell</extra>
     <extra l="ru">хаста спешка</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">хаста швидкість</extra>
+    <text l="en">%FMT% *%SPELL%* _%CHAR%_
+
+The haste spell allows your muscles to contract faster. If you cast it on
+yourself or an ally, it allows you to deal one more attack in combat and more
+frequently avoid enemy hits. Experienced warlocks and witches in the state of haste
+can even cast spells a bit faster.
+
+Many combat skills work better and more often in a state of haste--especially
+if your opponent is not hasted.
+
+However, such a load on the body affects your regenerative
+abilities--your health and mana points will recover more slowly.
+And when the haste effect ends, you will be briefly overwhelmed by {hh97fatigue{x,
+which significantly slows down any action.
+
+Haste and {hh705slowness{x effects cancel each other out. For example, if
+you cast haste on yourself under slowness, the slowness effect will fade.
+And if, in such a situation, you wear an item with haste, the slowness effect will
+still appear in the {hh997list{x, but it will not cause any harm.</text>
     <text l="ru">%FMT% *%SPELL%* _%CHAR%_
 
 Заклинание ускорения позволяет мышцам сокращаться быстрее. Если наложить его на
@@ -46,7 +64,26 @@
 А если в такой ситуации надеть вещь с ускорением, то аффект замедления будет
 по-прежнему висеть в {hh997списке{x, но ничего плохого уже не сделает.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%* _%CHAR%_
+
+Заклинання прискорення дозволяє м'язам скорочуватися швидше. Якщо накласти його на
+себе чи союзника, це дозволить тобі наносити на один удар більше в бою і частіше
+уникати ворожих ударів. Досвідчені чаклуни і відьми в стані прискорення можуть
+навіть чинити заклинання трохи швидше.
+
+Багато бойових умінь працюють краще і частіше в стані прискорення -- особливо
+якщо твій супротивник не прискорений.
+
+Така нагрузка на організм, однак, позначається на твоїх регенеративних
+здібностях -- твої бали здоров'я і мани будуть відновлюватися повільніше.
+А коли дія прискорення закінчиться, на тебе ненадовго нахлине {hh97втома{x,
+яка значно уповільнює будь-які дії.
+
+Афекти прискорення і {hh705уповільнення{x скасовують дію одне одного. Наприклад, якщо
+накласти на себе прискорення поверх уповільнення, то афект уповільнення спадатиме.
+А якщо в такій ситуації одягнути річ з прискоренням, то афект уповільнення буде
+все ще висіти в {hh997списку{x, але нічого поганого вже не завдасть.
+</text>
   </help>
   <mana>40</mana>
   <mob>
@@ -54,7 +91,7 @@
   </mob>
   <name l="en">haste</name>
   <name l="ru">ускорение</name>
-  <name l="ua"></name>
+  <name l="ua">прискорення</name>
   <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>magic</flags>

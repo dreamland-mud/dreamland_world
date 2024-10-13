@@ -14,32 +14,41 @@
   <command type="DefaultSkillCommand">
     <argtype>undef</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">(thieves) set a trap</hint>
     <hint l="ru">(воры) установить ловушку</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(злодії) встановити пастку</hint>
     <name l="en">settraps</name>
     <name l="ru">ловушка</name>
-    <name l="ua"></name>
+    <name l="ua">пастка</name>
     <position>stand</position>
   </command>
   <dammsg mg="f">ловушка</dammsg>
   <group registry="skillGroup">adventure</group>
   <help id="655" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">dart trap traps poisoned thieves</extra>
     <extra l="ru">дротик ловушка ловушки отравленный воровская</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">дротик пастка пастки отруєний злодійська</extra>
+    <text l="en">%FMT% *%CMD%*
+
+Professional thieves can set traps deadly for their enemies.
+The thieves' trap will shoot a {hh837poisoned{x dart at characters in your
+{hh32PC-range{x or creatures that follow you.</text>
     <text l="ru">%FMT% *%CMD%*
 
 Профессиональные воры могут расставлять смертельные для их врагов ловушки.
 Воровская ловушка выстрелит {hh837отравленным{x дротиком в персонажей в твоем
 {hh32ПК-интервале{x или существ, которые идут за тобой по следу.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%CMD%*
+
+Професійні злодії можуть розставляти смертельні для їхніх ворогів пастки.
+Злодійська пастка вистрілить {hh837отруєним{x дротиком у персонажів у твоєму
+{hh32ПК-інтервалі{x або істот, які йдуть за тобою по сліду.
+</text>
   </help>
   <mana>200</mana>
   <move>100</move>
   <name l="en">settraps</name>
   <name l="ru">ловушка</name>
-  <name l="ua"></name>
+  <name l="ua">пастка</name>
 </skill>

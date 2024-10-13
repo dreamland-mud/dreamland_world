@@ -36,16 +36,16 @@
   <command type="SKILL(second)">
     <aliases l="en">dual</aliases>
     <aliases l="ru">вторичное</aliases>
-    <aliases l="ua"></aliases>
+    <aliases l="ua">вторинне</aliases>
     <argtype>undef</argtype>
     <cat>class</cat>
     <extra>undig</extra>
-    <hint l="en"></hint>
+    <hint l="en">equip secondary weapon</hint>
     <hint l="ru">вооружиться вторичным оружием</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">озброїтися вторинною зброєю</hint>
     <name l="en">second</name>
     <name l="ru">второе</name>
-    <name l="ua"></name>
+    <name l="ua">друге</name>
     <position>rest</position>
   </command>
   <dammsg mg="m"></dammsg>
@@ -54,8 +54,45 @@
   <help id="752" level="-1" type="SkillHelp">
     <extra l="en">dual second &apos;second hand&apos; &apos;second weapon&apos;</extra>
     <extra l="ru">&apos;двумя руками&apos; вторичное второе &apos;второе оружие&apos;</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">&apos;двома руками&apos; вторинне друге &apos;друга зброя&apos;</extra>
+    <text l="en">To wield a second weapon (given you have the skill), use:
+%FMT% *second* _weapon_
+
+All warrior classes have access to the skill to fight with a secondary weapon -- or, in the case
+of {hh585bare-handed{x combat, using both hands. You cannot wear a {hh726shield{x with a secondary weapon
+or {hh990clench{x anything in the hand.
+
+Each round it strikes as the first, however, {hh665the second{x, {hh596third{x
+and further attacks occur less frequently. How often you can make these attacks
+greatly depends on how aligned your class is with this type of weapon.
+
+Here's how well different classes can wield various types of weapon as a secondary weapon:
+=Warriors=: {GExcellent:{x with a dagger or axe
+          {gGood:{x  bare-handed
+          {yAverage:{x with a sword or exotic
+          {RBad:{x   with all other types
+=Paladin=:  {GExcellent:{x with a dagger or flail
+          {gGood:{x  with a mace, halberd, or bare-handed
+          {yAverage:{x with a sword or exotic
+          {RBad:{x   with all other types
+=Anti-pal=: {gGood:{x  with a sword and dagger
+          {yAverage:{x with a flail, exotic, or bare-handed
+          {RBad:{x   with all other types
+=Ninja=:    {GExcellent:{x bare-handed or with a dagger
+          {gGood:{x  with staves
+          {yAverage:{x with a sword or exotic
+          {RBad:{x   with all other types            
+=Ranger=:   {GExcellent:{x with a spear or dagger
+          {gGood:{x  with a whip, arrow, or bare-handed
+          {yAverage:{x with exotic
+          {RBad:{x   with all other types            
+=Samurai=:  {GExcellent:{x with a sword or dagger
+          {gGood:{x  bare-handed
+          {yAverage:{x with exotic
+          {RBad:{x   with all other types
+           
+If by some miracle you trained {Sm yourself{Sf{ x to wield two weapons with any other class (usually through powerful artifacts), your chance of striking will be poor.
+</text>
     <text l="ru">Чтобы надеть второе оружие (при наличии навыка), используй:
 %FMT% *второе* _оружие_
 
@@ -96,10 +133,49 @@
 Если ты чудом обучил{Smся{Sfась{x владению двумя оружиями каким-то другим классом (обычно,
 с помощью мощных артефактов), твой шанс нанесения ударов будет плохим.
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">Щоб надягти другу зброю (за наявності навичок), використовуй:
+%FMT% *друге* _зброя_
+
+Усі бойові класи мають навички для бою з другою зброєю -- або, у разі
+{hh585рукопашного{x бою, використання обох рук. З другою зброєю не можна носити
+{hh726щит{x та {hh990стискати{x щось у руці.
+
+Кожен раунд вона завдає удари так само, як і перша, проте {hh665друга{x, {hh596третя{x
+та інші атаки відбуваються рідше. Як часто вдасться завдати ці атаки,
+дуже залежить від прихильності класу до цього виду зброї.
+
+Ось наскільки добре різні класи вміють володіти різними типами зброї
+в якості другої зброї:
+=Воїни=:    {GЧудово:{x кинджалом або сокирою
+          {gДобре:{x  голими руками
+          {yСередньо:{x мечем або екзотикою
+          {RПогано:{x   всіма іншими типами
+=Паладин=:  {GЧудово:{x кинджалом або ціпом
+          {gДобре:{x  булавою, алебардою або голими руками
+          {yСередньо:{x мечем або екзотикою
+          {RПогано:{x   всіма іншими типами
+=Анти-пал=: {gДобре:{x  мечом і кинджалом
+          {yСередньо:{x ціпом, екзотикою або голими руками
+          {RПогано:{x   всіма іншими типами
+=Ніндзя=:   {GЧудово:{x голими руками або кинджалом
+          {gДобре:{x  палицями
+          {yСередньо:{x мечем або екзотикою
+          {RПогано:{x   всіма іншими типами            
+=Рейнджер=: {GЧудово:{x списом або кинджалом
+          {gДобре:{x  батогом, стрілою або голими руками
+          {yСередньо:{x екзотикою
+          {RПогано:{x   всіма іншими типами            
+=Самурай=:  {GЧудово:{x мечем або кинджалом
+          {gДобре:{x  голими руками
+          {yСередньо:{x екзотикою
+          {RПогано:{x   всіма іншими типами
+           
+Якщо ти чудом навчив{Smся{Sf{ся{x володіти двома зброями якимось іншим класом (зазвичай, з
+допомогою могутніх артефактів), твій шанс нанесення ударів буде поганим.
+</text>
+    <title l="en">Second Weapon</title>
     <title l="ru">Второе оружие</title>
-    <title l="ua"></title>
+    <title l="ua">Друга зброя</title>
   </help>
   <mob>
     <bonus>10</bonus>
@@ -109,5 +185,5 @@
   <move>10</move>
   <name l="en">second weapon</name>
   <name l="ru">второе оружие</name>
-  <name l="ua"></name>
+  <name l="ua">друга зброя</name>
 </skill>

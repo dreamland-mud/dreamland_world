@@ -26,10 +26,18 @@
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">detection</group>
   <help id="799" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">'farsight' farsight</extra>
     <extra l="ru">&apos;дальнее зрение&apos; дальновидение</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">'дальнє зорове поле' дальновидність</extra>
+    <text l="en">%FMT% *%SPELL%* _%DIR%_
+%FMT% *%SPELL%* _distance_._%DIR%_
+
+This heightened vision spell allows you to see terrain far away from you in some direction -- even through closed doors! Unlike the {hh1021look around{x command, farsight shows everything in the area -- as if you are there now. The maximum distance of the spell depends on your level.
+
+For example, to look two rooms away to the north, you should write {yuse farsight 2.n{x. You can peek through closed doors only if you are right next to them: for example, to look through a door to the west, write {yuse farsight w{x.
+
+The binoculars that {hh2127newcomers{x can acquire on the {hh1560Galeon{x operate similarly.
+</text>
     <text l="ru">%FMT% *%SPELL%* _%DIR%_
 %FMT% *%SPELL%* _расстояние_._%DIR%_
 
@@ -44,12 +52,20 @@
 
 Бинокль, который {hh2127новички{x могут раздобыть на {hh1560Галеоне{x, работает похожим образом.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%* _%DIR%_
+%FMT% *%SPELL%* _відстань_._%DIR%_
+
+Це заклинання загостреного зору дозволяє побачити місцевість далеко від тебе в якомусь напрямку -- навіть через зачинені двері! На відміну від команди {hh1021оглянутись{x, дальнє зорове поле показує все в даній місцевості -- ніби ти зараз там перебуваєш. Максимальна дальність заклинання залежить від твого рівня.
+
+Наприклад, щоб подивитися на відстань двох переходів на північ, треба написати {yк даль 2.п{x. Через зачинені двері можна заглянути тільки впритул: наприклад, щоб подивитися через двері на заході, напиши {yк даль з{x.
+
+Бінокль, який {hh2127новачки{x можуть здобути на {hh1560Галеоні{x, працює подібним чином.
+</text>
   </help>
   <mana>20</mana>
   <name l="en">farsight</name>
   <name l="ru">дальновидение</name>
-  <name l="ua"></name>
+  <name l="ua">дальновидність</name>
   <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>magic</flags>

@@ -26,9 +26,9 @@
   <dammsg mg="f">молния</dammsg>
   <group registry="skillGroup">nature</group>
   <help id="650" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">lightning bolt &apos;call lightning&apos; summon &apos;summon lightning&apos;</extra>
     <extra l="ru">молнию молний &apos;призвать молнию&apos; вызвать &apos;вызвать молнию&apos;</extra>
-    <extra l="ua"></extra>
+    <extra l="ua">блискавку блискавок &apos;призвати блискавку&apos; виклик &apos;викликати блискавку&apos;</extra>
     <text l="en"></text>
     <text l="ru">%FMT% *%SPELL%*
 
@@ -36,7 +36,12 @@
 вызывая разряд молнии, поражающий всех в данной местности. Осторожнее!
 Не забудь, что погоду можно предусмотрительно {hh643ухудшить{x.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%*
+
+Це заклинання працює тільки {hh86поза приміщеннями{x, і тільки за поганої погоди,
+викликаючи розряд блискавки, що вражає всіх у цій місцевості. Обережно!
+Не забудьте, що погоду можна передбачливо {hh643погіршити{x.
+</text>
   </help>
   <mana>80</mana>
   <mob>
@@ -44,7 +49,7 @@
   </mob>
   <name l="en">call lightning</name>
   <name l="ru">вызов молнии</name>
-  <name l="ua"></name>
+  <name l="ua">виклик блискавки</name>
   <raceBonuses registry="race">&apos;storm giant&apos;</raceBonuses>
   <spell type="DefaultSpell">
     <damtype>lightning</damtype>

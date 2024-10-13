@@ -11,15 +11,15 @@
   <command type="SKILL(backstab)">
     <aliases l="en">bs</aliases>
     <aliases l="ru">вспину</aliases>
-    <aliases l="ua"></aliases>
+    <aliases l="ua">вспину</aliases>
     <argtype>undef</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">stab an enemy in the back</hint>
     <hint l="ru">(воры) ударить ножом в спину</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(злодії) вдарити ножем у спину</hint>
     <name l="en">backstab</name>
     <name l="ru">зарезать</name>
-    <name l="ua"></name>
+    <name l="ua">зарізати</name>
     <order>player_only</order>
     <position>stand</position>
   </command>
@@ -28,8 +28,19 @@
   <help id="609" level="-1" type="SkillHelp">
     <extra l="en">stab</extra>
     <extra l="ru">стаб заколоть</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">стаб заколоти</extra>
+    <text l="en">
+%FMT% *%CMD%* _target_
+%FMT% *bs* _target_
+
+Backstab is a favorite attack of thieves. It can be performed with any piercing weapon.
+Experienced and hardened thieves can quickly deliver a second strike following the first.
+
+It is said that somewhere in {hh2065Aarakocra{x exists one of the oldest thieves' guilds,
+which provides its adepts with much more detailed training in the art of being a successful thief.
+
+%SA% %H% {hh788double backstab{x
+</text>
     <text l="ru">%FMT% *%CMD%* _жертва_
 %FMT% *bs* _жертва_
 	  
@@ -42,7 +53,18 @@
 
 %SA% %H% {hh788двойной удар в спину{x
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%CMD%* _жертва_
+%FMT% *bs* _жертва_
+
+Удар у спину -- улюблена атака злодіїв. Може бути виконана будь-якою колючою зброєю.
+Досвідчені й загартовані злодії можуть швидко наносити другий удар слідом за першим.
+
+Кажуть, що десь у {hh2065Ааракокрані{x існує одна з найдавніших гільдій злодіїв,
+яка надає своїм адептам набагато більш докладне навчання мистецтву
+бути успішним злодієм.
+
+%SA% %H% {hh788подвійний удар у спину{x
+</text>
   </help>
   <mob>
     <bonus>20</bonus>
@@ -53,5 +75,5 @@
   <move>40</move>
   <name l="en">backstab</name>
   <name l="ru">удар в спину</name>
-  <name l="ua"></name>
+  <name l="ua">удар у спину</name>
 </skill>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
-    <removeCharSelf>Теперь ты снова можешь создать глиняного голема.</removeCharSelf>
+    <removeCharSelf>Тепер ти знову можеш створити глиняного голема.</removeCharSelf>
   </affect>
   <align>neutral evil</align>
   <beats>32</beats>
@@ -15,13 +15,26 @@
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">necromancy</group>
   <help id="545" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">clay golem lesser 'create golem'</extra>
     <extra l="ru">глиняный голем малый &apos;создать голема&apos;</extra>
-    <extra l="ua"></extra>
+    <extra l="ua">глиняний голем малий &apos;створити голема&apos;</extra>
     <keyword l="en">golems</keyword>
     <keyword l="ru">големы</keyword>
-    <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <keyword l="ua">големи</keyword>
+    <text l="en">%FMT% *%SPELL%*
+
+The clay golem is the most basic golem that necromancers learn to create. This creature will {hh15serve{x its master faithfully. Like all golems, in battle it can {hh812disarm{x opponents and {hh2138smash{x them with a powerful blow. Necromancers can also create {hh547stone{x, {hh868iron{x, and {hh861adamantite{x golems.
+
+Golems are {hh101vulnerable{x to spells and mental attacks, but they have good resistance against weapon strikes. Poison and disease do not frighten them.
+
+{CATTRIBUTES{x
+{C%A%{x {hh63Summoned Creature{x, needs =rebinding= after {hh922exiting{x the world
+{C%A%{x Requires an ingredient to create
+{C%A%{x Summoned for a week, can be =recharged= -- give the golem its ingredient
+{C%A%{x Can provide one weapon and wear armor, helmet, and shield
+{C%A%{x Maximum controllable is =three=, summoned one by one
+  The total number of {hh15followers{x is also limited -- see {y{hccharm help{x.
+</text>
     <text l="ru">%FMT% *%SPELL%*
 
 Глиняный голем -- самый базовый голем, которого учатся создавать некроманты.
@@ -40,12 +53,29 @@
 {C%A%{x Максимум можно контролировать =трех=, призывается один за раз
   Общее число {hh15последователей{x тоже ограничено -- читай {y{hcсправка очарование{x.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%*
+
+Глиняний голем -- найпростіший голем, якого вчаться створювати некроманти.
+Ця істота буде {hh15служити{x господареві вірно та правдиво. Як і всі големи, у бою
+він вміє {hh812роззброювати{x противника та {hh2138руйнувати{x його потужним ударом.
+Також некроманти можуть створювати {hh547кам'яного{x, {hh868залізного{x та {hh861адамантитового{x големів.
+
+Големи {hh101вразливі{x до заклинань та ментальних атак, але добре протистояться
+ударам зброї. Отрута і чума їм не страшні.
+
+{CВЛАСТИВОСТІ{x
+{C%A%{x {hh63Призвана істота{x, потребує =перепідпорядкування= після {hh922виходу{x з світу
+{C%A%{x Вимагає інгредієнт для створення
+{C%A%{x Призивається на тиждень, можна =перезаряджати= -- дати голему його інгредієнт
+{C%A%{x Можна дати одну зброю та одягти броню, шолом та щит
+{C%A%{x Максимум можна контролювати =трьох=, призивається один за раз
+  Загальна кількість {hh15послідовників{x теж обмежена -- читай {y{hcдовідка чар{x.
+</text>
   </help>
   <mana>100</mana>
   <name l="en">lesser golem</name>
   <name l="ru">глиняный голем</name>
-  <name l="ua"></name>
+  <name l="ua">глиняний голем</name>
   <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>magic</flags>

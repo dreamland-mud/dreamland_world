@@ -29,18 +29,20 @@
   <command type="DefaultSkillCommand">
     <argtype>char_self</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">Use herbs to heal.</hint>
     <hint l="ru">(друиды, рейнджеры) лечиться травами</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(друїди, рейнджери) лікуватись травами</hint>
     <name l="en">herbs</name>
     <name l="ru">травы</name>
-    <name l="ua"></name>
+    <name l="ua">трави</name>
     <position>stand</position>
   </command>
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">healing nature</group>
   <help id="777" level="-1" type="SkillHelp">
-    <text l="en"></text>
+    <text l="en">%FMT% *%CMD%* _%CHAR%_
+
+The skill to find rare herbs, which restore health, and for experts in natural magic, they cure from {hh837poison{x, {hh614disease{x, {hh573blindness{x or {hh541decay{x. Some rare herbs can even give the ability to breathe {hh2128under water{x. Of course, each area has its own herbs that provide different effects.</text>
     <text l="ru">%FMT% *%CMD%* _%CHAR%_
 	  
 Умение находить редкие травы, которые восстанавливают здоровье, а у знатоков
@@ -48,7 +50,13 @@
 Некоторые редкие травы даже могут дать возможность дышать {hh2128под водой{x.
 Разумеется, в каждой местности -- свои травы, которые дают разный эффект.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%CMD%* _%CHAR%_
+
+Вміння знаходити рідкісні трави, які відновлюють здоров'я, а у знавців
+природної магії -- і зцілюють від {hh837отрути{x, {hh614хвороби{x, {hh573сліпоти{x або {hh541гниття{x.
+Деякі рідкісні трави навіть можуть дати можливість дихати {hh2128під водою{x.
+Звісно, в кожному місцевості -- свої трави, які дають різний ефект.
+</text>
   </help>
   <mana>50</mana>
   <mob>
@@ -59,5 +67,5 @@
   <move>100</move>
   <name l="en">herbs</name>
   <name l="ru">травы</name>
-  <name l="ua"></name>
+  <name l="ua">трави</name>
 </skill>

@@ -26,16 +26,24 @@
   <dammsg mg="m">разряд молнии</dammsg>
   <group registry="skillGroup">combat</group>
   <help id="579" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">lightning 'lightning strike'</extra>
     <extra l="ru">молния &apos;удар молнии&apos;</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">блискавка 'удар блискавки'</extra>
+    <text l="en">%FMT% *%SPELL%* _%VICT%_
+
+A magical spell that deals damage to the victim with a discharge depending on the level
+of the spell. If the victim has a {hh2035saving throw{x, the damage is reduced by half.
+</text>
     <text l="ru">%FMT% *%SPELL%* _%VICT%_
 
 Магическое заклинание, наносящее урон жертве разрядом в зависимости от уровня
 заклинания. Если у жертвы срабатывает {hh2035спасбросок{x, урон уменьшается вдвое.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%* _%VICT%_
+
+Магічне заклинання, яке наносить шкоду жертві розрядом залежно від рівня
+заклинання. Якщо у жертви спрацьовує {hh2035рятувальний кидок{x, шкода зменшується вдвічі.
+</text>
   </help>
   <mana>40</mana>
   <mob>
@@ -43,7 +51,7 @@
   </mob>
   <name l="en">lightning bolt</name>
   <name l="ru">разряд молнии</name>
-  <name l="ua"></name>
+  <name l="ua">удар блискавки</name>
   <raceBonuses registry="race">&apos;storm giant&apos;</raceBonuses>
   <spell type="DefaultSpell">
     <damtype>lightning</damtype>

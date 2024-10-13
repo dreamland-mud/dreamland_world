@@ -14,15 +14,15 @@
   <command type="DefaultSkillCommand">
     <aliases l="en">temper</aliases>
     <aliases l="ru"></aliases>
-    <aliases l="ua"></aliases>
+    <aliases l="ua">закалити</aliases>
     <argtype>obj_carry</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">(samurai) temper sword</hint>
     <hint l="ru">(самураи) закалить меч</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(самураї) закалити меч</hint>
     <name l="en">enchant</name>
     <name l="ru">закалить</name>
-    <name l="ua"></name>
+    <name l="ua">закалити</name>
     <position>rest</position>
   </command>
   <dammsg mg="m"></dammsg>
@@ -31,8 +31,13 @@
   <help id="598" level="-1" type="SkillHelp">
     <extra l="en">enchant sword temper</extra>
     <extra l="ru">меч оружие закалить заточить</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">меч зброя закалити загострити</extra>
+    <text l="en">%FMT% *%CMD%* _sword_
+
+An experienced samurai can temporarily temper swords in the fire of the {hh249campfire{x, thus increasing their {hh47damage and accuracy{x.
+
+The degree of enhancement, duration, and chance of success depend on many factors: the levels of the item and character, intelligence or wisdom, skill mastery, and much more. Followers of {hh974Enki{x and those driven by the {hh725lust to create{x will improve the item more significantly.
+</text>
     <text l="ru">%FMT% *%CMD%* _меч_
 
 Опытный самурай может временно закалять мечи в огне {hh249костра{x, увеличивая при этом
@@ -43,11 +48,20 @@
 многого другого. Последователи {hh974Энки{x и те, кого обуяла {hh725жажда творить{x, улучшат
 предмет сильнее.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%CMD%* _меч_
+
+Досвідчений самурай може тимчасово загартовувати мечі в вогні {hh249багаття{x, збільшуючи таким чином
+їх {hh47урон і точність{x.
+
+Ступінь покращення, тривалість і шанс успіху залежать від багатьох параметрів:
+рівнів предмету і персонажа, інтелекту чи мудрості, володіння вмінням і
+багато іншого. Послідовники {hh974Енкі{x і ті, кого охопила {hh725жадоба творити{x, покращать
+предмет сильніше.
+</text>
   </help>
   <mana>100</mana>
   <move>100</move>
   <name l="en">temper</name>
   <name l="ru">закалить</name>
-  <name l="ua"></name>
+  <name l="ua">закалити</name>
 </skill>

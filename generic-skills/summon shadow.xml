@@ -17,8 +17,20 @@
   <help id="551" level="-1" type="SkillHelp">
     <extra l="en">summoned</extra>
     <extra l="ru">призванная призвать тень</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">призвана призвати тінь</extra>
+    <text l="en">This spell animates the necromancer's shadow, turning it into a shadow double.
+The created shadow resembles the owner in health and mana parameters.
+The shadow is resistant to weapons, possesses many spells from the necromancer's repertoire,
+and can {hh1361cast{x them by {hh1091command{x -- and even of its own will.
+
+{CPROPERTIES{x
+{C%A%{x {hh63Summoned entity{x, must be =re-subdued= after {hh922leaving{x the world
+{C%A%{x Summoned only at night, under artificial light
+{C%A%{x Summoned for a week
+{C%A%{x Cannot wear anything, and nothing can be given to it.
+{C%A%{x Maximum of =one= can be controlled, only one summoned at a time.
+  The total number of {hh15followers{x is also limited -- see {y{hchelp charm{x for more info.
+</text>
     <text l="ru">%FMT% *%SPELL%*
 
 Это заклинание оживляет тень некроманта, превращая ее в теневого двойника.
@@ -34,12 +46,26 @@
 {C%A%{x Максимум можно контролировать =одного=, призывается один за раз
   Общее число {hh15последователей{x тоже ограничено -- читай {y{hcсправка очарование{x.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%*
+
+Це заклинання оживляє тінь некроманта, перетворюючи її на тіньового двійника.
+Створена тінь за параметрами здоров'я і мани нагадує господаря.
+Тінь стійка до зброї, володіє багатьма заклинаннями з репертуару некроманта
+і може {hh1361чаклувати{x їх за {hh1091наказом{x -- і навіть з власної волі.
+
+{CВЛАСТИВОСТІ{x
+{C%A%{x {hh63Призване створіння{x, потрібно =підкорити= після {hh922виходу{x з світу
+{C%A%{x Призивається тільки вночі, при світлі штучного освітлювача
+{C%A%{x Призивається на тиждень
+{C%A%{x Нічого не може надіти, і йому нічого не можна дати. 
+{C%A%{x Максимум можно контролювати =одного=, призивається одночасно один
+  Загальна кількість {hh15послідовників{x також обмежена -- читай {y{hcдовідка зачарування{x.
+</text>
   </help>
   <mana>200</mana>
   <name l="en">summon shadow</name>
   <name l="ru">теневой двойник</name>
-  <name l="ua"></name>
+  <name l="ua">тіньовий двійник</name>
   <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>magic</flags>

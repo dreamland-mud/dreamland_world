@@ -14,12 +14,12 @@
   <command type="SKILL(hunt)">
     <argtype>undef</argtype>
     <cat>clan</cat>
-    <hint l="en"></hint>
+    <hint l="en">Follow the trail of the prey (hunters)</hint>
     <hint l="ru">(охотники) идти по следу жертвы</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(мисливці) йти по сліду жертви</hint>
     <name l="en">hunt</name>
     <name l="ru">охотиться</name>
-    <name l="ua"></name>
+    <name l="ua">полювати</name>
     <position>stand</position>
   </command>
   <dammsg mg="m"></dammsg>
@@ -28,7 +28,11 @@
     <keyword l="en">&apos;hunt skill&apos;</keyword>
     <keyword l="ru"></keyword>
     <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <text l="en">%FMT% *%CMD%* _target_
+
+Indicates the direction in which your prey is located. For young hunters, it works only within the zone, and with the developed skill &apos;{hh949world search{x&apos; - it will, accordingly, search the whole world.
+
+%SA% %H% {hh945pathfinding{x, {hh949world search{x</text>
     <text l="ru">%FMT% *%CMD%* _цель_
 
 Указывает направление, в котором находится твоя жертва. У молодых охотников
@@ -37,11 +41,15 @@
 
 %SA% %H% {hh945поиск пути{x, {hh949поиск по миру{x
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%CMD%* _ціль_
+
+Вказує напрямок, в якому знаходиться твоя жертва. Для молодих мисливців діє тільки в межах зони, а при розвиненій навичці &apos;{hh949пошук по світу{x&apos; - буде, відповідно, шукати по всьому світу.
+
+%SA% %H% {hh945пошук шляху{x, {hh949пошук по світу{x</text>
   </help>
   <mana>10</mana>
   <move>20</move>
   <name l="en">hunt</name>
   <name l="ru">охотиться</name>
-  <name l="ua"></name>
+  <name l="ua">полювати</name>
 </skill>

@@ -21,12 +21,12 @@
   <command type="SKILL(shoot)">
     <argtype>undef</argtype>
     <cat>fight</cat>
-    <hint l="en"></hint>
+    <hint l="en">(rangers) shoot a bow</hint>
     <hint l="ru">(рейнджеры) выстрелить из лука</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(рейнджери) вистрілити з лука</hint>
     <name l="en">shoot</name>
     <name l="ru">стрелять</name>
-    <name l="ua"></name>
+    <name l="ua">стріляти</name>
     <order>player_only</order>
     <position>stand</position>
   </command>
@@ -36,8 +36,26 @@
   <help id="810" level="-1" type="SkillHelp">
     <extra l="en">crossbows quiver ranged</extra>
     <extra l="ru">арбалеты колчан пистолеты стрельба выстрелить залпы</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">арбалети колчан пістолети стрільба вистрілити залпи</extra>
+    <text l="en">To shoot at enemies at a distance, arm yourself with any bow or crossbow
+(when {hh1001identified{x, the weapon type must be indicated as &quot;bow&quot;) and hold a quiver in hand
+with arrows. The quiver holds 50 arrows, they can be crafted or bought from
+a gunsmith in {hh1392Midgaard{x.
+
+%FMT%  *%CMD%* _%DIR%_ _%CHAR%_
+
+Sends an arrow at an enemy nearby -- the arrow can fly
+across several squares in the chosen direction. The enemy hit at a distance,
+of course, will get angry and run in your direction. The arrow may miss,
+nimble foes might dodge it, but in most cases, it will remain on
+the ground in the square where it hit the opponent. In a particularly lucky hit, the arrow
+may remain stuck in the enemy's wound, reducing their agility and causing {hh541decay{x.
+
+There are other ways to hit foes at a distance:
+%A% {hh1361cast{x spells at a distance
+%A% {hh699throw a spear{x
+
+%SA% %H% {hh850make a bow{x, {hh537make arrows{x.</text>
     <text l="ru">Чтобы стрелять в противников на расстоянии, вооружись любым луком или арбалетом
 (при {hh1001опознании{x должен быть указан тип оружия &quot;лук&quot;) и возьми в руки =колчан= со
 стрелами. В колчан помещается 50 стрел, их можно изготовить или купить у
@@ -58,7 +76,26 @@
 
 %SA% %H% {hh850изготовить лук{x, {hh537изготовить стрелы{x.
 </text>
-    <text l="ua"></text>
+    <text l="ua">Щоб стріляти в противників на відстані, озбройся будь-яким луком або арбалетом
+(при {hh1001розпізнаванні{x повинен бути вказаний тип зброї "лук") і візьми в руку =колчан= зі
+стрілами. У колчан вміщується 50 стріл, їх можна виготовити або купити у
+збройовика в {hh1392Мідгаарті{x.
+
+%FMT%  *%CMD%* _%DIR%_ _%CHAR%_
+
+Посилає стрілу у противника, що знаходиться неподалеку -- стріла може пролетіти
+кілька клітин у вибраному напрямку. Уражений на відстані противник,
+звісно, розлютиться і побіжить у твоєму напрямку. Стріла може промахнутися,
+особливі спритники можуть уникнути її, але в більшості випадків вона залишиться на
+землі в тій клітині, де вразила противника. При особливо вдалому влученні стріла
+може залишитися стирчати у рані противника, знижуючи його спритність і викликаючи {hh541гниття{x.
+
+Є й інші способи вражати противників на відстані:
+%A% {hh1361чаклувати{x заклинання на відстані
+%A% {hh699кинути спис{x
+
+%SA% %H% {hh850виготовити лук{x, {hh537виготовити стріли{x.
+</text>
   </help>
   <mob>
     <bonus>100</bonus>
@@ -67,6 +104,6 @@
   <move>20</move>
   <name l="en">bow</name>
   <name l="ru">лук</name>
-  <name l="ua"></name>
+  <name l="ua">лук</name>
   <raceBonuses registry="race">centaur elf</raceBonuses>
 </skill>

@@ -29,30 +29,38 @@
     </node>
   </classes>
   <command type="SKILL(lash)">
-    <aliases l="en"></aliases>
+    <aliases l="en">lash out</aliases>
     <aliases l="ru">хлестнуть</aliases>
-    <aliases l="ua"></aliases>
+    <aliases l="ua">хльоснути</aliases>
     <argtype>undef</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">whip strike</hint>
     <hint l="ru">ударить хлыстом</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">вдарити батогом</hint>
     <name l="en">lash</name>
     <name l="ru">хлестать</name>
-    <name l="ua"></name>
+    <name l="ua">хльостати</name>
     <order>fight_only</order>
     <position>fight</position>
   </command>
   <dammsg mg="m">удар хлыстом</dammsg>
   <group registry="skillGroup">weaponsmaster</group>
   <help id="818" level="-1" type="SkillHelp">
-    <text l="en"></text>
+    <text l="en">%FMT% *%CMD%* _%VICT%_
+
+Some classes skilled with whips can deal additional damage
+with this weapon and even trip the opponent.
+</text>
     <text l="ru">%FMT% *%CMD%* _%VICT%_
 
 Некоторые классы, умеющие обращаться с хлыстами, могут нанести
 этим оружием дополнительный урон, и даже подсечь противника.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%CMD%* _%VICT%_
+
+Деякі класи, що вміють користуватися батогами, можуть завдати
+цим зброєю додатковий шкоди і навіть підсікати противника.
+</text>
   </help>
   <mob>
     <bonus>10</bonus>
@@ -62,5 +70,5 @@
   <move>40</move>
   <name l="en">lash</name>
   <name l="ru">хлестать</name>
-  <name l="ua"></name>
+  <name l="ua">хльостати</name>
 </skill>

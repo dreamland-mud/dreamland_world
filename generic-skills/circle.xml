@@ -9,17 +9,17 @@
     </node>
   </classes>
   <command type="SKILL(circle)">
-    <aliases l="en"></aliases>
+    <aliases l="en">bypass</aliases>
     <aliases l="ru">обойти</aliases>
-    <aliases l="ua"></aliases>
+    <aliases l="ua">обійти</aliases>
     <argtype>undef</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">(thieves) deliver a circular dagger strike</hint>
     <hint l="ru">(воры) нанести круговой удар кинжалом</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(злодії) завдати кругового удару кинджалом</hint>
     <name l="en">circle</name>
     <name l="ru">круговой</name>
-    <name l="ua"></name>
+    <name l="ua">круговий</name>
     <position>fight</position>
   </command>
   <dammsg mg="m">круговой удар</dammsg>
@@ -28,7 +28,14 @@
     <keyword l="en">&apos;circle stab&apos; circlestab</keyword>
     <keyword l="ru"></keyword>
     <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <text l="en">%FMT% *%CMD%*
+    
+A combat technique widely used by thieves. At those moments in battle when the opponent
+{hh613is distracted{x by someone else and does not attack the thief, the latter can deliver stunning
+strikes with a piercing weapon by running behind the opponent.
+
+%SA% %H% {hh681dagger{x
+</text>
     <text l="ru">%FMT% *%CMD%*
     
 Техника боя, широко используемая ворами. В те моменты боя, когда противник
@@ -37,10 +44,17 @@
 
 %SA% %H% {hh681кинжал{x
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%CMD%*
+    
+Техніка бою, широко використовувана злодіями. У ті моменти бою, коли противник
+{hh613відволікся{x на когось ще і не наносить атаки злодію, той може завдавати приголомшуючі
+удари колючою зброєю, забігаючи за спину противнику.
+
+%SA% %H% {hh681кинджал{x
+</text>
   </help>
   <move>50</move>
   <name l="en">circle</name>
   <name l="ru">круговой удар</name>
-  <name l="ua"></name>
+  <name l="ua">круговий удар</name>
 </skill>

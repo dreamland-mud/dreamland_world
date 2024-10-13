@@ -3,8 +3,8 @@
   <affect type="DefaultAffectHandler">
     <cancelled>true</cancelled>
     <dispelled>true</dispelled>
-    <removeCharOthers>%1$C1 остается без святой защиты.</removeCharOthers>
-    <removeCharSelf>Ты остаешься без святой защиты.</removeCharSelf>
+    <removeCharOthers>%1$C1 лишається без святої захисту.</removeCharOthers>
+    <removeCharSelf>Ти лишаєшся без святої захисту.</removeCharSelf>
   </affect>
   <beats>12</beats>
   <clans>
@@ -20,10 +20,16 @@
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">clan protective</group>
   <help id="936" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">'holy armor' 'sacred armor'</extra>
     <extra l="ru">&apos;святая броня&apos; &apos;священный доспех&apos;</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">'свята броня' 'священний обладунок'</extra>
+    <text l="en">%FMT% *%SPELL%*
+%FMT% *%SPELL%* _%CHAR%_
+
+This spell enhances the {hh83protection class{x of the character, increases the level of all
+defensive skills and adds a small chance to completely block damage from a hit
+in battle against evil opponents.
+</text>
     <text l="ru">%FMT% *%SPELL%*
 %FMT% *%SPELL%* _%CHAR%_
 
@@ -31,12 +37,18 @@
 защитных умений и добавляет небольшой шанс полностью заблокировать урон от удара
 в сражении против злых противников.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%*
+%FMT% *%SPELL%* _%CHAR%_
+
+Це заклинання покращує {hh83клас захисту{x персонажа, підвищує рівень всіх
+захисних умінь і додає невеликий шанс повністю заблокувати шкоду від удару
+у битві проти злих супротивників.
+</text>
   </help>
   <mana>40</mana>
   <name l="en">holy armor</name>
   <name l="ru">священная броня</name>
-  <name l="ua"></name>
+  <name l="ua">священна броня</name>
   <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>magic prayer</flags>

@@ -20,7 +20,13 @@
   <dammsg mg="p">побеги терновника</dammsg>
   <group registry="skillGroup">nature</group>
   <help id="835" level="-1" type="SkillHelp">
-    <text l="en"></text>
+    <text l="en">This spell allows you to surround the opponent with thorny thickets, preventing them from leaving the area, taking {hh60movement points{x and dealing damage. The successfully ensnared victim experiences a thorn reminiscent of the {hh852web{x spell -- the victim can break free after several attempts to move in some direction.
+
+{hh153Cloud giants{x and other insubstantial or semi-substantial creatures can free themselves from the thickets more quickly.
+
+This spell can only be used in certain {hh86types of terrain{x: forest, field, hills, or mountains. In city streets, unfortunately, thickets do not grow -- but, according to rumors, they can sometimes be found in city parks.
+
+Wraps the {hh652grave{x in thickets, disturbing those who lie in it and forcing them to get out.</text>
     <text l="ru">%FMT%  *%CAST%* *%SKILL%* _%CHAR%_
 
 Это заклинание позволяет окружить противника колючим терновником, не давая
@@ -40,7 +46,25 @@
 Опутывает терновником {hh652могилу{x, тревожа тех, кто в ней лежит и заставляя их
 выбраться наружу.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT%  *%CAST%* *%SKILL%* _%CHAR%_
+
+Це заклинання дозволяє оточити противника колючими тернами, не даючи
+залишити цю місцевість, віднімаючи {hh60очки руху{x та наносячи пошкодження. Успішно
+зв'язавший жертву терни нагадують за дією заклинання {hh852павутини{x -- жертва
+може розірвати пута після кількох спроб пройти в якомусь з напрямків.
+
+{hh153Хмарні гіганти{x та інші нематеріальні або напівматеріальні істоти можуть
+вибратися з тернів швидше.
+
+Це заклинання може використовуватися тільки в певних {hh86типах місцевості{x:
+у лісі, на полі, на пагорбах або в горах. На вулицях міст, на жаль, терни не
+ростуть -- але, за чутками, іноді зустрічаються в міських парках. 
+
+%FMT%  *%CAST%* *%SKILL%* _%OBJ%_
+
+Оплутує терном {hh652могилу{x, турбуючи тих, хто в ній лежить, і змушуючи їх
+вибратися назовні.
+</text>
   </help>
   <mana>40</mana>
   <mob>
@@ -48,7 +72,7 @@
   </mob>
   <name l="en">entangle</name>
   <name l="ru">опутать терновником</name>
-  <name l="ua"></name>
+  <name l="ua">оплутати терном</name>
   <spell type="DefaultSpell">
     <damtype>pierce</damtype>
     <flags>magic</flags>

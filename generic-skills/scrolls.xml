@@ -57,28 +57,36 @@
     <argtype>undef</argtype>
     <cat>magic</cat>
     <extra>undig</extra>
-    <hint l="en"></hint>
+    <hint l="en">read magic scroll</hint>
     <hint l="ru">зачитать волшебный свиток</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">зачитати чарівний сувій</hint>
     <name l="en">recite</name>
     <name l="ru">зачитать</name>
-    <name l="ua"></name>
+    <name l="ua">зачитати</name>
     <order>player_only</order>
     <position>rest</position>
   </command>
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">arcane</group>
   <help id="2145" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">scroll</extra>
     <extra l="ru">свиток</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">сувій</extra>
+    <text l="en">This skill allows you to read magic scrolls. 
+For detailed information on how to use scrolls, see the article &quot;{hh121Magical items{x&quot;.
+
+%SA% %H% {hh121magical items{x
+</text>
     <text l="ru">Это умение позволяет зачитывать волшебные свитки.
 Подробно об использовании свитков читай в статье &quot;{hh121Волшебные предметы{x&quot;.
 
 %SA% %H% {hh121волшебные предметы{x
 </text>
-    <text l="ua"></text>
+    <text l="ua">Це вміння дозволяє зачитувати чарівні сувої.
+Детально про використання сувоїв читайте в статті &quot;{hh121Чарівні предмети{x&quot;.
+
+%SA% %H% {hh121чарівні предмети{x
+</text>
   </help>
   <mob>
     <bonus>20</bonus>
@@ -88,6 +96,6 @@
   <move>20</move>
   <name l="en">scrolls</name>
   <name l="ru">свитки</name>
-  <name l="ua"></name>
+  <name l="ua">сувої</name>
   <raceBonuses registry="race">gnome</raceBonuses>
 </skill>

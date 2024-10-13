@@ -31,13 +31,19 @@
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">detection</group>
   <help id="707" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">'locate object'</extra>
     <extra l="ru">&apos;поиск предмета&apos;</extra>
-    <extra l="ua"></extra>
-    <keyword l="en"></keyword>
+    <extra l="ua">'пошук предмета'</extra>
+    <keyword l="en">locator</keyword>
     <keyword l="ru">локатор</keyword>
-    <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <keyword l="ua">локатор</keyword>
+    <text l="en">%FMT% *%SPELL%* _%OBJ%_
+
+This spell shows the location of all items in the world that have a specified sequence of characters
+in their name or description.
+
+Some items are protected against location spells and cannot be found. It is also impossible to see items on players from your {hh32PK-range{x or their {hh15charms{x.
+For items that players or charms carry outside the PK-range, it is not visible in which area they are currently located.</text>
     <text l="ru">%FMT% *%SPELL%* _%OBJ%_
 
 Это заклинание показывает местоположение всех вещей в мире, у которых в названии
@@ -48,12 +54,21 @@
 Для вещей, которые несут игроки или чармисы вне ПК-диапазона, не видно, в какой
 именно местности они сейчас находятся.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%* _%OBJ%_
+
+Це заклинання показує місцезнаходження всіх речей в світі, у яких в назві
+або описі зустрічається задана послідовність символів.
+
+Деякі речі захищені від заклинань локації, їх знайти не вдасться. Також
+не вдасться побачити речі на гравцях зі свого {hh32ПК-діапазону{x або їх {hh15чармісах{x.
+Для речей, які несуть гравці або чарміси поза ПК-діапазоном, не видно, в якій
+саме місцевості вони зараз знаходяться.
+</text>
   </help>
   <mana>100</mana>
   <name l="en">locate object</name>
   <name l="ru">локатор</name>
-  <name l="ua"></name>
+  <name l="ua">локатор</name>
   <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>magic prayer</flags>

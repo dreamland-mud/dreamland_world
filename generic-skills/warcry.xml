@@ -24,18 +24,27 @@
   <command type="DefaultSkillCommand">
     <argtype>undef</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">(warrior classes) emit a warcry</hint>
     <hint l="ru">(воинские профессии) издать боевой клич</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(воїнські професії) виголосити бойовий клич</hint>
     <name l="en">warcry</name>
     <name l="ru">клич</name>
-    <name l="ua"></name>
+    <name l="ua">клич</name>
     <position>fight</position>
   </command>
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">defensive fightmaster</group>
   <help id="860" level="-1" type="SkillHelp">
-    <text l="en"></text>
+    <text l="en">%FMT% *warcry*
+
+A battle song has always been considered an excellent way to prepare for battle. It
+increases moral resistance against the enemy, enhancing your {hh2035spell defense{x
+and improving {hh47accuracy{x.
+
+The warcry does not work simultaneously with {hh766bless{x.
+
+If you want everyone in the same area to hear your formidable warcry, buy a restring coupon and inform the Gods what exactly you want to shout.
+For details, see {y{hcinfo restring{x.</text>
     <text l="ru">%FMT% *клич*	  
 	  
 Боевая песнь всегда считалась отличным способом приготовления к бою. Она
@@ -48,7 +57,17 @@
 зоне, купи рестринг-купон и сообщи Богам, что именно ты хочешь кричать. 
 Подробности читай по {y{hcсправка рестринг{x.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *клич*
+
+Бойова пісня завжди вважалася чудовим способом підготовки до бою. Вона
+збільшує моральний опір ворогу, підвищуючи твою {hh2035захист від заклинань{x
+і покращуючи {hh47точність{x.
+
+Бойовий клич не працює одночасно з {hh766благословенням{x.
+
+Якщо хочеш, щоб твій грізний бойовий клич почули всі, хто перебуває в одній
+зоні, купи рестринг-купон і повідом Богам, що саме ти хочеш кричати. 
+Деталі читай у {y{hcдовідка рестринг{x.</text>
   </help>
   <mana>40</mana>
   <mob>
@@ -59,5 +78,5 @@
   <move>100</move>
   <name l="en">warcry</name>
   <name l="ru">боевой клич</name>
-  <name l="ua"></name>
+  <name l="ua">бойовий клич</name>
 </skill>

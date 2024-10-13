@@ -16,31 +16,41 @@
   <command type="SKILL(escape)">
     <argtype>undef</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">Thieves, ninjas can flee from combat in a certain direction</hint>
     <hint l="ru">(воры, ниндзи) сбежать из боя по направлению</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(злодії, ніндзя) втекти з бою в певному напрямку</hint>
     <name l="en">escape</name>
     <name l="ru">побег</name>
-    <name l="ua"></name>
+    <name l="ua">втеча</name>
     <position>fight</position>
   </command>
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">adventure</group>
   <help id="832" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">'run quickly'</extra>
     <extra l="ru">&apos;быстро убегать&apos;</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">'бігти швидко'</extra>
+    <text l="en">%FMT%  *escape* _direction_
+
+Experienced rogues possess the skill to escape from combat in the desired direction.
+
+%SA% %H% {hh1025escape{x
+</text>
     <text l="ru">%FMT%  *побег* _направление_
 
 Опытные мошенники обладают навыком побега из боя в нужную им сторону.
 
 %SA% %H% {hh1025сбежать{x
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT%  *втеча* _напрямок_
+
+Досвідчені шахраї володіють навиком втечі з бою в потрібному їм напрямку.
+
+%SA% %H% {hh1025втекти{x
+</text>
   </help>
   <move>20</move>
   <name l="en">escape</name>
   <name l="ru">побег</name>
-  <name l="ua"></name>
+  <name l="ua">втеча</name>
 </skill>

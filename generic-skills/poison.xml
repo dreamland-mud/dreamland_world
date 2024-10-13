@@ -31,10 +31,22 @@
   <dammsg mg="n">отравление</dammsg>
   <group registry="skillGroup">maladictions</group>
   <help id="837" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">poison</extra>
     <extra l="ru">отравление</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">отруєння</extra>
+    <text l="en">%FMT% *%SPELL%* _%VICT%_
+
+The poison effect poisons the victim and deals significant damage every {hh16tick{x, as well as greatly {hh39weakening{x them and preventing rapid recovery of health and mana points. The poison effect can stack: upon re-poisoning, the poison will start dealing even more damage.
+
+While {hh705slowed{x, the poison spreads through the victim's veins much more slowly. A high {hh36constitution{x helps combat the poisoning.
+
+If a victim dies from your poisoning, it will count towards you -- in {hh32PK{x or in {hh125quests{x.
+
+%FMT% *%SPELL%* _%OBJ%_
+You can also poison food, {hh1075containers{x for drinks, {hh1075fountains{x, and weapons. A wound inflicted by a poisoned weapon can lead to poison infection.
+
+%SA% %H% {hh789poison{x
+</text>
     <text l="ru">%FMT% *%SPELL%* _%VICT%_
 
 Эффект яда отравляет жертву и наносит ей весомые повреждения каждый {hh16тик{x,
@@ -53,7 +65,19 @@
 
 %SA% %H% {hh789отравить{x
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%* _%VICT%_
+
+Ефект яду отруює жертву і завдає їй значні пошкодження кожного {hh16тіку{x, а також сильно {hh39ослаблює{x її та заважає швидкому відновленню очок здоров'я та мани. Ефект яду може накопичуватись: при повторному отруєнні яд почне завдавати ще більше шкоди.
+
+У стані {hh705уповільнення{x яд набагато повільніше розповсюджується по жилах жертви. Висока {hh36конституція{x допомагає боротися з отруєнням.
+
+Жертва, що померла від твого отруєння, зарахується тобі -- в {hh32ПК{x або в {hh125квестах{x.
+
+%FMT% *%SPELL%* _%OBJ%_
+Отруїти також можна їжу, {hh1075ємності{x для пиття, {hh1075фонтани{x і зброю. Рана, завдана отруєною зброєю, може призвести до зараження ядом.
+
+%SA% %H% {hh789отруїти{x
+</text>
   </help>
   <mana>40</mana>
   <mob>
@@ -61,7 +85,7 @@
   </mob>
   <name l="en">poison</name>
   <name l="ru">яд</name>
-  <name l="ua"></name>
+  <name l="ua">отрута</name>
   <spell type="DefaultSpell">
     <damtype>poison</damtype>
     <flags>magic prayer</flags>

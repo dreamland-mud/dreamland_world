@@ -26,19 +26,23 @@
   <command type="DefaultSkillCommand">
     <argtype>char_room</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">Take hits instead of a groupmate in battle</hint>
     <hint l="ru">подставиться под удары вместо согруппника в бою</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">підставитися під удари замість співгрупника в бою</hint>
     <name l="en">rescue</name>
     <name l="ru">спасти</name>
-    <name l="ua"></name>
+    <name l="ua">врятувати</name>
     <order>fight_only</order>
     <position>fight</position>
   </command>
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">defensive</group>
   <help id="613" level="-1" type="SkillHelp">
-    <text l="en"></text>
+    <text l="en">This martial skill allows you to pull a groupmate out of the attack by taking hits for them. The chance of success depends on the level of skill development and the level difference between you and the future opponent. 
+
+The team member pulled out of the attack can use the circular strike skill.
+
+NOTE: It won't work to keep someone out of the attack forever -- most opponents will sooner or later start attacking the original target again.</text>
     <text l="ru">%FMT% *%SKILL%* _%CHAR%_
 
 Этот воинский навык позволяет вывести {hh1378согруппника{x из-под атаки, подставившись
@@ -50,7 +54,14 @@
 ВНИМАНИЕ: навсегда вывести из-под атаки не получится -- большинство противников
 рано или поздно снова начнут атаковать исходного противника. 
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SKILL%* _%CHAR%_
+
+Цей воїнський навик дозволяє вивести {hh1378співгрупника{x з-під атаки, підставившись під удари його противника. Імовірність успіху залежить від прокачки навику і від різниці рівнів між тобою і майбутнім противником. 
+
+Виведений з-під атаки злодій може використовувати навик {hh744кругового удара{x.
+
+УВАГА: назавжди вивести з-під атаки не вдасться -- більшість противників рано чи пізно знову почнуть атакувати початкового противника. 
+</text>
   </help>
   <mob>
     <bonus>100</bonus>
@@ -60,5 +71,5 @@
   <move>40</move>
   <name l="en">rescue</name>
   <name l="ru">спасти</name>
-  <name l="ua"></name>
+  <name l="ua">врятувати</name>
 </skill>

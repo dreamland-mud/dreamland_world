@@ -17,19 +17,33 @@
   <command type="DefaultSkillCommand">
     <argtype>undef</argtype>
     <cat></cat>
-    <hint l="en"></hint>
+    <hint l="en">Call two panthers to aid.</hint>
     <hint l="ru">(Львы) вызвать двух пантер на помощь</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(Леви) викликати двох пантер на допомогу</hint>
     <name l="en">panthers</name>
     <name l="ru">пантеры</name>
-    <name l="ua"></name>
+    <name l="ua">пантери</name>
     <order>player_only</order>
     <position>fight</position>
   </command>
   <dammsg mg="m">пантеры</dammsg>
   <group registry="skillGroup">clan</group>
   <help id="923" level="-1" type="SkillHelp">
-    <text l="en"></text>
+    <text l="en">%FMT% *%SKILL%*
+
+Summons two panthers to help you in battle, capable of ripping open your
+enemies' bellies with sharp {hh910claws{x.
+
+The strength of the summoned clan creature depends on your {hh3clan rank{x.
+
+{CPROPERTIES{x
+{C%A%{x {hh63Summoned creature{x, must be =rebounded= after {hh922leaving{x the world.
+{C%A%{x Can only be summoned in the wild
+{C%A%{x Summoned for a week
+{C%A%{x Can be partially equipped (equipment slots are limited)
+{C%A%{x Can control =two= max, summoned two at a time
+  The total number of {hh15followers{x is also limited -- see {y{hchelp charm{x.
+</text>
     <text l="ru">%FMT% *%SKILL%*
 
 Призывает тебе в помощь двух пантер, которые в бою смогут вспороть брюхо твоим
@@ -45,11 +59,25 @@
 {C%A%{x Максимум можно контролировать =двух=, призывается два за раз
   Общее число {hh15последователей{x тоже ограничено -- читай {y{hcсправка очарование{x.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SKILL%*
+
+Викликає вам на допомогу двох пантер, які в бою зможуть розпороти живіт вашим
+противникам гострими {hh910кігтями{x.
+
+Сила викликаної кланової істоти залежить від вашого {hh3кланового рангу{x.
+
+{CВЛАСТИВОСТІ{x
+{C%A%{x {hh63Викликана істота{x, потрібно =перепідпорядковувати= після {hh922виходу{x з світу
+{C%A%{x Можна викликати тільки на лоні природи
+{C%A%{x Викликається на тиждень
+{C%A%{x Можна частково екіпірувати (слоти екіпіровки обмежені)
+{C%A%{x Максимум можна контролювати =двох=, викликається два за раз
+  Загальна кількість {hh15послідовників{x також обмежена -- читайте {y{hcдовідка чарівність{x.
+</text>
   </help>
   <mana>100</mana>
   <move>20</move>
   <name l="en">panthers</name>
   <name l="ru">пантеры</name>
-  <name l="ua"></name>
+  <name l="ua">пантери</name>
 </skill>

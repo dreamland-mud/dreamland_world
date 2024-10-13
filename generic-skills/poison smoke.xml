@@ -11,31 +11,39 @@
   <command type="SKILL(poison)">
     <argtype>undef</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">Create a cloud of poisonous smoke</hint>
     <hint l="ru">(ниндзи) создать облако ядовитого дыма</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(ніндзя) створити хмару отруйного диму</hint>
     <name l="en">poison</name>
     <name l="ru">дым</name>
-    <name l="ua"></name>
+    <name l="ua">дим</name>
     <position>fight</position>
   </command>
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">fightmaster</group>
   <help id="560" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">'cloud of poison'</extra>
     <extra l="ru">&apos;облака яда&apos;</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">&apos;хмара отрути&apos;</extra>
+    <text l="en">%FMT% *%CMD%*
+
+Ninjas can create a curtain of poisonous smoke around themselves, {hh837poisoning{x everyone who
+fails their {hh2035saving throw{x. The smoke cloud will not affect {hh1378fellow group members{x.
+</text>
     <text l="ru">%FMT% *%CMD%*
 
 Ниндзя умеют создать вокруг себя завесу из ядовитого дыма, {hh837отравляя{x всех, у кого
 не прошел {hh2035спасс-бросок{x. Облако дыма не заденет {hh1378согруппников{x.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%CMD%*
+
+Ніндзя вміють створити навколо себе завісу з отруйного диму, {hh837отруюючи{x всіх, у кого 
+не пройшов {hh2035рятівний кидок{x. Хмара диму не зачепить {hh1378спільників{x.
+</text>
   </help>
   <mana>20</mana>
   <move>20</move>
   <name l="en">poison smoke</name>
   <name l="ru">ядовитый дым</name>
-  <name l="ua"></name>
+  <name l="ua">отруйний дим</name>
 </skill>

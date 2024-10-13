@@ -46,18 +46,29 @@
   <command type="SKILL(weapon)">
     <argtype>undef</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">(warrior professions) cleave weapon</hint>
     <hint l="ru">(воинские профессии) расколоть оружие</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(воїнські професії) розколоти зброю</hint>
     <name l="en">weapon</name>
     <name l="ru">оружие</name>
-    <name l="ua"></name>
+    <name l="ua">зброя</name>
     <position>fight</position>
   </command>
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">weaponsmaster</group>
   <help id="735" level="-1" type="SkillHelp">
-    <text l="en"></text>
+    <text l="en">%FMT% *weapon*
+
+Professional warriors can cleave (destroy) an opponent's weapon using a
+sword, axe, or halberd. The success chance depends on the character's and
+victim's weapon skills, respectively, the item's level, and the character's
+size. {hh227Mounted{x, it's easier to cleave a weapon. It's harder to cleave with
+a sword than with an axe or halberd.
+
+On failure, the weapon bounces off the opponent's weapon, temporarily
+{hh120stunning{x the warrior. Naturally, it's impossible to cleave {hh42limited{x
+weapons or weapons made of durable material.
+</text>
     <text l="ru">%FMT% *оружие*
 
 Профессиональные воины могут разрубать (уничтожать) оружие противника, используя 
@@ -69,11 +80,21 @@
 {hh120оглушая{x воина. Разумеется, разрубить {hh42лимитное{x оружие или оружие из прочного
 материала не удастся.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *зброя*
+
+Професійні воїни можуть розколоти (знищити) зброю противника, використовуючи
+меч, сокиру або алебарду. Шанс успіху залежить від навичок володіння зброєю у
+персонажа і жертви, відповідно, рівня речі, а також розміру персонажа.
+{hh227Верхом{x розколоти зброю легше. Мечем важче рубити, ніж сокирою або алебардою.
+
+При невдалому використанні зброя відскакує від зброї противника, ненадовго
+{hh120оглушаючи{x воїна. Звісно, розколоти {hh42лімітну{x зброю або зброю з міцного
+матеріалу не вдасться.
+</text>
   </help>
   <mana>200</mana>
   <move>40</move>
   <name l="en">weapon cleave</name>
   <name l="ru">расколоть оружие</name>
-  <name l="ua"></name>
+  <name l="ua">розколоти зброю</name>
 </skill>

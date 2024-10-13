@@ -16,8 +16,23 @@
   <help id="778" level="-1" type="SkillHelp">
     <extra l="en">breath</extra>
     <extra l="ru">&apos;воронка инея&apos; &apos;воронка огня&apos; &apos;воронка ядовитого газа&apos;</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">'воронка інею' 'воронка вогню' 'воронка отруйного газу'</extra>
+    <text l="en">%FMT% *%SPELL%* _%VICT%_
+
+This powerful spell allows experienced warlocks and followers of the cult of {hh967Set{x
+to temporarily take on the form of a dragon and use its magic depending on a random
+dragon incarnation. {RWARNING:{x You need to select a specific target for this spell, but all creatures in the area may suffer.
+
+%A% Form of the red dragon: breath of a fire vortex that affects everyone nearby
+%A% Form of the white dragon: breath of an icy frost vortex that affects everyone nearby
+%A% Form of the green dragon: breath of a poisonous gas vortex that affects everyone nearby
+%A% Form of the black dragon: acid spit at the victim
+%A% Form of the blue dragon: lightning discharge strike at the victim
+
+All these breaths have side effects, damaging inventory and equipment.
+A successful {hh2035saving throw{x (saves vs spell) by the victim reduces the level of damage inflicted.
+The strength of the spell depends on the level and intelligence of the warlock.
+</text>
     <text l="ru">%FMT% *%SPELL%* _%VICT%_
 
 Это мощное заклинание позволяет опытным колдунам и последователям культа {hh967Сета{x
@@ -35,7 +50,22 @@
 Успешный {hh2035спасс-бросок{x (saves vs spell) у жертвы уменьшает уровень
 наносимых повреждений. Сила заклинания зависит от уровня и интеллекта колдуна.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%* _%VICT%_
+
+Це потужне заклинання дозволяє досвідченим чаклунам і послідовникам культу {hh967Сета{x
+на мить приймати образ дракона і користуватися його магією в залежності від випадкової
+драконячої іпостасі. {RУВАГА:{x для використання цього заклинання треба вибрати конкретну ціль, але постраждати можуть всі істоти в даній місцевості.
+
+%A% Образ червоного дракона: видих воронки вогню, що вражає всіх поруч
+%A% Образ білого дракона: видих крижаною воронки інею, що вражає всіх поруч
+%A% Образ зеленого дракона: видих воронки отруйного газу, що вражає всіх поруч
+%A% Образ чорного дракона: плювок кислотою на жертву
+%A% Образ синього дракона: удар розрядом блискавки на жертву
+
+Всі ці видихи також мають побічні ефекти, пошкоджуючи інвентар і екіпіровку.
+Успішний {hh2035захист кидком{x (saves vs spell) у жертви зменшує рівень завданих пошкоджень.
+Сила заклинання залежить від рівня і інтелекту чаклуна.
+</text>
   </help>
   <mana>200</mana>
   <mob>
@@ -43,7 +73,7 @@
   </mob>
   <name l="en">dragons breath</name>
   <name l="ru">дыхание драконов</name>
-  <name l="ua"></name>
+  <name l="ua">драконяче дихання</name>
   <spell type="DefaultSpell">
     <damflags>magic</damflags>
     <damtype>fire</damtype>

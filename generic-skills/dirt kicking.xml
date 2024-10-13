@@ -35,12 +35,12 @@
   <command type="DefaultSkillCommand">
     <argtype>char_fight</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">(warrior professions) blind an enemy with dirt</hint>
     <hint l="ru">(воинские профессии) ослепить врага грязью</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(воїнські професії) засліпити ворога брудом</hint>
     <name l="en">dirt</name>
     <name l="ru">грязь</name>
-    <name l="ua"></name>
+    <name l="ua">бруд</name>
     <order>fight_only</order>
     <position>fight</position>
   </command>
@@ -48,10 +48,16 @@
   <group registry="skillGroup">fightmaster</group>
   <hard>2</hard>
   <help id="783" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">throw dirt</extra>
     <extra l="ru">бросить грязь</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">кинути бруд</extra>
+    <text l="en">%FMT% *%CMD%* _%VICT%_
+%FFF% *%CMD%*
+
+With this skill, you can try to blind the victim by throwing dirt in their eyes -- if they have eyes, that is. Besides the percentage of your {hh1359skill proficiency{x, success depends on your agility, the intelligence or wisdom of the victim, the {hh26size{x of the victim (the bigger they are, the easier to blind), and other factors. The {hh831blindness{x effect will last until the end of the {hh16combat round{x and makes your victim significantly more vulnerable to attacks.
+
+To use the throw, you need to {hh575land{x -- and conversely, blinding a flying opponent will be more difficult. The skill will work differently depending on the {hh86type of terrain{x you are currently in. During rain, the skill will work more often, but there is a chance to slip in rain puddles -- or in {hh1075puddles{x someone else has created indoors.
+</text>
     <text l="ru">%FMT% *%CMD%* _%VICT%_
 %FFF% *%CMD%*
 
@@ -67,7 +73,21 @@
 чаще, но есть шанс подскользнуться в дождевых лужах -- или в {hh1075вылитых{x кем-то
 лужах в помещении.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%CMD%* _%VICT%_
+%FFF% *%CMD%*
+
+За допомогою цього вміння можна спробувати засліпити жертву, кинувши бруд їй в очі --
+якщо вони є у противника. Крім відсотка {hh1359розкачки{x, успіх залежить від твоєї
+спритності, розуму чи мудрості жертви, {hh26розміру{x жертви (чим більше, тим легше
+засліпити) та інших факторів. Ефект {hh831засліплення{x триватиме до кінця {hh16бойового
+раунду{x і робить твою жертву значно більш уразливою до атак.
+
+Щоб використати кидок, потрібно {hh575приземлитися{x -- і навпаки, летючого
+противника засліпити буде складніше. Уміння спрацює по-різному залежно від
+{hh86типу місцевості{x, в якій ти зараз знаходишся. Під час дощу навичка спрацює
+частіше, але є шанс послизнутися у дощових калюжах -- або у {hh1075вилетих{x кимось
+калюжах у приміщенні.
+</text>
   </help>
   <mob>
     <bonus>20</bonus>
@@ -78,5 +98,5 @@
   <move>40</move>
   <name l="en">dirt kicking</name>
   <name l="ru">бросок грязью</name>
-  <name l="ua"></name>
+  <name l="ua">кидок брудом</name>
 </skill>

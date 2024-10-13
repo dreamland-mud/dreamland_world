@@ -14,8 +14,11 @@
   <help id="827" level="-1" type="SkillHelp">
     <extra l="en">&apos;hand of dead&apos;</extra>
     <extra l="ru">длань мертвых</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">длань мертвих</extra>
+    <text l="en">The spell of powerful necromancers not only inflicts damage to the victim through negative energy, but also halves the number of {hh60steps{x and {hh59mana{x, if there is no {hh2035saving throw{x. Part of the energy thus taken will be converted into the necromancer's own health.
+
+%SA% %H% {hh1361cast{x
+</text>
     <text l="ru">%FMT% *%SPELL%* _%VICT%_
 
 Заклинание могущественных некромантов не только нанесет жертве повреждения
@@ -25,7 +28,15 @@
 
 %SA% %H% {hh1361колдовать{x
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%* _%VICT%_
+
+Заклинання могутніх некромантів не тільки завдасть жертві ушкодження
+негативною енергією, але і розділить навпіл кількість {hh60кроків{x і {hh59мани{x, в разі,
+якщо не пройшов {hh2035рятівний кидок{x. Частина відібраної таким чином енергії перетвориться
+в здоров'я самого некроманта.
+
+%SA% %H% {hh1361чаклувати{x
+</text>
   </help>
   <mana>20</mana>
   <mob>
@@ -33,7 +44,7 @@
   </mob>
   <name l="en">hand of undead</name>
   <name l="ru">рука умертвия</name>
-  <name l="ua"></name>
+  <name l="ua">рука мертвих</name>
   <spell type="DefaultSpell">
     <damtype>negative</damtype>
     <flags>magic</flags>

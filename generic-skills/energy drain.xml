@@ -32,16 +32,24 @@
   <dammsg mg="f">утечка энергии</dammsg>
   <group registry="skillGroup">maladictions</group>
   <help id="566" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">'life drain'</extra>
     <extra l="ru">&apos;утечка жизни&apos;</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">'втрата життя'</extra>
+    <text l="en">%FMT% *%SPELL%* _%VICT%_
+
+This spell deals damage with dark energy, and on a saving throw failure {hh2035it drains{x
+{hh59mana{x and {hh60movement points{x from the victim.
+</text>
     <text l="ru">%FMT% *%SPELL%* _%VICT%_
 
 Это заклинание наносит урон темной энергией, а при провале {hh2035спасброска{x отнимает
 {hh59ману{x и {hh60очки движения{x у жертвы.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%* _%VICT%_
+
+Це заклинання завдає шкоди темною енергією, а в разі невдачі {hh2035рятівного кидка{x відбирає
+{hh59ману{x і {hh60очки руху{x у жертви.
+</text>
   </help>
   <mana>40</mana>
   <mob>
@@ -49,7 +57,7 @@
   </mob>
   <name l="en">energy drain</name>
   <name l="ru">утечка энергии</name>
-  <name l="ua"></name>
+  <name l="ua">втрата енергії</name>
   <spell type="DefaultSpell">
     <damtype>negative</damtype>
     <flags>magic prayer</flags>

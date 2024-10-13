@@ -43,7 +43,16 @@
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">enchantment enhancement</group>
   <help id="774" level="-1" type="SkillHelp">
-    <text l="en"></text>
+    <text l="en">%FMT% *%SPELL%*
+
+This spell grants you protection from low temperatures. Spells and weapons with
+an icy {hh101damage type{x will deal less damage to you.
+
+%FMT% *%SPELL%* _%OBJ%_
+
+Protection from low temperatures can also be temporarily applied to objects.
+This will prevent items from being destroyed by freezing (for example, by freezing
+weapons or icy spells).</text>
     <text l="ru">%FMT% *%SPELL%*
 
 Это заклинание дает тебе защиту от низких температур. Заклинания и оружие с
@@ -55,7 +64,16 @@
 Это защитит вещи от разрушения при замораживании (например, от обмораживающего
 оружия или ледяных заклинаний).
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%*
+
+Це заклинання надає тобі захист від низьких температур. Закляття і зброя з
+крижаним {hh101типом ушкодження{x завдадуть тобі менше шкоди.
+
+%FMT% *%SPELL%* _%OBJ%_
+
+Захист від низьких температур можна також тимчасово накласти на предмети.
+Це захистить речі від руйнування при заморожуванні (наприклад, від обморожувальної
+зброї або крижаних заклять).</text>
   </help>
   <mana>40</mana>
   <mob>
@@ -63,7 +81,7 @@
   </mob>
   <name l="en">protection cold</name>
   <name l="ru">защита от холода</name>
-  <name l="ua"></name>
+  <name l="ua">захист від холоду</name>
   <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>magic prayer</flags>

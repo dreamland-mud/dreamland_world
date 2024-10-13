@@ -17,18 +17,27 @@
     <aliases l="ua"></aliases>
     <argtype>undef</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">(vampires) let your blood flow, igniting the thirst</hint>
     <hint l="ru">(вампиры) пустить себе кровь, разжигая жажду</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(вампіри) пустити собі кров, розпалюючи спрагу</hint>
     <name l="en">bloodlet</name>
     <name l="ru">кровопускание</name>
-    <name l="ua"></name>
+    <name l="ua">кровопускання</name>
     <position>stand</position>
   </command>
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">vampiric</group>
   <help id="539" level="-1" type="SkillHelp">
-    <text l="en"></text>
+    <text l="en">%FMT% *bloodletting*
+
+In human form, a vampire can intentionally incite blood thirst. 
+To do this, one must inflict a small wound on themselves, and the 
+sight of dripping blood will excite the thirst. However, one must 
+be sufficiently experienced in this skill, otherwise there is a 
+chance of causing too much harm and the thirst will become uncontrollable.
+
+%SA% %H% {hh769touch{x, {hh626bite{x, {hh697suck{x, {hh836vampire form{x
+</text>
     <text l="ru">%FMT% *кровопускание*
 
 Находясь в форме человека (human), вампир может намеренно вызвать в себе 
@@ -39,11 +48,20 @@
 
 %SA% %H% {hh769коснуться{x, {hh626кусать{x, {hh697сосать{x, {hh836форма вампира{x
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *кровопускання*
+
+Перебуваючи в формі людини, вампір може навмисно викликати в собі 
+спрагу крові. Для цього потрібно нанести собі невелику рану, і вигляд 
+крапель крові збудить спрагу. Однак необхідно мати достатній 
+досвід у цьому вмінні, інакше є ризик сильно пошкодити себе 
+і спрага стане неконтрольованою.
+
+%SA% %H% {hh769доторкнутися{x, {hh626кусати{x, {hh697ссати{x, {hh836форма вампіра{x
+</text>
   </help>
   <mana>50</mana>
   <move>40</move>
   <name l="en">bloodlet</name>
   <name l="ru">кровопускание</name>
-  <name l="ua"></name>
+  <name l="ua">кровопускання</name>
 </skill>

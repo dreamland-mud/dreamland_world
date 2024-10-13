@@ -11,12 +11,12 @@
   <command type="SKILL(forge)">
     <argtype>undef</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">(thieves) create a duplicate key or picklock</hint>
     <hint l="ru">(воры) создать дубликат ключа или отмычку</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(злодії) створити дублікат ключа або відмичку</hint>
     <name l="en">forge</name>
     <name l="ru">подделать</name>
-    <name l="ua"></name>
+    <name l="ua">підробити</name>
     <order>player_only</order>
     <position>rest</position>
   </command>
@@ -26,11 +26,21 @@
   <help id="612" level="-1" type="SkillHelp">
     <extra l="en">forgery</extra>
     <extra l="ru">изготовление ключей</extra>
-    <extra l="ua"></extra>
+    <extra l="ua">виготовлення ключів</extra>
     <keyword l="en"></keyword>
     <keyword l="ru">&apos;изготовить отмычку&apos; &apos;сделать отмычку&apos;</keyword>
-    <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <keyword l="ua">&apos;виготовити відмичку&apos; &apos;зробити відмичку&apos;</keyword>
+    <text l="en">*forge* a _door, portal, or container_
+
+Experienced thieves can turn a special blank into a lockpick for the model of the specified lock. Such lockpicks are generally of better quality than those found in the world and have the special ability to remember all the locks they have successfully opened.
+
+
+*forge* a _key_
+
+Blanks can also be used to make a duplicate of an existing key. Such a duplicate will not crumble over time.
+
+The blanks can be found in the same places as picklocks (%H% {hh714lock picking{x).
+</text>
     <text l="ru">%FMT%  *подделать* _дверь, портал или контейнер_  
 
 Опытные воры могут превратить специальную заготовку в отмычку для модели 
@@ -46,11 +56,25 @@
 
 Заготовки можно отыскать там же, где и отмычки (%H% {hh714взлом замка{x).
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT%  *підробити* _двері, портал або контейнер_  
+
+Досвідчені злодії можуть перетворити спеціальну заготовку в відмичку для моделі
+вказаного замку. Такі відмички, як правило, є кращими за якістю, ніж ті, що можна знайти
+по світу, і мають особливу властивість запам'ятовувати всі замки, які їм вдалося
+успішно відкрити. 
+
+
+%FMT%  *підробити* _ключ_
+
+З заготовок також можна виготовити дублікат вже існуючого ключа.
+Такий дублікат не розсиплеться з часом.
+
+Заготовки можна знайти там же, де й відмички (%H% {hh714взлом замка{x).
+</text>
   </help>
   <mana>200</mana>
   <move>100</move>
   <name l="en">key forgery</name>
   <name l="ru">подделка ключей</name>
-  <name l="ua"></name>
+  <name l="ua">підробка ключів</name>
 </skill>

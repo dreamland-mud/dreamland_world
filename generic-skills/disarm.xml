@@ -41,22 +41,30 @@
   <command type="SKILL(disarm)">
     <argtype>char_fight</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">disarm an opponent</hint>
     <hint l="ru">обезоружить противника</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">роззброїти противника</hint>
     <name l="en">disarm</name>
     <name l="ru">обезоружить</name>
-    <name l="ua"></name>
+    <name l="ua">роззброїти</name>
     <order>fight_only</order>
     <position>fight</position>
   </command>
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">weaponsmaster</group>
   <help id="812" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">'disarm opponents'</extra>
     <extra l="ru">&apos;обезоруживать противников&apos;</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">&apos;роззброювати противників&apos;</extra>
+    <text l="en">%FMT% *%CMD%*
+
+This important combat ability allows you to deprive an opponent of the ability to strike you with weapons
+or parry with them. Unarmed opponents hit much weaker and poorly deflect your attacks.
+
+The success rate depends on your skill level and your weapon skill,
+the type and weight of opponents' weapons, {hh28archetype{x, size, strength and/or dexterity
+of the fighters and many other factors.
+</text>
     <text l="ru">%FMT% *%CMD%*
 
 Это важное боевое умение позволяет лишить противника наносить тебе удары оружием
@@ -67,7 +75,16 @@
 типа и веса оружия противников, {hh28архетипа{x, размера, силы и/или ловкости
 бойцов и многих других факторов.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%CMD%*
+
+Це важливе бойове вміння дозволяє позбавити противника можливості наносити тобі удари зброєю
+або парирувати нею. Беззбройні противники значно слабше б'ють і гірше відбивають
+твої атаки.
+
+Шанс на успіх залежить від прокачки цього вміння і твого навику володіння зброєю,
+типу і ваги зброї противників, {hh28архетипа{x, розміру, сили та/або спритності
+бійців та багатьох інших факторів.
+</text>
   </help>
   <mob>
     <bonus>20</bonus>
@@ -78,5 +95,5 @@
   <move>40</move>
   <name l="en">disarm</name>
   <name l="ru">обезоружить</name>
-  <name l="ua"></name>
+  <name l="ua">роззброїти</name>
 </skill>

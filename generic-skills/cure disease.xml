@@ -16,7 +16,16 @@
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">healing</group>
   <help id="745" level="-1" type="SkillHelp">
-    <text l="en"></text>
+    <text l="en">%FMT% *%SPELL%*
+%FFF% *%SPELL%* _%CHAR%_
+
+Attempt to cure a patient suffering from the plague. Depending on the strength of the curse,
+it may not be possible to cure the disease on the first try.
+
+Disease treatment services are also provided by {hh202healers{x.
+
+%SA% %H% {hh1361cast{x
+</text>
     <text l="ru">%FMT% *%SPELL%*
 %FFF% *%SPELL%* _%CHAR%_
 
@@ -27,7 +36,16 @@
 
 %SA% %H% {hh1361колдовать{x
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%*
+%FFF% *%SPELL%* _%CHAR%_
+
+Спробувати вилікувати хворого пацієнта з чумою. Залежно від сили прокляття,
+може і не вдатися позбутися хвороби з першої спроби.
+
+Послуги з лікування хвороб також надають {hh202лікарі{x.
+
+%SA% %H% {hh1361чаклувати{x
+</text>
   </help>
   <mana>20</mana>
   <mob>
@@ -35,7 +53,7 @@
   </mob>
   <name l="en">cure disease</name>
   <name l="ru">лечить болезнь</name>
-  <name l="ua"></name>
+  <name l="ua">лікувати хворобу</name>
   <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>prayer</flags>

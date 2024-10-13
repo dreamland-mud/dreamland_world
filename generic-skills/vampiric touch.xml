@@ -15,22 +15,30 @@
     <argtype>undef</argtype>
     <cat>class</cat>
     <extra>keep_hide</extra>
-    <hint l="en"></hint>
+    <hint l="en">(vampires) put the victim to sleep with a touch</hint>
     <hint l="ru">(вампиры) усыпить жертву прикосновением</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(вампіри) приспати жертву дотиком</hint>
     <name l="en">touch</name>
     <name l="ru">коснуться</name>
-    <name l="ua"></name>
+    <name l="ua">доторкнутися</name>
     <order>player_only</order>
     <position>stand</position>
   </command>
   <dammsg mg="n">прикосновение вампира</dammsg>
   <group registry="skillGroup">suddendeath vampiric</group>
   <help id="769" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">touch vampire's touch vampiric</extra>
     <extra l="ru">касание прикосновение вампира вампирское</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">дотик доторкнутись вампіра вампірське</extra>
+    <text l="en">%FMT% *touch* _victim_
+
+The vampire touches the victim's neck, and they fall into a terrible nightmare.
+After this, the victim can be bitten on the neck and the vampire's thirst for blood can be quenched.
+The success of the skill depends on the vampire's intelligence, the constitution of the victim, and other
+factors.
+
+%SA% %H% {hh626bite{x, {hh697suck{x, {hh539bloodletting{x, {hh836vampire form{x
+</text>
     <text l="ru">%FMT% *коснуться* _жертва_
 
 Вампир прикасается к шее жертвы, и она забывается в ужасном кошмаре.
@@ -40,7 +48,15 @@
 
 %SA% %H% {hh626кусать{x, {hh697сосать{x, {hh539кровопускание{x, {hh836форма вампира{x
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *доторкнутися* _жертва_
+
+Вампір торкається до шиї жертви, і вона опиняється в жахливому кошмарі.
+Після цього жертву можна вкусити за шию і вгамувати свою спрагу крові.
+Успіх уміння залежить від інтелекту вампіра, конституції жертви та інших
+факторів.
+
+%SA% %H% {hh626кусати{x, {hh697смоктати{x, {hh539крововтрата{x, {hh836форма вампіра{x
+</text>
   </help>
   <mana>100</mana>
   <mob>
@@ -51,5 +67,5 @@
   <move>40</move>
   <name l="en">vampiric touch</name>
   <name l="ru">прикосновение вампира</name>
-  <name l="ua"></name>
+  <name l="ua">дотик вампіра</name>
 </skill>

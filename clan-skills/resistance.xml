@@ -17,28 +17,35 @@
   <command type="SKILL(resistance)">
     <argtype>undef</argtype>
     <cat>clan</cat>
-    <hint l="en"></hint>
+    <hint l="en">Use this skill to boost your resistance in battle.</hint>
     <hint l="ru">(клан ярости) повысить сопротивляемость в бою</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(клан люті) підвищити опір у бою</hint>
     <name l="en">resistance</name>
     <name l="ru">сопротивляемость</name>
-    <name l="ua"></name>
+    <name l="ua">опір</name>
     <order>player_only</order>
     <position>fight</position>
   </command>
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">clan</group>
   <help id="955" level="-1" type="SkillHelp">
-    <keyword l="en"></keyword>
+    <keyword l="en">resistance</keyword>
     <keyword l="ru">сопротивление</keyword>
-    <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <keyword l="ua">опір</keyword>
+    <text l="en">Halves the damage from physical damage, prayers, and dragon breath.
+
+Does not protect against magical attacks -- except for {hh907mental attack{x Shalafi.
+</text>
     <text l="ru">В два раза ослабляет вред, наносимый физическими повреждениями, молитвами и
 выдохами драконов.
 
 Не защищает от магических атак -- за исключением {hh907ментальной атаки{x Шалафи.
 </text>
-    <text l="ua"></text>
+    <text l="ua">Вдвоє послаблює шкоду, завдану фізичними пошкодженнями, молитвами і
+диханням драконів.
+
+Не захищає від магічних атак -- за винятком {hh907ментальної атаки{x Шалафі.
+</text>
   </help>
   <mana>50</mana>
   <mob>
@@ -47,5 +54,5 @@
   <move>80</move>
   <name l="en">resistance</name>
   <name l="ru">сопротивляемость</name>
-  <name l="ua"></name>
+  <name l="ua">опір</name>
 </skill>

@@ -12,10 +12,17 @@
   <dammsg mg="n">проклятие вампира</dammsg>
   <group registry="skillGroup">vampiric</group>
   <help id="591" level="-1" type="SkillHelp">
-    <keyword l="en"></keyword>
-    <keyword l="ru">&apos;проклятье вампира&apos;</keyword>
-    <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <keyword l="en">'vampiric blast'</keyword>
+    <keyword l="ru">'проклятье вампира'</keyword>
+    <keyword l="ua">'прокляття вампіра'</keyword>
+    <text l="en">%FMT% *%SPELL%* _%VICT%_
+
+A vampire, using the secrets of ancient magic, can strike its opponents
+with a blow of dark energy. The power of damage increases with the level of the spell.
+On a failed saving throw, the victim may be {hh704weakened{x.
+
+%SA% %H% {hh1361cast{x
+</text>
     <text l="ru">%FMT% *%SPELL%* _%VICT%_
 
 Вампир, используя секреты древней магии, может поражать своих противников
@@ -24,7 +31,14 @@
 
 %SA% %H% {hh1361колдовать{x
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%* _%VICT%_
+
+Вампір, використовуючи секрети давньої магії, може вражати своїх супротивників
+ударом темної енергії. Сила ушкоджень зростає з рівнем закляття.
+При провалі спаскидка жертва може бути {hh704ослаблена{x.
+
+%SA% %H% {hh1361чаклувати{x
+</text>
   </help>
   <mana>20</mana>
   <mob>
@@ -32,7 +46,7 @@
   </mob>
   <name l="en">vampiric blast</name>
   <name l="ru">проклятие вампира</name>
-  <name l="ua"></name>
+  <name l="ua">прокляття вампіра</name>
   <spell type="DefaultSpell">
     <damtype>negative</damtype>
     <flags>magic</flags>

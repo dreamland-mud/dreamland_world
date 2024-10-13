@@ -5,7 +5,7 @@
     <node name="anti-paladin">
       <level>8</level>
       <maximum>100</maximum>
-      <rating>2</rating>
+      <rating>1</rating>
     </node>
     <node name="cleric">
       <level>8</level>
@@ -20,7 +20,7 @@
     <node name="ninja">
       <level>8</level>
       <maximum>100</maximum>
-      <rating>2</rating>
+      <rating>1</rating>
     </node>
     <node name="samurai">
       <level>8</level>
@@ -44,34 +44,42 @@
     </node>
   </classes>
   <command type="SKILL(zap)">
-    <aliases l="en"></aliases>
+    <aliases l="en">rub</aliases>
     <aliases l="ru">тереть</aliases>
-    <aliases l="ua"></aliases>
+    <aliases l="ua">терти</aliases>
     <argtype>undef</argtype>
     <cat>magic</cat>
     <extra>undig</extra>
-    <hint l="en"></hint>
+    <hint l="en">wave a magic wand</hint>
     <hint l="ru">взмахнуть волшебной палочкой</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">махнути чарівною паличкою</hint>
     <name l="en">zap</name>
     <name l="ru">поразить</name>
-    <name l="ua"></name>
+    <name l="ua">зачарування</name>
     <order>player_only</order>
     <position>rest</position>
   </command>
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">arcane</group>
   <help id="2143" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">wand of wands</extra>
     <extra l="ru">палочка палочки</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">паличка палички</extra>
+    <text l="en">This skill allows you to use rods or wands.
+For details on using wands, read the article "{hh121Magical items{x".
+
+%SA% %H% {hh121magical items{x
+</text>
     <text l="ru">Это умение позволяет использовать жезлы или волшебные палочки.
 Подробно об использовании жезлов читай в статье &quot;{hh121Волшебные предметы{x&quot;.
 
 %SA% %H% {hh121волшебные предметы{x
 </text>
-    <text l="ua"></text>
+    <text l="ua">Це вміння дозволяє використовувати жезли або чарівні палички.
+Докладно про використання жезлів читайте в статті &quot;{hh121Магічні предмети{x&quot;.
+
+%SA% %H% {hh121магічні предмети{x
+</text>
   </help>
   <mob>
     <bonus>20</bonus>
@@ -81,6 +89,6 @@
   <move>20</move>
   <name l="en">wands</name>
   <name l="ru">жезлы</name>
-  <name l="ua"></name>
+  <name l="ua">жезли</name>
   <raceBonuses registry="race">rockseer</raceBonuses>
 </skill>

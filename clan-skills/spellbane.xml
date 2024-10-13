@@ -17,12 +17,12 @@
   <command type="SKILL(spellbane)">
     <argtype>undef</argtype>
     <cat>clan</cat>
-    <hint l="en"></hint>
+    <hint l="en">Reflect magical spells (Clan of Rage)</hint>
     <hint l="ru">(клан ярости) отражать магические заклинания</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(клан люті) відображати магічні заклинання</hint>
     <name l="en">spellbane</name>
     <name l="ru">спелбан</name>
-    <name l="ua"></name>
+    <name l="ua">спелбан</name>
     <order>player_only</order>
     <position>fight</position>
   </command>
@@ -30,10 +30,21 @@
   <group registry="skillGroup">clan</group>
   <hard>5</hard>
   <help id="914" level="-1" type="SkillHelp">
-    <extra l="en">&apos;spell bane&apos;</extra>
+    <extra l="en">'spell bane'</extra>
     <extra l="ru">спеллбан</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">спеллбан</extra>
+    <text l="en">The Curse {hh1471Clan of Rage{x, cast by mages, but turned against them.
+It forbids the use of magic by a clan member, while rejecting almost
+all magic directed at him, except for mental attacks.
+
+Spellbane blocks all protective prayers, but does not protect against offensive ones.
+Protective spells cast on a clan member will always be rejected,
+and spells cast by someone nearby will be reflected -- with possible
+damage to the sorcerer.
+
+Offensive spells targeting the victim whom the clan member is fighting
+will also be reflected -- with severe damage to the caster.
+</text>
     <text l="ru">Проклятие {hh1471Клана Ярости{x, наложенное магами, но обернувшееся против них самих.
 Запрещает использование магии члену клана, и в то же время отклоняет практически
 всю магию, направленную на него, кроме ментальных атак. 
@@ -46,7 +57,18 @@
 Атакующие заклинания, чьей жертвой стал тот, с кем сражается член клана,
 также будут отражены -- с сильными повреждениями для кастующего.
 </text>
-    <text l="ua"></text>
+    <text l="ua">Прокляття {hh1471Клану Люті{x, накладене магами, але обернулося проти них самих.
+Забороняє використання магії членом клану, і в той самий час відхиляє практично
+всю магію, спрямовану на нього, окрім ментальних атак.
+
+Спелбан блокує всі захисні молитви, але не захищає від нападів.
+Захисні заклинання, спрямовані на члена клану, завжди будуть відхилені,
+а заклинання, промовлені кимось поряд, будуть відображені -- з можливими
+пошкодженнями для чаклуна.
+
+Атакуючі заклинання, жертвою яких став той, з ким б'ється член клану,
+також будуть відображені -- зі значними пошкодженнями для кастуючого.
+</text>
   </help>
   <mob>
     <bonus>70</bonus>
@@ -54,5 +76,5 @@
   <move>20</move>
   <name l="en">spellbane</name>
   <name l="ru">отражение магии</name>
-  <name l="ua"></name>
+  <name l="ua">відображення магії</name>
 </skill>

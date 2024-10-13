@@ -42,10 +42,17 @@
   <dammsg mg="n">проклятие</dammsg>
   <group registry="skillGroup">maladictions</group>
   <help id="548" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">aura 'devil's weapon' 'weapon curse' sinister</extra>
     <extra l="ru">аура &apos;дьявольское оружие&apos; &apos;проклятие оружия&apos; зловещая</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">аура &apos;диявольська зброя&apos; &apos;прокляття зброї&apos; зловісна</extra>
+    <text l="en">%FMT% *%SPELL%* _%VICT%_
+
+Upon failing a {hh2035saving throw{x against dark energy, this spell reduces the {hh47accuracy{x and spell resistance of the target. Cursed characters also cannot use {hh862recall{x and {hh1126transport{x spells.
+
+%FMT% *%SPELL%* _%OBJ%_
+
+This spell can also be cast on objects, adding a sinister aura ({hh96flag{x "devil's") and {hh864making them unremovable{x. Devilish weapons will deal more damage to good opponents. The curse will remove any {hh766blessings{x on the object and vice versa. Evil items cannot be {hh806sanctified{x.
+</text>
     <text l="ru">%FMT% *%SPELL%* _%VICT%_
 
 При провале {hh2035спасброска{x к темной энергии это заклинание понижает {hh47точность{x и
@@ -59,7 +66,19 @@
 Дьявольское оружие нанесет больше урона добрым противникам.
 Проклятие сбивает с вещи {hh766благословение{x и наоборот. Злые вещи нельзя {hh806освятить{x.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%* _%VICT%_
+
+При провалі {hh2035збереження{x від темної енергії це заклинання знижує {hh47точність{x і
+захист від заклять у жертви. Прокляті персонажі також не можуть користуватися
+{hh862поверненням{x і {hh1126транспортними{x заклинаннями.
+
+%FMT% *%SPELL%* _%OBJ%_
+
+Це заклинання також можна застосувати до речей, додаючи зловісну ауру ({hh96прапор{x
+&quot;диявольський&quot;) і {hh864неможливість зняти{x. 
+Диявольська зброя завдасть більше шкоди добрим противникам.
+Прокляття збиває з речі {hh766благословення{x і навпаки. Злі речі не можна {hh806освятити{x.
+</text>
   </help>
   <mana>40</mana>
   <mob>
@@ -67,7 +86,7 @@
   </mob>
   <name l="en">curse</name>
   <name l="ru">проклятие</name>
-  <name l="ua"></name>
+  <name l="ua">прокляття</name>
   <spell type="DefaultSpell">
     <damtype>negative</damtype>
     <flags>magic prayer</flags>

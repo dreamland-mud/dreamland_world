@@ -33,8 +33,26 @@
   <help id="584" level="-1" type="SkillHelp">
     <extra l="en">nosummon</extra>
     <extra l="ru">непризыв &apos;призвать существо&apos; призывать запрет</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">невиклик &apos;викликати істоту&apos; заборона на виклик</extra>
+    <text l="en">This powerful spell or prayer summons characters to the room where the caller is located.
+
+You can summon characters below your {hh2036spell level{x, but not below your {hh32PK-range{x (if they are players).
+
+{cYou can be summoned by:{x
+%A% players in your PK-range
+%A% your clan members
+%A% any other players if you do not have {y{hcenabled no-summon{x setting
+%A% world mage mobs you try to flee from after an unsuccessful battle
+
+{cCannot be summoned:{x
+%A% characters who are currently fighting
+%A% mobs with a quest task on them
+%A% characters in {hh86safe{x, clan, protected, or cursed rooms
+%A% clan characters in your PK if you are non-clan{Sm member{Sf girl{Sx
+
+{cHow to protect against summoning:{x
+%A% Increase {hh2035magic protection{x: to summon successfully, a saving throw must be passed
+%A% Find an item or spell {hh570mental block{x</text>
     <text l="ru">%FMT% *%SPELL%* _%VICT%_
 
 Это мощное заклинание или молитва призывает персонажей в ту комнату, где
@@ -59,7 +77,27 @@
 %A% Увеличить {hh2035защиту от магии{x: чтобы успешно призвать, надо пройти спасбросок
 %A% Найти вещь или заклинание {hh570ментального блока{x
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%* _%VICT%_
+
+Це потужне заклинання або молитва призиває персонажів у ту кімнату, де знаходиться той, хто викликає.
+
+Ти можеш викликати персонажів нижче свого {hh2036рівня магії{x, але не нижче свого {hh32ПК-інтервалу{x (якщо це гравці).
+
+{cТебе можуть викликати:{x
+%A% гравці в твоєму ПК-інтервалі
+%A% твої клановики
+%A% будь-які інші гравці, якщо у тебе не увімкнено {y{hcналаштування невиклик{x
+%A% моби-чарівники по світу, від яких ти спробуєш втекти після невдалого бою
+
+{cНе вдасться викликати:{x
+%A% персонажів, які зараз б'ються
+%A% мобів, на яких дано квестове завдання
+%A% персонажів у {hh86безпечній{x, клановій, захищеній або проклятій кімнаті
+%A% кланових персонажів у твоєму ПК, якщо ти не в клані{Smий{Sfа{Sx
+
+{cЯк захиститися від виклику:{x
+%A% Збільшити {hh2035захист від магії{x: щоб успішно викликати, потрібно пройти спасбросок
+%A% Знайти річ або заклинання {hh570ментального блоку{x</text>
   </help>
   <mana>80</mana>
   <mob>
@@ -67,7 +105,7 @@
   </mob>
   <name l="en">summon</name>
   <name l="ru">призыв</name>
-  <name l="ua"></name>
+  <name l="ua">виклик</name>
   <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>magic prayer</flags>

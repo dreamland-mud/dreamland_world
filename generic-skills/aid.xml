@@ -19,10 +19,15 @@
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">healing</group>
   <help id="710" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">'aid prayer'</extra>
     <extra l="ru">&apos;молитва помощи&apos;</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">'молитва допомоги'</extra>
+    <text l="en">%FMT% *%SPELL%*
+%FFF% *%SPELL%* _%CHAR%_
+
+Clerics and druids can use this prayer not only to heal their own or someone
+else's wounds but also to temporarily increase the maximum amount of health.
+</text>
     <text l="ru">%FMT% *%SPELL%*
 %FFF% *%SPELL%* _%CHAR%_
 
@@ -30,7 +35,13 @@
 или чьи-то раны, но и на короткое время увеличить максимальное количество
 здоровья.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%*
+%FFF% *%SPELL%* _%CHAR%_
+
+Клерики і друїди можуть використовувати цю молитву, щоб не лише вилікувати свої
+або чиїсь рани, а й на короткий час збільшити максимальну кількість
+здоров'я.
+</text>
   </help>
   <mana>100</mana>
   <mob>
@@ -38,7 +49,7 @@
   </mob>
   <name l="en">aid</name>
   <name l="ru">помощь</name>
-  <name l="ua"></name>
+  <name l="ua">Допомога</name>
   <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>prayer</flags>

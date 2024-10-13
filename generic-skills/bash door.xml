@@ -36,21 +36,28 @@
   <command type="DefaultSkillCommand">
     <argtype>exit</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">(warrior classes) bash the door</hint>
     <hint l="ru">(воинские профессии) выбить дверь</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(воїнські професії) вибити двері</hint>
     <name l="en">bashdoor</name>
     <name l="ru">выбить</name>
-    <name l="ua"></name>
+    <name l="ua">вибити</name>
     <position>stand</position>
   </command>
   <dammsg mg="f">попытка выбить проход</dammsg>
   <group registry="skillGroup">adventure</group>
   <help id="833" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">'break down the door'</extra>
     <extra l="ru">&apos;взломать дверь&apos;</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">'зламати двері'</extra>
+    <text l="en">%FMT%  *bash* _%DIR%_
+
+With this skill, you can try to charge and break down a locked door,
+passage, or {hh1016extra-exit{x. Success depends on your strength and size, as well as the number
+of creatures above you in level that are "guarding" the passage.
+
+If you fail, you may get hurt badly, and nearby creatures might attack you.
+</text>
     <text l="ru">%FMT%  *выбить* _%DIR%_  
 
 С помощью этого навыка можно попробовать разогнаться и вышибить запертую дверь,
@@ -60,7 +67,15 @@
 В случае неудачи можно больно ушибиться, а окружающие существа могут на тебя
 напасть.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT%  *вибити* _%DIR%_
+
+Завдяки цьому навику можна спробувати розігнатися і вибити зачинені двері,
+прохід або {hh1016екстра-вихід{x. Успіх залежить від твоєї сили та розміру, а також від числа
+істот вищого за тебе рівня, які "охороняють" прохід.
+
+У разі невдачі можна боляче забитися, а навколишні істоти можуть на тебе
+напасти.
+</text>
   </help>
   <mana>20</mana>
   <mob>
@@ -71,5 +86,5 @@
   <move>100</move>
   <name l="en">bash door</name>
   <name l="ru">выбить дверь</name>
-  <name l="ua"></name>
+  <name l="ua">вибити двері</name>
 </skill>

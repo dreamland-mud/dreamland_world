@@ -97,15 +97,15 @@
   <command type="SKILL(clanrecall)">
     <aliases l="en">crecall</aliases>
     <aliases l="ru">кланвозврат</aliases>
-    <aliases l="ua"></aliases>
+    <aliases l="ua">кланповернення</aliases>
     <argtype>undef</argtype>
     <cat>clan</cat>
-    <hint l="en"></hint>
+    <hint l="en">ask the gods to move to the clan</hint>
     <hint l="ru">попросить богов о перемещении в клан</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">попросити богів про переміщення в клан</hint>
     <name l="en">clanrecall</name>
     <name l="ru">квозврат</name>
-    <name l="ua"></name>
+    <name l="ua">квідхід</name>
     <order>player_only</order>
     <position>fight</position>
   </command>
@@ -113,10 +113,12 @@
   <group registry="skillGroup">clan</group>
   <hard>6</hard>
   <help id="938" level="-1" type="SkillHelp">
-    <extra l="en">&apos;clan recall&apos;</extra>
-    <extra l="ru">&apos;клан возврат&apos; кланреколл</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="en">'clan recall'</extra>
+    <extra l="ru">'клан возврат' кланреколл</extra>
+    <extra l="ua">'повернення в клан' кланреколл</extra>
+    <text l="en">Ask the gods to move to the clan. You can't ask too often, and you must wait some time before the next attempt. The waiting time increases with level and is visible by the command 'affects'. Returning to the clan won't work if you are under {hh2146adrenaline{x from recent battles with other players.
+
+%SA% %H% {hh674word of return{x</text>
     <text l="ru">%FMT% *%CMD%*
 
 Попросить богов о перемещении в клан. Просить можно не часто, и до следующей
@@ -126,10 +128,18 @@
 
 %SA% %H% {hh674слово возврата{x
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%CMD%*
+
+Попросити богів про переміщення в клан. Просити можна не часто, і до наступної
+спроби доведеться трохи почекати. Час очікування зростає з рівнем і
+видно по команді *ефекти*. Повернення в клан не спрацює, якщо ти перебуваєш
+під {hh2146адреналіном{x від недавнього бою з іншими гравцями.
+
+%SA% %H% {hh674слово повернення{x
+</text>
   </help>
   <move>10</move>
   <name l="en">clanrecall</name>
   <name l="ru">кланвозврат</name>
-  <name l="ua"></name>
+  <name l="ua">кланповернення</name>
 </skill>

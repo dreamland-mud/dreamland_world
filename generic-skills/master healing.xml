@@ -11,10 +11,18 @@
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">healing</group>
   <help id="698" level="-1" type="SkillHelp">
-    <keyword l="en"></keyword>
+    <keyword l="en">wounds</keyword>
     <keyword l="ru">раны</keyword>
-    <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <keyword l="ua">рани</keyword>
+    <text l="en">%FMT% *%SPELL%* 
+%FMT% *%SPELL%* _%CHAR%_
+
+Upon reaching the highest mastery in the art of healing, clerics can restore
+a large amount of health points at once to themselves or a patient.
+The effectiveness of this prayer increases with the level.
+
+%SA% %H% {hh1361колдовать{x
+</text>
     <text l="ru">%FMT% *%SPELL%* 
 %FMT% *%SPELL%* _%CHAR%_
 
@@ -24,7 +32,15 @@
 
 %SA% %H% {hh1361колдовать{x
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%* 
+%FMT% *%SPELL%* _%CHAR%_
+
+Досягнувши найвищої майстерності в мистецтві лікування, клірики можуть відновити
+за один раз велику кількість очок здоров'я у себе або у пацієнта. 
+Ефективність цієї молитви зростає з рівнем.
+
+%SA% %H% {hh1361колдовать{x
+</text>
   </help>
   <mana>250</mana>
   <mob>
@@ -32,7 +48,7 @@
   </mob>
   <name l="en">master healing</name>
   <name l="ru">мастерское лечение</name>
-  <name l="ua"></name>
+  <name l="ua">майстерне лікування</name>
   <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>prayer</flags>

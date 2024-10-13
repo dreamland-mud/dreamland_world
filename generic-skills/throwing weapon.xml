@@ -69,17 +69,17 @@
     </node>
   </classes>
   <command type="DefaultSkillCommand">
-    <aliases l="en"></aliases>
+    <aliases l="en">throw</aliases>
     <aliases l="ru">метать швырнуть</aliases>
-    <aliases l="ua"></aliases>
+    <aliases l="ua">метати кидати</aliases>
     <argtype>string</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">throw weapon, held item, knife/stone from inventory</hint>
     <hint l="ru">метнуть оружие, предмет в руках, нож/камень из инвентаря</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">метнути зброю, предмет у руках, ніж/камінь з інвентаря</hint>
     <name l="en">throw</name>
     <name l="ru">метнуть</name>
-    <name l="ua"></name>
+    <name l="ua">метнути</name>
     <order>player_only</order>
     <position>stand</position>
   </command>
@@ -88,8 +88,16 @@
   <help id="218" level="-1" type="SkillHelp">
     <extra l="en">&apos;throw stone&apos;</extra>
     <extra l="ru">камень камни метать швырнуть</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">камінь камені метати кидати</extra>
+    <text l="en">This skill allows you to attack an opponent from a distance -- especially useful for {hh28warrior classes{x who do not want to get into a crowd of {hh998aggressive{x creatures. You can throw a weapon, an item held in your hands, or {hh681knives{x and {hh871stones{x from your inventory. Targeting is optional, and you can throw just for fun.
+
+The best results in throwing disciplines are achieved by {hh135thieves{x with knives, warriors with one-handed {hh784axes{x or {hh699spears{x, or races accustomed to it -- {hh169hobbits{x and {hh2134giants{x with stones, {hh163orks{x with spears, and {hh146dwarves{x with axes. Besides knives, stones, axes, and spears, you can throw almost any light item that can be held in your hands.
+
+For non-specialists, skill level does not affect hit chance or damage -- but it is very important for professional throwers. Agility, accuracy, item weight and size, and many other factors also influence the hit chance. Throwing distance depends on strength and how convenient it is to throw the item.
+
+Thrown projectiles can be {hh754dodged{x, including by {hh750blinking{x. {hh136Samurais{x can {hh576deflect{x them with a sword, and {hh141paladins{x and {hh142warriors{x with {hh726shields{x. In rare cases and only if they have a free hand, {hh28agile ones{x, samurais, warriors of {hh1471Clan of Fury{x, or the very agile can even catch a projectile mid-flight. Casters can also protect themselves from projectiles with {hh605enhanced armor{x.
+
+Depending on the situation, a thrown projectile can get lodged in the opponent's body, take {hh1055damage{x and be destroyed in various collisions, or just fall along the way or near the target.</text>
     <text l="ru">%FMT% *%CMD%* _%OBJ%_ _%DIR%_ _%VICT%_
 
 Этот навык позволяет атаковать противника издалека -- это особенно полезно для
@@ -118,11 +126,38 @@
 получить {hh1055повреждения{x и быть разрушенным в случае различных столкновений или
 просто упасть по пути или рядом с целью.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%CMD%* _%OBJ%_ _%DIR%_ _%VICT%_
+
+Ця навичка дозволяє атакувати противника здалеку -- це особливо корисно для
+{hh28воїнських класів{x, які не хочуть пхатися в купу {hh998агресивних{x істот.
+Можна метнути зброю, предмет в руках або {hh681ножі{x і {hh871камені{x з інвентаря. 
+Ціль вказувати не обов'язково, можна метати просто так, заради розваги.
+
+Найкращих результатів у метальних дисциплінах досягнуть {hh135злодії{x з ножами, воїни
+з одноручними {hh784сокирами{x або {hh699списами{x, або раси, для яких це звичка --
+{hh169хоббіти{x і {hh2134гіганти{x з каменями, {hh163орки{x зі списами та {hh146дварфи{x з сокирами. Крім ножів,
+каменів, сокир і списів можна метати практично будь-яку легку річ,
+яка підходить для тримання в руках.
+
+Для неспеціалістів підкачування уміння не впливає на шанс попасти або пошкодження -- але
+для професійних метальників це дуже важливо. Також на шанс попадання впливають
+спритність, точність, вага і розмір предмета та багато інших факторів. Дальність
+кидання також залежить від сили та того, наскільки сподручно цією річчю метати.
+
+Від метального снаряда можна {hh754ухилитися{x, в тому числі {hh750миготінням{x. {hh136Самураї{x можуть
+{hh576відбити{x його мечем, а {hh141паладини{x і {hh142воїни{x -- {hh726щитом{x. У рідкісних випадках і тільки при
+наявності вільної руки {hh28спритні{x, самураї, воїни {hh1471Клану Ярості{x або най-найспритніші
+можуть навіть піймати снаряд на льоту. Кастери також можуть захиститися від
+снарядів {hh605покращеною бронею{x.
+
+Залежно від ситуації кинутий снаряд може застрягти у тілі противника,
+отримати {hh1055пошкодження{x і бути знищеним при різних зіткненнях або
+просто впасти на шляху або поруч з ціллю.
+</text>
   </help>
   <move>20</move>
   <name l="en">throwing weapon</name>
   <name l="ru">метательное оружие</name>
-  <name l="ua"></name>
+  <name l="ua">метальна зброя</name>
   <raceBonuses registry="race">hobbit &apos;storm giant&apos; &apos;cloud giant&apos;</raceBonuses>
 </skill>

@@ -17,19 +17,26 @@
   <command type="SKILL(jail)">
     <argtype>undef</argtype>
     <cat>clan</cat>
-    <hint l="en"></hint>
+    <hint l="en">Cast into jail a rule violator</hint>
     <hint l="ru">(правители) посадить нарушителя за решетку</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(правителі) посадити порушника за ґрати</hint>
     <log>1</log>
     <name l="en">jail</name>
     <name l="ru">тюрьма</name>
-    <name l="ua"></name>
+    <name l="ua">в\'язниця</name>
     <position>stand</position>
   </command>
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">clan</group>
   <help id="890" level="-1" type="SkillHelp">
-    <text l="en"></text>
+    <text l="en">%PAUSE%
+Determine the sentence duration for a lawbreaker.
+
+Syntax: jail &lt;target&gt; - check sentence duration
+           jail &lt;target&gt; place [&lt;time&gt;] - set sentence duration
+           jail &lt;target&gt; remove - cancel the sentence
+
+A set imprisonment duration is assigned to the specified player. After serving their time, they are automatically released from prison. If the player is shackled, they are unchained.</text>
     <text l="ru">%PAUSE%
 Определить срок заключения нарушителю закона.
 
@@ -41,10 +48,19 @@
 он автоматически освобождается из тюрьмы. Если игрок был в кандалах, то
 его расковывают.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%PAUSE%
+Визначити строк ув'язнення порушнику закону.
+
+Синтаксис: jail &lt;ціль&gt; - перевірити строк ув'язнення
+           jail &lt;ціль&gt; place [&lt;час&gt;] - встановити строк ув'язнення
+           jail &lt;ціль&gt; remove - анулювати строк ув'язнення
+
+Зазначеному гравцеві встановлюється строк ув'язнення, після якого
+він автоматично звільняється з в'язниці. Якщо гравець був у кайданах, то
+його розковують.</text>
   </help>
   <move>20</move>
   <name l="en">jail</name>
   <name l="ru">тюрьма</name>
-  <name l="ua"></name>
+  <name l="ua">в'язниця</name>
 </skill>

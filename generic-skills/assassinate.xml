@@ -12,22 +12,31 @@
     <argtype>undef</argtype>
     <cat>class</cat>
     <extra>keep_hide</extra>
-    <hint l="en"></hint>
+    <hint l="en">(ninja) kill by snapping neck</hint>
     <hint l="ru">(ниндзи) убить, свернув шею</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(ніндзя) вбити, скрутивши шию</hint>
     <name l="en">assassinate</name>
     <name l="ru">свернуть</name>
-    <name l="ua"></name>
+    <name l="ua">скрутити</name>
     <order>player_only</order>
     <position>stand</position>
   </command>
   <dammsg mg="f">попытка свернуть шею</dammsg>
   <group registry="skillGroup">suddendeath fightmaster</group>
   <help id="620" level="-1" type="SkillHelp">
-    <keyword l="en"></keyword>
+    <keyword l="en">assassinate 'snap neck' 'break neck'</keyword>
     <keyword l="ru">ассассинейт &apos;ломать шею&apos; &apos;сломать шею&apos;</keyword>
-    <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <keyword l="ua">ассасінейт 'зламати шию' 'скрутити шию'</keyword>
+    <text l="en">%FMT% *%CMD%* _%VICT%_
+
+Only highly skilled ninjas can learn to kill with a single blow. Sneaking up
+from behind, the ninja grabs the enemy's head and, with a quick motion, snaps it,
+breaking the unsuspecting victim's neck.
+
+Success depends on the ninja's {hh39strength{x, {hh36constitution{x, and the {hh26size of the victim{x,
+as well as other factors. Both hands must be free to use this skill. It won't be
+possible to kill a wounded and wary victim in this way.
+</text>
     <text l="ru">%FMT% *%CMD%* _%VICT%_
 
 Только очень опытные ниндзя могут научиться убивать с одного удара. Подкравшись
@@ -38,11 +47,20 @@
 а также других факторов. Для использования этого умения обе руки должны быть
 свободны. Раненую и настороженную жертву убить таким образом не получится.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%CMD%* _%VICT%_
+
+Тільки дуже досвідчені ніндзя можуть навчитися вбивати з одного удару. Підкрадаючись
+ззаду, ніндзя захоплює голову супротивника і швидким рухом скручує її,
+ламаючи шию нічого не підозрюючій жертві.
+
+Успіх залежить від {hh39сили{x ніндзя, {hh36тілесного складу{x і {hh26розміру жертви{x,
+а також інших чинників. Для використання цього вміння обидві руки повинні бути
+вільні. Поранену та насторожену жертву вбити таким чином не вийде.
+</text>
   </help>
   <mana>20</mana>
   <move>100</move>
   <name l="en">assassinate</name>
   <name l="ru">свернуть шею</name>
-  <name l="ua"></name>
+  <name l="ua">скрутити шию</name>
 </skill>

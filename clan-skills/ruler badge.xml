@@ -16,8 +16,19 @@
   <help id="888" level="-1" type="SkillHelp">
     <extra l="en">badge of ruler</extra>
     <extra l="ru">бедж рулера</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">бейдж правителя</extra>
+    <text l="en">Place the symbol of Rulers around your neck. Using the symbol, the Ruler can escort  
+special mobs back to their permanent residences if they suddenly left. Any such creature will follow the Ruler if he shows  
+his guardian symbol:
+
+%FMT% *use symbol* _%CHAR%_
+
+If the creature ended up in someone else's {hh44guild{x, the Ruler can approach the guild entrance and call for:
+
+%FMT% *shout* {Dname_of_mob{x, follow me!
+
+Following stops upon arrival at the registry location. If something urgent happens along the way, the Ruler can stop the escort {hh1378normally{x. 
+Identity recognition will help determine the registry location of the special mob.</text>
     <text l="ru">%FMT% *%SPELL%*
 
 Повесить на шею символ Правителей. Используя символ, Правитель может отвести
@@ -36,12 +47,29 @@
 что-то экстренное, Правитель может прекратить сопровождение {hh1378обычным способом{x.
 Узнать место прописки спецмоба поможет {hh951опознание личности{x.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%*
+
+Повісити на шию символ Правителів. Використовуючи символ, Правитель може відвести
+{hh989спецмобів{x на місця їх постійного проживання, якщо вони раптом з них
+відлучилися. Будь-яка така істота піде за Правителем, якщо той пред'явить
+свій символ хранителя:
+
+%FMT% *використати символ* _%CHAR%_
+
+Якщо ж істота опинилася в чужій {hh44гільдії{x, Правитель може підійти до входу в
+гільдію і покликати:
+
+%FMT% *кричати* {Dім'я_моба{x, слідуйте за мною!
+
+Слідування припиняється по прибуттю на місце прописки. Якщо по дорозі трапилося
+щось екстрене, Правитель може припинити супровід {hh1378звичайним способом{x.
+Дізнатися місце прописки спецмоба допоможе {hh951впізнання особи{x.
+</text>
   </help>
   <mana>50</mana>
   <name l="en">ruler badge</name>
   <name l="ru">символ правителя</name>
-  <name l="ua"></name>
+  <name l="ua">знак правителя</name>
   <spell type="SPELL(RulerBadge)">
     <damtype>none</damtype>
     <flags>magic</flags>

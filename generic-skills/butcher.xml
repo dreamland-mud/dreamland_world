@@ -11,33 +11,42 @@
   <command type="DefaultSkillCommand">
     <argtype>obj_here</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">rangers carve steaks off a corpse</hint>
     <hint l="ru">(рейнджеры) срезать бифштексы с трупа</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(рейнджери) зрізати біфштекси з трупа</hint>
     <name l="en">butcher</name>
     <name l="ru">разделать</name>
-    <name l="ua"></name>
+    <name l="ua">розділити</name>
     <order>player_only</order>
     <position>stand</position>
   </command>
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">nature</group>
   <help id="723" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">steak beefsteak</extra>
     <extra l="ru">бифштекс бивштекс</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">біфштекс бивштекс</extra>
+    <text l="en">%FMT% *%CMD%* _corpse_
+
+The ranger skill of butchering a corpse, gutting its intestines and other offal, and cutting
+a few tasty steaks from it -- provided the creature was edible. The number of steaks depends on the size of the slain creature.
+</text>
     <text l="ru">%FMT% *%CMD%* _труп_
 
 Умение рейнджеров разделать труп, выпотрошить кишки и другую требуху и срезать с
 него несколько вкусных стейков -- если конечно существо было съедобным.
 Количество стейков зависит от размера убитого существа.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%CMD%* _труп_
+
+Вміння рейнджерів розділити труп, випотрошити кишки та інші нутрощі і зрізати з
+нього кілька смачних стейків -- якщо, звісно, істота була їстівною.
+Кількість стейків залежить від розміру вбитої істоти.
+</text>
   </help>
   <mana>50</mana>
   <move>50</move>
   <name l="en">butcher</name>
   <name l="ru">разделать</name>
-  <name l="ua"></name>
+  <name l="ua">розділити</name>
 </skill>

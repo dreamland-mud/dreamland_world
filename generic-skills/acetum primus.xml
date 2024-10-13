@@ -21,10 +21,17 @@
   <dammsg mg="m">ацетум примус</dammsg>
   <group registry="skillGroup">combat</group>
   <help id="587" level="-1" type="SkillHelp">
-    <keyword l="en"></keyword>
+    <keyword l="en">acetum 'acid stream' primus 'stream of acid'</keyword>
     <keyword l="ru">ацэтум &apos;кислотная струя&apos; примус &apos;струя кислоты&apos;</keyword>
-    <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <keyword l="ua">ацетум 'кислотний струмінь' примус 'струмінь кислоти'</keyword>
+    <text l="en">%FMT% *%SPELL%* _%VICT%_
+
+This spell enshrouds the victim with a cloud of acid, causing them severe damage.
+If the protection against spells (saves vs spell) worked, the damage will be halved.
+The power of the damage increases with the spell level.
+
+%SA% %H% {hh1361cast{x
+</text>
     <text l="ru">%FMT% *%SPELL%* _%VICT%_
 
 Это заклинание обволакивает жертву облаком кислоты, нанося ей серьезные повреждения.
@@ -33,7 +40,14 @@
 
 %SA% %H% {hh1361колдовать{x
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%* _%VICT%_
+
+Це заклинання огортає жертву хмарою кислоти, завдаючи їй серйозних пошкоджень.
+Якщо спрацював захист від заклинань (saves vs spell), пошкодження будуть ослаблені
+вдвічі. Сила пошкоджень зростає з рівнем заклинання.
+
+%SA% %H% {hh1361колдувати{x
+</text>
   </help>
   <mana>80</mana>
   <mob>
@@ -41,7 +55,7 @@
   </mob>
   <name l="en">acetum primus</name>
   <name l="ru">ацетум примус</name>
-  <name l="ua"></name>
+  <name l="ua">ацетум примус</name>
   <spell type="DefaultSpell">
     <damtype>acid</damtype>
     <flags>magic</flags>

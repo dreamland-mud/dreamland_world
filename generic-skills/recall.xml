@@ -77,12 +77,12 @@
     <aliases l="ua"></aliases>
     <argtype>undef</argtype>
     <cat>move</cat>
-    <hint l="en"></hint>
+    <hint l="en">ask the gods for relocation to the temple</hint>
     <hint l="ru">попросить богов о перемещении в храм</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">попросити богів про переміщення в храм</hint>
     <name l="en">recall</name>
     <name l="ru">возврат</name>
-    <name l="ua"></name>
+    <name l="ua">повернення</name>
     <order>allow_ruler player_only</order>
     <position>fight</position>
   </command>
@@ -90,7 +90,18 @@
   <group registry="skillGroup">adventure</group>
   <hard>6</hard>
   <help id="862" level="-1" type="SkillHelp">
-    <text l="en"></text>
+    <text l="en">This skill offers prayers to the Gods requesting to transport you from your
+current position to your {hh29home city{x. A successful recall transports you to the temple
+and consumes half of your {hh60movement points{x.
+
+Recall {Rdoes not work,{x if:
+{R%A% {xyou are under a {hh548curse{x from spells or items
+{R%A% {xyou are under the influence of {hh2146adrenaline{x from combat {hh32in PK{x
+{R%A% {xyou are in a {hh86cursed place{x or area
+{R%A% {xescaping from a fight if you are not a {hh2127novice{x
+
+&apos;/&apos; - synonym for *recall*.
+</text>
     <text l="ru">Это умение возносит молитвы к Богам с просьбами транспортировать тебя с твоего
 текущего положения в {hh29родной город{x. Удачный возврат переносит тебя в храм
 и отнимает половину {hh60единиц движения{x.
@@ -103,7 +114,18 @@
 
 &apos;/&apos; - синоним для *возврат*.
 </text>
-    <text l="ua"></text>
+    <text l="ua">Це уміння підносить молитви до Богів із проханням перемістити тебе з твоєї
+поточній позиції у {hh29рідне місто{x. Успішне повернення переносить тебе до храму
+і забирає половину {hh60одиниць руху{x.
+
+Повернення {Rне працює,{x якщо:
+{R%A% {xна тобі висить {hh548прокляття{x від закляттів або речей
+{R%A% {xти під впливом {hh2146адреналіну{x від бою {hh32в ПК{x
+{R%A% {xти знаходишся в {hh86проклятому місці{x або зоні
+{R%A% {xпокидаєш бій, якщо ти не {hh2127новачок{x
+
+&apos;/&apos; - синонім для *повернення*.
+</text>
   </help>
   <mob>
     <bonus>40</bonus>
@@ -113,5 +135,5 @@
   <move>10</move>
   <name l="en">recall</name>
   <name l="ru">возврат</name>
-  <name l="ua"></name>
+  <name l="ua">повернення</name>
 </skill>

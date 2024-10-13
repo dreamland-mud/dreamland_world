@@ -30,13 +30,28 @@
   <dammsg mg="f">чума</dammsg>
   <group registry="skillGroup">maladictions</group>
   <help id="614" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">fever</extra>
     <extra l="ru">лихорадка</extra>
-    <extra l="ua"></extra>
-    <keyword l="en"></keyword>
+    <extra l="ua">лихоманка</extra>
+    <keyword l="en">plague</keyword>
     <keyword l="ru">чуму</keyword>
-    <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <keyword l="ua">чуму</keyword>
+    <text l="en">%FMT% *%SPELL%* _%VICT%_
+
+Infection by the plague causes severe damage to the victim every {hh16tick{x, and also greatly
+{hh39weakens{x them. The victim does not regenerate health and mana points; instead,
+they are lost. The disease effect can stack: upon reinfection, the disease
+will start dealing even more damage. High {hh36constitution{x helps to fight
+against the disease.
+
+The plague spreads very quickly! The victim infects everyone nearby.
+You cannot be infected directly by the victim, but from those it has infected -- yes.
+Be careful with pathogens!..
+
+A victim dead from the plague you cast will count towards you -- in {hh32PK{x or in {hh125quests{x.
+
+%SA% %H% {hh1361cast{x, {hh745cure disease{x
+</text>
     <text l="ru">%FMT% *%SPELL%* _%VICT%_
 
 Заражение чумой наносит сильные повреждения жертве каждый {hh16тик{x, а также сильно
@@ -53,7 +68,22 @@
 
 %SA% %H% {hh1361колдовать{x, {hh745лечить болезнь{x
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%* _%VICT%_
+
+Зараження чумою завдає сильних пошкоджень жертві кожен {hh16тік{x, а також сильно
+{hh39ослаблює{x її. Жертва не відновлює очки здоров'я та мани, а натомість,
+втрачає їх. Ефект хвороби може сумуватися: при повторному зараженні хвороба
+почне завдавати ще більше шкоди. Високе {hh36тіло{x допомагає боротися
+з хворобою.
+
+Чума дуже швидко поширюється! Жертва заражує всіх, хто знаходиться поруч.
+Заразитися безпосередньо від жертви ти не зможеш, але від заражених нею -- вже так.
+Обережніше з патогенами!..
+
+Загибла від посланої тобою чуми жертва зарахується тобі -- в {hh32ПК{x або в {hh125квестах{x.
+
+%SA% %H% {hh1361чаклувати{x, {hh745лікувати хворобу{x
+</text>
   </help>
   <mana>40</mana>
   <mob>
@@ -61,7 +91,7 @@
   </mob>
   <name l="en">plague</name>
   <name l="ru">чума</name>
-  <name l="ua"></name>
+  <name l="ua">чума</name>
   <spell type="DefaultSpell">
     <damtype>disease</damtype>
     <flags>magic prayer</flags>

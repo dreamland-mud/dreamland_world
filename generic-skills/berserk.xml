@@ -24,22 +24,29 @@
   <command type="DefaultSkillCommand">
     <argtype>undef</argtype>
     <cat>class</cat>
-    <hint l="en"></hint>
+    <hint l="en">(warriors, samurais) go berserk</hint>
     <hint l="ru">(воины, самураи) впасть в берсерк</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(воїни, самураї) впасти в берсерк</hint>
     <name l="en">berserk</name>
     <name l="ru">берсерк</name>
-    <name l="ua"></name>
+    <name l="ua">берсерк</name>
     <position>fight</position>
   </command>
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">defensive fightmaster</group>
   <hard>2</hard>
   <help id="829" level="-1" type="SkillHelp">
-    <keyword l="en"></keyword>
+    <keyword l="en">'berserk rage'</keyword>
     <keyword l="ru">&apos;боевая ярость&apos;</keyword>
-    <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <keyword l="ua">&apos;боева лють&apos;</keyword>
+    <text l="en">%FMT% *rage*
+
+Skilled and fearless warriors can bring themselves into a state of extreme madness and frenzy during combat, known as "berserk rage". They become stronger, but also more vulnerable to enemies - and they gain a surge of health.
+
+The effectiveness of berserk rage increases if you use this skill when severely wounded. The duration of berserk rage is random but depends on your level.
+
+Berserk rage does not work simultaneously with the prayer of {hh619fury{x.
+</text>
     <text l="ru">%FMT% *ярость*
 
 Умелые и бесстрашные воины могут приводить себя во время боя в состояние
@@ -52,7 +59,14 @@
 
 Боевая ярость не работает одновременно с молитвой {hh619неистовства{x.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *лють*
+
+Умілі та безстрашні воїни можуть привести себе під час бою у стан крайнього божевілля і буйства, званого "боева лють". Вони стають сильнішими, але і більш уразливими для ворога - і отримують при цьому приплив здоров'я.
+
+Ефективність боева лють підвищується, якщо використовувати цей навик, будучи важкопораненим. Тривалість дії боева лють випадкова, але залежить від твого рівня.
+
+Боева лють не працює одночасно з молитвою {hh619бурі{x.
+</text>
   </help>
   <mana>40</mana>
   <mob>
@@ -63,6 +77,6 @@
   <move>100</move>
   <name l="en">berserk</name>
   <name l="ru">берсерк</name>
-  <name l="ua"></name>
+  <name l="ua">берсерк</name>
   <raceBonuses registry="race">dwarf duergar urukhai</raceBonuses>
 </skill>

@@ -34,10 +34,14 @@
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">nature</group>
   <help id="643" level="-1" type="SkillHelp">
-    <keyword l="en"></keyword>
+    <keyword l="en">'control weather' 'create weather'</keyword>
     <keyword l="ru">&apos;изменить погоду&apos; &apos;сотворить погоду&apos;</keyword>
-    <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <keyword l="ua">'змінити погоду' 'створити погоду'</keyword>
+    <text l="en">%FMT% *%SPELL%* _better/worse_
+
+This spell changes the current {hh1028weather{x for better (clear sky, sun) or for worse (rain and hurricanes). Some combat spells (for example, {hh650call lightning{x) only work in bad weather.
+
+The chance to change the weather depends on your spell level and the current weather -- for example, improving a thunderstorm with lightning will be more difficult than just a cloudy sky.</text>
     <text l="ru">%FMT% *%SPELL%* _лучше/хуже_
 
 Это заклинание изменяет текущую {hh1028погоду{x к лучшему (ясное небо, солнце) или к
@@ -47,7 +51,11 @@
 Шанс изменить погоду зависит от твоего уровня заклинаний и от текущей погоды --
 например, улучшить грозу с молниями будет сложнее, чем просто облачное небо.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%* _краще/гірше_
+
+Це заклинання змінює поточну {hh1028погоду{x на краще (ясне небо, сонце) або на гірше (дощі та урагани). Деякі бойові заклинання (наприклад, {hh650виклик блискавки{x) працюють лише за поганої погоди.
+
+Шанс змінити погоду залежить від твого рівня заклинань і від поточної погоди -- наприклад, покращити грозу з блискавками буде складніше, ніж просто хмарне небо.</text>
   </help>
   <mana>80</mana>
   <mob>
@@ -55,7 +63,7 @@
   </mob>
   <name l="en">control weather</name>
   <name l="ru">погода</name>
-  <name l="ua"></name>
+  <name l="ua">погода</name>
   <raceBonuses registry="race">&apos;storm giant&apos;</raceBonuses>
   <spell type="DefaultSpell">
     <damtype>none</damtype>

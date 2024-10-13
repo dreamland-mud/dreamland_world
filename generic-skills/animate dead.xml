@@ -22,11 +22,17 @@
   <help id="732" level="-1" type="SkillHelp">
     <extra l="en">&apos;animate undead&apos; &apos;raise dead&apos; zombie</extra>
     <extra l="ru">&apos;оживить труп&apos; &apos;оживленный труп&apos; &apos;поднять труп&apos; зомби</extra>
-    <extra l="ua"></extra>
+    <extra l="ua">&apos;оживити труп&apos; &apos;оживлений труп&apos; &apos;підняти труп&apos; зомбі</extra>
     <keyword l="en">&apos;animate dead&apos;</keyword>
     <keyword l="ru">&apos;оживление мертвеца&apos;</keyword>
-    <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <keyword l="ua">&apos;оживлення мерця&apos;</keyword>
+    <text l="en">%FMT% *%SPELL%* _corpse_
+
+A zombie animated by this spell will {hh15serve{x its new master until death. The health of the zombie depends on the original... hmm... material, while the level of the resulting creature depends on the caster: the higher your {hh2036spell level{x, the higher the zombie's level will be.
+
+The zombie inherits certain skills and characteristics from the original creature, and its overall combat capability and responsiveness to orders improve for followers of the {hh968Queen of Ravens{x -- the orders of everyone else the dull zombie may not always understand.
+
+Traditionally, zombies crave {hh62fresh brains{x the most. A zombie properly fed with brains can recover its strength.</text>
     <text l="ru">%FMT% *%SPELL%* _труп_
 
 Зомби, оживленное с помощью этого заклинания, будет {hh15служить{x своему новому
@@ -42,12 +48,26 @@
 По традиции, зомби больше всего на свете жаждут {hh62свежих мозгов{x.
 Вовремя накормленный мозгами зомби восстанавливает силы.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%* _труп_
+
+Зомбі, оживлене за допомогою цього заклинання, буде {hh15служити{x своєму новому
+господарю до смерті. Здоров'я зомбі залежить від первісного... хм... матеріалу, а
+рівень отриманого створіння залежить від самого чаклуна: чим вищий твій
+{hh2036рівень заклинань{x, тим вищий буде рівень зомбі.
+
+Зомбі переймає певні вміння та характеристики початкового створіння, а його
+загальна боєздатність і відгук на команди покращуються у послідовників
+{hh968Королеви Воронів{x -- команди всіх інших же незрячий зомбі не завжди
+може зрозуміти.
+
+За традицією, зомбі мають найбільшу пристрасть до {hh62свіжих мізків{x.
+Вчасно нагодований мізками зомбі відновлює сили.
+</text>
   </help>
   <mana>100</mana>
   <name l="en">animate dead</name>
   <name l="ru">оживление мертвеца</name>
-  <name l="ua"></name>
+  <name l="ua">оживлення мерця</name>
   <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>magic</flags>

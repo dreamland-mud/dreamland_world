@@ -18,12 +18,12 @@
   <command type="DefaultSkillCommand">
     <argtype>string</argtype>
     <cat></cat>
-    <hint l="en"></hint>
+    <hint l="en">(Knights) summon a squire or friar for assistance</hint>
     <hint l="ru">(Рыцари) вызвать сквайра-оруженосца или монаха на помощь</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(Лицарі) викликати сквайра-оруженосця або монаха на допомогу</hint>
     <name l="en">squire</name>
     <name l="ru">оруженосец</name>
-    <name l="ua"></name>
+    <name l="ua">зброєносець</name>
     <order>player_only</order>
     <position>stand</position>
   </command>
@@ -32,8 +32,27 @@
   <help id="892" level="-1" type="SkillHelp">
     <extra l="en">footman friar</extra>
     <extra l="ru">монах пехотинец</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">монах піхотинець</extra>
+    <text l="en">%FMT% *%SKILL%*
+%FFF% *%SKILL%* {Dfootman{x
+%FFF% *%SKILL%* {Dfriar{x
+
+Summon a squire for the Knight: a warrior-footman or a friar.
+
+In addition to the usual combat skills of a warrior, the footman will try to automatically
+{hh613save{x the master in battle and take the hit. And the friar will try
+to automatically heal all group members from wounds, diseases, and curses.
+
+The strength of the summoned clan creature depends on your {hh3clan rank{x.
+
+{CPROPERTIES{x
+{C%A%{x {hh63Summoned creature{x, must be =re-subordinated= after {hh922exiting{x the world
+{C%A%{x Can be summoned only during the day
+{C%A%{x Summoned for a week
+{C%A%{x Can be equipped partially depending on the type of squire
+{C%A%{x Maximum of one can be controlled, summoned one at a time
+  The total number of {hh15followers{x is also limited -- read {y{hcguide charm{x.
+</text>
     <text l="ru">%FMT% *%SKILL%*
 %FFF% *%SKILL%* {Dпехотинец{x
 %FFF% *%SKILL%* {Dмонах{x
@@ -54,11 +73,30 @@
 {C%A%{x Максимум можно контролировать =одного=, призывается один за раз
   Общее число {hh15последователей{x тоже ограничено -- читай {y{hcсправка очарование{x.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SKILL%*
+%FFF% *%SKILL%* {Dпіхотинець{x
+%FFF% *%SKILL%* {Dмонах{x
+
+Викликає зброєносця для Лицаря: воїна-піхотинця або монаха.
+
+Окрім звичайних бойових умінь воїна, піхотинець намагатиметься автоматично
+{hh613врятувати{x хазяїна у бою та підставити себе під удар. А монах намагатиметься
+автоматично зцілити всіх членів групи від ран, хвороб та проклять.
+
+Сила призваного кланового створіння залежить від твого {hh3кланового рангу{x.
+
+{CВЛАСТИВОСТІ{x
+{C%A%{x {hh63Призване створіння{x, треба =перепідпорядковувати= після {hh922виходу{x з світу
+{C%A%{x Можна викликати тільки вдень
+{C%A%{x Викликається на тиждень
+{C%A%{x Можна одягнути частково в залежності від типу зброєносця
+{C%A%{x Максимум можна контролювати =одного=, викликається один за раз
+  Загальна кількість {hh15послідовників{x теж обмежена -- читай {y{hcдовідка чарівність{x.
+</text>
   </help>
   <mana>100</mana>
   <move>20</move>
   <name l="en">squire</name>
   <name l="ru">оруженосец</name>
-  <name l="ua"></name>
+  <name l="ua">зброєносець</name>
 </skill>

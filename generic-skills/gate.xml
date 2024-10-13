@@ -26,10 +26,34 @@
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">transportation</group>
   <help id="803" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">gate spell</extra>
     <extra l="ru">гейт ворота &apos;заклинание врат&apos;</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">гейт ворота &apos;заклинання врат&apos;</extra>
+    <text l="en"> %FMT% *%SPELL%* _%CHAR%_
+
+The gate spell is a powerful transportation spell that opens a portal
+between you and another character somewhere in the world. Your {hh15favorite animal{x may pass through the portal,
+but not your {hh1378group{x members or charmed ones.
+The probability of success is influenced by the target's {hh2035spell protection{x and
+{hh101resistance{x or vulnerability to summoning.
+
+{GYOU CAN TRANSPORT TO:{x
+{G%A% {xYour {hh3clanmates{x (except non-clan) and groupmates
+{G%A% {xAny of your charmed creatures, including a pet
+{G%A% {xPlayers within {hh32PK range{x, under the condition that:
+    {g%A%{x If they have *no-summon mode* on, transport works only within one zone
+    {g%A%{x If they have *no-summon mode* off, transport works to any accessible zone
+{G%A% {xPlayers outside PK if they have *no-summon mode* off.
+
+{RYOU CANNOT TRANSPORT TO:{x
+{R%A% {xFrom or into zones/areas {hh86inaccessible{x to transportation spells: cursed,
+  safe, private, summon-prohibited, etc.
+{R%A% {xInto someone else's clan hall or {hh50mansion{x
+{R%A% {xUnder the effect of {hh2146adrenaline{x ({BV{x) in PK
+{R%A% {xTo a target with a {hh570mental block{x or immunity to transportation spells
+{R%A% {xTo a target older than your {hh2036spell level{x (except charmed ones) or in combat
+{R%A% {xIf you have {hh548curse{x
+</text>
     <text l="ru">%FMT% *%SPELL%* _%CHAR%_
 
 Заклинание врат -- это мощное транспортное заклинание, которое открывает врата
@@ -55,12 +79,36 @@
 {R%A% {xна цель старше твоего {hh2036уровня заклинаний{x (кроме очаров) или в бою
 {R%A% {xесли на тебе {hh548проклятие{x
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%* _%CHAR%_
+
+Заклинання врат -- це потужне транспортне заклинання, яке відкриває врата
+між тобою та іншим персонажем десь у світі. Через утворені врата
+може перенестися твоє {hh15улюблене тварина{x, але не члени твоєї {hh1378групи{x або очари.
+На ймовірність спрацьовування впливає {hh2035захист від заклинань{x у цілі та
+{hh101опір{x або уразливість до заклинань виклику.
+
+{GМОЖНА ПЕРЕНЕСТИСЯ:{x
+{G%A% {xна своїх {hh3кланових{x (за винятком некланових) та співгрупників
+{G%A% {xна будь-якого з твоїх очар, включаючи улюбленця
+{G%A% {xна гравців у межах {hh32інтервалу ПК{x, при цьому:
+    {g%A%{x якщо у них увімкнено *режим не закликати*, переміщення можливе лише в межах однієї зони
+    {g%A%{x якщо у них вимкнено *режим не закликати*, переміщення можливе будь-якою доступною зоною
+{G%A% {xна гравців поза ПК, якщо у них вимкнено *режим не закликати*.
+
+{RНЕЛЬЗЯ ПЕРЕНЕСТИСЬ:{x
+{R%A% {xз або в зони/території, {hh86недоступні{x для транспортних заклинань: прокляті,
+  безпечні, приватні, з забороною виклику й так далі
+{R%A% {xв чужий кланхолл або {hh50особняк{x
+{R%A% {xпід впливом {hh2146адреналіну{x ({BV{x) в ПК
+{R%A% {xна ціль із {hh570ментальним блоком{x або імунітетом до транспортних заклинань
+{R%A% {xна ціль старшу за твій {hh2036рівень заклинань{x (крім очар) або у бою
+{R%A% {xякщо на тобі {hh548прокляття{x
+</text>
   </help>
   <mana>80</mana>
   <name l="en">gate</name>
   <name l="ru">врата</name>
-  <name l="ua"></name>
+  <name l="ua">врата</name>
   <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>magic prayer</flags>

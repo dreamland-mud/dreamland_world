@@ -28,7 +28,7 @@
   <help id="657" level="-1" type="SkillHelp">
     <extra l="en">critical&apos; cure &apos;cure light&apos; &apos;cure serious&apos;</extra>
     <extra l="ru">&apos;лечить раны&apos; вылечить</extra>
-    <extra l="ua"></extra>
+    <extra l="ua">&apos;лікувати рани&apos; зцілити</extra>
     <text l="en"></text>
     <text l="ru">%FMT% *%SPELL%* 
 %FMT% *%SPELL%* _%CHAR%_
@@ -40,7 +40,16 @@
 
 %SA% %H% {hh1361колдовать{x, {hh637высшее лечение{x
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%* 
+%FMT% *%SPELL%* _%CHAR%_
+
+Здатність лікувати рани за допомогою молитви доступна багатьом -- від священників до
+паладинів. Кількість відновлених таким чином очок здоров'я плавно зростає
+з рівнем зцілювача, але що потужніша ставатиме молитва, тим більше на
+неї доведеться витрачати енергії.
+
+%SA% %H% {hh1361колдовать{x, {hh637високе лікування{x
+</text>
   </help>
   <mana>10</mana>
   <mob>
@@ -48,7 +57,7 @@
   </mob>
   <name l="en">heal</name>
   <name l="ru">лечение</name>
-  <name l="ua"></name>
+  <name l="ua">лікування</name>
   <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>prayer</flags>

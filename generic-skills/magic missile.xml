@@ -26,10 +26,20 @@
   <dammsg mg="f">волшебная стрела</dammsg>
   <group registry="skillGroup">combat</group>
   <help id="663" level="-1" type="SkillHelp">
-    <keyword l="en"></keyword>
+    <keyword l="en">'magic missiles'</keyword>
     <keyword l="ru">&apos;волшебные стрелы&apos;</keyword>
-    <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <keyword l="ua">'чарівні стріли'</keyword>
+    <text l="en">%FMT% *%SPELL%* _%VICT%_
+
+Combat magic that strikes the victim with a stream of magic missiles. This is one of
+the first spells that beginning sorcerers learn. The number of missiles increases
+with the level of the spell cast. The energy charge of each subsequent missile 
+slightly weakens, and is halved if the victim succeeds in a {hh2035spell save{x.
+
+The {hh616shield{x spell protects against magic missiles.
+
+%SA% %H% {hh1361cast{x
+</text>
     <text l="ru">%FMT% *%SPELL%* _%VICT%_
 
 Боевая магия, поражающая жертву потоком волшебных стрел. Это одно из самых
@@ -42,7 +52,17 @@
 
 %SA% %H% {hh1361колдовать{x
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%* _%VICT%_
+
+Бойова магія, яка вражає жертву потоком чарівних стріл. Це одне з перших 
+заклинань, які освоюють починаючі чаклуни. Кількість стріл зростає з рівнем 
+вимовленого заклинання. Енергетичний заряд кожної наступної стріли дещо 
+слабшає і зменшується удвічі, якщо жертва пройшла {hh2035ряткидок{x від заклинань.
+
+Заклинання {hh616щита{x захищає від чарівних стріл.
+
+%SA% %H% {hh1361чаклувати{x
+</text>
   </help>
   <mana>10</mana>
   <mob>
@@ -50,7 +70,7 @@
   </mob>
   <name l="en">magic missile</name>
   <name l="ru">волшебная стрела</name>
-  <name l="ua"></name>
+  <name l="ua">чарівна стріла</name>
   <spell type="DefaultSpell">
     <damtype>energy</damtype>
     <flags>magic</flags>

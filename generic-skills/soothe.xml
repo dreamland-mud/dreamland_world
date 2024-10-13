@@ -21,19 +21,25 @@
     <argtype>char_fight</argtype>
     <cat>class</cat>
     <extra>nodungeon</extra>
-    <hint l="en"></hint>
+    <hint l="en">(rangers, druids) calm aggressive animals</hint>
     <hint l="ru">(рейнджеры, друиды) успокоить агрессивных животных</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(рейнджери, друїди) заспокоїти агресивних тварин</hint>
     <name l="en">soothe</name>
     <name l="ru">укротить</name>
-    <name l="ua"></name>
+    <name l="ua">вгамувати</name>
     <order>player_only</order>
     <position>fight</position>
   </command>
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">nature</group>
   <help id="549" level="-1" type="SkillHelp">
-    <text l="en"></text>
+    <text l="en">%FMT% *%SKILL%* _%VICT%_
+
+Experienced rangers and druids can influence the mind of {hh998aggressive{x creatures,
+taming them and removing aggressiveness. It is similar in effect to the prayer of {hh851calmness{x.
+It will not affect intelligent creatures or, on the contrary, completely mindless ones.
+This skill is not available to evil characters.
+</text>
     <text l="ru">%FMT% *%SKILL%* _%VICT%_
 
 Опытные рейнджеры и друиды могут воздействовать на мозг {hh998агрессивных{x существ,
@@ -41,11 +47,17 @@
 Не подействует на разумных существ или, наоборот, на совершенно безмозглых.
 Это умение недоступно злым персонажам.
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SKILL%* _%VICT%_
+
+Досвідчені рейнджери і друїди можуть впливати на мозок {hh998агресивних{x істот,
+вгамовуючи їх і знімаючи агресивність. За дією схоже на молитву {hh851спокою{x.
+Не вплине на розумних істот або, навпаки, на повністю безмозких.
+Ця навичка недоступна злим персонажам.
+</text>
   </help>
   <mana>100</mana>
   <move>100</move>
   <name l="en">soothe</name>
   <name l="ru">укротить</name>
-  <name l="ua"></name>
+  <name l="ua">вгамувати</name>
 </skill>

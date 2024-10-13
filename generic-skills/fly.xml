@@ -34,8 +34,26 @@
   <help id="575" level="-1" type="SkillHelp">
     <extra l="en">flydown flyup</extra>
     <extra l="ru">летать левитация левитировать нелетать приземлиться приземляться взлетать взлететь</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">літати левітація левітувати нелітати приземлитися приземлятися злітати злетіти</extra>
+    <text l="en">%FMT% *%SPELL%* _%CHAR%_
+
+The spell or prayer of flight allows reaching various places where walking is not 
+so easy. Additionally, a flying adventurer spends fewer {hh60movement points{x 
+than walking or riding {hh931horseback{x.
+
+The state of flight imposes certain restrictions on battles. 
+Some spells (such as {hh796hurricane{x) will hit flying ones much harder. 
+Some skills (such as {hh783mud throw{x or {hh649shoulder throw{x) won't work 
+during flight -- one must first land.
+
+%FMT% *take off*
+%FFF% *fly up*
+
+%FMT% *not fly*
+%FFF% *fly down*
+
+If you have been enchanted with a flight spell, or your race allows you to fly, 
+you can take off and land whenever you please.</text>
     <text l="ru">%FMT% *%SPELL%* _%CHAR%_
 
 Заклинание или молитва полета позволяет попадать в разные места, куда пешком так
@@ -56,10 +74,28 @@
 Если на тебя было наложено заклинание полета, или раса позволяет тебе летать,
 ты можешь взлетать и опускаться, когда тебе заблагорассудится.
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">%FMT% *%SPELL%* _%CHAR%_
+
+Заклинання або молитва польоту дозволяє потрапляти в різні місця, куди пішки так 
+просто не дійти. Додатково, літаючий пригодник витрачає менше {hh60очок руху{x, 
+ніж той, хто йде або їде {hh931верхи{x.
+
+Стан польоту накладає певні обмеження на бої. 
+Деякі заклинання (наприклад, {hh796ураган{x) вдарять літаючих значно сильніше. 
+Деякі вміння (наприклад, {hh783кидання багнюки{x або {hh649кидання через плече{x) не працюють 
+під час польоту -- доведеться спочатку приземлитися.
+
+%FMT% *злетіти*
+%FFF% *летіти вгору*
+
+%FMT% *нелітати*
+%FFF% *летіти вниз*
+
+Якщо на тебе було накладено заклинання польоту, або раса дозволяє тобі літати,
+ти можеш злітати і опускатися, коли захочеш.</text>
+    <title l="en">Flight Spells and Effects</title>
     <title l="ru">Заклинания и эффект полета</title>
-    <title l="ua"></title>
+    <title l="ua">Заклинання і ефекти польоту</title>
   </help>
   <mana>40</mana>
   <mob>
@@ -67,7 +103,7 @@
   </mob>
   <name l="en">fly</name>
   <name l="ru">полет</name>
-  <name l="ua"></name>
+  <name l="ua">політ</name>
   <raceBonuses registry="race">arial &apos;storm giant&apos; faery &apos;cloud giant&apos;</raceBonuses>
   <spell type="DefaultSpell">
     <damtype>none</damtype>

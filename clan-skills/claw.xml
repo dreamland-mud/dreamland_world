@@ -14,19 +14,25 @@
   <command type="DefaultSkillCommand">
     <argtype>char_fight</argtype>
     <cat>clan</cat>
-    <hint l="en"></hint>
+    <hint l="en">Claw</hint>
     <hint l="ru">(львы) рассечь врага когтями</hint>
-    <hint l="ua"></hint>
+    <hint l="ua">(леви) розірвати ворога кігтями</hint>
     <name l="en">claw</name>
     <name l="ru">когти</name>
-    <name l="ua"></name>
+    <name l="ua">кіготь</name>
     <order>fight_only</order>
     <position>fight</position>
   </command>
   <dammsg mg="p">когти</dammsg>
   <group registry="skillGroup">clan</group>
   <help id="910" level="-1" type="SkillHelp">
-    <text l="en"></text>
+    <text l="en">%FMT% *%SKILL%*
+
+Using this fearsome combat skill, a clawed character can rip open an enemy's belly and spill their guts, provided they have them.
+The success of the skill depends on the strength and agility of the characters, as well as other factors. And when your character is injured, despair adds extra strength to you.
+
+Upon success, the skill can not only deal enormous damage but also knock the enemy {hh120on their back{x or cause the wound to {hh541fester{x. And if it fails, you can fall to the ground yourself!
+</text>
     <text l="ru">%FMT% *%SKILL%*
 
 Используя этот страшный боевой навык, когтистый персонаж может вспороть брюхо
@@ -38,11 +44,21 @@
 противника {hh120навзничь{x или заставить рану {hh541гноиться{x. А при неудаче опрокинуться
 наземь можно и самому!
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SKILL%*
+
+Використовуючи цей страшний бойовий навик, кігтистий персонаж може розпороти живіт
+ворогу і випустити кишки -- звичайно, якщо вони у ворога є.
+Успіх навику залежить від сили і спритності персонажів, а також інших факторів.
+А коли твій персонаж поранений, відчай додає тобі додаткові сили.
+
+При удачі навик може не тільки завдати величезні ушкодження, але і повалити
+ворога {hh120на спину{x або змусити рану {hh541гноїтися{x. А при невдачі повалитися
+на землю можна і самому!
+</text>
   </help>
   <mana>100</mana>
   <move>80</move>
   <name l="en">claw</name>
   <name l="ru">когти</name>
-  <name l="ua"></name>
+  <name l="ua">кіготь</name>
 </skill>

@@ -60,10 +60,23 @@
   <group registry="skillGroup">defensive</group>
   <hard>6</hard>
   <help id="754" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">dodging evasion dodge skip</extra>
     <extra l="ru">уклонение увёртка увернуться увертка уворачиваться уворот</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">уникнення ухиляння ухилитися ухил ухилятися ухил</extra>
+    <text l="en">The ability to dodge attacks during combat.
+
+The chance of success depends on the skill level, {hh28archetype{x, size and agility of the fighters,
+terrain, {hh122weapon type{x of the attacker, and many other factors. Dodging attempts
+consume steps. When the steps run out, the skill no longer works.
+
+In rare cases, the skill can lead to a critical outcome:
+{G%A% Critical success:{x the attacker falls with a possible delay
+{R%A% Critical failure:{x you fall with a possible delay
+Of course, these critical outcomes do not affect lucky hobbits.
+
+This skill also helps occasionally dodge some combat
+spells -- those that have any flying projectile ({hh625fireball{x,
+{hh663magic missile{x, and so on) or {hh218throwing projectiles{x.</text>
     <text l="ru">Умение уворачиваться от атак во время боя.
 
 Шанс успеха зависит от прокачки умения, {hh28архетипа{x, размера и ловкости бойцов,
@@ -79,7 +92,20 @@
 заклятий -- тех, в которых есть какой-либо летящий снаряд ({hh625огненный шар{x,
 {hh663волшебная стрела{x и так далее) или {hh218метательных снарядов{x.
 </text>
-    <text l="ua"></text>
+    <text l="ua">Здатність ухилятися від атак під час бою.
+
+Шанс на успіх залежить від рівня вміння, {hh28архетипу{x, розміру та спритності бійців,
+місцевості, {hh122типу зброї{x нападника та багатьох інших факторів. Спроби ухилення
+забирають кроки. Коли кроки закінчуються, навик не працює.
+
+У рідкісних випадках навик може призвести до критичного результату:
+{G%A% Критичний успіх:{x нападник падає з можливою затримкою
+{R%A% Критична невдача:{x ти падаєш з можливою затримкою
+Звичайно, ці критичні результати не діють на щасливих хоббітів.
+
+Цей навик також допомагає іноді дивом ухилятися від деяких бойових
+заклять -- тих, у яких є якийсь летючий снаряд ({hh625вогняна куля{x,
+{hh663чарівна стріла{x і так далі) або {hh218метальних снарядів{x.</text>
   </help>
   <mob>
     <dice>2</dice>
@@ -88,6 +114,6 @@
   </mob>
   <name l="en">dodge</name>
   <name l="ru">уворот</name>
-  <name l="ua"></name>
+  <name l="ua">ухилення</name>
   <raceBonuses registry="race">felar</raceBonuses>
 </skill>

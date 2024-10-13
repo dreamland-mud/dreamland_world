@@ -21,10 +21,17 @@
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">healing</group>
   <help id="721" level="-1" type="SkillHelp">
-    <extra l="en"></extra>
+    <extra l="en">'group heal' 'heal group'</extra>
     <extra l="ru">&apos;групповое лечение&apos; &apos;лечение группы&apos;</extra>
-    <extra l="ua"></extra>
-    <text l="en"></text>
+    <extra l="ua">'групове лікування' 'лікування групи'</extra>
+    <text l="en">%FMT% *%SPELL%*
+
+Experienced clerics and paladins have the skill to heal all their group members at once.
+A healing prayer will be chosen from those available: it could be masterful healing,
+greater healing, or just healing. Also, after this prayer, the strength of the group members will be restored.
+
+%SA% %H% {hh1361cast{x, {hh736remove fatigue{x, {hh637greater heal{x
+</text>
     <text l="ru">%FMT% *%SPELL%*
 
 Опытные клерики и паладины обладают умением лечить сразу всех членов своей группы.
@@ -33,7 +40,14 @@
 
 %SA% %H% {hh1361колдовать{x, {hh736снять усталость{x, {hh637высшее лечение{x
 </text>
-    <text l="ua"></text>
+    <text l="ua">%FMT% *%SPELL%*
+
+Досвідчені клирики та паладини мають уміння лікувати одразу всіх членів своєї групи.
+Лікувальна молитва буде обрана з числа доступних: це може бути майстерне лікування,
+вище лікування або просто лікування. Також після цієї молитви у соспілчан відновляться сили.
+
+%SA% %H% {hh1361чаклувати{x, {hh736зняти втому{x, {hh637вище лікування{x
+</text>
   </help>
   <mana>80</mana>
   <mob>
@@ -41,7 +55,7 @@
   </mob>
   <name l="en">group heal</name>
   <name l="ru">излечить группу</name>
-  <name l="ua"></name>
+  <name l="ua">лікувати групу</name>
   <spell type="DefaultSpell">
     <damtype>none</damtype>
     <flags>prayer</flags>

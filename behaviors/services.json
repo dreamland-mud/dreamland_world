@@ -18,12 +18,16 @@
  
  // blacksmith services
  { "name": "repair", "nameRus": "починк|а|и|е|у|ой|е", "nameUkr": "ремонт||а|у||ом|і", "price_gold": -1, "price_qp": 0, "spell": "", "behaviors": "blacksmith", "target": "object", "npc_ok": 1}, 
- { "name": "horseshoe", "nameRus": "подков|ы||ам|ы|ами|ах", "nameUkr": "підков|и||ам|и|ами|ах", "price_gold": -1, "price_qp": 0, "spell": "", "behaviors": "blacksmith", "target": "object", "npc_ok": 1}, 
- { "name": "corrosion", "nameRus": "коррози|я|и|и|ю|ей|и", "nameUkr": "корозі|я|ї|ї|ю|єю|ї", "price_gold": 0, "price_qp": 100, "spell": "mend", "behaviors": "blacksmith", "target": "object", "npc_ok": 1}, 
+ { "name": "horseshoe", "nameRus": "подков|ы||ам|ы|ами|ах", "nameUkr": "підков|и||ам|и|ами|ах", "price_gold": -1, "price_qp": 0, "spell": "", "behaviors": "blacksmith", "target": "char", "npc_ok": 1}, 
 
  // enchanter services
- { "name": "burnproof", "nameRus": "огнеупорност|ь|и|и|ь|ью|и", "nameUkr": "вогнетривк|ість|ості|ості|ість|істю|ості", "price_gold": 0, "price_qp": 400, "spell": "burnproof", "behaviors": "enchanter", "target": "object", "npc_ok": 0}, 
- { "name": "heatproof", "nameRus": "термоустойчивост|ь|и|и|ь|ью|и", "nameUkr": "термостійк|ість|ості|ості|ість|істю|ості", "price_gold": 0, "price_qp": 2000, "spell": "protection heat", "behaviors": "enchanter", "target": "object", "npc_ok": 0}, 
- { "name": "disenchant", "nameRus": "расчаровани|е|я|ю|е|ем|и", "nameUkr": "розчаруванн|я|я|ю|я|ям|і", "price_gold": 0, "price_qp": 500, "spell": "", "behaviors": "enchanter", "target": "object", "npc_ok": 0}
+ { "name": "mend", "nameRus": "исправлени|е|я|ю|е|ем|и", "nameUkr": "виправленн|я|я|ю|я|ям|і", "price_gold": 0, "price_qp": 150, "spell": "mend", "behaviors": "enchanter", "target": "object", "npc_ok": 0}, 
+ { "name": "fireproof", "nameRus": "огнеупорност|ь|и|и|ь|ью|и", "nameUkr": "вогнетривк|ість|ості|ості|ість|істю|ості", "price_gold": 0, "price_qp": 400, "spell": "fireproof", "behaviors": "enchanter", "target": "object", "npc_ok": 0}, 
+ { "name": "heatproof", "nameRus": "термоустойчивост|ь|и|и|ь|ью|и", "nameUkr": "термостійк|ість|ості|ості|ість|істю|ості", "price_gold": 0, "price_qp": 1000, "spell": "protection heat", "behaviors": "enchanter", "target": "object", "npc_ok": 0}, 
+ { "name": "recharge", "nameRus": "перезарядк|а|и|е|у|ой|е", "nameUkr": "перезаряд|ка|ки|ці|ку|ою|ці", "price_gold": 0, "price_qp": 300, "spell": "recharge", "behaviors": "enchanter", "target": "object", "npc_ok": 0},
 
+ // sage services
+ { "name": "identify", "nameRus": "опознани|е|я|ю|е|ем|и", "nameUkr": "упізнанн|я|я|ю|я|ям|і", "price_gold": 40, "price_qp": 0, "spell": "identify", "behaviors": "sage", "target": "object", "npc_ok": 0}, 
+ { "name": "locate", "nameRus": "локатор||а|у||ом|е", "nameUkr": "локатор||а|у||ом|і", "price_gold": 200, "price_qp": 0, "spell": "", "behaviors": "sage", "target": "string", "npc_ok": 0} 
+ 
 ]

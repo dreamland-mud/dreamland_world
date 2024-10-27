@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
+  <aliases l="en"></aliases>
+  <aliases l="ru">навыки</aliases>
+  <aliases l="ua">вміння</aliases>
   <cat>learn</cat>
   <extra>keep_hide ghost afk</extra>
   <help id="1352" labels="skill" level="-1" ref="spells" type="CommandHelp">
-    <extra l="en">'skills all' 'spells all'</extra>
-    <extra l="ru">'активные умения' навыки 'пассивные умения' список умений 'умения все' 'заклинания все'</extra>
-    <extra l="ua">'активні вміння' навички 'пасивні вміння' список вмінь 'вміння всі' 'заклинання всі'</extra>
+    <extra l="en">&apos;skills all&apos; &apos;spells all&apos;</extra>
+    <extra l="ru">&apos;активные умения&apos; навыки &apos;пассивные умения&apos; список умений &apos;умения все&apos; &apos;заклинания все&apos;</extra>
+    <extra l="ua">&apos;активні вміння&apos; навички &apos;пасивні вміння&apos; список вмінь &apos;вміння всі&apos; &apos;заклинання всі&apos;</extra>
     <text l="en">All abilities are divided into =spells= and =skills=.
 Your character can possess many abilities depending on their {hh28class{x, {hh24race{x,
 {hh3clan{x, or additional {hh242profession{x.
@@ -24,9 +27,9 @@ By contrast, passive skills work on their own if they are sufficiently learned. 
 Show only active skills (commands) or only passive ones.
 
 {CSKILL DEVELOPMENT{x
-Most skills become available at a certain {hh14level{x and need to be {hh1359practiced{x. Don't confuse practices with {hh1353training{x -- these are needed for developing your {hh41attributes{x.
+Most skills become available at a certain {hh14level{x and need to be {hh1359practiced{x. Don&apos;t confuse practices with {hh1353training{x -- these are needed for developing your {hh41attributes{x.
 
-In addition to the {hh1359skill proficiency{x percentage (leveling), which is achieved through practice and skill use, you will see the skill's efficiency percentage. For example, if you see something like {cbackstab{x {C100{x({x65{x) -- it means the backstab skill is learned 100%, but for some reason, it only works at 65%. The opposite can also be true: the skill is not yet practiced, but already works at 100%. This can be due to some powerful artifacts, divine blessings or curses, {hh120shock{x state, and other factors.
+In addition to the {hh1359skill proficiency{x percentage (leveling), which is achieved through practice and skill use, you will see the skill&apos;s efficiency percentage. For example, if you see something like {cbackstab{x {C100{x({x65{x) -- it means the backstab skill is learned 100%, but for some reason, it only works at 65%. The opposite can also be true: the skill is not yet practiced, but already works at 100%. This can be due to some powerful artifacts, divine blessings or curses, {hh120shock{x state, and other factors.
 
 {COTHER FILTERS{x
 %FMT% *skills all* 
@@ -120,7 +123,7 @@ Sorts the list by level, name, or percentage of leveling.</text>
 Показати лише активні навички (команди) або тільки пасивні.
 
 {CРОЗВИТОК ВМІНЬ{x
-Більшість вмінь з'являються на певному {hh14рівні{x і їх потрібно {hh1359практикувати{x.
+Більшість вмінь з&apos;являються на певному {hh14рівні{x і їх потрібно {hh1359практикувати{x.
 Не плутай практики з {hh1353тренуваннями{x -- ці потрібні для розвитку твоїх {hh41параметрів{x.
 
 Окрім відсотка {hh1359володіння вмінням{x (прокачування), який досягається практикою
@@ -136,16 +139,16 @@ Sorts the list by level, name, or percentage of leveling.</text>
 Список абсолютно всіх вмінь, які ти коли-небудь зможеш вивчити.
 
 %FMT% *%CMD%* _рівень1_ _рівень2_
-Показує всі вміння, які з'являються з рівня1 по рівень2.
+Показує всі вміння, які з&apos;являються з рівня1 по рівень2.
 
 %FMT% *%CMD%* _рівень_ 
-Показує всі вміння, які з'являються саме на цьому рівні.
+Показує всі вміння, які з&apos;являються саме на цьому рівні.
 
-%FMT% *%CMD%* _ім'я групи_
+%FMT% *%CMD%* _ім&apos;я групи_
 Показує список доступних вмінь цієї групи. 
 
-%FMT% *%CMD%* *сортувати* *ім'я*|*рівень*|*вивчено*
-Сортує список за рівнем, ім'ям або відсотком прокачування.</text>
+%FMT% *%CMD%* *сортувати* *ім&apos;я*|*рівень*|*вивчено*
+Сортує список за рівнем, ім&apos;ям або відсотком прокачування.</text>
     <title l="en">{CSkills of the character{x and their development</title>
     <title l="ru">{CУмения персонажа{x и их развитие</title>
     <title l="ua">{CВміння персонажа{x і їх розвиток</title>
@@ -155,7 +158,7 @@ Sorts the list by level, name, or percentage of leveling.</text>
   <hint l="ua">список усіх доступних вмінь</hint>
   <name l="en">skills</name>
   <name l="ru">умения</name>
-  <name l="ua">вміння</name>
+  <name l="ua">навички</name>
   <order>player_only</order>
   <position>dead</position>
 </Command>

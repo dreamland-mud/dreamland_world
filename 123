@@ -1,0 +1,177 @@
+sed  -i '' -e 's/([A-Za-z\+ ]*,\([А-Яа-я\+ ]*\))/\1/g'
+
+sed -i '' -e 's#{[Ll][Ee][^{]*{[Ll][Rr]\([^{]*\){lx#\1#g' */*xml */*/*xml
+sed -i '' -e 's#{[Ll][rR]\([^{]*\){[Ll][eE][^{]*{lx#\1#g' */*xml */*/*xml
+sed -i '' -e 's#{[Ll][Ee][^{]*{[Ll][Rr]\([^{]*\){x#\1{x#g' */*xml */*/*xml
+sed -i '' -e 's#{[Ll][rR]\([^{]*\){[Ll][eE][^{]*{x#\1{x#g' */*xml */*/*xml
+
+
+sed -i '' -e 's#{[Ll][eE][^{]*{lx##g' */*xml */*/*xml
+sed -i '' -e 's#{[Ll][eE][^{]*{x##g' */*xml */*/*xml
+
+sed -i '' -e 's#{[Ll][rR]\([^{]*\){lx#\1#g' */*xml */*/*xml
+sed -i '' -e 's#{[Ll][rR]\([^{]*\){x#\1{x#g' */*xml */*/*xml
+
+sed -i '' -e 's/\[(LAWS,кодекс)\]/\{hh1529кодекс{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(affects,эффекты)\]/\{hh997эффекты{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(ahenn,ахэнн)\]/\{hh2040ахэнн{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(altar,алтарь)\]/\{hh1375алтарь{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(ambush,засада)\]/\{hh689засада{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(ancient languages,древние языки)\]/\{hh234древние языки{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(arcadian,аркади)\]/\{hh2041аркади{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(area quest,задания зон)\]/\{hh124задания зон{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(armor,броня)\]/\{hh556броня{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(attract,привлечь)\]/\{hh989привлечь{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(autoassist,автопомощь)\]/\{hh1087автопомощь{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(autosac,автожертва)\]/\{hh1087автожертва{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(bash,сбить)\]/\{hh676сбить{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(battlerager tournament,турнир ярости)\]/\{hh1475турнир ярости{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(bite,кусать)\]/\{hh626кусать{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(blindness,слепота)\]/\{hh831слепота{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(bloodlet,кровопускание)\]/\{hh539кровопускание{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(brief,кратко)\]/\{hh1088кратко{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(build note,заявка на строительство)\]/\{hh51заявка на строительство{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(build price,цены на строительство)\]/\{hh50цены на строительство{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(building,застройка)\]/\{hh50застройка{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(building,строительство)\]/\{hh50строительство{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(butcher,разделать)\]/\{hh723разделать{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(calendar,календарь)\]/\{hh1027календарь{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(card vision,видения картежника)\]/\{hh521видения картежника{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(cast,колдовать)\]/\{hh1361колдовать{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(channels,каналы)\]/\{hh1059каналы{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(characters,существа)\]/\{hh2142существа{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(clan price,клановые цены)\]/\{hh2клановые цены{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(clan prices,клановые цены)\]/\{hh2клановые цены{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(colors,цвета)\]/\{hh43цвета{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(command separator,разделитель команд)\]/\{hh17разделитель команд{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(commands,команды)\]/\{hh1079команды{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(config,режим)\]/\{hh1087режим{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(confirm,подтверждение)\]/\{hh1071подтверждение{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(constitution,сложение)\]/\{hh36сложение{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(contact,контакт)\]/\{hh66контакт{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(control undead,подчинение нежити)\]/\{hh559подчинение нежити{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(credits,благодарности)\]/\{hh1010благодарности{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(cure blindness,лечить слепоту)\]/\{hh573лечить слепоту{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(cure disease,лечить болезнь)\]/\{hh745лечить болезнь{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(dagger,кинжал)\]/\{hh681кинжал{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(demand,требовать)\]/\{hh1000требовать{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(detect hide,приглядеться)\]/\{hh540приглядеться{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(dexterity,ловкость)\]/\{hh37ловкость{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(dodge,увертка)\]/\{hh754увертка{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(dreams,сны)\]/\{hh2045сны{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(drink,пить)\]/\{hh1074пить{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(dual backstab,двойной удар в спину)\]/\{hh788двойной удар в спину{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(dual,вторичное)\]/\{hh752вторичное{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(eat,есть)\]/\{hh1074есть{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(enter,войти)\]/\{hh1016войти{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(envenom,отравить)\]/\{hh789отравить{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(equipment,снаряжение)\]/\{hh1015снаряжение{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(escape,побег)\]/\{hh832побег{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(exits,выходы)\]/\{hh1021выходы{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(farsight,дальнее зрение)\]/\{hh799дальнее зрение{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(find object,найти предмет)\]/\{hh885найти предмет{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(flee,сбежать)\]/\{hh1025сбежать{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(gate,врата)\]/\{hh803врата{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(get,взять)\]/\{hh1024взять{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(golden eye,глаз-алмаз)\]/\{hh634глаз-алмаз{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(gtell,гговорить)\]/\{hh1379гговорить{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(guilds,гильдии)\]/\{hh44гильдии{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(heal,лечение)\]/\{hh657лечение{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(help,справка)\]/\{hh995справка{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(homerecall,домой)\]/\{hh1347домой{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(items,предметы)\]/\{hh65предметы{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(katana,катана)\]/\{hh628катана{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(key forgery,подделка ключей)\]/\{hh612подделка ключей{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(lash,хлестать)\]/\{hh818хлестать{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(leadership,лидерство)\]/\{hh737лидерство{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(limited,лимиты)\]/\{hh1051лимиты{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(liquids,жидкости)\]/\{hh1075жидкости{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(locate object,поиск предмета)\]/\{hh707поиск предмета{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(magic items,волшебные предметы)\]/\{hh121волшебные предметы{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(magical items,волшебные предметы)\]/\{hh121волшебные предметы{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(make arrow,изготовить стрелы)\]/\{hh537изготовить стрелы{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(make bow,изготовить лук)\]/\{hh850изготовить лук{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(marriage,брак)\]/\{hh1349брак{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(master healing,мастерское лечение)\]/\{hh698мастерское лечение{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(mastering sword,мастер меча)\]/\{hh802мастер меча{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(mkey,ключи)\]/\{hh1347ключи{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(movement,движение)\]/\{hh1022движение{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(movetype,ползти)\]/\{hh18ползти{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(mysocial,мойсоциал)\]/\{hh1095мойсоциал{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(nexus,нексус)\]/\{hh775нексус{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(nohelp,нетсправки)\]/\{hh996нетсправки{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(note list,письмо список)\]/\{hh20письмо список{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(observation,диагностика)\]/\{hh550диагностика{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(open,открыть)\]/\{hh1013открыть{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(owner,персональные вещи)\]/\{hh57персональные вещи{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(parameters,статы)\]/\{hh41статы{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(parameters,характеристики)\]/\{hh41характеристики{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(parry,парирование)\]/\{hh576парирование{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(path find,поиск пути)\]/\{hh945поиск пути{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(peek card,заглянуть в карту)\]/\{hh525заглянуть в карту{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(personal shop,персональный магазин)\]/\{hh55персональный магазин{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(pick lock,взлом замка)\]/\{hh714взлом замка{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(playerkilling,смертоубийство)\]/\{hh32смертоубийство{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(pockets,карманы)\]/\{hh19карманы{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(portal,портал)\]/\{hh838портал{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(pour,вылить)\]/\{hh1075вылить{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(practice,практиковать)\]/\{hh1359практиковать{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(pretitle,претитул)\]/\{hh1006претитул{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(prevent,предотвращение)\]/\{hh902предотвращение{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(prompt,подсказка)\]/\{hh1012подсказка{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(put,положить)\]/\{hh1024положить{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(quenia,квенья)\]/\{hh2044квенья{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(quest reward,награда)\]/\{hh126награда{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(race bonuses,бонусы рас)\]/\{hh24бонусы рас{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(race stats,расовые особенности)\]/\{hh24расовые особенности{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(race table,таблица рас)\]/\{hh54таблица рас{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(ranger staff,посох рейнджера)\]/\{hh751посох рейнджера{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(recharge,перезарядка)\]/\{hh600перезарядка{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(refresh,снять усталость)\]/\{hh736снять усталость{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(religion,религия)\]/\{hh1религия{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(remort,перерождение)\]/\{hh1064перерождение{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(repair,чинить)\]/\{hh1055чинить{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(reset,обновление)\]/\{hh16обновление{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(roleplaying,отыгрыш)\]/\{hh31отыгрыш{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(run,бежать)\]/\{hh1078бежать{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(sacrifice,жертвовать)\]/\{hh1375жертвовать{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(scrolls,свитки)\]/\{hh121свитки{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(shield block,блок щитом)\]/\{hh726блок щитом{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(shield cleave,расколоть щит)\]/\{hh659расколоть щит{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(shield,щит)\]/\{hh616щит{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(shoot,стрелять)\]/\{hh810стрелять{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(size,размер)\]/\{hh26размер{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(skills,умения)\]/\{hh1352умения{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(sleep,спать)\]/\{hh1020спать{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(smash,врезать)\]/\{hh700врезать{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(smell,нюхать)\]/\{hh1084нюхать{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(sneak,подкрадывание)\]/\{hh703подкрадывание{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(socials,социалы)\]/\{hh1095социалы{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(split,делиться)\]/\{hh1377делиться{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(stats,параметры)\]/\{hh41параметры{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(staves,посохи)\]/\{hh2144посохи{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(strength,сила)\]/\{hh39сила{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(suck,сосать)\]/\{hh697сосать{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(superior heal,высшее лечение)\]/\{hh637высшее лечение{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(tags,тэги)\]/\{hh61тэги{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(thera,тэра)\]/\{hh224тэра{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(touch,коснуться)\]/\{hh769коснуться{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(trip,подножка)\]/\{hh582подножка{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(vampiric form,форма вампира)\]/\{hh836форма вампира{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(wake,проснуться)\]/\{hh1020проснуться{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(wands,жезлы)\]/\{hh2143жезлы{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(weapon cleave,расколоть оружие)\]/\{hh735расколоть оружие{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(weapon morph,превратить оружие)\]/\{hh756превратить оружие{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(wear,надеть)\]/\{hh990надеть{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(who,кто)\]/\{hh1093кто{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(wisdom,мудрость)\]/\{hh40мудрость{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(word of recall,слово возврата)\]/\{hh674слово возврата{x/g' */*xml */*/*xml
+sed -i '' -e 's/\[(world find,поиск по миру)\]/\{hh949поиск по миру{x/g' */*xml */*/*xml
+
+sed -i '' -e 's/\[(dragons breath,дыхание драконов)\]/{hh778дыхание драконов{x/g' */*xml
+sed -i '' -e 's/\[(sets,комплекты)\]/{hh67комплекты{x/g' */*xml
+sed -i '' -e 's/\[(global quest,глобал)\]/{hh128глобал{x/g' */*xml
+sed -i '' -e 's/\[(request,попросить)\]/{hh1002попросить{x/g' */*xml
+sed -i '' -e 's/\[(tattoist,татуировщик)\]/{hh242татуировщик{x/g' craft-skills/*xml
+sed -i '' -e 's/\[(tattooist,татуировщик)\]/{hh242татуировщик{x/g' craft-skills/*xml
+

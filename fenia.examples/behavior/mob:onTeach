@@ -1,0 +1,13 @@
+.Behavior(@name@).@trig@ = function(mob, ch, arg) {
+    // Called after 'prac here' (arg == "here") or after successful practice (arg == "en skill name")
+
+    if (arg == "here") {
+    	// Show additional practice menu
+        return true;
+    }
+
+    var skill; skill = .Skill(arg);
+    mob.say("Теперь ты более опытный в %N1.", skill.nameRus);
+    return true;
+}
+

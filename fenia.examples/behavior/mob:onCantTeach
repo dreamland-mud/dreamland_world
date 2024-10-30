@@ -1,0 +1,14 @@
+.Behavior(@name@).@trig@ = function(mob, ch, skillName) {
+
+    // TODO: make '20' a props value, 100 by default
+    if (ch.level >= 20) {
+        var skill; skill = .Skill(skillName);
+        
+        mob.say("Извини, %1$^C1, но теперь тебе придется искать себе другого учителя.", ch);
+        mob.say("Учителя для этого умения можно найти в справке по умению.", ch);
+        return true;
+    }
+
+    return false;
+}
+

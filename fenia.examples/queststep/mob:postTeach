@@ -1,0 +1,11 @@
+.get_mob_index(@vnum@).@trig@ = function(mob, ch, arg) {
+    // Called after 'prac here' (arg == "here") or after successful practice (arg == "en skill name")
+    if (arg == "here") {
+    	// Show practice menu
+        return;
+    }
+
+    var skill; skill = .Skill(arg);
+    mob.say("Теперь ты более опытный в %N1.", skill.nameRus);
+}
+

@@ -1,0 +1,12 @@
+.Behavior(@name@).@trig@ = function(mob, ch) {
+
+    // TODO: make '20' a props value, 100 by default
+    if (ch.level >= 20) {
+        mob.recho("%^C1 сокрушенно цокает языком.", mob);
+        mob.say("Ты уже взросл%1$Gое|ый|ая, %1$C1, поищи себе другого тренера.", ch);
+        return true;
+    }
+
+    return false;
+}
+

@@ -1,9 +1,5 @@
 .get_mob_index(@vnum@).@trig@ = function(mob, ch) {
-	if (ch.is_npc()) {
-		if (.tmp.mob.masterHere(ch)) ch = ch.master;
-		else return false;
-	}
-	if (!.tmp.quest.active(ch, .AreaQuest(XXXX))) return false;
+	var q; q = .AreaQuest(XXXX);
 
 	mob.say("Убил! Убил!");
 	return true;

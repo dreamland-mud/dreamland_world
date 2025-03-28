@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill type="GenericSkill">
+  <beats>24</beats>
+  <classes>
+    <node name="warlock">
+      <level>59</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <dammsg mg="m">огненный шторм</dammsg>
+  <group registry="skillGroup">combat</group>
+  <healthPenalty>5</healthPenalty>
+  <help id="5064" level="-1" type="SkillHelp">
+    <keyword l="en">fire storm</keyword>
+    <keyword l="ru">огненный шторм</keyword>
+    <keyword l="ua">вогняний шторм</keyword>
+    <text l="en"></text>
+    <text l="ru">%FMT% *%SPELL%*
+
+Жуткое заклинание {hh134колдунов{x, наносящее урон всем противникам вокруг и
+создающее {hh281пожар{x в текущей местности. Сила зависит от уровня заклинателя.
+</text>
+    <text l="ua"></text>
+  </help>
+  <mana>100</mana>
+  <name l="en">firestorm</name>
+  <name l="ru">огненный шторм</name>
+  <name l="ua">вогняний шторм</name>
+  <spell type="DefaultSpell">
+    <damtype>fire</damtype>
+    <flags>magic</flags>
+    <order>player_only</order>
+    <position>stand</position>
+    <target>room</target>
+    <tier>2</tier>
+    <type>offensive</type>
+  </spell>
+</skill>

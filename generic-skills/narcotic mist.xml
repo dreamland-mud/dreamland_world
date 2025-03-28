@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
+    <dispelled>true</dispelled>
     <removeCharSelf>Ты вновь можешь создавать усыпляющий туман.</removeCharSelf>
     <removeRoom>Усыпляющий туман вокруг тебя наконец-то рассеивается.</removeRoom>
   </affect>
@@ -41,7 +42,11 @@ Anyone who enters and fails the {hh2035saving throw{x will fall into a deep slee
     <text l="ru">%FMT% *%SPELL%*
 
 Это заклинание позволяет наложить заклинание {hh741сна{x на данную местность.
-Каждый, кто зайдет туда и не выбросит {hh2035спасбросок{x, погрузится в глубокий сон.
+
+Чары срабатывают при заходе в местность и периодически на все подходящие цели
+в ней. Успех зависит от {hh2035спасброска{x, а для игроков в {hh32ПК{x -- еще и от
+дополнительных факторов, включая {hh38интеллект{x мага и {hh36телосложение{x жертвы.
+{hh28Ловкачей{x поймать в магическую ловушку сложнее.
 </text>
     <text l="ua">%FMT% *%SPELL%*
 

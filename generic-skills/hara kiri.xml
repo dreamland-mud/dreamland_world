@@ -6,7 +6,7 @@
   <beats>12</beats>
   <classes>
     <node name="samurai">
-      <level>110</level>
+      <level>21</level>
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
@@ -14,14 +14,15 @@
   <command type="SKILL(harakiri)">
     <argtype>undef</argtype>
     <cat>class</cat>
-    <extra>hidden</extra>
+    <extra>spellout</extra>
     <hint l="en">(samurai) perform harakiri</hint>
     <hint l="ru">(самураи) сделать харакири</hint>
     <hint l="ua">(самураї) зробити харакірі</hint>
     <name l="en">harakiri</name>
     <name l="ru">харакири</name>
     <name l="ua">харакірі</name>
-    <position>rest</position>
+    <order>never</order>
+    <position>stand</position>
   </command>
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">adventure</group>
@@ -33,9 +34,7 @@ The samurai can avoid disgrace by disemboweling himself in a ritual act of suici
 Life, mana, and movement points drop to 1 but recover much faster afterwards.</text>
     <text l="ru">%FMT% *%CMD%*
 
-Самурай может избежать позора, вспоров себе живот в ритуальном акте суицида. 
-Очки жизни, маны и движения падают до 1, но после этого восстанавливаются
-гораздо быстрее.
+Самурай может избежать {hh5065позора{x, вспоров себе живот в ритуальном акте суицида.
 </text>
     <text l="ua">%FMT% *%CMD%*
 

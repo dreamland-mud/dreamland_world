@@ -14,7 +14,7 @@
     </node>
   </classes>
   <command type="SKILL(escape)">
-    <argtype>undef</argtype>
+    <argtype>exit</argtype>
     <cat>class</cat>
     <hint l="en">Thieves, ninjas can flee from combat in a certain direction</hint>
     <hint l="ru">(воры, ниндзи) сбежать из боя по направлению</hint>
@@ -22,6 +22,7 @@
     <name l="en">escape</name>
     <name l="ru">побег</name>
     <name l="ua">втеча</name>
+    <order>fight_only</order>
     <position>fight</position>
   </command>
   <dammsg mg="m"></dammsg>
@@ -36,11 +37,12 @@ Experienced rogues possess the skill to escape from combat in the desired direct
 
 %SA% %H% {hh1025escape{x
 </text>
-    <text l="ru">%FMT%  *побег* _направление_
+    <text l="ru">%FMT%  *%CMD%* _%DIR%_
 
-Опытные мошенники обладают навыком побега из боя в нужную им сторону.
-
-%SA% %H% {hh1025сбежать{x
+Опытные мошенники обладают навыком {hh1025побега{x из боя в нужную им сторону.
+На процесс побега, разумеется, распространяются те же факторы, но ворам это дело
+удается намного лучше. Плюс, в случае побега никто не знает, в каком именно
+направлении ты смываешься.
 </text>
     <text l="ua">%FMT%  *втеча* _напрямок_
 
@@ -49,7 +51,7 @@ Experienced rogues possess the skill to escape from combat in the desired direct
 %SA% %H% {hh1025втекти{x
 </text>
   </help>
-  <move>20</move>
+  <move>30</move>
   <name l="en">escape</name>
   <name l="ru">побег</name>
   <name l="ua">втеча</name>

@@ -1,4 +1,6 @@
-.AffectHandler(@name@).@trig@ = function(ch, af) {
+.AffectHandler(@name@).@trig@ = function(ch, af, roomDescription) {
+    // Append new lines or replace characters in roomDescription and return the resulting one.
+    // Can also return empty string to indicate that nothing has changed.
     return "";
 }
 

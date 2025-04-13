@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="GenericSkill">
   <affect type="DefaultAffectHandler">
+    <dispelled>true</dispelled>
     <removeCharSelf>Ты снова можешь проклинать земли.</removeCharSelf>
     <removeRoom>Гнет проклятия над этой местностью исчезает, и все ее обитатели радуются.</removeRoom>
   </affect>
@@ -26,9 +27,9 @@
   <dammsg mg="m"></dammsg>
   <group registry="skillGroup">maladictions</group>
   <help id="855" level="-1" type="SkillHelp">
-    <extra l="en">'curse land'</extra>
+    <extra l="en">&apos;curse land&apos;</extra>
     <extra l="ru">&apos;проклясть землю&apos;</extra>
-    <extra l="ua">'проклясти землю'</extra>
+    <extra l="ua">&apos;проклясти землю&apos;</extra>
     <text l="en">%FMT% *%SPELL%*
 
 This spell allows you to curse a certain room, preventing

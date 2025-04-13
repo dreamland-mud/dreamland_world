@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
+  <aliases l="en"></aliases>
   <aliases l="ru">налить</aliases>
   <aliases l="ua">налити</aliases>
   <cat>food</cat>
-  <extra>keep_hide undig</extra>
+  <extra>undig</extra>
   <help id="1075" level="-1" ref="fill pourout" type="CommandHelp">
     <extra l="en">barrels fountains</extra>
     <extra l="ru">&apos;бочонок пива&apos; бурдюк фляга фонтаны глоток &apos;набрать воды&apos; напитки облить обливать поливать</extra>
-    <extra l="ua">'бочонок пива' бурдюк фляга фонтани ковток 'набрати води' напої облити обливати поливати</extra>
+    <extra l="ua">&apos;бочонок пива&apos; бурдюк фляга фонтани ковток &apos;набрати води&apos; напої облити обливати поливати</extra>
     <keyword l="en">liquids</keyword>
     <keyword l="ru">жидкости</keyword>
     <keyword l="ua">рідкі речовини</keyword>
@@ -15,10 +16,10 @@
 %A% Containers can usually be carried, so you have something to {hh1074drink{x from during travels.
 %A% Containers can sometimes be sealed with a cork.
 %A% Containers and fountains can be {hh837poisoned{x or {hh610frozen{x.
-%A% Fountains can't be picked up, but you can {hh1020sit{x, rest, or lie on or in them.
-%A% Not all fountains are infinite -- sometimes they can be emptied, and then you'll have 
+%A% Fountains can&apos;t be picked up, but you can {hh1020sit{x, rest, or lie on or in them.
+%A% Not all fountains are infinite -- sometimes they can be emptied, and then you&apos;ll have 
   to wait several hours for the fountain or container to slowly {hh16replenish{x.
-%A% Dried up fountains can be filled, but they won't replenish on their own 
+%A% Dried up fountains can be filled, but they won&apos;t replenish on their own 
   and will continue to dry up.
 
 {CLIQUIDS{x
@@ -32,8 +33,8 @@ You can check the level of current intoxication with the command {y{hccount{x.
 {CCOMMANDS FOR WORKING WITH LIQUIDS{x
 %FMT%  *fill* _container_
 %FFF%  *fill* _container_ _fountain_
-Fill a container with liquid. If there's a source of water (like a river, spring, or lake) in the current area, simply write *fill* _container_.
-If a lake, river, or sea is spacious enough, you can throw the container into the water and then pick it up already filled (if it doesn't sink, of course).
+Fill a container with liquid. If there&apos;s a source of water (like a river, spring, or lake) in the current area, simply write *fill* _container_.
+If a lake, river, or sea is spacious enough, you can throw the container into the water and then pick it up already filled (if it doesn&apos;t sink, of course).
 To fill a container from a fountain, write *fill* _container_ _fountain_.
 Some containers, like a beer barrel from a tavern in Midgaard, hold more liquid than, say, a small flask.
 
@@ -42,7 +43,7 @@ Some containers, like a beer barrel from a tavern in Midgaard, hold more liquid 
 Pour liquid from one vessel in the inventory to another vessel in the inventory or on the ground.
 
 %FMT%  *empty* _container_
-Empty a vessel by pouring all its contents onto the ground. If there's enough liquid, a puddle will remain, into which you can sit or drink from. If there's something {hh4red-hot{x underfoot, it can be cooled.
+Empty a vessel by pouring all its contents onto the ground. If there&apos;s enough liquid, a puddle will remain, into which you can sit or drink from. If there&apos;s something {hh4red-hot{x underfoot, it can be cooled.
 
 %FMT%  *pour* _container_ _character_
 Pour liquid from a vessel onto someone. After such pouring, the victim may start to smell accordingly (%H% {hh1084smell{x).
@@ -117,9 +118,9 @@ The commands *pour* and *empty* are synonyms.
 різну кількість ковтків.
 
 {hh2137Алкоголем{x (наприклад, вином або пивом) можна напитися. Культура аркадії та багато 
-слів їхньої давньої {hh234мови{x сильно прив'язані до алкоголю. Також, деякі {hh1боги{x 
-заохочують вживання алкоголю. Проте, у п'яних дещо гірше працюють уміння.
-Дізнатися рівень поточного сп'яніння можна командою {y{hcоблік{x.
+слів їхньої давньої {hh234мови{x сильно прив&apos;язані до алкоголю. Також, деякі {hh1боги{x 
+заохочують вживання алкоголю. Проте, у п&apos;яних дещо гірше працюють уміння.
+Дізнатися рівень поточного сп&apos;яніння можна командою {y{hcоблік{x.
 
 {CКОМАНДИ ДЛЯ РОБОТИ З РІДИНАМИ{x
 %FMT%  *наповнити* _ємність_

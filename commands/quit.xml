@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
+  <aliases l="en"></aliases>
   <aliases l="ru">закончить</aliases>
   <aliases l="ua">закінчити</aliases>
   <cat>char</cat>
   <extra>keep_hide ghost undig manacles afk freeze nanny spellout</extra>
   <help id="992" level="-1" ref="rent" type="CommandHelp">
-    <extra l="en">hotel rent exit leave</extra>
-    <extra l="ru">гостиница рента выход выйти</extra>
+    <extra l="en">hotel rent exit leave lostlink</extra>
+    <extra l="ru">гостиница рента выход выйти без связи</extra>
     <extra l="ua">готель рента вихід вийти</extra>
     <text l="en">%FMT% *%CMD%*   
 
@@ -20,7 +21,7 @@ parameters are automatically {hh991saved.{x
   a player ({RK{x) or after dying in PK ({DS{x)
 %A% while participating in the {hh994auction{x
 %A% if your {hh776soul is taken{x
-%A% while on someone else's {hh3clan territory{x
+%A% while on someone else&apos;s {hh3clan territory{x
 
 After 20 {hh16ticks{x of inactivity, the character will attempt to leave the world automatically,
 but only if they are not inside {hh50a personal house{x or in {hh86the Pavilion{x in Midgaard.
@@ -38,6 +39,11 @@ but only if they are not inside {hh50a personal house{x or in {hh86the Pavilion{
 %A% пока участвуешь в {hh994аукционе{x
 %A% если {hh776отобрали душу{x
 %A% находясь на чужой {hh3клановой территории{x
+
+Если просто закрыть окно {hh2133веб-клиента{x или прервать соединение без использования
+команды *%CMD%*, твой персонаж на какое-то время останется в мире в состоянии
+[{DБез связи{x], на него можно напасть и так далее. Если тебе нужно ненадолго отойти
+и не хочется выходить из игры -- используй команду {hh1080AFK{x.
 
 После 20 {hh16тиков{x бездействия персонаж попытается покинуть мир автоматически,
 но только если он не находится внутри {hh50персонального дома{x или в {hh86Беседке{x в Мидгаарде.

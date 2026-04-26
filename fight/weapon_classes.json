@@ -13,7 +13,7 @@
 
     "spear": {
             "attacks": "pound crush beating charge smash thwack bite pierce scratch peckb sting chomp thrust acbite frbite shbite",
-            "forbids": ["vorpal"],
+            "forbids": ["vorpal", "two_hands"],
             "prefers": ["hr", "ac"]
     }, 
 
@@ -47,6 +47,17 @@
             "prefers": ["vorpal", "sharp", "fightmaster", "dr"]
     }, 
 
+    "bow": {
+            "attacks": "blast",
+            "requires": ["two_hands"],
+            "forbids": ["flaming", "sharp", "vorpal"]
+    }, 
+    
+    "arrow": {
+            "attacks": "pierce, scratch",
+            "forbids": ["two_hands", "vorpal"]
+    }, 
+    
     "exotic": {
             "damtypes": "any",
             "prefers": ["vorpal", "fading", "shocking", "flaming", "frost", "pack_hp", "level"]

@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Command>
   <cat>item</cat>
-  <extra>keep_hide undig</extra>
+  <extra>keep_hide</extra>
   <help id="1011" level="-1" type="CommandHelp">
     <text l="en">%FMT%  *%CMD%* _item1_ _item2_
 Compare two items you have. If both are weapons, they are compared based on the damage they inflict. If both are armor, their protection (armor class) is compared. It is not possible to compare two items of different types.
 
 %FMT%  *%CMD%* _item_
 Compare the specified item in your inventory with what you are wearing or equipped with.</text>
-    <text l="ru">%FMT%  *%CMD%* _предмет1_ _предмет2_
-Сравнить два имеющихся у тебя предмета. Если оба они являются оружием,
-то сравниваться они будут по силе наносимых повреждений. Если же оба
-являются обмундированием, то сравниваться будет их защита (класс брони).
-Невозможно сравнить два предмета различных типов.
- 
-%FMT%  *%CMD%* _предмет_ 
-Сравнить указанный предмет из инвентаре с тем, что одет на тебе, или
-с тем, которым ты вооружен.
+    <text l="ru">Когда нет возможности {hh603опознать{x предметы, можно на скорую руку их сравнить.
+
+%FMT%  *%CMD%* _%OBJ%_
+%FMT%  *%CMD%* _%OBJ%_ _%OBJ%_
+
+Сравнивать можно любую ненадетую вещь с надетой на тот же {hh1015слот{x экипировки или
+любые две вещи, которые надеваются на один и тот же слот.
+
+Сравниваются {hh47урон{x, {hh47точность{x, {hh58здоровье{x, совокупные {hh41параметры{x и, в случае оружия,
+{hh122средние повреждения{x.
 </text>
     <text l="ua">%FMT%  *%CMD%* _предмет1_ _предмет2_
 Порівняти два наявні у тебе предмети. Якщо обидва є зброєю, то їх буде порівняно за шкодою, яку вони наносять. Якщо обидва є спорядженням, то буде порівняно їх захист (клас броні). Неможливо порівняти два предмети різних типів.

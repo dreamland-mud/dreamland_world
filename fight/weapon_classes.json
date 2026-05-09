@@ -1,7 +1,8 @@
 // Описывает ограничения и предпочтения по аффиксам и повреждениям для каждого класса сгенерированного оружия.
 {
     "sword": {
-            "attacks": "slice slash cleave chop bite pierce scratch peckb sting chomp thrust flbite flame acbite frbite shbite"
+            "attacks": "slice slash cleave chop bite pierce scratch peckb sting chomp thrust flbite flame acbite frbite shbite",
+            "forbids": ["two_hands"]
     }, 
 
     "dagger": {
@@ -25,12 +26,13 @@
 
     "axe": {
             "attacks": "slice slash cleave chop wrath flbite acbite frbite shbite",
+            "forbids": ["two_hands"],
             "prefers": ["vorpal", "sharp", "-hr", "dr"]
     }, 
 
     "flail": {
             "attacks": "pound crush beating charge smash thwack flbite flame divine wrath",
-            "forbids": ["vorpal", "sharp", "poison"],
+            "forbids": ["vorpal", "sharp", "poison", "two_hands"],
             "prefers": ["shocking", "hr", "dr"]
     }, 
 

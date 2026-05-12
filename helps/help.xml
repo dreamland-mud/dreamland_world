@@ -590,11 +590,47 @@
   <node id="24" labels="race" level="-1" type="Help">
     <extra l="en">&apos;race stats&apos;</extra>
     <extra l="ru">&apos;бонусные умения&apos; &apos;раса характеристики&apos; &apos;расовые особенности&apos; расса рассы &apos;свойства рас&apos; &apos;уникальные способности&apos;</extra>
-    <extra l="ua"></extra>
+    <extra l="ua">&apos;бонусні вміння&apos; &apos;раса характеристики&apos; &apos;расові особливості&apos; &apos;властивості рас&apos; &apos;унікальні здібності&apos;</extra>
     <keyword l="en">&apos;race bonuses&apos;</keyword>
     <keyword l="ru">&apos;бонусы рас&apos;</keyword>
-    <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <keyword l="ua">&apos;бонуси рас&apos;</keyword>
+    <text l="en">{CDreamland{x is home to 23 different races, each with unique features,
+bonuses, and restrictions. The summary chart for all races is shown by
+%H% {hh54race table{x.
+
+%A% {cParameters{x: the base value of {hh41stats{x is measured against humans --
+  they have every parameter except charisma at 20. If a race's help says,
+  say, +3 strength, that means you can raise this parameter through training
+  and gear up to 23. Higher still is possible with race, class, and rebirth
+  bonuses. Read {hc{yhelp stats{x to learn more.
+
+%A% {cAlignment{x: restrictions on the {hh33alignment{x of a race's
+  representatives. Elves are typically good, svirfneblin are neutral,
+  and so on.
+
+%A% {cSize{x: the size of a typical member, from small kenders to huge giants.
+  See %H% {hh26size{x for details.
+
+%A% {cVulnerability{x: damage from the given {hh101damage type{x or magic is
+  multiplied by one and a half.
+
+%A% {cResistance{x: damage is reduced by a third.
+
+%A% {cAffects{x: permanent properties of a race. {hh575Flying{x races, for
+  instance, don't need flight spells -- they fly always and everywhere.
+  Same goes for {hh830infravision{x and other features.
+
+%A% {WRacial abilities{x: skills or spells unique to this race, available
+  regardless of the chosen class. Felars, for example, can {hh872curl up{x
+  in their sleep.
+
+%A% {WBonus skills{x: some races handle certain skills exceptionally well
+  thanks to their racial culture, regardless of the chosen class. Rockseers
+  always handle {hh121magical wands{x well, and faeries can cast
+  {hh790faerie fog{x.
+
+%SA% %H% {hh28class{x, {hh54race table{x, and the help for each race
+</text>
     <text l="ru">{CМир Мечты{x -- дом для 23 различных рас с уникальными особенностями, бонусами
 и ограничениями. Сводную таблицу по всем расам показывает %H% {hh54таблица рас{x.
 
@@ -618,7 +654,7 @@
   искать заклинания полёта, они летают всегда и всюду. Аналогично с {hh830ночным зрением{x
   и другими особенностями.
 
-%A% {WРасовые способности{x: уникальные для этой расы умения или заклинания и доступные.
+%A% {WРасовые способности{x: уникальные для этой расы умения или заклинания, доступные
   вне зависимости от выбранного класса. Например, фелары умеют {hh872сворачиваться клубком{x во сне.
 
 %A% {WБонусные умения{x: некоторые расы отлично владеют какими-то умениями в силу
@@ -627,10 +663,46 @@
 
 %SA% %H% {hh28класс{x, {hh54таблица рас{x и справку по каждой расе
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">{CСвіт Мрій{x -- дім для 23 різних рас з унікальними особливостями,
+бонусами та обмеженнями. Зведену таблицю по всіх расах показує
+%H% {hh54таблиця рас{x.
+
+%A% {cПараметри{x: базове значення {hh41параметрів{x міряється по людях --
+  у них усі параметри, крім чарівності, дорівнюють 20. Якщо в довідці по
+  твоїй расі написано, скажімо, +3 сили, це означає, що ти зможеш підняти
+  цей параметр тренуваннями й речами до 23. Ще вище можна підняти бонусами
+  раси, класу й переродження. Читай {hc{yдовідка стати{x, щоб дізнатися
+  більше.
+
+%A% {cНатура{x: обмеження на {hh33натуру{x представників цієї раси.
+  Ельфи зазвичай добрі, свірфнеблі -- нейтральні і так далі.
+
+%A% {cРозмір{x: розмір типового представника раси, від маленьких кендерів
+  до величезних велетнів. Детальніше дивись %H% {hh26розмір{x.
+
+%A% {cВразливість{x: пошкодження від певного {hh101типу атак{x або магії
+  посилюються в півтора раза.
+
+%A% {cСтійкість{x: пошкодження зменшуються на третину.
+
+%A% {cАфекти{x: постійні властивості рас. Наприклад, {hh575летючим{x расам
+  не потрібно шукати закляття польоту -- вони літають завжди і всюди.
+  Аналогічно з {hh830тепловим зором{x та іншими особливостями.
+
+%A% {WРасові здібності{x: унікальні для цієї раси вміння або закляття,
+  доступні незалежно від обраного класу. Наприклад, фелари вміють
+  {hh872згортатися клубком{x уві сні.
+
+%A% {WБонусні вміння{x: деякі раси чудово володіють певними вміннями
+  завдяки культурі своєї раси, незалежно від обраного класу. Так, роксіри
+  завжди добре обходяться з {hh121магічними паличками{x, а феї вміють
+  насилати {hh790туман фей{x.
+
+%SA% %H% {hh28клас{x, {hh54таблиця рас{x і довідку по кожній расі
+</text>
+    <title l="en">{CRaces:{x stats and bonuses</title>
     <title l="ru">{CРасы:{x характеристики и бонусы</title>
-    <title l="ua"></title>
+    <title l="ua">{CРаси:{x характеристики та бонуси</title>
   </node>
   <node id="26" labels="char" level="-1" type="Help">
     <extra l="en">huge tiny</extra>
@@ -1775,8 +1847,34 @@ MCCP {Wне работает{x, если при {hh1087настройке{x conf
   <node id="54" labels="race" level="0" type="Help">
     <keyword l="en">&apos;race table&apos; races racetable</keyword>
     <keyword l="ru">раса расы &apos;таблица рас&apos;</keyword>
-    <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <keyword l="ua">раса раси &apos;таблиця рас&apos;</keyword>
+    <text l="en">{hh145human{x             the most flexible race, levels skills faster
+{hh162half-elf{x          infravision, ancient {hh234languages{x
+{hh146dwarf{x             toughest, axes, {hh829berserk{x
+{hh147arial{x             smartest, flight, {hh563spell craft{x
+{hh155faery{x             smartest, flight, {hh750blink{x, {hh563spell craft{x
+{hh166felar{x             most agile, hand-to-hand combat
+{hh148kender{x            most agile, lockpicking, theft, {hh644lore{x
+{hh153cloud giant{x       strongest, hardy, sword resistance
+{hh151centaur{x           strong, hardy, {hh876double kick{x
+{hh156elf{x               {Ygood{x, smart and agile, sword, bow
+{hh165storm giant{x       {Ygood{x, strongest, hardy, flight, {hh650lightning{x
+{hh167mawg{x              {Ygood{x/{cneutral{x, {hh2130regeneration{x, hardy
+{hh169hobbit{x            {Ygood{x/{cneutral{x, agile, no {hh47critical misses{x
+{hh168gnome{x             {Ygood{x/{cneutral{x, wisest, {hh1110item magic{x
+{hh164rockseer{x          {cneutral{x, smart, {hh870stone meld{x, {hh647pass door{x
+{hh150svirfneblin{x       {cneutral{x, very smart, {hh1110item magic{x
+{hh159satyr{x             {cneutral{x, agile, hardy, {hh546camouflage{x, alcoholism
+{hh152dark elf{x          {Revil{x, smartest, {hh563spell craft{x
+{hh149drow{x              {Revil{x, agile, swords, whips, {hh798hide{x
+{hh163uruk-hai{x          {Revil{x, strong, hardy, weapon mastery
+{hh154duergar{x           {Revil{x, agile, hardy, axes, {hh829berserk{x
+{hh158githyanki{x         {Revil{x, agile, some smarts, swords
+{hh157troll{x             {Revil{x, strong, toughest and hardiest, clubs
+
+For details on any race read{Iw the linked entry in the table or{x the help: for example, {Whelp troll{x.
+%SA% %H% {hh24race bonuses{x
+</text>
     <text l="ru">{hh145человек{x             самая гибкая раса, быстрее качают умения
 {hh162полуэльф{x            инфразрение, древние {hh234языки{x
 {hh146дварф{x               самые выносливые, топоры, {hh829берсерк{x
@@ -1804,10 +1902,36 @@ MCCP {Wне работает{x, если при {hh1087настройке{x conf
 Подробнее о каждой расе читай{Iw по ссылке в таблице или{x в справке: например, {Wсправка тролль{x.
 %SA% %H% {hh24бонусы рас{x
 </text>
-    <text l="ua"></text>
-    <title l="en"></title>
+    <text l="ua">{hh145людина{x             найгнучкіша раса, швидше прокачують уміння
+{hh162напівельф{x          тепловий зір, стародавні {hh234мови{x
+{hh146дварф{x              найвитриваліші, сокири, {hh829лють{x
+{hh147аріал{x              найрозумніші, політ, {hh563чаклунство{x
+{hh155фея{x                найрозумніші, політ, {hh750блимання{x, {hh563чаклунство{x
+{hh166фелар{x              найспритніші, рукопашний бій
+{hh148кендер{x             найспритніші, злам замків, крадіжки, {hh644легенди{x
+{hh153хмарний велетень{x   найсильніші, витривалість, захист від мечів
+{hh151кентавр{x            сила, витривалість, {hh876подвійний удар копитами{x
+{hh156ельф{x               {Yдобрі{x, розум і спритність, меч, лук
+{hh165штормовий велетень{x {Yдобрі{x, найсильніші, витривалість, політ, {hh650блискавки{x
+{hh167мавг{x               {Yдобрі{x/{cнейтральні{x, {hh2130регенерація{x, витривалість
+{hh169гобіт{x              {Yдобрі{x/{cнейтральні{x, спритність, без {hh47критичних промахів{x
+{hh168гном{x               {Yдобрі{x/{cнейтральні{x, наймудріші, {hh1110предметна магія{x
+{hh164роксір{x             {cнейтральні{x, розум, {hh870злиття{x з камінням, {hh647проходять крізь двері{x
+{hh150свірфнеблі{x         {cнейтральні{x, дуже розумні, {hh1110предметна магія{x
+{hh159сатир{x              {cнейтральні{x, спритність, витривалість, {hh546камуфляж{x, алкоголізм
+{hh152темний ельф{x        {Rзлі{x, найрозумніші, {hh563чаклунство{x
+{hh149дроу{x               {Rзлі{x, спритність, мечі, батоги, {hh798сховатися{x
+{hh163урук-хай{x           {Rзлі{x, сила, витривалість, володіння зброєю
+{hh154дуергар{x            {Rзлі{x, спритність, витривалість, сокири, {hh829лють{x
+{hh158гітіанки{x           {Rзлі{x, спритність, трохи розуму, мечі
+{hh157троль{x              {Rзлі{x, сила, найживучіші й найвитриваліші, дубини
+
+Детальніше про кожну расу читай{Iw за посиланням у таблиці або{x у довідці: наприклад, {Wдовідка троль{x.
+%SA% %H% {hh24бонуси рас{x
+</text>
+    <title l="en">{CRaces:{x summary table</title>
     <title l="ru">{CРасы:{x сводная таблица</title>
-    <title l="ua"></title>
+    <title l="ua">{CРаси:{x зведена таблиця</title>
   </node>
   <node id="55" labels="char shop" level="-1" type="Help">
     <extra l="en">shops</extra>

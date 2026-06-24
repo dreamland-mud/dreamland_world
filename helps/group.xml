@@ -7,7 +7,33 @@
     <keyword l="en">&apos;magical items&apos;</keyword>
     <keyword l="ru">&apos;волшебные предметы&apos;</keyword>
     <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <text l="en">Magic items are artefacts with limited charges of some magic or prayers. By using these items you can cast spells on yourself or your opponents. Before using magic items it is strongly advisable to first {hh603identify{x them -- or use the {hh65search engine{x on the website.
+
+Magic items come in the following types:
+{C%A%{x potions: anyone can quaff potions, no special skills required
+{C%A%{x pills: anyone can swallow pills too -- at their own risk
+{C%A%{x scrolls and books: requires knowledge of the {hh121scrolls{x skill
+{C%A%{x staves: requires knowledge of the {hh2144staves{x skill
+{C%A%{x wands: requires knowledge of the {hh2143wands{x skill
+
+The skills for using magic items and other {hh1130basics of magic{x can be learned from the Wizard in Midgaard. With insufficient skill level magic items may fail to work or even break.
+
+All magic items can be used with the *use* command or with these special commands:
+
+%FMT% *quaff* _potion_
+Quaff the specified magic potion (as opposed to the {hh1074drink{x command, which drinks ordinary mundane liquids). A potion can only be drunk once; after drinking it you will have an empty =vial= in your inventory.
+  
+%FMT% *recite* _scroll_ _target_
+Read a magic scroll. Specifying a target is not mandatory -- it all depends on the scroll's properties. A scroll can only be recited once.
+ 
+%FMT% *zap* _target_
+Brandish the magic wand you are holding. If no target is specified but you are fighting someone, your opponent will be used as the target for harmful spells.
+
+%FMT% *wave*
+Strike the ground with the magic staff you are holding. The spells on the staff may affect everyone nearby!
+
+Staves and wands may contain multiple charges. When the charges run out, these magic items become useless. However, wizards and witches know the secret of recharging wands and staves (the {hh600recharge{x skill).
+</text>
     <text l="ru">Волшебные предметы -- это артефакты с ограниченными зарядами какой-то магии или молитв. Используя эти предметы, ты сможешь наложить заклинания на себя или своих противников. Перед использованием волшебных предметов очень желательно сначала их {hh603опознать{x -- или использовать {hh65поисковик{x на сайте.
 
 Волшебные предметы бывают таких типов:
@@ -35,7 +61,33 @@
 
 Посохи и жезлы могут содержать несколько зарядов. Когда заряды истощатся, эти волшебные предметы становятся бесполезными. Однако колдуны и ведьмы владеют секретом повторной зарядки жезлов и посохов (умение {hh600перезарядка{x).
 </text>
-    <text l="ua"></text>
+    <text l="ua">Чарівні предмети -- це артефакти з обмеженими зарядами якоїсь магії або молитов. Використовуючи ці предмети, ти зможеш накладати заклинання на себе або своїх противників. Перед використанням чарівних предметів дуже бажано спочатку їх {hh603впізнати{x -- або скористатися {hh65пошуковиком{x на сайті.
+
+Чарівні предмети бувають таких типів:
+{C%A%{x зілля: осушати зілля можуть всі, без знання спеціальних навичок
+{C%A%{x пілюлі: ковтати пілюлі теж можуть всі -- на свій страх і ризик
+{C%A%{x сувої і книги: потрібне знання вміння {hh121сувої{x
+{C%A%{x посохи: потрібне знання вміння {hh2144посохи{x
+{C%A%{x жезли: потрібне знання вміння {hh2143жезли{x
+
+Вміння використання магічних предметів та інші {hh1130основи магії{x можна вивчити у Чарівника в Мідгаарді. При недостатньому рівні навику чарівні предмети можуть не спрацювати або навіть зламатися.
+
+Використовувати всі чарівні предмети можна командою *використати* або такими спеціальними командами:
+
+%FMT% *осушити* _зілля_
+Осушити вказане чарівне зілля (на відміну від команди {hh1074пити{x, яка виживає звичайні земні рідини). Зілля можна випити тільки один раз, після випивання в інвентарі у тебе залишиться порожній =пузирець=.
+  
+%FMT% *зачитати* _сувій_ _ціль_
+Прочитати чарівний сувій. Ціль впливу вказувати необовʼязково -- все залежить від властивостей сувою. Один сувій можна зачитати тільки один раз.
+ 
+%FMT% *вдарити* _ціль_
+Махнути чарівним жезлом, який ти тримаєш у руці. Якщо ціль явно не вказана, але ти з кимось бʼєшся, твій противник буде використаний як мішень для шкідливих заклинань.
+
+%FMT% *змахнути*
+Вдарити об землю чарівним посохом, який ти тримаєш у руці. Заклинання на посоху можуть подіяти на всіх навколишніх!
+
+Посохи і жезли можуть містити кілька зарядів. Коли заряди вичерпаються, ці чарівні предмети стають марними. Однак чарівники і відьми знають секрет повторного заряджання жезлів і посохів (вміння {hh600перезарядка{x).
+</text>
     <title l="en"></title>
     <title l="ru">Волшебные предметы</title>
     <title l="ua"></title>
@@ -47,7 +99,51 @@
     <keyword l="en">weapons</keyword>
     <keyword l="ru">оружие</keyword>
     <keyword l="ua"></keyword>
-    <text l="en"></text>
+    <text l="en">A weapon increases your damage in combat and lets you use special combat skills. Weapons are divided into *types.* Every weapon has a base stat called *average damage* -- the higher the average, the more damage you can deal.
+
+Every weapon requires the skill to wield it. Each weapon type has its own skill. The higher the skill, the more often you will hit your opponent and the more damage you will deal. The skill with each weapon type also governs your combat and defensive abilities -- for example, the {hh576parry{x or {hh812disarm{x skills. In addition, the chance for defensive skills depends on the weapon type you and your opponent are carrying.
+
+Skill                     Weapon types
+------------------------------------------------------------------------------
+[кинжал]    [dagger]          knives, daggers and piercing weapons
+[меч]       [sword]           various sword types, from rapier to falchion
+[топор]     [axe]             axes
+[булава]    [mace]            clubs, maces and hammers
+[копье]     [spear]           spears and staves
+[алебарда]  [polearm]         various polearms, except spears
+[хлыст]     [whip]            whips and scourges
+[цеп]       [flail]           chains and morning stars
+[лук]       [bow]             bows and arrows
+[экзотика]  [exotic]          exotic what-the-heck weapons
+
+For more details see the help article for each skill.
+
+{CRANDOM WEAPONS{x
+Sometimes in the corpse of a slain enemy you may find a weapon with random
+stats! Random weapons are divided into tiers of quality. The higher the tier,
+the rarer it drops and the faster it disappears:
+{W%A% common{x (no colour)    -- does not disappear
+{B%A% uncommon{x (blue)       -- after 10 real-time weeks
+{Y%A% rare{x (yellow)         -- after 5
+{M%A% epic{x (purple)         -- after 3
+{y%A% legendary{x (gold)      -- after 2
+  
+Not every weapon in the world can generate with random stats, and not every
+creature drops them equally. Some weapons have their entire name generated
+randomly. Others have a fixed name and certain stats, with random parameters
+added on top of the existing ones. Tougher opponents give a better chance of
+dropping higher-tier items.
+
+Good random weapons can be found in chests from the {hh127quest to help robbery victims{x,
+from {hh129gangsters{x, and especially good ones from their boss (before entering the hideout,
+don't forget to enable {y{hcsettings autoloot yes{x so you can grab them from the corpse in time).
+
+{CCLAN WEAPONS{x
+Some clans grant their members the secrets of special magical weapons.
+Such weapons are nearly as powerful as epic-tier gear. The {hh922Dragon Weapon{x and the {hh932Chaos Blade{x
+can be summoned using spells, while {hh1494Hunters{x receive their weapon as part of a
+package with a {hh906jacket{x upon joining the clan.
+</text>
     <text l="ru">Оружие увеличит твои повреждения в бою и позволит задействовать специальные
 боевые умения. Оружия делятся на *виды.* У каждого оружия есть базовый параметр
 *среднее повреждение* -- чем выше среднее, тем больше урона ты сможешь нанести.
@@ -99,7 +195,57 @@
 можно призвать с помощью заклинаний, а вот {hh1494Охотники{x сразу получают свое оружие в
 комплекте с {hh906жакетом{x при вступлении в клан.
 </text>
-    <text l="ua"></text>
+    <text l="ua">Зброя збільшує твої пошкодження в бою та дозволяє використовувати спеціальні
+бойові вміння. Зброя поділяється на *види.* У кожної зброї є базовий параметр
+*середнє пошкодження* -- чим вище середнє, тим більше шкоди ти зможеш завдати.
+
+Будь-яка зброя потребує вміння нею володіти. Для кожного виду зброї є своє
+вміння. Чим вище вміння, тим частіше ти потраплятимеш по противнику і тим більше
+пошкоджень зможеш завдати. Від вміння володіти кожним видом зброї залежать також
+бойові та захисні вміння -- наприклад, навички {hh576парирування{x або {hh812роззброєння{x.
+Також шанс захисних навичок залежить від типу зброї у тебе і в противника.
+
+Вміння                    Види зброї
+------------------------------------------------------------------------------
+[кинжал]    [dagger]          ножі, кинджали та колюча зброя
+[меч]       [sword]           різні типи мечів, від рапіри до палаша
+[топор]     [axe]             сокири
+[булава]    [mace]            дубини, булави та молоти
+[копье]     [spear]           списи та посохи
+[алебарда]  [polearm]         різноманітна древкова зброя, окрім списів
+[хлыст]     [whip]            батоги та бичі
+[цеп]       [flail]           ланцюги та ранкові зірки
+[лук]       [bow]             луки та стріли
+[экзотика]  [exotic]          екзотична незрозумілощо-зброя
+
+Детальніше -- дивись довідку по кожному вмінню.
+
+{CВИПАДКОВА ЗБРОЯ{x
+Іноді в трупі поваленого противника ти зможеш знайти зброю з випадковими
+параметрами! Випадкова зброя поділена на рівні крутості (тіри). Чим крутіший
+тір, тим рідше вона випадає і тим швидше зникає:
+{W%A% звичайна{x (без кольору)  -- не зникає
+{B%A% незвичайна{x (синя)       -- через 10 тижнів реального часу
+{Y%A% рідкісна{x (жовта)        -- через 5
+{M%A% епічна{x (фіолетова)      -- через 3
+{y%A% легендарна{x (золота)     -- через 2
+  
+Не вся зброя у світі може згенеруватися з випадковими параметрами, і не у
+всіх істот вона зʼявляється однаково. У деякої зброї вся назва цілком
+генерується випадковим чином. В інших -- назва та деякі стати фіксовані,
+a випадкові параметри додаються до наявних. У сильніших противників є шанс
+здобути речі крутішого тіру.
+
+Хорошу випадкову зброю можна знайти в скринях із {hh127квесту про допомогу жертвам{x
+ограбувань, у {hh129гангстерів{x і особливо хорошу -- у їхнього шефа (перед входом у лігво
+не забудь увімкнути {y{hcнастройки автограбіж так{x, щоб встигнути схопити з трупа).
+
+{CКЛАНОВА ЗБРОЯ{x
+Деякі клани дарують своїм членам секрети спеціальної магічної зброї.
+Така зброя за силою майже не поступається епічній. {hh922Зброю Дракона{x та {hh932клинок Хаосу{x
+можна викликати за допомогою заклинань, а от {hh1494Мисливці{x одразу отримують свою зброю в
+комплекті з {hh906жакетом{x при вступі в клан.
+</text>
     <title l="en"></title>
     <title l="ru">Оружие и его типы</title>
     <title l="ua"></title>

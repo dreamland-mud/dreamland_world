@@ -1,8 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <behavior type="DefaultBehavior">
   <cmd></cmd>
-  <description>Полноценная игра в шахматы на двоих или с самим собой.</description>
+  <description>{hh1023Используй{x, чтобы сыграть в {hh355шахматы{x.</description>
   <help id="355" level="-1" type="BehaviorHelp">
+    <extra l="en">chessboard chess game</extra>
+    <extra l="ru">шахматная доска игра в шахматы</extra>
+    <extra l="ua">шахова дошка гра в шахи</extra>
+    <keyword l="en">chess chessboard</keyword>
+    <keyword l="ru">шахматы</keyword>
+    <keyword l="ua">шахи</keyword>
+    <text l="en">%FMT% *use* _%OBJ%_ play white
+%FMT% *use* _%OBJ%_ e2-e4
+
+A real game of chess, played right on the board -- against another mortal, or against yourself for practice.
+
+First choose a side. =use chess play white= takes the side of Light, with wings and a shining sword; =use chess play black= casts you down into Lucifer's army; =use chess play self= lets you drill both sides alone. White always moves first.
+
+To command your army:
+%A% move a piece: =use chess e2-e4= (square-square)
+%A% capture an enemy piece: =use chess d5:e4= (square:square)
+%A% redraw the board: =use chess show=
+%A% check whose turn it is: =use chess turn=
+%A% reset the board: =use chess restart=
+
+Beating a living opponent earns you 200 experience, but no more than once a day; a game against yourself pays nothing. While two players are locked in battle, a third cannot touch their pieces -- wait for the match to finish, then take a seat.
+</text>
+    <text l="ru">%FMT% *использовать* _%OBJ%_ play white
+%FMT% *использовать* _%OBJ%_ e2-e4
+
+Настоящая игра в шахматы прямо на доске -- против другого смертного или, для тренировки, с самим собой.
+
+Сначала выбери сторону. =use chess play white= встанет под знамена Света, с крыльями и сверкающим мечом; =use chess play black= низвергнет тебя в армию Люцифера; =use chess play self= позволит играть за обе стороны в одиночку. Первый ход всегда за белыми.
+
+Чтобы командовать своим войском:
+%A% ход фигурой: =use chess e2-e4= (клетка-клетка)
+%A% взятие вражеской фигуры: =use chess d5:e4= (клетка:клетка)
+%A% показать доску: =use chess show=
+%A% чья очередь хода: =use chess turn=
+%A% начать партию заново: =use chess restart=
+
+За победу над живым противником дают 200 опыта, но не чаще раза в сутки; за игру с самим собой награды нет. Пока двое сражаются, третий не может трогать их фигуры -- дождись конца партии и занимай место.
+</text>
+    <text l="ua">%FMT% *використати* _%OBJ%_ play white
+%FMT% *використати* _%OBJ%_ e2-e4
+
+Справжня гра в шахи просто на дошці -- проти іншого смертного або, для тренування, із самим собою.
+
+Спершу обери сторону. =use chess play white= стане під знамена Світла, з крилами і сяючим мечем; =use chess play black= скине тебе в армію Люцифера; =use chess play self= дасть грати за обидві сторони наодинці. Перший хід завжди за білими.
+
+Щоб командувати своїм військом:
+%A% хід фігурою: =use chess e2-e4= (клітинка-клітинка)
+%A% узяття ворожої фігури: =use chess d5:e4= (клітинка:клітинка)
+%A% показати дошку: =use chess show=
+%A% чия черга ходу: =use chess turn=
+%A% почати партію заново: =use chess restart=
+
+За перемогу над живим супротивником дають 200 досвіду, але не частіше разу на добу; за гру із самим собою нагороди нема. Поки двоє бʼються, третій не може чіпати їхні фігури -- дочекайся кінця партії і сідай грати.
+</text>
   </help>
   <id>76</id>
   <nameRus>шахматная доска</nameRus>

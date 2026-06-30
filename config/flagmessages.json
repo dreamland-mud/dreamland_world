@@ -1,0 +1,48 @@
+// Per-language flag-table messages (bits.conf Variant 2).
+//
+// Shape: { "<table>": { "<flag>": { "ua": "...", "en": "...", "ru": "..." } } }
+//
+// Only "ua" is normally needed:
+//   - EN falls back to the flag's bit name (already English) unless you add an
+//     "en" override for a snake_case/ugly name.
+//   - RU falls back to the in-binary bits.conf message; add "ru" only to change it.
+// A value is a message pad (the "stem|case1|case2|..." Flexer form bits.conf
+// uses; a plain string means "no declension").
+//
+// RULE: add a table here only once every flag has "ua" -- a partially filled
+// table makes a UA viewer see UA + RU mush, worse than the table being absent.
+{
+    "extra_flags": {
+        "glow":         { "ua": "сяє" },
+        "hum":          { "ua": "гуде" },
+        "dark":         { "ua": "темне" },
+        "water_stand":  { "ua": "не тоне" },
+        "evil":         { "ua": "диявольське" },
+        "invis":        { "ua": "невидиме" },
+        "magic":        { "ua": "магічне" },
+        "nodrop":       { "ua": "не кинути" },
+        "bless":        { "ua": "священне" },
+        "anti_good":    { "ua": "не для добрих" },
+        "anti_evil":    { "ua": "не для злих" },
+        "anti_neutral": { "ua": "не для нейтральних" },
+        "noremove":     { "ua": "не зняти" },
+        "inventory":    { "ua": "інвентар" },
+        "nopurge":      { "ua": "незнищенне" },
+        "rot_death":    { "ua": "гниє з трупом" },
+        "vis_death":    { "ua": "видиме привидам" },
+        "nosac":        { "ua": "не пожертвувати" },
+        "nonmetal":     { "ua": "неметал" },
+        "nolocate":     { "ua": "недоступне локаторам" },
+        "melt_drop":    { "ua": "зникає на землі" },
+        "had_timer":    { "ua": "був таймер" },
+        "sell_extract": { "ua": "зникне при продажу" },
+        "nofind":       { "ua": "недоступне пошуку" },
+        "burn_proof":   { "ua": "вогнетривке" },
+        "nouncurse":    { "ua": "незнімне прокляття" },
+        "nosell":       { "ua": "не для продажу" },
+        "noident":      { "ua": "не опізнати" },
+        "nosavedrop":   { "ua": "не зберігається" },
+        "deleted":      { "ua": "видалене" },
+        "noenchant":    { "ua": "не зачарувати" }
+    }
+}

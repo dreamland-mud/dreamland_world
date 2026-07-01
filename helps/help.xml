@@ -3963,7 +3963,48 @@ Movement points regenerate every pulse -- the higher your dexterity, the faster 
     <keyword l="en">tags</keyword>
     <keyword l="ru">тэги</keyword>
     <keyword l="ua">теги</keyword>
-    <text l="en"></text>
+    <text l="en">Besides {hh43colours{x, you can use other tags to format text output.
+You can use them in {hh1059speech{x, {hh1083descriptions{x, {hh21notes{x, {hh1007titles{x and so on.
+
+{cCharacter's sex{x:
+{C%A%{x {{Sf -- seen only by female characters
+{C%A%{x {{Sm -- seen only by male characters
+
+For example, you can address the viewer by gender in descriptions:
+%FFF% *desc + The old woman smiles at you, {{Smyoung man{{Sfyoung lady{{Sx...*
+
+{cAlignment{x:
+{C%A%{x {{An - seen by neutrals  {{AN - seen by non-neutrals
+{C%A%{x {{Ag - seen by the good    {{AG - seen by the non-good
+{C%A%{x {{Ae - seen by the evil      {{AE - seen by the non-evil
+{C%A%{x {{Ax or {{x -- reset
+
+{cTime of day or season{x:
+{C%A%{x {{Td -- text seen only by day
+{C%A%{x {{Tn -- text seen only by night 
+{C%A%{x {{Tx or {{x -- reset 
+{C%A%{x {{Fw -- winter, {{FW -- not winter
+{C%A%{x {{Fp -- spring, {{FP -- not spring
+{C%A%{x {{Fu -- summer, {{FU -- not summer
+{C%A%{x {{Fa -- autumn, {{FA -- not autumn
+{C%A%{x {{Fy or {{FY -- reset
+This can be used when building zones and in descriptions, for example:
+%FFF% *desc + The feathers {{Tdgleam gold in the sunlight{{Tnshimmer dimly in the starlight{{Tx*
+
+{cWeather{x:
+{C%A%{x {{Ft -- storm, {{FT -- no storm
+{C%A%{x {{Fr -- rain, {{FR -- no rain
+{C%A%{x {{Fc -- cloudy, {{FC -- not cloudy
+{C%A%{x {{Fs -- sun, {{FS -- no sun
+{C%A%{x {{Fx or {{FX -- reset
+
+{cInvisibility{x:
+Text wrapped in such a tag is seen only by a narrow circle, namely:
+{C%A%{x {{Ii -- seen only by gods
+{C%A%{x {{Is -- seen by players with screen-reader mode on or using the blintin client.
+{C%A%{x {{IS -- seen by players without a screen reader. Example: {{IS a picture in ascii-art {{Is a text description of the picture {{Ix
+{C%A%{x {{Ix -- reset invisibility
+</text>
     <text l="ru">Кроме {hh43цветов{x, можно использовать и другие тэги для форматирования вывода текста.
 Использовать их можно в {hh1059разговоре{x, {hh1083описаниях{x, {hh21нотах{x, {hh1007титулах{x и так далее.
 
@@ -4006,7 +4047,48 @@ Movement points regenerate every pulse -- the higher your dexterity, the faster 
 {C%A%{x {{IS -- увидят игроки без скринридера. Пример: {{IS картинка в ascii-art {{Is текстовое описание картинки {{Ix
 {C%A%{x {{Ix -- сброс невидимости
 </text>
-    <text l="ua"></text>
+    <text l="ua">Окрім {hh43кольорів{x, можна використовувати й інші теги для форматування виводу тексту.
+Використовувати їх можна в {hh1059розмові{x, {hh1083описах{x, {hh21нотатках{x, {hh1007титулах{x і так далі.
+
+{cСтать персонажа{x:
+{C%A%{x {{Sf -- побачать лише персонажі жіночої статі
+{C%A%{x {{Sm -- побачать лише персонажі чоловічої статі
+
+Наприклад, можна правильно закінчувати дієслова в описах:
+%FFF% *desc + Ти подиви{{Smвся{{Sfлася{{Sx на цю істоту і побачи{{Smв{{Sfла{{Sx...*
+
+{cХарактер{x:
+{C%A%{x {{An - побачать нейтрали  {{AN - побачать не-нейтрали
+{C%A%{x {{Ag - побачать добрі    {{AG - побачать недобрі
+{C%A%{x {{Ae - побачать злі      {{AE - побачать незлі
+{C%A%{x {{Ax або {{x -- скидання
+
+{cПора доби або пора року{x:
+{C%A%{x {{Td -- текст побачать лише вдень
+{C%A%{x {{Tn -- текст побачать лише вночі 
+{C%A%{x {{Tx або {{x -- скидання 
+{C%A%{x {{Fw -- зима, {{FW -- не зима
+{C%A%{x {{Fp -- весна, {{FP -- не весна
+{C%A%{x {{Fu -- літо, {{FU -- не літо
+{C%A%{x {{Fa -- осінь, {{FA -- не осінь
+{C%A%{x {{Fy або {{FY -- скидання
+Це можна використовувати при створенні зон і в описах, наприклад:
+%FFF% *desc + Пірʼя {{Tdвідливають золотом у промінні сонця{{Tnтьмяно поблискують у світлі зірок{{Tx*
+
+{cПогода{x:
+{C%A%{x {{Ft -- шторм, {{FT -- не шторм
+{C%A%{x {{Fr -- дощ, {{FR -- не дощ
+{C%A%{x {{Fc -- хмарно, {{FC -- не хмарно
+{C%A%{x {{Fs -- сонце, {{FS -- не сонце
+{C%A%{x {{Fx або {{FX -- скидання
+
+{cНевидимість{x:
+Текст, обрамлений таким тегом, буде видно лише вузькому колу осіб, а саме:
+{C%A%{x {{Ii -- побачать лише боги
+{C%A%{x {{Is -- побачать гравці з увімкненим режимом скринрідера або ті, хто використовує клієнт blintin.
+{C%A%{x {{IS -- побачать гравці без скринрідера. Приклад: {{IS картинка в ascii-art {{Is текстовий опис картинки {{Ix
+{C%A%{x {{Ix -- скидання невидимості
+</text>
     <title l="en"></title>
     <title l="ru">Тэги для форматирования текста</title>
     <title l="ua"></title>

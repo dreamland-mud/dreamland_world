@@ -1,0 +1,750 @@
+{
+ "command/balance/runFunc": {
+  "Тебе нужен банковский автомат для этой операции.": {
+   "en": "You need an ATM for this operation.",
+   "ua": "Тобі потрібен банкомат для цієї операції."
+  },
+  "У тебя в банке %s.": {
+   "en": "You have %s in the bank.",
+   "ua": "У тебе в банку %s."
+  },
+  "У тебя нет никаких денег в банке.": {
+   "en": "You don't have any money in the bank.",
+   "ua": "У тебе немає жодних грошей у банку."
+  }
+ },
+ "command/craft/runFunc": {
+  "Что ты хочешь смастерить?": {
+   "en": "What do you want to craft?",
+   "ua": "Що ти хочеш змайструвати?"
+  },
+  "Что-то пошло не так, давай-ка запишем баг.": {
+   "en": "Something went wrong, let's log a bug.",
+   "ua": "Щось пішло не так, давай-но запишемо баг."
+  }
+ },
+ "command/deposit/runFunc": {
+  "%^C1 производит банковские операции.": {
+   "en": "%^C1 handles some banking business.",
+   "ua": "%^C1 виконує банківські операції."
+  },
+  "{C%^C1{x переводит на твой банковский счет %s.": {
+   "en": "{C%^C1{x transfers %s into your bank account.",
+   "ua": "{C%^C1{x переказує %s на твій банківський рахунок."
+  },
+  "Адресат перевода '%s' не найден или сейчас не в мире.": {
+   "en": "Transfer recipient '%s' not found, or they're not in the world right now.",
+   "ua": "Отримувача переказу '%s' не знайдено, або він зараз не у світі."
+  },
+  "Положить на счет сколько?": {
+   "en": "How much do you want to deposit?",
+   "ua": "Покласти на рахунок скільки?"
+  },
+  "Пример: 'насчет 3 серебра' или 'насчет 18 золота'": {
+   "en": "Example: 'deposit 3 silver' or 'deposit 18 gold'",
+   "ua": "Приклад: 'нарахунок 3 срібла' або 'нарахунок 18 золота'"
+  },
+  "Размер банковского счета не может превышать 100.000 золотых.": {
+   "en": "A bank account balance cannot exceed 100,000 gold.",
+   "ua": "Розмір банківського рахунку не може перевищувати 100 000 золотих."
+  },
+  "Сумма указана неверно.": {
+   "en": "The amount is invalid.",
+   "ua": "Сума вказана невірно."
+  },
+  "Тебе нужен банковский автомат для этой операции.": {
+   "en": "You need a bank ATM for this operation.",
+   "ua": "Тобі потрібен банківський автомат для цієї операції."
+  },
+  "Ты можешь положить на счет только золотые или серебряные монеты.": {
+   "en": "You can only deposit gold or silver coins.",
+   "ua": "Ти можеш покласти на рахунок тільки золоті або срібні монети."
+  },
+  "Ты переводишь на банковский счет {C%C2{x %s.": {
+   "en": "You transfer %s into {C%C2{x's bank account.",
+   "ua": "Ти переказуєш %s на банківський рахунок {C%C2{x."
+  },
+  "Ты переводишь на свой банковский счет %s.": {
+   "en": "You transfer %s to your bank account.",
+   "ua": "Ти переказуєш %s на свій банківський рахунок."
+  },
+  "Укажи денежную единицу: золото или серебро.": {
+   "en": "Specify the currency: gold or silver.",
+   "ua": "Вкажи грошову одиницю: золото або срібло."
+  },
+  "Это больше, чем есть у тебя в кошельке.": {
+   "en": "That's more than you have in your purse.",
+   "ua": "Це більше, ніж є в тебе в гаманці."
+  }
+ },
+ "command/dismount/runFunc": {
+  "%1$^C1 изящно соскакива%1$nет|ют со спины %2$C2 и спешива%1$nется|ются.": {
+   "en": "%1$^C1 gracefully leap%1$ns| off %2$C2's back and dismount%1$ns|.",
+   "ua": "%1$^C1 граційно зіскаку%1$nє|ють зі спини %2$C2 і спішу%1$nється|ються."
+  },
+  "%1$^C1 изящно соскакива%1$nет|ют со твоей спины и спешива%1$nется|ются.": {
+   "en": "%1$^C1 gracefully leap%1$ns| off your back and dismount%1$ns|.",
+   "ua": "%1$^C1 витончено зіскаку%1$nє|ють з твоєї спини і спішу%1$nється|ються."
+  },
+  "Ни над тобой, ни под тобой никого нет!": {
+   "en": "There is no one above or below you!",
+   "ua": "Ні над тобою, ні під тобою нікого немає!"
+  },
+  "Пока что только игрокам позволено ездить верхом.": {
+   "en": "For now, only players are allowed to ride mounts.",
+   "ua": "Наразі їздити верхи дозволено тільки гравцям."
+  },
+  "Ты изящно соскакиваешь со спины %1$C2 и спешиваешься.": {
+   "en": "You gracefully hop off the back of %1$C2 and dismount.",
+   "ua": "Ти граційно зіскакуєш зі спини %1$C2 і спішуєшся."
+  },
+  "%1$^C1 сбрасыва%1$nет|ют %2$C2 со своей спины. Все, накатались!": {
+   "en": "%1$^C1 buck%1$ns| %2$C2 off their back. That's it, no more riding!",
+   "ua": "%1$^C1 скида%1$nє|ють %2$C2 зі своєї спини. Все, покаталися!"
+  },
+  "%1$^C1 сбрасыва%1$nет|ют тебя со своей спины. Все, накатались!": {
+   "en": "%1$^C1 throw%1$ns| you off its back. That's it, ride's over!",
+   "ua": "%1$^C1 скида%1$nє|ють тебе зі своєї спини. Все, накаталися!"
+  },
+  "Ты сбрасываешь %1$C2 со своей спины. Все, накатались!": {
+   "en": "You throw %1$C2 off your back. Well, that's enough riding for one day!",
+   "ua": "Ти скидаєш %1$C2 зі своєї спини. Все, накаталися!"
+  }
+ },
+ "command/drop/runFunc": {
+  "Бросить {Y%d{x чего именно?": {
+   "en": "Drop {Y%d{x of what, exactly?",
+   "ua": "Кинути {Y%d{x чого саме?"
+  },
+  "На %1$O6 проклятие, ты не можешь от %1$P2 избавиться.": {
+   "en": "There's a curse on %1$O6, you can't get rid of it.",
+   "ua": "На %1$O6 прокляття, ти не можеш від %1$O2 позбутися."
+  },
+  "У тебя нет {g%s{x.": {
+   "en": "You don't have {g%s{x.",
+   "ua": "У тебе немає {g%s{x."
+  },
+  "У тебя нету %s.": {
+   "en": "You don't have %s.",
+   "ua": "У тебе немає %s."
+  },
+  "Что именно ты хочешь {hh1024бросить{x?": {
+   "en": "What exactly do you want to {hh1024drop{x?",
+   "ua": "Що саме ти хочеш {hh1024кинути{x?"
+  },
+  "Чтобы бросить деньги, укажи название монеты полностью: {Yзолото{x или {Wсеребро{x.": {
+   "en": "To drop money, specify the coin name in full: {Ygold{x or {Wsilver{x.",
+   "ua": "Щоб кинути гроші, вкажи назву монети повністю: {Yзолото{x або {Wсрібло{x."
+  },
+  "Бросить {Y%d{x {g%s{x? Это как?": {
+   "en": "Drop {Y%d{x {g%s{x? Come again?",
+   "ua": "Кинути {Y%d{x {g%s{x? Це ти як?"
+  },
+  "Например, {y{hcбросить 5 серебро{x.": {
+   "en": "For example, {y{hcdrop 5 silver{x.",
+   "ua": "Наприклад, {y{hcкинути 5 срібло{x."
+  }
+ },
+ "command/fenia/runFunc": {
+  "(резервную копию сценария можно найти в системных логах)": {
+   "en": "(a backup of the script can be found in the system logs)",
+   "ua": "(резервну копію сценарію можна знайти в системних логах)"
+  },
+  "fenia add <trigger> <label> - добавить новый триггер с меткой или редактировать существующий": {
+   "en": "fenia add <trigger> <label> - add a new trigger with the given label, or edit an existing one",
+   "ua": "fenia add <trigger> <label> - додати новий тригер із міткою або редагувати вже існуючий"
+  },
+  "fenia del <trigger> <label> - удалить триггер с данной меткой": {
+   "en": "fenia del <trigger> <label> - delete the trigger with this label",
+   "ua": "fenia del <trigger> <label> - видалити тригер із цією міткою"
+  },
+  "fenia list                  - перечислить все объявленные триггера и метки": {
+   "en": "fenia list                  - list all declared triggers and labels",
+   "ua": "fenia list                  - вивести список усіх оголошених тригерів та міток"
+  },
+  "Глобальный триггер должен начинаться с 'on' или 'post', например, onLore или onDeath.": {
+   "en": "A global trigger must start with 'on' or 'post', for example onLore or onDeath.",
+   "ua": "Глобальний тригер повинен починатися з 'on' або 'post', наприклад, onLore або onDeath."
+  },
+  "Использование:": {
+   "en": "Usage:",
+   "ua": "Використання:"
+  },
+  "Использование:\\nfenia add onDeath label.": {
+   "en": "Usage:\nfenia add onDeath label.",
+   "ua": "Використання:\nfenia add onDeath label."
+  },
+  "Использование:\\nfenia del onReset label.": {
+   "en": "Usage:\\nfenia del onReset label.",
+   "ua": "Використання:\\nfenia del onReset label."
+  },
+  "Не задано ни одного глобального триггера.": {
+   "en": "No global triggers have been set.",
+   "ua": "Не задано жодного глобального тригера."
+  },
+  "Редактирую существующий триггер %s с меткой %s.": {
+   "en": "Editing existing trigger %s with label %s.",
+   "ua": "Редагую вже існуючий тригер %s з міткою %s."
+  },
+  "Триггер %s с меткой %s не задан.": {
+   "en": "Trigger %s with label %s is not set.",
+   "ua": "Тригер %s з міткою %s не заданий."
+  },
+  "Триггер %s с меткой %s успешно удален.": {
+   "en": "Trigger %s with label %s has been successfully deleted.",
+   "ua": "Тригер %s з міткою %s успішно видалено."
+  },
+  "Триггер {g%s{x:": {
+   "en": "Trigger {g%s{x:",
+   "ua": "Тригер {g%s{x:"
+  },
+  "Триггера %s с меткой %s не существует, создаю новый.": {
+   "en": "Trigger %s with label %s does not exist, creating a new one.",
+   "ua": "Тригера %s з міткою %s не існує, створюю новий."
+  },
+  "Триггеров %s пока не существует.": {
+   "en": "There are no %s triggers yet.",
+   "ua": "Тригерів %s поки що не існує."
+  },
+  "У тебя нет прав писать скрипты.": {
+   "en": "You don't have permission to write scripts.",
+   "ua": "У тебе немає прав писати скрипти."
+  },
+  "Создаю первый в мире триггер типа %s.": {
+   "en": "Creating the world's first trigger of type %s.",
+   "ua": "Створюю перший у світі тригер типу %s."
+  }
+ },
+ "command/flee/runFunc": {
+  "Похоже, ты сейчас ни с кем не сражаешься.": {
+   "en": "Looks like you're not fighting anyone right now.",
+   "ua": "Схоже, ти зараз ні з ким не б'єшся."
+  },
+  "У тебя не хватает сил, чтобы сбежать!": {
+   "en": "You don't have enough strength left to flee!",
+   "ua": "Тобі бракує сил, щоб втекти!"
+  },
+  "Смой свой позор {Rкровью.{x": {
+   "en": "Wash away your shame with {Rblood.{x",
+   "ua": "Змий свій сором {Rкров'ю.{x"
+  },
+  "Ты уже запятнал{Sfа{Sx себя позором -- куда уж больше!": {
+   "en": "You've already covered yourself in shame -- how much further could you sink!",
+   "ua": "Ти вже заплямува{Smв{Sfла{Sx себе ганьбою -- куди вже більше!"
+  }
+ },
+ "command/fly/runFunc": {
+  "%1$^C1 взмыва%1$nет|ют в воздух и начина%1$nет|ют летать.": {
+   "en": "%1$^C1 soar%1$ns| into the air and start%1$ns| flying.",
+   "ua": "%1$^C1 зліта%1$nє|ють у повітря і почина%1$nє|ють літати."
+  },
+  "%1$^C1 переста%1$nет|ют летать и медленно опуска%1$nется|ются %2$s.": {
+   "en": "%1$^C1 stop%1$ns| flying and slowly descend%1$ns| %2$s.",
+   "ua": "%1$^C1 переста%1$nє|ють літати і повільно опуска%1$nється|ються %2$s."
+  },
+  "Можешь также найти крылатого скакуна и сесть на него верхом.": {
+   "en": "You can also find a winged steed and ride it.",
+   "ua": "Ти також можеш знайти крилатого скакуна і сісти на нього верхи."
+  },
+  "Под водой летать не получиться.": {
+   "en": "You can't fly underwater.",
+   "ua": "Під водою літати не вийде."
+  },
+  "Ты перестаешь летать и медленно опускаешься %1$s.": {
+   "en": "You stop flying and slowly descend %1$s.",
+   "ua": "Ти перестаєш літати і повільно опускаєшся %1$s."
+  },
+  "Ты уже летаешь.": {
+   "en": "You are already flying.",
+   "ua": "Ти вже літаєш."
+  },
+  "Ты уже приземлил%1$Gось|ся|ась и не летаешь.": {
+   "en": "You've already landed and you're not flying.",
+   "ua": "Ти вже приземли%1$Gлося|вся|лася|лися і не літаєш."
+  },
+  "Чтобы взлететь, тебе понадобится заклинание полета или вещь с этим аффектом.": {
+   "en": "To take flight, you'll need a spell of flight or an item with that affect.",
+   "ua": "Щоб злетіти, тобі знадобиться заклинання польоту або річ з цим ефектом."
+  },
+  "Ты взмываешь в воздух и начинаешь {Cлетать{x. Уиии!": {
+   "en": "You soar into the air and start to {Cfly{x. Wheee!",
+   "ua": "Ти злітаєш у повітря і починаєш {Cлітати{x. Віііі!"
+  },
+  "Напиши {y{hcвзлететь{x или {y{hcнелетать{x.": {
+   "en": "Type {y{hcfly{x or {y{hcunfly{x.",
+   "ua": "Напиши {y{hcзлетіти{x або {y{hcнелітати{x."
+  }
+ },
+ "command/heal/runFunc": {
+  "Прочитай справку про {hh275платные услуги{x, чтобы узнать больше.": {
+   "en": "Read up on {hh275paid services{x to learn more.",
+   "ua": "Прочитай довідку про {hh275платні послуги{x, щоб дізнатися більше."
+  },
+  "Вместо этой команды используй команду {y{hc{ууслуга{x.": {
+   "en": "Instead of this command, use the {y{hc{uservice{x command.",
+   "ua": "Замість цієї команди використовуй команду {y{hc{uпослуга{x."
+  }
+ },
+ "command/identify/runFunc": {
+  "Прочитай справку про {hh275платные услуги{x, чтобы узнать больше.": {
+   "en": "Read the {hh275paid services{x help article to learn more.",
+   "ua": "Прочитай довідку про {hh275платні послуги{x, щоб дізнатися більше."
+  },
+  "Вместо этой команды используй {y{hcуслуга опознание{x.": {
+   "en": "Instead of this command, use {y{hcуслуга опознание{x.",
+   "ua": "Замість цієї команди скористайся {y{hcуслуга опознание{x."
+  }
+ },
+ "command/map/runFunc": {
+  "В {CМире Мечты{x для карт зон не нужно особых команд.": {
+   "en": "In {CDreamland{x, zone maps don't need any special commands.",
+   "ua": "У {CСвіті Мрій{x для карт зон не потрібні особливі команди."
+  },
+  "В нашем {hh2133веб-клиенте{x карта текущей зоны выводится автоматически.": {
+   "en": "In our {hh2133web client{x, the map of the current zone is displayed automatically.",
+   "ua": "У нашому {hh2133веб-клієнті{x мапа поточної зони виводиться автоматично."
+  },
+  "Дополнительно, список всех карт есть на нашем сайте: {hlhttps://dreamland.rocks/maps.html{x.": {
+   "en": "Additionally, a list of all maps is available on our website: {hlhttps://dreamland.rocks/maps.html{x.",
+   "ua": "Додатково, список усіх карт є на нашому сайті: {hlhttps://dreamland.rocks/maps.html{x."
+  },
+  "Удобно перемещаться также с помощью команды {1{hh2170путь{x{2.": {
+   "en": "You can also move around conveniently using the {1{hh2170path{x{2 command.",
+   "ua": "Зручно пересуватися також за допомогою команди {1{hh2170шлях{x{2."
+  },
+  "Чтобы почитать описания всех зон, набери {hc{yсправка карта{x.": {
+   "en": "To read the descriptions of all the zones, type {hc{yhelp map{x.",
+   "ua": "Щоб почитати описи всіх зон, набери {hc{yдовідка карта{x."
+  }
+ },
+ "command/mount/runFunc": {
+  "%1$^C1 не желает, чтобы на %1$P6 катались.": {
+   "en": "%1$^C1 doesn't want anyone riding it.",
+   "ua": "%1$^C1 не бажає, щоб на %1$C6 їздили."
+  },
+  "%1$^C1 не подчиня%1$nется|ются твоим командам.": {
+   "en": "%1$^C1 refuse%1$ns| to obey your commands.",
+   "ua": "%1$^C1 не підкоря%1$nється|ються твоїм командам."
+  },
+  "%1$^C1 непринужденно седла%1$nет|ют %2$C4 и запрыгива%1$nет|ют %2$P3 на спину.": {
+   "en": "%1$^C1 casually saddle%1$ns| %2$C4 and hop%1$ns| onto its back.",
+   "ua": "%1$^C1 невимушено сідла%1$nє|ють %2$C4 і застрибу%1$nє|ють %2$C3 на спину."
+  },
+  "%1$^C1 пытается оседлать %2$C4, но мастерства явно не хватает.": {
+   "en": "%1$^C1 tries to mount %2$C4, but clearly lacks the skill.",
+   "ua": "%1$^C1 намагається осідлати %2$C4, але майстерності явно бракує."
+  },
+  "%1$^C1 уже ед%1$nет|ут верхом на %2$C6.": {
+   "en": "%1$^C1 %1$nis|are already riding %2$C6.",
+   "ua": "%1$^C1 вже їд%1$nе|уть верхи на %2$C6."
+  },
+  "%^C1 пытается запрыгнуть верхом на %C4.": {
+   "en": "%^C1 tries to jump onto %C4.",
+   "ua": "%^C1 намагається застрибнути верхи на %C4."
+  },
+  "%^C1 пытается запрыгнуть на тебя верхом.": {
+   "en": "%^C1 tries to jump on your back.",
+   "ua": "%^C1 намагається застрибнути на тебе верхи."
+  },
+  "Для начала %C4 неплохо было бы подчинить или очаровать.": {
+   "en": "First, it wouldn't hurt to subdue or charm %C4.",
+   "ua": "Спершу непогано було б підкорити або зачарувати %C4."
+  },
+  "Кого ты хочешь оседлать?": {
+   "en": "Who do you want to mount?",
+   "ua": "Кого ти хочеш осідлати?"
+  },
+  "Пока что только игрокам позволено ездить верхом.": {
+   "en": "For now, only players are allowed to ride.",
+   "ua": "Поки що тільки гравцям дозволено їздити верхи."
+  },
+  "Попробуй найти скакуна подходящего для себя размера.": {
+   "en": "Try to find a mount that's a better fit for your size.",
+   "ua": "Спробуй знайти скакуна, який пасує тобі за розміром."
+  },
+  "Сначала попроси %C4 слезть с %C2!": {
+   "en": "First ask %C4 to get off %C2!",
+   "ua": "Спершу попроси %C4 злізти з %C2!"
+  },
+  "Сначала попроси %C4 слезть с тебя!": {
+   "en": "First ask %C4 to get off you!",
+   "ua": "Спершу попроси %C4 злізти з тебе!"
+  },
+  "Твоего мастерства кавалериста не хватает, чтобы оседлать %1$C4.": {
+   "en": "Your horsemanship isn't good enough to mount %1$C4.",
+   "ua": "Твоєї кавалерійської майстерності не вистачає, щоб осідлати %1$C4."
+  },
+  "Тебе непонятно как оседлать %C4, попробуй кого-то другого.": {
+   "en": "You have no idea how to mount %C4 -- try someone else.",
+   "ua": "Тобі незрозуміло, як осідлати %C4, спробуй когось іншого."
+  },
+  "Ты не видишь здесь персонажа по имени {1{g%s{2.": {
+   "en": "You don't see a character named {1{g%s{2 here.",
+   "ua": "Ти не бачиш тут персонажа на ім'я {1{g%s{2."
+  },
+  "Ты непринужденно седлаешь %1$C4 и запрыгиваешь %1$P3 на спину.": {
+   "en": "You casually saddle %1$C4 and jump onto its back.",
+   "ua": "Ти невимушено сідлаєш %1$C4 і застрибуєш на спину %1$C2."
+  },
+  "Ты уже едешь верхом на %C6.": {
+   "en": "You're already riding %C6.",
+   "ua": "Ти вже їдеш верхи на %C6."
+  },
+  "У тебя не хватает сил оседлать кого-либо, надо отдохнуть.": {
+   "en": "You don't have the strength to mount anyone, you need to rest.",
+   "ua": "Тобі бракує сил, щоб осідлати когось, треба відпочити."
+  },
+  "У тебя не хватит умения вскочить на %1$C4 в гуще сражения.": {
+   "en": "You don't have enough skill to jump onto %1$C4 in the thick of battle.",
+   "ua": "Тобі не вистачить вміння скочити на %1$C4 в гущі бою."
+  },
+  "Чтобы сесть верхом на %1$C4, сначала нужно, чтобы %1$P1 встал%1$Gо||а|и.": {
+   "en": "To mount %1$C4, %1$C1 needs to stand up first.",
+   "ua": "Щоб сісти верхи на %1$C4, спершу потрібно, щоб %1$C1 вст%1$Gало|ав|ала|али."
+  },
+  "%1$^C1 непринужденно седлает тебя и запрыгивает на спину.": {
+   "en": "%1$^C1 casually saddles you up and hops onto your back.",
+   "ua": "%1$^C1 невимушено осідлує тебе і застрибує на спину."
+  },
+  "%1$^C1 пыта%1$nется|ются запрыгнуть верхом на %2$C4, но соскальзыва%1$nет|ют.": {
+   "en": "%1$^C1 tr%1$nies|y to jump onto %2$C4's back, but slip%1$ns| off.",
+   "ua": "%1$^C1 намага%1$nється|ються застрибнути верхи на %2$C4, але зісковзу%1$nє|ють."
+  },
+  "%1$^C1 пытается оседлать %2$C4. %2$^C1 строго смотрит на %1$C4.": {
+   "en": "%1$^C1 tries to mount %2$C4. %2$^C1 gives %1$C4 a stern look.",
+   "ua": "%1$^C1 намагається осідлати %2$C4. %2$^C1 суворо дивиться на %1$C4."
+  },
+  "%^C1 пытается оседлать тебя, но заметив твой строгий взгляд, останавливается.": {
+   "en": "%^C1 tries to mount you, but stops after catching your stern look.",
+   "ua": "%^C1 намагається осідлати тебе, але, помітивши твій суворий погляд, зупиняється."
+  },
+  "Да ты и так на коне.": {
+   "en": "Come on, you're already in the saddle.",
+   "ua": "Та ти й так у сідлі."
+  },
+  "Оседлать само{Smго{Sfму{Sx себя? Это как?": {
+   "en": "Mount yourself? How would that even work?",
+   "ua": "Осідлати сам{Smого{Sfу{Sx себе? Це як?"
+  },
+  "Ты пытаешься оседлать %C4, но никак не можешь найти стремена.": {
+   "en": "You try to saddle %C4, but you just can't find the stirrups.",
+   "ua": "Ти намагаєшся осідлати %C4, але ніяк не можеш знайти стремена."
+  }
+ },
+ "command/nuke/runFunc": {
+  "Какого из своих последователей ты хочешь выгнать?": {
+   "en": "Which of your followers do you want to kick out?",
+   "ua": "Кого зі своїх послідовників ти хочеш вигнати?"
+  },
+  "Среди твоих последователей нет никого по имени {g%s{x.": {
+   "en": "There is no one named {g%s{x among your followers.",
+   "ua": "Серед твоїх послідовників немає нікого на ім'я {g%s{x."
+  },
+  "Ты од{Smин{Sfна{Sx. Совершенно од{Smин{Sfна{Sx. Од{Smин{Sfна{Sx-одинешен{Smек{Sfька{Sx в этом огромном и жестоком мире.": {
+   "en": "You are alone. Completely alone. All alone in this vast and cruel world.",
+   "ua": "Ти од{Smин{Sfна{Sx. Цілком од{Smин{Sfна{Sx. Од{Smин{Sfна{Sx-однісіньк{Smий{Sfа{Sx у цьому величезному й жорстокому світі."
+  },
+  "Это существо -- уже не жилец.": {
+   "en": "This creature is already a goner.",
+   "ua": "Ця істота -- вже не житець."
+  },
+  "Ты уверенно и непримиримо выгоняешь сам{Smого{Sfу{Sx себя на мороз.": {
+   "en": "You confidently and unyieldingly throw yourself out into the cold.",
+   "ua": "Ти впевнено і непримиренно виганяєш сам{Smого{Sfу{Sx себе на мороз."
+  }
+ },
+ "command/practice/runFunc": {
+  "%1$^C1 терпеливо практику%1$nет|ют с %2$C5 умение {1{W%3$s{x{2.": {
+   "en": "%1$^C1 patiently practice%1$ns| the skill {1{W%3$s{x{2 with %2$C5.",
+   "ua": "%1$^C1 терпляче практику%1$nє|ють з %2$C5 уміння {1{W%3$s{x{2."
+  },
+  "%1$^C1 терпеливо практику%1$nет|ют с тобой умение {1{W%2$s{x{2.": {
+   "en": "%1$^C1 patiently practice%1$ns| the skill {1{W%2$s{x{2 with you.",
+   "ua": "%1$^C1 терпляче практику%1$nє|ють з тобою вміння {1{W%2$s{x{2."
+  },
+  "Здесь тебе не с кем практиковать умения.": {
+   "en": "There's no one here for you to practice skills with.",
+   "ua": "Тут тобі ні з ким практикувати вміння."
+  },
+  "Ищи учителя в другом месте.": {
+   "en": "Look for a teacher somewhere else.",
+   "ua": "Шукай вчителя в іншому місці."
+  },
+  "Тебе недоступно умение {1{hh%d%s{x{2.": {
+   "en": "The skill {1{hh%d%s{x{2 is not available to you.",
+   "ua": "Тобі недоступне вміння {1{hh%d%s{x{2."
+  },
+  "Теперь %1$C1 знает умение {1{W%2$s{x{2 на {1{y%3$d%%{x{2.": {
+   "en": "Now %1$C1 knows the skill {1{W%2$s{x{2 at {1{y%3$d%%{x{2.",
+   "ua": "Тепер %1$C1 знає уміння {1{W%2$s{x{2 на {1{y%3$d%%{x{2."
+  },
+  "Теперь ты {cхорошо владеешь{x умением {W%1$s{x.": {
+   "en": "Now you {chave a good grasp of{x the skill {W%1$s{x.",
+   "ua": "Тепер ти {cдобре володієш{x умінням {W%1$s{x."
+  },
+  "Теперь ты знаешь умение {1{W%1$s{x{2 на {1{y%2$d%%{x{2.": {
+   "en": "You now know the skill {1{W%1$s{x{2 at {1{y%2$d%%{x{2.",
+   "ua": "Тепер ти знаєш вміння {1{W%1$s{x{2 на {1{y%2$d%%{x{2."
+  },
+  "Ты терпеливо практику%1$nет|ют с %1$C5 умение {1{W%2$s{x{2.": {
+   "en": "You patiently practice%1$ns| the skill {1{W%2$s{x{2 with %1$C5.",
+   "ua": "Ти терпляче практику%1$nє|ють з %1$C5 вміння {1{W%2$s{x{2."
+  },
+  "У тебя не осталось сессий практики.": {
+   "en": "You have no practice sessions left.",
+   "ua": "У тебе не залишилось сесій практики."
+  },
+  "У тебя теперь {1{Y%1$d{x{2 сесси%1$Iя|и|й практики.": {
+   "en": "You now have {1{Y%1$d{x{2 practice session%1$I|s|s.",
+   "ua": "У тебе тепер {1{Y%1$d{x{2 сесі%1$Iя|ї|й практики."
+  },
+  "Чтобы овладеть умением еще лучше, просто применяй его почаще.": {
+   "en": "To master the skill even better, just use it more often.",
+   "ua": "Щоб опанувати вміння ще краще, просто застосовуй його частіше."
+  },
+  "Я не могу обучить тебя умению {1{hh%d%s{x{2.": {
+   "en": "I can't teach you the skill {1{hh%d%s{x{2.",
+   "ua": "Я не можу навчити тебе умінню {1{hh%d%s{x{2."
+  },
+  "%^s? Я не знаю такого умения.": {
+   "en": "%^s? I don't know that skill.",
+   "ua": "%^s? Я не знаю такого вміння."
+  },
+  "Да ты сам{Sfа{Sx кого-угодно этому умению можешь {1{hh1358обучить{x{2!": {
+   "en": "Hell, you could {1{hh1358teach{x{2 this skill to just about anyone yourself!",
+   "ua": "Та ти сам{Sfа{Sx можеш {1{hh1358навчити{x{2 цьому вмінню кого завгодно!"
+  },
+  "Ты уже слишком хорошо владеешь умением {1{W%s{x{2, я не смогу ничем помочь.": {
+   "en": "You already know the skill {1{W%s{x{2 too well -- there's nothing more I can teach you.",
+   "ua": "Ти вже занадто добре володієш умінням {1{W%s{x{2, я нічим не зможу допомогти."
+  }
+ },
+ "command/readall/runFunc": {
+  "{gМаркирую все {hh21типы сообщений{x{g как {Gпрочитанные{x...": {
+   "en": "{gMarking all {hh21message types{x{g as {Gread{x...",
+   "ua": "{gПозначаю всі {hh21типи повідомлень{x{g як {Gпрочитані{x..."
+  },
+  "Чтобы заново пометить один из типов сообщений как непрочитанные,": {
+   "en": "To mark one of the message types as unread again,",
+   "ua": "Щоб знову позначити один з типів повідомлень як непрочитані,"
+  },
+  "напиши {D<тип сообщения> непрочитаны{x. Например: {y{hcизменения непрочитаны{x.": {
+   "en": "type {D<message type> unread{x. For example: {y{hcchanges unread{x.",
+   "ua": "напиши {D<тип повідомлення> непрочитані{x. Наприклад: {y{hcизменения непрочитаны{x."
+  }
+ },
+ "command/repair/runFunc": {
+  "Вместо этой команды используй {y{hcуслуга починка{x.": {
+   "en": "Instead of this command, use {y{hcservice repair{x.",
+   "ua": "Замість цієї команди використовуй {y{hcпослуга ремонт{x."
+  },
+  "Прочитай справку про {hh275платные услуги{x, чтобы узнать больше.": {
+   "en": "Read the help article on {hh275paid services{x to learn more.",
+   "ua": "Прочитай довідку про {hh275платні послуги{x, щоб дізнатися більше."
+  }
+ },
+ "command/service/runFunc": {
+  "Похоже, здесь никто не слышал об услуге под названием {g%s.{x": {
+   "en": "Looks like nobody here has heard of a service called {g%s.{x",
+   "ua": "Схоже, тут ніхто не чув про послугу під назвою {g%s.{x"
+  }
+ },
+ "command/suicide/runFunc": {
+  "{RСовершить самоубийство? Уверен{Sfа{Sx?{x": {
+   "en": "{RCommit suicide? Are you sure?{x",
+   "ua": "{RВчинити самогубство? Впевнен{Smий{Sfа{Sx?{x"
+  },
+  "Из этой местности ты сможешь выбраться самостоятельно.": {
+   "en": "You'll be able to get out of this area on your own.",
+   "ua": "З цієї місцевості ти зможеш вибратися самостійно."
+  },
+  "Милостью Варды твоя душа и труп переносятся в храм.": {
+   "en": "By Varda's mercy, your soul and corpse are transported to a temple.",
+   "ua": "Милістю Варди твоя душа і труп переносяться до храму."
+  },
+  "%1^C1 вздыхает и дрожащими руками осеняет себя святым знамением Ахурамазды.": {
+   "en": "%1^C1 sighs and with trembling hands makes the holy sign of Ahuramazda over themselves.",
+   "ua": "%1^C1 зітхає і тремтячими руками осіняє себе святим знаменням Ахурамазди."
+  },
+  "%1^C1 встает на колени и вспарывает себе живот, чтобы спастись от бесчестья.": {
+   "en": "%1^C1 drops to their knees and guts themselves to escape dishonor.",
+   "ua": "%1^C1 стає на коліна і розпорює собі живіт, щоб врятуватися від безчестя."
+  },
+  "%1^C1 перерезает себе вены и истекает кровью до смерти.": {
+   "en": "%1^C1 slits their wrists and bleeds to death.",
+   "ua": "%1^C1 перерізає собі вени і стікає кров'ю до смерті."
+  },
+  "%1^C1 уже {rТРУП!{x": {
+   "en": "%1^C1 is already a {rCORPSE!{x",
+   "ua": "%1^C1 вже {rТРУП!{x"
+  },
+  "%^O1 внезапно появляется в серебристой вспышке.": {
+   "en": "%^O1 suddenly appears in a silvery flash.",
+   "ua": "%^O1 раптово з'являється в сріблястому спалаху."
+  },
+  "{RТЫ УМИРАЕШЬ!{x": {
+   "en": "{RYOU ARE DYING!{x",
+   "ua": "{RТИ ПОМИРАЄШ!{x"
+  },
+  "{WСВЯЩЕННОЕ ПЛАМЯ ОХВАТЫВАЕТ ТЕБЯ И СЖИГАЕТ ЗАЖИВО!{x": {
+   "en": "{WHOLY FLAME ENGULFS YOU AND BURNS YOU ALIVE!{x",
+   "ua": "{WСВЯЩЕННЕ ПОЛУМʼЯ ОХОПЛЮЄ ТЕБЕ І СПАЛЮЄ ЖИВЦЕМ!{x"
+  },
+  "Вздохнув, ты перерезаешь себе вены и вскоре истекаешь кровью до смерти.": {
+   "en": "Sighing, you slit your wrists and soon bleed to death.",
+   "ua": "Зітхнувши, ти перерізаєш собі вени і незабаром стікаєш кров'ю до смерті."
+  },
+  "Один точный, жестокий жест -- и мир взрывается болью, словно внутри тебя раскрыли пламя.": {
+   "en": "One precise, brutal gesture -- and the world explodes in pain, as if a flame had been unleashed inside you.",
+   "ua": "Один точний, жорстокий жест -- і світ вибухає болем, ніби всередині тебе розкрили полум'я."
+  },
+  "Священное пламя охватывает %1$C4 и сжигает дотла!": {
+   "en": "Holy fire engulfs %1$C4 and burns them to ash!",
+   "ua": "Священне полум'я охоплює %1$C4 і спалює дотла!"
+  },
+  "Странно... местонахождение твоего тела нельзя определить.": {
+   "en": "Strange... your body's location cannot be determined.",
+   "ua": "Дивно... місцезнаходження твого тіла визначити неможливо."
+  },
+  "Ты вздыхаешь и дрожащими руками осеняешь себя святым знамением Ахурамазды.": {
+   "en": "You sigh and, with trembling hands, make the holy sign of Ahuramazda over yourself.",
+   "ua": "Ти зітхаєш і тремтячими руками осіняєш себе святим знаменням Ахурамазди."
+  },
+  "Ты падаешь вперёд, лицо касается земли... и с каждым мгновением позор уходит, растворяясь в тишине.": {
+   "en": "You fall forward, your face touching the ground... and with every passing moment the shame fades away, dissolving into silence.",
+   "ua": "Ти падаєш вперед, обличчя торкається землі... і з кожною миттю сором зникає, розчиняючись у тиші."
+  },
+  "Ты становишься на колени, подоткнув рукава и выпрямив спину -- поза покоя перед бурей.": {
+   "en": "You kneel down, tucking up your sleeves and straightening your back -- the pose of calm before the storm.",
+   "ua": "Ти стаєш на коліна, підіткнувши рукави і випрямивши спину -- поза спокою перед бурею."
+  },
+  "Холодное лезвие дрожит в руке, но ты уже не чувствуешь страха -- только тяжёлую ясность.": {
+   "en": "The cold blade trembles in your hand, but you no longer feel fear -- only a heavy clarity.",
+   "ua": "Холодне лезо тремтить у руці, але ти вже не відчуваєш страху -- тільки важку ясність."
+  },
+  "Чтобы продолжить, напиши {rсамоубийство {D<имяперсонажа>{x.": {
+   "en": "To continue, type {rsuicide {D<character name>{x.",
+   "ua": "Щоб продовжити, напиши {rсамоубийство {D<ім'я персонажа>{x."
+  }
+ },
+ "command/train/runFunc": {
+  "%1$^C1 заставля%1$nет|ют %2$C4 поднимать тяжести и выполнять изнурительные упражнения, чтобы укрепить силу.": {
+   "en": "%1$^C1 force%1$ns| %2$C4 to lift weights and perform grueling exercises to build strength.",
+   "ua": "%1$^C1 заставля%1$nє|ють %2$C4 піднімати тягарі та виконувати виснажливі вправи, щоб зміцнити силу."
+  },
+  "%1$^C1 развива%1$nет|ют красноречие %2$C2 и навыки общения, чтобы улучшить %2$P2 обаяние.": {
+   "en": "%1$^C1 develop%1$ns| %2$C2's eloquence and social skills to improve their charm.",
+   "ua": "%1$^C1 розвива%1$nє|ють красномовність %2$C2 і навички спілкування, щоб покращити чарівність %2$C2."
+  },
+  "%1$^C1 загружа%1$nет|ют %2$C4 сложными задачами и головоломками, заставляя ум работать на пределе и повышая %2$P2 интеллект.": {
+   "en": "%1$^C1 load%1$ns| %2$C4 down with complex tasks and puzzles, pushing the mind to its limit and raising their intelligence.",
+   "ua": "%1$^C1 завантажу%1$nє|ють %2$C4 складними завданнями та головоломками, змушуючи розум працювати на межі і піднімаючи інтелект."
+  },
+  "%1$^C1 заставля%1$nет|ют %2$C4 уклоняться от ударов и выполнять серию стремительных движений, улучшая %2$P2 ловкость.": {
+   "en": "%1$^C1 force%1$ns| %2$C4 to dodge blows and perform a series of swift movements, improving their dexterity.",
+   "ua": "%1$^C1 змушу%1$nє|ють %2$C4 ухилятися від ударів і виконувати серію стрімких рухів, покращуючи спритність %2$C2."
+  },
+  "%1$^C1 организу%1$nет|ют %2$C3 марафон тренировок на выносливость, постепенно укрепляя %2$P2 тело и закаляя дух.": {
+   "en": "%1$^C1 puts %2$C3 through an endurance training marathon, gradually toughening %2$C3's body and hardening their spirit.",
+   "ua": "%1$^C1 організовує для %2$C3 марафон тренувань на витривалість, поступово зміцнюючи тіло %2$C2 і гартуючи дух."
+  },
+  "%1$^C1 провод%1$nит|ят с %2$C5 время в философских размышлениях, помогая %2$P3 углубить понимание мира и обрести мудрость.": {
+   "en": "%1$^C1 spend%1$ns| time with %2$C5 in philosophical contemplation, helping %2$C3 deepen their understanding of the world and gain wisdom.",
+   "ua": "%1$^C1 провод%1$nить|ять час з %2$C5 у філософських роздумах, допомагаючи %2$C3 поглибити розуміння світу і набути мудрості."
+  }
+ },
+ "command/unmorph/runFunc": {
+  "%1$^C1 уменьша%1$nется|ются, выходя из вампирьей трансформации и превращаясь назад в %2$N4.": {
+   "en": "%1$^C1 shrink%1$ns|, coming out of the vampiric transformation and turning back into %2$N4.",
+   "ua": "%1$^C1 зменшу%1$nється|ються, виходячи з вампірської трансформації і перетворюючись назад на %2$N4."
+  },
+  "Тебе это недоступно.": {
+   "en": "This isn't available to you.",
+   "ua": "Тобі це недоступно."
+  },
+  "Ты сейчас не находишься в состоянии трансформации.": {
+   "en": "You are not currently in a transformed state.",
+   "ua": "Ти зараз не перебуваєш у стані трансформації."
+  },
+  "Ты уменьшаешься, выходя из вампирьей трансформации и превращаясь назад в %1$N4.": {
+   "en": "You shrink back down, emerging from your vampire transformation and turning back into %1$N4.",
+   "ua": "Ти зменшуєшся, виходячи з вампірської трансформації і перетворюючись назад на %1$N4."
+  },
+  "Поклонись своему Гильдмастеру для вампирьей Инициации ({hc{yсправка инициация{x).": {
+   "en": "Bow to your Guildmaster for the vampire Initiation ({hc{yhelp initiation{x).",
+   "ua": "Вклонись своєму Гільдмайстру заради вампірської Ініціації ({hc{yдовідка инициация{x)."
+  }
+ },
+ "command/wash/runFunc": {
+  "%1$^C1 пытается умыться %2$s, но безуспешно.": {
+   "en": "%1$^C1 tries to wash up with %2$s, but without success.",
+   "ua": "%1$^C1 намагається вмитися %2$s, але безуспішно."
+  },
+  "%1$^C1 черпает воду %2$s и тщательно умывается.": {
+   "en": "%1$^C1 scoops up water %2$s and washes thoroughly.",
+   "ua": "%1$^C1 набирає воду %2$s і ретельно вмивається."
+  },
+  "Для этого нужно сначала спешиться.": {
+   "en": "You need to dismount first for that.",
+   "ua": "Для цього спершу потрібно спішитися."
+  },
+  "Здесь нечем умыться -- нужна вода.": {
+   "en": "There's nothing to wash with here -- you need water.",
+   "ua": "Тут нема чим умитися -- потрібна вода."
+  },
+  "Сначала тебе нужно {y{hcприземлиться{x.": {
+   "en": "First, you need to {y{hcland{x.",
+   "ua": "Спершу тобі потрібно {y{hcприземлитися{x."
+  },
+  "Ты зачерпываешь воду %1$s и тщательно умываешься.": {
+   "en": "You scoop up water %1$s and wash yourself thoroughly.",
+   "ua": "Ти зачерпуєш воду %1$s і ретельно вмиваєшся."
+  },
+  "Твое личико и так в порядке.": {
+   "en": "Your pretty little face is already just fine.",
+   "ua": "Твоє личко і так у порядку."
+  },
+  "Ты пытаешься умыться %1$s, но руки дрожат и вода проливается мимо.": {
+   "en": "You try to wash your face with %1$s, but your hands are shaking and the water spills everywhere.",
+   "ua": "Ти намагаєшся вмитися %1$s, але руки тремтять і вода проливається повз."
+  }
+ },
+ "command/withdraw/runFunc": {
+  "%^C1 производит банковские операции.": {
+   "en": "%^C1 conducts some banking business.",
+   "ua": "%^C1 здійснює банківські операції."
+  },
+  "Сумма в %s слишком мала для снятия.": {
+   "en": "The amount of %s is too small to withdraw.",
+   "ua": "Сума у %s занадто мала для зняття."
+  },
+  "Сумма указана неверно.": {
+   "en": "The amount specified is invalid.",
+   "ua": "Сума вказана невірно."
+  },
+  "Тебе нужен банковский автомат для этой операции.": {
+   "en": "You need a bank teller machine for that.",
+   "ua": "Тобі потрібен банківський автомат для цієї операції."
+  },
+  "Ты снимаешь со счета %s.": {
+   "en": "You withdraw %s from the account.",
+   "ua": "Ти знімаєш з рахунку %s."
+  },
+  "Укажи сумму и денежную единицу. Например: 'сосчета 77 золота' или 'сосчета 9000 серебра'.": {
+   "en": "Specify the amount and the currency. For example: 'withdraw 77 gold' or 'withdraw 9000 silver'.",
+   "ua": "Вкажи суму та грошову одиницю. Наприклад: 'зрахунку 77 золота' або 'зрахунку 9000 срібла'."
+  },
+  "Услуги банка составили %s.": {
+   "en": "The bank's fees came to %s.",
+   "ua": "Послуги банку становили %s."
+  },
+  "Извини, мы не даем взаймы.": {
+   "en": "Sorry, we don't extend loans.",
+   "ua": "Вибач, ми не даємо в борг."
+  },
+  "Очень щедро.": {
+   "en": "Very generous.",
+   "ua": "Дуже щедро."
+  }
+ }
+}

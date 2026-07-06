@@ -5625,6 +5625,10 @@
   "Ты пытаешься телепортироваться, но в этой зоне твоя транспортная магия не срабатывает.": {
    "en": "You try to teleport, but your transport magic doesn't work in this zone.",
    "ua": "Ти намагаєшся телепортуватися, але в цій зоні твоя транспортна магія не спрацьовує."
+  },
+  "{BВ момент удара твое тело становится полупрозрачным, заменяясь на {Cастральную проекцию!{x": {
+   "en": "{BAt the moment of impact, your body turns translucent, shifting into {Can astral projection!{x",
+   "ua": "{BУ момент удару твоє тіло стає напівпрозорим, перетворюючись на {Cастральну проекцію!{x"
   }
  },
  "affect/bark skin/onHit": {
@@ -5667,6 +5671,18 @@
   "Твоя маскировка работает только на лоне природы.": {
    "en": "Your camouflage only works out in nature.",
    "ua": "Твоє маскування працює лише на лоні природи."
+  },
+  "{1{RЯркие источники света внезапно проявляют твое присутствие! Тебя заметили!{2": {
+   "en": "{1{RBright light sources suddenly reveal your presence! You've been spotted!{2",
+   "ua": "{1{RЯскраві джерела світла раптово викривають твою присутність! Тебе помітили!{2"
+  },
+  "{1{RЯркий солнечный свет внезапно проявляет твое присутствие! Тебя заметили!{2": {
+   "en": "{1{RBright sunlight suddenly reveals your presence! You've been spotted!{2",
+   "ua": "{1{RЯскраве сонячне світло раптово викриває твою присутність! Тебе помітили!{2"
+  },
+  "Внезапно множественные светильники будто проявляют что-то ранее замаскированное...": {
+   "en": "Suddenly, a multitude of lamps seem to reveal something that was camouflaged before...",
+   "ua": "Раптом безліч світильників ніби виявляють щось, раніше замасковане..."
   }
  },
  "affect/chill touch/onRemoveObj": {
@@ -5695,18 +5711,46 @@
   "Из дымки проступа%1$nет|ют %1$O1 в своей изначальной форме.": {
    "en": "From the haze, %1$O1 emerge%1$ns| in their original form.",
    "ua": "Із серпанку проступа%1$nє|ють %1$O1 у своїй первісній формі."
+  },
+  "%1$^O1 окутыва%1$nется|ются алой дымкой, словно сдуваясь на глазах.": {
+   "en": "%1$^O1 wrap%1$ns| itself in a scarlet haze, as if deflating before your eyes.",
+   "ua": "%1$^O1 огорта%1$nється|ються багряною млою, немов на очах здувається."
   }
  },
  "affect/corruption/onUpdateChar": {
   "Твое внимание привлекает приятный сладковатый запах гниения.": {
    "en": "A pleasant, sweetish smell of decay catches your attention.",
    "ua": "Твою увагу привертає приємний солодкуватий запах гниття."
+  },
+  "%1$^C1 с удовольствием обнюхива%1$nет|ют свои гниющие раны и слизыва%1$nет|ют с них червяков.": {
+   "en": "%1$^C1 sniff%1$ns| at their rotting wounds with relish and lick%1$ns| the worms off them.",
+   "ua": "%1$^C1 із задоволенням обнюху%1$nє|ють свої гниючі рани і злизу%1$nє|ють з них червʼяків."
+  },
+  "{1{rГниющие раны{2 %1$C2 причиняют %1$P3 жуткую боль и страдания.": {
+   "en": "{1{rRotting wounds{2 of %1$C2 cause %1$C3 terrible pain and suffering.",
+   "ua": "{1{rГниючі рани{2 %1$C2 завдають %1$C3 жахливого болю та страждань."
+  },
+  "{1{rГниющие раны{2 причиняют тебе жуткую боль и страдания.": {
+   "en": "{1{rYour rotting wounds{2 cause you horrific pain and suffering.",
+   "ua": "{1{rГниючі рани{2 завдають тобі жахливого болю і страждань."
+  },
+  "Ты с удовольствием обнюхиваешь свою гниющую рану и слизываешь с нее червяков.": {
+   "en": "You gleefully sniff your rotting wound and lick the worms off it.",
+   "ua": "Ти із задоволенням обнюхуєш свою гниючу рану і злизуєш з неї червʼяків."
   }
  },
  "affect/corruption/onUpdateHit": {
   "{1Ты получаешь урон от гниющих ран {D[{R%d{2{D]{2.": {
    "en": "{1You take damage from your rotting wounds {D[{R%d{2{D]{2.",
    "ua": "{1Ти отримуєш шкоду від гниючих ран {D[{R%d{2{D]{2."
+  },
+  "{RНезалеченные гниющие раны приводят к твоей безвременной кончине.{x": {
+   "en": "{RUntreated, rotting wounds bring about your untimely demise.{x",
+   "ua": "{RНезагоєні гниючі рани призводять до твоєї передчасної смерті.{x"
+  },
+  "В муках от {1{rгниющих ран,{2 %1$C1, наконец, отда%1$nет|ют Шамашу душу и погиба%1$nет|ют.": {
+   "en": "In agony from {1{rrotting wounds,{2 %1$C1 finally give%1$ns| their soul to Shamash and die%1$ns|.",
+   "ua": "У муках від {1{rгниючих ран,{2 %1$C1, нарешті, відда%1$nє|ють Шамашу душу і гин%1$nе|уть."
   }
  },
  "affect/dark shroud/onRefresh": {
@@ -5731,12 +5775,40 @@
   "Твой пульс учащается, когда ты входишь в {Rярость!{x": {
    "en": "Your pulse quickens as you fly into a {Rrage!{x",
    "ua": "Твій пульс частішає, коли тебе охоплює {Rлють!{x"
+  },
+  "%1$^C1 изда%1$nет|ют боевой клич!": {
+   "en": "%1$^C1 let%1$ns| out a battle cry!",
+   "ua": "%1$^C1 вида%1$nє|ють бойовий клич!"
+  },
+  "%1$^C1 свирепе%1$nет|ют, и %1$Gего|его|ее|их глаза наполняются {Rдиким огнем!{x": {
+   "en": "%1$^C1 grow%1$ns| fiercer, and their eyes fill with {Rwild fire!{x",
+   "ua": "%1$^C1 лютіша%1$nє|ють, і %1$Gйого|його|її|їх очі наповнюються {Rдиким вогнем!{x"
+  },
+  "{C'Когда-нибудь ты станешь моим! Но, возможно, не сегодня!'{x": {
+   "en": "{C'Someday you'll be mine! But maybe not today!'{x",
+   "ua": "{C'Колись ти станеш моїм! Але, можливо, не сьогодні!'{x"
+  },
+  "{yТы слышишь у себя в голове дьявольский голос Дэви Джонса:{x": {
+   "en": "{yYou hear the devilish voice of Davy Jones inside your head:{x",
+   "ua": "{yТи чуєш у себе в голові диявольський голос Дейві Джонса:{x"
+  },
+  "Ты же сатир, найди напиток покрепче!": {
+   "en": "You're a satyr, go find yourself a stronger drink!",
+   "ua": "Ти ж сатир, знайди собі напій міцніший!"
+  },
+  "Ты издаешь боевой клич и чувствуешь, что теперь тебе все по плечу!": {
+   "en": "You let out a battle cry and feel like you can take on anything now!",
+   "ua": "Ти видаєш бойовий клич і відчуваєш, що тепер тобі все по плечу!"
   }
  },
  "affect/deadly venom/onSmellRoom": {
   "Долго находиться в этом месте наверняка опасно для здоровья.": {
    "en": "Staying here too long is surely bad for your health.",
    "ua": "Довго перебувати в цьому місці напевно шкідливо для здоровʼя."
+  },
+  "В воздухе разлит ужасающий приторно-сладкий аромат чистой {1{gсмерти{2.": {
+   "en": "The air is thick with a horrifying, sickly-sweet aroma of pure {1{gdeath{2.",
+   "ua": "Повітря просякнуте жахливим приторно-солодким ароматом чистої {1{gсмерті{2."
   }
  },
  "affect/deforestation/onUpdateRoom": {
@@ -5761,6 +5833,10 @@
   "Охотничье чутье предостерегает: не ходи %1$s -- там притаилась ловушка.": {
    "en": "Your hunter's instinct warns you: don't go %1$s -- there's a trap lurking there.",
    "ua": "Мисливське чуття застерігає: не йди %1$s -- там причаїлася пастка."
+  },
+  "Не ходи %1$s, не умея летать -- там открытое небо, и ты камнем рухнешь вниз.": {
+   "en": "Don't go %1$s without being able to fly -- there's open sky out there, and you'll plummet down like a stone.",
+   "ua": "Не йди %1$s, не вміючи літати -- там відкрите небо, і ти каменем рухнеш вниз."
   }
  },
  "affect/dragon skin/onHit": {
@@ -5785,18 +5861,42 @@
   "{cПеред тобой на мгновение сгущается силовое поле, отклоняющее снаряд!{x": {
    "en": "{cA force field flickers into being before you for an instant, deflecting the projectile!{x",
    "ua": "{cПеред тобою на мить згущається силове поле, що відхиляє снаряд!{x"
+  },
+  "{1{cПеред {2%C5 {cна мгновение сгущается силовое поле, отклоняющее снаряд!{x": {
+   "en": "{1{cIn front of {2%C5 {ca force field thickens for a moment, deflecting the projectile!{x",
+   "ua": "{1{cПеред {2%C5 {cна мить згущується силове поле, що відхиляє снаряд!{x"
   }
  },
  "affect/evil spirit/onUpdateRoom": {
   "{DЖадные щупальца Тьмы{x внезапно захлестывают %C4 и проникают в тело!": {
    "en": "{DGreedy tendrils of Darkness{x suddenly lash out at %C4 and sink into the body!",
    "ua": "{DЖадібні щупальця Темряви{x раптово оповивають %C4 і проникають у тіло!"
+  },
+  "{DДревняя Тьма проникает в тебя, завладевая твоим разумом!{x": {
+   "en": "{DThe Ancient Darkness seeps into you, seizing your mind!{x",
+   "ua": "{DПрадавня Темрява проникає в тебе, оволодіваючи твоїм розумом!{x"
+  },
+  "{DТы слышишь жуткий шепот миллионов душ, сводящий тебя с ума!{x": {
+   "en": "{DYou hear the eerie whisper of a million souls, driving you mad!{x",
+   "ua": "{DТи чуєш моторошний шепіт мільйонів душ, що зводить тебе з розуму!{x"
   }
  },
  "affect/fade/onEntryChar": {
   "Внезапно солнечный свет будто проявляет что-то ранее спрятанное...": {
    "en": "Suddenly the sunlight seems to reveal something that was previously hidden...",
    "ua": "Раптом сонячне світло ніби проявляє щось раніше приховане..."
+  },
+  "{1{RЯркие источники света внезапно проявляют твое присутствие! Тебя заметили!{2": {
+   "en": "{1{RBright light sources suddenly reveal your presence! You've been spotted!{2",
+   "ua": "{1{RЯскраві джерела світла раптово викривають твою присутність! Тебе помітили!{2"
+  },
+  "{1{RЯркий солнечный свет внезапно проявляет твое присутствие! Тебя заметили!{2": {
+   "en": "{1{RBright sunlight suddenly reveals your presence! You've been spotted!{2",
+   "ua": "{1{RЯскраве сонячне світло раптово викриває твою присутність! Тебе помітили!{2"
+  },
+  "Внезапно множественные светильники будто проявляют что-то ранее спрятанное...": {
+   "en": "Suddenly, a multitude of lamps seem to reveal something that was hidden before...",
+   "ua": "Раптом безліч світильників ніби виявляють щось, раніше сховане..."
   }
  },
  "affect/fatigue/onUpdateChar": {
@@ -5819,12 +5919,24 @@
   "{1{bПод водой %1$C1 начина%1$nет|ют {Rзадыхаться!{2": {
    "en": "{1{bUnderwater %1$C1 begin%1$ns| {Rto suffocate!{2",
    "ua": "{1{bПід водою %1$C1 почина%1$nє|ють {Rзадихатися!{2"
+  },
+  "{1{bПод водой ты начинаешь {Rзадыхаться!{2": {
+   "en": "{1{bUnderwater, you start to {Rchoke!{2",
+   "ua": "{1{bПід водою ти починаєш {Rзадихатися!{2"
   }
  },
  "affect/flux state/onFightChar": {
   "{RУ тебя больше не хватает энергии поддерживать состояние потока.{x": {
    "en": "{RYou no longer have the energy to maintain your flux state.{x",
    "ua": "{RУ тебе більше не вистачає енергії підтримувати стан потоку.{x"
+  },
+  "{BПолупрозрачное тело %C2 мерно пульсирует голубоватым светом.{x": {
+   "en": "{BThe translucent body of %C2 pulses steadily with a bluish light.{x",
+   "ua": "{BНапівпрозоре тіло %C2 мірно пульсує блакитним світлом.{x"
+  },
+  "{BТы продолжаешь свою глубокую медитацию, путешествуя в Великом Потоке.{x": {
+   "en": "{BYou continue your deep meditation, traveling through the Great Flow.{x",
+   "ua": "{BТи продовжуєш свою глибоку медитацію, подорожуючи Великим Потоком.{x"
   }
  },
  "affect/flux state/onImmune": {
@@ -5841,12 +5953,28 @@
   "{GКорни ласково окутывают тебя, развеивая дурман нездорового сна.{x": {
    "en": "{GRoots gently wrap around you, dispelling the haze of feverish sleep.{x",
    "ua": "{GКорені ніжно огортають тебе, розвіюючи дурман нездорового сну.{x"
+  },
+  "Колючие побеги внезапно прорастают сквозь землю и устремляются к %C3!": {
+   "en": "Thorny shoots suddenly burst up through the ground and lunge toward %C3!",
+   "ua": "Колючі пагони раптово проростають крізь землю і кидаються до %C3!"
+  },
+  "Колючие побеги внезапно прорастают сквозь землю и устремляются к тебе!": {
+   "en": "Thorny shoots suddenly burst up through the ground and lunge at you!",
+   "ua": "Колючі паростки раптово проростають крізь землю і кидаються на тебе!"
+  },
+  "Корни ласково окутывают %C4, развеивая дурман нездорового сна.": {
+   "en": "Roots gently envelop %C4, dispelling the haze of a troubled sleep.",
+   "ua": "Корені лагідно огортають %C4, розвіюючи дурман нездорового сну."
   }
  },
  "affect/hazukure/onUpdateChar": {
   "%^C1 стонет от невыносимого {Rстыда.{x": {
    "en": "%^C1 moans in unbearable {Rshame.{x",
    "ua": "%^C1 стогне від нестерпного {Rсорому.{x"
+  },
+  "{RПозор не уходит -- он живёт в каждом твоём вдохе.{x": {
+   "en": "{RShame doesn't fade -- it lives in every breath you take.{x",
+   "ua": "{RГаньба не минає -- вона живе в кожному твоєму подиху.{x"
   }
  },
  "affect/heat/onSpecRoom": {
@@ -5871,6 +5999,14 @@
   "В воздухе, в поле или в пустыне скрыться негде.": {
    "en": "There's nowhere to hide in the air, in an open field, or in the desert.",
    "ua": "У повітрі, в полі чи в пустелі сховатися нема де."
+  },
+  "Внезапно множественные светильники будто проявляют что-то ранее скрытое...": {
+   "en": "Suddenly, a multitude of lights seem to reveal something that was hidden before...",
+   "ua": "Раптово численні світильники ніби проявляють щось, що досі було приховане..."
+  },
+  "Внезапно солнечный свет будто проявляет что-то ранее скрытое...": {
+   "en": "Suddenly, the sunlight seems to reveal something that was concealed before...",
+   "ua": "Раптом сонячне світло ніби виявляє щось, раніше приховане..."
   }
  },
  "affect/holy armor/onImmune": {
@@ -5903,6 +6039,10 @@
   "Под потоком %1$N2 %2$O1 шип%2$nит|ят и остыва%2$nет|ют.": {
    "en": "Under a stream of %1$N2, %2$O1 hiss%2$nes| and cool%2$ns| down.",
    "ua": "Під потоком %1$N2 %2$O1 шип%2$nить|лять і остига%2$nє|ють."
+  },
+  "От явно недостаточной струи %1$N2 %2$O1 шип%2$nит|ят, но все равно не остыва%2$nет|ют!": {
+   "en": "From the clearly inadequate stream of %1$N2, %2$O1 sizzle%2$ns|, but still do%2$nesn't|n't cool down!",
+   "ua": "Від явно недостатнього струменя %1$N2 %2$O1 ши%2$nпить|плять, але все одно не охолоджу%2$nється|ються!"
   }
  },
  "affect/incandescent/onRemoveObj": {
@@ -5947,6 +6087,10 @@
   "%^O1 вспыхивает и выстреливает электрическим разрядом в тебя!": {
    "en": "%^O1 flares up and fires a bolt of electricity at you!",
    "ua": "%^O1 спалахує і вистрілює електричним розрядом у тебе!"
+  },
+  "{1{Y%^O1 {Yбудит тебя, предупреждая о приближении врагов!{2": {
+   "en": "{1{Y%^O1 {Ywakes you, warning of approaching enemies!{2",
+   "ua": "{1{Y%^O1 {Yбудить тебе, попереджаючи про наближення ворогів!{2"
   }
  },
  "affect/lightning ward/onLeave": {
@@ -5959,6 +6103,14 @@
   "Ты поворачиваешь голову, обращая внимание на новоприбывш%1$Gего|его|ую %1$C1": {
    "en": "You turn your head, noticing the newly arrived %1$C1",
    "ua": "Ти повертаєш голову, звертаючи увагу на новоприбул%1$Gого|ого|у %1$C1"
+  },
+  "Пресвятые пяточки Эроса! Как%1$Gое|ой|ая эффектн%1$Gое|ый|ая %1$Gсоздание|мужчина|женщина!": {
+   "en": "Holy heels of Eros! What a gorgeous specimen!",
+   "ua": "Пресвяті пʼяточки Ероса! Як%1$Gе|ий|а ефектн%1$Gе|ий|а %1$Gстворіння|чоловік|жінка!"
+  },
+  "Ты чувствуешь непреодолимое желание поскорее посмотреть на %1$P4.": {
+   "en": "You feel an overwhelming urge to catch sight of the object of your affection as soon as possible.",
+   "ua": "Ти відчуваєш непереборне бажання якнайшвидше подивитися на обʼєкт свого кохання."
   }
  },
  "affect/misogi/onUpdateChar": {
@@ -5999,12 +6151,40 @@
   "Комары и мошки кусают %1$C2, {1{Gотравляя{2 %1$P2!": {
    "en": "Mosquitoes and midges bite %1$C2, {1{Gpoisoning{2 them!",
    "ua": "Комарі та мошка кусають %1$C2, {1{Gотруюючи{2 %1$C2!"
+  },
+  "%^C1 сдирает с себя %O4 и с наслаждением чешется.": {
+   "en": "%^C1 rips %O4 off themselves and scratches with relish.",
+   "ua": "%^C1 зриває з себе %O4 і з насолодою чешеться."
+  },
+  "{RИзнывая от укусов комаров, ты сдираешь с себя %O4, чтобы почесаться.{x": {
+   "en": "{RItching from mosquito bites, you tear off your %O4 to scratch yourself.{x",
+   "ua": "{RЗнемагаючи від укусів комарів, ти зриваєш із себе %O4, щоб почухатися.{x"
+  },
+  "{RКомары и мошки безжалостно вгрызаются в кожу, {1{Gотравляя{2 тебя!{x": {
+   "en": "{RMosquitoes and midges bite mercilessly into your skin, {1{Gpoisoning{2 you!{x",
+   "ua": "{RКомарі та мошка нещадно вгризаються в шкіру, {1{Gотруюючи{2 тебе!{x"
+  },
+  "Комары и мошки забираются в глаза %1$C2, {1{Wослепляя{2 %1$P2!": {
+   "en": "Mosquitoes and gnats creep into the eyes of %1$C2, {1{Wblinding{2 %1$C4!",
+   "ua": "Комарі та мошки залазять в очі %1$C2, {1{Wосліплюючи{2 %1$C4!"
+  },
+  "Комары и мошки кусают %1$C2, {1{mослабляя{2 %1$P2!": {
+   "en": "Mosquitoes and gnats bite %1$C2, {1{mweakening{2 them!",
+   "ua": "Комарі та мошка кусають %1$C2, {1{mослаблюючи{2 %1$C2!"
   }
  },
  "affect/mosquito swarm/onUpdateChar": {
   "Тебе удается ловко прихлопнуть большинство гнуса.": {
    "en": "You manage to deftly swat away most of the bugs.",
    "ua": "Тобі вдається спритно прихлопнути більшість гнусу."
+  },
+  "%^C1 сдирает с себя %O4 и с наслаждением чешется.": {
+   "en": "%^C1 rips %O4 off themselves and scratches with relish.",
+   "ua": "%^C1 зриває з себе %O4 і з насолодою чешеться."
+  },
+  "{RИзнывая от укусов комаров, ты сдираешь с себя %O4, чтобы почесаться.{x": {
+   "en": "{RItching from mosquito bites, you tear off your %O4 to scratch yourself.{x",
+   "ua": "{RЗнемагаючи від укусів комарів, ти зриваєш із себе %O4, щоб почухатися.{x"
   }
  },
  "affect/narcotic mist/onLeave": {
@@ -6037,12 +6217,44 @@
   "{WТы ошеломленно трясешь головой!{x": {
    "en": "{WYou shake your head, dazed!{x",
    "ua": "{WТи приголомшено трясеш головою!{x"
+  },
+  "{BЗаметив толстую шкуру {C%C2{B, твой призрачный двойник наносит ментальный удар!": {
+   "en": "{BNoticing the thick hide of {C%C2{B, your phantasmal double delivers a mental blow!",
+   "ua": "{BПомітивши товсту шкуру {C%C2{B, твій примарний двійник завдає ментального удару!"
+  },
+  "{BПризрачный двойник %C2 появляется за спиной у %C2, нанося внезапный удар!{x": {
+   "en": "{BA phantom double of %C2 appears behind %C2, landing a sudden strike!{x",
+   "ua": "{BПривид-двійник %C2 зʼявляється за спиною у %C2, завдаючи раптового удару!{x"
+  },
+  "{BПризрачный двойник %C2 появляется за спиной у %C2, нанося ментальный удар!{x": {
+   "en": "{BA phantom double of %C2 appears behind %C2, landing a mental blow!{x",
+   "ua": "{BПривид-двійник %C2 зʼявляється за спиною у %C2, завдаючи ментального удару!{x"
+  },
+  "{BПризрачный двойник %C2 появляется у тебя за спиной, нанося внезапный удар!{x": {
+   "en": "{BA ghostly double of %C2 appears behind you, landing a sudden strike!{x",
+   "ua": "{BПривид-двійник %C2 зʼявляється у тебе за спиною, завдаючи раптового удару!{x"
+  },
+  "{BТвой призрачный двойник появляется за спиной у {C%C2{B, нанося внезапный удар!{x": {
+   "en": "{BYour ghostly double appears behind {C%C2{B, landing a sudden strike!{x",
+   "ua": "{BТвій примарний двійник зʼявляється за спиною у {C%C2{B, завдаючи раптового удару!{x"
+  },
+  "{W%^C1 ошеломленно трясет головой!{x": {
+   "en": "{W%^C1 shakes their head in a daze!{x",
+   "ua": "{W%^C1 приголомшено трясе головою!{x"
   }
  },
  "affect/plague/onUpdateChar": {
   "Твое телосложение помогает тебе бороться с болезнью.": {
    "en": "Your constitution helps you fight off the disease.",
    "ua": "Твоя статура допомагає тобі боротися з хворобою."
+  },
+  "%1$^C1 бь%1$nется|ются в агонии от огромных чумных язв на %1$Gего|его|ее|их теле.": {
+   "en": "%1$^C1 thrash%1$nes| in agony from massive plague boils covering their body.",
+   "ua": "%1$^C1 бʼ%1$nється|ються в агонії від величезних чумних виразок на %1$Gйого|його|її|їх тілі."
+  },
+  "Ты бьешься в агонии от огромных чумных язв на твоем теле.": {
+   "en": "You writhe in agony from the huge plague sores covering your body.",
+   "ua": "Ти бʼєшся в агонії від величезних чумних виразок на своєму тілі."
   }
  },
  "affect/poison/onSmellChar": {
@@ -6079,6 +6291,26 @@
   "%^C1 блаженно улыбается.": {
    "en": "%^C1 smiles blissfully.",
    "ua": "%^C1 блаженно посміхається."
+  },
+  "%^C1 внезапно поднимает нос по ветру.": {
+   "en": "%^C1 suddenly lifts their nose to the wind.",
+   "ua": "%^C1 раптом підіймає ніс за вітром."
+  },
+  "%^C1 яростно принюхивается, но затем разочарованно затихает.": {
+   "en": "%^C1 sniffs furiously, then quiets down in disappointment.",
+   "ua": "%^C1 люто принюхується, але потім розчаровано затихає."
+  },
+  "Ммм, вкуснятина!": {
+   "en": "Mmm, tasty!",
+   "ua": "Ммм, смакота!"
+  },
+  "Ты внезапно застываешь. Кажется, откуда-то пахнет свежей кровушкой!": {
+   "en": "You suddenly freeze in place. Seems like fresh blood is wafting in from somewhere!",
+   "ua": "Ти раптово завмираєш. Здається, звідкись тхне свіжою кровцею!"
+  },
+  "Ты яростно принюхиваешься, но не можешь обнаружить источник запаха крови.": {
+   "en": "You sniff furiously, but you can't pinpoint the source of the smell of blood.",
+   "ua": "Ти люто принюхуєшся, але не можеш визначити джерело запаху крові."
   }
  },
  "affect/protection good/onRefresh": {
@@ -6113,6 +6345,10 @@
   "Вокруг %C2 вспыхивает {Wбелая аура{x, дарованная {1{C%N5{2.": {
    "en": "{WA white aura{x flares up around %C2, granted by {1{C%N5{2.",
    "ua": "Навколо %C2 спалахує {Wбіла аура{x, дарована {1{C%N5{2."
+  },
+  "Вокруг тебя вспыхивает {Wбелая аура{x, дарованная {1{C%N5{2.": {
+   "en": "A {Wwhite aura{x flares up around you, granted by {1{C%N5{2.",
+   "ua": "Навколо тебе спалахує {Wбіла аура{x, дарована {1{C%N5{2."
   }
  },
  "affect/set davy jones/onFightChar": {
@@ -6131,6 +6367,34 @@
   "Волшебное тепло согревает тебя изнутри.": {
    "en": "Magical warmth warms you from within.",
    "ua": "Магічне тепло зігріває тебе зсередини."
+  },
+  "%1$^C1 свирепе%1$nет|ют, и %1$Gего|его|ее|их глаза наполняются {Rдиким огнем!{x": {
+   "en": "%1$^C1 grow%1$ns| fierce, and their eyes fill with {Rwild fire!{x",
+   "ua": "%1$^C1 люті%1$nє|ють, і %1$Gйого|його|її|їх очі наповнюються {Rдиким вогнем!{x"
+  },
+  "{C'Без капли рома в бутылке ты не настоящий пират, салага! Тьфу!'{x": {
+   "en": "{C'Without a drop of rum in the bottle, you're no real pirate, ye landlubber! Bah!'{x",
+   "ua": "{C'Без краплі рому в пляшці ти не справжній пірат, салаго! Тьху!'{x"
+  },
+  "{C'Когда-нибудь ты станешь моим! Но, возможно, не сегодня!'{x": {
+   "en": "{C'Someday you'll be mine! But maybe not today!'{x",
+   "ua": "{C'Колись ти станеш моїм! Але, можливо, не сьогодні!'{x"
+  },
+  "{yТы слышишь у себя в голове дьявольский голос Дэви Джонса:{x": {
+   "en": "{yYou hear the devilish voice of Davy Jones inside your head:{x",
+   "ua": "{yТи чуєш у себе в голові диявольський голос Дейві Джонса:{x"
+  },
+  "Твой пульс учащается, когда ты входишь в {Rярость!{x": {
+   "en": "Your pulse quickens as you fly into a {Rrage!{x",
+   "ua": "Твій пульс частішає, коли ти впадаєш у {Rлють!{x"
+  },
+  "Ты же сатир, найди напиток покрепче!": {
+   "en": "You're a satyr -- go find something stronger to drink!",
+   "ua": "Ти ж сатир, знайди собі напій міцніший!"
+  },
+  "Ты издаешь боевой клич и чувствуешь, что теперь тебе все по плечу!": {
+   "en": "You let out a battle cry and feel like you can take on anything now!",
+   "ua": "Ти видаєш бойовий клич і відчуваєш, що тепер тобі все по плечу!"
   }
  },
  "affect/settraps/onEntryRoom": {
@@ -6149,6 +6413,10 @@
   "Ты замечаешь замаскированную воровскую ловушку и аккуратно обходишь ее.": {
    "en": "You notice a disguised thief's trap and carefully avoid it.",
    "ua": "Ти помічаєш замасковану злодійську пастку і обережно оминаєш її."
+  },
+  "Ты удовлетворенно смотришь на свою ловушку и поправляешь пару мелочей.": {
+   "en": "You eye your trap with satisfaction, tweaking a couple of small details.",
+   "ua": "Ти задоволено оглядаєш свою пастку і поправляєш кілька дрібниць."
   }
  },
  "affect/shapeshift/onFightChar": {
@@ -6183,6 +6451,54 @@
   "{gТы кусаешь {1%1$C4{2, и %1$P2 раны начинают гнить!{x": {
    "en": "{gYou bite {1%1$C4{2, and %1$C2's wounds start to rot!{x",
    "ua": "{gТи кусаєш {1%1$C4{2, і рани %1$C2 починають гнити!{x"
+  },
+  "{g%1$^C1 кусает {1%2$C4{2, и %2$P2 раны начинают гнить!{x": {
+   "en": "{g%1$^C1 bites {1%2$C4{2, and %2$C2's wounds begin to rot!{x",
+   "ua": "{g%1$^C1 кусає {1%2$C4{2, і рани %2$C2 починають гнити!{x"
+  },
+  "{g%1$^C1 кусает тебя, и твои раны начинают гнить!{x": {
+   "en": "{g%1$^C1 bites you, and your wounds start to rot!{x",
+   "ua": "{g%1$^C1 кусає тебе, і твої рани починають гнити!{x"
+  },
+  "{g%^C1 резко шипит, подсекая {1%C4{2 ударом хвоста!{x": {
+   "en": "{g%^C1 hisses sharply, sweeping {1%C4{2 off its feet with a tail strike!{x",
+   "ua": "{g%^C1 різко шипить, підсікаючи {1%C4{2 ударом хвоста!{x"
+  },
+  "{g%^C1 резко шипит, подсекая тебя ударом хвоста!{x": {
+   "en": "{g%^C1 hisses sharply, sweeping your legs out with a tail strike!{x",
+   "ua": "{g%^C1 різко шипить, підсікаючи тебе ударом хвоста!{x"
+  },
+  "{gТы резко шипишь, подсекая {1%C4{2 ударом хвоста!{x": {
+   "en": "{gYou hiss sharply, knocking {1%C4{2 off balance with a lash of your tail!{x",
+   "ua": "{gТи різко шипиш, підсікаючи {1%C4{2 ударом хвоста!{x"
+  },
+  "{r%1$^C1 страшно рычит и {1%1$P2{2 глаза загораются диким огнем!{x": {
+   "en": "{r%1$^C1 growls fiercely, and {1%1$C2{2's eyes blaze with wild fire!{x",
+   "ua": "{r%1$^C1 страшно ричить, і {1%1$C2{2 очі займаються диким вогнем!{x"
+  },
+  "{y%^C1 глухо рычит, стискивая {1%C4{2 в медвежьих обьятиях.{x": {
+   "en": "{y%^C1 growls low, squeezing {1%C4{2 in a crushing bear hug.{x",
+   "ua": "{y%^C1 глухо гарчить, стискаючи {1%C4{2 в ведмежих обіймах.{x"
+  },
+  "{y%^C1 глухо рычит, стискивая тебя в медвежьих обьятиях.{x": {
+   "en": "{y%^C1 growls low, crushing you in a bear hug.{x",
+   "ua": "{y%^C1 глухо гарчить, стискаючи тебе в ведмежих обіймах.{x"
+  },
+  "{y%^C1 рычит, ударяя {1%C4{2 лапой!{x": {
+   "en": "{y%^C1 growls, striking {1%C4{2 with a paw!{x",
+   "ua": "{y%^C1 гарчить, бʼючи {1%C4{2 лапою!{x"
+  },
+  "{y%^C1 рычит, ударяя тебя лапой!{x": {
+   "en": "{y%^C1 growls, striking you with a paw!{x",
+   "ua": "{y%^C1 гарчить, бʼючи тебе лапою!{x"
+  },
+  "{yТы глухо рычишь, стискивая {1%C4{2 в медвежьих обьятиях.{x": {
+   "en": "{yYou growl lowly, crushing {1%C4{2 in a bear hug.{x",
+   "ua": "{yТи глухо ричиш, стискаючи {1%C4{2 в ведмежих обіймах.{x"
+  },
+  "{yТы рычишь, ударяя {1%C4{2 лапой!{x": {
+   "en": "{yYou growl, striking {1%C4{2 with a paw!{x",
+   "ua": "{yТи ричиш, бʼючи {1%C4{2 лапою!{x"
   }
  },
  "affect/shield/onImmune": {
@@ -6201,6 +6517,10 @@
   "{WЗаклинание щита мерцает под ударами и исчезает.{x": {
    "en": "{WThe shield spell flickers under the blows and fades away.{x",
    "ua": "{WЗаклинання щита мерехтить під ударами і зникає.{x"
+  },
+  "{CПеред тобой на мгновение сгущается призрачный щит, блокирующий удар!{x": {
+   "en": "{CA ghostly shield condenses before you for an instant, blocking the blow!{x",
+   "ua": "{CПеред тобою на мить згущується примарний щит, що блокує удар!{x"
   }
  },
  "affect/shocking trap/onEntryRoom": {
@@ -6223,6 +6543,14 @@
   "Ты ошеломленно трясешь головой и не можешь пошевелиться!": {
    "en": "You shake your head, stunned, and can't move!",
    "ua": "Ти приголомшено трясеш головою і не можеш поворухнутися!"
+  },
+  "Ты чувствуешь приятное покалывание, входя в резонанс со своей ловушкой.": {
+   "en": "You feel a pleasant tingling as you resonate with your own trap.",
+   "ua": "Ти відчуваєш приємне поколювання, входячи в резонанс зі своєю пасткою."
+  },
+  "Ты чувствуешь усиливающееся покалывание в кончиках пальцев...": {
+   "en": "You feel a growing tingling in your fingertips...",
+   "ua": "Ти відчуваєш наростаюче поколювання в кінчиках пальців..."
   }
  },
  "affect/sleep/onRemoveChar": {
@@ -6271,6 +6599,14 @@
   "Ты слышишь тихий плеск %1$C2, плывущ%1$Gего|его|ей|их в %2$N6.": {
    "en": "You hear the quiet splash of %1$C2 swimming in %2$N6.",
    "ua": "Ти чуєш тихий плескіт %1$C2, пливуч%1$Gого|ого|ої|их, у %2$N6."
+  },
+  "Бесшумно левитировать удается только ловкачам.": {
+   "en": "Only the nimble can manage to levitate without a sound.",
+   "ua": "Безшумно левітувати вдається лише спритникам."
+  },
+  "Ты случайно шлепаешь по луже и перестаешь двигаться бесшумно!": {
+   "en": "You accidentally splash through a puddle and stop moving silently!",
+   "ua": "Ти випадково хляпаєш по калюжі і перестаєш рухатися нечутно!"
   }
  },
  "affect/stone skin/onHit": {
@@ -6299,18 +6635,46 @@
   "Ты просыпаешься и встаешь. Тебя одолевает усталость.": {
    "en": "You wake up and stand. Fatigue overwhelms you.",
    "ua": "Ти прокидаєшся і встаєш. Тебе долає втома."
+  },
+  "%^C1 приходит в чувство, просыпается и встает, отчаянно зевая.": {
+   "en": "%^C1 comes to, wakes up, and rises, yawning desperately.",
+   "ua": "%^C1 приходить до тями, прокидається і встає, відчайдушно позіхаючи."
   }
  },
  "affect/stuck item/onUpdateChar": {
   "{1{rГниющие раны{2 %1$C2 причиняют %1$P3 жуткую боль и страдания.": {
    "en": "{1{rFestering wounds{2 of %1$C2 cause them terrible pain and suffering.",
    "ua": "{1{rГниючі рани{2 %1$C2 завдають %1$C3 жахливого болю і страждань."
+  },
+  "%1$^C1 с удовольствием обнюхива%1$nет|ют свои гниющие раны и слизыва%1$nет|ют с них червяков.": {
+   "en": "%1$^C1 happily sniff%1$ns| their rotting wounds and lick%1$ns| the worms off them.",
+   "ua": "%1$^C1 із задоволенням обнюх%1$nує|ують свої гниючі рани і злизу%1$nє|ють з них червʼяків."
+  },
+  "{1{rГниющие раны{2 причиняют тебе жуткую боль и страдания.": {
+   "en": "{1{rRotting wounds{2 cause you terrible pain and suffering.",
+   "ua": "{1{rГниючі рани{2 завдають тобі жахливого болю і страждань."
+  },
+  "Твое внимание привлекает приятный сладковатый запах гниения.": {
+   "en": "A pleasant, sweetish smell of rot catches your attention.",
+   "ua": "Твою увагу привертає приємний солодкуватий запах гниття."
+  },
+  "Ты с удовольствием обнюхиваешь свою гниющую рану и слизываешь с нее червяков.": {
+   "en": "You sniff your festering wound with relish, licking the maggots right off it.",
+   "ua": "Ти із задоволенням обнюхуєш свою гниючу рану і злизуєш з неї червʼячків."
   }
  },
  "affect/stuck item/onUpdateHit": {
   "{1Ты получаешь урон от гниющей раны от стрелы в ноге {D[{R%d{2{D]{2.": {
    "en": "{1You take damage from a rotting wound from the arrow in your leg {D[{R%d{2{D]{2.",
    "ua": "{1Ти отримуєш шкоду від гниючої рани від стріли в нозі {D[{R%d{2{D]{2."
+  },
+  "{RНезалеченные гниющие раны приводят к твоей безвременной кончине.{x": {
+   "en": "{RYour untreated, rotting wounds lead to your untimely demise.{x",
+   "ua": "{RНезагоєні гниючі рани призводять до твоєї передчасної смерті.{x"
+  },
+  "В муках от {1{rгниющих ран,{2 %1$C1, наконец, отда%1$nет|ют Шамашу душу и погиба%1$nет|ют.": {
+   "en": "In agony from {1{rrotting wounds,{2 %1$C1 finally give%1$ns| up their soul to Shamash and perish%1$nes|.",
+   "ua": "У муках від {1{rгниючих ран,{2 %1$C1, нарешті, відда%1$nє|ють Шамашу душу і гин%1$nе|уть."
   }
  },
  "affect/tornado/onFightChar": {
@@ -6325,6 +6689,18 @@
   "Ты прекращаешь ритуал, останавливая воронку торнадо.": {
    "en": "You stop the ritual, halting the tornado's funnel.",
    "ua": "Ти припиняєш ритуал, зупиняючи вирву торнадо."
+  },
+  "%1$^C1 беспомощно вис%1$nит|ят в воздухе -- в центре торнадо, поддерживаемого %C5.": {
+   "en": "%1$^C1 hang%1$ns| helplessly in the air -- at the center of a tornado sustained by %C5.",
+   "ua": "%1$^C1 безпорадно вис%1$nить|ять у повітрі -- в центрі торнадо, що підтримується %C5."
+  },
+  "{WПока ты продолжаешь держать %1$C4 подвешенн%1$Gым|ым|ой|ыми в воздухе, %1$P2 атаки не смогут повредить тебе.{x": {
+   "en": "{WWhile you keep %1$C4 suspended in the air, their attacks can't harm you.{x",
+   "ua": "{WПоки ти продовжуєш тримати %1$C4 підвішен%1$Gим|им|ою|ими в повітрі, атаки %1$C2 не зможуть завдати тобі шкоди.{x"
+  },
+  "Ты беспомощно висишь в воздухе -- в центре торнадо, поддерживаемого %C5.": {
+   "en": "You hang helplessly in the air -- at the center of a tornado, sustained by %C5.",
+   "ua": "Ти безпорадно висиш у повітрі -- в центрі торнадо, що підтримується %C5."
   }
  },
  "affect/tornado/onImmune": {
@@ -6369,12 +6745,24 @@
   "Плетеный человек все еще крепко держит тебя в клетке.": {
    "en": "The wicker man still holds you firmly in his cage.",
    "ua": "Плетена людина все ще міцно тримає тебе в клітці."
+  },
+  "%^C1 наносит отчаянный удар по прутьям клетки, пытаясь освободиться.": {
+   "en": "%^C1 lands a desperate blow against the cage bars, struggling to break free.",
+   "ua": "%^C1 завдає відчайдушного удару по прутах клітки, намагаючись вирватися на волю."
+  },
+  "Ты наносишь отчаянный удар по прутьям клетки, пытаясь освободиться.": {
+   "en": "You land a desperate blow on the cage bars, trying to break free.",
+   "ua": "Ти завдаєш відчайдушного удару по прутах клітки, намагаючись звільнитися."
   }
  },
  "affect/witch curse/onUpdateChar": {
   "{1{bВедьминское проклятие{2 безжалостно отнимает жизнь у %C2!": {
    "en": "{1{bThe witch's curse{2 mercilessly drains the life from %C2!",
    "ua": "{1{bВідьомське прокляття{2 нещадно забирає життя у %C2!"
+  },
+  "{1{bВедьминское проклятие{2 безжалостно отнимает у тебя жизнь!": {
+   "en": "{1{bThe witch's curse{2 mercilessly drains your life!",
+   "ua": "{1{bВідьомське прокляття{2 безжалісно забирає в тебе життя!"
   }
  },
  "affect/love potion/onLook": {
@@ -6385,6 +6773,14 @@
   "{mТы полностью очарован{Sfа{Sx и готов{Sfа{Sx всюду следовать за %1$P5.{x": {
    "en": "{mYou are completely enchanted and ready to follow %1$C5 everywhere.{x",
    "ua": "{mТи повністю зачарован{Sfа{Smий{Sx і готов{Sfа{Smий{Sx всюди слідувати за %1$C5.{x"
+  },
+  "{MГлаза {1%1$C2{2 стекленеют, и %1$P1 начинает следовать за тобой.{x": {
+   "en": "{MThe eyes of {1%1$C2{2 glaze over, and they start following you.{x",
+   "ua": "{MОчі {1%1$C2{2 скляніють, і %1$C1 починає йти за тобою слідом.{x"
+  },
+  "Ты глазеешь на %1$C4 и не можешь оторвать от %1$P4 глаз!": {
+   "en": "You gawk at %1$C4 and can't tear your eyes off them!",
+   "ua": "Ти витріщаєшся на %1$C4 і не можеш відірвати від %1$C2 очей!"
   }
  },
  "affect/stardust/onRefresh": {
@@ -6395,6 +6791,152 @@
   "Мерцающая {Wз{wве{Wзд{wная {Wп{wыль закружилась вокруг тебя.": {
    "en": "Shimmering {Wst{war{Wdu{wst swirled around you.",
    "ua": "Мерехтливий {Wзо{wря{Wний {wп{Wил закружляв навколо тебе."
+  }
+ },
+ "affect/ancestral spirits/onFightChar": {
+  "Твоя связь с %C5 была грубо прервана, и дух предков возвращается к тебе!": {
+   "en": "Your bond with %C5 has been rudely severed, and the ancestral spirit returns to you!",
+   "ua": "Твій звʼязок з %C5 було грубо перервано, і дух предків повертається до тебе!"
+  }
+ },
+ "affect/black death/onSmellRoom": {
+  "В воздухе разлит ужасающий приторно-сладкий аромат чистой {1{gсмерти{2.": {
+   "en": "The air is thick with a horrifying, sickly-sweet aroma of pure {1{gdeath{2.",
+   "ua": "Повітря просякнуте жаским нудотно-солодким ароматом чистої {1{gсмерті{2."
+  },
+  "Долго находиться в этом месте наверняка опасно для здоровья.": {
+   "en": "Staying here too long is surely hazardous to your health.",
+   "ua": "Довго перебувати тут напевно небезпечно для здоровʼя."
+  }
+ },
+ "affect/caltraps/onUpdateChar": {
+  "Тебе наконец удается вытащить из ступни эти чертовы шипы.": {
+   "en": "You finally manage to yank those damn spikes out of your foot.",
+   "ua": "Ти нарешті примудряєшся витягти ці кляті шипи зі ступні."
+  }
+ },
+ "affect/dark shroud/onImmune": {
+  "Твой удар будто уходит в пустоту, поглощенный {1{Dтемной аурой{2 %C2.": {
+   "en": "Your strike seems to vanish into the void, swallowed by {1{Dthe dark aura{2 of %C2.",
+   "ua": "Твій удар ніби йде в порожнечу, поглинутий {1{Dтемною аурою{2 %C2."
+  },
+  "Удар %C2 будто уходит в пустоту, поглощенный {1{Dтемной аурой{2 %C2.": {
+   "en": "%C2's strike seems to vanish into the void, swallowed by the {1{Ddark aura{2 of %C2.",
+   "ua": "Удар %C2 наче зникає в порожнечі, поглинутий {1{Dтемною аурою{2 %C2."
+  },
+  "Удар %C2 будто уходит в пустоту, поглощенный твоей {1{Dтемной аурой.{2": {
+   "en": "%C2's strike seems to vanish into the void, swallowed by your {1{Ddark aura.{2",
+   "ua": "Удар %C2 ніби зникає в порожнечі, поглинутий твоєю {1{Dтемною аурою.{2"
+  }
+ },
+ "affect/eruption/onRemoveRoom": {
+  "%^C1 издаёт пронзительный клёкот и взмывает в небеса.": {
+   "en": "%^C1 lets out a piercing screech and soars into the sky.",
+   "ua": "%^C1 видає пронизливий клекіт і злітає в небеса."
+  }
+ },
+ "affect/evil spirit/onEntryRoom": {
+  "{DДревняя Тьма проникает в тебя, завладевая твоим разумом!{x": {
+   "en": "{DAncient Darkness seeps into you, seizing hold of your mind!{x",
+   "ua": "{DПрадавня Тьма проникає в тебе, заволодіваючи твоїм розумом!{x"
+  },
+  "{DЖадные щупальца Тьмы{x внезапно захлестывают %C4 и проникают в тело!": {
+   "en": "{DGreedy tendrils of Darkness{x suddenly engulf %C4 and sink into their body!",
+   "ua": "{DЖадібні щупальця Темряви{x раптово захльостують %C4 і проникають у тіло!"
+  },
+  "{DТы слышишь жуткий шепот миллионов душ, сводящий тебя с ума!{x": {
+   "en": "{DYou hear the eerie whisper of millions of souls, driving you insane!{x",
+   "ua": "{DТи чуєш моторошний шепіт мільйонів душ, що зводить тебе з розуму!{x"
+  }
+ },
+ "affect/evil spirit/onUpdateChar": {
+  "%1$^C1 внезапно хвата%1$nется|ются за голову и крич%1$nит|ат от невыносимой муки!": {
+   "en": "%1$^C1 suddenly grab%1$ns| at their head and scream%1$ns| in unbearable agony!",
+   "ua": "%1$^C1 раптово хапа%1$nється|ються за голову і крич%1$nить|ать від нестерпної муки!"
+  },
+  "{DТы слышишь жуткий шепот миллионов душ, сводящий тебя с ума!{x": {
+   "en": "{DYou hear the eerie whisper of a million souls, driving you mad!{x",
+   "ua": "{DТи чуєш моторошний шепіт мільйонів душ, що зводить тебе з розуму!{x"
+  }
+ },
+ "affect/haste/onRemoveChar": {
+  "%^C1 внезапно замедляется и еле волочит ноги от усталости.": {
+   "en": "%^C1 suddenly slows down and can barely drag their feet from exhaustion.",
+   "ua": "%^C1 раптово сповільнюється і ледве волочить ноги від утоми."
+  },
+  "Волна усталости захлестывает твое тело, когда эффект ускорения пропадает.": {
+   "en": "A wave of exhaustion washes over your body as the haste effect fades.",
+   "ua": "Хвиля втоми накриває твоє тіло, коли ефект прискорення зникає."
+  }
+ },
+ "affect/hazukure/onSpecChar": {
+  "%^C1 стонет от невыносимого {Rстыда.{x": {
+   "en": "%^C1 groans in unbearable {Rshame.{x",
+   "ua": "%^C1 стогне від нестерпного {Rсорому.{x"
+  },
+  "{RПозор не уходит -- он живёт в каждом твоём вдохе.{x": {
+   "en": "{RShame doesn't fade -- it lives in every breath you take.{x",
+   "ua": "{RСором не минає -- він живе в кожному твоєму подиху.{x"
+  }
+ },
+ "affect/hazukure/onUpdateHit": {
+  "%^C1 стонет от невыносимого {Rстыда.{x": {
+   "en": "%^C1 groans in unbearable {Rshame.{x",
+   "ua": "%^C1 стогне від нестерпного {Rсорому.{x"
+  },
+  "{RПозор не уходит -- он живёт в каждом твоём вдохе.{x": {
+   "en": "{RShame doesn't fade -- it lives in every breath you take.{x",
+   "ua": "{RГаньба не минає -- вона живе в кожному твоєму подиху.{x"
+  }
+ },
+ "affect/heat/onRemoveRoom": {
+  "На месте сгоревших деревьев остаются горы пепла.": {
+   "en": "Where the trees have burned down, mountains of ash remain.",
+   "ua": "На місці спалених дерев лишаються гори попелу."
+  }
+ },
+ "affect/heat/onUpdateRoom": {
+  "Пламя из этой местности перекидывается в соседнюю! {RНачинается пожар!{x": {
+   "en": "The flames spread from this area into the next! {RA fire breaks out!{x",
+   "ua": "Полумʼя з цієї місцевості перекидається на сусідню! {RПочинається пожежа!{x"
+  }
+ },
+ "affect/morris dancer/onUpdateChar": {
+  "{WЖелание непременно с кем-то потанцевать охватывает тебя!{x": {
+   "en": "{WAn irresistible urge to dance with someone grips you!{x",
+   "ua": "{WБажання неодмінно з кимось потанцювати охоплює тебе!{x"
+  }
+ },
+ "affect/set morris dancer/onUpdateChar": {
+  "{WЖелание непременно с кем-то потанцевать охватывает тебя!{x": {
+   "en": "{WAn overwhelming urge to dance with someone grips you!{x",
+   "ua": "{WБажання неодмінно з кимось потанцювати охоплює тебе!{x"
+  }
+ },
+ "affect/slow/onRemoveChar": {
+  "%^C1 внезапно ускоряется и почти прыгает от избытка энергии!": {
+   "en": "%^C1 suddenly speeds up and practically bounces from the excess energy!",
+   "ua": "%^C1 раптово прискорюється і мало не підстрибує від надлишку енергії!"
+  },
+  "Нечеловеческая энергия и задор охватывают тебя, когда эффект замедления пропадает.": {
+   "en": "Superhuman energy and vigor surge through you as the slowing effect fades.",
+   "ua": "Надлюдська енергія і запал охоплюють тебе, коли ефект уповільнення зникає."
+  }
+ },
+ "affect/soothe/onRemoveChar": {
+  "Глаза %C2 снова наливаются злобой.": {
+   "en": "%C2's eyes fill with malice once again.",
+   "ua": "Очі %C2 знову наливаються злістю."
+  }
+ },
+ "affect/spellbane/onUpdateChar": {
+  "%1$^C1 с отвращением сдира%1$nет|ют с себя %1$O4.": {
+   "en": "%1$^C1 tear%1$ns| %1$O4 off themselves in disgust.",
+   "ua": "%1$^C1 з огидою здира%1$nє|ють із себе %1$O4."
+  },
+  "Ты с отвращением сдираешь с себя %1$O4, пропитанн%1$Gое|ый|ую мерзким духом магии.": {
+   "en": "You disgustedly rip %1$O4 off yourself, soaked in the vile stench of magic.",
+   "ua": "Ти з огидою здираєш із себе %1$O4, просякнут%1$Gе|ий|а|і мерзенним духом магії."
   }
  }
 }

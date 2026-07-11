@@ -889,6 +889,10 @@
   "$o1 выглядит живой, но тебе не удается дотронуться до $S руки.": {
    "en": "$o1 looks alive, but you can't manage to touch its hand.",
    "ua": "$o1 виглядає живим, але ти не можеш торкнутися його руки."
+  },
+  "$c1 пытается вытащить из колоды карту, но она выпадает у $x из рук.": {
+   "en": "$c1 tries to pull a card from the deck, but it slips out of their hands.",
+   "ua": "$c1 намагається витягнути карту з колоди, але вона випадає з рук."
   }
  },
  "plug-ins/cards/skills.cpp": {
@@ -3177,6 +3181,10 @@
   "Повестка в суд для %s истекает через %d час%s": {
    "en": "The summons to court for %s expires in %d hour%s",
    "ua": "Виклик до суду для %s спливає через %d годин%s"
+  },
+  "$C1 бросает на $c4 мимолетный взгляд и $c1 мгновенно исчезает.": {
+   "en": "$C1 casts a fleeting glance at $c4 and $c1 instantly vanishes.",
+   "ua": "$C1 кидає на $c4 швидкоплинний погляд, і $c1 миттєво зникає."
   }
  },
  "plug-ins/clan/impl/shalafi.cpp": {
@@ -4011,6 +4019,10 @@
   "от %1$C2]: %2$s": {
    "en": "from %1$C2]: %2$s",
    "ua": "від %1$C2]: %2$s"
+  },
+  "Ты не привязан к Telegram -- ответ на идейку ищи в нашем чате: {y{hlhttps://t.me/dreamland_rocks{x": {
+   "en": "You're not linked to Telegram -- look for the answer to your suggestion in our chat: {y{hlhttps://t.me/dreamland_rocks{x",
+   "ua": "Ти не прив'язаний до Telegram -- відповідь на свою ідейку шукай у нашому чаті: {y{hlhttps://t.me/dreamland_rocks{x"
   }
  },
  "plug-ins/comm/close.cpp": {
@@ -5439,6 +5451,10 @@
   "Это невозможно запереть.": {
    "en": "This can't be locked.",
    "ua": "Це неможливо замкнути."
+  },
+  "%^C1 запирает %N4 %O5.": {
+   "en": "%^C1 locks %N4 with %O5.",
+   "ua": "%^C1 замикає %N4 %O5."
   }
  },
  "plug-ins/comm/look.cpp": {
@@ -5597,6 +5613,10 @@
   "$E выглядит как обычн$Gое|ый|ая $n1.": {
    "en": "It looks like an ordinary $n1.",
    "ua": "Це виглядає як звичайн$Gе|ий|а $n1."
+  },
+  "Ты не видишь ничего особенного в $Z.": {
+   "en": "You see nothing special about it.",
+   "ua": "Ти не бачиш нічого особливого в цьому."
   }
  },
  "plug-ins/comm/move.cpp": {
@@ -6487,6 +6507,10 @@
   "  set skill {y<имя>{x <spell или skill> <число>": {
    "en": "  set skill {y<name>{x <spell or skill> <number>",
    "ua": "  set skill {y<ім'я>{x <spell чи skill> <число>"
+  },
+  "  set skill {y<имя>{x all <число>": {
+   "en": "  set skill {y<name>{x all <number>",
+   "ua": "  set skill {y<ім'я>{x all <число>"
   }
  },
  "plug-ins/comm/showtable.cpp": {
@@ -7781,6 +7805,10 @@
   "{W%#^C1 {Wне может выполнить твой приказ, потому что видит следующее:{x\r\n  {W*{x ": {
    "en": "{W%#^C1 {Wcan't carry out your order because it sees the following:{x\r\n  {W*{x ",
    "ua": "{W%#^C1 {Wне може виконати твій наказ, бо бачить наступне:{x\r\n  {W*{x "
+  },
+  "%^C1 возвращает %C3 %O4.": {
+   "en": "%^C1 hands %C3 back %O4.",
+   "ua": "%^C1 повертає %C3 %O4."
   }
  },
  "plug-ins/fight/effects.cpp": {
@@ -8401,6 +8429,10 @@
   "$c1 смертельно ране$gно|н|на и скоро умрет, если $m не помогут.": {
    "en": "$c1 is mortally wounded and will die soon unless someone helps.",
    "ua": "$c1 смертельно поран$gено|ений|ена і скоро помре, якщо не отримає допомоги."
+  },
+  "$c1 совершенно беспомощ$gно|ен|на и скоро умрет, если $m не помогут.": {
+   "en": "$c1 is completely helpless and will die soon unless someone helps.",
+   "ua": "$c1 цілком безпорад$gне|ний|на і скоро помре, якщо ніхто не допоможе."
   }
  },
  "plug-ins/fight_core/fight_extract.cpp": {
@@ -9093,6 +9125,14 @@
   "Ты {R{IS+++ {IxЛОМАЕШЬ ШЕЮ{IS +++{Ix{x $C3!": {
    "en": "You {R{IS+++ {IxBREAK THE NECK{IS +++{Ix{x of $C3!",
    "ua": "Ти {R{IS+++ {IxЛАМАЄШ ШИЮ{IS +++{Ix{x $C3!"
+  },
+  "Ты смыкаешь руки на шее $C2 и $E погружается в сон.": {
+   "en": "You close your hands around $C2's throat and they drift off to sleep.",
+   "ua": "Ти змикаєш руки на шиї $C2, і той поринає в сон."
+  },
+  "$c1 смыкает руки на шее $C2 и $E погружается в сон.": {
+   "en": "$c1 closes their hands around $C2's throat and they drift off to sleep.",
+   "ua": "$c1 змикає руки на шиї $C2, і той поринає в сон."
   }
  },
  "plug-ins/groups/class_ranger.cpp": {
@@ -10415,6 +10455,10 @@
   "$S оружие не двигается с места!": {
    "en": "Their weapon won't budge!",
    "ua": "Їхня зброя не рухається з місця!"
+  },
+  "$c1 пытается обезоружить тебя, но ты хватаешь $s за руку и ускользаешь!": {
+   "en": "$c1 tries to disarm you, but you grab their hand and slip away!",
+   "ua": "$c1 намагається обеззброїти тебе, але ти хапаєш його за руку і вислизаєш!"
   }
  },
  "plug-ins/help/areahelp.cpp": {
@@ -11641,6 +11685,14 @@
   "О$Gно|н|на тебя не хочет.": {
    "en": "Not interested in you.",
    "ua": "О$Gно|н|на тебе не хоче."
+  },
+  "Ты срываешь с $C2 одежду и страстно занимаешься с $Y любовью.": {
+   "en": "You tear the clothes off $C2 and lose yourself in passionate lovemaking.",
+   "ua": "Ти зриваєш з $C2 одяг і поринаєш у пристрасне кохання."
+  },
+  "$c1 вертится вокруг $C2 и так, и эдак, но что-то $s смущает. Наверное, $S храп?": {
+   "en": "$c1 circles around $C2 this way and that, but something's bothering them. Maybe it's the snoring?",
+   "ua": "$c1 крутиться навколо $C2 і так, і сяк, але щось його бентежить. Мабуть, то хропіння?"
   }
  },
  "plug-ins/mlove/mtalk.cpp": {
@@ -12705,6 +12757,10 @@
   "$c1 произносит '{gВидишь, что неразумное еще, так и ра$Gдо|д|да стараться?{x'.": {
    "en": "$c1 says, '{gYou see it's still not too bright, yet so glad to try, isn't it?{x'.",
    "ua": "$c1 промовляє '{gБачиш, що ще нерозумне, а так і ра$Gдо|д|да старатися?{x'."
+  },
+  "$c1 берет за руку $C4 и уводит $S прочь.": {
+   "en": "$c1 takes $C4 by the hand and leads them away.",
+   "ua": "$c1 бере за руку $C4 і веде його геть."
   }
  },
  "plug-ins/quest/kidnapquest/scenario_dragon.cpp": {
@@ -13283,6 +13339,14 @@
   "{YБольшое спасибо $m за это, однако...{x": {
    "en": "{YMany thanks for that, however...{x",
    "ua": "{YВелике спасибі за це, однак...{x"
+  },
+  "$c1 говорит тебе '{GВот в одной из тюрем его и держат, по моим сведениям где-то в {W{hh$t{hx{G.'{x": {
+   "en": "$c1 tells you '{GHe's being held in one of the prisons, according to my info, somewhere in {W{hh$t{hx{G.'{x",
+   "ua": "$c1 каже тобі '{GЙого тримають в одній із тюрем, за моїми відомостями десь у {W{hh$t{hx{G.'{x"
+  },
+  "$c1 так хлопает $C4 по плечу, что $E теряет равновесие и падает мордой $m на сапог.": {
+   "en": "$c1 slaps $C4 on the shoulder so hard that they lose their balance and fall flat on their face.",
+   "ua": "$c1 так ляскає $C4 по плечу, що той втрачає рівновагу і падає мордою на землю."
   }
  },
  "plug-ins/quest/killquest/victimbehavior.cpp": {
@@ -13809,6 +13873,14 @@
   "Не стоит просить %N4 об одном и том же два раза подряд -- попроси %p2 о чем-то еще.": {
    "en": "Don't ask %N4 for the same thing twice in a row -- ask for something else instead.",
    "ua": "Не варто просити %N4 про одне й те саме двічі поспіль -- попроси про щось інше."
+  },
+  "Ты приносишь содержимое %O2 в жертву %N3 и надеешься на %p2 милость.": {
+   "en": "You offer the contents of %O2 in sacrifice to %N3 and hope for their mercy.",
+   "ua": "Ти приносиш вміст %O2 в жертву %N3 і сподіваєшся на його милість."
+  },
+  "%^C1 приносит в жертву %N3 все, что находится %s.": {
+   "en": "%^C1 sacrifices to %N3 everything found %s.",
+   "ua": "%^C1 приносить у жертву %N3 все, що знаходиться %s."
   }
  },
  "plug-ins/remort/cmlt.cpp": {

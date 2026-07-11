@@ -441,6 +441,10 @@
   "Упс, не могу восстановить профайл, неверное имя?": {
    "en": "Oops, can't restore the profile, wrong name maybe?",
    "ua": "Упс, не можу відновити профайл, невірне ім'я?"
+  },
+  "Формат:\r\nprofile backup <player_name>  -- сохранить профайлы игрока в каталогах var/db/backup и var/db/oldstyle/backup\r\nprofile recover <player_name> -- восстановить профайлы из backup-каталогов, поверх существующих профайлов\r\nprofile undelete <player_name> -- восстановить профайлы из каталогов var/db/delete и var/db/oldstyle/delete, поверх существующих профайлов\r\nprofile unremort <player_name> <number> -- восстановить конкретный профайл перед ремортом из каталогов var/db/remort и var/db/oldstyle/remort, поверх существующих профайлов\r\n": {
+   "en": "Format:\r\nprofile backup <player_name>  -- save the player's profiles into the var/db/backup and var/db/oldstyle/backup directories\r\nprofile recover <player_name> -- restore profiles from the backup directories, over existing profiles\r\nprofile undelete <player_name> -- restore profiles from the var/db/delete and var/db/oldstyle/delete directories, over existing profiles\r\nprofile unremort <player_name> <number> -- restore a specific pre-remort profile from the var/db/remort and var/db/oldstyle/remort directories, over existing profiles\r\n",
+   "ua": "Формат:\r\nprofile backup <player_name>  -- зберегти профайли гравця в каталогах var/db/backup та var/db/oldstyle/backup\r\nprofile recover <player_name> -- відновити профайли з backup-каталогів, поверх наявних профайлів\r\nprofile undelete <player_name> -- відновити профайли з каталогів var/db/delete та var/db/oldstyle/delete, поверх наявних профайлів\r\nprofile unremort <player_name> <number> -- відновити конкретний профайл перед ремортом з каталогів var/db/remort та var/db/oldstyle/remort, поверх наявних профайлів\r\n"
   }
  },
  "plug-ins/admin/finger.cpp": {
@@ -577,6 +581,10 @@
   "Установлена награда в %d qp, причина: %s.": {
    "en": "Reward set at %d qp, reason: %s.",
    "ua": "Встановлено нагороду в %d qp, причина: %s."
+  },
+  "Использование: \r\n    ireward персонаж кп причина\r\n    ireward персонаж show\r\n    ireward персонаж delete": {
+   "en": "Usage: \r\n    ireward character qp reason\r\n    ireward character show\r\n    ireward character delete",
+   "ua": "Використання: \r\n    ireward персонаж кп причина\r\n    ireward персонаж show\r\n    ireward персонаж delete"
   }
  },
  "plug-ins/ai/assist.cpp": {
@@ -693,6 +701,10 @@
   "Кого ты хочешь сделать шестеркой?": {
    "en": "Who do you want to make your flunky?",
    "ua": "Кого ти хочеш зробити своєю шісткою?"
+  },
+  "\r\nМобы-шестерки:": {
+   "en": "\r\nSix mobs:",
+   "ua": "\r\nМоби-шістки:"
   }
  },
  "plug-ins/cards/mobiles.cpp": {
@@ -865,6 +877,18 @@
   "Ты хватаешь себя за руку.": {
    "en": "You grab your own hand.",
    "ua": "Ти хапаєш себе за руку."
+  },
+  "Ты дотрагиваешься до $o2, мысленно протягивая $M руку.": {
+   "en": "You touch $o2, mentally reaching out with your hand.",
+   "ua": "Ти торкаєшся $o2, подумки простягаючи свою руку."
+  },
+  "$c1 пытается напялить $o4, но шулер из $x никакущий..": {
+   "en": "$c1 tries to put on $o4, but they make for a pathetic cardsharp..",
+   "ua": "$c1 намагається натягнути $o4, але шулер з нього ніякий.."
+  },
+  "$o1 выглядит живой, но тебе не удается дотронуться до $S руки.": {
+   "en": "$o1 looks alive, but you can't manage to touch its hand.",
+   "ua": "$o1 виглядає живим, але ти не можеш торкнутися його руки."
   }
  },
  "plug-ins/cards/skills.cpp": {
@@ -947,6 +971,14 @@
   "Ты со всей силы бьешь $C4 канделябром по голове!": {
    "en": "You smash $C4 over the head with a candelabrum with all your strength!",
    "ua": "Ти щосили б'єш $C4 канделябром по голові!"
+  },
+  "$c1 удачно {R+++ПОШУТИ$gЛО|Л|ЛА+++{x над $C5!": {
+   "en": "$c1 successfully {R+++JOKED+++{x on $C5!",
+   "ua": "$c1 вдало {R+++ПОЖАРТУВА$gЛО|В|ЛА+++{x над $C5!"
+  },
+  "$E уже спит.": {
+   "en": "They're already asleep.",
+   "ua": "Вже спить."
   }
  },
  "plug-ins/cards/xmlattributecards.cpp": {
@@ -1349,6 +1381,30 @@
   "Это насовсем...": {
    "en": "This is permanent...",
    "ua": "Це назавжди..."
+  },
+  "{W%s становится внекланов%s.{x": {
+   "en": "{W%s becomes clanless%s.{x",
+   "ua": "{W%s стає безкланов%s.{x"
+  },
+  "{Wclan induct {x<player> <clan> - принять кого-либо в указанный клан": {
+   "en": "{Wclan induct {x<player> <clan> - accept someone into the specified clan",
+   "ua": "{Wclan induct {x<player> <clan> - прийняти когось у вказаний клан"
+  },
+  "Можно задать только режим 'положить' или 'снять'.": {
+   "en": "You can only set mode 'put' or 'remove'.",
+   "ua": "Можна встановити лише режим 'покласти' або 'зняти'."
+  },
+  "\n\r{BИмя         раса        класс         уровень звание           last time{x": {
+   "en": "\n\r{BName         race        class         level   rank             last time{x",
+   "ua": "\n\r{BІм'я         раса        клас          рівень  звання           last time{x"
+  },
+  "      {BКлан        ...20        21-40       41-60       61-80       81...{x": {
+   "en": "      {BClan        ...20        21-40       41-60       61-80       81...{x",
+   "ua": "      {BКлан        ...20        21-40       41-60       61-80       81...{x"
+  },
+  "      Клан         кол.": {
+   "en": "      Clan         qty.",
+   "ua": "      Клан         кіл."
   }
  },
  "plug-ins/clan/command/cclantalk.cpp": {
@@ -1367,6 +1423,14 @@
   "До тебя никому нет дела.": {
    "en": "Nobody gives a damn about you.",
    "ua": "До тебе нікому немає діла."
+  },
+  "$c1 пускает изо рта {Rр{Yа{Gз{Cн{Mо{Rц{Gв{Yе{Cт{Mн{Yы{Cе{x мыльные пузыри.": {
+   "en": "$c1 blows {Rm{Yu{Gl{Ct{Mi{Rc{Go{Yl{Co{Mr{Ye{Cd{x soap bubbles from their mouth.",
+   "ua": "$c1 пускає з рота {Rр{Yі{Gз{Cн{Mо{Rб{Gа{Yр{Cв{Mн{Yі{x мильні бульбашки."
+  },
+  "Ты пускаешь изо рта {Rр{Yа{Gз{Cн{Mо{Rц{Gв{Yе{Cт{Mн{Yы{Cе{x мыльные пузыри.": {
+   "en": "You blow {Rr{Ya{Gi{Cn{Mb{Ro{Gw{x soap bubbles from your mouth.",
+   "ua": "Ти пускаєш з рота {Rр{Yі{Gз{Cн{Mо{Rк{Gо{Yл{Cь{Mо{Yр{Cо{xві мильні бульбашки."
   }
  },
  "plug-ins/clan/command/xmlattributeinduct.cpp": {
@@ -1613,6 +1677,10 @@
   "Ты уже жаждешь крови.": {
    "en": "You already thirst for blood.",
    "ua": "Ти вже жадаєш крові."
+  },
+  "$C1 выпивает лечебное зелье, которое $m да$gло|л|ла $c1.": {
+   "en": "$C1 gulps down the healing potion $c1 had given themselves earlier.",
+   "ua": "$C1 випиває лікувальне зілля, яке $c1 дав$gло|в|ла собі заздалегідь."
   }
  },
  "plug-ins/clan/impl/chaos.cpp": {
@@ -1755,6 +1823,26 @@
   "Это просто глупо.": {
    "en": "That's just plain stupid.",
    "ua": "Це просто по-дурному."
+  },
+  "{W%s{x%s здесь.\n\r": {
+   "en": "{W%s{x%s is here.\n\r",
+   "ua": "{W%s{x%s тут.\n\r"
+  },
+  "Зеркальное отражение $C2 появляется рядом с $Y!": {
+   "en": "$C2's mirror reflection appears next to you!",
+   "ua": "Дзеркальне відображення $C2 з'являється поруч із тобою!"
+  },
+  "Зеркальное отражение $c2 появляется рядом с $y!": {
+   "en": "A mirror reflection of $c2 appears next to you!",
+   "ua": "Дзеркальне відображення $c2 з'являється поруч з тобою!"
+  },
+  "Ты уже выглядишь как $E.": {
+   "en": "You already look just like them.",
+   "ua": "Ти вже виглядаєш так само, як він."
+  },
+  "Окружающее тебя пространство на ближайш%1$Iий|ие|ие {W%1$d{x ча%1$Iс|са|сов попало под власть Хаоса!": {
+   "en": "The space around you falls under the power of Chaos for the next%1$I|| {W%1$d{x hour%1$I|s|s!",
+   "ua": "Простір навколо тебе на найближч%1$Iий|і|і {W%1$d{x годин%1$Iу|и| потрапив під владу Хаосу!"
   }
  },
  "plug-ins/clan/impl/hunter.cpp": {
@@ -2137,6 +2225,14 @@
   "Эта яма уже замаскирована и ждет гостей.": {
    "en": "This pit is already camouflaged and waiting for guests.",
    "ua": "Ця яма вже замаскована і чекає на гостей."
+  },
+  "Ты пытаешься зарядить %1$O4, но зажимаешь в %1$P4 собственную руку. Это больно!": {
+   "en": "You try to load %1$O4, but pinch your own hand in it. That hurts!",
+   "ua": "Ти намагаєшся зарядити %1$O4, але затискаєш у ньому власну руку. Це боляче!"
+  },
+  "$C1 $t отсюда.": {
+   "en": "$C1 $t from here.",
+   "ua": "$C1 $t звідси."
   }
  },
  "plug-ins/clan/impl/invader.cpp": {
@@ -3061,6 +3157,26 @@
   "Ты чувствуешь - тебя ждут в Суде.": {
    "en": "You feel that you are awaited in Court.",
    "ua": "Ти відчуваєш -- тебе чекають у Суді."
+  },
+  "$C1 закован менее чем на %d час%s.": {
+   "en": "$C1 is imprisoned for less than %d hour%s.",
+   "ua": "$C1 закутий менш ніж на %d годин%s."
+  },
+  "Синтаксис: fine <наказуемый> <сумма> [<получатель>]": {
+   "en": "Syntax: fine <target> <amount> [<recipient>]",
+   "ua": "Синтаксис: fine <кого_карати> <сума> [<отримувач>]"
+  },
+  "%^C1 -- это всего лишь зеркало, созданное %#^C5!": {
+   "en": "%^C1 is nothing but a mirror image created by %#^C5!",
+   "ua": "%^C1 -- це лише дзеркало, створене %#^C5!"
+  },
+  "У %1$#C2 %2$s этос и %3$s натура.\n\r%1$#^P2 заслуги перед законом: %4$d.": {
+   "en": "%1$#C2 has %2$s ethos and %3$s nature.\n\rTheir merits before the law: %4$d.",
+   "ua": "У %1$#C2 %2$s етос і %3$s натура.\n\r%1$#^C2 заслуги перед законом: %4$d."
+  },
+  "Повестка в суд для %s истекает через %d час%s": {
+   "en": "The summons to court for %s expires in %d hour%s",
+   "ua": "Виклик до суду для %s спливає через %d годин%s"
   }
  },
  "plug-ins/clan/impl/shalafi.cpp": {
@@ -3099,6 +3215,10 @@
   "Твой ментальный удар повреждает разум $C2!": {
    "en": "Your mental strike damages $C2's mind!",
    "ua": "Твій ментальний удар пошкоджує розум $C2!"
+  },
+  "Ментальный удар $c2 повреждает $s разум!": {
+   "en": "$c2's mental strike damages their own mind!",
+   "ua": "Ментальний удар $c2 ушкоджує свій власний розум!"
   }
  },
  "plug-ins/clan/skill/clanskill.cpp": {
@@ -3143,6 +3263,14 @@
   "{RВНИМАНИЕ: {WЭТО НЕОБРАТИМОЕ ДЕЙСТВИЕ, ТВОЙ ПЕРСОНАЖ БУДЕТ УДАЛЕН НАСОВСЕМ!{x": {
    "en": "{RWARNING: {WTHIS ACTION CANNOT BE UNDONE, YOUR CHARACTER WILL BE DELETED FOREVER!{x",
    "ua": "{RУВАГА: {WЦЕ НЕЗВОРОТНА ДІЯ, ТВІЙ ПЕРСОНАЖ БУДЕ ВИДАЛЕНИЙ НАЗАВЖДИ!{x"
+  },
+  "Введи {yудалить <твой пароль>{x для подтверждения команды.": {
+   "en": "Type {ydelete <your password>{x to confirm the command.",
+   "ua": "Введи {yвидалити <твій пароль>{x для підтвердження команди."
+  },
+  "Чтобы отменить попытку суицида, введи {yудалить без пароля.": {
+   "en": "To cancel your suicide attempt, enter {ydelete without password.",
+   "ua": "Щоб скасувати спробу самогубства, введи {yвидалити без пароля."
   }
  },
  "plug-ins/comm/affects.cpp": {
@@ -3185,6 +3313,14 @@
   "улучшает {m%1$s{y на {m%2$d%%{y": {
    "en": "improves {m%1$s{y by {m%2$d%%{y",
    "ua": "покращує {m%1$s{y на {m%2$d%%{y"
+  },
+  "Задержки от всех умений у тебя на {%s%d%%{x %s.": {
+   "en": "Your cooldowns for all skills are at {%s%d%%{x %s.",
+   "ua": "Затримки від усіх умінь у тебе на {%s%d%%{x %s."
+  },
+  "ухудшает {m%1$s{y на {m%2$d%%{y": {
+   "en": "worsens {m%1$s{y by {m%2$d%%{y",
+   "ua": "погіршує {m%1$s{y на {m%2$d%%{y"
   }
  },
  "plug-ins/comm/alias.cpp": {
@@ -3237,6 +3373,10 @@
   "Уровень зоны указан неверно.": {
    "en": "The zone level is specified incorrectly.",
    "ua": "Рівень зони вказано неправильно."
+  },
+  "Использование: \r\nзоны [<уровень> | <мин.уровень> <макс.уровень> | <название>]": {
+   "en": "Usage: \r\nareas [<level> | <min level> <max level> | <name>]",
+   "ua": "Використання: \r\nзони [<рівень> | <мін.рівень> <макс.рівень> | <назва>]"
   }
  },
  "plug-ins/comm/auction.cpp": {
@@ -3403,6 +3543,14 @@
   "Продажа остановлена Богами. Лот '%s{Y' конфискован{x.": {
    "en": "The sale has been halted by the Gods. Lot '%s{Y' has been confiscated{x.",
    "ua": "Продаж зупинено Богами. Лот '%s{Y' конфісковано{x."
+  },
+  "Лот: '%s{x'. Тип: %s. Экстра флаги: %s.\n\rВес: %d. Стоимость: %d. Уровень: %d.": {
+   "en": "Lot: '%s{x'. Type: %s. Extra flags: %s.\n\rWeight: %d. Cost: %d. Level: %d.",
+   "ua": "Лот: '%s{x'. Тип: %s. Екстра-флаги: %s.\n\rВага: %d. Вартість: %d. Рівень: %d."
+  },
+  "Аукционер появляется перед $c5 и возвращает $m {W$o4{w.": {
+   "en": "The auctioneer appears before $c5 and hands {W$o4{w back.",
+   "ua": "Аукціонер з'являється перед $c5 і повертає {W$o4{w назад."
   }
  },
  "plug-ins/comm/bodyposition.cpp": {
@@ -3859,6 +4007,10 @@
   "Какой именно идейкой ты хочешь поделиться?": {
    "en": "What little idea exactly do you want to share?",
    "ua": "Якою саме ідейкою ти хочеш поділитися?"
+  },
+  "от %1$C2]: %2$s": {
+   "en": "from %1$C2]: %2$s",
+   "ua": "від %1$C2]: %2$s"
   }
  },
  "plug-ins/comm/close.cpp": {
@@ -4023,6 +4175,10 @@
   "Ты опять можешь говорить с кем-либо.": {
    "en": "You can talk to others again.",
    "ua": "Ти знову можеш говорити з будь-ким."
+  },
+  "Также смотри {hc{yпрослушать ?{x.": {
+   "en": "Also see {hc{yпрослушать ?{x.",
+   "ua": "Дивись також {hc{yпрослушать ?{x."
   }
  },
  "plug-ins/comm/compare.cpp": {
@@ -4095,6 +4251,42 @@
   "Укажи язык: англ, укр или рус.": {
    "en": "Specify a language: eng, ukr, or rus.",
    "ua": "Вкажи мову: англ, укр або рос."
+  },
+  "  {%s%-14s {%s%5s {xнабери {y{hcрежим язык{x для установки": {
+   "en": "  {%s%-14s {%s%5s {xtype {y{hcрежим язык{x to set",
+   "ua": "  {%s%-14s {%s%5s {xнабери {y{hcрежим язык{x для встановлення"
+  },
+  "Вывод установлен на %d лин%s.": {
+   "en": "Output is set to %d line%s.",
+   "ua": "Вивід встановлено на %d рядк%s."
+  },
+  "Для изменения используй {yрежим буфер{x число.": {
+   "en": "To change it use {ymode buffer{x number.",
+   "ua": "Щоб змінити, використай {yрежим буфер{x число."
+  },
+  "Опция не найдена. Используй {hc{yрежим{x для списка.": {
+   "en": "Option not found. Use {hc{yconfig{x for a list.",
+   "ua": "Опція не знайдена. Використай {hc{yрежим{x для списку."
+  },
+  "Твой персонаж не связан с пользователями Telegram.\r\nИспользуй {yрежим телеграм @имя{x для установки.": {
+   "en": "Your character isn't linked to a Telegram user.\r\nUse {ymode telegram @name{x to set it up.",
+   "ua": "Твій персонаж не пов'язаний із користувачами Telegram.\r\nВикористовуй {yрежим telegram @ім'я{x для встановлення."
+  },
+  "Твой персонаж связан с пользователем Telegram {C%s{x.Используй {hc{yрежим телеграм очистить{x для очистки.\r\n": {
+   "en": "Your character is linked to Telegram user {C%s{x. Use {hc{ymode telegram clear{x to clear it.\r\n",
+   "ua": "Твій персонаж пов'язаний з користувачем Telegram {C%s{x. Використай {hc{yрежим телеграм очистити{x для очищення.\r\n"
+  },
+  "Тебе непрерывно выводится %d лин%s текста.": {
+   "en": "You're constantly being shown %d line%s of text.",
+   "ua": "Тобі безперервно виводиться %d рядк%s тексту."
+  },
+  "\nИспользуй команду {hc{yрежим %s %s{x для изменения.": {
+   "en": "\nUse the command {hc{ymode %s %s{x to change it.",
+   "ua": "\nВикористовуй команду {hc{yрежим %s %s{x, щоб змінити."
+  },
+  "\r\nПодробнее смотри по команде {yрежим {Dнастройка{w.": {
+   "en": "\r\nFor details see the {yрежим {Dнастройка{w command.",
+   "ua": "\r\nДетальніше дивись команду {yрежим {Dнастройка{w."
   }
  },
  "plug-ins/comm/corder.cpp": {
@@ -4173,6 +4365,10 @@
   "%1$^C1 наказан%1$Gо||а богами и не может выполнить эту команду.": {
    "en": "%1$^C1 has been punished by the gods and cannot perform this command.",
    "ua": "%1$^C1 покаран%1$Gо||а богами і не може виконати цю команду."
+  },
+  "%1$#^C1 %3$sне может ходить и выполнять некоторые команды. Напиши {y{hcприказать %2$N3 встать{x.": {
+   "en": "%1$#^C1 %3$scan't walk or perform certain commands. Type {y{hcorder %2$N3 stand{x.",
+   "ua": "%1$#^C1 %3$sне може ходити і виконувати деякі команди. Напиши {y{hcнаказати %2$N3 встати{x."
   }
  },
  "plug-ins/comm/demand.cpp": {
@@ -4313,6 +4509,10 @@
   "Твое описание:": {
    "en": "Your description:",
    "ua": "Твій опис:"
+  },
+  "Описание скопировано в буфер редактора, используй команду вебредактор{x для редактирования.": {
+   "en": "The description has been copied to the editor buffer, use the вебредактор{x command to edit it.",
+   "ua": "Опис скопійовано в буфер редактора, використай команду вебредактор{x для редагування."
   }
  },
  "plug-ins/comm/drop.cpp": {
@@ -4521,6 +4721,10 @@
   "Это животное не сделало тебе ничего плохого!": {
    "en": "This animal hasn't done anything bad to you!",
    "ua": "Ця тварина не зробила тобі нічого поганого!"
+  },
+  "Это не грызун! Даже и не думай за $Y гоняться.": {
+   "en": "This isn't a rodent! Don't even think about chasing it.",
+   "ua": "Це не гризун! Навіть не думай ганятися за ним."
   }
  },
  "plug-ins/comm/equipment.cpp": {
@@ -4835,6 +5039,14 @@
   "Ты уже следуешь за собой.": {
    "en": "You're already following yourself.",
    "ua": "Ти вже слідуєш за собою."
+  },
+  "$c1 исключает $C4 из числа $s последователей.": {
+   "en": "$c1 removes $C4 from among their followers.",
+   "ua": "$c1 виключає $C4 з числа своїх послідовників."
+  },
+  "$c1 исключает $C4 из $s группы.": {
+   "en": "$c1 kicks $C4 out of the group.",
+   "ua": "$c1 виключає $C4 зі своєї групи."
   }
  },
  "plug-ins/comm/get.cpp": {
@@ -4957,6 +5169,14 @@
   "Тебе не удалось нашарить ни одного кармана у $o2.": {
    "en": "You failed to feel out a single pocket on $o2.",
    "ua": "Тобі не вдалося намацати жодної кишені у $o2."
+  },
+  "Осторожно, ты не смог%1$Gло||ла бы поднять такую тяжесть, будучи смертн%1$Gым|ым|ой.": {
+   "en": "Careful, you wouldn't have been able to lift such a weight if you were mortal.",
+   "ua": "Обережно, тобі, смертн%1$Gим|им|ою, не стало б сили підняти такий тягар."
+  },
+  "%2$^s не позволят тебе владеть %1$O5.": {
+   "en": "They won't let you own %1$O5.",
+   "ua": "Вони не дозволять тобі володіти %1$O5."
   }
  },
  "plug-ins/comm/give.cpp": {
@@ -5341,6 +5561,42 @@
   "Ты не видишь ничего, кроме звезд!": {
    "en": "You see nothing but stars!",
    "ua": "Ти не бачиш нічого, окрім зірок!"
+  },
+  "({1{DУкрыт%Gо||а{2)": {
+   "en": "({1{DHidden{2)",
+   "ua": "({1{DПрихован%Gе|ий|а{2)"
+  },
+  "Ты чувствуешь присутствие %d жизненн%s форм%s в комнате.": {
+   "en": "You sense the presence of %d living%s form%s in the room.",
+   "ua": "Ти відчуваєш присутність %d живи%s форм%s у кімнаті."
+  },
+  "({1{wПр{Dо{wзр{Dа{wч%Gно|ен|на{2)": {
+   "en": "({1{wTr{Da{wnsp{Da{wrent{2)",
+   "ua": "({1{wПроз{Dо{wр%Gе|ий|а{2)"
+  },
+  "{B име%1$nет|ют несколько царапин": {
+   "en": "{B show%1$ns| a few scratches",
+   "ua": "{B ма%1$nє|ють кілька подряпин"
+  },
+  "{M выгляд%1$nит|ят сильно поврежденн%1$Gым|ым|ой|ыми": {
+   "en": "{M look%1$ns| heavily damaged",
+   "ua": "{M вигляда%1$nє|ють дуже пошкоджен%1$Gим|им|ою|ими"
+  },
+  "\r\n{DПризрачное покрывало окутывает %1$C4, скрывая %1$P2 экипировку от твоего взора.{x": {
+   "en": "\r\n{DA ghostly shroud wraps around %1$C4, hiding their equipment from your sight.{x",
+   "ua": "\r\n{DПривидне покривало огортає %1$C4, ховаючи спорядження %1$C2 від твого погляду.{x"
+  },
+  "{Y име%1$nет|ют несколько больших, опасных ран и царапин": {
+   "en": "{Y %1$nhas|have several large, dangerous wounds and scratches",
+   "ua": "{Y ма%1$nє|ють кілька великих, небезпечних ран і подряпин"
+  },
+  "{x...%1$P1 выгляд%1$nит|ят слеп%1$Gым|ым|ой|ыми и дезориентированн%1$Gым|ым|ой|ыми.{x": {
+   "en": "{x...they look%1$ns| blind and disoriented.{x",
+   "ua": "{x...вигляда%1$nє|ють сліп%1$Gим|им|ою|ими та дезорієнтован%1$Gим|им|ою|ими.{x"
+  },
+  "$E выглядит как обычн$Gое|ый|ая $n1.": {
+   "en": "It looks like an ordinary $n1.",
+   "ua": "Це виглядає як звичайн$Gе|ий|а $n1."
   }
  },
  "plug-ins/comm/move.cpp": {
@@ -5455,6 +5711,10 @@
   "Текущая строка состояния:": {
    "en": "Current status line:",
    "ua": "Поточний рядок стану:"
+  },
+  "Необходимо указать вид строки состояния.\nДля получения более подробной информации напиши {y{hcсправка строка состояния{x'": {
+   "en": "You need to specify the type of status line.\nFor more detailed information, type {y{hchelp status line{x'",
+   "ua": "Необхідно вказати вид рядка стану.\nДля отримання докладнішої інформації напиши {y{hcдовідка рядок стану{x'"
   }
  },
  "plug-ins/comm/put.cpp": {
@@ -5557,6 +5817,10 @@
   "Ты не можешь положить что-то в себя же.": {
    "en": "You can't put something inside yourself.",
    "ua": "Ти не можеш покласти щось у самого себе."
+  },
+  "%^C1 кладет %s %O4 несколько монет.": {
+   "en": "%^C1 puts several coins %s %O4.",
+   "ua": "%^C1 кладе %s %O4 кілька монет."
   }
  },
  "plug-ins/comm/quit.cpp": {
@@ -5643,6 +5907,10 @@
   "%1$^C1 говорит тебе '{G%N2, я %d уровня, у меня %d/%d жизни и %d/%d маны.{x'": {
    "en": "%1$^C1 tells you '{G%N2, I'm level %d, I have %d/%d health and %d/%d mana.{x'",
    "ua": "%1$^C1 каже тобі '{G%N2, я %d рівня, у мене %d/%d здоров'я і %d/%d мани.{x'"
+  },
+  "Напиши {y{hcприказать %1$N3 рапорт все{x, и я расскажу, что ещё я умею делать.": {
+   "en": "Write {y{hcorder %1$N3 report all{x, and I'll tell you what else I can do.",
+   "ua": "Напиши {y{hcнаказати %1$N3 рапорт всі{x, і я розповім, що ще я вмію робити."
   }
  },
  "plug-ins/comm/run.cpp": {
@@ -5681,6 +5949,10 @@
   "Тебе доступно только передвижение пешком, увы.": {
    "en": "Alas, all that's available to you is moving on foot.",
    "ua": "На жаль, тобі доступне лише пересування пішки."
+  },
+  "Но ты же сражаешься! Используй команду {yсбежать{x для побега из боя.": {
+   "en": "But you're fighting! Use the {yflee{x command to escape the fight.",
+   "ua": "Але ж ти б'єшся! Використовуй команду {yвтекти{x, щоб утекти з бою."
   }
  },
  "plug-ins/comm/scan.cpp": {
@@ -5925,6 +6197,50 @@
   "Трусость %d.": {
    "en": "Cowardice %d.",
    "ua": "Боягузтво %d."
+  },
+  "Используй команды {y{hcквест время{x и {y{hcквест очки{x.": {
+   "en": "Use the commands {y{hcquest time{x and {y{hcquest points{x.",
+   "ua": "Використовуй команди {y{hcквест час{x і {y{hcквест очки{x."
+  },
+  "     %s| %sВещи          :{x     %3d/%-4d        %sЗащита от уколов:{x   %-5d   %s|\n\r     | %sВес           :{x  %6d/%-8d    %sЗащита от ударов:{x   %-5d   %s|\n\r     | %sЗолото        :{Y %-10d          %sЗащита от разрезов:{x %-5d   %s|\n\r     | %sСеребро       :{W %-10d          %sЗащита от экзотики:{x %-5d   %s|\n\r     | %sЕдиниц опыта  :{x %-6d              %sЗащита от заклинаний:{x %4d  %s|": {
+   "en": "     %s| %sItems          :{x     %3d/%-4d        %sPierce defense:{x   %-5d   %s|\n\r     | %sWeight        :{x  %6d/%-8d    %sBlunt defense:{x     %-5d   %s|\n\r     | %sGold          :{Y %-10d          %sSlash defense:{x     %-5d   %s|\n\r     | %sSilver        :{W %-10d          %sExotic defense:{x    %-5d   %s|\n\r     | %sExp points    :{x %-6d              %sSpell defense:{x       %4d  %s|",
+   "ua": "     %s| %sРечі           :{x     %3d/%-4d        %sЗахист від уколів:{x   %-5d   %s|\n\r     | %sВага          :{x  %6d/%-8d    %sЗахист від ударів:{x   %-5d   %s|\n\r     | %sЗолото        :{Y %-10d          %sЗахист від порізів:{x %-5d   %s|\n\r     | %sСрібло        :{W %-10d          %sЗахист від екзотики:{x %-5d   %s|\n\r     | %sОдиниць досвіду:{x %-6d              %sЗахист від заклять:{x %4d  %s|"
+  },
+  "     %s| %sДом  :{x  %-30.30s %s| {Y%-22s %s|": {
+   "en": "     %s| %sHome  :{x  %-30.30s %s| {Y%-22s %s|",
+   "ua": "     %s| %sДім  :{x  %-30.30s %s| {Y%-22s %s|"
+  },
+  "     %s| %sОпыта до уровня:{x %-6d                                         %s|\n\r     |                                    %sЖизни:{x %5d / %5d         %s|": {
+   "en": "     %s| %sExp to level:{x %-6d                                         %s|\n\r     |                                    %sHP:{x %5d / %5d         %s|",
+   "ua": "     %s| %sДосвіду до рівня:{x %-6d                                         %s|\n\r     |                                    %sЖиття:{x %5d / %5d         %s|"
+  },
+  "     %s| %sТочность      :{x   %-3d            %sЭнергии:{x %5d / %5d         %s|\n\r     | %sУрон          :{x   %-3d           %sДвижения:{x %5d / %5d         %s|": {
+   "en": "     %s| %sAccuracy      :{x   %-3d            %sEnergy:{x %5d / %5d         %s|\n\r     | %sDamage        :{x   %-3d           %sMoves:{x %5d / %5d         %s|",
+   "ua": "     %s| %sТочність      :{x   %-3d            %sЕнергія:{x %5d / %5d         %s|\n\r     | %sУрон          :{x   %-3d           %sРухи:{x %5d / %5d         %s|"
+  },
+  "     %s| {wНевидимость: уровня %3d   Инкогнито: уровня %3d                 %s|": {
+   "en": "     %s| {wInvisibility: level %3d   Incognito: level %3d                 %s|",
+   "ua": "     %s| {wНевидимість: рівня %3d   Інкогніто: рівня %3d                 %s|"
+  },
+  "     %s| {wТебя охраняет     :{Y %-10s                                  %s|": {
+   "en": "     %s| {wGuarding you    :{Y %-10s                                  %s|",
+   "ua": "     %s| {wТебе охороняє   :{Y %-10s                                  %s|"
+  },
+  "     %s| {wТы охраняешь    :{Y %-10s                                    %s|": {
+   "en": "     %s| {wYou are guarding :{Y %-10s                                    %s|",
+   "ua": "     %s| {wТи охороняєш   :{Y %-10s                                    %s|"
+  },
+  "     %s| {yАдреналин кипит в твоих венах!                                  %s|": {
+   "en": "     %s| {yAdrenaline is boiling in your veins!                                  %s|",
+   "ua": "     %s| {yАдреналін кипить у твоїх венах!                                  %s|"
+  },
+  "     %s|%s+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+%s|\n\r     | %sУровень:{x  %3d        %s|%s Сила:{x %2d{c({x%2d{c){x {C%2d{x %s| %sРелигия:{x %-14.14s%s|\n\r     | %sРаса :{x  %-12s %s| %sУм  :{x %2d{c({x%2d{c){x {C%2d{x %s| %sПрактик   :{x   %3d      %s|\n\r     | %sПол  :{x  %-11s  %s| %sМудр:{x %2d{c({x%2d{c){x {C%2d{x %s| %sТренировок:{x   %3d      %s|\n\r     | %sКласс:{x  %-13s%s| %sЛовк:{x %2d{c({x%2d{c){x {C%2d{x %s| %sКвест. единиц:{x  %-6d%s |\n\r     | %sНатура:{x %-11s  %s| %sСлож:{x %2d{c({x%2d{c){x {C%2d{x %s| %sКвест. время:{x   %-3d %s   |\n\r     | %sЭтос :{x  %-12s %s| %sОбая:{x %2d{c({x%2d{c){x {C%2d{x %s| %s%s :{x   %3d      %s|": {
+   "en": "     %s|%s+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+%s|\n\r     | %sLevel:{x  %3d        %s|%s Str:{x %2d{c({x%2d{c){x {C%2d{x %s| %sReligion:{x %-14.14s%s|\n\r     | %sRace :{x  %-12s %s| %sInt :{x %2d{c({x%2d{c){x {C%2d{x %s| %sPractices :{x   %3d      %s|\n\r     | %sSex  :{x  %-11s  %s| %sWis :{x %2d{c({x%2d{c){x {C%2d{x %s| %sTrainings :{x   %3d      %s|\n\r     | %sClass:{x  %-13s%s| %sDex :{x %2d{c({x%2d{c){x {C%2d{x %s| %sQuest points:{x  %-6d%s |\n\r     | %sNature:{x %-11s  %s| %sCon :{x %2d{c({x%2d{c){x {C%2d{x %s| %sQuest time:{x   %-3d %s   |\n\r     | %sEthos :{x  %-12s %s| %sCha :{x %2d{c({x%2d{c){x {C%2d{x %s| %s%s :{x   %3d      %s|",
+   "ua": "     %s|%s+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+%s|\n\r     | %sРівень:{x  %3d        %s|%s Сила:{x %2d{c({x%2d{c){x {C%2d{x %s| %sРелігія:{x %-14.14s%s|\n\r     | %sРаса :{x  %-12s %s| %sРозум:{x %2d{c({x%2d{c){x {C%2d{x %s| %sПрактик   :{x   %3d      %s|\n\r     | %sСтать:{x  %-11s  %s| %sМудр:{x %2d{c({x%2d{c){x {C%2d{x %s| %sТренувань :{x   %3d      %s|\n\r     | %sКлас :{x  %-13s%s| %sСпрт:{x %2d{c({x%2d{c){x {C%2d{x %s| %sКвест. одиниць:{x  %-6d%s |\n\r     | %sНатура:{x %-11s  %s| %sТіло:{x %2d{c({x%2d{c){x {C%2d{x %s| %sКвест. час:{x   %-3d %s   |\n\r     | %sЕтос :{x  %-12s %s| %sЧари:{x %2d{c({x%2d{c){x {C%2d{x %s| %s%s :{x   %3d      %s|"
+  },
+  "Твои параметры: исходные, {c({Wтекущие{c){x, [{Cмаксимальные{x]\n\r      Сила: %d{c({W%d{c){x [{C%d{x]   Интеллект: %d{c({W%d{c){x [{C%d{x]\n\r  Мудрость: %d{c({W%d{c){x [{C%d{x]    Ловкость: %d{c({W%d{c){x [{C%d{x]\n\r  Сложение: %d{c({W%d{c){x [{C%d{x]     Обаяние: %d{c({W%d{c){x [{C%d{x]\n\r": {
+   "en": "Your attributes: base, {c({Wcurrent{c){x, [{Cmaximum{x]\n\r  Strength: %d{c({W%d{c){x [{C%d{x]   Intelligence: %d{c({W%d{c){x [{C%d{x]\n\r    Wisdom: %d{c({W%d{c){x [{C%d{x]     Dexterity: %d{c({W%d{c){x [{C%d{x]\n\rConstitution: %d{c({W%d{c){x [{C%d{x]     Charisma: %d{c({W%d{c){x [{C%d{x]\n\r",
+   "ua": "Твої параметри: початкові, {c({Wпоточні{c){x, [{Cмаксимальні{x]\n\r      Сила: %d{c({W%d{c){x [{C%d{x]   Інтелект: %d{c({W%d{c){x [{C%d{x]\n\r  Мудрість: %d{c({W%d{c){x [{C%d{x]    Спритність: %d{c({W%d{c){x [{C%d{x]\n\r  Статура: %d{c({W%d{c){x [{C%d{x]     Чарівність: %d{c({W%d{c){x [{C%d{x]\n\r"
   }
  },
  "plug-ins/comm/search.cpp": {
@@ -6033,6 +6349,10 @@
   "Ты чувствуешь слабую вибрацию.": {
    "en": "You feel a faint vibration.",
    "ua": "Ти відчуваєш слабку вібрацію."
+  },
+  "Используй 'smell description <строка>' для установки запаха\n\rили 'smell description clear' для его очистки.": {
+   "en": "Use 'smell description <string>' to set a smell\n\ror 'smell description clear' to clear it.",
+   "ua": "Використовуй 'smell description <рядок>' щоб встановити запах\n\rабо 'smell description clear' щоб його очистити."
   }
  },
  "plug-ins/comm/set.cpp": {
@@ -6151,12 +6471,36 @@
   "Это умение не является временным для персонажа.": {
    "en": "This skill isn't temporary for the character.",
    "ua": "Це вміння не є тимчасовим для персонажа."
+  },
+  "  set skill {y<имя>{x <spell или skill> ?": {
+   "en": "  set skill {y<name>{x <spell or skill> ?",
+   "ua": "  set skill {y<ім'я>{x <спел чи скіл> ?"
+  },
+  "  set skill {y<имя>{x <временное умение> off": {
+   "en": "  set skill {y<name>{x <temporary skill> off",
+   "ua": "  set skill {y<ім'я>{x <тимчасове вміння> off"
+  },
+  "  {Cset{x mob {y%-8s{x {C<{xназвание{C>{x %s%s {C[{x %s {C]{x\n\r": {
+   "en": "  {Cset{x mob {y%-8s{x {C<{xname{C>{x %s%s {C[{x %s {C]{x\n\r",
+   "ua": "  {Cset{x mob {y%-8s{x {C<{xназва{C>{x %s%s {C[{x %s {C]{x\n\r"
+  },
+  "  set skill {y<имя>{x <spell или skill> <число>": {
+   "en": "  set skill {y<name>{x <spell or skill> <number>",
+   "ua": "  set skill {y<ім'я>{x <spell чи skill> <число>"
   }
  },
  "plug-ins/comm/showtable.cpp": {
   "Не найдено ни одной команды, начинающейся с '%s'.": {
    "en": "No command found starting with '%s'.",
    "ua": "Не знайдено жодної команди, що починається з '%s'."
+  },
+  "Использование:\n{y{hcкоманды{x        - таблица всех команд\n{y{hcкоманды список{x - список команд с краткой справкой\n{yкоманды показ{x слово - показать синонимы и справку по команде.\n": {
+   "en": "Usage:\n{y{hccommands{x        - table of all commands\n{y{hccommands list{x - list of commands with a short description\n{ycommands show{x word - show synonyms and help for the command.\n",
+   "ua": "Використання:\n{y{hcкоманди{x        - таблиця всіх команд\n{y{hcкоманди список{x - список команд із короткою довідкою\n{yкоманди показ{x слово - показати синоніми та довідку по команді.\n"
+  },
+  "Использование: {yкоманды показ{D название{x.": {
+   "en": "Usage: {ycommands show{D name{x.",
+   "ua": "Використання: {yкоманди показ{D назва{x."
   }
  },
  "plug-ins/comm/title.cpp": {
@@ -6971,6 +7315,34 @@
   "Эта команда нужна для смены тел -- а ты и так в своем теле.": {
    "en": "This command is for switching bodies -- and you're already in your own body.",
    "ua": "Ця команда потрібна для зміни тіл -- а ти і так у своєму тілі."
+  },
+  "Stat на кого?": {
+   "en": "Stat on whom?",
+   "ua": "Stat на кого?"
+  },
+  "Значения: %d %d %d %d %d\n\r": {
+   "en": "Values: %d %d %d %d %d\n\r",
+   "ua": "Значення: %d %d %d %d %d\n\r"
+  },
+  "А чтобы вернуться в Храм, напиши {y{hcвозврат{x.": {
+   "en": "And to return to the Temple, type {y{hcreturn{x.",
+   "ua": "А щоб повернутися до Храму, напиши {y{hcповернення{x."
+  },
+  "В комнате %-20s [%d]": {
+   "en": "In room %-20s [%d]",
+   "ua": "У кімнаті %-20s [%d]"
+  },
+  "$c1 скрывает $s присутствие.": {
+   "en": "$c1 conceals their presence.",
+   "ua": "$c1 приховує свою присутність."
+  },
+  "Формат: limited <vnum>.": {
+   "en": "Format: limited <vnum>.",
+   "ua": "Формат: limited <vnum>."
+  },
+  "У %-30s": {
+   "en": "At %-30s",
+   "ua": "У %-30s"
   }
  },
  "plug-ins/comm/writing.cpp": {
@@ -7183,6 +7555,14 @@
   "Этот канал не для тебя, прости.": {
    "en": "This channel isn't for you, sorry.",
    "ua": "Цей канал не для тебе, вибач."
+  },
+  "Ты пускаешь изо рта {Rр{Yа{Gз{Cн{Mо{Rц{Gв{Yе{Cт{Mн{Yы{Cе{x мыльные пузыри.": {
+   "en": "You blow {Rc{Yo{Gl{Co{Mr{Rf{Gu{Yl{x soap bubbles from your mouth.",
+   "ua": "Ти пускаєш з рота {Rр{Yі{Gз{Cн{Mо{Rк{Gо{Yл{Cь{Mо{Yр{Cо{Rв{Yі{x мильні бульбашки."
+  },
+  "$c1 пускает изо рта {Rр{Yа{Gз{Cн{Mо{Rц{Gв{Yе{Cт{Mн{Yы{Cе{x мыльные пузыри.": {
+   "en": "$c1 blows {Rm{Yu{Gl{Ct{Mi{Rc{Go{Yl{Co{Mr{Ye{Cd{x soap bubbles from their mouth.",
+   "ua": "$c1 випускає з рота {Rр{Yі{Gз{Cн{Mо{Rк{Yо{Gл{Cь{Mо{Rр{Yо{Gв{Cі{x мильні бульбашки."
   }
  },
  "plug-ins/communication/personalchannel.cpp": {
@@ -7209,6 +7589,30 @@
   "Боги лишили тебя возможности личного общения.": {
    "en": "The Gods have stripped you of the ability to communicate privately.",
    "ua": "Боги позбавили тебе можливості особистого спілкування."
+  },
+  "$C1 не может сейчас получить твое сообщение, т.к. $E отсутствует: {c$t{x.": {
+   "en": "$C1 can't receive your message right now because they're away: {c$t{x.",
+   "ua": "$C1 не може зараз отримати твоє повідомлення через відсутність: {c$t{x."
+  },
+  "$C1 сейчас сражается, но твое сообщение будет прочитано, когда $E закончит бой.": {
+   "en": "$C1 is currently fighting, but your message will be read once the fight is over.",
+   "ua": "$C1 зараз б'ється, але твоє повідомлення буде прочитано, коли бій закінчиться."
+  },
+  "$E сейчас сражается и не может получить твое сообщение.": {
+   "en": "They're currently in combat and can't receive your message.",
+   "ua": "Ця людина зараз б'ється і не може отримати твоє повідомлення."
+  },
+  "Сообщение будет прочитано, когда $E вернется.": {
+   "en": "The message will be read once they get back.",
+   "ua": "Повідомлення буде прочитано, коли вони повернуться."
+  },
+  "Твое сообщение не дошло $M.": {
+   "en": "Your message didn't reach the recipient.",
+   "ua": "Твоє повідомлення не дійшло до адресата."
+  },
+  "У $C2 нет связи с этим миром, но твое сообщение будет прочитано, когда $E вернется.": {
+   "en": "$C2 has no connection to this world, but your message will be read when they return.",
+   "ua": "$C2 не має зв'язку з цим світом, але твоє повідомлення буде прочитане, коли повернеться."
   }
  },
  "plug-ins/communication/replay.cpp": {
@@ -7343,6 +7747,10 @@
   "Ты не ботаешь по фене.": {
    "en": "You don't speak the criminals' cant.",
    "ua": "Ти не ботаєш по фені."
+  },
+  "Синтаксис: {Wfindrefs {x<cs id> - список ссылок на этот сценарий": {
+   "en": "Syntax: {Wfindrefs {x<cs id> - list of references to this script",
+   "ua": "Синтаксис: {Wfindrefs {x<cs id> - список посилань на цей сценарій"
   }
  },
  "plug-ins/feniaroot/characterwrapper.cpp": {
@@ -7369,6 +7777,10 @@
   "Ты перестаешь летать.": {
    "en": "You stop flying.",
    "ua": "Ти перестаєш літати."
+  },
+  "{W%#^C1 {Wне может выполнить твой приказ, потому что видит следующее:{x\r\n  {W*{x ": {
+   "en": "{W%#^C1 {Wcan't carry out your order because it sees the following:{x\r\n  {W*{x ",
+   "ua": "{W%#^C1 {Wне може виконати твій наказ, бо бачить наступне:{x\r\n  {W*{x "
   }
  },
  "plug-ins/fight/effects.cpp": {
@@ -7427,6 +7839,10 @@
   "Холод окутывает тебя и проникает до самых костей.": {
    "en": "Cold wraps around you and seeps into your very bones.",
    "ua": "Холод огортає тебе і проникає аж до кісток."
+  },
+  "%1$^C4 начинает тошнить, когда яд проникает в %1$P2 тело.": {
+   "en": "%1$^C4 starts to feel sick as poison spreads through %1$C2's body.",
+   "ua": "%1$^C4 починає нудити, коли отрута проникає в тіло %1$C2."
   }
  },
  "plug-ins/fight/fight.cpp": {
@@ -7515,6 +7931,10 @@
   "Ты хладнокровно умерщвляешь $C4!": {
    "en": "You coldly put $C4 to death!",
    "ua": "Ти холоднокровно вбиваєш $C4!"
+  },
+  "Чтобы напасть на игрока используй команду {y{hhпорешить{x.": {
+   "en": "To attack a player, use the {y{hhporeshit{x command.",
+   "ua": "Щоб напасти на гравця, використай команду {y{hhпорешить{x."
   }
  },
  "plug-ins/fight/fight_death.cpp": {
@@ -7733,6 +8153,10 @@
   "{RБОЛЬШЕ КРОВИ! БОЛЬШЕ КРОВИ! БОЛЬШЕ КРОВИ!!!{x": {
    "en": "{RMORE BLOOD! MORE BLOOD! MORE BLOOD!!!{x",
    "ua": "{RБІЛЬШЕ КРОВІ! БІЛЬШЕ КРОВІ! БІЛЬШЕ КРОВІ!!!{x"
+  },
+  "{1{MПаралич %1$C2 проходит, но %1$P1, похоже, все еще оглуше%1$Gно|н|на|ны!{2": {
+   "en": "{1{MThe paralysis wears off %1$C2, but %1$C1 still seems to be stunned!{2",
+   "ua": "{1{MПараліч %1$C2 минає, але %1$C1, схоже, усе ще оглуш%1$Gене|ений|ена|ені!{2"
   }
  },
  "plug-ins/fight/magic.cpp": {
@@ -7783,6 +8207,14 @@
   "Твой язык заплетается, и ты не можешь как следует произнести заклинание.": {
    "en": "Your tongue trips over itself, and you can't properly utter the spell.",
    "ua": "Твій язик заплітається, і ти не можеш як слід вимовити заклинання."
+  },
+  "%1$^C1 пыта%1$nется|ются сотворить заклинание, но что-то в этой местности блокирует %1$P2.": {
+   "en": "%1$^C1 tr%1$nies|y to cast a spell, but something in this area blocks it.",
+   "ua": "%1$^C1 намага%1$nється|ються сотворити заклинання, але щось у цій місцевості блокує його."
+  },
+  "Язык %1$C2 заплетается, и %1$P1 не мо%1$nжет|гут как следует произнести заклинание.": {
+   "en": "%1$C2's tongue trips over itself, and %1$C1 can't get the spell out right.",
+   "ua": "Язик %1$C2 заплітається, і %1$C1 не мо%1$nже|жуть як слід вимовити закляття."
   }
  },
  "plug-ins/fight/onehit_undef.cpp": {
@@ -7883,6 +8315,10 @@
   "{DЧерная немощь{x поражает твою руку!": {
    "en": "{DBlack Palsy{x strikes your arm!",
    "ua": "{DЧорна немічність{x вражає твою руку!"
+  },
+  "Ты направляешь удар $c2 против $x!": {
+   "en": "You direct $c2's strike against them!",
+   "ua": "Ти скеровуєш удар $c2 проти нього!"
   }
  },
  "plug-ins/fight_core/damage.cpp": {
@@ -7961,6 +8397,10 @@
   "Это было действительно БОЛЬНО!": {
    "en": "That really HURT!",
    "ua": "Це було справді БОЛЯЧЕ!"
+  },
+  "$c1 смертельно ране$gно|н|на и скоро умрет, если $m не помогут.": {
+   "en": "$c1 is mortally wounded and will die soon unless someone helps.",
+   "ua": "$c1 смертельно поран$gено|ений|ена і скоро помре, якщо не отримає допомоги."
   }
  },
  "plug-ins/fight_core/fight_extract.cpp": {
@@ -8101,6 +8541,14 @@
   "Укажите имя правильно и полностью.": {
    "en": "Specify the name correctly and in full.",
    "ua": "Вкажи ім'я правильно і повністю."
+  },
+  "Использование: gquest set <player> <quest id> <num. of victories>": {
+   "en": "Usage: gquest set <player> <quest id> <num. of victories>",
+   "ua": "Використання: gquest set <player> <quest id> <num. of victories>"
+  },
+  "Используй 'гквест безопыта да' или 'гквест безопыта нет'.": {
+   "en": "Use 'gquest noexp yes' or 'gquest noexp no'.",
+   "ua": "Використовуй 'гквест безопыта да' або 'гквест безопыта нет'."
   }
  },
  "plug-ins/gquest/command/gquestnotifyplugin.cpp": {
@@ -8641,6 +9089,10 @@
   "Ты умудряешься вырваться из объятий $c2": {
    "en": "You manage to break free from $c2's embrace",
    "ua": "Тобі вдається вирватися з обіймів $c2"
+  },
+  "Ты {R{IS+++ {IxЛОМАЕШЬ ШЕЮ{IS +++{Ix{x $C3!": {
+   "en": "You {R{IS+++ {IxBREAK THE NECK{IS +++{Ix{x of $C3!",
+   "ua": "Ти {R{IS+++ {IxЛАМАЄШ ШИЮ{IS +++{Ix{x $C3!"
   }
  },
  "plug-ins/groups/class_ranger.cpp": {
@@ -8771,6 +9223,10 @@
   "Засаду себе? Это еще как?!": {
    "en": "Ambush yourself? How's that supposed to work?!",
    "ua": "Засідку самому собі? Це як таке?!"
+  },
+  "%1$^O1, посланн%1$Gое|ый|ая|ые тобой, улете%1$nла|ли %2$s.": {
+   "en": "%1$^O1, sent by you, %1$nflew|flew away %2$s.",
+   "ua": "%1$^O1, послан%1$Gе|ий|а|і тобою, %1$nполетіла|полетіли %2$s."
   }
  },
  "plug-ins/groups/class_samurai.cpp": {
@@ -9015,6 +9471,10 @@
   "Это ключ от замка, который невозможно взломать. Увы..": {
    "en": "This is the key to a lock that can't be picked. Alas..",
    "ua": "Це ключ від замка, який неможливо зламати. На жаль.."
+  },
+  "$C1 бол$Gьно|ен|ьна и подозрител$Gьно|ен|ьна... ты не можешь незаметно подкрасться к не$Gму|му|й.": {
+   "en": "$C1 is sick and suspicious... you can't sneak up on them unnoticed.",
+   "ua": "$C1 хвор$Gе|ий|а і підозріл$Gе|ий|а... ти не можеш непомітно підкрастися до $Gнього|нього|неї."
   }
  },
  "plug-ins/groups/class_vampire.cpp": {
@@ -9321,6 +9781,14 @@
   "Упс, похоже, этот участок уже занял твой коллега.": {
    "en": "Oops, looks like your colleague already claimed this spot.",
    "ua": "Упс, схоже, цю ділянку вже зайняв твій колега."
+  },
+  "$c1 очнул$gось|ся|ась от терзавшего $s кошмара.": {
+   "en": "$c1 wakes from a nightmare that had been tormenting them.",
+   "ua": "$c1 прокинул$gося|вся|ася від жахіття, яке мучило його."
+  },
+  "Поклонись своему Гильдмастеру для вампирьей Инициации ({hc{yсправка инициация{x).": {
+   "en": "Bow to your Guildmaster for the vampiric Initiation ({hc{yhelp инициация{x).",
+   "ua": "Вклонись своєму Гільдмайстру для вампірської Ініціації ({hc{yдовідка инициация{x)."
   }
  },
  "plug-ins/groups/class_warrior.cpp": {
@@ -9367,6 +9835,10 @@
   "Тебе понадобится специальный молот -- ищи его в Королевстве Дварфов.": {
    "en": "You'll need a special hammer -- look for it in the Kingdom of the Dwarves.",
    "ua": "Тобі знадобиться особливий молот -- шукай його в Королівстві Дварфів."
+  },
+  "%1$^O1 по%1$nет|ют под руками %2$C2, обретая первозданный вид.": {
+   "en": "%1$^O1 %1$nsings|sing under %2$C2's hands, regaining its original shape.",
+   "ua": "%1$^O1 співа%1$nє|ють під руками %2$C2, повертаючи собі первозданний вигляд."
   }
  },
  "plug-ins/groups/genericskill.cpp": {
@@ -9527,6 +9999,18 @@
   "Этот свиток чересчур сложен для твоего понимания.": {
    "en": "This scroll is too complex for you to understand.",
    "ua": "Цей сувій занадто складний для твого розуміння."
+  },
+  "Тво%1$Gе|й|я|и %1$O1 темне%1$nет|ют и исчеза%1$nет|ют.": {
+   "en": "Your %1$O1 darken%1$ns| and disappear%1$ns|.",
+   "ua": "%1$GТвоє|Твій|Твоя|Твої %1$O1 темні%1$nє|ють і зника%1$nє|ють."
+  },
+  "$c1 ударяет $o5 $T.": {
+   "en": "$c1 strikes $o5 $T.",
+   "ua": "$c1 б'є $o5 $T."
+  },
+  "Ты зачитываешь одно из заклинаний %s %O2.": {
+   "en": "You read out one of the spells %s %O2.",
+   "ua": "Ти зачитуєш одне із заклинань %s %O2."
   }
  },
  "plug-ins/groups/group_beguiling.cpp": {
@@ -9661,6 +10145,10 @@
   "Сначала слезь, а потом уже убегай.": {
    "en": "Dismount first, then run away.",
    "ua": "Спочатку злізь, а потім вже тікай."
+  },
+  "%^$#C1 и так двигается бесшумно.\n\r": {
+   "en": "%^$#C1 already moves silently.\n\r",
+   "ua": "%^$#C1 і так рухається безшумно.\n\r"
   }
  },
  "plug-ins/groups/group_weaponsmaster.cpp": {
@@ -9923,6 +10411,10 @@
   "Ты размахиваешься и разрубаешь свою тень.": {
    "en": "You swing and hack through your own shadow.",
    "ua": "Ти розмахуєшся і розрубуєш власну тінь."
+  },
+  "$S оружие не двигается с места!": {
+   "en": "Their weapon won't budge!",
+   "ua": "Їхня зброя не рухається з місця!"
   }
  },
  "plug-ins/help/areahelp.cpp": {
@@ -10351,12 +10843,20 @@
   "Ты слишком миролюбив{Sfа{Sx для древней ярости.": {
    "en": "You are too peaceable for the ancient fury.",
    "ua": "Ти надто миролюбн{Smий{Sfа{Sx для давньої люті."
+  },
+  "%1$^C1 слишком миролюбив%1$Gо||а для древней ярости.": {
+   "en": "%1$^C1 is too peaceful for the ancient fury.",
+   "ua": "%1$^C1 занадто %1$Gмиролюбне|миролюбний|миролюбна для древньої люті."
   }
  },
  "plug-ins/learn/cskills.cpp": {
   "Неверный параметр '%1$s', подходящие фильтры: заклинания, навыки, пассивные, активные, название группы умений, диапазон уровней.\r\n": {
    "en": "Invalid parameter '%1$s'; valid filters: spells, skills, passive, active, skill group name, level range.\r\n",
    "ua": "Неправильний параметр '%1$s', допустимі фільтри: заклинання, навички, пасивні, активні, назва групи вмінь, діапазон рівнів.\r\n"
+  },
+  "Также используй фильтры {y{hc%1$s заклинания{x, {y{hc%1$s навыки{x, {y{hc%1$s пассивные{x, {y{hc%1$s активные{x, группа умений и диапазон уровней (например, 10 или 10 42)\r\n": {
+   "en": "Also use the filters {y{hc%1$s spells{x, {y{hc%1$s skills{x, {y{hc%1$s passive{x, {y{hc%1$s active{x, skill group, and level range (e.g. 10 or 10 42)\r\n",
+   "ua": "Також використовуй фільтри {y{hc%1$s заклинання{x, {y{hc%1$s навички{x, {y{hc%1$s пасивні{x, {y{hc%1$s активні{x, група вмінь і діапазон рівнів (наприклад, 10 або 10 42)\r\n"
   }
  },
  "plug-ins/learn/glist.cpp": {
@@ -10447,6 +10947,10 @@
   "Такого умения нет.": {
    "en": "There's no such skill.",
    "ua": "Такого вміння немає."
+  },
+  "Использование: {yумение{x <умение или заклинание>": {
+   "en": "Usage: {yумение{x <skill or spell>",
+   "ua": "Використання: {yумение{x <уміння чи заклинання>"
   }
  },
  "plug-ins/learn/teach.cpp": {
@@ -10689,6 +11193,14 @@
   "Тебя начинает тошнить, когда яд проникает в твое тело.": {
    "en": "You start to feel nauseous as the poison seeps into your body.",
    "ua": "Тебе починає нудити, коли отрута проникає у твоє тіло."
+  },
+  "Ты не можешь перелить из %1$O2 в сам%1$Gое|ого|у|их себя!": {
+   "en": "You can't pour from %1$O2 into yourself!",
+   "ua": "Ти не можеш перелити з %1$O2 у сам%1$Gе|ого|у|их себе!"
+  },
+  "%1$^C4 начинает тошнить, когда яд проникает в %1$Gего|его|ее|их тел%1$nо|а.": {
+   "en": "%1$^C4 starts to feel sick as the poison seeps into their bod%1$ny|ies.",
+   "ua": "%1$^C4 починає нудити, коли отрута проникає в %1$Gйого|його|її|їхнє тіл%1$nо|а."
   }
  },
  "plug-ins/liquid/drink_utils.cpp": {
@@ -10847,6 +11359,10 @@
   "Ты выкапываешься из земли.": {
    "en": "You dig yourself out of the ground.",
    "ua": "Ти викопуєшся із землі."
+  },
+  "$c1 выходит из $s укрытия.": {
+   "en": "$c1 comes out of its hiding spot.",
+   "ua": "$c1 виходить зі свого сховку."
   }
  },
  "plug-ins/loadsave/player_exp.cpp": {
@@ -10921,6 +11437,10 @@
   "В лес!": {
    "en": "Into the forest!",
    "ua": "У ліс!"
+  },
+  "%s бездомное..": {
+   "en": "%s is homeless..",
+   "ua": "%s безхатнє.."
   }
  },
  "plug-ins/mansion/mkey.cpp": {
@@ -11097,6 +11617,30 @@
   "Эй, не отвлекайся!": {
    "en": "Hey, don't get distracted!",
    "ua": "Гей, не відволікайся!"
+  },
+  "$M сейчас 'как-то так'.. извини.": {
+   "en": "Your other half is currently 'kind of like that'.. sorry.",
+   "ua": "Твоя половинка зараз 'якось так'.. вибач."
+  },
+  "$M сейчас совсем не до тебя.": {
+   "en": "There's no time for you right now.",
+   "ua": "Зараз зовсім не до тебе."
+  },
+  "$c1 пытается добиться от $C2 взаимности, но $C1 отвергает $s.": {
+   "en": "$c1 tries to win over $C2, but $C1 gets rejected.",
+   "ua": "$c1 намагається домогтися взаємності від $C2, але $C1 отримує відмову."
+  },
+  "$c1 пытается добиться от тебя взаимности, но ты отвергаешь $s.": {
+   "en": "$c1 tries to win your affection, but you reject them.",
+   "ua": "$c1 намагається домогтися від тебе взаємності, але ти відкидаєш цю спробу."
+  },
+  "Может, стоит $S для начала разбудить?": {
+   "en": "Maybe you should wake them up first?",
+   "ua": "Може, варто спершу розбудити?"
+  },
+  "О$Gно|н|на тебя не хочет.": {
+   "en": "Not interested in you.",
+   "ua": "О$Gно|н|на тебе не хоче."
   }
  },
  "plug-ins/mlove/mtalk.cpp": {
@@ -11131,6 +11675,30 @@
   "Тебя ожида%1$Iет|ют|ют {W%1$d{x сообщен%1$Iие|ия|ий о глобальн%1$Iом|ых|ых квест%1$Iе|ах|ах ('{hc{yквестнота{x').": {
    "en": "You have {W%1$d{x message%1$I|s|s waiting about a global quest%1$I|s|s ('{hc{yquestnote{x').",
    "ua": "Тебе очіку%1$Iє|ють|ють {W%1$d{x повідомлен%1$Iня|ня|ь про глобальн%1$Iий|і|і квест%1$Iи|и|ів ('{hc{yквестнота{x')."
+  },
+  "{W%1$d{x нов%1$Iая|ые|ых истор%1$Iия|ии|ий ожида%1$Iет|ют|ют прочтения ('{hc{yистория{x').": {
+   "en": "{W%1$d{x new stor%1$Iy|ies|ies await%1$Is|| reading ('{hc{yhistory{x').",
+   "ua": "{W%1$d{x нов%1$Iа|і|их істор%1$Iія|ії|ій чека%1$Iє|ють|ють на прочитання ('{hc{yісторія{x')."
+  },
+  "{W%1$d{x новост%1$Iь|и|ей ожида%1$Iет|ют|ют тебя ('{hc{yновость{x').": {
+   "en": "{W%1$d{x news item%1$I|s|s await%1$Is|| you ('{hc{ynews{x').",
+   "ua": "{W%1$d{x нови%1$Iна|ни|н очіку%1$Iє|ють|ють на тебе ('{hc{yновина{x')."
+  },
+  "За последнее время произошл%1$Iо|и|и {W%1$d{x изменен%1$Iие|ия|ий ('{hc{yизменение{x').": {
+   "en": "Recently there ha%1$Is|ve|ve been {W%1$d{x change%1$I|s|s ('{hc{ychanges{x').",
+   "ua": "Останнім часом відбу%1$Iлося|лися|лися {W%1$d{x зм%1$Iіна|іни|ін ('{hc{yзміна{x')."
+  },
+  "Опубликован%1$Iо|ы|ы {W%1$d{x сообщен%1$Iие|ия|ий о Каре Небесной ('{hc{yнаказание{x').": {
+   "en": "%1$Ihas|have|have been published {W%1$d{x message%1$I|s|s about the Wrath of the Gods ('{hc{ypunishment{x').",
+   "ua": "Опублікован%1$Iо|о|о {W%1$d{x повідомлен%1$Iня|ня|ь про Кару Небесну ('{hc{yпокарання{x')."
+  },
+  "Тебя ожида%1$Iет|ют|ют {W%1$d{x сообщен%1$Iие|ия|ий о преступлени%1$Iи|ях|ях ('{hc{yпреступление{x').": {
+   "en": "You have {W%1$d{x message%1$I|s|s about crime%1$I|s|s awaiting you ('{hc{yпреступление{x').",
+   "ua": "На тебе чека%1$Iє|ють|ють {W%1$d{x повідомлен%1$Iня|ня|ь про злочин%1$I|и|ів ('{hc{yпреступление{x')."
+  },
+  "У тебя {W%1$d{x непрочитан%1$Iное|ных|ных пис%1$Iьмо|ьма|ем ('{hc{yписьмо{x').": {
+   "en": "You have {W%1$d{x unread letter%1$I|s|s ('{hc{ymail{x').",
+   "ua": "У тебе {W%1$d{x непрочитан%1$Iий|і|их лист%1$I|и|ів ('{hc{yпошта{x')."
   }
  },
  "plug-ins/note/notecommand.cpp": {
@@ -11233,6 +11801,14 @@
   "Что-то пошло не так, письмо не найдено.": {
    "en": "Something went wrong, the letter wasn't found.",
    "ua": "Щось пішло не так, лист не знайдено."
+  },
+  "Неверный формат, смотри {y{hcсправка письмо список{x.": {
+   "en": "Invalid format, see {y{hchelp note list{x.",
+   "ua": "Неправильний формат, дивись {y{hcдовідка лист список{x."
+  },
+  "Использование: %s flag <number> <flags to set|none>": {
+   "en": "Usage: %s flag <number> <flags to set|none>",
+   "ua": "Використання: %s flag <number> <flags to set|none>"
   }
  },
  "plug-ins/note/notehooks.cpp": {
@@ -11429,6 +12005,10 @@
   "Он вспыхивает и исчезает, оставив на своем месте {C1000{x очков опыта.": {
    "en": "It flares up and vanishes, leaving {C1000{x experience points in its place.",
    "ua": "Він спалахує і зникає, залишивши на своєму місці {C1000{x очок досвіду."
+  },
+  "%1$^O1 не принадлежит тебе, и ты бросаешь %1$P2.": {
+   "en": "%1$^O1 doesn't belong to you, so you drop it.",
+   "ua": "%1$^O1 не належить тобі, тож ти кидаєш %1$O2."
   }
  },
  "plug-ins/quest/bigquest/bigquest.cpp": {
@@ -11519,6 +12099,30 @@
   "Наслаждение жизнью недоступно призракам.": {
    "en": "Enjoying life isn't available to ghosts.",
    "ua": "Насолода життям недоступна привидам."
+  },
+  "          {W%4d{w %s (%dе место)\r\n": {
+   "en": "          {W%4d{w %s (place %d)\r\n",
+   "ua": "          {W%4d{w %s (%d-е місце)\r\n"
+  },
+  "{wКоманды{x: {y{hcквест сдать{x, {y{hcквест сдать опыт{x, {y{hcквест найти{x, {y{hcквест отменить{x.": {
+   "en": "{wCommands{x: {y{hcквест сдать{x, {y{hcквест сдать опыт{x, {y{hcквест найти{x, {y{hcквест отменить{x.",
+   "ua": "{wКоманди{x: {y{hcквест сдать{x, {y{hcквест сдать опыт{x, {y{hcквест найти{x, {y{hcквест отменить{x."
+  },
+  "Использование: quest set <player> <quest id> [+]<num. of victories>": {
+   "en": "Usage: quest set <player> <quest id> [+]<num. of victories>",
+   "ua": "Використання: quest set <player> <quest id> [+]<num. of victories>"
+  },
+  "Смотри также {y{hcквест ?{x для списка всех возможных действий.": {
+   "en": "See also {y{hcквест ?{x for a list of all possible actions.",
+   "ua": "Дивись також {y{hcквест ?{x для списку всіх можливих дій."
+  },
+  "У тебя сейчас нет задания от квестора. См. также команду {y{hcквест{x.": {
+   "en": "You don't currently have a task from a quest giver. See also the command {y{hcквест{x.",
+   "ua": "У тебе зараз немає завдання від квестора. Див. також команду {y{hcквест{x."
+  },
+  "У тебя сейчас нет задания. Подробности читай по команде {y{hcсправка квесты{x.": {
+   "en": "You don't have a quest right now. Read the details via the {y{hchelp quests{x command.",
+   "ua": "У тебе зараз немає завдання. Подробиці читай за командою {y{hcдовідка квести{x."
   }
  },
  "plug-ins/quest/command/questmaster.cpp": {
@@ -11591,6 +12195,10 @@
   "Чернила меркнут, и $o1 рассыпается трухой.": {
    "en": "The ink fades, and $o1 crumbles to dust.",
    "ua": "Чорнило блякне, і $o1 розсипається трухою."
+  },
+  "$c1 просит $C4 отменить $S задание.": {
+   "en": "$c1 asks $C4 to cancel their quest.",
+   "ua": "$c1 просить $C4 скасувати своє завдання."
   }
  },
  "plug-ins/quest/command/questtrader.cpp": {
@@ -11661,6 +12269,10 @@
   "$C1 пришивает карманы на $o4.": {
    "en": "$C1 sews pockets onto $o4.",
    "ua": "$C1 пришиває кишені на $o4."
+  },
+  "Для покупки чего-либо используй {yквест купить {Dназвание{x.": {
+   "en": "To buy anything, use {yquest buy {Ditem name{x.",
+   "ua": "Щоб купити щось, використовуй {yквест купити {Dназву{x."
   }
  },
  "plug-ins/quest/core/areaquestcleanupplugin.cpp": {
@@ -12077,6 +12689,22 @@
   "Ты в {RУЖАСНОМ СОСТОЯНИИ.{x": {
    "en": "You're in {RTERRIBLE CONDITION.{x",
    "ua": "Ти в {RЖАХЛИВОМУ СТАНІ.{x"
+  },
+  "$c1 говорит тебе '{GПрослыша$gло|л|ла я, что в {W{hh$t{hx{G есть один ребенок.{x": {
+   "en": "$c1 says to you '{gI've heard tell that there's a child in {W{hh$t{hx{G.{x'",
+   "ua": "$c1 каже тобі '{gПрочу$gло|в|ла я, що в {W{hh$t{hx{G є одна дитина.{x'"
+  },
+  "Раскатывающее движение скалкой $c2 {R<*) (*>= ! ПРЕВРАЩАЕТ В КРОВАВОЕ МЕСИВО ! =<*) (*>{x лицо $C2": {
+   "en": "The rolling motion of $c2's rolling pin {R<*) (*>= ! TURNS INTO A BLOODY PULP ! =<*) (*>{x $C2's face",
+   "ua": "Розкочувальний рух качалкою $c2 {R<*) (*>= ! ПЕРЕТВОРЮЄ НА КРИВАВЕ МІСИВО ! =<*) (*>{x обличчя $C2"
+  },
+  "Раскатывающее движение скалкой $c2 {R<*) (*>= ! ПРЕВРАЩАЕТ В КРОВАВОЕ МЕСИВО ! =<*) (*>{x твое лицо": {
+   "en": "A rolling motion of $c2's rolling pin {R<*) (*>= ! TURNS YOUR FACE INTO BLOODY MUSH ! =<*) (*>{x",
+   "ua": "Розкочувальний рух качалкою $c2 {R<*) (*>= ! ПЕРЕТВОРЮЄ НА КРИВАВЕ МІСИВО ! =<*) (*>{x твоє обличчя"
+  },
+  "$c1 произносит '{gВидишь, что неразумное еще, так и ра$Gдо|д|да стараться?{x'.": {
+   "en": "$c1 says, '{gYou see it's still not too bright, yet so glad to try, isn't it?{x'.",
+   "ua": "$c1 промовляє '{gБачиш, що ще нерозумне, а так і ра$Gдо|д|да старатися?{x'."
   }
  },
  "plug-ins/quest/kidnapquest/scenario_dragon.cpp": {
@@ -12215,6 +12843,14 @@
   "Приди к $C3 за благодарностью!": {
    "en": "Come to $C3 for your reward!",
    "ua": "Прийди до $C3 за подякою!"
+  },
+  "$c1 говорит тебе '{GПоторопись! У тебя будет всего {Y%d{G минут%s, чтобы вернуть его в целости и сохранности.{x'": {
+   "en": "$c1 says to you '{GHurry! You'll have only {Y%d{G minute%s to bring it back safe and sound.{x'",
+   "ua": "$c1 каже тобі '{GПоспіши! У тебе буде лише {Y%d{G хвилин%s, щоб повернути його цілим і неушкодженим.{x'"
+  },
+  "$c1 говорит тебе '{GСкорее всего ты встретишь его в местности {W{hh$t{hx{G.{x'": {
+   "en": "$c1 says to you '{GMost likely you'll meet him in the area {W{hh$t{hx{G.{x'",
+   "ua": "$c1 каже тобі '{GШвидше за все ти зустрінеш його в місцевості {W{hh$t{hx{G.{x'"
   }
  },
  "plug-ins/quest/kidnapquest/scenario_urchin.cpp": {
@@ -12635,6 +13271,18 @@
   "Причем тебе кажется, что сапог движется навстречу.": {
    "en": "And it seems to you that the boot is moving towards you.",
    "ua": "Причому тобі здається, що чобіт рухається назустріч."
+  },
+  "$c1 хлопает тебя по плечу так, что ты теряешь равновесие и падаешь мордой прямо $m на сапог.": {
+   "en": "$c1 claps you on the shoulder so hard you lose your balance and faceplant right onto their boot.",
+   "ua": "$c1 ляскає тебе по плечу так, що ти втрачаєш рівновагу і падаєш мордою прямо на його чобіт."
+  },
+  "{Y$c1 подло убил того, кто нуждался в твоей помощи. Мафия не забудет $s.{x": {
+   "en": "{Y$c1 treacherously killed the one who needed your help. The mafia won't forget this.{x",
+   "ua": "{Y$c1 підступно вбив того, хто потребував твоєї допомоги. Мафія цього не забуде.{x"
+  },
+  "{YБольшое спасибо $m за это, однако...{x": {
+   "en": "{YMany thanks for that, however...{x",
+   "ua": "{YВелике спасибі за це, однак...{x"
   }
  },
  "plug-ins/quest/killquest/victimbehavior.cpp": {
@@ -12849,6 +13497,10 @@
   "Лимиты нельзя приватизировать!": {
    "en": "Limits can't be privatized!",
    "ua": "Ліміти не можна приватизувати!"
+  },
+  "(во избежание недоразумений внимательно прочти help owner!)": {
+   "en": "(to avoid misunderstandings, carefully read help owner!)",
+   "ua": "(щоб уникнути непорозумінь, уважно прочитай help owner!)"
   }
  },
  "plug-ins/race_aptitude/felar.cpp": {
@@ -12973,6 +13625,10 @@
   "Ты слишком возбужден%Gо||а, чтобы воздвигать алтарь.": {
    "en": "You're too worked up to build an altar.",
    "ua": "Ти занадто збудж%Gено|ений|ена|ені, щоб зводити вівтар."
+  },
+  "Но ты же закоренел%1$Gое|ый|ая атеист%1$G||ка.": {
+   "en": "But you're a die-hard atheist.",
+   "ua": "Але ж ти %1$Gзакореніле|закоренілий|закореніла атеїст%1$G||ка."
   }
  },
  "plug-ins/religion/gods_impl.cpp": {
@@ -13149,6 +13805,10 @@
   "Это было действительно {rБОЛЬНО{x!": {
    "en": "That really {rHURT{x!",
    "ua": "Це було справді {rБОЛЯЧЕ{x!"
+  },
+  "Не стоит просить %N4 об одном и том же два раза подряд -- попроси %p2 о чем-то еще.": {
+   "en": "Don't ask %N4 for the same thing twice in a row -- ask for something else instead.",
+   "ua": "Не варто просити %N4 про одне й те саме двічі поспіль -- попроси про щось інше."
   }
  },
  "plug-ins/remort/cmlt.cpp": {
@@ -13211,6 +13871,10 @@
   "Ты пока не обменя%1$Gло|л|ла ни одну победу на плюшки.": {
    "en": "You haven't traded a single win for perks yet.",
    "ua": "Ти поки що не обміня%1$Gло|в|ла жодної перемоги на плюшки."
+  },
+  "{B Раса         Класс        Время игры   Бонус{x": {
+   "en": "{B Race         Class        Play Time    Bonus{x",
+   "ua": "{B Раса         Клас         Час гри      Бонус{x"
   }
  },
  "plug-ins/remort/cremort.cpp": {
@@ -13233,6 +13897,18 @@
   "Не удалось сохранить твой профайл: сообщи Богам!": {
    "en": "Failed to save your profile: tell the Gods!",
    "ua": "Не вдалося зберегти твій профайл: повідом Богам!"
+  },
+  "Вещи можно сохранить в именном сундуке или собственном доме ({y{hcсправка цены{x, {y{hcсправка строительство{x)": {
+   "en": "Items can be stored in a named chest or your own house ({y{hchelp prices{x, {y{hchelp construction{x)",
+   "ua": "Речі можна зберегти в іменній скрині або власному домі ({y{hcдовідка ціни{x, {y{hcдовідка будівництво{x)"
+  },
+  "Если хочешь начать новую жизнь, набери {yпереродиться{x пароль.": {
+   "en": "If you want to start a new life, type {yreborn{x password.",
+   "ua": "Якщо хочеш почати нове життя, набери {yпереродитися{x пароль."
+  },
+  "Обязательно прочитай {y{hcсправка перерождение{x": {
+   "en": "Be sure to read {y{hchelp remort{x",
+   "ua": "Обов'язково прочитай {y{hcдовідка переродження{x"
   }
  },
  "plug-ins/remort/remortnanny.cpp": {
@@ -13323,6 +13999,10 @@
   "Ты надеешься, что если перестать покупать питомцев, то их просто выпустят на волю.": {
    "en": "You hope that if people stop buying pets, they'll just be set free.",
    "ua": "Ти сподіваєшся, що якщо перестати купувати улюбленців, то їх просто відпустять на волю."
+  },
+  "В трудную минуту $E поможет тебе!": {
+   "en": "In a tough spot, it'll be there to help you!",
+   "ua": "У скрутну хвилину воно допоможе тобі!"
   }
  },
  "plug-ins/services/petshop/petshopstorage.cpp": {
@@ -13483,6 +14163,14 @@
   "Ты торгуешься с %C5 и выбиваешь скидку!": {
    "en": "You haggle with %C5 and score a discount!",
    "ua": "Ти торгуєшся з %C5 і вибиваєш знижку!"
+  },
+  "Ты покупаешь $o4 за %d серебрян%s.": {
+   "en": "You buy $o4 for %d silver%s.",
+   "ua": "Ти купуєш $o4 за %d срібн%s."
+  },
+  "$c1 говорит тебе '{gЯ не продаю этого -- используй команду список{x'.": {
+   "en": "$c1 tells you '{gI don't sell that -- use the list command{x'.",
+   "ua": "$c1 каже тобі '{gЯ не продаю цього -- використовуй команду список{x'."
   }
  },
  "plug-ins/services/shop/shoptrader.cpp": {
@@ -13609,6 +14297,14 @@
   "У тебя нет сил даже пошевелить языком.": {
    "en": "You don't even have the strength to wag your tongue.",
    "ua": "У тебе немає сил навіть поворухнути язиком."
+  },
+  "Язык %1$C2 заплетается, и %1$P1 не мо%1$nжет|гут как следует произнести заклинание.": {
+   "en": "%1$C2's tongue trips up, and %1$C1 %1$nis|are unable to properly cast the spell.",
+   "ua": "Язик %1$C2 заплітається, і %1$C1 не мож%1$nе|уть як слід вимовити заклинання."
+  },
+  "%1$^C1 пыта%1$nется|ются сотворить заклинание, но изолирующий экран блокирует %1$P2.": {
+   "en": "%1$^C1 tr%1$nies|y to cast a spell, but an insulating screen blocks %1$C2.",
+   "ua": "%1$^C1 намага%1$nється|ються сотворити заклинання, але ізолюючий екран блокує %1$C2."
   }
  },
  "plug-ins/skills_impl/defaultskillcommand.cpp": {
@@ -13891,6 +14587,18 @@
   "Укажи имя социала.": {
    "en": "Specify the social's name.",
    "ua": "Вкажи ім'я соціалу."
+  },
+  "Нет такого вида сообщений. Смотри 'мойсоц ?'.": {
+   "en": "There's no such message type. See 'мойсоц ?'.",
+   "ua": "Немає такого виду повідомлень. Дивись 'мойсоц ?'."
+  },
+  "Сообщение должно начинаться с твоего имени в нужном падеже ($c1, .. $c6) \r\nи кроме него может содержать еще только имя жертвы ($C1, ... $C6).": {
+   "en": "The message must start with your name in the correct case ($c1, .. $c6) \r\nand besides that may only contain the victim's name ($C1, ... $C6).",
+   "ua": "Повідомлення повинно починатися з твого імені у потрібному відмінку ($c1, .. $c6) \r\nі крім нього може містити тільки ім'я жертви ($C1, ... $C6)."
+  },
+  "Укажи, какой вид сообщения изменить и как. Смотри 'мойсоц ?'.": {
+   "en": "Specify which message type to change and how. See 'mysocial ?'.",
+   "ua": "Вкажи, який вид повідомлення змінити і як. Дивись 'мійсоц ?'."
   }
  },
  "plug-ins/social/social.cpp": {
@@ -14291,6 +14999,10 @@
   "У тебя нет даже первичного оружия!": {
    "en": "You don't even have a primary weapon!",
    "ua": "У тебе немає навіть первинної зброї!"
+  },
+  "%1$^C1 пытается ухватить %2$O4, но в %1$P2 левой руке уже что-то зажато.": {
+   "en": "%1$^C1 tries to grab %2$O4, but their left hand is already holding something.",
+   "ua": "%1$^C1 намагається схопити %2$O4, але в лівій руці вже щось затиснуто."
   }
  },
  "plug-ins/wearlocation/wearloc_commands.cpp": {
@@ -14445,6 +15157,18 @@
   "Ты поднимаешь к небу ладони, полные разноцветных осколков.": {
    "en": "You raise your palms to the sky, full of multicolored shards.",
    "ua": "Ти піднімаєш до неба долоні, повні різнокольорових скалок."
+  },
+  "\r\n{YР{Rа{Mд{Gу{Bж{Cн{Rы{Mй{W столп света ударяет в {Cнебо!{x": {
+   "en": "\r\n{YR{Ra{Mi{Gn{Bb{Co{Rw{W pillar of light strikes the {Csky!{x",
+   "ua": "\r\n{YР{Rа{Mй{Gд{Bу{Cж{Rн{Mи{Yй{W стовп світла б'є в {Cнебо!{x"
+  },
+  "\r\n{YР{Rа{Mз{Gн{Bо{Cц{Rв{Mе{Gт{Cн{Yы{Rе{x вихри окружают $c4!": {
+   "en": "\r\n{YM{Ru{Ml{Gt{Bi{Cc{Ro{Ml{Go{Cr{Ye{Rd{x whirlwinds surround $c4!",
+   "ua": "\r\n{Yб{Rа{Mг{Gа{Bт{Cо{Rб{Mа{Gр{Cв{Yн{Rі{x вихори оточують $c4!"
+  },
+  "\r\nТебя окружают {Yр{Rа{Mз{Gн{Bо{Cц{Rв{Mе{Gт{Cн{Yы{Rе{x вихри!": {
+   "en": "\r\nYou're surrounded by {Ym{Ru{Ml{Gt{Bi{Cc{Ro{Ml{Go{Cr{Ye{Rd whirlwinds!{x",
+   "ua": "\r\nТебе оточують {Yр{Rі{Mз{Gн{Bо{Cк{Rо{Mл{Gь{Cо{Yр{Rо{Yв{Rі вихори!{x"
   }
  },
  "plug-ins/groups/chance.cpp": {
@@ -14551,6 +15275,10 @@
   "Мерцающая аура окружает $o4.": {
    "en": "A flickering aura surrounds $o4.",
    "ua": "Мерехтлива аура оточує $o4."
+  },
+  "%1$^O1 не принадлежит тебе, и ты бросаешь %1$P2.": {
+   "en": "%1$^O1 doesn't belong to you, so you drop it.",
+   "ua": "%1$^O1 тобі не належить, тож ти кидаєш %1$O4."
   }
  },
  "plug-ins/questreward/personalquestreward.cpp": {
@@ -14585,6 +15313,36 @@
   "{CАура {Rлюбви{C окружает тебя.{x": {
    "en": "{CAn aura of {Rlove{C surrounds you.{x",
    "ua": "{CАура {Rкохання{C оточує тебе.{x"
+  }
+ },
+ "plug-ins/gquest/core/xmlattributereward.cpp": {
+  "%s%s%4d %sзолот%s\r\n": {
+   "en": "%s%s%4d %sgold%s\r\n",
+   "ua": "%s%s%4d %sзолот%s\r\n"
+  },
+  "%s%s%4d %sквестов%s\r\n": {
+   "en": "%s%s%4d %squests%s\r\n",
+   "ua": "%s%s%4d %sквестів%s\r\n"
+  },
+  "%s%s%4d %sочк%s опыта\r\n": {
+   "en": "%s%s%4d %spoint%s of experience\r\n",
+   "ua": "%s%s%4d %sочк%s досвіду\r\n"
+  },
+  "%s%s%4d %sпрактик%s\r\n": {
+   "en": "%s%s%4d %spractice%s\r\n",
+   "ua": "%s%s%4d %sпрактик%s\r\n"
+  }
+ },
+ "plug-ins/iomanager/commonlayers.cpp": {
+  "Что? Для справки наберите {y{hcкоманды{x или {y{hcсправка{x.": {
+   "en": "What? For reference type {y{hccommands{x or {y{hchelp{x.",
+   "ua": "Що? Для довідки набери {y{hcкоманди{x або {y{hcдовідка{x."
+  }
+ },
+ "plug-ins/feniaroot/feniacroaker.cpp": {
+  "{CТихий голос из хрустального шара фенера: {W%s{x": {
+   "en": "{CA quiet voice from the fener's crystal ball: {W%s{x",
+   "ua": "{CТихий голос з кришталевої кулі фенера: {W%s{x"
   }
  }
 }

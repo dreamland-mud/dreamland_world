@@ -1,43 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Weather and time-of-day ambient messages, broadcast to outdoor awake players
-  on each sky/daylight transition (see plug-ins/updates/weather.cpp).
-
-  Structure:
-    <event id="...">                one entry per transition the engine fires
-      <variant season="winter|spring|summer|autumn|any">
-        <line l="ru">...</line>     Russian  (also the universal fallback)
-        <line l="en">...</line>     English
-        <line l="ua">...</line>     Ukrainian
-      </variant>
-      ...
-    </event>
-
-  At transition time the engine gathers every variant whose season matches the
-  current season (plus season="any"), picks ONE at random, and renders it to
-  each viewer in that viewer's own language (RU/EN/UA). One weather, everyone
-  sees it, each in their tongue.
-
-  Conventions (KOI8 render path; same as all in-game output):
-    * ASCII punctuation only: a double hyphen for a dash, three dots for an
-      ellipsis, straight quotes.
-    * No cyrillic 'yo' in RU/UA; no e-oborotne / y / hard-sign in UA.
-    * No mixed Latin/Cyrillic inside one word.
-    * Canonical lore names: seas from THERA_ATLAS, gods from RELIGIONS.md/help.
-    * Colour codes {W {Y {D {x are allowed but sparing.
-
-  Editable live: change this file, then `plug reload most`; no reboot needed.
-  Geography by direction: sunrise=east (Dragon Sea / Wine-Dark Sea),
-  sunset=west (Sea of the Golden Circle), cold/snow=north (Dead Sea, Cloudy
-  Mountain, Northern Plains), storms=Reaches of Chaos. Gods: Atum-Ra (sun),
-  Varda (stars), Goktengri (open sky), Raven Queen (winter), Teshub (storm),
-  Taiphoen (dark).
--->
 <weather>
 
-  <!-- ============================ SUNRISE ============================ -->
   <event id="sunrise">
-    <!-- winter: dim, late, reluctant; over the icy eastern seas -->
+    
     <variant season="winter">
       <line l="ru">Тусклое зимнее солнце нехотя выползает из-за Моря Дракона.</line>
       <line l="en">A dim winter sun crawls reluctantly up from behind the Dragon Sea.</line>
@@ -64,7 +29,6 @@
       <line l="ua">Світанок скрадається зі сходу тихо, наче боїться збудити мороз.</line>
     </variant>
 
-    <!-- spring: fresh, hopeful, dew -->
     <variant season="spring">
       <line l="ru">Весеннее солнце весело выкатывается из-за Моря Дракона.</line>
       <line l="en">A spring sun rolls up merrily from behind the Dragon Sea.</line>
@@ -91,7 +55,6 @@
       <line l="ua">Свіжий світанок заливає світ золотом зі сходу.</line>
     </variant>
 
-    <!-- summer: early, blazing, hot -->
     <variant season="summer">
       <line l="ru">Жаркое летнее солнце стремительно выкатывается из-за Моря Дракона.</line>
       <line l="en">A hot summer sun rolls swiftly up from behind the Dragon Sea.</line>
@@ -118,7 +81,6 @@
       <line l="ua">Багряне сонце випливає над Морем Дракона, віщуючи довгий спекотний день.</line>
     </variant>
 
-    <!-- autumn: late, grey, reluctant, misty -->
     <variant season="autumn">
       <line l="ru">Осеннее солнце устало выбирается из-за Моря Дракона.</line>
       <line l="en">An autumn sun hauls itself wearily up from behind the Dragon Sea.</line>
@@ -146,11 +108,9 @@
     </variant>
   </event>
 
-  <!-- ========================= PRECIP START ========================= -->
-  <!-- CLOUDY -> RAINING. Winter precipitation is SNOW (matches the Fenia
-       snowdrift layer in global/update); other seasons are rain. -->
+  
   <event id="precip_start">
-    <!-- winter: SNOW, off the Dead Sea / the north; Raven Queen's season -->
+    
     <variant season="winter">
       <line l="ru">С севера, от Мертвого моря, наносит первый снег.</line>
       <line l="en">The first snow drifts in from the north, off the Dead Sea.</line>
@@ -177,7 +137,6 @@
       <line l="ua">Повалив густий сніг, укриваючи землю білим покривалом.</line>
     </variant>
 
-    <!-- spring: fresh, light, alive -->
     <variant season="spring">
       <line l="ru">Заморосил легкий весенний дождик, пахнущий мокрой землей.</line>
       <line l="en">A light spring drizzle sets in, smelling of wet earth.</line>
@@ -204,7 +163,6 @@
       <line l="ua">Весняна мжичка повисла в повітрі прозорою сіткою.</line>
     </variant>
 
-    <!-- summer: warm downpour, relief, from the south -->
     <variant season="summer">
       <line l="ru">Хлынул теплый летний ливень, тяжелый и щедрый.</line>
       <line l="en">A warm summer downpour bursts loose, heavy and generous.</line>
@@ -231,7 +189,6 @@
       <line l="ua">Почалась злива -- парка, липнева, на всю силу.</line>
     </variant>
 
-    <!-- autumn: cold, long, dreary; clouds off the Bloody Sea -->
     <variant season="autumn">
       <line l="ru">Зарядил холодный осенний дождь -- надолго и всерьез.</line>
       <line l="en">A cold autumn rain settles in -- for the long haul, and in earnest.</line>
@@ -259,9 +216,7 @@
     </variant>
   </event>
 
-  <!-- ==== SEEDED EVENTS (leak killed now; variance grows via plug reload) ==== -->
-
-  <!-- SUN_LIGHT: full day begins -->
+  
   <event id="day_begin">
     <variant season="any">
       <line l="ru">Начался новый день.</line>
@@ -275,7 +230,6 @@
     </variant>
   </event>
 
-  <!-- SUN_SET: sun goes down in the west -->
   <event id="sunset">
     <variant season="any">
       <line l="ru">Солнце медленно прячется за горизонтом.</line>
@@ -299,7 +253,6 @@
     </variant>
   </event>
 
-  <!-- SUN_DARK: night falls; Varda's stars, Taiphoen's dark -->
   <event id="night_begin">
     <variant season="any">
       <line l="ru">Начинается ночь.</line>
@@ -318,7 +271,6 @@
     </variant>
   </event>
 
-  <!-- CLOUDLESS -> CLOUDY -->
   <event id="clouds_gather">
     <variant season="any">
       <line l="ru">Небо затягивается тучами.</line>
@@ -332,7 +284,6 @@
     </variant>
   </event>
 
-  <!-- CLOUDY -> CLOUDLESS: Goktengri's open blue sky returns -->
   <event id="clouds_clear">
     <variant season="any">
       <line l="ru">Тучи рассеиваются.</line>
@@ -346,7 +297,6 @@
     </variant>
   </event>
 
-  <!-- RAINING -> LIGHTNING: Teshub's storm -->
   <event id="lightning_start">
     <variant season="any">
       <line l="ru">{WМолнии{x сверкают на небе.</line>
@@ -365,7 +315,6 @@
     </variant>
   </event>
 
-  <!-- RAINING -> CLOUDY: precip stops -->
   <event id="precip_stop">
     <variant season="any">
       <line l="ru">Дождь прекращается.</line>
@@ -379,7 +328,6 @@
     </variant>
   </event>
 
-  <!-- LIGHTNING -> RAINING: storm eases -->
   <event id="storm_ease">
     <variant season="any">
       <line l="ru">Гроза понемногу утихает, молний больше нет.</line>

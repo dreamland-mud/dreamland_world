@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Weather and time-of-day ambient messages, broadcast to outdoor awake players
+  on each sky/daylight transition (see plug-ins/updates/weather.cpp).
+
+  Structure:
+    <event id="...">                one entry per transition the engine fires
+      <variant season="winter|spring|summer|autumn|any">
+        <line l="ru">...</line>     Russian  (also the universal fallback)
+        <line l="en">...</line>     English
+        <line l="ua">...</line>     Ukrainian
+      </variant>
+      ...
+    </event>
+
+  At transition time the engine gathers every variant whose season matches the
+  current season (plus season="any"), picks ONE at random, and renders it to
+  each viewer in that viewer's own language (RU/EN/UA). One weather, everyone
+  sees it, each in their tongue.
+
+  Conventions (KOI8 render path; same as all in-game output):
+    * ASCII punctuation only: a double hyphen for a dash, three dots for an
+      ellipsis, straight quotes.
+    * No cyrillic 'yo' in RU/UA; no e-oborotne / y / hard-sign in UA.
+    * No mixed Latin/Cyrillic inside one word.
+    * Canonical lore names: seas from THERA_ATLAS, gods from RELIGIONS.md/help.
+    * Colour codes {W {Y {D {x are allowed but sparing.
+
+  Editable live: change this file, then `plug reload most`; no reboot needed.
+  Geography by direction: sunrise=east (Dragon Sea / Wine-Dark Sea),
+  sunset=west (Sea of the Golden Circle), cold/snow=north (Dead Sea, Cloudy
+  Mountain, Northern Plains), storms=Reaches of Chaos. Gods: Atum-Ra (sun),
+  Varda (stars), Goktengri (open sky), Raven Queen (winter), Teshub (storm),
+  Taiphoen (dark).
+-->
+<weather>
+
+  <!-- ============================ SUNRISE ============================ -->
+  <event id="sunrise">
+    <!-- winter: dim, late, reluctant; over the icy eastern seas -->
+    <variant season="winter">
+      <line l="ru">Тусклое зимнее солнце нехотя выползает из-за Моря Дракона.</line>
+      <line l="en">A dim winter sun crawls reluctantly up from behind the Dragon Sea.</line>
+      <line l="ua">Тьмяне зимове сонце знехотя виповзає з-за Моря Дракона.</line>
+    </variant>
+    <variant season="winter">
+      <line l="ru">Над Виноцветным морем занимается блеклый рассвет -- Атум-Ра просыпается неохотно.</line>
+      <line l="en">A pale dawn breaks over the Wine-Dark Sea -- Atum-Ra wakes unwillingly.</line>
+      <line l="ua">Над Винноколірним морем займається блідий світанок -- Атум-Ра прокидається знехотя.</line>
+    </variant>
+    <variant season="winter">
+      <line l="ru">Скупые лучи золотят иней на востоке, но тепла в них нет.</line>
+      <line l="en">Thin rays gild the frost in the east, but there is no warmth in them.</line>
+      <line l="ua">Скупі промені золотять паморозь на сході, та тепла в них немає.</line>
+    </variant>
+    <variant season="winter">
+      <line l="ru">Бледное солнце показывается над Морем Дракона и повисает в стылой дымке.</line>
+      <line l="en">A wan sun shows over the Dragon Sea and hangs there in a freezing haze.</line>
+      <line l="ua">Бліде сонце показується над Морем Дракона і зависає у зимній імлі.</line>
+    </variant>
+    <variant season="winter">
+      <line l="ru">Рассвет крадется с востока тихо, будто боится разбудить мороз.</line>
+      <line l="en">Dawn creeps in from the east quietly, as if afraid to wake the frost.</line>
+      <line l="ua">Світанок скрадається зі сходу тихо, наче боїться збудити мороз.</line>
+    </variant>
+
+    <!-- spring: fresh, hopeful, dew -->
+    <variant season="spring">
+      <line l="ru">Весеннее солнце весело выкатывается из-за Моря Дракона.</line>
+      <line l="en">A spring sun rolls up merrily from behind the Dragon Sea.</line>
+      <line l="ua">Весняне сонце весело викочується з-за Моря Дракона.</line>
+    </variant>
+    <variant season="spring">
+      <line l="ru">Варда гасит последние звезды, и над Виноцветным морем встает солнце.</line>
+      <line l="en">Varda snuffs the last stars, and the sun climbs over the Wine-Dark Sea.</line>
+      <line l="ua">Варда гасить останні зорі, і над Винноколірним морем встає сонце.</line>
+    </variant>
+    <variant season="spring">
+      <line l="ru">Над восточными водами розовеет молодой рассвет.</line>
+      <line l="en">A young dawn flushes pink over the eastern waters.</line>
+      <line l="ua">Над східними водами рожевіє молодий світанок.</line>
+    </variant>
+    <variant season="spring">
+      <line l="ru">Солнце поднимается над Морем Дракона, и роса вспыхивает искрами.</line>
+      <line l="en">The sun lifts over the Dragon Sea, and the dew flares into sparks.</line>
+      <line l="ua">Сонце підіймається над Морем Дракона, і роса спалахує іскрами.</line>
+    </variant>
+    <variant season="spring">
+      <line l="ru">Свежий рассвет заливает мир золотом с востока.</line>
+      <line l="en">A fresh dawn floods the world with gold from the east.</line>
+      <line l="ua">Свіжий світанок заливає світ золотом зі сходу.</line>
+    </variant>
+
+    <!-- summer: early, blazing, hot -->
+    <variant season="summer">
+      <line l="ru">Жаркое летнее солнце стремительно выкатывается из-за Моря Дракона.</line>
+      <line l="en">A hot summer sun rolls swiftly up from behind the Dragon Sea.</line>
+      <line l="ua">Спекотне літнє сонце стрімко викочується з-за Моря Дракона.</line>
+    </variant>
+    <variant season="summer">
+      <line l="ru">Над Виноцветным морем вспыхивает раскаленный рассвет, обещая пекло.</line>
+      <line l="en">A blazing dawn flares over the Wine-Dark Sea, promising a scorcher.</line>
+      <line l="ua">Над Винноколірним морем спалахує розжарений світанок, обіцяючи пекло.</line>
+    </variant>
+    <variant season="summer">
+      <line l="ru">Солнце Атум-Ра встает рано и сразу принимается жечь вовсю.</line>
+      <line l="en">Atum-Ra's sun rises early and sets to searing at full strength at once.</line>
+      <line l="ua">Сонце Атум-Ра встає рано й одразу береться пекти на всю силу.</line>
+    </variant>
+    <variant season="summer">
+      <line l="ru">Едва рассвело над Морем Дракона, а с востока уже пышет зноем.</line>
+      <line l="en">Barely dawn over the Dragon Sea, and already heat pours in from the east.</line>
+      <line l="ua">Ледь розвиднілось над Морем Дракона, а зі сходу вже пашить спекою.</line>
+    </variant>
+    <variant season="summer">
+      <line l="ru">Багровое солнце всплывает над Морем Дракона, суля долгий жаркий день.</line>
+      <line l="en">A crimson sun floats up over the Dragon Sea, boding a long hot day.</line>
+      <line l="ua">Багряне сонце випливає над Морем Дракона, віщуючи довгий спекотний день.</line>
+    </variant>
+
+    <!-- autumn: late, grey, reluctant, misty -->
+    <variant season="autumn">
+      <line l="ru">Осеннее солнце устало выбирается из-за Моря Дракона.</line>
+      <line l="en">An autumn sun hauls itself wearily up from behind the Dragon Sea.</line>
+      <line l="ua">Осіннє сонце втомлено вибирається з-за Моря Дракона.</line>
+    </variant>
+    <variant season="autumn">
+      <line l="ru">Над Виноцветным морем сочится серый осенний рассвет.</line>
+      <line l="en">A grey autumn dawn seeps over the Wine-Dark Sea.</line>
+      <line l="ua">Над Винноколірним морем сочиться сірий осінній світанок.</line>
+    </variant>
+    <variant season="autumn">
+      <line l="ru">Солнце встает поздно, кутаясь в туман над восточными водами.</line>
+      <line l="en">The sun rises late, wrapped in mist above the eastern waters.</line>
+      <line l="ua">Сонце встає пізно, кутаючись у туман над східними водами.</line>
+    </variant>
+    <variant season="autumn">
+      <line l="ru">Хмурый рассвет нехотя расползается с востока.</line>
+      <line l="en">A sullen dawn spreads reluctantly out of the east.</line>
+      <line l="ua">Похмурий світанок знехотя розповзається зі сходу.</line>
+    </variant>
+    <variant season="autumn">
+      <line l="ru">Тусклый диск поднимается над Морем Дракона сквозь пелену туч.</line>
+      <line l="en">A dull disc climbs over the Dragon Sea through a veil of cloud.</line>
+      <line l="ua">Тьмяний диск підіймається над Морем Дракона крізь пелену хмар.</line>
+    </variant>
+  </event>
+
+  <!-- ========================= PRECIP START ========================= -->
+  <!-- CLOUDY -> RAINING. Winter precipitation is SNOW (matches the Fenia
+       snowdrift layer in global/update); other seasons are rain. -->
+  <event id="precip_start">
+    <!-- winter: SNOW, off the Dead Sea / the north; Raven Queen's season -->
+    <variant season="winter">
+      <line l="ru">С севера, от Мертвого моря, наносит первый снег.</line>
+      <line l="en">The first snow drifts in from the north, off the Dead Sea.</line>
+      <line l="ua">З півночі, від Мертвого Моря, наносить перший сніг.</line>
+    </variant>
+    <variant season="winter">
+      <line l="ru">Закружились {Wснежинки{x -- Королева Воронов правит свою зиму.</line>
+      <line l="en">{WSnowflakes{x begin to whirl -- the Raven Queen keeps her winter.</line>
+      <line l="ua">Закружляли {Wсніжинки{x -- Королева Воронів править свою зиму.</line>
+    </variant>
+    <variant season="winter">
+      <line l="ru">Холодный ветер с Мертвого моря приносит колючую метель.</line>
+      <line l="en">A cold wind off the Dead Sea brings a stinging flurry.</line>
+      <line l="ua">Холодний вітер від Мертвого Моря приносить колючу заметіль.</line>
+    </variant>
+    <variant season="winter">
+      <line l="ru">Небо посерело, и на землю тихо посыпался {Wснег{x.</line>
+      <line l="en">The sky greys over, and {Wsnow{x sifts quietly down onto the land.</line>
+      <line l="ua">Небо посіріло, і на землю тихо посипався {Wсніг{x.</line>
+    </variant>
+    <variant season="winter">
+      <line l="ru">Повалил густой снег, укрывая землю белым покрывалом.</line>
+      <line l="en">Thick snow begins to fall, drawing a white blanket over the ground.</line>
+      <line l="ua">Повалив густий сніг, укриваючи землю білим покривалом.</line>
+    </variant>
+
+    <!-- spring: fresh, light, alive -->
+    <variant season="spring">
+      <line l="ru">Заморосил легкий весенний дождик, пахнущий мокрой землей.</line>
+      <line l="en">A light spring drizzle sets in, smelling of wet earth.</line>
+      <line l="ua">Заморосив легкий весняний дощик, що пахне мокрою землею.</line>
+    </variant>
+    <variant season="spring">
+      <line l="ru">Первые капли весеннего дождя весело застучали по листве.</line>
+      <line l="en">The first drops of spring rain patter merrily on the leaves.</line>
+      <line l="ua">Перші краплі весняного дощу весело затарабанили по листю.</line>
+    </variant>
+    <variant season="spring">
+      <line l="ru">Небо расплакалось теплыми весенними слезами.</line>
+      <line l="en">The sky breaks into warm spring tears.</line>
+      <line l="ua">Небо розплакалось теплими весняними сльозами.</line>
+    </variant>
+    <variant season="spring">
+      <line l="ru">Пошел дождь -- молодой, звонкий, будто умытый.</line>
+      <line l="en">Rain begins -- young, ringing, freshly washed.</line>
+      <line l="ua">Пішов дощ -- молодий, дзвінкий, наче вмитий.</line>
+    </variant>
+    <variant season="spring">
+      <line l="ru">Весенняя морось повисла в воздухе прозрачной сеткой.</line>
+      <line l="en">A spring mist hangs in the air like a sheet of clear gauze.</line>
+      <line l="ua">Весняна мжичка повисла в повітрі прозорою сіткою.</line>
+    </variant>
+
+    <!-- summer: warm downpour, relief, from the south -->
+    <variant season="summer">
+      <line l="ru">Хлынул теплый летний ливень, тяжелый и щедрый.</line>
+      <line l="en">A warm summer downpour bursts loose, heavy and generous.</line>
+      <line l="ua">Ринула тепла літня злива, важка і щедра.</line>
+    </variant>
+    <variant season="summer">
+      <line l="ru">Духоту разорвал внезапный летний дождь.</line>
+      <line l="en">A sudden summer rain tears through the sultry air.</line>
+      <line l="ua">Задуху розірвав раптовий літній дощ.</line>
+    </variant>
+    <variant season="summer">
+      <line l="ru">С юга наползла туча, и на пыль упали первые крупные капли.</line>
+      <line l="en">A cloud rolls up from the south, and the first big drops hit the dust.</line>
+      <line l="ua">З півдня насунула хмара, і на пил упали перші великі краплі.</line>
+    </variant>
+    <variant season="summer">
+      <line l="ru">Небо не выдержало жары и пролилось долгожданным дождем.</line>
+      <line l="en">The sky gives up on the heat and spills a long-awaited rain.</line>
+      <line l="ua">Небо не витримало спеки і пролилося довгожданим дощем.</line>
+    </variant>
+    <variant season="summer">
+      <line l="ru">Начался ливень -- парной, июльский, во весь опор.</line>
+      <line l="en">The downpour begins -- steamy, high-summer, at full tilt.</line>
+      <line l="ua">Почалась злива -- парка, липнева, на всю силу.</line>
+    </variant>
+
+    <!-- autumn: cold, long, dreary; clouds off the Bloody Sea -->
+    <variant season="autumn">
+      <line l="ru">Зарядил холодный осенний дождь -- надолго и всерьез.</line>
+      <line l="en">A cold autumn rain settles in -- for the long haul, and in earnest.</line>
+      <line l="ua">Зарядив холодний осінній дощ -- надовго і всерйоз.</line>
+    </variant>
+    <variant season="autumn">
+      <line l="ru">С Кровавого моря нагнало туч, и посыпалась промозглая морось.</line>
+      <line l="en">Clouds blow in off the Bloody Sea, and a raw drizzle begins.</line>
+      <line l="ua">З Кривавого Моря нагнало хмар, і посипалась промозгла мжичка.</line>
+    </variant>
+    <variant season="autumn">
+      <line l="ru">Пошел дождь, унылый и серый, как сама осень.</line>
+      <line l="en">Rain begins, dreary and grey as autumn itself.</line>
+      <line l="ua">Пішов дощ, понурий і сірий, як сама осінь.</line>
+    </variant>
+    <variant season="autumn">
+      <line l="ru">Осенний ливень обрушился стеной, гоня прочь остатки тепла.</line>
+      <line l="en">An autumn downpour comes down like a wall, driving off the last of the warmth.</line>
+      <line l="ua">Осіння злива ринула стіною, женучи геть рештки тепла.</line>
+    </variant>
+    <variant season="autumn">
+      <line l="ru">Захлюпал промозглый дождь, и мир стал на тон темнее.</line>
+      <line l="en">A raw, dank rain starts up, and the world goes a shade darker.</line>
+      <line l="ua">Заляпотів промозклий дощ, і світ став на тон темніший.</line>
+    </variant>
+  </event>
+
+  <!-- ==== SEEDED EVENTS (leak killed now; variance grows via plug reload) ==== -->
+
+  <!-- SUN_LIGHT: full day begins -->
+  <event id="day_begin">
+    <variant season="any">
+      <line l="ru">Начался новый день.</line>
+      <line l="en">A new day has begun.</line>
+      <line l="ua">Почався новий день.</line>
+    </variant>
+    <variant season="any">
+      <line l="ru">Солнце поднялось высоко, и мир окончательно проснулся.</line>
+      <line l="en">The sun has climbed high, and the world is fully awake.</line>
+      <line l="ua">Сонце піднялося високо, і світ остаточно прокинувся.</line>
+    </variant>
+  </event>
+
+  <!-- SUN_SET: sun goes down in the west -->
+  <event id="sunset">
+    <variant season="any">
+      <line l="ru">Солнце медленно прячется за горизонтом.</line>
+      <line l="en">The sun slowly hides below the horizon.</line>
+      <line l="ua">Сонце поволі ховається за обрієм.</line>
+    </variant>
+    <variant season="any">
+      <line l="ru">Солнце тонет на западе, в водах Моря Золотого Круга.</line>
+      <line l="en">The sun sinks in the west, into the waters of the Sea of the Golden Circle.</line>
+      <line l="ua">Сонце тоне на заході, у водах Моря Золотого Кола.</line>
+    </variant>
+    <variant season="winter">
+      <line l="ru">Короткий зимний день гаснет, и с запада наползает стужа.</line>
+      <line l="en">The short winter day burns out, and cold creeps in from the west.</line>
+      <line l="ua">Короткий зимовий день гасне, і з заходу насувається холод.</line>
+    </variant>
+    <variant season="summer">
+      <line l="ru">Долгий летний закат заливает запад червонным золотом.</line>
+      <line l="en">A long summer sunset floods the west with red-gold.</line>
+      <line l="ua">Довгий літній захід заливає захід червоним золотом.</line>
+    </variant>
+  </event>
+
+  <!-- SUN_DARK: night falls; Varda's stars, Taiphoen's dark -->
+  <event id="night_begin">
+    <variant season="any">
+      <line l="ru">Начинается ночь.</line>
+      <line l="en">Night falls.</line>
+      <line l="ua">Настає ніч.</line>
+    </variant>
+    <variant season="any">
+      <line l="ru">Тьма растекается по земле, и в небе зажигаются звезды Варды.</line>
+      <line l="en">Darkness spreads across the land, and Varda's stars kindle overhead.</line>
+      <line l="ua">Темрява розтікається землею, і в небі спалахують зорі Варди.</line>
+    </variant>
+    <variant season="winter">
+      <line l="ru">Длинная зимняя ночь смыкается над миром, черная и морозная.</line>
+      <line l="en">The long winter night closes over the world, black and frozen.</line>
+      <line l="ua">Довга зимова ніч змикається над світом, чорна і морозна.</line>
+    </variant>
+  </event>
+
+  <!-- CLOUDLESS -> CLOUDY -->
+  <event id="clouds_gather">
+    <variant season="any">
+      <line l="ru">Небо затягивается тучами.</line>
+      <line l="en">The sky clouds over.</line>
+      <line l="ua">Небо затягує хмарами.</line>
+    </variant>
+    <variant season="any">
+      <line l="ru">С севера наползают тяжелые тучи, глотая синеву.</line>
+      <line l="en">Heavy clouds crawl up from the north, swallowing the blue.</line>
+      <line l="ua">З півночі насуваються важкі хмари, ковтаючи блакить.</line>
+    </variant>
+  </event>
+
+  <!-- CLOUDY -> CLOUDLESS: Goktengri's open blue sky returns -->
+  <event id="clouds_clear">
+    <variant season="any">
+      <line l="ru">Тучи рассеиваются.</line>
+      <line l="en">The clouds break apart.</line>
+      <line l="ua">Хмари розходяться.</line>
+    </variant>
+    <variant season="any">
+      <line l="ru">Тучи расходятся, и снова открывается бескрайнее небо Гек Тенгри.</line>
+      <line l="en">The clouds part, and the boundless sky of Goktengri opens once more.</line>
+      <line l="ua">Хмари розходяться, і знову відкривається безкрає небо Гьок Тенгрі.</line>
+    </variant>
+  </event>
+
+  <!-- RAINING -> LIGHTNING: Teshub's storm -->
+  <event id="lightning_start">
+    <variant season="any">
+      <line l="ru">{WМолнии{x сверкают на небе.</line>
+      <line l="en">{WLightning{x flashes across the sky.</line>
+      <line l="ua">{WБлискавки{x спалахують у небі.</line>
+    </variant>
+    <variant season="any">
+      <line l="ru">{WМолнии{x раскалывают небо -- где-то Тешуб взялся за свой молот.</line>
+      <line l="en">{WLightning{x splits the sky -- somewhere Teshub has taken up his hammer.</line>
+      <line l="ua">{WБлискавки{x розколюють небо -- десь Тешуб узявся за свій молот.</line>
+    </variant>
+    <variant season="any">
+      <line l="ru">С юго-востока, из Пространств Хаоса, накатывает гроза.</line>
+      <line l="en">A storm rolls in from the south-east, out of the Reaches of Chaos.</line>
+      <line l="ua">З південного сходу, з Просторів Хаосу, накочується гроза.</line>
+    </variant>
+  </event>
+
+  <!-- RAINING -> CLOUDY: precip stops -->
+  <event id="precip_stop">
+    <variant season="any">
+      <line l="ru">Дождь прекращается.</line>
+      <line l="en">The rain lets up.</line>
+      <line l="ua">Дощ ущухає.</line>
+    </variant>
+    <variant season="winter">
+      <line l="ru">Снегопад стихает, и наступает белая морозная тишина.</line>
+      <line l="en">The snowfall dies down, and a white, frozen silence settles in.</line>
+      <line l="ua">Снігопад стихає, і настає біла морозна тиша.</line>
+    </variant>
+  </event>
+
+  <!-- LIGHTNING -> RAINING: storm eases -->
+  <event id="storm_ease">
+    <variant season="any">
+      <line l="ru">Гроза понемногу утихает, молний больше нет.</line>
+      <line l="en">The storm eases little by little; the lightning is gone.</line>
+      <line l="ua">Гроза потроху вщухає, блискавок більше немає.</line>
+    </variant>
+    <variant season="any">
+      <line l="ru">Молот Тешуба смолкает вдали, остается лишь ровный шум дождя.</line>
+      <line l="en">Teshub's hammer falls quiet in the distance, leaving only the steady hiss of rain.</line>
+      <line l="ua">Молот Тешуба стихає вдалині, лишається тільки рівний шум дощу.</line>
+    </variant>
+  </event>
+
+</weather>

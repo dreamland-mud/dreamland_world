@@ -214,11 +214,7 @@ NannyState = function(ch) {
 	ch.config = .tables.config_flags.fightspam 
 		   |.tables.config_flags.skillspam
 		   |.tables.config_flags.objname_hint
-		   |.tables.config_flags.newdamage
-	           | .tables.config_flags.runames
-                   | .tables.config_flags.ruskills
-                   | .tables.config_flags.rucommands
-                   | .tables.config_flags.ruexits;
+		   |.tables.config_flags.newdamage;
 	ch.act = .tables.plr_flags.color
 		   |.tables.plr_flags.autoexit
 		   |.tables.plr_flags.autoloot
@@ -729,7 +725,7 @@ NannyState = function(ch) {
 	sleep(4);
 	
 	say("На каком языке ты предпочитаешь видеть названия команд, "
-	    "рас и навыков: русский(russian) или английский(english)?");
+	    "рас и навыков: русский(russian), украинский(ukrainian) или английский(english)?");
 	
 	for ( ; !ackLanguage(); )
 	    ;
@@ -750,11 +746,15 @@ NannyState = function(ch) {
 	    || lang.strPrefix("по-русски")
 	    || lang.strPrefix("russian"))
 	{
-	    ch.config = .set_bit(ch.config,
-	                         .tables.config_flags.runames
-				 | .tables.config_flags.ruskills
-				 | .tables.config_flags.rucommands
-				 | .tables.config_flags.ruexits);
+	    ch.interpret_cmd("config", "lang ru");
+	    return true;
+	}
+
+	if (lang.strPrefix("украинский")
+	    || lang.strPrefix("по-украински")
+	    || lang.strPrefix("ukrainian"))
+	{
+	    ch.interpret_cmd("config", "lang ua");
 	    return true;
 	}
 
@@ -762,11 +762,7 @@ NannyState = function(ch) {
 	    || lang.strPrefix("по-английски")
 	    || lang.strPrefix("english"))
 	{
-	    ch.config = .unset_bit(ch.config,
-	                         .tables.config_flags.runames
-				 | .tables.config_flags.ruskills
-				 | .tables.config_flags.rucommands
-				 | .tables.config_flags.ruexits);
+	    ch.interpret_cmd("config", "lang en");
 	    return true;
 	}
 

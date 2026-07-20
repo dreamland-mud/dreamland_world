@@ -595,5 +595,29 @@
         "nowalk":        { "ru": "нельзя пройти пешком", "ua": "не пройти пішки", "en": "no walk" },
         "swim_only":     { "ru": "только вплавь", "ua": "лише вплав", "en": "swim only" },
         "bash_only":     { "ru": "только выломать", "ua": "лише виламати", "en": "bash only" }
+    },
+    // Shown by 'skill <name>' on the spell-target line: noun phrases, comma-joined.
+    // Every bit name is snake_case, so each needs an "en" override.
+    "target_table": {
+        "ignore":      { "ua": "рядок", "en": "a string" },
+        "char_self":   { "ua": "твій персонаж (або без цілі)", "en": "yourself (or no target)" },
+        "char_room":   { "ua": "персонаж поряд", "en": "a character nearby" },
+        "char_world":  { "ua": "персонаж у світі", "en": "a character in the world" },
+        "obj_inv":     { "ua": "предмет в інвентарі", "en": "an item in your inventory" },
+        "obj_equip":   { "ua": "предмет в екіпіруванні", "en": "an item you wear" },
+        "obj_room":    { "ua": "предмет на підлозі", "en": "an item on the ground" },
+        "obj_world":   { "ua": "предмет у світі", "en": "an item in the world" },
+        "room":        { "ua": "ця місцевість", "en": "this location" },
+        "people":      { "ua": "усе живе в цій місцевості", "en": "everything alive in this location" },
+        "create_mob":  { "ua": "виклик істоти", "en": "summoning a creature" },
+        "create_obj":  { "ua": "створення предмета", "en": "creating an item" },
+        "exit":        { "ua": "вихід", "en": "an exit" }
+    },
+    // Shown by 'skill <name>' on the spell-type line, immediately followed by the
+    // word for magic/prayer, so RU/UA are feminine adjectives agreeing with it.
+    "spell_types": {
+        "none":      { "ua": "службова", "en": "utility" },
+        "offensive": { "ua": "атакувальна", "en": "offensive" },
+        "defensive": { "ua": "захисна", "en": "defensive" }
     }
 }

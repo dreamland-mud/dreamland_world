@@ -619,5 +619,61 @@
         "none":      { "ua": "службова", "en": "utility" },
         "offensive": { "ua": "атакувальна", "en": "offensive" },
         "defensive": { "ua": "захисна", "en": "defensive" }
+    },
+
+    // Command CATEGORY headers shown by the 'commands' command. EN uses the
+    // (already-English) bit name; only UA needed.
+    "command_category_flags": {
+        "move":     { "ua": "Переміщення" },
+        "info":     { "ua": "Інформація" },
+        "comm":     { "ua": "Спілкування" },
+        "item":     { "ua": "Предмети" },
+        "locks":    { "ua": "Двері та скрині" },
+        "food":     { "ua": "Їжа та напої" },
+        "position": { "ua": "Положення" },
+        "fight":    { "ua": "Битви" },
+        "magic":    { "ua": "Магія" },
+        "learn":    { "ua": "Навчання" },
+        "class":    { "ua": "Класові" },
+        "clan":     { "ua": "Кланові" },
+        "skill":    { "ua": "Уміння" },
+        "group":    { "ua": "Групи" },
+        "quest":    { "ua": "Квести" },
+        "shop":     { "ua": "Крамниці" },
+        "bank":     { "ua": "Банки" },
+        "service":  { "ua": "Послуги" },
+        "char":     { "ua": "Персонаж" },
+        "config":   { "ua": "Налаштування" },
+        "note":     { "ua": "Листування" },
+        "religion": { "ua": "Релігія" },
+        "olc":      { "ua": "OLC" },
+        "language": { "ua": "Мови" },
+        "family":   { "ua": "Дім та родина" },
+        "client":   { "ua": "Клієнт" },
+        "misc":     { "ua": "Інше" }
+    },
+
+    // Command 'extra' properties shown by 'commands show <name>'. Snake_case bit
+    // names, so both EN and UA overrides are supplied.
+    "command_flags": {
+        "keep_hide": { "en": "keeps invisibility",      "ua": "зберігає невидимість" },
+        "ghost":     { "en": "available to ghosts",     "ua": "доступна привидам" },
+        "undig":     { "en": "digs out of the grave",   "ua": "викопує з могили" },
+        "manacles":  { "en": "available in manacles",   "ua": "доступна в кайданах" },
+        "afk":       { "en": "available in AFK",        "ua": "доступна в AFK" },
+        "freeze":    { "en": "available when frozen",   "ua": "доступна в заморозці" },
+        "nanny":     { "en": "available at Archivarius", "ua": "доступна в архіваріуса" },
+        "spellout":  { "en": "must be typed in full",   "ua": "вводиться повністю" },
+        "nodungeon": { "en": "unavailable in a dungeon", "ua": "недоступна у фортеці" }
+    },
+
+    // Who may be given this command as an order ('commands show <name>').
+    "order_flags": {
+        "allow_ruler": { "en": "only from Rulers", "ua": "лише від Правителів" },
+        "fight_only":  { "en": "only in combat",   "ua": "лише в бою" },
+        "player_only": { "en": "only players",     "ua": "лише гравці" },
+        "thief_only":  { "en": "only thieves",     "ua": "лише крадії" },
+        "never":       { "en": "no one",           "ua": "ніхто" },
+        "except_pk":   { "en": "only mobs",        "ua": "лише моби" }
     }
 }

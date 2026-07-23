@@ -8,6 +8,22 @@
   <groups>
     <node>
       <node type="ConfigElement">
+        <bit table="add_comm_flags">nocancel</bit>
+        <hint>запрет не-соклановикам применять заклинание отмена</hint>
+        <msgOff>Заклинание &apos;отмена&apos; на тебя смогут применить все.</msgOff>
+        <msgOn>Заклинание &apos;отмена&apos; на тебя смогут применить только соклановцы.</msgOn>
+        <name>nocancel</name>
+        <rname>неотменять</rname>
+      </node>
+      <node type="ConfigElement">
+        <bit table="plr_flags">nofollow</bit>
+        <hint>запретить следовать за собой</hint>
+        <msgOff>Ты разрешаешь следовать за собой.</msgOff>
+        <msgOn>Ты запрещаешь следовать за собой.</msgOn>
+        <name>nofollow</name>
+        <rname>неследовать</rname>
+      </node>
+      <node type="ConfigElement">
         <bit table="plr_flags">autoassist</bit>
         <hint>вступать в бой при нападении на группу</hint>
         <msgOff>Ты не будешь вступать в бой при нападении на твою группу.</msgOff>
@@ -30,6 +46,25 @@
         <msgOn>Ты будешь приносить в жертву труп после убийства.</msgOn>
         <name>autosac</name>
         <rname>автожертва</rname>
+      </node>
+      <node type="ConfigElement">
+        <bit table="config_flags">newdamage</bit>
+        <hint>альтернативная система отображения повреждений</hint>
+        <msgOff>Ты используешь обычную систему отображения повреждений.</msgOff>
+        <msgOn>Ты используешь новую систему отображения повреждений.</msgOn>
+        <name>newdamage</name>
+        <rname>повреждения</rname>
+      </node>
+      <name>Настройки игрового процесса:</name>
+    </node>
+    <node>
+      <node type="ConfigElement">
+        <bit table="config_flags">short_objflag</bit>
+        <hint>показывать флаги на предметах в сокращенной форме</hint>
+        <msgOff>Флаги на предметах отображаются в развернутом виде.</msgOff>
+        <msgOn>Флаги на предметах отображаются в сокращенном виде.</msgOn>
+        <name>shortflags</name>
+        <rname>краткофлаги</rname>
       </node>
       <node type="ConfigElement">
         <bit table="config_flags">fightspam</bit>
@@ -56,45 +91,6 @@
         <rname>нетспаморужия</rname>
       </node>
       <node type="ConfigElement">
-        <bit table="config_flags">newdamage</bit>
-        <hint>альтернативная система отображения повреждений</hint>
-        <msgOff>Ты используешь обычную систему отображения повреждений.</msgOff>
-        <msgOn>Ты используешь новую систему отображения повреждений.</msgOn>
-        <name>newdamage</name>
-        <rname>повреждения</rname>
-      </node>
-      <name>Настройки персонажа, связанные с боями:</name>
-    </node>
-    <node>
-      <node type="ConfigElement">
-        <bit table="add_comm_flags">nocancel</bit>
-        <hint>запрет не-соклановикам применять заклинание отмена</hint>
-        <msgOff>Заклинание &apos;отмена&apos; на тебя смогут применить все.</msgOff>
-        <msgOn>Заклинание &apos;отмена&apos; на тебя смогут применить только соклановцы.</msgOn>
-        <name>nocancel</name>
-        <rname>неотменять</rname>
-      </node>
-      <node type="ConfigElement">
-        <bit table="plr_flags">nofollow</bit>
-        <hint>запретить следовать за собой</hint>
-        <msgOff>Ты разрешаешь следовать за собой.</msgOff>
-        <msgOn>Ты запрещаешь следовать за собой.</msgOn>
-        <name>nofollow</name>
-        <rname>неследовать</rname>
-      </node>
-      <name>Защитные настройки:</name>
-    </node>
-    <node>
-      <node type="ConfigElement">
-        <bit table="plr_flags">holylight</bit>
-        <hint>божественный взор</hint>
-        <level>102</level>
-        <msgOff>Божественный взор выключен.</msgOff>
-        <msgOn>Божественный взор включен.</msgOn>
-        <name>holylight</name>
-        <rname>боговзор</rname>
-      </node>
-      <node type="ConfigElement">
         <bit table="comm_flags">show_affects</bit>
         <hint>показывать аффекты по команде счет</hint>
         <msgOff>Аффекты не видны по команде счет.</msgOff>
@@ -119,13 +115,25 @@
         <rname>подсказка</rname>
       </node>
       <node type="ConfigElement">
-        <bit table="config_flags">short_objflag</bit>
-        <hint>показывать флаги на предметах в сокращенной форме</hint>
-        <msgOff>Флаги на предметах отображаются в развернутом виде.</msgOff>
-        <msgOn>Флаги на предметах отображаются в сокращенном виде.</msgOn>
-        <name>shortflags</name>
-        <rname>краткофлаги</rname>
+        <bit table="config_flags">screenreader</bit>
+        <hint>режим поддержки screen reader</hint>
+        <msgOff>Режим поддержки читалки для незрячих{x выключен.</msgOff>
+        <msgOn>Режим поддержки читалки для незрячих{x включен.</msgOn>
+        <name>blind</name>
+        <rname>незрячий</rname>
       </node>
+      <node type="ConfigElement">
+        <bit table="plr_flags">holylight</bit>
+        <hint>божественный взор</hint>
+        <level>102</level>
+        <msgOff>Божественный взор выключен.</msgOff>
+        <msgOn>Божественный взор включен.</msgOn>
+        <name>holylight</name>
+        <rname>боговзор</rname>
+      </node>
+      <name>Комфортный вывод:</name>
+    </node>
+    <node>
       <node type="ConfigElement">
         <bit table="config_flags">objname_hint</bit>
         <hint>показывать английское название предмета</hint>
@@ -134,15 +142,7 @@
         <name>objname</name>
         <rname>имяпредмета</rname>
       </node>
-      <node type="ConfigElement">
-        <bit table="config_flags">screenreader</bit>
-        <hint>режим поддержки screen reader</hint>
-        <msgOff>Режим поддержки читалки для незрячих{x выключен.</msgOff>
-        <msgOn>Режим поддержки читалки для незрячих{x включен.</msgOn>
-        <name>blind</name>
-        <rname>незрячий</rname>
-      </node>
-      <name>Настройки отображения:</name>
+      <name>Настройки языка:</name>
     </node>
     <node>
       <node type="ConfigElement">
@@ -169,7 +169,7 @@
         <name>telnetga</name>
         <rname>telnetga</rname>
       </node>
-      <name>Настройки соединения:</name>
+      <name>Настройки клиента:</name>
     </node>
   </groups>
   <help id="1087" labels="info" level="-1" type="CommandHelp">

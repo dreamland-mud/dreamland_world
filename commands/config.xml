@@ -54,12 +54,16 @@
       </node>
       <node type="ConfigElement">
         <bit table="config_flags">newdamage</bit>
-        <hint>альтернативная система отображения повреждений</hint>
-        <msgOff l="ru">Ты используешь обычную систему отображения повреждений.</msgOff>
-        <msgOn l="ru">Ты используешь новую систему отображения повреждений.</msgOn>
-        <name>newdamage</name>
-        <rname>повреждения</rname>
-        <uaname>пошкодження</uaname>
+        <hint>формат отображения урона: числами или в процентах</hint>
+        <msgOff l="en">Damage is shown as numbers.</msgOff>
+        <msgOff l="ru">Урон отображается числами.</msgOff>
+        <msgOff l="ua">Шкода відображається числами.</msgOff>
+        <msgOn l="en">Damage is shown as a percentage.</msgOn>
+        <msgOn l="ru">Урон отображается в процентах.</msgOn>
+        <msgOn l="ua">Шкода відображається у відсотках.</msgOn>
+        <name>damage</name>
+        <rname>урон</rname>
+        <uaname>шкода</uaname>
       </node>
       <name l="en">Gameplay settings:</name>
       <name l="ru">Настройки игрового процесса:</name>
@@ -126,15 +130,15 @@
         <msgOff l="ru">Вывод {hh1012строки подсказки{x отключен.</msgOff>
         <msgOn l="ru">Вывод {hh1012строки подсказки{x включен.</msgOn>
         <name>prompt</name>
-        <rname>подсказка</rname>
-        <uaname>підказка</uaname>
+        <rname>состояние</rname>
+        <uaname>стан</uaname>
       </node>
       <node type="ConfigElement">
         <bit table="config_flags">screenreader</bit>
         <hint>режим поддержки screen reader</hint>
         <msgOff l="ru">Режим поддержки читалки для незрячих{x выключен.</msgOff>
         <msgOn l="ru">Режим поддержки читалки для незрячих{x включен.</msgOn>
-        <name>blind</name>
+        <name>screenreader</name>
         <rname>незрячий</rname>
         <uaname>незрячий</uaname>
       </node>

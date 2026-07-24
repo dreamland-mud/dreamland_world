@@ -1,733 +1,1582 @@
 {
-"sword": [
-    { 
-      "gender": "m", 
-      "name": "sword меч", 
-      "short": "меч||а|у||ом|е", 
-      "long": "Длинный меч (sword) с тавром Мидгаарда лежит здесь."},
-    { 
-      "gender": "f", 
-      "forbids": ["two_hands"], 
-      "name": "sabre сабля", 
-      "short": "сабл|я|и|е|ю|ей|е", 
-      "long": "Амберская сабля (sabre) привлекает твое внимание."},
-    { 
-      "gender": "m", 
-      "name": "broadsword палаш", 
-      "short": "палаш||а|у||ом|е", 
-      "long": "Пиратский палаш (broadsword) с односторонним лезвием лежит тут."},
-    { 
-      "gender": "f", 
-      "forbids": ["two_hands"], 
-      "name": "rapier рапира", 
-      "short": "рапир|а|ы|е|у|ой|е", 
-      "long": "Изящная сидхийская рапира (rapier) едва заметна на земле."},
-    { 
-      "gender": "m", 
-      "name": "yatagan ятаган", 
-      "short": "ятаган||а|у||ом|е", 
-      "long": "Кривой орочий ятаган (yatagan) зловеще блестит на земле."},
-    { 
-      "gender": "m", 
-      "forbids": ["two_hands"], 
-      "name": "xiphos ксифос", 
-      "short": "ксифос||а|у||ом|е", 
-      "long": "Короткий ксифос (xiphos) с печатью Трои готов к бою."},
-    { 
-      "gender": "m", 
-      "name": "falchion фальшион", 
-      "short": "фальшион||а|у||ом|е", 
-      "long": "Широкий фальшион (falchion) с клеймом Камелота лежит тут."},
-    { 
-      "gender": "m", 
-      "forbids": ["two_hands"], 
-      "name": "shamshir шамшир", 
-      "short": "шамшир||а|у||ом|е", 
-      "long": "Изогнутый шамшир (shamshir) с клеймом Нового Талоса лежит тут."},
-    { 
-      "gender": "m", 
-      "forbids": ["two_hands"], 
-      "name": "acinaces акинак", 
-      "short": "акинак||а|у||ом|е", 
-      "long": "Акинак (acinaces) с печатью Ааракокрана готов порхать в твоих руках."},
-    { 
-      "gender": "m", 
-      "name": "daito дайто", 
-      "short": "дайто", 
-      "long": "Длинный дайто (daito) с тавром мастера Масахиро лежит тут."},
-    { 
-      "gender": "m", 
-      "name": "jian цзянь", 
-      "short": "цзян|ь|я|ю|ь|ем|е", 
-      "long": "Прекрасный прямой цзянь (jian) с печатью Бангзуи скучает без дела."},
-    { 
-      "gender": "m", 
-      "requires": ["two_hands"], 
-      "name": "claymore клеймор", 
-      "short": "клеймор||а|у||ом|е", 
-      "long": "Широкий клеймор (claymore) работы Офкола лежит тут."},
-    { 
-      "gender": "m", 
-      "mtypes": ["metal"], 
-      "requires": ["two_hands"], 
-      "name": "flamberge фламберг", 
-      "short": "фламберг||а|у||ом|е", 
-      "long": "Жуткий волнистый фламберг (flamberge) выкован во мраке Бездны."},
-    { 
-      "gender": "m", 
-      "requires": ["two_hands"], 
-      "name": "sword эспадон", 
-      "short": "эспадон||а|у||ом|е", 
-      "long": "Тяжелый эспадон (sword) под силу лишь лучшим рыцарям Камелота."},
-    { 
-      "gender": "m", 
-      "requires": ["two_hands"], 
-      "name": "bastard бастард", 
-      "short": "бастард||а|у||ом|е", 
-      "long": "Полутораручный меч (bastard) с руной Великого Ясеня светится тут."},
-    { 
-      "gender": "m", 
-      "mtypes": ["metal"], 
-      "requires": ["two_hands"], 
-      "name": "changdao чандао", 
-      "short": "чандао", 
-      "long": "Очень длинный меч (changdao) выкован Чингтао, мастером Бангзуи."}
-],
-"dagger": [
-    { 
-      "gender": "m", 
-      "name": "dagger кинжал", 
-      "short": "кинжал||а|у||ом|е", 
-      "long": "Простой кинжал (dagger), лучший друг приключенца лежит здесь."},
-    { 
-      "gender": "m", 
-      "name": "knife нож", 
-      "short": "нож||а|у||ом|е", 
-      "long": "Короткий ножик (dagger) мидгаардских карманников валяется тут."},
-    { 
-      "gender": "m", 
-      "name": "stiletto стилет", 
-      "short": "стилет||а|у||ом|е", 
-      "long": "Острый стилет (stiletto) с клеймом клана Мирксес лежит здесь."},
-    { 
-      "gender": "m", 
-      "name": "kris крис", 
-      "short": "крис||а|у||ом|е", 
-      "long": "Волнистый крис (kris) работы драконидов затерялся здесь."},
-    { 
-      "gender": "m", 
-      "name": "scalpel скальпель", 
-      "short": "скальпел|ь|я|ю|ь|ем|е", 
-      "long": "Бритвенно-острый скальпель (scalpel) лекарей Герихельма лежит тут."},
-    { 
-      "gender": "m", 
-      "name": "tanto танто", 
-      "short": "танто", 
-      "long": "Короткий танто (tanto) с тавром мастера Масахиро лежит тут."},
-    { 
-      "gender": "f", 
-      "name": "daga дага", 
-      "short": "даг|а|и|е|у|ой|е", 
-      "long": "Узкая дага (daga), излюбленное оружие убийц Подземья, лежит тут."},
-    { 
-      "gender": "m", 
-      "name": "dirk кортик", 
-      "short": "кортик||а|у||ом|е", 
-      "long": "Морской кортик (dirk) с клеймом Вольной Гавани забыт тут."},
-    { 
-      "gender": "m", 
-      "name": "cord корд", 
-      "short": "корд||а|у||ом|е", 
-      "long": "Незамысловатый корд (cord) пастухов долины Иштар лежит здесь."},
-    { 
-      "gender": "m", 
-      "name": "katar катар", 
-      "short": "катар||а|у||ом|е", 
-      "long": "Коготь-катар (katar) ааракокранских убийц жаждет чьей-то крови."},
-    { 
-      "gender": "m", 
-      "name": "kukri кукри", 
-      "short": "кукри", 
-      "long": "Изогнутый кукри (kukri) работы оружейников Треля лежит здесь."}
-],
-"spear": [
-    { 
-      "gender": "n", 
-      "mtypes": ["wood", "metal"],
-      "prefers": ["sharp"],
-      "name": "spear копье", 
-      "short": "копь|е|я|ю|е|ем|е", 
-      "long": "Простое копье (spear) с клеймом Долины Титанов забыто здесь."},
-    { 
-      "gender": "m", 
-      "mtypes": ["wood", "metal"], 
-      "prefers": ["sharp"],
-      "name": "pilum пилум", 
-      "short": "пилум||а|у||ом|е", 
-      "long": "Метательный пилум (pilum) стражи Анона заброшен здесь."},
-    { 
-      "gender": "f", 
-      "mtypes": ["wood", "metal"], 
-      "requires": ["two_hands"], 
-      "prefers": ["sharp"],
-      "name": "sarissa сарисса", 
-      "short": "сарисс|а|ы|е|у|ой|е", 
-      "long": "Сарисса (sarissa) ахейских пехотинцев ожидает своего часа."},
-    { 
-      "gender": "m", 
-      "mtypes": ["wood", "metal"], 
-      "requires": ["two_hands"], 
-      "prefers": ["sharp"],
-      "name": "assegai ассегай", 
-      "short": "ассега|й|я|ю|й|ем|е", 
-      "long": "Ассегай (assegai) с пиктограммами Темного Континента лежит тут."},
-    { 
-      "gender": "m", 
-      "mtypes": ["wood", "metal"], 
-      "prefers": ["sharp"],
-      "name": "harpoon гарпун", 
-      "short": "гарпун||а|у||ом|е", 
-      "long": "Гарпун (harpoon) рыбаков Вестландии ржавеет здесь."},
-    { 
-      "gender": "m", 
-      "mtypes": ["wood", "metal"], 
-      "prefers": ["sharp"],
-      "name": "javelin дротик", 
-      "short": "дротик||а|у||ом|е", 
-      "long": "Дротик (javelin) работы оружейников-олимпийцев лежит тут."},
-    { 
-      "gender": "f", 
-      "mtypes": ["wood", "metal"], 
-      "prefers": ["sharp"],
-      "name": "bident острога", 
-      "short": "острог|а|и|е|у|ой|е", 
-      "long": "Острога (bident) с печатью Антарии воткнута в землю."},
-    { 
-      "gender": "n", 
-      "mtypes": ["wood", "metal"], 
-      "prefers": ["sharp"],
-      "name": "yari яри", 
-      "short": "яри", 
-      "long": "Яри (yari) с тавром мастера-самурая Нового Талоса забыто здесь."},
-    { 
-      "gender": "m", 
-      "mtypes": ["wood"], 
-      "name": "hoopak хупак", 
-      "short": "хупак||а|у||ом|е", 
-      "long": "Кендерский хупак (hoopak) явно напрашивается на неприятности."},
-    { 
-      "gender": "m", 
-      "mtypes": ["wood"], 
-      "requires": ["two_hands"], 
-      "name": "bo шест", 
-      "short": "бо", 
-      "long": "Бамбуковый шест (bo) используют плотогоны на реке Иштар."},
-    { 
-      "gender": "m", 
-      "mtypes": ["wood"], 
-      "requires": ["two_hands"], 
-      "name": "jo посох", 
-      "short": "дзё", 
-      "long": "Боевой посох, дзё (jo), изготовлен монахами Шаолинь."},
-    { 
-      "gender": "f", 
-      "mtypes": ["wood", "metal"], 
-      "requires": ["two_hands"], 
-      "prefers": ["sharp"],
-      "name": "bear spear рогатина", 
-      "short": "рогатин|а|ы|е|у|ой|е", 
-      "long": "Рогатина (bear spear) забыта тут трапперами Дварфийского Леса."},
-    { 
-      "gender": "m", 
-      "mtypes": ["wood", "metal"], 
-      "requires": ["two_hands"], 
-      "prefers": ["sharp"],
-      "name": "awl pike альшпис", 
-      "short": "альшпис||а|у||ом|е", 
-      "long": "Боевой альшпис (awl pike) стражников Долины Титанов лежит тут."},
-    { 
-      "gender": "n", 
-      "mtypes": ["wood", "metal"], 
-      "requires": ["two_hands"], 
-      "prefers": ["sharp"],
-      "name": "qiang чань", 
-      "short": "чан|ь|я|ю|ь|ем|е", 
-      "long": "Изящное копье-чань (qiang) работы мастеров Бангзуи лежит здесь."},
-    { 
-      "gender": "f", 
-      "mtypes": ["wood", "metal"], 
-      "requires": ["two_hands"], 
-      "prefers": ["sharp"],
-      "name": "pike пика", 
-      "short": "пик|а|и|е|у|ой|е", 
-      "long": "Длинная пика (pike) гвардейцев Амбера забыта здесь."},
-    { 
-      "gender": "f", 
-      "mtypes": ["wood", "metal"], 
-      "requires": ["two_hands"], 
-      "prefers": ["sharp"],
-      "name": "menaulion менавла", 
-      "short": "менавл|а|ы|е|у|ой|е", 
-      "long": "Тяжелое копье-менавла (menaulion) с клеймом Анона лежит здесь."}
-],
-"mace": [
-    { 
-      "gender": "f", 
-      "name": "mace булава", 
-      "short": "булав|а|ы|е|у|ой|е", 
-      "long": "Простая булава (mace) изготовлена оружейниками Герихельма."},
-    { 
-      "gender": "m", 
-      "name": "hammer молот", 
-      "short": "молот||а|у||ом|е", 
-      "long": "Боевой молот (hammer) с рунами Королевства Дварфов лежит тут."},
-    { 
-      "gender": "f", 
-      "name": "cudgel палица", 
-      "short": "палиц|а|ы|е|у|ей|е", 
-      "long": "Уродливая палица (cudgel) иллитидов жаждет чьих-то мозгов."},
-    { 
-      "gender": "m", 
-      "name": "buzdygan буздыган", 
-      "short": "буздыган||а|у||ом|е", 
-      "long": "Буздыган (buzdygan) забыт здесь степными кочевниками."},
-    { 
-      "gender": "m", 
-      "name": "mace шестопёр", 
-      "short": "шестопёр||а|у||ом|е", 
-      "long": "Тяжелый шестопёр (mace) минотавров Махн-Тора ждет своего часа."},
-    { 
-      "gender": "m", 
-      "mtypes": ["metal"], 
-      "name": "bec de corbin чекан", 
-      "short": "чекан||а|у||ом|е", 
-      "long": "Боевой чекан (bec de corbin) выкован оружейниками Утехи."},
-    { 
-      "gender": "f", 
-      "mtypes": ["wood"], 
-      "forbids": ["two_hands"], 
-      "name": "club дубинка", 
-      "short": "дубинк|а|и|е|у|ой|е", 
-      "long": "Простая хоббитская дубинка (club) забыта здесь."},
-    { 
-      "gender": "m", 
-      "mtypes": ["metal"], 
-      "name": "crowbar лом", 
-      "short": "лом||а|у||ом|е", 
-      "long": "Тяжелый лом (crowbar) храмовников Зава превзойдет любые приемы."},
-    { 
-      "gender": "f", 
-      "mtypes": ["wood"], 
-      "forbids": ["two_hands"], 
-      "name": "tonfa тонфа", 
-      "short": "тонф|а|ы|е|у|ой|е", 
-      "long": "Крепкая дубинка (tonfa) патрульных Опасного Района лежит тут."},
-    { 
-      "gender": "m", 
-      "mtypes": ["metal"], 
-      "name": "flanged mace пернач", 
-      "short": "пернач||а|у||ом|е", 
-      "long": "Пернач (flanged mace) выкован мастерами-свирфнебли Подземья."}
-],
-"axe": [
-    { 
-      "gender": "m", 
-      "mtypes": ["wood", "metal"], 
-      "name": "axe топор", 
-      "short": "топор||а|у||ом|е", 
-      "long": "Простой топор (axe) с клеймом оружейников Мидгаарда забыт тут."},
-    { 
-      "gender": "m", 
-      "mtypes": ["wood", "metal"], 
-      "name": "sagaris сагарис", 
-      "short": "сагарис||а|у||ом|е", 
-      "long": "На рукояти топора-сагариса (sagaris) выжжено \"Во славу Адрона!\""},
-    { 
-      "gender": "m", 
-      "mtypes": ["metal"], 
-      "name": "ice axe ледоруб", 
-      "short": "ледоруб||а|у||ом|е", 
-      "long": "Изношенный ледоруб (ice axe) альпинистов Каньона лежит тут."},
-    { 
-      "gender": "n", 
-      "mtypes": ["metal"], 
-      "forbids": ["two_hands"], 
-      "name": "gou шуангоу", 
-      "short": "шуангоу", 
-      "long": "Крюк-шуангоу (gou) когда-то был любимым оружием Си Тонга."},
-    { 
-      "gender": "m", 
-      "mtypes": ["metal"], 
-      "name": "cleaver тесак", 
-      "short": "тесак||а|у||ом|е", 
-      "long": "Окровавленный мясницкий тесак (cleaver) прямиком из Ада лежит тут."},
-    { 
-      "gender": "f", 
-      "mtypes": ["metal"], 
-      "forbids": ["two_hands"], 
-      "name": "kama кама", 
-      "short": "кам|а|ы|е|у|ой|е", 
-      "long": "Острая кама (kama) часто используется учениками-здрени."},
-    { 
-      "gender": "m", 
-      "mtypes": ["wood", "metal"], 
-      "forbids": ["two_hands"], 
-      "name": "tomahawk томагавк", 
-      "short": "томагавк||а|у||ом|е", 
-      "long": "Томагавк (tomahawk) изготовлен аборигенами Темного Континента."},
-    { 
-      "gender": "f", 
-      "mtypes": ["wood", "metal"], 
-      "name": "shepherd axe валашка", 
-      "short": "валашк|а|и|е|у|ой|е", 
-      "long": "Изящная валашка (axe) пастухов Долины Эльфов лежит тут."},
-    { 
-      "gender": "f", 
-      "mtypes": ["wood", "metal"], 
-      "name": "balta балта", 
-      "short": "балт|а|ы|е|у|ой|е", 
-      "long": "Заточенная балта (balta) забыта здесь степными кочевниками."},
-    { 
-      "gender": "f", 
-      "mtypes": ["wood", "metal"], 
-      "name": "francesca франциска", 
-      "short": "франциск|а|и|е|у|ой|е", 
-      "long": "Короткая франциска (francesca) стражи Дюнкельдорфа брошена тут."},
-    { 
-      "gender": "f", 
-      "mtypes": ["metal"], 
-      "requires": ["two_hands"], 
-      "name": "battleaxe секира", 
-      "short": "секир|а|ы|е|у|ой|е", 
-      "long": "Мощная секира (battleaxe) с рунами Королевства Дварфов лежит тут."},
-    { 
-      "gender": "m", 
-      "mtypes": ["metal"], 
-      "requires": ["two_hands"], 
-      "name": "labrys лабрис", 
-      "short": "лабрис||а|у||ом|е", 
-      "long": "Тяжелый лабрис (labrys) выкован минотаврихами-оружейницами."},
-    { 
-      "gender": "m", 
-      "mtypes": ["wood", "metal"], 
-      "requires": ["two_hands"], 
-      "name": "bardiche бердыш", 
-      "short": "бердыш||а|у||ом|е", 
-      "long": "Длинный бердыш (bardiche) стражи Королевского Замка лежит здесь."},
-    { 
-      "gender": "m", 
-      "mtypes": ["metal"], 
-      "requires": ["two_hands"], 
-      "name": "cleaver секач", 
-      "short": "секач||а|у||ом|е", 
-      "long": "Ужасный секач (cleaver) изготовлен в пылающих недрах Ородруина."}
-],
-"flail": [
-    { 
-      "gender": "m", 
-      "mtypes": ["metal"], 
-      "name": "flail цеп", 
-      "short": "цеп||а|у||ом|е", 
-      "long": "Простой цеп (flail) из арсенала Мидгаарда лежит тут."},
-    { 
-      "gender": "m", 
-      "mtypes": ["metal"], 
-      "name": "morning star моргенштерн", 
-      "short": "моргенштерн||а|у||ом|е", 
-      "long": "Жуткий моргенштерн (morning star) сделан в кузнях Горы Смерти."},
-    { 
-      "gender": "m", 
-      "mtypes": ["metal"], 
-      "name": "flail кистень", 
-      "short": "кистен|ь|я|ю|ь|ем|е", 
-      "long": "Кистень (flail) с клеймом кузней Камелота лежит тут."},
-    { 
-      "gender": "p", 
-      "mtypes": ["wood"], 
-      "name": "nunchaku нунчаки", 
-      "short": "нунчак|и|ов|ам|и|ами|ах", 
-      "long": "Нунчаки (nunchaku) забыты здесь одним из бандюг Опасного Района."},
-    { 
-      "gender": "m", 
-      "mtypes": ["metal"], 
-      "name": "sanjiegun саньцзегунь", 
-      "short": "саньцзегун|ь|я|ю|ь|ем|е", 
-      "long": "Трехсекционный саньцзегунь (sanjiegun) выкован в садах Бангзуи."},
-    { 
-      "gender": "f", 
-      "mtypes": ["metal"], 
-      "name": "chain цзебянь", 
-      "short": "цзебян|ь|я|ю|ь|ем|е", 
-      "long": "Колючая цепь-цзебянь (chain) выкована в Дьявольском Монастыре."},
-    { 
-      "gender": "m", 
-      "mtypes": ["metal"], 
-      "forbids": ["two_hands"], 
-      "name": "liuxing люсинчуй", 
-      "short": "люсинчу|й|я|ю|й|ем|е", 
-      "long": "Молот-метеор люсинчуй (liuxing) используют лучшие монахи Шаолинь."},
-    { 
-      "gender": "f", 
-      "mtypes": ["metal"], 
-      "forbids": ["two_hands"], 
-      "name": "kusarigama кусаригама", 
-      "short": "кусаригам|а|ы|е|у|ой|е", 
-      "long": "Серп на цепи, кусаригама (kusarigama) создан великим Масахиро."},
-    { 
-      "gender": "n", 
-      "mtypes": ["wood"], 
-      "requires": ["two_hands"], 
-      "name": "flail гасило", 
-      "short": "гасил|о|а|у|о|ом|е", 
-      "long": "Тяжелое гасило (flail) горных огров-людоедов лежит здесь."}
-],
-"whip": [
-    { 
-      "gender": "f", 
-      "material": "leather", 
-      "name": "whip плеть", 
-      "short": "плет|ь|и|и|ь|ью|и", 
-      "long": "Простая плеть (whip) забыта кем-то из укротителей Цирка."},
-    { 
-      "gender": "m", 
-      "material": "leather", 
-      "name": "bullwhip кнут", 
-      "short": "кнут||а|у||ом|е", 
-      "long": "Кнут (bullwhip) с тавром орков Огненной Горы лежит тут."},
-    { 
-      "gender": "m", 
-      "material": "leather", 
-      "name": "crop хлыст", 
-      "short": "хлыст||а|у||ом|е", 
-      "long": "Тонкий хлыстик (crop) рыцарей Герихельма лежит тут."},
-    { 
-      "gender": "p", 
-      "mtypes": ["wood"],  
-      "name": "rod розга розги", 
-      "short": "роз|ги|ог|гам|ги|гами|гах", 
-      "long": "Розга (rod) из арсенала Шоколадной Фабрики забыта здесь."},
-    { 
-      "gender": "n", 
-      "material": "cloth",   
-      "name": "rope dart шэнбяо", 
-      "short": "шэнбяо", 
-      "long": "Веревочное копье-шэнбяо (rope dart) сделано мастерами Шаолинь."},
-    { 
-      "gender": "f", 
-      "material": "leather", 
-      "name": "nagaika нагайка", 
-      "short": "нагайк|а|и|е|у|ой|е", 
-      "long": "Черная нагайка (nagaika) рабовладельцев Подземья лежит здесь."},
-    { 
-      "gender": "m", 
-      "mtypes": ["wood"],  
-      "name": "sjambok шамбок", 
-      "short": "шамбок||а|у||ом|е", 
-      "long": "Скромный шамбок (sjambok) пастухов Земли Гоблинов лежит тут."},
-    { 
-      "gender": "m", 
-      "material": "leather", 
-      "name": "whip арапник", 
-      "short": "арапник||а|у||ом|е", 
-      "long": "Боевой арапник (whip) драконов клана Анархии ждет своего часа."},
-    { 
-      "gender": "m", 
-      "material": "leather", 
-      "name": "whip snake бич", 
-      "short": "бич||а|у||ом|е", 
-      "long": "Жуткий бич (snake whip) с тавром Города Дроу шипит под ногами."},
-    { 
-      "gender": "f", 
-      "material": "leather", 
-      "name": "whip камча", 
-      "short": "камч|а|и|е|у|ой|е", 
-      "long": "Простая камча (whip) кочевников Песков Скорби лежит здесь."}
-],
-"polearm": [
-    { 
-      "gender": "f", 
-      "mtypes": ["wood", "metal"], 
-      "name": "halberd алебарда", 
-      "short": "алебард|а|ы|е|у|ой|е", 
-      "long": "Алебарда (halberd) гвардейцев Амбера лежит здесь."},
-    { 
-      "gender": "f", 
-      "mtypes": ["wood", "metal"], 
-      "name": "glaive глефа", 
-      "short": "глеф|а|ы|е|у|ой|е", 
-      "long": "Страшная глефа (glaive) с древними рунами Бездны источает мрак."},
-    { 
-      "gender": "f", 
-      "mtypes": ["wood", "metal"], 
-      "name": "guisarme гизарма", 
-      "short": "гизарм|а|ы|е|у|ой|е", 
-      "long": "Длинная гизарма (guisarme) султаната Нового Талоса лежит тут."},
-    { 
-      "gender": "f", 
-      "mtypes": ["wood", "metal"], 
-      "name": "scythe коса", 
-      "short": "кос|а|ы|е|у|ой|е", 
-      "long": "Коса (scythe) с острым запахом серы пришла с полей Армагеддона."},
-    { 
-      "gender": "m", 
-      "mtypes": ["wood", "metal"], 
-      "name": "trident трезубец", 
-      "short": "трезуб|ец|ца|цу|ец|цем|це", 
-      "long": "Трезубец (trident) с печатью Антарии воткнут в землю."},
-    { 
-      "gender": "m", 
-      "mtypes": ["wood", "metal"], 
-      "name": "mancatcher ухват", 
-      "short": "ухват||а|у||ом|е", 
-      "long": "Простой ухват (mancatcher) крестьян Изумрудного Леса лежит тут."},
-    { 
-      "gender": "n", 
-      "mtypes": ["wood", "metal"], 
-      "name": "ge гэ", 
-      "short": "гэ", 
-      "long": "Алебарда-гэ (ge) с печатью Бангзуи чем-то похожа на мотыгу."},
-    { 
-      "gender": "m", 
-      "mtypes": ["wood", "metal"], 
-      "name": "langxian лансянь", 
-      "short": "лансян|ь|я|ю|ь|ем|е", 
-      "long": "Неповоротливый лансянь (langxian) сделан на Темном Континенте."},
-    { 
-      "gender": "f", 
-      "mtypes": ["wood", "metal"], 
-      "name": "naginata нагината", 
-      "short": "нагинат|а|ы|е|у|ой|е", 
-      "long": "Мощная нагината (naginata) с клеймом Облачной Горы лежит тут."},
-    { 
-      "gender": "m", 
-      "mtypes": ["wood", "metal"], 
-      "name": "partisan протазан", 
-      "short": "протазан||а|у||ом|е", 
-      "long": "Протазан (partisan) с забытым клеймом Города Призраков лежит тут."}
-],
-  "bow": [                                                                                                                                                                                                 
-      {                                                                                                                                                                                                    
-        "gender": "m",                                                                                                                                                                                     
-        "mtypes": ["wood"],                                                                                                                                                                                
-        "name": "longbow длинный лук",                                                                                                                                                                     
-        "short": "длинн|ый|ого|ому|ый|ым|ом лук||а|у||ом|е",                                                                                                                                               
-        "long": "Длинный лук (longbow) лучников Камелота прислонен к стволу дерева."},                                                                                                                     
-      {                                                                                                                                                                                                    
-        "gender": "m",                                                                                                                                                                                     
-        "mtypes": ["wood"],                                                                                                                                                                                
-        "name": "yew тисовый лук",   
-        "short": "тисов|ый|ого|ому|ый|ым|ом лук||а|у||ом|е",                                                                                                                                               
-        "long": "Тисовый лук (yew) эльфийских следопытов Изумрудного Леса лежит здесь."},                                                                                                                  
-      {                                                                                                                                                                                                    
-        "gender": "m",                                                                                                                                                                                     
-        "mtypes": ["wood", "metal"],                                                                                                                                                                       
-        "name": "composite составной лук",
-        "short": "составн|ой|ого|ому|ой|ым|ом лук||а|у||ом|е",
-        "long": "Составной лук (composite) с роговыми накладками сделан в степях Земли Гоблинов."},                                                                                                       
-      {                                                                                                                                                                                                    
-        "gender": "m",                                                                                                                                                                                     
-        "mtypes": ["wood", "metal"],                                                                                                                                                                       
-        "name": "crossbow арбалет",  
-        "short": "арбалет||а|у||ом|е",                                                                                                                                                                     
-        "long": "Тяжелый арбалет (crossbow) с печатью Мидгаарда лежит у стены."},                                                                                                                          
-      {                                                                                                                                                                                                    
-        "gender": "m",                                                                                                                                                                                     
-        "mtypes": ["wood"],                                                                                                                                                                                
-        "name": "warbow боевой лук",                                                                                                                                                                       
-        "short": "боев|ой|ого|ому|ой|ым|ом лук||а|у||ом|е",
-        "long": "Боевой лук (warbow) с клеймом Нового Талоса ждет твердой руки."}                                                                                                                          
-  ],                                                                                                                                                                                                       
-  "arrow": [                                                                                                                                                                                               
-      {                                                                                                                                                                                                    
-        "gender": "f",               
-        "mtypes": ["wood"],                                                                                                                                                                                
-        "name": "arrow стрела",      
-        "short": "стрел|а|ы|е|у|ой|е",
-        "long": "Простая стрела (arrow) с серым оперением валяется на земле."},                                                                                                                            
-      {                                                                                                                                                                                                    
-        "gender": "f",                                                                                                                                                                                     
-        "mtypes": ["wood", "metal"],                                                                                                                                                                       
-        "name": "broadhead бронебойная стрела",
-        "short": "бронебойн|ая|ой|ой|ую|ой|ой стрел|а|ы|е|у|ой|е",                                                                                                                                         
-        "long": "Бронебойная стрела (broadhead) с трехгранным наконечником лежит здесь."},                                                                                                                 
-      {                                                                                                                                                                                                    
-        "gender": "f",                                                                                                                                                                                     
-        "mtypes": ["wood"],                                                                                                                                                                                
-        "name": "fletched оперённая стрела",
-        "short": "оперённ|ая|ой|ой|ую|ой|ой стрел|а|ы|е|у|ой|е",                                                                                                                                           
-        "long": "Оперённая стрела (fletched) с гусиными перьями ждет своего лучника."},
-      {                                                                                                                                                                                                    
-        "gender": "m",               
-        "mtypes": ["wood", "metal"],                                                                                                                                                                       
-        "name": "bolt болт",         
-        "short": "болт||а|у||ом|е",                                                                                                                                                                        
-        "long": "Короткий арбалетный болт (bolt) с тяжелым жалом валяется в пыли."},
-      {                                                                                                                                                                                                    
-        "gender": "f",                                                                                                                                                                                     
-        "mtypes": ["wood"],                                                                                                                                                                                
-        "name": "tomar томарная стрела",                                                                                                                                                                   
-        "short": "томарн|ая|ой|ой|ую|ой|ой стрел|а|ы|е|у|ой|е",                                                                                                                                            
-        "long": "Томарная стрела (tomar) с тупым набалдашником вместо наконечника лежит тут."}
-],
-"exotic": [
-    { 
-      "gender": "m", 
-      "material": "bone", 
-      "name": "tusk бивень", 
-      "short": "бив|ень|ня|ню|ень|нем|не", 
-      "long": "Бивень (tusk) хаотичного бегемота весело искрится под ногами."},
-    { 
-      "gender": "f", 
-      "mtypes": ["cloth"], 
-      "name": "footwrap портянка", 
-      "short": "портянк|а|и|е|у|ой|е", 
-      "long": "Смертоносная портянка (footwrap) пахнет давно забытым подземельем."},
-    { 
-      "gender": "f", 
-      "mtypes": ["wood"], 
-      "name": "picket штакетина", 
-      "short": "штакетин|а|ы|е|у|ой|е", 
-      "long": "Штакетина (picket) выдрана из заборчика вокруг деревни смурфов."},
-    { 
-      "gender": "f", 
-      "material": "darkness", 
-      "name": "te waza те ваза", 
-      "short": "те-ваз|а|ы|е|у|ой|е", 
-      "long": "Загадочная те-ваза (te waza) способна нанести повреждения даже тебе."},
-    { 
-      "gender": "f", 
-      "mtypes": ["metal"], 
-      "name": "anvil наковальня", 
-      "short": "наковальн|я|и|е|ю|ей|е", 
-      "long": "Тяжелая наковальня (anvil) жаждет упасть кому-то на голову."},
-    { 
-      "gender": "f", 
-      "material": "fish", 
-      "name": "cod треска", 
-      "short": "треск|а|и|е|у|ой|е", 
-      "long": "Свежей треской (cod) очень хочется врезать кому-то по мордасам."},
-    { 
-      "gender": "m", 
-      "mtypes": ["cloth"], 
-      "name": "codpiece гульфик", 
-      "short": "гульфик||а|у||ом|е", 
-      "long": "Переполненный гульфик (codpiece) распространяет гендерное неравенство."},
-    { 
-      "gender": "f", 
-      "material": "flesh", 
-      "name": "toad жаба", 
-      "short": "жаб|а|ы|е|у|ой|е", 
-      "long": "Ужасная жаба (toad) осуществляет сильное давление."},
-    { 
-      "gender": "f", 
-      "material": "flesh", 
-      "name": "underkilting подкилтятина", 
-      "short": "подкилтятин|а|ы|е|у|ой|е", 
-      "long": "Страшная подкилтятина (underkilting) не поддается гендерной идентификации."},
-    { 
-      "gender": "m", 
-      "mtypes": ["abstract"], 
-      "name": "meme мемас", 
-      "short": "мемас||а|у||ом|е", 
-      "long": "Несвежий мемас (meme) обладает убийственной силой."}
-]}
+ "sword": [
+  {
+   "gender": "m",
+   "name": "sword меч",
+   "short": "меч||а|у||ом|е",
+   "short_en": "sword",
+   "short_ua": "меч",
+   "long": "Длинный меч (sword) с тавром Мидгаарда лежит здесь.",
+   "long_en": "A long sword marked with the brand of Midgaard lies here.",
+   "long_ua": "Довгий меч з тавром Мідгаарда лежить тут."
+  },
+  {
+   "gender": "f",
+   "forbids": [
+    "two_hands"
+   ],
+   "name": "sabre сабля",
+   "short": "сабл|я|и|е|ю|ей|е",
+   "short_en": "sabre",
+   "short_ua": "шабля",
+   "long": "Амберская сабля (sabre) привлекает твое внимание.",
+   "long_en": "An Amber sabre catches your eye.",
+   "long_ua": "Амберська шабля привертає твою увагу."
+  },
+  {
+   "gender": "m",
+   "name": "broadsword палаш",
+   "short": "палаш||а|у||ом|е",
+   "short_en": "broadsword",
+   "short_ua": "палаш",
+   "long": "Пиратский палаш (broadsword) с односторонним лезвием лежит тут.",
+   "long_en": "A pirate broadsword with a single-edged blade lies here.",
+   "long_ua": "Піратський палаш з одностороннім лезом лежить тут."
+  },
+  {
+   "gender": "f",
+   "forbids": [
+    "two_hands"
+   ],
+   "name": "rapier рапира",
+   "short": "рапир|а|ы|е|у|ой|е",
+   "short_en": "rapier",
+   "short_ua": "рапіра",
+   "long": "Изящная сидхийская рапира (rapier) едва заметна на земле.",
+   "long_en": "An elegant sidhe rapier is barely visible on the ground.",
+   "long_ua": "Витончена сідхійська рапіра ледь помітна на землі."
+  },
+  {
+   "gender": "m",
+   "name": "yatagan ятаган",
+   "short": "ятаган||а|у||ом|е",
+   "short_en": "yatagan",
+   "short_ua": "ятаган",
+   "long": "Кривой орочий ятаган (yatagan) зловеще блестит на земле.",
+   "long_en": "A curved orc yatagan gleams ominously on the ground.",
+   "long_ua": "Кривий орочий ятаган зловісно блищить на землі."
+  },
+  {
+   "gender": "m",
+   "forbids": [
+    "two_hands"
+   ],
+   "name": "xiphos ксифос",
+   "short": "ксифос||а|у||ом|е",
+   "short_en": "xiphos",
+   "short_ua": "ксифос",
+   "long": "Короткий ксифос (xiphos) с печатью Трои готов к бою.",
+   "long_en": "A short xiphos marked with the seal of Troy is ready for battle.",
+   "long_ua": "Короткий ксифос з печаткою Трої готовий до бою."
+  },
+  {
+   "gender": "m",
+   "name": "falchion фальшион",
+   "short": "фальшион||а|у||ом|е",
+   "short_en": "falchion",
+   "short_ua": "фальшіон",
+   "long": "Широкий фальшион (falchion) с клеймом Камелота лежит тут.",
+   "long_en": "A broad falchion branded with the mark of Camelot lies here.",
+   "long_ua": "Широкий фальшіон з тавром Камелота лежить тут."
+  },
+  {
+   "gender": "m",
+   "forbids": [
+    "two_hands"
+   ],
+   "name": "shamshir шамшир",
+   "short": "шамшир||а|у||ом|е",
+   "short_en": "shamshir",
+   "short_ua": "шамшир",
+   "long": "Изогнутый шамшир (shamshir) с клеймом Нового Талоса лежит тут.",
+   "long_en": "A curved shamshir branded with the mark of New Thalos lies here.",
+   "long_ua": "Вигнутий шамшир з тавром Нового Талоса лежить тут."
+  },
+  {
+   "gender": "m",
+   "forbids": [
+    "two_hands"
+   ],
+   "name": "acinaces акинак",
+   "short": "акинак||а|у||ом|е",
+   "short_en": "acinaces",
+   "short_ua": "акінак",
+   "long": "Акинак (acinaces) с печатью Ааракокрана готов порхать в твоих руках.",
+   "long_en": "An acinaces marked with the seal of Aarakokran is ready to flutter in your hands.",
+   "long_ua": "Акінак з печаткою Ааракокрана готовий пурхати у твоїх руках."
+  },
+  {
+   "gender": "m",
+   "name": "daito дайто",
+   "short": "дайто",
+   "short_en": "daito",
+   "short_ua": "дайто",
+   "long": "Длинный дайто (daito) с тавром мастера Масахиро лежит тут.",
+   "long_en": "A long daito branded by master Masahiro lies here.",
+   "long_ua": "Довгий дайто з тавром майстра Масахіро лежить тут."
+  },
+  {
+   "gender": "m",
+   "name": "jian цзянь",
+   "short": "цзян|ь|я|ю|ь|ем|е",
+   "short_en": "jian",
+   "short_ua": "цзянь",
+   "long": "Прекрасный прямой цзянь (jian) с печатью Бангзуи скучает без дела.",
+   "long_en": "A beautiful straight jian marked with the seal of Bangzui lies idle, waiting for a wielder.",
+   "long_ua": "Прекрасний прямий цзянь з печаткою Бангзуи нудьгує без діла."
+  },
+  {
+   "gender": "m",
+   "requires": [
+    "two_hands"
+   ],
+   "name": "claymore клеймор",
+   "short": "клеймор||а|у||ом|е",
+   "short_en": "claymore",
+   "short_ua": "клеймор",
+   "long": "Широкий клеймор (claymore) работы Офкола лежит тут.",
+   "long_en": "A broad claymore crafted by Ofkol lies here.",
+   "long_ua": "Широкий клеймор роботи Офкола лежить тут."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "metal"
+   ],
+   "requires": [
+    "two_hands"
+   ],
+   "name": "flamberge фламберг",
+   "short": "фламберг||а|у||ом|е",
+   "short_en": "flamberge",
+   "short_ua": "фламберг",
+   "long": "Жуткий волнистый фламберг (flamberge) выкован во мраке Бездны.",
+   "long_en": "A terrifying wavy flamberge was forged in the darkness of the Abyss.",
+   "long_ua": "Моторошний хвилястий фламберг викуваний у мороку Безодні."
+  },
+  {
+   "gender": "m",
+   "requires": [
+    "two_hands"
+   ],
+   "name": "sword эспадон",
+   "short": "эспадон||а|у||ом|е",
+   "short_en": "sword",
+   "short_ua": "еспадон",
+   "long": "Тяжелый эспадон (sword) под силу лишь лучшим рыцарям Камелота.",
+   "long_en": "A heavy espadon can only be wielded by the finest knights of Camelot.",
+   "long_ua": "Важкий еспадон під силу лише найкращим лицарям Камелота."
+  },
+  {
+   "gender": "m",
+   "requires": [
+    "two_hands"
+   ],
+   "name": "bastard бастард",
+   "short": "бастард||а|у||ом|е",
+   "short_en": "bastard",
+   "short_ua": "бастард",
+   "long": "Полутораручный меч (bastard) с руной Великого Ясеня светится тут.",
+   "long_en": "A hand-and-a-half sword marked with the rune of the Great Ash glows here.",
+   "long_ua": "Меч на півтори руки з руною Великого Ясена світиться тут."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "metal"
+   ],
+   "requires": [
+    "two_hands"
+   ],
+   "name": "changdao чандао",
+   "short": "чандао",
+   "short_en": "changdao",
+   "short_ua": "чандао",
+   "long": "Очень длинный меч (changdao) выкован Чингтао, мастером Бангзуи.",
+   "long_en": "A very long sword was forged by Chingtao, a master of Bangzui.",
+   "long_ua": "Дуже довгий меч викуваний Чінгтао, майстром Бангзуи."
+  }
+ ],
+ "dagger": [
+  {
+   "gender": "m",
+   "name": "dagger кинжал",
+   "short": "кинжал||а|у||ом|е",
+   "short_en": "dagger",
+   "short_ua": "кинджал",
+   "long": "Простой кинжал (dagger), лучший друг приключенца лежит здесь.",
+   "long_en": "A simple dagger, an adventurer's best friend, lies here.",
+   "long_ua": "Простий кинджал, найкращий друг пригодника, лежить тут."
+  },
+  {
+   "gender": "m",
+   "name": "knife нож",
+   "short": "нож||а|у||ом|е",
+   "short_en": "knife",
+   "short_ua": "ніж",
+   "long": "Короткий ножик (dagger) мидгаардских карманников валяется тут.",
+   "long_en": "A short knife of the Midgaard pickpockets lies here.",
+   "long_ua": "Короткий ножик мідгаардських кишенькарів валяється тут."
+  },
+  {
+   "gender": "m",
+   "name": "stiletto стилет",
+   "short": "стилет||а|у||ом|е",
+   "short_en": "stiletto",
+   "short_ua": "стилет",
+   "long": "Острый стилет (stiletto) с клеймом клана Мирксес лежит здесь.",
+   "long_en": "A sharp stiletto branded with the mark of Clan Mirkses lies here.",
+   "long_ua": "Гострий стилет із тавром клану Мірксес лежить тут."
+  },
+  {
+   "gender": "m",
+   "name": "kris крис",
+   "short": "крис||а|у||ом|е",
+   "short_en": "kris",
+   "short_ua": "крис",
+   "long": "Волнистый крис (kris) работы драконидов затерялся здесь.",
+   "long_en": "A wavy-bladed kris, the work of draconians, lies forgotten here.",
+   "long_ua": "Хвилястий крис роботи драконідів загубився тут."
+  },
+  {
+   "gender": "m",
+   "name": "scalpel скальпель",
+   "short": "скальпел|ь|я|ю|ь|ем|е",
+   "short_en": "scalpel",
+   "short_ua": "скальпель",
+   "long": "Бритвенно-острый скальпель (scalpel) лекарей Герихельма лежит тут.",
+   "long_en": "A razor-sharp scalpel of the healers of Gerighelm lies here.",
+   "long_ua": "Гострий, як бритва, скальпель лікарів Геригельма лежить тут."
+  },
+  {
+   "gender": "m",
+   "name": "tanto танто",
+   "short": "танто",
+   "short_en": "tanto",
+   "short_ua": "танто",
+   "long": "Короткий танто (tanto) с тавром мастера Масахиро лежит тут.",
+   "long_en": "A short tanto marked with the stamp of master Masahiro lies here.",
+   "long_ua": "Коротке танто із тавром майстра Масахіро лежить тут."
+  },
+  {
+   "gender": "f",
+   "name": "daga дага",
+   "short": "даг|а|и|е|у|ой|е",
+   "short_en": "daga",
+   "short_ua": "дага",
+   "long": "Узкая дага (daga), излюбленное оружие убийц Подземья, лежит тут.",
+   "long_en": "A narrow daga, the favored weapon of UnderDark assassins, lies here.",
+   "long_ua": "Вузька дага, улюблена зброя вбивць Підзем'я, лежить тут."
+  },
+  {
+   "gender": "m",
+   "name": "dirk кортик",
+   "short": "кортик||а|у||ом|е",
+   "short_en": "dirk",
+   "short_ua": "кортик",
+   "long": "Морской кортик (dirk) с клеймом Вольной Гавани забыт тут.",
+   "long_en": "A naval dirk marked with the brand of Freeport lies forgotten here.",
+   "long_ua": "Морський кортик із тавром Вільної Гавані забутий тут."
+  },
+  {
+   "gender": "m",
+   "name": "cord корд",
+   "short": "корд||а|у||ом|е",
+   "short_en": "cord",
+   "short_ua": "корд",
+   "long": "Незамысловатый корд (cord) пастухов долины Иштар лежит здесь.",
+   "long_en": "A plain cord of the shepherds of the Ishtar valley lies here.",
+   "long_ua": "Нехитрий корд пастухів долини Іштар лежить тут."
+  },
+  {
+   "gender": "m",
+   "name": "katar катар",
+   "short": "катар||а|у||ом|е",
+   "short_en": "katar",
+   "short_ua": "катар",
+   "long": "Коготь-катар (katar) ааракокранских убийц жаждет чьей-то крови.",
+   "long_en": "A claw-katar of aarakocran assassins thirsts for someone's blood.",
+   "long_ua": "Кіготь-катар вбивць-ааракокрів жадає чиєїсь крові."
+  },
+  {
+   "gender": "m",
+   "name": "kukri кукри",
+   "short": "кукри",
+   "short_en": "kukri",
+   "short_ua": "кукрі",
+   "long": "Изогнутый кукри (kukri) работы оружейников Треля лежит здесь.",
+   "long_en": "A curved kukri, the work of Trell weaponsmiths, lies here.",
+   "long_ua": "Вигнуте кукрі роботи трельських зброярів лежить тут."
+  }
+ ],
+ "spear": [
+  {
+   "gender": "n",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "prefers": [
+    "sharp"
+   ],
+   "name": "spear копье",
+   "short": "копь|е|я|ю|е|ем|е",
+   "short_en": "spear",
+   "short_ua": "спис",
+   "long": "Простое копье (spear) с клеймом Долины Титанов забыто здесь.",
+   "long_en": "A simple spear, branded with the mark of the Valley of Titans, lies forgotten here.",
+   "long_ua": "Простий спис із тавром Долини Титанів забутий тут."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "prefers": [
+    "sharp"
+   ],
+   "name": "pilum пилум",
+   "short": "пилум||а|у||ом|е",
+   "short_en": "pilum",
+   "short_ua": "пілум",
+   "long": "Метательный пилум (pilum) стражи Анона заброшен здесь.",
+   "long_en": "A throwing pilum belonging to the guards of Anon lies abandoned here.",
+   "long_ua": "Метальний пілум варти Анона покинутий тут."
+  },
+  {
+   "gender": "f",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "requires": [
+    "two_hands"
+   ],
+   "prefers": [
+    "sharp"
+   ],
+   "name": "sarissa сарисса",
+   "short": "сарисс|а|ы|е|у|ой|е",
+   "short_en": "sarissa",
+   "short_ua": "сариса",
+   "long": "Сарисса (sarissa) ахейских пехотинцев ожидает своего часа.",
+   "long_en": "A sarissa once wielded by Achaean infantrymen awaits its moment.",
+   "long_ua": "Сариса ахейських піхотинців чекає на свій час."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "requires": [
+    "two_hands"
+   ],
+   "prefers": [
+    "sharp"
+   ],
+   "name": "assegai ассегай",
+   "short": "ассега|й|я|ю|й|ем|е",
+   "short_en": "assegai",
+   "short_ua": "асегай",
+   "long": "Ассегай (assegai) с пиктограммами Темного Континента лежит тут.",
+   "long_en": "An assegai etched with pictograms of the Dark Continent lies here.",
+   "long_ua": "Асегай із піктограмами Темного Континенту лежить тут."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "prefers": [
+    "sharp"
+   ],
+   "name": "harpoon гарпун",
+   "short": "гарпун||а|у||ом|е",
+   "short_en": "harpoon",
+   "short_ua": "гарпун",
+   "long": "Гарпун (harpoon) рыбаков Вестландии ржавеет здесь.",
+   "long_en": "A harpoon used by Westland fishermen rusts here.",
+   "long_ua": "Гарпун рибалок Вестландії іржавіє тут."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "prefers": [
+    "sharp"
+   ],
+   "name": "javelin дротик",
+   "short": "дротик||а|у||ом|е",
+   "short_en": "javelin",
+   "short_ua": "дротик",
+   "long": "Дротик (javelin) работы оружейников-олимпийцев лежит тут.",
+   "long_en": "A javelin crafted by Olympian weaponsmiths lies here.",
+   "long_ua": "Дротик роботи зброярів-олімпійців лежить тут."
+  },
+  {
+   "gender": "f",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "prefers": [
+    "sharp"
+   ],
+   "name": "bident острога",
+   "short": "острог|а|и|е|у|ой|е",
+   "short_en": "bident",
+   "short_ua": "острога",
+   "long": "Острога (bident) с печатью Антарии воткнута в землю.",
+   "long_en": "A bident stamped with the seal of Antaria is driven into the ground.",
+   "long_ua": "Острога з печаткою Антарії встромлена в землю."
+  },
+  {
+   "gender": "n",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "prefers": [
+    "sharp"
+   ],
+   "name": "yari яри",
+   "short": "яри",
+   "short_en": "yari",
+   "short_ua": "яри",
+   "long": "Яри (yari) с тавром мастера-самурая Нового Талоса забыто здесь.",
+   "long_en": "A yari branded by a samurai master of New Thalos lies forgotten here.",
+   "long_ua": "Яри із тавром майстра-самурая Нового Талоса забуте тут."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "wood"
+   ],
+   "name": "hoopak хупак",
+   "short": "хупак||а|у||ом|е",
+   "short_en": "hoopak",
+   "short_ua": "хупак",
+   "long": "Кендерский хупак (hoopak) явно напрашивается на неприятности.",
+   "long_en": "A kender hoopak all but begs for trouble.",
+   "long_ua": "Кендерський хупак аж напрошується на халепу."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "wood"
+   ],
+   "requires": [
+    "two_hands"
+   ],
+   "name": "bo шест",
+   "short": "бо",
+   "short_en": "bo",
+   "short_ua": "бо",
+   "long": "Бамбуковый шест (bo) используют плотогоны на реке Иштар.",
+   "long_en": "Rafters on the river Ishtar use this bamboo staff.",
+   "long_ua": "Бамбукову жердину використовують плотарі на річці Іштар."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "wood"
+   ],
+   "requires": [
+    "two_hands"
+   ],
+   "name": "jo посох",
+   "short": "дзё",
+   "short_en": "jo",
+   "short_ua": "дзьо",
+   "long": "Боевой посох, дзё (jo), изготовлен монахами Шаолинь.",
+   "long_en": "This battle staff, a jo, was crafted by monks of Shaolin.",
+   "long_ua": "Бойовий посох, дзьо, виготовлений ченцями Шаоліня."
+  },
+  {
+   "gender": "f",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "requires": [
+    "two_hands"
+   ],
+   "prefers": [
+    "sharp"
+   ],
+   "name": "bear spear рогатина",
+   "short": "рогатин|а|ы|е|у|ой|е",
+   "short_en": "bear",
+   "short_ua": "рогатина",
+   "long": "Рогатина (bear spear) забыта тут трапперами Дварфийского Леса.",
+   "long_en": "A bear spear left behind here by trappers of the Dwarven Forest.",
+   "long_ua": "Рогатину забули тут трапери Дварфійського Лісу."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "requires": [
+    "two_hands"
+   ],
+   "prefers": [
+    "sharp"
+   ],
+   "name": "awl pike альшпис",
+   "short": "альшпис||а|у||ом|е",
+   "short_en": "awl",
+   "short_ua": "альшпіс",
+   "long": "Боевой альшпис (awl pike) стражников Долины Титанов лежит тут.",
+   "long_en": "A battle awl pike belonging to the guards of the Valley of Titans lies here.",
+   "long_ua": "Бойовий альшпіс вартових Долини Титанів лежить тут."
+  },
+  {
+   "gender": "n",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "requires": [
+    "two_hands"
+   ],
+   "prefers": [
+    "sharp"
+   ],
+   "name": "qiang чань",
+   "short": "чан|ь|я|ю|ь|ем|е",
+   "short_en": "qiang",
+   "short_ua": "чань",
+   "long": "Изящное копье-чань (qiang) работы мастеров Бангзуи лежит здесь.",
+   "long_en": "An elegant qiang spear crafted by the masters of Bangzui lies here.",
+   "long_ua": "Витончений спис-чань роботи майстрів Бангзуй лежить тут."
+  },
+  {
+   "gender": "f",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "requires": [
+    "two_hands"
+   ],
+   "prefers": [
+    "sharp"
+   ],
+   "name": "pike пика",
+   "short": "пик|а|и|е|у|ой|е",
+   "short_en": "pike",
+   "short_ua": "піка",
+   "long": "Длинная пика (pike) гвардейцев Амбера забыта здесь.",
+   "long_en": "A long pike belonging to the guardsmen of Amber lies forgotten here.",
+   "long_ua": "Довга піка гвардійців Амбера забута тут."
+  },
+  {
+   "gender": "f",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "requires": [
+    "two_hands"
+   ],
+   "prefers": [
+    "sharp"
+   ],
+   "name": "menaulion менавла",
+   "short": "менавл|а|ы|е|у|ой|е",
+   "short_en": "menaulion",
+   "short_ua": "менавла",
+   "long": "Тяжелое копье-менавла (menaulion) с клеймом Анона лежит здесь.",
+   "long_en": "A heavy menaulion spear branded with the mark of Anon lies here.",
+   "long_ua": "Важкий спис-менавла із тавром Анона лежить тут."
+  }
+ ],
+ "mace": [
+  {
+   "gender": "f",
+   "name": "mace булава",
+   "short": "булав|а|ы|е|у|ой|е",
+   "short_en": "mace",
+   "short_ua": "булава",
+   "long": "Простая булава (mace) изготовлена оружейниками Герихельма.",
+   "long_en": "A simple mace was forged by the weaponsmiths of Gerighelm.",
+   "long_ua": "Просту булаву викували зброярі Геригельма."
+  },
+  {
+   "gender": "m",
+   "name": "hammer молот",
+   "short": "молот||а|у||ом|е",
+   "short_en": "hammer",
+   "short_ua": "молот",
+   "long": "Боевой молот (hammer) с рунами Королевства Дварфов лежит тут.",
+   "long_en": "A war hammer engraved with runes of the Dwarven Kingdom lies here.",
+   "long_ua": "Бойовий молот з рунами Королівства Дварфів лежить тут."
+  },
+  {
+   "gender": "f",
+   "name": "cudgel палица",
+   "short": "палиц|а|ы|е|у|ей|е",
+   "short_en": "cudgel",
+   "short_ua": "палиця",
+   "long": "Уродливая палица (cudgel) иллитидов жаждет чьих-то мозгов.",
+   "long_en": "A hideous illithid cudgel thirsts for someone's brains.",
+   "long_ua": "Потворна палиця ілітідів прагне чиїхось мізків."
+  },
+  {
+   "gender": "m",
+   "name": "buzdygan буздыган",
+   "short": "буздыган||а|у||ом|е",
+   "short_en": "buzdygan",
+   "short_ua": "буздиган",
+   "long": "Буздыган (buzdygan) забыт здесь степными кочевниками.",
+   "long_en": "A buzdygan lies here, forgotten by steppe nomads.",
+   "long_ua": "Буздиган лежить тут, забутий степовими кочівниками."
+  },
+  {
+   "gender": "m",
+   "name": "mace шестопёр",
+   "short": "шестопёр||а|у||ом|е",
+   "short_en": "mace",
+   "short_ua": "шестопер",
+   "long": "Тяжелый шестопёр (mace) минотавров Махн-Тора ждет своего часа.",
+   "long_en": "A heavy mace of the Mahn-Tor minotaurs awaits its moment.",
+   "long_ua": "Важкий шестопер мінотаврів Мах'н-Тора чекає свого часу."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "metal"
+   ],
+   "name": "bec de corbin чекан",
+   "short": "чекан||а|у||ом|е",
+   "short_en": "bec",
+   "short_ua": "чекан",
+   "long": "Боевой чекан (bec de corbin) выкован оружейниками Утехи.",
+   "long_en": "A war bec de corbin was forged by the weaponsmiths of Solace.",
+   "long_ua": "Бойовий чекан викували зброярі Утіхи."
+  },
+  {
+   "gender": "f",
+   "mtypes": [
+    "wood"
+   ],
+   "forbids": [
+    "two_hands"
+   ],
+   "name": "club дубинка",
+   "short": "дубинк|а|и|е|у|ой|е",
+   "short_en": "club",
+   "short_ua": "дубинка",
+   "long": "Простая хоббитская дубинка (club) забыта здесь.",
+   "long_en": "A simple hobbit club was left behind here.",
+   "long_ua": "Проста гобітська дубинка забута тут."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "metal"
+   ],
+   "name": "crowbar лом",
+   "short": "лом||а|у||ом|е",
+   "short_en": "crowbar",
+   "short_ua": "лом",
+   "long": "Тяжелый лом (crowbar) храмовников Зава превзойдет любые приемы.",
+   "long_en": "A heavy crowbar of the Zav templars outmatches any technique.",
+   "long_ua": "Важкий лом храмовників Зава перевершить будь-які прийоми."
+  },
+  {
+   "gender": "f",
+   "mtypes": [
+    "wood"
+   ],
+   "forbids": [
+    "two_hands"
+   ],
+   "name": "tonfa тонфа",
+   "short": "тонф|а|ы|е|у|ой|е",
+   "short_en": "tonfa",
+   "short_ua": "тонфа",
+   "long": "Крепкая дубинка (tonfa) патрульных Опасного Района лежит тут.",
+   "long_en": "A sturdy tonfa carried by the patrols of the Dangerous Neighborhood lies here.",
+   "long_ua": "Міцна тонфа патрульних Небезпечного Району лежить тут."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "metal"
+   ],
+   "name": "flanged mace пернач",
+   "short": "пернач||а|у||ом|е",
+   "short_en": "flanged",
+   "short_ua": "пернач",
+   "long": "Пернач (flanged mace) выкован мастерами-свирфнебли Подземья.",
+   "long_en": "A flanged mace was forged by svirfneblin craftsmen of the UnderDark.",
+   "long_ua": "Пернач викували майстри-свірфнеблі Підзем'я."
+  }
+ ],
+ "axe": [
+  {
+   "gender": "m",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "name": "axe топор",
+   "short": "топор||а|у||ом|е",
+   "short_en": "axe",
+   "short_ua": "сокира",
+   "long": "Простой топор (axe) с клеймом оружейников Мидгаарда забыт тут.",
+   "long_en": "A simple axe stamped with the mark of Midgaard's weaponsmiths lies forgotten here.",
+   "long_ua": "Проста сокира з тавром зброярів Мідгаарда забута тут."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "name": "sagaris сагарис",
+   "short": "сагарис||а|у||ом|е",
+   "short_en": "sagaris",
+   "short_ua": "сагарис",
+   "long": "На рукояти топора-сагариса (sagaris) выжжено \"Во славу Адрона!\"",
+   "long_en": "Burned into the sagaris's handle: \"Glory to Adron!\"",
+   "long_ua": "На руків'ї сокири-сагариса випалено \"Слава Адрону!\""
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "metal"
+   ],
+   "name": "ice axe ледоруб",
+   "short": "ледоруб||а|у||ом|е",
+   "short_en": "ice",
+   "short_ua": "льодоруб",
+   "long": "Изношенный ледоруб (ice axe) альпинистов Каньона лежит тут.",
+   "long_en": "A worn ice axe once used by climbers of the Canyon lies here.",
+   "long_ua": "Зношений льодоруб альпіністів Каньйону лежить тут."
+  },
+  {
+   "gender": "n",
+   "mtypes": [
+    "metal"
+   ],
+   "forbids": [
+    "two_hands"
+   ],
+   "name": "gou шуангоу",
+   "short": "шуангоу",
+   "short_en": "gou",
+   "short_ua": "шуангоу",
+   "long": "Крюк-шуангоу (gou) когда-то был любимым оружием Си Тонга.",
+   "long_en": "This shuangou hook was once Si Tong's favorite weapon.",
+   "long_ua": "Гак-шуангоу колись був улюбленою зброєю Сі Тонга."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "metal"
+   ],
+   "name": "cleaver тесак",
+   "short": "тесак||а|у||ом|е",
+   "short_en": "cleaver",
+   "short_ua": "тесак",
+   "long": "Окровавленный мясницкий тесак (cleaver) прямиком из Ада лежит тут.",
+   "long_en": "A blood-stained butcher's cleaver straight from Hell lies here.",
+   "long_ua": "Закривавлений м'ясницький тесак просто з Пекла лежить тут."
+  },
+  {
+   "gender": "f",
+   "mtypes": [
+    "metal"
+   ],
+   "forbids": [
+    "two_hands"
+   ],
+   "name": "kama кама",
+   "short": "кам|а|ы|е|у|ой|е",
+   "short_en": "kama",
+   "short_ua": "кама",
+   "long": "Острая кама (kama) часто используется учениками-здрени.",
+   "long_en": "This sharp kama is often used by zdreni disciples.",
+   "long_ua": "Гостра кама часто використовується учнями-здрени."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "forbids": [
+    "two_hands"
+   ],
+   "name": "tomahawk томагавк",
+   "short": "томагавк||а|у||ом|е",
+   "short_en": "tomahawk",
+   "short_ua": "томагавк",
+   "long": "Томагавк (tomahawk) изготовлен аборигенами Темного Континента.",
+   "long_en": "This tomahawk was crafted by natives of the Dark Continent.",
+   "long_ua": "Томагавк виготовлений тубільцями Темного Континенту."
+  },
+  {
+   "gender": "f",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "name": "shepherd axe валашка",
+   "short": "валашк|а|и|е|у|ой|е",
+   "short_en": "shepherd",
+   "short_ua": "валашка",
+   "long": "Изящная валашка (axe) пастухов Долины Эльфов лежит тут.",
+   "long_en": "An elegant shepherd's axe of the herders from the Elven Valley lies here.",
+   "long_ua": "Вишукана валашка пастухів Долини Ельфів лежить тут."
+  },
+  {
+   "gender": "f",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "name": "balta балта",
+   "short": "балт|а|ы|е|у|ой|е",
+   "short_en": "balta",
+   "short_ua": "балта",
+   "long": "Заточенная балта (balta) забыта здесь степными кочевниками.",
+   "long_en": "A sharpened balta was left here by steppe nomads.",
+   "long_ua": "Заточена балта забута тут степовими кочівниками."
+  },
+  {
+   "gender": "f",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "name": "francesca франциска",
+   "short": "франциск|а|и|е|у|ой|е",
+   "short_en": "francesca",
+   "short_ua": "франциска",
+   "long": "Короткая франциска (francesca) стражи Дюнкельдорфа брошена тут.",
+   "long_en": "A short francesca belonging to the Dunkeldorf guard was tossed here.",
+   "long_ua": "Коротка франциска варти Дюнкельдорфа кинута тут."
+  },
+  {
+   "gender": "f",
+   "mtypes": [
+    "metal"
+   ],
+   "requires": [
+    "two_hands"
+   ],
+   "name": "battleaxe секира",
+   "short": "секир|а|ы|е|у|ой|е",
+   "short_en": "battleaxe",
+   "short_ua": "бойова сокира",
+   "long": "Мощная секира (battleaxe) с рунами Королевства Дварфов лежит тут.",
+   "long_en": "A mighty battleaxe marked with runes of the Dwarven Kingdom lies here.",
+   "long_ua": "Могутня бойова сокира з рунами Королівства Дварфів лежить тут."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "metal"
+   ],
+   "requires": [
+    "two_hands"
+   ],
+   "name": "labrys лабрис",
+   "short": "лабрис||а|у||ом|е",
+   "short_en": "labrys",
+   "short_ua": "лабрис",
+   "long": "Тяжелый лабрис (labrys) выкован минотаврихами-оружейницами.",
+   "long_en": "This heavy labrys was forged by minotaur-women weaponsmiths.",
+   "long_ua": "Важкий лабрис викували зброярки-жінки-мінотаври."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "requires": [
+    "two_hands"
+   ],
+   "name": "bardiche бердыш",
+   "short": "бердыш||а|у||ом|е",
+   "short_en": "bardiche",
+   "short_ua": "бердиш",
+   "long": "Длинный бердыш (bardiche) стражи Королевского Замка лежит здесь.",
+   "long_en": "A long bardiche belonging to the Royal Castle guard lies here.",
+   "long_ua": "Довгий бердиш варти Королівського Замку лежить тут."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "metal"
+   ],
+   "requires": [
+    "two_hands"
+   ],
+   "name": "cleaver секач",
+   "short": "секач||а|у||ом|е",
+   "short_en": "cleaver",
+   "short_ua": "сікач",
+   "long": "Ужасный секач (cleaver) изготовлен в пылающих недрах Ородруина.",
+   "long_en": "This terrifying cleaver was forged in the burning depths of Orodruin.",
+   "long_ua": "Жахливий сікач викуваний у палючих надрах Ородруїну."
+  }
+ ],
+ "flail": [
+  {
+   "gender": "m",
+   "mtypes": [
+    "metal"
+   ],
+   "name": "flail цеп",
+   "short": "цеп||а|у||ом|е",
+   "short_en": "flail",
+   "short_ua": "ціп",
+   "long": "Простой цеп (flail) из арсенала Мидгаарда лежит тут.",
+   "long_en": "A simple flail from the arsenal of Midgaard lies here.",
+   "long_ua": "Простий ціп із арсеналу Мідгаарда лежить тут."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "metal"
+   ],
+   "name": "morning star моргенштерн",
+   "short": "моргенштерн||а|у||ом|е",
+   "short_en": "morning",
+   "short_ua": "моргенштерн",
+   "long": "Жуткий моргенштерн (morning star) сделан в кузнях Горы Смерти.",
+   "long_en": "A gruesome morning star was forged in the smithies of the Mountain of Death.",
+   "long_ua": "Моторошний моргенштерн викуваний у кузнях Гори Смерті."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "metal"
+   ],
+   "name": "flail кистень",
+   "short": "кистен|ь|я|ю|ь|ем|е",
+   "short_en": "flail",
+   "short_ua": "кистень",
+   "long": "Кистень (flail) с клеймом кузней Камелота лежит тут.",
+   "long_en": "A flail bearing the mark of the Camelot forges lies here.",
+   "long_ua": "Кистень із тавром кузень Камелота лежить тут."
+  },
+  {
+   "gender": "p",
+   "mtypes": [
+    "wood"
+   ],
+   "name": "nunchaku нунчаки",
+   "short": "нунчак|и|ов|ам|и|ами|ах",
+   "short_en": "nunchaku",
+   "short_ua": "нунчаки",
+   "long": "Нунчаки (nunchaku) забыты здесь одним из бандюг Опасного Района.",
+   "long_en": "A pair of nunchaku was left here by one of the thugs of the Dangerous District.",
+   "long_ua": "Нунчаки забуті тут одним із бандюків Небезпечного Району."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "metal"
+   ],
+   "name": "sanjiegun саньцзегунь",
+   "short": "саньцзегун|ь|я|ю|ь|ем|е",
+   "short_en": "sanjiegun",
+   "short_ua": "саньцзегунь",
+   "long": "Трехсекционный саньцзегунь (sanjiegun) выкован в садах Бангзуи.",
+   "long_en": "A three-sectional sanjiegun was forged in the gardens of Bangzui.",
+   "long_ua": "Трисекційний саньцзегунь викуваний у садах Бангзуи."
+  },
+  {
+   "gender": "f",
+   "mtypes": [
+    "metal"
+   ],
+   "name": "chain цзебянь",
+   "short": "цзебян|ь|я|ю|ь|ем|е",
+   "short_en": "chain",
+   "short_ua": "цзебянь",
+   "long": "Колючая цепь-цзебянь (chain) выкована в Дьявольском Монастыре.",
+   "long_en": "A spiked jiebian chain was forged in the Devil's Monastery.",
+   "long_ua": "Колючий ланцюг-цзебянь викуваний у Диявольському Монастирі."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "metal"
+   ],
+   "forbids": [
+    "two_hands"
+   ],
+   "name": "liuxing люсинчуй",
+   "short": "люсинчу|й|я|ю|й|ем|е",
+   "short_en": "liuxing",
+   "short_ua": "люсинчуй",
+   "long": "Молот-метеор люсинчуй (liuxing) используют лучшие монахи Шаолинь.",
+   "long_en": "The meteor hammer liuxing is used by the finest monks of Shaolin.",
+   "long_ua": "Молот-метеор люсинчуй використовують найкращі монахи Шаоліню."
+  },
+  {
+   "gender": "f",
+   "mtypes": [
+    "metal"
+   ],
+   "forbids": [
+    "two_hands"
+   ],
+   "name": "kusarigama кусаригама",
+   "short": "кусаригам|а|ы|е|у|ой|е",
+   "short_en": "kusarigama",
+   "short_ua": "кусаригама",
+   "long": "Серп на цепи, кусаригама (kusarigama) создан великим Масахиро.",
+   "long_en": "A sickle on a chain, the kusarigama, was crafted by the great Masahiro.",
+   "long_ua": "Серп на ланцюгу, кусаригама, створений великим Масахіро."
+  },
+  {
+   "gender": "n",
+   "mtypes": [
+    "wood"
+   ],
+   "requires": [
+    "two_hands"
+   ],
+   "name": "flail гасило",
+   "short": "гасил|о|а|у|о|ом|е",
+   "short_en": "flail",
+   "short_ua": "гасило",
+   "long": "Тяжелое гасило (flail) горных огров-людоедов лежит здесь.",
+   "long_en": "A heavy flail belonging to the mountain ogre-cannibals lies here.",
+   "long_ua": "Важке гасило гірських огрів-людожерів лежить тут."
+  }
+ ],
+ "whip": [
+  {
+   "gender": "f",
+   "material": "leather",
+   "name": "whip плеть",
+   "short": "плет|ь|и|и|ь|ью|и",
+   "short_en": "whip",
+   "short_ua": "пуга",
+   "long": "Простая плеть (whip) забыта кем-то из укротителей Цирка.",
+   "long_en": "A simple whip lies here, forgotten by one of the Circus tamers.",
+   "long_ua": "Проста пуга, забута кимось із приборкувачів Цирку."
+  },
+  {
+   "gender": "m",
+   "material": "leather",
+   "name": "bullwhip кнут",
+   "short": "кнут||а|у||ом|е",
+   "short_en": "bullwhip",
+   "short_ua": "батіг",
+   "long": "Кнут (bullwhip) с тавром орков Огненной Горы лежит тут.",
+   "long_en": "A bullwhip branded with the mark of the Fire Mountain orcs lies here.",
+   "long_ua": "Батіг із тавром орків Вогняної Гори лежить тут."
+  },
+  {
+   "gender": "m",
+   "material": "leather",
+   "name": "crop хлыст",
+   "short": "хлыст||а|у||ом|е",
+   "short_en": "crop",
+   "short_ua": "хлист",
+   "long": "Тонкий хлыстик (crop) рыцарей Герихельма лежит тут.",
+   "long_en": "A thin riding crop of the Gerichhelm knights lies here.",
+   "long_ua": "Тонкий хлистик лицарів Герихельма лежить тут."
+  },
+  {
+   "gender": "p",
+   "mtypes": [
+    "wood"
+   ],
+   "name": "rod розга розги",
+   "short": "роз|ги|ог|гам|ги|гами|гах",
+   "short_en": "rod",
+   "short_ua": "різка",
+   "long": "Розга (rod) из арсенала Шоколадной Фабрики забыта здесь.",
+   "long_en": "A rod from the arsenal of the Chocolate Factory has been forgotten here.",
+   "long_ua": "Різка з арсеналу Шоколадної Фабрики забута тут."
+  },
+  {
+   "gender": "n",
+   "material": "cloth",
+   "name": "rope dart шэнбяо",
+   "short": "шэнбяо",
+   "short_en": "rope",
+   "short_ua": "шенбяо",
+   "long": "Веревочное копье-шэнбяо (rope dart) сделано мастерами Шаолинь.",
+   "long_en": "A rope-spear, a shenbiao, crafted by the masters of Shaolin.",
+   "long_ua": "Мотузковий спис-шенбяо, зроблений майстрами Шаоліню."
+  },
+  {
+   "gender": "f",
+   "material": "leather",
+   "name": "nagaika нагайка",
+   "short": "нагайк|а|и|е|у|ой|е",
+   "short_en": "nagaika",
+   "short_ua": "нагайка",
+   "long": "Черная нагайка (nagaika) рабовладельцев Подземья лежит здесь.",
+   "long_en": "A black nagaika belonging to the slavers of the Underdark lies here.",
+   "long_ua": "Чорна нагайка рабовласників Підзем'я лежить тут."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "wood"
+   ],
+   "name": "sjambok шамбок",
+   "short": "шамбок||а|у||ом|е",
+   "short_en": "sjambok",
+   "short_ua": "шамбок",
+   "long": "Скромный шамбок (sjambok) пастухов Земли Гоблинов лежит тут.",
+   "long_en": "A humble sjambok belonging to the herders of Goblin Land lies here.",
+   "long_ua": "Скромний шамбок пастухів Землі Гоблінів лежить тут."
+  },
+  {
+   "gender": "m",
+   "material": "leather",
+   "name": "whip арапник",
+   "short": "арапник||а|у||ом|е",
+   "short_en": "whip",
+   "short_ua": "арапник",
+   "long": "Боевой арапник (whip) драконов клана Анархии ждет своего часа.",
+   "long_en": "A battle whip of the Anarchy clan dragons awaits its moment.",
+   "long_ua": "Бойовий арапник драконів клану Анархії чекає свого часу."
+  },
+  {
+   "gender": "m",
+   "material": "leather",
+   "name": "whip snake бич",
+   "short": "бич||а|у||ом|е",
+   "short_en": "whip",
+   "short_ua": "бич",
+   "long": "Жуткий бич (snake whip) с тавром Города Дроу шипит под ногами.",
+   "long_en": "A dreadful snake whip branded with the mark of the Drow City hisses underfoot.",
+   "long_ua": "Моторошний бич із тавром Міста Дроу шипить під ногами."
+  },
+  {
+   "gender": "f",
+   "material": "leather",
+   "name": "whip камча",
+   "short": "камч|а|и|е|у|ой|е",
+   "short_en": "whip",
+   "short_ua": "камча",
+   "long": "Простая камча (whip) кочевников Песков Скорби лежит здесь.",
+   "long_en": "A simple camcha of the Sands of Sorrow nomads lies here.",
+   "long_ua": "Проста камча кочівників Пісків Скорботи лежить тут."
+  }
+ ],
+ "polearm": [
+  {
+   "gender": "f",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "name": "halberd алебарда",
+   "short": "алебард|а|ы|е|у|ой|е",
+   "short_en": "halberd",
+   "short_ua": "алебарда",
+   "long": "Алебарда (halberd) гвардейцев Амбера лежит здесь.",
+   "long_en": "A halberd belonging to the guards of Amber lies here.",
+   "long_ua": "Алебарда гвардійців Амбера лежить тут."
+  },
+  {
+   "gender": "f",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "name": "glaive глефа",
+   "short": "глеф|а|ы|е|у|ой|е",
+   "short_en": "glaive",
+   "short_ua": "глефа",
+   "long": "Страшная глефа (glaive) с древними рунами Бездны источает мрак.",
+   "long_en": "A terrifying glaive marked with ancient runes of the Abyss exudes darkness.",
+   "long_ua": "Страшна глефа з давніми рунами Безодні випромінює морок."
+  },
+  {
+   "gender": "f",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "name": "guisarme гизарма",
+   "short": "гизарм|а|ы|е|у|ой|е",
+   "short_en": "guisarme",
+   "short_ua": "гізарма",
+   "long": "Длинная гизарма (guisarme) султаната Нового Талоса лежит тут.",
+   "long_en": "A long guisarme of the Sultanate of New Thalos lies here.",
+   "long_ua": "Довга гізарма султанату Нового Талоса лежить тут."
+  },
+  {
+   "gender": "f",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "name": "scythe коса",
+   "short": "кос|а|ы|е|у|ой|е",
+   "short_en": "scythe",
+   "short_ua": "коса",
+   "long": "Коса (scythe) с острым запахом серы пришла с полей Армагеддона.",
+   "long_en": "A scythe reeking sharply of sulfur has come from the fields of Armageddon.",
+   "long_ua": "Коса з різким запахом сірки прийшла з полів Армагеддону."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "name": "trident трезубец",
+   "short": "трезуб|ец|ца|цу|ец|цем|це",
+   "short_en": "trident",
+   "short_ua": "тризуб",
+   "long": "Трезубец (trident) с печатью Антарии воткнут в землю.",
+   "long_en": "A trident bearing the seal of Antaria is stuck in the ground.",
+   "long_ua": "Тризуб з печаткою Антарії встромлений у землю."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "name": "mancatcher ухват",
+   "short": "ухват||а|у||ом|е",
+   "short_en": "mancatcher",
+   "short_ua": "рогач",
+   "long": "Простой ухват (mancatcher) крестьян Изумрудного Леса лежит тут.",
+   "long_en": "A simple mancatcher of the peasants of the Emerald Forest lies here.",
+   "long_ua": "Простий рогач селян Смарагдового Лісу лежить тут."
+  },
+  {
+   "gender": "n",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "name": "ge гэ",
+   "short": "гэ",
+   "short_en": "ge",
+   "short_ua": "ге",
+   "long": "Алебарда-гэ (ge) с печатью Бангзуи чем-то похожа на мотыгу.",
+   "long_en": "A ge-halberd bearing the seal of Bangzui looks somewhat like a hoe.",
+   "long_ua": "Алебарда-ге з печаткою Бангзуи чимось схожа на мотику."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "name": "langxian лансянь",
+   "short": "лансян|ь|я|ю|ь|ем|е",
+   "short_en": "langxian",
+   "short_ua": "лансянь",
+   "long": "Неповоротливый лансянь (langxian) сделан на Темном Континенте.",
+   "long_en": "An unwieldy langxian was made on the Dark Continent.",
+   "long_ua": "Незграбний лансянь зроблений на Темному Континенті."
+  },
+  {
+   "gender": "f",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "name": "naginata нагината",
+   "short": "нагинат|а|ы|е|у|ой|е",
+   "short_en": "naginata",
+   "short_ua": "нагіната",
+   "long": "Мощная нагината (naginata) с клеймом Облачной Горы лежит тут.",
+   "long_en": "A powerful naginata bearing the brand of Cloud Mountain lies here.",
+   "long_ua": "Потужна нагіната з тавром Хмарної Гори лежить тут."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "name": "partisan протазан",
+   "short": "протазан||а|у||ом|е",
+   "short_en": "partisan",
+   "short_ua": "протазан",
+   "long": "Протазан (partisan) с забытым клеймом Города Призраков лежит тут.",
+   "long_en": "A partisan bearing the forgotten brand of Ghost City lies here.",
+   "long_ua": "Протазан із забутим тавром Міста Привидів лежить тут."
+  }
+ ],
+ "bow": [
+  {
+   "gender": "m",
+   "mtypes": [
+    "wood"
+   ],
+   "name": "longbow длинный лук",
+   "short": "длинн|ый|ого|ому|ый|ым|ом лук||а|у||ом|е",
+   "short_en": "longbow",
+   "short_ua": "довгий лук",
+   "long": "Длинный лук (longbow) лучников Камелота прислонен к стволу дерева.",
+   "long_en": "A longbow belonging to the archers of Camelot leans against a tree trunk.",
+   "long_ua": "Довгий лук лучників Камелота притулений до стовбура дерева."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "wood"
+   ],
+   "name": "yew тисовый лук",
+   "short": "тисов|ый|ого|ому|ый|ым|ом лук||а|у||ом|е",
+   "short_en": "yew",
+   "short_ua": "тисовий лук",
+   "long": "Тисовый лук (yew) эльфийских следопытов Изумрудного Леса лежит здесь.",
+   "long_en": "A yew bow of the elven rangers of the Emerald Forest lies here.",
+   "long_ua": "Тисовий лук ельфійських слідопитів Смарагдового Лісу лежить тут."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "name": "composite составной лук",
+   "short": "составн|ой|ого|ому|ой|ым|ом лук||а|у||ом|е",
+   "short_en": "composite",
+   "short_ua": "композитний лук",
+   "long": "Составной лук (composite) с роговыми накладками сделан в степях Земли Гоблинов.",
+   "long_en": "A composite bow with horn plating, made in the steppes of the Goblin Lands.",
+   "long_ua": "Композитний лук з рогових накладок, зроблений у степах Землі Гоблінів."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "name": "crossbow арбалет",
+   "short": "арбалет||а|у||ом|е",
+   "short_en": "crossbow",
+   "short_ua": "арбалет",
+   "long": "Тяжелый арбалет (crossbow) с печатью Мидгаарда лежит у стены.",
+   "long_en": "A heavy crossbow bearing the seal of Midgaard lies by the wall.",
+   "long_ua": "Важкий арбалет з печаткою Мідгаарда лежить біля стіни."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "wood"
+   ],
+   "name": "warbow боевой лук",
+   "short": "боев|ой|ого|ому|ой|ым|ом лук||а|у||ом|е",
+   "short_en": "warbow",
+   "short_ua": "бойовий лук",
+   "long": "Боевой лук (warbow) с клеймом Нового Талоса ждет твердой руки.",
+   "long_en": "A warbow branded with the mark of New Thalos waits for a steady hand.",
+   "long_ua": "Бойовий лук з тавром Нового Талоса чекає на тверду руку."
+  }
+ ],
+ "arrow": [
+  {
+   "gender": "f",
+   "mtypes": [
+    "wood"
+   ],
+   "name": "arrow стрела",
+   "short": "стрел|а|ы|е|у|ой|е",
+   "short_en": "arrow",
+   "short_ua": "стріла",
+   "long": "Простая стрела (arrow) с серым оперением валяется на земле.",
+   "long_en": "A plain arrow with gray fletching lies on the ground.",
+   "long_ua": "Проста стріла із сірим оперенням валяється на землі."
+  },
+  {
+   "gender": "f",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "name": "broadhead бронебойная стрела",
+   "short": "бронебойн|ая|ой|ой|ую|ой|ой стрел|а|ы|е|у|ой|е",
+   "short_en": "broadhead",
+   "short_ua": "бронебійна стріла",
+   "long": "Бронебойная стрела (broadhead) с трехгранным наконечником лежит здесь.",
+   "long_en": "An armor-piercing broadhead arrow with a three-edged tip lies here.",
+   "long_ua": "Бронебійна стріла з тригранним вістрям лежить тут."
+  },
+  {
+   "gender": "f",
+   "mtypes": [
+    "wood"
+   ],
+   "name": "fletched оперённая стрела",
+   "short": "оперённ|ая|ой|ой|ую|ой|ой стрел|а|ы|е|у|ой|е",
+   "short_en": "fletched",
+   "short_ua": "оперена стріла",
+   "long": "Оперённая стрела (fletched) с гусиными перьями ждет своего лучника.",
+   "long_en": "A fletched arrow with goose feathers awaits its archer.",
+   "long_ua": "Оперена стріла з гусячим пір'ям чекає свого лучника."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "wood",
+    "metal"
+   ],
+   "name": "bolt болт",
+   "short": "болт||а|у||ом|е",
+   "short_en": "bolt",
+   "short_ua": "болт",
+   "long": "Короткий арбалетный болт (bolt) с тяжелым жалом валяется в пыли.",
+   "long_en": "A short crossbow bolt with a heavy tip lies in the dust.",
+   "long_ua": "Короткий арбалетний болт з важким вістрям валяється в пилюці."
+  },
+  {
+   "gender": "f",
+   "mtypes": [
+    "wood"
+   ],
+   "name": "tomar томарная стрела",
+   "short": "томарн|ая|ой|ой|ую|ой|ой стрел|а|ы|е|у|ой|е",
+   "short_en": "tomar",
+   "short_ua": "томарна стріла",
+   "long": "Томарная стрела (tomar) с тупым набалдашником вместо наконечника лежит тут.",
+   "long_en": "A tomar arrow with a blunt knob instead of a point lies here.",
+   "long_ua": "Томарна стріла з тупим набалдашником замість вістря лежить тут."
+  }
+ ],
+ "exotic": [
+  {
+   "gender": "m",
+   "material": "bone",
+   "name": "tusk бивень",
+   "short": "бив|ень|ня|ню|ень|нем|не",
+   "short_en": "tusk",
+   "short_ua": "бивень",
+   "long": "Бивень (tusk) хаотичного бегемота весело искрится под ногами.",
+   "long_en": "The tusk of a chaotic hippopotamus sparkles merrily underfoot.",
+   "long_ua": "Бивень хаотичного бегемота весело виблискує під ногами."
+  },
+  {
+   "gender": "f",
+   "mtypes": [
+    "cloth"
+   ],
+   "name": "footwrap портянка",
+   "short": "портянк|а|и|е|у|ой|е",
+   "short_en": "footwrap",
+   "short_ua": "онуча",
+   "long": "Смертоносная портянка (footwrap) пахнет давно забытым подземельем.",
+   "long_en": "A deadly footwrap smells of a long-forgotten dungeon.",
+   "long_ua": "Смертоносна онуча пахне давно забутим підземеллям."
+  },
+  {
+   "gender": "f",
+   "mtypes": [
+    "wood"
+   ],
+   "name": "picket штакетина",
+   "short": "штакетин|а|ы|е|у|ой|е",
+   "short_en": "picket",
+   "short_ua": "штахетина",
+   "long": "Штакетина (picket) выдрана из заборчика вокруг деревни смурфов.",
+   "long_en": "A picket, ripped out of the little fence around a village of smurfs.",
+   "long_ua": "Штахетина, видерта з парканчика навколо села смурфів."
+  },
+  {
+   "gender": "f",
+   "material": "darkness",
+   "name": "te waza те ваза",
+   "short": "те-ваз|а|ы|е|у|ой|е",
+   "short_en": "te",
+   "short_ua": "те-ваза",
+   "long": "Загадочная те-ваза (te waza) способна нанести повреждения даже тебе.",
+   "long_en": "A mysterious te waza is capable of hurting even you.",
+   "long_ua": "Загадкова те-ваза здатна завдати шкоди навіть тобі."
+  },
+  {
+   "gender": "f",
+   "mtypes": [
+    "metal"
+   ],
+   "name": "anvil наковальня",
+   "short": "наковальн|я|и|е|ю|ей|е",
+   "short_en": "anvil",
+   "short_ua": "ковадло",
+   "long": "Тяжелая наковальня (anvil) жаждет упасть кому-то на голову.",
+   "long_en": "A heavy anvil is itching to fall on someone's head.",
+   "long_ua": "Важке ковадло прагне впасти комусь на голову."
+  },
+  {
+   "gender": "f",
+   "material": "fish",
+   "name": "cod треска",
+   "short": "треск|а|и|е|у|ой|е",
+   "short_en": "cod",
+   "short_ua": "тріска",
+   "long": "Свежей треской (cod) очень хочется врезать кому-то по мордасам.",
+   "long_en": "A fresh cod is just begging to smack someone across the face.",
+   "long_ua": "Свіжою тріскою дуже кортить зацідити комусь по пиці."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "cloth"
+   ],
+   "name": "codpiece гульфик",
+   "short": "гульфик||а|у||ом|е",
+   "short_en": "codpiece",
+   "short_ua": "гульфик",
+   "long": "Переполненный гульфик (codpiece) распространяет гендерное неравенство.",
+   "long_en": "An overstuffed codpiece is spreading gender inequality.",
+   "long_ua": "Переповнений гульфик поширює гендерну нерівність."
+  },
+  {
+   "gender": "f",
+   "material": "flesh",
+   "name": "toad жаба",
+   "short": "жаб|а|ы|е|у|ой|е",
+   "short_en": "toad",
+   "short_ua": "жаба",
+   "long": "Ужасная жаба (toad) осуществляет сильное давление.",
+   "long_en": "A horrid toad is exerting some serious pressure.",
+   "long_ua": "Жахлива жаба чинить сильний тиск."
+  },
+  {
+   "gender": "f",
+   "material": "flesh",
+   "name": "underkilting подкилтятина",
+   "short": "подкилтятин|а|ы|е|у|ой|е",
+   "short_en": "underkilting",
+   "short_ua": "підкілтятина",
+   "long": "Страшная подкилтятина (underkilting) не поддается гендерной идентификации.",
+   "long_en": "A dreadful underkilting defies gender identification.",
+   "long_ua": "Страшна підкілтятина не піддається гендерній ідентифікації."
+  },
+  {
+   "gender": "m",
+   "mtypes": [
+    "abstract"
+   ],
+   "name": "meme мемас",
+   "short": "мемас||а|у||ом|е",
+   "short_en": "meme",
+   "short_ua": "мемас",
+   "long": "Несвежий мемас (meme) обладает убийственной силой.",
+   "long_en": "A stale meme wields deadly power.",
+   "long_ua": "Несвіжий мемас володіє вбивчою силою."
+  }
+ ]
+}

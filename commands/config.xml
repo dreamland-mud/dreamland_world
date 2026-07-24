@@ -21,6 +21,32 @@
         <uaname>невідміняти</uaname>
       </node>
       <node type="ConfigElement">
+        <bit table="add_comm_flags">nobuff</bit>
+        <hint>запрет посторонним накладывать на тебя и твоих питомцев положительные заклинания</hint>
+        <msgOff l="en">Anyone can cast beneficial spells on you and your pets.</msgOff>
+        <msgOff l="ru">Положительные заклинания на тебя и твоих питомцев смогут накладывать все.</msgOff>
+        <msgOff l="ua">Позитивні закляття на тебе й твоїх улюбленців зможуть накладати всі.</msgOff>
+        <msgOn l="en">Only you, your group and clanmates can cast beneficial spells on you and your pets.</msgOn>
+        <msgOn l="ru">Положительные заклинания на тебя и твоих питомцев смогут накладывать только твоя группа и соклановцы.</msgOn>
+        <msgOn l="ua">Позитивні закляття на тебе й твоїх улюбленців зможуть накладати лише твоя група та соклановці.</msgOn>
+        <name>nobuff</name>
+        <rname>небаф</rname>
+        <uaname>небаф</uaname>
+      </node>
+      <node type="ConfigElement">
+        <bit table="add_comm_flags">notransfer</bit>
+        <hint>запрет посторонним игрокам передавать тебе вещи и деньги</hint>
+        <msgOff l="en">Anyone can give items and money to you.</msgOff>
+        <msgOff l="ru">Передавать тебе вещи и деньги смогут все.</msgOff>
+        <msgOff l="ua">Передавати тобі речі й гроші зможуть усі.</msgOff>
+        <msgOn l="en">Only your group and clanmates can give items and money to you.</msgOn>
+        <msgOn l="ru">Передавать тебе вещи и деньги смогут только твоя группа и соклановцы.</msgOn>
+        <msgOn l="ua">Передавати тобі речі й гроші зможуть лише твоя група та соклановці.</msgOn>
+        <name>notransfer</name>
+        <rname>непередавать</rname>
+        <uaname>непередавати</uaname>
+      </node>
+      <node type="ConfigElement">
         <bit table="plr_flags">nofollow</bit>
         <hint>запретить следовать за собой</hint>
         <msgOff l="en">You allow others to follow you.</msgOff>
@@ -276,7 +302,7 @@
     </node>
   </groups>
   <help id="1087" labels="info" level="-1" type="CommandHelp">
-    <extra l="en">autoassist autoloot autosac nocancel nofollow damage brief shortflags affscore prompt screenreader color lines lang objname holylight noiac notelnet telnetga</extra>
+    <extra l="en">autoassist autoloot autosac nocancel nobuff notransfer nofollow damage brief shortflags affscore prompt screenreader color lines lang objname holylight noiac notelnet telnetga</extra>
     <extra l="ru">автопомощь автограбеж автожертва неотменять неследовать урон кратко краткофлаги аффектывсчет состояние незрячий цвет строк язык имяпредмета боговзор</extra>
     <extra l="ua">автодопомога автограбунок автожертва невідміняти неслідувати шкода стисло короткофлаги афективрахунок стан незрячий колір рядки мова назвапредмета боговзір</extra>
     <text l="en">Write *%CMD%* to see all your settings, grouped by section. To change one, write *%CMD%* _option_ *%YES%*|*%NO%* -- for example, *%CMD%* _autoloot_ *%NO%* to stop looting items from corpses.

@@ -101,8 +101,31 @@ def all_cyr_literals(src):
     return out
 
 def unescape(s):
-    return (s.replace('\\r', '\r').replace('\\n', '\n')
-             .replace('\\t', '\t').replace('\\"', '"').replace('\\\\', '\\'))
+    """Decode C/C++ string escapes, incl. octal \\ooo and hex \\xHH -- combat damage
+    frames embed \\5 / \\6 (byte 0x05/0x06, the verb-splice points) which the catalog
+    stores as the raw byte, so the key won't match unless we decode them here."""
+    out = []; i = 0; n = len(s)
+    simple = {'n': '\n', 'r': '\r', 't': '\t', '"': '"', "'": "'", '\\': '\\', '0': '\0'}
+    while i < n:
+        c = s[i]
+        if c != '\\' or i+1 >= n:
+            out.append(c); i += 1; continue
+        nxt = s[i+1]
+        if nxt in '01234567':                    # octal \o, \oo, \ooo
+            j = i+1; digs = ''
+            while j < n and len(digs) < 3 and s[j] in '01234567':
+                digs += s[j]; j += 1
+            out.append(chr(int(digs, 8))); i = j
+        elif nxt == 'x':                          # hex \xHH
+            j = i+2; digs = ''
+            while j < n and len(digs) < 2 and s[j] in '0123456789abcdefABCDEF':
+                digs += s[j]; j += 1
+            out.append(chr(int(digs, 16)) if digs else 'x'); i = j
+        elif nxt in simple:
+            out.append(simple[nxt]); i += 2
+        else:
+            out.append(nxt); i += 2
+    return ''.join(out)
 
 def load_catalog(catalog_dir):
     """Merge every shard into {section_key: {ru: entry}}."""

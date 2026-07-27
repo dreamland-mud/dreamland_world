@@ -240,24 +240,6 @@
     </node>
     <node>
       <node type="ConfigElement">
-        <bit table="config_flags">objname_hint</bit>
-        <hint>показывать английское название предмета</hint>
-        <msgOff l="en">Items will not show their English names.</msgOff>
-        <msgOff l="ru">У предметов не будут показываться английские названия.</msgOff>
-        <msgOff l="ua">Предмети не показуватимуть англійські назви.</msgOff>
-        <msgOn l="en">English names for items are on.</msgOn>
-        <msgOn l="ru">Английские названия для предметов включены.</msgOn>
-        <msgOn l="ua">Англійські назви предметів увімкнено.</msgOn>
-        <name>objname</name>
-        <rname>имяпредмета</rname>
-        <uaname>назвапредмета</uaname>
-      </node>
-      <name l="en">Language settings:</name>
-      <name l="ru">Настройки языка:</name>
-      <name l="ua">Мовні налаштування:</name>
-    </node>
-    <node>
-      <node type="ConfigElement">
         <bit table="add_comm_flags">noiac</bit>
         <hint>не заменять IAC на большое YA при выводе текста</hint>
         <msgOff l="en">IAC bytes will be replaced by another letter (YA in cp1251).</msgOff>
@@ -302,9 +284,9 @@
     </node>
   </groups>
   <help id="1087" labels="info" level="-1" type="CommandHelp">
-    <extra l="en">autoassist autoloot autosac nocancel nobuff notransfer nofollow damage brief shortflags affscore prompt screenreader color lines lang objname holylight noiac notelnet telnetga</extra>
-    <extra l="ru">автопомощь автограбеж автожертва неотменять неследовать урон кратко краткофлаги аффектывсчет состояние незрячий цвет строк язык имяпредмета боговзор</extra>
-    <extra l="ua">автодопомога автограбунок автожертва невідміняти неслідувати шкода стисло короткофлаги афективрахунок стан незрячий колір рядки мова назвапредмета боговзір</extra>
+    <extra l="en">autoassist autoloot autosac nocancel nobuff notransfer nofollow damage brief shortflags affscore prompt screenreader color lines lang holylight noiac notelnet telnetga</extra>
+    <extra l="ru">автопомощь автограбеж автожертва неотменять неследовать урон кратко краткофлаги аффектывсчет состояние незрячий цвет строк язык боговзор</extra>
+    <extra l="ua">автодопомога автограбунок автожертва невідміняти неслідувати шкода стисло короткофлаги афективрахунок стан незрячий колір рядки мова боговзір</extra>
     <text l="en">Write *%CMD%* to see all your settings, grouped by section. To change one, write *%CMD%* _option_ *%YES%*|*%NO%* -- for example, *%CMD%* _autoloot_ *%NO%* to stop looting items from corpses.
 
 A few useful ones: *autoassist* makes you join your group's fights; *autoloot* and *autosac* deal with enemy corpses; *nocancel* and *nofollow* keep others from cancelling your spells or following you; *brief* shortens room descriptions; *shortflags* abbreviates item flags; *damage* shows damage as numbers or as a percentage; *screenreader* turns on screen-reader support.

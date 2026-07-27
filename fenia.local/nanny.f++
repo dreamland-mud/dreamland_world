@@ -253,7 +253,6 @@ NannyState = function(ch) {
 					  |.tables.add_comm_flags.autolook;
 		ch.config = .tables.config_flags.fightspam 
 				   |.tables.config_flags.skillspam
-				   |.tables.config_flags.objname_hint
 				   |.tables.config_flags.newdamage;
 		ch.act = .tables.plr_flags.color
 				   |.tables.plr_flags.autoexit
@@ -758,7 +757,6 @@ NannyState = function(ch) {
 			return;
 
 		ch.config = .set_bit(ch.config, .tables.config_flags.screenreader);
-		ch.config = .unset_bit(ch.config, .tables.config_flags.objname_hint);
 
 		sleep(1);
 		say("Поддержка включена, подробности читай по команде {hc{yсправка незрячий{x.");

@@ -2,6 +2,50 @@
 <Command>
   <cat>config</cat>
   <extra>keep_hide ghost</extra>
+  <help id="5088" level="-1" type="CommandHelp">
+    <extra l="en">names transliteration name forms latin cyrillic</extra>
+    <extra l="ru">имена транслитерация формы имени латиница кириллица</extra>
+    <extra l="ua">імена транслітерація форми імені латиниця кирилиця</extra>
+    <text l="en">%FMT% *%CMD%*
+Shows how your name is written in each of the three languages. The line with a star beside it is the language you registered under: that form is your real name, and it cannot be changed.
+
+%FMT% *%CMD%* _en|ru|ua_ _form_
+Sets how your name looks to everyone who reads the game in that language. The English form must be Latin letters, the Russian and Ukrainian forms Cyrillic, and no form may repeat a name another player already carries.
+
+None of this is required. The missing forms are filled in for you the first time you enter the game: a Cyrillic name is transliterated into Latin so that English readers can address you, and the Cyrillic forms are declined through the cases automatically, so that you read correctly in the middle of a sentence. Reach for this command when the automatic guess is not quite you.
+
+Available from level 10. A form that strays too far from the name you registered under has to be approved by an immortal -- ask one. Which language *you* read the game in is a separate setting (%H% {hh1087configuration{x).
+
+%SA% %H% {hh31roleplay{x
+</text>
+    <text l="ru">%FMT% *%CMD%*
+Покажет, как твое имя записано на каждом из трех языков. Строка со звездочкой -- это язык, под которым ты зарегистрирован: та форма и есть твое настоящее имя, менять ее нельзя.
+
+%FMT% *%CMD%* _en|ru|ua_ _форма_
+Задает, как твое имя выглядит для всех, кто читает игру на этом языке. Английская форма пишется латиницей, русская и украинская -- кириллицей, и ни одна из форм не должна повторять имя другого игрока.
+
+Делать это необязательно. Недостающие формы заполняются сами при первом входе в игру: имя с кириллицы переводится в латиницу, чтобы к тебе могли обратиться англоязычные, а кириллические формы автоматически склоняются по падежам, чтобы ты правильно читался посреди фразы. Команда нужна тогда, когда автоматика угадала не совсем тебя.
+
+Доступно с 10 уровня. Форму, которая слишком далеко ушла от имени при регистрации, должен подтвердить бессмертный -- обратись к нему. На каком языке читаешь игру ты сам -- отдельная настройка (%H% {hh1087режим{x).
+
+%SA% %H% {hh31отыгрыш{x
+</text>
+    <text l="ua">%FMT% *%CMD%*
+Покаже, як твоє імʼя записане кожною з трьох мов. Рядок із зірочкою -- це мова, під якою ти зареєстрований: та форма і є твоє справжнє імʼя, змінювати її не можна.
+
+%FMT% *%CMD%* _en|ru|ua_ _форма_
+Задає, як твоє імʼя виглядає для всіх, хто читає гру цією мовою. Англійська форма пишеться латиницею, російська й українська -- кирилицею, і жодна з форм не повинна повторювати імʼя іншого гравця.
+
+Робити це необовʼязково. Відсутні форми заповнюються самі під час першого входу в гру: імʼя з кирилиці переводиться в латиницю, щоб до тебе могли звернутися англомовні, а кириличні форми автоматично відмінюються за відмінками, щоб ти правильно читався посеред фрази. Команда потрібна тоді, коли автоматика вгадала не зовсім тебе.
+
+Доступно з 10 рівня. Форму, яка надто далеко відійшла від імені при реєстрації, має підтвердити безсмертний -- звернися до нього. Якою мовою читаєш гру ти сам -- окреме налаштування (%H% {hh1087режим{x).
+
+%SA% %H% {hh31рольова гра{x
+</text>
+    <title l="en">Your name in the other languages</title>
+    <title l="ru">Твое имя на других языках</title>
+    <title l="ua">Твоє імʼя іншими мовами</title>
+  </help>
   <hint l="en">set your name for other languages</hint>
   <hint l="ru">задать свое имя на других языках</hint>
   <hint l="ua">задати своє ім'я іншими мовами</hint>

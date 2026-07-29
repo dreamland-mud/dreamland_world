@@ -6,114 +6,42 @@
     <keyword l="en">mudprompt</keyword>
     <keyword l="ru">промпт состояния статуса строка</keyword>
     <keyword l="ua">стан статус рядок промпт</keyword>
-    <text l="en">*prompt* without an argument turns the status line display on and off,
-       and *battleprompt* - the status line during battle.
+    <text l="en">*prompt* without an argument turns the status line display on and off, and *battleprompt* - the status line during battle.
  
-*prompt* *%ALL%* - sets the default status line 
-               "&lt;{r%h{x/{R%H{xhp {c%m{x/{C%M{xmana %v/%Vmv {W%X{xexp Exits:{g%d{x>".
+*prompt* *%ALL%* - sets the default status line "&lt;{r%h{x/{R%H{xhp {c%m{x/{C%M{xmana %v/%Vmv {W%X{xexp Exits:{g%d{x>".
 
 *battleprompt* *%ALL%* - sets the default status line in battle
  %PAUSE% "&lt;{r%h{x/{R%H{xhp {c%m{x/{C%M{xmana %v/%Vmv %Xexp Exits:{g%d{x> [{r%y{x:{Y%o{x]>".%RESUME%
 
 *prompt* *%SHOW%* and *battleprompt* *%SHOW%* - display the current status line
 
-        {Y%h{x : Displays current health {hh58points{x (hit points, hp)
-        {Y%H{x : Displays maximum health
-        {Y%m{x : Displays current {hh59mana points{x (mana)
-        {Y%M{x : Displays maximum mana
-        {Y%v{x : Displays current {hh60movement points{x (moves)
-        {Y%V{x : Displays maximum movement
-        {Y%W{x : Displays ability delay in pulses
-        {Y%x{x : Displays current {hh14experience points{x (experience)
-        {Y%X{x : Displays experience points to next level
-        {Y%l{x : Displays your level 
-        {Y%g{x : Displays amount of {hh13gold{x you have
-        {Y%s{x : Displays amount of silver you have
-        {Y%y{x : Displays your current health status (percentages)
-        {Y%o{x : Displays opponent's current health status (percentages)
-        {Y%r{x : Displays name of the room you are in
-        {Y%e{x : Displays exits from the room you are in NESWUD
-        {Y%d{x : (same as %e)
-        {Y%S{x : Displays name of the terrain type; in brackets if indoors
-        {Y%c{x : Sets newline (useful for multi-line prompts)
-        {Y%n{x : Displays your name
-        {Y%L{x : Displays lighting (dark, dawn, daylight, dusk)
-        {Y%t{x : Displays quest time {Ii {Y%R{w : Displays the room number you are in (IMMORTAL ONLY)
-        {Y%z{w : Displays the zone name you are in (IMMORTAL ONLY){Ix Example: *prompt* &lt;%hhp %mm %vmv> displays the status line as: "&lt;10hp 100m 100mv>"
+        {Y%h{x : Displays current health {hh58points{x (hit points, hp) {Y%H{x : Displays maximum health {Y%m{x : Displays current {hh59mana points{x (mana) {Y%M{x : Displays maximum mana {Y%v{x : Displays current {hh60movement points{x (moves) {Y%V{x : Displays maximum movement {Y%W{x : Displays ability delay in pulses {Y%x{x : Displays current {hh14experience points{x (experience) {Y%X{x : Displays experience points to next level {Y%l{x : Displays your level {Y%g{x : Displays amount of {hh13gold{x you have {Y%s{x : Displays amount of silver you have {Y%y{x : Displays your current health status (percentages) {Y%o{x : Displays opponent's current health status (percentages) {Y%r{x : Displays name of the room you are in {Y%e{x : Displays exits from the room you are in NESWUD {Y%d{x : (same as %e) {Y%S{x : Displays name of the terrain type; in brackets if indoors {Y%c{x : Sets newline (useful for multi-line prompts) {Y%n{x : Displays your name {Y%L{x : Displays lighting (dark, dawn, daylight, dusk) {Y%t{x : Displays quest time {Ii {Y%R{w : Displays the room number you are in (IMMORTAL ONLY) {Y%z{w : Displays the zone name you are in (IMMORTAL ONLY){Ix Example: *prompt* &lt;%hhp %mm %vmv> displays the status line as: "&lt;10hp 100m 100mv>"
 
 *battleprompt* &lt;%hhp %mm %vmv Opp:&lt;%o>> displays the battle status line as: "&lt;10hp 100m 100mv Opp:&lt;100%>"
 </text>
-    <text l="ru">*состояние* без аргумента включает и выключает вывод строки состояния,
-       а *боевоесостояние* -- строки состояния в бою.
+    <text l="ru">*состояние* без аргумента включает и выключает вывод строки состояния, а *боевоесостояние* -- строки состояния в бою.
  
-*состояние* *%ALL%* -- устанавливает стандартную строку состояния 
-               "&lt;{r%h{x/{R%H{xзд {c%m{x/{C%M{xман %v/%Vшг {W%X{xоп Вых:{g%d{x>".
+*состояние* *%ALL%* -- устанавливает стандартную строку состояния "&lt;{r%h{x/{R%H{xзд {c%m{x/{C%M{xман %v/%Vшг {W%X{xоп Вых:{g%d{x>".
 
 *боевоесостояние* *%ALL%* -- устанавливает стандартную строку состояния в бою
  %PAUSE% "&lt;{r%h{x/{R%H{xзд {c%m{x/{C%M{xман %v/%Vшг %Xоп Вых:{g%d{x> [{r%y{x:{Y%o{x]>".%RESUME%
 
 *состояние* *%SHOW%* и *боевоесостояние* *%SHOW%* -- показывают текущую строку состояния
 
-        {Y%h{x : Выводит текущее состояние {hh58очков жизни{x (hit points, hp)
-        {Y%H{x : Выводит максимальное количество жизни
-        {Y%m{x : Выводит текущее состояние {hh59очков энергии{x (mana)
-        {Y%M{x : Выводит максимальное количество энергии
-        {Y%v{x : Выводит текущее состояние {hh60очков движения{x (moves)
-        {Y%V{x : Выводит максимальное количество движения
-        {Y%W{x : Выводит задержки от умений в пульсах
-        {Y%x{x : Выводит текущее количество {hh14очков опыта{x (experience)
-        {Y%X{x : Выводит количество очков опыта до след. уровня
-        {Y%l{x : Выводит твой уровень (level) 
-        {Y%g{x : Выводит количество имеющегося у тебя {hh13золота{x (gold)
-        {Y%s{x : Выводит количество имеющегося у тебя серебра (silver)
-        {Y%y{x : Выводит текущее состояние твоей жизни (в процентах)
-        {Y%o{x : Выводит текущее состояние жизни противника (в процентах)
-        {Y%r{x : Выводит название комнаты, в которой ты находишься
-        {Y%e{x : Выводит выходы из комнаты, в которой ты находишься СВЮЗПО
-        {Y%d{x : (то же, что %e)
-        {Y%S{x : Выводит название типа местности; в скобках, если внутри помещения
-        {Y%c{x : Устанавливает перевод строки (полезно для многострочных подсказок)
-        {Y%n{x : Выводит твое имя
-        {Y%L{x : Выводит освещенность (темно, светает, светло, сумерки)
-        {Y%t{x : Выводит квестовое время {Ii {Y%R{w : Выводит номер комнаты, в которой ты находишься (IMMORTAL ONLY)
-        {Y%z{w : Выводит название зоны, в которой ты находишься (IMMORTAL ONLY){Ix Например: *состояние* &lt;%hhp %mm %vmv> выводит строку состояния в следующем виде: "&lt;10hp 100m 100mv>"
+        {Y%h{x : Выводит текущее состояние {hh58очков жизни{x (hit points, hp) {Y%H{x : Выводит максимальное количество жизни {Y%m{x : Выводит текущее состояние {hh59очков энергии{x (mana) {Y%M{x : Выводит максимальное количество энергии {Y%v{x : Выводит текущее состояние {hh60очков движения{x (moves) {Y%V{x : Выводит максимальное количество движения {Y%W{x : Выводит задержки от умений в пульсах {Y%x{x : Выводит текущее количество {hh14очков опыта{x (experience) {Y%X{x : Выводит количество очков опыта до след. уровня {Y%l{x : Выводит твой уровень (level) {Y%g{x : Выводит количество имеющегося у тебя {hh13золота{x (gold) {Y%s{x : Выводит количество имеющегося у тебя серебра (silver) {Y%y{x : Выводит текущее состояние твоей жизни (в процентах) {Y%o{x : Выводит текущее состояние жизни противника (в процентах) {Y%r{x : Выводит название комнаты, в которой ты находишься {Y%e{x : Выводит выходы из комнаты, в которой ты находишься СВЮЗПО {Y%d{x : (то же, что %e) {Y%S{x : Выводит название типа местности; в скобках, если внутри помещения {Y%c{x : Устанавливает перевод строки (полезно для многострочных подсказок) {Y%n{x : Выводит твое имя {Y%L{x : Выводит освещенность (темно, светает, светло, сумерки) {Y%t{x : Выводит квестовое время {Ii {Y%R{w : Выводит номер комнаты, в которой ты находишься (IMMORTAL ONLY) {Y%z{w : Выводит название зоны, в которой ты находишься (IMMORTAL ONLY){Ix Например: *состояние* &lt;%hhp %mm %vmv> выводит строку состояния в следующем виде: "&lt;10hp 100m 100mv>"
 
 *боевоесостояние* &lt;%hhp %mm %vmv Opp:&lt;%o>> выводит строку состояния в бою в следующем виде: "&lt;10hp 100m 100mv Opp:&lt;100%>"
 </text>
-    <text l="ua">*стан* без аргументу вмикає та вимикає виведення рядка стану,
-       а *бойовийстан* - рядка стану в бою.
+    <text l="ua">*стан* без аргументу вмикає та вимикає виведення рядка стану, а *бойовийстан* - рядка стану в бою.
  
-*стан* *%ALL%* - встановлює стандартний рядок стану 
-               "&lt;{r%h{x/{R%H{xзд {c%m{x/{C%M{xман %v/%Vшг {W%X{xоп Вих:{g%d{x>".
+*стан* *%ALL%* - встановлює стандартний рядок стану "&lt;{r%h{x/{R%H{xзд {c%m{x/{C%M{xман %v/%Vшг {W%X{xоп Вих:{g%d{x>".
 
 *бойовийстан* *%ALL%* - встановлює стандартний рядок стану в бою
  %PAUSE% "&lt;{r%h{x/{R%H{xзд {c%m{x/{C%M{xман %v/%Vшг %Xоп Вих:{g%d{x> [{r%y{x:{Y%o{x]>".%RESUME%
 
 *стан* *%SHOW%* і *бойовийстан* *%SHOW%* - показують поточний рядок стану
 
-        {Y%h{x : Відображає поточний стан {hh58очок життя{x (hit points, hp)
-        {Y%H{x : Відображає максимальну кількість життя
-        {Y%m{x : Відображає поточний стан {hh59очок енергії{x (mana)
-        {Y%M{x : Відображає максимальну кількість енергії
-        {Y%v{x : Відображає поточний стан {hh60очок руху{x (moves)
-        {Y%V{x : Відображає максимальну кількість руху
-        {Y%W{x : Відображає затримки від умінь у пульсах
-        {Y%x{x : Відображає поточну кількість {hh14очок досвіду{x (experience)
-        {Y%X{x : Відображає кількість очок досвіду до наст. рівня
-        {Y%l{x : Відображає твій рівень (level) 
-        {Y%g{x : Відображає кількість наявного у тебе {hh13золота{x (gold)
-        {Y%s{x : Відображає кількість наявного у тебе срібла (silver)
-        {Y%y{x : Відображає поточний стан твоєї життя (у відсотках)
-        {Y%o{x : Відображає поточний стан життя противника (у відсотках)
-        {Y%r{x : Відображає назву кімнати, в якій ти знаходишся
-        {Y%e{x : Відображає виходи з кімнати, в якій ти знаходишся ПнСхПдЗхПдпВг
-        {Y%d{x : (те ж, що %e)
-        {Y%S{x : Відображає назву типу місцевості; в дужках, якщо всередині приміщення
-        {Y%c{x : Встановлює перехід на новий рядок (корисно для багаторядкових підказок)
-        {Y%n{x : Відображає твоє імʼя
-        {Y%L{x : Відображає освітлення (темно, світає, світло, сутінки)
-        {Y%t{x : Відображає квестовий час {Ii {Y%R{w : Відображає номер кімнати, в якій ти знаходишся (ТІЛЬКИ ДЛЯ БЕЗСМЕРТНИХ)
-        {Y%z{w : Відображає назву зони, в якій ти знаходишся (ТІЛЬКИ ДЛЯ БЕЗСМЕРТНИХ){Ix Наприклад: *стан* &lt;%hhp %mm %vmv> виводить рядок стану в такому вигляді: "&lt;10hp 100m 100mv>"
+        {Y%h{x : Відображає поточний стан {hh58очок життя{x (hit points, hp) {Y%H{x : Відображає максимальну кількість життя {Y%m{x : Відображає поточний стан {hh59очок енергії{x (mana) {Y%M{x : Відображає максимальну кількість енергії {Y%v{x : Відображає поточний стан {hh60очок руху{x (moves) {Y%V{x : Відображає максимальну кількість руху {Y%W{x : Відображає затримки від умінь у пульсах {Y%x{x : Відображає поточну кількість {hh14очок досвіду{x (experience) {Y%X{x : Відображає кількість очок досвіду до наст. рівня {Y%l{x : Відображає твій рівень (level) {Y%g{x : Відображає кількість наявного у тебе {hh13золота{x (gold) {Y%s{x : Відображає кількість наявного у тебе срібла (silver) {Y%y{x : Відображає поточний стан твоєї життя (у відсотках) {Y%o{x : Відображає поточний стан життя противника (у відсотках) {Y%r{x : Відображає назву кімнати, в якій ти знаходишся {Y%e{x : Відображає виходи з кімнати, в якій ти знаходишся ПнСхПдЗхПдпВг {Y%d{x : (те ж, що %e) {Y%S{x : Відображає назву типу місцевості; в дужках, якщо всередині приміщення {Y%c{x : Встановлює перехід на новий рядок (корисно для багаторядкових підказок) {Y%n{x : Відображає твоє імʼя {Y%L{x : Відображає освітлення (темно, світає, світло, сутінки) {Y%t{x : Відображає квестовий час {Ii {Y%R{w : Відображає номер кімнати, в якій ти знаходишся (ТІЛЬКИ ДЛЯ БЕЗСМЕРТНИХ) {Y%z{w : Відображає назву зони, в якій ти знаходишся (ТІЛЬКИ ДЛЯ БЕЗСМЕРТНИХ){Ix Наприклад: *стан* &lt;%hhp %mm %vmv> виводить рядок стану в такому вигляді: "&lt;10hp 100m 100mv>"
 
 *бойовийстан* &lt;%hhp %mm %vmv Opp:&lt;%o>> виводить рядок стану в бою в такому вигляді: "&lt;10hp 100m 100mv Opp:&lt;100%>"
 </text>

@@ -45,21 +45,21 @@ Copies player profiles from /tmp at the construction site if they do not already
 </text>
     <text l="ua">=Робота з профілями гравців=
 
-%FMT% *profile backup* _ім'я гравця_
+%FMT% *profile backup* _імʼя гравця_
 Зберігає звичайний та XML профіль гравця в каталоги var/db/backup і var/db/oldstyle/backup, а також у /tmp. Профілі відновлюються командою *profile recover*.
 
-Для того, щоб змінити щось в XML-профілі вручну, необхідно: - profile backup _ім'я_ - на сервері: cd /home/dreamland/var/db/backup; vi _ім'я_.xml - profile recover _ім'я_
+Для того, щоб змінити щось в XML-профілі вручну, необхідно: - profile backup _імʼя_ - на сервері: cd /home/dreamland/var/db/backup; vi _імʼя_.xml - profile recover _імʼя_
 
-%FMT% *profile recover* _ім'я гравця_
+%FMT% *profile recover* _імʼя гравця_
 Відновлює профілі, збережені командою *backup*.
 
-%FMT% *profile unremort* _ім'я гравця_ _номер реморту_
+%FMT% *profile unremort* _імʼя гравця_ _номер реморту_
 Відновлює невдало ремортованих гравців. Для першого реморту _номер реморту_ %PAUSE%= 0, для другого = 1 і так далі.%RESUME%
 
-%FMT% *profile undelete* _ім'я гравця_
+%FMT% *profile undelete* _імʼя гравця_
 Відновлює автоматично видалених або видалених командою *delete* гравців.
 
-%FMT% *profile buildplot* _ім'я гравця_
+%FMT% *profile buildplot* _імʼя гравця_
 На будівельному майданчику копіює профілі гравця з /tmp, якщо він ще не існує. Призначає рівень OLC і Fenia security, достатній для роботи. Надає права OLC на весь діапазон внумів.
 
 </text>

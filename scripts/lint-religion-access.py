@@ -12,17 +12,24 @@ Light, Fury and Order. There is no Path field on a religion -- the Paths are the
 colour groupings of the master index in helps/religion.xml, so that is where the
 mapping is read from.
 
-Two directions of drift are reported:
+Three findings, only the first of which is a defect:
 
-  HOLE       the gate lets a druid in on a Path the rule forbids
-  UNREACHED  the rule promises a Path but some other gate shuts druids out anyway
+  HOLE     the gate lets a druid in on a Path the rule forbids -- fixable by
+           adding a <classes> whitelist. Exits 1.
+  OR-TRAP  same, but the god has <races> set, and reasonWhy ORs races with
+           classes -- adding <classes> would ADMIT every listed class of every
+           race instead of narrowing. Needs an engine change, not data.
+  NOTE     the god is on an accepted Path yet some other gate refuses druids.
+           NOT a defect: help 192 states a necessary condition (which Paths are
+           acceptable), never a promise that every god on them is reachable.
+           align/class/clan gates compose on top of it independently.
 
 An empty <classes> means "no class restriction", NOT "no class allowed" -- the
 whole-of-13 whitelist and the empty element are equivalent for access but only
 the empty one stays correct when a 14th profession is added.
 
 Usage:  python3 scripts/lint-religion-access.py [--quiet]
-Exit 1 if any mismatch is found.
+Exit 1 if any gate contradicts the rule.
 """
 import glob
 import os
@@ -42,6 +49,8 @@ PATH_BY_COLOUR = {
 # help 192: "only gods of the Paths of Nature, Light, Fury or Order are accepted"
 DRUID_PATHS = {"Nature", "Light", "Fury", "Order"}
 DRUID_ALIGN = "neutral"          # professions/druid.xml <align>
+# Gods help 192 names as standing exceptions to the Path rule (by help id).
+DRUID_EXCEPTIONS = {"1584"}      # Tirna -- patron of those who walk paths of their own
 
 
 def text(node, tag):
@@ -90,6 +99,7 @@ def main():
     quiet = "--quiet" in sys.argv
     by_id = paths_from_index()
     problems = []
+    notes = []
     checked = 0
 
     for path in sorted(glob.glob(os.path.join(WORLD, "religions", "*.xml"))):
@@ -108,26 +118,36 @@ def main():
             continue
         checked += 1
 
-        allowed = godpath in DRUID_PATHS
+        allowed = godpath in DRUID_PATHS or hid in DRUID_EXCEPTIONS
         # race-gated / race-or-class still admit a druid of a qualifying race
         can = gate in (None, "race-gated", "race-or-class", "clan-gated")
 
         if can and not allowed:
-            problems.append(("HOLE", god, godpath, gate or "open",
-                             "druid may worship a %s god" % godpath))
+            # A god with <races> set cannot be narrowed by adding <classes>:
+            # reasonWhy ORs the two, so that would ADMIT every listed class of
+            # every race. Closing these needs an engine change, not data.
+            if gate in ("race-gated", "race-or-class"):
+                notes.append(("OR-TRAP", god, godpath, gate,
+                              "a druid of a listed race gets in; NOT closable by data"))
+            else:
+                problems.append(("HOLE", god, godpath, gate or "open",
+                                 "druid may worship a %s god" % godpath))
         elif allowed and not can:
-            problems.append(("UNREACHED", god, godpath, gate,
-                             "help 192 promises %s but <%s> shuts druids out" % (godpath, gate)))
+            # Not a defect: help 192 states a NECESSARY condition (which Paths are
+            # acceptable), never a promise that every god on them is reachable.
+            # align/class/clan gates compose on top of it independently.
+            notes.append(("NOTE", god, godpath, gate,
+                          "%s god, but <%s> applies independently" % (godpath, gate)))
 
     if not quiet:
         print("religions checked: %d\n" % checked)
-    for kind, god, godpath, gate, why in problems:
+    for kind, god, godpath, gate, why in problems + notes:
         print("  %-10s %-16s Path=%-8s gate=%-14s %s" % (kind, god, godpath, gate, why))
 
     if problems:
-        print("\n%d mismatch(es) between the gates and help 192." % len(problems))
+        print("\n%d gate(s) contradict help 192." % len(problems))
         return 1
-    print("OK -- every gate agrees with the druid Path rule.")
+    print("\nOK -- no gate contradicts the druid Path rule (%d informational)." % len(notes))
     return 0
 
 

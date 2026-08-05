@@ -14,7 +14,7 @@
 set -u
 
 world="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-shared="$(cd "$world/../../scripts" 2>/dev/null && pwd)"
+shared="$(cd "$world/../scripts" 2>/dev/null && pwd)"
 
 # Only the catalog shards actually being pushed -- linting all 30 on every push
 # buries the two lines that are about your change.

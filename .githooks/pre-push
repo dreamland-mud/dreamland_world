@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+#
+# pre-push -- put the catalog linters in front of you before the push, not after
+# a player reports it.
+#
+# WARN ONLY, on purpose. Both linters carry pre-existing findings that are not
+# worth blocking on (and a couple of false positives where a command is real but
+# absent from the vocabulary sources), and a hook that fails every push is a hook
+# that gets switched off. It prints; you decide.
+#
+# Install:  git config core.hooksPath .githooks
+# Skip once: git push --no-verify
+
+set -u
+
+world="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+shared="$(cd "$world/../../scripts" 2>/dev/null && pwd)"
+
+# Only the catalog shards actually being pushed -- linting all 30 on every push
+# buries the two lines that are about your change.
+shards=$(git diff --name-only @{push}..HEAD 2>/dev/null || git diff --name-only origin/master..HEAD 2>/dev/null)
+shards=$(echo "$shards" | sed -n 's#^config/translations/\(.*\.json\)$#\1#p')
+
+if [ -z "$shards" ]; then
+    exit 0
+fi
+
+echo "--- pre-push: linting $(echo "$shards" | tr '\n' ' ')"
+
+# {hc} links whose command word is not a command of the language they sit in --
+# a dead clickable link for the player who gets that translation.
+if [ -x "$world/scripts/lint-hc-command-lang.py" ]; then
+    python3 "$world/scripts/lint-hc-command-lang.py" $shards || true
+fi
+
+# Strings wrapped for translation but never translated: they reach an EN or UA
+# player in Russian, silently. Whole-corpus by design -- it matches call sites
+# against the catalog, so there is no per-shard form of the question.
+if [ -n "${shared:-}" ] && [ -f "$shared/lint-catalog-gaps.py" ]; then
+    python3 "$shared/lint-catalog-gaps.py" --limit 20 || true
+fi
+
+echo "--- pre-push: advisory only, push continues"
+exit 0

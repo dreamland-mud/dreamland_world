@@ -195,6 +195,19 @@
         <uaname>стисло</uaname>
       </node>
       <node type="ConfigElement">
+        <bit table="plr_flags">autoexit</bit>
+        <hint>отображать выходы из комнаты</hint>
+        <msgOff l="en">Room exits are not shown automatically.</msgOff>
+        <msgOff l="ru">Выходы не отображаются автоматически.</msgOff>
+        <msgOff l="ua">Виходи з кімнати не показуються автоматично.</msgOff>
+        <msgOn l="en">Room exits are shown automatically.</msgOn>
+        <msgOn l="ru">Выходы отображаются автоматически.</msgOn>
+        <msgOn l="ua">Виходи з кімнати показуються автоматично.</msgOn>
+        <name>autoexit</name>
+        <rname>автовыходы</rname>
+        <uaname>автовиходи</uaname>
+      </node>
+      <node type="ConfigElement">
         <bit table="comm_flags">prompt</bit>
         <hint>выводить строку состояния с параметрами персонажа</hint>
         <msgOff l="en">The {hh1012status line{x is off.</msgOff>
@@ -284,12 +297,12 @@
     </node>
   </groups>
   <help id="1087" level="-1" type="CommandHelp" labels="comm">
-    <extra l="en">autoassist autoloot autosac nocancel nobuff notransfer nofollow damage brief shortflags affscore prompt screenreader color lines lang holylight noiac notelnet telnetga</extra>
-    <extra l="ru">автопомощь автограбеж автожертва неотменять неследовать урон кратко краткофлаги аффектывсчет состояние незрячий цвет строк язык боговзор</extra>
-    <extra l="ua">автодопомога автограбунок автожертва невідміняти неслідувати ушкодження пошкодження стисло короткофлаги афективрахунок стан незрячий колір рядки мова боговзір</extra>
+    <extra l="en">autoassist autoloot autosac nocancel nobuff notransfer nofollow damage brief autoexit shortflags affscore prompt screenreader color lines lang holylight noiac notelnet telnetga</extra>
+    <extra l="ru">автопомощь автограбеж автожертва неотменять неследовать урон кратко автовыходы краткофлаги аффектывсчет состояние незрячий цвет строк язык боговзор</extra>
+    <extra l="ua">автодопомога автограбунок автожертва невідміняти неслідувати ушкодження пошкодження стисло автовиходи короткофлаги афективрахунок стан незрячий колір рядки мова боговзір</extra>
     <text l="en">Write *%CMD%* to see all your settings, grouped by section. To change one, write *%CMD%* _option_ *%YES%*|*%NO%* -- for example, *%CMD%* _autoloot_ *%NO%* to stop looting items from corpses.
 
-A few useful ones: *autoassist* makes you join your group's fights; *autoloot* and *autosac* deal with enemy corpses; *nocancel* and *nofollow* keep others from cancelling your spells or following you; *brief* shortens room descriptions; *shortflags* abbreviates item flags; *damage* shows damage as numbers or as a percentage; *screenreader* turns on screen-reader support.
+A few useful ones: *autoassist* makes you join your group's fights; *autoloot* and *autosac* deal with enemy corpses; *nocancel* and *nofollow* keep others from cancelling your spells or following you; *brief* shortens room descriptions; *autoexit* lists the room's exits after every move; *shortflags* abbreviates item flags; *damage* shows damage as numbers or as a percentage; *screenreader* turns on screen-reader support.
 
 Some options take a value instead of on/off: *color* (_on_|_off_|_mild_), *lines* (scroll buffer) and *lang* (interface language).
 
@@ -302,7 +315,7 @@ Toggles the specified option.
 %SA% %H% {hh1088brief{x, [noiac]</text>
     <text l="ru">Напиши *%CMD%*, чтобы увидеть все свои настройки по разделам. Чтобы изменить любую, напиши *%CMD%* _опция_ *%YES%*|*%NO%* -- например, *%CMD%* _автограбеж_ *%NO%*, чтобы перестать подбирать вещи из трупов.
 
-Несколько полезных: *автопомощь* вступает в бой за твою группу; *автограбеж* и *автожертва* разбираются с трупами врагов; *неотменять* и *неследовать* защищают тебя от чужих отмен и слежки; *кратко* сокращает описания комнат; *краткофлаги* сокращают флаги на предметах; *урон* показывает урон числами или в процентах; *незрячий* включает поддержку читалки экрана.
+Несколько полезных: *автопомощь* вступает в бой за твою группу; *автограбеж* и *автожертва* разбираются с трупами врагов; *неотменять* и *неследовать* защищают тебя от чужих отмен и слежки; *кратко* сокращает описания комнат; *автовыходы* показывают выходы из комнаты после каждого шага; *краткофлаги* сокращают флаги на предметах; *урон* показывает урон числами или в процентах; *незрячий* включает поддержку читалки экрана.
 
 Некоторые опции принимают значение, а не да/нет: *цвет* (_вкл_|_выкл_|_мягкий_), *строк* (буфер прокрутки) и *язык* (язык интерфейса).
 
@@ -315,7 +328,7 @@ Toggles the specified option.
 %SA% %H% {hh1088кратко{x, [noiac]</text>
     <text l="ua">Напиши *%CMD%*, щоб побачити всі свої налаштування за розділами. Щоб змінити будь-яке, напиши *%CMD%* _опція_ *%YES%*|*%NO%* -- наприклад, *%CMD%* _автограбунок_ *%NO%*, щоб перестати підбирати речі з трупів.
 
-Кілька корисних: *автодопомога* вступає в бій за твою групу; *автограбунок* і *автожертва* розбираються з трупами ворогів; *невідміняти* і *неслідувати* захищають тебе від чужих відмін і стеження; *стисло* скорочує описи кімнат; *короткофлаги* скорочують флаги на предметах; *шкода* показує шкоду числами чи у відсотках; *незрячий* вмикає підтримку читача екрана.
+Кілька корисних: *автодопомога* вступає в бій за твою групу; *автограбунок* і *автожертва* розбираються з трупами ворогів; *невідміняти* і *неслідувати* захищають тебе від чужих відмін і стеження; *стисло* скорочує описи кімнат; *автовиходи* показують виходи з кімнати після кожного кроку; *короткофлаги* скорочують флаги на предметах; *шкода* показує шкоду числами чи у відсотках; *незрячий* вмикає підтримку читача екрана.
 
 Деякі опції приймають значення, а не так/ні: *колір* (_увімк_|_вимк_|_мʼякий_), *рядки* (буфер прокрутки) і *мова* (мова інтерфейсу).
 

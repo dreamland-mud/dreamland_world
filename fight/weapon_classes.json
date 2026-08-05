@@ -1,4 +1,6 @@
 // Описывает ограничения и предпочтения по аффиксам и повреждениям для каждого класса сгенерированного оружия.
+// "nonmetal": materials to fall back to when the weapon is generated for a player who can never
+// wield metal (druids) and the chosen name has no 'mtypes' of its own in weapon_names.json.
 {
     "sword": {
             "attacks": "slice slash cleave chop bite pierce scratch peckb sting chomp thrust flbite flame acbite frbite shbite",
@@ -9,8 +11,9 @@
             "attacks": "bite pierce scratch peckb sting chomp thrust flbite flame acbite frbite shbite negative",
             "forbids": ["two_hands", "vorpal"],
             "prefers": ["sharp", "poison", "dr"],
+            "nonmetal": ["bone", "ivory", "stone"],
             "flags": { "tattoo": 20 }
-    }, 
+    },
 
     "spear": {
             "attacks": "pound crush beating charge smash thwack bite pierce scratch peckb sting chomp thrust acbite frbite shbite",
@@ -21,8 +24,9 @@
     "mace": {
             "attacks": "pound crush beating charge smash thwack divine negative",
             "forbids": ["vorpal", "sharp", "poison", "flaming"],
-            "prefers": ["shocking", "hr", "pack_hp"]
-    }, 
+            "prefers": ["shocking", "hr", "pack_hp"],
+            "nonmetal": ["wood", "stone", "bone"]
+    },
 
     "axe": {
             "attacks": "slice slash cleave chop wrath flbite acbite frbite shbite",

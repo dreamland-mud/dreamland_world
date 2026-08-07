@@ -510,10 +510,6 @@
    "en": "A copy of the profile has been saved to var/db/backup and /tmp.",
    "ua": "Копію профайлу збережено в var/db/backup та /tmp."
   },
-  "Не могу восстановить профайл. Возможно, забыли убрать случайное расширение в конце имени файла.": {
-   "en": "Can't restore the profile. Maybe you forgot to remove the random extension at the end of the file name.",
-   "ua": "Не можу відновити профайл. Можливо, забули прибрати випадкове розширення в кінці імені файлу."
-  },
   "Неправильная подкоманда, см. {y{hcprofile{x для списка.": {
    "en": "Invalid subcommand, see {y{hcprofile{x for the list.",
    "ua": "Неправильна підкоманда, див. {y{hcprofile{x для списку."
@@ -577,6 +573,10 @@
   "Формат:\r\nprofile backup <player_name>  -- сохранить профайлы игрока в каталогах var/db/backup и var/db/oldstyle/backup\r\nprofile recover <player_name> -- восстановить профайлы из backup-каталогов, поверх существующих профайлов\r\nprofile undelete <player_name> -- восстановить профайлы из каталогов var/db/delete и var/db/oldstyle/delete, поверх существующих профайлов\r\nprofile unremort <player_name> <number> -- восстановить конкретный профайл перед ремортом из каталогов var/db/remort и var/db/oldstyle/remort, поверх существующих профайлов\r\n": {
    "en": "Format:\r\nprofile backup <player_name>  -- save the player's profiles into the var/db/backup and var/db/oldstyle/backup directories\r\nprofile recover <player_name> -- restore profiles from the backup directories, over existing profiles\r\nprofile undelete <player_name> -- restore profiles from the var/db/delete and var/db/oldstyle/delete directories, over existing profiles\r\nprofile unremort <player_name> <number> -- restore a specific pre-remort profile from the var/db/remort and var/db/oldstyle/remort directories, over existing profiles\r\n",
    "ua": "Формат:\r\nprofile backup <player_name>  -- зберегти профайли гравця в каталогах var/db/backup та var/db/oldstyle/backup\r\nprofile recover <player_name> -- відновити профайли з backup-каталогів, поверх наявних профайлів\r\nprofile undelete <player_name> -- відновити профайли з каталогів var/db/delete та var/db/oldstyle/delete, поверх наявних профайлів\r\nprofile unremort <player_name> <number> -- відновити конкретний профайл перед ремортом з каталогів var/db/remort та var/db/oldstyle/remort, поверх наявних профайлів\r\n"
+  },
+  "Не могу восстановить профайл: удаленных копий с таким именем нет.": {
+   "en": "Cannot restore the profile: there are no deleted copies under that name.",
+   "ua": "Не можу відновити профайл: видалених копій з таким іменем немає."
   }
  },
  "plug-ins/admin/finger.cpp": {

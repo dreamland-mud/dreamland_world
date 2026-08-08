@@ -173,11 +173,18 @@
       
 // config
 "toggle":  ["перемкнути", "переключить"],
-"switchon":["on","увімкнути", "включить"],
-"switchoff":["off","вимкнути","выключить","офф"],
+// arg_is_switch_on/off go through arg_is_strict, so these are exact spellings,
+// not stems -- an abbreviation of a longer synonym will NOT match. The short
+// forms are the ones 'config' prints at the player ("набери режим цвет вкл,
+// выкл или мягкий" / "увімк, вимк"), so they have to be listed in their own right.
+"switchon":["on","увімкнути", "включить", "вкл", "увімк"],
+"switchoff":["off","вимкнути","выключить","офф", "выкл", "вимк"],
 "lang":    ["language", "мова", "язык"],
 "color":   ["colour", "цвет", "колір"],
-"mild":    ["мягкий", "мʼякий", "мягкийцвет"],
+// Both apostrophes on purpose: the UA catalog prints "м'який" with the ASCII
+// one, so that is what a player copies back, while the codebase writes UA words
+// with the modifier letter.
+"mild":    ["мягкий", "мʼякий", "м'який", "мягкийцвет"],
 "lines":   ["scroll", "буфер", "строк", "экран", "рядки"],
 // config option renames -- old names kept as synonyms so muscle memory + profiles keep working
 "shortflags":   ["objflag", "предмфлаги"],

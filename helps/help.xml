@@ -1301,6 +1301,8 @@ For details on each class follow the links, or type {y? _class_{x, e.g. {y? samu
 %A% {hh2062Shire{x: only for hobbits
 %A% {hh2080Holy Grove{x: only for {hh192druids{x who hate cities
 
+Your hometown is set when your life begins, but it is not final: once per life you can register somewhere else -- see {hh5089residency{x.
+
 Most cities offer various amenities for their residents: shops, {hh125questors{x, {hh202healers{x, {hh12sacrifice pits{x, and more. And if something is missing, you can always head to the capital, Midgaard -- it has everything.
 
 {CGUARDS{x
@@ -1324,6 +1326,8 @@ On the outskirts of most large cities lie {csuburbs,{x built up with {hh50player
 %A% {hh2071Долина Титанов{x: только для гигантов
 %A% {hh2062Шир{x: только для хоббитов
 %A% {hh2080Священная Роща{x: только для ненавидящих города {hh192друидов{x
+
+Прописку назначают в начале жизни, но она не навсегда: один раз за жизнь можно записаться в другой город -- смотри {hh5089смену прописки{x.
 
 Большинство городов обладают различными удобствами для жителей: магазинами, {hh125квесторами{x, {hh202лекарями{x, {hh12жертвенными ямами{x и прочим. А если чего-то не хватает, всегда можно отправится в столицу, Мидгаард -- там есть все.
 
@@ -1349,6 +1353,8 @@ On the outskirts of most large cities lie {csuburbs,{x built up with {hh50player
 %A% {hh2062Шир{x: тільки для хоббітів
 %A% {hh2080Священний Гай{x: тільки для {hh192друїдів{x, що ненавидять міста
 
+Прописку призначають на початку життя, але вона не назавжди: один раз за життя можна записатися в інше місто -- дивись {hh5089зміну прописки{x.
+
 Більшість міст мають різні зручності для мешканців: магазини, {hh125квесторів{x, {hh202лікарів{x, {hh12жертовні ями{x та інше. А якщо чогось не вистачає, завжди можна відправитися до столиці, Мідгаарду -- там є все.
 
 {CВАРТА{x
@@ -1365,6 +1371,77 @@ On the outskirts of most large cities lie {csuburbs,{x built up with {hh50player
     <title l="en">Cities</title>
     <title l="ru">Города</title>
     <title l="ua">Міста</title>
+  </node>
+  <node id="5089" labels="world" level="-1" type="Help">
+    <extra l="en">hometown 'change hometown' 'change residency' relocation registrar clerk municipality resettle</extra>
+    <extra l="ru">прописка переезд муниципалитет секретарша ратуша 'сменить город' 'сменить прописку' 'родной город'</extra>
+    <extra l="ua">прописка переїзд муніципалітет секретарка ратуша 'змінити місто' 'змінити прописку' 'рідне місто'</extra>
+    <keyword l="en">residency</keyword>
+    <keyword l="ru">'смена прописки'</keyword>
+    <keyword l="ua">'зміна прописки'</keyword>
+    <text l="en">=Residency= is your hometown. It is where the gods drop you when you {hh862recall{x, where your body goes when you die, where your {hh12sacrifice pit{x stands, and where the {hh29city guard{x counts you as one of their own. It is assigned at birth from your class and alignment and it holds for life -- but once per life you may change it, and a {hh1064remort{x gives the right back.
+
+Municipal clerks handle it -- the same window that sells the {hh195craft licence{x. Each clerk registers people into their own town only: if you want to live in Solace, walk to Solace and queue. Seven windows are open:
+
+%A% {hh1392Midgaard{x -- the secretary in the town hall
+%A% {hh1838New Thalos{x -- the receptionist upstairs from the town hall
+%A% {hh1505Solace{x -- the Chief Tax Collector
+%A% {hh2062Shire{x -- the hobbit secretary in the Green Dragon inn
+%A% {hh1406Drow City{x -- a handmaiden of Lloth on the dais
+%A% {hh2071Valley of the Titans{x -- the town sheriff in the prison office
+%A% {hh1861New Ofcol{x -- chaplain Jerold in the Golden Citadel
+
+The clerk reads out the list of services. To hear the terms, {1{y{hcsay residency{x{2; to go through with it, {1{y{hcsay register{x{2. The fee is 25 gold per level plus 500 for every remort, and never less than 50.
+
+Everything moves with you: your {hh862recall{x point, the altar your corpse is laid on, the sacrifice pit, the landing and the town map. Whatever you left in the old pit stays in the old pit, and a corpse already lying on the old altar does not follow you.
+
+A clerk will refuse you for several reasons: the town does not admit your race, class or alignment; you have already spent this life's change; you are wanted, or marked a thief or a killer; or you have an unfinished quest tied to a hometown -- the clerk will name it. And, of course, if you cannot pay.
+
+No town on that list registers {hh192druids{x. The Midgaard secretary will instead strike a druid off her books and resettle them in the {hh2080Holy Grove{x, for the same fee and the same once-per-life right. The Grove keeps no paperwork, so it has no window of its own.
+
+{RCareful.{x The clerk hears everything said at the window. The word "yes" buys a craft licence, and the word "register" changes your residency -- and there is no changing it back this life. Best to keep quiet near the window.</text>
+    <text l="ru">=Прописка= -- это твой родной город. Туда боги переносят тебя по команде {hh862возврат{x, туда же попадает твое тело после смерти, там стоит твоя {hh12жертвенная яма{x, и там {hh29городская стража{x считает тебя своим. Прописку назначают при рождении, по классу и натуре, и держится она всю жизнь -- но один раз за жизнь ее можно сменить, а {hh1064перерождение{x возвращает это право снова.
+
+Оформляют прописку муниципальные служащие -- то же окошко, где берут {hh195ремесленную лицензию{x. Каждый прописывает только в свой город: хочешь жить в Утехе -- иди в Утеху и стой в очереди. Окошки работают в семи городах:
+
+%A% {hh1392Мидгаард{x -- секретарша в ратуше
+%A% {hh1838Новый Талос{x -- секретарша в приемной над ратушей
+%A% {hh1505Утеха{x -- Главный Сборщик Налогов
+%A% {hh2062Шир{x -- хоббит-секретарь в трактире "Зеленый Дракон"
+%A% {hh1406Город Дроу{x -- служанка Ллот на помосте
+%A% {hh2071Долина Титанов{x -- городской шериф в офисе тюрьмы
+%A% {hh1861Новый Офкол{x -- капеллан Джерольд в Золотой Цитадели
+
+Служащий зачитает перечень услуг. Чтобы узнать условия, надо {1{y{hcсказать прописка{x{2; чтобы оформить -- {1{y{hcсказать оформляй{x{2. Пошлина -- 25 золотых за уровень плюс 500 за каждое перерождение, но не меньше 50.
+
+Вместе с тобой переезжает все: точка {hh862возврата{x, алтарь, куда ляжет твое тело, жертвенная яма, причал и карта города. Вещи, оставленные в старой яме, там и останутся, а тело, которое уже лежит на старом алтаре, никуда не переедет.
+
+Отказать могут по нескольким причинам: город не принимает тебя по расе, классу или натуре; право на смену уже потрачено в этой жизни; на тебе висит розыск, кража или убийство; у тебя не закрыто задание, привязанное к родному городу -- служащий назовет его. И, разумеется, если не хватает денег.
+
+{hh192Друидов{x не прописывает ни один город из списка. Зато секретарша Мидгаарда вычеркнет друида из своих книг и выпишет его в {hh2080Священную Рощу{x -- за ту же пошлину и то же право раз в жизнь. Бумаг в Роще не ведут, поэтому своего окошка там нет.
+
+{RОсторожно.{x Служащий слышит все, что говорят у окошка. Слово "да" покупает ремесленную лицензию, а слово "оформляй" меняет прописку -- и обратно в этой жизни ее уже не вернуть. Рядом с окошком лучше молчать.</text>
+    <text l="ua">=Прописка= -- це твоє рідне місто. Туди боги переносять тебе за командою {hh862повернення{x, туди ж потрапляє твоє тіло після смерті, там стоїть твоя {hh12жертовна яма{x, і там {hh29міська варта{x вважає тебе своїм. Прописку призначають при народженні, за класом і натурою, і тримається вона все життя -- але один раз за життя її можна змінити, а {hh1064переродження{x повертає це право знову.
+
+Оформляють прописку муніципальні службовці -- те саме віконце, де беруть {hh195ремісничу ліцензію{x. Кожен прописує тільки у своє місто: хочеш жити в Утісі -- іди до Утіхи і стій у черзі. Віконця працюють у семи містах:
+
+%A% {hh1392Мідгаард{x -- секретарка в ратуші
+%A% {hh1838Новий Талос{x -- секретарка в приймальні над ратушею
+%A% {hh1505Утіха{x -- Головний Збирач Податків
+%A% {hh2062Шир{x -- хоббіт-секретар у трактирі "Зелений Дракон"
+%A% {hh1406Місто Дроу{x -- служниця Ллот на помості
+%A% {hh2071Долина Титанів{x -- міський шериф в офісі вʼязниці
+%A% {hh1861Новий Офкол{x -- капелан Джерольд у Золотій Цитаделі
+
+Службовець зачитає перелік послуг. Щоб дізнатися умови, треба {1{y{hcсказати прописка{x{2; щоб оформити -- {1{y{hcсказати оформлюй{x{2. Мито -- 25 золотих за рівень плюс 500 за кожне переродження, але не менше 50.
+
+Разом з тобою переїжджає все: точка {hh862повернення{x, вівтар, куди ляже твоє тіло, жертовна яма, причал і карта міста. Речі, залишені в старій ямі, там і залишаться, а тіло, яке вже лежить на старому вівтарі, нікуди не переїде.
+
+Відмовити можуть з кількох причин: місто не приймає тебе за расою, класом чи натурою; право на зміну вже витрачене в цьому житті; на тобі висить розшук, крадіжка або вбивство; у тебе не закрите завдання, привʼязане до рідного міста -- службовець назве його. І, звісно, якщо не вистачає грошей.
+
+{hh192Друїдів{x не прописує жодне місто зі списку. Зате секретарка Мідгаарда викреслить друїда зі своїх книг і випише його до {hh2080Священного Гаю{x -- за те саме мито і те саме право раз на життя. Паперів у Гаю не ведуть, тому свого віконця там немає.
+
+{RОбережно.{x Службовець чує все, що кажуть біля віконця. Слово "так" купує ремісничу ліцензію, а слово "оформлюй" міняє прописку -- і назад у цьому житті її вже не повернути. Біля віконця краще мовчати.</text>
   </node>
   <node id="30" labels="char" level="-1" type="Help">
     <extra l="en">chaotic lawful neutral</extra>

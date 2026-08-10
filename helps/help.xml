@@ -1290,7 +1290,7 @@ For details on each class follow the links, or type {y? _class_{x, e.g. {y? samu
     <keyword l="en">hometowns</keyword>
     <keyword l="ru">города</keyword>
     <keyword l="ua">міста</keyword>
-    <text l="en">At the start of their life, every character chooses a =home= or =hometown= -- the place the gods will send you when you use the {hh862recall{x command. Depending on race and class, the following zones can be chosen:
+    <text l="en">At the start of their life, every character is given a =home= or =hometown= -- the place the gods will send you when you use the {hh862recall{x command. Depending on race and class, the following zones can be chosen:
 
 %A% {hh1392Midgaard{x and {hh1838New Thalos{x: for characters of any {hh33alignment{x
 %A% {hh1406Drow City{x: only for drow, evil dark elves, and half-elves
@@ -1316,7 +1316,7 @@ Most cities have guards maintaining order, who answer to both the local authorit
 {CSUBURBS{x
 On the outskirts of most large cities lie {csuburbs,{x built up with {hh50players' private homes{x. Suburbs are created and grow as building progresses. If your hometown does not yet have a district for development, but you dream of a home, you can design a suburb yourself (or at least part of one).
 </text>
-    <text l="ru">В начале жизни каждый персонаж выбирает =прописку= или =родной город= -- место, куда боги перенесут тебя по команде {hh862возврат{x. В зависимости от расы и класса можно выбрать такие зоны:
+    <text l="ru">В начале жизни каждому персонажу назначают =прописку= или =родной город= -- место, куда боги перенесут тебя по команде {hh862возврат{x. В зависимости от расы и класса можно выбрать такие зоны:
 
 %A% {hh1392Мидгаард{x и {hh1838Новый Талос{x: для персонажей любой {hh33натуры{x
 %A% {hh1406Город Дроу{x: только для дроу, злых темных эльфов и полуэльфов
@@ -1342,7 +1342,7 @@ On the outskirts of most large cities lie {csuburbs,{x built up with {hh50player
 {CПРИГОРОДЫ{x
 На окраинах большинства крупных городов расположены {cпригороды,{x застроенные {hh50личными домами{x игроков. Пригороды создаются и разрастаются по мере застройки. Если в твоем родном городе еще нет района под застройку, а ты мечтаешь о доме, ты можешь самостоятельно нарисовать пригород (или хотя бы его часть).
 </text>
-    <text l="ua">На початку свого життя кожен персонаж вибирає =прописку= або =рідне місто= -- місце, куди боги перенесуть тебе за командою {hh862повернення{x. Залежно від раси й класу можна вибрати такі зони:
+    <text l="ua">На початку свого життя кожному персонажу призначають =прописку= або =рідне місто= -- місце, куди боги перенесуть тебе за командою {hh862повернення{x. Залежно від раси й класу можна вибрати такі зони:
 
 %A% {hh1392Мідгаард{x і {hh1838Новий Талос{x: для персонажів будь-якої {hh33натури{x
 %A% {hh1406Місто Дроу{x: тільки для дроу, злих темних ельфів і напівельфів
@@ -1373,13 +1373,16 @@ On the outskirts of most large cities lie {csuburbs,{x built up with {hh50player
     <title l="ua">Міста</title>
   </node>
   <node id="5089" labels="world" level="-1" type="Help">
-    <extra l="en">hometown 'change hometown' 'change residency' relocation registrar clerk municipality resettle</extra>
-    <extra l="ru">прописка переезд муниципалитет секретарша ратуша 'сменить город' 'сменить прописку' 'родной город'</extra>
-    <extra l="ua">прописка переїзд муніципалітет секретарка ратуша 'змінити місто' 'змінити прописку' 'рідне місто'</extra>
+    <extra l="en">'change hometown' 'change residency' relocation registrar clerk municipality resettle</extra>
+    <extra l="ru">переезд муниципалитет секретарша ратуша 'сменить город' 'сменить прописку'</extra>
+    <extra l="ua">переїзд муніципалітет секретарка ратуша 'змінити місто' 'змінити прописку'</extra>
     <keyword l="en">residency</keyword>
     <keyword l="ru">'смена прописки'</keyword>
     <keyword l="ua">'зміна прописки'</keyword>
-    <text l="en">=Residency= is your hometown. It is where the gods drop you when you {hh862recall{x, where your body goes when you die, where your {hh12sacrifice pit{x stands, and where the {hh29city guard{x counts you as one of their own. It is assigned at birth from your class and alignment and it holds for life -- but once per life you may change it, and a {hh1064remort{x gives the right back.
+    <title l="en">Cities: changing your residency</title>
+    <title l="ru">Города: смена прописки</title>
+    <title l="ua">Міста: зміна прописки</title>
+    <text l="en">=Residency= is your hometown. It is where the gods drop you when you {hh862recall{x, where you reappear when you {hh12die{x, where your sacrifice pit stands, and where the {hh29city guard{x counts you as one of their own. It is assigned when your life begins, from your class and alignment -- but once per life you may change it, and a {hh1064remort{x gives the right back.
 
 Municipal clerks handle it -- the same window that sells the {hh195craft licence{x. Each clerk registers people into their own town only: if you want to live in Solace, walk to Solace and queue. Seven windows are open:
 
@@ -1391,16 +1394,18 @@ Municipal clerks handle it -- the same window that sells the {hh195craft licence
 %A% {hh2071Valley of the Titans{x -- the town sheriff in the prison office
 %A% {hh1861New Ofcol{x -- chaplain Jerold in the Golden Citadel
 
-The clerk reads out the list of services. To hear the terms, {1{y{hcsay residency{x{2; to go through with it, {1{y{hcsay register{x{2. The fee is 25 gold per level plus 500 for every remort, and never less than 50.
+The other hometowns in {hh29the list{x keep no registry window. You can be born into them, but nobody there will move you in.
 
-Everything moves with you: your {hh862recall{x point, the altar your corpse is laid on, the sacrifice pit, the landing and the town map. Whatever you left in the old pit stays in the old pit, and a corpse already lying on the old altar does not follow you.
+The clerk reads out the list of services. To hear the terms, {1{y{hcsay residency{x{2; to go through with it, {1{y{hcsay register{x{2. The fee is 25 gold per level plus 500 for every remort, and never less than 50. In Midgaard the clerk registers you by {hh33alignment{x, so a good, a neutral and an evil citizen of the same city end up with three different recall points.
 
-A clerk will refuse you for several reasons: the town does not admit your race, class or alignment; you have already spent this life's change; you are wanted, or marked a thief or a killer; or you have an unfinished quest tied to a hometown -- the clerk will name it. And, of course, if you cannot pay.
+Your {hh862recall{x point moves, and so do the altar you wake at and the sacrifice pit you share with the townsfolk. Below level 15 your corpse is carried to that altar too; above it your body stays where you fell. Anything already lying in the old pit stays in the old pit, and a corpse made before the move still empties into the old town's pit when it rots.
 
-No town on that list registers {hh192druids{x. The Midgaard secretary will instead strike a druid off her books and resettle them in the {hh2080Holy Grove{x, for the same fee and the same once-per-life right. The Grove keeps no paperwork, so it has no window of its own.
+A clerk will refuse you for several reasons: you already live there; the town does not admit your race, class or alignment; you have already spent this life's change; you are wanted, or marked a thief or a killer; or you have an unfinished quest tied to a hometown -- the clerk will name that one. And, of course, if you cannot pay.
 
-{RCareful.{x The clerk hears everything said at the window. The word "yes" buys a craft licence, and the word "register" changes your residency -- and there is no changing it back this life. Best to keep quiet near the window.</text>
-    <text l="ru">=Прописка= -- это твой родной город. Туда боги переносят тебя по команде {hh862возврат{x, туда же попадает твое тело после смерти, там стоит твоя {hh12жертвенная яма{x, и там {hh29городская стража{x считает тебя своим. Прописку назначают при рождении, по классу и натуре, и держится она всю жизнь -- но один раз за жизнь ее можно сменить, а {hh1064перерождение{x возвращает это право снова.
+{hh192Druids{x are settled in the {hh2080Holy Grove{x from birth, and almost every city refuses them outright. If you are a druid who was settled somewhere else in an older life, the Midgaard secretary will strike you off her books and resettle you in the Grove, for the same fee and the same once-per-life right. The Grove keeps no paperwork of its own, so it has no window.
+
+{RCareful.{x The clerk hears everything said at the window and does not listen for whole words. Any sentence with "yes" in it buys a craft licence, and any sentence with "register" in it changes your residency -- and there is no changing it back this life. Near the window, say nothing you do not mean.</text>
+    <text l="ru">=Прописка= -- это твой родной город. Туда боги переносят тебя по команде {hh862возврат{x, там ты приходишь в себя после {hh12смерти{x, там стоит твоя жертвенная яма, и там {hh29городская стража{x считает тебя своим. Прописку назначают в начале жизни, по классу и натуре -- но один раз за жизнь ее можно сменить, а {hh1064перерождение{x возвращает это право снова.
 
 Оформляют прописку муниципальные служащие -- то же окошко, где берут {hh195ремесленную лицензию{x. Каждый прописывает только в свой город: хочешь жить в Утехе -- иди в Утеху и стой в очереди. Окошки работают в семи городах:
 
@@ -1412,36 +1417,40 @@ No town on that list registers {hh192druids{x. The Midgaard secretary will inste
 %A% {hh2071Долина Титанов{x -- городской шериф в офисе тюрьмы
 %A% {hh1861Новый Офкол{x -- капеллан Джерольд в Золотой Цитадели
 
-Служащий зачитает перечень услуг. Чтобы узнать условия, надо {1{y{hcсказать прописка{x{2; чтобы оформить -- {1{y{hcсказать оформляй{x{2. Пошлина -- 25 золотых за уровень плюс 500 за каждое перерождение, но не меньше 50.
+В остальных городах из {hh29списка{x окошка нет. Родиться там можно, а вот переехать туда некому.
 
-Вместе с тобой переезжает все: точка {hh862возврата{x, алтарь, куда ляжет твое тело, жертвенная яма, причал и карта города. Вещи, оставленные в старой яме, там и останутся, а тело, которое уже лежит на старом алтаре, никуда не переедет.
+Служащий зачитает перечень услуг. Чтобы узнать условия, надо {1{y{hcсказать прописка{x{2; чтобы оформить -- {1{y{hcсказать оформляй{x{2. Пошлина -- 25 золотых за уровень плюс 500 за каждое перерождение, но не меньше 50. В Мидгаарде прописывают по {hh33натуре{x, так что у доброго, нейтрального и злого горожанина одного и того же города окажутся три разных точки возврата.
 
-Отказать могут по нескольким причинам: город не принимает тебя по расе, классу или натуре; право на смену уже потрачено в этой жизни; на тебе висит розыск, кража или убийство; у тебя не закрыто задание, привязанное к родному городу -- служащий назовет его. И, разумеется, если не хватает денег.
+Переезжает точка {hh862возврата{x, а вместе с ней алтарь, у которого ты очнешься, и жертвенная яма, общая с горожанами. До 15-го уровня к тому же алтарю относят и твой труп; выше -- тело остается там, где ты упал. Вещи, оставленные в старой яме, там и останутся, а труп, сделанный до переезда, при разложении все равно отдаст добро в яму старого города.
 
-{hh192Друидов{x не прописывает ни один город из списка. Зато секретарша Мидгаарда вычеркнет друида из своих книг и выпишет его в {hh2080Священную Рощу{x -- за ту же пошлину и то же право раз в жизнь. Бумаг в Роще не ведут, поэтому своего окошка там нет.
+Отказать могут по нескольким причинам: ты уже здесь прописан; город не принимает тебя по расе, классу или натуре; право на смену уже потрачено в этой жизни; на тебе висит розыск, кража или убийство; у тебя не закрыто задание, привязанное к родному городу -- служащий назовет его. И, разумеется, если не хватает денег.
 
-{RОсторожно.{x Служащий слышит все, что говорят у окошка. Слово "да" покупает ремесленную лицензию, а слово "оформляй" меняет прописку -- и обратно в этой жизни ее уже не вернуть. Рядом с окошком лучше молчать.</text>
-    <text l="ua">=Прописка= -- це твоє рідне місто. Туди боги переносять тебе за командою {hh862повернення{x, туди ж потрапляє твоє тіло після смерті, там стоїть твоя {hh12жертовна яма{x, і там {hh29міська варта{x вважає тебе своїм. Прописку призначають при народженні, за класом і натурою, і тримається вона все життя -- але один раз за життя її можна змінити, а {hh1064переродження{x повертає це право знову.
+{hh192Друидов{x селят в {hh2080Священной Роще{x с самого начала, и почти всякий город им откажет. Если ты друид и тебя в прошлой жизни поселили не там, секретарша Мидгаарда вычеркнет тебя из своих книг и выпишет в Рощу -- за ту же пошлину и то же право раз в жизнь. Своих бумаг в Роще не ведут, поэтому и окошка там нет.
+
+{RОсторожно.{x Служащий слышит все, что говорят у окошка, и целых слов не разбирает. Любая фраза со словом "да" покупает ремесленную лицензию, а любая фраза со словом "оформляй" меняет прописку -- и обратно в этой жизни ее уже не вернуть. У окошка лучше не говорить того, чего не имеешь в виду.</text>
+    <text l="ua">=Прописка= -- це твоє рідне місто. Туди боги переносять тебе за командою {hh862повернення{x, там ти приходиш до тями після {hh12смерті{x, там стоїть твоя жертовна яма, і там {hh29міська варта{x вважає тебе своїм. Прописку призначають на початку життя, за класом і натурою -- але один раз за життя її можна змінити, а {hh1064переродження{x повертає це право знову.
 
 Оформляють прописку муніципальні службовці -- те саме віконце, де беруть {hh195ремісничу ліцензію{x. Кожен прописує тільки у своє місто: хочеш жити в Утісі -- іди до Утіхи і стій у черзі. Віконця працюють у семи містах:
 
 %A% {hh1392Мідгаард{x -- секретарка в ратуші
 %A% {hh1838Новий Талос{x -- секретарка в приймальні над ратушею
 %A% {hh1505Утіха{x -- Головний Збирач Податків
-%A% {hh2062Шир{x -- хоббіт-секретар у трактирі "Зелений Дракон"
+%A% {hh2062Шир{x -- гобіт-секретар у шинку "Зелений Дракон"
 %A% {hh1406Місто Дроу{x -- служниця Ллот на помості
 %A% {hh2071Долина Титанів{x -- міський шериф в офісі вʼязниці
 %A% {hh1861Новий Офкол{x -- капелан Джерольд у Золотій Цитаделі
 
-Службовець зачитає перелік послуг. Щоб дізнатися умови, треба {1{y{hcсказати прописка{x{2; щоб оформити -- {1{y{hcсказати оформлюй{x{2. Мито -- 25 золотих за рівень плюс 500 за кожне переродження, але не менше 50.
+В інших містах зі {hh29списку{x віконця немає. Народитися там можна, а от переїхати туди нікому.
 
-Разом з тобою переїжджає все: точка {hh862повернення{x, вівтар, куди ляже твоє тіло, жертовна яма, причал і карта міста. Речі, залишені в старій ямі, там і залишаться, а тіло, яке вже лежить на старому вівтарі, нікуди не переїде.
+Службовець зачитає перелік послуг. Щоб дізнатися умови, треба {1{y{hcсказати прописка{x{2; щоб оформити -- {1{y{hcсказати оформлюй{x{2. Мито -- 25 золотих за рівень плюс 500 за кожне переродження, але не менше 50. У Мідгаарді прописують за {hh33натурою{x, тож у доброго, нейтрального і злого містянина того самого міста будуть три різні точки повернення.
 
-Відмовити можуть з кількох причин: місто не приймає тебе за расою, класом чи натурою; право на зміну вже витрачене в цьому житті; на тобі висить розшук, крадіжка або вбивство; у тебе не закрите завдання, привʼязане до рідного міста -- службовець назве його. І, звісно, якщо не вистачає грошей.
+Переїжджає точка {hh862повернення{x, а з нею вівтар, біля якого ти отямишся, і жертовна яма, спільна з містянами. До 15-го рівня до того ж вівтаря відносять і твій труп; вище -- тіло лишається там, де ти впав. Речі, залишені в старій ямі, там і залишаться, а труп, зроблений до переїзду, при розкладанні однаково віддасть добро в яму старого міста.
 
-{hh192Друїдів{x не прописує жодне місто зі списку. Зате секретарка Мідгаарда викреслить друїда зі своїх книг і випише його до {hh2080Священного Гаю{x -- за те саме мито і те саме право раз на життя. Паперів у Гаю не ведуть, тому свого віконця там немає.
+Відмовити можуть з кількох причин: ти вже тут прописаний; місто не приймає тебе за расою, класом чи натурою; право на зміну вже витрачене в цьому житті; на тобі висить розшук, крадіжка або вбивство; у тебе не закрите завдання, привʼязане до рідного міста -- службовець назве його. І, звісно, якщо не вистачає грошей.
 
-{RОбережно.{x Службовець чує все, що кажуть біля віконця. Слово "так" купує ремісничу ліцензію, а слово "оформлюй" міняє прописку -- і назад у цьому житті її вже не повернути. Біля віконця краще мовчати.</text>
+{hh192Друїдів{x селять у {hh2080Священному Гаю{x із самого початку, і майже кожне місто їм відмовить. Якщо ти друїд і тебе в минулому житті оселили не там, секретарка Мідгаарда викреслить тебе зі своїх книг і випише до Гаю -- за те саме мито і те саме право раз на життя. Своїх паперів у Гаю не ведуть, тому й віконця там немає.
+
+{RОбережно.{x Службовець чує все, що кажуть біля віконця, і цілих слів не розбирає. Будь-яка фраза зі словом "так" купує ремісничу ліцензію, а будь-яка фраза зі словом "оформлюй" міняє прописку -- і назад у цьому житті її вже не повернути. Біля віконця краще не казати того, чого не маєш на увазі.</text>
   </node>
   <node id="30" labels="char" level="-1" type="Help">
     <extra l="en">chaotic lawful neutral</extra>
@@ -5264,7 +5273,7 @@ Every craft and recipe has its own ingredients. Typically the ingredients are co
 
 The required tool is also described in the recipe. Most carpenter blueprints need a small axe, tattooists need a sharp knife, and so on.
 
-In addition, every craft profession requires a =license=, which can be purchased at the Midgaard town hall once you have the profession. The license lasts a month of real time, and its cost depends on your level.
+In addition, every craft profession requires a =license=, which can be purchased at the town hall of any major city once you have the profession. The license lasts a month of real time, and its cost depends on your level.
 
 {CPROFESSION LEVELS{x
 Craft professions have their own levels and their own experience scale. The maximum proficiency level in any craft is 10. The recipes you can use and the quality of products depend on the profession level. If you keep crafting the same thing, or work on recipes too easy for you, you will earn less experience.
@@ -5289,7 +5298,7 @@ Craft professions have their own levels and their own experience scale. The maxi
 
 Нужный инструмент также описывается в рецепте. Для большинства чертежей плотника нужен маленький топорик, для тату-мастера -- острый нож, и так далее.
 
-Кроме того, для всех ремесленных профессий понадобится =лицензия=, которую можно приобрести в ратуше Мидгаарда при наличии самой профессии. Лицензия выдается на месяц реального времени, а ее стоимость зависит от твоего уровня.
+Кроме того, для всех ремесленных профессий понадобится =лицензия=, которую можно приобрести в ратуше любого крупного города при наличии самой профессии. Лицензия выдается на месяц реального времени, а ее стоимость зависит от твоего уровня.
 
 {CУРОВНИ ПРОФЕССИИ{x
 У крафтовых профессий есть свои уровни и своя шкала опыта до уровня. Максимальный уровень мастерства в любом ремесле -- 10. От уровня профессии зависит сложность рецептов, которые можно использовать, и качество продуктов. Если все время мастерить одно и то же или делать слишком легкие рецепты, опыта получишь меньше.
@@ -5314,7 +5323,7 @@ Craft professions have their own levels and their own experience scale. The maxi
 
 Потрібний інструмент також описаний у рецепті. Для більшості теслярських креслень потрібен маленький топірець, для тату-майстра -- гострий ніж, і так далі.
 
-Крім того, для всіх ремісничих професій знадобиться =ліцензія=, яку можна придбати в ратуші Мідгаарда за наявності самої професії. Ліцензія видається на місяць реального часу, а її вартість залежить від твого рівня.
+Крім того, для всіх ремісничих професій знадобиться =ліцензія=, яку можна придбати в ратуші будь-якого великого міста за наявності самої професії. Ліцензія видається на місяць реального часу, а її вартість залежить від твого рівня.
 
 {CРІВНІ ПРОФЕСІЇ{x
 Крафтові професії мають свої рівні та свою шкалу досвіду до рівня. Максимальний рівень майстерності в будь-якому ремеслі -- 10. Від рівня професії залежить складність рецептів, які можна використовувати, і якість продуктів. Якщо весь час робити одне й те ж або працювати над занадто легкими рецептами, досвіду отримаєш менше.

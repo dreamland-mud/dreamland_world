@@ -2,7 +2,7 @@
 <Command>
   <aliases l="en"></aliases>
   <aliases l="ru">с</aliases>
-  <aliases l="ua">с</aliases>
+  <aliases l="ua">с пн</aliases>
   <cat>move</cat>
   <extra>keep_hide ghost</extra>
   <help id="1022" level="-1" ref="down east south up west" type="CommandHelp" labels="start">
@@ -83,10 +83,13 @@ Besides this, you can leave the area by entering a portal or additional exit: re
                   {Yвниз{y  |
                         {Yпівдень{x
 {x%RESUME%
-Для зручності команди можна скорочувати до однієї букви: наприклад, за командою
-{hc{yс{x ({hc{yсхід{x), ти підеш на схід.
-Щоб йти вниз або вгору, достатньо писати {yвн{x або {yвв{x, 
-або ж {yо{x ({yопуститися{x), {yп{x ({yпіднятися{x).
+Для зручності є короткі форми сторін світу: {hc{yпн{x, {hc{yпд{x, {hc{yсх{x, {hc{yзх{x --
+північ, південь, схід, захід.
+Працюють і однобуквені скорочення, успадковані з російських назв, тому й
+виглядають несподівано: {hc{yс{x -- на північ, {hc{yю{x -- на південь,
+{hc{yв{x -- на схід, {hc{yз{x -- на захід.
+Щоб йти вниз або вгору, достатньо писати {yвн{x або {yвв{x,
+або ж {yо{x ({yопуститися{x).
 
 Ходити можна тільки стоячи -- див. %H% {hh1020спати{x та інші команди положення в просторі.
 

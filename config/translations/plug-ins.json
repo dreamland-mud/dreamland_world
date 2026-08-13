@@ -2766,9 +2766,9 @@
    "en": "$c1 carefully checks the list.",
    "ua": "$c1 уважно звіряється зі списком."
   },
-  "%d рыцар%s, поставленных стык-в-стык, представляют собой потрясающее зрелище!": {
-   "en": "%d knight%s lined up shoulder to shoulder make an awesome sight!",
-   "ua": "%d лицар%s, вишикувані пліч-о-пліч, являють собою приголомшливе видовище!"
+  "%1$d рыцар%1$Iь|я|ей, поставленных стык-в-стык, представляют собой потрясающее зрелище!": {
+   "en": "%1$d knight%1$gs||s lined up shoulder to shoulder make an awesome sight!",
+   "ua": "%1$d лицар%1$I|і|ів, вишикувані пліч-о-пліч, являють собою приголомшливе видовище!"
   },
   "{WЛучи света пронизывают комнату и в центре материализуется $o1.{x": {
    "en": "{WBeams of light pierce the room, and $o1 materializes in the center.{x",
@@ -2862,13 +2862,13 @@
    "en": "$C1 revokes $c3's summons to Court.",
    "ua": "$C1 анулює повістку $c3 до Суду."
   },
-  "$C1 в тюряге менее чем на %d час%s.": {
-   "en": "$C1 has been in the clink for less than %d hour%s.",
-   "ua": "$C1 у буцегарні менше ніж на %d годин%s."
+  "$C1 в тюряге менее чем на %1$d час%1$I|а|ов.": {
+   "en": "$C1 has been in the clink for less than %1$d hour%1$gs||s.",
+   "ua": "$C1 у буцегарні менше ніж на %1$d годин%1$Iу|и|."
   },
-  "$C1 лише$Gно|н|на своих привилегий Правителя менее чем на %d час%s.": {
-   "en": "$C1 is stripped of the Ruler's privileges for less than %d hour%s.",
-   "ua": "$C1 позбавлен$Gо|ий|а своїх привілеїв Правителя менш ніж на %d годин%s."
+  "$C1 лише$Gно|н|на своих привилегий Правителя менее чем на %1$d час%1$I|а|ов.": {
+   "en": "$C1 is stripped of the Ruler's privileges for less than %1$d hour%1$gs||s.",
+   "ua": "$C1 позбавлен$Gо|ий|а своїх привілеїв Правителя менш ніж на %1$d годин%1$Iу|и|."
   },
   "$C1 может обитать в одном из следующих мест:": {
    "en": "$C1 can reside in one of the following places:",
@@ -3058,9 +3058,9 @@
    "en": "The bounty hunter has been sent on assignment.",
    "ua": "Мисливець за головами відправлений на завдання."
   },
-  "Повестка $C2 действительна менее %d час%s.": {
-   "en": "$C2's summons is valid for less than %d hour%s.",
-   "ua": "Повістка $C2 дійсна менше ніж %d годин%s."
+  "Повестка $C2 действительна менее %1$d час%1$Iа|ов|ов.": {
+   "en": "$C2's summons is valid for less than %1$d hour%1$gs||s.",
+   "ua": "Повістка $C2 дійсна менше ніж %1$d годин%1$Iи||."
   },
   "Повестка в суд для %s истекла!": {
    "en": "The court summons for %s has expired!",
@@ -3474,9 +3474,9 @@
    "en": "You feel that you are awaited in Court.",
    "ua": "Ти відчуваєш -- тебе чекають у Суді."
   },
-  "$C1 закован менее чем на %d час%s.": {
-   "en": "$C1 is imprisoned for less than %d hour%s.",
-   "ua": "$C1 закутий менш ніж на %d годин%s."
+  "$C1 закован менее чем на %1$d час%1$I|а|ов.": {
+   "en": "$C1 is imprisoned for less than %1$d hour%1$gs||s.",
+   "ua": "$C1 закутий менш ніж на %1$d годин%1$Iу|и|."
   },
   "Синтаксис: fine <наказуемый> <сумма> [<получатель>]": {
    "en": "Syntax: fine <target> <amount> [<recipient>]",
@@ -3509,6 +3509,22 @@
   "$c1 кричит '$C2! ТЫ ЕЩЕ ОТВЕТИШЬ ЗА СВОИ ПРЕСТУПЛЕНИЯ!'": {
    "en": "$c1 shouts '$C2! YOU WILL STILL ANSWER FOR YOUR CRIMES!'",
    "ua": "$c1 кричить '$C2! ТИ ЩЕ ВІДПОВІСИШ ЗА СВОЇ ЗЛОЧИНИ!'"
+  },
+  "$C1 закован навсегда.": {
+   "en": "$C1 is imprisoned forever.",
+   "ua": "$C1 закутий назавжди."
+  },
+  "$C1 не выдавалась повестка в Суд.": {
+   "en": "$C1 has not been summoned to Court.",
+   "ua": "$C1 не видавалася повістка до Суду."
+  },
+  "$C1 в тюряге ПОЖИЗНЕННО.": {
+   "en": "$C1 is in the clink FOR LIFE.",
+   "ua": "$C1 у буцегарні ДОВІЧНО."
+  },
+  "$C1 лише$Gно|н|на своих привилегий Правителя НАВСЕГДА.": {
+   "en": "$C1 is stripped of the Ruler's privileges FOREVER.",
+   "ua": "$C1 позбавлен$Gо|ий|а своїх привілеїв Правителя НАЗАВЖДИ."
   }
  },
  "plug-ins/clan/impl/shalafi.cpp": {
@@ -14718,9 +14734,9 @@
    "en": "You don't need to cancel your quest, it will disappear as soon as you disembark from the ship.",
    "ua": "Твоє завдання не потрібно скасовувати, воно зникне, щойно ти зійдеш з корабля."
   },
-  "У тебя {Y%d{x квестов%s единиц%s.": {
-   "en": "You have {Y%d{x quest%s point%s.",
-   "ua": "У тебе {Y%d{x квестов%s одиниц%s."
+  "У тебя {Y%1$d{x квестов%1$Iая|ых|ых единиц%1$Iа|ы|.": {
+   "en": "You have {Y%1$d{x quest point%1$gs||s.",
+   "ua": "У тебе {Y%1$d{x квестов%1$Iа|і|их одиниц%1$Iя|і|ь."
   },
   "Эта команда недоступна пока ты на корабле.": {
    "en": "This command isn't available while you're on a ship.",
@@ -16542,9 +16558,9 @@
    "en": "You've been ordered to deliver it to me!",
    "ua": "Тобі доручається доставити це мені!"
   },
-  "У тебя есть {Y%d{G минут%s на выполнение задания.": {
-   "en": "You have {Y%d{G minute%s to complete the task.",
-   "ua": "У тебе є {Y%d{G хвилин%s на виконання завдання."
+  "У тебя есть {Y%1$d{G минут%1$Iа|ы| на выполнение задания.": {
+   "en": "You have {Y%1$d{G minute%1$gs||s to complete the task.",
+   "ua": "У тебе є {Y%1$d{G хвилин%1$Iа|и| на виконання завдання."
   },
   "У тебя задание - вернуть %1$s.": {
    "en": "Your task is to bring back %1$s.",
@@ -19378,9 +19394,9 @@
   }
  },
  "plug-ins/quest/butcherquest/butcherquest.cpp": {
-  "{W%s{G из местности {W{hh%s{hx{G хочет подать к столу {W%d{G кус%s мяса {W%s{G из местности {W{hh%s{hx{G.": {
-   "en": "{W%s{G from the region {W{hh%s{hx{G wants to have served at the table {W%d{G piece%s of meat {W%s{G from the region {W{hh%s{hx{G.",
-   "ua": "{W%s{G з місцевості {W{hh%s{hx{G хоче, щоб подали до столу {W%d{G шмат%s м'яса {W%s{G з місцевості {W{hh%s{hx{G."
+  "{W%1$s{G из местности {W{hh%2$s{hx{G хочет подать к столу {W%3$d{G кус%3$Iок|ка|ков мяса {W%4$s{G из местности {W{hh%5$s{hx{G.": {
+   "en": "{W%1$s{G from the region {W{hh%2$s{hx{G wants {W%3$d{G piece%3$gs||s of %4$s meat from the region {W{hh%5$s{hx{G served at the table.",
+   "ua": "{W%1$s{G з місцевості {W{hh%2$s{hx{G хоче, щоб подали до столу {W%3$d{G шмат%3$Iок|ки|ків м'яса {W%4$s{G з місцевості {W{hh%5$s{hx{G."
   },
   "Доставь мясо заказчику и вернись сюда за вознаграждением.": {
    "en": "Deliver the meat to the customer and come back here for your reward.",
@@ -19390,9 +19406,9 @@
    "en": "I have an urgent task for you!",
    "ua": "У мене є для тебе термінове доручення!"
   },
-  "У тебя есть {Y%d{G минут%s на выполнение задания.": {
-   "en": "You have {Y%d{G minute%s to complete the task.",
-   "ua": "У тебе є {Y%d{G хвилин%s на виконання завдання."
+  "У тебя есть {Y%1$d{G минут%1$Iа|ы| на выполнение задания.": {
+   "en": "You have {Y%1$d{G minute%1$gs||s to complete the task.",
+   "ua": "У тебе є {Y%1$d{G хвилин%1$Iа|и| на виконання завдання."
   },
   "%1$s из {hh%2$s{hx просит тебя доставить к столу %3$d кус%3$Iок|ка|ков мяса %4$s из местности {hh%5$s{hx.": {
    "en": "%1$s from {hh%2$s{hx asks you to bring %3$d piece%3$I|s|s of %4$s meat from the area of {hh%5$s{hx to the table.",
@@ -19470,9 +19486,9 @@
    "en": "{W%s{G was last seen in the area {W{hh%s{hx{G.",
    "ua": "Востаннє {W%s{G бачили в місцевості {W{hh%s{hx{G."
   },
-  "У тебя есть {Y%d{G минут%s, чтобы добраться туда и узнать, в чем дело.": {
-   "en": "You have {Y%d{G minute%s to get there and find out what's going on.",
-   "ua": "У тебе є {Y%d{G хвилин%s, щоб дістатися туди і з'ясувати, в чому річ."
+  "У тебя есть {Y%1$d{G минут%1$Iа|ы|, чтобы добраться туда и узнать, в чем дело.": {
+   "en": "You have {Y%1$d{G minute%1$gs||s to get there and find out what's going on.",
+   "ua": "У тебе є {Y%1$d{G хвилин%1$Iа|и|, щоб дістатися туди і з'ясувати, в чому річ."
   },
   "Я помогу тебе, но награда будет не так велика.": {
    "en": "I'll help you, but the reward won't be quite as big.",

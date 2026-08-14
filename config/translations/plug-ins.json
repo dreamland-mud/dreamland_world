@@ -16489,8 +16489,8 @@
    "ua": "Всього там {W%d{G залізяк. Притягни їх сюди, якщо ти справді такий гарний нишпорка, як про тебе розказують."
   },
   "Да, так вот.. в моей лаборатории прогремел взрыв, и {W$n4{G расшвыряло в разные стороны.": {
-   "en": "Yeah, so... there was an explosion in my lab, and it flung $n4 in every direction.",
-   "ua": "Так, ось... у моїй лабораторії гримнув вибух, і $n4 розкидало в різні боки."
+   "en": "Yeah, so... there was an explosion in my lab, and it flung {W$n4{G in every direction.",
+   "ua": "Так, ось... у моїй лабораторії гримнув вибух, і {W$n4{G розкидало в різні боки."
   },
   "Если я их не соберу, меня казнят, а не то и уволят.": {
    "en": "If I don't collect them, they'll have me executed -- or worse, fired.",
@@ -16527,6 +16527,38 @@
   "Случилось ужасное. С моего рабочего стола сквозняком выдуло в окно пачку {W$n2{G и расшвыряло по окрестностям!": {
    "en": "Something terrible happened. A draft blew a pack of {W$n2{G off my desk and out the window, scattering it all over the neighborhood!",
    "ua": "Сталося щось жахливе. Протягом здуло з мого робочого столу пачку {W$n2{G у вікно і розкидало по околицях!"
+  },
+  "%1$s жалуется на банду грызунов, которые растащили %2$s из ее кладовки.": {
+   "en": "%1$s complains about a gang of rodents that dragged %2$s out of her pantry.",
+   "ua": "%1$s скаржиться на банду гризунів, які розтягли %2$s з її комори."
+  },
+  "Пропало довольно много, но она будет благодарна тебе, если ты принесешь ей хотя бы {Y%1$d{x штук%1$Iу|и|.": {
+   "en": "Quite a lot went missing, but she will be grateful if you bring her at least {Y%1$d{x of them.",
+   "ua": "Пропало чимало, але вона буде вдячна тобі, якщо принесеш їй хоча б {Y%1$d{x штук%1$Iу|и|."
+  },
+  "%1$s просит тебя собрать пачку %2$s, которую ветром расшвыряло по окрестностям. Всего их было {Y%3$d{x штук%3$Iу|и|.": {
+   "en": "%1$s asks you to gather up a bundle of %2$s that the wind scattered across the neighbourhood. There were {Y%3$d{x of them in all.",
+   "ua": "%1$s просить тебе зібрати пачку %2$s, яку вітром розкидало по околицях. Усього їх було {Y%3$d{x."
+  },
+  "В лаборатории %1$s взрывом расшвыряло %2$s, в количестве {Y%3$d{x штук%3$Iи||.": {
+   "en": "An explosion in the laboratory of %1$s scattered %2$s all over, {Y%3$d{x of them in all.",
+   "ua": "У лабораторії %1$s вибухом розкидало %2$s, у кількості {Y%3$d{x штук%3$Iи||."
+  },
+  "%1$s просит тебя попытаться собрать их.": {
+   "en": "%1$s asks you to try and gather them up.",
+   "ua": "%1$s просить тебе спробувати їх зібрати."
+  },
+  "Поставщик не донес %1$s орудия пыток, растеряв их на полпути от %2$s.": {
+   "en": "A supplier failed to deliver instruments of torture to %1$s, losing them halfway from %2$s.",
+   "ua": "Постачальник не доніс %1$s знаряддя тортур, розгубивши їх на півдорозі від %2$s."
+  },
+  "Всего их было {Y%1$d{x штук%1$Iи||.": {
+   "en": "There were {Y%1$d{x of them in all.",
+   "ua": "Усього їх було {Y%1$d{x."
+  },
+  "%1$s просит тебя собрать их и отдать ему.": {
+   "en": "%1$s asks you to gather them up and hand them over.",
+   "ua": "%1$s просить тебе зібрати їх і віддати йому."
   }
  },
  "plug-ins/quest/staffquest/staffquest.cpp": {
@@ -19623,6 +19655,34 @@
   "У тебя есть {Y%3$d{G мину%3$Iта|ты|т, чтобы добраться туда и узнать подробности.": {
    "en": "You have {Y%3$d{G minute%3$I|s|s to get there and find out the details.",
    "ua": "У тебе є {Y%3$d{G хвилин%3$Iа|и|, щоб дістатися туди і дізнатися подробиці."
+  },
+  "%1$s хочет отыскать кое-какие свои вещи.": {
+   "en": "%1$s wants to recover some lost belongings.",
+   "ua": "%1$s хоче відшукати деякі свої речі."
+  },
+  "Тебя с нетерпением ждут в районе %1$s.": {
+   "en": "You are eagerly awaited at %1$s.",
+   "ua": "На тебе з нетерпінням чекають у районі %1$s."
+  },
+  "Это находится в местности под названием {hh%1$s{hx.": {
+   "en": "That is in the area called {hh%1$s{hx.",
+   "ua": "Це в місцевості під назвою {hh%1$s{hx."
+  },
+  "Тобой уже доставлено {Y%1$d{x из них.": {
+   "en": "You have delivered {Y%1$d{x of them so far.",
+   "ua": "Тобою вже доставлено {Y%1$d{x з них."
+  },
+  "Заказчик ждет тебя в районе %1$s.": {
+   "en": "The client is waiting for you at %1$s.",
+   "ua": "Замовник чекає на тебе в районі %1$s."
+  },
+  "Помочь %1$s из %2$s (%3$s) отыскать свои вещи.": {
+   "en": "Help %1$s from %2$s (%3$s) recover their belongings.",
+   "ua": "Допомогти %1$s з %2$s (%3$s) відшукати свої речі."
+  },
+  "Найти %1$d штук%1$Iу|и| %2$s для %3$s из %4$s (%5$s).": {
+   "en": "Find %1$d %2$s for %3$s from %4$s (%5$s).",
+   "ua": "Знайти %1$d штук%1$Iу|и| %2$s для %3$s з %4$s (%5$s)."
   }
  },
  "plug-ins/quest/stealquest/stealquest.cpp": {

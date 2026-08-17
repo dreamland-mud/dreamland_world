@@ -1,382 +1,584 @@
 {
- "autoquest/kill/onCreate": {
-  "%1$^C1 говорит тебе '{GУ меня есть для тебя срочное поручение!{x'": {
-   "en": "%1$^C1 tells you '{GI have an urgent task for you!{x'",
-   "ua": "%1$^C1 каже тобі '{GУ мене є для тебе термінове доручення!{x'"
+  "autoquest/kill/onCreate": {
+    "%1$^C1 говорит тебе '{GУ меня есть для тебя срочное поручение!{x'": {
+      "en": "%1$^C1 tells you '{GI have an urgent task for you!{x'",
+      "ua": "%1$^C1 каже тобі '{GУ мене є для тебе термінове доручення!{x'"
+    },
+    "%1$^C1 говорит тебе '{GСпокойствие нашего Мира было нарушено!{x'": {
+      "en": "%1$^C1 tells you '{GThe peace of our World has been disturbed!{x'",
+      "ua": "%1$^C1 каже тобі '{GСпокій нашого Світу було порушено!{x'"
+    },
+    "%1$^C1 говорит тебе '{GЯ поручаю тебе наказать {W%2$#C4{G, совершивш%2$Gее|его|ую множество злодеяний.{x'": {
+      "en": "%1$^C1 tells you '{GI'm charging you with punishing {W%2$#C4{G, who has committed countless atrocities.{x'",
+      "ua": "%1$^C1 каже тобі '{GЯ доручаю тобі покарати {W%2$#C4{G, що вчин%2$Gило|ив|ила безліч лиходійств.{x'"
+    },
+    "%1$^C1 говорит тебе '{GТемные силы нашего Мира ослаблены действиями {W%2$#C2{G.{x'": {
+      "en": "%1$^C1 tells you '{GThe dark forces of our World have been weakened by the deeds of {W%2$#C2{G.{x'",
+      "ua": "%1$^C1 каже тобі '{GТемні сили нашого Світу ослаблені діяннями {W%2$#C2{G.{x'"
+    },
+    "%1$^C1 говорит тебе '{GТебе поручается убить %2$P2!{x'": {
+      "en": "%1$^C1 tells you '{GYou are ordered to kill %2$C4!{x'",
+      "ua": "%1$^C1 каже тобі '{GТобі доручається вбити %2$C4!{x'"
+    },
+    "%1$^C1 говорит тебе '{GРавновесие нашего Мира было нарушено!{x'": {
+      "en": "%1$^C1 tells you '{GThe balance of our World has been disturbed!{x'",
+      "ua": "%1$^C1 каже тобі '{GРівновагу нашого Світу порушено!{x'"
+    },
+    "%1$^C1 говорит тебе '{GВ этом винов%2$Gно|ен|на {W%2$#C1{G, я поручаю тебе наказать %2$P2.{x'": {
+      "en": "%1$^C1 tells you '{G{W%2$#C1{G is guilty of this, so I'm tasking you with punishing them.{x'",
+      "ua": "%1$^C1 каже тобі '{GУ цьому вин%2$Gне|ен|на|ні {W%2$#C1{G, тож доручаю тобі покарати %2$C4.{x'"
+    },
+    "%1$^C1 говорит тебе '{GМесто, где %2$P2 видели в последний раз -- {W%3$s{G!{x'": {
+      "en": "%1$^C1 tells you '{GThe place where %2$C4 was last seen -- {W%3$s{G!{x'",
+      "ua": "%1$^C1 каже тобі '{GМісце, де %2$C4 бачили востаннє -- {W%3$s{G!{x'"
+    },
+    "%1$^C1 говорит тебе '{GЭто находится в районе под названием {W{hh%2$s{hx{G.{x'": {
+      "en": "%1$^C1 tells you '{GIt is located in an area called {W{hh%2$s{hx{G.{x'",
+      "ua": "%1$^C1 каже тобі '{GЦе знаходиться в районі під назвою {W{hh%2$s{hx{G.{x'"
+    },
+    "%1$^C1 говорит тебе '{GУ тебя есть {Y%2$d{G мину%2$Iта|ты|т на выполнение задания.{x'": {
+      "en": "%1$^C1 tells you '{GYou have {Y%2$d{G minute%2$gs||s to complete the task.{x'",
+      "ua": "%1$^C1 каже тобі '{GУ тебе є {Y%2$d{G хвилин%2$Iа|и| на виконання завдання.{x'"
+    }
   },
-  "%1$^C1 говорит тебе '{GСпокойствие нашего Мира было нарушено!{x'": {
-   "en": "%1$^C1 tells you '{GThe peace of our World has been disturbed!{x'",
-   "ua": "%1$^C1 каже тобі '{GСпокій нашого Світу було порушено!{x'"
+  "autoquest/kill/onTargetDeath": {
+    "Твое задание {YВЫПОЛНЕНО{x!": {
+      "en": "Your quest is {YCOMPLETE{x!",
+      "ua": "Твоє завдання {YВИКОНАНО{x!"
+    },
+    "Вернись за вознаграждением к давшему тебе задание до того, как истечет время!": {
+      "en": "Return to whoever gave you the quest for your reward before time runs out!",
+      "ua": "Повернись за винагородою до того, хто дав тобі завдання, поки не сплив час!"
+    },
+    "{YПоздравляю! Ты выполнил%1$Gо||а задание своего согруппника.{x": {
+      "en": "{YCongratulations! You've completed your groupmate's task.{x",
+      "ua": "{YВітаю! Ти виконал%1$Gо||а завдання свого спільника.{x"
+    },
+    "{Y%1$^C1 помог%1$Gло||ла тебе выполнить задание, поспеши к квестору за наградой.{x": {
+      "en": "{Y%1$^C1 helped you complete the task, hurry to the quest giver for your reward.{x",
+      "ua": "{Y%1$^C1 допом%1$Gогло|іг|огла тобі виконати завдання, поспіши до квестодавця по нагороду.{x"
+    },
+    "{YПоздравляю! Но это убийство было поручено другому.{x": {
+      "en": "{YCongratulations! But this kill was assigned to someone else.{x",
+      "ua": "{YВітаю! Але це вбивство було доручено іншому.{x"
+    },
+    "{YКто-то другой выполнил порученное тебе задание.{x": {
+      "en": "{YSomeone else has completed the quest assigned to you.{x",
+      "ua": "{YХтось інший виконав доручене тобі завдання.{x"
+    },
+    "{YЖертва умерла своей смертью.{x": {
+      "en": "{YThe victim died of natural causes.{x",
+      "ua": "{YЖертва померла своєю смертю.{x"
+    }
   },
-  "%1$^C1 говорит тебе '{GЯ поручаю тебе наказать {W%2$#C4{G, совершивш%2$Gее|его|ую множество злодеяний.{x'": {
-   "en": "%1$^C1 tells you '{GI'm charging you with punishing {W%2$#C4{G, who has committed countless atrocities.{x'",
-   "ua": "%1$^C1 каже тобі '{GЯ доручаю тобі покарати {W%2$#C4{G, що вчин%2$Gило|ив|ила безліч лиходійств.{x'"
+  "autoquest/kill/onInfo": {
+    "У тебя задание -- уничтожить %1$s!": {
+      "en": "Your task is to destroy %1$s!",
+      "ua": "Твоє завдання -- знищити %1$s!"
+    },
+    "Место, где жертву видели в последний раз -- %1$s": {
+      "en": "The victim was last seen in %1$s",
+      "ua": "Востаннє жертву бачили тут: %1$s"
+    },
+    "Это находится в районе под названием {hh%1$s{hx.": {
+      "en": "That is in the area called {hh%1$s{hx.",
+      "ua": "Це в місцевості під назвою {hh%1$s{hx."
+    }
   },
-  "%1$^C1 говорит тебе '{GТемные силы нашего Мира ослаблены действиями {W%2$#C2{G.{x'": {
-   "en": "%1$^C1 tells you '{GThe dark forces of our World have been weakened by the deeds of {W%2$#C2{G.{x'",
-   "ua": "%1$^C1 каже тобі '{GТемні сили нашого Світу ослаблені діяннями {W%2$#C2{G.{x'"
+  "autoquest/kill/onShortInfo": {
+    "Уничтожить %1$s из %2$s (%3$s).": {
+      "en": "Destroy %1$s from %2$s (%3$s).",
+      "ua": "Знищити %1$s з %2$s (%3$s)."
+    }
   },
-  "%1$^C1 говорит тебе '{GТебе поручается убить %2$P2!{x'": {
-   "en": "%1$^C1 tells you '{GYou are ordered to kill %2$C4!{x'",
-   "ua": "%1$^C1 каже тобі '{GТобі доручається вбити %2$C4!{x'"
+  "autoquest/staff/onCreate": {
+    "%1$^C1 говорит тебе '{G%2$s{x'": {
+      "en": "%1$^C1 tells you '{G%2$s{x'",
+      "ua": "%1$^C1 каже тобі '{G%2$s{x'"
+    },
+    "%1$^C1 говорит тебе '{GИз королевской сокровищницы похитили {W%2$s{G!{x'": {
+      "en": "%1$^C1 tells you '{G{W%2$s{G was stolen from the royal treasury!{x'",
+      "ua": "%1$^C1 каже тобі '{GЗ королівської скарбниці викрали {W%2$s{G!{x'"
+    },
+    "%1$^C1 говорит тебе '{GПридворные волшебники определили, где спрятано украденное сокровище.{x'": {
+      "en": "%1$^C1 tells you '{GThe court wizards have determined where the stolen treasure is hidden.{x'",
+      "ua": "%1$^C1 каже тобі '{GПридворні чарівники визначили, де сховано викрадений скарб.{x'"
+    },
+    "%1$^C1 говорит тебе '{GТебе поручается доставить его мне!{x'": {
+      "en": "%1$^C1 tells you '{GYou've been ordered to deliver it to me!{x'",
+      "ua": "%1$^C1 каже тобі '{GТобі доручається доставити це мені!{x'"
+    },
+    "%1$^C1 говорит тебе '{GМесто, где оно спрятано, называется {W%2$s{G.{x'": {
+      "en": "%1$^C1 tells you '{GThe place where it's hidden is called {W%2$s{G.{x'",
+      "ua": "%1$^C1 каже тобі '{GМісце, де воно сховане, зветься {W%2$s{G.{x'"
+    },
+    "%1$^C1 говорит тебе '{GИ находится это место в районе под названием -- {W{hh%2$s{hx{G.{x'": {
+      "en": "%1$^C1 tells you '{GAnd this place is located in the area called -- {W{hh%2$s{hx{G.{x'",
+      "ua": "%1$^C1 каже тобі '{GІ знаходиться це місце в районі під назвою -- {W{hh%2$s{hx{G.{x'"
+    },
+    "%1$^C1 говорит тебе '{GУ тебя есть {Y%2$d{G мину%2$Iта|ты|т на выполнение задания.{x'": {
+      "en": "%1$^C1 tells you '{GYou have {Y%2$d{G minute%2$gs||s to complete the task.{x'",
+      "ua": "%1$^C1 каже тобі '{GУ тебе є {Y%2$d{G хвилин%2$Iа|и| на виконання завдання.{x'"
+    }
   },
-  "%1$^C1 говорит тебе '{GРавновесие нашего Мира было нарушено!{x'": {
-   "en": "%1$^C1 tells you '{GThe balance of our World has been disturbed!{x'",
-   "ua": "%1$^C1 каже тобі '{GРівновагу нашого Світу порушено!{x'"
+  "autoquest/staff/onInfo": {
+    "У тебя задание -- вернуть %1$s.": {
+      "en": "Your task is to bring back %1$s.",
+      "ua": "Твоє завдання -- повернути %1$s."
+    },
+    "Место, где спрятано сокровище, называется %1$s.": {
+      "en": "The place where the treasure is hidden is called %1$s.",
+      "ua": "Місце, де сховано скарб, зветься %1$s."
+    },
+    "И находится это место в районе под названием {hh%1$s{hx.": {
+      "en": "And that place is in the area called {hh%1$s{hx.",
+      "ua": "А розташоване воно в місцевості під назвою {hh%1$s{hx."
+    }
   },
-  "%1$^C1 говорит тебе '{GВ этом винов%2$Gно|ен|на {W%2$#C1{G, я поручаю тебе наказать %2$P2.{x'": {
-   "en": "%1$^C1 tells you '{G{W%2$#C1{G is guilty of this, so I'm tasking you with punishing them.{x'",
-   "ua": "%1$^C1 каже тобі '{GУ цьому вин%2$Gне|ен|на|ні {W%2$#C1{G, тож доручаю тобі покарати %2$C4.{x'"
+  "autoquest/staff/onShortInfo": {
+    "Доставить квестору %1$s из %2$s (%3$s).": {
+      "en": "Deliver %1$s from %2$s (%3$s) to the quest giver.",
+      "ua": "Доставити квестодавцю %1$s з %2$s (%3$s)."
+    }
   },
-  "%1$^C1 говорит тебе '{GМесто, где %2$P2 видели в последний раз -- {W%3$s{G!{x'": {
-   "en": "%1$^C1 tells you '{GThe place where %2$C4 was last seen -- {W%3$s{G!{x'",
-   "ua": "%1$^C1 каже тобі '{GМісце, де %2$C4 бачили востаннє -- {W%3$s{G!{x'"
+  "autoquest/staff/onTargetGet": {
+    "%1$^O1 загорается голубым пламенем.": {
+      "en": "%1$^O1 bursts into blue flame.",
+      "ua": "%1$^O1 спалахує блакитним полум'ям."
+    },
+    "Мерцающая аура окружает %1$O4.": {
+      "en": "A flickering aura surrounds %1$O4.",
+      "ua": "Мерехтлива аура оточує %1$O4."
+    },
+    "%1$^O1 не принадлежит тебе, и ты бросаешь %1$P2.": {
+      "en": "%1$^O1 doesn't belong to you, so you drop it.",
+      "ua": "%1$^O1 тобі не належить, тож ти кидаєш %1$O4."
+    }
   },
-  "%1$^C1 говорит тебе '{GЭто находится в районе под названием {W{hh%2$s{hx{G.{x'": {
-   "en": "%1$^C1 tells you '{GIt is located in an area called {W{hh%2$s{hx{G.{x'",
-   "ua": "%1$^C1 каже тобі '{GЦе знаходиться в районі під назвою {W{hh%2$s{hx{G.{x'"
+  "autoquest/staff/onReward": {
+    "Ты передаешь %1$s %2$C3.": {
+      "en": "You hand %1$s to %2$C3.",
+      "ua": "Ти передаєш %1$s %2$C3."
+    },
+    "%1$^C1 передает %2$s %3$C3.": {
+      "en": "%1$^C1 hands %2$s to %3$C3.",
+      "ua": "%1$^C1 передає %2$s %3$C3."
+    }
   },
-  "%1$^C1 говорит тебе '{GУ тебя есть {Y%2$d{G мину%2$Iта|ты|т на выполнение задания.{x'": {
-   "en": "%1$^C1 tells you '{GYou have {Y%2$d{G minute%2$gs||s to complete the task.{x'",
-   "ua": "%1$^C1 каже тобі '{GУ тебе є {Y%2$d{G хвилин%2$Iа|и| на виконання завдання.{x'"
+  "autoquest/butcher/onCreate": {
+    "%1$^C1 говорит тебе '{GУ меня есть для тебя срочное поручение!{x'": {
+      "en": "%1$^C1 tells you '{GI have an urgent task for you!{x'",
+      "ua": "%1$^C1 каже тобі '{GУ мене є для тебе термінове доручення!{x'"
+    },
+    "%1$^C1 говорит тебе '{G{W%2$s{G из местности {W{hh%3$s{hx{G хочет подать к столу {W%4$d{G кус%4$Iок|ка|ков мяса {W%5$s{G из местности {W{hh%6$s{hx{G.{x'": {
+      "en": "%1$^C1 tells you '{G{W%2$s{G from the region {W{hh%3$s{hx{G wants {W%4$d{G piece%4$gs||s of {W%5$s{G meat from the region {W{hh%6$s{hx{G served at the table.{x'",
+      "ua": "%1$^C1 каже тобі '{G{W%2$s{G з місцевості {W{hh%3$s{hx{G хоче, щоб подали до столу {W%4$d{G шмат%4$Iок|ки|ків м'яса {W%5$s{G з місцевості {W{hh%6$s{hx{G.{x'"
+    },
+    "%1$^C1 говорит тебе '{GДоставь мясо заказчику и вернись сюда за вознаграждением.{x'": {
+      "en": "%1$^C1 tells you '{GDeliver the meat to the customer and come back here for your reward.{x'",
+      "ua": "%1$^C1 каже тобі '{GДостав м'ясо замовнику і повернись сюди за винагородою.{x'"
+    },
+    "%1$^C1 говорит тебе '{GУ тебя есть {Y%2$d{G мину%2$Iта|ты|т на выполнение задания.{x'": {
+      "en": "%1$^C1 tells you '{GYou have {Y%2$d{G minute%2$gs||s to complete the task.{x'",
+      "ua": "%1$^C1 каже тобі '{GУ тебе є {Y%2$d{G хвилин%2$Iа|и| на виконання завдання.{x'"
+    }
+  },
+  "autoquest/butcher/onInfo": {
+    "%1$s из {hh%2$s{hx просит тебя доставить к столу %3$d кус%3$Iок|ка|ков мяса %4$s из местности {hh%5$s{hx.": {
+      "en": "%1$s from {hh%2$s{hx asks you to bring %3$d piece%3$gs||s of %4$s meat from the area of {hh%5$s{hx to the table.",
+      "ua": "%1$s з {hh%2$s{hx просить тебе подати до столу %3$d шмат%3$Iок|ки|ків м'яса %4$s з місцевості {hh%5$s{hx."
+    },
+    "Доставлено кусков: %1$d.": {
+      "en": "Pieces delivered: %1$d.",
+      "ua": "Доставлено шматків: %1$d."
+    },
+    "Заказ уже неактуален.": {
+      "en": "The order is no longer valid.",
+      "ua": "Замовлення вже неактуальне."
+    }
+  },
+  "autoquest/butcher/onShortInfo": {
+    "%1$s из %2$s заказал %3$d кус%3$Iок|ка|ков мяса %4$s из %5$s.": {
+      "en": "%1$s from %2$s ordered %3$d piece%3$gs||s of %4$s meat from %5$s.",
+      "ua": "%1$s з %2$s замовив %3$d шмат%3$Iок|ки|ків м'яса %4$s з %5$s."
+    },
+    "Заказ повара.": {
+      "en": "A cook's order.",
+      "ua": "Замовлення кухаря."
+    }
+  },
+  "autoquest/butcher/onTargetGive": {
+    "%1$^C1 говорит тебе '{GЧто ты мне приволок%2$Gло|л|ла! Это даже не мясо!{x'": {
+      "en": "%1$^C1 tells you '{GWhat did you drag in for me?! This isn't even meat!{x'",
+      "ua": "%1$^C1 каже тобі '{GЩо ти мені притяг%2$Gло||ла|ли! Це навіть не м'ясо!{x'"
+    },
+    "%1$^C1 говорит тебе '{GУжас, с кого ты это среза%2$Gло|л|ла?!{x'": {
+      "en": "%1$^C1 tells you '{GGood grief, who did you carve this off of?!{x'",
+      "ua": "%1$^C1 каже тобі '{GЖах, з кого ти це зріза%2$Gло|в|ла|ли?!{x'"
+    },
+    "%1$^C1 говорит тебе '{GХороший кусок, но я заказыва%1$Gло|л|ла мясо %2$s.{x'": {
+      "en": "%1$^C1 tells you '{GGood cut, but I ordered %2$s meat.{x'",
+      "ua": "%1$^C1 каже тобі '{GГарний шматок, але я замовля%1$Gло|в|ла|ли м'ясо %2$s.{x'"
+    },
+    "%1$^C1 говорит тебе '{GЭти звери водятся в %2$s, а не в %3$s.{x'": {
+      "en": "%1$^C1 tells you '{GThose animals live in %2$s, not in %3$s.{x'",
+      "ua": "%1$^C1 каже тобі '{GЦі звірі водяться в %2$s, а не в %3$s.{x'"
+    },
+    "%1$^C1 говорит тебе '{GСпасибо за помощь! Вернись к квестору за наградой.{x'": {
+      "en": "%1$^C1 tells you '{GThanks for the help! Go back to the questor for your reward.{x'",
+      "ua": "%1$^C1 каже тобі '{GДякую за допомогу! Повернися до квестора за нагородою.{x'"
+    },
+    "%1$^C1 говорит тебе '{GХватит, родн%2$Gое|ой|ая.{x'": {
+      "en": "%1$^C1 tells you '{GThat's enough, dear.{x'",
+      "ua": "%1$^C1 каже тобі '{GДосить, рідн%2$Gе|ий|а|і.{x'"
+    },
+    "%1$^C1 говорит тебе '{GМаловато будет...{x'": {
+      "en": "%1$^C1 tells you '{GThat won't quite cut it...{x'",
+      "ua": "%1$^C1 каже тобі '{GЗамало буде...{x'"
+    },
+    "%1$^C1 куда-то прячет %2$O4.": {
+      "en": "%1$^C1 hides %2$O4 somewhere.",
+      "ua": "%1$^C1 кудись ховає %2$O4."
+    }
+  },
+  "autoquest/butcher/onTargetDeath": {
+    "{YЗаказ отменен в связи с кончиной заказчика.{x": {
+      "en": "{YThe order has been cancelled due to the customer's untimely demise.{x",
+      "ua": "{YЗамовлення скасовано у зв'язку зі смертю замовника.{x"
+    }
+  },
+  "autoquest/butcher/onTargetGreet": {
+    "%1$^C1 выжидающе смотрит на тебя.": {
+      "en": "%1$^C1 looks at you expectantly.",
+      "ua": "%1$^C1 вичікувально дивиться на тебе."
+    }
+  },
+  "autoquest/heal/onCreate": {
+    "%1$^C1 говорит тебе '{GУ меня есть для тебя срочное поручение!{x'": {
+      "en": "%1$^C1 tells you '{GI have an urgent task for you!{x'",
+      "ua": "%1$^C1 каже тобі '{GУ мене є для тебе термінове доручення!{x'"
+    },
+    "%1$^C1 говорит тебе '{G{W%2$#^C1{G чем-то серьезно бол%2$Gьно|ен|ьна и нуждается в помощи лекаря.{x'": {
+      "en": "%1$^C1 tells you '{G{W%2$#^C1{G is gravely ill with something and needs a healer's help.{x'",
+      "ua": "%1$^C1 каже тобі '{G{W%2$#^C1{G чимось серйозно хвор%2$Gе|ий|а і потребує допомоги лікаря.{x'"
+    },
+    "%1$^C1 говорит тебе '{GМесто, где в последний раз видели {W%2$#C4{G, называется {W%3$s{G.{x'": {
+      "en": "%1$^C1 tells you '{GThe place where {W%2$#C4{G was last seen is called {W%3$s{G.{x'",
+      "ua": "%1$^C1 каже тобі '{GМісце, де востаннє бачили {W%2$#C4{G, зветься {W%3$s{G.{x'"
+    },
+    "%1$^C1 говорит тебе '{GИ находится это место в районе под названием -- {W{hh%2$s{hx{G.{x'": {
+      "en": "%1$^C1 tells you '{GAnd this place is located in the area called -- {W{hh%2$s{hx{G.{x'",
+      "ua": "%1$^C1 каже тобі '{GІ знаходиться це місце в районі під назвою -- {W{hh%2$s{hx{G.{x'"
+    },
+    "%1$^C1 говорит тебе '{GПоторопись, пока болезнь не доконала %2$#C4!{x'": {
+      "en": "%1$^C1 tells you '{GHurry, before the illness finishes %2$#C4 off!{x'",
+      "ua": "%1$^C1 каже тобі '{GПоспіши, поки хвороба не доконала %2$#C4!{x'"
+    },
+    "%1$^C1 говорит тебе '{GУ тебя есть {Y%2$d{G мину%2$Iта|ты|т на выполнение задания.{x'": {
+      "en": "%1$^C1 tells you '{GYou have {Y%2$d{G minute%2$gs||s to complete the task.{x'",
+      "ua": "%1$^C1 каже тобі '{GУ тебе є {Y%2$d{G хвилин%2$Iа|и| на виконання завдання.{x'"
+    }
+  },
+  "autoquest/heal/spellHook": {
+    "{YЧто ж ты творишь! Тебя лечить позвали.{x": {
+      "en": "{YWhat are you doing?! You were called to heal.{x",
+      "ua": "{YЩо ж ти коїш! Тебе лікувати покликали.{x"
+    },
+    "Твое задание {YВЫПОЛНЕНО{x!": {
+      "en": "Your quest is {YCOMPLETE{x!",
+      "ua": "Твоє завдання {YВИКОНАНО{x!"
+    },
+    "Вернись за вознаграждением к давшему тебе задание до того, как истечет время!": {
+      "en": "Return to whoever gave you the quest for your reward before time runs out!",
+      "ua": "Повернись за винагородою до того, хто дав тобі завдання, поки не сплив час!"
+    },
+    "{YТы излечи%1$Gло|л|ла пациента от одного из недугов.{x": {
+      "en": "{YYou've cured the patient of one of its ailments.{x",
+      "ua": "{YТи вилікува%1$Gло|в|ла пацієнта від однієї з недуг.{x"
+    },
+    "{YКто-то другой полностью излечил твоего пациента.{x": {
+      "en": "{YSomeone else has fully cured your patient.{x",
+      "ua": "{YХтось інший цілком вилікував твого пацієнта.{x"
+    },
+    "Вернись к квестору за утешительным призом.": {
+      "en": "Return to the quest giver for a consolation prize.",
+      "ua": "Повернись до квестодавця по втішний приз."
+    },
+    "{YКому-то удалось избавить твоего пациента от одного из недугов.{x": {
+      "en": "{YSomeone managed to rid your patient of one of its ailments.{x",
+      "ua": "{YКомусь удалося позбавити твого пацієнта однієї з недуг.{x"
+    },
+    "Это отрицательно скажется на общем размере вознаграждения.": {
+      "en": "This will reduce the overall size of your reward.",
+      "ua": "Це негативно позначиться на загальному розмірі винагороди."
+    }
+  },
+  "autoquest/heal/onInfo": {
+    "У тебя задание -- вылечить %1$s!": {
+      "en": "Your task is to heal %1$s!",
+      "ua": "У тебе завдання -- вилікувати %1$s!"
+    },
+    "Место, где пациента видели в последний раз -- %1$s.": {
+      "en": "The place where the patient was last seen -- %1$s.",
+      "ua": "Місце, де пацієнта бачили востаннє -- %1$s."
+    },
+    "Это находится в районе под названием {hh%1$s{hx.": {
+      "en": "It is located in an area called {hh%1$s{hx.",
+      "ua": "Це знаходиться в районі під назвою {hh%1$s{hx."
+    }
+  },
+  "autoquest/heal/onShortInfo": {
+    "Вылечить %1$s из %2$s (%3$s).": {
+      "en": "Heal %1$s from %2$s (%3$s).",
+      "ua": "Вилікувати %1$s з %2$s (%3$s)."
+    }
+  },
+  "autoquest/heal/onTargetDeath": {
+    "{YТы вылечи%1$Gло|л|ла пациента сразу от всех болезней >8){x": {
+      "en": "{YYou've cured the patient of all its diseases at once >8){x",
+      "ua": "{YТи вилікува%1$Gло|в|ла пацієнта відразу від усіх хвороб >8){x"
+    },
+    "{YПациент отправился на тот свет без твоей помощи.{x": {
+      "en": "{YThe patient has passed on without your help.{x",
+      "ua": "{YПацієнт відійшов на той світ без твоєї допомоги.{x"
+    }
+  },
+  "autoquest/big/onCreate": {
+    "%1$^C1 говорит тебе '{G%2$s{x'": {
+      "en": "%1$^C1 tells you '{G%2$s{x'",
+      "ua": "%1$^C1 каже тобі '{G%2$s{x'"
+    }
+  },
+  "autoquest/big/onTargetDeath": {
+    "{YВсе разбежались или были уничтожены, сообщи квестору о выполнении задания.{x": {
+      "en": "{YThey have all scattered or been destroyed; report the completed task to the quest giver.{x",
+      "ua": "{YУсі розбіглися чи були знищені, повідом квестодавця про виконання завдання.{x"
+    },
+    "{YТебе осталось уничтожить %1$d из %2$d.{x": {
+      "en": "{YYou have %1$d of %2$d left to destroy.{x",
+      "ua": "{YТобі лишилося знищити %1$d з %2$d.{x"
+    },
+    "{YКто-то из целей текущего задания погиб без твоего участия. Осталось %1$d из %2$d.{x": {
+      "en": "{YOne of the current task's targets died without your help. %1$d of %2$d left.{x",
+      "ua": "{YОдна з цілей поточного завдання загинула без твоєї участі. Лишилося %1$d з %2$d.{x"
+    }
+  },
+  "autoquest/big/onInfo": {
+    "Последний раз их видели в местности '{hh%1$s{hx'.": {
+      "en": "They were last seen in the area '{hh%1$s{hx'.",
+      "ua": "Востаннє їх бачили в місцевості '{hh%1$s{hx'."
+    },
+    "Уже уничтожено %1$d, осталось совсем немного.": {
+      "en": "%1$d already destroyed, only a few left.",
+      "ua": "Уже знищено %1$d, лишилося зовсім небагато."
+    }
+  },
+  "autoquest/big/onShortInfo": {
+    "Уничтожить %1$d преступник%1$Iа|ов|ов из '%2$s' (уничтожено %3$d).": {
+      "en": "Destroy %1$d criminal%1$gs||s from '%2$s' (%3$d destroyed).",
+      "ua": "Знищити %1$d злочинц%1$Iя|ів|ів з '%2$s' (знищено %3$d)."
+    }
+  },
+  "autoquest/locate/onCreate": {
+    "%1$^C1 говорит тебе '{W%2$#^C1{G хочет отыскать некоторые свои вещи.{x'": {
+      "en": "%1$^C1 tells you '{W%2$#^C1{G wants to find some of their belongings.{x'",
+      "ua": "%1$^C1 каже тобі '{W%2$#^C1{G хоче відшукати деякі свої речі.{x'"
+    },
+    "%1$^C1 говорит тебе '{W%2$#^C1{G ждет тебя в районе {W%3$s{G ({W{hh%4$s{hx{G).{x'": {
+      "en": "%1$^C1 tells you '{W%2$#^C1{G awaits you in the {W%3$s{G area ({W{hh%4$s{hx{G).{x'",
+      "ua": "%1$^C1 каже тобі '{W%2$#^C1{G чекає на тебе в районі {W%3$s{G ({W{hh%4$s{hx{G).{x'"
+    },
+    "%1$^C1 говорит тебе '{GУ тебя есть {Y%2$d{G мину%2$Iта|ты|т, чтобы добраться туда и узнать подробности.{x'": {
+      "en": "%1$^C1 tells you '{GYou have {Y%2$d{G minute%2$gs||s to get there and find out the details.{x'",
+      "ua": "%1$^C1 каже тобі '{GУ тебе є {Y%2$d{G хвилин%2$Iа|и|, щоб дістатися туди і дізнатися подробиці.{x'"
+    }
+  },
+  "autoquest/locate/onTargetGreet": {
+    "%1$^C1, всплеснув руками, бросается тебе навстречу.": {
+      "en": "%1$^C1 throws up their hands and rushes toward you.",
+      "ua": "%1$^C1, сплеснувши руками, кидається тобі назустріч."
+    },
+    "%1$^C1 говорит тебе '{GПодлые мыши, спасу от них нет никакого. Чем я их только не травила!{x'": {
+      "en": "%1$^C1 tells you '{GFilthy mice, there's no escaping them. I've tried everything to poison them!{x'",
+      "ua": "%1$^C1 каже тобі '{GПідступні миші, рятунку від них нема жодного. Чим я їх тільки не труїла!{x'"
+    },
+    "%1$^C1 говорит тебе '{GРастащили из кладовки {W%2$s{G. Всех их уже, конечно, не отыскать.{x'": {
+      "en": "%1$^C1 tells you '{GThey looted {W%2$s{G from the storeroom. Of course, there's no finding them all now.{x'",
+      "ua": "%1$^C1 каже тобі '{GЗ комори розтягли {W%2$s{G. Усіх їх уже, звісно, не відшукати.{x'"
+    },
+    "%1$^C1 говорит тебе '{GНо попробуй собери хотя бы {W%2$d{G штук. Жду с нетерпением.{x'": {
+      "en": "%1$^C1 tells you '{GBut at least try to gather {W%2$d{G of them. I'll be waiting eagerly.{x'",
+      "ua": "%1$^C1 каже тобі '{GАле спробуй зібрати хоча б {W%2$d{G штук. Чекаю з нетерпінням.{x'"
+    },
+    "%1$^C1 смотрит на тебя широко раскрытыми от ужаса глазами.": {
+      "en": "%1$^C1 stares at you with eyes wide with horror.",
+      "ua": "%1$^C1 дивиться на тебе широко розплющеними від жаху очима."
+    },
+    "%1$^C1 говорит тебе '{GСлучилось ужасное. С моего рабочего стола сквозняком выдуло в окно пачку {W%2$s{G и расшвыряло по окрестностям!{x'": {
+      "en": "%1$^C1 tells you '{GSomething terrible happened. A draft blew a pack of {W%2$s{G off my desk and out the window, scattering it all over the neighborhood!{x'",
+      "ua": "%1$^C1 каже тобі '{GСталося щось жахливе. Протягом здуло з мого робочого столу пачку {W%2$s{G у вікно і розкидало по околицях!{x'"
+    },
+    "%1$^C1 говорит тебе '{GЕсли я их не соберу, меня казнят, а не то и уволят.{x'": {
+      "en": "%1$^C1 tells you '{GIf I don't collect them, they'll have me executed -- or worse, fired.{x'",
+      "ua": "%1$^C1 каже тобі '{GЯкщо я їх не зберу, мене стратять, а то й звільнять.{x'"
+    },
+    "%1$^C1 жалобно всхлипывает.": {
+      "en": "%1$^C1 sobs pitifully.",
+      "ua": "%1$^C1 жалібно схлипує."
+    },
+    "%1$^C1 говорит тебе '{GВсего их было {W%2$d{G. Пожалуйста, отыщи их и принеси мне! Ты моя последняя надежда!{x'": {
+      "en": "%1$^C1 tells you '{GThere were {W%2$d{G of them in total. Please find them and bring them to me! You're my last hope!{x'",
+      "ua": "%1$^C1 каже тобі '{GУсього їх було {W%2$d{G. Будь ласка, знайди їх і принеси мені! Ти моя остання надія!{x'"
+    },
+    "%1$^C1 отрывает взгляд от пробирок и поворачивается к тебе.": {
+      "en": "%1$^C1 tears their eyes away from the test tubes and turns to you.",
+      "ua": "%1$^C1 відриває погляд від пробірок і повертається до тебе."
+    },
+    "%1$^C1 говорит тебе '{GНедавно я что-то смешал не в тех пропорциях..{x'": {
+      "en": "%1$^C1 tells you '{GI recently mixed something in the wrong proportions...{x'",
+      "ua": "%1$^C1 каже тобі '{GНещодавно я щось змішав не в тих пропорціях...{x'"
+    },
+    "%1$^C1 думает о чем-то, уставившись в одну точку.": {
+      "en": "%1$^C1 stares at a fixed point, lost in thought.",
+      "ua": "%1$^C1 думає про щось, втупившись в одну точку."
+    },
+    "%1$^C1 говорит тебе '{GДа, так вот.. в моей лаборатории прогремел взрыв, и {W%2$s{G расшвыряло в разные стороны.{x'": {
+      "en": "%1$^C1 tells you '{GYeah, so... there was an explosion in my lab, and it flung {W%2$s{G in every direction.{x'",
+      "ua": "%1$^C1 каже тобі '{GТак, ось... у моїй лабораторії гримнув вибух, і {W%2$s{G розкидало в різні боки.{x'"
+    },
+    "%1$^C1 говорит тебе '{GПо моим подсчетам, их около {W%2$d{G. Поищи, вдруг тебе повезет.{x'": {
+      "en": "%1$^C1 tells you '{GBy my count, there are about {W%2$d{G of them. Have a look -- you might get lucky.{x'",
+      "ua": "%1$^C1 каже тобі '{GЗа моїми підрахунками, їх близько {W%2$d{G. Пошукай, раптом тобі пощастить.{x'"
+    },
+    "%1$^C1 снова возвращается к работе.": {
+      "en": "%1$^C1 goes back to work.",
+      "ua": "%1$^C1 знову повертається до роботи."
+    },
+    "%1$^C1 говорит тебе '{GЗаказа%1$Gло|л|ла я на днях набор отменнейших пыточных приспособлений. Железные девы 'от кутюр', наручники под ключ.. ну, ты меня понимаешь.{x'": {
+      "en": "%1$^C1 tells you '{GI ordered a batch of the finest torture devices the other day. Iron maidens 'haute couture', turnkey handcuffs.. well, you know how it is.{x'",
+      "ua": "%1$^C1 каже тобі '{GЗамови%1$Gло|в|ла|ли я днями набір найвишуканіших знарядь для тортур. Залізні діви 'від кутюр', наручники під ключ.. ну, ти ж мене розумієш.{x'"
+    },
+    "%1$^C1 говорит тебе '{GНо балбес поставщик растерял все по пути от {W%2$s{G сюда. На нем мне пришлось опробовать старые средства, а вот заказанное добро до сих пор валяется где-то на дороге.{x'": {
+      "en": "%1$^C1 tells you '{GBut the doofus of a supplier lost everything on the way here from {W%2$s{G. I had to try some old methods on him, and the goods I ordered are still lying around somewhere on the road.{x'",
+      "ua": "%1$^C1 каже тобі '{GТа бовдур постачальник розгубив усе по дорозі від {W%2$s{G сюди. На ньому довелося випробувати старі методи, а замовлений товар досі валяється десь на дорозі.{x'"
+    },
+    "%1$^C1 говорит тебе '{GВсего там {W%2$d{G железок. Приволоки их сюда, если ты действительно такой хороший сыщик, как о тебе рассказывают.{x'": {
+      "en": "%1$^C1 tells you '{GThere are {W%2$d{G bits of scrap there in total. Haul them back here, if you're really as good a detective as they say.{x'",
+      "ua": "%1$^C1 каже тобі '{GВсього там {W%2$d{G залізяк. Притягни їх сюди, якщо ти справді такий гарний нишпорка, як про тебе розказують.{x'"
+    }
+  },
+  "autoquest/locate/onTargetGive": {
+    "%1$^C1 говорит тебе '{GСпасибо, конечно, но я не об этом проси%1$Gло|л|ла тебя.{x'": {
+      "en": "%1$^C1 tells you '{GThanks, sure, but that's not what I asked you for.{x'",
+      "ua": "%1$^C1 каже тобі '{GДякую, звісно, але я не про це проси%1$Gло|в|ла тебе.{x'"
+    },
+    "%1$^C1 говорит тебе '{GВот спасибо, %2$C1. Теперь все найдено и я могу спать спокойно.{x'": {
+      "en": "%1$^C1 tells you '{GThanks a lot, %2$C1. Now everything's found and I can sleep soundly.{x'",
+      "ua": "%1$^C1 каже тобі '{GОт спасибі, %2$C1. Тепер усе знайдено і я можу спати спокійно.{x'"
+    },
+    "%1$^C1 говорит тебе '{GА вознаграждение я уже переда%1$Gло|л|ла твоему квестору. Сходи и забери его.{x'": {
+      "en": "%1$^C1 tells you '{GAnd I've already handed the reward over to your quest giver. Go get it.{x'",
+      "ua": "%1$^C1 каже тобі '{GА нагороду я вже переда%1$Gло|в|ла твоєму квестору. Піди і забери її.{x'"
+    },
+    "%1$^C1 говорит тебе '{GДа-да, как говорится, еще 65535 ведер -- и золотой ключик у нас в кармане.{x'": {
+      "en": "%1$^C1 tells you '{GYes yes, as they say, another 65535 buckets and the golden little key is in our pocket.{x'",
+      "ua": "%1$^C1 каже тобі '{GТак-так, як то кажуть, ще 65535 відер -- і золотий ключик у нас в кишені.{x'"
+    },
+    "%1$^C1 говорит тебе '{GО, ты наш%2$Gло|ел|ла еще %3$s!{x'": {
+      "en": "%1$^C1 tells you '{GOh, you found another %3$s!{x'",
+      "ua": "%1$^C1 каже тобі '{GО, ти знайш%2$Gло|ов|ла ще %3$s!{x'"
+    },
+    "%1$^C1 говорит тебе '{GТеперь их уже %2$d, осталось совсем немного.{x'": {
+      "en": "%1$^C1 tells you '{GThat makes %2$d already, only a few more to go.{x'",
+      "ua": "%1$^C1 каже тобі '{GТепер їх уже %2$d, лишилося зовсім небагато.{x'"
+    }
+  },
+  "autoquest/locate/onTargetGet": {
+    "%1$^O1 не принадлежит тебе, и ты бросаешь %1$P2.": {
+      "en": "%1$^O1 does not belong to you, so you throw it away.",
+      "ua": "%1$^O1 не належить тобі, і ти кидаєш %1$O4."
+    },
+    "%2$^C1 бросает %1$O4.": {
+      "en": "%2$^C1 throws %1$O4.",
+      "ua": "%2$^C1 кидає %1$O4."
+    }
+  },
+  "autoquest/locate/onTargetDeath": {
+    "{YТы прине%1$Gсло|с|сла %2$C3 смерть, а тебя просили принести кое-что другое.{x": {
+      "en": "{YYou brought death to %2$C3, but you were asked to bring something else.{x",
+      "ua": "{YТи прин%1$Gесло|іс|есла %2$C3 смерть, а тебе просили принести щось інше.{x"
+    },
+    "{Y%1$^C1 внезапно скончал%1$Gось|ся|ась. Задание отменяется.{x": {
+      "en": "{Y%1$^C1 suddenly passed away. The quest is cancelled.{x",
+      "ua": "{Y%1$^C1 раптово скона%1$Gло|в|ла. Завдання скасовується.{x"
+    },
+    "{Y%1$^C1 подло уби%1$Gло|л|ла того, кто нуждался в твоей помощи.{x": {
+      "en": "{Y%1$^C1 treacherously killed the one who needed your help.{x",
+      "ua": "{Y%1$^C1 підло вби%1$Gло|в|ла того, хто потребував твоєї допомоги.{x"
+    }
+  },
+  "autoquest/locate/onInfo": {
+    "%1$s хочет отыскать кое-какие свои вещи.": {
+      "en": "%1$s wants to recover some lost belongings.",
+      "ua": "%1$s хоче відшукати деякі свої речі."
+    },
+    "Тебя с нетерпением ждут в районе %1$s.": {
+      "en": "You are eagerly awaited at %1$s.",
+      "ua": "На тебе з нетерпінням чекають у районі %1$s."
+    },
+    "Это находится в местности под названием {hh%1$s{hx.": {
+      "en": "That is in the area called {hh%1$s{hx.",
+      "ua": "Це в місцевості під назвою {hh%1$s{hx."
+    },
+    "%1$s жалуется на банду грызунов, которые растащили %2$s из ее кладовки.": {
+      "en": "%1$s complains about a gang of rodents that dragged %2$s out of her pantry.",
+      "ua": "%1$s скаржиться на банду гризунів, які розтягли %2$s з її комори."
+    },
+    "Пропало довольно много, но она будет благодарна тебе, если ты принесешь ей хотя бы {Y%1$d{x штук%1$Iу|и|.": {
+      "en": "Quite a lot went missing, but she will be grateful if you bring her at least {Y%1$d{x of them.",
+      "ua": "Пропало чимало, але вона буде вдячна тобі, якщо принесеш їй хоча б {Y%1$d{x штук%1$Iу|и|."
+    },
+    "%1$s просит тебя собрать пачку %2$s, которую ветром расшвыряло по окрестностям. Всего их было {Y%3$d{x штук%3$Iу|и|.": {
+      "en": "%1$s asks you to gather up a bundle of %2$s that the wind scattered across the neighborhood. There were {Y%3$d{x of them in all.",
+      "ua": "%1$s просить тебе зібрати пачку %2$s, яку вітром розкидало по околицях. Усього їх було {Y%3$d{x."
+    },
+    "В лаборатории %1$s взрывом расшвыряло %2$s, в количестве {Y%3$d{x штук%3$Iи||.": {
+      "en": "An explosion in the laboratory of %1$s scattered %2$s all over, {Y%3$d{x of them in all.",
+      "ua": "У лабораторії %1$s вибухом розкидало %2$s, у кількості {Y%3$d{x штук%3$Iи||."
+    },
+    "%1$s просит тебя попытаться собрать их.": {
+      "en": "%1$s asks you to try and gather them up.",
+      "ua": "%1$s просить тебе спробувати їх зібрати."
+    },
+    "Поставщик не донес %1$s орудия пыток, растеряв их на полпути от %2$s.": {
+      "en": "A supplier failed to deliver instruments of torture to %1$s, scattering them somewhere on the road from %2$s.",
+      "ua": "Постачальник не доніс %1$s знаряддя тортур, розгубивши їх на півдорозі від %2$s."
+    },
+    "Всего их было {Y%1$d{x штук%1$Iи||.": {
+      "en": "There were {Y%1$d{x of them in all.",
+      "ua": "Усього їх було {Y%1$d{x."
+    },
+    "%1$s просит тебя собрать их и отдать ему.": {
+      "en": "%1$s asks you to gather them up and hand them over.",
+      "ua": "%1$s просить тебе зібрати їх і віддати йому."
+    },
+    "Тобой уже доставлено {Y%1$d{x из них.": {
+      "en": "You have delivered {Y%1$d{x of them so far.",
+      "ua": "Тобою вже доставлено {Y%1$d{x з них."
+    },
+    "Заказчик ждет тебя в районе %1$s.": {
+      "en": "The client is waiting for you at %1$s.",
+      "ua": "Замовник чекає на тебе в районі %1$s."
+    }
+  },
+  "autoquest/locate/onShortInfo": {
+    "Помочь %1$s из %2$s (%3$s) отыскать свои вещи.": {
+      "en": "Help %1$s from %2$s (%3$s) recover their belongings.",
+      "ua": "Допомогти %1$s з %2$s (%3$s) відшукати свої речі."
+    },
+    "Найти %1$d штук%1$Iу|и| %2$s для %3$s из %4$s (%5$s).": {
+      "en": "Find %1$d %2$s for %3$s from %4$s (%5$s).",
+      "ua": "Знайти %1$d штук%1$Iу|и| %2$s для %3$s з %4$s (%5$s)."
+    }
   }
- },
- "autoquest/kill/onTargetDeath": {
-  "Твое задание {YВЫПОЛНЕНО{x!": {
-   "en": "Your quest is {YCOMPLETE{x!",
-   "ua": "Твоє завдання {YВИКОНАНО{x!"
-  },
-  "Вернись за вознаграждением к давшему тебе задание до того, как истечет время!": {
-   "en": "Return to whoever gave you the quest for your reward before time runs out!",
-   "ua": "Повернись за винагородою до того, хто дав тобі завдання, поки не сплив час!"
-  },
-  "{YПоздравляю! Ты выполнил%1$Gо||а задание своего согруппника.{x": {
-   "en": "{YCongratulations! You've completed your groupmate's task.{x",
-   "ua": "{YВітаю! Ти виконал%1$Gо||а завдання свого спільника.{x"
-  },
-  "{Y%1$^C1 помог%1$Gло||ла тебе выполнить задание, поспеши к квестору за наградой.{x": {
-   "en": "{Y%1$^C1 helped you complete the task, hurry to the quest giver for your reward.{x",
-   "ua": "{Y%1$^C1 допом%1$Gогло|іг|огла тобі виконати завдання, поспіши до квестодавця по нагороду.{x"
-  },
-  "{YПоздравляю! Но это убийство было поручено другому.{x": {
-   "en": "{YCongratulations! But this kill was assigned to someone else.{x",
-   "ua": "{YВітаю! Але це вбивство було доручено іншому.{x"
-  },
-  "{YКто-то другой выполнил порученное тебе задание.{x": {
-   "en": "{YSomeone else has completed the quest assigned to you.{x",
-   "ua": "{YХтось інший виконав доручене тобі завдання.{x"
-  },
-  "{YЖертва умерла своей смертью.{x": {
-   "en": "{YThe victim died of natural causes.{x",
-   "ua": "{YЖертва померла своєю смертю.{x"
-  }
- },
- "autoquest/kill/onInfo": {
-  "У тебя задание -- уничтожить %1$s!": {
-   "en": "Your task is to destroy %1$s!",
-   "ua": "Твоє завдання -- знищити %1$s!"
-  },
-  "Место, где жертву видели в последний раз -- %1$s": {
-   "en": "The victim was last seen in %1$s",
-   "ua": "Востаннє жертву бачили тут: %1$s"
-  },
-  "Это находится в районе под названием {hh%1$s{hx.": {
-   "en": "That is in the area called {hh%1$s{hx.",
-   "ua": "Це в місцевості під назвою {hh%1$s{hx."
-  }
- },
- "autoquest/kill/onShortInfo": {
-  "Уничтожить %1$s из %2$s (%3$s).": {
-   "en": "Destroy %1$s from %2$s (%3$s).",
-   "ua": "Знищити %1$s з %2$s (%3$s)."
-  }
- },
- "autoquest/staff/onCreate": {
-  "%1$^C1 говорит тебе '{G%2$s{x'": {
-   "en": "%1$^C1 tells you '{G%2$s{x'",
-   "ua": "%1$^C1 каже тобі '{G%2$s{x'"
-  },
-  "%1$^C1 говорит тебе '{GИз королевской сокровищницы похитили {W%2$s{G!{x'": {
-   "en": "%1$^C1 tells you '{G{W%2$s{G was stolen from the royal treasury!{x'",
-   "ua": "%1$^C1 каже тобі '{GЗ королівської скарбниці викрали {W%2$s{G!{x'"
-  },
-  "%1$^C1 говорит тебе '{GПридворные волшебники определили, где спрятано украденное сокровище.{x'": {
-   "en": "%1$^C1 tells you '{GThe court wizards have determined where the stolen treasure is hidden.{x'",
-   "ua": "%1$^C1 каже тобі '{GПридворні чарівники визначили, де сховано викрадений скарб.{x'"
-  },
-  "%1$^C1 говорит тебе '{GТебе поручается доставить его мне!{x'": {
-   "en": "%1$^C1 tells you '{GYou've been ordered to deliver it to me!{x'",
-   "ua": "%1$^C1 каже тобі '{GТобі доручається доставити це мені!{x'"
-  },
-  "%1$^C1 говорит тебе '{GМесто, где оно спрятано, называется {W%2$s{G.{x'": {
-   "en": "%1$^C1 tells you '{GThe place where it's hidden is called {W%2$s{G.{x'",
-   "ua": "%1$^C1 каже тобі '{GМісце, де воно сховане, зветься {W%2$s{G.{x'"
-  },
-  "%1$^C1 говорит тебе '{GИ находится это место в районе под названием -- {W{hh%2$s{hx{G.{x'": {
-   "en": "%1$^C1 tells you '{GAnd this place is located in the area called -- {W{hh%2$s{hx{G.{x'",
-   "ua": "%1$^C1 каже тобі '{GІ знаходиться це місце в районі під назвою -- {W{hh%2$s{hx{G.{x'"
-  },
-  "%1$^C1 говорит тебе '{GУ тебя есть {Y%2$d{G мину%2$Iта|ты|т на выполнение задания.{x'": {
-   "en": "%1$^C1 tells you '{GYou have {Y%2$d{G minute%2$gs||s to complete the task.{x'",
-   "ua": "%1$^C1 каже тобі '{GУ тебе є {Y%2$d{G хвилин%2$Iа|и| на виконання завдання.{x'"
-  }
- },
- "autoquest/staff/onInfo": {
-  "У тебя задание -- вернуть %1$s.": {
-   "en": "Your task is to bring back %1$s.",
-   "ua": "Твоє завдання -- повернути %1$s."
-  },
-  "Место, где спрятано сокровище, называется %1$s.": {
-   "en": "The place where the treasure is hidden is called %1$s.",
-   "ua": "Місце, де сховано скарб, зветься %1$s."
-  },
-  "И находится это место в районе под названием {hh%1$s{hx.": {
-   "en": "And that place is in the area called {hh%1$s{hx.",
-   "ua": "А розташоване воно в місцевості під назвою {hh%1$s{hx."
-  }
- },
- "autoquest/staff/onShortInfo": {
-  "Доставить квестору %1$s из %2$s (%3$s).": {
-   "en": "Deliver %1$s from %2$s (%3$s) to the quest giver.",
-   "ua": "Доставити квестодавцю %1$s з %2$s (%3$s)."
-  }
- },
- "autoquest/staff/onTargetGet": {
-  "%1$^O1 загорается голубым пламенем.": {
-   "en": "%1$^O1 bursts into blue flame.",
-   "ua": "%1$^O1 спалахує блакитним полум'ям."
-  },
-  "Мерцающая аура окружает %1$O4.": {
-   "en": "A flickering aura surrounds %1$O4.",
-   "ua": "Мерехтлива аура оточує %1$O4."
-  },
-  "%1$^O1 не принадлежит тебе, и ты бросаешь %1$P2.": {
-   "en": "%1$^O1 doesn't belong to you, so you drop it.",
-   "ua": "%1$^O1 тобі не належить, тож ти кидаєш %1$O4."
-  }
- },
- "autoquest/staff/onReward": {
-  "Ты передаешь %1$s %2$C3.": {
-   "en": "You hand %1$s to %2$C3.",
-   "ua": "Ти передаєш %1$s %2$C3."
-  },
-  "%1$^C1 передает %2$s %3$C3.": {
-   "en": "%1$^C1 hands %2$s to %3$C3.",
-   "ua": "%1$^C1 передає %2$s %3$C3."
-  }
- },
- "autoquest/butcher/onCreate": {
-  "%1$^C1 говорит тебе '{GУ меня есть для тебя срочное поручение!{x'": {
-   "en": "%1$^C1 tells you '{GI have an urgent task for you!{x'",
-   "ua": "%1$^C1 каже тобі '{GУ мене є для тебе термінове доручення!{x'"
-  },
-  "%1$^C1 говорит тебе '{G{W%2$s{G из местности {W{hh%3$s{hx{G хочет подать к столу {W%4$d{G кус%4$Iок|ка|ков мяса {W%5$s{G из местности {W{hh%6$s{hx{G.{x'": {
-   "en": "%1$^C1 tells you '{G{W%2$s{G from the region {W{hh%3$s{hx{G wants {W%4$d{G piece%4$gs||s of {W%5$s{G meat from the region {W{hh%6$s{hx{G served at the table.{x'",
-   "ua": "%1$^C1 каже тобі '{G{W%2$s{G з місцевості {W{hh%3$s{hx{G хоче, щоб подали до столу {W%4$d{G шмат%4$Iок|ки|ків м'яса {W%5$s{G з місцевості {W{hh%6$s{hx{G.{x'"
-  },
-  "%1$^C1 говорит тебе '{GДоставь мясо заказчику и вернись сюда за вознаграждением.{x'": {
-   "en": "%1$^C1 tells you '{GDeliver the meat to the customer and come back here for your reward.{x'",
-   "ua": "%1$^C1 каже тобі '{GДостав м'ясо замовнику і повернись сюди за винагородою.{x'"
-  },
-  "%1$^C1 говорит тебе '{GУ тебя есть {Y%2$d{G мину%2$Iта|ты|т на выполнение задания.{x'": {
-   "en": "%1$^C1 tells you '{GYou have {Y%2$d{G minute%2$gs||s to complete the task.{x'",
-   "ua": "%1$^C1 каже тобі '{GУ тебе є {Y%2$d{G хвилин%2$Iа|и| на виконання завдання.{x'"
-  }
- },
- "autoquest/butcher/onInfo": {
-  "%1$s из {hh%2$s{hx просит тебя доставить к столу %3$d кус%3$Iок|ка|ков мяса %4$s из местности {hh%5$s{hx.": {
-   "en": "%1$s from {hh%2$s{hx asks you to bring %3$d piece%3$gs||s of %4$s meat from the area of {hh%5$s{hx to the table.",
-   "ua": "%1$s з {hh%2$s{hx просить тебе подати до столу %3$d шмат%3$Iок|ки|ків м'яса %4$s з місцевості {hh%5$s{hx."
-  },
-  "Доставлено кусков: %1$d.": {
-   "en": "Pieces delivered: %1$d.",
-   "ua": "Доставлено шматків: %1$d."
-  },
-  "Заказ уже неактуален.": {
-   "en": "The order is no longer valid.",
-   "ua": "Замовлення вже неактуальне."
-  }
- },
- "autoquest/butcher/onShortInfo": {
-  "%1$s из %2$s заказал %3$d кус%3$Iок|ка|ков мяса %4$s из %5$s.": {
-   "en": "%1$s from %2$s ordered %3$d piece%3$gs||s of %4$s meat from %5$s.",
-   "ua": "%1$s з %2$s замовив %3$d шмат%3$Iок|ки|ків м'яса %4$s з %5$s."
-  },
-  "Заказ повара.": {
-   "en": "A cook's order.",
-   "ua": "Замовлення кухаря."
-  }
- },
- "autoquest/butcher/onTargetGive": {
-  "%1$^C1 говорит тебе '{GЧто ты мне приволок%2$Gло|л|ла! Это даже не мясо!{x'": {
-   "en": "%1$^C1 tells you '{GWhat did you drag in for me?! This isn't even meat!{x'",
-   "ua": "%1$^C1 каже тобі '{GЩо ти мені притяг%2$Gло||ла|ли! Це навіть не м'ясо!{x'"
-  },
-  "%1$^C1 говорит тебе '{GУжас, с кого ты это среза%2$Gло|л|ла?!{x'": {
-   "en": "%1$^C1 tells you '{GGood grief, who did you carve this off of?!{x'",
-   "ua": "%1$^C1 каже тобі '{GЖах, з кого ти це зріза%2$Gло|в|ла|ли?!{x'"
-  },
-  "%1$^C1 говорит тебе '{GХороший кусок, но я заказыва%1$Gло|л|ла мясо %2$s.{x'": {
-   "en": "%1$^C1 tells you '{GGood cut, but I ordered %2$s meat.{x'",
-   "ua": "%1$^C1 каже тобі '{GГарний шматок, але я замовля%1$Gло|в|ла|ли м'ясо %2$s.{x'"
-  },
-  "%1$^C1 говорит тебе '{GЭти звери водятся в %2$s, а не в %3$s.{x'": {
-   "en": "%1$^C1 tells you '{GThose animals live in %2$s, not in %3$s.{x'",
-   "ua": "%1$^C1 каже тобі '{GЦі звірі водяться в %2$s, а не в %3$s.{x'"
-  },
-  "%1$^C1 говорит тебе '{GСпасибо за помощь! Вернись к квестору за наградой.{x'": {
-   "en": "%1$^C1 tells you '{GThanks for the help! Go back to the questor for your reward.{x'",
-   "ua": "%1$^C1 каже тобі '{GДякую за допомогу! Повернися до квестора за нагородою.{x'"
-  },
-  "%1$^C1 говорит тебе '{GХватит, родн%2$Gое|ой|ая.{x'": {
-   "en": "%1$^C1 tells you '{GThat's enough, dear.{x'",
-   "ua": "%1$^C1 каже тобі '{GДосить, рідн%2$Gе|ий|а|і.{x'"
-  },
-  "%1$^C1 говорит тебе '{GМаловато будет...{x'": {
-   "en": "%1$^C1 tells you '{GThat won't quite cut it...{x'",
-   "ua": "%1$^C1 каже тобі '{GЗамало буде...{x'"
-  },
-  "%1$^C1 куда-то прячет %2$O4.": {
-   "en": "%1$^C1 hides %2$O4 somewhere.",
-   "ua": "%1$^C1 кудись ховає %2$O4."
-  }
- },
- "autoquest/butcher/onTargetDeath": {
-  "{YЗаказ отменен в связи с кончиной заказчика.{x": {
-   "en": "{YThe order has been cancelled due to the customer's untimely demise.{x",
-   "ua": "{YЗамовлення скасовано у зв'язку зі смертю замовника.{x"
-  }
- },
- "autoquest/butcher/onTargetGreet": {
-  "%1$^C1 выжидающе смотрит на тебя.": {
-   "en": "%1$^C1 looks at you expectantly.",
-   "ua": "%1$^C1 вичікувально дивиться на тебе."
-  }
- },
- "autoquest/heal/onCreate": {
-  "%1$^C1 говорит тебе '{GУ меня есть для тебя срочное поручение!{x'": {
-   "en": "%1$^C1 tells you '{GI have an urgent task for you!{x'",
-   "ua": "%1$^C1 каже тобі '{GУ мене є для тебе термінове доручення!{x'"
-  },
-  "%1$^C1 говорит тебе '{G{W%2$#^C1{G чем-то серьезно бол%2$Gьно|ен|ьна и нуждается в помощи лекаря.{x'": {
-   "en": "%1$^C1 tells you '{G{W%2$#^C1{G is gravely ill with something and needs a healer's help.{x'",
-   "ua": "%1$^C1 каже тобі '{G{W%2$#^C1{G чимось серйозно хвор%2$Gе|ий|а і потребує допомоги лікаря.{x'"
-  },
-  "%1$^C1 говорит тебе '{GМесто, где в последний раз видели {W%2$#C4{G, называется {W%3$s{G.{x'": {
-   "en": "%1$^C1 tells you '{GThe place where {W%2$#C4{G was last seen is called {W%3$s{G.{x'",
-   "ua": "%1$^C1 каже тобі '{GМісце, де востаннє бачили {W%2$#C4{G, зветься {W%3$s{G.{x'"
-  },
-  "%1$^C1 говорит тебе '{GИ находится это место в районе под названием -- {W{hh%2$s{hx{G.{x'": {
-   "en": "%1$^C1 tells you '{GAnd this place is located in the area called -- {W{hh%2$s{hx{G.{x'",
-   "ua": "%1$^C1 каже тобі '{GІ знаходиться це місце в районі під назвою -- {W{hh%2$s{hx{G.{x'"
-  },
-  "%1$^C1 говорит тебе '{GПоторопись, пока болезнь не доконала %2$#C4!{x'": {
-   "en": "%1$^C1 tells you '{GHurry, before the illness finishes %2$#C4 off!{x'",
-   "ua": "%1$^C1 каже тобі '{GПоспіши, поки хвороба не доконала %2$#C4!{x'"
-  },
-  "%1$^C1 говорит тебе '{GУ тебя есть {Y%2$d{G мину%2$Iта|ты|т на выполнение задания.{x'": {
-   "en": "%1$^C1 tells you '{GYou have {Y%2$d{G minute%2$gs||s to complete the task.{x'",
-   "ua": "%1$^C1 каже тобі '{GУ тебе є {Y%2$d{G хвилин%2$Iа|и| на виконання завдання.{x'"
-  }
- },
- "autoquest/heal/spellHook": {
-  "{YЧто ж ты творишь! Тебя лечить позвали.{x": {
-   "en": "{YWhat are you doing?! You were called to heal.{x",
-   "ua": "{YЩо ж ти коїш! Тебе лікувати покликали.{x"
-  },
-  "Твое задание {YВЫПОЛНЕНО{x!": {
-   "en": "Your quest is {YCOMPLETE{x!",
-   "ua": "Твоє завдання {YВИКОНАНО{x!"
-  },
-  "Вернись за вознаграждением к давшему тебе задание до того, как истечет время!": {
-   "en": "Return to whoever gave you the quest for your reward before time runs out!",
-   "ua": "Повернись за винагородою до того, хто дав тобі завдання, поки не сплив час!"
-  },
-  "{YТы излечи%1$Gло|л|ла пациента от одного из недугов.{x": {
-   "en": "{YYou've cured the patient of one of its ailments.{x",
-   "ua": "{YТи вилікува%1$Gло|в|ла пацієнта від однієї з недуг.{x"
-  },
-  "{YКто-то другой полностью излечил твоего пациента.{x": {
-   "en": "{YSomeone else has fully cured your patient.{x",
-   "ua": "{YХтось інший цілком вилікував твого пацієнта.{x"
-  },
-  "Вернись к квестору за утешительным призом.": {
-   "en": "Return to the quest giver for a consolation prize.",
-   "ua": "Повернись до квестодавця по втішний приз."
-  },
-  "{YКому-то удалось избавить твоего пациента от одного из недугов.{x": {
-   "en": "{YSomeone managed to rid your patient of one of its ailments.{x",
-   "ua": "{YКомусь удалося позбавити твого пацієнта однієї з недуг.{x"
-  },
-  "Это отрицательно скажется на общем размере вознаграждения.": {
-   "en": "This will reduce the overall size of your reward.",
-   "ua": "Це негативно позначиться на загальному розмірі винагороди."
-  }
- },
- "autoquest/heal/onInfo": {
-  "У тебя задание -- вылечить %1$s!": {
-   "en": "Your task is to heal %1$s!",
-   "ua": "У тебе завдання -- вилікувати %1$s!"
-  },
-  "Место, где пациента видели в последний раз -- %1$s.": {
-   "en": "The place where the patient was last seen -- %1$s.",
-   "ua": "Місце, де пацієнта бачили востаннє -- %1$s."
-  },
-  "Это находится в районе под названием {hh%1$s{hx.": {
-   "en": "It is located in an area called {hh%1$s{hx.",
-   "ua": "Це знаходиться в районі під назвою {hh%1$s{hx."
-  }
- },
- "autoquest/heal/onShortInfo": {
-  "Вылечить %1$s из %2$s (%3$s).": {
-   "en": "Heal %1$s from %2$s (%3$s).",
-   "ua": "Вилікувати %1$s з %2$s (%3$s)."
-  }
- },
- "autoquest/heal/onTargetDeath": {
-  "{YТы вылечи%1$Gло|л|ла пациента сразу от всех болезней >8){x": {
-   "en": "{YYou've cured the patient of all its diseases at once >8){x",
-   "ua": "{YТи вилікува%1$Gло|в|ла пацієнта відразу від усіх хвороб >8){x"
-  },
-  "{YПациент отправился на тот свет без твоей помощи.{x": {
-   "en": "{YThe patient has passed on without your help.{x",
-   "ua": "{YПацієнт відійшов на той світ без твоєї допомоги.{x"
-  }
- },
- "autoquest/big/onCreate": {
-  "%1$^C1 говорит тебе '{G%2$s{x'": {
-   "en": "%1$^C1 tells you '{G%2$s{x'",
-   "ua": "%1$^C1 каже тобі '{G%2$s{x'"
-  }
- },
- "autoquest/big/onTargetDeath": {
-  "{YВсе разбежались или были уничтожены, сообщи квестору о выполнении задания.{x": {
-   "en": "{YThey have all scattered or been destroyed; report the completed task to the quest giver.{x",
-   "ua": "{YУсі розбіглися чи були знищені, повідом квестодавця про виконання завдання.{x"
-  },
-  "{YТебе осталось уничтожить %1$d из %2$d.{x": {
-   "en": "{YYou have %1$d of %2$d left to destroy.{x",
-   "ua": "{YТобі лишилося знищити %1$d з %2$d.{x"
-  },
-  "{YКто-то из целей текущего задания погиб без твоего участия. Осталось %1$d из %2$d.{x": {
-   "en": "{YOne of the current task's targets died without your help. %1$d of %2$d left.{x",
-   "ua": "{YОдна з цілей поточного завдання загинула без твоєї участі. Лишилося %1$d з %2$d.{x"
-  }
- },
- "autoquest/big/onInfo": {
-  "Последний раз их видели в местности '{hh%1$s{hx'.": {
-   "en": "They were last seen in the area '{hh%1$s{hx'.",
-   "ua": "Востаннє їх бачили в місцевості '{hh%1$s{hx'."
-  },
-  "Уже уничтожено %1$d, осталось совсем немного.": {
-   "en": "%1$d already destroyed, only a few left.",
-   "ua": "Уже знищено %1$d, лишилося зовсім небагато."
-  }
- },
- "autoquest/big/onShortInfo": {
-  "Уничтожить %1$d преступник%1$Iа|ов|ов из '%2$s' (уничтожено %3$d).": {
-   "en": "Destroy %1$d criminal%1$gs||s from '%2$s' (%3$d destroyed).",
-   "ua": "Знищити %1$d злочинц%1$Iя|ів|ів з '%2$s' (знищено %3$d)."
-  }
- }
 }

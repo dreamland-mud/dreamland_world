@@ -252,5 +252,95 @@
    "en": "%1$^C1 looks at you expectantly.",
    "ua": "%1$^C1 вичікувально дивиться на тебе."
   }
+ },
+ "autoquest/heal/onCreate": {
+  "%1$^C1 говорит тебе '{GУ меня есть для тебя срочное поручение!{x'": {
+   "en": "%1$^C1 tells you '{GI have an urgent task for you!{x'",
+   "ua": "%1$^C1 каже тобі '{GУ мене є для тебе термінове доручення!{x'"
+  },
+  "%1$^C1 говорит тебе '{G{W%2$#^C1{G чем-то серьезно бол%2$Gьно|ен|ьна и нуждается в помощи лекаря.{x'": {
+   "en": "%1$^C1 tells you '{G{W%2$#^C1{G is gravely ill with something and needs a healer's help.{x'",
+   "ua": "%1$^C1 каже тобі '{G{W%2$#^C1{G чимось серйозно хвор%2$Gе|ий|а і потребує допомоги лікаря.{x'"
+  },
+  "%1$^C1 говорит тебе '{GМесто, где в последний раз видели {W%2$#C4{G, называется {W%3$s{G.{x'": {
+   "en": "%1$^C1 tells you '{GThe place where {W%2$#C4{G was last seen is called {W%3$s{G.{x'",
+   "ua": "%1$^C1 каже тобі '{GМісце, де востаннє бачили {W%2$#C4{G, зветься {W%3$s{G.{x'"
+  },
+  "%1$^C1 говорит тебе '{GИ находится это место в районе под названием -- {W{hh%2$s{hx{G.{x'": {
+   "en": "%1$^C1 tells you '{GAnd this place is located in the area called -- {W{hh%2$s{hx{G.{x'",
+   "ua": "%1$^C1 каже тобі '{GІ знаходиться це місце в районі під назвою -- {W{hh%2$s{hx{G.{x'"
+  },
+  "%1$^C1 говорит тебе '{GПоторопись, пока болезнь не доконала %2$#C4!{x'": {
+   "en": "%1$^C1 tells you '{GHurry, before the illness finishes %2$#C4 off!{x'",
+   "ua": "%1$^C1 каже тобі '{GПоспіши, поки хвороба не доконала %2$#C4!{x'"
+  },
+  "%1$^C1 говорит тебе '{GУ тебя есть {Y%2$d{G мину%2$Iта|ты|т на выполнение задания.{x'": {
+   "en": "%1$^C1 tells you '{GYou have {Y%2$d{G minute%2$gs||s to complete the task.{x'",
+   "ua": "%1$^C1 каже тобі '{GУ тебе є {Y%2$d{G хвилин%2$Iа|и| на виконання завдання.{x'"
+  }
+ },
+ "autoquest/heal/spellHook": {
+  "{YЧто ж ты творишь! Тебя лечить позвали.{x": {
+   "en": "{YWhat are you doing?! You were called to heal.{x",
+   "ua": "{YЩо ж ти коїш! Тебе лікувати покликали.{x"
+  },
+  "Твое задание {YВЫПОЛНЕНО{x!": {
+   "en": "Your quest is {YCOMPLETE{x!",
+   "ua": "Твоє завдання {YВИКОНАНО{x!"
+  },
+  "Вернись за вознаграждением к давшему тебе задание до того, как истечет время!": {
+   "en": "Return to whoever gave you the quest for your reward before time runs out!",
+   "ua": "Повернись за винагородою до того, хто дав тобі завдання, поки не сплив час!"
+  },
+  "{YТы излечи%1$Gло|л|ла пациента от одного из недугов.{x": {
+   "en": "{YYou've cured the patient of one of its ailments.{x",
+   "ua": "{YТи вилікува%1$Gло|в|ла пацієнта від однієї з недуг.{x"
+  },
+  "{YКто-то другой полностью излечил твоего пациента.{x": {
+   "en": "{YSomeone else has fully cured your patient.{x",
+   "ua": "{YХтось інший цілком вилікував твого пацієнта.{x"
+  },
+  "Вернись к квестору за утешительным призом.": {
+   "en": "Return to the quest giver for a consolation prize.",
+   "ua": "Повернись до квестодавця по втішний приз."
+  },
+  "{YКому-то удалось избавить твоего пациента от одного из недугов.{x": {
+   "en": "{YSomeone managed to rid your patient of one of its ailments.{x",
+   "ua": "{YКомусь удалося позбавити твого пацієнта однієї з недуг.{x"
+  },
+  "Это отрицательно скажется на общем размере вознаграждения.": {
+   "en": "This will reduce the overall size of your reward.",
+   "ua": "Це негативно позначиться на загальному розмірі винагороди."
+  }
+ },
+ "autoquest/heal/onInfo": {
+  "У тебя задание -- вылечить %1$s!": {
+   "en": "Your task is to heal %1$s!",
+   "ua": "У тебе завдання -- вилікувати %1$s!"
+  },
+  "Место, где пациента видели в последний раз -- %1$s.": {
+   "en": "The place where the patient was last seen -- %1$s.",
+   "ua": "Місце, де пацієнта бачили востаннє -- %1$s."
+  },
+  "Это находится в районе под названием {hh%1$s{hx.": {
+   "en": "It is located in an area called {hh%1$s{hx.",
+   "ua": "Це знаходиться в районі під назвою {hh%1$s{hx."
+  }
+ },
+ "autoquest/heal/onShortInfo": {
+  "Вылечить %1$s из %2$s (%3$s).": {
+   "en": "Heal %1$s from %2$s (%3$s).",
+   "ua": "Вилікувати %1$s з %2$s (%3$s)."
+  }
+ },
+ "autoquest/heal/onTargetDeath": {
+  "{YТы вылечи%1$Gло|л|ла пациента сразу от всех болезней >8){x": {
+   "en": "{YYou've cured the patient of all its diseases at once >8){x",
+   "ua": "{YТи вилікува%1$Gло|в|ла пацієнта відразу від усіх хвороб >8){x"
+  },
+  "{YПациент отправился на тот свет без твоей помощи.{x": {
+   "en": "{YThe patient has passed on without your help.{x",
+   "ua": "{YПацієнт відійшов на той світ без твоєї допомоги.{x"
+  }
  }
 }

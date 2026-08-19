@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Command>
+  <aliases l="en"></aliases>
+  <aliases l="ru"></aliases>
+  <aliases l="ua"></aliases>
+  <cat>item</cat>
+  <help id="5101" level="-1" ref="wear quest" type="CommandHelp" labels="items">
+    <extra l="en">personal flavor 'personal slot'</extra>
+    <extra l="ru">личный 'личный слот'</extra>
+    <extra l="ua">особистий 'особистий слот'</extra>
+    <text l="en">A personal slot is an extra piece of your equipment list that holds one item of any type, worn purely for show: a watch on your wrist, a dagger in your teeth, a lucky coin. Items in it give no stats and no combat benefit -- it exists so your character can look the way you want.
+
+The slot is bought once, for quest points, from the quest item trader: {hc*quest buy slot*{x. It stays with you forever.
+
+%FMT% *wear* _item_ *in* *slot*
+Put any item from your inventory into your personal slot. One item at a time; {hc*remove*{x takes it back out.
+
+%FMT% *%CMD%*
+Show what is in your slot and how it is displayed.
+
+%FMT% *%CMD%* *name* _text_
+Name the way the slot appears in your equipment, up to 20 characters: for example {W'on the wrist'{x or {W'clenched in teeth'{x. Everyone who looks at you will see the slot under this name. Color codes are stripped.
+
+%FMT% *%CMD%* *name*
+Reset the display back to the default.
+
+%SA% %H% {hh990wear{x, {hh1015equipment{x.
+</text>
+    <text l="ru">Личный слот -- это дополнительная строчка в твоем снаряжении, в которой можно носить одну любую вещь просто напоказ: часы на руке, кинжал в зубах, счастливую монетку. Вещи в нем не дают ни параметров, ни боевых преимуществ -- он существует для того, чтобы твой персонаж выглядел так, как хочется тебе.
+
+Слот покупается один раз, за квесто-очки, у торговца квестовыми вещами: {hc*квест купить слот*{x. Он остается с тобой навсегда.
+
+%FMT% *надеть* _вещь_ *в* *слот*
+Поместить любую вещь из инвентаря в личный слот. Одна вещь за раз; команда {hc*снять*{x достает ее обратно.
+
+%FMT% *%CMD%*
+Показать, что лежит в слоте и как он отображается.
+
+%FMT% *%CMD%* *имя* _текст_
+Назвать то, как слот выглядит в снаряжении, до 20 символов: например {W'на руке'{x или {W'в зубах'{x. Все, кто посмотрит на тебя, увидят слот под этим именем. Цветовые коды вырезаются.
+
+%FMT% *%CMD%* *имя*
+Сбросить отображение обратно на стандартное.
+
+%SA% %H% {hh990надеть{x, {hh1015снаряжение{x.
+</text>
+    <text l="ua">Особистий слот -- це додатковий рядок у твоєму спорядженні, в якому можна носити одну будь-яку річ просто напоказ: годинник на руці, кинджал у зубах, щасливу монетку. Речі в ньому не дають ні параметрів, ні бойових переваг -- він існує для того, щоб твій персонаж виглядав так, як хочеться тобі.
+
+Слот купується один раз, за квесто-бали, у торговця квестовими речами: {hc*квест купити слот*{x. Він залишається з тобою назавжди.
+
+%FMT% *надягти* _річ_ *у* *слот*
+Помістити будь-яку річ з інвентарю в особистий слот. Одна річ за раз; команда {hc*зняти*{x дістає її назад.
+
+%FMT% *%CMD%*
+Показати, що лежить у слоті та як він відображається.
+
+%FMT% *%CMD%* *ім'я* _текст_
+Назвати те, як слот виглядає у спорядженні, до 20 символів: наприклад {W'на руці'{x або {W'в зубах'{x. Усі, хто подивиться на тебе, побачать слот під цим імʼям. Кольорові коди вирізаються.
+
+%FMT% *%CMD%* *ім'я*
+Скинути відображення назад на стандартне.
+
+%SA% %H% {hh990надеть{x, {hh1015спорядження{x.
+</text>
+    <title l="en">{CItems: {xpersonal flavor slot</title>
+    <title l="ru">{CВещи: {xличный слот</title>
+    <title l="ua">{CРечі: {xособистий слот</title>
+  </help>
+  <hint l="en">your personal flavor slot: contents and display name</hint>
+  <hint l="ru">личный слот: содержимое и отображение</hint>
+  <hint l="ua">особистий слот: вміст і відображення</hint>
+  <name l="en">slot</name>
+  <name l="ru">слот</name>
+  <name l="ua">слот</name>
+  <order>player_only</order>
+  <position>rest</position>
+</Command>

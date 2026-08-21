@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="cleric">
+      <level>12</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <dammsg mg="m"></dammsg>
+  <group registry="skillGroup">nature</group>
+  <help id="5102" level="-1" type="SkillHelp">
+    <extra l="en">'water down' 'sober'</extra>
+    <extra l="ru">'разбавить вино' 'разбавить'</extra>
+    <extra l="ua">'розбавити вино' 'розбавити'</extra>
+    <text l="en">%FMT% *%SPELL%* _container_
+
+A bartender's trick dressed up as a prayer. Clerics of {hh1580Cradya{x and {hh1579Bastian{x -- the chaos gods of drink -- can water down any alcoholic {hh1075container{x or fountain, turning its wine, beer or spirits into plain water. Anyone else who tries it just gets wet hands.
+</text>
+    <text l="ru">%FMT% *%SPELL%* _емкость_
+
+Шинкарский трюк под видом молитвы. Служители {hh1580Кради{x и {hh1579Бастиана{x -- богов хмельного хаоса -- могут разбавить любую хмельную {hh1075емкость{x или фонтан, обращая вино, пиво или крепкое в простую воду. У всех прочих выйдут лишь мокрые руки.
+</text>
+    <text l="ua">%FMT% *%SPELL%* _ємкість_
+
+Шинкарський трюк під виглядом молитви. Служителі {hh1580Краді{x і {hh1579Бастіана{x -- богів хмільного хаосу -- можуть розбавити будь-яку хмільну {hh1075ємкість{x або фонтан, обертаючи вино, пиво чи міцне на просту воду. У решти вийдуть хіба мокрі руки.
+</text>
+  </help>
+  <mana>15</mana>
+  <name l="en">water down</name>
+  <name l="ru">разбавить вино</name>
+  <name l="ua">розбавити вино</name>
+  <spell type="DefaultSpell">
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
+    <position>stand</position>
+    <target>obj_inv obj_equip obj_room</target>
+    <type>none</type>
+  </spell>
+</skill>

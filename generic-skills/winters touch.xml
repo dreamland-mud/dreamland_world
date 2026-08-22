@@ -3,10 +3,14 @@
   <affect type="DefaultAffectHandler">
     <removeObj>Холодная дымка, покрывавшая %1$O4, исчезает.</removeObj>
   </affect>
-  <beats>12</beats>
   <classes>
     <node name="anti-paladin">
       <level>33</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="necromancer">
+      <level>37</level>
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
@@ -17,32 +21,18 @@
     <extra l="en">frost touch freeze winter</extra>
     <extra l="ru">касание обледенение обледенить зимы</extra>
     <extra l="ua">дотик обледеніння замерзати зими</extra>
-    <text l="en">%FMT% *%SPELL%* _%OBJ%_
+    <text l="en">A passive mastery of cold. While you know it, the frost you lay on a weapon with {hh610chill touch{x lingers, wrapping the blade so that it also {hh96frostbites{x its victim, penetrating them with cold to the bone and weakening them. Without this passive the frost still forms, but it melts away at once and nothing takes hold.
 
-Spell that imbues a weapon with the power of cold. In addition to regular damage, such a weapon will also {hh96frostbite{x the victim, penetrating them with cold to the bone and weakening them.
+Those who draw {hh725inspiration{x from the ancient word {hh234ahenn{x can lend the frosted weapon extra bite.</text>
+    <text l="ru">Пассивное владение холодом. Пока ты знаешь его, стужа, которой ты покрываешь оружие через {hh610ледяное касание{x, держится на клинке, и такое оружие будет также {hh96обмораживать{x жертву, пронизывая ее холодом до костей и ослабляя. Без этого пассива иней все равно ложится, но тут же тает, и ничего не остается.
 
-Rumors say that those who draw {hh725inspiration{x from the ancient word {hh234ahenn{x can endow the weapon with additional properties.</text>
-    <text l="ru">%FMT% *%SPELL%* _%OBJ%_
-
-Заклинание, отдающее оружие во власть холода. Помимо обычного урона, такое оружие будет также {hh96обмораживать{x жертву, пронизывая ее холодом до костей и ослабляя.
-
-Ходят слухи, что те, кто почерпнут {hh725вдохновение{x из древнего слова {hh234ахэнн{x, смогут наделить оружие дополнительными свойствами.
+Те, кто черпают {hh725вдохновение{x из древнего слова {hh234ахэнн{x, могут наделить обмороженное оружие дополнительной силой.
 </text>
-    <text l="ua">%FMT% *%SPELL%* _%OBJ%_
+    <text l="ua">Пасивне володіння холодом. Поки ти знаєш його, стужа, якою ти вкриваєш зброю через {hh610льодяний дотик{x, тримається на клинку, і така зброя також буде {hh96обморожувати{x жертву, пронизуючи її холодом до кісток і послаблюючи. Без цього пасиву іній усе одно лягає, та одразу тане, і нічого не лишається.
 
-Заклинання, що надає зброї владу холоду. Окрім звичайної шкоди, така зброя також буде {hh96обморожувати{x жертву, пронизуючи її холодом до кісток і послаблюючи.
-
-Ходять чутки, що ті, хто {hh725надихнутися{x від древнього слова {hh234ахенн{x, можуть наділити зброю додатковими властивостями.</text>
+Ті, хто черпають {hh725натхнення{x з древнього слова {hh234ахенн{x, можуть наділити обморожену зброю додатковою силою.</text>
   </help>
-  <mana>150</mana>
   <name l="en">winters touch</name>
   <name l="ru">прикосновение зимы</name>
   <name l="ua">дотик зими</name>
-  <spell type="DefaultSpell">
-    <damtype>none</damtype>
-    <flags>magic</flags>
-    <position>stand</position>
-    <target>obj_inv obj_equip</target>
-    <type>none</type>
-  </spell>
 </skill>

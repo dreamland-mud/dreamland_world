@@ -45,14 +45,18 @@
 
 This spell does damage to the victim as well as frostbite, reducing strength. Similar effects are given by {hh96frostbiting{x weapons and most spells dealing damage {hh101by cold{x or ice. To get rid of frostbite, one can warm up {hh249by the fire{x or in the {hh86desert{x. Or, take a fireball to the face.
 
-This spell can also freeze various things! It can freeze some liquids in {hh1075containers and fountains{x, making them temporarily undrinkable. You can temporarily freeze something impermanent and organic (for example, body parts) to preserve them longer. Frozen items can be melted or warmed with {hh839burning hands{x. Freezing can also cool {hh4heated{x items on the ground.</text>
+This spell can also freeze various things! It can freeze some liquids in {hh1075containers and fountains{x, making them temporarily undrinkable. You can temporarily freeze something impermanent and organic (for example, body parts) to preserve them longer. Frozen items can be melted or warmed with {hh839burning hands{x. Freezing can also cool {hh4heated{x items on the ground.
+
+Laid on a weapon, chill touch coats the blade in {hh96frost{x -- but the cold only lingers for those who know the {hh580winters touch{x passive, otherwise it flares and melts at once.</text>
     <text l="ru">%FMT% *%SPELL%* _%VICT%_
 
 Это заклинание наносит повреждения жертве, а также обмораживает, уменьшая силу. Похожий аффект дают {hh96обмораживающие{x оружия и большинство заклинаний, наносящих урон {hh101холодом{x или льдом. Чтобы избавиться от обморожения можно погреться {hh249у костра{x или в {hh86пустыне{x. Ну или получить огненным шаром в лоб.
 
 %FMT% *%SPELL%* _%OBJ%_
 
-Этим же заклинанием можно замораживать самые разные вещи! Можно заморозить некоторые жидкости в {hh1075емкостях и фонтанах{x -- тогда из них временно нельзя пить. Можно временно заморозить что-то непостоянное и органическое (например, части тела) -- чтобы сохранить их подольше. Растопить или согреть замороженные вещи можно {hh839горящими руками{x. Заморозкой также можно остудить {hh4раскаленные{x вещи на земле. 
+Этим же заклинанием можно замораживать самые разные вещи! Можно заморозить некоторые жидкости в {hh1075емкостях и фонтанах{x -- тогда из них временно нельзя пить. Можно временно заморозить что-то непостоянное и органическое (например, части тела) -- чтобы сохранить их подольше. Растопить или согреть замороженные вещи можно {hh839горящими руками{x. Заморозкой также можно остудить {hh4раскаленные{x вещи на земле.
+
+Наложенное на оружие, ледяное касание покрывает клинок {hh96изморозью{x -- но холод держится лишь у тех, кто владеет пассивом {hh580прикосновение зимы{x, иначе он вспыхивает и тут же тает.
 </text>
     <text l="ua">%FMT% *%SPELL%* _%VICT%_
 
@@ -60,7 +64,9 @@ This spell can also freeze various things! It can freeze some liquids in {hh1075
 
 %FMT% *%SPELL%* _%OBJ%_
 
-Цим же заклинанням можна заморожувати різноманітні речі! Можна заморозити деякі рідини в {hh1075ємностях і фонтани{x -- тоді з них тимчасово не можна пити. Можна тимчасово заморозити щось непостійне й органічне (наприклад, частини тіла) -- щоб зберегти їх довше. Розтопити або зігріти заморожені речі можна {hh839палаючими руками{x. Заморозкою також можна охолодити {hh4розпечені{x речі на землі.</text>
+Цим же заклинанням можна заморожувати різноманітні речі! Можна заморозити деякі рідини в {hh1075ємностях і фонтани{x -- тоді з них тимчасово не можна пити. Можна тимчасово заморозити щось непостійне й органічне (наприклад, частини тіла) -- щоб зберегти їх довше. Розтопити або зігріти заморожені речі можна {hh839палаючими руками{x. Заморозкою також можна охолодити {hh4розпечені{x речі на землі.
+
+Накладений на зброю, льодяний дотик вкриває клинок {hh96памороззю{x -- та холод тримається лише в тих, хто володіє пасивом {hh580дотик зими{x, інакше він спалахує й одразу тане.</text>
   </help>
   <mana>80</mana>
   <mob>
@@ -74,7 +80,7 @@ This spell can also freeze various things! It can freeze some liquids in {hh1075
     <flags>magic</flags>
     <position>fight</position>
     <ranged>false</ranged>
-    <target>char_room obj_room</target>
+    <target>char_room obj_room obj_inv obj_equip</target>
     <tier>2</tier>
     <type>offensive</type>
   </spell>

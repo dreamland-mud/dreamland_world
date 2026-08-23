@@ -648,10 +648,6 @@
    "en": "%^C1 flicks their tail, and %O1 bursts forth from the ground.",
    "ua": "%^C1 клацає хвостом, і з землі пробивається %O1."
   },
-  "Милостью %N2 из земли пробивается %O1.": {
-   "en": "By the grace of %N2, %O1 bursts from the ground.",
-   "ua": "Милістю %N2 з землі пробивається %O1."
-  },
   "Создать родник в воздухе не под силу даже самым могучим волшебникам.": {
    "en": "Not even the mightiest wizards can create a spring in midair.",
    "ua": "Створити джерело в повітрі не під силу навіть наймогутнішим чарівникам."
@@ -671,6 +667,10 @@
   "Ты щелкаешь хвостом, и из земли пробивается %O1.": {
    "en": "You flick your tail, and %O1 bursts forth from the ground.",
    "ua": "Ти клацаєш хвостом, і з землі пробивається %O1."
+  },
+  "Милостью %s из земли пробивается %O1.": {
+   "en": "By the grace of %s, %O1 bursts from the ground.",
+   "ua": "Милістю %s з землі пробивається %O1."
   }
  },
  "spell/control weather/runArg": {
@@ -1106,18 +1106,6 @@
    "en": "%^C1 {1{WBANISHES{2 you!",
    "ua": "%^C1 {1{WВИГАНЯЄ{2 тебе!"
   },
-  "%^C1 взывает к {1{C%N3{2, чертя в воздухе символ изгнания нечисти.": {
-   "en": "%^C1 calls upon {1{C%N3{2, tracing a sign of banishment against the unclean in the air.",
-   "ua": "%^C1 звертається до {1{C%N3{2, малюючи в повітрі знак вигнання нечисті."
-  },
-  "В ужасе от мощи {1{C%N2{2 ты обращаешься в бегство!": {
-   "en": "Terrified by the power of {1{C%N2{2, you flee in terror!",
-   "ua": "У жаху від могутності {1{C%N2{2 ти кидаєшся навтіки!"
-  },
-  "В ужасе от мощи {1{C%N2{2, %C1 обращается в паническое бегство!": {
-   "en": "Terrified by the might of {1{C%N2{2, %C1 flees in a blind panic!",
-   "ua": "У жаху від могутності {1{C%N2{2, %C1 кидається навтіки у паніці!"
-  },
   "К сожалению, %C1 -- не нечисть, не демон и не богомерзкий голем.": {
    "en": "Unfortunately, %C1 is not undead, not a demon, and not a godless golem.",
    "ua": "На жаль, %C1 -- не нечисть, не демон і не богомерзький голем."
@@ -1126,13 +1114,25 @@
    "en": "Before %C1 can even react, %C1 vanishes in {1{Wa blinding flash!{2",
    "ua": "Не встигнувши й опам'ятатися, %C1 зникає у {1{Wсліплячому спалаху!{2"
   },
-  "Ты взываешь к {1{C%N3{2, чертя в воздухе символ изгнания нечисти.": {
-   "en": "You call upon {1{C%N3{2, tracing the symbol of banishment against unholy creatures in the air.",
-   "ua": "Ти волаєш до {1{C%N3{2, викреслюючи в повітрі символ вигнання нечисті."
-  },
   "Ты сопротивляешься священному символу изгнания!": {
    "en": "You resist the holy symbol of banishment!",
    "ua": "Ти опираєшся священному символу вигнання!"
+  },
+  "Ты взываешь к {1{C%s{2, чертя в воздухе символ изгнания нечисти.": {
+   "en": "You call upon {1{C%s{2, tracing the symbol of banishment against unholy creatures in the air.",
+   "ua": "Ти волаєш до {1{C%s{2, викреслюючи в повітрі символ вигнання нечисті."
+  },
+  "%^C1 взывает к {1{C%s{2, чертя в воздухе символ изгнания нечисти.": {
+   "en": "%^C1 calls upon {1{C%s{2, tracing a sign of banishment against the unclean in the air.",
+   "ua": "%^C1 звертається до {1{C%s{2, малюючи в повітрі знак вигнання нечисті."
+  },
+  "В ужасе от мощи {1{C%s{2, %C1 обращается в паническое бегство!": {
+   "en": "Terrified by the might of {1{C%s{2, %C1 flees in a blind panic!",
+   "ua": "У жаху від могутності {1{C%s{2, %C1 кидається навтіки у паніці!"
+  },
+  "В ужасе от мощи {1{C%s{2 ты обращаешься в бегство!": {
+   "en": "Terrified by the power of {1{C%s{2, you flee in terror!",
+   "ua": "У жаху від могутності {1{C%s{2 ти кидаєшся навтіки!"
   }
  },
  "spell/mosquito swarm/runVict": {
@@ -1316,33 +1316,9 @@
    "en": "%1$^C1 banishes themselves for some reason!",
    "ua": "%1$^C1 чомусь виганяє себе сам%1$Gого|ого|у!"
   },
-  "%^C1 взывает к {1{C%N3{2, {1{Yизгоняя{2 %C4!": {
-   "en": "%^C1 calls upon {1{C%N3{2, {1{Ybanishing{2 %C4!",
-   "ua": "%^C1 волає до {1{C%N3{2, {1{Yвиганяючи{2 %C4!"
-  },
-  "%^C1 взывает к {1{C%N3{2, {1{Yизгоняя{2 тебя!": {
-   "en": "%^C1 calls upon {1{C%N3{2, {1{Ybanishing{2 you!",
-   "ua": "%^C1 звертається до {1{C%N3{2, {1{Yвиганяючи{2 тебе!"
-  },
   "{1{YСветлая энергия взрывается внутри тебя!{2": {
    "en": "{1{YRadiant energy explodes inside you!{2",
    "ua": "{1{YСвітла енергія вибухає всередині тебе!{2"
-  },
-  "Волею {1{C%N2{2 %C1 {1{RПОЛНОСТЬЮ РАЗВОПЛОЩАЕТ{2 %C4!": {
-   "en": "By the will of {1{C%N2{2, %C1 {1{RCOMPLETELY UNMAKES{2 %C4!",
-   "ua": "Волею {1{C%N2{2 %C1 {1{RПОВНІСТЮ РОЗВТІЛЮЄ{2 %C4!"
-  },
-  "Волею {1{C%N2{2 %C1 {1{RПОЛНОСТЬЮ РАЗВОПЛОЩАЕТ{2 тебя!": {
-   "en": "By the will of {1{C%N2{2, %C1 {1{RCOMPLETELY UNMAKES{2 you!",
-   "ua": "Волею {1{C%N2{2 %C1 {1{RПОВНІСТЮ ЗНЕТІЛЕСНЮЄ{2 тебе!"
-  },
-  "Волею {1{C%N2{2 ты {1{RПОЛНОСТЬЮ РАЗВОПЛОЩАЕШЬ{2 %C4!": {
-   "en": "By the will of {1{C%N2{2 you {1{RCOMPLETELY DISCORPORATE{2 %C4!",
-   "ua": "Волею {1{C%N2{2 ти {1{RПОВНІСТЮ РОЗВТІЛЮЄШ{2 %C4!"
-  },
-  "Ты взываешь к {1{C%N3{2, {1{Yизгоняя{2 %C4!": {
-   "en": "You call upon {1{C%N3{2, {1{Ybanishing{2 %C4!",
-   "ua": "Ти волаєш до {1{C%N3{2, {1{Yвиганяючи{2 %C4!"
   },
   "Ты зачем-то изгоняешь себя сам%1$Gого|ого|у!": {
    "en": "For some reason you banish yourself!",
@@ -1351,6 +1327,30 @@
   "Эта молитва не сможет навредить тебе. Извращен{Smец{Sfка{Sx.": {
    "en": "This prayer can't harm you. Pervert.",
    "ua": "Ця молитва не зможе нашкодити тобі. Збочен{Smець{Sfка{Sx."
+  },
+  "Волею {1{C%s{2 ты {1{RПОЛНОСТЬЮ РАЗВОПЛОЩАЕШЬ{2 %C4!": {
+   "en": "By the will of {1{C%s{2 you {1{RCOMPLETELY DISCORPORATE{2 %C4!",
+   "ua": "Волею {1{C%s{2 ти {1{RПОВНІСТЮ РОЗВТІЛЮЄШ{2 %C4!"
+  },
+  "Волею {1{C%s{2 %C1 {1{RПОЛНОСТЬЮ РАЗВОПЛОЩАЕТ{2 %C4!": {
+   "en": "By the will of {1{C%s{2, %C1 {1{RCOMPLETELY UNMAKES{2 %C4!",
+   "ua": "Волею {1{C%s{2 %C1 {1{RПОВНІСТЮ РОЗВТІЛЮЄ{2 %C4!"
+  },
+  "Волею {1{C%s{2 %C1 {1{RПОЛНОСТЬЮ РАЗВОПЛОЩАЕТ{2 тебя!": {
+   "en": "By the will of {1{C%s{2, %C1 {1{RCOMPLETELY UNMAKES{2 you!",
+   "ua": "Волею {1{C%s{2 %C1 {1{RПОВНІСТЮ ЗНЕТІЛЕСНЮЄ{2 тебе!"
+  },
+  "Ты взываешь к {1{C%s{2, {1{Yизгоняя{2 %C4!": {
+   "en": "You call upon {1{C%s{2, {1{Ybanishing{2 %C4!",
+   "ua": "Ти волаєш до {1{C%s{2, {1{Yвиганяючи{2 %C4!"
+  },
+  "%^C1 взывает к {1{C%s{2, {1{Yизгоняя{2 %C4!": {
+   "en": "%^C1 calls upon {1{C%s{2, {1{Ybanishing{2 %C4!",
+   "ua": "%^C1 волає до {1{C%s{2, {1{Yвиганяючи{2 %C4!"
+  },
+  "%^C1 взывает к {1{C%s{2, {1{Yизгоняя{2 тебя!": {
+   "en": "%^C1 calls upon {1{C%s{2, {1{Ybanishing{2 you!",
+   "ua": "%^C1 звертається до {1{C%s{2, {1{Yвиганяючи{2 тебе!"
   }
  },
  "spell/dispel good/runVict": {
@@ -1816,25 +1816,25 @@
    "en": "For some reason %1$^C1 fires the {1{WRay of Truth{2 at themselves!",
    "ua": "%1$^C1 чомусь випускає {1{WПромінь Істини{2 в себе сам%1$Gого|ого|у!"
   },
-  "%^C1 взывает к {1{C%N3{2, выпуская {1{WЛуч Истины{2 в сторону %C2!": {
-   "en": "%^C1 calls out to {1{C%N3{2, unleashing the {1{WRay of Truth{2 at %C2!",
-   "ua": "%^C1 волає до {1{C%N3{2, вивільняючи {1{WПромінь Істини{2 у бік %C2!"
-  },
-  "%^C1 взывает к {1{C%N3{2, выпуская {1{WЛуч Истины{2 в тебя!": {
-   "en": "%^C1 calls upon {1{C%N3{2, releasing a {1{WRay of Truth{2 at you!",
-   "ua": "%^C1 звертається до {1{C%N3{2, випускаючи {1{WПромінь Істини{2 в тебе!"
-  },
   "{1{WЭнергия Луча Истины взрывается внутри тебя!{2": {
    "en": "{1{WThe energy of the Ray of Truth explodes inside you!{2",
    "ua": "{1{WЕнергія Променя Істини вибухає всередині тебе!{2"
   },
-  "Ты взываешь к {1{C%N3{2, выпуская {1{WЛуч Истины{2 в сторону %C2!": {
-   "en": "You call upon {1{C%N3{2, releasing a {1{WRay of Truth{2 toward %C2!",
-   "ua": "Ти волаєш до {1{C%N3{2, випускаючи {1{WПромінь Істини{2 у бік %C2!"
-  },
   "Ты зачем-то выпускаешь {1{WЛуч Истины{2 в себя сам%1$Gого|ого|у!": {
    "en": "You fire the {1{WRay of Truth{2 at yourself for some reason!",
    "ua": "Ти чомусь випускаєш {1{WПромінь Істини{2 у себе сам%1$Gого|ого|у!"
+  },
+  "Ты взываешь к {1{C%s{2, выпуская {1{WЛуч Истины{2 в сторону %C2!": {
+   "en": "You call upon {1{C%s{2, releasing a {1{WRay of Truth{2 toward %C2!",
+   "ua": "Ти волаєш до {1{C%s{2, випускаючи {1{WПромінь Істини{2 у бік %C2!"
+  },
+  "%^C1 взывает к {1{C%s{2, выпуская {1{WЛуч Истины{2 в сторону %C2!": {
+   "en": "%^C1 calls out to {1{C%s{2, unleashing the {1{WRay of Truth{2 at %C2!",
+   "ua": "%^C1 волає до {1{C%s{2, вивільняючи {1{WПромінь Істини{2 у бік %C2!"
+  },
+  "%^C1 взывает к {1{C%s{2, выпуская {1{WЛуч Истины{2 в тебя!": {
+   "en": "%^C1 calls upon {1{C%s{2, releasing a {1{WRay of Truth{2 at you!",
+   "ua": "%^C1 звертається до {1{C%s{2, випускаючи {1{WПромінь Істини{2 в тебе!"
   }
  },
  "spell/poison/runObj": {
@@ -2298,25 +2298,25 @@
    "en": "%O1 suddenly drops into %C3's hands.",
    "ua": "%O1 раптово падає в руки %C3."
   },
-  "%1$^C1 просит {1{C%2$N4{2 о пропитании, и %1$P4 на ладонь падает %3$O1.": {
-   "en": "%1$^C1 asks {1{C%2$N4{2 for sustenance, and %3$O1 falls into their own palm.",
-   "ua": "%1$^C1 просить {1{C%2$N4{2 про їжу, і %3$O1 падає на власну долоню."
-  },
   "%^C1 прищуривается и выращивает у себя на ладони %O4.": {
    "en": "%^C1 narrows their eyes and grows %O4 in the palm of their hand.",
    "ua": "%^C1 мружиться і вирощує на своїй долоні %O4."
-  },
-  "Волею {1{C%N2{2 тебе в руки падает %O1 на пропитание.": {
-   "en": "By the will of {1{C%N2{2, %O1 falls into your hands for sustenance.",
-   "ua": "Волею {1{C%N2{2 тобі в руки падає %O1 на прожиток."
   },
   "Ты прищуриваешься и выращиваешь у себя на ладони %O4.": {
    "en": "You squint and grow %O4 on your palm.",
    "ua": "Ти мружишся і вирощуєш у себе на долоні %O4."
   },
-  "Ты просишь {1{C%N4{2 о пропитании, и тебе на ладонь падает %O1.": {
-   "en": "You ask {1{C%N4{2 for sustenance, and %O1 falls into your palm.",
-   "ua": "Ти просиш {1{C%N4{2 про харч, і тобі на долоню падає %O1."
+  "Ты просишь {1{C%s{2 о пропитании, и тебе на ладонь падает %O1.": {
+   "en": "You ask {1{C%s{2 for sustenance, and %O1 falls into your palm.",
+   "ua": "Ти просиш {1{C%s{2 про харч, і тобі на долоню падає %O1."
+  },
+  "%1$^C1 просит {1{C%2$s{2 о пропитании, и %1$P4 на ладонь падает %3$O1.": {
+   "en": "%1$^C1 asks {1{C%2$s{2 for sustenance, and %3$O1 falls into their own palm.",
+   "ua": "%1$^C1 просить {1{C%2$s{2 про їжу, і %3$O1 падає на власну долоню."
+  },
+  "Волею {1{C%s{2 тебе в руки падает %O1 на пропитание.": {
+   "en": "By the will of {1{C%s{2, %O1 falls into your hands for sustenance.",
+   "ua": "Волею {1{C%s{2 тобі в руки падає %O1 на прожиток."
   }
  },
  "spell/holy word/runRoom": {
@@ -2340,21 +2340,9 @@
    "en": "You are already inspired.",
    "ua": "Ти вже натхнен%1$Gне|ний|на|ні."
   },
-  "%^C1 произносит тайное Слово {1{C%N2{2, призывая божественную силу!": {
-   "en": "%^C1 utters the secret Word {1{C%N2{2, calling upon divine power!",
-   "ua": "%^C1 промовляє таємне Слово {1{C%N2{2, закликаючи божественну силу!"
-  },
-  "Ты произносишь тайное Слово {1{C%N2{2, призывая божественную силу!": {
-   "en": "You speak the secret Word of {1{C%N2{2, calling forth divine power!",
-   "ua": "Ти промовляєш таємне Слово {1{C%N2{2, прикликаючи божественну силу!"
-  },
   "Ты чувствуешь себя опустошенно.": {
    "en": "You feel utterly drained.",
    "ua": "Ти почуваєшся спустошено."
-  },
-  "Вокруг тебя вспыхивает %s, когда {1{C%N1{2 дарует тебе могущество!": {
-   "en": "Around you flares up %s as {1{C%N1{2 grants you might!",
-   "ua": "Навколо тебе спалахує %s, коли {1{C%N1{2 дарує тобі могутність!"
   },
   "Вокруг %C2 вспыхивает %s!": {
    "en": "Around %C2 flares up %s!",
@@ -2375,6 +2363,18 @@
   "Земля дрожит под ногами, когда ты чувствуешь вмешательство божественных сил.": {
    "en": "The ground trembles underfoot as you feel divine powers intervene.",
    "ua": "Земля дрижить під ногами, коли ти відчуваєш втручання божественних сил."
+  },
+  "Ты произносишь тайное Слово {1{C%s{2, призывая божественную силу!": {
+   "en": "You speak the secret Word of {1{C%s{2, calling forth divine power!",
+   "ua": "Ти промовляєш таємне Слово {1{C%s{2, прикликаючи божественну силу!"
+  },
+  "%^C1 произносит тайное Слово {1{C%s{2, призывая божественную силу!": {
+   "en": "%^C1 utters the secret Word {1{C%s{2, calling upon divine power!",
+   "ua": "%^C1 промовляє таємне Слово {1{C%s{2, закликаючи божественну силу!"
+  },
+  "Вокруг тебя вспыхивает %s, когда {1{C%s{2 дарует тебе могущество!": {
+   "en": "Around you flares up %s as {1{C%s{2 grants you might!",
+   "ua": "Навколо тебе спалахує %s, коли {1{C%s{2 дарує тобі могутність!"
   }
  },
  "spell/farsight/runArg": {
@@ -2438,17 +2438,9 @@
   }
  },
  "spell/protective shield/runVict": {
-  "%^C4 окружает тускло светящийся {1{cохранный щит,{2 дарованный {1{C%N5{2.": {
-   "en": "%^C4 is surrounded by a dimly glowing {1{cwarding shield,{2 granted by {1{C%N5{2.",
-   "ua": "%^C4 оточує тьмяно світний {1{cохоронний щит,{2 дарований {1{C%N5{2."
-  },
   "%^C4 окружает тускло светящийся {1{cохранный щит,{2 отклоняющий резкие толчки и удары.": {
    "en": "%^C4 is surrounded by a dimly glowing {1{cprotective shield,{2 deflecting sharp blows and strikes.",
    "ua": "%^C4 оточує тьмяно світний {1{cохоронний щит,{2 що відхиляє різкі поштовхи та удари."
-  },
-  "Тебя окружает тускло светящийся {1{cохранный щит,{2 дарованный {1{C%N5{2.": {
-   "en": "A dimly glowing {1{cprotective shield,{2 granted by {1{C%N5{2, surrounds you.",
-   "ua": "Тебе оточує тьмяно світний {1{cохоронний щит,{2 дарований {1{C%N5{2."
   },
   "Тебя окружает тускло светящийся {1{cохранный щит,{2 отклоняющий резкие толчки и удары.": {
    "en": "A dimly glowing {1{cwarding shield{2 surrounds you, deflecting sharp blows and strikes.",
@@ -2461,6 +2453,14 @@
   "%1$^C1 уже под воздействием охранного щита.": {
    "en": "%1$^C1 is already affected by protective shield.",
    "ua": "%1$^C1 уже під захистом охоронного щита."
+  },
+  "Тебя окружает тускло светящийся {1{cохранный щит,{2 дарованный {1{C%s{2.": {
+   "en": "A dimly glowing {1{cprotective shield,{2 granted by {1{C%s{2, surrounds you.",
+   "ua": "Тебе оточує тьмяно світний {1{cохоронний щит,{2 дарований {1{C%s{2."
+  },
+  "%^C4 окружает тускло светящийся {1{cохранный щит,{2 дарованный {1{C%s{2.": {
+   "en": "%^C4 is surrounded by a dimly glowing {1{cwarding shield,{2 granted by {1{C%s{2.",
+   "ua": "%^C4 оточує тьмяно світний {1{cохоронний щит,{2 дарований {1{C%s{2."
   }
  },
  "spell/astral projection/runVict": {
@@ -2660,13 +2660,13 @@
    "en": "%^C1 is already under the effect of stardust, that's enough.",
    "ua": "%^C1 вже під дією зоряного пилу, цього досить."
   },
-  "Вокруг %C2 вспыхивает {Wбелая аура{x, дарованная {1{C%N5{2.": {
-   "en": "A {Wwhite aura{x flares up around %C2, granted by {1{C%N5{2.",
-   "ua": "Навколо %C2 спалахує {Wбіла аура{x, дарована {1{C%N5{2."
+  "Вокруг тебя вспыхивает {Wбелая аура{x, дарованная {1{C%s{2.": {
+   "en": "A {Wwhite aura{x flares up around you, granted by {1{C%s{2.",
+   "ua": "Навколо тебе спалахує {Wбіла аура{x, дарована {1{C%s{2."
   },
-  "Вокруг тебя вспыхивает {Wбелая аура{x, дарованная {1{C%N5{2.": {
-   "en": "A {Wwhite aura{x flares up around you, granted by {1{C%N5{2.",
-   "ua": "Навколо тебе спалахує {Wбіла аура{x, дарована {1{C%N5{2."
+  "Вокруг %C2 вспыхивает {Wбелая аура{x, дарованная {1{C%s{2.": {
+   "en": "A {Wwhite aura{x flares up around %C2, granted by {1{C%s{2.",
+   "ua": "Навколо %C2 спалахує {Wбіла аура{x, дарована {1{C%s{2."
   }
  },
  "spell/caustic font/runVict": {
@@ -2754,17 +2754,17 @@
    "en": "This room is already lit with healing light.",
    "ua": "Ця кімната вже освітлена цілющим світлом."
   },
-  "%1$^C1 взывает к {1{C%N3{2, освещая местность вокруг целебным светом.": {
-   "en": "%1$^C1 calls upon {1{C%N3{2, lighting up the area with healing light.",
-   "ua": "%1$^C1 звертається до {1{C%N3{2, освітлюючи місцевість цілющим світлом."
-  },
-  "Ты взываешь к {1{C%N3{2, освещая местность вокруг целебным светом.": {
-   "en": "You call upon {1{C%N3{2, lighting up the area around you with healing light.",
-   "ua": "Ти волаєш до {1{C%N3{2, освітлюючи місцевість навколо цілющим світлом."
-  },
   "Ты на мгновение чувствуешь приятное тепло, но ощущение быстро пропадает.": {
    "en": "For a moment you feel a pleasant warmth, but the sensation fades quickly.",
    "ua": "На мить ти відчуваєш приємне тепло, але відчуття швидко минає."
+  },
+  "%1$^C1 взывает к {1{C%s{2, освещая местность вокруг целебным светом.": {
+   "en": "%1$^C1 calls upon {1{C%s{2, lighting up the area with healing light.",
+   "ua": "%1$^C1 звертається до {1{C%s{2, освітлюючи місцевість цілющим світлом."
+  },
+  "Ты взываешь к {1{C%s{2, освещая местность вокруг целебным светом.": {
+   "en": "You call upon {1{C%s{2, lighting up the area around you with healing light.",
+   "ua": "Ти волаєш до {1{C%s{2, освітлюючи місцевість навколо цілющим світлом."
   }
  },
  "spell/brew/runObj": {
@@ -2794,14 +2794,6 @@
    "en": "A {1{Cmagical shield{2 surrounds you, helping to block blows.",
    "ua": "Тебе оточує {1{Cмагічний щит,{2 що допомагає блокувати удари."
   },
-  "%^C4 окружает священный щит, дарованный {1{C%N5{2.": {
-   "en": "A sacred shield, granted by {1{C%N5{2, surrounds %C4.",
-   "ua": "%^C4 оточує священний щит, дарований {1{C%N5{2."
-  },
-  "Тебя окружает {1{Cсвященный щит,{2 дарованный {1{C%N5{2.": {
-   "en": "A {1{Csacred shield,{2 granted by {1{C%N5{2, surrounds you.",
-   "ua": "Тебе оточує {1{Cсвященний щит,{2 дарований {1{C%N5{2."
-  },
   "Ты уже под воздействием этого заклинания.": {
    "en": "You are already affected by this spell.",
    "ua": "Ти вже під впливом цього закляття."
@@ -2809,6 +2801,14 @@
   "%1$^C1 уже под воздействием этого заклинания.": {
    "en": "%1$^C1 is already affected by this spell.",
    "ua": "%1$^C1 вже під впливом цього закляття."
+  },
+  "Тебя окружает {1{Cсвященный щит,{2 дарованный {1{C%s{2.": {
+   "en": "A {1{Csacred shield,{2 granted by {1{C%s{2, surrounds you.",
+   "ua": "Тебе оточує {1{Cсвященний щит,{2 дарований {1{C%s{2."
+  },
+  "%^C4 окружает священный щит, дарованный {1{C%s{2.": {
+   "en": "A sacred shield, granted by {1{C%s{2, surrounds %C4.",
+   "ua": "%^C4 оточує священний щит, дарований {1{C%s{2."
   }
  },
  "spell/gaseous form/runVict": {
@@ -2958,18 +2958,6 @@
   }
  },
  "spell/frenzy/runVict": {
-  "Волею {1{C%N2{2 глаза %C2 зажигаются диким огнем!": {
-   "en": "By the will of {1{C%N2{2, %C2's eyes ignite with wild fire!",
-   "ua": "Волею {1{C%N2{2 очі %C2 запалюються диким вогнем!"
-  },
-  "Волею {1{C%N2{2 твои глаза зажигаются диким огнем!": {
-   "en": "By the will of {1{C%N2{2, your eyes ignite with wild fire!",
-   "ua": "Волею {1{C%N2{2 твої очі займаються диким вогнем!"
-  },
-  "Волею {1{C%N2{2 твои глаза зажигаются диким огнем.": {
-   "en": "By the will of {1{C%N2{2, your eyes ignite with wild fire.",
-   "ua": "Волею {1{C%N2{2 твої очі займаються диким вогнем."
-  },
   "Глаза %C2 зажигаются диким огнем!": {
    "en": "%C2's eyes blaze with wild fire!",
    "ua": "Очі %C2 спалахують диким вогнем!"
@@ -2989,6 +2977,18 @@
   "Кажется, натура %1$C2 не по душе {1{C%2$s{2.": {
    "en": "It seems the nature of %1$C2 does not please {1{C%2$s{2.",
    "ua": "Здається, вдача %1$C2 не до душі {1{C%2$s{2."
+  },
+  "Волею {1{C%s{2 твои глаза зажигаются диким огнем!": {
+   "en": "By the will of {1{C%s{2, your eyes ignite with wild fire!",
+   "ua": "Волею {1{C%s{2 твої очі займаються диким вогнем!"
+  },
+  "Волею {1{C%s{2 глаза %C2 зажигаются диким огнем!": {
+   "en": "By the will of {1{C%s{2, %C2's eyes ignite with wild fire!",
+   "ua": "Волею {1{C%s{2 очі %C2 запалюються диким вогнем!"
+  },
+  "Волею {1{C%s{2 твои глаза зажигаются диким огнем.": {
+   "en": "By the will of {1{C%s{2, your eyes ignite with wild fire.",
+   "ua": "Волею {1{C%s{2 твої очі займаються диким вогнем."
   }
  },
  "spell/detect undead/runVict": {
@@ -3088,10 +3088,6 @@
   }
  },
  "spell/fly/runVict": {
-  "Волею {1{C%N2{2 ты поднимаешься в воздух! Это чудо!": {
-   "en": "By the will of {1{C%N2{2, you rise into the air! It's a miracle!",
-   "ua": "Волею {1{C%N2{2 ти підіймаєшся в повітря! Це диво!"
-  },
   "Со счастливой ухмылкой %C1 поднимается в воздух, начиная левитировать.": {
    "en": "With a happy grin, %C1 rises into the air, beginning to levitate.",
    "ua": "Зі щасливою посмішкою %C1 підіймається в повітря, починаючи левітувати."
@@ -3107,6 +3103,10 @@
   "Ты и так можешь подняться в воздух.": {
    "en": "You can already take to the air anyway.",
    "ua": "Ти й так можеш піднятися в повітря."
+  },
+  "Волею {1{C%s{2 ты поднимаешься в воздух! Это чудо!": {
+   "en": "By the will of {1{C%s{2, you rise into the air! It's a miracle!",
+   "ua": "Волею {1{C%s{2 ти підіймаєшся в повітря! Це диво!"
   }
  },
  "spell/heal/runVict": {
@@ -3446,13 +3446,13 @@
   }
  },
  "spell/infected mushroom/runArg": {
-  "%1$^C1 просит {1{C%2$N4{2 о просветлении, и %1$P4 на ладонь падает %3$O1.": {
-   "en": "%1$^C1 begs {1{C%2$N4{2 for enlightenment, and %3$O1 falls into the palm of %1$C2.",
-   "ua": "%1$^C1 просить {1{C%2$N4{2 про просвітлення, і на долоню %1$C2 падає %3$O1."
+  "Ты просишь {1{C%s{2 о просветлении, и тебе на ладонь падает %O1.": {
+   "en": "You ask {1{C%s{2 for enlightenment, and %O1 falls into your palm.",
+   "ua": "Ти просиш {1{C%s{2 про просвітлення, і тобі на долоню падає %O1."
   },
-  "Ты просишь {1{C%N4{2 о просветлении, и тебе на ладонь падает %O1.": {
-   "en": "You ask {1{C%N4{2 for enlightenment, and %O1 falls into your palm.",
-   "ua": "Ти просиш {1{C%N4{2 про просвітлення, і тобі на долоню падає %O1."
+  "%1$^C1 просит {1{C%2$s{2 о просветлении, и %1$P4 на ладонь падает %3$O1.": {
+   "en": "%1$^C1 begs {1{C%2$s{2 for enlightenment, and %3$O1 falls into the palm of %1$C2.",
+   "ua": "%1$^C1 просить {1{C%2$s{2 про просвітлення, і на долоню %1$C2 падає %3$O1."
   }
  },
  "spell/ethereal fist/runVict": {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<behavior type="DefaultBehavior">
+<behavior type="SetBehavior">
   <cmd></cmd>
   <description l="en">{hh990Wear{x it to assemble the {hh299hoplite set{x.</description>
   <description l="ru">{hh990Надень{x, чтобы собрать {hh299набор гоплита{x.</description>
@@ -18,5 +18,17 @@
   <nameUa>набір гопліта</nameUa>
   <props>{&quot;double_neck&quot;:false,&quot;double_wrist&quot;:false,&quot;max_level&quot;:110,&quot;total_count&quot;:2}
 </props>
+  <affects>
+    <node>
+      <apply to="hitroll">10</apply>
+      <bits table="affect_flags">haste</bits>
+    </node>
+  </affects>
+  <grantSkills>
+    <node>smash</node>
+  </grantSkills>
+  <msgComplete l="en">{yYou feel like a true hoplite spearman.{x</msgComplete>
+  <msgComplete l="ru">{yТы ощущаешь себя настоящ%1$Gим|им|ей копейщи%1$Gком|ком|цей-гоплитом.{x</msgComplete>
+  <msgComplete l="ua">{yТи почуваєшся справжн%1$Gім|ім|ьою списонос%1$Gцем|цем|ицею-гоплітом.{x</msgComplete>
   <target>obj</target>
 </behavior>

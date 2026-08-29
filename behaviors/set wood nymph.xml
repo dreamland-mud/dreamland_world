@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<behavior type="DefaultBehavior">
+<behavior type="SetBehavior">
   <cmd></cmd>
   <description l="en">{hh990Wear{x it to assemble the {hh301wood nymphs' ward{x.</description>
   <description l="ru">{hh990Надень{x, чтобы собрать {hh301оберег древесных нимф{x.</description>
@@ -18,5 +18,17 @@
   <nameUa>оберіг деревних німф</nameUa>
   <props>{&quot;double_neck&quot;:false,&quot;double_wrist&quot;:true,&quot;max_level&quot;:110,&quot;total_count&quot;:3}
 </props>
+  <affects>
+    <node>
+      <apply to="saves">-10</apply>
+      <bits table="affect_flags">flying</bits>
+    </node>
+  </affects>
+  <grantSkills>
+    <node>mosquito swarm</node>
+  </grantSkills>
+  <msgComplete l="en">{gThe might of ancient trees and their guardians, the wood nymphs, fills you.{x</msgComplete>
+  <msgComplete l="ru">{gТебя переполняет сила могучих деревьев и их защитниц, древесных нимф.{x</msgComplete>
+  <msgComplete l="ua">{gТебе переповнює сила могутніх дерев і їхніх захисниць, деревних німф.{x</msgComplete>
   <target>obj</target>
 </behavior>

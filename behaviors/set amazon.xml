@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<behavior type="DefaultBehavior">
+<behavior type="SetBehavior">
   <cmd></cmd>
   <description l="en">{hh990Wear{x it to assemble the {hh5081amazon set{x.</description>
   <description l="ru">{hh990Надень{x, чтобы собрать {hh5081набор амазонки{x.</description>
@@ -18,5 +18,27 @@
   <nameUa>набір амазонки</nameUa>
   <props>{&quot;double_neck&quot;:false,&quot;double_wrist&quot;:false,&quot;max_level&quot;:110,&quot;total_count&quot;:3}
 </props>
+  <affects>
+    <node>
+      <apply to="hit">30</apply>
+    </node>
+    <node>
+      <apply to="hitroll">4</apply>
+    </node>
+    <node>
+      <apply to="damroll">2</apply>
+    </node>
+    <node>
+      <apply to="dex">2</apply>
+      <bits table="affect_flags">haste</bits>
+    </node>
+    <node>
+      <apply to="level">3</apply>
+      <global registry="skillGroup">fightmaster</global>
+    </node>
+  </affects>
+  <msgComplete l="en">{cYou move with the swift grace of an amazon.{x</msgComplete>
+  <msgComplete l="ru">{cТы двигаешься со стремительной грацией амазонки.{x</msgComplete>
+  <msgComplete l="ua">{cТи рухаєшся зі стрімкою грацією амазонки.{x</msgComplete>
   <target>obj</target>
 </behavior>

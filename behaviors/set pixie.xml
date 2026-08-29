@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<behavior type="DefaultBehavior">
+<behavior type="SetBehavior">
   <cmd></cmd>
   <description l="en">{hh990Wear{x it to assemble the {hh290pixie armor{x.</description>
   <description l="ru">{hh990Надень{x, чтобы собрать {hh290доспехи пикси{x.</description>
@@ -18,5 +18,42 @@
   <nameUa>обладунки піксі</nameUa>
   <props>{&quot;double_neck&quot;:false,&quot;double_wrist&quot;:false,&quot;max_level&quot;:65,&quot;total_count&quot;:5}
 </props>
+  <affects>
+    <node>
+      <apply to="dex">4</apply>
+      <bits table="affect_flags">haste infrared flying</bits>
+    </node>
+    <node>
+      <apply to="int">4</apply>
+    </node>
+    <node>
+      <apply to="wis">4</apply>
+    </node>
+    <node>
+      <apply to="str">-4</apply>
+    </node>
+    <node>
+      <apply to="con">-4</apply>
+    </node>
+    <node>
+      <apply to="hitroll">14</apply>
+    </node>
+    <node>
+      <apply to="damroll">14</apply>
+    </node>
+    <node>
+      <apply to="mana">77</apply>
+    </node>
+    <node>
+      <apply to="saves">-20</apply>
+    </node>
+  </affects>
+  <grantSkills>
+    <node>improved invis</node>
+    <node>improved detect</node>
+  </grantSkills>
+  <msgComplete l="en">{CYou shrink and turn into a true pixie!{x</msgComplete>
+  <msgComplete l="ru">{CТы съеживаешься и превращаешься в настоящ%1$Gего|его|ую пикси!{x</msgComplete>
+  <msgComplete l="ua">{CТи зіщулюєшся й перетворюєшся на справжн%1$Gього|ього|ю піксі!{x</msgComplete>
   <target>obj</target>
 </behavior>

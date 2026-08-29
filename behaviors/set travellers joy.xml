@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<behavior type="DefaultBehavior">
+<behavior type="SetBehavior">
   <cmd></cmd>
   <description l="en">{hh990Wear{x it to assemble the {hh67set{x of traveller's joy.</description>
   <description l="ru">{hh990Надень{x, чтобы собрать {hh67комплект{x отрады путешественника.</description>
@@ -10,5 +10,28 @@
   <nameUa>розрада мандрівника</nameUa>
   <props>{&quot;double_neck&quot;:false,&quot;double_wrist&quot;:false,&quot;total_count&quot;:4}
 </props>
+  <affects>
+    <node>
+      <apply to="hitroll">8</apply>
+    </node>
+    <node>
+      <apply to="damroll">12</apply>
+    </node>
+    <node>
+      <apply to="hit">35</apply>
+    </node>
+    <node>
+      <apply to="dex">2</apply>
+    </node>
+    <node>
+      <apply to="str">2</apply>
+    </node>
+    <node>
+      <apply to="con">2</apply>
+    </node>
+  </affects>
+  <msgComplete l="en">{CThe traveller's garb begins to glow with a steady bluish light.{x</msgComplete>
+  <msgComplete l="ru">{CКомплект одежд путешественника начинает светиться ровным голубоватым светом.{x</msgComplete>
+  <msgComplete l="ua">{CКомплект одеж мандрівника починає світитися рівним блакитним сяйвом.{x</msgComplete>
   <target>obj</target>
 </behavior>

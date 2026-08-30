@@ -1,0 +1,54 @@
+{
+  "_doc": "Relative combat value per spell for the gear advisor's proc scorer (service advice). Items that cast an offensive/heal/buff spell in combat declare <props>combatcast</props>; ga_score computes procScore = SUM over casts of value(spell) * chance/100 * count * (itemLevel/_level_ref) * _global, and it supersedes the flat +50 for proc items. Value covers dealing damage AND negating the opponent's (a self-heal is effective DPS in attrition; heals already carry a 0.75 over-heal discount). Keys starting with _ are knobs/meta, not spells. _global scales procs vs stats; _level_ref is the item level that scores at 1.0x (higher-level procs cast harder). Both are Kit-tuned live on Dementia. See COMBAT_PROC_SCORING.md.",
+
+  "_global": 1.0,
+  "_level_ref": 50.0,
+
+  "harm": 90,
+  "flamestrike": 80,
+  "demonfire": 80,
+  "lightning breath": 75,
+  "hurricane": 75,
+  "earthquake": 70,
+  "corruption": 70,
+
+  "fireball": 55,
+  "iceball": 55,
+  "hydroblast": 55,
+  "quantum spike": 55,
+  "lightning bolt": 50,
+  "burning hands": 45,
+  "desert fist": 45,
+  "acetum primus": 45,
+  "chill touch": 35,
+
+  "energy drain": 35,
+  "magic missile": 30,
+  "scream": 30,
+
+  "poison": 40,
+  "slow": 30,
+  "mind wrench": 30,
+  "black feeble": 25,
+  "weaken": 25,
+  "web": 20,
+  "entangle": 20,
+  "confuse": 20,
+  "deafen": 20,
+  "fear": 15,
+  "calm": 15,
+  "faerie fire": 15,
+
+  "ray of truth": 35,
+  "banishment": 30,
+  "dispel evil": 25,
+  "turn": 25,
+
+  "frenzy": 55,
+  "master healing": 50,
+  "shielding": 40,
+  "superior heal": 38,
+  "heal": 26,
+  "aid": 19,
+  "dispel affects": 20
+}

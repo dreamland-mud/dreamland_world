@@ -5,6 +5,53 @@
   <aliases l="ua">схованка</aliases>
   <cat>item</cat>
   <extra>keep_hide ghost</extra>
+  <help id="367" level="-1" type="CommandHelp" labels="items">
+    <text l="en">=vault= is your own storehouse, kept out in the world's back rooms. Step into any {hh1086bank{x and you can tuck items away and pull them back whenever you like -- it costs nothing and there is no limit on how much you keep. A bag goes in whole, with everything inside it, as a single entry, so the gear you are not using never drags on the world while you are away.
+
+%FMT% *%CMD%*
+%FMT% *%CMD%* *put* _%OBJ%_
+%FMT% *%CMD%* *get* _number_|_%OBJ%_
+%FMT% *%CMD%* *find* _word_
+%FMT% *%CMD%* *filter* _type_
+On its own, *%CMD%* lists what you have stored, sorted by type. *put* moves an item from your {hh1015inventory{x into the vault -- worn gear is left alone -- and *get* brings one back by its row number or by name. Sweep everything in or out at once with *put %ALL%* or *get %ALL%*, or just one kind with the *%ALL%.*_word_ form, say *get %ALL%.potion*. *find* searches your stored items by name; *filter* narrows the list to a single item type.
+
+Two kinds of item stay in your hands: =unique= items and anything with a running timer -- stored items do not tick, so a timer would freeze half-spent, and a unique's bookkeeping is not safe to bank yet. A few items simply refuse to be stored at all. And you must be standing at a bank for any of this to work.
+
+In the web client the row numbers and the counts on the *By type* line are clickable: one click pulls an item out or filters the list to that type.
+
+%SA% %H% {hh1086bank{x
+</text>
+    <text l="ru">=хранилище= -- это твой личный склад, спрятанный в задворках мира. Зайди в любой {hh1086банк{x -- и сможешь убирать вещи с глаз долой и доставать их обратно когда угодно; это бесплатно и без всякого предела на то, сколько ты хранишь. Сумка отправляется внутрь целиком, со всем содержимым, как одна запись, так что снаряга, которой ты не пользуешься, не висит на мире, пока тебя нет.
+
+%FMT% *%CMD%*
+%FMT% *%CMD%* *положить* _%OBJ%_
+%FMT% *%CMD%* *взять* _номер_|_%OBJ%_
+%FMT% *%CMD%* *найти* _слово_
+%FMT% *%CMD%* *фильтр* _тип_
+Без аргументов *%CMD%* показывает, что у тебя сложено, отсортированное по типу. *положить* убирает вещь из твоего {hh1015инвентаря{x в хранилище -- надетое остается на тебе, -- а *взять* достает ее обратно по номеру строки или по названию. Загрести все разом внутрь или наружу можно через *положить %ALL%* или *взять %ALL%*, а один вид -- через форму *%ALL%.*_слово_, например *взять %ALL%.зелье*. *найти* ищет сложенное по названию; *фильтр* сужает список до одного типа предметов.
+
+Две вещи остаются у тебя в руках: =уникальные= предметы и все, у чего тикает таймер -- сложенное не тикает, поэтому таймер застыл бы на полдороге, а учет уникальных пока небезопасно доверять хранилищу. Кое-что просто отказывается складываться. И чтобы все это работало, надо стоять в банке.
+
+В веб-клиенте номера строк и счетчики в строке *По типу* кликабельны: один клик достает вещь или сужает список до этого типа.
+
+%SA% %H% {hh1086банк{x
+</text>
+    <text l="ua">=сховище= -- це твій особистий склад, захований на задвірках світу. Зайди в будь-який {hh1086банк{x -- і зможеш ховати речі з очей і діставати їх назад коли завгодно; це безкоштовно і без жодної межі на те, скільки ти тримаєш. Торба вирушає всередину цілком, з усім вмістом, як один запис, тож спорядження, яким ти не користуєшся, не висить на світі, поки тебе нема.
+
+%FMT% *%CMD%*
+%FMT% *%CMD%* *покласти* _%OBJ%_
+%FMT% *%CMD%* *взяти* _номер_|_%OBJ%_
+%FMT% *%CMD%* *знайти* _слово_
+%FMT% *%CMD%* *фільтр* _тип_
+Без аргументів *%CMD%* показує, що в тебе складено, відсортоване за типом. *покласти* прибирає річ із твого {hh1015інвентарю{x до сховища -- вдягнене лишається на тобі, -- а *взяти* дістає її назад за номером рядка або за назвою. Загребти все разом усередину чи назовні можна через *покласти %ALL%* або *взяти %ALL%*, а один вид -- через форму *%ALL%.*_слово_, наприклад *взяти %ALL%.зілля*. *знайти* шукає складене за назвою; *фільтр* звужує список до одного типу предметів.
+
+Дві речі лишаються в тебе в руках: =унікальні= предмети і все, у чого цокає таймер -- складене не цокає, тож таймер застиг би на півдорозі, а облік унікальних поки небезпечно довіряти сховищу. Дещо просто відмовляється складатися. І щоб усе це працювало, треба стояти в банку.
+
+У веб-клієнті номери рядків і лічильники в рядку *За типом* клікабельні: один клік дістає річ або звужує список до цього типу.
+
+%SA% %H% {hh1086банк{x
+</text>
+  </help>
   <hint l="en">store items out of the world and take them back at a bank</hint>
   <hint l="ru">убирать предметы из мира и доставать их обратно в банке</hint>
   <hint l="ua">ховати предмети зі світу і діставати їх назад у банку</hint>

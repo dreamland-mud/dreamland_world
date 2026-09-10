@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Command>
+  <cat>config</cat>
+  <extra>keep_hide ghost</extra>
+  <help id="5106" level="-1" type="CommandHelp" labels="comm">
+    <extra l="en">account accounts linking</extra>
+    <extra l="ru">аккаунт аккаунты связка привязка</extra>
+    <extra l="ua">акаунт акаунти привʼязка звʼязка</extra>
+    <text l="en">%FMT% *%CMD%*
+%FFF% *%CMD%* link
+
+An account ties your characters together and gives you a way to recover access. It is a layer on top of the character password: your world-entry password does not change.
+
+*%CMD%* -- show your account status: linked identities and characters.
+*%CMD%* link -- mint a one-time linking code. Redeem it in the Telegram or Discord bot, or on the website, to attach this character to an account. The code is single-use, lives ten minutes, and must be kept secret -- whoever redeems it links the character to their account.
+
+Account linking is rolling out. Until it opens, *%CMD%* link only tells you so.
+</text>
+    <text l="ru">%FMT% *%CMD%*
+%FFF% *%CMD%* связать
+
+Аккаунт связывает твоих персонажей вместе и дает способ восстановить доступ. Это слой поверх пароля персонажа: пароль на вход в мир не меняется.
+
+*%CMD%* -- показать статус аккаунта: привязанные способы входа и персонажей.
+*%CMD%* связать -- получить одноразовый код привязки. Введи его в боте Telegram или Discord, либо на сайте, чтобы привязать этого персонажа к аккаунту. Код одноразовый, живет десять минут и должен оставаться в секрете -- кто его введет, привяжет персонажа к своему аккаунту.
+
+Привязка аккаунтов постепенно открывается. Пока она закрыта, *%CMD%* связать просто скажет об этом.
+</text>
+    <text l="ua">%FMT% *%CMD%*
+%FFF% *%CMD%* звязати
+
+Акаунт повʼязує твоїх персонажів разом і дає спосіб відновити доступ. Це шар поверх пароля персонажа: пароль на вхід до світу не змінюється.
+
+*%CMD%* -- показати статус акаунта: привʼязані способи входу та персонажів.
+*%CMD%* звязати -- отримати одноразовий код привʼязки. Введи його в боті Telegram чи Discord або на сайті, щоб привʼязати цього персонажа до акаунта. Код одноразовий, живе десять хвилин і має лишатися в секреті -- хто його введе, привʼяже персонажа до свого акаунта.
+
+Привʼязка акаунтів поступово відкривається. Поки вона закрита, *%CMD%* звязати просто скаже про це.
+</text>
+    <title l="en">{CAccounts: {xaccount linking</title>
+    <title l="ru">{CАккаунты: {xпривязка аккаунта</title>
+    <title l="ua">{CАкаунти: {xпривʼязка акаунта</title>
+  </help>
+  <hint l="en">manage your account and linking</hint>
+  <hint l="ru">управление аккаунтом и привязкой</hint>
+  <hint l="ua">керування акаунтом і привʼязкою</hint>
+  <log>2</log>
+  <name l="en">account</name>
+  <name l="ru">аккаунт</name>
+  <name l="ua">акаунт</name>
+  <order>player_only</order>
+  <position>dead</position>
+</Command>

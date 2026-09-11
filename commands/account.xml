@@ -7,40 +7,49 @@
     <extra l="ru">аккаунт аккаунты связка привязка</extra>
     <extra l="ua">акаунт акаунти привʼязка звʼязка</extra>
     <text l="en">%FMT% *%CMD%*
-%FFF% *%CMD%* link
-%FFF% *%CMD%* link discord
+%FFF% *%CMD%* *link*
+%FFF% *%CMD%* *discord*
+%FFF% *%CMD%* *telegram*
 
-An account ties your characters together and gives you a way to recover access. It is a layer on top of the character password: your world-entry password does not change. Every account gets a name of its own, such as "Ashen Warden of Old Thalos".
+An account ties your characters together and gives you a way to recover access. It is a layer on top of the character {hh1003password{x: your world-entry password does not change. Every account gets a name of its own, such as "Ashen Warden of Old Thalos".
 
 *%CMD%* -- show your account status: its name, linked identities and characters.
-*%CMD%* link -- mint a one-time linking code. Redeem it in the Telegram or Discord bot, or on the website, to attach this character to an account. The code is single-use, lives ten minutes, and must be kept secret -- whoever redeems it links the character to their account.
-*%CMD%* link discord -- if your Discord is already verified in-game, link an account straight from it, no code needed.
+*%CMD%* *link* -- mint a one-time linking code and redeem it in the Telegram or Discord bot. Single-use, ten minutes, keep it secret -- whoever redeems it links the character to their account.
+*%CMD%* *discord* -- if your Discord is already verified in-game, link an account straight from it in one command, no code. Otherwise it hands you a code for the Discord bot.
+*%CMD%* *telegram* -- always through the Telegram bot: tap the one-time link, or send it the code. A Telegram handle you typed yourself is not proof, so Telegram always confirms through the bot -- unlike Discord, which the game has already verified.
+*%CMD%* *email* _address_, then *%CMD%* *code* _code_ -- (coming) the telnet-only door, for players with no bot or browser.
 
-Account linking is rolling out. Until it opens, *%CMD%* link only tells you so.
+Account linking is rolling out. Until it opens, these only tell you so.
 </text>
     <text l="ru">%FMT% *%CMD%*
-%FFF% *%CMD%* связать
-%FFF% *%CMD%* связать дискорд
+%FFF% *%CMD%* *связать*
+%FFF% *%CMD%* *дискорд*
+%FFF% *%CMD%* *телеграм*
 
-Аккаунт связывает твоих персонажей вместе и дает способ восстановить доступ. Это слой поверх пароля персонажа: пароль на вход в мир не меняется. У каждого аккаунта есть свое имя, например "Ashen Warden of Old Thalos".
+Аккаунт связывает твоих персонажей вместе и дает способ восстановить доступ. Это слой поверх {hh1003пароля{x персонажа: пароль на вход в мир не меняется. У каждого аккаунта есть свое имя, например "Ashen Warden of Old Thalos".
 
 *%CMD%* -- показать статус аккаунта: его имя, привязанные способы входа и персонажей.
-*%CMD%* связать -- получить одноразовый код привязки. Введи его в боте Telegram или Discord, либо на сайте, чтобы привязать этого персонажа к аккаунту. Код одноразовый, живет десять минут и должен оставаться в секрете -- кто его введет, привяжет персонажа к своему аккаунту.
-*%CMD%* связать дискорд -- если твой Discord уже подтвержден в игре, привязать аккаунт сразу по нему, без кода.
+*%CMD%* *связать* -- получить одноразовый код и ввести его в боте Telegram или Discord. Одноразовый, десять минут, держи в секрете -- кто его введет, привяжет персонажа к своему аккаунту.
+*%CMD%* *дискорд* -- если твой Discord уже подтвержден в игре, привязать аккаунт сразу по нему, одной командой, без кода. Иначе выдаст код для бота Discord.
+*%CMD%* *телеграм* -- всегда через бота Telegram: тапни одноразовую ссылку или отправь ему код. Хендл Telegram, который ты вписал сам, ничего не доказывает, поэтому Telegram всегда подтверждается через бота -- в отличие от Discord, который игра уже проверила.
+*%CMD%* *почта* _адрес_, затем *%CMD%* *код* _код_ -- (скоро) вход только по telnet, для тех, у кого нет бота или браузера.
 
-Привязка аккаунтов постепенно открывается. Пока она закрыта, *%CMD%* связать просто скажет об этом.
+Привязка аккаунтов постепенно открывается. Пока она закрыта, это просто скажет об этом.
 </text>
     <text l="ua">%FMT% *%CMD%*
-%FFF% *%CMD%* звязати
-%FFF% *%CMD%* звязати дискорд
+%FFF% *%CMD%* *звязати*
+%FFF% *%CMD%* *дискорд*
+%FFF% *%CMD%* *телеграм*
 
-Акаунт повʼязує твоїх персонажів разом і дає спосіб відновити доступ. Це шар поверх пароля персонажа: пароль на вхід до світу не змінюється. Кожен акаунт має власну назву, наприклад "Ashen Warden of Old Thalos".
+Акаунт повʼязує твоїх персонажів разом і дає спосіб відновити доступ. Це шар поверх {hh1003пароля{x персонажа: пароль на вхід до світу не змінюється. Кожен акаунт має власну назву, наприклад "Ashen Warden of Old Thalos".
 
 *%CMD%* -- показати статус акаунта: його назву, привʼязані способи входу та персонажів.
-*%CMD%* звязати -- отримати одноразовий код привʼязки. Введи його в боті Telegram чи Discord або на сайті, щоб привʼязати цього персонажа до акаунта. Код одноразовий, живе десять хвилин і має лишатися в секреті -- хто його введе, привʼяже персонажа до свого акаунта.
-*%CMD%* звязати дискорд -- якщо твій Discord уже підтверджено в грі, привʼязати акаунт одразу по ньому, без коду.
+*%CMD%* *звязати* -- отримати одноразовий код і ввести його в боті Telegram чи Discord. Одноразовий, десять хвилин, тримай у секреті -- хто його введе, привʼяже персонажа до свого акаунта.
+*%CMD%* *дискорд* -- якщо твій Discord уже підтверджено в грі, привʼязати акаунт одразу по ньому, однією командою, без коду. Інакше видасть код для бота Discord.
+*%CMD%* *телеграм* -- завжди через бота Telegram: тапни одноразове посилання або надішли йому код. Хендл Telegram, який ти вписав сам, нічого не доводить, тож Telegram завжди підтверджується через бота -- на відміну від Discord, який гра вже перевірила.
+*%CMD%* *пошта* _адреса_, потім *%CMD%* *код* _код_ -- (скоро) вхід лише через telnet, для тих, хто без бота чи браузера.
 
-Привʼязка акаунтів поступово відкривається. Поки вона закрита, *%CMD%* звязати просто скаже про це.
+Привʼязка акаунтів поступово відкривається. Поки вона закрита, це просто скаже про це.
 </text>
     <title l="en">{CAccounts: {xaccount linking</title>
     <title l="ru">{CАккаунты: {xпривязка аккаунта</title>

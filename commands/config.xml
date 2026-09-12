@@ -7,20 +7,37 @@
   <extra>keep_hide ghost afk</extra>
   <groups>
     <node>
+      <name l="en">Gameplay settings:</name>
+      <name l="ru">Настройки игрового процесса:</name>
+      <name l="ua">Налаштування ігрового процесу:</name>
       <node type="ConfigElement">
         <bit table="add_comm_flags">nocancel</bit>
+        <help l="en">The spell 'cancellation' strips magic off its target -- the helpful spells along with the harmful ones. A stranger can use that to leave you without your protections at the worst possible moment. With this on, only members of your clan may cast it on you.</help>
+        <help l="ru">Заклинание 'отмена' снимает с цели наложенную магию -- и вредную, и полезную. Чужой может этим воспользоваться и оставить тебя без защит в самый неподходящий момент. Когда настройка включена, применить его к тебе смогут только соклановцы.</help>
+        <help l="ua">Закляття 'відміна' знімає з цілі накладену магію -- і шкідливу, і корисну. Чужий може цим скористатися й лишити тебе без захистів у найгірший момент. Коли налаштування увімкнене, застосувати його до тебе зможуть лише соклановці.</help>
+        <hint l="en">Only clanmates may cast 'cancellation' on you.</hint>
+        <hint l="ru">Снимать с тебя заклинания сможет только соклановец.</hint>
+        <hint l="ua">Знімати з тебе закляття зможе лише соклановець.</hint>
         <msgOff l="en">Anyone can cast 'cancellation' on you.</msgOff>
-        <msgOff l="ru">Заклинание &apos;отмена&apos; на тебя смогут применить все.</msgOff>
+        <msgOff l="ru">Заклинание 'отмена' на тебя смогут применить все.</msgOff>
         <msgOff l="ua">Закляття 'відміна' на тебе зможуть застосувати всі.</msgOff>
         <msgOn l="en">Only your clanmates can cast 'cancellation' on you.</msgOn>
-        <msgOn l="ru">Заклинание &apos;отмена&apos; на тебя смогут применить только соклановцы.</msgOn>
+        <msgOn l="ru">Заклинание 'отмена' на тебя смогут применить только соклановцы.</msgOn>
         <msgOn l="ua">Закляття 'відміна' на тебе зможуть застосувати лише соклановці.</msgOn>
         <name>nocancel</name>
         <rname>неотменять</rname>
         <uaname>невідміняти</uaname>
+        <webOrder>10</webOrder>
+        <webPage>gameplay</webPage>
       </node>
       <node type="ConfigElement">
         <bit table="add_comm_flags">nobuff</bit>
+        <help l="en">Helpful magic is not always welcome: someone else's spell can push out the one you chose yourself, and it lands on your pets too. With this on, only your group and your clan may cast such spells on you and on the creatures following you.</help>
+        <help l="ru">Полезная магия нужна не всегда: чужое заклинание может вытеснить то, которое ты выбрал сам, и накладывают их не только на тебя, но и на твоих питомцев. Когда настройка включена, делать это смогут только твоя группа и соклановцы.</help>
+        <help l="ua">Корисна магія потрібна не завжди: чуже закляття може витіснити те, яке ти обрав сам, і накладають їх не лише на тебе, а й на твоїх улюбленців. Коли налаштування увімкнене, робити це зможуть лише твоя група та соклановці.</help>
+        <hint l="en">Only your group and clanmates may cast helpful spells on you.</hint>
+        <hint l="ru">Полезные заклинания на тебя смогут накладывать только свои.</hint>
+        <hint l="ua">Корисні закляття на тебе зможуть накладати лише свої.</hint>
         <msgOff l="en">Anyone can cast beneficial spells on you and your pets.</msgOff>
         <msgOff l="ru">Положительные заклинания на тебя и твоих питомцев смогут накладывать все.</msgOff>
         <msgOff l="ua">Позитивні закляття на тебе й твоїх улюбленців зможуть накладати всі.</msgOff>
@@ -30,9 +47,17 @@
         <name>nobuff</name>
         <rname>небаф</rname>
         <uaname>небаф</uaname>
+        <webOrder>20</webOrder>
+        <webPage>gameplay</webPage>
       </node>
       <node type="ConfigElement">
         <bit table="add_comm_flags">notransfer</bit>
+        <help l="en">Whatever somebody hands over goes straight into your hands, and not every gift is a kind one: an item may be cursed, or heavy enough to slow you down. With this on, only your group and your clan may give you things.</help>
+        <help l="ru">Переданное попадает прямо тебе в руки, а дарят не всегда доброе: вещь может оказаться проклятой или просто тяжёлой. Когда настройка включена, передать тебе вещь или деньги смогут только твоя группа и соклановцы.</help>
+        <help l="ua">Передане потрапляє просто тобі до рук, а дарують не завжди добре: річ може виявитися проклятою або просто важкою. Коли налаштування увімкнене, передати тобі річ або гроші зможуть лише твоя група та соклановці.</help>
+        <hint l="en">Only your group and clanmates may hand you items and money.</hint>
+        <hint l="ru">Передавать тебе вещи и деньги смогут только свои.</hint>
+        <hint l="ua">Передавати тобі речі й гроші зможуть лише свої.</hint>
         <msgOff l="en">Anyone can give items and money to you.</msgOff>
         <msgOff l="ru">Передавать тебе вещи и деньги смогут все.</msgOff>
         <msgOff l="ua">Передавати тобі речі й гроші зможуть усі.</msgOff>
@@ -42,9 +67,17 @@
         <name>notransfer</name>
         <rname>непередавать</rname>
         <uaname>непередавати</uaname>
+        <webOrder>30</webOrder>
+        <webPage>gameplay</webPage>
       </node>
       <node type="ConfigElement">
         <bit table="plr_flags">nofollow</bit>
+        <help l="en">Anyone may normally start following you around, and walk wherever you walk. With this on, such attempts are refused -- the would-be follower is told that you prefer to walk alone. Immortals are not stopped by it.</help>
+        <help l="ru">Обычно за тобой может пойти следом кто угодно и ходить за тобой повсюду. Когда настройка включена, такие попытки отклоняются: желающему сообщают, что ты предпочитаешь ходить один. На бессмертных запрет не действует.</help>
+        <help l="ua">Зазвичай за тобою може піти слідом будь-хто і ходити за тобою всюди. Коли налаштування увімкнене, такі спроби відхиляються: охочому повідомляють, що ти волієш ходити сам. На безсмертних заборона не діє.</help>
+        <hint l="en">Nobody may start following you.</hint>
+        <hint l="ru">Никто не сможет пойти за тобой следом.</hint>
+        <hint l="ua">Ніхто не зможе піти за тобою слідом.</hint>
         <msgOff l="en">You allow others to follow you.</msgOff>
         <msgOff l="ru">Ты разрешаешь следовать за собой.</msgOff>
         <msgOff l="ua">Ти дозволяєш іти за собою.</msgOff>
@@ -54,9 +87,17 @@
         <name>nofollow</name>
         <rname>неследовать</rname>
         <uaname>неслідувати</uaname>
+        <webOrder>40</webOrder>
+        <webPage>gameplay</webPage>
       </node>
       <node type="ConfigElement">
         <bit table="plr_flags">autoassist</bit>
+        <help l="en">When someone in your group is attacked in the room you are standing in, you strike back without being asked. With this off you keep standing still until you attack yourself -- useful when you are the one who heals and would rather not be hit.</help>
+        <help l="ru">Когда на кого-то из твоей группы нападают в той же комнате, где стоишь ты, ты вступаешь в бой сам, без команды. Если настройка выключена, ты продолжаешь стоять, пока не нападёшь сам, -- это удобно тому, кто лечит и не хочет попадать под удар.</help>
+        <help l="ua">Коли на когось із твоєї групи нападають у тій самій кімнаті, де стоїш ти, ти вступаєш у бій сам, без команди. Якщо налаштування вимкнене, ти стоїш далі, доки не нападеш сам, -- це зручно тому, хто лікує й не хоче потрапляти під удар.</help>
+        <hint l="en">Join the fight when your group is attacked.</hint>
+        <hint l="ru">Вступать в бой, когда напали на твою группу.</hint>
+        <hint l="ua">Вступати в бій, коли напали на твою групу.</hint>
         <msgOff l="en">You will not join combat when your group is attacked.</msgOff>
         <msgOff l="ru">Ты не будешь вступать в бой при нападении на твою группу.</msgOff>
         <msgOff l="ua">Ти не вступатимеш у бій, коли нападають на твою групу.</msgOff>
@@ -66,9 +107,17 @@
         <name>autoassist</name>
         <rname>автопомощь</rname>
         <uaname>автодопомога</uaname>
+        <webOrder>50</webOrder>
+        <webPage>gameplay</webPage>
       </node>
       <node type="ConfigElement">
         <bit table="plr_flags">autoloot</bit>
+        <help l="en">The moment your enemy dies, everything in the corpse ends up in your hands by itself -- no need to type 'get all corpse'. Red-hot items are left where they are: picking one up burns the hands, and doing that by accident right after a fight can kill you. Blind, you will not find the corpse at all.</help>
+        <help l="ru">Как только противник умрёт, всё, что лежало в трупе, само окажется у тебя в руках -- набирать 'взять все труп' не нужно. Раскалённые вещи остаются лежать: такая вещь обжигает руки, и схватить её случайно сразу после боя опасно для жизни. Вслепую ты труп не найдёшь вовсе.</help>
+        <help l="ua">Щойно ворог помре, усе, що лежало в трупі, само опиниться в тебе в руках -- набирати 'взяти все труп' не треба. Розжарені речі лишаються лежати: така річ обпікає руки, і схопити її випадково одразу після бою небезпечно для життя. Наосліп ти трупа не знайдеш узагалі.</help>
+        <hint l="en">Take everything from the corpse the moment the enemy dies.</hint>
+        <hint l="ru">Забирать всё из трупа, как только противник умрёт.</hint>
+        <hint l="ua">Забирати все з трупа, щойно ворог помре.</hint>
         <msgOff l="en">You will not automatically loot items from enemy corpses.</msgOff>
         <msgOff l="ru">Ты не будешь автоматически забирать все вещи из трупа врага.</msgOff>
         <msgOff l="ua">Ти не забиратимеш речі з трупів ворогів автоматично.</msgOff>
@@ -78,9 +127,17 @@
         <name>autoloot</name>
         <rname>автограбеж</rname>
         <uaname>автограбунок</uaname>
+        <webOrder>60</webOrder>
+        <webPage>gameplay</webPage>
       </node>
       <node type="ConfigElement">
         <bit table="plr_flags">autosac</bit>
+        <help l="en">The corpse is offered to your god at once, and you get a few coins for it instead of a body lying underfoot. If you also take loot automatically, a corpse with something still inside it is left alone -- so nothing is sacrificed along with the loot.</help>
+        <help l="ru">Труп сразу приносится в жертву твоему богу: вместо лежащего под ногами тела ты получаешь несколько монет. Если при этом включён и автограбёж, труп с оставшимся внутри добром не трогается -- чтобы вместе с трупом не улетело и содержимое.</help>
+        <help l="ua">Труп одразу приноситься в жертву твоєму богові: замість тіла під ногами ти отримуєш кілька монет. Якщо при цьому увімкнено й автопограбунок, труп із рештками добра всередині не чіпають -- щоб разом із трупом не зникло й те, що в ньому.</help>
+        <hint l="en">Sacrifice the corpse after a kill.</hint>
+        <hint l="ru">Приносить труп в жертву после убийства.</hint>
+        <hint l="ua">Приносити труп у жертву після вбивства.</hint>
         <msgOff l="en">You will not sacrifice corpses after a kill.</msgOff>
         <msgOff l="ru">Ты не будешь приносить в жертву труп после убийства.</msgOff>
         <msgOff l="ua">Ти не жертвуватимеш труп після вбивства.</msgOff>
@@ -90,9 +147,35 @@
         <name>autosac</name>
         <rname>автожертва</rname>
         <uaname>автожертва</uaname>
+        <webOrder>70</webOrder>
+        <webPage>gameplay</webPage>
       </node>
       <node type="ConfigElement">
         <bit table="config_flags">newdamage</bit>
+        <examples>
+          <node>
+            <label l="en">numbers</label>
+            <label l="ru">числом</label>
+            <label l="ua">числом</label>
+            <text l="en">You{r wound{r {xa grim goblin. {D[{Y20{D]{x</text>
+            <text l="ru">Ты{r ранишь{r {xхмурого гоблина. {D[{Y20{D]{x</text>
+            <text l="ua">Ти{r раниш{r {xпохмурого гобліна. {D[{Y20{D]{x</text>
+          </node>
+          <node>
+            <label l="en">share</label>
+            <label l="ru">долей</label>
+            <label l="ua">часткою</label>
+            <text l="en">You{r graze{r {xa grim goblin.</text>
+            <text l="ru">Ты{r задеваешь{r {xхмурого гоблина.</text>
+            <text l="ua">Ти{r зачіпаєш{r {xпохмурого гобліна.</text>
+          </node>
+        </examples>
+        <help l="en">Every blow is described by a word. Off: the word is chosen by the bare amount of damage and the exact number follows in brackets. On: the word is chosen by how much of the victim's health that blow took away, and no number is printed -- the same twenty points read as a scratch on a dragon and as a maiming on a rat.</help>
+        <help l="ru">Каждый удар описывается словом. Выключено: слово выбирается по голой величине урона, а следом в скобках печатается точное число. Включено: слово выбирается по тому, какую долю здоровья жертвы этот удар отнял, и число не печатается -- одни и те же двадцать единиц читаются как царапина для дракона и как увечье для крысы.</help>
+        <help l="ua">Кожен удар описується словом. Вимкнено: слово добирається за голою величиною шкоди, а далі в дужках друкується точне число. Увімкнено: слово добирається за тим, яку частку здоров'я жертви цей удар відібрав, і число не друкується -- ті самі двадцять одиниць читаються як подряпина для дракона й як каліцтво для щура.</help>
+        <hint l="en">Describe a blow by the share of health it took, without the number.</hint>
+        <hint l="ru">Описывать удар долей здоровья, а не числом.</hint>
+        <hint l="ua">Описувати удар часткою здоров'я, а не числом.</hint>
         <msgOff l="en">Damage is shown as numbers.</msgOff>
         <msgOff l="ru">Урон отображается числами.</msgOff>
         <msgOff l="ua">Шкода відображається числами.</msgOff>
@@ -102,14 +185,40 @@
         <name>damage</name>
         <rname>урон</rname>
         <uaname>шкода</uaname>
+        <webOrder>80</webOrder>
+        <webPage>gameplay</webPage>
       </node>
-      <name l="en">Gameplay settings:</name>
-      <name l="ru">Настройки игрового процесса:</name>
-      <name l="ua">Налаштування ігрового процесу:</name>
     </node>
     <node>
+      <name l="en">Comfortable output:</name>
+      <name l="ru">Комфортный вывод:</name>
+      <name l="ua">Комфортний вивід:</name>
       <node type="ConfigElement">
         <bit table="config_flags">short_objflag</bit>
+        <examples>
+          <node>
+            <label l="en">off</label>
+            <label l="ru">словами</label>
+            <label l="ua">словами</label>
+            <text l="en">({MGlowing{x) ({cVibrating{x) {Ga long sword{x</text>
+            <text l="ru">({MПылает{x) ({cВибрирует{x) {Gдлинный меч{x</text>
+            <text l="ua">({MПалає{x) ({cВібрує{x) {Gдовгий меч{x</text>
+          </node>
+          <node>
+            <label l="en">on</label>
+            <label l="ru">буквами</label>
+            <label l="ua">літерами</label>
+            <text l="en">{x[{D.{R.{C.{w.{MG{cV{y.{x] {Ga long sword{x</text>
+            <text l="ru">{x[{D.{R.{C.{w.{MП{cВ{y.{x] {Gдлинный меч{x</text>
+            <text l="ua">{x[{D.{R.{C.{w.{MП{cВ{y.{x] {Gдовгий меч{x</text>
+          </node>
+        </examples>
+        <help l="en">Items carry marks: glowing, humming, enchanted, blessed, corroded and so on. Written out in full they take more room than the item name itself; in short form each mark gets one letter in a fixed place, and a dot where the item has nothing. Long lists become much easier to scan.</help>
+        <help l="ru">У вещей бывают пометки: пылает, вибрирует, заколдовано, благословлено, изъедено коррозией и так далее. Написанные словами, они занимают больше места, чем само название вещи; в кратком виде каждая пометка -- одна буква на своём месте, а точка означает, что этого свойства нет. Длинные списки становится заметно легче просматривать.</help>
+        <help l="ua">У речей бувають позначки: палає, вібрує, зачакловано, благословенно, роз'їдено корозією і таке інше. Написані словами, вони займають більше місця, ніж сама назва речі; у стислому вигляді кожна позначка -- одна літера на своєму місці, а крапка означає, що цієї властивості немає. Довгі переліки стають помітно легшими для перегляду.</help>
+        <hint l="en">Mark item properties with letters instead of words.</hint>
+        <hint l="ru">Помечать свойства вещей буквами, а не словами.</hint>
+        <hint l="ua">Позначати властивості речей літерами, а не словами.</hint>
         <msgOff l="en">Item flags are shown in full form.</msgOff>
         <msgOff l="ru">Флаги на предметах отображаются в развернутом виде.</msgOff>
         <msgOff l="ua">Флаги на предметах показуються повністю.</msgOff>
@@ -119,9 +228,38 @@
         <name>shortflags</name>
         <rname>краткофлаги</rname>
         <uaname>короткофлаги</uaname>
+        <webOrder>10</webOrder>
+        <webPage>output</webPage>
       </node>
       <node type="ConfigElement">
         <bit table="config_flags">fightspam</bit>
+        <examples>
+          <node>
+            <label l="en">on</label>
+            <label l="ru">включено</label>
+            <label l="ua">увімкнено</label>
+            <text l="en">You{r wound{r {xa grim goblin. {D[{Y20{D]{x
+You{w miss{w {xa grim goblin.</text>
+            <text l="ru">Ты{r ранишь{r {xхмурого гоблина. {D[{Y20{D]{x
+Ты{w не можешь пробить защиту{w {xхмурого гоблина.</text>
+            <text l="ua">Ти{r раниш{r {xпохмурого гобліна. {D[{Y20{D]{x
+Ти{w не можеш пробити захист{w {xпохмурого гобліна.</text>
+          </node>
+          <node>
+            <label l="en">off</label>
+            <label l="ru">выключено</label>
+            <label l="ua">вимкнено</label>
+            <text l="en">You {C=&gt;{x a grim goblin {D[{x{M37{x{D]{x</text>
+            <text l="ru">Ты {C=&gt;{x хмурый гоблин {D[{x{M37{x{D]{x</text>
+            <text l="ua">Ти {C=&gt;{x похмурий гоблін {D[{x{M37{x{D]{x</text>
+          </node>
+        </examples>
+        <help l="en">A fight is made of many blows a second: hits, parries, dodges, misses. With this on you see all of them, line by line. With it off the per-blow lines are hidden and each round ends with a single summary line instead -- less to read, and the important messages stop scrolling away.</help>
+        <help l="ru">Бой состоит из множества ударов в секунду: попадания, парирования, увороты, промахи. Когда настройка включена, ты видишь их все, строка за строкой. Когда выключена, отдельные удары не показываются, а вместо них в конце каждого раунда выводится одна итоговая строка -- читать меньше, и важные сообщения перестают улетать вверх.</help>
+        <help l="ua">Бій складається з безлічі ударів на секунду: влучання, парирування, ухиляння, промахи. Коли налаштування увімкнене, ти бачиш їх усі, рядок за рядком. Коли вимкнене, окремі удари не показуються, а замість них наприкінці кожного раунду виводиться один підсумковий рядок -- читати менше, і важливі повідомлення перестають зникати вгору.</help>
+        <hint l="en">Show every blow of the fight, one line each.</hint>
+        <hint l="ru">Показывать каждый удар боя отдельной строкой.</hint>
+        <hint l="ua">Показувати кожен удар бою окремим рядком.</hint>
         <msgOff l="en">You do not see parries, dodges and so on.</msgOff>
         <msgOff l="ru">Ты не видишь парирований, уворотов и так далее.</msgOff>
         <msgOff l="ua">Ти не бачиш парирувань, ухилянь тощо.</msgOff>
@@ -131,9 +269,27 @@
         <name>fightspam</name>
         <rname>спамбой</rname>
         <uaname>спамбій</uaname>
+        <webOrder>20</webOrder>
+        <webPage>output</webPage>
       </node>
       <node type="ConfigElement">
         <bit table="config_flags">skillspam</bit>
+        <examples>
+          <node>
+            <label l="en">on</label>
+            <label l="ru">включено</label>
+            <label l="ua">увімкнено</label>
+            <text l="en">Your lightning{w misses{w {xa grim goblin.</text>
+            <text l="ru">Твоя молния{w промахивается мимо{w {xхмурого гоблина.</text>
+            <text l="ua">Твоя блискавка{w промахується повз{w {xпохмурого гобліна.</text>
+          </node>
+        </examples>
+        <help l="en">Skills and spells that deal damage do not always land. With this on you see the attempts that did no damage at all, so you know the skill fired and simply missed. With it off only the blows that actually hurt are shown.</help>
+        <help l="ru">Умения и заклинания, наносящие урон, срабатывают не всегда. Когда настройка включена, ты видишь и те попытки, которые не нанесли урона вовсе, -- сразу понятно, что умение сработало, но прошло мимо. Когда выключена, показываются только удары, которые действительно навредили.</help>
+        <help l="ua">Уміння та закляття, що завдають шкоди, спрацьовують не завжди. Коли налаштування увімкнене, ти бачиш і ті спроби, що не завдали шкоди зовсім, -- одразу зрозуміло, що вміння спрацювало, але пройшло повз. Коли вимкнене, показуються лише удари, які справді зашкодили.</help>
+        <hint l="en">Show failed attempts of your skills and spells.</hint>
+        <hint l="ru">Показывать неудачные срабатывания умений и заклинаний.</hint>
+        <hint l="ua">Показувати невдалі спрацювання вмінь і заклять.</hint>
         <msgOff l="en">You do not see skill misses.</msgOff>
         <msgOff l="ru">Ты не видишь промахи умений.</msgOff>
         <msgOff l="ua">Ти не бачиш промахів умінь.</msgOff>
@@ -143,9 +299,17 @@
         <name>skillspam</name>
         <rname>спамумения</rname>
         <uaname>спамумінь</uaname>
+        <webOrder>30</webOrder>
+        <webPage>output</webPage>
       </node>
       <node type="ConfigElement">
         <bit table="config_flags">weaponspam</bit>
+        <help l="en">A weapon may burn, freeze, drain or poison on top of the blow itself, and each of those prints its own line every time it goes off. With this on those lines are hidden -- for you, for the one you are hitting and for everyone watching. The effects themselves keep working.</help>
+        <help l="ru">Оружие может жечь, морозить, вытягивать силы или отравлять вдобавок к самому удару, и каждое такое свойство при срабатывании печатает свою строку. Когда настройка включена, эти строки не показываются -- ни тебе, ни тому, кого ты бьёшь, ни зрителям. Сами свойства при этом работают как работали.</help>
+        <help l="ua">Зброя може палити, морозити, витягати сили або труїти на додачу до самого удару, і кожна така властивість під час спрацювання друкує свій рядок. Коли налаштування увімкнене, ці рядки не показуються -- ні тобі, ні тому, кого ти б'єш, ні глядачам. Самі властивості при цьому працюють як працювали.</help>
+        <hint l="en">Hide what the flags on your weapon do.</hint>
+        <hint l="ru">Не показывать действия флагов оружия.</hint>
+        <hint l="ua">Не показувати дії прапорців зброї.</hint>
         <msgOff l="en">You see all {hh96weapon flag{x effects.</msgOff>
         <msgOff l="ru">Ты видишь все действия {hh96флагов оружия{x.</msgOff>
         <msgOff l="ua">Ти бачиш усі дії {hh96флагів зброї{x.</msgOff>
@@ -155,9 +319,17 @@
         <name>noweaponspam</name>
         <rname>нетспаморужия</rname>
         <uaname>нетспамзброї</uaname>
+        <webOrder>40</webOrder>
+        <webPage>output</webPage>
       </node>
       <node type="ConfigElement">
         <bit table="comm_flags">show_affects</bit>
+        <help l="en">'Score' shows what your character is: level, stats, money. With this on the list of spells currently on you is printed right after it, so you do not have to ask for it separately.</help>
+        <help l="ru">Команда 'счет' показывает, что представляет собой твой персонаж: уровень, характеристики, деньги. Когда настройка включена, сразу за ней печатается список заклинаний, которые на тебе висят, -- отдельно спрашивать не нужно.</help>
+        <help l="ua">Команда 'рахунок' показує, що являє собою твій персонаж: рівень, характеристики, гроші. Коли налаштування увімкнене, одразу за нею друкується перелік заклять, що на тобі висять, -- окремо питати не потрібно.</help>
+        <hint l="en">Add the list of spells on you to the 'score' output.</hint>
+        <hint l="ru">Добавлять список наложенных заклинаний к команде 'счет'.</hint>
+        <hint l="ua">Додавати перелік накладених заклять до команди 'рахунок'.</hint>
         <msgOff l="en">Affects are not shown by the score command.</msgOff>
         <msgOff l="ru">Аффекты не видны по команде счет.</msgOff>
         <msgOff l="ua">Ефекти не видно за командою рахунок.</msgOff>
@@ -167,9 +339,50 @@
         <name>affscore</name>
         <rname>аффектывсчет</rname>
         <uaname>афективрахунок</uaname>
+        <webOrder>50</webOrder>
+        <webPage>output</webPage>
       </node>
       <node type="ConfigElement">
         <bit table="comm_flags">brief</bit>
+        <examples>
+          <node>
+            <label l="en">off</label>
+            <label l="ru">выключено</label>
+            <label l="ua">вимкнено</label>
+            <text l="en">{WTemple of Leo{x
+ You stand at the entrance of Leo's Temple. Built from gigantic marble
+blocks, the Temple has withstood many centuries and epochs -- ever since the
+founding of Midgaard itself.
+{c[{CExits{c:{C north east south west up down{c]{x</text>
+            <text l="ru">{WХрам Лео{x
+ Ты находишься у входа в Храм Лео. Построенный из гигантских мраморных
+блоков, Храм выдержал многие столетия и эпохи -- с самого основания
+Мидгаарда.
+{c[{CВыходы{c:{C север восток юг запад вверх вниз{c]{x</text>
+            <text l="ua">{WХрам Лео{x
+ Ти стоїш біля входу до Храму Лео. Збудований з велетенських мармурових
+блоків, Храм пережив численні століття й епохи -- від самого заснування
+Мідгаарда.
+{c[{CВиходи{c:{C північ схід південь захід вгору вниз{c]{x</text>
+          </node>
+          <node>
+            <label l="en">on</label>
+            <label l="ru">включено</label>
+            <label l="ua">увімкнено</label>
+            <text l="en">{WTemple of Leo{x
+{c[{CExits{c:{C north east south west up down{c]{x</text>
+            <text l="ru">{WХрам Лео{x
+{c[{CВыходы{c:{C север восток юг запад вверх вниз{c]{x</text>
+            <text l="ua">{WХрам Лео{x
+{c[{CВиходи{c:{C північ схід південь захід вгору вниз{c]{x</text>
+          </node>
+        </examples>
+        <help l="en">Every step normally prints the full description of the room you walked into. With this on you get its name, what lies there and who is there -- the description itself is skipped, and typing 'look' still shows it in full. Player titles beside their names are hidden too.</help>
+        <help l="ru">Обычно каждый шаг печатает полное описание комнаты, куда ты вошёл. Когда настройка включена, остаются название, вещи и те, кто здесь есть, а само описание пропускается; команда 'смотреть' по-прежнему показывает его целиком. Заодно скрываются титулы игроков рядом с именами.</help>
+        <help l="ua">Зазвичай кожен крок друкує повний опис кімнати, куди ти ввійшов. Коли налаштування увімкнене, лишаються назва, речі й ті, хто тут є, а сам опис пропускається; команда 'дивитися' так само показує його повністю. Заразом ховаються титули гравців поруч з іменами.</help>
+        <hint l="en">Skip room descriptions while walking.</hint>
+        <hint l="ru">Не показывать описания комнат при ходьбе.</hint>
+        <hint l="ua">Не показувати описи кімнат під час ходьби.</hint>
         <msgOff l="en">Room descriptions are shown in full.</msgOff>
         <msgOff l="ru">Описание комнаты отображается в полном виде.</msgOff>
         <msgOff l="ua">Описи кімнат показуються повністю.</msgOff>
@@ -179,9 +392,27 @@
         <name>brief</name>
         <rname>кратко</rname>
         <uaname>стисло</uaname>
+        <webOrder>60</webOrder>
+        <webPage>output</webPage>
       </node>
       <node type="ConfigElement">
         <bit table="plr_flags">autoexit</bit>
+        <examples>
+          <node>
+            <label l="en">on</label>
+            <label l="ru">включено</label>
+            <label l="ua">увімкнено</label>
+            <text l="en">{c[{CExits{c:{C north east south west up down{c]{x</text>
+            <text l="ru">{c[{CВыходы{c:{C север восток юг запад вверх вниз{c]{x</text>
+            <text l="ua">{c[{CВиходи{c:{C північ схід південь захід вгору вниз{c]{x</text>
+          </node>
+        </examples>
+        <help l="en">A line listing the ways out is printed under the room, with a star beside a door that is shut. With this off you get the room without it and can ask for the exits by hand -- which is what people using a screen reader usually do, since the line is read aloud on every single step.</help>
+        <help l="ru">Под комнатой печатается строка со всеми ходами наружу; закрытая дверь помечается звёздочкой. Когда настройка выключена, комната выводится без неё, а выходы можно спросить отдельной командой -- так обычно и делают те, кто слушает игру читалкой: иначе эта строка зачитывается на каждом шагу.</help>
+        <help l="ua">Під кімнатою друкується рядок з усіма ходами назовні; зачинені двері позначаються зірочкою. Коли налаштування вимкнене, кімната виводиться без нього, а виходи можна спитати окремою командою -- так зазвичай і роблять ті, хто слухає гру читалкою: інакше цей рядок зачитується на кожному кроці.</help>
+        <hint l="en">Show the list of exits in every room.</hint>
+        <hint l="ru">Показывать список выходов в каждой комнате.</hint>
+        <hint l="ua">Показувати перелік виходів у кожній кімнаті.</hint>
         <msgOff l="en">Room exits are not shown automatically.</msgOff>
         <msgOff l="ru">Выходы не отображаются автоматически.</msgOff>
         <msgOff l="ua">Виходи з кімнати не показуються автоматично.</msgOff>
@@ -191,9 +422,27 @@
         <name>autoexit</name>
         <rname>автовыходы</rname>
         <uaname>автовиходи</uaname>
+        <webOrder>70</webOrder>
+        <webPage>output</webPage>
       </node>
       <node type="ConfigElement">
         <bit table="comm_flags">prompt</bit>
+        <examples>
+          <node>
+            <label l="en">on</label>
+            <label l="ru">включено</label>
+            <label l="ua">увімкнено</label>
+            <text l="en">&lt;{r120{x/{R150{xhp {c40{x/{C60{xmn 95/100mv {W1200{xxp Ex:{gne{x &gt;</text>
+            <text l="ru">&lt;{r120{x/{R150{xзд {c40{x/{C60{xман 95/100шг {W1200{xоп Вых:{gсв{x &gt;</text>
+            <text l="ua">&lt;{r120{x/{R150{xхп {c40{x/{C60{xмн 95/100мв {W1200{xдс Вих:{gпс{x &gt;</text>
+          </node>
+        </examples>
+        <help l="en">The status line is the short line at the bottom with your health, mana and moves. In the web client the same numbers are always on the panels, so the line only adds noise there; in a telnet client it is the main way to see how you are doing.</help>
+        <help l="ru">Строка состояния -- это короткая строчка внизу с твоим здоровьем, маной и силами. В веб-клиенте те же числа и так всегда на панелях, и строка там только добавляет шума; в телнет-клиенте это главный способ видеть, как твои дела.</help>
+        <help l="ua">Рядок стану -- це короткий рядок унизу з твоїм здоров'ям, маною та силами. У веб-клієнті ті самі числа й так завжди на панелях, і рядок там лише додає шуму; у телнет-клієнті це головний спосіб бачити, як твої справи.</help>
+        <hint l="en">Print the status line after every command.</hint>
+        <hint l="ru">Печатать строку состояния после каждой команды.</hint>
+        <hint l="ua">Друкувати рядок стану після кожної команди.</hint>
         <msgOff l="en">The {hh1012status line{x is off.</msgOff>
         <msgOff l="ru">Вывод {hh1012строки состояния{x отключен.</msgOff>
         <msgOff l="ua">Виведення {hh1012рядка стану{x вимкнено.</msgOff>
@@ -203,9 +452,17 @@
         <name>prompt</name>
         <rname>состояние</rname>
         <uaname>стан</uaname>
+        <webOrder>80</webOrder>
+        <webPage>output</webPage>
       </node>
       <node type="ConfigElement">
         <bit table="config_flags">screenreader</bit>
+        <help l="en">Switches the game to plain text a reading program can cope with: drawings and decorations that turn into gibberish when read aloud are replaced with words. Turn it on if you play by ear.</help>
+        <help l="ru">Переключает игру на простой текст, с которым справляется читающая программа: рисунки и украшения, которые вслух превращаются в бессмыслицу, заменяются словами. Включай, если играешь на слух.</help>
+        <help l="ua">Перемикає гру на простий текст, з яким дає раду програма читання: малюнки й прикраси, що вголос перетворюються на нісенітницю, замінюються словами. Вмикай, якщо граєш на слух.</help>
+        <hint l="en">Lay the output out for a screen reader.</hint>
+        <hint l="ru">Готовить вывод для программы чтения с экрана.</hint>
+        <hint l="ua">Готувати виведення для програми читання з екрана.</hint>
         <msgOff l="en">Screen reader support mode is off.</msgOff>
         <msgOff l="ru">Режим поддержки читалки для незрячих{x выключен.</msgOff>
         <msgOff l="ua">Режим підтримки читача екрана вимкнено.</msgOff>
@@ -215,9 +472,17 @@
         <name>screenreader</name>
         <rname>незрячий</rname>
         <uaname>незрячий</uaname>
+        <webOrder>90</webOrder>
+        <webPage>output</webPage>
       </node>
       <node type="ConfigElement">
         <bit table="plr_flags">holylight</bit>
+        <help l="en">An immortal's sight: darkness, invisibility and hiding stop working for you.</help>
+        <help l="ru">Зрение бессмертного: темнота, невидимость и укрытие перестают для тебя работать.</help>
+        <help l="ua">Зір безсмертного: темрява, невидимість і схованки перестають для тебе працювати.</help>
+        <hint l="en">See everything, hidden and dark alike.</hint>
+        <hint l="ru">Видеть всё, включая скрытое и тёмное.</hint>
+        <hint l="ua">Бачити все, зокрема приховане й темне.</hint>
         <level>102</level>
         <msgOff l="en">Holy light is off.</msgOff>
         <msgOff l="ru">Божественный взор выключен.</msgOff>
@@ -228,14 +493,22 @@
         <name>holylight</name>
         <rname>боговзор</rname>
         <uaname>боговзір</uaname>
+        <webOrder>100</webOrder>
+        <webPage>output</webPage>
       </node>
-      <name l="en">Comfortable output:</name>
-      <name l="ru">Комфортный вывод:</name>
-      <name l="ua">Комфортний вивід:</name>
     </node>
     <node>
+      <name l="en">Client settings:</name>
+      <name l="ru">Настройки клиента:</name>
+      <name l="ua">Налаштування клієнта:</name>
       <node type="ConfigElement">
         <bit table="add_comm_flags">noiac</bit>
+        <help l="en">One byte carries both a Russian letter and a signal in the terminal language, so the server sends it twice in a row to say 'this one is a letter'. A client that does not know the rule shows the letter doubled. With this on the server sends a different character instead: the letter comes out wrong, but the rest of the line stays readable.</help>
+        <help l="ru">Один и тот же байт означает и русскую букву, и служебный знак терминального языка, поэтому сервер посылает его дважды подряд -- так он говорит: 'это буква'. Клиент, который правила не знает, показывает букву удвоенной. Когда настройка включена, сервер шлёт вместо неё другой символ: буква выходит неправильной, зато остальная строка остаётся читаемой.</help>
+        <help l="ua">Той самий байт означає і російську літеру, і службовий знак термінальної мови, тому сервер надсилає його двічі поспіль -- так він каже: 'це літера'. Клієнт, який правила не знає, показує літеру подвоєною. Коли налаштування увімкнене, сервер шле замість неї інший символ: літера виходить неправильною, зате решта рядка лишається читабельною.</help>
+        <hint l="en">Fix the letter that some old clients garble.</hint>
+        <hint l="ru">Починить букву, которую некоторые старые клиенты портят.</hint>
+        <hint l="ua">Полагодити літеру, яку деякі старі клієнти псують.</hint>
         <msgOff l="en">IAC bytes will be replaced by another letter (YA in cp1251).</msgOff>
         <msgOff l="ru">IAC-и будут заменяться другой буквой (YA в кодировке cp1251).</msgOff>
         <msgOff l="ua">IAC-байти замінюватимуться іншою літерою (YA в cp1251).</msgOff>
@@ -245,9 +518,17 @@
         <name>noiac</name>
         <rname>noiac</rname>
         <uaname>noiac</uaname>
+        <webOrder>40</webOrder>
+        <webPage>terminal</webPage>
       </node>
       <node type="ConfigElement">
         <bit table="add_comm_flags">notelnet</bit>
+        <help l="en">Old terminal programs agree with the server about things like window size using a language of their own, mixed into the text. A client that does not know that language shows it as rubbish. With this on the server stops speaking it and sends the text and nothing else. The web client is not affected either way.</help>
+        <help l="ru">Старые терминальные программы договариваются с сервером о таких мелочах, как размер окна, на своём служебном языке, вперемешку с текстом. Клиент, который этого языка не знает, показывает его как мусор. Когда настройка включена, сервер перестаёт на нём говорить и шлёт только текст. На веб-клиент это не влияет никак.</help>
+        <help l="ua">Старі термінальні програми домовляються із сервером про такі дрібниці, як розмір вікна, своєю службовою мовою, впереміш із текстом. Клієнт, який цієї мови не знає, показує її як сміття. Коли налаштування увімкнене, сервер перестає нею говорити й шле лише текст. На вебклієнт це не впливає ніяк.</help>
+        <hint l="en">Send the text as raw bytes, with no protocol of any kind.</hint>
+        <hint l="ru">Слать текст как есть, без всякого протокола.</hint>
+        <hint l="ua">Слати текст як є, без жодного протоколу.</hint>
         <msgOff l="en">The TELNET filter is on.</msgOff>
         <msgOff l="ru">Фильтр TELNET включен.</msgOff>
         <msgOff l="ua">Фільтр TELNET увімкнено.</msgOff>
@@ -257,9 +538,17 @@
         <name>notelnet</name>
         <rname>notelnet</rname>
         <uaname>notelnet</uaname>
+        <webOrder>30</webOrder>
+        <webPage>terminal</webPage>
       </node>
       <node type="ConfigElement">
         <bit table="comm_flags">telnet_ga</bit>
+        <help l="en">After the status line the server sends a short signal meaning 'your turn'. Some terminal programs need it to tell where the status line ends and pull your health and mana out of it. With this off the signal is not sent.</help>
+        <help l="ru">После строки состояния сервер посылает короткий сигнал 'твой ход'. Некоторым терминальным программам он нужен, чтобы понять, где строка состояния закончилась, и вытащить из неё здоровье и ману. Когда настройка выключена, сигнал не отправляется.</help>
+        <help l="ua">Після рядка стану сервер надсилає короткий сигнал 'твій хід'. Деяким термінальним програмам він потрібен, щоб зрозуміти, де рядок стану скінчився, і витягти з нього здоров'я та ману. Коли налаштування вимкнене, сигнал не надсилається.</help>
+        <hint l="en">Mark the end of the status line for the client.</hint>
+        <hint l="ru">Отмечать для клиента конец строки состояния.</hint>
+        <hint l="ua">Позначати для клієнта кінець рядка стану.</hint>
         <msgOff l="en">Sending TELNET GA is off.</msgOff>
         <msgOff l="ru">Отправка TELNET GA отключена.</msgOff>
         <msgOff l="ua">Надсилання TELNET GA вимкнено.</msgOff>
@@ -269,10 +558,9 @@
         <name>telnetga</name>
         <rname>telnetga</rname>
         <uaname>telnetga</uaname>
+        <webOrder>50</webOrder>
+        <webPage>terminal</webPage>
       </node>
-      <name l="en">Client settings:</name>
-      <name l="ru">Настройки клиента:</name>
-      <name l="ua">Налаштування клієнта:</name>
     </node>
   </groups>
   <help id="1087" level="-1" type="CommandHelp" labels="comm">
@@ -330,4 +618,248 @@ Toggles the specified option.
   <name l="ua">режим</name>
   <order>player_only</order>
   <position>dead</position>
+  <valueElements>
+    <node>
+      <help l="en">Room descriptions, item names, fight messages, help articles -- everything the game prints comes in the language chosen here. Commands may still be typed in Russian whatever the choice.</help>
+      <help l="ru">Описания комнат, названия вещей, сообщения боя, справка -- всё, что печатает игра, приходит на выбранном здесь языке. Команды при этом можно набирать по-русски при любом выборе.</help>
+      <help l="ua">Описи кімнат, назви речей, повідомлення бою, довідка -- усе, що друкує гра, надходить обраною тут мовою. Команди при цьому можна набирати російською за будь-якого вибору.</help>
+      <hint l="en">The language the game speaks to you.</hint>
+      <hint l="ru">Язык, на котором с тобой говорит игра.</hint>
+      <hint l="ua">Мова, якою з тобою говорить гра.</hint>
+      <name>lang</name>
+      <rname>язык</rname>
+      <uaname>мова</uaname>
+      <values>
+        <node>
+          <desc l="en">The game speaks English to you.</desc>
+          <desc l="ru">Игра говорит с тобой по-английски.</desc>
+          <desc l="ua">Гра говорить з тобою англійською.</desc>
+          <label l="en">eng</label>
+          <label l="ru">англ</label>
+          <label l="ua">англ</label>
+          <value>en</value>
+        </node>
+        <node>
+          <desc l="en">The game speaks Russian to you.</desc>
+          <desc l="ru">Игра говорит с тобой по-русски.</desc>
+          <desc l="ua">Гра говорить з тобою російською.</desc>
+          <label l="en">rus</label>
+          <label l="ru">рус</label>
+          <label l="ua">рос</label>
+          <value>ru</value>
+        </node>
+        <node>
+          <desc l="en">The game speaks Ukrainian to you.</desc>
+          <desc l="ru">Игра говорит с тобой по-украински.</desc>
+          <desc l="ua">Гра говорить з тобою українською.</desc>
+          <label l="en">ukr</label>
+          <label l="ru">укр</label>
+          <label l="ua">укр</label>
+          <value>ua</value>
+        </node>
+      </values>
+      <webOrder>30</webOrder>
+      <webPage>integrations</webPage>
+      <webType>enum</webType>
+    </node>
+    <node>
+      <examples>
+        <node>
+          <label l="en">on</label>
+          <label l="ru">вкл</label>
+          <label l="ua">увімк</label>
+          <text l="en">  {Cautoexit     {R  YES {xRoom exits are shown automatically.</text>
+          <text l="ru">  {Cавтовыходы     {R   ДА {xВыходы отображаются автоматически.</text>
+          <text l="ua">  {Cавтовиходи     {R  ТАК {xВиходи з кімнати показуються автоматично.</text>
+        </node>
+        <node>
+          <label l="en">mild</label>
+          <label l="ru">мягкий</label>
+          <label l="ua">м'який</label>
+          <text l="en">  {cautoexit     {g  YES {xRoom exits are shown automatically.</text>
+          <text l="ru">  {cавтовыходы     {g   ДА {xВыходы отображаются автоматически.</text>
+          <text l="ua">  {cавтовиходи     {g  ТАК {xВиходи з кімнати показуються автоматично.</text>
+        </node>
+        <node>
+          <label l="en">off</label>
+          <label l="ru">выкл</label>
+          <label l="ua">вимк</label>
+          <text l="en">  autoexit       YES Room exits are shown automatically.</text>
+          <text l="ru">  автовыходы        ДА Выходы отображаются автоматически.</text>
+          <text l="ua">  автовиходи       ТАК Виходи з кімнати показуються автоматично.</text>
+        </node>
+      </examples>
+      <help l="en">Off: plain text with no colour at all. On: the usual bright palette. Mild: the same colours, toned down -- the same things stay marked out, but the screen stops shouting.</help>
+      <help l="ru">Выкл: обычный текст вовсе без цвета. Вкл: привычная яркая палитра. Мягкий: те же цвета, но приглушённые, -- выделено остаётся то же самое, а экран перестаёт кричать.</help>
+      <help l="ua">Вимк: звичайний текст зовсім без кольору. Увімк: звична яскрава палітра. М'який: ті самі кольори, але приглушені, -- виділеним лишається те саме, а екран перестає кричати.</help>
+      <hint l="en">How bright the colours of the game text are.</hint>
+      <hint l="ru">Насколько ярки цвета игрового текста.</hint>
+      <hint l="ua">Наскільки яскраві кольори ігрового тексту.</hint>
+      <name>color</name>
+      <rname>цвет</rname>
+      <uaname>колір</uaname>
+      <values>
+        <node>
+          <desc l="en">Colours are off.</desc>
+          <desc l="ru">Цвета отключены.</desc>
+          <desc l="ua">Кольори вимкнено.</desc>
+          <label l="en">off</label>
+          <label l="ru">выкл</label>
+          <label l="ua">вимк</label>
+          <value>off</value>
+        </node>
+        <node>
+          <desc l="en">You are using the standard (bright) colour scheme.</desc>
+          <desc l="ru">Ты используешь стандартную (яркую) цветовую схему.</desc>
+          <desc l="ua">Ти використовуєш стандартну (яскраву) колірну схему.</desc>
+          <label l="en">on</label>
+          <label l="ru">вкл</label>
+          <label l="ua">увімк</label>
+          <value>on</value>
+        </node>
+        <node>
+          <desc l="en">You are using the 'mild' colour scheme.</desc>
+          <desc l="ru">Ты используешь 'мягкую' цветовую схему.</desc>
+          <desc l="ua">Ти використовуєш 'м'яку' колірну схему.</desc>
+          <label l="en">mild</label>
+          <label l="ru">мягкий</label>
+          <label l="ua">м'який</label>
+          <value>mild</value>
+        </node>
+      </values>
+      <webOrder>10</webOrder>
+      <webPage>terminal</webPage>
+      <webType>enum</webType>
+    </node>
+    <node>
+      <desc l="en">Long output comes %d lines at a time.</desc>
+      <desc l="ru">Тебе непрерывно выводится %d строк текста.</desc>
+      <desc l="ua">Тобі безперервно виводиться %d рядків тексту.</desc>
+      <descEmpty l="en">Long output comes all at once.</descEmpty>
+      <descEmpty l="ru">Ты получаешь длинные сообщения без буферизации.</descEmpty>
+      <descEmpty l="ua">Ти отримуєш довгі повідомлення без буферизації.</descEmpty>
+      <help l="en">Long answers -- the who list, help articles, your own inventory -- are handed out a page at a time, and you press Enter for the next one. Set it to zero and the whole thing comes at once.</help>
+      <help l="ru">Длинные ответы -- список игроков, статьи справки, собственный инвентарь -- выдаются по странице, следующую ты запрашиваешь вводом. Поставь ноль, и всё будет приходить целиком.</help>
+      <help l="ua">Довгі відповіді -- перелік гравців, статті довідки, власний інвентар -- видаються по сторінці, наступну ти запитуєш введенням. Постав нуль, і все надходитиме цілком.</help>
+      <hint l="en">How many lines of long output to show at a time.</hint>
+      <hint l="ru">По сколько строк выдавать длинный вывод.</hint>
+      <hint l="ua">По скільки рядків видавати довге виведення.</hint>
+      <maxValue>200</maxValue>
+      <minValue>10</minValue>
+      <name>lines</name>
+      <offValue>0</offValue>
+      <rname>строк</rname>
+      <step>5</step>
+      <uaname>рядки</uaname>
+      <webOrder>20</webOrder>
+      <webPage>terminal</webPage>
+      <webType>int</webType>
+    </node>
+    <node>
+      <desc l="en">Your character is linked to Telegram user %s.</desc>
+      <desc l="ru">Твой персонаж связан с пользователем Telegram %s.</desc>
+      <desc l="ua">Твій персонаж пов'язаний з користувачем Telegram %s.</desc>
+      <descEmpty l="en">Your character is not linked to any Telegram user.</descEmpty>
+      <descEmpty l="ru">Твой персонаж не связан с пользователем Telegram.</descEmpty>
+      <descEmpty l="ua">Твій персонаж не пов'язаний з користувачем Telegram.</descEmpty>
+      <help l="en">When you report a bug, a typo or an idea, the report goes to the developers' chat. If your character is linked to a Telegram name, they know whom to answer there; without it you have to look for the reply in the public chat. The name starts with @.</help>
+      <help l="ru">Когда ты сообщаешь об ошибке, опечатке или идее, сообщение уходит в чат разработчиков. Если персонаж связан с именем в Telegram, там знают, кому отвечать; без этого ответ придётся искать в общем чате. Имя начинается с @.</help>
+      <help l="ua">Коли ти повідомляєш про помилку, одрук або ідею, повідомлення йде в чат розробників. Якщо персонаж пов'язаний з іменем у Telegram, там знають, кому відповідати; без цього відповідь доведеться шукати в спільному чаті. Ім'я починається з @.</help>
+      <hint l="en">Your Telegram name, so the developers can answer you.</hint>
+      <hint l="ru">Твоё имя в Telegram, чтобы разработчики могли ответить.</hint>
+      <hint l="ua">Твоє ім'я в Telegram, щоб розробники могли відповісти.</hint>
+      <name>telegram</name>
+      <pattern>^@</pattern>
+      <placeholder>@username</placeholder>
+      <rname>телеграм</rname>
+      <uaname>телеграм</uaname>
+      <webOrder>10</webOrder>
+      <webPage>integrations</webPage>
+      <webType>string</webType>
+    </node>
+    <node>
+      <desc l="en">Your character is linked to Discord user %s.</desc>
+      <desc l="ru">Твой персонаж связан с пользователем Discord %s.</desc>
+      <desc l="ua">Твій персонаж пов'язаний з користувачем Discord %s.</desc>
+      <descEmpty l="en">Your character is not linked to any Discord user.</descEmpty>
+      <descEmpty l="ru">Твой персонаж не связан с пользователем Discord.</descEmpty>
+      <descEmpty l="ua">Твій персонаж не пов'язаний з користувачем Discord.</descEmpty>
+      <help l="en">A linked character counts among those who hear the common channels while you are away, so the others can see you are reachable. To link it: come to the game's Discord at https://discord.gg/fVtaeePyey, open the channel #дрим-чат or a private chat with the bot Валькирия, and send it /link with the secret word below. The button gives you a new secret word and drops the current link.</help>
+      <help l="ru">Связанный персонаж считается среди тех, кто слышит общие каналы, пока тебя нет в мире, -- остальные видят, что до тебя можно достучаться. Чтобы связать: зайди на сервер игры в Discord https://discord.gg/fVtaeePyey, открой канал #дрим-чат или приват с ботом Валькирия и отправь ему /link с секретным словом. Кнопка выдаёт новое секретное слово и разрывает нынешнюю связь.</help>
+      <help l="ua">Пов'язаний персонаж рахується серед тих, хто чує спільні канали, поки тебе немає у світі, -- інші бачать, що до тебе можна достукатися. Щоб пов'язати: завітай на сервер гри в Discord https://discord.gg/fVtaeePyey, відкрий канал #дрим-чат або приват з ботом Валькирия й надішли йому /link із секретним словом. Кнопка видає нове секретне слово й розриває теперішній зв'язок.</help>
+      <hint l="en">The link between your character and your Discord account.</hint>
+      <hint l="ru">Связь твоего персонажа с учётной записью Discord.</hint>
+      <hint l="ua">Зв'язок твого персонажа з обліковим записом Discord.</hint>
+      <name>discord</name>
+      <rname>дискорд</rname>
+      <uaname>дискорд</uaname>
+      <values>
+        <node>
+          <label l="en">new secret word</label>
+          <label l="ru">новое секретное слово</label>
+          <label l="ua">нове секретне слово</label>
+          <value>clear</value>
+        </node>
+      </values>
+      <webOrder>20</webOrder>
+      <webPage>integrations</webPage>
+      <webType>account</webType>
+    </node>
+  </valueElements>
+  <webPages>
+    <node>
+      <key>gameplay</key>
+      <name l="en">Gameplay</name>
+      <name l="ru">Игровой процесс</name>
+      <name l="ua">Ігровий процес</name>
+      <section>server</section>
+      <subtitle l="en">How other players and the world may act on your character.</subtitle>
+      <subtitle l="ru">Что другие игроки и мир могут делать с твоим персонажем.</subtitle>
+      <subtitle l="ua">Що інші гравці та світ можуть робити з твоїм персонажем.</subtitle>
+    </node>
+    <node>
+      <key>output</key>
+      <name l="en">Output comfort</name>
+      <name l="ru">Комфортный вывод</name>
+      <name l="ua">Комфортний вивід</name>
+      <section>server</section>
+      <subtitle l="en">What reaches the game stream and what stays out of it.</subtitle>
+      <subtitle l="ru">Что попадает в поток игры, а что остаётся за кадром.</subtitle>
+      <subtitle l="ua">Що потрапляє в потік гри, а що лишається за кадром.</subtitle>
+    </node>
+    <node>
+      <key>terminal</key>
+      <name l="en">Display and terminal</name>
+      <name l="ru">Экран и терминал</name>
+      <name l="ua">Екран і термінал</name>
+      <section>client</section>
+      <subtitle l="en">Colour, the output buffer and getting along with old terminal programs.</subtitle>
+      <subtitle l="ru">Цвет, буфер вывода и уживчивость со старыми терминальными программами.</subtitle>
+      <subtitle l="ua">Колір, буфер виводу та лагідність зі старими термінальними програмами.</subtitle>
+    </node>
+    <node>
+      <key>integrations</key>
+      <name l="en">Links and language</name>
+      <name l="ru">Связи и язык</name>
+      <name l="ua">Зв'язки та мова</name>
+      <section>client</section>
+      <subtitle l="en">Your character's links to things outside the game.</subtitle>
+      <subtitle l="ru">Связь персонажа с тем, что находится за пределами игры.</subtitle>
+      <subtitle l="ua">Зв'язок персонажа з тим, що поза межами гри.</subtitle>
+    </node>
+  </webPages>
+  <webSections>
+    <node>
+      <key>server</key>
+      <name l="en">Server settings</name>
+      <name l="ru">Настройки сервера</name>
+      <name l="ua">Налаштування сервера</name>
+    </node>
+    <node>
+      <key>client</key>
+      <name l="en">Client settings</name>
+      <name l="ru">Настройки клиента</name>
+      <name l="ua">Налаштування клієнта</name>
+    </node>
+  </webSections>
 </Command>

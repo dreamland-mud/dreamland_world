@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<behavior type="SetBehavior">
+  <cmd></cmd>
+  <description l="en">{hh990Wear{x it to assemble the {hh5114adamant set{x.</description>
+  <description l="ru">{hh990Надень{x, чтобы собрать {hh5114набор адаманта{x.</description>
+  <description l="ua">{hh990Одягни{x, щоб зібрати {hh5114набір адаманту{x.</description>
+  <help id="5114" level="-1" type="BehaviorHelp">
+    <extra l="en">set adamant pieces collection</extra>
+    <extra l="ru">набор адаманта части комплект</extra>
+    <extra l="ua">набір адаманту частини комплект</extra>
+    <text l="en">This item is part of the adamant set -- a matched set of 4 pieces forged by a master {hh5071blacksmith{x: breastplate, greaves, great helm and gauntlets. Collect and wear all 4 together to assemble the set; once complete it grants its bonus. Wear only some pieces and you gain nothing extra.</text>
+    <text l="ru">Эта вещь -- часть набора 'набор адаманта' из 4 предметов, которые выковывает мастер-{hh5071кузнец{x: нагрудник, поножи, шлем и перчатки. Собери и надень все 4 вместе, чтобы собрать набор; собранный целиком, он дает свой бонус. Наденешь лишь часть -- ничего сверх не получишь.</text>
+    <text l="ua">Ця річ -- частина набору 'набір адаманту' із 4 предметів, які кує майстер-{hh5071коваль{x: нагрудник, наголінники, шолом і рукавиці. Збери й надінь усі 4 разом, щоб зібрати набір; зібраний цілком, він дає свій бонус. Надінеш лише частину -- нічого понад не отримаєш.</text>
+  </help>
+  <id>108</id>
+  <nameEn>adamant</nameEn>
+  <nameRus>набор адаманта</nameRus>
+  <nameUa>набір адаманту</nameUa>
+  <props>{&quot;double_neck&quot;:false,&quot;double_wrist&quot;:false,&quot;max_level&quot;:110,&quot;total_count&quot;:4}
+</props>
+  <affects>
+    <node>
+      <apply to="hit">50</apply>
+      <bits table="res_flags">bash</bits>
+    </node>
+    <node>
+      <apply to="damroll">2</apply>
+    </node>
+    <node>
+      <apply to="hitroll">1</apply>
+    </node>
+    <node>
+      <apply to="con">2</apply>
+    </node>
+    <node>
+      <apply to="saves">-3</apply>
+    </node>
+  </affects>
+  <msgComplete l="en">{yThe adamant closes around you: the master's harness is complete.{x</msgComplete>
+  <msgComplete l="ru">{yАдамант смыкается вокруг тебя: доспех мастера собран.{x</msgComplete>
+  <msgComplete l="ua">{yАдамант змикається довкола тебе: обладунок майстра зібрано.{x</msgComplete>
+  <target>obj</target>
+</behavior>

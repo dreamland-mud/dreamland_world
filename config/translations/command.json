@@ -11,6 +11,10 @@
   "У тебя нет никаких денег в банке.": {
    "en": "You don't have any money in the bank.",
    "ua": "У тебе немає жодних грошей у банку."
+  },
+  "В общем банке аккаунта: %1$s.": {
+   "en": "Your account's shared bank holds %1$s.",
+   "ua": "У спільному банку акаунта: %1$s."
   }
  },
  "command/craft/runFunc": {
@@ -44,10 +48,6 @@
    "en": "How much do you want to deposit?",
    "ua": "Покласти на рахунок скільки?"
   },
-  "Пример: 'насчет 3 серебра' или 'насчет 18 золота'": {
-   "en": "Example: 'deposit 3 silver' or 'deposit 18 gold'",
-   "ua": "Приклад: 'нарахунок 3 срібла' або 'нарахунок 18 золота'"
-  },
   "Размер банковского счета не может превышать 100.000 золотых.": {
    "en": "A bank account balance cannot exceed 100,000 gold.",
    "ua": "Розмір банківського рахунку не може перевищувати 100 000 золотих."
@@ -64,10 +64,6 @@
    "en": "You need a bank ATM for this operation.",
    "ua": "Тобі потрібен банківський автомат для цієї операції."
   },
-  "Ты можешь положить на счет только золотые или серебряные монеты.": {
-   "en": "You can only deposit gold or silver coins.",
-   "ua": "Ти можеш покласти на рахунок тільки золоті або срібні монети."
-  },
   "Ты переводишь на банковский счет {C%C2{x %s.": {
    "en": "You transfer %2$s into {C%1$C2{x's bank account.",
    "ua": "Ти переказуєш %2$s на банківський рахунок {C%1$C2{x."
@@ -75,10 +71,6 @@
   "Ты переводишь на свой банковский счет %s.": {
    "en": "You transfer %s to your bank account.",
    "ua": "Ти переказуєш %s на свій банківський рахунок."
-  },
-  "Укажи денежную единицу: золото или серебро.": {
-   "en": "Specify the currency: gold or silver.",
-   "ua": "Вкажи грошову одиницю: золото або срібло."
   },
   "Это больше, чем есть у тебя в кошельке.": {
    "en": "That's more than you have in your purse.",
@@ -91,6 +83,42 @@
   "Очень щедро.": {
    "en": "Very generous.",
    "ua": "Дуже щедро."
+  },
+  "Банк не смог провести операцию, попробуй позже.": {
+   "en": "The bank could not complete the operation, try again later.",
+   "ua": "Банк не зміг провести операцію, спробуй пізніше."
+  },
+  "Хранить qp в банке могут только персонажи, привязанные к аккаунту (команда {y{hcаккаунт{x).": {
+   "en": "Only characters linked to an account can keep qp in the bank (see the {y{hcaccount{x command).",
+   "ua": "Зберігати qp у банку можуть лише персонажі, привʼязані до акаунта (команда {y{hcакаунт{x)."
+  },
+  "В общем банке аккаунта: %1$s.": {
+   "en": "Your account's shared bank holds %1$s.",
+   "ua": "У спільному банку акаунта: %1$s."
+  },
+  "Квестовые единицы можно положить только в банк своего аккаунта.": {
+   "en": "Quest points can only go into your own account's bank.",
+   "ua": "Квестові одиниці можна покласти лише в банк свого акаунта."
+  },
+  "Пример: 'насчет 3 серебра', 'насчет 18 золота' или 'насчет 500 qp'": {
+   "en": "Example: 'deposit 3 silver', 'deposit 18 gold' or 'deposit 500 qp'",
+   "ua": "Приклад: 'нарахунок 3 срібла', 'нарахунок 18 золота' або 'нарахунок 500 qp'"
+  },
+  "Ты кладешь в общий банк аккаунта {C%1$d{x qp.": {
+   "en": "You deposit {C%1$d{x qp into your account's shared bank.",
+   "ua": "Ти кладеш у спільний банк акаунта {C%1$d{x qp."
+  },
+  "Ты можешь положить на счет только золото, серебро или qp.": {
+   "en": "You can only deposit gold, silver or qp.",
+   "ua": "Ти можеш покласти на рахунок лише золото, срібло або qp."
+  },
+  "У тебя нет столько квестовых единиц.": {
+   "en": "You don't have that many quest points.",
+   "ua": "У тебе немає стільки квестових одиниць."
+  },
+  "Укажи, что кладешь: золото, серебро или qp.": {
+   "en": "Say what you deposit: gold, silver or qp.",
+   "ua": "Вкажи, що кладеш: золото, срібло або qp."
   }
  },
  "command/dismount/runFunc": {
@@ -742,10 +770,6 @@
    "en": "The amount of %s is too small to withdraw.",
    "ua": "Сума у %s занадто мала для зняття."
   },
-  "Сумма указана неверно.": {
-   "en": "The amount specified is invalid.",
-   "ua": "Сума вказана невірно."
-  },
   "Тебе нужен банковский автомат для этой операции.": {
    "en": "You need a bank teller machine for that.",
    "ua": "Тобі потрібен банківський автомат для цієї операції."
@@ -753,10 +777,6 @@
   "Ты снимаешь со счета %s.": {
    "en": "You withdraw %s from the account.",
    "ua": "Ти знімаєш з рахунку %s."
-  },
-  "Укажи сумму и денежную единицу. Например: 'сосчета 77 золота' или 'сосчета 9000 серебра'.": {
-   "en": "Specify the amount and the currency. For example: 'withdraw 77 gold' or 'withdraw 9000 silver'.",
-   "ua": "Вкажи суму та грошову одиницю. Наприклад: 'зрахунку 77 золота' або 'зрахунку 9000 срібла'."
   },
   "Услуги банка составили %s.": {
    "en": "The bank's fees came to %s.",
@@ -777,6 +797,30 @@
   "У тебя больше нет денег в банке.": {
    "en": "You have no money left in the bank.",
    "ua": "У тебе більше немає грошей у банку."
+  },
+  "Банк не смог провести операцию, попробуй позже.": {
+   "en": "The bank could not complete the operation, try again later.",
+   "ua": "Банк не зміг провести операцію, спробуй пізніше."
+  },
+  "Хранить qp в банке могут только персонажи, привязанные к аккаунту (команда {y{hcаккаунт{x).": {
+   "en": "Only characters linked to an account can keep qp in the bank (see the {y{hcaccount{x command).",
+   "ua": "Зберігати qp у банку можуть лише персонажі, привʼязані до акаунта (команда {y{hcакаунт{x)."
+  },
+  "Меньше {C10{x qp со счета не снимают.": {
+   "en": "The bank won't withdraw less than {C10{x qp.",
+   "ua": "Менше {C10{x qp з рахунку не знімають."
+  },
+  "Налог банка составил {C%1$d{x qp, тебе достается {C%2$d{x.": {
+   "en": "The bank takes {C%1$d{x qp in tax, you get {C%2$d{x.",
+   "ua": "Податок банку склав {C%1$d{x qp, тобі дістається {C%2$d{x."
+  },
+  "Ты снимаешь со счета {C%1$d{x qp.": {
+   "en": "You withdraw {C%1$d{x qp from the account.",
+   "ua": "Ти знімаєш з рахунку {C%1$d{x qp."
+  },
+  "Укажи сумму и что снимаешь. Например: 'сосчета 77 золота', 'сосчета 9000 серебра' или 'сосчета 500 qp'.": {
+   "en": "Specify the amount and what to withdraw. For example: 'withdraw 77 gold', 'withdraw 9000 silver' or 'withdraw 500 qp'.",
+   "ua": "Вкажи суму і що знімаєш. Наприклад: 'зрахунку 77 золота', 'зрахунку 9000 срібла' або 'зрахунку 500 qp'."
   }
  },
  "command/pour/runFunc": {

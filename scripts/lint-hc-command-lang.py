@@ -1,18 +1,19 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """lint-hc-command-lang.py -- flag {hc<command> ...{x} clickable links whose command
-word is not a command of the language the string is written in.
+word does not resolve to a command.
 
-A {hc} link is sent to the server verbatim when the player clicks it. The interpreter
-resolves command names in the PLAYER'S language only, so an EN catalog value carrying
-{hcсказать да{x} gives an English player a link that does nothing. The same trap in
-reverse produces mixed strings like {hcсказать так{x} (RU verb, UA argument).
+A {hc} link is sent to the server verbatim when the player clicks it. Command::matches
+(plug-ins/command/command.cpp) tries the names and aliases of EVERY language, so:
 
-Reports, per language, every {hc} link whose first token does not resolve to a
-registered command / social / alias of that language.
+    NOT-A-COMMAND  the first token is no command in any language -> the click prints
+                   "Что?" or runs something else. A real bug; the exit code counts these.
+    WRONG-LANG     the command belongs to another language only. The click still works;
+                   it just reads odd ({hcсказать так{x}). Cosmetic, reported as a warning.
 
 Command vocabulary is read from:
     commands/**/*.xml   <name l=..> and <aliases l=..>
+    *-skills/*.xml      the <command> block of a skill command (file stem = EN name)
     socials/*.xml                       <rusName>, <uaName>, EN = file stem
     prio/commands_*.json
 
@@ -35,6 +36,10 @@ WORLD = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
 CATALOG = os.path.join(WORLD, 'config', 'translations')
 
 HC = re.compile(r'\{hc(.*?)\{x')
+# {hc'<command>'<label>{x -- the quoted part is what gets sent
+HC_QUOTED = re.compile(r"^'([^']*)'")
+# Catalog sections whose {hc} links answer a nanny prompt, not the interpreter.
+NON_INTERPRETER_KEYS = ('newbie/nanny',)
 # {lE<english>{lR<russian>{lU<ukrainian> -- per-viewer-language literal switch
 LANGSEG = re.compile(r'\{l([eruERU])')
 LANGS = ('en', 'ru', 'ua')
@@ -53,6 +58,22 @@ def load_vocab():
             for lang, val in re.findall(rf'<{tag}\s+l="(en|ru|ua)">([^<]*)</{tag}>', txt):
                 if tag == 'name' and val.split():
                     cmd_langs.setdefault(base, set()).add(lang)
+                for word in val.split():
+                    vocab[lang].setdefault(word.lower(), base)
+
+    # skill commands (shapeshift, squire, ...) live in the skill profiles
+    for path in glob.glob(os.path.join(WORLD, '*-skills', '*.xml')):
+        txt = open(path, encoding='utf-8', errors='replace').read()
+        m = re.search(r'<command\b[^>]*>(.*?)</command>', txt, re.S)
+        if not m:
+            continue
+        base = os.path.basename(path)
+        cmd_langs.setdefault(base, set()).add('en')
+        vocab['en'].setdefault(base[:-4].split()[0].lower(), base)
+        for tag in ('name', 'aliases'):
+            for lang, val in re.findall(rf'<{tag}\s+l="(en|ru|ua)">([^<]*)</{tag}>', m.group(1)):
+                if tag == 'name' and val.split():
+                    cmd_langs[base].add(lang)
                 for word in val.split():
                     vocab[lang].setdefault(word.lower(), base)
 
@@ -99,11 +120,14 @@ def resolve(token, lang, vocab):
 
 
 def pick_lang(link, lang):
-    """Collapse a {lE..{lR..{lU..} switch down to the segment this language sees."""
+    """Collapse a {lE..{lR..{lU..} switch down to the segment this language sees.
+    A UA viewer with no {lU segment falls back to {lR (mudtags.cpp)."""
     parts = LANGSEG.split(link)
     if len(parts) == 1:
         return link
     want = LANG_MARKER[lang]
+    if lang == 'ua' and not any(parts[i].lower() == 'u' for i in range(1, len(parts) - 1, 2)):
+        want = 'r'
     out = parts[0]
     for i in range(1, len(parts) - 1, 2):
         if parts[i].lower() == want:
@@ -116,6 +140,9 @@ def first_token(link, lang):
     body = pick_lang(link, lang).strip()
     while len(body) > 1 and body[0] == '{':
         body = body[2:].strip()
+    m = HC_QUOTED.match(body)
+    if m:
+        body = m.group(1)
     return body.split()[0] if body.split() else ''
 
 
@@ -135,6 +162,8 @@ def main():
             continue
         data = json.load(open(os.path.join(CATALOG, fn), encoding='utf-8'))
         for key, entries in data.items():
+            if key.startswith(NON_INTERPRETER_KEYS):
+                continue
             for ru, v in entries.items():
                 if not isinstance(v, dict):
                     continue
@@ -166,16 +195,17 @@ def main():
     counts = defaultdict(int)
     for f in findings:
         counts[f[0].split('(')[0]] += 1
-    print(f'{len(findings)} bad {{hc}} links  ' +
+    dead = counts['NOT-A-COMMAND'] + counts['NO-FORM']
+    print(f'{dead} dead {{hc}} links, {counts["WRONG-LANG"]} cosmetic  ' +
           '  '.join(f'{k}={v}' for k, v in sorted(counts.items())))
-    print('  WRONG-LANG   = command word belongs to another language; swap it')
-    print('  NOT-A-COMMAND= link body is bare prose; needs a speech verb in front')
-    print('  NO-FORM      = {lE/{lR/{lU switch has no segment for this language')
+    print('  NOT-A-COMMAND= no command in any language; needs a speech verb or the real command')
+    print('  NO-FORM      = {lE/{lR/{lU switch leaves this language an empty link')
+    print('  WRONG-LANG   = works (commands match across languages) but reads in the wrong language')
     print()
     for cls, fn, key, lang, tok, link in sorted(findings):
         print(f'[{lang}] {cls}  {fn} :: {key}')
         print(f'      {{hc{link}{{x   -- first token {tok!r}')
-    return 1 if findings else 0
+    return 1 if dead else 0
 
 
 if __name__ == '__main__':

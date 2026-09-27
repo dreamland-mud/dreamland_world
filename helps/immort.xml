@@ -138,9 +138,9 @@ Gods can hide their true level or even take on the appearance of mortals. You ca
     <title l="ua">Правила для божественних персонажів</title>
   </node>
   <node id="96" level="-1" type="Help" labels="items">
-    <extra l="en">anti-evil anti-good anti-neutral twohanded nopurge sharp two-handed vorpal 'weapon flag' vis_death humming glowing</extra>
-    <extra l="ru">аура двуручное дьявольское 'флаги предметов' гниет 'голубая аура' гудит магическое неуничтожимо обмораживающее обжигающее оружия 'особенности оружия' 'особые свойства' отравленное отточенное призрачное пылает смертельное свойства священное темное вампирическое вибрация вибрирует 'видно призракам' шокирующее</extra>
-    <extra l="ua">аура дворучне диявольське 'прапори предметів' гниє 'блакитна аура' гуде магічне незнищенне обморожувальне обпікаюче зброї 'особливості зброї' 'особливі властивості' отруєне відточене примарне палає смертельне властивості священне темне вампіричне вібрація вібрує 'видно привидам' шокуюче</extra>
+    <extra l="en">anti-evil anti-good anti-neutral noremove nodrop nouncurse burn_proof melt_drop noenchant twohanded nopurge sharp two-handed vorpal 'weapon flag' vis_death humming glowing</extra>
+    <extra l="ru">аура двуручное дьявольское 'флаги предметов' гниет 'голубая аура' гудит 'нельзя снять' 'нельзя бросить' огнеупорно 'неснимаемое проклятие' 'исчезает на земле' 'нельзя зачаровать' невидимо магическое неуничтожимо обмораживающее обжигающее оружия 'особенности оружия' 'особые свойства' отравленное отточенное призрачное пылает смертельное свойства священное темное вампирическое вибрация вибрирует 'видно призракам' шокирующее</extra>
+    <extra l="ua">аура дворучне диявольське 'прапори предметів' гниє 'блакитна аура' гуде 'не зняти' 'не кинути' вогнетривке 'незнімне прокляття' 'зникає на землі' 'не зачарувати' магічне незнищенне обморожувальне обпікаюче зброї 'особливості зброї' 'особливі властивості' отруєне відточене примарне палає смертельне властивості священне темне вампіричне вібрація вібрує 'видно привидам' шокуюче</extra>
     <keyword l="en">flags item</keyword>
     <keyword l="ru">флаги вещей</keyword>
     <keyword l="ua">прапори речей</keyword>
@@ -149,28 +149,35 @@ Gods can hide their true level or even take on the appearance of mortals. You ca
 {CITEM PROPERTIES{x
 %A% =Glowing:= the item can be seen in the dark without a lantern
 %A% =Humming:= a vibrating item can be worn or used even while blinded
-%A% =Dark:= paladins cannot {hh806bless{x this weapon
-%A% =Fiendish:= likewise, the weapon cannot be blessed, but this property CAN be removed by first blessing the item with an ordinary {hh766blessing{x prayer.
-%A% =Magical:= members of the {hh1471Rage Clan{x will not want to wear these items
+%A% =Dark:= paladins cannot cast {hh806bless weapon{x on it
+%A% =Fiendish:= a red aura, visible with {hh748detect evil{x. Like dark, it blocks {hh806bless weapon{x. The property CAN be removed with an ordinary {hh766blessing{x prayer, if the prayer overpowers the evil and the item is not protected from enchantment. It adds no damage against good opponents. A {hh548curse{x puts it on together with the "cannot remove" property.
+%A% =Magical:= a member of the {hh1471Rage Clan{x under spellbane cannot wear this item -- the magic strikes back at them
 %A% =Blue aura:= a {hh766blessed{x item
-%A% =Holy:= a weapon with this property deals more damage to evil opponents
+%A% =Holy:= a {hh766blessed{x item: to {hh548curse{x it, the blessing has to be broken first. While the blessing prayer itself lasts, it also slightly improves saves against spells. It adds no damage against evil -- that is the "holy" weapon flag
 %A% =Hovers:= floats in the air and on water -- it will not fall out of an air room, and a weapon with this flag will not sink if you are {hh812disarmed{x in an underwater fight.
-%A% =Rots with the corpse:= disappears as soon as you {hh12die{x -- try not to die!
+%A% =Rots with the corpse:= crumbles to dust 5-10 ticks after you {hh12die{x -- try not to die!
 %A% =Indestructible:= cannot be destroyed by any means, in combat or by skills
-%A% =Visible to ghosts:= the opposite -- an item visible only while YOU are a ghost (and only after the owner's death, i.e. only in the corpse). Some powerful and rare artifacts have this property -- which is why they are so hard to find.
+%A% =Visible to ghosts:= only ghosts can see this item, wherever it is: on its bearer, on the floor or in a chest. When whoever carries it dies, the property goes away, and the item in the corpse is visible to everyone. Some powerful and rare artifacts hide this way -- which is why they are so hard to find.
+%A% =Cannot remove:= a worn item cannot be taken off, and a weapon cannot be knocked out of your hands. A {hh864remove curse{x prayer can lift it.
+%A% =Cannot drop:= the item cannot be dropped, given away, put in a container or sold. Also lifted by {hh864remove curse{x.
+%A% =Uncurable curse:= {hh864remove curse{x has no effect on this item.
+%A% =Fireproof:= the item will not catch fire, and acid, lightning, sand and sound will not damage it. It can still melt or heat up.
+%A% =Vanishes on the ground:= the item disappears when dropped on the ground.
+%A% =Cannot enchant:= the {hh766bless{x prayer, a {hh548curse{x and enchanting have no effect on this item.
+%A% =Invisible:= only those who {hh675detect invisibility{x can see the item.
 %A% =Not for good/neutral/evil:= creatures of that alignment cannot wear this item, and sometimes cannot even pick it up.
 %A% =Personal:= see {hh57personal items{x. Many other auras are only shown in {hh2132screen-reader mode{x.
 
 {CWEAPON FLAGS{x
-%A% =Fiery:= can burn and {hh831blind{x the opponent with smoke
-%A% =Frosty:= can {hh610chill{x and weaken the opponent
+%A% =Fiery:= burns the opponent with fire, heats up their gear and can {hh831blind{x them with the heat
+%A% =Frosty:= {hh610chills{x the opponent and their gear
 %A% =Vampiric:= every hit drains a bit of life and heals the wielder
 %A% =Honed:= has a chance to double damage on a single hit
-%A% =Shocking:= can temporarily paralyse the opponent
+%A% =Shocking:= strikes the opponent with a lightning discharge that hits their gear too. The shock can briefly paralyse
 %A% =Poisoned:= can {hh837poison{x the opponent in combat
-%A% =Ghostly:= anti-paladins' {hh568shadowblades{x are very hard to parry
-%A% =Holy:= deals more damage to evil opponents
-%A% =Two-handed:= everyone except giants must hold this weapon with both hands -- you cannot carry a shield and an item at the same time
+%A% =Ghostly:= passes straight through parry and {hh763cross block{x, unless the defender holds a holy weapon. The spell {hh629blade of darkness{x gives an anti-paladin's shadowblade this property
+%A% =Holy:= in the hands of a good character, sometimes hits evil opponents more than twice as hard
+%A% =Two-handed:= takes both hands, so most races cannot carry a shield with it. Large races and bigger (trolls, centaurs, uruk-hai, giants) still can, and only huge ones (giants) can wield a second weapon next to it
 %A% =Deadly:= the weapon occasionally comes alive in battle, cutting off opponents' heads.
 </text>
     <text l="ru">При {hh603идентификации предметов{x можно увидеть их особые свойства и флаги. Внешние свойства (ауры, экстра-флаги) бывают у всех предметов, флаги оружия бывают только на оружии. Некоторые свойства понятны сразу, а некоторые стоит разъяснить поподробнее.
@@ -179,27 +186,34 @@ Gods can hide their true level or even take on the appearance of mortals. You ca
 %A% =Пылает:= вещь можно увидеть в темноте без фонаря
 %A% =Гудит:= вибрирующую вещь можно надеть или использовать даже ослепленн{Smым{Sfой{Sx
 %A% =Темное:= паладины не могут {hh806освятить{x это оружие 
-%A% =Дьявольское:= аналогично, нельзя освятить оружие, но это свойство зато можно снять, сначала благословив предмет обычной молитвой {hh766благословения{x.
-%A% =Магическое:= эти вещи не захочет надеть член клана {hh1471Баттлрейджеров{x
+%A% =Дьявольское:= красная аура, заметная с {hh748обнаружением зла{x. Как и темное, не дает освятить оружие. Свойство можно снять обычной молитвой {hh766благословения{x, если она пересилит зло и вещь не защищена от зачарования. Урона добрым не добавляет. {hh548Проклятие{x накладывает его вместе со свойством "нельзя снять".
+%A% =Магическое:= член клана {hh1471Баттлрейджеров{x под спеллбаном не сможет надеть эту вещь -- магия ударит его самого
 %A% =Голубая аура:= {hh766благословленная{x вещь
-%A% =Священно:= оружие с этим свойством наносит больше урона злым противникам
+%A% =Священно:= {hh766благословленная{x вещь: чтобы ее {hh548проклясть{x, сначала придется сломить благословение. Пока действует сама молитва благословения, она еще и немного улучшает защиту от заклинаний. Урона злым не добавляет -- это делает флаг оружия "священное"
 %A% =Парит:= висит в воздухе и не тонет в воде -- не падает из воздушной комнаты, а оружие с этим флагом не утонет, если тебя {hh812обезоружат{x в битве на воде.
-%A% =Гниет с трупом:= исчезнет сразу после твоей {hh12смерти{x -- постарайся не умирать!
+%A% =Гниет с трупом:= рассыплется в прах через 5-10 тиков после твоей {hh12смерти{x -- постарайся не умирать!
 %A% =Неуничтожимо:= нельзя разрушить никакими способами, в бою или умениями
-%A% =Видно призракам:= наоборот, вещь которую видно только пока ТЫ -- призрак. (и только после смерти владельца -- т.е. только в трупе). Некоторые мощные и редкие артефакты обладают таким свойством -- и поэтому их так сложно найти.
+%A% =Видно призракам:= такую вещь видят только призраки, где бы она ни была: на владельце, на полу или в сундуке. Когда тот, кто ее несет, погибает, свойство исчезает, и вещь в трупе видна всем. Так прячутся некоторые мощные и редкие артефакты -- поэтому их так сложно найти.
+%A% =Нельзя снять:= надетую вещь не снять, а оружие не выбить из рук. Свойство может снять молитва {hh864снятия проклятия{x.
+%A% =Нельзя бросить:= вещь не выбросить, не отдать, не положить в контейнер и не продать. Тоже снимается {hh864снятием проклятия{x.
+%A% =Неснимаемое проклятие:= {hh864снятие проклятия{x на эту вещь не действует.
+%A% =Огнеупорно:= вещь не загорится, и ей не повредят кислота, молния, песок и звук. Расплавиться или раскалиться она все еще может.
+%A% =Исчезает на земле:= брошенная на землю вещь пропадает.
+%A% =Нельзя зачаровать:= вещь нельзя благословить, проклясть или зачаровать.
+%A% =Невидимо:= вещь видят только те, кто {hh675обнаруживает невидимое{x.
 %A% =Не для добрых/нейтральных/злых:= существа данной натуры не смогут надеть эту вещь, а иногда -- даже взять в руки.
 %A% =Личное:= см. {hh57персональные вещи{x Многие другие ауры выводятся только в режиме {hh2132скринридера{x.
 
 {CФЛАГИ ОРУЖИЯ{x
-%A% =Обжигающее:= может обжечь и {hh831ослепить{x противника дымом
-%A% =Обмораживающее:= может {hh610обморозить{x и ослабить противника
+%A% =Обжигающее:= жжет противника огнем, раскаляет его снаряжение и может {hh831ослепить{x жаром
+%A% =Обмораживающее:= {hh610обмораживает{x противника и его снаряжение
 %A% =Вампирическое:= каждый удар вытягивает немного жизни и лечит владельца
 %A% =Отточенное:= имеет шанс удвоить повреждения за один удар
-%A% =Шокирующее:= может временно парализовать противника
+%A% =Шокирующее:= бьет противника разрядом молнии, достается и снаряжению. Разряд может ненадолго парализовать
 %A% =Отравленное:= может {hh837отравить{x противника в бою
-%A% =Призрачное:= {hh568призрачные клинки{x антипаладинов очень сложно парировать
-%A% =Священное:= наносит больше повреждений злым противникам
-%A% =Двуручное:= все, кроме гигантов, должны держать это оружие в двух руках -- нельзя одновременно нести щит и вещь в руках
+%A% =Призрачное:= проходит сквозь парирование и попытку {hh763скрестить клинки{x, если у защищающегося нет священного оружия. Это свойство дает призрачному клинку антипаладина заклинание {hh629клинок тьмы{x
+%A% =Священное:= в руках доброго персонажа иногда бьет злых противников больше чем вдвое сильнее
+%A% =Двуручное:= занимает обе руки, так что щит с ним большинству рас не надеть. Большие расы и крупнее (тролли, кентавры, урук-хаи, гиганты) все равно могут, а второе оружие рядом с ним удержат только огромные -- гиганты
 %A% =Смертельное:= оружие изредка оживает в бою, отрубая головы противникам.
 </text>
     <text l="ua">При {hh603упізнанні предметів{x можна побачити їхні особливі властивості та прапори. Зовнішні властивості (аури, екстра-прапори) бувають у всіх предметів, прапори зброї бувають лише на зброї. Деякі властивості зрозумілі одразу, а деякі варто пояснити детальніше.
@@ -208,27 +222,34 @@ Gods can hide their true level or even take on the appearance of mortals. You ca
 %A% =Сяє:= річ можна побачити в темряві без ліхтаря
 %A% =Гуде:= вібруючу річ можна надягти або використовувати навіть засліплен{Smим{Sfою{Sx
 %A% =Темне:= паладини не можуть {hh806освятити{x цю зброю
-%A% =Диявольське:= аналогічно, не можна освятити зброю, але цю властивість можна зняти, спершу поблагословивши предмет звичайною молитвою {hh766благословення{x.
-%A% =Магічне:= ці речі не захоче надягти член клану {hh1471Батлрейджерів{x
+%A% =Диявольське:= червона аура, помітна з {hh748виявленням зла{x. Як і темне, не дає освятити зброю. Властивість можна зняти звичайною молитвою {hh766благословення{x, якщо вона пересилить зло і річ не захищена від зачарування. Шкоди добрим не додає. {hh548Прокляття{x накладає її разом із властивістю "не зняти".
+%A% =Магічне:= член клану {hh1471Батлрейджерів{x під спеллбаном не зможе надягти цю річ -- магія вдарить його самого
 %A% =Блакитна аура:= {hh766благословенна{x річ
-%A% =Священне:= зброя з цією властивістю завдає більше шкоди злим противникам
+%A% =Священне:= {hh766благословенна{x річ: щоб її {hh548проклясти{x, спершу доведеться зламати благословення. Поки діє сама молитва благословення, вона ще й трохи покращує захист від заклинань. Шкоди злим не додає -- це робить прапор зброї "священна"
 %A% =Ширяє:= висить у повітрі й не тоне у воді -- не падає з повітряної кімнати, а зброя з цим прапором не потоне, якщо тебе {hh812роззброять{x у битві на воді.
-%A% =Гниє з трупом:= зникне одразу після твоєї {hh12смерті{x -- намагайся не вмирати!
+%A% =Гниє з трупом:= розсиплеться на порох через 5-10 тіків після твоєї {hh12смерті{x -- намагайся не вмирати!
 %A% =Незнищенне:= не можна зруйнувати жодним способом, у бою чи вміннями
-%A% =Видиме привидам:= навпаки, річ, яку видно тільки поки ТИ -- привид. (і тільки після смерті власника -- тобто тільки в трупі). Деякі потужні й рідкісні артефакти мають таку властивість -- і тому їх так важко знайти.
+%A% =Видиме привидам:= таку річ бачать тільки привиди, хай де вона є: на власникові, на підлозі чи в скрині. Коли той, хто її несе, гине, властивість зникає, і річ у трупі видно всім. Так ховаються деякі потужні й рідкісні артефакти -- і тому їх так важко знайти.
+%A% =Не зняти:= надягнуту річ не зняти, а зброю не вибити з рук. Властивість може зняти молитва {hh864зняття прокляття{x.
+%A% =Не кинути:= річ не викинути, не віддати, не покласти в контейнер і не продати. Теж знімається {hh864зняттям прокляття{x.
+%A% =Незнімне прокляття:= {hh864зняття прокляття{x на цю річ не діє.
+%A% =Вогнетривке:= річ не займеться, і їй не зашкодять кислота, блискавка, пісок і звук. Розплавитися чи розжаритися вона все ще може.
+%A% =Зникає на землі:= кинута на землю річ пропадає.
+%A% =Не зачарувати:= річ не можна поблагословити, проклясти чи зачарувати.
+%A% =Невидиме:= річ бачать тільки ті, хто {hh675виявляє невидиме{x.
 %A% =Не для добрих/нейтральних/злих:= істоти цієї натури не зможуть надягти цю річ, а іноді -- навіть взяти в руки.
 %A% =Особисте:= див. {hh57особисті речі{x. Багато інших аур виводяться лише в режимі {hh2132скрінрідера{x.
 
 {CПРАПОРИ ЗБРОЇ{x
-%A% =Обпалююча:= може обпекти і {hh831засліпити{x противника димом
-%A% =Обморожуюча:= може {hh610обморозити{x і послабити противника
+%A% =Обпалююча:= палить противника вогнем, розжарює його спорядження і може {hh831засліпити{x жаром
+%A% =Обморожуюча:= {hh610обморожує{x противника і його спорядження
 %A% =Вампірична:= кожен удар витягує трохи життя і лікує власника
 %A% =Відточена:= має шанс подвоїти ушкодження за один удар
-%A% =Шокуюча:= може тимчасово паралізувати противника
+%A% =Шокуюча:= бʼє противника розрядом блискавки, дістається і спорядженню. Розряд може ненадовго паралізувати
 %A% =Отруєна:= може {hh837отруїти{x противника в бою
-%A% =Примарна:= {hh568фантомні клинки{x антипаладинів дуже важко парирувати
-%A% =Священна:= завдає більше ушкоджень злим противникам
-%A% =Дворучна:= усі, крім велетнів, повинні тримати цю зброю в двох руках -- не можна одночасно нести щит і річ у руках
+%A% =Примарна:= проходить крізь парирування і спробу {hh763схрестити клинки{x, якщо в того, хто захищається, нема священної зброї. Цю властивість дає примарному клинку антипаладина заклинання {hh629клинок темряви{x
+%A% =Священна:= у руках доброго персонажа часом бʼє злих противників більш ніж удвічі сильніше
+%A% =Дворучна:= займає обидві руки, тож щит із нею більшості рас не надягти. Великі раси й більші (тролі, кентаври, урук-хаї, велетні) все одно можуть, а другу зброю поруч із нею втримають тільки величезні -- велетні
 %A% =Смертоносна:= зброя зрідка оживає в бою, відрубуючи голови противникам.
 </text>
     <title l="en">Weapon flags and special item properties</title>

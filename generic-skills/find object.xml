@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill type="GenericSkill">
+  <beats>18</beats>
+  <classes>
+    <node name="thief">
+      <level>30</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <command type="DefaultSkillCommand">
+    <argtype>undef</argtype>
+    <cat>class</cat>
+    <hint l="en">Buy rumors of where a thing lies.</hint>
+    <hint l="ru">(воры) купить слухи о том, где лежит вещь</hint>
+    <hint l="ua">(крадії) купити чутки про те, де лежить річ</hint>
+    <name l="en">rumors</name>
+    <name l="ru">слухи</name>
+    <name l="ua">чутки</name>
+    <position>rest</position>
+  </command>
+  <dammsg mg="m"></dammsg>
+  <group registry="skillGroup">detection</group>
+  <help id="885" level="-1" type="SkillHelp">
+    <text l="en">%FMT% *%CMD%* _item_
+
+A thief knows the whole town is one big ear. In a town or a tavern, slip a handful of silver to the first local who is awake and not fighting, and learn where in the World of Dreams the thing lies. Rumors find even what hides from the {hh707locate object{x spell. They cost five silver per skill level, and you pay even when the gossip knows nothing. The higher the level, the more you find. A thief who knows rumors to at least 50 percent can take item-finding quests from the questor.
+</text>
+    <text l="ru">%FMT% *%CMD%* _предмет_
+
+Вор знает: весь город -- одно большое ухо. В городе или в таверне сунь горсть серебра первому местному, кто не спит и не дерется, и узнаешь, где в Мире Мечты лежит нужная вещь. Слухи находят даже то, что прячется от заклинания {hh707локатор{x. Стоят они пять серебряных монет за каждый уровень умения, и платишь ты, даже если болтун ничего не знает. Чем выше уровень, тем больше находок. Вор, который владеет слухами хотя бы на 50 процентов, может брать у квестора задания на поиск предметов.
+</text>
+    <text l="ua">%FMT% *%CMD%* _предмет_
+
+Крадій знає: усе місто -- одне велике вухо. У місті чи в таверні тицьни жменю срібла першому місцевому, хто не спить і не бʼється, і дізнаєшся, де у Світі Мрій лежить потрібна річ. Чутки знаходять навіть те, що ховається від закляття {hh707локатор{x. Коштують вони пʼять срібних монет за кожен рівень уміння, і платиш ти, навіть якщо базікало нічого не знає. Що вищий рівень, то більше знахідок. Крадій, який володіє чутками хоча б на 50 відсотків, може брати у квестора завдання на пошук предметів.
+</text>
+  </help>
+  <name l="en">find object</name>
+  <name l="ru">слухи</name>
+  <name l="ua">чутки</name>
+</skill>

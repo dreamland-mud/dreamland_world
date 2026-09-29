@@ -4,6 +4,7 @@
   <aliases l="ru">баф автобафф автобаф</aliases>
   <aliases l="ua">бафф автобаф</aliases>
   <cat>magic</cat>
+  <extra>keep_hide afk spellout</extra>
   <help id="5124" level="-1" type="CommandHelp" labels="magic">
     <extra l="en">autobuff 'auto buff'</extra>
     <extra l="ru">автобафф автобаф бафф баф</extra>
@@ -13,27 +14,27 @@ Casts on you every useful buff you know and are not already under, one after ano
 
 Type *%CMD%* again while it is still casting to stop it.
 
-It won't start while you rest or sleep (stand up first, or be in a fight), and it doesn't work in AFK mode. The result is easy to check with {hh997affects{x.
+It only starts while you stand or fight, and it doesn't work in AFK mode. The result is easy to check with {hh997affects{x.
 
-In the {hh2133web client{x the same thing sits on the autobuff button, the *#autobuff* command and the *~* key.
+In the {hh2133web client{x the autobuff button and the *~* key do the same, and also send your own extra lines added with *#autobuff*.
 </text>
     <text l="ru">%FMT% *%CMD%*
 Накладывает на тебя по очереди все полезные баффы, которые ты знаешь и которых на тебе еще нет. Все честно, как если бы ты сам набирал {hh1361колдовать{x раз за разом: та же мана, та же задержка, никакой бесплатной скорости. Из заклинаний, которые друг с другом не совмещаются, выбирается одно (одно святилище, одна защита от мировоззрения, одна защита от стихии), а то, что на тебе уже висит, пропускается.
 
 Набери *%CMD%* еще раз, пока оно колдует, -- и оно остановится.
 
-Сидя или во сне не запускается (сначала встань, в бою можно), в режиме АФК не работает. Что получилось, смотри командой {hh997аффекты{x.
+Запускается только стоя или в бою, в режиме АФК не работает. Что получилось, смотри командой {hh997аффекты{x.
 
-В {hh2133веб-клиенте{x то же самое висит на кнопке автобафа, команде *#autobuff* и клавише *~*.
+В {hh2133веб-клиенте{x то же самое делают кнопка автобафа и клавиша *~*, а заодно отправляют твои собственные строки, добавленные через *#autobuff*.
 </text>
     <text l="ua">%FMT% *%CMD%*
 Накладає на тебе по черзі всі корисні бафи, які ти знаєш і яких на тобі ще нема. Все чесно, як ніби ти сам набирав {hh1361чаклувати{x раз за разом: та сама мана, та сама затримка, жодної дармової швидкості. Із заклинань, що одне з одним не поєднуються, вибирається одне (одне святилище, один захист від світогляду, один захист від стихії), а те, що на тобі вже висить, пропускається.
 
 Набери *%CMD%* ще раз, поки воно чаклує, -- і воно зупиниться.
 
-Сидячи чи уві сні не запускається (спершу встань, у бою можна), у режимі АФК не працює. Що вийшло, дивись командою {hh997впливи{x.
+Запускається тільки стоячи або в бою, у режимі АФК не працює. Що вийшло, дивись командою {hh997впливи{x.
 
-У {hh2133веб-клієнті{x те саме висить на кнопці автобафу, команді *#autobuff* і клавіші *~*.
+У {hh2133веб-клієнті{x те саме роблять кнопка автобафу і клавіша *~*, а заодно надсилають твої власні рядки, додані через *#autobuff*.
 </text>
     <title l="en">Auto-buff: all your buffs in one command</title>
     <title l="ru">Автобафф: все твои баффы одной командой</title>
@@ -46,5 +47,5 @@ In the {hh2133web client{x the same thing sits on the autobuff button, the *#aut
   <name l="ru">бафф</name>
   <name l="ua">баф</name>
   <order>player_only</order>
-  <position>fight</position>
+  <position>rest</position>
 </Command>

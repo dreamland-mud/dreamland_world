@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Command>
+  <aliases l="en">autobuff</aliases>
+  <aliases l="ru">баф автобафф автобаф</aliases>
+  <aliases l="ua">бафф автобаф</aliases>
+  <cat>magic</cat>
+  <extra>keep_hide spellout</extra>
+  <help id="5124" level="-1" type="CommandHelp" labels="magic">
+    <extra l="en">autobuff 'auto buff'</extra>
+    <extra l="ru">автобафф автобаф бафф баф</extra>
+    <extra l="ua">автобаф баф бафф</extra>
+    <text l="en">%FMT% *%CMD%*
+Casts on you every useful buff you know and are not already under, one after another, exactly as if you typed each {hh1361cast{x by hand: the same mana, the same lag, no free speed. Only one spell from a family that can't stack gets picked (one sanctuary, one protection from alignment, one element ward), and buffs you already wear are skipped.
+
+Type *%CMD%* again while it is still casting to stop it.
+
+It only starts while you stand or fight, and it doesn't work in AFK mode. The result is easy to check with {hh997affects{x.
+
+In the {hh2133web client{x the autobuff button and the *~* key do the same, and also send your own extra lines added with *#autobuff*.
+</text>
+    <text l="ru">%FMT% *%CMD%*
+Накладывает на тебя по очереди все полезные баффы, которые ты знаешь и которых на тебе еще нет. Все честно, как если бы ты сам набирал {hh1361колдовать{x раз за разом: та же мана, та же задержка, никакой бесплатной скорости. Из заклинаний, которые друг с другом не совмещаются, выбирается одно (одно святилище, одна защита от мировоззрения, одна защита от стихии), а то, что на тебе уже висит, пропускается.
+
+Набери *%CMD%* еще раз, пока оно колдует, -- и оно остановится.
+
+Запускается только стоя или в бою, в режиме АФК не работает. Что получилось, смотри командой {hh997аффекты{x.
+
+В {hh2133веб-клиенте{x то же самое делают кнопка автобафа и клавиша *~*, а заодно отправляют твои собственные строки, добавленные через *#autobuff*.
+</text>
+    <text l="ua">%FMT% *%CMD%*
+Накладає на тебе по черзі всі корисні бафи, які ти знаєш і яких на тобі ще нема. Все чесно, як ніби ти сам набирав {hh1361чаклувати{x раз за разом: та сама мана, та сама затримка, жодної дармової швидкості. Із заклинань, що одне з одним не поєднуються, вибирається одне (одне святилище, один захист від світогляду, один захист від стихії), а те, що на тобі вже висить, пропускається.
+
+Набери *%CMD%* ще раз, поки воно чаклує, -- і воно зупиниться.
+
+Запускається тільки стоячи або в бою, у режимі АФК не працює. Що вийшло, дивись командою {hh997впливи{x.
+
+У {hh2133веб-клієнті{x те саме роблять кнопка автобафу і клавіша *~*, а заодно надсилають твої власні рядки, додані через *#autobuff*.
+</text>
+    <title l="en">Auto-buff: all your buffs in one command</title>
+    <title l="ru">Автобафф: все твои баффы одной командой</title>
+    <title l="ua">Автобаф: усі твої бафи однією командою</title>
+  </help>
+  <hint l="en">cast all your known buffs on yourself</hint>
+  <hint l="ru">наложить на себя все известные баффы</hint>
+  <hint l="ua">накласти на себе всі відомі бафи</hint>
+  <name l="en">buff</name>
+  <name l="ru">бафф</name>
+  <name l="ua">баф</name>
+  <order>player_only</order>
+  <position>rest</position>
+</Command>

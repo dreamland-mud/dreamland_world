@@ -12,23 +12,23 @@
 %FFF% *%CMD%* *donate* _qp_
 %FFF% *%CMD%* *bank* _[deposit|withdraw N gold]_
 %FFF% *%CMD%* *catalog*
-%FFF% *%CMD%* *buy* _id_
+%FFF% *%CMD%* *buy* _id_ _[confirm]_
 %FFF% *%CMD%* *recruiter* _add|remove name_
 %FFF% *%CMD%* *kick* _name_
 %FFF% *%CMD%* *unban* _[name]_
 %FFF% *%CMD%* *diplomacy*
 
-Everything about your clan in one command. With no arguments it lists the clans of the world, and =clan info= shows a clan's leader, recruiters and what it owns. What each clan stands for is told in {hh3clans{x. The {hh1551Flower Children{x and the {hh1500Ghosts{x keep their old rules, the rest of this article is about all other clans.
+Everything about your clan in one command. With no arguments it lists the clans of the world, and, once you are in a clan, *clan info* shows a clan's leader, recruiters and what it owns. What each clan stands for is told in {hh3clans{x. The {hh1551Flower Children{x and the {hh1500Ghosts{x keep their old rules, the rest of this article is about all other clans.
 
-{CJOINING{x Clans take those who have been reborn at least once or reached level 100, and each clan adds its own conditions. Joining costs 1000 quest points: they go to the treasury and make you rank 1. If you once held rank 1 or higher in this clan, you come back for free.
+{CJOINING{x Clans take those who have been reborn at least once or reached level 100, and each clan adds its own conditions. Joining costs 1000 quest points: they go to the treasury and make you rank 1. If you once held rank 1 or higher in this clan, you come back for free. You must leave your current clan first, unless it is the Flower Children.
 
-{CRANKS{x Rank grows by itself and belongs to you, not to your membership: leave and come back, and it is still there. Ranks 1 to 4 come from donations to the treasury, 1000, 2000, 4000 and 8000 quest points one after another, and part of a step counts toward it. Ranks 5 to 8 come from hours played in the clan: 100, 250, 500 and 1000. The higher the rank, the higher the ceiling of your clan skills and the stronger they get. After 180 days away from the game a rank above 4 drops to 4, the clan hours start over, and an office is lost.
+{CRANKS{x Rank grows by itself and belongs to you, not to your membership: leave and come back, and it is still there. Ranks 1 to 4 come from donations to the treasury, 1000, 2000, 4000 and 8000 quest points one after another, and part of a step counts toward it. Ranks 5 to 8 come from hours played in the clan, 100, 250, 500 and 1000, and start counting only once you hold rank 4. The higher the rank, the higher the ceiling of your clan skills and the stronger they get. After 180 days away from the game a rank above 4 drops to 4, the clan hours start over, and an office is lost.
 
-{COFFICES{x The leader and recruiters hold offices, not ranks. The leader appoints recruiters, sets {hcclan diplomacy{x and buys from the catalog. The leader and recruiters see other members' ranks, take gold out of the treasury and kick members. Only the leader can kick a recruiter. A kicked member can't come back until the leader or a recruiter runs =clan unban=.
+{COFFICES{x The leader and recruiters hold offices, not ranks. The leader appoints recruiters, sets {hcclan diplomacy{x and buys from the catalog. The leader and recruiters see other members' full rank cards, take gold out of the treasury and kick members. Only the leader can kick a recruiter. A kicked member can't come back until the leader or a recruiter runs *clan unban*.
 
 {CTREASURY{x Anyone can donate quest points and put gold in. Quest points never come back out: the leader spends them in the catalog.
 
-{CCATALOG{x =clan catalog= lists what your clan can buy. Some clan skills stay locked until the clan buys them, others get upgrades. A purchase works for every member at once. Some items need another one bought first. What an item does is told in the help of its skill. Leave the clan and its purchases stay with it, while the skill you learned is kept for your return.
+{CCATALOG{x *clan catalog* lists what your clan can buy. Some clan skills stay locked until the clan buys them, others get upgrades. A purchase works for every member at once. Some items need another one bought first. A purchase is confirmed with *clan buy &lt;id&gt; confirm* and can't be undone until the epoch ends. What an item does is told in the help of its skill. Leave the clan and its purchases stay with it, while the skill you learned is kept for your return.
 
 %SA% {hh3clans{x.
 </text>
@@ -41,23 +41,23 @@ Everything about your clan in one command. With no arguments it lists the clans 
 %FFF% *%CMD%* *пожертвовать* _кп_
 %FFF% *%CMD%* *банк* _[положить|снять N золота]_
 %FFF% *%CMD%* *каталог*
-%FFF% *%CMD%* *купить* _id_
+%FFF% *%CMD%* *купить* _id_ _[подтверждение]_
 %FFF% *%CMD%* *рекрутер* _добавить|удалить имя_
 %FFF% *%CMD%* *кикнуть* _имя_
 %FFF% *%CMD%* *разбанить* _[имя]_
 %FFF% *%CMD%* *дипломатия*
 
-Все о твоем клане одной командой. Без аргументов она показывает кланы мира, а =клан инфо= -- лидера клана, его рекрутеров и то, чем клан владеет. За что стоит каждый клан, рассказано в {hh3кланах{x. {hh1551Дети Цветов{x и {hh1500Призраки{x живут по старым правилам, остальная часть статьи -- про все другие кланы.
+Все о твоем клане одной командой. Без аргументов она показывает кланы мира, а *клан инфо*, когда ты уже в клане, -- лидера клана, его рекрутеров и то, чем клан владеет. За что стоит каждый клан, рассказано в {hh3кланах{x. {hh1551Дети Цветов{x и {hh1500Призраки{x живут по старым правилам, остальная часть статьи -- про все другие кланы.
 
-{CВСТУПЛЕНИЕ{x Кланы принимают тех, кто хотя бы раз перерождался или достиг 100 уровня, и каждый клан добавляет свои условия. Вступление стоит 1000 квестовых единиц: они идут в казну и дают тебе первый ранг. Если у тебя в этом клане уже был ранг 1 или выше, вернуться можно бесплатно.
+{CВСТУПЛЕНИЕ{x Кланы принимают тех, кто хотя бы раз перерождался или достиг 100 уровня, и каждый клан добавляет свои условия. Вступление стоит 1000 квестовых единиц: они идут в казну и дают тебе первый ранг. Если у тебя в этом клане уже был ранг 1 или выше, вернуться можно бесплатно. Сначала нужно покинуть свой нынешний клан, если это не Дети Цветов.
 
-{CРАНГИ{x Ранг растет сам и принадлежит тебе, а не твоему членству: уйдешь и вернешься -- он на месте. Ранги с 1 по 4 дают пожертвования в казну, 1000, 2000, 4000 и 8000 квестовых единиц по очереди, и часть шага засчитывается. Ранги с 5 по 8 дают часы, сыгранные в клане: 100, 250, 500 и 1000. Чем выше ранг, тем выше потолок твоих клановых умений и тем они сильнее. После 180 дней вне игры ранг выше 4 падает до 4, клановые часы начинаются заново, а должность теряется.
+{CРАНГИ{x Ранг растет сам и принадлежит тебе, а не твоему членству: уйдешь и вернешься -- он на месте. Ранги с 1 по 4 дают пожертвования в казну, 1000, 2000, 4000 и 8000 квестовых единиц по очереди, и часть шага засчитывается. Ранги с 5 по 8 дают часы, сыгранные в клане: 100, 250, 500 и 1000, но засчитываются они только с четвертого ранга. Чем выше ранг, тем выше потолок твоих клановых умений и тем они сильнее. После 180 дней вне игры ранг выше 4 падает до 4, клановые часы начинаются заново, а должность теряется.
 
-{CДОЛЖНОСТИ{x Лидер и рекрутеры -- это должности, а не ранги. Лидер назначает рекрутеров, устанавливает {hcклан дипломатия{x и покупает в каталоге. Лидер и рекрутеры видят ранги других, берут золото из казны и выгоняют членов клана. Рекрутера может выгнать только лидер. Выгнанный не вернется, пока лидер или рекрутер не сделает =клан разбанить=.
+{CДОЛЖНОСТИ{x Лидер и рекрутеры -- это должности, а не ранги. Лидер назначает рекрутеров, устанавливает {hcклан дипломатия{x и покупает в каталоге. Лидер и рекрутеры видят чужие карточки рангов, берут золото из казны и выгоняют членов клана. Рекрутера может выгнать только лидер. Выгнанный не вернется, пока лидер или рекрутер не сделает *клан разбанить*.
 
 {CКАЗНА{x Жертвовать квестовые единицы и класть золото может любой. Квестовые единицы назад не выдаются: их тратит лидер в каталоге.
 
-{CКАТАЛОГ{x =клан каталог= показывает, что может купить твой клан. Одни клановые умения закрыты, пока клан их не купит, другие получают улучшения. Покупка работает сразу для всех членов клана. Некоторые позиции требуют сначала купить другую. Что дает позиция, рассказано в справке ее умения. Уйдешь из клана -- его покупки останутся с ним, а выученное тобой умение сохранится до твоего возвращения.
+{CКАТАЛОГ{x *клан каталог* показывает, что может купить твой клан. Одни клановые умения закрыты, пока клан их не купит, другие получают улучшения. Покупка работает сразу для всех членов клана. Некоторые позиции требуют сначала купить другую. Покупку подтверждают командой *клан купить &lt;id&gt; подтверждение*, и отменить ее до конца эпохи нельзя. Что дает позиция, рассказано в справке ее умения. Уйдешь из клана -- его покупки останутся с ним, а выученное тобой умение сохранится до твоего возвращения.
 
 %SA% {hh3кланы{x.
 </text>
@@ -70,23 +70,23 @@ Everything about your clan in one command. With no arguments it lists the clans 
 %FFF% *%CMD%* *пожертвувати* _кп_
 %FFF% *%CMD%* *банк* _[покласти|зняти N золота]_
 %FFF% *%CMD%* *каталог*
-%FFF% *%CMD%* *купити* _id_
+%FFF% *%CMD%* *купити* _id_ _[підтвердження]_
 %FFF% *%CMD%* *рекрутер* _додати|видалити імʼя_
 %FFF% *%CMD%* *кікнути* _імʼя_
 %FFF% *%CMD%* *розбанити* _[імʼя]_
 %FFF% *%CMD%* *дипломатія*
 
-Усе про твій клан однією командою. Без аргументів вона показує клани світу, а =клан інфо= -- лідера клану, його рекрутерів і те, чим клан володіє. За що стоїть кожен клан, розказано в {hh3кланах{x. {hh1551Діти Квітів{x і {hh1500Примари{x живуть за старими правилами, решта статті -- про всі інші клани.
+Усе про твій клан однією командою. Без аргументів вона показує клани світу, а *клан інфо*, коли ти вже в клані, -- лідера клану, його рекрутерів і те, чим клан володіє. За що стоїть кожен клан, розказано в {hh3кланах{x. {hh1551Діти Квітів{x і {hh1500Примари{x живуть за старими правилами, решта статті -- про всі інші клани.
 
-{CВСТУП{x Клани приймають тих, хто хоча б раз перероджувався або досяг 100 рівня, і кожен клан додає свої умови. Вступ коштує 1000 квестових одиниць: вони йдуть у скарбницю і дають тобі перший ранг. Якщо в тебе в цьому клані вже був ранг 1 або вище, повернутися можна безкоштовно.
+{CВСТУП{x Клани приймають тих, хто хоча б раз перероджувався або досяг 100 рівня, і кожен клан додає свої умови. Вступ коштує 1000 квестових одиниць: вони йдуть у скарбницю і дають тобі перший ранг. Якщо в тебе в цьому клані вже був ранг 1 або вище, повернутися можна безкоштовно. Спершу треба покинути свій теперішній клан, якщо це не Діти Квітів.
 
-{CРАНГИ{x Ранг росте сам і належить тобі, а не твоєму членству: підеш і повернешся -- він на місці. Ранги з 1 по 4 дають пожертви до скарбниці, 1000, 2000, 4000 і 8000 квестових одиниць по черзі, і частина кроку зараховується. Ранги з 5 по 8 дають години, зіграні в клані: 100, 250, 500 і 1000. Що вищий ранг, то вища стеля твоїх кланових умінь і то вони сильніші. Після 180 днів поза грою ранг вище 4 падає до 4, кланові години починаються заново, а посада втрачається.
+{CРАНГИ{x Ранг росте сам і належить тобі, а не твоєму членству: підеш і повернешся -- він на місці. Ранги з 1 по 4 дають пожертви до скарбниці, 1000, 2000, 4000 і 8000 квестових одиниць по черзі, і частина кроку зараховується. Ранги з 5 по 8 дають години, зіграні в клані: 100, 250, 500 і 1000, але зараховуються вони лише з четвертого рангу. Що вищий ранг, то вища стеля твоїх кланових умінь і то вони сильніші. Після 180 днів поза грою ранг вище 4 падає до 4, кланові години починаються заново, а посада втрачається.
 
-{CПОСАДИ{x Лідер і рекрутери -- це посади, а не ранги. Лідер призначає рекрутерів, встановлює {hcклан дипломатія{x і купує в каталозі. Лідер і рекрутери бачать ранги інших, беруть золото зі скарбниці й виганяють членів клану. Рекрутера може вигнати лише лідер. Вигнаний не повернеться, доки лідер чи рекрутер не зробить =клан розбанити=.
+{CПОСАДИ{x Лідер і рекрутери -- це посади, а не ранги. Лідер призначає рекрутерів, встановлює {hcклан дипломатія{x і купує в каталозі. Лідер і рекрутери бачать чужі картки рангів, беруть золото зі скарбниці й виганяють членів клану. Рекрутера може вигнати лише лідер. Вигнаний не повернеться, доки лідер чи рекрутер не зробить *клан розбанити*.
 
 {CСКАРБНИЦЯ{x Жертвувати квестові одиниці й класти золото може будь-хто. Квестові одиниці назад не видаються: їх витрачає лідер у каталозі.
 
-{CКАТАЛОГ{x =клан каталог= показує, що може купити твій клан. Одні кланові вміння закриті, доки клан їх не купить, інші отримують покращення. Покупка працює одразу для всіх членів клану. Деякі позиції вимагають спершу купити іншу. Що дає позиція, розказано в довідці її вміння. Підеш із клану -- його покупки лишаться з ним, а вивчене тобою вміння збережеться до твого повернення.
+{CКАТАЛОГ{x *клан каталог* показує, що може купити твій клан. Одні кланові вміння закриті, доки клан їх не купить, інші отримують покращення. Покупка працює одразу для всіх членів клану. Деякі позиції вимагають спершу купити іншу. Покупку підтверджують командою *клан купити &lt;id&gt; підтвердження*, і скасувати її до кінця епохи не можна. Що дає позиція, розказано в довідці її вміння. Підеш із клану -- його покупки лишаться з ним, а вивчене тобою вміння збережеться до твого повернення.
 
 %SA% {hh3клани{x.
 </text>

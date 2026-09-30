@@ -18,9 +18,9 @@
   <command type="SKILL(spellbane)">
     <argtype>undef</argtype>
     <cat>clan</cat>
-    <hint l="en">Reflect magical spells (Battleragers)</hint>
-    <hint l="ru">(клан ярости) отражать магические заклинания</hint>
-    <hint l="ua">(клан ярості) відображати магічні заклинання</hint>
+    <hint l="en">Renew the aura of rage that deflects magic (Battleragers)</hint>
+    <hint l="ru">(клан ярости) обновить ауру ярости, отражающую магию</hint>
+    <hint l="ua">(клан ярості) оновити ауру ярості, що відбиває магію</hint>
     <name l="en">spellbane</name>
     <name l="ru">спелбан</name>
     <name l="ua">спелбан</name>
@@ -31,38 +31,44 @@
   <group registry="skillGroup">clan</group>
   <hard>5</hard>
   <help id="914" level="-1" type="SkillHelp">
-    <extra l="en">'spell bane'</extra>
-    <extra l="ru">спеллбан</extra>
-    <extra l="ua">спеллбан</extra>
+    <extra l="en">'spell bane' 'oath of rage' 'aura of rage'</extra>
+    <extra l="ru">спеллбан 'аура ярости'</extra>
+    <extra l="ua">спеллбан 'аура ярості'</extra>
     <text l="en">%FMT% *%CMD%*
 
-The Curse of the {hh1471Battleragers{x, cast by mages, but turned against them. It forbids the use of magic by a clan member, while rejecting almost all magic directed at him, except for mental attacks.
+The =oath of rage= binds every warrior of the {hh1471Battleragers{x to the {hh10gods of Fury{x: no spells, no scrolls, wands or staves, no magic gear, no public healers. In return the gods wrap the warrior in an =aura of rage=, the old spellbane. It deflects magic cast at the warrior and burns the sorcerer who tried it, and it returns by itself whenever it fades, so the command is rarely needed.
 
-Spellbane blocks all protective prayers, but does not protect against offensive ones. Protective spells cast on a clan member will always be rejected, and spells cast by someone nearby will be reflected -- with possible damage to the sorcerer.
+The aura grows with devotion, that is, with your {hh2245clan rank{x. A recruit's aura catches only some of the spells aimed at him, and he may still touch a little magic: a potion, a pill, a magic portal, a word of an ancient language, the card deck. The aura fights even that magic -- it hurts every time and sometimes burns the magic away before it works. As the rank grows, the aura catches more and the oath takes more away: first portals and ancient languages, and at the top even potions and the deck. A zealot of the highest ranks deflects most magic and touches none.
 
-Offensive spells targeting the victim whom the clan member is fighting will also be reflected -- with severe damage to the caster.
+Spells that sweep the whole room are harder to catch than spells aimed at you, but the aura may still turn them aside, and every warrior it spares strikes back at the caster. Summons, gates and other magic that moves or reaches you are caught like any other spell.
 
-The command puts the spellbane on you for a while. You rarely need to type it: when it wears off, it comes back on a clan member by itself.
+Prayers are not quite magic: they are the gods answering. Offensive prayers of foreign gods pass through a recruit, but the aura of a seasoned warrior starts to turn them aside too. Blessings are accepted only from a priest of a god of Fury, and only the ones that serve the body: healing, cures, refresh, frenzy. Recruits accept all of these, warriors of the middle ranks only cures, zealots nothing at all -- except the hymn of rage, the voice of their own gods. No warrior of the Battleragers ever accepts a magic shield such as sanctuary, from anyone.
+
+Clerics and paladins who worship a god of Fury may take the oath too. They keep only the prayers the gods of Fury answer and never rise above the middle ranks. Mental attacks are not magic and always pass.
 </text>
     <text l="ru">%FMT% *%CMD%*
 
-Проклятие {hh1471Клана Ярости{x, наложенное магами, но обернувшееся против них самих. Запрещает использование магии члену клана, и в то же время отклоняет практически всю магию, направленную на него, кроме ментальных атак. 
+=Клятва ярости= связывает каждого воина {hh1471Клана Ярости{x с {hh10богами Ярости{x: никаких заклинаний, свитков, жезлов и посохов, никаких магических вещей, никаких городских лекарей. Взамен боги окружают воина =аурой ярости=, прежним спеллбаном. Она отклоняет магию, направленную на воина, и обжигает колдуна, который ее сотворил, а когда спадает, возвращается сама, так что команду набирать приходится редко.
 
-Спеллбан блокирует все защитные молитвы, но не защищает от атакующих. Защитные заклинания, направленные на члена клана, будут отклонены всегда, а заклинания, произнесенные кем-то рядом, будут отражены -- с возможными повреждениями для колдуна. 
+Аура растет вместе с преданностью, то есть с твоим {hh2245клановым рангом{x. Аура новобранца ловит лишь часть заклинаний, направленных на него, и ему еще дозволено немного магии: зелье, пилюля, магический портал, слово древнего языка, колода карт. Аура борется и с этой магией -- она каждый раз причиняет боль, а иногда сжигает магию прежде, чем та подействует. С ростом ранга аура ловит все больше, а клятва отнимает все больше: сначала порталы и древние языки, а на вершине даже зелья и колоду. Ревнитель высших рангов отклоняет почти всю магию и не касается никакой.
 
-Атакующие заклинания, чьей жертвой стал тот, с кем сражается член клана, также будут отражены -- с сильными повреждениями для кастующего.
+Заклинания на всю комнату поймать труднее, чем направленные на тебя, но аура все равно может их отвести, и каждый воин, которого она уберегла, наносит ответный удар колдуну. Призыв, врата и прочая магия, которая перемещает тебя или дотягивается до тебя, ловятся как любое другое заклинание.
 
-Команда накладывает спеллбан на тебя на время. Набирать ее приходится редко: когда спеллбан спадает, он возвращается на члена клана сам.
+Молитвы -- не совсем магия: это ответ богов. Атакующие молитвы чужих богов проходят сквозь новобранца, но аура опытного воина начинает отводить и их. Благословения принимаются только от жреца бога Ярости и только те, что служат телу: лечение, исцеление от недугов, освежение, неистовство. Новобранцы принимают их все, воины средних рангов -- только исцеление от недугов, ревнители -- ничего, кроме гимна ярости, голоса их собственных богов. Магический щит вроде святилища ни один воин Ярости не примет никогда и ни от кого.
+
+Клерики и паладины, верящие в бога Ярости, тоже могут принести клятву. Они сохраняют только те молитвы, на которые отвечают боги Ярости, и никогда не поднимаются выше средних рангов. Ментальные атаки -- не магия и проходят всегда.
 </text>
     <text l="ua">%FMT% *%CMD%*
 
-Прокляття {hh1471Клану Ярості{x, накладене магами, але обернулося проти них самих. Забороняє використання магії членом клану, і в той самий час відхиляє практично всю магію, спрямовану на нього, окрім ментальних атак.
+=Клятва ярості= звʼязує кожного воїна {hh1471Клану Ярості{x з {hh10богами Люті{x: жодних заклинань, сувоїв, жезлів і посохів, жодних магічних речей, жодних міських лікарів. Натомість боги оточують воїна =аурою ярості=, колишнім спелбаном. Вона відхиляє магію, спрямовану на воїна, і обпікає чаклуна, який її сотворив, а коли спадає, повертається сама, тож команду набирати доводиться рідко.
 
-Спелбан блокує всі захисні молитви, але не захищає від нападів. Захисні заклинання, спрямовані на члена клану, завжди будуть відхилені, а заклинання, промовлені кимось поряд, будуть відображені -- з можливими ушкодженнями для чаклуна.
+Аура росте разом з відданістю, тобто з твоїм {hh2245клановим рангом{x. Аура новобранця ловить лише частину заклинань, спрямованих на нього, і йому ще дозволено трохи магії: зілля, пігулка, магічний портал, слово древньої мови, колода карт. Аура бореться і з цією магією -- вона щоразу завдає болю, а часом спалює магію раніше, ніж та подіє. Із зростанням рангу аура ловить дедалі більше, а клятва забирає дедалі більше: спершу портали й древні мови, а на вершині навіть зілля й колоду. Ревнитель найвищих рангів відхиляє майже всю магію й не торкається жодної.
 
-Атакуючі заклинання, жертвою яких став той, з ким бʼється член клану, також будуть відображені -- зі значними ушкодженнями для кастуючого.
+Заклинання на всю кімнату впіймати важче, ніж спрямовані на тебе, але аура все одно може їх відвести, і кожен воїн, якого вона вберегла, завдає удару у відповідь чаклунові. Виклик, брама та інша магія, що переміщує тебе чи дотягується до тебе, ловляться як будь-яке інше заклинання.
 
-Команда накладає спелбан на тебе на певний час. Набирати її доводиться рідко: коли спелбан спадає, він повертається на члена клану сам.
+Молитви -- не зовсім магія: це відповідь богів. Атакувальні молитви чужих богів проходять крізь новобранця, але аура досвідченого воїна починає відводити і їх. Благословення приймаються лише від жерця бога Люті і лише ті, що служать тілу: лікування, зцілення від недуг, освіження, несамовитість. Новобранці приймають їх усі, воїни середніх рангів -- лише зцілення від недуг, ревнителі -- нічого, крім гімну ярості, голосу їхніх власних богів. Магічного щита на кшталт святилища жоден воїн Ярості не прийме ніколи й ні від кого.
+
+Клірики й паладини, що вірять у бога Люті, теж можуть скласти клятву. Вони зберігають лише ті молитви, на які відповідають боги Люті, і ніколи не піднімаються вище середніх рангів. Ментальні атаки -- не магія й проходять завжди.
 </text>
   </help>
   <mob>
@@ -70,8 +76,8 @@ The command puts the spellbane on you for a while. You rarely need to type it: w
   </mob>
   <move>20</move>
   <name l="en">spellbane</name>
-  <name l="ru">отражение магии</name>
-  <name l="ua">відображення магії</name>
+  <name l="ru">клятва ярости</name>
+  <name l="ua">клятва ярості</name>
   <webColumn>cln</webColumn>
   <webLabel l="en">SpBane</webLabel>
   <webLabel l="ru">Спелба</webLabel>

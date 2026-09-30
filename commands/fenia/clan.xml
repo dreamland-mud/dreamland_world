@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Command>
+<Command type="CommandElement">
   <cat>clan</cat>
   <extra>keep_hide ghost</extra>
   <help id="2245" level="-1" type="CommandHelp">
@@ -16,7 +16,7 @@
 %FFF% *%CMD%* *recruiter* _add|remove name_
 %FFF% *%CMD%* *kick* _name_
 %FFF% *%CMD%* *unban* _[name]_
-%FFF% *%CMD%* *diplomacy*
+%FFF% *%CMD%* *diplomacy* _[list|proposition|set clan number]_
 
 Everything about your clan in one command. With no arguments it lists the clans of the world, and, once you are in a clan, *clan info* shows a clan's leader and recruiters, and for your own clan also the treasury and what it has bought. What each clan stands for is told in {hh3clans{x. The {hh1551Flower Children{x and the {hh1500Ghosts{x keep their old rules, the rest of this article is about all other clans.
 
@@ -29,6 +29,8 @@ Everything about your clan in one command. With no arguments it lists the clans 
 {CTREASURY{x Anyone can donate quest points and put gold in. Quest points never come back out: the leader spends them in the catalog.
 
 {CCATALOG{x *clan catalog* lists what your clan can buy. Some clan skills stay locked until the clan buys them, others get upgrades. A purchase works for every member at once. Some items need another one bought first. Only the leader buys, in two steps. First *clan buy* _id_, where _id_ is the word at the start of a catalog line, for example *clan buy* =garble+=: the game names the price and asks you to confirm. Then, within two minutes, *clan buy* _id_ *confirm*. A purchase can't be undone until the epoch ends. What an item does is told in the help of its skill. Leave the clan and its purchases stay with it, while the skill you learned is kept for your return.
+
+{CDIPLOMACY{x *clan diplomacy* shows how the clans stand with each other, and *clan diplomacy list* names the treaties and their numbers, from alliance to war. The leader changes a treaty with *clan diplomacy set*. Making things worse takes effect at once. Making them better is an offer: it takes effect when the leader of the other clan offers the same, and *clan diplomacy proposition* shows what others offer your clan.
 
 %SA% {hh3clans{x.
 </text>
@@ -45,7 +47,7 @@ Everything about your clan in one command. With no arguments it lists the clans 
 %FFF% *%CMD%* *рекрутер* _добавить|удалить имя_
 %FFF% *%CMD%* *кикнуть* _имя_
 %FFF% *%CMD%* *разбанить* _[имя]_
-%FFF% *%CMD%* *дипломатия*
+%FFF% *%CMD%* *дипломатия* _[список|предложения|установить клан номер]_
 
 Все о твоем клане одной командой. Без аргументов она показывает кланы мира, а *клан инфо*, когда ты уже в клане, -- лидера клана и его рекрутеров, а для своего клана еще и казну и покупки. За что стоит каждый клан, рассказано в {hh3кланах{x. {hh1551Дети Цветов{x и {hh1500Призраки{x живут по старым правилам, остальная часть статьи -- про все другие кланы.
 
@@ -58,6 +60,8 @@ Everything about your clan in one command. With no arguments it lists the clans 
 {CКАЗНА{x Жертвовать квестовые единицы и класть золото может любой. Квестовые единицы назад не выдаются: их тратит лидер в каталоге.
 
 {CКАТАЛОГ{x *клан каталог* показывает, что может купить твой клан. Одни клановые умения закрыты, пока клан их не купит, другие получают улучшения. Покупка работает сразу для всех членов клана. Некоторые позиции требуют сначала купить другую. Покупает только лидер, в два шага. Сначала *клан купить* _id_, где _id_ -- слово в начале строки каталога, например *клан купить* =garble+=: игра назовет цену и попросит подтвердить. Потом, в течение двух минут, *клан купить* _id_ *подтверждение*. Отменить покупку до конца эпохи нельзя. Что дает позиция, рассказано в справке ее умения. Уйдешь из клана -- его покупки останутся с ним, а выученное тобой умение сохранится до твоего возвращения.
+
+{CДИПЛОМАТИЯ{x *клан дипломатия* показывает, как кланы относятся друг к другу, а *клан дипломатия список* -- все отношения и их номера, от альянса до войны. Лидер меняет отношения командой *клан дипломатия установить*. Ухудшение действует сразу. Улучшение -- это предложение: оно вступит в силу, когда лидер другого клана предложит то же, а *клан дипломатия предложения* покажет, что предлагают твоему клану.
 
 %SA% {hh3кланы{x.
 </text>
@@ -74,7 +78,7 @@ Everything about your clan in one command. With no arguments it lists the clans 
 %FFF% *%CMD%* *рекрутер* _додати|видалити імʼя_
 %FFF% *%CMD%* *кікнути* _імʼя_
 %FFF% *%CMD%* *розбанити* _[імʼя]_
-%FFF% *%CMD%* *дипломатія*
+%FFF% *%CMD%* *дипломатія* _[список|пропозиції|встановити клан номер]_
 
 Усе про твій клан однією командою. Без аргументів вона показує клани світу, а *клан інфо*, коли ти вже в клані, -- лідера клану та його рекрутерів, а для свого клану ще й скарбницю і покупки. За що стоїть кожен клан, розказано в {hh3кланах{x. {hh1551Діти Квітів{x і {hh1500Привиди{x живуть за старими правилами, решта статті -- про всі інші клани.
 
@@ -87,6 +91,8 @@ Everything about your clan in one command. With no arguments it lists the clans 
 {CСКАРБНИЦЯ{x Жертвувати квестові одиниці й класти золото може будь-хто. Квестові одиниці назад не видаються: їх витрачає лідер у каталозі.
 
 {CКАТАЛОГ{x *клан каталог* показує, що може купити твій клан. Одні кланові вміння закриті, доки клан їх не купить, інші отримують покращення. Покупка працює одразу для всіх членів клану. Деякі позиції вимагають спершу купити іншу. Купує лише лідер, у два кроки. Спершу *клан купити* _id_, де _id_ -- слово на початку рядка каталогу, наприклад *клан купити* =garble+=: гра назве ціну й попросить підтвердити. Потім, протягом двох хвилин, *клан купити* _id_ *підтвердження*. Скасувати покупку до кінця епохи не можна. Що дає позиція, розказано в довідці її вміння. Підеш із клану -- його покупки лишаться з ним, а вивчене тобою вміння збережеться до твого повернення.
+
+{CДИПЛОМАТІЯ{x *клан дипломатія* показує, як клани ставляться один до одного, а *клан дипломатія список* -- усі відносини та їхні номери, від альянсу до війни. Лідер змінює відносини командою *клан дипломатія встановити*. Погіршення діє одразу. Покращення -- це пропозиція: вона набуде чинності, коли лідер іншого клану запропонує те саме, а *клан дипломатія пропозиції* покаже, що пропонують твоєму клану.
 
 %SA% {hh3клани{x.
 </text>

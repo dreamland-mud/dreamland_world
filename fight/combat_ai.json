@@ -1,0 +1,780 @@
+// Combat AI profiles, read by the Fenia combat AI (dreamland_fenia/utils/combat ai).
+// Profile names: a-z, 0-9, _ only. Field reference: header of "utils/combat ai"
+// and "utils/combat ai: moves". Texts are RU; EN/UA via the catalog, section
+// "utils/combat ai". Integers only (Fenia has no floats).
+{
+  "clanguard": {
+    "purge": 30,
+    "spread": 25
+  },
+  "clanguard_battlerager": {
+    "base": "clanguard",
+    "policy": [
+      "caster",
+      "healer"
+    ],
+    "prep": [
+      {
+        "move": "skill",
+        "skill": "spellbane",
+        "target": "self",
+        "unless": "spellbane"
+      },
+      {
+        "move": "skill",
+        "skill": "resistance",
+        "target": "self",
+        "unless": "resistance"
+      },
+      {
+        "move": "skill",
+        "skill": "truesight",
+        "target": "self",
+        "unless": "truesight"
+      }
+    ],
+    "phases": [
+      {
+        "moves": [
+          {
+            "move": "skill",
+            "skill": "dirt",
+            "target": "caster",
+            "notBlind": true,
+            "chance": 25,
+            "free": true
+          },
+          {
+            "move": "skill",
+            "skill": "bash",
+            "target": "caster",
+            "chance": 30,
+            "free": true
+          },
+          {
+            "move": "strikes",
+            "n": 3,
+            "chance": 20,
+            "msg": "%1$^C1 нанос%1$nит|ят тройной удар смертоносной силы!"
+          }
+        ]
+      },
+      {
+        "hp": 60,
+        "enter": [
+          {
+            "move": "skill",
+            "skill": "bloodthirst",
+            "target": "self"
+          }
+        ]
+      },
+      {
+        "hp": 30,
+        "enter": [
+          {
+            "move": "strikes",
+            "n": 3,
+            "target": "random",
+            "msg": "%1$^C1 рев%1$nет|ут от ярости и броса%1$nется|ются на %2$C4!"
+          }
+        ],
+        "moves": [
+          {
+            "move": "skill",
+            "skill": "dirt",
+            "target": "caster",
+            "notBlind": true,
+            "chance": 25,
+            "free": true
+          },
+          {
+            "move": "skill",
+            "skill": "bash",
+            "target": "caster",
+            "chance": 30,
+            "free": true
+          },
+          {
+            "move": "strikes",
+            "n": 3,
+            "chance": 40,
+            "msg": "%1$^C1 нанос%1$nит|ят тройной удар смертоносной силы!"
+          }
+        ]
+      }
+    ]
+  },
+  "clanguard_knight": {
+    "base": "clanguard",
+    "policy": [
+      "evil",
+      "caster"
+    ],
+    "prep": [
+      {
+        "move": "castRoom",
+        "spell": "golden aura",
+        "target": "self",
+        "unless": "golden aura"
+      },
+      {
+        "move": "cast",
+        "spell": "holy armor",
+        "target": "self",
+        "unless": "holy armor"
+      }
+    ],
+    "phases": [
+      {
+        "moves": [
+          {
+            "move": "cast",
+            "spell": "dispel affects",
+            "needsDispel": true,
+            "chance": 30
+          },
+          {
+            "move": "cast",
+            "spell": "dispel evil",
+            "when": "evil",
+            "chance": 25
+          },
+          {
+            "move": "cast",
+            "spell": "flamestrike",
+            "chance": 20
+          }
+        ]
+      },
+      {
+        "hp": 60,
+        "enter": [
+          {
+            "move": "castRoom",
+            "spell": "holy word",
+            "target": "room"
+          }
+        ]
+      },
+      {
+        "hp": 30,
+        "enter": [
+          {
+            "move": "emote",
+            "target": "self",
+            "msg": "%1$^C1 поднима%1$nет|ют меч к небу: \"Свет, не оставь меня!\"",
+            "free": true
+          },
+          {
+            "move": "cast",
+            "spell": "heal",
+            "target": "self"
+          }
+        ],
+        "moves": [
+          {
+            "move": "cast",
+            "spell": "dispel affects",
+            "needsDispel": true,
+            "chance": 30
+          },
+          {
+            "move": "cast",
+            "spell": "dispel evil",
+            "when": "evil",
+            "chance": 25
+          },
+          {
+            "move": "cast",
+            "spell": "flamestrike",
+            "chance": 40
+          }
+        ]
+      }
+    ]
+  },
+  "clanguard_ruler": {
+    "base": "clanguard",
+    "policy": [
+      "wanted",
+      "caster"
+    ],
+    "prep": [
+      {
+        "move": "cast",
+        "spell": "ruler aura",
+        "target": "self",
+        "unless": "ruler aura"
+      }
+    ],
+    "always": [
+      {
+        "move": "brand",
+        "target": "hostiles"
+      }
+    ],
+    "phases": [
+      {
+        "moves": [
+          {
+            "move": "skill",
+            "skill": "disarm",
+            "wielding": true,
+            "chance": 25,
+            "free": true
+          },
+          {
+            "move": "cast",
+            "spell": "caustic font",
+            "chance": 20
+          }
+        ]
+      },
+      {
+        "hp": 60,
+        "enter": [
+          {
+            "move": "say",
+            "target": "self",
+            "text": "Нападение на суд! БАНДИТЫ! Смерть преступникам!"
+          },
+          {
+            "move": "summon",
+            "vnum": 11,
+            "tier": 5,
+            "target": "self",
+            "text": "%1$^C1 свист%1$nит|ят в свисток, и на зов врывается %2$C1!"
+          }
+        ]
+      },
+      {
+        "hp": 30,
+        "enter": [
+          {
+            "move": "summon",
+            "vnum": 11,
+            "tier": 5,
+            "target": "self",
+            "text": "%1$^C1 свист%1$nит|ят в свисток, и на зов врывается %2$C1!"
+          },
+          {
+            "move": "cast",
+            "spell": "blindness",
+            "target": "strongest",
+            "notBlind": true
+          }
+        ]
+      }
+    ]
+  },
+  "clanguard_invader": {
+    "base": "clanguard",
+    "policy": [
+      "good",
+      "caster"
+    ],
+    "prep": [
+      {
+        "move": "skill",
+        "skill": "fade",
+        "target": "self",
+        "unless": "fade"
+      }
+    ],
+    "phases": [
+      {
+        "moves": [
+          {
+            "move": "necro",
+            "chance": 35
+          }
+        ]
+      },
+      {
+        "hp": 60,
+        "enter": [
+          {
+            "move": "cast",
+            "spell": "shadowlife",
+            "target": "strongest"
+          }
+        ]
+      },
+      {
+        "hp": 30,
+        "enter": [
+          {
+            "move": "summon",
+            "vnum": 14,
+            "tier": 5,
+            "target": "self",
+            "text": "%1$^C1 шепч%1$nет|ут слово Тьмы, и из тени выступает %2$C1."
+          }
+        ]
+      }
+    ]
+  },
+  "clanguard_shalafi": {
+    "base": "clanguard",
+    "policy": [
+      "battlerager",
+      "caster"
+    ],
+    "prep": [
+      {
+        "move": "cast",
+        "spell": "astral projection",
+        "target": "self",
+        "unless": "astral projection"
+      }
+    ],
+    "phases": [
+      {
+        "moves": [
+          {
+            "move": "cast",
+            "spell": "mental knife",
+            "when": "spellbane",
+            "pierce": true,
+            "chance": 40
+          },
+          {
+            "move": "mage",
+            "chance": 40
+          }
+        ]
+      },
+      {
+        "hp": 60,
+        "enter": [
+          {
+            "move": "summon",
+            "vnum": 13,
+            "tier": 5,
+            "target": "self",
+            "text": "%1$^C1 черт%1$nит|ят в воздухе пентаграмму, и из пламени шагает %2$C1!"
+          }
+        ]
+      },
+      {
+        "hp": 30,
+        "moves": [
+          {
+            "move": "cast",
+            "spell": "teleport",
+            "target": "strongest",
+            "key": "teleport",
+            "cd": 60
+          },
+          {
+            "move": "cast",
+            "spell": "mental knife",
+            "when": "spellbane",
+            "pierce": true,
+            "chance": 40
+          },
+          {
+            "move": "mage",
+            "chance": 40
+          }
+        ]
+      }
+    ]
+  },
+  "clanguard_chaos": {
+    "base": "clanguard",
+    "policy": [
+      "random"
+    ],
+    "phases": [
+      {
+        "moves": [
+          {
+            "move": "cast",
+            "spell": "garble",
+            "unless": "garble",
+            "chance": 12
+          },
+          {
+            "move": "cast",
+            "spell": "confuse",
+            "unless": "confuse",
+            "chance": 12
+          },
+          {
+            "move": "cast",
+            "spell": "disgrace",
+            "unless": "disgrace",
+            "chance": 12
+          },
+          {
+            "move": "cast",
+            "spell": "colour spray",
+            "chance": 12
+          },
+          {
+            "move": "emote",
+            "target": "self",
+            "chance": 10,
+            "msg": "%1$^C1 вдруг заливисто хохоч%1$nет|ут без всякой видимой причины."
+          }
+        ]
+      },
+      {
+        "hp": 60,
+        "enter": [
+          {
+            "move": "emote",
+            "target": "self",
+            "free": true,
+            "msg": "%1$^C1 хохоч%1$nет|ут, и слова в головах нападающих путаются."
+          },
+          {
+            "move": "cast",
+            "spell": "garble",
+            "target": "caster",
+            "unless": "garble"
+          }
+        ],
+        "moves": [
+          {
+            "move": "cast",
+            "spell": "garble",
+            "target": "caster",
+            "unless": "garble",
+            "chance": 50
+          },
+          {
+            "move": "cast",
+            "spell": "garble",
+            "unless": "garble",
+            "chance": 12
+          },
+          {
+            "move": "cast",
+            "spell": "confuse",
+            "unless": "confuse",
+            "chance": 12
+          },
+          {
+            "move": "cast",
+            "spell": "disgrace",
+            "unless": "disgrace",
+            "chance": 12
+          },
+          {
+            "move": "cast",
+            "spell": "colour spray",
+            "chance": 12
+          },
+          {
+            "move": "emote",
+            "target": "self",
+            "chance": 10,
+            "msg": "%1$^C1 вдруг заливисто хохоч%1$nет|ут без всякой видимой причины."
+          }
+        ]
+      },
+      {
+        "hp": 30,
+        "enter": [
+          {
+            "move": "castRoom",
+            "spell": "disperse",
+            "target": "room"
+          }
+        ]
+      }
+    ]
+  },
+  "clanguard_lion": {
+    "base": "clanguard",
+    "policy": [
+      "caster",
+      "healer"
+    ],
+    "spreadMoves": [
+      {
+        "move": "hit",
+        "target": "hostiles",
+        "noun": "claw",
+        "damtype": "slash",
+        "div": 8,
+        "sides": 10,
+        "msg": "%1$^C1 наотмашь полосу%1$nет|ют когтями всех вокруг!"
+      }
+    ],
+    "phases": [
+      {
+        "moves": [
+          {
+            "move": "cast",
+            "spell": "faerie fire",
+            "unless": "faerie fire",
+            "chance": 30
+          },
+          {
+            "move": "hit",
+            "noun": "claw",
+            "damtype": "slash",
+            "div": 4,
+            "sides": 10,
+            "damroll": true,
+            "chance": 30,
+            "free": true
+          },
+          {
+            "move": "cast",
+            "spell": "acid arrow",
+            "chance": 8
+          },
+          {
+            "move": "cast",
+            "spell": "caustic font",
+            "chance": 8
+          }
+        ]
+      },
+      {
+        "hp": 60,
+        "enter": [
+          {
+            "move": "summon",
+            "vnum": 28,
+            "tier": 6,
+            "target": "self",
+            "text": "%1$^C1 коротко рыч%1$nит|ат, и из-за колонн бесшумно выходит %2$C1."
+          }
+        ]
+      },
+      {
+        "hp": 30,
+        "enter": [
+          {
+            "move": "prone",
+            "target": "hostiles",
+            "resist": 30,
+            "fall": 90,
+            "stun": 3,
+            "msg": "%1$^C1 запрокидыва%1$nет|ют голову и изда%1$nет|ют оглушительный {1{YРЫК ПРАЙДА{2!",
+            "text": "Рык Прайда оглушает тебя, в глазах темнеет.",
+            "resistText": "Рык бьет по ушам, но ты удерживаешься на ногах."
+          }
+        ]
+      }
+    ]
+  },
+  "clanguard_ghost": {
+    "base": "clanguard",
+    "phases": [
+      {
+        "moves": [
+          {
+            "move": "cast",
+            "spell": "lightning breath",
+            "chance": 15
+          },
+          {
+            "move": "necro",
+            "chance": 35
+          }
+        ]
+      },
+      {
+        "hp": 60,
+        "enter": [
+          {
+            "move": "cast",
+            "spell": "fear",
+            "target": "strongest"
+          }
+        ]
+      },
+      {
+        "hp": 30,
+        "enter": [
+          {
+            "move": "emote",
+            "target": "self",
+            "free": true,
+            "msg": "Глаза %1$C2 вспыхивают мертвенным светом: время собирать души."
+          }
+        ],
+        "moves": [
+          {
+            "move": "cast",
+            "spell": "power word kill",
+            "hpBelow": 15,
+            "key": "pwk",
+            "cd": 30
+          },
+          {
+            "move": "cast",
+            "spell": "hand of undead",
+            "chance": 20
+          },
+          {
+            "move": "cast",
+            "spell": "chill touch",
+            "chance": 20
+          },
+          {
+            "move": "cast",
+            "spell": "lightning breath",
+            "chance": 15
+          },
+          {
+            "move": "necro",
+            "chance": 35
+          }
+        ]
+      }
+    ]
+  },
+  "clanguard_artificer": {
+    "base": "clanguard",
+    "policy": [
+      "caster"
+    ],
+    "prep": [
+      {
+        "move": "cast",
+        "spell": "haste",
+        "target": "self",
+        "unless": "haste"
+      }
+    ],
+    "spreadMoves": [
+      {
+        "move": "hit",
+        "target": "hostiles",
+        "noun": "blasting",
+        "damtype": "pierce",
+        "div": 4,
+        "sides": 6,
+        "msg": "Из клапанов %1$C2 со свистом летит раскаленная {1{Yшрапнель{2!"
+      }
+    ],
+    "phases": [
+      {
+        "moves": [
+          {
+            "move": "fire",
+            "power": 5,
+            "every": 3,
+            "free": true,
+            "msg": "%1$^C1 стравлива%1$nет|ют пар из котла прямо в лицо %2$C3!"
+          }
+        ]
+      },
+      {
+        "hp": 60,
+        "enter": [
+          {
+            "move": "emote",
+            "target": "self",
+            "free": true,
+            "msg": "Из рупора %1$C2 доносится: \"А? Что? Тревога! Полный пар!\""
+          }
+        ],
+        "moves": [
+          {
+            "move": "fire",
+            "power": 5,
+            "every": 2,
+            "free": true,
+            "msg": "%1$^C1 стравлива%1$nет|ют пар из котла прямо в лицо %2$C3!"
+          }
+        ]
+      },
+      {
+        "hp": 30,
+        "enter": [
+          {
+            "move": "heal",
+            "target": "self",
+            "pct": 15,
+            "msg": "%1$^C1 с лязгом заваривает пробоину в корпусе!"
+          },
+          {
+            "move": "summon",
+            "vnum": 35,
+            "tier": 6,
+            "target": "self",
+            "text": "%2$^C1 выкатывается из люка %1$C2."
+          }
+        ]
+      }
+    ]
+  },
+  "clanguard_flowers": {
+    "base": "clanguard",
+    "policy": [
+      "random"
+    ],
+    "pacifist": true,
+    "phases": [
+      {
+        "enter": [
+          {
+            "move": "say",
+            "target": "self",
+            "text": "Пис, бро. Давай без этого."
+          },
+          {
+            "move": "castRoom",
+            "spell": "calm",
+            "target": "room"
+          }
+        ],
+        "moves": [
+          {
+            "move": "cast",
+            "spell": "sleep",
+            "unless": "sleep",
+            "chance": 50
+          }
+        ]
+      },
+      {
+        "hp": 60,
+        "enter": [
+          {
+            "move": "say",
+            "target": "self",
+            "text": "Бро, тебе пора прогуляться."
+          }
+        ],
+        "moves": [
+          {
+            "move": "cast",
+            "spell": "teleport",
+            "chance": 50
+          }
+        ]
+      },
+      {
+        "hp": 30,
+        "enter": [
+          {
+            "move": "say",
+            "target": "self",
+            "text": "Все, ребята, идите с миром."
+          },
+          {
+            "move": "castRoom",
+            "spell": "calm",
+            "target": "room"
+          }
+        ],
+        "moves": [
+          {
+            "move": "cast",
+            "spell": "teleport"
+          }
+        ]
+      }
+    ]
+  }
+}

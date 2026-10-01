@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill type="ClanSkill">
+  <affect type="DefaultAffectHandler">
+  </affect>
+  <beats>12</beats>
+  <clans>
+    <node name="battlerager">
+      <level>30</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+      <catalog>war-drums</catalog>
+    </node>
+  </clans>
+  <command type="DefaultSkillCommand">
+    <argtype>char_self</argtype>
+    <cat>clan</cat>
+    <hint l="en">(battleragers) beat the war drums: your group fights harder</hint>
+    <hint l="ru">(клан ярости) бить в боевые барабаны: твоя группа бьется злее</hint>
+    <hint l="ua">(клан ярості) бити в бойові барабани: твоя група бʼється лютіше</hint>
+    <name l="en">drums</name>
+    <name l="ru">барабаны</name>
+    <name l="ua">барабани</name>
+    <order>player_only</order>
+    <position>fight</position>
+  </command>
+  <dammsg mg="m"></dammsg>
+  <group registry="skillGroup">clan</group>
+  <hard>2</hard>
+  <help id="5131" level="-1" type="SkillHelp">
+    <text l="en">%FMT% *%CMD%*
+
+In the thick of a fight a {hh1471Battlerager{x beats the war drums. For about an hour everyone in your {hh1378group{x who stands in the room with you fights with more {hh47accuracy and damage{x, and the higher your level, the bigger the bonus. Caster mobs fighting your group that are well below your level hear the drums, lose their nerve and run.
+
+The drums only beat in battle. After a beat you need a few hours before the next one, and whoever is still under the drums can't beat them again until the roar dies down.
+
+{CCLAN CATALOG{x This ability is unlocked once for the whole clan: until the leader buys =war-drums= in the {hh2245clan catalog{x, no member can use it. Whatever you have already learned is kept and comes back with the purchase.
+</text>
+    <text l="ru">%FMT% *%CMD%*
+
+В самой гуще боя воин {hh1471Клана Ярости{x бьет в боевые барабаны. Примерно на час каждый из твоей {hh1378группы{x, кто стоит с тобой в комнате, бьется с большей {hh47точностью и уроном{x, и чем выше твой уровень, тем больше прибавка. Колдующие мобы, что дерутся с твоей группой и сильно уступают тебе в уровне, слышат барабаны, теряют голову и бегут.
+
+Барабаны бьют только в бою. После удара нужно несколько часов до следующего, а тот, в чьей крови еще гремят барабаны, не может бить в них сам, пока гул не затихнет.
+
+{CКАТАЛОГ КЛАНА{x Это умение клан открывает один раз для всех: пока лидер не купит =war-drums= в {hh2245каталоге клана{x, никто в клане не может им пользоваться. Выученное тобой не пропадает и вернется с покупкой.
+</text>
+    <text l="ua">%FMT% *%CMD%*
+
+У самій гущі бою воїн {hh1471Клану Ярості{x бʼє в бойові барабани. Десь на годину кожен із твоєї {hh1378групи{x, хто стоїть з тобою в кімнаті, бʼється з більшою {hh47точністю і шкодою{x, і що вищий твій рівень, то більша надбавка. Моби-чаклуни, що бʼються з твоєю групою і сильно поступаються тобі рівнем, чують барабани, втрачають голову й тікають.
+
+Барабани бʼють лише в бою. Після удару треба кілька годин до наступного, а той, у чиїй крові ще гримлять барабани, не може бити в них сам, доки гул не затихне.
+
+{CКАТАЛОГ КЛАНУ{x Це вміння клан відкриває один раз для всіх: поки лідер не купить =war-drums= у {hh2245каталозі клану{x, ніхто в клані не може ним користуватися. Вивчене тобою не зникає і повернеться з покупкою.
+</text>
+  </help>
+  <name l="en">war drums</name>
+  <name l="ru">боевые барабаны</name>
+  <name l="ua">бойові барабани</name>
+  <webColumn>cln</webColumn>
+  <webLabel l="en">Drums</webLabel>
+  <webLabel l="ru">Барабаны</webLabel>
+  <webLabel l="ua">Барабани</webLabel>
+</skill>

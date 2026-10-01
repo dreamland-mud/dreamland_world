@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill type="ClanSkill">
+  <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
+    <removeCharOthers>Ярость в глазах %1$C2 угасает.</removeCharOthers>
+    <removeCharSelf>Гимн ярости затихает в твоей крови.</removeCharSelf>
+  </affect>
+  <beats>24</beats>
+  <clans>
+    <node name="battlerager">
+      <level>25</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+      <rankCap>false</rankCap>
+      <archetypes>divine</archetypes>
+    </node>
+  </clans>
+  <dammsg mg="m"></dammsg>
+  <group registry="skillGroup">clan</group>
+  <hard>2</hard>
+  <help id="5128" level="-1" type="SkillHelp">
+    <text l="en">%FMT% *%SPELL%*
+
+The battle hymn of the {hh10Fury{x gods, sung by {hh133clerics{x and {hh141paladins{x of the {hh1471Battleragers{x. It raises {hh47accuracy and damage{x and the {hh2035saving throws{x of everyone in the {hh1378group{x.
+
+The hymn is the one prayer the {hh914aura of rage{x never bounces: every Battlerager accepts it, zealots of the highest ranks included.
+
+Only Battleragers whose power comes from the gods can learn it.
+</text>
+    <text l="ru">%FMT% *%SPELL%*
+
+Боевой гимн богов {hh10Ярости{x, который поют {hh133клирики{x и {hh141паладины{x {hh1471Клана Ярости{x. Он повышает {hh47точность и урон{x и {hh2035спасброски{x у всех в {hh1378группе{x.
+
+Это единственная молитва, которую {hh914аура ярости{x никогда не отражает: гимн принимает любой член клана, даже фанатики старших рангов.
+
+Выучить его могут только члены клана, чья сила от богов.
+</text>
+    <text l="ua">%FMT% *%SPELL%*
+
+Бойовий гімн богів {hh10Люті{x, який співають {hh133клірики{x і {hh141паладини{x {hh1471Клану Ярості{x. Він підвищує {hh47точність і шкоду{x та {hh2035рятівні кидки{x у всіх у {hh1378групі{x.
+
+Це єдина молитва, яку {hh914аура ярості{x ніколи не відбиває: гімн приймає будь-який член клану, навіть фанатики старших рангів.
+
+Вивчити його можуть лише члени клану, чия сила від богів.
+</text>
+  </help>
+  <mana>80</mana>
+  <name l="en">hymn of rage</name>
+  <name l="ru">гимн ярости</name>
+  <name l="ua">гімн ярості</name>
+  <spell type="DefaultSpell">
+    <damtype>none</damtype>
+    <flags>prayer</flags>
+    <position>fight</position>
+    <target>people</target>
+    <type>defensive</type>
+  </spell>
+  <webColumn>cln</webColumn>
+  <webLabel l="en">Hymn</webLabel>
+  <webLabel l="ru">Гимн</webLabel>
+  <webLabel l="ua">Гімн</webLabel>
+</skill>

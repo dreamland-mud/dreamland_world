@@ -218,6 +218,12 @@
       {
         "moves": [
           {
+            "move": "cast",
+            "spell": "dispel affects",
+            "needsDispel": true,
+            "chance": 30
+          },
+          {
             "move": "skill",
             "skill": "disarm",
             "wielding": true,
@@ -387,6 +393,34 @@
     "policy": [
       "random"
     ],
+    "prep": [
+      {
+        "move": "castAny",
+        "target": "self",
+        "max": 2,
+        "spells": [
+          "stardust",
+          "protective shield",
+          "dragon skin",
+          "giant strength",
+          "shield",
+          "stone skin"
+        ]
+      },
+      {
+        "move": "castAny",
+        "target": "self",
+        "max": 2,
+        "spells": [
+          "stardust",
+          "protective shield",
+          "dragon skin",
+          "giant strength",
+          "shield",
+          "stone skin"
+        ]
+      }
+    ],
     "phases": [
       {
         "moves": [
@@ -493,6 +527,20 @@
     "policy": [
       "caster",
       "healer"
+    ],
+    "prep": [
+      {
+        "move": "cast",
+        "spell": "bark skin",
+        "target": "self",
+        "unless": "bark skin"
+      },
+      {
+        "move": "cast",
+        "spell": "seasonal aspect",
+        "target": "self",
+        "unless": "seasonal aspect"
+      }
     ],
     "spreadMoves": [
       {
@@ -640,9 +688,9 @@
     "prep": [
       {
         "move": "cast",
-        "spell": "haste",
+        "spell": "protective shield",
         "target": "self",
-        "unless": "haste"
+        "unless": "protective shield"
       }
     ],
     "spreadMoves": [
@@ -751,6 +799,10 @@
             "move": "cast",
             "spell": "teleport",
             "chance": 50
+          },
+          {
+            "move": "push",
+            "chance": 30
           }
         ]
       },
@@ -772,6 +824,9 @@
           {
             "move": "cast",
             "spell": "teleport"
+          },
+          {
+            "move": "push"
           }
         ]
       }

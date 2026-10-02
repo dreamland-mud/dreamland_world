@@ -836,6 +836,9 @@
   },
   "tier_elite": {
     "act": 85,
+    "blunder": 12,
+    "winded": 20,
+    "rage": false,
     "policy": [
       "weakest"
     ],
@@ -906,6 +909,9 @@
   },
   "tier_champion": {
     "act": 95,
+    "blunder": 8,
+    "winded": 20,
+    "rage": true,
     "policy": [
       "healer",
       "caster"
@@ -998,6 +1004,118 @@
   },
   "tier_boss": {
     "act": 100,
+    "blunder": 5,
+    "winded": 25,
+    "rage": true,
+    "policy": [
+      "healer",
+      "caster"
+    ],
+    "tools": 99,
+    "spells": 99,
+    "debuffMax": 3,
+    "healBelow": 50,
+    "helpBelow": 50,
+    "switchFocus": true,
+    "switchDamtype": true,
+    "priority": [
+      {
+        "move": "healSpell",
+        "target": "self",
+        "cd": 8
+      },
+      {
+        "move": "dispel",
+        "needsDispel": true,
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "disarm",
+        "after": "dirt",
+        "blind": true,
+        "wielding": true,
+        "fighting": true,
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "bash",
+        "after": "disarm",
+        "fighting": true,
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "trip",
+        "target": "random",
+        "after": "trip",
+        "standing": true
+      },
+      {
+        "move": "tool",
+        "skill": "bash",
+        "target": "random",
+        "after": "bash",
+        "standing": true
+      },
+      {
+        "move": "tool",
+        "skill": "dirt",
+        "when": "caster",
+        "notBlind": true,
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "dirt",
+        "needs": "disarm",
+        "wielding": true,
+        "notBlind": true,
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "disarm",
+        "blind": true,
+        "wielding": true,
+        "fighting": true,
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "bash",
+        "target": "caster",
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "trip",
+        "target": "caster",
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "crush",
+        "target": "caster",
+        "cd": 8
+      },
+      {
+        "move": "debuff"
+      },
+      {
+        "move": "nuke"
+      },
+      {
+        "move": "anyTool"
+      }
+    ]
+  },
+  "tier_legend": {
+    "act": 100,
+    "blunder": 3,
+    "winded": 25,
+    "rage": true,
     "policy": [
       "healer",
       "caster"

@@ -1,0 +1,324 @@
+{
+ "_doc": "One item value model, shared by the gear advisor (service advice, characterwrapper.cpp ga_*), the random item generator and Fenia's item measure (.config(\"fight/item_value\")). Units are gear-score points. melee/caster: per-profile weight per point of an apply (level/slevel/skill_level_* per +1, beats per -1% skill lag). shared: profile-independent weights; ac weight is ac_base at level 1 falling to 0 at ac_zero_level. flags: [melee, caster] per affect flag (a flag the char can self-cast counts 10%). res: [res, imm, vuln] per damage class (resists do not stack). measure: one roll of the item measure (M) and the slot factors (rolls = level / factor), tier budgets in M. A missing key falls back to the compiled default. docs/plans/armor-generator.md.",
+ "melee": {
+  "hp": 1.0,
+  "mana": 0.1,
+  "mana_gain": 0.05,
+  "heal_gain": 0.3,
+  "damroll": 12.0,
+  "hitroll": 6.0,
+  "saves": 3.0,
+  "weapon_weight": 12.0,
+  "str": 3.0,
+  "int": 1.0,
+  "wis": 1.0,
+  "dex": 2.0,
+  "con": 3.0,
+  "cha": 0.0,
+  "slevel": 4.0,
+  "level": 107.0,
+  "skill_level_group": 8.0,
+  "skill_level_skill": 4.0,
+  "beats": 1.0
+ },
+ "caster": {
+  "hp": 1.0,
+  "mana": 0.5,
+  "mana_gain": 0.6,
+  "heal_gain": 0.15,
+  "damroll": 6.0,
+  "hitroll": 2.0,
+  "saves": 5.0,
+  "weapon_weight": 4.0,
+  "str": 1.0,
+  "int": 2.0,
+  "wis": 3.0,
+  "dex": 1.0,
+  "con": 3.0,
+  "cha": 0.0,
+  "slevel": 25.0,
+  "level": 127.0,
+  "skill_level_group": 18.0,
+  "skill_level_skill": 9.0,
+  "beats": 6.0
+ },
+ "shared": {
+  "ac_base": 0.5,
+  "ac_zero_level": 40.0,
+  "move": 0.05,
+  "learn_skill": 2.0,
+  "learn_group": 3.0,
+  "learn_all": 4.0
+ },
+ "flags": {
+  "sanctuary": [
+   300.0,
+   300.0
+  ],
+  "haste": [
+   110.0,
+   40.0
+  ],
+  "slow": [
+   -55.0,
+   -10.0
+  ],
+  "protect_evil": [
+   60.0,
+   60.0
+  ],
+  "protect_good": [
+   60.0,
+   60.0
+  ],
+  "regeneration": [
+   30.0,
+   15.0
+  ],
+  "flying": [
+   15.0,
+   15.0
+  ],
+  "pass_door": [
+   15.0,
+   15.0
+  ],
+  "invisible": [
+   15.0,
+   15.0
+  ],
+  "imp_invis": [
+   100.0,
+   100.0
+  ],
+  "camouflage": [
+   100.0,
+   100.0
+  ],
+  "fade": [
+   100.0,
+   100.0
+  ],
+  "sneak": [
+   12.0,
+   8.0
+  ],
+  "hide": [
+   6.0,
+   6.0
+  ],
+  "infrared": [
+   8.0,
+   8.0
+  ],
+  "swim": [
+   4.0,
+   4.0
+  ],
+  "stun": [
+   -100.0,
+   -100.0
+  ],
+  "weak_stun": [
+   -40.0,
+   -40.0
+  ],
+  "blind": [
+   -200.0,
+   -200.0
+  ],
+  "sleep": [
+   -250.0,
+   -250.0
+  ],
+  "charm": [
+   -250.0,
+   -250.0
+  ],
+  "curse": [
+   -35.0,
+   -35.0
+  ],
+  "corruption": [
+   -50.0,
+   -50.0
+  ],
+  "poison": [
+   -45.0,
+   -45.0
+  ],
+  "plague": [
+   -60.0,
+   -60.0
+  ],
+  "calm": [
+   -25.0,
+   -5.0
+  ],
+  "weaken": [
+   -10.0,
+   -10.0
+  ],
+  "faerie_fire": [
+   -15.0,
+   -15.0
+  ]
+ },
+ "res": {
+  "weapon": [
+   140.0,
+   420.0,
+   -210.0
+  ],
+  "spell": [
+   50.0,
+   150.0,
+   -75.0
+  ],
+  "bash": [
+   72.0,
+   216.0,
+   -108.0
+  ],
+  "pierce": [
+   34.0,
+   103.0,
+   -52.0
+  ],
+  "slash": [
+   33.0,
+   100.0,
+   -50.0
+  ],
+  "fire": [
+   23.0,
+   70.0,
+   -35.0
+  ],
+  "energy": [
+   17.0,
+   50.0,
+   -25.0
+  ],
+  "negative": [
+   17.0,
+   50.0,
+   -25.0
+  ],
+  "lightning": [
+   13.0,
+   40.0,
+   -20.0
+  ],
+  "acid": [
+   13.0,
+   40.0,
+   -20.0
+  ],
+  "holy": [
+   13.0,
+   40.0,
+   -20.0
+  ],
+  "cold": [
+   13.0,
+   40.0,
+   -20.0
+  ],
+  "poison": [
+   13.0,
+   40.0,
+   -20.0
+  ],
+  "charm": [
+   10.0,
+   30.0,
+   -20.0
+  ],
+  "mental": [
+   17.0,
+   50.0,
+   -25.0
+  ],
+  "disease": [
+   10.0,
+   30.0,
+   -20.0
+  ],
+  "drowning": [
+   10.0,
+   30.0,
+   -20.0
+  ],
+  "light": [
+   10.0,
+   30.0,
+   -20.0
+  ],
+  "sound": [
+   10.0,
+   30.0,
+   -20.0
+  ],
+  "summon": [
+   10.0,
+   30.0,
+   -20.0
+  ],
+  "iron": [
+   10.0,
+   30.0,
+   -20.0
+  ],
+  "wood": [
+   10.0,
+   30.0,
+   -20.0
+  ],
+  "silver": [
+   10.0,
+   30.0,
+   -20.0
+  ],
+  "mithril": [
+   10.0,
+   30.0,
+   -20.0
+  ]
+ },
+ "measure": {
+  "_doc": "Read by Fenia .tmp.craft.getMeasure. One roll = +1 damroll, +1 hitroll, +10 hp, +10 mana. rolls = level / factor; jeweler crafts use jeweler_factor. tier_budget is in M (one measure), reference level ref_level.",
+  "roll": {
+   "damroll": 1,
+   "hitroll": 1,
+   "hp": 10,
+   "mana": 10
+  },
+  "default_factor": 11,
+  "slot_factor": {
+   "shield": 8,
+   "head": 10,
+   "body": 10,
+   "waist": 10,
+   "light": 12,
+   "float": 12,
+   "ears": 12,
+   "neck": 12,
+   "finger": 12,
+   "wrist": 12
+  },
+  "jeweler_factor": {
+   "finger": 8,
+   "ears": 8,
+   "neck": 7
+  },
+  "ref_level": 60,
+  "tier_budget": {
+   "common": 0.5,
+   "uncommon": 1.0,
+   "rare": 1.5,
+   "epic": 2.5,
+   "legendary": 4.5
+  }
+ }
+}

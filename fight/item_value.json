@@ -314,13 +314,133 @@
   },
   "ref_level": 60,
   "craft_budget_cm": [160, 120, 80, 50, 30],
- "enchant_budget_cm": [150, 250],
- "tier_budget": {
+  "enchant_budget_cm": [150, 250],
+  "tier_budget": {
    "common": 0.5,
    "uncommon": 1.0,
    "rare": 1.5,
    "epic": 2.5,
    "legendary": 4.5
+  },
+  "level_curve": {
+   "1": 1.5,
+   "20": 1.5,
+   "40": 1.2,
+   "60": 1.0,
+   "90": 0.9
   }
+ },
+ "detects": {
+  "_doc": "Points per detect affix [melee, caster] (decision 11). From the generator's senses prices. A detect the char can cast itself counts 10% (sage fit).",
+  "evil": [
+   5.4,
+   5.1
+  ],
+  "good": [
+   5.4,
+   5.1
+  ],
+  "magic": [
+   5.4,
+   5.1
+  ],
+  "life": [
+   5.4,
+   5.1
+  ],
+  "undead": [
+   5.4,
+   5.1
+  ],
+  "infrared": [
+   7.5,
+   7.6
+  ],
+  "hidden": [
+   15.0,
+   15.2
+  ],
+  "invis": [
+   15.0,
+   15.2
+  ],
+  "acute_vision": [
+   20.3,
+   20.3
+  ],
+  "pack_vis": [
+   30.0,
+   30.5
+  ]
+ },
+ "materials": {
+  "_doc": "Points per item material [melee, caster] (decision 12): durability today. Weapon materials still carry their combat side here until the combat-effect model (P3) prices it from the mob census.",
+  "dragonskin": [
+   35.3,
+   35.6
+  ],
+  "mithril": [
+   6.4,
+   6.4
+  ],
+  "adamantite": [
+   6.4,
+   6.4
+  ],
+  "snakeskin": [
+   3.2,
+   2.5
+  ],
+  "platinum": [
+   48.1,
+   57.1
+  ],
+  "titanium": [
+   23.5,
+   27.9
+  ],
+  "wood": [
+   -23.5,
+   -27.9
+  ],
+  "ice": [
+   -169.1,
+   -200.7
+  ]
+ },
+ "extras": {
+  "_doc": "Points per extra flag [melee, caster]: noremove, anti_good, bless... From the generator's extra prices (Kit 2026-10-03).",
+  "anti_good": [
+   -9.6,
+   -10.2
+  ],
+  "anti_evil": [
+   -9.6,
+   -10.2
+  ],
+  "hum": [
+   2.1,
+   2.5
+  ],
+  "evil": [
+   -5.4,
+   -5.1
+  ],
+  "noremove": [
+   -6.4,
+   -6.4
+  ],
+  "bless": [
+   2.1,
+   2.5
+  ],
+  "burn_proof": [
+   3.2,
+   2.5
+  ],
+  "nouncurse": [
+   -11.8,
+   -11.4
+  ]
  }
 }

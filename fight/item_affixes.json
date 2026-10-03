@@ -123,7 +123,8 @@
     "price_caster": -8,
     "unit": -1
    }
-  ]
+  ],
+  "items": "both"
  },
  "affects_by_level": {
   "values": [
@@ -324,7 +325,8 @@
      "майстерності"
     ]
    }
-  ]
+  ],
+  "items": "both"
  },
  "affect_packs": {
   "values": [
@@ -477,7 +479,8 @@
      "святенницький"
     ]
    }
-  ]
+  ],
+  "items": "both"
  },
  "skill_group": {
   "tier": 3,
@@ -727,7 +730,8 @@
      "провидця"
     ]
    }
-  ]
+  ],
+  "items": "both"
  },
  "player": {
   "needs_player": true,
@@ -768,7 +772,8 @@
      "вправності"
     ]
    }
-  ]
+  ],
+  "items": "both"
  },
  "extra": {
   "values": [
@@ -900,7 +905,8 @@
     "price_melee": -11,
     "price_caster": -9
    }
-  ]
+  ],
+  "items": "both"
  },
  "material": {
   "values": [
@@ -962,7 +968,8 @@
      "лускатий"
     ]
    }
-  ]
+  ],
+  "items": "armor"
  },
  "resists": {
   "tier": 4,
@@ -1233,7 +1240,8 @@
      "непрорубний"
     ]
    }
-  ]
+  ],
+  "items": "armor"
  },
  "vulns": {
   "values": [
@@ -1292,7 +1300,8 @@
     "price_melee": -14,
     "price_caster": -12
    }
-  ]
+  ],
+  "items": "armor"
  },
  "immunes": {
   "tier": 1,
@@ -1382,7 +1391,8 @@
      "незламного розуму"
     ]
    }
-  ]
+  ],
+  "items": "armor"
  },
  "senses": {
   "slots": {
@@ -1550,7 +1560,8 @@
      "invis"
     ]
    }
-  ]
+  ],
+  "items": "armor"
  },
  "affects_with_bits": {
   "values": [
@@ -1769,7 +1780,8 @@
      "вигнанця"
     ]
    }
-  ]
+  ],
+  "items": "both"
  },
  "worn_buff": {
   "conflictsWith": "same_section",
@@ -2142,7 +2154,8 @@
      "вітру"
     ]
    }
-  ]
+  ],
+  "items": "armor"
  },
  "proc": {
   "conflictsWith": "same_section",
@@ -2366,7 +2379,8 @@
      "чудотворний"
     ]
    }
-  ]
+  ],
+  "items": "armor"
  },
  "signature": {
   "tier": 1,
@@ -2379,7 +2393,8 @@
     "value": "boss_proc"
    }
   ],
-  "_doc": "Price comes from the matching resists/proc entry at roll time (boss damtype, boss spell)."
+  "_doc": "Price comes from the matching resists/proc entry at roll time (boss damtype, boss spell).",
+  "items": "armor"
  },
  "primary_stats": {
   "values": [
@@ -2479,6 +2494,407 @@
      "чарівності"
     ]
    }
+  ],
+  "items": "both"
+ },
+ "flag": {
+  "items": "weapon",
+  "conflictsWith": "none",
+  "values": [
+   {
+    "value": "vorpal",
+    "price_by_level": {
+     "20": 50,
+     "40": 140,
+     "60": 260,
+     "90": 470
+    },
+    "min_tier": 3,
+    "extra": "noenchant",
+    "align": [
+     -349,
+     1000
+    ],
+    "align_bonus": "good",
+    "adjectives": [
+     "смертельн(ое,ый,ая2,ые)",
+     "стрижающ(ее,ий1,ая1,ие)",
+     "ворпальн(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "deadly",
+     "severing",
+     "vorpal"
+    ],
+    "adjectives_ua": [
+     "смертоносний",
+     "зрізаючий",
+     "ворпальний"
+    ]
+   },
+   {
+    "value": "fading",
+    "price_by_level": {
+     "20": 140,
+     "40": 320,
+     "60": 340,
+     "90": 290
+    },
+    "conflicts": [
+     "holy",
+     "anti_evil",
+     "protect_evil"
+    ],
+    "extra": "invis noenchant magic",
+    "align": [
+     -1000,
+     349
+    ],
+    "align_bonus": "evil",
+    "adjectives": [
+     "призрачн(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "ghostly"
+    ],
+    "adjectives_ua": [
+     "примарний"
+    ]
+   },
+   {
+    "value": "shocking",
+    "price_by_level": {
+     "20": 300,
+     "40": 100,
+     "60": 80,
+     "90": 75
+    },
+    "min_tier": 3,
+    "extra": "hum",
+    "adjectives": [
+     "искрист(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "sparkling"
+    ],
+    "adjectives_ua": [
+     "іскристий"
+    ]
+   },
+   {
+    "value": "holy",
+    "price_by_level": {
+     "20": 90,
+     "40": 70,
+     "60": 50,
+     "90": 40
+    },
+    "extra": "bless noenchant",
+    "align": [
+     349,
+     1000
+    ],
+    "align_bonus": "good",
+    "conflicts": [
+     "poison",
+     "vampiric"
+    ],
+    "adjectives": [
+     "священн(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "holy"
+    ],
+    "adjectives_ua": [
+     "священний"
+    ]
+   },
+   {
+    "value": "flaming",
+    "price_by_level": {
+     "20": 510,
+     "40": 220,
+     "60": 250,
+     "90": 260
+    },
+    "extra": "glow burn_proof",
+    "align_bonus": "good",
+    "conflicts": [
+     "frost",
+     "fading",
+     "wood",
+     "ice"
+    ],
+    "adjectives": [
+     "пылающ(ее,ий1,ая1,ие)"
+    ],
+    "adjectives_en": [
+     "flaming"
+    ],
+    "adjectives_ua": [
+     "палаючий"
+    ]
+   },
+   {
+    "value": "frost",
+    "price_by_level": {
+     "20": 140,
+     "40": 70,
+     "60": 70,
+     "90": 75
+    },
+    "extra": "",
+    "align_bonus": "evil",
+    "adjectives": [
+     "леденящ(ее,ий1,ая1,ие)",
+     "ледян(ое,ой,ая2,ые)",
+     "морозн(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "freezing",
+     "icy",
+     "frosty"
+    ],
+    "adjectives_ua": [
+     "крижаний",
+     "льодяний",
+     "морозний"
+    ]
+   },
+   {
+    "value": "poison",
+    "price_by_level": {
+     "20": 10,
+     "40": 10,
+     "60": 10,
+     "90": 10
+    },
+    "extra": "",
+    "align_bonus": "evil",
+    "adjectives": [
+     "пауч(ье,ий2,ья,ьи)",
+     "ядовит(ое,ый,ая2,ые)",
+     "змеин(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "spider",
+     "venomous",
+     "serpentine"
+    ],
+    "adjectives_ua": [
+     "павучий",
+     "отруйний",
+     "зміїний"
+    ]
+   },
+   {
+    "value": "sharp",
+    "price_by_level": {
+     "20": 110,
+     "40": 90,
+     "60": 70,
+     "90": 50
+    },
+    "extra": "noenchant",
+    "adjectives": [
+     "остр(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "sharp"
+    ],
+    "adjectives_ua": [
+     "гострий"
+    ]
+   },
+   {
+    "value": "vampiric",
+    "price_by_level": {
+     "20": 140,
+     "40": 230,
+     "60": 340,
+     "90": 570
+    },
+    "extra": "dark anti_good anti_neutral",
+    "conflicts": [
+     "anti_good"
+    ],
+    "align": [
+     -1000,
+     -350
+    ],
+    "align_bonus": "evil",
+    "adjectives": [
+     "вампирск(ое,ий3,ая2,ие)",
+     "кровососущ(ее,ий1,ая1,ие)"
+    ],
+    "adjectives_en": [
+     "vampiric",
+     "bloodsucking"
+    ],
+    "adjectives_ua": [
+     "вампірський",
+     "кровосисний"
+    ]
+   }
   ]
+ },
+ "weapon_material": {
+  "items": "weapon",
+  "conflictsWith": "same_section",
+  "values": [
+   {
+    "value": "platinum",
+    "price_melee": 45,
+    "price_caster": 45,
+    "adjectives": [
+     "платинов(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "platinum"
+    ],
+    "adjectives_ua": [
+     "платиновий"
+    ]
+   },
+   {
+    "value": "titanium",
+    "price_melee": 22,
+    "price_caster": 22,
+    "adjectives": [
+     "титанов(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "titanium"
+    ],
+    "adjectives_ua": [
+     "титановий"
+    ]
+   },
+   {
+    "value": "wood",
+    "price_melee": -22,
+    "price_caster": -22,
+    "adjectives": [
+     "деревянн(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "wooden"
+    ],
+    "adjectives_ua": [
+     "дерев'яний"
+    ]
+   },
+   {
+    "value": "ice",
+    "price_melee": -158,
+    "price_caster": -158,
+    "adjectives": [
+     "ледян(ое,ой,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "icy"
+    ],
+    "adjectives_ua": [
+     "льодяний"
+    ]
+   }
+  ]
+ },
+ "affects_by_tier": {
+  "items": "weapon",
+  "conflictsWith": "same_value",
+  "values": [
+   {
+    "value": "ave",
+    "dynamic_price": true,
+    "stack": 2,
+    "step": 0.5,
+    "align_bonus": "evil",
+    "extra": "hum noenchant",
+    "nouns": [
+     "боли"
+    ],
+    "nouns_en": [
+     "of pain"
+    ],
+    "nouns_ua": [
+     "болю"
+    ]
+   },
+   {
+    "value": "-ave",
+    "dynamic_price": true,
+    "stack": 2,
+    "step": -0.5
+   },
+   {
+    "value": "dr",
+    "dynamic_price": true,
+    "stack": 2,
+    "step": 0.5,
+    "align_bonus": "evil",
+    "nouns": [
+     "урона"
+    ],
+    "nouns_en": [
+     "of damage"
+    ],
+    "nouns_ua": [
+     "шкоди"
+    ]
+   },
+   {
+    "value": "-dr",
+    "dynamic_price": true,
+    "stack": 2,
+    "step": -0.5
+   },
+   {
+    "value": "hr",
+    "dynamic_price": true,
+    "stack": 3,
+    "step": 1,
+    "align_bonus": "good",
+    "nouns": [
+     "точности"
+    ],
+    "nouns_en": [
+     "of accuracy"
+    ],
+    "nouns_ua": [
+     "влучності"
+    ]
+   },
+   {
+    "value": "-hr",
+    "dynamic_price": true,
+    "stack": 3,
+    "step": -1
+   }
+  ]
+ },
+ "_weapons": {
+  "_doc": "Weapons on the M budget (docs/plans/weapons-on-m.md). use_m: WeaponGenerator rolls from this file instead of weapon_affixes.json. Two-handedness is decided before the affixes: weapon_classes requires/forbids, else two_hand_chance percent; a two-hander gets base ave/damroll and the tier M window x two_hand_k and one more affix. flag: price_by_level centi-M interpolated by item level (clamped to the end points), same for both archetypes; a flag is allowed on the cheapest tier whose max_m covers its price (and not below min_tier); dearer than the legendary window = never rolled. affects_by_tier: dynamic_price, priced at roll time from the calculator step at the item level.",
+  "use_m": false,
+  "two_hand_k": 1.75,
+  "two_hand_chance": 6,
+  "two_hands": {
+   "adjectives": [
+    "двуручн(ое,ый,ая2,ые)",
+    "больш(ое,ой,ая2,ие)",
+    "огромн(ое,ый,ая2,ые)"
+   ],
+   "adjectives_en": [
+    "two-handed",
+    "big",
+    "huge"
+   ],
+   "adjectives_ua": [
+    "дворучний",
+    "великий",
+    "величезний"
+   ],
+   "extra": "noenchant"
+  }
  }
 }

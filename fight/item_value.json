@@ -287,7 +287,7 @@
   ]
  },
  "measure": {
-  "_doc": "Read by Fenia .tmp.craft.getMeasure. One roll = +1 damroll, +1 hitroll, +10 hp, +10 mana. rolls = level / factor; jeweler crafts use jeweler_factor. tier_budget is in M (one measure), reference level ref_level.",
+  "_doc": "Read by Fenia .tmp.craft.getMeasure. One roll = +1 damroll, +1 hitroll, +10 hp, +10 mana. rolls = level / factor; jeweler crafts use jeweler_factor. tier_budget is in M (one measure), reference level ref_level. craft_budget_cm: crafted armor (craft/armor generateAffects) per craft tier 1..5 in centi-M (Fenia has no floats). enchant_budget_cm: enchant armor target [rare, epic with creativity or Enki].",
   "roll": {
    "damroll": 1,
    "hitroll": 1,
@@ -313,7 +313,9 @@
    "neck": 7
   },
   "ref_level": 60,
-  "tier_budget": {
+  "craft_budget_cm": [160, 120, 80, 50, 30],
+ "enchant_budget_cm": [150, 250],
+ "tier_budget": {
    "common": 0.5,
    "uncommon": 1.0,
    "rare": 1.5,

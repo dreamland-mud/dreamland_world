@@ -1,5 +1,5 @@
 {
- "_doc": "Shared random-item affix pool, armor side (generated from docs/plans drafts 2026-10-02). price_melee/price_caster = centi-M (100 = one item measure), the generator reads the killer's archetype column. items/slots/tier as in weapon_affixes.json; tier = best-tier floor (1 legendary only .. 4 uncommon+). Weapons keep weapon_affixes.json until they move to M. Stats with 'unit' scale in measure rolls (getMeasure: level / slot factor): value = unit * rolls. ac unit is an estimate (AC is weak, Kit).",
+ "_doc": "Shared random-item affix pool, armor side (generated from docs/plans drafts 2026-10-02). price_melee/price_caster = centi-M (100 = one item measure), the generator reads the killer's archetype column. items/slots/tier as in weapon_affixes.json; tier = best-tier floor (1 legendary only .. 4 uncommon+). Weapons keep weapon_affixes.json until they move to M. Stats with 'unit' scale in measure rolls (getMeasure: level / slot factor): value = unit * rolls. ac unit is an estimate (AC is weak, Kit). Tier caps for M-priced items: weapon_tiers max_affixes_m (distinct affixes, stacks count once) and max_negatives_m.",
  "armor_stats": {
   "conflictsWith": "same_value",
   "values": [
@@ -1539,6 +1539,10 @@
       "table": "detect_flags",
       "bits": "invis hidden"
      }
+    ],
+    "conflicts": [
+     "hidden",
+     "invis"
     ]
    }
   ]

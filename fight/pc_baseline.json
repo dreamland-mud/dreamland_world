@@ -1,0 +1,343 @@
+{
+ "_doc": "Reference player by level band (one item model decision 15): p50 of active mortals from live pfiles. dmg = wielded weapon ave + damroll (damage per landed hit), round = attacks x p_hit x dmg (the median round). Regenerate with scripts/pc-baseline.py; read by the item combat-effect model and ttk-model.",
+ "meta": {
+  "date": "2026-10-03",
+  "active_days": 180,
+  "pcs": 333,
+  "p_hit": 0.8,
+  "min_n": 5,
+  "attacks": {
+   "warrior": 3.0,
+   "samurai": 3.0,
+   "ninja": 2.5,
+   "thief": 2.5,
+   "ranger": 2.5,
+   "paladin": 2.5,
+   "anti-paladin": 2.5,
+   "vampire": 2.5,
+   "cleric": 1.5,
+   "druid": 1.5,
+   "warlock": 1.5,
+   "witch": 1.0,
+   "necromancer": 1.0
+  }
+ },
+ "bands": {
+  "10": {
+   "melee": {
+    "n": 28,
+    "armed": 22,
+    "hp": 200,
+    "hr": 16,
+    "dr": 5,
+    "ave": 9,
+    "dmg": 16,
+    "attacks": 2.5,
+    "round": 32,
+    "window": 5
+   },
+   "caster": {
+    "n": 11,
+    "armed": 10,
+    "hp": 141,
+    "hr": 19,
+    "dr": 7,
+    "ave": 6,
+    "dmg": 17,
+    "attacks": 1.0,
+    "round": 14,
+    "window": 5
+   },
+   "classes": {
+    "thief": {
+     "n": 5,
+     "armed": 5,
+     "hp": 178,
+     "hr": 19,
+     "dr": 5,
+     "ave": 7,
+     "dmg": 12,
+     "attacks": 2.5,
+     "round": 24
+    },
+    "warrior": {
+     "n": 11,
+     "armed": 8,
+     "hp": 200,
+     "hr": 6,
+     "dr": 4,
+     "ave": 8,
+     "dmg": 13,
+     "attacks": 3.0,
+     "round": 31
+    }
+   }
+  },
+  "20": {
+   "melee": {
+    "n": 7,
+    "armed": 5,
+    "hp": 392,
+    "hr": 23,
+    "dr": 21,
+    "ave": 14,
+    "dmg": 37,
+    "attacks": 2.5,
+    "round": 74,
+    "window": 5
+   },
+   "caster": {
+    "n": 6,
+    "armed": 4,
+    "hp": 356,
+    "hr": 19,
+    "dr": 16,
+    "ave": 13,
+    "dmg": 34,
+    "attacks": 1.25,
+    "round": 34,
+    "window": 5
+   },
+   "classes": {}
+  },
+  "30": {
+   "melee": {
+    "n": 8,
+    "armed": 7,
+    "hp": 656,
+    "hr": 30,
+    "dr": 26,
+    "ave": 18,
+    "dmg": 48,
+    "attacks": 2.5,
+    "round": 96,
+    "window": 5
+   },
+   "caster": {
+    "n": 5,
+    "armed": 4,
+    "hp": 398,
+    "hr": 30,
+    "dr": 20,
+    "ave": 16,
+    "dmg": 51,
+    "attacks": 1.5,
+    "round": 61,
+    "window": 5
+   },
+   "classes": {}
+  },
+  "40": {
+   "melee": {
+    "n": 5,
+    "armed": 4,
+    "hp": 978,
+    "hr": 49,
+    "dr": 41,
+    "ave": 29,
+    "dmg": 64,
+    "attacks": 2.5,
+    "round": 128,
+    "window": 5
+   },
+   "caster": {
+    "n": 3,
+    "armed": 2,
+    "hp": 945,
+    "hr": 28,
+    "dr": 30,
+    "ave": 32,
+    "dmg": 67,
+    "attacks": 1.5,
+    "round": 80,
+    "window": 10
+   },
+   "classes": {}
+  },
+  "50": {
+   "melee": {
+    "n": 10,
+    "armed": 10,
+    "hp": 1423,
+    "hr": 82,
+    "dr": 60,
+    "ave": 38,
+    "dmg": 98,
+    "attacks": 2.5,
+    "round": 196,
+    "window": 5
+   },
+   "caster": {
+    "n": 6,
+    "armed": 5,
+    "hp": 1188,
+    "hr": 53,
+    "dr": 55,
+    "ave": 40,
+    "dmg": 84,
+    "attacks": 1.5,
+    "round": 101,
+    "window": 10
+   },
+   "classes": {}
+  },
+  "60": {
+   "melee": {
+    "n": 5,
+    "armed": 5,
+    "hp": 1615,
+    "hr": 95,
+    "dr": 104,
+    "ave": 52,
+    "dmg": 156,
+    "attacks": 2.5,
+    "round": 312,
+    "window": 10
+   },
+   "caster": {
+    "n": 5,
+    "armed": 5,
+    "hp": 1317,
+    "hr": 58,
+    "dr": 71,
+    "ave": 40,
+    "dmg": 86,
+    "attacks": 1.5,
+    "round": 103,
+    "window": 10
+   },
+   "classes": {}
+  },
+  "70": {
+   "melee": {
+    "n": 7,
+    "armed": 6,
+    "hp": 1428,
+    "hr": 59,
+    "dr": 78,
+    "ave": 47,
+    "dmg": 156,
+    "attacks": 2.5,
+    "round": 312,
+    "window": 10
+   },
+   "caster": {
+    "n": 5,
+    "armed": 5,
+    "hp": 1362,
+    "hr": 58,
+    "dr": 55,
+    "ave": 56,
+    "dmg": 103,
+    "attacks": 1.0,
+    "round": 82,
+    "window": 10
+   },
+   "classes": {}
+  },
+  "80": {
+   "melee": {
+    "n": 5,
+    "armed": 4,
+    "hp": 1720,
+    "hr": 102,
+    "dr": 131,
+    "ave": 63,
+    "dmg": 195,
+    "attacks": 2.5,
+    "round": 390,
+    "window": 5
+   },
+   "caster": {
+    "n": 5,
+    "armed": 4,
+    "hp": 2130,
+    "hr": 107,
+    "dr": 97,
+    "ave": 60,
+    "dmg": 146,
+    "attacks": 1.0,
+    "round": 117,
+    "window": 10
+   },
+   "classes": {}
+  },
+  "90": {
+   "melee": {
+    "n": 20,
+    "armed": 13,
+    "hp": 2915,
+    "hr": 167,
+    "dr": 148,
+    "ave": 70,
+    "dmg": 234,
+    "attacks": 2.5,
+    "round": 468,
+    "window": 10
+   },
+   "caster": {
+    "n": 20,
+    "armed": 16,
+    "hp": 3538,
+    "hr": 170,
+    "dr": 150,
+    "ave": 62,
+    "dmg": 235,
+    "attacks": 1.5,
+    "round": 282,
+    "window": 10
+   },
+   "classes": {}
+  },
+  "100": {
+   "melee": {
+    "n": 15,
+    "armed": 10,
+    "hp": 3105,
+    "hr": 184,
+    "dr": 162,
+    "ave": 72,
+    "dmg": 241,
+    "attacks": 2.5,
+    "round": 482,
+    "window": 5
+   },
+   "caster": {
+    "n": 19,
+    "armed": 16,
+    "hp": 3668,
+    "hr": 170,
+    "dr": 150,
+    "ave": 62,
+    "dmg": 235,
+    "attacks": 1.5,
+    "round": 282,
+    "window": 5
+   },
+   "classes": {
+    "cleric": {
+     "n": 7,
+     "armed": 5,
+     "hp": 2864,
+     "hr": 170,
+     "dr": 76,
+     "ave": 60,
+     "dmg": 153,
+     "attacks": 1.5,
+     "round": 184
+    },
+    "witch": {
+     "n": 7,
+     "armed": 6,
+     "hp": 3668,
+     "hr": 145,
+     "dr": 150,
+     "ave": 62,
+     "dmg": 220,
+     "attacks": 1.0,
+     "round": 176
+    }
+   }
+  }
+ }
+}

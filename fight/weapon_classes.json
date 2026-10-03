@@ -1,8 +1,11 @@
 // Описывает ограничения и предпочтения по аффиксам и повреждениям для каждого класса сгенерированного оружия.
 // "nonmetal": materials to fall back to when the weapon is generated for a player who can never
 // wield metal (druids) and the chosen name has no 'mtypes' of its own in weapon_names.json.
+// "two_hand_chance": percent a weapon of this class rolls two-handed on the M budget (item_affixes.json
+// _weapons); "requires": ["two_hands"] makes it always two-handed. Classes with neither are never two-handed.
 {
     "sword": {
+            "two_hand_chance": 18,
             "attacks": "slice slash cleave chop bite pierce scratch peckb sting chomp thrust flbite flame acbite frbite shbite",
             "forbids": ["two_hands"]
     }, 
@@ -16,12 +19,14 @@
     },
 
     "spear": {
+            "two_hand_chance": 18,
             "attacks": "pound crush beating charge smash thwack bite pierce scratch peckb sting chomp thrust acbite frbite shbite",
             "forbids": ["vorpal", "two_hands"],
             "prefers": ["hr", "ac"]
     }, 
 
     "mace": {
+            "two_hand_chance": 18,
             "attacks": "pound crush beating charge smash thwack divine negative",
             "forbids": ["vorpal", "sharp", "poison", "flaming"],
             "prefers": ["shocking", "hr", "pack_hp"],
@@ -29,12 +34,14 @@
     },
 
     "axe": {
+            "two_hand_chance": 18,
             "attacks": "slice slash cleave chop wrath flbite acbite frbite shbite",
             "forbids": ["two_hands"],
             "prefers": ["vorpal", "sharp", "-hr", "dr"]
     }, 
 
     "flail": {
+            "two_hand_chance": 18,
             "attacks": "pound crush beating charge smash thwack flbite flame divine wrath",
             "forbids": ["vorpal", "sharp", "poison", "two_hands"],
             "prefers": ["shocking", "hr", "dr"]

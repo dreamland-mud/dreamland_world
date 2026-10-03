@@ -80,7 +80,8 @@
     "nouns_ua": [
      "влучності"
     ],
-    "unit": 1
+    "unit": 1,
+    "weapon_tier": 3
    },
    {
     "value": "damroll",
@@ -100,7 +101,8 @@
     "nouns_ua": [
      "шкоди"
     ],
-    "unit": 1
+    "unit": 1,
+    "weapon_tier": 3
    },
    {
     "value": "-hit",
@@ -2874,10 +2876,9 @@
   ]
  },
  "_weapons": {
-  "_doc": "Weapons on the M budget (docs/plans/weapons-on-m.md). use_m: WeaponGenerator rolls from this file instead of weapon_affixes.json. Two-handedness is decided before the affixes: weapon_classes requires/forbids, else two_hand_chance percent; a two-hander gets base ave/damroll and the tier M window x two_hand_k and one more affix. flag: price_by_level centi-M interpolated by item level (clamped to the end points), same for both archetypes; a flag is allowed on the cheapest tier whose max_m covers its price (and not below min_tier); dearer than the legendary window = never rolled. affects_by_tier: dynamic_price, priced at roll time from the calculator step at the item level.",
+  "_doc": "Weapons on the M budget (docs/plans/weapons-on-m.md). use_m: WeaponGenerator rolls from this file instead of weapon_affixes.json. Two-handedness is decided before the name and the affixes: weapon_classes requires two_hands = always, else the class two_hand_chance percent, else never; the name is then drawn among the two-handed names (or any not forbidding it) or the one-handed ones; a two-hander gets base ave/damroll and the tier M window x two_hand_k and one more affix. flag: price_by_level centi-M interpolated by item level (clamped to the end points), same for both archetypes; a flag is allowed on the cheapest tier whose max_m covers its price (and not below min_tier); dearer than the legendary window = never rolled. affects_by_tier: dynamic_price, priced at roll time from the calculator step at the item level. weapon_tier: a tier floor that applies to weapons only (damroll/hitroll stats: rare and up).",
   "use_m": false,
   "two_hand_k": 1.75,
-  "two_hand_chance": 6,
   "two_hands": {
    "adjectives": [
     "двуручн(ое,ый,ая2,ые)",

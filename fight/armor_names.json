@@ -84,6 +84,7 @@
   {
    "gender": "m",
    "heft": "light",
+   "coverage": 8,
    "name": "circlet обруч",
    "short": "обруч||а|у||ем|е",
    "short_en": "circlet",
@@ -105,6 +106,7 @@
   {
    "gender": "f",
    "heft": "light",
+   "coverage": 10,
    "name": "diadem диадема",
    "short": "диадем|а|ы|е|у|ой|е",
    "short_en": "diadem",
@@ -330,6 +332,7 @@
   {
    "gender": "p",
    "heft": "light",
+   "coverage": 10,
    "name": "epaulets эполеты",
    "short": "эполет|ы||ам|ы|ами|ах",
    "short_en": "epaulets",
@@ -707,6 +710,7 @@
   {
    "gender": "p",
    "heft": "light",
+   "coverage": 30,
    "name": "sandals сандалии",
    "short": "сандали|и|й|ям|и|ями|ях",
    "short_en": "sandals",
@@ -823,6 +827,7 @@
   {
    "gender": "m",
    "heft": "light",
+   "coverage": 20,
    "name": "buckler баклер",
    "short": "баклер||а|у||ом|е",
    "short_en": "buckler",
@@ -860,5 +865,5 @@
    "gender_ua": "f"
   }
  ],
- "_notes": "materials: first = default. platinum/dragonskin are indestructible -> epic+ only (pool `material` tier 2). A druid killer never rolls a metal; a noun with no non-metal material is skipped for druids."
+ "_notes": "materials: first = default. platinum/dragonskin are indestructible -> epic+ only (pool `material` tier 2). A druid killer never rolls a metal; a noun with no non-metal material is skipped for druids. heft (heavy/medium/light) and the optional coverage (percent of the slot's shell) go onto the item as properties and drive the weight helper .tmp.weight.calculateWeight: heavy covers 100, medium 65, light 40, cloth always 100."
 }

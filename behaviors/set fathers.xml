@@ -1,23 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <behavior type="SetBehavior">
-  <cmd></cmd>
-  <description l="en">{hh990Wear{x it to assemble the {hh5073fathers' heritage{x.</description>
-  <description l="ru">{hh990Надень{x, чтобы собрать {hh5073отцовское наследство{x.</description>
-  <description l="ua">{hh990Одягни{x, щоб зібрати {hh5073батьківську спадщину{x.</description>
-  <help id="5073" level="-1" type="BehaviorHelp">
-    <extra l="en">set fathers legacy pieces collection</extra>
-    <extra l="ru">набор отцовское наследство части комплект</extra>
-    <extra l="ua">набір батьківський спадок частини комплект</extra>
-    <text l="en">This item is part of the the fathers' legacy -- a matched set of 3 pieces. Collect and wear all 3 together to assemble the set; once complete it grants its bonus. Wear only some pieces and you gain nothing extra.</text>
-    <text l="ru">Эта вещь -- часть набора 'отцовское наследство' из 3 предметов. Собери и надень все 3 вместе, чтобы собрать набор; собранный целиком, он дает свой бонус. Наденешь лишь часть -- ничего сверх не получишь.</text>
-    <text l="ua">Ця річ -- частина набору 'батьківський спадок' із 3 предметів. Збери й надінь усі 3 разом, щоб зібрати набір; зібраний цілком, він дає свій бонус. Надінеш лише частину -- нічого понад не отримаєш.</text>
-  </help>
-  <id>66</id>
-  <nameEn>fathers' heritage</nameEn>
-  <nameRus>отцовское наследство</nameRus>
-  <nameUa>батьківська спадщина</nameUa>
-  <props>{&quot;double_neck&quot;:false,&quot;double_wrist&quot;:true,&quot;max_level&quot;:35,&quot;total_count&quot;:3}
-</props>
   <affects>
     <node>
       <apply to="hit">20</apply>
@@ -32,8 +14,26 @@
       <apply to="saves">-1</apply>
     </node>
   </affects>
+  <cmd></cmd>
+  <description l="en">{hh990Wear{x it to assemble the {hh5073fathers' heritage{x.</description>
+  <description l="ru">{hh990Надень{x, чтобы собрать {hh5073отцовское наследство{x.</description>
+  <description l="ua">{hh990Одягни{x, щоб зібрати {hh5073батьківську спадщину{x.</description>
+  <help id="5073" level="-1" type="BehaviorHelp">
+    <extra l="en">set fathers legacy pieces collection</extra>
+    <extra l="ru">набор отцовское наследство части комплект</extra>
+    <extra l="ua">набір батьківський спадок частини комплект</extra>
+    <text l="en">This item is part of the the fathers' legacy -- a matched set of 3 pieces. Collect and wear all 3 together to assemble the set; once complete it grants its bonus. Wear only some pieces and you gain nothing extra.</text>
+    <text l="ru">Эта вещь -- часть набора 'отцовское наследство' из 3 предметов. Собери и надень все 3 вместе, чтобы собрать набор; собранный целиком, он дает свой бонус. Наденешь лишь часть -- ничего сверх не получишь.</text>
+    <text l="ua">Ця річ -- частина набору 'батьківський спадок' із 3 предметів. Збери й надінь усі 3 разом, щоб зібрати набір; зібраний цілком, він дає свій бонус. Надінеш лише частину -- нічого понад не отримаєш.</text>
+  </help>
+  <id>66</id>
   <msgComplete l="en">{yFor a moment a warm feeling fills you -- as if a father stands at your shoulder, watching over you.{x</msgComplete>
   <msgComplete l="ru">{yТебя на мгновение охватывает теплое чувство -- словно отец стоит за плечом, оберегая тебя.{x</msgComplete>
   <msgComplete l="ua">{yНа мить тебе охоплює тепле почуття -- наче батько стоїть за плечем, оберігаючи тебе.{x</msgComplete>
+  <nameEn>fathers' heritage</nameEn>
+  <nameRus>отцовское наследство</nameRus>
+  <nameUa>батьківська спадщина</nameUa>
+  <props>{"double_neck":false,"double_wrist":true,"max_level":35,"total_count":3}
+</props>
   <target>obj</target>
 </behavior>

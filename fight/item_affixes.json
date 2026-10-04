@@ -1,0 +1,4153 @@
+{
+ "_doc": "Shared random-item affix pool, armor side (generated from docs/plans drafts 2026-10-02). price_melee/price_caster = centi-M (100 = one item measure), the generator reads the killer's archetype column. items/slots/tier as in weapon_affixes.json; tier = best-tier floor (1 legendary only .. 4 uncommon+). Weapons keep weapon_affixes.json until they move to M. Stats with 'unit' scale in measure rolls (getMeasure: level / slot factor): value = unit * rolls. ac unit is an estimate (AC is weak, Kit). Tier caps for M-priced items: weapon_tiers max_affixes_m (distinct affixes, stacks count once) and max_negatives_m.",
+ "armor_stats": {
+  "conflictsWith": "same_value",
+  "values": [
+   {
+    "value": "hit",
+    "stack": 3,
+    "slots": {
+     "body": 3,
+     "legs": 2
+    },
+    "price_melee": 47,
+    "price_caster": 39,
+    "nouns": [
+     "живучести"
+    ],
+    "nouns_en": [
+     "of vitality"
+    ],
+    "nouns_ua": [
+     "живучості"
+    ],
+    "unit": 10,
+    "pick": {
+     "all": {
+      "1": 1.5
+     }
+    }
+   },
+   {
+    "value": "mana",
+    "stack": 3,
+    "slots": {
+     "head": 3,
+     "arms": 2
+    },
+    "price_melee": 5,
+    "price_caster": 20,
+    "nouns": [
+     "духа"
+    ],
+    "nouns_en": [
+     "of the spirit"
+    ],
+    "nouns_ua": [
+     "духу"
+    ],
+    "unit": 10,
+    "pick": {
+     "caster": {
+      "1": 1.5
+     },
+     "melee": {
+      "1": 0.25
+     }
+    }
+   },
+   {
+    "value": "move",
+    "stack": 2,
+    "slots": {
+     "feet": 3,
+     "legs": 2
+    },
+    "price_melee": 5,
+    "price_caster": 4,
+    "nouns": [
+     "странника"
+    ],
+    "nouns_en": [
+     "of the wanderer"
+    ],
+    "nouns_ua": [
+     "мандрівника"
+    ],
+    "unit": 15,
+    "pick": {
+     "caster": {
+      "1": 0.25
+     },
+     "melee": {
+      "1": 1.5
+     },
+     "hybrid": {
+      "1": 1.5
+     }
+    }
+   },
+   {
+    "value": "hitroll",
+    "stack": 2,
+    "slots": {
+     "hands": 3
+    },
+    "price_melee": 28,
+    "price_caster": 8,
+    "nouns": [
+     "точности"
+    ],
+    "nouns_en": [
+     "of accuracy"
+    ],
+    "nouns_ua": [
+     "влучності"
+    ],
+    "unit": 1,
+    "weapon_tier": 3,
+    "pick": {
+     "caster": {
+      "20": 1,
+      "40": 0.25
+     }
+    }
+   },
+   {
+    "value": "damroll",
+    "stack": 2,
+    "slots": {
+     "hands": 3,
+     "arms": 2
+    },
+    "price_melee": 56,
+    "price_caster": 24,
+    "nouns": [
+     "урона"
+    ],
+    "nouns_en": [
+     "of damage"
+    ],
+    "nouns_ua": [
+     "шкоди"
+    ],
+    "unit": 1,
+    "weapon_tier": 3,
+    "pick": {
+     "caster": {
+      "20": 1,
+      "40": 0.25
+     }
+    }
+   },
+   {
+    "value": "-hit",
+    "stack": 2,
+    "price_melee": -28,
+    "price_caster": -24,
+    "unit": -6
+   },
+   {
+    "value": "-mana",
+    "stack": 2,
+    "price_melee": -3,
+    "price_caster": -12,
+    "unit": -6
+   },
+   {
+    "value": "-hitroll",
+    "stack": 2,
+    "price_melee": -28,
+    "price_caster": -8,
+    "unit": -1
+   },
+   {
+    "value": "-damroll",
+    "stack": 2,
+    "price_melee": -28,
+    "price_caster": -12,
+    "unit": -1,
+    "conflicts": [
+     "dr",
+     "-dr"
+    ]
+   },
+   {
+    "value": "-move",
+    "stack": 2,
+    "price_melee": -5,
+    "price_caster": -2,
+    "unit": -10
+   }
+  ],
+  "items": "both"
+ },
+ "affects_by_level": {
+  "values": [
+   {
+    "value": "saves",
+    "stack": 2,
+    "align_bonus": "good",
+    "extra": "bless",
+    "slots": {
+     "head": 2,
+     "arms": 2,
+     "shield": 2
+    },
+    "price_melee": 14,
+    "price_caster": 20,
+    "nouns": [
+     "охраны",
+     "спасения",
+     "оберега"
+    ],
+    "nouns_en": [
+     "of warding",
+     "of salvation",
+     "of the amulet"
+    ],
+    "nouns_ua": [
+     "охорони",
+     "порятунку",
+     "оберега"
+    ],
+    "unit": -1,
+    "pick": {
+     "all": {
+      "1": 1.5
+     }
+    }
+   },
+   {
+    "value": "-saves",
+    "stack": 2,
+    "price_melee": -14,
+    "price_caster": -20,
+    "unit": 1
+   },
+   {
+    "value": "saving_spell",
+    "stack": 2,
+    "slots": {
+     "head": 2
+    },
+    "price_melee": 14,
+    "price_caster": 20,
+    "adjectives": [
+     "заговоренн(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "warded"
+    ],
+    "adjectives_ua": [
+     "заговорений"
+    ],
+    "unit": -1,
+    "pick": {
+     "all": {
+      "1": 1.5
+     }
+    }
+   },
+   {
+    "value": "saving_breath",
+    "stack": 2,
+    "slots": {
+     "shield": 3,
+     "body": 2
+    },
+    "price_melee": 14,
+    "price_caster": 20,
+    "nouns": [
+     "драконоборца"
+    ],
+    "nouns_en": [
+     "of the dragonslayer"
+    ],
+    "nouns_ua": [
+     "драконоборця"
+    ],
+    "unit": -1,
+    "pick": {
+     "all": {
+      "1": 1.5
+     }
+    }
+   },
+   {
+    "value": "ac",
+    "stack": 3,
+    "align_bonus": "good",
+    "slots": {
+     "body": 3,
+     "shield": 3
+    },
+    "price_melee": 6,
+    "price_caster": 5,
+    "nouns": [
+     "брони"
+    ],
+    "nouns_en": [
+     "of armour"
+    ],
+    "nouns_ua": [
+     "броні"
+    ],
+    "unit": -10,
+    "pick": {
+     "melee": {
+      "40": 1,
+      "41": 0
+     },
+     "hybrid": {
+      "40": 1,
+      "41": 0
+     },
+     "caster": {
+      "1": 1.5
+     }
+    }
+   },
+   {
+    "value": "-ac",
+    "stack": 2,
+    "price_melee": -6,
+    "price_caster": -5,
+    "unit": 10,
+    "pick": {
+     "all": {
+      "40": 1,
+      "41": 0
+     }
+    }
+   },
+   {
+    "value": "heal_gain",
+    "stack": 2,
+    "mod": 25,
+    "slots": {
+     "body": 2,
+     "legs": 2
+    },
+    "price_melee": 7,
+    "price_caster": 3,
+    "nouns": [
+     "исцеления"
+    ],
+    "nouns_en": [
+     "of healing"
+    ],
+    "nouns_ua": [
+     "зцілення"
+    ],
+    "pick": {
+     "caster": {
+      "1": 1.5
+     }
+    }
+   },
+   {
+    "value": "mana_gain",
+    "stack": 2,
+    "mod": 25,
+    "slots": {
+     "head": 2
+    },
+    "price_melee": 1,
+    "price_caster": 12,
+    "nouns": [
+     "медитации"
+    ],
+    "nouns_en": [
+     "of meditation"
+    ],
+    "nouns_ua": [
+     "медитації"
+    ],
+    "pick": {
+     "caster": {
+      "1": 1.5
+     }
+    }
+   },
+   {
+    "value": "beats",
+    "mod": -1,
+    "tier": 2,
+    "slots": {
+     "hands": 3
+    },
+    "price_melee": 5,
+    "price_caster": 24,
+    "nouns": [
+     "проворства"
+    ],
+    "nouns_en": [
+     "of quickness"
+    ],
+    "nouns_ua": [
+     "моторності"
+    ],
+    "pick": {
+     "caster": {
+      "1": 1.5
+     }
+    }
+   },
+   {
+    "value": "slevel",
+    "mod": 1,
+    "extra": "magic",
+    "tier": 2,
+    "slots": {
+     "head": 3
+    },
+    "price_melee": 4,
+    "price_caster": 20,
+    "nouns": [
+     "колдовства"
+    ],
+    "nouns_en": [
+     "of sorcery"
+    ],
+    "nouns_ua": [
+     "чаклунства"
+    ],
+    "pick": {
+     "caster": {
+      "1": 1.5
+     }
+    }
+   },
+   {
+    "value": "level",
+    "mod": 1,
+    "tier": 1,
+    "price_melee": 100,
+    "price_caster": 100,
+    "nouns": [
+     "мастерства"
+    ],
+    "nouns_en": [
+     "of mastery"
+    ],
+    "nouns_ua": [
+     "майстерності"
+    ]
+   },
+   {
+    "value": "-heal_gain",
+    "stack": 2,
+    "mod": -25,
+    "price_melee": -10,
+    "price_caster": -5
+   },
+   {
+    "value": "-mana_gain",
+    "stack": 2,
+    "mod": -25,
+    "price_melee": -3,
+    "price_caster": -12
+   },
+   {
+    "value": "+beats",
+    "mod": 1,
+    "price_melee": -8,
+    "price_caster": -20
+   },
+   {
+    "value": "-slevel",
+    "mod": -1,
+    "price_melee": -3,
+    "price_caster": -20
+   }
+  ],
+  "items": "both"
+ },
+ "affect_packs": {
+  "values": [
+   {
+    "value": "pack_hp",
+    "stack": 3,
+    "align_bonus": "good",
+    "affects": [
+     {
+      "apply": "hit",
+      "mult": 0.5
+     },
+     {
+      "apply": "mana",
+      "mult": 1
+     }
+    ],
+    "price_melee": 55,
+    "price_caster": 72,
+    "nouns": [
+     "здоровья",
+     "жизни"
+    ],
+    "nouns_en": [
+     "of health",
+     "of life"
+    ],
+    "nouns_ua": [
+     "здоров'я",
+     "життя"
+    ]
+   },
+   {
+    "value": "pack_dex",
+    "stack": 2,
+    "affects": [
+     {
+      "apply": "dex",
+      "mod": 2
+     },
+     {
+      "apply": "str",
+      "mod": 2
+     }
+    ],
+    "price_melee": 10,
+    "price_caster": 4,
+    "nouns": [
+     "ловкача"
+    ],
+    "nouns_en": [
+     "of the trickster"
+    ],
+    "nouns_ua": [
+     "спритника"
+    ],
+    "pick": {
+     "caster": {
+      "1": 0
+     },
+     "all": {
+      "50": 1,
+      "51": 0
+     }
+    }
+   },
+   {
+    "value": "pack_newbie",
+    "stack": 2,
+    "affects": [
+     {
+      "apply": "wis",
+      "mod": 2
+     },
+     {
+      "apply": "con",
+      "mod": 2
+     }
+    ],
+    "price_melee": 8,
+    "price_caster": 10,
+    "nouns": [
+     "новичка"
+    ],
+    "nouns_en": [
+     "of the newbie"
+    ],
+    "nouns_ua": [
+     "новачка"
+    ],
+    "pick": {
+     "caster": {
+      "20": 1.5,
+      "21": 1,
+      "30": 1,
+      "31": 0
+     },
+     "melee": {
+      "30": 1,
+      "31": 0
+     },
+     "hybrid": {
+      "30": 1,
+      "31": 0
+     }
+    }
+   },
+   {
+    "value": "pack_sage",
+    "stack": 2,
+    "affects": [
+     {
+      "apply": "wis",
+      "mod": 2
+     },
+     {
+      "apply": "int",
+      "mod": 2
+     }
+    ],
+    "price_melee": 4,
+    "price_caster": 8,
+    "nouns": [
+     "мудреца"
+    ],
+    "nouns_en": [
+     "of the sage"
+    ],
+    "nouns_ua": [
+     "мудреця"
+    ],
+    "pick": {
+     "caster": {
+      "20": 1.5,
+      "21": 1,
+      "50": 1,
+      "51": 0
+     },
+     "melee": {
+      "30": 1,
+      "31": 0
+     },
+     "hybrid": {
+      "30": 1,
+      "31": 0
+     }
+    }
+   },
+   {
+    "value": "pack_gain",
+    "stack": 2,
+    "affects": [
+     {
+      "apply": "heal_gain",
+      "mod": 50
+     },
+     {
+      "apply": "mana_gain",
+      "mod": 50
+     }
+    ],
+    "price_melee": 16,
+    "price_caster": 30,
+    "nouns": [
+     "восстановления"
+    ],
+    "nouns_en": [
+     "of restoration"
+    ],
+    "nouns_ua": [
+     "відновлення"
+    ],
+    "pick": {
+     "caster": {
+      "1": 1.5
+     }
+    }
+   },
+   {
+    "value": "pack_bigot",
+    "affects": [
+     {
+      "table": "detect_flags",
+      "bits": "good evil"
+     }
+    ],
+    "price_melee": 10,
+    "price_caster": 8,
+    "adjectives": [
+     "ханжеск(ое,ий3,ая2,ие)"
+    ],
+    "adjectives_en": [
+     "bigoted"
+    ],
+    "adjectives_ua": [
+     "святенницький"
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "21": 0.25
+     },
+     "hybrid": {
+      "20": 1,
+      "21": 0.25
+     }
+    }
+   }
+  ],
+  "items": "both"
+ },
+ "skill_group": {
+  "tier": 3,
+  "values": [
+   {
+    "value": "defensive",
+    "mod": 1,
+    "align_bonus": "good",
+    "price_melee": 7,
+    "price_caster": 14,
+    "nouns": [
+     "защитника"
+    ],
+    "nouns_en": [
+     "of the defender"
+    ],
+    "nouns_ua": [
+     "захисника"
+    ],
+    "pick": {
+     "melee": {
+      "39": 0,
+      "40": 1.25
+     },
+     "all": {
+      "39": 0,
+      "40": 1
+     }
+    }
+   },
+   {
+    "value": "fightmaster",
+    "mod": 1,
+    "align_bonus": "evil",
+    "price_melee": 7,
+    "price_caster": 14,
+    "nouns": [
+     "дуэлянта"
+    ],
+    "nouns_en": [
+     "of the duelist"
+    ],
+    "nouns_ua": [
+     "дуелянта"
+    ],
+    "pick": {
+     "melee": {
+      "39": 0,
+      "40": 1.25
+     },
+     "all": {
+      "39": 0,
+      "40": 1
+     }
+    }
+   },
+   {
+    "value": "adventure",
+    "mod": 1,
+    "price_melee": 7,
+    "price_caster": 14,
+    "nouns": [
+     "приключенца"
+    ],
+    "nouns_en": [
+     "of the adventurer"
+    ],
+    "nouns_ua": [
+     "шукача пригод"
+    ]
+   },
+   {
+    "value": "arcane",
+    "mod": 1,
+    "extra": "magic",
+    "price_melee": 7,
+    "price_caster": 14,
+    "nouns": [
+     "артефактов"
+    ],
+    "nouns_en": [
+     "of artifacts"
+    ],
+    "nouns_ua": [
+     "артефактів"
+    ]
+   },
+   {
+    "value": "maladictions",
+    "mod": 1,
+    "extra": "magic",
+    "align_bonus": "evil",
+    "price_melee": 7,
+    "price_caster": 14,
+    "nouns": [
+     "проклятий"
+    ],
+    "nouns_en": [
+     "of curses"
+    ],
+    "nouns_ua": [
+     "проклять"
+    ]
+   },
+   {
+    "value": "benedictions",
+    "mod": 1,
+    "align_bonus": "good",
+    "price_melee": 7,
+    "price_caster": 14,
+    "nouns": [
+     "благости"
+    ],
+    "nouns_en": [
+     "of grace"
+    ],
+    "nouns_ua": [
+     "благості"
+    ]
+   },
+   {
+    "value": "weaponsmaster",
+    "mod": 1,
+    "align_bonus": "neutral",
+    "price_melee": 7,
+    "price_caster": 14,
+    "nouns": [
+     "оружейника"
+    ],
+    "nouns_en": [
+     "of the weaponsmith"
+    ],
+    "nouns_ua": [
+     "зброяра"
+    ]
+   },
+   {
+    "value": "protective",
+    "mod": 1,
+    "slots": {
+     "shield": 3,
+     "body": 2
+    },
+    "price_melee": 7,
+    "price_caster": 14,
+    "nouns": [
+     "стража"
+    ],
+    "nouns_en": [
+     "of the warden"
+    ],
+    "nouns_ua": [
+     "вартового"
+    ]
+   },
+   {
+    "value": "healing",
+    "mod": 1,
+    "slots": {
+     "head": 2
+    },
+    "price_melee": 7,
+    "price_caster": 14,
+    "nouns": [
+     "лекаря"
+    ],
+    "nouns_en": [
+     "of the healer"
+    ],
+    "nouns_ua": [
+     "цілителя"
+    ]
+   },
+   {
+    "value": "combat",
+    "mod": 1,
+    "slots": {
+     "hands": 2
+    },
+    "price_melee": 7,
+    "price_caster": 14,
+    "nouns": [
+     "бойца"
+    ],
+    "nouns_en": [
+     "of the fighter"
+    ],
+    "nouns_ua": [
+     "бійця"
+    ]
+   },
+   {
+    "value": "enhancement",
+    "mod": 1,
+    "price_melee": 7,
+    "price_caster": 14,
+    "nouns": [
+     "укрепления"
+    ],
+    "nouns_en": [
+     "of bolstering"
+    ],
+    "nouns_ua": [
+     "зміцнення"
+    ]
+   },
+   {
+    "value": "illusion",
+    "mod": 1,
+    "price_melee": 7,
+    "price_caster": 14,
+    "nouns": [
+     "иллюзиониста"
+    ],
+    "nouns_en": [
+     "of the illusionist"
+    ],
+    "nouns_ua": [
+     "ілюзіоніста"
+    ]
+   },
+   {
+    "value": "nature",
+    "mod": 1,
+    "price_melee": 7,
+    "price_caster": 14,
+    "nouns": [
+     "природы"
+    ],
+    "nouns_en": [
+     "of nature"
+    ],
+    "nouns_ua": [
+     "природи"
+    ]
+   },
+   {
+    "value": "necromancy",
+    "mod": 1,
+    "price_melee": 7,
+    "price_caster": 14,
+    "nouns": [
+     "некроманта"
+    ],
+    "nouns_en": [
+     "of the necromancer"
+    ],
+    "nouns_ua": [
+     "некроманта"
+    ]
+   },
+   {
+    "value": "detection",
+    "mod": 1,
+    "slots": {
+     "head": 3
+    },
+    "price_melee": 7,
+    "price_caster": 14,
+    "nouns": [
+     "провидца"
+    ],
+    "nouns_en": [
+     "of the seer"
+    ],
+    "nouns_ua": [
+     "провидця"
+    ]
+   }
+  ],
+  "items": "both",
+  "pick": {
+   "all": {
+    "39": 0,
+    "40": 1
+   }
+  }
+ },
+ "player": {
+  "needs_player": true,
+  "values": [
+   {
+    "value": "skillgroup",
+    "mod": 1,
+    "tier": 2,
+    "price_melee": 7,
+    "price_caster": 14,
+    "nouns": [
+     "умения"
+    ],
+    "nouns_en": [
+     "of skill"
+    ],
+    "nouns_ua": [
+     "уміння"
+    ],
+    "pick": {
+     "all": {
+      "39": 0,
+      "40": 1
+     }
+    }
+   },
+   {
+    "value": "learned",
+    "mod": 10,
+    "tier": 3,
+    "stack": 2,
+    "slots": {
+     "hands": 2
+    },
+    "price_melee": 19,
+    "price_caster": 16,
+    "nouns": [
+     "сноровки"
+    ],
+    "nouns_en": [
+     "of finesse"
+    ],
+    "nouns_ua": [
+     "вправності"
+    ]
+   }
+  ],
+  "items": "both"
+ },
+ "extra": {
+  "values": [
+   {
+    "value": "anti_good",
+    "conflicts": [
+     "holy",
+     "protect_evil"
+    ],
+    "align": [
+     -1000,
+     349
+    ],
+    "extra": "dark noenchant",
+    "price_melee": 0,
+    "price_caster": 0,
+    "adjectives": [
+     "темн(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "dark"
+    ],
+    "adjectives_ua": [
+     "темний"
+    ]
+   },
+   {
+    "value": "anti_evil",
+    "conflicts": [
+     "vampiric",
+     "evil",
+     "protect_good"
+    ],
+    "align": [
+     -349,
+     1000
+    ],
+    "extra": "noenchant",
+    "price_melee": 0,
+    "price_caster": 0,
+    "adjectives": [
+     "светл(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "bright"
+    ],
+    "adjectives_ua": [
+     "світлий"
+    ]
+   },
+   {
+    "value": "hum",
+    "price_melee": 2,
+    "price_caster": 2,
+    "adjectives": [
+     "гудящ(ее,ий1,ая1,ие)"
+    ],
+    "adjectives_en": [
+     "humming"
+    ],
+    "adjectives_ua": [
+     "гудячий"
+    ]
+   },
+   {
+    "value": "evil",
+    "conflicts": [
+     "holy",
+     "anti_evil",
+     "protect_evil"
+    ],
+    "align": [
+     -1000,
+     349
+    ],
+    "align_bonus": "evil",
+    "extra": "noenchant",
+    "price_melee": 0,
+    "price_caster": 0,
+    "adjectives": [
+     "зловещ(ее,ий1,ая1,ие)"
+    ],
+    "adjectives_en": [
+     "sinister"
+    ],
+    "adjectives_ua": [
+     "зловісний"
+    ]
+   },
+   {
+    "value": "noremove",
+    "extra": "noenchant",
+    "price_melee": -6,
+    "price_caster": -5,
+    "adjectives": [
+     "проклят(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "cursed"
+    ],
+    "adjectives_ua": [
+     "проклятий"
+    ]
+   },
+   {
+    "value": "bless",
+    "price_melee": 2,
+    "price_caster": 2,
+    "adjectives": [
+     "благословенн(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "blessed"
+    ],
+    "adjectives_ua": [
+     "благословенний"
+    ]
+   },
+   {
+    "value": "burn_proof",
+    "price_melee": 3,
+    "price_caster": 2
+   },
+   {
+    "value": "nouncurse",
+    "needs": [
+     "noremove"
+    ],
+    "price_melee": -30,
+    "price_caster": -30
+   },
+   {
+    "value": "melt_drop",
+    "price_melee": -5,
+    "price_caster": -5
+   }
+  ],
+  "items": "both"
+ },
+ "material": {
+  "values": [
+   {
+    "value": "dragonskin",
+    "tier": 2,
+    "price_melee": 33,
+    "price_caster": 28,
+    "price_legendary": 0,
+    "adjectives": [
+     "дракон(ье,ий2,ья,ьи)"
+    ],
+    "adjectives_en": [
+     "dragonhide"
+    ],
+    "adjectives_ua": [
+     "драконячий"
+    ]
+   },
+   {
+    "value": "mithril",
+    "price_melee": 6,
+    "price_caster": 5,
+    "adjectives": [
+     "мифрилов(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "mithril"
+    ],
+    "adjectives_ua": [
+     "мітриловий"
+    ]
+   },
+   {
+    "value": "adamantite",
+    "price_melee": 6,
+    "price_caster": 5,
+    "adjectives": [
+     "адамантов(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "adamantine"
+    ],
+    "adjectives_ua": [
+     "адамантовий"
+    ]
+   },
+   {
+    "value": "snakeskin",
+    "price_melee": 3,
+    "price_caster": 2,
+    "adjectives": [
+     "чешуйчат(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "scaled"
+    ],
+    "adjectives_ua": [
+     "лускатий"
+    ]
+   }
+  ],
+  "items": "armor"
+ },
+ "resists": {
+  "tier": 4,
+  "values": [
+   {
+    "value": "fire",
+    "price_melee": 21,
+    "price_caster": 18,
+    "adjectives": [
+     "жаростойк(ое,ий3,ая2,ие)"
+    ],
+    "adjectives_en": [
+     "heatproof"
+    ],
+    "adjectives_ua": [
+     "жаростійкий"
+    ]
+   },
+   {
+    "value": "cold",
+    "price_melee": 12,
+    "price_caster": 10,
+    "adjectives": [
+     "морозостойк(ое,ий3,ая2,ие)"
+    ],
+    "adjectives_en": [
+     "frostproof"
+    ],
+    "adjectives_ua": [
+     "морозостійкий"
+    ]
+   },
+   {
+    "value": "lightning",
+    "price_melee": 12,
+    "price_caster": 10,
+    "adjectives": [
+     "заземленн(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "grounded"
+    ],
+    "adjectives_ua": [
+     "заземлений"
+    ]
+   },
+   {
+    "value": "acid",
+    "price_melee": 12,
+    "price_caster": 10,
+    "adjectives": [
+     "кислотостойк(ое,ий3,ая2,ие)"
+    ],
+    "adjectives_en": [
+     "acidproof"
+    ],
+    "adjectives_ua": [
+     "кислотостійкий"
+    ]
+   },
+   {
+    "value": "poison",
+    "price_melee": 12,
+    "price_caster": 10,
+    "adjectives": [
+     "противоядн(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "antidotal"
+    ],
+    "adjectives_ua": [
+     "протиотрутний"
+    ]
+   },
+   {
+    "value": "disease",
+    "price_melee": 9,
+    "price_caster": 8,
+    "adjectives": [
+     "противочумн(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "plagueward"
+    ],
+    "adjectives_ua": [
+     "протичумний"
+    ]
+   },
+   {
+    "value": "negative",
+    "price_melee": 16,
+    "price_caster": 13,
+    "adjectives": [
+     "жизнестойк(ое,ий3,ая2,ие)"
+    ],
+    "adjectives_en": [
+     "deathward"
+    ],
+    "adjectives_ua": [
+     "життєстійкий"
+    ]
+   },
+   {
+    "value": "holy",
+    "price_melee": 12,
+    "price_caster": 10,
+    "adjectives": [
+     "богоборческ(ое,ий3,ая2,ие)"
+    ],
+    "adjectives_en": [
+     "godless"
+    ],
+    "adjectives_ua": [
+     "богоборчий"
+    ]
+   },
+   {
+    "value": "light",
+    "price_melee": 9,
+    "price_caster": 8,
+    "adjectives": [
+     "затененн(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "shaded"
+    ],
+    "adjectives_ua": [
+     "затінений"
+    ]
+   },
+   {
+    "value": "mental",
+    "price_melee": 16,
+    "price_caster": 13,
+    "adjectives": [
+     "непоколебим(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "unshakable"
+    ],
+    "adjectives_ua": [
+     "непохитний"
+    ]
+   },
+   {
+    "value": "sound",
+    "price_melee": 9,
+    "price_caster": 8,
+    "adjectives": [
+     "глух(ое,ой,ая2,ие)"
+    ],
+    "adjectives_en": [
+     "muffled"
+    ],
+    "adjectives_ua": [
+     "глухий"
+    ]
+   },
+   {
+    "value": "drowning",
+    "price_melee": 9,
+    "price_caster": 8,
+    "adjectives": [
+     "непотопляем(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "unsinkable"
+    ],
+    "adjectives_ua": [
+     "непотопний"
+    ]
+   },
+   {
+    "value": "energy",
+    "price_melee": 16,
+    "price_caster": 13,
+    "adjectives": [
+     "изолированн(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "insulated"
+    ],
+    "adjectives_ua": [
+     "ізольований"
+    ]
+   },
+   {
+    "value": "spell",
+    "tier": 2,
+    "price_melee": 47,
+    "price_caster": 39,
+    "adjectives": [
+     "антимагическ(ое,ий3,ая2,ие)"
+    ],
+    "adjectives_en": [
+     "antimagic"
+    ],
+    "adjectives_ua": [
+     "антимагічний"
+    ]
+   },
+   {
+    "value": "weapon",
+    "tier": 1,
+    "slots": {
+     "body": 2,
+     "shield": 3,
+     "head": 0,
+     "arms": 0,
+     "hands": 0,
+     "legs": 0,
+     "feet": 0
+    },
+    "price_melee": 131,
+    "price_caster": 110,
+    "adjectives": [
+     "непробиваем(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "impenetrable"
+    ],
+    "adjectives_ua": [
+     "непробивний"
+    ],
+    "top": true
+   },
+   {
+    "value": "bash",
+    "tier": 3,
+    "price_melee": 67,
+    "price_caster": 57,
+    "adjectives": [
+     "ударостойк(ое,ий3,ая2,ие)"
+    ],
+    "adjectives_en": [
+     "padded"
+    ],
+    "adjectives_ua": [
+     "ударостійкий"
+    ]
+   },
+   {
+    "value": "pierce",
+    "tier": 3,
+    "price_melee": 32,
+    "price_caster": 27,
+    "adjectives": [
+     "стрелостойк(ое,ий3,ая2,ие)"
+    ],
+    "adjectives_en": [
+     "arrowproof"
+    ],
+    "adjectives_ua": [
+     "стрілостійкий"
+    ]
+   },
+   {
+    "value": "slash",
+    "tier": 3,
+    "price_melee": 31,
+    "price_caster": 26,
+    "adjectives": [
+     "непрорубаем(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "bladeproof"
+    ],
+    "adjectives_ua": [
+     "непрорубний"
+    ]
+   }
+  ],
+  "items": "armor"
+ },
+ "vulns": {
+  "values": [
+   {
+    "value": "fire",
+    "price_melee": -32,
+    "price_caster": -27
+   },
+   {
+    "value": "cold",
+    "price_melee": -18,
+    "price_caster": -15
+   },
+   {
+    "value": "lightning",
+    "price_melee": -18,
+    "price_caster": -15
+   },
+   {
+    "value": "acid",
+    "price_melee": -18,
+    "price_caster": -15
+   },
+   {
+    "value": "mental",
+    "price_melee": -24,
+    "price_caster": -20
+   },
+   {
+    "value": "holy",
+    "price_melee": -18,
+    "price_caster": -15
+   },
+   {
+    "value": "negative",
+    "price_melee": -24,
+    "price_caster": -20
+   },
+   {
+    "value": "sound",
+    "price_melee": -14,
+    "price_caster": -12
+   },
+   {
+    "value": "light",
+    "price_melee": -14,
+    "price_caster": -12
+   },
+   {
+    "value": "poison",
+    "price_melee": -18,
+    "price_caster": -15
+   },
+   {
+    "value": "charm",
+    "price_melee": -14,
+    "price_caster": -12
+   },
+   {
+    "value": "bash",
+    "price_melee": -30,
+    "price_caster": -25
+   },
+   {
+    "value": "pierce",
+    "price_melee": -30,
+    "price_caster": -25
+   },
+   {
+    "value": "slash",
+    "price_melee": -30,
+    "price_caster": -25
+   }
+  ],
+  "items": "armor"
+ },
+ "immunes": {
+  "tier": 1,
+  "conflictsWith": "same_section",
+  "values": [
+   {
+    "value": "charm",
+    "price_melee": 28,
+    "price_caster": 24,
+    "nouns": [
+     "свободной воли"
+    ],
+    "nouns_en": [
+     "of free will"
+    ],
+    "nouns_ua": [
+     "вільної волі"
+    ]
+   },
+   {
+    "value": "disease",
+    "price_melee": 28,
+    "price_caster": 24,
+    "nouns": [
+     "чумного лекаря"
+    ],
+    "nouns_en": [
+     "of the plague doctor"
+    ],
+    "nouns_ua": [
+     "чумного лікаря"
+    ]
+   },
+   {
+    "value": "poison",
+    "price_melee": 36,
+    "price_caster": 31,
+    "nouns": [
+     "заклинателя змей"
+    ],
+    "nouns_en": [
+     "of the snake charmer"
+    ],
+    "nouns_ua": [
+     "заклинача змій"
+    ]
+   },
+   {
+    "value": "drowning",
+    "price_melee": 28,
+    "price_caster": 24,
+    "nouns": [
+     "русалки"
+    ],
+    "nouns_en": [
+     "of the mermaid"
+    ],
+    "nouns_ua": [
+     "русалки"
+    ]
+   },
+   {
+    "value": "sound",
+    "price_melee": 28,
+    "price_caster": 24,
+    "nouns": [
+     "тишины"
+    ],
+    "nouns_en": [
+     "of silence"
+    ],
+    "nouns_ua": [
+     "тиші"
+    ]
+   },
+   {
+    "value": "mental",
+    "price_melee": 48,
+    "price_caster": 40,
+    "nouns": [
+     "несокрушимого разума"
+    ],
+    "nouns_en": [
+     "of the iron mind"
+    ],
+    "nouns_ua": [
+     "незламного розуму"
+    ]
+   }
+  ],
+  "items": "armor"
+ },
+ "senses": {
+  "slots": {
+   "head": 4
+  },
+  "values": [
+   {
+    "value": "evil",
+    "tier": 4,
+    "price_melee": 5,
+    "price_caster": 4,
+    "nouns": [
+     "инквизитора"
+    ],
+    "nouns_en": [
+     "of the inquisitor"
+    ],
+    "nouns_ua": [
+     "інквізитора"
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "21": 0.25
+     },
+     "hybrid": {
+      "20": 1,
+      "21": 0.25
+     }
+    }
+   },
+   {
+    "value": "good",
+    "tier": 4,
+    "price_melee": 5,
+    "price_caster": 4,
+    "nouns": [
+     "еретика"
+    ],
+    "nouns_en": [
+     "of the heretic"
+    ],
+    "nouns_ua": [
+     "єретика"
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "21": 0.25
+     },
+     "hybrid": {
+      "20": 1,
+      "21": 0.25
+     }
+    }
+   },
+   {
+    "value": "magic",
+    "tier": 4,
+    "price_melee": 5,
+    "price_caster": 4,
+    "nouns": [
+     "оценщика"
+    ],
+    "nouns_en": [
+     "of the appraiser"
+    ],
+    "nouns_ua": [
+     "оцінювача"
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "21": 0.25
+     },
+     "hybrid": {
+      "20": 1,
+      "21": 0.25
+     }
+    }
+   },
+   {
+    "value": "life",
+    "tier": 4,
+    "price_melee": 5,
+    "price_caster": 4,
+    "nouns": [
+     "охотника"
+    ],
+    "nouns_en": [
+     "of the hunter"
+    ],
+    "nouns_ua": [
+     "мисливця"
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "21": 0.25
+     },
+     "hybrid": {
+      "20": 1,
+      "21": 0.25
+     }
+    }
+   },
+   {
+    "value": "undead",
+    "tier": 4,
+    "price_melee": 5,
+    "price_caster": 4,
+    "nouns": [
+     "экзорциста"
+    ],
+    "nouns_en": [
+     "of the exorcist"
+    ],
+    "nouns_ua": [
+     "екзорциста"
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "21": 0.25
+     },
+     "hybrid": {
+      "20": 1,
+      "21": 0.25
+     }
+    }
+   },
+   {
+    "value": "infrared",
+    "table": "affect_flags",
+    "tier": 4,
+    "price_melee": 7,
+    "price_caster": 6,
+    "nouns": [
+     "совы"
+    ],
+    "nouns_en": [
+     "of the owl"
+    ],
+    "nouns_ua": [
+     "сови"
+    ],
+    "pick": {
+     "all": {
+      "1": 0.1
+     }
+    }
+   },
+   {
+    "value": "hidden",
+    "tier": 3,
+    "price_melee": 14,
+    "price_caster": 12,
+    "nouns": [
+     "разведчика"
+    ],
+    "nouns_en": [
+     "of the scout"
+    ],
+    "nouns_ua": [
+     "розвідника"
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "21": 0.5
+     },
+     "hybrid": {
+      "20": 1,
+      "21": 0.5
+     },
+     "thief": {
+      "1": 0
+     },
+     "ninja": {
+      "1": 0
+     }
+    }
+   },
+   {
+    "value": "invis",
+    "tier": 3,
+    "price_melee": 14,
+    "price_caster": 12,
+    "nouns": [
+     "ясновидца"
+    ],
+    "nouns_en": [
+     "of the clairvoyant"
+    ],
+    "nouns_ua": [
+     "ясновидця"
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "21": 0.25
+     },
+     "hybrid": {
+      "20": 1,
+      "21": 0.25
+     }
+    }
+   },
+   {
+    "value": "fade",
+    "tier": 3,
+    "price_melee": 14,
+    "price_caster": 12,
+    "nouns": [
+     "следопыта"
+    ],
+    "nouns_en": [
+     "of the pathfinder"
+    ],
+    "nouns_ua": [
+     "слідопита"
+    ]
+   },
+   {
+    "value": "imp_invis",
+    "tier": 3,
+    "price_melee": 14,
+    "price_caster": 12,
+    "nouns": [
+     "оракула"
+    ],
+    "nouns_en": [
+     "of the oracle"
+    ],
+    "nouns_ua": [
+     "оракула"
+    ]
+   },
+   {
+    "value": "acute_vision",
+    "tier": 3,
+    "price_melee": 19,
+    "price_caster": 16,
+    "nouns": [
+     "орла"
+    ],
+    "nouns_en": [
+     "of the eagle"
+    ],
+    "nouns_ua": [
+     "орла"
+    ]
+   },
+   {
+    "value": "pack_vis",
+    "tier": 2,
+    "price_melee": 28,
+    "price_caster": 24,
+    "nouns": [
+     "видения"
+    ],
+    "nouns_en": [
+     "of vision"
+    ],
+    "nouns_ua": [
+     "видіння"
+    ],
+    "affects": [
+     {
+      "table": "detect_flags",
+      "bits": "invis hidden"
+     }
+    ],
+    "conflicts": [
+     "hidden",
+     "invis"
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "21": 0.5
+     },
+     "hybrid": {
+      "20": 1,
+      "21": 0.5
+     }
+    }
+   }
+  ],
+  "items": "armor"
+ },
+ "affects_with_bits": {
+  "values": [
+   {
+    "value": "haste",
+    "extra": "noenchant magic",
+    "tier": 2,
+    "slots": {
+     "feet": 3,
+     "legs": 2
+    },
+    "price_melee": 103,
+    "price_caster": 31,
+    "nouns": [
+     "скорости",
+     "ускорения"
+    ],
+    "nouns_en": [
+     "of speed",
+     "of acceleration"
+    ],
+    "nouns_ua": [
+     "швидкості",
+     "прискорення"
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "40": 0.25
+     }
+    },
+    "top": true,
+    "conflicts": [
+     "slow"
+    ]
+   },
+   {
+    "value": "protect_good",
+    "align": [
+     -1000,
+     349
+    ],
+    "align_bonus": "evil",
+    "extra": "evil noenchant magic",
+    "conflicts": [
+     "protect_evil"
+    ],
+    "tier": 2,
+    "price_melee": 56,
+    "price_caster": 47,
+    "nouns": [
+     "зла",
+     "тьмы"
+    ],
+    "nouns_en": [
+     "of evil",
+     "of darkness"
+    ],
+    "nouns_ua": [
+     "зла",
+     "темряви"
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "21": 0
+     },
+     "druid": {
+      "1": 1
+     },
+     "paladin": {
+      "1": 0
+     }
+    }
+   },
+   {
+    "value": "protect_evil",
+    "align": [
+     -349,
+     1000
+    ],
+    "align_bonus": "good",
+    "extra": "bless noenchant magic",
+    "conflicts": [
+     "protect_good"
+    ],
+    "tier": 2,
+    "price_melee": 56,
+    "price_caster": 47,
+    "nouns": [
+     "добра",
+     "света"
+    ],
+    "nouns_en": [
+     "of good",
+     "of light"
+    ],
+    "nouns_ua": [
+     "добра",
+     "світла"
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "21": 0
+     },
+     "druid": {
+      "1": 1
+     }
+    }
+   },
+   {
+    "value": "regeneration",
+    "extra": "noenchant magic",
+    "tier": 2,
+    "slots": {
+     "body": 2
+    },
+    "price_melee": 28,
+    "price_caster": 12,
+    "nouns": [
+     "регенерации",
+     "троллей"
+    ],
+    "nouns_en": [
+     "of regeneration",
+     "of trolls"
+    ],
+    "nouns_ua": [
+     "регенерації",
+     "тролів"
+    ],
+    "pick": {
+     "druid": {
+      "50": 1,
+      "51": 0
+     },
+     "vampire": {
+      "1": 0
+     }
+    }
+   },
+   {
+    "value": "pass_door",
+    "tier": 2,
+    "price_melee": 14,
+    "price_caster": 12,
+    "nouns": [
+     "призрака"
+    ],
+    "nouns_en": [
+     "of the phantom"
+    ],
+    "nouns_ua": [
+     "привида"
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "40": 0
+     }
+    }
+   },
+   {
+    "value": "flying",
+    "tier": 3,
+    "slots": {
+     "feet": 4,
+     "arms": 2
+    },
+    "price_melee": 14,
+    "price_caster": 12,
+    "adjectives": [
+     "крылат(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "winged"
+    ],
+    "adjectives_ua": [
+     "крилатий"
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "40": 0
+     }
+    }
+   },
+   {
+    "value": "sneak",
+    "tier": 3,
+    "slots": {
+     "feet": 4
+    },
+    "price_melee": 11,
+    "price_caster": 6,
+    "adjectives": [
+     "бесшумн(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "silent"
+    ],
+    "adjectives_ua": [
+     "безшумний"
+    ],
+    "pick": {
+     "thief": {
+      "1": 0
+     },
+     "ninja": {
+      "1": 0
+     },
+     "vampire": {
+      "1": 0
+     }
+    }
+   },
+   {
+    "value": "hide",
+    "tier": 3,
+    "slots": {
+     "arms": 3
+    },
+    "price_melee": 6,
+    "price_caster": 5,
+    "nouns": [
+     "теней"
+    ],
+    "nouns_en": [
+     "of shadows"
+    ],
+    "nouns_ua": [
+     "тіней"
+    ],
+    "pick": {
+     "thief": {
+      "1": 0
+     },
+     "ninja": {
+      "1": 0
+     },
+     "vampire": {
+      "1": 0
+     }
+    }
+   },
+   {
+    "value": "swim",
+    "tier": 4,
+    "slots": {
+     "feet": 2
+    },
+    "price_melee": 4,
+    "price_caster": 3,
+    "nouns": [
+     "выдры"
+    ],
+    "nouns_en": [
+     "of the otter"
+    ],
+    "nouns_ua": [
+     "видри"
+    ]
+   },
+   {
+    "value": "faerie_fire",
+    "price_melee": -14,
+    "price_caster": -12,
+    "adjectives": [
+     "мерцающ(ее,ий1,ая1,ие)"
+    ],
+    "adjectives_en": [
+     "glimmering"
+    ],
+    "adjectives_ua": [
+     "мерехтливий"
+    ]
+   },
+   {
+    "value": "curse",
+    "price_melee": -33,
+    "price_caster": -28,
+    "nouns": [
+     "изгоя"
+    ],
+    "nouns_en": [
+     "of the outcast"
+    ],
+    "nouns_ua": [
+     "вигнанця"
+    ]
+   },
+   {
+    "value": "slow",
+    "conflicts": [
+     "haste"
+    ],
+    "price_melee": -30,
+    "price_caster": -10
+   },
+   {
+    "value": "weaken",
+    "price_melee": -15,
+    "price_caster": -8
+   }
+  ],
+  "items": "both"
+ },
+ "worn_buff": {
+  "conflictsWith": "same_section",
+  "values": [
+   {
+    "value": "sanctuary",
+    "tier": 1,
+    "slots": {
+     "body": 3,
+     "arms": 2
+    },
+    "price_melee": 280,
+    "price_caster": 236,
+    "nouns": [
+     "святилища"
+    ],
+    "nouns_en": [
+     "of the sanctuary"
+    ],
+    "nouns_ua": [
+     "святилища"
+    ],
+    "points_by_level": {
+     "20": [
+      18,
+      79
+     ],
+     "40": [
+      44,
+      209
+     ],
+     "60": [
+      72,
+      292
+     ],
+     "90": [
+      131,
+      784
+     ]
+    },
+    "source_hash": "4e5961b66367",
+    "align": [
+     350,
+     1000
+    ],
+    "have": [
+     "sanctuary",
+     "stardust",
+     "dark shroud"
+    ],
+    "have_bits": {
+     "table": "affect_flags",
+     "bits": "sanctuary"
+    },
+    "pick": {
+     "caster": {
+      "10": 0.094,
+      "20": 0.123,
+      "30": 0.23,
+      "40": 0
+     },
+     "hybrid": {
+      "10": 0.094,
+      "20": 0.123,
+      "30": 0.23,
+      "40": 0
+     },
+     "melee": {
+      "10": 0.094,
+      "20": 0.123,
+      "40": 0.333,
+      "60": 0.333,
+      "90": 0.44
+     }
+    },
+    "floor_exempt": true,
+    "top": true
+   },
+   {
+    "value": "stardust",
+    "tier": 1,
+    "price_melee": 280,
+    "price_caster": 236,
+    "nouns": [
+     "звездной пыли"
+    ],
+    "nouns_en": [
+     "of stardust"
+    ],
+    "nouns_ua": [
+     "зоряного пилу"
+    ],
+    "points_by_level": {
+     "20": [
+      18,
+      79
+     ],
+     "40": [
+      44,
+      209
+     ],
+     "60": [
+      72,
+      292
+     ],
+     "90": [
+      131,
+      784
+     ]
+    },
+    "source_hash": "be8f8f4ee449",
+    "points_note": "model: flags_by_level sanctuary x1.0 (no AFF bit to measure)",
+    "align": [
+     -349,
+     349
+    ],
+    "have": [
+     "sanctuary",
+     "stardust",
+     "dark shroud"
+    ],
+    "have_bits": {
+     "table": "affect_flags",
+     "bits": "sanctuary"
+    },
+    "pick": {
+     "caster": {
+      "10": 0.094,
+      "20": 0.123,
+      "30": 0.23,
+      "40": 0
+     },
+     "hybrid": {
+      "10": 0.094,
+      "20": 0.123,
+      "30": 0.23,
+      "40": 0
+     },
+     "melee": {
+      "10": 0.094,
+      "20": 0.123,
+      "40": 0.333,
+      "60": 0.333,
+      "90": 0.44
+     }
+    },
+    "floor_exempt": true,
+    "top": true
+   },
+   {
+    "value": "dark shroud",
+    "tier": 1,
+    "align": [
+     -1000,
+     -350
+    ],
+    "price_melee": 234,
+    "price_caster": 197,
+    "nouns": [
+     "темной ауры"
+    ],
+    "nouns_en": [
+     "of the dark aura"
+    ],
+    "nouns_ua": [
+     "темної аури"
+    ],
+    "points_by_level": {
+     "20": [
+      14,
+      63
+     ],
+     "40": [
+      35,
+      167
+     ],
+     "60": [
+      58,
+      234
+     ],
+     "90": [
+      105,
+      627
+     ]
+    },
+    "source_hash": "ff7c56a37061",
+    "points_note": "model: flags_by_level sanctuary x0.8 (no AFF bit to measure)",
+    "have": [
+     "sanctuary",
+     "stardust",
+     "dark shroud"
+    ],
+    "have_bits": {
+     "table": "affect_flags",
+     "bits": "sanctuary"
+    },
+    "pick": {
+     "caster": {
+      "10": 0.094,
+      "20": 0.123,
+      "30": 0.23,
+      "40": 0
+     },
+     "hybrid": {
+      "10": 0.094,
+      "20": 0.123,
+      "30": 0.23,
+      "40": 0
+     },
+     "melee": {
+      "10": 0.094,
+      "20": 0.123,
+      "40": 0.333,
+      "60": 0.333,
+      "90": 0.44
+     }
+    },
+    "floor_exempt": true,
+    "top": true
+   },
+   {
+    "value": "spell resistance",
+    "tier": 1,
+    "slots": {
+     "head": 3
+    },
+    "price_melee": 75,
+    "price_caster": 79,
+    "nouns": [
+     "отпора заклятий"
+    ],
+    "nouns_en": [
+     "of spellbreaking"
+    ],
+    "nouns_ua": [
+     "захисту від заклять"
+    ],
+    "points_by_level": {
+     "20": [
+      50,
+      50
+     ],
+     "40": [
+      50,
+      50
+     ],
+     "60": [
+      50,
+      50
+     ],
+     "90": [
+      50,
+      50
+     ]
+    },
+    "source_hash": "297a27b25148"
+   },
+   {
+    "value": "black feeble",
+    "tier": 1,
+    "align": [
+     -1000,
+     -350
+    ],
+    "price_melee": 93,
+    "price_caster": 31,
+    "nouns": [
+     "черной немощи"
+    ],
+    "nouns_en": [
+     "of black feebleness"
+    ],
+    "nouns_ua": [
+     "чорної немочі"
+    ],
+    "points_by_level": {
+     "20": [
+      100,
+      39
+     ],
+     "40": [
+      100,
+      39
+     ],
+     "60": [
+      100,
+      39
+     ],
+     "90": [
+      100,
+      39
+     ]
+    },
+    "source_hash": "562cad92aef4",
+    "points_note": "manual (price-converted): its worth is the C++ weapon-drop on attackers (onehit_weapon.cpp), not its affects"
+   },
+   {
+    "value": "seasonal aspect",
+    "tier": 1,
+    "price_melee": 164,
+    "price_caster": 138,
+    "nouns": [
+     "времен года"
+    ],
+    "nouns_en": [
+     "of the seasons"
+    ],
+    "nouns_ua": [
+     "пір року"
+    ],
+    "points_by_level": {
+     "20": [
+      35,
+      45
+     ],
+     "40": [
+      44,
+      60
+     ],
+     "60": [
+      62,
+      90
+     ],
+     "90": [
+      77,
+      115
+     ]
+    },
+    "source_hash": "102258f35e2c",
+    "points_note": "measured 2026-10-04: affects follow the game calendar"
+   },
+   {
+    "value": "enhanced armor",
+    "tier": 2,
+    "slots": {
+     "body": 3,
+     "shield": 3
+    },
+    "price_melee": 9,
+    "price_caster": 8,
+    "nouns": [
+     "твердыни"
+    ],
+    "nouns_en": [
+     "of the bulwark"
+    ],
+    "nouns_ua": [
+     "твердині"
+    ],
+    "points_by_level": {
+     "20": [
+      5,
+      5
+     ],
+     "40": [
+      0,
+      0
+     ],
+     "60": [
+      0,
+      0
+     ],
+     "90": [
+      0,
+      0
+     ]
+    },
+    "source_hash": "497b28929947",
+    "pick": {
+     "caster": {
+      "30": 1,
+      "50": 0
+     }
+    }
+   },
+   {
+    "value": "protection evil",
+    "tier": 2,
+    "align": [
+     350,
+     1000
+    ],
+    "price_melee": 56,
+    "price_caster": 47,
+    "nouns": [
+     "добра",
+     "света"
+    ],
+    "nouns_en": [
+     "of good",
+     "of light"
+    ],
+    "nouns_ua": [
+     "добра",
+     "світла"
+    ],
+    "points_by_level": {
+     "20": [
+      2,
+      8
+     ],
+     "40": [
+      4,
+      21
+     ],
+     "60": [
+      7,
+      29
+     ],
+     "90": [
+      13,
+      78
+     ]
+    },
+    "source_hash": "6ae6cbdc82da",
+    "points_note": "model: flags_by_level protect_evil x1.0 (no AFF bit to measure)",
+    "pick": {
+     "caster": {
+      "20": 1,
+      "21": 0
+     },
+     "druid": {
+      "1": 1
+     }
+    },
+    "have_bits": {
+     "table": "affect_flags",
+     "bits": "protect_evil"
+    }
+   },
+   {
+    "value": "protection good",
+    "tier": 2,
+    "align": [
+     -1000,
+     -350
+    ],
+    "price_melee": 56,
+    "price_caster": 47,
+    "nouns": [
+     "зла",
+     "тьмы"
+    ],
+    "nouns_en": [
+     "of evil",
+     "of darkness"
+    ],
+    "nouns_ua": [
+     "зла",
+     "темряви"
+    ],
+    "points_by_level": {
+     "20": [
+      2,
+      8
+     ],
+     "40": [
+      4,
+      21
+     ],
+     "60": [
+      7,
+      29
+     ],
+     "90": [
+      13,
+      78
+     ]
+    },
+    "source_hash": "a39d3dde0f1d",
+    "points_note": "model: flags_by_level protect_good x1.0 (no AFF bit to measure)",
+    "pick": {
+     "caster": {
+      "20": 1,
+      "21": 0
+     },
+     "druid": {
+      "1": 1
+     },
+     "paladin": {
+      "1": 0
+     }
+    },
+    "have_bits": {
+     "table": "affect_flags",
+     "bits": "protect_good"
+    }
+   },
+   {
+    "value": "benediction",
+    "tier": 2,
+    "slots": {
+     "head": 2
+    },
+    "price_melee": 52,
+    "price_caster": 43,
+    "nouns": [
+     "благодати"
+    ],
+    "nouns_en": [
+     "of benediction"
+    ],
+    "nouns_ua": [
+     "благодаті"
+    ],
+    "points_by_level": {
+     "20": [
+      241,
+      267
+     ],
+     "40": [
+      268,
+      280
+     ],
+     "60": [
+      298,
+      298
+     ],
+     "90": [
+      340,
+      320
+     ]
+    },
+    "source_hash": "17ef1c05cd11"
+   },
+   {
+    "value": "dragon strength",
+    "tier": 2,
+    "slots": {
+     "arms": 2,
+     "hands": 2
+    },
+    "price_melee": 101,
+    "price_caster": 38,
+    "nouns": [
+     "дракона"
+    ],
+    "nouns_en": [
+     "of the dragon"
+    ],
+    "nouns_ua": [
+     "дракона"
+    ],
+    "points_by_level": {
+     "20": [
+      223,
+      99
+     ],
+     "40": [
+      220,
+      96
+     ],
+     "60": [
+      220,
+      96
+     ],
+     "90": [
+      220,
+      96
+     ]
+    },
+    "source_hash": "7458e5ef8776"
+   },
+   {
+    "value": "protection heat",
+    "tier": 2,
+    "price_melee": 33,
+    "price_caster": 28,
+    "nouns": [
+     "саламандры"
+    ],
+    "nouns_en": [
+     "of the salamander"
+    ],
+    "nouns_ua": [
+     "саламандри"
+    ],
+    "points_by_level": {
+     "20": [
+      26,
+      28
+     ],
+     "40": [
+      26,
+      28
+     ],
+     "60": [
+      26,
+      28
+     ],
+     "90": [
+      29,
+      33
+     ]
+    },
+    "source_hash": "3e0f147cb378",
+    "pick": {
+     "caster": {
+      "30": 1,
+      "50": 0
+     }
+    }
+   },
+   {
+    "value": "protection cold",
+    "tier": 2,
+    "price_melee": 23,
+    "price_caster": 20,
+    "nouns": [
+     "севера"
+    ],
+    "nouns_en": [
+     "of the north"
+    ],
+    "nouns_ua": [
+     "півночі"
+    ],
+    "points_by_level": {
+     "20": [
+      16,
+      18
+     ],
+     "40": [
+      16,
+      18
+     ],
+     "60": [
+      16,
+      18
+     ],
+     "90": [
+      19,
+      23
+     ]
+    },
+    "source_hash": "8f4b9f140ae7",
+    "pick": {
+     "caster": {
+      "30": 1,
+      "50": 0
+     }
+    }
+   },
+   {
+    "value": "concentrate",
+    "tier": 2,
+    "needs_skill": true,
+    "price_melee": 118,
+    "price_caster": 0,
+    "nouns": [
+     "сосредоточения"
+    ],
+    "nouns_en": [
+     "of focus"
+    ],
+    "nouns_ua": [
+     "зосередження"
+    ],
+    "points_by_level": {
+     "20": [
+      126,
+      0
+     ],
+     "40": [
+      126,
+      0
+     ],
+     "60": [
+      126,
+      0
+     ],
+     "90": [
+      126,
+      0
+     ]
+    },
+    "source_hash": "aa53b95d1dea",
+    "points_note": "manual (price-converted): no affect on mob 3012 (align-gated, needs a skill, or refused)"
+   },
+   {
+    "value": "bless",
+    "tier": 3,
+    "price_melee": 10,
+    "price_caster": 10,
+    "nouns": [
+     "благословения"
+    ],
+    "nouns_en": [
+     "of blessing"
+    ],
+    "nouns_ua": [
+     "благословення"
+    ],
+    "points_by_level": {
+     "20": [
+      18,
+      14
+     ],
+     "40": [
+      39,
+      25
+     ],
+     "60": [
+      54,
+      34
+     ],
+     "90": [
+      81,
+      47
+     ]
+    },
+    "source_hash": "b6252d5316e3"
+   },
+   {
+    "value": "inspire",
+    "tier": 3,
+    "price_melee": 36,
+    "price_caster": 20,
+    "nouns": [
+     "вдохновения"
+    ],
+    "nouns_en": [
+     "of inspiration"
+    ],
+    "nouns_ua": [
+     "натхнення"
+    ],
+    "points_by_level": {
+     "20": [
+      39,
+      25
+     ],
+     "40": [
+      39,
+      25
+     ],
+     "60": [
+      39,
+      25
+     ],
+     "90": [
+      39,
+      25
+     ]
+    },
+    "source_hash": "676ce4ccda80",
+    "points_note": "manual (price-converted): no affect on mob 3012 (align-gated, needs a skill, or refused)"
+   },
+   {
+    "value": "regeneration",
+    "tier": 3,
+    "slots": {
+     "body": 2
+    },
+    "price_melee": 28,
+    "price_caster": 12,
+    "nouns": [
+     "регенерации",
+     "троллей"
+    ],
+    "nouns_en": [
+     "of regeneration",
+     "of trolls"
+    ],
+    "nouns_ua": [
+     "регенерації",
+     "тролів"
+    ],
+    "points_by_level": {
+     "20": [
+      30,
+      15
+     ],
+     "40": [
+      30,
+      15
+     ],
+     "60": [
+      30,
+      15
+     ],
+     "90": [
+      30,
+      15
+     ]
+    },
+    "source_hash": "efb5d670ae96",
+    "pick": {
+     "druid": {
+      "50": 1,
+      "51": 0
+     },
+     "vampire": {
+      "1": 0
+     }
+    },
+    "have_bits": {
+     "table": "affect_flags",
+     "bits": "regeneration"
+    }
+   },
+   {
+    "value": "fortitude",
+    "tier": 3,
+    "price_melee": 28,
+    "price_caster": 24,
+    "nouns": [
+     "стойкости"
+    ],
+    "nouns_en": [
+     "of fortitude"
+    ],
+    "nouns_ua": [
+     "стійкості"
+    ],
+    "points_by_level": {
+     "20": [
+      30,
+      30
+     ],
+     "40": [
+      30,
+      30
+     ],
+     "60": [
+      30,
+      30
+     ],
+     "90": [
+      30,
+      30
+     ]
+    },
+    "source_hash": "602ad27e0769",
+    "pick": {
+     "paladin": {
+      "60": 1,
+      "61": 0
+     }
+    }
+   },
+   {
+    "value": "resilience",
+    "tier": 3,
+    "price_melee": 16,
+    "price_caster": 13,
+    "nouns": [
+     "устойчивости"
+    ],
+    "nouns_en": [
+     "of resilience"
+    ],
+    "nouns_ua": [
+     "незламності"
+    ],
+    "points_by_level": {
+     "20": [
+      17,
+      17
+     ],
+     "40": [
+      17,
+      17
+     ],
+     "60": [
+      17,
+      17
+     ],
+     "90": [
+      17,
+      17
+     ]
+    },
+    "source_hash": "f8f650691ccd",
+    "pick": {
+     "paladin": {
+      "60": 1,
+      "61": 0
+     }
+    }
+   },
+   {
+    "value": "protection negative",
+    "tier": 3,
+    "price_melee": 16,
+    "price_caster": 13,
+    "nouns": [
+     "живых"
+    ],
+    "nouns_en": [
+     "of the living"
+    ],
+    "nouns_ua": [
+     "живих"
+    ],
+    "points_by_level": {
+     "20": [
+      17,
+      17
+     ],
+     "40": [
+      17,
+      17
+     ],
+     "60": [
+      17,
+      17
+     ],
+     "90": [
+      17,
+      17
+     ]
+    },
+    "source_hash": "80177911f305"
+   },
+   {
+    "value": "fly",
+    "tier": 3,
+    "conflicts": [
+     "flying"
+    ],
+    "slots": {
+     "feet": 3
+    },
+    "price_melee": 14,
+    "price_caster": 12,
+    "nouns": [
+     "ветра"
+    ],
+    "nouns_en": [
+     "of the wind"
+    ],
+    "nouns_ua": [
+     "вітру"
+    ],
+    "points_by_level": {
+     "20": [
+      15,
+      15
+     ],
+     "40": [
+      15,
+      15
+     ],
+     "60": [
+      15,
+      15
+     ],
+     "90": [
+      15,
+      15
+     ]
+    },
+    "source_hash": "30d5f50f6cc0",
+    "pick": {
+     "caster": {
+      "20": 1,
+      "40": 0
+     }
+    },
+    "have_bits": {
+     "table": "affect_flags",
+     "bits": "flying"
+    }
+   }
+  ],
+  "items": "armor"
+ },
+ "proc": {
+  "conflictsWith": "same_section",
+  "slots": {
+   "hands": 3,
+   "shield": 3
+  },
+  "values": [
+   {
+    "value": "acid blast",
+    "tier": 3,
+    "target": "victim",
+    "price_melee": 19,
+    "price_caster": 16,
+    "adjectives": [
+     "едк(ое,ий3,ая2,ие)"
+    ],
+    "adjectives_en": [
+     "caustic"
+    ],
+    "adjectives_ua": [
+     "їдкий"
+    ]
+   },
+   {
+    "value": "burning hands",
+    "tier": 3,
+    "target": "victim",
+    "price_melee": 15,
+    "price_caster": 13,
+    "adjectives": [
+     "раскаленн(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "searing"
+    ],
+    "adjectives_ua": [
+     "розпечений"
+    ]
+   },
+   {
+    "value": "shocking grasp",
+    "tier": 3,
+    "target": "victim",
+    "price_melee": 19,
+    "price_caster": 16,
+    "adjectives": [
+     "грозов(ое,ой,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "thundering"
+    ],
+    "adjectives_ua": [
+     "грозовий"
+    ]
+   },
+   {
+    "value": "chill touch",
+    "tier": 3,
+    "target": "victim",
+    "price_melee": 15,
+    "price_caster": 13,
+    "adjectives": [
+     "студен(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "chilling"
+    ],
+    "adjectives_ua": [
+     "студений"
+    ]
+   },
+   {
+    "value": "faerie fire",
+    "tier": 3,
+    "target": "victim",
+    "price_melee": 5,
+    "price_caster": 4,
+    "adjectives": [
+     "разоблачающ(ее,ий1,ая1,ие)"
+    ],
+    "adjectives_en": [
+     "revealing"
+    ],
+    "adjectives_ua": [
+     "викривальний"
+    ]
+   },
+   {
+    "value": "deafen",
+    "tier": 2,
+    "target": "victim",
+    "price_melee": 17,
+    "price_caster": 14,
+    "adjectives": [
+     "оглушающ(ее,ий1,ая1,ие)"
+    ],
+    "adjectives_en": [
+     "deafening"
+    ],
+    "adjectives_ua": [
+     "оглушливий"
+    ]
+   },
+   {
+    "value": "energy drain",
+    "tier": 2,
+    "target": "victim",
+    "not_vs": "undead construct",
+    "price_melee": 31,
+    "price_caster": 26,
+    "adjectives": [
+     "иссушающ(ее,ий1,ая1,ие)"
+    ],
+    "adjectives_en": [
+     "draining"
+    ],
+    "adjectives_ua": [
+     "виснажливий"
+    ]
+   },
+   {
+    "value": "quantum spike",
+    "tier": 2,
+    "target": "victim",
+    "price_melee": 31,
+    "price_caster": 26,
+    "adjectives": [
+     "квантов(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "quantum"
+    ],
+    "adjectives_ua": [
+     "квантовий"
+    ]
+   },
+   {
+    "value": "superior heal",
+    "tier": 2,
+    "target": "self",
+    "hp_below": 50,
+    "price_melee": 21,
+    "price_caster": 18,
+    "adjectives": [
+     "спасительн(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "lifesaving"
+    ],
+    "adjectives_ua": [
+     "рятівний"
+    ]
+   },
+   {
+    "value": "demonfire",
+    "tier": 1,
+    "target": "victim",
+    "align": [
+     -1000,
+     -350
+    ],
+    "price_melee": 60,
+    "price_caster": 50,
+    "adjectives": [
+     "адск(ое,ий3,ая2,ие)"
+    ],
+    "adjectives_en": [
+     "hellish"
+    ],
+    "adjectives_ua": [
+     "пекельний"
+    ]
+   },
+   {
+    "value": "blindness",
+    "tier": 1,
+    "target": "victim",
+    "price_melee": 50,
+    "price_caster": 42,
+    "adjectives": [
+     "ослепляющ(ее,ий1,ая1,ие)"
+    ],
+    "adjectives_en": [
+     "blinding"
+    ],
+    "adjectives_ua": [
+     "сліпучий"
+    ]
+   },
+   {
+    "value": "fear",
+    "tier": 1,
+    "target": "victim",
+    "price_melee": 60,
+    "price_caster": 50,
+    "adjectives": [
+     "жутк(ое,ий3,ая2,ие)"
+    ],
+    "adjectives_en": [
+     "dreadful"
+    ],
+    "adjectives_ua": [
+     "моторошний"
+    ]
+   },
+   {
+    "value": "master healing",
+    "tier": 1,
+    "target": "self",
+    "hp_below": 50,
+    "price_melee": 45,
+    "price_caster": 38,
+    "adjectives": [
+     "чудотворн(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "miraculous"
+    ],
+    "adjectives_ua": [
+     "чудотворний"
+    ]
+   }
+  ],
+  "items": "armor"
+ },
+ "signature": {
+  "tier": 1,
+  "needs_boss": true,
+  "values": [
+   {
+    "value": "boss_resist"
+   },
+   {
+    "value": "boss_proc"
+   }
+  ],
+  "_doc": "Price comes from the matching resists/proc entry at roll time (boss damtype, boss spell).",
+  "items": "armor"
+ },
+ "primary_stats": {
+  "values": [
+   {
+    "value": "str",
+    "stack": 3,
+    "mod": 2,
+    "price_melee": 6,
+    "price_caster": 2,
+    "nouns": [
+     "силы"
+    ],
+    "nouns_en": [
+     "of strength"
+    ],
+    "nouns_ua": [
+     "сили"
+    ],
+    "pick": {
+     "all": {
+      "50": 1,
+      "51": 0
+     },
+     "caster": {
+      "1": 0
+     }
+    }
+   },
+   {
+    "value": "int",
+    "stack": 3,
+    "mod": 2,
+    "price_melee": 2,
+    "price_caster": 3,
+    "nouns": [
+     "разума"
+    ],
+    "nouns_en": [
+     "of intellect"
+    ],
+    "nouns_ua": [
+     "розуму"
+    ],
+    "pick": {
+     "all": {
+      "50": 1,
+      "51": 0
+     },
+     "melee": {
+      "30": 1,
+      "31": 0
+     },
+     "hybrid": {
+      "30": 1,
+      "31": 0
+     },
+     "caster": {
+      "50": 1,
+      "51": 0
+     }
+    }
+   },
+   {
+    "value": "wis",
+    "stack": 3,
+    "mod": 2,
+    "price_melee": 2,
+    "price_caster": 5,
+    "nouns": [
+     "мудрости"
+    ],
+    "nouns_en": [
+     "of wisdom"
+    ],
+    "nouns_ua": [
+     "мудрості"
+    ],
+    "pick": {
+     "all": {
+      "50": 1,
+      "51": 0
+     },
+     "melee": {
+      "30": 1,
+      "31": 0
+     },
+     "hybrid": {
+      "30": 1,
+      "31": 0
+     },
+     "caster": {
+      "20": 1.5,
+      "21": 1,
+      "50": 1,
+      "51": 0
+     }
+    }
+   },
+   {
+    "value": "dex",
+    "stack": 3,
+    "mod": 2,
+    "price_melee": 4,
+    "price_caster": 2,
+    "nouns": [
+     "ловкости"
+    ],
+    "nouns_en": [
+     "of dexterity"
+    ],
+    "nouns_ua": [
+     "спритності"
+    ],
+    "pick": {
+     "all": {
+      "50": 1,
+      "51": 0
+     },
+     "caster": {
+      "50": 0.5,
+      "51": 0
+     }
+    }
+   },
+   {
+    "value": "con",
+    "stack": 3,
+    "mod": 2,
+    "price_melee": 6,
+    "price_caster": 5,
+    "nouns": [
+     "выносливости"
+    ],
+    "nouns_en": [
+     "of endurance"
+    ],
+    "nouns_ua": [
+     "витривалості"
+    ],
+    "pick": {
+     "all": {
+      "50": 1,
+      "51": 0
+     },
+     "caster": {
+      "20": 1.5,
+      "21": 1,
+      "30": 1,
+      "31": 0
+     }
+    }
+   },
+   {
+    "value": "cha",
+    "stack": 3,
+    "mod": 2,
+    "price_melee": 1,
+    "price_caster": 1,
+    "nouns": [
+     "обаяния"
+    ],
+    "nouns_en": [
+     "of charm"
+    ],
+    "nouns_ua": [
+     "чарівності"
+    ],
+    "pick": {
+     "all": {
+      "50": 1,
+      "51": 0
+     }
+    }
+   },
+   {
+    "value": "-str",
+    "stack": 2,
+    "mod": -1,
+    "price_melee": -6,
+    "price_caster": -2,
+    "pick": {
+     "all": {
+      "50": 1,
+      "51": 0
+     }
+    }
+   },
+   {
+    "value": "-dex",
+    "stack": 2,
+    "mod": -1,
+    "price_melee": -4,
+    "price_caster": -2,
+    "pick": {
+     "all": {
+      "50": 1,
+      "51": 0
+     }
+    }
+   },
+   {
+    "value": "-con",
+    "stack": 2,
+    "mod": -1,
+    "price_melee": -6,
+    "price_caster": -5,
+    "pick": {
+     "all": {
+      "50": 1,
+      "51": 0
+     }
+    }
+   },
+   {
+    "value": "-int",
+    "stack": 2,
+    "mod": -1,
+    "price_melee": -2,
+    "price_caster": -3,
+    "pick": {
+     "all": {
+      "50": 1,
+      "51": 0
+     }
+    }
+   },
+   {
+    "value": "-wis",
+    "stack": 2,
+    "mod": -1,
+    "price_melee": -2,
+    "price_caster": -5,
+    "pick": {
+     "all": {
+      "50": 1,
+      "51": 0
+     }
+    }
+   }
+  ],
+  "items": "both"
+ },
+ "flag": {
+  "items": "weapon",
+  "conflictsWith": "none",
+  "values": [
+   {
+    "value": "vorpal",
+    "price_by_level": {
+     "20": 50,
+     "40": 140,
+     "60": 260,
+     "90": 470
+    },
+    "min_tier": 3,
+    "extra": "noenchant",
+    "align": [
+     -349,
+     1000
+    ],
+    "align_bonus": "good",
+    "adjectives": [
+     "смертельн(ое,ый,ая2,ые)",
+     "стрижающ(ее,ий1,ая1,ие)",
+     "ворпальн(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "deadly",
+     "severing",
+     "vorpal"
+    ],
+    "adjectives_ua": [
+     "смертоносний",
+     "зрізаючий",
+     "ворпальний"
+    ],
+    "points_by_level": {
+     "20": 25,
+     "40": 126,
+     "60": 390,
+     "90": 649
+    }
+   },
+   {
+    "value": "fading",
+    "price_by_level": {
+     "20": 140,
+     "40": 320,
+     "60": 340,
+     "90": 290
+    },
+    "conflicts": [
+     "holy",
+     "anti_evil",
+     "protect_evil"
+    ],
+    "extra": "invis noenchant magic",
+    "align": [
+     -1000,
+     349
+    ],
+    "align_bonus": "evil",
+    "adjectives": [
+     "призрачн(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "ghostly"
+    ],
+    "adjectives_ua": [
+     "примарний"
+    ],
+    "points_by_level": {
+     "20": 38,
+     "40": 142,
+     "60": 362,
+     "90": 472
+    }
+   },
+   {
+    "value": "shocking",
+    "price_by_level": {
+     "20": 300,
+     "40": 100,
+     "60": 80,
+     "90": 75
+    },
+    "min_tier": 3,
+    "extra": "hum",
+    "adjectives": [
+     "искрист(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "sparkling"
+    ],
+    "adjectives_ua": [
+     "іскристий"
+    ],
+    "points_by_level": {
+     "20": 80,
+     "40": 85,
+     "60": 119,
+     "90": 180
+    }
+   },
+   {
+    "value": "holy",
+    "price_by_level": {
+     "20": 90,
+     "40": 70,
+     "60": 50,
+     "90": 40
+    },
+    "extra": "bless noenchant",
+    "align": [
+     349,
+     1000
+    ],
+    "align_bonus": "good",
+    "conflicts": [
+     "poison",
+     "vampiric"
+    ],
+    "adjectives": [
+     "священн(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "holy"
+    ],
+    "adjectives_ua": [
+     "священний"
+    ],
+    "points_by_level": {
+     "20": 23,
+     "40": 48,
+     "60": 87,
+     "90": 117
+    }
+   },
+   {
+    "value": "flaming",
+    "price_by_level": {
+     "20": 510,
+     "40": 220,
+     "60": 250,
+     "90": 260
+    },
+    "extra": "glow burn_proof",
+    "align_bonus": "good",
+    "conflicts": [
+     "frost",
+     "fading",
+     "wood",
+     "ice"
+    ],
+    "adjectives": [
+     "пылающ(ее,ий1,ая1,ие)"
+    ],
+    "adjectives_en": [
+     "flaming"
+    ],
+    "adjectives_ua": [
+     "палаючий"
+    ],
+    "points_by_level": {
+     "20": 108,
+     "40": 111,
+     "60": 174,
+     "90": 279
+    }
+   },
+   {
+    "value": "frost",
+    "price_by_level": {
+     "20": 140,
+     "40": 70,
+     "60": 70,
+     "90": 75
+    },
+    "extra": "",
+    "align_bonus": "evil",
+    "adjectives": [
+     "леденящ(ее,ий1,ая1,ие)",
+     "ледян(ое,ой,ая2,ые)",
+     "морозн(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "freezing",
+     "icy",
+     "frosty"
+    ],
+    "adjectives_ua": [
+     "крижаний",
+     "льодяний",
+     "морозний"
+    ],
+    "points_by_level": {
+     "20": 49,
+     "40": 74,
+     "60": 105,
+     "90": 160
+    }
+   },
+   {
+    "value": "poison",
+    "price_by_level": {
+     "20": 10,
+     "40": 10,
+     "60": 10,
+     "90": 10
+    },
+    "extra": "",
+    "align_bonus": "evil",
+    "adjectives": [
+     "пауч(ье,ий2,ья,ьи)",
+     "ядовит(ое,ый,ая2,ые)",
+     "змеин(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "spider",
+     "venomous",
+     "serpentine"
+    ],
+    "adjectives_ua": [
+     "павучий",
+     "отруйний",
+     "зміїний"
+    ],
+    "points_by_level": {
+     "20": 4,
+     "40": 8,
+     "60": 19,
+     "90": 28
+    }
+   },
+   {
+    "value": "sharp",
+    "price_by_level": {
+     "20": 110,
+     "40": 90,
+     "60": 70,
+     "90": 50
+    },
+    "extra": "noenchant",
+    "adjectives": [
+     "остр(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "sharp"
+    ],
+    "adjectives_ua": [
+     "гострий"
+    ],
+    "points_by_level": {
+     "20": 29,
+     "40": 61,
+     "60": 109,
+     "90": 146
+    }
+   },
+   {
+    "value": "vampiric",
+    "price_by_level": {
+     "20": 140,
+     "40": 230,
+     "60": 340,
+     "90": 570
+    },
+    "extra": "dark anti_good anti_neutral",
+    "conflicts": [
+     "anti_good"
+    ],
+    "align": [
+     -1000,
+     -350
+    ],
+    "align_bonus": "evil",
+    "adjectives": [
+     "вампирск(ое,ий3,ая2,ие)",
+     "кровососущ(ее,ий1,ая1,ие)"
+    ],
+    "adjectives_en": [
+     "vampiric",
+     "bloodsucking"
+    ],
+    "adjectives_ua": [
+     "вампірський",
+     "кровосисний"
+    ],
+    "points_by_level": {
+     "20": 72,
+     "40": 220,
+     "60": 364,
+     "90": 560
+    }
+   }
+  ]
+ },
+ "weapon_material": {
+  "items": "weapon",
+  "conflictsWith": "same_section",
+  "values": [
+   {
+    "value": "platinum",
+    "price_melee": 45,
+    "price_caster": 45,
+    "adjectives": [
+     "платинов(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "platinum"
+    ],
+    "adjectives_ua": [
+     "платиновий"
+    ]
+   },
+   {
+    "value": "titanium",
+    "price_melee": 22,
+    "price_caster": 22,
+    "adjectives": [
+     "титанов(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "titanium"
+    ],
+    "adjectives_ua": [
+     "титановий"
+    ]
+   },
+   {
+    "value": "wood",
+    "price_melee": -22,
+    "price_caster": -22,
+    "adjectives": [
+     "деревянн(ое,ый,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "wooden"
+    ],
+    "adjectives_ua": [
+     "дерев'яний"
+    ]
+   },
+   {
+    "value": "ice",
+    "price_melee": -158,
+    "price_caster": -158,
+    "adjectives": [
+     "ледян(ое,ой,ая2,ые)"
+    ],
+    "adjectives_en": [
+     "icy"
+    ],
+    "adjectives_ua": [
+     "льодяний"
+    ]
+   }
+  ]
+ },
+ "affects_by_tier": {
+  "items": "weapon",
+  "conflictsWith": "same_value",
+  "values": [
+   {
+    "value": "ave",
+    "dynamic_price": true,
+    "stack": 2,
+    "step": 0.5,
+    "align_bonus": "evil",
+    "extra": "hum noenchant",
+    "nouns": [
+     "боли"
+    ],
+    "nouns_en": [
+     "of pain"
+    ],
+    "nouns_ua": [
+     "болю"
+    ]
+   },
+   {
+    "value": "-ave",
+    "dynamic_price": true,
+    "stack": 2,
+    "step": -0.5
+   },
+   {
+    "value": "dr",
+    "dynamic_price": true,
+    "stack": 2,
+    "step": 0.5,
+    "align_bonus": "evil",
+    "nouns": [
+     "урона"
+    ],
+    "nouns_en": [
+     "of damage"
+    ],
+    "nouns_ua": [
+     "шкоди"
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "40": 0.25
+     }
+    }
+   },
+   {
+    "value": "-dr",
+    "dynamic_price": true,
+    "stack": 2,
+    "step": -0.5
+   },
+   {
+    "value": "hr",
+    "dynamic_price": true,
+    "stack": 3,
+    "step": 1,
+    "align_bonus": "good",
+    "nouns": [
+     "точности"
+    ],
+    "nouns_en": [
+     "of accuracy"
+    ],
+    "nouns_ua": [
+     "влучності"
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "40": 0.25
+     }
+    }
+   },
+   {
+    "value": "-hr",
+    "dynamic_price": true,
+    "stack": 3,
+    "step": -1
+   }
+  ]
+ },
+ "_weapons": {
+  "_doc": "Weapons on the M budget (docs/plans/weapons-on-m.md). use_m: WeaponGenerator rolls from this file instead of weapon_affixes.json. Two-handedness is decided before the name and the affixes: weapon_classes requires two_hands = always, else the class two_hand_chance percent, else never; the name is then drawn among the two-handed names (or any not forbidding it) or the one-handed ones; a two-hander gets base ave/damroll and the tier M window x two_hand_k and one more affix. flag: price_by_level centi-M interpolated by item level (clamped to the end points), same for both archetypes; a flag is allowed on the cheapest tier whose max_m covers its price (and not below min_tier); dearer than the legendary window = never rolled. affects_by_tier: dynamic_price, priced at roll time from the calculator step at the item level. weapon_tier: a tier floor that applies to weapons only (damroll/hitroll stats: rare and up).",
+  "use_m": true,
+  "two_hand_k": 1.75,
+  "two_hands": {
+   "adjectives": [
+    "двуручн(ое,ый,ая2,ые)",
+    "больш(ое,ой,ая2,ие)",
+    "огромн(ое,ый,ая2,ые)"
+   ],
+   "adjectives_en": [
+    "two-handed",
+    "big",
+    "huge"
+   ],
+   "adjectives_ua": [
+    "дворучний",
+    "великий",
+    "величезний"
+   ],
+   "extra": "noenchant"
+  }
+ },
+ "_pick_doc": "pick (one item model, Kit 2026-10-04): {key: {level: weight multiplier}} on an affix or a section, interpolated at the item level and clamped at the ends. Key lookup: the killer's class (druid, paladin...), then profile (caster / hybrid / melee), then 'all'; the affix's pick before the section's. 0 = never rolls. Model only (measure.item_model). have / have_bits: the killer already has it (worn gear or active affect) -> it does not roll.",
+ "_top_doc": "Top effects (\"top\": true -- sanctuary family, haste, resist weapon): at most measure.top_max per item, the second at measure.top_repeat_weight (Kit 2026-10-04: two max, very rarely). anti_good/anti_evil/evil are personalization, price 0, not a minus."
+}

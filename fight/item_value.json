@@ -1,0 +1,602 @@
+{
+ "_doc": "One item value model, shared by the gear advisor (service advice, characterwrapper.cpp ga_*), the random item generator and Fenia's item measure (.config(\"fight/item_value\")). Units are gear-score points. melee/caster: per-profile weight per point of an apply (level/slevel/skill_level_* per +1, beats per -1% skill lag). shared: profile-independent weights; ac weight is ac_base at level 1 falling to 0 at ac_zero_level. flags: [melee, caster] per affect flag (a flag the char can self-cast counts 10%). res: [res, imm, vuln] per damage class (resists do not stack). measure: one roll of the item measure (M) and the slot factors (rolls = level / factor), tier budgets in M. A missing key falls back to the compiled default. docs/plans/armor-generator.md.",
+ "melee": {
+  "hp": 1.0,
+  "mana": 0.1,
+  "mana_gain": 0.05,
+  "heal_gain": 0.3,
+  "damroll": 12.0,
+  "hitroll": 6.0,
+  "saves": 3.0,
+  "weapon_weight": 12.0,
+  "str": 3.0,
+  "int": 1.0,
+  "wis": 1.0,
+  "dex": 2.0,
+  "con": 3.0,
+  "cha": 0.0,
+  "slevel": 4.0,
+  "level": 107.0,
+  "skill_level_group": 8.0,
+  "skill_level_skill": 4.0,
+  "beats": 1.0,
+  "move": 0.5
+ },
+ "caster": {
+  "hp": 1.0,
+  "mana": 0.5,
+  "mana_gain": 0.6,
+  "heal_gain": 0.15,
+  "damroll": 6.0,
+  "hitroll": 2.0,
+  "saves": 5.0,
+  "weapon_weight": 4.0,
+  "str": 1.0,
+  "int": 2.0,
+  "wis": 3.0,
+  "dex": 1.0,
+  "con": 3.0,
+  "cha": 0.0,
+  "slevel": 25.0,
+  "level": 127.0,
+  "skill_level_group": 18.0,
+  "skill_level_skill": 9.0,
+  "beats": 6.0,
+  "move": 0.05,
+  "ac_floor": 0.1
+ },
+ "shared": {
+  "ac_base": 0.5,
+  "ac_zero_level": 40.0,
+  "move": 0.05,
+  "learn_skill": 2.0,
+  "learn_group": 3.0,
+  "learn_all": 4.0
+ },
+ "flags": {
+  "sanctuary": [
+   300.0,
+   300.0
+  ],
+  "haste": [
+   110.0,
+   40.0
+  ],
+  "slow": [
+   -55.0,
+   -10.0
+  ],
+  "protect_evil": [
+   60.0,
+   60.0
+  ],
+  "protect_good": [
+   60.0,
+   60.0
+  ],
+  "regeneration": [
+   30.0,
+   15.0
+  ],
+  "flying": [
+   15.0,
+   15.0
+  ],
+  "pass_door": [
+   15.0,
+   15.0
+  ],
+  "invisible": [
+   15.0,
+   15.0
+  ],
+  "imp_invis": [
+   100.0,
+   100.0
+  ],
+  "camouflage": [
+   100.0,
+   100.0
+  ],
+  "fade": [
+   100.0,
+   100.0
+  ],
+  "sneak": [
+   12.0,
+   8.0
+  ],
+  "hide": [
+   6.0,
+   6.0
+  ],
+  "infrared": [
+   8.0,
+   8.0
+  ],
+  "swim": [
+   4.0,
+   4.0
+  ],
+  "stun": [
+   -100.0,
+   -100.0
+  ],
+  "weak_stun": [
+   -40.0,
+   -40.0
+  ],
+  "blind": [
+   -200.0,
+   -200.0
+  ],
+  "sleep": [
+   -250.0,
+   -250.0
+  ],
+  "charm": [
+   -250.0,
+   -250.0
+  ],
+  "curse": [
+   -35.0,
+   -35.0
+  ],
+  "corruption": [
+   -50.0,
+   -50.0
+  ],
+  "poison": [
+   -45.0,
+   -45.0
+  ],
+  "plague": [
+   -60.0,
+   -60.0
+  ],
+  "calm": [
+   -25.0,
+   -5.0
+  ],
+  "weaken": [
+   -10.0,
+   -10.0
+  ],
+  "faerie_fire": [
+   -15.0,
+   -15.0
+  ]
+ },
+ "res": {
+  "weapon": [
+   140.0,
+   420.0,
+   -210.0
+  ],
+  "spell": [
+   50.0,
+   150.0,
+   -75.0
+  ],
+  "bash": [
+   72.0,
+   216.0,
+   -108.0
+  ],
+  "pierce": [
+   34.0,
+   103.0,
+   -52.0
+  ],
+  "slash": [
+   33.0,
+   100.0,
+   -50.0
+  ],
+  "fire": [
+   23.0,
+   70.0,
+   -35.0
+  ],
+  "energy": [
+   17.0,
+   50.0,
+   -25.0
+  ],
+  "negative": [
+   17.0,
+   50.0,
+   -25.0
+  ],
+  "lightning": [
+   13.0,
+   40.0,
+   -20.0
+  ],
+  "acid": [
+   13.0,
+   40.0,
+   -20.0
+  ],
+  "holy": [
+   13.0,
+   40.0,
+   -20.0
+  ],
+  "cold": [
+   13.0,
+   40.0,
+   -20.0
+  ],
+  "poison": [
+   13.0,
+   40.0,
+   -20.0
+  ],
+  "charm": [
+   10.0,
+   30.0,
+   -20.0
+  ],
+  "mental": [
+   17.0,
+   50.0,
+   -25.0
+  ],
+  "disease": [
+   10.0,
+   30.0,
+   -20.0
+  ],
+  "drowning": [
+   10.0,
+   30.0,
+   -20.0
+  ],
+  "light": [
+   10.0,
+   30.0,
+   -20.0
+  ],
+  "sound": [
+   10.0,
+   30.0,
+   -20.0
+  ],
+  "summon": [
+   10.0,
+   30.0,
+   -20.0
+  ],
+  "iron": [
+   10.0,
+   30.0,
+   -20.0
+  ],
+  "wood": [
+   10.0,
+   30.0,
+   -20.0
+  ],
+  "silver": [
+   10.0,
+   30.0,
+   -20.0
+  ],
+  "mithril": [
+   10.0,
+   30.0,
+   -20.0
+  ]
+ },
+ "measure": {
+  "_doc": "Read by Fenia .tmp.craft.getMeasure. One roll = +1 damroll, +1 hitroll, +10 hp, +10 mana. rolls = level / factor; jeweler crafts use jeweler_factor. tier_budget is in M (one measure), reference level ref_level. craft_budget_cm: crafted armor (craft/armor generateAffects) per craft tier 1..5 in centi-M (Fenia has no floats). enchant_budget_cm: enchant armor target [rare, epic with creativity or Enki].",
+  "roll": {
+   "damroll": 1,
+   "hitroll": 1,
+   "hp": 10,
+   "mana": 10
+  },
+  "default_factor": 14,
+  "slot_factor": {
+   "shield": 11,
+   "head": 13,
+   "body": 11,
+   "waist": 14,
+   "light": 14,
+   "float": 14,
+   "ears": 14,
+   "neck": 14,
+   "finger": 14,
+   "wrist": 14
+  },
+  "jeweler_factor": {
+   "finger": 13,
+   "ears": 13,
+   "neck": 13
+  },
+  "ref_level": 60,
+  "craft_budget_cm": [160, 120, 80, 50, 30],
+  "enchant_budget_cm": [150, 250],
+  "tier_budget": {
+   "common": 0.5,
+   "uncommon": 1.0,
+   "rare": 1.5,
+   "epic": 2.5,
+   "legendary": 4.5
+  },
+  "level_curve": {
+   "1": 1.5,
+   "20": 1.5,
+   "40": 1.2,
+   "60": 1.0,
+   "90": 0.9
+  },
+  "cost_k": 7.0,
+  "armor_budget_mult": [0.8, 1.0],
+  "cost_cap": 30000,
+  "top_max": 2,
+  "top_repeat_weight": 0.1,
+  "core_affixes": {
+   "melee": ["damroll", "hitroll", "hit"],
+   "caster": ["hit", "mana", "mana_gain", "heal_gain", "pack_gain"]
+  },
+  "core_chance": [90, 60],
+  "legendary_stat_share": 0.5,
+  "stat_floor": {
+   "10": [
+    0.35,
+    0.5
+   ],
+   "20": [
+    0.2,
+    0.45
+   ],
+   "40": [
+    0.0,
+    0.15
+   ],
+   "60": [
+    0.0,
+    0.05
+   ],
+   "90": [
+    0.0,
+    0.0
+   ]
+  },
+  "stat_sections": [
+   "armor_stats",
+   "primary_stats",
+   "affect_packs"
+  ],
+  "_doc_calibration": "P7 knobs (model only): stat_floor {level: share} = least share of an item's budget spent on stat_sections; max_affixes_bonus {level: n}. Calibrated on item-dump.py --model reruns vs docs/plans/item-baseline/before.jsonl."
+ },
+ "detects": {
+  "_doc": "Points per detect affix [melee, caster] (decision 11). From the generator's senses prices. A detect the char can cast itself counts 10% (sage fit).",
+  "evil": [
+   5.4,
+   5.1
+  ],
+  "good": [
+   5.4,
+   5.1
+  ],
+  "magic": [
+   5.4,
+   5.1
+  ],
+  "life": [
+   5.4,
+   5.1
+  ],
+  "undead": [
+   5.4,
+   5.1
+  ],
+  "infrared": [
+   7.5,
+   7.6
+  ],
+  "fade": [
+   15.0,
+   15.2
+  ],
+  "imp_invis": [
+   15.0,
+   15.2
+  ],
+  "hidden": [
+   15.0,
+   15.2
+  ],
+  "invis": [
+   15.0,
+   15.2
+  ],
+  "acute_vision": [
+   20.3,
+   20.3
+  ],
+  "pack_vis": [
+   30.0,
+   30.5
+  ]
+ },
+ "materials": {
+  "_doc": "Points per item material [melee, caster] (decision 12): durability today. Weapon materials still carry their combat side here until the combat-effect model (P3) prices it from the mob census.",
+  "dragonskin": [
+   35.3,
+   35.6
+  ],
+  "mithril": [
+   6.4,
+   6.4
+  ],
+  "adamantite": [
+   6.4,
+   6.4
+  ],
+  "snakeskin": [
+   3.2,
+   2.5
+  ],
+  "platinum": [
+   48.1,
+   57.1
+  ],
+  "titanium": [
+   23.5,
+   27.9
+  ],
+  "wood": [
+   -23.5,
+   -27.9
+  ],
+  "ice": [
+   -169.1,
+   -200.7
+  ]
+ },
+ "extras": {
+  "_doc": "Points per extra flag [melee, caster]: noremove, anti_good, bless... From the generator's extra prices (Kit 2026-10-03). anti_good/anti_evil/evil = 0: personalization, not a minus (Kit 2026-10-04).",
+  "anti_good": [
+   0,
+   0
+  ],
+  "anti_evil": [
+   0,
+   0
+  ],
+  "hum": [
+   2.1,
+   2.5
+  ],
+  "evil": [
+   0,
+   0
+  ],
+  "noremove": [
+   -6.4,
+   -6.4
+  ],
+  "bless": [
+   2.1,
+   2.5
+  ],
+  "burn_proof": [
+   3.2,
+   2.5
+  ],
+  "nouncurse": [
+   -35.0,
+   -35.0
+  ],
+  "melt_drop": [
+   -5.0,
+   -5.0
+  ]
+ },
+ "materials_combat": {
+  "_doc": "Combat side of weapon materials in points by level: mobs vulnerable / resistant / immune to the material (protectMaterial). scripts/item-combat-model.py.",
+  "platinum": {
+   "20": 0,
+   "40": 0,
+   "60": 0,
+   "90": 0
+  },
+  "titanium": {
+   "20": 0,
+   "40": 0,
+   "60": 0,
+   "90": 0
+  },
+  "wood": {
+   "20": -4,
+   "40": -7,
+   "60": -17,
+   "90": -26
+  },
+  "ice": {
+   "20": -8,
+   "40": -14,
+   "60": -35,
+   "90": -53
+  }
+ },
+ "flags_by_level": {
+  "_doc": "Affect flags in points by level [melee, caster] (one combat frame, Kit 2026-10-04): defense = hp saved per average fight (tier spawn share x measured incoming x rounds x share removed), offense = DPS share. Wins over the flat flags table when the item model is on. scripts/item-combat-model.py.",
+  "sanctuary": {
+   "20": [
+    18,
+    79
+   ],
+   "40": [
+    44,
+    209
+   ],
+   "60": [
+    72,
+    292
+   ],
+   "90": [
+    131,
+    784
+   ]
+  },
+  "protect_evil": {
+   "20": [
+    2,
+    8
+   ],
+   "40": [
+    4,
+    21
+   ],
+   "60": [
+    7,
+    29
+   ],
+   "90": [
+    13,
+    78
+   ]
+  },
+  "protect_good": {
+   "20": [
+    2,
+    8
+   ],
+   "40": [
+    4,
+    21
+   ],
+   "60": [
+    7,
+    29
+   ],
+   "90": [
+    13,
+    78
+   ]
+  },
+  "haste": {
+   "20": [
+    89,
+    57
+   ],
+   "40": [
+    154,
+    113
+   ],
+   "60": [
+    374,
+    144
+   ],
+   "90": [
+    562,
+    395
+   ]
+  }
+ }
+}

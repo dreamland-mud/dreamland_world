@@ -328,7 +328,20 @@
    "40": 1.2,
    "60": 1.0,
    "90": 0.9
-  }
+  },
+  "stat_floor": {
+   "10": 0.6,
+   "20": 0.6,
+   "40": 0.4,
+   "60": 0.2,
+   "90": 0.0
+  },
+  "stat_sections": [
+   "armor_stats",
+   "primary_stats",
+   "affect_packs"
+  ],
+  "_doc_calibration": "P7 knobs (model only): stat_floor {level: share} = least share of an item's budget spent on stat_sections; max_affixes_bonus {level: n}. Calibrated on item-dump.py --model reruns vs docs/plans/item-baseline/before.jsonl."
  },
  "detects": {
   "_doc": "Points per detect affix [melee, caster] (decision 11). From the generator's senses prices. A detect the char can cast itself counts 10% (sage fit).",

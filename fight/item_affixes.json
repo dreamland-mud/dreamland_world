@@ -954,8 +954,8 @@
      349
     ],
     "extra": "dark noenchant",
-    "price_melee": -9,
-    "price_caster": -8,
+    "price_melee": 0,
+    "price_caster": 0,
     "adjectives": [
      "темн(ое,ый,ая2,ые)"
     ],
@@ -978,8 +978,8 @@
      1000
     ],
     "extra": "noenchant",
-    "price_melee": -9,
-    "price_caster": -8,
+    "price_melee": 0,
+    "price_caster": 0,
     "adjectives": [
      "светл(ое,ый,ая2,ые)"
     ],
@@ -1017,8 +1017,8 @@
     ],
     "align_bonus": "evil",
     "extra": "noenchant",
-    "price_melee": -5,
-    "price_caster": -4,
+    "price_melee": 0,
+    "price_caster": 0,
     "adjectives": [
      "зловещ(ее,ий1,ая1,ие)"
     ],
@@ -1359,6 +1359,12 @@
     ],
     "adjectives_ua": [
      "непробивний"
+    ],
+    "conflicts": [
+     "sanctuary",
+     "stardust",
+     "dark shroud",
+     "haste"
     ]
    },
    {
@@ -1879,7 +1885,13 @@
       "20": 1,
       "40": 0.25
      }
-    }
+    },
+    "conflicts": [
+     "sanctuary",
+     "stardust",
+     "dark shroud",
+     "weapon"
+    ]
    },
    {
     "value": "protect_good",
@@ -2214,7 +2226,13 @@
       "90": 0.44
      }
     },
-    "floor_exempt": true
+    "floor_exempt": true,
+    "conflicts": [
+     "stardust",
+     "dark shroud",
+     "haste",
+     "weapon"
+    ]
    },
    {
     "value": "stardust",
@@ -2284,7 +2302,13 @@
       "90": 0.44
      }
     },
-    "floor_exempt": true
+    "floor_exempt": true,
+    "conflicts": [
+     "sanctuary",
+     "dark shroud",
+     "haste",
+     "weapon"
+    ]
    },
    {
     "value": "dark shroud",
@@ -2354,7 +2378,13 @@
       "90": 0.44
      }
     },
-    "floor_exempt": true
+    "floor_exempt": true,
+    "conflicts": [
+     "sanctuary",
+     "stardust",
+     "haste",
+     "weapon"
+    ]
    },
    {
     "value": "spell resistance",
@@ -3984,5 +4014,6 @@
    "extra": "noenchant"
   }
  },
- "_pick_doc": "pick (one item model, Kit 2026-10-04): {key: {level: weight multiplier}} on an affix or a section, interpolated at the item level and clamped at the ends. Key lookup: the killer's class (druid, paladin...), then profile (caster / hybrid / melee), then 'all'; the affix's pick before the section's. 0 = never rolls. Model only (measure.item_model). have / have_bits: the killer already has it (worn gear or active affect) -> it does not roll."
+ "_pick_doc": "pick (one item model, Kit 2026-10-04): {key: {level: weight multiplier}} on an affix or a section, interpolated at the item level and clamped at the ends. Key lookup: the killer's class (druid, paladin...), then profile (caster / hybrid / melee), then 'all'; the affix's pick before the section's. 0 = never rolls. Model only (measure.item_model). have / have_bits: the killer already has it (worn gear or active affect) -> it does not roll.",
+ "_top_doc": "Top effects (sanctuary family, haste, resist weapon) conflict with each other: one per item (Kit 2026-10-04). anti_good/anti_evil/evil are personalization, price 0, not a minus."
 }

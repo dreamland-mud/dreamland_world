@@ -1360,12 +1360,7 @@
     "adjectives_ua": [
      "непробивний"
     ],
-    "conflicts": [
-     "sanctuary",
-     "stardust",
-     "dark shroud",
-     "haste"
-    ]
+    "top": true
    },
    {
     "value": "bash",
@@ -1886,12 +1881,7 @@
       "40": 0.25
      }
     },
-    "conflicts": [
-     "sanctuary",
-     "stardust",
-     "dark shroud",
-     "weapon"
-    ]
+    "top": true
    },
    {
     "value": "protect_good",
@@ -2227,12 +2217,7 @@
      }
     },
     "floor_exempt": true,
-    "conflicts": [
-     "stardust",
-     "dark shroud",
-     "haste",
-     "weapon"
-    ]
+    "top": true
    },
    {
     "value": "stardust",
@@ -2303,12 +2288,7 @@
      }
     },
     "floor_exempt": true,
-    "conflicts": [
-     "sanctuary",
-     "dark shroud",
-     "haste",
-     "weapon"
-    ]
+    "top": true
    },
    {
     "value": "dark shroud",
@@ -2379,12 +2359,7 @@
      }
     },
     "floor_exempt": true,
-    "conflicts": [
-     "sanctuary",
-     "stardust",
-     "haste",
-     "weapon"
-    ]
+    "top": true
    },
    {
     "value": "spell resistance",
@@ -4015,5 +3990,5 @@
   }
  },
  "_pick_doc": "pick (one item model, Kit 2026-10-04): {key: {level: weight multiplier}} on an affix or a section, interpolated at the item level and clamped at the ends. Key lookup: the killer's class (druid, paladin...), then profile (caster / hybrid / melee), then 'all'; the affix's pick before the section's. 0 = never rolls. Model only (measure.item_model). have / have_bits: the killer already has it (worn gear or active affect) -> it does not roll.",
- "_top_doc": "Top effects (sanctuary family, haste, resist weapon) conflict with each other: one per item (Kit 2026-10-04). anti_good/anti_evil/evil are personalization, price 0, not a minus."
+ "_top_doc": "Top effects (\"top\": true -- sanctuary family, haste, resist weapon): at most measure.top_max per item, the second at measure.top_repeat_weight (Kit 2026-10-04: two max, very rarely). anti_good/anti_evil/evil are personalization, price 0, not a minus."
 }

@@ -21,7 +21,12 @@
     "nouns_ua": [
      "живучості"
     ],
-    "unit": 10
+    "unit": 10,
+    "pick": {
+     "all": {
+      "1": 1.5
+     }
+    }
    },
    {
     "value": "mana",
@@ -41,7 +46,15 @@
     "nouns_ua": [
      "духу"
     ],
-    "unit": 10
+    "unit": 10,
+    "pick": {
+     "caster": {
+      "1": 1.5
+     },
+     "melee": {
+      "1": 0.25
+     }
+    }
    },
    {
     "value": "move",
@@ -61,7 +74,18 @@
     "nouns_ua": [
      "мандрівника"
     ],
-    "unit": 20
+    "unit": 20,
+    "pick": {
+     "caster": {
+      "1": 0.25
+     },
+     "melee": {
+      "1": 1.5
+     },
+     "hybrid": {
+      "1": 1.5
+     }
+    }
    },
    {
     "value": "hitroll",
@@ -81,7 +105,13 @@
      "влучності"
     ],
     "unit": 1,
-    "weapon_tier": 3
+    "weapon_tier": 3,
+    "pick": {
+     "caster": {
+      "20": 1,
+      "40": 0.25
+     }
+    }
    },
    {
     "value": "damroll",
@@ -102,7 +132,13 @@
      "шкоди"
     ],
     "unit": 1,
-    "weapon_tier": 3
+    "weapon_tier": 3,
+    "pick": {
+     "caster": {
+      "20": 1,
+      "40": 0.25
+     }
+    }
    },
    {
     "value": "-hit",
@@ -157,7 +193,12 @@
      "порятунку",
      "оберега"
     ],
-    "unit": -1
+    "unit": -1,
+    "pick": {
+     "all": {
+      "1": 1.5
+     }
+    }
    },
    {
     "value": "-saves",
@@ -183,7 +224,12 @@
     "adjectives_ua": [
      "заговорений"
     ],
-    "unit": -1
+    "unit": -1,
+    "pick": {
+     "all": {
+      "1": 1.5
+     }
+    }
    },
    {
     "value": "saving_breath",
@@ -203,7 +249,12 @@
     "nouns_ua": [
      "драконоборця"
     ],
-    "unit": -1
+    "unit": -1,
+    "pick": {
+     "all": {
+      "1": 1.5
+     }
+    }
    },
    {
     "value": "ac",
@@ -225,7 +276,19 @@
      "броні"
     ],
     "unit": -10,
-    "max_level": 40
+    "pick": {
+     "melee": {
+      "40": 1,
+      "41": 0
+     },
+     "hybrid": {
+      "40": 1,
+      "41": 0
+     },
+     "caster": {
+      "1": 1.5
+     }
+    }
    },
    {
     "value": "-ac",
@@ -233,7 +296,12 @@
     "price_melee": -6,
     "price_caster": -5,
     "unit": 10,
-    "max_level": 40
+    "pick": {
+     "all": {
+      "40": 1,
+      "41": 0
+     }
+    }
    },
    {
     "value": "heal_gain",
@@ -253,7 +321,12 @@
     ],
     "nouns_ua": [
      "зцілення"
-    ]
+    ],
+    "pick": {
+     "caster": {
+      "1": 1.5
+     }
+    }
    },
    {
     "value": "mana_gain",
@@ -272,7 +345,12 @@
     ],
     "nouns_ua": [
      "медитації"
-    ]
+    ],
+    "pick": {
+     "caster": {
+      "1": 1.5
+     }
+    }
    },
    {
     "value": "beats",
@@ -291,7 +369,12 @@
     ],
     "nouns_ua": [
      "моторності"
-    ]
+    ],
+    "pick": {
+     "caster": {
+      "1": 1.5
+     }
+    }
    },
    {
     "value": "slevel",
@@ -311,7 +394,12 @@
     ],
     "nouns_ua": [
      "чаклунства"
-    ]
+    ],
+    "pick": {
+     "caster": {
+      "1": 1.5
+     }
+    }
    },
    {
     "value": "level",
@@ -386,7 +474,16 @@
     ],
     "nouns_ua": [
      "спритника"
-    ]
+    ],
+    "pick": {
+     "caster": {
+      "1": 0
+     },
+     "all": {
+      "50": 1,
+      "51": 0
+     }
+    }
    },
    {
     "value": "pack_newbie",
@@ -411,7 +508,23 @@
     ],
     "nouns_ua": [
      "новачка"
-    ]
+    ],
+    "pick": {
+     "caster": {
+      "20": 1.5,
+      "21": 1,
+      "30": 1,
+      "31": 0
+     },
+     "melee": {
+      "30": 1,
+      "31": 0
+     },
+     "hybrid": {
+      "30": 1,
+      "31": 0
+     }
+    }
    },
    {
     "value": "pack_sage",
@@ -436,7 +549,23 @@
     ],
     "nouns_ua": [
      "мудреця"
-    ]
+    ],
+    "pick": {
+     "caster": {
+      "20": 1.5,
+      "21": 1,
+      "50": 1,
+      "51": 0
+     },
+     "melee": {
+      "30": 1,
+      "31": 0
+     },
+     "hybrid": {
+      "30": 1,
+      "31": 0
+     }
+    }
    },
    {
     "value": "pack_gain",
@@ -461,7 +590,12 @@
     ],
     "nouns_ua": [
      "відновлення"
-    ]
+    ],
+    "pick": {
+     "caster": {
+      "1": 1.5
+     }
+    }
    },
    {
     "value": "pack_bigot",
@@ -481,7 +615,17 @@
     ],
     "adjectives_ua": [
      "святенницький"
-    ]
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "21": 0.25
+     },
+     "hybrid": {
+      "20": 1,
+      "21": 0.25
+     }
+    }
    }
   ],
   "items": "both"
@@ -503,7 +647,12 @@
     ],
     "nouns_ua": [
      "захисника"
-    ]
+    ],
+    "pick": {
+     "all": {
+      "1": 1.5
+     }
+    }
    },
    {
     "value": "fightmaster",
@@ -1416,7 +1565,17 @@
     ],
     "nouns_ua": [
      "інквізитора"
-    ]
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "21": 0.25
+     },
+     "hybrid": {
+      "20": 1,
+      "21": 0.25
+     }
+    }
    },
    {
     "value": "good",
@@ -1431,7 +1590,17 @@
     ],
     "nouns_ua": [
      "єретика"
-    ]
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "21": 0.25
+     },
+     "hybrid": {
+      "20": 1,
+      "21": 0.25
+     }
+    }
    },
    {
     "value": "magic",
@@ -1446,7 +1615,17 @@
     ],
     "nouns_ua": [
      "оцінювача"
-    ]
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "21": 0.25
+     },
+     "hybrid": {
+      "20": 1,
+      "21": 0.25
+     }
+    }
    },
    {
     "value": "life",
@@ -1461,7 +1640,17 @@
     ],
     "nouns_ua": [
      "мисливця"
-    ]
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "21": 0.25
+     },
+     "hybrid": {
+      "20": 1,
+      "21": 0.25
+     }
+    }
    },
    {
     "value": "undead",
@@ -1476,7 +1665,17 @@
     ],
     "nouns_ua": [
      "екзорциста"
-    ]
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "21": 0.25
+     },
+     "hybrid": {
+      "20": 1,
+      "21": 0.25
+     }
+    }
    },
    {
     "value": "infrared",
@@ -1492,7 +1691,12 @@
     ],
     "nouns_ua": [
      "сови"
-    ]
+    ],
+    "pick": {
+     "all": {
+      "1": 0.1
+     }
+    }
    },
    {
     "value": "hidden",
@@ -1507,7 +1711,23 @@
     ],
     "nouns_ua": [
      "розвідника"
-    ]
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "21": 0.5
+     },
+     "hybrid": {
+      "20": 1,
+      "21": 0.5
+     },
+     "thief": {
+      "1": 0
+     },
+     "ninja": {
+      "1": 0
+     }
+    }
    },
    {
     "value": "invis",
@@ -1522,6 +1742,31 @@
     ],
     "nouns_ua": [
      "ясновидця"
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "21": 0.25
+     },
+     "hybrid": {
+      "20": 1,
+      "21": 0.25
+     }
+    }
+   },
+   {
+    "value": "fade",
+    "tier": 3,
+    "price_melee": 14,
+    "price_caster": 12,
+    "nouns": [
+     "следопыта"
+    ],
+    "nouns_en": [
+     "of the pathfinder"
+    ],
+    "nouns_ua": [
+     "слідопита"
     ]
    },
    {
@@ -1562,7 +1807,17 @@
     "conflicts": [
      "hidden",
      "invis"
-    ]
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "21": 0.5
+     },
+     "hybrid": {
+      "20": 1,
+      "21": 0.5
+     }
+    }
    }
   ],
   "items": "armor"
@@ -1590,7 +1845,13 @@
     "nouns_ua": [
      "швидкості",
      "прискорення"
-    ]
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "40": 0.25
+     }
+    }
    },
    {
     "value": "protect_good",
@@ -1617,7 +1878,19 @@
     "nouns_ua": [
      "зла",
      "темряви"
-    ]
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "21": 0
+     },
+     "druid": {
+      "1": 1
+     },
+     "paladin": {
+      "1": 0
+     }
+    }
    },
    {
     "value": "protect_evil",
@@ -1644,7 +1917,16 @@
     "nouns_ua": [
      "добра",
      "світла"
-    ]
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "21": 0
+     },
+     "druid": {
+      "1": 1
+     }
+    }
    },
    {
     "value": "regeneration",
@@ -1666,7 +1948,16 @@
     "nouns_ua": [
      "регенерації",
      "тролів"
-    ]
+    ],
+    "pick": {
+     "druid": {
+      "50": 1,
+      "51": 0
+     },
+     "vampire": {
+      "1": 0
+     }
+    }
    },
    {
     "value": "pass_door",
@@ -1681,7 +1972,13 @@
     ],
     "nouns_ua": [
      "привида"
-    ]
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "40": 0
+     }
+    }
    },
    {
     "value": "flying",
@@ -1700,7 +1997,13 @@
     ],
     "adjectives_ua": [
      "крилатий"
-    ]
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "40": 0
+     }
+    }
    },
    {
     "value": "sneak",
@@ -1718,7 +2021,18 @@
     ],
     "adjectives_ua": [
      "безшумний"
-    ]
+    ],
+    "pick": {
+     "thief": {
+      "1": 0
+     },
+     "ninja": {
+      "1": 0
+     },
+     "vampire": {
+      "1": 0
+     }
+    }
    },
    {
     "value": "hide",
@@ -1736,7 +2050,18 @@
     ],
     "nouns_ua": [
      "тіней"
-    ]
+    ],
+    "pick": {
+     "thief": {
+      "1": 0
+     },
+     "ninja": {
+      "1": 0
+     },
+     "vampire": {
+      "1": 0
+     }
+    }
    },
    {
     "value": "swim",
@@ -1808,7 +2133,6 @@
     "nouns_ua": [
      "святилища"
     ],
-    "min_level": 30,
     "points_by_level": {
      "20": [
       18,
@@ -1827,7 +2151,30 @@
       784
      ]
     },
-    "source_hash": "4e5961b66367"
+    "source_hash": "4e5961b66367",
+    "align": [
+     350,
+     1000
+    ],
+    "have": [
+     "sanctuary",
+     "stardust",
+     "dark shroud"
+    ],
+    "have_bits": {
+     "table": "affect_flags",
+     "bits": "sanctuary"
+    },
+    "pick": {
+     "caster": {
+      "30": 1,
+      "40": 0
+     },
+     "hybrid": {
+      "30": 1,
+      "40": 0
+     }
+    }
    },
    {
     "value": "stardust",
@@ -1843,7 +2190,6 @@
     "nouns_ua": [
      "зоряного пилу"
     ],
-    "min_level": 30,
     "points_by_level": {
      "20": [
       18,
@@ -1863,7 +2209,30 @@
      ]
     },
     "source_hash": "be8f8f4ee449",
-    "points_note": "model: flags_by_level sanctuary x1.0 (no AFF bit to measure)"
+    "points_note": "model: flags_by_level sanctuary x1.0 (no AFF bit to measure)",
+    "align": [
+     -349,
+     349
+    ],
+    "have": [
+     "sanctuary",
+     "stardust",
+     "dark shroud"
+    ],
+    "have_bits": {
+     "table": "affect_flags",
+     "bits": "sanctuary"
+    },
+    "pick": {
+     "caster": {
+      "30": 1,
+      "40": 0
+     },
+     "hybrid": {
+      "30": 1,
+      "40": 0
+     }
+    }
    },
    {
     "value": "dark shroud",
@@ -1883,7 +2252,6 @@
     "nouns_ua": [
      "темної аури"
     ],
-    "min_level": 30,
     "points_by_level": {
      "20": [
       14,
@@ -1903,7 +2271,26 @@
      ]
     },
     "source_hash": "ff7c56a37061",
-    "points_note": "model: flags_by_level sanctuary x0.8 (no AFF bit to measure)"
+    "points_note": "model: flags_by_level sanctuary x0.8 (no AFF bit to measure)",
+    "have": [
+     "sanctuary",
+     "stardust",
+     "dark shroud"
+    ],
+    "have_bits": {
+     "table": "affect_flags",
+     "bits": "sanctuary"
+    },
+    "pick": {
+     "caster": {
+      "30": 1,
+      "40": 0
+     },
+     "hybrid": {
+      "30": 1,
+      "40": 0
+     }
+    }
    },
    {
     "value": "spell resistance",
@@ -2052,7 +2439,13 @@
       0
      ]
     },
-    "source_hash": "497b28929947"
+    "source_hash": "497b28929947",
+    "pick": {
+     "caster": {
+      "30": 1,
+      "50": 0
+     }
+    }
    },
    {
     "value": "protection evil",
@@ -2094,7 +2487,20 @@
      ]
     },
     "source_hash": "6ae6cbdc82da",
-    "points_note": "model: flags_by_level protect_evil x1.0 (no AFF bit to measure)"
+    "points_note": "model: flags_by_level protect_evil x1.0 (no AFF bit to measure)",
+    "pick": {
+     "caster": {
+      "20": 1,
+      "21": 0
+     },
+     "druid": {
+      "1": 1
+     }
+    },
+    "have_bits": {
+     "table": "affect_flags",
+     "bits": "protect_evil"
+    }
    },
    {
     "value": "protection good",
@@ -2136,7 +2542,23 @@
      ]
     },
     "source_hash": "a39d3dde0f1d",
-    "points_note": "model: flags_by_level protect_good x1.0 (no AFF bit to measure)"
+    "points_note": "model: flags_by_level protect_good x1.0 (no AFF bit to measure)",
+    "pick": {
+     "caster": {
+      "20": 1,
+      "21": 0
+     },
+     "druid": {
+      "1": 1
+     },
+     "paladin": {
+      "1": 0
+     }
+    },
+    "have_bits": {
+     "table": "affect_flags",
+     "bits": "protect_good"
+    }
    },
    {
     "value": "benediction",
@@ -2245,7 +2667,13 @@
       33
      ]
     },
-    "source_hash": "3e0f147cb378"
+    "source_hash": "3e0f147cb378",
+    "pick": {
+     "caster": {
+      "30": 1,
+      "50": 0
+     }
+    }
    },
    {
     "value": "protection cold",
@@ -2279,7 +2707,13 @@
       23
      ]
     },
-    "source_hash": "8f4b9f140ae7"
+    "source_hash": "8f4b9f140ae7",
+    "pick": {
+     "caster": {
+      "30": 1,
+      "50": 0
+     }
+    }
    },
    {
     "value": "concentrate",
@@ -2424,7 +2858,20 @@
       15
      ]
     },
-    "source_hash": "efb5d670ae96"
+    "source_hash": "efb5d670ae96",
+    "pick": {
+     "druid": {
+      "50": 1,
+      "51": 0
+     },
+     "vampire": {
+      "1": 0
+     }
+    },
+    "have_bits": {
+     "table": "affect_flags",
+     "bits": "regeneration"
+    }
    },
    {
     "value": "fortitude",
@@ -2458,7 +2905,13 @@
       30
      ]
     },
-    "source_hash": "602ad27e0769"
+    "source_hash": "602ad27e0769",
+    "pick": {
+     "paladin": {
+      "60": 1,
+      "61": 0
+     }
+    }
    },
    {
     "value": "resilience",
@@ -2492,7 +2945,13 @@
       17
      ]
     },
-    "source_hash": "f8f650691ccd"
+    "source_hash": "f8f650691ccd",
+    "pick": {
+     "paladin": {
+      "60": 1,
+      "61": 0
+     }
+    }
    },
    {
     "value": "protection negative",
@@ -2566,7 +3025,17 @@
       15
      ]
     },
-    "source_hash": "30d5f50f6cc0"
+    "source_hash": "30d5f50f6cc0",
+    "pick": {
+     "caster": {
+      "20": 1,
+      "40": 0
+     }
+    },
+    "have_bits": {
+     "table": "affect_flags",
+     "bits": "flying"
+    }
    }
   ],
   "items": "armor"
@@ -2826,7 +3295,16 @@
     ],
     "nouns_ua": [
      "сили"
-    ]
+    ],
+    "pick": {
+     "all": {
+      "50": 1,
+      "51": 0
+     },
+     "caster": {
+      "1": 0
+     }
+    }
    },
    {
     "value": "int",
@@ -2842,7 +3320,25 @@
     ],
     "nouns_ua": [
      "розуму"
-    ]
+    ],
+    "pick": {
+     "all": {
+      "50": 1,
+      "51": 0
+     },
+     "melee": {
+      "30": 1,
+      "31": 0
+     },
+     "hybrid": {
+      "30": 1,
+      "31": 0
+     },
+     "caster": {
+      "50": 1,
+      "51": 0
+     }
+    }
    },
    {
     "value": "wis",
@@ -2858,7 +3354,27 @@
     ],
     "nouns_ua": [
      "мудрості"
-    ]
+    ],
+    "pick": {
+     "all": {
+      "50": 1,
+      "51": 0
+     },
+     "melee": {
+      "30": 1,
+      "31": 0
+     },
+     "hybrid": {
+      "30": 1,
+      "31": 0
+     },
+     "caster": {
+      "20": 1.5,
+      "21": 1,
+      "50": 1,
+      "51": 0
+     }
+    }
    },
    {
     "value": "dex",
@@ -2874,7 +3390,17 @@
     ],
     "nouns_ua": [
      "спритності"
-    ]
+    ],
+    "pick": {
+     "all": {
+      "50": 1,
+      "51": 0
+     },
+     "caster": {
+      "50": 0.5,
+      "51": 0
+     }
+    }
    },
    {
     "value": "con",
@@ -2890,7 +3416,19 @@
     ],
     "nouns_ua": [
      "витривалості"
-    ]
+    ],
+    "pick": {
+     "all": {
+      "50": 1,
+      "51": 0
+     },
+     "caster": {
+      "20": 1.5,
+      "21": 1,
+      "30": 1,
+      "31": 0
+     }
+    }
    },
    {
     "value": "cha",
@@ -2906,7 +3444,13 @@
     ],
     "nouns_ua": [
      "чарівності"
-    ]
+    ],
+    "pick": {
+     "all": {
+      "50": 1,
+      "51": 0
+     }
+    }
    }
   ],
   "items": "both"
@@ -3309,7 +3853,13 @@
     ],
     "nouns_ua": [
      "шкоди"
-    ]
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "40": 0.25
+     }
+    }
    },
    {
     "value": "-dr",
@@ -3331,7 +3881,13 @@
     ],
     "nouns_ua": [
      "влучності"
-    ]
+    ],
+    "pick": {
+     "caster": {
+      "20": 1,
+      "40": 0.25
+     }
+    }
    },
    {
     "value": "-hr",
@@ -3363,5 +3919,6 @@
    ],
    "extra": "noenchant"
   }
- }
+ },
+ "_pick_doc": "pick (one item model, Kit 2026-10-04): {key: {level: weight multiplier}} on an affix or a section, interpolated at the item level and clamped at the ends. Key lookup: the killer's class (druid, paladin...), then profile (caster / hybrid / melee), then 'all'; the affix's pick before the section's. 0 = never rolls. Model only (measure.item_model). have / have_bits: the killer already has it (worn gear or active affect) -> it does not roll."
 }

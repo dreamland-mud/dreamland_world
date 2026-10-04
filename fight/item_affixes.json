@@ -160,6 +160,24 @@
     "price_melee": -28,
     "price_caster": -8,
     "unit": -1
+   },
+   {
+    "value": "-damroll",
+    "stack": 2,
+    "price_melee": -28,
+    "price_caster": -12,
+    "unit": -1,
+    "conflicts": [
+     "dr",
+     "-dr"
+    ]
+   },
+   {
+    "value": "-move",
+    "stack": 2,
+    "price_melee": -5,
+    "price_caster": -2,
+    "unit": -10
    }
   ],
   "items": "both"
@@ -416,6 +434,32 @@
     "nouns_ua": [
      "майстерності"
     ]
+   },
+   {
+    "value": "-heal_gain",
+    "stack": 2,
+    "mod": -25,
+    "price_melee": -10,
+    "price_caster": -5
+   },
+   {
+    "value": "-mana_gain",
+    "stack": 2,
+    "mod": -25,
+    "price_melee": -3,
+    "price_caster": -12
+   },
+   {
+    "value": "+beats",
+    "mod": 1,
+    "price_melee": -8,
+    "price_caster": -20
+   },
+   {
+    "value": "-slevel",
+    "mod": -1,
+    "price_melee": -3,
+    "price_caster": -20
    }
   ],
   "items": "both"
@@ -1068,8 +1112,13 @@
     "needs": [
      "noremove"
     ],
-    "price_melee": -11,
-    "price_caster": -9
+    "price_melee": -30,
+    "price_caster": -30
+   },
+   {
+    "value": "melt_drop",
+    "price_melee": -5,
+    "price_caster": -5
    }
   ],
   "items": "both"
@@ -1466,6 +1515,21 @@
     "value": "charm",
     "price_melee": -14,
     "price_caster": -12
+   },
+   {
+    "value": "bash",
+    "price_melee": -30,
+    "price_caster": -25
+   },
+   {
+    "value": "pierce",
+    "price_melee": -30,
+    "price_caster": -25
+   },
+   {
+    "value": "slash",
+    "price_melee": -30,
+    "price_caster": -25
    }
   ],
   "items": "armor"
@@ -1881,7 +1945,10 @@
       "40": 0.25
      }
     },
-    "top": true
+    "top": true,
+    "conflicts": [
+     "slow"
+    ]
    },
    {
     "value": "protect_good",
@@ -2138,6 +2205,19 @@
     "nouns_ua": [
      "вигнанця"
     ]
+   },
+   {
+    "value": "slow",
+    "conflicts": [
+     "haste"
+    ],
+    "price_melee": -30,
+    "price_caster": -10
+   },
+   {
+    "value": "weaken",
+    "price_melee": -15,
+    "price_caster": -8
    }
   ],
   "items": "both"
@@ -3514,6 +3594,71 @@
     "nouns_ua": [
      "чарівності"
     ],
+    "pick": {
+     "all": {
+      "50": 1,
+      "51": 0
+     }
+    }
+   },
+   {
+    "value": "-str",
+    "stack": 2,
+    "mod": -1,
+    "price_melee": -6,
+    "price_caster": -2,
+    "pick": {
+     "all": {
+      "50": 1,
+      "51": 0
+     }
+    }
+   },
+   {
+    "value": "-dex",
+    "stack": 2,
+    "mod": -1,
+    "price_melee": -4,
+    "price_caster": -2,
+    "pick": {
+     "all": {
+      "50": 1,
+      "51": 0
+     }
+    }
+   },
+   {
+    "value": "-con",
+    "stack": 2,
+    "mod": -1,
+    "price_melee": -6,
+    "price_caster": -5,
+    "pick": {
+     "all": {
+      "50": 1,
+      "51": 0
+     }
+    }
+   },
+   {
+    "value": "-int",
+    "stack": 2,
+    "mod": -1,
+    "price_melee": -2,
+    "price_caster": -3,
+    "pick": {
+     "all": {
+      "50": 1,
+      "51": 0
+     }
+    }
+   },
+   {
+    "value": "-wis",
+    "stack": 2,
+    "mod": -1,
+    "price_melee": -2,
+    "price_caster": -5,
     "pick": {
      "all": {
       "50": 1,

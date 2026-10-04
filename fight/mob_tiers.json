@@ -93,7 +93,7 @@
    "aff_add": [
     "sanctuary"
    ],
-   "drop_pct": 100,
+   "drop_pct": 200,
    "max_weapon_tier": 3,
    "legendary_pm": 5,
    "guaranteed": false,
@@ -104,6 +104,11 @@
     "max_weapon_tier": 2,
     "legendary_pm": 5,
     "guaranteed": false
+   },
+   "loot": {
+    "recipe_mult": 2,
+    "scroll_pct": 3,
+    "component_pct": 10
    }
   },
   "3": {
@@ -137,6 +142,21 @@
     "max_weapon_tier": 2,
     "legendary_pm": 20,
     "guaranteed": true
+   },
+   "loot": {
+    "cooldown_h": 24,
+    "items": 1,
+    "item_tiers": [
+     3,
+     2
+    ],
+    "legendary_pct": 0,
+    "recipe_pct": 25,
+    "scroll_pct": 10,
+    "components": 1,
+    "component_pct": 50,
+    "cut_pct": 15,
+    "flawless_pct": 0
    }
   },
   "2": {
@@ -170,6 +190,20 @@
     "max_weapon_tier": 1,
     "legendary_pm": 300,
     "guaranteed": true
+   },
+   "loot": {
+    "cooldown_h": 24,
+    "items": 1,
+    "item_tiers": [
+     2
+    ],
+    "legendary_pct": 20,
+    "recipe_pct": 50,
+    "scroll_pct": 25,
+    "components": 1,
+    "component_pct": 100,
+    "cut_pct": 40,
+    "flawless_pct": 10
    }
   },
   "1": {
@@ -203,6 +237,20 @@
     "max_weapon_tier": 1,
     "legendary_pm": 300,
     "guaranteed": true
+   },
+   "loot": {
+    "cooldown_h": 24,
+    "items": 2,
+    "item_tiers": [
+     1
+    ],
+    "legendary_pct": 100,
+    "recipe_pct": 100,
+    "scroll_pct": 50,
+    "components": 2,
+    "component_pct": 100,
+    "cut_pct": 0,
+    "flawless_pct": 50
    }
   }
  },
@@ -366,5 +414,6 @@
    "hp": 0.7,
    "dmg": 1.0
   }
- }
+ },
+ "loot_doc": "Tier loot (Kit 2026-10-04), read by Fenia global/onDeath/drops tierLoot. Champion/boss/legend: the guaranteed part (items, recipe/scroll/component/cut/flawless rolls) drops once per player per mob vnum per cooldown_h real hours; inside the window the kill gets the ordinary drop. A pet's kill counts for its master. items: count of random armor/weapons, tier picked from item_tiers, legendary_pct turns one into tier 1. components: rare mining finds (utils/mining rare band); cut/flawless: Path stones. Elite: drop_pct x the ordinary weapon chance, recipe_mult x the ordinary recipe chance, scroll/component rolls inside the ordinary once-per-hour gate. Percent and counts are integers (Fenia has no floats)."
 }

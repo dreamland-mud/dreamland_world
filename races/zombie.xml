@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Race type="DefaultRace">
-  <act>npc aggressive</act>
+  <act>aggressive undead</act>
   <aff>slow</aff>
   <affects registry="skill">slow</affects>
   <det>life</det>
@@ -34,7 +34,7 @@ Main spawn points are {hh1446Old Midgaard{x, graveyards, and other places where 
 Основні точки появи -- {hh1446Старий Мідгаард{x, цвинтарі та інші місця, де некрос захотів практики. Зомбі в {hh2050Вогняній Горі{x -- особливо неприємні, з пропеченими кістками.
 </text>
   </help>
-  <imm>poison disease drowning</imm>
+  <imm>disease drowning poison</imm>
   <nameFemale>зомби</nameFemale>
   <nameMale>зомби</nameMale>
   <nameMaleUa>зомбі</nameMaleUa>
@@ -42,9 +42,9 @@ Main spawn points are {hh1446Old Midgaard{x, graveyards, and other places where 
   <nameMltUa>зомбі</nameMltUa>
   <nameMlt>зомби</nameMlt>
   <nameNeuter>зомби</nameNeuter>
-  <off>parry crush</off>
+  <off>crush parry</off>
   <parts>head arms legs heart brains guts hands feet fingers ear eye</parts>
-  <res>charm pierce cold negative</res>
+  <res>charm cold negative pierce</res>
   <size>medium</size>
   <stats>
     <str>4</str>
@@ -56,4 +56,5 @@ Main spawn points are {hh1446Old Midgaard{x, graveyards, and other places where 
   </stats>
   <vuln>fire holy light silver</vuln>
   <wearloc registry="wearlocation">finger_l second_wield neck_2 neck_1 finger_r wrist_r wrist_l body light shield head legs feet hands arms about waist wield hold float tattoo face</wearloc>
+  <forms>poison biped mammal</forms>
 </Race>

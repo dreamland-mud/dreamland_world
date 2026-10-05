@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Race type="DefaultRace">
-  <act>npc</act>
-  <aff>swim</aff>
   <affects registry="skill">swim</affects>
   <form>edible amphibian cold_blood</form>
   <help id="318" level="-1" type="RaceHelp">
@@ -34,7 +32,6 @@ The class exists mainly for mechanics -- so spells and hunting skills tuned to a
   <nameMaleUa>самець амфібії</nameMaleUa>
   <nameFemaleUa>самиця амфібії</nameFemaleUa>
   <nameMltUa>амфібії</nameMltUa>
-  <off>kick_dirt</off>
   <parts>head legs heart brains guts feet eye long_tongue fins claws</parts>
   <res>drowning</res>
   <size>medium</size>
@@ -47,4 +44,6 @@ The class exists mainly for mechanics -- so spells and hunting skills tuned to a
   </stats>
   <vuln>cold</vuln>
   <wearloc registry="wearlocation">neck_2 neck_1 body light head legs feet about waist float</wearloc>
+  <forms>amphibian quadruped</forms>
+  <partsAdd>long_tongue</partsAdd>
 </Race>

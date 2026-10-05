@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Race type="DefaultRace">
-  <act>npc</act>
-  <aff>flying</aff>
   <affects registry="skill">fly</affects>
   <form>edible animal bird</form>
   <help id="344" level="-1" type="RaceHelp">
@@ -33,9 +31,7 @@ Frail of body but sharp-eyed and nimble -- they spot small things on the ground 
   <nameMaleUa>самець птаха</nameMaleUa>
   <nameFemaleUa>самиця птаха</nameFemaleUa>
   <nameMltUa>птахи</nameMltUa>
-  <off>dodge fast</off>
   <parts>head legs heart brains guts feet eye wings tail claws</parts>
-  <res>sound</res>
   <size>small</size>
   <stats>
     <str>-3</str>
@@ -45,6 +41,7 @@ Frail of body but sharp-eyed and nimble -- they spot small things on the ground 
     <con>-3</con>
     <cha>1</cha>
   </stats>
-  <vuln>disease</vuln>
   <wearloc registry="wearlocation">neck_2 neck_1 body light head legs about waist float tail</wearloc>
+  <forms>bird</forms>
+  <offDel>tail</offDel>
 </Race>

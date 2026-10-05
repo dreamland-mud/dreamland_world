@@ -3439,7 +3439,7 @@
     "value": "boss_proc"
    }
   ],
-  "_doc": "Price comes from the matching resists/proc entry at roll time (boss damtype, boss spell).",
+  "_doc": "Marker, never rolled. A legendary armor drop from a boss/legend (mob_tiers loot.signature) forces one affix from the pool: 50/50 the resists entry for the boss damtype or a proc entry for one of its tier-AI spells, the other half as fallback (ArmorGenerator::pickSignature). Priced as that entry, inside the budget.",
   "items": "armor"
  },
  "primary_stats": {

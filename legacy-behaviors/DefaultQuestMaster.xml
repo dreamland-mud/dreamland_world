@@ -92,7 +92,7 @@
       <descr l="en">Hero's Ring</descr>
       <descr l="ua">Перстень Героя</descr>
       <price type="QuestPointPrice">
-        <questpoint>1000</questpoint>
+        <questpoint>500</questpoint>
       </price>
       <gender table="sex_table">neutral</gender>
       <troubled>true</troubled>
@@ -105,7 +105,7 @@
       <descr l="en">Hero's Weapon</descr>
       <descr l="ua">Зброя Героя</descr>
       <price type="QuestPointPrice">
-        <questpoint>1000</questpoint>
+        <questpoint>500</questpoint>
       </price>
       <gender table="sex_table">neutral</gender>
       <troubled>true</troubled>
@@ -118,7 +118,7 @@
       <descr l="en">Hero's Girth</descr>
       <descr l="ua">Пояс Героя</descr>
       <price type="QuestPointPrice">
-        <questpoint>1000</questpoint>
+        <questpoint>500</questpoint>
       </price>
       <gender table="sex_table">male</gender>
       <troubled>true</troubled>
@@ -166,9 +166,14 @@
     <node type="UpgradeQuestArticle">
       <name>upgrade</name>
       <rname>улучшение</rname>
-      <descr>Улучшить снятую вещь Героя на ступень: пояс, кольцо или оружие</descr>
-      <descr l="en">Upgrade an unequipped Hero item one tier: girth, ring or weapon</descr>
-      <descr l="ua">Покращити зняту річ Героя на щабель: пояс, перстень чи зброю</descr>
+      <descr>Улучшить снятую вещь Героя на ступень: пояс, кольцо, оружие или сумку</descr>
+      <descr l="en">Upgrade an unequipped Hero item one tier: girth, ring, weapon or bag</descr>
+      <descr l="ua">Покращити зняту річ Героя на щабель: пояс, перстень, зброю чи торбу</descr>
+      <tierPrices>
+        <node>750</node>
+        <node>1000</node>
+        <node>1500</node>
+      </tierPrices>
     </node>
     <node type="OwnerQuestArticle">
       <vnum>109</vnum>

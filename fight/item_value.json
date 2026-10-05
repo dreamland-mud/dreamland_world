@@ -291,7 +291,7 @@
  },
  "measure": {
   "item_model": 1,
-  "_doc":"Read by Fenia .tmp.craft.getMeasure. One roll = +1 damroll, +1 hitroll, +10 hp, +10 mana. rolls = level / factor; jeweler crafts use jeweler_factor. tier_budget is in M (one measure), reference level ref_level. craft_budget_cm: crafted armor (craft/armor generateAffects) per craft tier 1..5 in centi-M (Fenia has no floats). enchant_budget_cm: enchant armor target [rare, epic with creativity or Enki].",
+  "_doc": "Read by Fenia .tmp.craft.getMeasure. One roll = +1 damroll, +1 hitroll, +10 hp, +10 mana. rolls = level / factor; jeweler crafts use jeweler_factor. tier_budget is in M (one measure), reference level ref_level. craft_budget_cm: crafted armor (craft/armor generateAffects) per craft tier 1..5 in centi-M (Fenia has no floats). enchant_budget_cm: enchant armor target [rare, epic with creativity or Enki].",
   "roll": {
    "damroll": 1,
    "hitroll": 1,
@@ -334,15 +334,31 @@
    "90": 0.9
   },
   "cost_k": 7.0,
-  "armor_budget_mult": [0.8, 1.0],
+  "armor_budget_mult": [
+   0.8,
+   1.0
+  ],
   "cost_cap": 30000,
   "top_max": 2,
   "top_repeat_weight": 0.1,
   "core_affixes": {
-   "melee": ["damroll", "hitroll", "hit"],
-   "caster": ["hit", "mana", "mana_gain", "heal_gain", "pack_gain"]
+   "melee": [
+    "damroll",
+    "hitroll",
+    "hit"
+   ],
+   "caster": [
+    "hit",
+    "mana",
+    "mana_gain",
+    "heal_gain",
+    "pack_gain"
+   ]
   },
-  "core_chance": [90, 60],
+  "core_chance": [
+   90,
+   60
+  ],
   "legendary_stat_share": 0.5,
   "stat_floor": {
    "10": [
@@ -513,16 +529,16 @@
    "90": 0
   },
   "wood": {
-   "20": -4,
+   "20": -3,
    "40": -7,
-   "60": -17,
+   "60": -18,
    "90": -26
   },
   "ice": {
-   "20": -8,
+   "20": -7,
    "40": -14,
    "60": -35,
-   "90": -53
+   "90": -52
   }
  },
  "flags_by_level": {
@@ -530,15 +546,15 @@
   "sanctuary": {
    "20": [
     18,
-    79
+    83
    ],
    "40": [
-    44,
-    209
+    43,
+    222
    ],
    "60": [
-    72,
-    292
+    59,
+    282
    ],
    "90": [
     131,
@@ -552,11 +568,11 @@
    ],
    "40": [
     4,
-    21
+    22
    ],
    "60": [
-    7,
-    29
+    6,
+    28
    ],
    "90": [
     13,
@@ -570,11 +586,11 @@
    ],
    "40": [
     4,
-    21
+    22
    ],
    "60": [
-    7,
-    29
+    6,
+    28
    ],
    "90": [
     13,
@@ -583,7 +599,7 @@
   },
   "haste": {
    "20": [
-    89,
+    72,
     57
    ],
    "40": [
@@ -591,12 +607,12 @@
     113
    ],
    "60": [
-    374,
+    379,
     144
    ],
    "90": [
     562,
-    395
+    373
    ]
   }
  }

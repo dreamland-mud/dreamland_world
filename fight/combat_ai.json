@@ -2,6 +2,11 @@
 // Profile names: a-z, 0-9, _ only. Field reference: header of "utils/combat ai"
 // and "utils/combat ai: moves". Texts are RU; EN/UA via the catalog, section
 // "utils/combat ai". Integers only (Fenia has no floats).
+// tier_elite/tier_champion/tier_boss: templates the tier AI fills with each
+// mob's own toolbox (.tmp.cai.tierProfile). tier_spells: spell groups by class
+// act; spell_damtypes: spell -> .tables.damage_table name (Fenia cannot read
+// it from the spell); spell_prayers: prayer-only spells; spell_rules: who a
+// spell can hurt (vict) and who can cast it usefully (caster).
 {
   "clanguard": {
     "purge": 30,
@@ -828,5 +833,548 @@
         ]
       }
     ]
+  },
+  "tier_elite": {
+    "act": 85,
+    "blunder": 12,
+    "winded": 20,
+    "rage": false,
+    "policy": [
+      "weakest"
+    ],
+    "tools": 3,
+    "spells": 3,
+    "debuffMax": 2,
+    "healBelow": 40,
+    "helpBelow": 0,
+    "switchFocus": false,
+    "switchDamtype": false,
+    "priority": [
+      {
+        "move": "healSpell",
+        "target": "self",
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "dirt",
+        "when": "caster",
+        "notBlind": true,
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "dirt",
+        "needs": "disarm",
+        "wielding": true,
+        "notBlind": true,
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "disarm",
+        "blind": true,
+        "wielding": true,
+        "fighting": true,
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "bash",
+        "target": "caster",
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "trip",
+        "target": "caster",
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "crush",
+        "target": "caster",
+        "cd": 8
+      },
+      {
+        "move": "debuff"
+      },
+      {
+        "move": "nuke"
+      },
+      {
+        "move": "anyTool"
+      }
+    ]
+  },
+  "tier_champion": {
+    "act": 95,
+    "blunder": 8,
+    "winded": 20,
+    "rage": true,
+    "policy": [
+      "healer",
+      "caster"
+    ],
+    "tools": 99,
+    "spells": 99,
+    "debuffMax": 3,
+    "healBelow": 40,
+    "helpBelow": 0,
+    "switchFocus": false,
+    "switchDamtype": false,
+    "priority": [
+      {
+        "move": "healSpell",
+        "target": "self",
+        "cd": 8
+      },
+      {
+        "move": "dispel",
+        "needsDispel": true,
+        "cd": 12
+      },
+      {
+        "move": "tool",
+        "skill": "disarm",
+        "after": "dirt",
+        "blind": true,
+        "wielding": true,
+        "fighting": true,
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "bash",
+        "after": "disarm",
+        "fighting": true,
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "dirt",
+        "when": "caster",
+        "notBlind": true,
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "dirt",
+        "needs": "disarm",
+        "wielding": true,
+        "notBlind": true,
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "disarm",
+        "blind": true,
+        "wielding": true,
+        "fighting": true,
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "bash",
+        "target": "caster",
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "trip",
+        "target": "caster",
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "crush",
+        "target": "caster",
+        "cd": 8
+      },
+      {
+        "move": "debuff"
+      },
+      {
+        "move": "nuke"
+      },
+      {
+        "move": "anyTool"
+      }
+    ]
+  },
+  "tier_boss": {
+    "act": 100,
+    "blunder": 5,
+    "winded": 25,
+    "rage": true,
+    "policy": [
+      "healer",
+      "caster"
+    ],
+    "tools": 99,
+    "spells": 99,
+    "debuffMax": 3,
+    "healBelow": 50,
+    "helpBelow": 50,
+    "switchFocus": true,
+    "switchDamtype": true,
+    "priority": [
+      {
+        "move": "healSpell",
+        "target": "self",
+        "cd": 8
+      },
+      {
+        "move": "dispel",
+        "needsDispel": true,
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "disarm",
+        "after": "dirt",
+        "blind": true,
+        "wielding": true,
+        "fighting": true,
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "bash",
+        "after": "disarm",
+        "fighting": true,
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "trip",
+        "target": "random",
+        "after": "trip",
+        "standing": true
+      },
+      {
+        "move": "tool",
+        "skill": "bash",
+        "target": "random",
+        "after": "bash",
+        "standing": true
+      },
+      {
+        "move": "tool",
+        "skill": "dirt",
+        "when": "caster",
+        "notBlind": true,
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "dirt",
+        "needs": "disarm",
+        "wielding": true,
+        "notBlind": true,
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "disarm",
+        "blind": true,
+        "wielding": true,
+        "fighting": true,
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "bash",
+        "target": "caster",
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "trip",
+        "target": "caster",
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "crush",
+        "target": "caster",
+        "cd": 8
+      },
+      {
+        "move": "debuff"
+      },
+      {
+        "move": "nuke"
+      },
+      {
+        "move": "anyTool"
+      }
+    ]
+  },
+  "tier_legend": {
+    "act": 100,
+    "blunder": 3,
+    "winded": 25,
+    "rage": true,
+    "policy": [
+      "healer",
+      "caster"
+    ],
+    "tools": 99,
+    "spells": 99,
+    "debuffMax": 3,
+    "healBelow": 50,
+    "helpBelow": 50,
+    "switchFocus": true,
+    "switchDamtype": true,
+    "priority": [
+      {
+        "move": "healSpell",
+        "target": "self",
+        "cd": 8
+      },
+      {
+        "move": "dispel",
+        "needsDispel": true,
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "disarm",
+        "after": "dirt",
+        "blind": true,
+        "wielding": true,
+        "fighting": true,
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "bash",
+        "after": "disarm",
+        "fighting": true,
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "trip",
+        "target": "random",
+        "after": "trip",
+        "standing": true
+      },
+      {
+        "move": "tool",
+        "skill": "bash",
+        "target": "random",
+        "after": "bash",
+        "standing": true
+      },
+      {
+        "move": "tool",
+        "skill": "dirt",
+        "when": "caster",
+        "notBlind": true,
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "dirt",
+        "needs": "disarm",
+        "wielding": true,
+        "notBlind": true,
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "disarm",
+        "blind": true,
+        "wielding": true,
+        "fighting": true,
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "bash",
+        "target": "caster",
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "trip",
+        "target": "caster",
+        "cd": 8
+      },
+      {
+        "move": "tool",
+        "skill": "crush",
+        "target": "caster",
+        "cd": 8
+      },
+      {
+        "move": "debuff"
+      },
+      {
+        "move": "nuke"
+      },
+      {
+        "move": "anyTool"
+      }
+    ]
+  },
+  "tier_spells": {
+    "mage": {
+      "attack": [
+        "acid blast",
+        "fireball",
+        "lightning bolt",
+        "chill touch",
+        "colour spray",
+        "magnetic thrust",
+        "shocking grasp",
+        "quantum spike",
+        "acid arrow",
+        "sulfuric spray",
+        "dragons breath",
+        "burning hands",
+        "energy drain",
+        "magic missile"
+      ],
+      "debuff": [
+        "faerie fire",
+        "weaken",
+        "slow",
+        "curse",
+        "blindness",
+        "web"
+      ],
+      "heal": [],
+      "dispel": [
+        "dispel affects"
+      ]
+    },
+    "cleric": {
+      "attack": [
+        "ray of truth",
+        "blade barrier",
+        "severity force",
+        "flamestrike",
+        "demonfire",
+        "bluefire",
+        "dispel evil",
+        "dispel good",
+        "energy drain",
+        "harm"
+      ],
+      "debuff": [
+        "curse",
+        "weaken",
+        "slow",
+        "faerie fire",
+        "blindness",
+        "plague",
+        "poison"
+      ],
+      "heal": [
+        "master healing",
+        "superior heal",
+        "heal"
+      ],
+      "dispel": [
+        "dispel affects"
+      ]
+    },
+    "necromancer": {
+      "attack": [
+        "hand of undead",
+        "disruption",
+        "spectral furor",
+        "sonic resonance",
+        "chill touch",
+        "energy drain",
+        "acid blast",
+        "lightning bolt",
+        "burning hands",
+        "magic missile"
+      ],
+      "debuff": [
+        "curse",
+        "weaken",
+        "slow",
+        "plague",
+        "corruption",
+        "blindness",
+        "poison"
+      ],
+      "heal": [],
+      "dispel": [
+        "dispel affects"
+      ]
+    }
+  },
+  "spell_damtypes": {
+    "acid blast": "acid",
+    "fireball": "fire",
+    "lightning bolt": "lightning",
+    "chill touch": "cold",
+    "colour spray": "light",
+    "magnetic thrust": "lightning",
+    "shocking grasp": "lightning",
+    "quantum spike": "energy",
+    "acid arrow": "acid",
+    "sulfuric spray": "acid",
+    "dragons breath": "fire",
+    "burning hands": "fire",
+    "energy drain": "negative",
+    "magic missile": "energy",
+    "hand of undead": "negative",
+    "disruption": "energy",
+    "spectral furor": "energy",
+    "sonic resonance": "sound",
+    "ray of truth": "holy",
+    "blade barrier": "pierce",
+    "severity force": "none",
+    "flamestrike": "fire",
+    "demonfire": "fire",
+    "bluefire": "fire",
+    "dispel evil": "holy",
+    "dispel good": "negative",
+    "harm": "harm",
+    "faerie fire": "light",
+    "weaken": "negative",
+    "slow": "drowning",
+    "curse": "negative",
+    "blindness": "light",
+    "web": "energy",
+    "plague": "disease",
+    "poison": "poison",
+    "corruption": "disease",
+    "dispel affects": "mental"
+  },
+  "spell_prayers": [
+    "ray of truth",
+    "blade barrier",
+    "severity force",
+    "flamestrike",
+    "demonfire",
+    "bluefire",
+    "dispel evil",
+    "dispel good",
+    "harm"
+  ],
+  "spell_rules": {
+    "ray of truth": {
+      "vict": "notgood",
+      "caster": "notevil"
+    },
+    "dispel evil": {
+      "vict": "evil",
+      "caster": "notevil"
+    },
+    "dispel good": {
+      "vict": "good",
+      "caster": "notgood"
+    },
+    "faerie fire": {
+      "vict": "invis"
+    }
   }
 }

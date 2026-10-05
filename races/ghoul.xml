@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Race type="DefaultRace">
-  <act>npc aggressive</act>
-  <aff>infrared curse regeneration</aff>
+  <act>aggressive undead</act>
+  <aff>curse infrared regeneration</aff>
   <affects registry="skill">regeneration infravision curse</affects>
   <det>hidden life</det>
   <form>poison undead biped</form>
@@ -34,14 +34,14 @@ They prowl near {hh2078Graveyard{x, in {hh1865Chapel Dungeon{x and in {hh2039Old
 Промишляють біля {hh2078Цвинтаря{x, в {hh1865Підземеллі Каплиці{x і в {hh2039Старому Болоті{x. Харчуються переважно падаллю, але свіжим теж не погребують.
 </text>
   </help>
-  <imm>poison negative disease</imm>
+  <imm>disease negative poison</imm>
   <nameFemale>упырица</nameFemale>
   <nameMlt>упыр|и|ей|ям|ей|ями|ях</nameMlt>
   <nameMale>упырь</nameMale>
   <nameMaleUa>упир</nameMaleUa>
   <nameFemaleUa>упириця</nameFemaleUa>
   <nameMltUa>упирі</nameMltUa>
-  <off>berserk dodge fast kick parry trip crush</off>
+  <off>berserk crush dodge fast parry trip</off>
   <parts>head arms legs heart brains guts hands feet fingers ear eye claws fangs</parts>
   <res>charm cold</res>
   <size>medium</size>
@@ -55,4 +55,7 @@ They prowl near {hh2078Graveyard{x, in {hh1865Chapel Dungeon{x and in {hh2039Old
   </stats>
   <vuln>fire holy light silver</vuln>
   <wearloc registry="wearlocation">finger_l neck_2 neck_1 finger_r wrist_r wrist_l body light head legs feet arms about waist hold float face</wearloc>
+  <forms>poison biped mammal</forms>
+  <partsAdd>claws fangs</partsAdd>
+  <wearlocDel>hair</wearlocDel>
 </Race>

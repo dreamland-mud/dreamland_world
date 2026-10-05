@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Race type="DefaultRace">
-  <act>npc undead</act>
-  <aff>infrared sneak flying pass_door swim</aff>
+  <act>undead</act>
+  <aff>infrared sneak swim</aff>
   <affects registry="skill">fly infravision swim &apos;pass door&apos; sneak</affects>
-  <det>undead life dark_vision</det>
+  <det>dark_vision life undead</det>
   <form>instant_decay nonadoptable sentient undead mist</form>
   <help id="349" level="-1" type="RaceHelp">
     <keyword l="en"></keyword>
@@ -34,7 +34,7 @@ Main haunts are {hh1425Ghost Town{x and {hh2078Graveyard{x. They turn up at time
 Основні пристанища -- {hh1425Місто Привидів{x і {hh2078Цвинтар{x. Іноді трапляються в бібліотеках, де померли так і не дочитавши книгу.
 </text>
   </help>
-  <imm>poison negative disease drowning</imm>
+  <imm>disease drowning negative poison</imm>
   <nameFemale>женщина-призрак</nameFemale>
   <nameMale>призрак</nameMale>
   <nameMaleUa>привид</nameMaleUa>
@@ -55,4 +55,6 @@ Main haunts are {hh1425Ghost Town{x and {hh2078Graveyard{x. They turn up at time
   </stats>
   <vuln>holy</vuln>
   <wearloc registry="wearlocation">second_wield light about wield float</wearloc>
+  <forms>instant_decay mist nonadoptable sentient</forms>
+  <wearlocAdd>second_wield wield</wearlocAdd>
 </Race>

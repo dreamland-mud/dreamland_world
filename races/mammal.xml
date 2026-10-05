@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Race type="DefaultRace">
-  <act>npc scavenger</act>
+  <act>scavenger</act>
   <form>edible animal biped mammal</form>
   <help id="302" level="-1" type="RaceHelp">
     <keyword l="en"></keyword>
@@ -25,7 +25,7 @@ The race is used mostly inside game mechanics -- so spells, traps, and skills ta
   <nameMaleUa>людиноподібний</nameMaleUa>
   <nameFemaleUa>людиноподібна</nameFemaleUa>
   <nameMltUa>людиноподібні</nameMltUa>
-  <off>bash berserk disarm dodge fast kick_dirt assist_race</off>
+  <off>assist_race bash berserk disarm dodge fast kick_dirt</off>
   <parts>head arms legs heart brains guts hands feet fingers ear eye tail</parts>
   <size>medium</size>
   <stats>
@@ -36,4 +36,7 @@ The race is used mostly inside game mechanics -- so spells, traps, and skills ta
     <cha>-1</cha>
   </stats>
   <wearloc registry="wearlocation">finger_l second_wield neck_2 neck_1 finger_r wrist_r wrist_l body light shield head legs feet hands arms about waist wield hold float tattoo face tail hair</wearloc>
+  <forms>biped mammal</forms>
+  <partsAdd>tail</partsAdd>
+  <offDel>tail</offDel>
 </Race>

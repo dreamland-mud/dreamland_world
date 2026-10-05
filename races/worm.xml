@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Race type="DefaultRace">
-  <act>npc</act>
-  <aff>regeneration slow</aff>
   <affects registry="skill">regeneration slow</affects>
   <form>worm</form>
   <help id="311" level="-1" type="RaceHelp">
@@ -27,7 +25,7 @@ Large worms live in {hh1854UnderDark{x, in {hh1841Mahn-Tor{x, and in the surroun
 Великі черви водяться в {hh1854Підземʼї{x, в {hh1841Махʼн-Торі{x і в околишніх підземних тунелях. З ним краще не стикатися без перевіреної мотузки і кількох товаришів.
 </text>
   </help>
-  <imm>mental light sound</imm>
+  <imm>sound</imm>
   <nameFemale>самк|а|и|е|у|ой|е червя</nameFemale>
   <nameMale>черв|ь|я|ю|я|ём|е</nameMale>
   <nameMaleUa>червʼяк</nameMaleUa>
@@ -35,7 +33,6 @@ Large worms live in {hh1854UnderDark{x, in {hh1841Mahn-Tor{x, and in the surroun
   <nameMltUa>червʼяки</nameMltUa>
   <nameMlt>черв|и|ей|ям|ей|ями|ях</nameMlt>
   <nameNeuter>черв|ь|я|ю|я|ём|е</nameNeuter>
-  <off>tail</off>
   <parts>head tail scales</parts>
   <res>drowning</res>
   <size>tiny</size>
@@ -45,6 +42,7 @@ Large worms live in {hh1854UnderDark{x, in {hh1841Mahn-Tor{x, and in the surroun
     <con>5</con>
     <cha>-7</cha>
   </stats>
-  <vuln>fire acid</vuln>
+  <vuln>acid fire</vuln>
   <wearloc registry="wearlocation">body light about waist float</wearloc>
+  <forms>worm</forms>
 </Race>

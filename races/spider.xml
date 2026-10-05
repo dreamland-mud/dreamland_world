@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Race type="DefaultRace">
-  <act>npc</act>
   <det>life</det>
   <form>animal spider cold_blood</form>
   <help id="320" level="-1" type="RaceHelp">
@@ -27,7 +26,6 @@ The main nest is {hh2051Arachnos{x, where the largest and most unpleasant ones l
 </text>
   </help>
   <hunts registry="race">insect</hunts>
-  <imm>poison</imm>
   <nameFemale>паучих|а|и|н|у|ой|е</nameFemale>
   <nameMale>паук||а|у|а|ом|е</nameMale>
   <nameMaleUa>павук</nameMaleUa>
@@ -35,7 +33,6 @@ The main nest is {hh2051Arachnos{x, where the largest and most unpleasant ones l
   <nameMltUa>павуки</nameMltUa>
   <nameMlt>паук|и|ов|ам|ов|ами|ах</nameMlt>
   <nameNeuter>паук||а|у|а|ом|е</nameNeuter>
-  <off>dodge</off>
   <parts>head legs eye fangs</parts>
   <size>tiny</size>
   <stats>
@@ -46,6 +43,7 @@ The main nest is {hh2051Arachnos{x, where the largest and most unpleasant ones l
     <con>-3</con>
     <cha>-3</cha>
   </stats>
-  <vuln>fire</vuln>
   <wearloc registry="wearlocation">neck_2 neck_1 body light head legs about waist float</wearloc>
+  <forms>spider</forms>
+  <partsAdd>cold_blood</partsAdd>
 </Race>

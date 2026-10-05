@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Race type="DefaultRace">
-  <act>npc</act>
-  <aff>flying</aff>
   <affects registry="skill">fly</affects>
   <form>animal insect cold_blood</form>
   <help id="327" level="-1" type="RaceHelp">
@@ -27,7 +25,6 @@ You can find them anywhere -- from {hh2092Temple of Themis{x to {hh1844Zoo of Mi
 Знайти їх можна скрізь -- від {hh2092Храму Феміди{x до {hh1844Зоопарку Мідгаарда{x. Серйозної небезпеки зазвичай не становлять, окрім випадків, коли тебе кусає щось велике, отруйне і одночасно.
 </text>
   </help>
-  <imm>mental</imm>
   <nameFemale>самк|а|и|е|у|ой|е насекомого</nameFemale>
   <nameMale>самец||а|у|а|ом|е насекомого</nameMale>
   <nameMaleUa>самець комахи</nameMaleUa>
@@ -35,7 +32,6 @@ You can find them anywhere -- from {hh2092Temple of Themis{x to {hh1844Zoo of Mi
   <nameMltUa>комахи</nameMltUa>
   <nameMlt>насеком|ые|ых|ым|ых|ыми|ых</nameMlt>
   <nameNeuter>насеком|ое|ого|ому|ое|ым|ом</nameNeuter>
-  <off>dodge fast</off>
   <parts>head legs eye wings</parts>
   <res>disease</res>
   <size>tiny</size>
@@ -47,6 +43,8 @@ You can find them anywhere -- from {hh2092Temple of Themis{x to {hh1844Zoo of Mi
     <con>-3</con>
     <cha>-3</cha>
   </stats>
-  <vuln>fire cold</vuln>
+  <vuln>cold</vuln>
   <wearloc registry="wearlocation">neck_2 neck_1 body light head legs about waist float tail</wearloc>
+  <forms>insect</forms>
+  <partsAdd>cold_blood</partsAdd>
 </Race>

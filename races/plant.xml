@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Race type="DefaultRace">
-  <act>npc sentinel</act>
+  <act>sentinel</act>
   <form>instant_decay other nonadoptable construct</form>
   <help id="331" level="-1" type="RaceHelp">
     <keyword l="en"></keyword>
@@ -31,7 +31,7 @@ The wild botanical garden is {hh1842Emerald Forest{x and {hh2039Old Marsh{x, wit
 Дикий ботанічний сад -- {hh1842Смарагдовий Ліс{x і {hh2039Старе Болото{x, з особливо живими різновидами. У звичайних областях рослини поводяться пристойніше.
 </text>
   </help>
-  <imm>charm poison disease drowning wood</imm>
+  <imm>charm disease drowning poison wood</imm>
   <nameFemale>растение</nameFemale>
   <nameMale>растение</nameMale>
   <nameMaleUa>рослина</nameMaleUa>
@@ -53,4 +53,7 @@ The wild botanical garden is {hh1842Emerald Forest{x and {hh2039Old Marsh{x, wit
   </stats>
   <vuln>fire</vuln>
   <wearloc registry="wearlocation">light about waist float</wearloc>
+  <forms>construct instant_decay nonadoptable</forms>
+  <partsAdd>tentacles</partsAdd>
+  <vulnDel>sound</vulnDel>
 </Race>

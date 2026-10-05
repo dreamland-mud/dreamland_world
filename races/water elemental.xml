@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Race type="DefaultRace">
-  <act>npc cleric</act>
-  <aff>swim</aff>
+  <act>cleric</act>
   <affects registry="skill">swim</affects>
   <det>hidden</det>
   <form>magical instant_decay nonadoptable sentient blob amphibian</form>
@@ -34,16 +33,15 @@ Natural habitat is {hh1867Elemental Canyon{x. They also turn up in large bodies 
 Природне середовище -- {hh1867Каньйон Стихій{x. Іноді зустрічаються в крупних водоймах і підземних озерах. На відміну від риб, ці розмовляють.
 </text>
   </help>
-  <imm>drowning</imm>
   <nameFemale>водная элементаль</nameFemale>
   <nameMlt>водн|ые|ых|ым|ых|ыми|ых элементал|и|ей|ям|ей|ями|ях</nameMlt>
   <nameMale>водный элементаль</nameMale>
   <nameMaleUa>водяний елементаль</nameMaleUa>
   <nameFemaleUa>водяна елементаль</nameFemaleUa>
   <nameMltUa>водяні елементалі</nameMltUa>
-  <off>area_attack dodge fast crush</off>
+  <off>crush dodge fast</off>
   <parts>head tentacles fins</parts>
-  <res>weapon fire</res>
+  <res>fire</res>
   <size>large</size>
   <stats>
     <str>3</str>
@@ -53,6 +51,7 @@ Natural habitat is {hh1867Elemental Canyon{x. They also turn up in large bodies 
     <con>2</con>
     <cha>-2</cha>
   </stats>
-  <vuln>cold</vuln>
   <wearloc registry="wearlocation">body light head about waist float face</wearloc>
+  <forms>amphibian instant_decay magical nonadoptable sentient blob</forms>
+  <partsAdd>head</partsAdd>
 </Race>

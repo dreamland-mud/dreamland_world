@@ -1,6 +1,6 @@
 {
  "version": 1,
- "status": "Phase C (world). Tier rows = plan 4.2 with champion/boss dmg 2.0/2.8 (Kit 2026-10-01). Base hp cut above L55 (decision 54, first cut, calibrate live at L80+). Base AC kept <= 0 so tier multipliers never invert. xp/gold/loot are INERT (1.0 / today's drop rules) until the Phase F economy flip: the targets sit in economy_target, which nothing reads. Loot keys are integers (drop_pct, legendary_pm) because Fenia has no floats. Tier 2 = boss (most bosses: barely soloable in best gear, hp 4.5 / dmg 2.4, first cut), tier 1 = legend (superboss). styles: fortress fat but mild, brute deadly but thin (Kit 2026-10-02).",
+ "status": "Phase C (world). Tier rows = plan 4.2 with champion/boss dmg 2.0/2.8 (Kit 2026-10-01). Base hp cut above L55 (decision 54, first cut, calibrate live at L80+). Base AC kept <= 0 so tier multipliers never invert. Economy LIVE (Kit 2026-10-06): xp/gold/drop_pct per tier (trash xp 0.75 from L11, gold 0.5, no ordinary weapon drops; elite 1.6/2; champion 2.5/4; boss and legend 4/8). max_weapon_tier/legendary_pm/guaranteed are not read: tier loot lives in loot. Loot keys are integers (drop_pct, legendary_pm) because Fenia has no floats. Tier 2 = boss (most bosses: barely soloable in best gear, hp 4.5 / dmg 2.4, first cut), tier 1 = legend (superboss). styles: fortress fat but mild, brute deadly but thin (Kit 2026-10-02).",
  "default_tier": "normal",
  "names": {
   "trash": 9,
@@ -21,26 +21,18 @@
    "stat_cap": 11,
    "mana": 0.5,
    "off_enabled": 0,
-   "xp": 1.0,
-   "gold": 1.0,
+   "xp": 0.75,
+   "gold": 0.5,
+   "xp_min_level": 11,
    "word": {
     "en": "a weakling",
     "ru": "слабак",
     "ua": "слабак"
    },
-   "drop_pct": 100,
+   "drop_pct": 0,
    "max_weapon_tier": 3,
    "legendary_pm": 5,
-   "guaranteed": false,
-   "economy_target": {
-    "xp": 0.75,
-    "gold": 0.5,
-    "xp_min_level": 11,
-    "drop_pct": 0,
-    "max_weapon_tier": 3,
-    "legendary_pm": 5,
-    "guaranteed": false
-   }
+   "guaranteed": false
   },
   "7": {
    "name": "normal",
@@ -63,15 +55,7 @@
    "drop_pct": 100,
    "max_weapon_tier": 3,
    "legendary_pm": 5,
-   "guaranteed": false,
-   "economy_target": {
-    "xp": 1.0,
-    "gold": 1.0,
-    "drop_pct": 100,
-    "max_weapon_tier": 3,
-    "legendary_pm": 5,
-    "guaranteed": false
-   }
+   "guaranteed": false
   },
   "5": {
    "name": "elite",
@@ -83,8 +67,8 @@
    "stat_cap": 15,
    "mana": 1.5,
    "off_enabled": 3,
-   "xp": 1.0,
-   "gold": 1.0,
+   "xp": 1.6,
+   "gold": 2.0,
    "word": {
     "en": "a veteran",
     "ru": "ветеран",
@@ -95,17 +79,9 @@
    ],
    "off_add": ["fast"],
    "drop_pct": 200,
-   "max_weapon_tier": 3,
+   "max_weapon_tier": 2,
    "legendary_pm": 5,
    "guaranteed": false,
-   "economy_target": {
-    "xp": 1.6,
-    "gold": 2.0,
-    "drop_pct": 200,
-    "max_weapon_tier": 2,
-    "legendary_pm": 5,
-    "guaranteed": false
-   },
    "loot": {
     "recipe_mult": 2,
     "scroll_pct": 3,
@@ -122,8 +98,8 @@
    "stat_cap": 18,
    "mana": 2.0,
    "off_enabled": -1,
-   "xp": 1.0,
-   "gold": 1.0,
+   "xp": 2.5,
+   "gold": 4.0,
    "word": {
     "en": "a champion",
     "ru": "чемпион",
@@ -134,18 +110,10 @@
    ],
    "off_add": ["fast"],
    "act_add": ["warrior"],
-   "drop_pct": 100,
-   "max_weapon_tier": 3,
-   "legendary_pm": 5,
-   "guaranteed": false,
-   "economy_target": {
-    "xp": 2.5,
-    "gold": 4.0,
-    "drop_pct": 200,
-    "max_weapon_tier": 2,
-    "legendary_pm": 20,
-    "guaranteed": true
-   },
+   "drop_pct": 200,
+   "max_weapon_tier": 2,
+   "legendary_pm": 20,
+   "guaranteed": true,
    "loot": {
     "cooldown_h": 24,
     "items": 1,
@@ -172,8 +140,8 @@
    "stat_cap": 20,
    "mana": 2.6,
    "off_enabled": -1,
-   "xp": 1.0,
-   "gold": 1.0,
+   "xp": 4.0,
+   "gold": 8.0,
    "word": {
     "en": "a boss",
     "ru": "босс",
@@ -184,18 +152,10 @@
    ],
    "off_add": ["fast"],
    "act_add": ["warrior"],
-   "drop_pct": 100,
-   "max_weapon_tier": 3,
-   "legendary_pm": 5,
-   "guaranteed": false,
-   "economy_target": {
-    "xp": 4.0,
-    "gold": 8.0,
-    "drop_pct": 200,
-    "max_weapon_tier": 1,
-    "legendary_pm": 300,
-    "guaranteed": true
-   },
+   "drop_pct": 200,
+   "max_weapon_tier": 1,
+   "legendary_pm": 300,
+   "guaranteed": true,
    "loot": {
     "cooldown_h": 24,
     "signature": true,
@@ -222,8 +182,8 @@
    "stat_cap": 22,
    "mana": 3.0,
    "off_enabled": -1,
-   "xp": 1.0,
-   "gold": 1.0,
+   "xp": 4.0,
+   "gold": 8.0,
    "word": {
     "en": "a legend",
     "ru": "легенда",
@@ -234,18 +194,10 @@
    ],
    "off_add": ["fast"],
    "act_add": ["warrior"],
-   "drop_pct": 100,
-   "max_weapon_tier": 3,
-   "legendary_pm": 5,
-   "guaranteed": false,
-   "economy_target": {
-    "xp": 4.0,
-    "gold": 8.0,
-    "drop_pct": 200,
-    "max_weapon_tier": 1,
-    "legendary_pm": 300,
-    "guaranteed": true
-   },
+   "drop_pct": 200,
+   "max_weapon_tier": 1,
+   "legendary_pm": 300,
+   "guaranteed": true,
    "loot": {
     "cooldown_h": 24,
     "signature": true,

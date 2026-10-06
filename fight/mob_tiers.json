@@ -1,8 +1,9 @@
 {
  "version": 1,
- "status": "Phase C (world). Tier rows = plan 4.2 with champion/boss dmg 2.0/2.8 (Kit 2026-10-01). Base hp cut above L55 (decision 54, first cut, calibrate live at L80+). Base AC kept <= 0 so tier multipliers never invert. Economy LIVE (Kit 2026-10-06): xp/gold/drop_pct per tier (trash xp 0.75 from L11, gold 0.5, no ordinary weapon drops; elite 1.6/2; champion 2.5/4; boss and legend 4/8). max_weapon_tier/legendary_pm/guaranteed are not read: tier loot lives in loot. Loot keys are integers (drop_pct, legendary_pm) because Fenia has no floats. Tier 2 = boss (most bosses: barely soloable in best gear, hp 4.5 / dmg 2.4, first cut), tier 1 = legend (superboss). styles: fortress fat but mild, brute deadly but thin (Kit 2026-10-02).",
+ "status": "Phase C (world). Tier rows = plan 4.2 with champion/boss dmg 2.0/2.8 (Kit 2026-10-01). Base hp cut above L55 (decision 54, first cut, calibrate live at L80+). Base AC kept <= 0 so tier multipliers never invert. Economy LIVE (Kit 2026-10-06): xp/gold/drop_pct per tier (trash xp 0.75 from L11, gold 0.5, no ordinary weapon drops; elite 1.6/2; champion 2.5/4; boss and legend 4/8). max_weapon_tier/legendary_pm/guaranteed are not read: tier loot lives in loot. Loot keys are integers (drop_pct, legendary_pm) because Fenia has no floats. Tier 10 = dummy (Kit 2026-10-06): onboarding training mobs (Moehewa spider + gremlins, Galeon insects), 1 hp, 1d2, naked AC, no tricks, full xp; shows as a weakling. Tier 2 = boss (most bosses: barely soloable in best gear, hp 4.5 / dmg 2.4, first cut), tier 1 = legend (superboss). styles: fortress fat but mild, brute deadly but thin (Kit 2026-10-02).",
  "default_tier": "normal",
  "names": {
+  "dummy": 10,
   "trash": 9,
   "normal": 7,
   "elite": 5,
@@ -11,6 +12,28 @@
   "legend": 1
  },
  "tiers": {
+  "10": {
+   "name": "dummy",
+   "hp": 0.01,
+   "dmg": 0.1,
+   "hitroll": 0,
+   "ac": -1.0,
+   "saves": 0,
+   "stat_cap": 11,
+   "mana": 0.5,
+   "off_enabled": 0,
+   "xp": 1.0,
+   "gold": 0.5,
+   "word": {
+    "en": "a weakling",
+    "ru": "слабак",
+    "ua": "слабак"
+   },
+   "drop_pct": 0,
+   "max_weapon_tier": 3,
+   "legendary_pm": 5,
+   "guaranteed": false
+  },
   "9": {
    "name": "trash",
    "hp": 0.6,

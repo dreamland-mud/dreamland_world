@@ -1,6 +1,6 @@
 {
  "version": 1,
- "status": "Phase C (world). Tier rows = plan 4.2 with champion/boss dmg 2.0/2.8 (Kit 2026-10-01). Base hp cut above L55 (decision 54, first cut, calibrate live at L80+). Base AC kept <= 0 so tier multipliers never invert. Economy LIVE (Kit 2026-10-06): xp/gold/drop_pct per tier (trash xp 0.75 from L11, gold 0.5, no ordinary weapon drops; elite 1.6/2; champion 2.5/4; boss and legend 4/8). max_weapon_tier/legendary_pm/guaranteed are not read: tier loot lives in loot. Loot keys are integers (drop_pct, legendary_pm) because Fenia has no floats. Tier 10 = dummy (Kit 2026-10-06): onboarding training mobs (Moehewa spider + gremlins, Galeon insects), 1 hp, 1d2, naked AC, no tricks, full xp; shows as a weakling. Tier 2 = boss (most bosses: barely soloable in best gear, hp 4.5 / dmg 2.4, first cut), tier 1 = legend (superboss). styles: fortress fat but mild, brute deadly but thin (Kit 2026-10-02).",
+ "status": "Phase C (world). Tier rows = plan 4.2 with champion/boss dmg 2.0/2.8 (Kit 2026-10-01). Base hp cut above L55 (decision 54, first cut, calibrate live at L80+). Base AC kept <= 0 so tier multipliers never invert. Economy LIVE (Kit 2026-10-06): xp/gold/drop_pct per tier (trash xp 0.75 from L11, gold 0.5, no ordinary weapon drops; elite 1.6/2; champion 2.5/4; boss and legend 4/8). max_weapon_tier/legendary_pm/guaranteed are not read: tier loot lives in loot. Loot keys are integers (drop_pct, legendary_pm) because Fenia has no floats. Base curve point L1 (Kit 2026-10-06): before it L1-4 mobs clamped to L5 numbers. Tier 10 = dummy (Kit 2026-10-06): onboarding training mobs (Moehewa spider + gremlins, Galeon insects), 1 hp, 1d2, naked AC, no tricks, full xp; shows as a weakling. Tier 2 = boss (most bosses: barely soloable in best gear, hp 4.5 / dmg 2.4, first cut), tier 1 = legend (superboss). styles: fortress fat but mild, brute deadly but thin (Kit 2026-10-02).",
  "default_tier": "normal",
  "names": {
   "dummy": 10,
@@ -248,6 +248,7 @@
  },
  "base": {
   "level": [
+   1,
    5,
    15,
    25,
@@ -261,6 +262,7 @@
    105
   ],
   "hp": [
+   15,
    67,
    201,
    528,
@@ -274,6 +276,7 @@
    13050
   ],
   "dmg": [
+   2.0,
    4.5,
    9.5,
    17.0,
@@ -288,6 +291,7 @@
   ],
   "ac": [
    -2,
+   -2,
    -4,
    -6,
    -11,
@@ -300,6 +304,7 @@
    -81
   ],
   "mana": [
+   100,
    110,
    130,
    210,
@@ -313,6 +318,7 @@
    5015
   ],
   "wealth": [
+   10,
    10,
    75,
    480,

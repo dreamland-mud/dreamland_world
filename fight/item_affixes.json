@@ -1,5 +1,5 @@
 {
- "_doc": "Shared random-item affix pool, armor side (generated from docs/plans drafts 2026-10-02). price_melee/price_caster = centi-M (100 = one item measure), the generator reads the killer's archetype column. items/slots/tier as in weapon_affixes.json; tier = best-tier floor (1 legendary only .. 4 uncommon+). Weapons keep weapon_affixes.json until they move to M. Stats with 'unit' scale in measure rolls (getMeasure: level / slot factor): value = unit * rolls. ac unit is an estimate (AC is weak, Kit). Tier caps for M-priced items: weapon_tiers max_affixes_m (distinct affixes, stacks count once) and max_negatives_m.",
+ "_doc": "Shared random-item affix pool, armor side (generated from docs/plans drafts 2026-10-02). Affixes are priced by the one item model (item_value.json, docs/systems/ITEM_POWER.md) at the item level. price_melee/price_caster (centi-M, 100 = one item measure) stay only on armor_stats, for Fenia craft/armor budgetStats. items/slots/tier as in weapon_affixes.json; tier = best-tier floor (1 legendary only .. 4 uncommon+). Stats with 'unit' scale in measure rolls (getMeasure: level / slot factor): value = unit * rolls. ac unit is an estimate (AC is weak, Kit). Tier caps for M-priced items: weapon_tiers max_affixes_m (distinct affixes, stacks count once) and max_negatives_m.",
  "armor_stats": {
   "conflictsWith": "same_value",
   "values": [
@@ -194,8 +194,6 @@
      "arms": 2,
      "shield": 2
     },
-    "price_melee": 14,
-    "price_caster": 20,
     "nouns": [
      "охраны",
      "спасения",
@@ -221,8 +219,6 @@
    {
     "value": "-saves",
     "stack": 2,
-    "price_melee": -14,
-    "price_caster": -20,
     "unit": 1
    },
    {
@@ -231,8 +227,6 @@
     "slots": {
      "head": 2
     },
-    "price_melee": 14,
-    "price_caster": 20,
     "adjectives": [
      "заговоренн(ое,ый,ая2,ые)"
     ],
@@ -256,8 +250,6 @@
      "shield": 3,
      "body": 2
     },
-    "price_melee": 14,
-    "price_caster": 20,
     "nouns": [
      "драконоборца"
     ],
@@ -282,8 +274,6 @@
      "body": 3,
      "shield": 3
     },
-    "price_melee": 6,
-    "price_caster": 5,
     "nouns": [
      "брони"
     ],
@@ -311,8 +301,6 @@
    {
     "value": "-ac",
     "stack": 2,
-    "price_melee": -6,
-    "price_caster": -5,
     "unit": 10,
     "pick": {
      "all": {
@@ -329,8 +317,6 @@
      "body": 2,
      "legs": 2
     },
-    "price_melee": 7,
-    "price_caster": 3,
     "nouns": [
      "исцеления"
     ],
@@ -353,8 +339,6 @@
     "slots": {
      "head": 2
     },
-    "price_melee": 1,
-    "price_caster": 12,
     "nouns": [
      "медитации"
     ],
@@ -377,8 +361,6 @@
     "slots": {
      "hands": 3
     },
-    "price_melee": 5,
-    "price_caster": 24,
     "nouns": [
      "проворства"
     ],
@@ -402,8 +384,6 @@
     "slots": {
      "head": 3
     },
-    "price_melee": 4,
-    "price_caster": 20,
     "nouns": [
      "колдовства"
     ],
@@ -423,8 +403,6 @@
     "value": "level",
     "mod": 1,
     "tier": 1,
-    "price_melee": 100,
-    "price_caster": 100,
     "nouns": [
      "мастерства"
     ],
@@ -438,28 +416,20 @@
    {
     "value": "-heal_gain",
     "stack": 2,
-    "mod": -25,
-    "price_melee": -10,
-    "price_caster": -5
+    "mod": -25
    },
    {
     "value": "-mana_gain",
     "stack": 2,
-    "mod": -25,
-    "price_melee": -3,
-    "price_caster": -12
+    "mod": -25
    },
    {
     "value": "+beats",
-    "mod": 1,
-    "price_melee": -8,
-    "price_caster": -20
+    "mod": 1
    },
    {
     "value": "-slevel",
-    "mod": -1,
-    "price_melee": -3,
-    "price_caster": -20
+    "mod": -1
    }
   ],
   "items": "both"
@@ -480,8 +450,6 @@
       "mult": 1
      }
     ],
-    "price_melee": 55,
-    "price_caster": 72,
     "nouns": [
      "здоровья",
      "жизни"
@@ -508,8 +476,6 @@
       "mod": 2
      }
     ],
-    "price_melee": 10,
-    "price_caster": 4,
     "nouns": [
      "ловкача"
     ],
@@ -542,8 +508,6 @@
       "mod": 2
      }
     ],
-    "price_melee": 8,
-    "price_caster": 10,
     "nouns": [
      "новичка"
     ],
@@ -583,8 +547,6 @@
       "mod": 2
      }
     ],
-    "price_melee": 4,
-    "price_caster": 8,
     "nouns": [
      "мудреца"
     ],
@@ -624,8 +586,6 @@
       "mod": 50
      }
     ],
-    "price_melee": 16,
-    "price_caster": 30,
     "nouns": [
      "восстановления"
     ],
@@ -649,8 +609,6 @@
       "bits": "good evil"
      }
     ],
-    "price_melee": 10,
-    "price_caster": 8,
     "adjectives": [
      "ханжеск(ое,ий3,ая2,ие)"
     ],
@@ -681,8 +639,6 @@
     "value": "defensive",
     "mod": 1,
     "align_bonus": "good",
-    "price_melee": 7,
-    "price_caster": 14,
     "nouns": [
      "защитника"
     ],
@@ -707,8 +663,6 @@
     "value": "fightmaster",
     "mod": 1,
     "align_bonus": "evil",
-    "price_melee": 7,
-    "price_caster": 14,
     "nouns": [
      "дуэлянта"
     ],
@@ -732,8 +686,6 @@
    {
     "value": "adventure",
     "mod": 1,
-    "price_melee": 7,
-    "price_caster": 14,
     "nouns": [
      "приключенца"
     ],
@@ -748,8 +700,6 @@
     "value": "arcane",
     "mod": 1,
     "extra": "magic",
-    "price_melee": 7,
-    "price_caster": 14,
     "nouns": [
      "артефактов"
     ],
@@ -765,8 +715,6 @@
     "mod": 1,
     "extra": "magic",
     "align_bonus": "evil",
-    "price_melee": 7,
-    "price_caster": 14,
     "nouns": [
      "проклятий"
     ],
@@ -781,8 +729,6 @@
     "value": "benedictions",
     "mod": 1,
     "align_bonus": "good",
-    "price_melee": 7,
-    "price_caster": 14,
     "nouns": [
      "благости"
     ],
@@ -797,8 +743,6 @@
     "value": "weaponsmaster",
     "mod": 1,
     "align_bonus": "neutral",
-    "price_melee": 7,
-    "price_caster": 14,
     "nouns": [
      "оружейника"
     ],
@@ -816,8 +760,6 @@
      "shield": 3,
      "body": 2
     },
-    "price_melee": 7,
-    "price_caster": 14,
     "nouns": [
      "стража"
     ],
@@ -834,8 +776,6 @@
     "slots": {
      "head": 2
     },
-    "price_melee": 7,
-    "price_caster": 14,
     "nouns": [
      "лекаря"
     ],
@@ -852,8 +792,6 @@
     "slots": {
      "hands": 2
     },
-    "price_melee": 7,
-    "price_caster": 14,
     "nouns": [
      "бойца"
     ],
@@ -867,8 +805,6 @@
    {
     "value": "enhancement",
     "mod": 1,
-    "price_melee": 7,
-    "price_caster": 14,
     "nouns": [
      "укрепления"
     ],
@@ -882,8 +818,6 @@
    {
     "value": "illusion",
     "mod": 1,
-    "price_melee": 7,
-    "price_caster": 14,
     "nouns": [
      "иллюзиониста"
     ],
@@ -897,8 +831,6 @@
    {
     "value": "nature",
     "mod": 1,
-    "price_melee": 7,
-    "price_caster": 14,
     "nouns": [
      "природы"
     ],
@@ -912,8 +844,6 @@
    {
     "value": "necromancy",
     "mod": 1,
-    "price_melee": 7,
-    "price_caster": 14,
     "nouns": [
      "некроманта"
     ],
@@ -930,8 +860,6 @@
     "slots": {
      "head": 3
     },
-    "price_melee": 7,
-    "price_caster": 14,
     "nouns": [
      "провидца"
     ],
@@ -958,8 +886,6 @@
     "value": "skillgroup",
     "mod": 1,
     "tier": 2,
-    "price_melee": 7,
-    "price_caster": 14,
     "nouns": [
      "умения"
     ],
@@ -984,8 +910,6 @@
     "slots": {
      "hands": 2
     },
-    "price_melee": 19,
-    "price_caster": 16,
     "nouns": [
      "сноровки"
     ],
@@ -1012,8 +936,6 @@
      349
     ],
     "extra": "dark noenchant",
-    "price_melee": 0,
-    "price_caster": 0,
     "adjectives": [
      "темн(ое,ый,ая2,ые)"
     ],
@@ -1036,8 +958,6 @@
      1000
     ],
     "extra": "noenchant",
-    "price_melee": 0,
-    "price_caster": 0,
     "adjectives": [
      "светл(ое,ый,ая2,ые)"
     ],
@@ -1050,8 +970,6 @@
    },
    {
     "value": "hum",
-    "price_melee": 2,
-    "price_caster": 2,
     "adjectives": [
      "гудящ(ее,ий1,ая1,ие)"
     ],
@@ -1075,8 +993,6 @@
     ],
     "align_bonus": "evil",
     "extra": "noenchant",
-    "price_melee": 0,
-    "price_caster": 0,
     "adjectives": [
      "зловещ(ее,ий1,ая1,ие)"
     ],
@@ -1090,8 +1006,6 @@
    {
     "value": "noremove",
     "extra": "noenchant",
-    "price_melee": -6,
-    "price_caster": -5,
     "adjectives": [
      "проклят(ое,ый,ая2,ые)"
     ],
@@ -1104,8 +1018,6 @@
    },
    {
     "value": "bless",
-    "price_melee": 2,
-    "price_caster": 2,
     "adjectives": [
      "благословенн(ое,ый,ая2,ые)"
     ],
@@ -1117,22 +1029,16 @@
     ]
    },
    {
-    "value": "burn_proof",
-    "price_melee": 3,
-    "price_caster": 2
+    "value": "burn_proof"
    },
    {
     "value": "nouncurse",
     "needs": [
      "noremove"
-    ],
-    "price_melee": -30,
-    "price_caster": -30
+    ]
    },
    {
-    "value": "melt_drop",
-    "price_melee": -5,
-    "price_caster": -5
+    "value": "melt_drop"
    }
   ],
   "items": "both"
@@ -1142,8 +1048,6 @@
    {
     "value": "dragonskin",
     "tier": 2,
-    "price_melee": 33,
-    "price_caster": 28,
     "price_legendary": 0,
     "adjectives": [
      "дракон(ье,ий2,ья,ьи)"
@@ -1157,8 +1061,6 @@
    },
    {
     "value": "mithril",
-    "price_melee": 6,
-    "price_caster": 5,
     "adjectives": [
      "мифрилов(ое,ый,ая2,ые)"
     ],
@@ -1171,8 +1073,6 @@
    },
    {
     "value": "adamantite",
-    "price_melee": 6,
-    "price_caster": 5,
     "adjectives": [
      "адамантов(ое,ый,ая2,ые)"
     ],
@@ -1185,8 +1085,6 @@
    },
    {
     "value": "snakeskin",
-    "price_melee": 3,
-    "price_caster": 2,
     "adjectives": [
      "чешуйчат(ое,ый,ая2,ые)"
     ],
@@ -1205,8 +1103,6 @@
   "values": [
    {
     "value": "fire",
-    "price_melee": 21,
-    "price_caster": 18,
     "adjectives": [
      "жаростойк(ое,ий3,ая2,ие)"
     ],
@@ -1219,8 +1115,6 @@
    },
    {
     "value": "cold",
-    "price_melee": 12,
-    "price_caster": 10,
     "adjectives": [
      "морозостойк(ое,ий3,ая2,ие)"
     ],
@@ -1233,8 +1127,6 @@
    },
    {
     "value": "lightning",
-    "price_melee": 12,
-    "price_caster": 10,
     "adjectives": [
      "заземленн(ое,ый,ая2,ые)"
     ],
@@ -1247,8 +1139,6 @@
    },
    {
     "value": "acid",
-    "price_melee": 12,
-    "price_caster": 10,
     "adjectives": [
      "кислотостойк(ое,ий3,ая2,ие)"
     ],
@@ -1261,8 +1151,6 @@
    },
    {
     "value": "poison",
-    "price_melee": 12,
-    "price_caster": 10,
     "adjectives": [
      "противоядн(ое,ый,ая2,ые)"
     ],
@@ -1275,8 +1163,6 @@
    },
    {
     "value": "disease",
-    "price_melee": 9,
-    "price_caster": 8,
     "adjectives": [
      "противочумн(ое,ый,ая2,ые)"
     ],
@@ -1289,8 +1175,6 @@
    },
    {
     "value": "negative",
-    "price_melee": 16,
-    "price_caster": 13,
     "adjectives": [
      "жизнестойк(ое,ий3,ая2,ие)"
     ],
@@ -1303,8 +1187,6 @@
    },
    {
     "value": "holy",
-    "price_melee": 12,
-    "price_caster": 10,
     "adjectives": [
      "богоборческ(ое,ий3,ая2,ие)"
     ],
@@ -1317,8 +1199,6 @@
    },
    {
     "value": "light",
-    "price_melee": 9,
-    "price_caster": 8,
     "adjectives": [
      "затененн(ое,ый,ая2,ые)"
     ],
@@ -1331,8 +1211,6 @@
    },
    {
     "value": "mental",
-    "price_melee": 16,
-    "price_caster": 13,
     "adjectives": [
      "непоколебим(ое,ый,ая2,ые)"
     ],
@@ -1345,8 +1223,6 @@
    },
    {
     "value": "sound",
-    "price_melee": 9,
-    "price_caster": 8,
     "adjectives": [
      "глух(ое,ой,ая2,ие)"
     ],
@@ -1359,8 +1235,6 @@
    },
    {
     "value": "drowning",
-    "price_melee": 9,
-    "price_caster": 8,
     "adjectives": [
      "непотопляем(ое,ый,ая2,ые)"
     ],
@@ -1373,8 +1247,6 @@
    },
    {
     "value": "energy",
-    "price_melee": 16,
-    "price_caster": 13,
     "adjectives": [
      "изолированн(ое,ый,ая2,ые)"
     ],
@@ -1388,8 +1260,6 @@
    {
     "value": "spell",
     "tier": 2,
-    "price_melee": 47,
-    "price_caster": 39,
     "adjectives": [
      "антимагическ(ое,ий3,ая2,ие)"
     ],
@@ -1412,8 +1282,6 @@
      "legs": 0,
      "feet": 0
     },
-    "price_melee": 131,
-    "price_caster": 110,
     "adjectives": [
      "непробиваем(ое,ый,ая2,ые)"
     ],
@@ -1428,8 +1296,6 @@
    {
     "value": "bash",
     "tier": 3,
-    "price_melee": 67,
-    "price_caster": 57,
     "adjectives": [
      "ударостойк(ое,ий3,ая2,ие)"
     ],
@@ -1443,8 +1309,6 @@
    {
     "value": "pierce",
     "tier": 3,
-    "price_melee": 32,
-    "price_caster": 27,
     "adjectives": [
      "стрелостойк(ое,ий3,ая2,ие)"
     ],
@@ -1458,8 +1322,6 @@
    {
     "value": "slash",
     "tier": 3,
-    "price_melee": 31,
-    "price_caster": 26,
     "adjectives": [
      "непрорубаем(ое,ый,ая2,ые)"
     ],
@@ -1476,74 +1338,46 @@
  "vulns": {
   "values": [
    {
-    "value": "fire",
-    "price_melee": -32,
-    "price_caster": -27
+    "value": "fire"
    },
    {
-    "value": "cold",
-    "price_melee": -18,
-    "price_caster": -15
+    "value": "cold"
    },
    {
-    "value": "lightning",
-    "price_melee": -18,
-    "price_caster": -15
+    "value": "lightning"
    },
    {
-    "value": "acid",
-    "price_melee": -18,
-    "price_caster": -15
+    "value": "acid"
    },
    {
-    "value": "mental",
-    "price_melee": -24,
-    "price_caster": -20
+    "value": "mental"
    },
    {
-    "value": "holy",
-    "price_melee": -18,
-    "price_caster": -15
+    "value": "holy"
    },
    {
-    "value": "negative",
-    "price_melee": -24,
-    "price_caster": -20
+    "value": "negative"
    },
    {
-    "value": "sound",
-    "price_melee": -14,
-    "price_caster": -12
+    "value": "sound"
    },
    {
-    "value": "light",
-    "price_melee": -14,
-    "price_caster": -12
+    "value": "light"
    },
    {
-    "value": "poison",
-    "price_melee": -18,
-    "price_caster": -15
+    "value": "poison"
    },
    {
-    "value": "charm",
-    "price_melee": -14,
-    "price_caster": -12
+    "value": "charm"
    },
    {
-    "value": "bash",
-    "price_melee": -30,
-    "price_caster": -25
+    "value": "bash"
    },
    {
-    "value": "pierce",
-    "price_melee": -30,
-    "price_caster": -25
+    "value": "pierce"
    },
    {
-    "value": "slash",
-    "price_melee": -30,
-    "price_caster": -25
+    "value": "slash"
    }
   ],
   "items": "armor"
@@ -1554,8 +1388,6 @@
   "values": [
    {
     "value": "charm",
-    "price_melee": 28,
-    "price_caster": 24,
     "nouns": [
      "свободной воли"
     ],
@@ -1568,8 +1400,6 @@
    },
    {
     "value": "disease",
-    "price_melee": 28,
-    "price_caster": 24,
     "nouns": [
      "чумного лекаря"
     ],
@@ -1582,8 +1412,6 @@
    },
    {
     "value": "poison",
-    "price_melee": 36,
-    "price_caster": 31,
     "nouns": [
      "заклинателя змей"
     ],
@@ -1596,8 +1424,6 @@
    },
    {
     "value": "drowning",
-    "price_melee": 28,
-    "price_caster": 24,
     "nouns": [
      "русалки"
     ],
@@ -1610,8 +1436,6 @@
    },
    {
     "value": "sound",
-    "price_melee": 28,
-    "price_caster": 24,
     "nouns": [
      "тишины"
     ],
@@ -1624,8 +1448,6 @@
    },
    {
     "value": "mental",
-    "price_melee": 48,
-    "price_caster": 40,
     "nouns": [
      "несокрушимого разума"
     ],
@@ -1647,8 +1469,6 @@
    {
     "value": "evil",
     "tier": 4,
-    "price_melee": 5,
-    "price_caster": 4,
     "nouns": [
      "инквизитора"
     ],
@@ -1672,8 +1492,6 @@
    {
     "value": "good",
     "tier": 4,
-    "price_melee": 5,
-    "price_caster": 4,
     "nouns": [
      "еретика"
     ],
@@ -1697,8 +1515,6 @@
    {
     "value": "magic",
     "tier": 4,
-    "price_melee": 5,
-    "price_caster": 4,
     "nouns": [
      "оценщика"
     ],
@@ -1722,8 +1538,6 @@
    {
     "value": "life",
     "tier": 4,
-    "price_melee": 5,
-    "price_caster": 4,
     "nouns": [
      "охотника"
     ],
@@ -1747,8 +1561,6 @@
    {
     "value": "undead",
     "tier": 4,
-    "price_melee": 5,
-    "price_caster": 4,
     "nouns": [
      "экзорциста"
     ],
@@ -1773,8 +1585,6 @@
     "value": "infrared",
     "table": "affect_flags",
     "tier": 4,
-    "price_melee": 7,
-    "price_caster": 6,
     "nouns": [
      "совы"
     ],
@@ -1793,8 +1603,6 @@
    {
     "value": "hidden",
     "tier": 3,
-    "price_melee": 14,
-    "price_caster": 12,
     "nouns": [
      "разведчика"
     ],
@@ -1824,8 +1632,6 @@
    {
     "value": "invis",
     "tier": 3,
-    "price_melee": 14,
-    "price_caster": 12,
     "nouns": [
      "ясновидца"
     ],
@@ -1849,8 +1655,6 @@
    {
     "value": "fade",
     "tier": 3,
-    "price_melee": 14,
-    "price_caster": 12,
     "nouns": [
      "следопыта"
     ],
@@ -1864,8 +1668,6 @@
    {
     "value": "imp_invis",
     "tier": 3,
-    "price_melee": 14,
-    "price_caster": 12,
     "nouns": [
      "оракула"
     ],
@@ -1879,8 +1681,6 @@
    {
     "value": "acute_vision",
     "tier": 3,
-    "price_melee": 19,
-    "price_caster": 16,
     "nouns": [
      "орла"
     ],
@@ -1894,8 +1694,6 @@
    {
     "value": "pack_vis",
     "tier": 2,
-    "price_melee": 28,
-    "price_caster": 24,
     "nouns": [
      "видения"
     ],
@@ -1939,8 +1737,6 @@
      "feet": 3,
      "legs": 2
     },
-    "price_melee": 103,
-    "price_caster": 31,
     "nouns": [
      "скорости",
      "ускорения"
@@ -1976,8 +1772,6 @@
      "protect_evil"
     ],
     "tier": 2,
-    "price_melee": 56,
-    "price_caster": 47,
     "nouns": [
      "зла",
      "тьмы"
@@ -2015,8 +1809,6 @@
      "protect_good"
     ],
     "tier": 2,
-    "price_melee": 56,
-    "price_caster": 47,
     "nouns": [
      "добра",
      "света"
@@ -2046,8 +1838,6 @@
     "slots": {
      "body": 2
     },
-    "price_melee": 28,
-    "price_caster": 12,
     "nouns": [
      "регенерации",
      "троллей"
@@ -2073,8 +1863,6 @@
    {
     "value": "pass_door",
     "tier": 2,
-    "price_melee": 14,
-    "price_caster": 12,
     "nouns": [
      "призрака"
     ],
@@ -2098,8 +1886,6 @@
      "feet": 4,
      "arms": 2
     },
-    "price_melee": 14,
-    "price_caster": 12,
     "adjectives": [
      "крылат(ое,ый,ая2,ые)"
     ],
@@ -2122,8 +1908,6 @@
     "slots": {
      "feet": 4
     },
-    "price_melee": 11,
-    "price_caster": 6,
     "adjectives": [
      "бесшумн(ое,ый,ая2,ые)"
     ],
@@ -2151,8 +1935,6 @@
     "slots": {
      "arms": 3
     },
-    "price_melee": 6,
-    "price_caster": 5,
     "nouns": [
      "теней"
     ],
@@ -2180,8 +1962,6 @@
     "slots": {
      "feet": 2
     },
-    "price_melee": 4,
-    "price_caster": 3,
     "nouns": [
      "выдры"
     ],
@@ -2194,8 +1974,6 @@
    },
    {
     "value": "faerie_fire",
-    "price_melee": -14,
-    "price_caster": -12,
     "adjectives": [
      "мерцающ(ее,ий1,ая1,ие)"
     ],
@@ -2208,8 +1986,6 @@
    },
    {
     "value": "curse",
-    "price_melee": -33,
-    "price_caster": -28,
     "nouns": [
      "изгоя"
     ],
@@ -2224,14 +2000,10 @@
     "value": "slow",
     "conflicts": [
      "haste"
-    ],
-    "price_melee": -30,
-    "price_caster": -10
+    ]
    },
    {
-    "value": "weaken",
-    "price_melee": -15,
-    "price_caster": -8
+    "value": "weaken"
    }
   ],
   "items": "both"
@@ -2246,8 +2018,6 @@
      "body": 3,
      "arms": 2
     },
-    "price_melee": 280,
-    "price_caster": 236,
     "nouns": [
      "святилища"
     ],
@@ -2316,8 +2086,6 @@
    {
     "value": "stardust",
     "tier": 1,
-    "price_melee": 280,
-    "price_caster": 236,
     "nouns": [
      "звездной пыли"
     ],
@@ -2391,8 +2159,6 @@
      -1000,
      -350
     ],
-    "price_melee": 234,
-    "price_caster": 197,
     "nouns": [
      "темной ауры"
     ],
@@ -2461,8 +2227,6 @@
     "slots": {
      "head": 3
     },
-    "price_melee": 75,
-    "price_caster": 79,
     "nouns": [
      "отпора заклятий"
     ],
@@ -2499,8 +2263,6 @@
      -1000,
      -350
     ],
-    "price_melee": 93,
-    "price_caster": 31,
     "nouns": [
      "черной немощи"
     ],
@@ -2534,8 +2296,6 @@
    {
     "value": "seasonal aspect",
     "tier": 1,
-    "price_melee": 164,
-    "price_caster": 138,
     "nouns": [
      "времен года"
     ],
@@ -2573,8 +2333,6 @@
      "body": 3,
      "shield": 3
     },
-    "price_melee": 9,
-    "price_caster": 8,
     "nouns": [
      "твердыни"
     ],
@@ -2617,8 +2375,6 @@
      350,
      1000
     ],
-    "price_melee": 56,
-    "price_caster": 47,
     "nouns": [
      "добра",
      "света"
@@ -2672,8 +2428,6 @@
      -1000,
      -350
     ],
-    "price_melee": 56,
-    "price_caster": 47,
     "nouns": [
      "зла",
      "тьмы"
@@ -2729,8 +2483,6 @@
     "slots": {
      "head": 2
     },
-    "price_melee": 52,
-    "price_caster": 43,
     "nouns": [
      "благодати"
     ],
@@ -2767,8 +2519,6 @@
      "arms": 2,
      "hands": 2
     },
-    "price_melee": 101,
-    "price_caster": 38,
     "nouns": [
      "дракона"
     ],
@@ -2801,8 +2551,6 @@
    {
     "value": "protection heat",
     "tier": 2,
-    "price_melee": 33,
-    "price_caster": 28,
     "nouns": [
      "саламандры"
     ],
@@ -2841,8 +2589,6 @@
    {
     "value": "protection cold",
     "tier": 2,
-    "price_melee": 23,
-    "price_caster": 20,
     "nouns": [
      "севера"
     ],
@@ -2882,8 +2628,6 @@
     "value": "concentrate",
     "tier": 2,
     "needs_skill": true,
-    "price_melee": 118,
-    "price_caster": 0,
     "nouns": [
      "сосредоточения"
     ],
@@ -2917,8 +2661,6 @@
    {
     "value": "bless",
     "tier": 3,
-    "price_melee": 10,
-    "price_caster": 10,
     "nouns": [
      "благословения"
     ],
@@ -2951,8 +2693,6 @@
    {
     "value": "inspire",
     "tier": 3,
-    "price_melee": 36,
-    "price_caster": 20,
     "nouns": [
      "вдохновения"
     ],
@@ -2989,8 +2729,6 @@
     "slots": {
      "body": 2
     },
-    "price_melee": 28,
-    "price_caster": 12,
     "nouns": [
      "регенерации",
      "троллей"
@@ -3039,8 +2777,6 @@
    {
     "value": "fortitude",
     "tier": 3,
-    "price_melee": 28,
-    "price_caster": 24,
     "nouns": [
      "стойкости"
     ],
@@ -3079,8 +2815,6 @@
    {
     "value": "resilience",
     "tier": 3,
-    "price_melee": 16,
-    "price_caster": 13,
     "nouns": [
      "устойчивости"
     ],
@@ -3119,8 +2853,6 @@
    {
     "value": "protection negative",
     "tier": 3,
-    "price_melee": 16,
-    "price_caster": 13,
     "nouns": [
      "живых"
     ],
@@ -3159,8 +2891,6 @@
     "slots": {
      "feet": 3
     },
-    "price_melee": 14,
-    "price_caster": 12,
     "nouns": [
      "ветра"
     ],
@@ -3214,8 +2944,6 @@
     "value": "acid blast",
     "tier": 3,
     "target": "victim",
-    "price_melee": 19,
-    "price_caster": 16,
     "adjectives": [
      "едк(ое,ий3,ая2,ие)"
     ],
@@ -3230,8 +2958,6 @@
     "value": "burning hands",
     "tier": 3,
     "target": "victim",
-    "price_melee": 15,
-    "price_caster": 13,
     "adjectives": [
      "раскаленн(ое,ый,ая2,ые)"
     ],
@@ -3246,8 +2972,6 @@
     "value": "shocking grasp",
     "tier": 3,
     "target": "victim",
-    "price_melee": 19,
-    "price_caster": 16,
     "adjectives": [
      "грозов(ое,ой,ая2,ые)"
     ],
@@ -3262,8 +2986,6 @@
     "value": "chill touch",
     "tier": 3,
     "target": "victim",
-    "price_melee": 15,
-    "price_caster": 13,
     "adjectives": [
      "студен(ое,ый,ая2,ые)"
     ],
@@ -3278,8 +3000,6 @@
     "value": "faerie fire",
     "tier": 3,
     "target": "victim",
-    "price_melee": 5,
-    "price_caster": 4,
     "adjectives": [
      "разоблачающ(ее,ий1,ая1,ие)"
     ],
@@ -3294,8 +3014,6 @@
     "value": "deafen",
     "tier": 2,
     "target": "victim",
-    "price_melee": 17,
-    "price_caster": 14,
     "adjectives": [
      "оглушающ(ее,ий1,ая1,ие)"
     ],
@@ -3311,8 +3029,6 @@
     "tier": 2,
     "target": "victim",
     "not_vs": "undead construct",
-    "price_melee": 31,
-    "price_caster": 26,
     "adjectives": [
      "иссушающ(ее,ий1,ая1,ие)"
     ],
@@ -3327,8 +3043,6 @@
     "value": "quantum spike",
     "tier": 2,
     "target": "victim",
-    "price_melee": 31,
-    "price_caster": 26,
     "adjectives": [
      "квантов(ое,ый,ая2,ые)"
     ],
@@ -3344,8 +3058,6 @@
     "tier": 2,
     "target": "self",
     "hp_below": 50,
-    "price_melee": 21,
-    "price_caster": 18,
     "adjectives": [
      "спасительн(ое,ый,ая2,ые)"
     ],
@@ -3364,8 +3076,6 @@
      -1000,
      -350
     ],
-    "price_melee": 60,
-    "price_caster": 50,
     "adjectives": [
      "адск(ое,ий3,ая2,ие)"
     ],
@@ -3380,8 +3090,6 @@
     "value": "blindness",
     "tier": 1,
     "target": "victim",
-    "price_melee": 50,
-    "price_caster": 42,
     "adjectives": [
      "ослепляющ(ее,ий1,ая1,ие)"
     ],
@@ -3396,8 +3104,6 @@
     "value": "fear",
     "tier": 1,
     "target": "victim",
-    "price_melee": 60,
-    "price_caster": 50,
     "adjectives": [
      "жутк(ое,ий3,ая2,ие)"
     ],
@@ -3413,8 +3119,6 @@
     "tier": 1,
     "target": "self",
     "hp_below": 50,
-    "price_melee": 45,
-    "price_caster": 38,
     "adjectives": [
      "чудотворн(ое,ый,ая2,ые)"
     ],
@@ -3448,8 +3152,6 @@
     "value": "str",
     "stack": 3,
     "mod": 2,
-    "price_melee": 6,
-    "price_caster": 2,
     "nouns": [
      "силы"
     ],
@@ -3473,8 +3175,6 @@
     "value": "int",
     "stack": 3,
     "mod": 2,
-    "price_melee": 2,
-    "price_caster": 3,
     "nouns": [
      "разума"
     ],
@@ -3507,8 +3207,6 @@
     "value": "wis",
     "stack": 3,
     "mod": 2,
-    "price_melee": 2,
-    "price_caster": 5,
     "nouns": [
      "мудрости"
     ],
@@ -3543,8 +3241,6 @@
     "value": "dex",
     "stack": 3,
     "mod": 2,
-    "price_melee": 4,
-    "price_caster": 2,
     "nouns": [
      "ловкости"
     ],
@@ -3569,8 +3265,6 @@
     "value": "con",
     "stack": 3,
     "mod": 2,
-    "price_melee": 6,
-    "price_caster": 5,
     "nouns": [
      "выносливости"
     ],
@@ -3597,8 +3291,6 @@
     "value": "cha",
     "stack": 3,
     "mod": 2,
-    "price_melee": 1,
-    "price_caster": 1,
     "nouns": [
      "обаяния"
     ],
@@ -3619,8 +3311,6 @@
     "value": "-str",
     "stack": 2,
     "mod": -1,
-    "price_melee": -6,
-    "price_caster": -2,
     "pick": {
      "all": {
       "50": 1,
@@ -3632,8 +3322,6 @@
     "value": "-dex",
     "stack": 2,
     "mod": -1,
-    "price_melee": -4,
-    "price_caster": -2,
     "pick": {
      "all": {
       "50": 1,
@@ -3645,8 +3333,6 @@
     "value": "-con",
     "stack": 2,
     "mod": -1,
-    "price_melee": -6,
-    "price_caster": -5,
     "pick": {
      "all": {
       "50": 1,
@@ -3658,8 +3344,6 @@
     "value": "-int",
     "stack": 2,
     "mod": -1,
-    "price_melee": -2,
-    "price_caster": -3,
     "pick": {
      "all": {
       "50": 1,
@@ -3671,8 +3355,6 @@
     "value": "-wis",
     "stack": 2,
     "mod": -1,
-    "price_melee": -2,
-    "price_caster": -5,
     "pick": {
      "all": {
       "50": 1,
@@ -3984,8 +3666,6 @@
   "values": [
    {
     "value": "platinum",
-    "price_melee": 45,
-    "price_caster": 45,
     "adjectives": [
      "платинов(ое,ый,ая2,ые)"
     ],
@@ -3998,8 +3678,6 @@
    },
    {
     "value": "titanium",
-    "price_melee": 22,
-    "price_caster": 22,
     "adjectives": [
      "титанов(ое,ый,ая2,ые)"
     ],
@@ -4012,8 +3690,6 @@
    },
    {
     "value": "wood",
-    "price_melee": -22,
-    "price_caster": -22,
     "adjectives": [
      "деревянн(ое,ый,ая2,ые)"
     ],
@@ -4026,8 +3702,6 @@
    },
    {
     "value": "ice",
-    "price_melee": -158,
-    "price_caster": -158,
     "adjectives": [
      "ледян(ое,ой,ая2,ые)"
     ],
@@ -4126,8 +3800,7 @@
   ]
  },
  "_weapons": {
-  "_doc": "Weapons on the M budget (docs/plans/weapons-on-m.md). use_m: WeaponGenerator rolls from this file instead of weapon_affixes.json. Two-handedness is decided before the name and the affixes: weapon_classes requires two_hands = always, else the class two_hand_chance percent, else never; the name is then drawn among the two-handed names (or any not forbidding it) or the one-handed ones; a two-hander gets base ave/damroll and the tier M window x two_hand_k and one more affix. flag: price_by_level centi-M interpolated by item level (clamped to the end points), same for both archetypes; a flag is allowed on the cheapest tier whose max_m covers its price (and not below min_tier); dearer than the legendary window = never rolled. affects_by_tier: dynamic_price, priced at roll time from the calculator step at the item level. weapon_tier: a tier floor that applies to weapons only (damroll/hitroll stats: rare and up).",
-  "use_m": true,
+  "_doc": "Weapons on the M budget (docs/plans/weapons-on-m.md): WeaponGenerator rolls from this file (weapon_affixes.json only keeps the weapon name forms). Two-handedness is decided before the name and the affixes: weapon_classes requires two_hands = always, else the class two_hand_chance percent, else never; the name is then drawn among the two-handed names (or any not forbidding it) or the one-handed ones; a two-hander gets base ave/damroll and the tier M window x two_hand_k and one more affix. flag: price_by_level centi-M interpolated by item level (clamped to the end points), same for both archetypes; a flag is allowed on the cheapest tier whose max_m covers its price (and not below min_tier); dearer than the legendary window = never rolled. affects_by_tier: dynamic_price, priced at roll time from the calculator step at the item level. weapon_tier: a tier floor that applies to weapons only (damroll/hitroll stats: rare and up).",
   "two_hand_k": 1.75,
   "two_hands": {
    "adjectives": [

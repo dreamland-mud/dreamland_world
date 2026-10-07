@@ -40,5 +40,11 @@ if [ -n "${shared:-}" ] && [ -f "$shared/lint-catalog-gaps.py" ]; then
     python3 "$shared/lint-catalog-gaps.py" --limit 20 || true
 fi
 
+# EN/UA placeholders that read a different arg type than RU (%G vs %g, a dropped
+# %1$G shifting a %d): the formatter throws or reads garbage at runtime.
+if [ -f "$world/scripts/lint-catalog-placeholders.py" ]; then
+    python3 "$world/scripts/lint-catalog-placeholders.py" $shards || true
+fi
+
 echo "--- pre-push: advisory only, push continues"
 exit 0

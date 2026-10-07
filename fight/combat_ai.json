@@ -13,6 +13,8 @@
 // spell_tiers: attack spell -> damage tier from its skill XML <tier>;
 // spell_tier_weight[tier]: % of a tier-3 nuke's damage at L75, so the tier
 // AI casts the strongest first. tier_spells debuffs: first = cast first.
+// Champion+ end with strikes (one more blow on a round no move fired); boss
+// and legend try rend (tear off the target's sanctuary after a tool landed).
 {
   "clanguard": {
     "purge": 30,
@@ -841,6 +843,7 @@
     ]
   },
   "tier_normal": {
+    "moves": 2,
     "act": 70,
     "winded": 25,
     "rage": false,
@@ -889,6 +892,7 @@
     ]
   },
   "tier_elite": {
+    "moves": 2,
     "act": 95,
     "blunder": 8,
     "winded": 10,
@@ -962,6 +966,7 @@
     ]
   },
   "tier_champion": {
+    "moves": 3,
     "act": 95,
     "blunder": 5,
     "winded": 10,
@@ -1052,11 +1057,17 @@
         "move": "nuke"
       },
       {
+        "move": "strikes",
+        "chance": 50,
+        "fighting": true
+      },
+      {
         "move": "anyTool"
       }
     ]
   },
   "tier_boss": {
+    "moves": 3,
     "act": 100,
     "blunder": 3,
     "winded": 10,
@@ -1161,11 +1172,21 @@
         "move": "nuke"
       },
       {
+        "move": "rend",
+        "cd": 12
+      },
+      {
+        "move": "strikes",
+        "chance": 50,
+        "fighting": true
+      },
+      {
         "move": "anyTool"
       }
     ]
   },
   "tier_legend": {
+    "moves": 3,
     "act": 100,
     "blunder": 2,
     "winded": 10,
@@ -1268,6 +1289,15 @@
       },
       {
         "move": "nuke"
+      },
+      {
+        "move": "rend",
+        "cd": 12
+      },
+      {
+        "move": "strikes",
+        "chance": 50,
+        "fighting": true
       },
       {
         "move": "anyTool"

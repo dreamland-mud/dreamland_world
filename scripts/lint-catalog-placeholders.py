@@ -33,6 +33,8 @@ ALLOW = {
         'caller passes 6 args, RU reads 1-2, EN 3-4, UA 5-6 by design',
     ('plug-ins/services/shop/oldshop.cpp', 'Я дал%2$Gо||а бы тебе %3s за %4$O4, но у меня нет денег.'):
         'tell_fmt prepends %2$^C1, so the sequential %3s reads arg 3',
+    ('plug-ins/profession/defaultprofession.cpp', 'Подробнее обо всех параметрах читай в %H% {hh28таблица классов{x. '):
+        'l() only looks the text up; %H% is a help-formatter keyword (helpformatter.cpp)',
 }
 
 ACT = {

@@ -13,6 +13,8 @@
 // spell_tiers: attack spell -> damage tier from its skill XML <tier>;
 // spell_tier_weight[tier]: % of a tier-3 nuke's damage at L75, so the tier
 // AI casts the strongest first. tier_spells debuffs: first = cast first.
+// Champion+ end with strikes (one more blow on a round no move fired); boss
+// and legend try rend (tear off the target's sanctuary after a tool landed).
 {
   "clanguard": {
     "purge": 30,
@@ -1053,6 +1055,10 @@
       },
       {
         "move": "anyTool"
+      },
+      {
+        "move": "strikes",
+        "fighting": true
       }
     ]
   },
@@ -1161,7 +1167,16 @@
         "move": "nuke"
       },
       {
+        "move": "rend",
+        "chance": 25,
+        "cd": 12
+      },
+      {
         "move": "anyTool"
+      },
+      {
+        "move": "strikes",
+        "fighting": true
       }
     ]
   },
@@ -1270,7 +1285,16 @@
         "move": "nuke"
       },
       {
+        "move": "rend",
+        "chance": 25,
+        "cd": 12
+      },
+      {
         "move": "anyTool"
+      },
+      {
+        "move": "strikes",
+        "fighting": true
       }
     ]
   },

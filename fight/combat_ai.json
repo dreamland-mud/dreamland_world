@@ -3,7 +3,8 @@
 // and "utils/combat ai: moves". Texts are RU; EN/UA via the catalog, section
 // "utils/combat ai". Integers only (Fenia has no floats).
 // tier_normal (tiers 6-8) and tier_trash (9) drive spells only, melee stays
-// with the random pick in global/onFightAI/ai_basic.
+// with the random pick in global/onFightAI/ai_basic (no blunders: those are
+// melee-round slips).
 // tier_elite/tier_champion/tier_boss: templates the tier AI fills with each
 // mob's own toolbox (.tmp.cai.tierProfile). tier_spells: spell groups by class
 // act; spell_damtypes: spell -> .tables.damage_table name (Fenia cannot read
@@ -838,14 +839,13 @@
   },
   "tier_normal": {
     "act": 70,
-    "blunder": 15,
     "winded": 25,
     "rage": false,
     "policy": [
       "weakest"
     ],
     "tools": 0,
-    "spells": 2,
+    "spells": 3,
     "debuffMax": 1,
     "healBelow": 30,
     "helpBelow": 0,
@@ -867,7 +867,6 @@
   },
   "tier_trash": {
     "act": 50,
-    "blunder": 20,
     "winded": 30,
     "rage": false,
     "policy": [

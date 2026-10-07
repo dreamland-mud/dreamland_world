@@ -10,12 +10,15 @@ check-translation-batch.py compares code multisets and misses that positional dr
 
 Parser mirrors msgformatter's state machine: positional vs sequential args,
 #/-/width/limit/^/_, the case digit after C/O/P/T/p/N/K, |-separated form runs, and
-invalid conversions. Old act() $-codes are mapped per act.cpp.
+invalid conversions. Old act() $-codes are mapped per act.cpp. Positional args follow
+Fenia's RegFormatter (shiftArg sets the cursor); C++ VarArgFormatter keeps the max,
+which differs only for a sequential conversion after a backward positional (none today).
 
 Reports:
   TYPE-MISMATCH  the translation reads an arg as NOUN/INT/STR where RU reads another type
   ARG-NOT-IN-RU  the translation reads an arg RU never touches
-  INVALID-CONV   '%' followed by a letter the formatter does not know (Cyrillic look-alikes)
+  INVALID-CONV   '%' followed by a letter the formatter does not know (Cyrillic look-alikes),
+                 in the RU key too
 
 Usage: lint-catalog-placeholders.py [shard.json ...]   (default: every shard)
 Exit 1 on any finding.
@@ -24,11 +27,12 @@ import glob, json, os, re, sys
 
 CATALOG = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'config', 'translations')
 
-# Section -> reason. Deliberate or not run through the formatter at all.
+# (section, RU key) -> reason. One string each, never a whole section.
 ALLOW = {
-    'plug-ins/comm/configs.cpp': 'caller passes 6 args, RU uses 1-2, EN 3-4, UA 5-6 by design',
-    'plug-ins/services/shop/oldshop.cpp': 'tell_fmt prepends %2$^C1, so %3s lines up',
-    'plug-ins/clan/impl/ruler.cpp': 'syntax line printed raw, not formatted',
+    ('plug-ins/comm/configs.cpp', '\nИспользуй команду {hc{yрежим %s %s{x для изменения.'):
+        'caller passes 6 args, RU reads 1-2, EN 3-4, UA 5-6 by design',
+    ('plug-ins/services/shop/oldshop.cpp', 'Я дал%2$Gо||а бы тебе %3s за %4$O4, но у меня нет денег.'):
+        'tell_fmt prepends %2$^C1, so the sequential %3s reads arg 3',
 }
 
 ACT = {
@@ -157,12 +161,15 @@ def lint(path):
     shard = os.path.basename(path)
     data = json.load(open(path, encoding='utf-8'))
     for sec, entries in data.items():
-        if not isinstance(entries, dict) or sec in ALLOW:
+        if not isinstance(entries, dict):
             continue
         for ru, tr in entries.items():
-            if not isinstance(tr, dict):
+            if not isinstance(tr, dict) or (sec, ru) in ALLOW:
                 continue
-            rtypes, _ = classes(ru)
+            rtypes, rinvalid = classes(ru)
+            for a, c in rinvalid:
+                print(f"{shard}: {sec} [ru] INVALID-CONV arg{a} %{c[8:]!r}\n    ru: {ru}")
+                found += 1
             rcls = {a: {t for t, _ in v} for a, v in rtypes.items()}
             for lang in ('en', 'ua'):
                 t = tr.get(lang)

@@ -10,6 +10,9 @@
 // act; spell_damtypes: spell -> .tables.damage_table name (Fenia cannot read
 // it from the spell); spell_prayers: prayer-only spells; spell_rules: who a
 // spell can hurt (vict) and who can cast it usefully (caster).
+// spell_tiers: attack spell -> damage tier from its skill XML <tier>;
+// spell_tier_weight[tier]: % of a tier-3 nuke's damage at L75, so the tier
+// AI casts the strongest first. tier_spells debuffs: first = cast first.
 {
   "clanguard": {
     "purge": 30,
@@ -886,9 +889,9 @@
     ]
   },
   "tier_elite": {
-    "act": 85,
-    "blunder": 12,
-    "winded": 20,
+    "act": 95,
+    "blunder": 8,
+    "winded": 10,
     "rage": false,
     "policy": [
       "weakest"
@@ -960,8 +963,8 @@
   },
   "tier_champion": {
     "act": 95,
-    "blunder": 8,
-    "winded": 20,
+    "blunder": 5,
+    "winded": 10,
     "rage": true,
     "policy": [
       "healer",
@@ -1055,8 +1058,8 @@
   },
   "tier_boss": {
     "act": 100,
-    "blunder": 5,
-    "winded": 25,
+    "blunder": 3,
+    "winded": 10,
     "rage": true,
     "policy": [
       "healer",
@@ -1064,7 +1067,7 @@
     ],
     "tools": 99,
     "spells": 99,
-    "debuffMax": 3,
+    "debuffMax": 2,
     "healBelow": 50,
     "helpBelow": 50,
     "switchFocus": true,
@@ -1164,8 +1167,8 @@
   },
   "tier_legend": {
     "act": 100,
-    "blunder": 3,
-    "winded": 25,
+    "blunder": 2,
+    "winded": 10,
     "rage": true,
     "policy": [
       "healer",
@@ -1173,7 +1176,7 @@
     ],
     "tools": 99,
     "spells": 99,
-    "debuffMax": 3,
+    "debuffMax": 2,
     "healBelow": 50,
     "helpBelow": 50,
     "switchFocus": true,
@@ -1290,11 +1293,11 @@
         "magic missile"
       ],
       "debuff": [
-        "faerie fire",
-        "weaken",
-        "slow",
-        "curse",
         "blindness",
+        "slow",
+        "weaken",
+        "faerie fire",
+        "curse",
         "web"
       ],
       "heal": [],
@@ -1316,11 +1319,11 @@
         "harm"
       ],
       "debuff": [
-        "curse",
-        "weaken",
-        "slow",
-        "faerie fire",
         "blindness",
+        "slow",
+        "weaken",
+        "curse",
+        "faerie fire",
         "plague",
         "poison"
       ],
@@ -1347,12 +1350,12 @@
         "magic missile"
       ],
       "debuff": [
-        "curse",
-        "weaken",
-        "slow",
-        "plague",
-        "corruption",
         "blindness",
+        "slow",
+        "weaken",
+        "curse",
+        "corruption",
+        "plague",
         "poison"
       ],
       "heal": [],
@@ -1361,6 +1364,36 @@
       ]
     }
   },
+  "spell_tiers": {
+    "acid arrow": 2,
+    "acid blast": 3,
+    "blade barrier": 4,
+    "bluefire": 3,
+    "burning hands": 4,
+    "chill touch": 4,
+    "colour spray": 3,
+    "demonfire": 2,
+    "dispel evil": 3,
+    "dispel good": 3,
+    "disruption": 2,
+    "dragons breath": 1,
+    "energy drain": 3,
+    "fireball": 3,
+    "flamestrike": 3,
+    "hand of undead": 4,
+    "harm": 5,
+    "lightning bolt": 3,
+    "magic missile": 5,
+    "magnetic thrust": 4,
+    "quantum spike": 3,
+    "ray of truth": 3,
+    "severity force": 2,
+    "shocking grasp": 3,
+    "sonic resonance": 4,
+    "spectral furor": 2,
+    "sulfuric spray": 3
+  },
+  "spell_tier_weight": [0, 150, 125, 100, 75, 60],
   "spell_damtypes": {
     "acid blast": "acid",
     "fireball": "fire",

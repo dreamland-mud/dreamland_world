@@ -2,6 +2,8 @@
 // Profile names: a-z, 0-9, _ only. Field reference: header of "utils/combat ai"
 // and "utils/combat ai: moves". Texts are RU; EN/UA via the catalog, section
 // "utils/combat ai". Integers only (Fenia has no floats).
+// tier_normal (tiers 6-8) and tier_trash (9) drive spells only, melee stays
+// with the random pick in global/onFightAI/ai_basic.
 // tier_elite/tier_champion/tier_boss: templates the tier AI fills with each
 // mob's own toolbox (.tmp.cai.tierProfile). tier_spells: spell groups by class
 // act; spell_damtypes: spell -> .tables.damage_table name (Fenia cannot read
@@ -831,6 +833,56 @@
             "move": "push"
           }
         ]
+      }
+    ]
+  },
+  "tier_normal": {
+    "act": 70,
+    "blunder": 15,
+    "winded": 25,
+    "rage": false,
+    "policy": [
+      "weakest"
+    ],
+    "tools": 0,
+    "spells": 2,
+    "debuffMax": 1,
+    "healBelow": 30,
+    "helpBelow": 0,
+    "switchFocus": false,
+    "switchDamtype": false,
+    "priority": [
+      {
+        "move": "healSpell",
+        "target": "self",
+        "cd": 12
+      },
+      {
+        "move": "debuff"
+      },
+      {
+        "move": "nuke"
+      }
+    ]
+  },
+  "tier_trash": {
+    "act": 50,
+    "blunder": 20,
+    "winded": 30,
+    "rage": false,
+    "policy": [
+      "weakest"
+    ],
+    "tools": 0,
+    "spells": 1,
+    "debuffMax": 1,
+    "healBelow": 0,
+    "helpBelow": 0,
+    "switchFocus": false,
+    "switchDamtype": false,
+    "priority": [
+      {
+        "move": "nuke"
       }
     ]
   },

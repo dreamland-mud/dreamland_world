@@ -617,7 +617,7 @@
   }
  },
  "grant_skill": {
-  "_doc": "Item-granted skills (grantskills behavior), priced per character by the gear sage (characterwrapper.cpp ga_grantsValue): PvE + pvp_weight x PvP + QoL per skill, 0 when the wearer already has the skill or its align/ethos refuses the wearer. pvp_weight: share of PvP worth counted (0 for clan Flowers). nature_share: share of fights in nature rooms (forest fighting). active_use: share of the time a granted nuke is actually cast; mana_share: share of the mana pool spent per fight; fight_rounds: rounds per fight by level. crit_*: critical strike bonus per proc and the worth of its blind/stun at the reference proc chance. nuke_cond, nuke_pvp_share, buff_uptime, pet_round_share: per-skill knobs. fixed: [PvE melee, PvE caster, PvP melee, PvP caster, QoL] per skill, x learned/100. ref_*: the reference player of the char-less base value. docs/plans/grantskills-pricing.md.",
+  "_doc": "Item-granted skills (grantskills behavior), priced per character by the gear sage (characterwrapper.cpp ga_grantsValue): PvE + pvp_weight x PvP + QoL per skill, 0 when the wearer already has the skill or its align/ethos refuses the wearer. pvp_weight: share of PvP worth counted (0 for clan Flowers). nature_share: share of fights in nature rooms (forest fighting). active_use: share of the time a granted nuke is actually cast; mana_share: share of the mana pool spent per fight; fight_rounds: rounds per fight by level. crit_*: critical strike bonus per proc and the worth of its blind/stun at the reference proc chance. blink_pvp_share: the most of a duel's damage blink is credited with removing [melee, caster]. nuke_cond, nuke_pvp_share, buff_uptime, pet_round_share: per-skill knobs. fixed: [PvE melee, PvE caster, PvP melee, PvP caster, QoL] per skill, x learned/100. ref_*: the reference player of the char-less base value. docs/plans/grantskills-pricing.md.",
   "pvp_weight": 0.25,
   "nature_share": 0.25,
   "active_use": 0.5,
@@ -630,6 +630,7 @@
   "crit_pve_control": 0.31,
   "crit_pvp_share": 0.11,
   "blink_mana_factor": [0.8, 0.7],
+  "blink_pvp_share": [0.27, 0.36],
   "ref_swings": 2.5,
   "ref_mana_per_level": [20, 30],
   "ref_reach": [0.54, 0.72],

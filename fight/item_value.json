@@ -1,5 +1,5 @@
 {
- "_doc": "One item value model, shared by the gear advisor (service advice, characterwrapper.cpp ga_*), the random item generator and Fenia's item measure (.config(\"fight/item_value\")). Units are gear-score points. melee/caster: per-profile weight per point of an apply (level/slevel/skill_level_* per +1, beats per -1% skill lag). shared: profile-independent weights; ac weight is ac_base at level 1 falling to 0 at ac_zero_level. flags: [melee, caster] per affect flag (a flag the char can self-cast counts 10%). res: [res, imm, vuln] per damage class (resists do not stack). measure: one roll of the item measure (M) and the slot factors (rolls = level / factor), tier budgets in M. A missing key falls back to the compiled default. docs/plans/armor-generator.md.",
+ "_doc": "One item value model, shared by the gear advisor (service advice, characterwrapper.cpp ga_*), the random item generator and Fenia's item measure (.config(\"fight/item_value\")). Units are gear-score points. melee/caster: per-profile weight per point of an apply (level/slevel/skill_level_* per +1, beats per -1% skill lag). shared: profile-independent weights; ac weight is ac_base at level 1 falling to 0 at ac_zero_level. flags: [melee, caster] per affect flag (a flag the char can self-cast counts 10%). res: [res, imm, vuln] per damage class (resists do not stack). measure: one roll of the item measure (M) and the slot factors (rolls = level / factor), tier budgets in M. grant_skill: what an item-granted skill is worth to its wearer. A missing key falls back to the compiled default. docs/plans/armor-generator.md.",
  "melee": {
   "hp": 1.0,
   "mana": 0.1,
@@ -614,6 +614,72 @@
     562,
     373
    ]
+  }
+ },
+ "grant_skill": {
+  "_doc": "Item-granted skills (grantskills behavior), priced per character by the gear sage (characterwrapper.cpp ga_grantsValue): PvE + pvp_weight x PvP + QoL per skill, 0 when the wearer already has the skill or its align/ethos refuses the wearer. pvp_weight: share of PvP worth counted (0 for clan Flowers). nature_share: share of fights in nature rooms (forest fighting). active_use: share of the time a granted nuke is actually cast; mana_share: share of the mana pool spent per fight; fight_rounds: rounds per fight by level. crit_*: critical strike bonus per proc and the worth of its blind/stun at the reference proc chance. nuke_cond, nuke_pvp_share, buff_uptime, pet_round_share: per-skill knobs. fixed: [PvE melee, PvE caster, PvP melee, PvP caster, QoL] per skill, x learned/100. ref_*: the reference player of the char-less base value. docs/plans/grantskills-pricing.md.",
+  "pvp_weight": 0.25,
+  "nature_share": 0.25,
+  "active_use": 0.5,
+  "mana_share": 0.25,
+  "aoe_targets": 1.3,
+  "not_tanking": 0.2,
+  "shapeshift_share": 0.3,
+  "crit_bonus": 0.9,
+  "crit_ref_proc": 0.07,
+  "crit_pve_control": 0.31,
+  "crit_pvp_share": 0.11,
+  "blink_mana_factor": [0.8, 0.7],
+  "ref_swings": 2.5,
+  "ref_mana_per_level": [20, 30],
+  "ref_reach": [0.54, 0.72],
+  "fight_rounds": {
+   "20": 3,
+   "40": 8,
+   "60": 10,
+   "90": 11
+  },
+  "nuke_cond": {
+   "call lightning": 0.15
+  },
+  "nuke_pvp_share": {
+   "fear": 0.25
+  },
+  "buff_uptime": {
+   "benediction": 0.5,
+   "warcry": 0.7
+  },
+  "pet_round_share": {
+   "lesser golem": 0.25,
+   "adamantite golem": 0.3,
+   "attract other": 0.15
+  },
+  "fixed": {
+   "spell craft": [0, 0, 0, 0, 3],
+   "attract other": [0, 0, 60, 60, 0],
+   "ambush": [77, 0, 230, 0, 0],
+   "leadership": [0, 0, 0, 0, 10],
+   "disarm": [14, 5, 132, 36, 0],
+   "blind fighting": [7, 39, 85, 190, 0],
+   "escape": [20, 20, 100, 100, 0],
+   "vanish": [20, 20, 80, 80, 0],
+   "mist walk": [10, 10, 60, 60, 30],
+   "camouflage": [20, 20, 60, 60, 0],
+   "camouflage move": [0, 0, 0, 0, 0],
+   "envenom": [15, 15, 30, 30, 0],
+   "poison": [20, 20, 30, 30, 0],
+   "stone skin": [20, 20, 10, 10, 0],
+   "bow": [10, 10, 25, 25, 5],
+   "mastering bow": [10, 10, 25, 25, 5],
+   "remove fear": [0, 0, 20, 20, 0],
+   "lore": [0, 0, 0, 0, 10],
+   "pick lock": [0, 0, 0, 0, 10],
+   "perception": [0, 0, 0, 0, 3],
+   "golden eye": [0, 0, 0, 0, 3],
+   "bash door": [0, 0, 0, 0, 3],
+   "butcher": [0, 0, 0, 0, 2],
+   "soothe": [0, 0, 0, 0, 3],
+   "hara kiri": [0, 0, 0, 0, 0]
   }
  }
 }

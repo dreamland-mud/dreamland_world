@@ -15,6 +15,9 @@
 // AI casts the strongest first. tier_spells debuffs: first = cast first.
 // Champion+ end with strikes (one more blow on a round no move fired); boss
 // and legend try rend (tear off the target's sanctuary after a tool landed).
+// leash: rooms from home a champion+ chases its last foe (utils/mob brain);
+// evadeSecs: seconds with no reachable foe before it gives up, heals and
+// goes home.
 {
   "clanguard": {
     "purge": 30,
@@ -967,6 +970,8 @@
   },
   "tier_champion": {
     "moves": 3,
+    "leash": 5,
+    "evadeSecs": 30,
     "act": 95,
     "blunder": 5,
     "winded": 10,
@@ -1068,6 +1073,8 @@
   },
   "tier_boss": {
     "moves": 3,
+    "leash": 7,
+    "evadeSecs": 30,
     "act": 100,
     "blunder": 3,
     "winded": 10,
@@ -1187,6 +1194,8 @@
   },
   "tier_legend": {
     "moves": 3,
+    "leash": 10,
+    "evadeSecs": 30,
     "act": 100,
     "blunder": 2,
     "winded": 10,

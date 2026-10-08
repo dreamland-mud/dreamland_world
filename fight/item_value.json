@@ -290,7 +290,7 @@
   ]
  },
  "measure": {
-  "_doc": "Read by Fenia .tmp.craft.getMeasure. One roll = +1 damroll, +1 hitroll, +10 hp, +10 mana. rolls = level / factor; jeweler crafts use jeweler_factor. tier_budget is in M (one measure), reference level ref_level. craft_budget_cm: crafted armor (craft/armor generateAffects) per craft tier 1..5 in centi-M (Fenia has no floats). enchant_budget_cm: enchant armor target [rare, epic with creativity or Enki].",
+  "_doc": "Read by Fenia .tmp.craft.getMeasure. One roll = +1 damroll, +1 hitroll, +10 hp, +10 mana. rolls = level / factor; jeweler crafts use jeweler_factor. tier_budget is in M (one measure), reference level ref_level. craft_budget_cm: crafted armor (craft/armor generateAffects) per craft tier 1..5 in centi-M (Fenia has no floats). enchant_budget_cm: enchant armor target [rare, epic with creativity or Enki]. repair_cm: repair price in silver per item level at 100% damage, tier 1..5 (legendary..common; hand-made = uncommon) -- tier_budget x 0.7, read by public utils/object repairPrice.",
   "roll": {
    "damroll": 1,
    "hitroll": 1,
@@ -318,6 +318,7 @@
   "ref_level": 60,
   "craft_budget_cm": [160, 120, 80, 50, 30],
   "enchant_budget_cm": [150, 250],
+  "repair_cm": [315, 175, 105, 70, 35],
   "tier_budget": {
    "common": 0.5,
    "uncommon": 1.0,

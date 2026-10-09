@@ -440,6 +440,17 @@
    30.5
   ]
  },
+ "craft_material": {
+  "_doc": "Metal character of crafted armor (Fenia craft/armor craftLean: blacksmith, carpenter and jeweler crafts only, never spells or services, whose doubled caster mana would break the budget), keyed by the first material of the piece. shares: percent applied to the wearer's stat shares (damroll, hitroll, hp, mana) before budgetStatsBy, which renormalizes them, so the M budget is unchanged and only the shape moves. ac: percent of the rolled AC per damage type (pierce, bash, slash, exotic), clamped 1..60. Unlisted materials are neutral.",
+  "mithril": {
+   "shares": { "damroll": 100, "hitroll": 125, "hp": 75, "mana": 150 },
+   "ac": { "pierce": 110, "bash": 80, "slash": 110, "exotic": 100 }
+  },
+  "adamantite": {
+   "shares": { "damroll": 125, "hitroll": 75, "hp": 150, "mana": 50 },
+   "ac": { "pierce": 90, "bash": 120, "slash": 90, "exotic": 100 }
+  }
+ },
  "materials": {
   "_doc": "Points per item material [melee, caster] (decision 12): durability today. Weapon materials still carry their combat side here until the combat-effect model (P3) prices it from the mob census.",
   "dragonskin": [

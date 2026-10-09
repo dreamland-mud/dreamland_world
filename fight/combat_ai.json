@@ -13,6 +13,8 @@
 // spell_tiers: attack spell -> damage tier from its skill XML <tier>;
 // spell_tier_weight[tier]: % of a tier-3 nuke's damage at L75, so the tier
 // AI casts the strongest first. tier_spells debuffs: first = cast first.
+// tier_spells ranged: {spell, chance} tried in order at a foe a few rooms
+// away (utils/mob brain castRanged); the first that passes its roll casts.
 // Champion+ end with strikes (one more blow on a round no move fired); boss
 // and legend try rend (tear off the target's sanctuary after a tool landed).
 // leash: rooms from home a champion+ chases its last foe (utils/mob brain);
@@ -1340,6 +1342,16 @@
         "web"
       ],
       "heal": [],
+      "ranged": [
+        { "spell": "web", "chance": 95 },
+        { "spell": "dispel affects", "chance": 50 },
+        { "spell": "acid blast", "chance": 95 },
+        { "spell": "dragons breath", "chance": 100 },
+        { "spell": "fireball", "chance": 100 },
+        { "spell": "acid arrow", "chance": 100 },
+        { "spell": "magnetic thrust", "chance": 100 },
+        { "spell": "sulfuric spray", "chance": 100 }
+      ],
       "dispel": [
         "dispel affects"
       ]
@@ -1371,6 +1383,15 @@
         "superior heal",
         "heal"
       ],
+      "ranged": [
+        { "spell": "ray of truth", "chance": 50 },
+        { "spell": "blade barrier", "chance": 100 },
+        { "spell": "demonfire", "chance": 100 },
+        { "spell": "bluefire", "chance": 100 },
+        { "spell": "dispel evil", "chance": 100 },
+        { "spell": "dispel good", "chance": 100 },
+        { "spell": "flamestrike", "chance": 100 }
+      ],
       "dispel": [
         "dispel affects"
       ]
@@ -1398,6 +1419,33 @@
         "poison"
       ],
       "heal": [],
+      "ranged": [
+        { "spell": "web", "chance": 100 },
+        { "spell": "hand of undead", "chance": 100 },
+        { "spell": "disruption", "chance": 100 },
+        { "spell": "spectral furor", "chance": 100 },
+        { "spell": "sonic resonance", "chance": 100 },
+        { "spell": "lightning bolt", "chance": 100 }
+      ],
+      "dispel": [
+        "dispel affects"
+      ]
+    },
+    "vampire": {
+      "attack": [
+        "chain lightning",
+        "vampiric blast",
+        "dispel good",
+        "burning hands"
+      ],
+      "debuff": [
+        "blindness",
+        "curse",
+        "slow",
+        "weaken"
+      ],
+      "heal": [],
+      "ranged": [],
       "dispel": [
         "dispel affects"
       ]
@@ -1409,6 +1457,7 @@
     "blade barrier": 4,
     "bluefire": 3,
     "burning hands": 4,
+    "chain lightning": 5,
     "chill touch": 4,
     "colour spray": 3,
     "demonfire": 2,
@@ -1430,7 +1479,8 @@
     "shocking grasp": 3,
     "sonic resonance": 4,
     "spectral furor": 2,
-    "sulfuric spray": 3
+    "sulfuric spray": 3,
+    "vampiric blast": 2
   },
   "spell_tier_weight": [0, 150, 125, 100, 75, 60],
   "spell_damtypes": {
@@ -1470,7 +1520,9 @@
     "plague": "disease",
     "poison": "poison",
     "corruption": "disease",
-    "dispel affects": "mental"
+    "dispel affects": "mental",
+    "chain lightning": "lightning",
+    "vampiric blast": "negative"
   },
   "spell_prayers": [
     "ray of truth",

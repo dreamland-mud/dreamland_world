@@ -339,7 +339,7 @@
    0.8,
    1.0
   ],
-  "cost_cap": 30000,
+  "cost_cap": 50000,
   "top_max": 2,
   "top_repeat_weight": 0.1,
   "core_affixes": {
@@ -735,5 +735,24 @@
    "soothe": [0, 0, 0, 0, 3],
    "hara kiri": [0, 0, 0, 0, 0]
   }
+ },
+ "cost": {
+  "_doc": "Auto price of a prototype in silver (C++ item_auto_cost, fight_core/itemeconomy.cpp): min(measure.cost_cap, base + magic). magic = measure.cost_k x M x level, M = the sage base score / one M at the item level and slot (best of melee, caster). base = by type below + material.json price (silver per kg) x weight in kg; type_floor adds a flat floor per type. A non-take item costs 0. The boot price of a prototype is min(auto, its area-file cost): the model only ever lowers a price, and no <cost> stays 0. A scripted prototype the model finds no stats in keeps its area-file cost. docs/plans/weight-cost-sweep.md 3.4.",
+  "worn_types": ["armor", "clothing", "weapon", "jewelry"],
+  "worn_per_level": 14,
+  "spell_per_level": 50,
+  "charge_per_level": 15,
+  "food_per_hour": 5,
+  "food_max_hours": 100,
+  "drink_per_unit": 2,
+  "light_per_hour": 3,
+  "light_infinite": 1000,
+  "container_per_lb": 3,
+  "container_mult_premium": 50,
+  "recipe_per_complexity": 1500,
+  "valuable_types": ["treasure", "gem", "jewelry"],
+  "valuable_per_level": 40,
+  "type_floor": { "trash": 10, "key": 25, "treasure": 200, "gem": 100, "jewelry": 50, "map": 100, "drink": 20, "food": 5, "warp_stone": 300, "lockpick": 50, "parchment": 10, "boat": 300 },
+  "type_floor_default": 1
  }
 }

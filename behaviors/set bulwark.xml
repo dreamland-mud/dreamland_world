@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<behavior type="SetBehavior">
+  <cmd></cmd>
+  <description l="en">{hh990Wear{x it to assemble the {hh5114Bulwark set{x.</description>
+  <description l="ru">{hh990Надень{x, чтобы собрать {hh5114набор 'Бастион'{x.</description>
+  <description l="ua">{hh990Одягни{x, щоб зібрати {hh5114набір 'Бастіон'{x.</description>
+  <help id="5114" level="-1" type="BehaviorHelp">
+    <extra l="en">set bulwark adamant pieces collection Bulwark</extra>
+    <extra l="ru">набор бастиона адамант части комплект бастион</extra>
+    <extra l="ua">набір бастіону адамант частини комплект бастіон</extra>
+    <text l="en">This item is part of the Bulwark set -- a matched set of 4 pieces forged by a master {hh5071blacksmith{x: breastplate, greaves, great helm and gauntlets. Collect and wear all 4 together to assemble the set; once complete it grants its bonus. Wear only some pieces and you gain nothing extra. The helm and greaves also belong to the {hh5135Undying Chieftain set{x: only one of the two works at a time, whichever you assemble first.</text>
+    <text l="ru">Эта вещь -- часть набора 'Бастион' из 4 предметов, которые выковывает мастер-{hh5071кузнец{x: нагрудник, поножи, шлем и перчатки. Собери и надень все 4 вместе, чтобы собрать набор; собранный целиком, он дает свой бонус. Наденешь лишь часть -- ничего сверх не получишь. Шлем и поножи входят и в {hh5135набор 'Бессмертный вождь'{x: действует только один из двух, тот, что собран первым.</text>
+    <text l="ua">Ця річ -- частина набору 'Бастіон' із 4 предметів, які кує майстер-{hh5071коваль{x: нагрудник, наголінники, шолом і рукавиці. Збери й надінь усі 4 разом, щоб зібрати набір; зібраний цілком, він дає свій бонус. Надінеш лише частину -- нічого понад не отримаєш. Шолом і наголінники входять і в {hh5135набір 'Безсмертний вождь'{x: діє лише один із двох, той, що зібрано першим.</text>
+    <title l="en">{CSets:{x Bulwark</title>
+    <title l="ru">{CНаборы: {xБастион</title>
+    <title l="ua">{CНабори:{x Бастіон</title>
+  </help>
+  <id>108</id>
+  <nameEn>Bulwark</nameEn>
+  <nameRus>Бастион</nameRus>
+  <nameUa>Бастіон</nameUa>
+  <props>{&quot;double_neck&quot;:false,&quot;double_wrist&quot;:false,&quot;excludes&quot;:&quot;set undying chieftain&quot;,&quot;max_level&quot;:110,&quot;total_count&quot;:4}
+</props>
+  <affects>
+    <node>
+      <apply to="hit">80</apply>
+      <bits table="res_flags">weapon</bits>
+    </node>
+    <node>
+      <apply to="con">3</apply>
+      <bits table="affect_flags">sanctuary</bits>
+    </node>
+    <node>
+      <apply to="saves">-5</apply>
+    </node>
+  </affects>
+  <msgComplete l="en">{yThe adamant closes around you: you stand like a bulwark.{x</msgComplete>
+  <msgComplete l="ru">{yАдамант смыкается вокруг тебя: ты стоишь, как бастион.{x</msgComplete>
+  <msgComplete l="ua">{yАдамант змикається довкола тебе: ти стоїш, як бастіон.{x</msgComplete>
+  <target>obj</target>
+</behavior>

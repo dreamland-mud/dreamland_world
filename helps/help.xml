@@ -220,6 +220,8 @@ Silver is four times heavier than gold, so carrying large amounts of silver coin
 {Y%A% {xYou can put money in a {hh1086bank account{x so you don't have to carry it around
 {Y%A% {xYou can buy {hh65jewellery{x from a {cjeweller{x -- it's lighter than gold and silver and can also be deposited!
 
+Coins have {hh39weight{x: 25 gold coins or 120 silver ones weigh a pound, in a purse or in a pile on the floor alike. A big fortune is heavy to haul around.
+
 %SA% %H% {hh203coin flip{x
 </text>
     <text l="ru">В Мире Мечты в ходу золотые и серебряные монеты. 
@@ -243,6 +245,8 @@ Silver is four times heavier than gold, so carrying large amounts of silver coin
 {Y%A% {xможно положить деньги на {hh1086банковский счет{x, чтобы не приходилось таскать с собой
 {Y%A% {xможно покупать {hh65драгоценности{x у {cювелира{x -- они легче золота и серебра и их тоже можно класть на счет!
 
+Монеты имеют {hh39вес{x: фунт весят 25 золотых или 120 серебряных, что в кошельке, что кучкой на полу. Большое состояние тяжело таскать с собой.
+
 %SA% %H% {hh203орлянка{x
 </text>
     <text l="ua">У Світі Мрій в обігу золоті та срібні монети. 
@@ -265,6 +269,8 @@ Silver is four times heavier than gold, so carrying large amounts of silver coin
 {Y%A% {xМожна сходити до {hh276Отто{x у {hh1392Мідгаарді{x або до вампіра-клерка у {hh1446Старому Мідгаарді{x і дати їм срібло -- вони обміняють його на золото. З комісією, звісно!
 {Y%A% {xМожна покласти гроші на {hh1086банківський рахунок{x, щоб не доводилося таскати з собою
 {Y%A% {xМожна купувати {hh65прикраси{x у {cювеліра{x -- вони легші за золото та срібло і їх теж можна класти на рахунок!
+
+Монети мають {hh39вагу{x: фунт важать 25 золотих або 120 срібних, що в гаманці, що купкою на підлозі. Великі статки важко тягати з собою.
 
 %SA% %H% {hh203орлянка{x
 </text>
@@ -1916,18 +1922,20 @@ Strength grants additional bonuses to {hh47damage and accuracy{x: your chance to
 {x     27 to 28: {G+8%            {x  27-28: {G+18-19%{x
 
 {CWEIGHT{x
-Every item in the world has a =weight=. To find out what it is, use identify or buy a set of scales from the grocer in Midgaard. Weight is measured in pounds or kilograms, depending. Yes, it is all a bit confusing right now, but the gods will sort it out soon :)
+Every item in the world has a =weight=, measured in pounds. To find out what it is, use identify or buy a set of scales from the grocer in Midgaard. An item weighs what its kind, size and material make it weigh: plate armor is heavier than a leather jerkin, a steel axe heavier than a wooden club. {hh13Coins{x weigh something too.
 
-Strength determines the total weight of {hh1015equipment{x and inventory your character can carry. It also sets the maximum weight of a primary and {hh752secondary{x weapon you can wield.
+Strength determines the total weight of {hh1015equipment{x and inventory your character can carry: the number from the table below plus 2.5 pounds for every level. The score command shows how much you carry and how much you can. At the limit you cannot pick up, receive or buy anything else.
 
-{cWeapon weight in pounds:{x             {cSecondary weapon weight in pounds:{x
-{xstrength 14 to 15: 14-15            {x: 6-7
-{x     16 to 18: 16-25            {x: 8-12
-{x     19 to 20: 30-35            {x: 15-17
-{x     21 to 22: 40-45            {x: 20-22
-{x     23 to 24: 50-55            {x: 25-27
-{x     25 to 26: 60-65            {x: 30-32
-{x     27 to 28: 70-75            {x: 34-36
+Your main hand takes a weapon of any weight. Strength only limits the weapon in your {hh752second hand{x.
+
+{cCarry, pounds:{x             {cSecond weapon, pounds:{x
+{xstrength 14 to 15: 140-150        {x: 7-7.5
+{x     16 to 18: 165-200        {x: 8-12.5
+{x     19 to 20: 225-250        {x: 15-17.5
+{x     21 to 22: 300-350        {x: 20-22.5
+{x     23 to 24: 400-450        {x: 25-27.5
+{x     25 to 26: 500-550        {x: 30-32.5
+{x     27 to 28: 600-650        {x: 35-37.5
 
 %SA% %H% {hh41stats{x.
 </text>
@@ -1948,18 +1956,20 @@ Strength determines the total weight of {hh1015equipment{x and inventory your ch
 {x     от 27 до 28: {G+8%            {x  27-28: {G+18-19%{x
 
 {CВЕС{x
-Все предметы в мире имеют =вес=. Чтобы узнать его, пользуйся опознанием или купи весы у бакалейщика в Мидгаарде. Вес измеряется в фунтах или килограммах, когда как. Да, сейчас с этим большая путаница, но боги скоро это исправят :)
+Все предметы в мире имеют =вес=, он измеряется в фунтах. Чтобы узнать его, пользуйся опознанием или купи весы у бакалейщика в Мидгаарде. Предмет весит столько, сколько велят его вид, размер и материал: латы тяжелее кожаной куртки, стальной топор тяжелее деревянной дубины. Даже {hh13монеты{x кое-что весят.
 
-Сила определяет общий вес {hh1015экипировки{x и инвентаря, который способен поднять твой персонаж. Также от силы зависит максимальный вес первичного и {hh752вторичного{x оружия, который можно взять в руки.
+Сила определяет общий вес {hh1015экипировки{x и инвентаря, который способен унести твой персонаж: число из таблицы ниже плюс 2.5 фунта за каждый уровень. Команда счет покажет, сколько ты несешь и сколько можешь. Упершись в предел, ты не сможешь ничего поднять, принять или купить.
 
-{cВес оружия в фунтах:{x             {cВес вторичного оружия в фунтах:{x
-{xсила от 14 до 15: 14-15            {x: 6-7
-{x     от 16 до 18: 16-25            {x: 8-12
-{x     от 19 до 20: 30-35            {x: 15-17
-{x     от 21 до 22: 40-45            {x: 20-22
-{x     от 23 до 24: 50-55            {x: 25-27
-{x     от 25 до 26: 60-65            {x: 30-32
-{x     от 27 до 28: 70-75            {x: 34-36
+В основную руку можно взять оружие любого веса. Сила ограничивает только оружие во {hh752второй руке{x.
+
+{cМожно нести, фунтов:{x             {cВторое оружие, фунтов:{x
+{xсила от 14 до 15: 140-150        {x: 7-7.5
+{x     от 16 до 18: 165-200        {x: 8-12.5
+{x     от 19 до 20: 225-250        {x: 15-17.5
+{x     от 21 до 22: 300-350        {x: 20-22.5
+{x     от 23 до 24: 400-450        {x: 25-27.5
+{x     от 25 до 26: 500-550        {x: 30-32.5
+{x     от 27 до 28: 600-650        {x: 35-37.5
 
 %SA% %H% {hh41статы{x.
 </text>
@@ -1980,18 +1990,20 @@ Strength determines the total weight of {hh1015equipment{x and inventory your ch
 {x     від 27 до 28: {G+8%            {x  27-28: {G+18-19%{x
 
 {CВАГА{x
-Усі предмети у світі мають =вагу=. Щоб дізнатися її, користуйся опізнанням або купи ваги у бакалійника в Мідгаарді. Вага вимірюється у фунтах або кілограмах, вже як. Так, зараз тут велика плутанина, але боги незабаром це виправлять :)
+Усі предмети у світі мають =вагу=, вона вимірюється у фунтах. Щоб дізнатися її, користуйся опізнанням або купи ваги у бакалійника в Мідгаарді. Предмет важить стільки, скільки велять його вид, розмір і матеріал: обладунок важчий за шкіряну куртку, сталева сокира важча за деревʼяну палицю. Навіть {hh13монети{x дещо важать.
 
-Сила визначає загальну вагу {hh1015екіпіровки{x та інвентарю, який здатен підняти твій персонаж. Також від сили залежить максимальна вага основної та {hh752допоміжної{x зброї, яку можна взяти в руки.
+Сила визначає загальну вагу {hh1015екіпіровки{x та інвентарю, яку здатен понести твій персонаж: число з таблиці нижче плюс 2.5 фунта за кожен рівень. Команда рахунок покаже, скільки ти несеш і скільки можеш. Коли впираєшся в межу, вже нічого не піднімеш, не приймеш і не купиш.
 
-{cВага зброї у фунтах:{x             {cВага допоміжної зброї у фунтах:{x
-{xсила від 14 до 15: 14-15            {x: 6-7
-{x     від 16 до 18: 16-25            {x: 8-12
-{x     від 19 до 20: 30-35            {x: 15-17
-{x     від 21 до 22: 40-45            {x: 20-22
-{x     від 23 до 24: 50-55            {x: 25-27
-{x     від 25 до 26: 60-65            {x: 30-32
-{x     від 27 до 28: 70-75            {x: 34-36
+В основну руку можна взяти зброю будь-якої ваги. Сила обмежує лише зброю в {hh752другій руці{x.
+
+{cМожна нести, фунтів:{x             {cДруга зброя, фунтів:{x
+{xсила від 14 до 15: 140-150        {x: 7-7.5
+{x     від 16 до 18: 165-200        {x: 8-12.5
+{x     від 19 до 20: 225-250        {x: 15-17.5
+{x     від 21 до 22: 300-350        {x: 20-22.5
+{x     від 23 до 24: 400-450        {x: 25-27.5
+{x     від 25 до 26: 500-550        {x: 30-32.5
+{x     від 27 до 28: 600-650        {x: 35-37.5
 
 %SA% %H% {hh41стати{x.
 </text>

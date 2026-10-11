@@ -5256,6 +5256,11 @@ Crafting for yourself is free. To craft for another player, or to tattoo someone
 
 {CPROFESSION LEVELS{x
 Craft professions have their own levels and their own experience scale. The maximum proficiency level in any craft is 10. The profession level decides which recipes you can use. The strength of a product comes from its blueprint: the rarer the blueprint, the stronger the piece and the sooner it wears out. Arrows are the exception: they still follow the profession level. Every level from 6 on adds a little mastery on top, except for jewelers. If you keep crafting the same thing, or work on recipes too easy for you, you will earn less experience.
+
+{CREFITTING{x
+%FMT% *craft refit* _item_
+%FMT% *craft refit* _item_ for _character_
+Re-forges a crafted armor, weapon or piece of jewelry to its owner's current level, but never above your own. You need the item's own blueprint, loose or in a tome, the same tools as for crafting it, and one unit of the blueprint's main material for every 20 levels gained. The item must be in your hands, not worn. It keeps its rarity, owner, sockets and wear-out date. A weapon keeps its bonuses: they grow with the level, nothing is rolled again. A slip spoils some material, never the item.
 </text>
     <text l="ru">Впридачу к основному {hh28классу{x, в нашем мире можно обзавестись дополнительной профессией или =ремеслом=. На текущий момент есть такие ремесла:
 %A% {hh242Тату-мастера{x: наносят улучшающие параметры татуировки вдобавок к экипировке
@@ -5287,6 +5292,11 @@ Craft professions have their own levels and their own experience scale. The maxi
 
 {CУРОВНИ ПРОФЕССИИ{x
 У крафтовых профессий есть свои уровни и своя шкала опыта до уровня. Максимальный уровень мастерства в любом ремесле -- 10. От уровня профессии зависит сложность рецептов, которые можно использовать. Сила изделия зависит от чертежа: чем реже чертеж, тем сильнее вещь и тем быстрее она изнашивается. Исключение -- стрелы: они по-прежнему зависят от уровня профессии. Каждый уровень с 6-го добавляет немного мастерства сверху -- у всех, кроме ювелиров. Если все время мастерить одно и то же или делать слишком легкие рецепты, опыта получишь меньше.
+
+{CПОДГОНКА{x
+%FMT% *смастерить подогнать* _вещь_
+%FMT% *смастерить подогнать* _вещь_ для _персонаж_
+Перековывает сделанные ремеслом доспех, оружие или украшение под нынешний уровень владельца, но не выше твоего собственного. Нужен чертеж именно этой вещи, на руках или в томе, те же инструменты, что и для крафта, и одна единица главного материала из чертежа за каждые 20 уровней подъема. Вещь должна быть у тебя в руках, а не надета. Редкость, владелец, гнезда и срок износа остаются прежними. Оружие сохраняет свои бонусы: они растут вместе с уровнем, заново ничего не выпадает. Неудача портит часть материала, но не саму вещь.
 </text>
     <text l="ua">На додаток до основного {hh28класу{x, у нашому світі можна обзавестися додатковою професією чи =ремеслом=. Наразі доступні такі ремесла:
 %A% {hh242Тату-майстри{x: наносять татуювання, що поліпшують параметри понад екіпірування
@@ -5318,6 +5328,11 @@ Craft professions have their own levels and their own experience scale. The maxi
 
 {CРІВНІ ПРОФЕСІЇ{x
 Крафтові професії мають свої рівні та свою шкалу досвіду до рівня. Максимальний рівень майстерності в будь-якому ремеслі -- 10. Від рівня професії залежить складність рецептів, які можна використовувати. Сила виробу залежить від креслення: чим рідкісніше креслення, тим сильніша річ і тим швидше вона зношується. Виняток -- стріли: вони й далі залежать від рівня професії. Кожен рівень із 6-го додає трохи майстерності зверху -- у всіх, крім ювелірів. Якщо весь час робити одне й те ж або працювати над занадто легкими рецептами, досвіду отримаєш менше.
+
+{CПРИПАСУВАННЯ{x
+%FMT% *змайструвати припасувати* _річ_
+%FMT% *змайструвати припасувати* _річ_ для _персонаж_
+Перековує зроблені ремеслом обладунок, зброю чи прикрасу під теперішній рівень власника, але не вище за твій власний. Потрібне креслення саме цієї речі, при собі чи в томі, ті самі інструменти, що й для крафту, і одна одиниця головного матеріалу з креслення за кожні 20 рівнів підйому. Річ має бути в тебе в руках, а не вдягнута. Рідкість, власник, гнізда й термін зносу лишаються ті самі. Зброя зберігає свої бонуси: вони ростуть разом із рівнем, наново нічого не випадає. Невдача псує частину матеріалу, але не саму річ.
 </text>
     <title l="en">Crafting, making items</title>
     <title l="ru">Крафт, создание предметов</title>
@@ -5887,7 +5902,7 @@ Reading a blueprint (*use*) prints its own order, host, the level you need and i
 
 {CTHE RULES{x
 %A% Owner-locked to the jeweler who made it, the same as any crafted gear.
-%A% Jeweler level sets the base tier: level 5 and up rolls the best tier there is, a lower level rolls worse. The better the tier, the sooner it decays: two weeks at the best tier, three and five weeks below it.
+%A% The blueprint sets the tier: the rarer the blueprint, the stronger the piece. The better the tier, the sooner it decays: two weeks for legendary, three for epic, five for rare.
 %A% A graver in hand is required to craft, same as for sockets and constellations.
 
 {CWHAT YOU GET{x
@@ -5898,7 +5913,7 @@ Eleven pieces. What they are and what they do is for you to find out: the bluepr
 
 {CПРАВИЛА{x
 %A% Привязано к ювелиру, который смастерил вещь, как и любое другое крафтовое снаряжение.
-%A% Уровень ювелира задает базовую ступень: с 5-го уровня и выше вещь выходит лучшей возможной ступени, ниже -- хуже. Чем лучше ступень, тем скорее вещь распадается: две недели на лучшей ступени, три и пять недель ниже.
+%A% Ступень задает чертеж: чем реже чертеж, тем сильнее вещь. Чем лучше ступень, тем скорее вещь распадается: две недели у легендарной, три у эпической, пять у редкой.
 %A% Для крафта нужен резец в руке -- как для гнезд и созвездий.
 
 {CЧТО ПОЛУЧИШЬ{x
@@ -5909,7 +5924,7 @@ Eleven pieces. What they are and what they do is for you to find out: the bluepr
 
 {CПРАВИЛА{x
 %A% Привʼязана до ювеліра, який змайстрував річ, як і будь-яке інше крафтове спорядження.
-%A% Рівень ювеліра задає базову ступінь: з 5-го рівня і вище річ виходить найкращої можливої ступені, нижче -- гіршої. Що краща ступінь, то швидше річ розпадається: два тижні на найкращій ступені, три і пʼять тижнів нижче.
+%A% Ступінь задає креслення: що рідкісніше креслення, то сильніша річ. Що краща ступінь, то швидше річ розпадається: два тижні в легендарної, три в епічної, пʼять у рідкісної.
 %A% Для крафту потрібен різець у руці -- так само, як для гнізд і сузірʼїв.
 
 {CЩО ОТРИМАЄШ{x

@@ -11,6 +11,16 @@
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
+    <node name="druid">
+      <level>15</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="necromancer">
+      <level>20</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
     <node name="ninja">
       <level>6</level>
       <maximum>100</maximum>
@@ -36,8 +46,23 @@
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
+    <node name="vampire">
+      <level>10</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="warlock">
+      <level>20</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
     <node name="warrior">
       <level>2</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="witch">
+      <level>20</level>
       <maximum>100</maximum>
       <rating>1</rating>
     </node>
@@ -55,16 +80,30 @@
   <group registry="skillGroup">defensive</group>
   <hard>6</hard>
   <help id="726" level="-1" type="SkillHelp">
-    <text l="en">Shield blocking is the ability to deflect enemy attacks using a shield. Characters without this skill cannot use a shield effectively. The skill is accessible to many, but warriors and clerics excel at it. It should be noted that {hh1623whips{x cannot be blocked by a shield, and {hh615flails{x can wrap around the edge of the shield.
+    <text l="en">=Shield block= is the art of taking blows on a shield. Everyone can learn it, but not everyone holds a shield equally well: melee fighters are best at it, hybrid classes slightly worse, agile classes worse still, and mages are downright clumsy. The chance to block depends on your skill, the shield's weight, your strength and constitution against the attacker's strength, the level difference and the attacker's weapon: {hh588whips{x and {hh615flails{x curl around the rim, while a heavy axe or mace blow lands squarely on it. The light weapons of agile fighters glance off a shield, but a warrior's full swing is harder to hold. Every successful block costs a little stamina, and a heavy shield tires you more.
 
-In rare cases, paladins and warriors can deflect {hh218projectiles{x using their shields.</text>
-    <text l="ru">Блокирование щитом -- это умение отклонять атаки противника с помощью щита. Персонажи, не владеющие этим умением, не могут эффективно использовать щит. Умение доступно многим, но у воинов и священников получается лучше. Следует учитывать, что {hh1623хлысты{x (whip) невозможно блокировать щитом, а {hh615цепи{x (flail) могут обогнуть край щита.
+Once in a while a shield can even stop a combat spell, a breath or a combat skill -- the shield takes the whole blow and suffers for it.
 
-В редких случаях паладины и воины могут отбивать щитом {hh218метательные снаряды{x.
+A shield wears down in battle: a short skirmish leaves a couple of nicks, a long fight leaves a lot more, especially against axes and maces. Shields of hard materials last longer, and indestructible ones never wear at all. A battered shield is much easier to {hh659cleave{x.
+
+A failed block against a heavy blow can knock you off your feet, and an unskilled fighter may even lose the shield. A warrior's masterful block, on the other hand, slams the shield rim into the attacker and stuns them. In rare cases paladins and warriors can deflect {hh218projectiles{x with a shield.
 </text>
-    <text l="ua">Блокування щитом - це вміння відхиляти атаки противника за допомогою щита. Персонажі, які не володіють цим умінням, не можуть ефективно використовувати щит. Уміння доступне багатьом, але у воїнів та священників виходить краще. Слід врахувати, що {hh1623батоги{x (whip) неможливо блокувати щитом, а {hh615ланцюги{x (flail) можуть обійти край щита.
+    <text l="ru">=Блок щитом= -- умение принимать удары на щит. Им владеют все, но держат щит по-разному: лучше всех бойцы ближнего боя, чуть хуже гибридные классы, еще хуже ловкачи, а маги -- совсем неуклюже. Шанс блока зависит от навыка, веса щита, твоей силы и выносливости против силы нападающего, разницы в уровнях и оружия противника: {hh588хлысты{x и {hh615цепи{x обвивают край щита, а тяжелый удар топором или булавой приходится прямо в него. Легкое оружие ловкачей соскальзывает со щита, а полный замах воина удержать труднее. Каждый удачный блок отнимает немного бодрости, и тяжелый щит утомляет сильнее.
 
-У рідкісних випадках паладини та воїни можуть відбивати щитом {hh218метальні снаряди{x.</text>
+Изредка щитом удается закрыться даже от боевого заклинания, дыхания или боевого приема -- удар целиком приходится на щит, и он изрядно страдает.
+
+Щит изнашивается в бою: короткая стычка оставит на нем пару зазубрин, долгий бой -- куда больше, особенно под топором или булавой. Щиты из твердых материалов служат дольше, а неразрушимые не изнашиваются вовсе. Побитый щит гораздо легче {hh659разрубить{x.
+
+Неудачный блок тяжелого удара может сбить тебя с ног, а неумелый боец рискует и вовсе выронить щит. Зато мастерский блок воина ребром щита ошеломляет нападающего. В редких случаях паладины и воины могут отбивать щитом {hh218метательные снаряды{x.
+</text>
+    <text l="ua">=Блокування щитом= -- уміння приймати удари на щит. Ним володіють усі, але тримають щит по-різному: найкраще бійці ближнього бою, трохи гірше гібридні класи, ще гірше спритники, а маги -- зовсім незграбно. Шанс блоку залежить від навички, ваги щита, твоєї сили та витривалості проти сили нападника, різниці в рівнях і зброї противника: {hh588батоги{x і {hh615ланцюги{x обвивають край щита, а важкий удар сокирою чи булавою припадає просто в нього. Легка зброя спритників зісковзує зі щита, а повний замах воїна втримати важче. Кожен вдалий блок забирає трохи бадьорості, і важкий щит втомлює сильніше.
+
+Зрідка щитом вдається закритися навіть від бойового закляття, подиху чи бойового прийому -- удар цілком припадає на щит, і він неабияк страждає.
+
+Щит зношується в бою: коротка сутичка лишить на ньому пару щербин, довгий бій -- набагато більше, особливо під сокирою чи булавою. Щити з твердих матеріалів служать довше, а неруйнівні не зношуються взагалі. Побитий щит набагато легше {hh659розрубати{x.
+
+Невдалий блок важкого удару може збити тебе з ніг, а невмілий боєць ризикує і зовсім упустити щит. Зате майстерний блок воїна ребром щита приголомшує нападника. У рідкісних випадках паладини та воїни можуть відбивати щитом {hh218метальні снаряди{x.
+</text>
   </help>
   <mob>
     <bonus>10</bonus>

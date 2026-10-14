@@ -6,8 +6,13 @@
 // with the random pick in global/onFightAI/ai_basic (no blunders: those are
 // melee-round slips).
 // tier_elite/tier_champion/tier_boss: templates the tier AI fills with each
-// mob's own toolbox (.tmp.cai.tierProfile). tier_spells: spell groups by class
-// act; spell_damtypes: spell -> .tables.damage_table name (Fenia cannot read
+// mob's own toolbox (.tmp.cai.tierProfile). tier_champion/_boss/_legend have
+// phases [{hp, beats, rage, blunder, priority}]: phase i opens below its hp
+// (boss/legend 100-60-30, champion 100-30), beats = % change of the lag the
+// mob's own skills leave (-100 = none), rage = the damroll boost; drSecs = one
+// knockdown/stun and one disarm per target per that many seconds. boss_scenes: lines played when a
+// phase opens, by mob vnum, else generic.<template>; keys are phase indexes.
+// tier_spells: spell groups by class act; spell_damtypes: spell -> .tables.damage_table name (Fenia cannot read
 // it from the spell); spell_prayers: prayer-only spells; spell_rules: who a
 // spell can hurt (vict) and who can cast it usefully (caster).
 // spell_tiers: attack spell -> damage tier from its skill XML <tier>;
@@ -977,7 +982,6 @@
     "act": 95,
     "blunder": 5,
     "winded": 10,
-    "rage": true,
     "policy": [
       "healer",
       "caster"
@@ -989,87 +993,126 @@
     "helpBelow": 0,
     "switchFocus": false,
     "switchDamtype": false,
-    "priority": [
+    "drSecs": 8,
+    "phases": [
       {
-        "move": "healSpell",
-        "target": "self",
-        "cd": 8
+        "priority": [
+          {
+            "move": "healSpell",
+            "target": "self",
+            "cd": 8
+          },
+          {
+            "move": "dispel",
+            "needsDispel": true,
+            "cd": 12
+          },
+          {
+            "move": "tool",
+            "skill": "disarm",
+            "after": "dirt",
+            "blind": true,
+            "wielding": true,
+            "fighting": true,
+            "cd": 8
+          },
+          {
+            "move": "tool",
+            "skill": "bash",
+            "after": "disarm",
+            "fighting": true,
+            "cd": 8
+          },
+          {
+            "move": "tool",
+            "skill": "dirt",
+            "when": "caster",
+            "notBlind": true,
+            "cd": 8
+          },
+          {
+            "move": "tool",
+            "skill": "dirt",
+            "needs": "disarm",
+            "wielding": true,
+            "notBlind": true,
+            "cd": 8
+          },
+          {
+            "move": "tool",
+            "skill": "disarm",
+            "blind": true,
+            "wielding": true,
+            "fighting": true,
+            "cd": 8
+          },
+          {
+            "move": "tool",
+            "skill": "bash",
+            "target": "caster",
+            "cd": 8
+          },
+          {
+            "move": "tool",
+            "skill": "trip",
+            "target": "caster",
+            "cd": 8
+          },
+          {
+            "move": "tool",
+            "skill": "crush",
+            "target": "caster",
+            "cd": 8
+          },
+          {
+            "move": "debuff"
+          },
+          {
+            "move": "nuke"
+          },
+          {
+            "move": "strikes",
+            "chance": 50,
+            "fighting": true
+          },
+          {
+            "move": "anyTool"
+          }
+        ]
       },
       {
-        "move": "dispel",
-        "needsDispel": true,
-        "cd": 12
-      },
-      {
-        "move": "tool",
-        "skill": "disarm",
-        "after": "dirt",
-        "blind": true,
-        "wielding": true,
-        "fighting": true,
-        "cd": 8
-      },
-      {
-        "move": "tool",
-        "skill": "bash",
-        "after": "disarm",
-        "fighting": true,
-        "cd": 8
-      },
-      {
-        "move": "tool",
-        "skill": "dirt",
-        "when": "caster",
-        "notBlind": true,
-        "cd": 8
-      },
-      {
-        "move": "tool",
-        "skill": "dirt",
-        "needs": "disarm",
-        "wielding": true,
-        "notBlind": true,
-        "cd": 8
-      },
-      {
-        "move": "tool",
-        "skill": "disarm",
-        "blind": true,
-        "wielding": true,
-        "fighting": true,
-        "cd": 8
-      },
-      {
-        "move": "tool",
-        "skill": "bash",
-        "target": "caster",
-        "cd": 8
-      },
-      {
-        "move": "tool",
-        "skill": "trip",
-        "target": "caster",
-        "cd": 8
-      },
-      {
-        "move": "tool",
-        "skill": "crush",
-        "target": "caster",
-        "cd": 8
-      },
-      {
-        "move": "debuff"
-      },
-      {
-        "move": "nuke"
-      },
-      {
-        "move": "strikes",
-        "chance": 50,
-        "fighting": true
-      },
-      {
-        "move": "anyTool"
+        "hp": 30,
+        "rage": true,
+        "blunder": 8,
+        "priority": [
+          {
+            "move": "nuke",
+            "target": "random"
+          },
+          {
+            "move": "strikes",
+            "chance": 70,
+            "fighting": true
+          },
+          {
+            "move": "rend",
+            "cd": 8
+          },
+          {
+            "move": "tool",
+            "skill": "bash",
+            "target": "random",
+            "standing": true,
+            "cd": 8
+          },
+          {
+            "move": "nuke"
+          },
+          {
+            "move": "anyTool",
+            "target": "random"
+          }
+        ]
       }
     ]
   },
@@ -1080,7 +1123,6 @@
     "act": 100,
     "blunder": 3,
     "winded": 10,
-    "rage": true,
     "policy": [
       "healer",
       "caster"
@@ -1092,105 +1134,175 @@
     "helpBelow": 50,
     "switchFocus": true,
     "switchDamtype": true,
-    "priority": [
+    "drSecs": 8,
+    "phases": [
       {
-        "move": "healSpell",
-        "target": "self",
-        "cd": 8
+        "beats": -50,
+        "priority": [
+          {
+            "move": "healSpell",
+            "target": "self",
+            "cd": 8
+          },
+          {
+            "move": "tool",
+            "skill": "dirt",
+            "when": "caster",
+            "notBlind": true,
+            "cd": 12
+          },
+          {
+            "move": "tool",
+            "skill": "trip",
+            "target": "random",
+            "standing": true,
+            "cd": 12
+          },
+          {
+            "move": "debuff"
+          },
+          {
+            "move": "nuke"
+          },
+          {
+            "move": "strikes",
+            "chance": 50,
+            "fighting": true
+          },
+          {
+            "move": "anyTool"
+          }
+        ]
       },
       {
-        "move": "dispel",
-        "needsDispel": true,
-        "cd": 8
+        "hp": 60,
+        "beats": -100,
+        "priority": [
+          {
+            "move": "healSpell",
+            "target": "self",
+            "cd": 8
+          },
+          {
+            "move": "dispel",
+            "needsDispel": true,
+            "cd": 8
+          },
+          {
+            "move": "tool",
+            "skill": "disarm",
+            "after": "dirt",
+            "blind": true,
+            "wielding": true,
+            "fighting": true,
+            "cd": 8
+          },
+          {
+            "move": "tool",
+            "skill": "bash",
+            "after": "disarm",
+            "fighting": true,
+            "cd": 8
+          },
+          {
+            "move": "tool",
+            "skill": "dirt",
+            "when": "caster",
+            "notBlind": true,
+            "cd": 8
+          },
+          {
+            "move": "tool",
+            "skill": "dirt",
+            "needs": "disarm",
+            "wielding": true,
+            "notBlind": true,
+            "cd": 8
+          },
+          {
+            "move": "tool",
+            "skill": "disarm",
+            "blind": true,
+            "wielding": true,
+            "fighting": true,
+            "cd": 8
+          },
+          {
+            "move": "tool",
+            "skill": "bash",
+            "target": "caster",
+            "cd": 8
+          },
+          {
+            "move": "tool",
+            "skill": "trip",
+            "target": "caster",
+            "cd": 8
+          },
+          {
+            "move": "tool",
+            "skill": "crush",
+            "target": "caster",
+            "cd": 8
+          },
+          {
+            "move": "debuff",
+            "target": "healer"
+          },
+          {
+            "move": "debuff"
+          },
+          {
+            "move": "nuke"
+          },
+          {
+            "move": "rend",
+            "cd": 12
+          },
+          {
+            "move": "strikes",
+            "chance": 50,
+            "fighting": true
+          },
+          {
+            "move": "anyTool"
+          }
+        ]
       },
       {
-        "move": "tool",
-        "skill": "disarm",
-        "after": "dirt",
-        "blind": true,
-        "wielding": true,
-        "fighting": true,
-        "cd": 8
-      },
-      {
-        "move": "tool",
-        "skill": "bash",
-        "after": "disarm",
-        "fighting": true,
-        "cd": 8
-      },
-      {
-        "move": "tool",
-        "skill": "trip",
-        "target": "random",
-        "after": "trip",
-        "standing": true
-      },
-      {
-        "move": "tool",
-        "skill": "bash",
-        "target": "random",
-        "after": "bash",
-        "standing": true
-      },
-      {
-        "move": "tool",
-        "skill": "dirt",
-        "when": "caster",
-        "notBlind": true,
-        "cd": 8
-      },
-      {
-        "move": "tool",
-        "skill": "dirt",
-        "needs": "disarm",
-        "wielding": true,
-        "notBlind": true,
-        "cd": 8
-      },
-      {
-        "move": "tool",
-        "skill": "disarm",
-        "blind": true,
-        "wielding": true,
-        "fighting": true,
-        "cd": 8
-      },
-      {
-        "move": "tool",
-        "skill": "bash",
-        "target": "caster",
-        "cd": 8
-      },
-      {
-        "move": "tool",
-        "skill": "trip",
-        "target": "caster",
-        "cd": 8
-      },
-      {
-        "move": "tool",
-        "skill": "crush",
-        "target": "caster",
-        "cd": 8
-      },
-      {
-        "move": "debuff"
-      },
-      {
-        "move": "nuke"
-      },
-      {
-        "move": "rend",
-        "cd": 12
-      },
-      {
-        "move": "strikes",
-        "chance": 50,
-        "fighting": true
-      },
-      {
-        "move": "anyTool"
+        "hp": 30,
+        "beats": 0,
+        "rage": true,
+        "blunder": 8,
+        "priority": [
+          {
+            "move": "nuke",
+            "target": "random"
+          },
+          {
+            "move": "strikes",
+            "chance": 70,
+            "fighting": true
+          },
+          {
+            "move": "rend",
+            "cd": 8
+          },
+          {
+            "move": "tool",
+            "skill": "bash",
+            "target": "random",
+            "standing": true,
+            "cd": 8
+          },
+          {
+            "move": "nuke"
+          },
+          {
+            "move": "anyTool",
+            "target": "random"
+          }
+        ]
       }
     ]
   },
@@ -1201,7 +1313,6 @@
     "act": 100,
     "blunder": 2,
     "winded": 10,
-    "rage": true,
     "policy": [
       "healer",
       "caster"
@@ -1213,105 +1324,184 @@
     "helpBelow": 50,
     "switchFocus": true,
     "switchDamtype": true,
-    "priority": [
+    "drSecs": 8,
+    "phases": [
       {
-        "move": "healSpell",
-        "target": "self",
-        "cd": 8
+        "beats": -50,
+        "priority": [
+          {
+            "move": "healSpell",
+            "target": "self",
+            "cd": 8
+          },
+          {
+            "move": "dispel",
+            "needsDispel": true,
+            "cd": 8
+          },
+          {
+            "move": "tool",
+            "skill": "dirt",
+            "when": "caster",
+            "notBlind": true,
+            "cd": 12
+          },
+          {
+            "move": "tool",
+            "skill": "trip",
+            "target": "random",
+            "standing": true,
+            "cd": 12
+          },
+          {
+            "move": "debuff"
+          },
+          {
+            "move": "nuke"
+          },
+          {
+            "move": "rend",
+            "cd": 12
+          },
+          {
+            "move": "strikes",
+            "chance": 50,
+            "fighting": true
+          },
+          {
+            "move": "anyTool"
+          }
+        ]
       },
       {
-        "move": "dispel",
-        "needsDispel": true,
-        "cd": 8
+        "hp": 60,
+        "beats": -100,
+        "priority": [
+          {
+            "move": "healSpell",
+            "target": "self",
+            "cd": 8
+          },
+          {
+            "move": "dispel",
+            "needsDispel": true,
+            "cd": 8
+          },
+          {
+            "move": "tool",
+            "skill": "disarm",
+            "after": "dirt",
+            "blind": true,
+            "wielding": true,
+            "fighting": true,
+            "cd": 8
+          },
+          {
+            "move": "tool",
+            "skill": "bash",
+            "after": "disarm",
+            "fighting": true,
+            "cd": 8
+          },
+          {
+            "move": "tool",
+            "skill": "dirt",
+            "when": "caster",
+            "notBlind": true,
+            "cd": 8
+          },
+          {
+            "move": "tool",
+            "skill": "dirt",
+            "needs": "disarm",
+            "wielding": true,
+            "notBlind": true,
+            "cd": 8
+          },
+          {
+            "move": "tool",
+            "skill": "disarm",
+            "blind": true,
+            "wielding": true,
+            "fighting": true,
+            "cd": 8
+          },
+          {
+            "move": "tool",
+            "skill": "bash",
+            "target": "caster",
+            "cd": 8
+          },
+          {
+            "move": "tool",
+            "skill": "trip",
+            "target": "caster",
+            "cd": 8
+          },
+          {
+            "move": "tool",
+            "skill": "crush",
+            "target": "caster",
+            "cd": 8
+          },
+          {
+            "move": "debuff",
+            "target": "healer"
+          },
+          {
+            "move": "debuff"
+          },
+          {
+            "move": "nuke"
+          },
+          {
+            "move": "rend",
+            "cd": 12
+          },
+          {
+            "move": "strikes",
+            "chance": 50,
+            "fighting": true
+          },
+          {
+            "move": "anyTool"
+          }
+        ]
       },
       {
-        "move": "tool",
-        "skill": "disarm",
-        "after": "dirt",
-        "blind": true,
-        "wielding": true,
-        "fighting": true,
-        "cd": 8
-      },
-      {
-        "move": "tool",
-        "skill": "bash",
-        "after": "disarm",
-        "fighting": true,
-        "cd": 8
-      },
-      {
-        "move": "tool",
-        "skill": "trip",
-        "target": "random",
-        "after": "trip",
-        "standing": true
-      },
-      {
-        "move": "tool",
-        "skill": "bash",
-        "target": "random",
-        "after": "bash",
-        "standing": true
-      },
-      {
-        "move": "tool",
-        "skill": "dirt",
-        "when": "caster",
-        "notBlind": true,
-        "cd": 8
-      },
-      {
-        "move": "tool",
-        "skill": "dirt",
-        "needs": "disarm",
-        "wielding": true,
-        "notBlind": true,
-        "cd": 8
-      },
-      {
-        "move": "tool",
-        "skill": "disarm",
-        "blind": true,
-        "wielding": true,
-        "fighting": true,
-        "cd": 8
-      },
-      {
-        "move": "tool",
-        "skill": "bash",
-        "target": "caster",
-        "cd": 8
-      },
-      {
-        "move": "tool",
-        "skill": "trip",
-        "target": "caster",
-        "cd": 8
-      },
-      {
-        "move": "tool",
-        "skill": "crush",
-        "target": "caster",
-        "cd": 8
-      },
-      {
-        "move": "debuff"
-      },
-      {
-        "move": "nuke"
-      },
-      {
-        "move": "rend",
-        "cd": 12
-      },
-      {
-        "move": "strikes",
-        "chance": 50,
-        "fighting": true
-      },
-      {
-        "move": "anyTool"
+        "hp": 30,
+        "beats": 0,
+        "rage": true,
+        "blunder": 6,
+        "priority": [
+          {
+            "move": "nuke",
+            "target": "random"
+          },
+          {
+            "move": "strikes",
+            "chance": 70,
+            "fighting": true
+          },
+          {
+            "move": "rend",
+            "cd": 8
+          },
+          {
+            "move": "tool",
+            "skill": "bash",
+            "target": "random",
+            "standing": true,
+            "cd": 8
+          },
+          {
+            "move": "nuke"
+          },
+          {
+            "move": "anyTool",
+            "target": "random"
+          }
+        ]
       }
     ]
   },
@@ -1550,6 +1740,35 @@
     },
     "faerie fire": {
       "vict": "invis"
+    }
+  },
+  "boss_scenes": {
+    "generic": {
+      "tier_boss": {
+        "1": [
+          "{R%1$^C1 отступа%1$nет|ют на шаг и меня%1$nет|ют стойку: взгляд становится холодным и расчетливым.{x",
+          "{RБольше никаких размашистых ударов -- теперь каждый выпад бьет в слабое место.{x"
+        ],
+        "2": [
+          "{r%1$^C1 зажима%1$nет|ют рану, и из горла вырывается звериный рык.{x",
+          "{rРасчет забыт: в ход идет все, что под руку попадется, лишь бы убить.{x"
+        ]
+      },
+      "tier_legend": {
+        "1": [
+          "{M%1$^C1 расправля%1$nет|ют плечи, и воздух вокруг густеет от силы.{x",
+          "{MСтановится ясно: до сих пор это была лишь игра.{x"
+        ],
+        "2": [
+          "{W%1$^C1 впервые за века чувству%1$nет|ют боль, и ярость затмевает разум.{x",
+          "{WСтены дрожат: удары сыплются без разбора, о защите забыто.{x"
+        ]
+      },
+      "tier_champion": {
+        "1": [
+          "{y%1$^C1 шата%1$nется|ются, но вместо того чтобы отступить, броса%1$nется|ются вперед в отчаянной ярости!{x"
+        ]
+      }
     }
   }
 }

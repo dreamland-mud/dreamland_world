@@ -257,9 +257,9 @@ Gods can hide their true level or even take on the appearance of mortals. You ca
     <title l="ua">Прапори зброї та особливі властивості предметів</title>
   </node>
   <node id="101" level="-1" type="Help" labels="combat">
-    <extra l="en">damage immune immunity resistance types vulnerability</extra>
-    <extra l="ru">иммунитет повреждений резист сопротивляемость 'типы атаки' 'типы урона' уязвимость устойчивость воздействия вульн 'элементальная магия' элементарный элементы</extra>
-    <extra l="ua">імунітет ушкоджень резист опірність 'типи атаки' 'типи урону' вразливість стійкість впливи вульн 'елементальна магія' елементарний елементи</extra>
+    <extra l="en">damage immune immunity resist resistance types vuln vulnerability</extra>
+    <extra l="ru">иммунитет повреждений резист ресист сопротивляемость 'типы атаки' 'типы урона' уязвимость устойчивость воздействия вульн 'элементальная магия' элементарный элементы</extra>
+    <extra l="ua">імунітет ушкоджень резист ресист опірність 'типи атаки' 'типи урону' вразливість стійкість впливи вульн 'елементальна магія' елементарний елементи</extra>
     <keyword l="en">'damage types'</keyword>
     <keyword l="ru">типы воздействий</keyword>
     <keyword l="ua">типи впливів</keyword>
@@ -270,6 +270,9 @@ Gods can hide their true level or even take on the appearance of mortals. You ca
 %A% =Resistance= resist: hits of this affect type deal a third {Gless{x damage, and spells land less often.
 %A% =Immunity= immune: hits of this affect type deal {Wno{x damage at all, and spells fail completely. Immunities are very rare.
 %A% They do not stack: two resistances to the same hit still cut a third, not two thirds. Vulnerability and resistance together cancel out -- the damage is normal. Immunity beats both.
+%A% Resistance to =weapons= works against every weapon hit, whatever its damage type: bash, pierce, slash or, say, poison. The damage type is checked in the same go, so a weapon resist plus a poison resist on one hit is still one third.
+%A% The weapon's =material= is checked on its own, as a separate multiplier. Vulnerability to iron against an iron sword adds 50%, then a weapon resist cuts a third, and the hit lands at normal damage.
+%A% Resistance to =spells= covers both magic and prayers. Resistance to magic covers only magic, resistance to prayers only prayers.
 
 {CAFFECT TYPES{x
 %A% =Weapon=: most physical effects that deal "ordinary" damage. It splits into three types you can resist on their own -- =bash= (heavy, crushing blows), =pierce= (stabs) and =slash= (cuts). Bash is by far the most common in the world, about twice as common as pierce or slash, so resisting it protects you most often. Magic weapons or weapon {hh96flags{x have their own affect types -- usually elemental ones.
@@ -291,6 +294,9 @@ Many creatures (mobs) in the world already have innate immunities or vulnerabili
 %A% =Сопротивляемость= резист: удары этим типом воздействий нанесут на треть {Gменьше{x урона, а заклинания сработают реже.
 %A% =Иммунитет= иммун: удары этим типом воздействий не нанесут вообще {Wникакого{x урона, а заклинания полностью провалятся. Иммуны бывают очень редко.
 %A% Они не складываются: две сопротивляемости к одному удару все равно срезают треть, а не две трети. Уязвимость и сопротивляемость вместе гасят друг друга -- урон будет обычный. Иммунитет сильнее их обеих.
+%A% Сопротивляемость к =оружию= работает против любого удара оружием, какой бы ни был у него тип воздействия: дробящий, колющий, рубящий или, скажем, яд. Тип воздействия проверяется заодно с ней, так что резист к оружию и резист к яду на одном ударе -- все равно одна треть.
+%A% =Материал= оружия проверяется отдельно, своим множителем. Уязвимость к железу против железного меча добавит 50%, потом резист к оружию срежет треть -- и удар выйдет с обычным уроном.
+%A% Сопротивляемость к =заклинаниям= защищает и от магии, и от молитв. Сопротивляемость к магии -- только от магии, к молитвам -- только от молитв.
 
 {CТИПЫ ВОЗДЕЙСТВИЙ{x
 %A% =Оружие=: большинство физических воздействий, наносящих "обычные" повреждения. Оно делится на три типа, к которым можно получить отдельную сопротивляемость -- =дробящий= (тяжелые удары), =колющий= (уколы) и =рубящий= (порезы). Дробящий -- самый частый в мире, примерно вдвое чаще колющего или рубящего, так что сопротивляемость к нему пригодится чаще всего. Магическое оружие или {hh96флаги{x оружия имеют свои собственные типы воздействий -- обычно, элементальные.
@@ -312,6 +318,9 @@ Many creatures (mobs) in the world already have innate immunities or vulnerabili
 %A% =Опірність= резист: удари цим типом впливу завдадуть на третину {Gменше{x шкоди, а заклинання спрацюють рідше.
 %A% =Імунітет= імун: удари цим типом впливу не завдадуть узагалі {Wжодної{x шкоди, а заклинання повністю провалюються. Імуни бувають дуже рідко.
 %A% Вони не складаються: дві опірності до одного удару все одно зрізають третину, а не дві третини. Вразливість і опірність разом гасять одна одну -- шкода буде звичайна. Імунітет сильніший за обидві.
+%A% Опірність до =зброї= працює проти будь-якого удару зброєю, хай який у нього тип впливу: важкий удар, прокол, розсічення чи, скажімо, отрута. Тип впливу перевіряється разом із нею, тож резист до зброї і резист до отрути на одному ударі -- однаково одна третина.
+%A% =Матеріал= зброї перевіряється окремо, своїм множником. Вразливість до заліза проти залізного меча додасть 50%, потім резист до зброї зріже третину -- і удар вийде зі звичайною шкодою.
+%A% Опірність до =заклять= захищає і від магії, і від молитов. Опірність до магії -- тільки від магії, до молитов -- тільки від молитов.
 
 {CТИПИ ВПЛИВІВ{x
 %A% =Зброя=: більшість фізичних впливів, що завдають "звичайних" ушкоджень. Вона ділиться на три типи, до яких можна отримати окрему опірність -- =важкий удар= (дроблення), =прокол= (уколи) та =розсічення= (порізи). Важкий удар -- найпоширеніший у світі, приблизно вдвічі частіший за прокол чи розсічення, тож опірність до нього стане в пригоді найчастіше. Магічна зброя або {hh96прапори{x зброї мають свої власні типи впливів -- зазвичай елементальні.

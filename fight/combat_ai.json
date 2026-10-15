@@ -25,6 +25,9 @@
 // leash: rooms from home a champion+ chases its last foe (utils/mob brain);
 // evadeSecs: seconds with no reachable foe before it gives up, heals and
 // goes home.
+// extraStrikes: plain blows a boss/legend adds every tier round; crushPct: % of
+// rounds a melee-only one (no spells, no breath, not blinded) lands a blow past
+// shield, parry and dodge (dice + damroll x1.5, red line). Service NPCs neither.
 {
   "clanguard": {
     "purge": 30,
@@ -1135,6 +1138,8 @@
     "switchFocus": true,
     "switchDamtype": true,
     "drSecs": 8,
+    "extraStrikes": 1,
+    "crushPct": 35,
     "phases": [
       {
         "beats": -50,
@@ -1325,6 +1330,8 @@
     "switchFocus": true,
     "switchDamtype": true,
     "drSecs": 8,
+    "extraStrikes": 2,
+    "crushPct": 50,
     "phases": [
       {
         "beats": -50,

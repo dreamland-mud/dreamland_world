@@ -17,7 +17,15 @@
 // spell can hurt (vict) and who can cast it usefully (caster).
 // spell_tiers: attack spell -> damage tier from its skill XML <tier>;
 // spell_tier_weight[tier]: % of a tier-3 nuke's damage at L75, so the tier
-// AI casts the strongest first. tier_spells debuffs: first = cast first.
+// AI casts the strongest first. tier_spells debuffs: what each class can cast.
+// debuff_rules (move debuff): target role pet (NPC caster on the players'
+// side) / caster (player with the caster flag) / melee. lead[class] goes first
+// on any player; first[role] = groups tried in order, a random pick inside a
+// group, "silence" = the mob's silence spell (silence: evil sentient caster ->
+// garble, else by class). Then regen (target has regeneration), agile (agile
+// class), then the rest at random. never[role] is never cast; randomPct = %
+// of casts that skip the order. glows: affects a "glowing" dispel goes after
+// (players only, not permanent ones). No per-target cap for champion+.
 // tier_spells ranged: {spell, chance} tried in order at a foe a few rooms
 // away (utils/mob brain castRanged); the first that passes its roll casts.
 // Champion+ end with strikes (one more blow on a round no move fired); boss
@@ -991,7 +999,6 @@
     ],
     "tools": 99,
     "spells": 99,
-    "debuffMax": 3,
     "healBelow": 40,
     "helpBelow": 0,
     "switchFocus": false,
@@ -1007,8 +1014,9 @@
           },
           {
             "move": "dispel",
-            "needsDispel": true,
-            "cd": 12
+            "target": "glowing",
+            "key": "dispelGlow",
+            "cd": 8
           },
           {
             "move": "tool",
@@ -1069,6 +1077,11 @@
           },
           {
             "move": "debuff"
+          },
+          {
+            "move": "dispel",
+            "target": "buffed",
+            "cd": 12
           },
           {
             "move": "nuke"
@@ -1132,7 +1145,6 @@
     ],
     "tools": 99,
     "spells": 99,
-    "debuffMax": 2,
     "healBelow": 50,
     "helpBelow": 50,
     "switchFocus": true,
@@ -1147,6 +1159,12 @@
           {
             "move": "healSpell",
             "target": "self",
+            "cd": 8
+          },
+          {
+            "move": "dispel",
+            "target": "glowing",
+            "key": "dispelGlow",
             "cd": 8
           },
           {
@@ -1165,6 +1183,11 @@
           },
           {
             "move": "debuff"
+          },
+          {
+            "move": "dispel",
+            "target": "buffed",
+            "cd": 12
           },
           {
             "move": "nuke"
@@ -1190,7 +1213,8 @@
           },
           {
             "move": "dispel",
-            "needsDispel": true,
+            "target": "glowing",
+            "key": "dispelGlow",
             "cd": 8
           },
           {
@@ -1252,10 +1276,19 @@
           },
           {
             "move": "debuff",
-            "target": "healer"
+            "target": "casterPet"
+          },
+          {
+            "move": "debuff",
+            "target": "caster"
           },
           {
             "move": "debuff"
+          },
+          {
+            "move": "dispel",
+            "target": "buffed",
+            "cd": 8
           },
           {
             "move": "nuke"
@@ -1324,7 +1357,6 @@
     ],
     "tools": 99,
     "spells": 99,
-    "debuffMax": 2,
     "healBelow": 50,
     "helpBelow": 50,
     "switchFocus": true,
@@ -1343,7 +1375,8 @@
           },
           {
             "move": "dispel",
-            "needsDispel": true,
+            "target": "glowing",
+            "key": "dispelGlow",
             "cd": 8
           },
           {
@@ -1362,6 +1395,11 @@
           },
           {
             "move": "debuff"
+          },
+          {
+            "move": "dispel",
+            "target": "buffed",
+            "cd": 12
           },
           {
             "move": "nuke"
@@ -1391,7 +1429,8 @@
           },
           {
             "move": "dispel",
-            "needsDispel": true,
+            "target": "glowing",
+            "key": "dispelGlow",
             "cd": 8
           },
           {
@@ -1453,10 +1492,19 @@
           },
           {
             "move": "debuff",
-            "target": "healer"
+            "target": "casterPet"
+          },
+          {
+            "move": "debuff",
+            "target": "caster"
           },
           {
             "move": "debuff"
+          },
+          {
+            "move": "dispel",
+            "target": "buffed",
+            "cd": 8
           },
           {
             "move": "nuke"
@@ -1511,6 +1559,38 @@
         ]
       }
     ]
+  },
+  "debuff_rules": {
+    "randomPct": 20,
+    "lead": {
+      "necromancer": "curse"
+    },
+    "first": {
+      "pet": [
+        ["blindness"],
+        ["silence"]
+      ],
+      "caster": [
+        ["curse"],
+        ["silence"]
+      ],
+      "melee": [
+        ["slow", "blindness"]
+      ]
+    },
+    "never": {
+      "pet": ["slow"],
+      "caster": ["slow"]
+    },
+    "regen": ["corruption"],
+    "agile": ["faerie fire", "web"],
+    "silence": {
+      "evil": "garble",
+      "mage": "shielding",
+      "necromancer": "shielding",
+      "cleric": "deafen"
+    },
+    "glows": ["sanctuary", "stardust", "dark shroud"]
   },
   "tier_spells": {
     "mage": {

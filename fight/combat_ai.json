@@ -914,6 +914,7 @@
   },
   "tier_elite": {
     "moves": 2,
+    "drSecs": 8,
     "act": 95,
     "blunder": 8,
     "winded": 10,
@@ -1560,6 +1561,86 @@
       }
     ]
   },
+  // Class kits (utils/combat ai classLines): lines run ahead of the body and
+  // template lists, elite and up, for each class the mob has. Sleep tools
+  // (blackjack, touch) on a player need then: "strike" or a tool (Kit D2).
+  "class_kits": {
+    "thief": {
+      "priority": [
+        {
+          "move": "tool",
+          "skill": "blackjack",
+          "target": "random",
+          "notFighting": true,
+          "then": "strike",
+          "cd": 15
+        },
+        {
+          "move": "tool",
+          "skill": "trip",
+          "after": "dirt",
+          "standing": true,
+          "cd": 8
+        },
+        {
+          "move": "tool",
+          "skill": "kick",
+          "after": "trip",
+          "cd": 8
+        }
+      ]
+    },
+    "vampire": {
+      "priority": [
+        {
+          "move": "cast",
+          "spell": "gaseous form",
+          "target": "self",
+          "hpBelow": 20,
+          "cd": 600,
+          "minTier": 3,
+          "key": "mistEscape"
+        },
+        {
+          "move": "tool",
+          "skill": "touch",
+          "target": "random",
+          "notFighting": true,
+          "then": "bite",
+          "cd": 15
+        },
+        {
+          "move": "tool",
+          "skill": "bite",
+          "target": "random",
+          "cd": 8
+        }
+      ]
+    },
+    "ranger": {
+      "priority": [
+        {
+          "move": "tool",
+          "skill": "warcry",
+          "target": "self",
+          "once": true
+        },
+        {
+          "move": "tool",
+          "skill": "herbs",
+          "target": "self",
+          "cd": 30
+        },
+        {
+          "move": "tool",
+          "skill": "trip",
+          "after": "debuff",
+          "standing": true,
+          "cd": 8
+        }
+      ]
+    }
+  },
   // Natural attacks by body part / form (utils/combat ai bodyMoves, move "natural"
   // in utils/combat ai: moves). Kits match in order; tier 1-5 take up to max moves,
   // trash/normal only the first, at low.chance % a round, effects only from
@@ -1628,8 +1709,8 @@
             "damtype": "pierce",
             "effect": "venom",
             "effectPct": 50,
-            "text": "%1$^C1 впива%1$nет|ют ядовитые клыки в %2$C4!",
-            "vtext": "%1$^C1 впива%1$nет|ют в тебя ядовитые клыки!"
+            "text": "%1$^C1 вонза%1$nет|ют ядовитые клыки в %2$C4!",
+            "vtext": "%1$^C1 вонза%1$nет|ют в тебя ядовитые клыки!"
           }
         ]
       },
@@ -2027,6 +2108,19 @@
         "dispel affects"
       ]
     },
+    "ranger": {
+      "attack": [
+        "hydroblast"
+      ],
+      "debuff": [
+        "entangle"
+      ],
+      "heal": [],
+      "ranged": [
+        { "spell": "hydroblast", "chance": 60 }
+      ],
+      "dispel": []
+    },
     "vampire": {
       "attack": [
         "chain lightning",
@@ -2048,6 +2142,7 @@
     }
   },
   "spell_tiers": {
+    "hydroblast": 3,
     "acid arrow": 2,
     "acid blast": 3,
     "blade barrier": 4,
@@ -2080,6 +2175,8 @@
   },
   "spell_tier_weight": [0, 150, 125, 100, 75, 60],
   "spell_damtypes": {
+    "hydroblast": "drowning",
+    "entangle": "pierce",
     "acid blast": "acid",
     "fireball": "fire",
     "lightning bolt": "lightning",

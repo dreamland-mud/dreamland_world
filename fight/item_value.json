@@ -1,5 +1,5 @@
 {
- "_doc": "One item value model, shared by the gear advisor (service advice, characterwrapper.cpp ga_*), the random item generator and Fenia's item measure (.config(\"fight/item_value\")). Units are gear-score points. melee/caster: per-profile weight per point of an apply (level/slevel/skill_level_* per +1, beats per -1% skill lag). shared: profile-independent weights; ac weight is ac_base at level 1 falling to 0 at ac_zero_level. flags: [melee, caster] per affect flag (a flag the char can self-cast counts 10%). res: [res, imm, vuln] per damage class (resists do not stack). measure: one roll of the item measure (M) and the slot factors (rolls = level / factor), tier budgets in M. grant_skill: what an item-granted skill is worth to its wearer. A missing key falls back to the compiled default. docs/plans/armor-generator.md.",
+ "_doc": "One item value model, shared by the gear advisor (service advice, characterwrapper.cpp ga_*), the random item generator and Fenia's item measure (.config(\"fight/item_value\")). Units are gear-score points. melee/caster: per-profile weight per point of an apply (level/slevel/skill_level_* per +1, beats per -1% skill lag). shared: profile-independent weights; ac weight is ac_base at level 1 falling to 0 at ac_zero_level; trigger_bonus_skip: vnums whose Fenia scripts are housekeeping (owner or duplicate checks), so the sage gives them no flat trigger bonus. flags: [melee, caster] per affect flag (a flag the char can self-cast counts 10%). res: [res, imm, vuln] per damage class (resists do not stack). measure: one roll of the item measure (M) and the slot factors (rolls = level / factor), tier budgets in M. grant_skill: what an item-granted skill is worth to its wearer. A missing key falls back to the compiled default. docs/plans/armor-generator.md.",
  "melee": {
   "hp": 1.0,
   "mana": 0.1,
@@ -51,7 +51,10 @@
   "move": 0.05,
   "learn_skill": 2.0,
   "learn_group": 3.0,
-  "learn_all": 4.0
+  "learn_all": 4.0,
+  "trigger_bonus_skip": [
+   50111
+  ]
  },
  "flags": {
   "sanctuary": [

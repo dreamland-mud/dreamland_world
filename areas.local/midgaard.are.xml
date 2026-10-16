@@ -434,7 +434,7 @@
 Ты тоже можешь взять у нее задание командой {yквест попросить{x.
 Еще полезно прочесть справку по темам &apos;{hh125квестор{x&apos; и &apos;{hh127виды заданий{x&apos;.
 </description>
-      <detection add="evil invis hidden dark_vision"/>
+      <detection add="evil invis hidden"/>
       <form add="sentient biped mammal" del="animal amphibian cold_blood"/>
       <group>3000</group>
       <hit>1d1+28999</hit>
@@ -599,7 +599,7 @@
     <node name="3014">
       <ac bash="-970" exotic="-950" pierce="-970" slash="-970"/>
       <act add="npc sentinel warrior nopurge notrack"/>
-      <aff add="haste"/>
+      <aff add="haste infrared"/>
       <alignment>-1000</alignment>
       <behavior type="DefaultQuestMaster">
       </behavior>
@@ -612,7 +612,7 @@
 Ты тоже можешь взять у него задание командой {yквест попросить{x.
 Еще полезно прочесть справку по темам &apos;{hh125квестор{x&apos; и &apos;{hh127виды заданий{x&apos;.
 </description>
-      <detection add="evil invis hidden dark_vision"/>
+      <detection add="evil invis hidden"/>
       <group>3000</group>
       <hit>1d1+28999</hit>
       <hitroll>300</hitroll>
@@ -635,7 +635,7 @@
     <node name="3015">
       <ac bash="-970" exotic="-950" pierce="-970" slash="-970"/>
       <act add="npc sentinel warrior nopurge notrack"/>
-      <aff add="haste"/>
+      <aff add="haste infrared"/>
       <alignment>1000</alignment>
       <behavior type="DefaultQuestMaster">
       </behavior>
@@ -649,7 +649,7 @@
 Ты тоже можешь взять у него задание командой {yквест попросить{x.
 Еще полезно прочесть справку по темам &apos;{hh125квестор{x&apos; и &apos;{hh127виды заданий{x&apos;.
 </description>
-      <detection add="evil invis hidden dark_vision"/>
+      <detection add="evil invis hidden"/>
       <group>3000</group>
       <hit>1d1+28999</hit>
       <hitroll>300</hitroll>
@@ -672,6 +672,7 @@
     <node name="3020">
       <ac bash="-65" exotic="-35" pierce="-65" slash="-65"/>
       <act add="npc sentinel practice mage nopurge notrack"/>
+      <aff add="infrared"/>
       <alignment>1000</alignment>
       <dam_type>magic</dam_type>
       <damage>43d48+64</damage>
@@ -681,7 +682,7 @@
 прекрасные  магические одежды и тебе кажется, что от нее исходит голубая
 искрящаяся аура.
 </description>
-      <detection add="invis magic hidden dark_vision"/>
+      <detection add="invis magic hidden"/>
       <hit>1d1+29099</hit>
       <imm add="summon charm weapon"/>
       <level>96</level>
@@ -702,7 +703,7 @@
     <node name="3021">
       <ac bash="-65" exotic="-35" pierce="-65" slash="-65"/>
       <act add="npc sentinel practice cleric nopurge notrack"/>
-      <aff add="sanctuary"/>
+      <aff add="sanctuary infrared"/>
       <alignment>1000</alignment>
       <dam_type>divine</dam_type>
       <damage>43d48+64</damage>
@@ -711,7 +712,7 @@
 богу;  он  смотрит спокойно и любяще. Тебе кажется, что он окружен белой
 аурой.
 </description>
-      <detection add="evil invis magic hidden dark_vision"/>
+      <detection add="evil invis magic hidden"/>
       <hit>1d1+29099</hit>
       <imm add="summon charm weapon"/>
       <level>96</level>
@@ -732,6 +733,7 @@
     <node name="3022">
       <ac bash="-65" exotic="-35" pierce="-65" slash="-65"/>
       <act add="npc sentinel practice thief nopurge notrack"/>
+      <aff add="infrared"/>
       <alignment>1000</alignment>
       <behavior type="ShopTrader">
         <buys>key lockpick</buys>
@@ -747,7 +749,7 @@
 покидает  восхищение:  это  настоящий  вор!  Она  одета в бедную одежду,
 становясь похожей на обычную горожанку.
 </description>
-      <detection add="invis hidden dark_vision"/>
+      <detection add="invis hidden"/>
       <hit>1d1+29099</hit>
       <imm add="summon charm weapon"/>
       <level>96</level>
@@ -1503,7 +1505,7 @@
 ростом,  и  каждый  дюйм - это мускул. Должно быть плохая идея совершить
 преступление в его присутствии.
 </description>
-      <detection add="evil invis hidden dark_vision"/>
+      <detection add="evil invis hidden"/>
       <group>3000</group>
       <hit>1d1+29999</hit>
       <hitroll>300</hitroll>
@@ -1533,7 +1535,7 @@
       <default_pos>stand</default_pos>
       <description>Валькирия как Валькирия. Обижать ее не стоит. Все-таки она наполовину божество.
 </description>
-      <detection add="evil invis hidden dark_vision"/>
+      <detection add="evil invis hidden"/>
       <group>3000</group>
       <hit>1d1+29999</hit>
       <hitroll>300</hitroll>
@@ -1690,12 +1692,13 @@
     <node name="3095">
       <ac bash="0" exotic="8" pierce="0" slash="0"/>
       <act add="npc sentinel noalign"/>
+      <aff add="infrared"/>
       <dam_type>claw</dam_type>
       <damage>2d5+3</damage>
       <default_pos>stand</default_pos>
       <description>Орел выглядит сильным, свирепым бойцом.
 </description>
-      <detection add="hidden dark_vision"/>
+      <detection add="hidden"/>
       <hit>6d10+130</hit>
       <hitroll>3</hitroll>
       <level>12</level>
@@ -2285,7 +2288,7 @@
     <node name="3166">
       <ac bash="-478" exotic="-379" pierce="-478" slash="-476"/>
       <act add="npc sentinel practice cleric mage nopurge notrack"/>
-      <aff add="sanctuary"/>
+      <aff add="sanctuary infrared"/>
       <alignment>1000</alignment>
       <behavior type="Healer">
         <services>
@@ -2371,7 +2374,7 @@
 
 Набери {y{hcлечить{x, чтобы увидеть, чем она может тебе помочь.
 </description>
-      <detection add="invis magic hidden dark_vision"/>
+      <detection add="invis magic hidden"/>
       <hit>25d11+26942</hit>
       <hitroll>73</hitroll>
       <imm add="summon charm spell"/>
@@ -2393,6 +2396,7 @@
     <node name="3167">
       <ac bash="-80" exotic="-40" pierce="-80" slash="-80"/>
       <act add="npc sentinel practice mage nopurge notrack"/>
+      <aff add="infrared"/>
       <alignment>1000</alignment>
       <dam_type>slash</dam_type>
       <damage>20d48+64</damage>
@@ -2402,7 +2406,7 @@
 доспехи,  даже  если  в таком надежном месте они ему совсем не нужны. Он
 вооружен длинным, двуручным мечем.
 </description>
-      <detection add="invis magic hidden dark_vision"/>
+      <detection add="invis magic hidden"/>
       <hit>1d1+29099</hit>
       <imm add="summon charm weapon"/>
       <level>96</level>
@@ -2423,13 +2427,14 @@
     <node name="3168">
       <ac bash="-80" exotic="-30" pierce="-80" slash="-80"/>
       <act add="npc sentinel practice mage nopurge notrack"/>
+      <aff add="infrared"/>
       <dam_type>slash</dam_type>
       <damage>20d48+64</damage>
       <default_pos>stand</default_pos>
       <description>Мастер  гильдии - высокий, хорошо сложенный мужчина. Он полностью одет в
 темную одежду, и держит странное снаряжение, связанное поясом.
 </description>
-      <detection add="invis magic hidden dark_vision"/>
+      <detection add="invis magic hidden"/>
       <hit>1d1+29099</hit>
       <imm add="summon charm"/>
       <level>96</level>
@@ -2450,6 +2455,7 @@
     <node name="3169">
       <ac bash="-80" exotic="-40" pierce="-80" slash="-80"/>
       <act add="npc sentinel practice mage nopurge notrack"/>
+      <aff add="infrared"/>
       <alignment>-300</alignment>
       <behavior type="AntipaladinGuildmaster">
       </behavior>
@@ -2465,7 +2471,7 @@
 Если хочешь провести защитный ритуал над своим призрачным клинком, просто
 дай его в руки мастеру.
 </description>
-      <detection add="invis magic hidden dark_vision"/>
+      <detection add="invis magic hidden"/>
       <hit>1d1+29099</hit>
       <imm add="summon charm"/>
       <level>96</level>
@@ -2486,6 +2492,7 @@
     <node name="3170">
       <ac bash="-85" exotic="-35" pierce="-85" slash="-85"/>
       <act add="npc sentinel practice mage nopurge notrack"/>
+      <aff add="infrared"/>
       <dam_type>magic</dam_type>
       <damage>20d48+64</damage>
       <default_pos>stand</default_pos>
@@ -2494,7 +2501,7 @@
 прекрасные  магические одежды и тебе кажется, что от нее исходит голубая
 искрящаяся аура.
 </description>
-      <detection add="invis magic hidden dark_vision"/>
+      <detection add="invis magic hidden"/>
       <hit>1d1+29099</hit>
       <imm add="summon charm weapon"/>
       <level>96</level>
@@ -2515,6 +2522,7 @@
     <node name="3171">
       <ac bash="-80" exotic="-40" pierce="-80" slash="-80"/>
       <act add="npc sentinel practice mage nopurge notrack"/>
+      <aff add="infrared"/>
       <alignment>1000</alignment>
       <behavior type="SamuraiGuildmaster">
       </behavior>
@@ -2525,7 +2533,7 @@
 уверенностью сказать, что он полон обаяния. Он с легкостью носит стариные
 доспехи, даже в этом хорошо защищенном месте.
 </description>
-      <detection add="invis magic hidden dark_vision"/>
+      <detection add="invis magic hidden"/>
       <hit>1d1+29099</hit>
       <imm add="summon charm weapon"/>
       <level>96</level>
@@ -2589,6 +2597,7 @@
     <node name="3173">
       <ac bash="-80" exotic="-30" pierce="-80" slash="-80"/>
       <act add="npc sentinel practice mage nopurge notrack"/>
+      <aff add="infrared"/>
       <dam_type>slash</dam_type>
       <damage>20d48+64</damage>
       <default_pos>stand</default_pos>
@@ -2597,7 +2606,7 @@
 адептом бога Дворкина и учителем племени идеальных существ, универсалов.
 Но универсалы покинули этот мир, и дни карлика сочтены.
 </description>
-      <detection add="invis magic hidden dark_vision"/>
+      <detection add="invis magic hidden"/>
       <hit>1d1+29099</hit>
       <imm add="summon charm"/>
       <level>96</level>
@@ -2618,7 +2627,7 @@
     <node name="3174">
       <ac bash="-1000" exotic="-1000" pierce="-1000" slash="-1000"/>
       <act add="npc sentinel mage warrior notrack"/>
-      <aff add="sanctuary"/>
+      <aff add="sanctuary infrared"/>
       <dam_type>none</dam_type>
       <damage>1d1+100000</damage>
       <default_pos>stand</default_pos>
@@ -2630,7 +2639,7 @@
 уверенность и твердость.  Ты понимаешь, что своего этот старик не упустит, и
 твоего тоже...  
 </description>
-      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <detection add="imp_invis fade invis hidden sneak acute_vision"/>
       <hit>1d1+100000</hit>
       <hitroll>10000</hitroll>
       <imm add="spell weapon"/>

@@ -32,7 +32,8 @@
 // and legend try rend (tear off the target's sanctuary after a tool landed).
 // leash: rooms from home a champion+ chases its last foe (utils/mob brain);
 // evadeSecs: seconds with no reachable foe before it gives up, heals and
-// goes home.
+// goes home. An elite has evadeSecs and no leash: it never chases, but one
+// sniped from where it cannot walk gives up the same way.
 // extraStrikes: plain blows a boss/legend adds every tier round; crushPct: % of
 // rounds a melee-only one (no spells, no breath, not blinded) lands a blow past
 // shield, parry and dodge (dice + damroll x1.5, red line). Service NPCs neither.
@@ -913,6 +914,7 @@
     ]
   },
   "tier_elite": {
+    "evadeSecs": 30,
     "moves": 2,
     "drSecs": 8,
     "act": 95,

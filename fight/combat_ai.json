@@ -1560,6 +1560,325 @@
       }
     ]
   },
+  // Natural attacks by body part / form (utils/combat ai bodyMoves, move "natural"
+  // in utils/combat ai: moves). Kits match in order; tier 1-5 take up to max moves,
+  // trash/normal only the first, at low.chance % a round, effects only from
+  // low.effects. Texts RU, %1 = mob, %2 = victim; EN/UA via the catalog.
+  "body_kits": {
+    "max": 3,
+    "low": {
+      "chance": 10,
+      "effects": [
+        "wound",
+        "venom",
+        "drain"
+      ]
+    },
+    "kits": [
+      {
+        "name": "spider",
+        "form": "spider",
+        "moves": [
+          {
+            "key": "web",
+            "pct": 60,
+            "damtype": "pierce",
+            "effect": "web",
+            "effectPct": 60,
+            "cd": 15,
+            "text": "%1$^C1 опутыва%1$nет|ют %2$C4 липкой паутиной.",
+            "vtext": "%1$^C1 опутыва%1$nет|ют тебя липкой паутиной."
+          },
+          {
+            "key": "spiderbite",
+            "after": "web",
+            "pct": 130,
+            "damtype": "pierce",
+            "effect": "venom",
+            "effectPct": 70,
+            "text": "%1$^C1 вонза%1$nет|ют ядовитые жвала в опутанн%2$Gое|ого|ую|ых %2$C4!",
+            "vtext": "%1$^C1 вонза%1$nет|ют в тебя ядовитые жвала!"
+          }
+        ]
+      },
+      {
+        "name": "snake",
+        "form": "snake",
+        "moves": [
+          {
+            "key": "constrict",
+            "pct": 90,
+            "damtype": "bash",
+            "effect": "hold",
+            "effectPct": 55,
+            "cd": 12,
+            "text": "%1$^C1 обвива%1$nет|ют %2$C4 кольцами и сжима%1$nет|ют.",
+            "vtext": "%1$^C1 обвива%1$nет|ют тебя кольцами и сжима%1$nет|ют."
+          }
+        ]
+      },
+      {
+        "name": "venomfangs",
+        "part": "fangs",
+        "form": "poison",
+        "moves": [
+          {
+            "key": "venombite",
+            "pct": 110,
+            "damtype": "pierce",
+            "effect": "venom",
+            "effectPct": 50,
+            "text": "%1$^C1 впива%1$nет|ют ядовитые клыки в %2$C4!",
+            "vtext": "%1$^C1 впива%1$nет|ют в тебя ядовитые клыки!"
+          }
+        ]
+      },
+      {
+        "name": "sting",
+        "form": "insect",
+        "moves": [
+          {
+            "key": "sting",
+            "pct": 90,
+            "damtype": "pierce",
+            "effect": "venom",
+            "effectPct": 40,
+            "text": "%1$^C1 жал%1$nит|ят %2$C4!",
+            "vtext": "%1$^C1 жал%1$nит|ят тебя!"
+          }
+        ]
+      },
+      {
+        "name": "canine",
+        "form": "canine",
+        "moves": [
+          {
+            "key": "hamstring",
+            "pct": 100,
+            "damtype": "pierce",
+            "effect": "drain",
+            "effectPct": 60,
+            "cd": 12,
+            "text": "%1$^C1 вцепля%1$nется|ются %2$C3 в ногу и рв%1$nет|ут жилы!",
+            "vtext": "%1$^C1 вцепля%1$nется|ются тебе в ногу и рв%1$nет|ут жилы!"
+          }
+        ]
+      },
+      {
+        "name": "feline",
+        "form": "feline",
+        "moves": [
+          {
+            "key": "pounce",
+            "once": true,
+            "pct": 150,
+            "damtype": "slash",
+            "effect": "prone",
+            "effectPct": 40,
+            "standing": true,
+            "text": "%1$^C1 броса%1$nется|ются на %2$C4 в стремительном прыжке!",
+            "vtext": "%1$^C1 броса%1$nется|ются на тебя в стремительном прыжке!"
+          }
+        ]
+      },
+      {
+        "name": "horns",
+        "part": "horns",
+        "moves": [
+          {
+            "key": "gore",
+            "pct": 150,
+            "damtype": "pierce",
+            "effect": "prone",
+            "effectPct": 35,
+            "standing": true,
+            "cd": 10,
+            "text": "%1$^C1 наклоня%1$nет|ют голову и бода%1$nет|ют %2$C4 рогами!",
+            "vtext": "%1$^C1 наклоня%1$nет|ют голову и бода%1$nет|ют тебя рогами!"
+          }
+        ]
+      },
+      {
+        "name": "tusks",
+        "part": "tusks",
+        "moves": [
+          {
+            "key": "tusk",
+            "pct": 140,
+            "damtype": "pierce",
+            "effect": "prone",
+            "effectPct": 30,
+            "standing": true,
+            "cd": 10,
+            "text": "%1$^C1 поддева%1$nет|ют %2$C4 бивнями!",
+            "vtext": "%1$^C1 поддева%1$nет|ют тебя бивнями!"
+          }
+        ]
+      },
+      {
+        "name": "fourhooves",
+        "part": "four_hooves",
+        "moves": [
+          {
+            "key": "trample",
+            "down": true,
+            "pct": 200,
+            "damtype": "bash",
+            "cd": 6,
+            "text": "%1$^C1 топч%1$nет|ут поверженн%2$Gое|ого|ую|ых %2$C4 копытами!",
+            "vtext": "%1$^C1 топч%1$nет|ут тебя копытами!"
+          },
+          {
+            "key": "hoofkick",
+            "pct": 110,
+            "damtype": "bash",
+            "effect": "prone",
+            "effectPct": 25,
+            "standing": true,
+            "cd": 10,
+            "text": "%1$^C1 ляга%1$nет|ют %2$C4 копытом!",
+            "vtext": "%1$^C1 ляга%1$nет|ют тебя копытом!"
+          }
+        ]
+      },
+      {
+        "name": "twohooves",
+        "part": "two_hooves",
+        "moves": [
+          {
+            "key": "trample",
+            "down": true,
+            "pct": 200,
+            "damtype": "bash",
+            "cd": 6,
+            "text": "%1$^C1 топч%1$nет|ут поверженн%2$Gое|ого|ую|ых %2$C4 копытами!",
+            "vtext": "%1$^C1 топч%1$nет|ут тебя копытами!"
+          }
+        ]
+      },
+      {
+        "name": "claws",
+        "part": "claws",
+        "moves": [
+          {
+            "key": "rake",
+            "pct": 110,
+            "damtype": "slash",
+            "effect": "wound",
+            "effectPct": 50,
+            "text": "%1$^C1 полосу%1$nет|ют %2$C4 когтями!",
+            "vtext": "%1$^C1 полосу%1$nет|ют тебя когтями!"
+          }
+        ]
+      },
+      {
+        "name": "fangs",
+        "part": "fangs",
+        "moves": [
+          {
+            "key": "maul",
+            "pct": 120,
+            "damtype": "pierce",
+            "effect": "wound",
+            "effectPct": 35,
+            "text": "%1$^C1 вгрыза%1$nется|ются в %2$C4!",
+            "vtext": "%1$^C1 вгрыза%1$nется|ются в тебя!"
+          }
+        ]
+      },
+      {
+        "name": "pincers",
+        "part": "pincers",
+        "moves": [
+          {
+            "key": "clamp",
+            "pct": 100,
+            "damtype": "slash",
+            "effect": "hold",
+            "effectPct": 50,
+            "cd": 12,
+            "text": "%1$^C1 сжима%1$nет|ют %2$C4 клешнями!",
+            "vtext": "%1$^C1 сжима%1$nет|ют тебя клешнями!"
+          }
+        ]
+      },
+      {
+        "name": "tentacles",
+        "part": "tentacles",
+        "moves": [
+          {
+            "key": "grapple",
+            "pct": 90,
+            "damtype": "bash",
+            "effect": "hold",
+            "effectPct": 55,
+            "cd": 12,
+            "text": "%1$^C1 обхватыва%1$nет|ют %2$C4 щупальцами!",
+            "vtext": "%1$^C1 обхватыва%1$nет|ют тебя щупальцами!"
+          }
+        ]
+      },
+      {
+        "name": "wings",
+        "part": "wings",
+        "moves": [
+          {
+            "key": "buffet",
+            "pct": 80,
+            "damtype": "bash",
+            "effect": "blind",
+            "effectPct": 30,
+            "cd": 12,
+            "text": "%1$^C1 бь%1$nет|ют %2$C4 крыльями, поднимая тучу пыли!",
+            "vtext": "%1$^C1 бь%1$nет|ют тебя крыльями, поднимая тучу пыли!"
+          }
+        ]
+      },
+      {
+        "name": "beak",
+        "part": "beak",
+        "moves": [
+          {
+            "key": "eyepeck",
+            "after": "buffet",
+            "pct": 90,
+            "damtype": "pierce",
+            "effect": "blind",
+            "effectPct": 60,
+            "text": "%1$^C1 мет%1$nит|ят клювом прямо в глаза %2$C3!",
+            "vtext": "%1$^C1 мет%1$nит|ят клювом тебе в глаза!"
+          },
+          {
+            "key": "peck",
+            "pct": 90,
+            "damtype": "pierce",
+            "effect": "blind",
+            "effectPct": 20,
+            "text": "%1$^C1 клю%1$nет|ют %2$C4!",
+            "vtext": "%1$^C1 клю%1$nет|ют тебя!"
+          }
+        ]
+      },
+      {
+        "name": "tail",
+        "part": "tail",
+        "moves": [
+          {
+            "key": "tailsweep",
+            "bigger": true,
+            "pct": 100,
+            "damtype": "bash",
+            "effect": "prone",
+            "effectPct": 30,
+            "standing": true,
+            "cd": 12,
+            "text": "%1$^C1 хлещ%1$nет|ут %2$C4 хвостом!",
+            "vtext": "%1$^C1 хлещ%1$nет|ут тебя хвостом!"
+          }
+        ]
+      }
+    ]
+  },
   "debuff_rules": {
     "randomPct": 20,
     "lead": {

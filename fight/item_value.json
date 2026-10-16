@@ -289,6 +289,17 @@
    -20.0
   ]
  },
+ "salvage": {
+    "_doc": "Disassembly bonus by item tier (Kit 2026-10-15; Fenia utils/object: destruction salvageCopies / scarceSalvage, cuisinart postUse, forgeSmelt). Legendary (tier 1, nopurge) goes in only through the confirm path. legendary_copies: the ordinary parts come out that many times. legendary_scarce: scarce parts for sure, plus one more at legendary_extra_pct; epic_scarce_pct: chance of one. The scarce part comes from metal (metal items), precious (precious_materials or a gem material) or other (everything else).",
+    "legendary_copies": 2,
+    "legendary_scarce": 1,
+    "legendary_extra_pct": 25,
+    "epic_scarce_pct": 25,
+    "precious_materials": "silver gold platinum",
+    "metal": [1312, 1313],
+    "precious": [3375, 16087, 3377],
+    "other": [28047]
+ },
  "measure": {
   "_doc": "Read by Fenia .tmp.craft.getMeasure. One roll = +1 damroll, +1 hitroll, +10 hp, +10 mana. rolls = level / factor; jeweler crafts use jeweler_factor. tier_budget is in M (one measure), reference level ref_level. mastery_cm_per_level: centi-M added to a crafted armor budget per mastery level (profession 6-10, craft audit D4). refit.levels_per_unit: craft refit costs one unit of the blueprint's main material per this many levels gained (utils/refit). craft_budget_cm: generated armor outside the craft professions (quest reward, spells, artificer jacket, horseshoe, trophy) per tier 1..5 in centi-M (Fenia has no floats). craft_piece_budget_cm: a piece made by a craft profession (smith/carpenter armor, jewelry, refit) per blueprint tier 1..5: loot tier_budget, a little under it at legendary/epic (Kit 2026-10-11). enchant_budget_cm: enchant armor target [rare, epic with creativity or Enki]. repair_cm: repair price in silver per item level at 100% damage, tier 1..5 (legendary..common; hand-made = uncommon) -- tier_budget x 0.7, read by public utils/object repairPrice.",
   "roll": {
@@ -317,7 +328,53 @@
   },
   "ref_level": 60,
   "mastery_cm_per_level": 18,
-  "refit": {"levels_per_unit": 20},
+  "refit": {"levels_per_unit": 20, "reroll_units": 2},
+  "craft_roll": {
+    "_doc": "Rare, epic and legendary crafts (blacksmith, carpenter, jeweler) roll affixes from the loot pool (Kit 2026-10-15, Fenia craft/armor + utils/craft). center = craft_piece_budget_cm + mastery. Armor: fixed_pct[tier-1] of center goes to the material-shaped dr/hr/hp/mana as before, the rest rolls in [center x (100 - spread_pct)%, center x (100 + spread_pct)%] minus the fixed part. Weapons keep their base row and roll the whole window. max_tier: the worst tier that rolls (3 rare). masterwork_pct + masterwork_per_mastery x mastery (profession 6-10): chance a fresh craft rolls one tier up (3% .. 8%); a legendary masterwork rolls only the top half; rerolls never do. armor / weapon: an affix each listed material forces, first two hits in material order (armor 'section:value', weapon the affix name). refit.reroll_units: craft reroll costs that many main-material units more each time on the same piece (2, 4, 6...), counted in the craft_rerolls property.",
+    "max_tier": 3,
+    "fixed_pct": [40, 50, 60],
+    "spread_pct": 30,
+    "masterwork_pct": 3,
+    "masterwork_per_mastery": 1,
+    "armor": {
+      "steel": "affects_by_level:ac",
+      "mithril": "affects_by_level:saving_spell",
+      "adamantite": "resists:bash",
+      "wood": "affects_by_level:heal_gain",
+      "hardwood": "affects_by_level:heal_gain",
+      "oak": "affects_by_level:heal_gain",
+      "ebony": "affects_by_level:heal_gain",
+      "straw": "armor_stats:move",
+      "silver": "resists:disease",
+      "gold": "affects_by_level:mana_gain",
+      "platinum": "affects_by_level:saves",
+      "garnet": "primary_stats:str",
+      "ruby": "resists:fire",
+      "moonstone": "primary_stats:wis",
+      "onyx": "resists:negative",
+      "emerald": "resists:poison",
+      "sapphire": "resists:cold",
+      "diamond": "resists:energy",
+      "amethyst": "resists:mental",
+      "topaz": "resists:lightning",
+      "chalk": "resists:acid"
+    },
+    "weapon": {
+      "steel": "sharp",
+      "mithril": "hr",
+      "adamantite": "dr",
+      "wood": "hr",
+      "hardwood": "hr",
+      "oak": "hr",
+      "ebony": "hr",
+      "garnet": "flaming",
+      "ruby": "flaming",
+      "moonstone": "frost",
+      "onyx": "vampiric",
+      "emerald": "poison",
+      "chalk": "holy"
+    }
+  },
   "craft_budget_cm": [160, 120, 80, 50, 30],
   "craft_piece_budget_cm": [400, 220, 150, 100, 50],
   "enchant_budget_cm": [150, 250],

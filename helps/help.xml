@@ -5407,12 +5407,19 @@ The required tool is also described in the recipe. Most carpenter blueprints nee
 Crafting for yourself is free. To craft for another player, or to tattoo someone else, you need a =license=, which can be purchased from a municipal clerk once you have the profession (their windows are listed in {hh5089residency{x). The license lasts a month of real time, and its cost depends on your level.
 
 {CPROFESSION LEVELS{x
-Craft professions have their own levels and their own experience scale. The maximum proficiency level in any craft is 10. The profession level decides which recipes you can use. The strength of a product comes from its blueprint: the rarer the blueprint, the stronger the piece and the sooner it wears out. Arrows are the exception: they still follow the profession level. Every level from 6 on adds a little mastery on top, except for jewelers. If you keep crafting the same thing, or work on recipes too easy for you, you will earn less experience.
+Craft professions have their own levels and their own experience scale. The maximum proficiency level in any craft is 10. The profession level decides which recipes you can use. The strength of a product comes from its blueprint: the rarer the blueprint, the stronger the piece and the sooner it wears out. Arrows are the exception: they still follow the profession level. Every level from 6 on adds a little mastery on top, except for jewelers, and takes noticeably more experience than the one before. If you keep crafting the same thing, or work on recipes too easy for you, you will earn less experience.
+
+{CLUCK OF THE FORGE{x
+Common and uncommon work always comes out the same. From rare blueprints up, a piece is a gamble: part of its strength is set, the stats its material leans to, and the rest is rolled from the same pool as {hh5133random items{x -- resists, saves, skills, procs and more. Its materials always leave their mark: steel hardens armor, adamantite takes blows, silver wards off disease, a ruby inlay guards against fire, and so on. The roll can land well below or well above the blueprint's usual strength, and once in a while a crafter turns out a true masterpiece, a whole rarity above the blueprint. Masters do it more often: every level of the craft from 6 on adds to the chance.
 
 {CREFITTING{x
 %FMT% *craft refit* _item_
 %FMT% *craft refit* _item_ for _character_
-Re-forges a crafted armor, weapon or piece of jewelry to its owner's current level, but never above your own. You need the item's own blueprint, loose or in a tome, the same tools as for crafting it, and one unit of the blueprint's main material for every 20 levels gained. The item must be in your hands, not worn. It keeps its rarity, owner, sockets and wear-out date. A weapon keeps its bonuses: they grow with the level, nothing is rolled again. A slip spoils some material, never the item.
+Re-forges a crafted armor, weapon or piece of jewelry to its owner's current level, but never above your own. You need the item's own blueprint, loose or in a tome, the same tools as for crafting it, and one unit of the blueprint's main material for every 20 levels gained. The item must be in your hands, not worn. It keeps its rarity, owner, sockets and wear-out date. Its bonuses stay the same and grow with the level, nothing is rolled again. A slip spoils some material, never the item.
+
+%FMT% *craft reroll* _item_
+%FMT% *craft reroll* _item_ for _character_
+Reworks a rare or finer crafted piece from scratch: the rolled part goes and is rolled anew, at the owner's current level (but never above yours or below the item's own). Same blueprint, same tools, and on top of any refit cost two units of the main material for the first rework of a piece, four for the second, six for the third and so on. It works without a level gain. What comes out can be worse than what went in, and a rework never turns out a masterpiece: a masterpiece reworked goes back to its blueprint's rarity.
 </text>
     <text l="ru">Впридачу к основному {hh28классу{x, в нашем мире можно обзавестись дополнительной профессией или =ремеслом=. На текущий момент есть такие ремесла:
 %A% {hh242Тату-мастера{x: наносят улучшающие параметры татуировки вдобавок к экипировке
@@ -5443,12 +5450,19 @@ Re-forges a crafted armor, weapon or piece of jewelry to its owner's current lev
 Мастерить для себя можно бесплатно. Чтобы мастерить для другого игрока или татуировать кого-то еще, понадобится =лицензия=, которую можно приобрести у муниципального служащего при наличии самой профессии (где стоят их окошки -- смотри {hh5089смену прописки{x). Лицензия выдается на месяц реального времени, а ее стоимость зависит от твоего уровня.
 
 {CУРОВНИ ПРОФЕССИИ{x
-У крафтовых профессий есть свои уровни и своя шкала опыта до уровня. Максимальный уровень мастерства в любом ремесле -- 10. От уровня профессии зависит сложность рецептов, которые можно использовать. Сила изделия зависит от чертежа: чем реже чертеж, тем сильнее вещь и тем быстрее она изнашивается. Исключение -- стрелы: они по-прежнему зависят от уровня профессии. Каждый уровень с 6-го добавляет немного мастерства сверху -- у всех, кроме ювелиров. Если все время мастерить одно и то же или делать слишком легкие рецепты, опыта получишь меньше.
+У крафтовых профессий есть свои уровни и своя шкала опыта до уровня. Максимальный уровень мастерства в любом ремесле -- 10. От уровня профессии зависит сложность рецептов, которые можно использовать. Сила изделия зависит от чертежа: чем реже чертеж, тем сильнее вещь и тем быстрее она изнашивается. Исключение -- стрелы: они по-прежнему зависят от уровня профессии. Каждый уровень с 6-го добавляет немного мастерства сверху -- у всех, кроме ювелиров, -- и требует заметно больше опыта, чем предыдущий. Если все время мастерить одно и то же или делать слишком легкие рецепты, опыта получишь меньше.
+
+{CУДАЧА КУЗНИ{x
+Обычная и необычная работа всегда выходит одинаковой. Начиная с редких чертежей, вещь -- это лотерея: часть ее силы задана заранее, те параметры, к которым тянется материал, а остальное выпадает из того же набора, что и у {hh5133случайных вещей{x -- сопротивления, защиты, навыки, срабатывающие заклинания и не только. Материалы всегда оставляют свой след: сталь делает доспех крепче, адамантит держит удар, серебро бережет от болезней, рубиновая вставка -- от огня, и так далее. Выпасть может и сильно хуже, и сильно лучше обычного для чертежа, а изредка мастеру удается настоящий шедевр -- на целую редкость выше чертежа. Мастерам это удается чаще: каждый уровень ремесла с 6-го прибавляет к шансу.
 
 {CПОДГОНКА{x
 %FMT% *смастерить подогнать* _вещь_
 %FMT% *смастерить подогнать* _вещь_ для _персонаж_
-Перековывает сделанные ремеслом доспех, оружие или украшение под нынешний уровень владельца, но не выше твоего собственного. Нужен чертеж именно этой вещи, на руках или в томе, те же инструменты, что и для крафта, и одна единица главного материала из чертежа за каждые 20 уровней подъема. Вещь должна быть у тебя в руках, а не надета. Редкость, владелец, гнезда и срок износа остаются прежними. Оружие сохраняет свои бонусы: они растут вместе с уровнем, заново ничего не выпадает. Неудача портит часть материала, но не саму вещь.
+Перековывает сделанные ремеслом доспех, оружие или украшение под нынешний уровень владельца, но не выше твоего собственного. Нужен чертеж именно этой вещи, на руках или в томе, те же инструменты, что и для крафта, и одна единица главного материала из чертежа за каждые 20 уровней подъема. Вещь должна быть у тебя в руках, а не надета. Редкость, владелец, гнезда и срок износа остаются прежними. Бонусы остаются те же и растут вместе с уровнем, заново ничего не выпадает. Неудача портит часть материала, но не саму вещь.
+
+%FMT% *смастерить переделать* _вещь_
+%FMT% *смастерить переделать* _вещь_ для _персонаж_
+Переделывает редкую или лучшую ремесленную вещь с нуля: выпавшая часть уходит и выпадает заново, под нынешний уровень владельца (но не выше твоего и не ниже уровня самой вещи). Тот же чертеж, те же инструменты, и сверх цены подгонки -- две единицы главного материала за первую переделку вещи, четыре за вторую, шесть за третью и так далее. Рост уровня не нужен. Выйти может и хуже, чем было, а шедевра переделка не дает никогда: переделанный шедевр возвращается к редкости своего чертежа.
 </text>
     <text l="ua">На додаток до основного {hh28класу{x, у нашому світі можна обзавестися додатковою професією чи =ремеслом=. Наразі доступні такі ремесла:
 %A% {hh242Тату-майстри{x: наносять татуювання, що поліпшують параметри понад екіпірування
@@ -5479,12 +5493,19 @@ Re-forges a crafted armor, weapon or piece of jewelry to its owner's current lev
 Майструвати для себе можна безкоштовно. Щоб майструвати для іншого гравця чи татуювати когось іще, знадобиться =ліцензія=, яку можна придбати у муніципального службовця за наявності самої професії (де стоять їхні віконця -- дивись {hh5089зміну прописки{x). Ліцензія видається на місяць реального часу, а її вартість залежить від твого рівня.
 
 {CРІВНІ ПРОФЕСІЇ{x
-Крафтові професії мають свої рівні та свою шкалу досвіду до рівня. Максимальний рівень майстерності в будь-якому ремеслі -- 10. Від рівня професії залежить складність рецептів, які можна використовувати. Сила виробу залежить від креслення: чим рідкісніше креслення, тим сильніша річ і тим швидше вона зношується. Виняток -- стріли: вони й далі залежать від рівня професії. Кожен рівень із 6-го додає трохи майстерності зверху -- у всіх, крім ювелірів. Якщо весь час робити одне й те ж або працювати над занадто легкими рецептами, досвіду отримаєш менше.
+Крафтові професії мають свої рівні та свою шкалу досвіду до рівня. Максимальний рівень майстерності в будь-якому ремеслі -- 10. Від рівня професії залежить складність рецептів, які можна використовувати. Сила виробу залежить від креслення: чим рідкісніше креслення, тим сильніша річ і тим швидше вона зношується. Виняток -- стріли: вони й далі залежать від рівня професії. Кожен рівень із 6-го додає трохи майстерності зверху -- у всіх, крім ювелірів, -- і потребує помітно більше досвіду, ніж попередній. Якщо весь час робити одне й те ж або працювати над занадто легкими рецептами, досвіду отримаєш менше.
+
+{CФАРТ КУЗНІ{x
+Звичайна й незвичайна робота завжди виходить однаковою. Починаючи з рідкісних креслень, річ -- це лотерея: частина її сили задана наперед, ті параметри, до яких тягнеться матеріал, а решта випадає з того самого набору, що й у {hh5133випадкових речей{x -- опірність, захисти, навички, заклинання, що спрацьовують, і не тільки. Матеріали завжди лишають свій слід: сталь робить обладунок міцнішим, адамантит тримає удар, срібло береже від хвороб, рубінова вставка -- від вогню, і так далі. Випасти може і значно гірше, і значно краще звичайного для креслення, а зрідка майстрові вдається справжній шедевр -- на цілу рідкість вищий за креслення. Майстрам це вдається частіше: кожен рівень ремесла з 6-го додає до шансу.
 
 {CПРИПАСУВАННЯ{x
 %FMT% *змайструвати припасувати* _річ_
 %FMT% *змайструвати припасувати* _річ_ для _персонаж_
-Перековує зроблені ремеслом обладунок, зброю чи прикрасу під теперішній рівень власника, але не вище за твій власний. Потрібне креслення саме цієї речі, при собі чи в томі, ті самі інструменти, що й для крафту, і одна одиниця головного матеріалу з креслення за кожні 20 рівнів підйому. Річ має бути в тебе в руках, а не вдягнута. Рідкість, власник, гнізда й термін зносу лишаються ті самі. Зброя зберігає свої бонуси: вони ростуть разом із рівнем, наново нічого не випадає. Невдача псує частину матеріалу, але не саму річ.
+Перековує зроблені ремеслом обладунок, зброю чи прикрасу під теперішній рівень власника, але не вище за твій власний. Потрібне креслення саме цієї речі, при собі чи в томі, ті самі інструменти, що й для крафту, і одна одиниця головного матеріалу з креслення за кожні 20 рівнів підйому. Річ має бути в тебе в руках, а не вдягнута. Рідкість, власник, гнізда й термін зносу лишаються ті самі. Бонуси лишаються ті самі й ростуть разом із рівнем, наново нічого не випадає. Невдача псує частину матеріалу, але не саму річ.
+
+%FMT% *змайструвати переробити* _річ_
+%FMT% *змайструвати переробити* _річ_ для _персонаж_
+Переробляє рідкісну чи кращу ремісничу річ з нуля: частина, що випала, йде і випадає наново, під теперішній рівень власника (але не вище за твій і не нижче за рівень самої речі). Те саме креслення, ті самі інструменти, і понад ціну припасування -- дві одиниці головного матеріалу за першу переробку речі, чотири за другу, шість за третю і так далі. Зростання рівня не потрібне. Вийти може й гірше, ніж було, а шедевра переробка не дає ніколи: перероблений шедевр повертається до рідкості свого креслення.
 </text>
     <title l="en">Crafting, making items</title>
     <title l="ru">Крафт, создание предметов</title>
@@ -6054,7 +6075,7 @@ Reading a blueprint (*use*) prints its own order, host, the level you need and i
 
 {CTHE RULES{x
 %A% Owner-locked to the jeweler who made it, the same as any crafted gear.
-%A% The blueprint sets the tier: the rarer the blueprint, the stronger the piece. The better the tier, the sooner it decays: two weeks for legendary, three for epic, five for rare.
+%A% The blueprint sets the tier: the rarer the blueprint, the stronger the piece. The better the tier, the sooner it decays: a week for legendary, ten days for epic, seventeen for rare. From rare up, part of its strength is rolled (see {hh195crafting{x).
 %A% A graver in hand is required to craft, same as for sockets and constellations.
 
 {CWHAT YOU GET{x
@@ -6065,7 +6086,7 @@ Eleven pieces. What they are and what they do is for you to find out: the bluepr
 
 {CПРАВИЛА{x
 %A% Привязано к ювелиру, который смастерил вещь, как и любое другое крафтовое снаряжение.
-%A% Ступень задает чертеж: чем реже чертеж, тем сильнее вещь. Чем лучше ступень, тем скорее вещь распадается: две недели у легендарной, три у эпической, пять у редкой.
+%A% Ступень задает чертеж: чем реже чертеж, тем сильнее вещь. Чем лучше ступень, тем скорее вещь распадается: неделя у легендарной, десять дней у эпической, семнадцать у редкой. Начиная с редкой, часть силы вещи выпадает случайно (смотри {hh195крафт{x).
 %A% Для крафта нужен резец в руке -- как для гнезд и созвездий.
 
 {CЧТО ПОЛУЧИШЬ{x
@@ -6076,7 +6097,7 @@ Eleven pieces. What they are and what they do is for you to find out: the bluepr
 
 {CПРАВИЛА{x
 %A% Привʼязана до ювеліра, який змайстрував річ, як і будь-яке інше крафтове спорядження.
-%A% Ступінь задає креслення: що рідкісніше креслення, то сильніша річ. Що краща ступінь, то швидше річ розпадається: два тижні в легендарної, три в епічної, пʼять у рідкісної.
+%A% Ступінь задає креслення: що рідкісніше креслення, то сильніша річ. Що краща ступінь, то швидше річ розпадається: тиждень у легендарної, десять днів в епічної, сімнадцять у рідкісної. Починаючи з рідкісної, частина сили речі випадає навмання (дивись {hh195крафт{x).
 %A% Для крафту потрібен різець у руці -- так само, як для гнізд і сузірʼїв.
 
 {CЩО ОТРИМАЄШ{x

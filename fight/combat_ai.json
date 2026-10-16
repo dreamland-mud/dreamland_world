@@ -1641,6 +1641,78 @@
           "cd": 8
         }
       ]
+    },
+    // ninja and druid come from the proto's professions list, not an act bit.
+    // Strangle puts a player who isn't fighting to sleep, then: champion and
+    // up try to break the neck (Kit 2026-10-16); the strike line is the
+    // fallback for elites and for ninjas too young for assassinate.
+    "ninja": {
+      "priority": [
+        {
+          "move": "tool",
+          "skill": "vanish",
+          "target": "self",
+          "hpBelow": 20,
+          "cd": 600,
+          "minTier": 3,
+          "key": "vanishEscape"
+        },
+        {
+          "move": "tool",
+          "skill": "strangle",
+          "target": "random",
+          "notFighting": true,
+          "then": "assassinate",
+          "maxTier": 4,
+          "cd": 15
+        },
+        {
+          "move": "tool",
+          "skill": "strangle",
+          "target": "random",
+          "notFighting": true,
+          "then": "strike",
+          "cd": 15
+        },
+        {
+          "move": "tool",
+          "skill": "dust",
+          "target": "self",
+          "once": true
+        },
+        {
+          "move": "tool",
+          "skill": "nerve",
+          "cd": 12
+        }
+      ]
+    },
+    "druid": {
+      "priority": [
+        {
+          "move": "cast",
+          "spell": "stone skin",
+          "target": "self",
+          "unless": "stone skin",
+          "once": true,
+          "key": "stoneSkin"
+        },
+        {
+          "move": "cast",
+          "spell": "regeneration",
+          "target": "self",
+          "unless": "regeneration",
+          "hpBelow": 50,
+          "cd": 120,
+          "key": "selfRegen"
+        },
+        {
+          "move": "tool",
+          "skill": "herbs",
+          "target": "self",
+          "cd": 30
+        }
+      ]
     }
   },
   // Natural attacks by body part / form (utils/combat ai bodyMoves, move "natural"
@@ -2141,6 +2213,32 @@
       "dispel": [
         "dispel affects"
       ]
+    },
+    // desert fist and hydroblast need a sector or rain, severity force fails
+    // on flyers and would win every pick as the only tier-2 nuke: left out
+    "druid": {
+      "attack": [
+        "bluefire",
+        "caustic font",
+        "lightning bolt",
+        "sonic resonance",
+        "shocking grasp",
+        "chill touch"
+      ],
+      "debuff": [
+        "entangle"
+      ],
+      "heal": [
+        "superior heal",
+        "heal"
+      ],
+      "ranged": [
+        {
+          "spell": "lightning bolt",
+          "chance": 100
+        }
+      ],
+      "dispel": []
     }
   },
   "spell_tiers": {
@@ -2150,6 +2248,7 @@
     "blade barrier": 4,
     "bluefire": 3,
     "burning hands": 4,
+    "caustic font": 3,
     "chain lightning": 5,
     "chill touch": 4,
     "colour spray": 3,
@@ -2179,6 +2278,7 @@
   "spell_damtypes": {
     "hydroblast": "drowning",
     "entangle": "pierce",
+    "caustic font": "drowning",
     "acid blast": "acid",
     "fireball": "fire",
     "lightning bolt": "lightning",

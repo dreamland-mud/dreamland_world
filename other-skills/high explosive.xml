@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <skill type="BasicSkill">
   <beats>12</beats>
-  <dammsg mg="f">взрывчатка</dammsg>
+  <dammsg mg="m">взрыв</dammsg>
   <help id="2136" level="-1" type="SkillHelp">
     <text l="en">This long-forgotten spell deals damage to an enemy with explosive projectiles packed with blasting compounds. According to legend, this magic came from a distant barbaric world where it is used to destroy entire cities. Fortunately, in the Dreamland this spell can only be found on certain ancient {hh121wands{x in {hh1851Hell{x.
 </text>
@@ -12,9 +12,10 @@
   </help>
   <name l="en">high explosive</name>
   <name l="ru">взрывчатка</name>
-  <name l="ua"></name>
-  <spell type="SPELL(HighExplosive)">
-    <damtype>none</damtype>
+  <name l="ua">вибухівка</name>
+  <spell type="DefaultSpell">
+    <damflags>weapon</damflags>
+    <damtype>pierce</damtype>
     <position>fight</position>
     <target>char_room</target>
     <type>offensive</type>

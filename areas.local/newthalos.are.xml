@@ -2688,6 +2688,7 @@
     <node name="9594">
       <ac bash="-100" exotic="-60" pierce="-100" slash="-100"/>
       <act add="npc sentinel practice mage nopurge notrack"/>
+      <aff add="infrared"/>
       <alignment>1000</alignment>
       <behavior type="Trainer">
       </behavior>
@@ -2698,7 +2699,7 @@
 уже в летах. Он все еще носит свои старые доспехи, даже в таком спокойном месте
 как это.
 </description>
-      <detection add="invis magic hidden dark_vision"/>
+      <detection add="invis magic hidden"/>
       <hit>1d1+29099</hit>
       <hitroll>100</hitroll>
       <imm add="summon charm weapon"/>
@@ -2737,7 +2738,7 @@
 Ты тоже можешь попытать удачу командой {yквест попросить{x.
 Еще полезно прочесть справку по темам &apos;{hh125квестор{x&apos; и &apos;{hh127виды заданий{x&apos;.
 </description>
-      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <detection add="imp_invis fade invis hidden sneak acute_vision"/>
       <form del="edible sentient biped mammal"/>
       <hit>1d1+28999</hit>
       <hitroll>300</hitroll>

@@ -1380,7 +1380,7 @@
 стоит  ли  идти  с  ним сражаться?  Такой  демон  несомненно  смертельно
 опасен  и будет жечь тебя Огнем!
 </description>
-      <detection add="hidden dark_vision"/>
+      <detection add="hidden"/>
       <hit>10d10+1500</hit>
       <imm add="summon slash fire mental"/>
       <level>35</level>
@@ -1410,7 +1410,7 @@
 опасных   демонов    -   Демона   Воды.   Внутренний голос советует тебе
 держаться от него подальше.
 </description>
-      <detection add="hidden dark_vision"/>
+      <detection add="hidden"/>
       <hit>10d10+1500</hit>
       <imm add="summon slash drowning"/>
       <level>35</level>
@@ -1440,7 +1440,7 @@
 демонов   -   Демона   Воздуха.  Он  окружил  себя  ураганным  ветром,
 сметающим все живое вокруг.
 </description>
-      <detection add="hidden dark_vision"/>
+      <detection add="hidden"/>
       <hit>10d10+1500</hit>
       <imm add="summon bash pierce lightning disease"/>
       <level>35</level>
@@ -1470,7 +1470,7 @@
 себе  дорогу  к солнцу!  Он создает вокруг себя землетрясения,  разрушая
 все вокруг.
 </description>
-      <detection add="hidden dark_vision"/>
+      <detection add="hidden"/>
       <hit>10d10+1500</hit>
       <imm add="energy mental light"/>
       <level>35</level>
@@ -1500,7 +1500,7 @@
 вокруг  себя  хаос.  Он  смертельно  опасен, повелевая всеми деревьями и
 деревянными вещами.
 </description>
-      <detection add="hidden dark_vision"/>
+      <detection add="hidden"/>
       <hit>10d10+1500</hit>
       <imm add="pierce light"/>
       <level>35</level>
@@ -1530,7 +1530,7 @@
 сердце  и  смятение и твою душу. Это жестокое чудовище смертельно опасно
 для всего живого.
 </description>
-      <detection add="hidden dark_vision"/>
+      <detection add="hidden"/>
       <hit>10d10+1500</hit>
       <imm add="summon spell"/>
       <level>35</level>
@@ -1736,7 +1736,7 @@
     <node name="18054">
       <ac bash="-13" exotic="4" pierce="-13" slash="-13"/>
       <act add="warrior"/>
-      <aff add="sanctuary pass_door haste"/>
+      <aff add="sanctuary pass_door haste infrared"/>
       <alignment>1000</alignment>
       <behavior type="Pet">
       </behavior>
@@ -1746,7 +1746,7 @@
       <description>Очень большой и смертельно опасный кугуар внимательно следит за
 каждым твоим движением.
 </description>
-      <detection add="invis hidden dark_vision"/>
+      <detection add="invis hidden"/>
       <hit>15d10+1500</hit>
       <hitroll>1</hitroll>
       <imm add="fire negative"/>
@@ -2666,7 +2666,7 @@
 Ты можешь взять у него задание командой {yквест попросить{x.
 Еще полезно прочесть справку по темам &apos;{hh125квестор{x&apos; и &apos;{hh127виды заданий{x&apos;.
 </description>
-      <detection add="evil invis hidden dark_vision"/>
+      <detection add="evil invis hidden"/>
       <group>3000</group>
       <hit>1d1+13999</hit>
       <hitroll>30</hitroll>

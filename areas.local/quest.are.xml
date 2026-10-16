@@ -894,11 +894,12 @@
     <node name="28101">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
       <act add="npc sentinel thief"/>
+      <aff add="infrared"/>
       <alignment>-1000</alignment>
       <dam_type>none</dam_type>
       <damage>1d1+1</damage>
       <default_pos>stand</default_pos>
-      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <detection add="imp_invis fade invis hidden sneak acute_vision"/>
       <hit>20d34+1000</hit>
       <imm add="summon charm"/>
       <long_descr>(no long)
@@ -924,7 +925,6 @@
 глазами-бусинками и на его морде расплывается похотливая ухмылка.
 Всем своим видом овец показывает желание плодиться и размножаться.
 </description>
-      <detection add="dark_vision"/>
       <hit>1d5+1000</hit>
       <hitroll>10</hitroll>
       <imm add="summon charm"/>
@@ -1024,6 +1024,7 @@
     <node name="28500">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
       <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <aff add="infrared"/>
       <behavior type="ValentineLover">
         <lover type="XMLInteger">28501</lover>
         <room type="XMLInteger">12085</room>
@@ -1045,7 +1046,7 @@
 спускаясь ниже колен, которые имеют какой-то странный изгиб.  
 Из-под густой шевелюры застенчиво выглядывают рожки.
 </description>
-      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <detection add="imp_invis fade invis hidden sneak acute_vision"/>
       <hit>30d10+30000</hit>
       <level>100</level>
       <long_descr>Юный и красивый сатир (Stephan) приглядывает за зверюшками здесь.
@@ -1062,6 +1063,7 @@
     <node name="28501">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
       <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <aff add="infrared"/>
       <behavior type="ValentineLover">
         <lover type="XMLInteger">28500</lover>
         <room type="XMLInteger">8207</room>
@@ -1084,7 +1086,7 @@
 Она одета в теплую кофту, плотную махеровую юбку, на шее - странный амулет. 
 В целом - типичный ветеринар из далекого села.  
 </description>
-      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <detection add="imp_invis fade invis hidden sneak acute_vision"/>
       <hit>30d10+30000</hit>
       <level>100</level>
       <long_descr>Ветеринарша Бидж (Bidge) высматривает очередную зверушку, чтобы ПОМОЧЬ ей!
@@ -1101,6 +1103,7 @@
     <node name="28502">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
       <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <aff add="infrared"/>
       <behavior type="ValentineLover">
         <lover type="XMLInteger">28503</lover>
         <room type="XMLInteger">32045</room>
@@ -1123,7 +1126,7 @@
 обернувшись к тебе, говорит: &quot;Корабль..  Черная Жемчужина - это не просто
 паруса, палуба - это свобода.&quot;  И ты замечаешь тоску в его карих глазах.  
 </description>
-      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <detection add="imp_invis fade invis hidden sneak acute_vision"/>
       <hit>30d10+30000</hit>
       <level>100</level>
       <long_descr>Капитан Джек Воробей (Jack Sparrow) мотает срок в тюрьме.
@@ -1140,6 +1143,7 @@
     <node name="28503">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
       <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <aff add="infrared"/>
       <behavior type="ValentineLover">
         <lover type="XMLInteger">28502</lover>
         <room type="XMLInteger">17231</room>
@@ -1159,7 +1163,7 @@
 Мачты вздымаются вверх идеальными иглами.  Только одного штриха не хватает
 этой идиллии - капитана.  И она терпеливо ждет его.  
 </description>
-      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <detection add="imp_invis fade invis hidden sneak acute_vision"/>
       <hit>30d10+30000</hit>
       <level>100</level>
       <long_descr>Роскошный черный корабль (black pearl) тихо дрейфует в лазурном море.
@@ -1176,6 +1180,7 @@
     <node name="28504">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
       <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <aff add="infrared"/>
       <behavior type="ValentineLover">
         <lover type="XMLInteger">28505</lover>
         <room type="XMLInteger">609</room>
@@ -1198,7 +1203,7 @@
 Очевидно, он надирается здесь из-за очередных недоразумений со своей
 прекрасной мавкой - полуденницей Метанкой.  
 </description>
-      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <detection add="imp_invis fade invis hidden sneak acute_vision"/>
       <hit>30d10+30000</hit>
       <long_descr>Полуголый молодой мужик (Mstislav) вовсю распивает пивеццо здесь.
 </long_descr>
@@ -1214,6 +1219,7 @@
     <node name="28505">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
       <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <aff add="infrared"/>
       <behavior type="ValentineLover">
         <lover type="XMLInteger">28504</lover>
         <room type="XMLInteger">19138</room>
@@ -1235,7 +1241,7 @@
 парня закружится голова! 110-55-90! Ты любуешься этой прекрасной невинной 
 мавкой, не замечая, как медовая дрема окутывает тебя и убаюкивает.
 </description>
-      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <detection add="imp_invis fade invis hidden sneak acute_vision"/>
       <hit>30d10+30000</hit>
       <level>100</level>
       <long_descr>Метанка (Metanca) объедается сладким медом на пасеке, сладкоежка!
@@ -1252,6 +1258,7 @@
     <node name="28506">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
       <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <aff add="infrared"/>
       <behavior type="ValentineLover">
         <lover type="XMLInteger">28507</lover>
         <room type="XMLInteger">1126</room>
@@ -1274,7 +1281,7 @@
 одеяний... Он приехал навестить старинных друзей - хоббитов. Но, похоже, в этот 
 день он скучает по своей королеве.
 </description>
-      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <detection add="imp_invis fade invis hidden sneak acute_vision"/>
       <hit>30d10+30000</hit>
       <level>100</level>
       <long_descr>Арагорн (Aragorn) гостит у друзей-хоббитов здесь.
@@ -1291,6 +1298,7 @@
     <node name="28507">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
       <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <aff add="infrared"/>
       <behavior type="ValentineLover">
         <lover type="XMLInteger">28506</lover>
         <room type="XMLInteger">7834</room>
@@ -1312,7 +1320,7 @@
 она только что умылась росой. Чистым блеском предрассветных звезд лучатся ее
 светло-серые глаза, но в них таится зрелая мудрость, а еще - тоска по мужу.
 </description>
-      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <detection add="imp_invis fade invis hidden sneak acute_vision"/>
       <hit>30d10+30000</hit>
       <level>100</level>
       <long_descr>Арвен (Arwen) отдыхает в кругу далеких родственников.
@@ -1329,6 +1337,7 @@
     <node name="28508">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
       <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <aff add="infrared"/>
       <behavior type="ValentineLover">
         <lover type="XMLInteger">28509</lover>
         <room type="XMLInteger">2353</room>
@@ -1363,7 +1372,7 @@
 
 (для полного счастья ему не хватает только одной полногрудой валькирии)
 </description>
-      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <detection add="imp_invis fade invis hidden sneak acute_vision"/>
       <hit>30d10+30000</hit>
       <level>100</level>
       <long_descr>Хельги (Helgi) прокладывает лыжню в глубоком снегу.
@@ -1380,6 +1389,7 @@
     <node name="28509">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
       <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <aff add="infrared"/>
       <behavior type="ValentineLover">
         <lover type="XMLInteger">28508</lover>
         <room type="XMLInteger">7912</room>
@@ -1413,7 +1423,7 @@
 Прежде чем Хельги
 В плен ее взял.
 </description>
-      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <detection add="imp_invis fade invis hidden sneak acute_vision"/>
       <hit>30d10+30000</hit>
       <level>100</level>
       <long_descr>Сигрун (Sigrun) начищает свой двуручник и проверяет ремешки на доспехах.
@@ -1430,6 +1440,7 @@
     <node name="28510">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
       <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <aff add="infrared"/>
       <behavior type="ValentineLover">
         <lover type="XMLInteger">28511</lover>
         <room type="XMLInteger">11837</room>
@@ -1452,7 +1463,7 @@
 могучую атлетическую фигуру, почти не скрывая всех частей тела, на вьющихся 
 золотых кудрях - лавровый венок, в руках - неизменная лира.
 </description>
-      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <detection add="imp_invis fade invis hidden sneak acute_vision"/>
       <hit>30d10+30000</hit>
       <level>100</level>
       <long_descr>Орфей (Orpheus) нашел себе применение именно здесь.
@@ -1469,6 +1480,7 @@
     <node name="28511">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
       <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <aff add="infrared"/>
       <behavior type="ValentineLover">
         <lover type="XMLInteger">28510</lover>
         <room type="XMLInteger">10418</room>
@@ -1490,7 +1502,7 @@
 волосы перехвачены белой лентой. У нее тонкие ладошки и ступни, будто она 
 голодала не один месяц.
 </description>
-      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <detection add="imp_invis fade invis hidden sneak acute_vision"/>
       <hit>30d10+30000</hit>
       <level>100</level>
       <long_descr>Эвридика (Eurydice) грустит в этом богами забытом месте.
@@ -1507,6 +1519,7 @@
     <node name="28512">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
       <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <aff add="infrared"/>
       <behavior type="ValentineLover">
         <lover type="XMLInteger">28513</lover>
         <room type="XMLInteger">7639</room>
@@ -1532,7 +1545,7 @@
 обручем с кристаллом.  Странно, чем-то этот парень тебе нравится.  Наверное,
 своей уверенностью и честностью.  
 </description>
-      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <detection add="imp_invis fade invis hidden sneak acute_vision"/>
       <hit>30d10+30000</hit>
       <level>100</level>
       <long_descr>Румата (Rumata) Эсторский, кажется, ввязался в очередную драку здесь.
@@ -1549,6 +1562,7 @@
     <node name="28513">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
       <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <aff add="infrared"/>
       <behavior type="ValentineLover">
         <lover type="XMLInteger">28512</lover>
         <room type="XMLInteger">10244</room>
@@ -1572,7 +1586,7 @@
 испуганный взгляд. При виде тебя она откладывает книгу, которую с интересом 
 читала у окна.
 </description>
-      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <detection add="imp_invis fade invis hidden sneak acute_vision"/>
       <hit>30d10+30000</hit>
       <level>100</level>
       <long_descr>Кира (Kira) отдыхает после всех ужасов, которые ей пришлось пережить.
@@ -1589,6 +1603,7 @@
     <node name="28514">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
       <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <aff add="infrared"/>
       <behavior type="ValentineLover">
         <lover type="XMLInteger">28515</lover>
         <room type="XMLInteger">8163</room>
@@ -1614,7 +1629,7 @@
 Маленький носик судорожно дергается в надежде уловить знакомые запахи. 
 Маленькое тельце шарахается от любого звука... *cry*
 </description>
-      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <detection add="imp_invis fade invis hidden sneak acute_vision"/>
       <hit>30d10+30000</hit>
       <level>100</level>
       <long_descr>Ежик (hedgehog) одиноко скитается в тумане.
@@ -1631,6 +1646,7 @@
     <node name="28515">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
       <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <aff add="infrared"/>
       <behavior type="ValentineLover">
         <lover type="XMLInteger">28514</lover>
         <room type="XMLInteger">17309</room>
@@ -1655,7 +1671,7 @@
 яблоко с травы и с довольным видом зажевать его. У нее толстые серые бочка в 
 яблоки и длинная грива.
 </description>
-      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <detection add="imp_invis fade invis hidden sneak acute_vision"/>
       <hit>30d10+30000</hit>
       <level>100</level>
       <long_descr>Лошадка (horsey) гуляет по влажному лугу.
@@ -1672,6 +1688,7 @@
     <node name="28516">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
       <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <aff add="infrared"/>
       <behavior type="ValentineLover">
         <lover type="XMLInteger">28517</lover>
         <room type="XMLInteger">29361</room>
@@ -1698,7 +1715,7 @@
 (если не считать клыков, впрочем, некоторым нравится). Он держится вельможно, 
 то есть одновременно свободно и гордо.
 </description>
-      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <detection add="imp_invis fade invis hidden sneak acute_vision"/>
       <hit>30d10+30000</hit>
       <level>100</level>
       <long_descr>Дракула (Dracula) коротает день за преферансом.
@@ -1715,6 +1732,7 @@
     <node name="28517">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
       <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <aff add="infrared"/>
       <behavior type="ValentineLover">
         <lover type="XMLInteger">28516</lover>
         <room type="XMLInteger">14541</room>
@@ -1739,7 +1757,7 @@
 прямые черные волосы. На шее виднеются две дырочки от укуса, но это 
 в наше время уже никого не смущает.
 </description>
-      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <detection add="imp_invis fade invis hidden sneak acute_vision"/>
       <hit>30d10+30000</hit>
       <level>100</level>
       <long_descr>Мира (Mira) не находит себе места от беспокойства.
@@ -1756,6 +1774,7 @@
     <node name="28519">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
       <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <aff add="infrared"/>
       <behavior type="ValentineLover">
         <lover type="XMLInteger">28520</lover>
         <room type="XMLInteger">9687</room>
@@ -1776,7 +1795,7 @@
       <description>Темноглазая и чернобровая восточная красавица, с тонким станом и восхитите
 льными пятками, поскольку только их и видно из-под паранджи.
 </description>
-      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <detection add="imp_invis fade invis hidden sneak acute_vision"/>
       <form del="edible sentient biped mammal"/>
       <hit>1d1+30000</hit>
       <long_descr>Лейла (Leyla) тоскует и чахнет здесь.
@@ -1794,6 +1813,7 @@
     <node name="28520">
       <ac bash="0" exotic="0" pierce="0" slash="0"/>
       <act add="npc sentinel nowhere nopurge nosavedrop"/>
+      <aff add="infrared"/>
       <behavior type="ValentineLover">
         <lover type="XMLInteger">28519</lover>
         <room type="XMLInteger">5027</room>
@@ -1814,7 +1834,7 @@
 пустыне, общаясь лишь со зверями да птицами.  Он иссох, зачах и загорел до
 черноты.  Но тоска иссушила его больше, чем солнце.
 </description>
-      <detection add="imp_invis fade invis hidden sneak dark_vision acute_vision"/>
+      <detection add="imp_invis fade invis hidden sneak acute_vision"/>
       <form del="edible sentient biped mammal"/>
       <hit>1d1+30000</hit>
       <long_descr>Меджнун (Medjnun) общается со зверьми и животными в пустыне.

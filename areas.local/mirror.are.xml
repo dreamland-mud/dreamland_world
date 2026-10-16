@@ -379,7 +379,7 @@
 Ты тоже можешь попытать удачу командой {yквест попросить{x.
 Еще полезно прочесть справку по темам &apos;{hh125квестор{x&apos; и &apos;{hh127виды заданий{x&apos;.
 </description>
-      <detection add="evil invis hidden dark_vision"/>
+      <detection add="evil invis hidden"/>
       <form add="edible sentient biped mammal" del="nonadoptable"/>
       <group>3000</group>
       <hit>1d1+27999</hit>
@@ -508,6 +508,7 @@
     <node name="5393">
       <ac bash="-65" exotic="-35" pierce="-65" slash="-65"/>
       <act add="npc sentinel practice mage nopurge notrack"/>
+      <aff add="infrared"/>
       <alignment>1000</alignment>
       <dam_type>magic</dam_type>
       <damage>3d8+24</damage>
@@ -516,7 +517,7 @@
 моей гильдии?!!!{x&apos;, она опережает тебя и объясняет &apos;{gВолонтерская программа.
 Отлично будет смотреться в моем резюме через 500 лет.{x&apos;. 
 </description>
-      <detection add="invis magic hidden dark_vision"/>
+      <detection add="invis magic hidden"/>
       <hit>1d1+29099</hit>
       <imm add="summon charm weapon"/>
       <level>96</level>
@@ -537,6 +538,7 @@
     <node name="5394">
       <ac bash="-65" exotic="-35" pierce="-65" slash="-65"/>
       <act add="npc sentinel necromancer practice mage nopurge notrack"/>
+      <aff add="infrared"/>
       <alignment>-1000</alignment>
       <behavior type="VampireGuildmaster">
       </behavior>
@@ -546,7 +548,7 @@
       <description>Статный, немолодой вампир придирчиво изучает тебя. Он обучит тебя всем 
 премудростям вампирского мастерства.
 </description>
-      <detection add="evil invis magic hidden dark_vision"/>
+      <detection add="evil invis magic hidden"/>
       <hit>1d1+29099</hit>
       <imm add="summon charm weapon"/>
       <level>96</level>
@@ -681,6 +683,7 @@
     <node name="5398">
       <ac bash="-65" exotic="-35" pierce="-65" slash="-65"/>
       <act add="npc sentinel practice mage warrior nopurge notrack"/>
+      <aff add="infrared"/>
       <alignment>-1000</alignment>
       <behavior type="AntipaladinGuildmaster">
       </behavior>
@@ -694,7 +697,7 @@
 Раз уж ты здесь, мастер обучит тебя премудростям мастерства анти-паладинов,
 если ты воспользуешься командой {y{hcпрактиковать здесь{x.
 </description>
-      <detection add="evil invis magic hidden dark_vision"/>
+      <detection add="evil invis magic hidden"/>
       <hit>1d1+29099</hit>
       <imm add="summon charm weapon negative"/>
       <level>96</level>

@@ -914,6 +914,7 @@
   },
   "tier_elite": {
     "moves": 2,
+    "drSecs": 8,
     "act": 95,
     "blunder": 8,
     "winded": 10,
@@ -1596,7 +1597,8 @@
           "spell": "gaseous form",
           "target": "self",
           "hpBelow": 20,
-          "once": true,
+          "cd": 600,
+          "minTier": 3,
           "key": "mistEscape"
         },
         {
@@ -1707,8 +1709,8 @@
             "damtype": "pierce",
             "effect": "venom",
             "effectPct": 50,
-            "text": "%1$^C1 впива%1$nет|ют ядовитые клыки в %2$C4!",
-            "vtext": "%1$^C1 впива%1$nет|ют в тебя ядовитые клыки!"
+            "text": "%1$^C1 вонза%1$nет|ют ядовитые клыки в %2$C4!",
+            "vtext": "%1$^C1 вонза%1$nет|ют в тебя ядовитые клыки!"
           }
         ]
       },

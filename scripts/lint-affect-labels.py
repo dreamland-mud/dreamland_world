@@ -7,6 +7,8 @@ picking its column + short label from the skill profile fields <webColumn>/<webL
 A skill with no <webColumn> still shows -- auto-classified (offensive spell -> mal,
 everything else -> enh) and labelled from its own <name>. To keep an internal or
 tracking affect out of the panel, say so explicitly: <webColumn>none</webColumn>.
+A reuse timer ("you can do X again" when it wears off, no effect of its own) goes to
+<webColumn>cd</webColumn>: the client draws cooldowns in their own colour, apart from buffs.
 
 Three checks:
   1. <webColumn> holds a legal value                          (hard error)
@@ -26,7 +28,7 @@ import os, re, sys
 
 DIRS = ["generic-skills", "clan-skills", "other-skills", "race-aptitudes",
         "card-skills", "craft-skills"]
-VALID = {"pro", "det", "trv", "enh", "mal", "cln", "none"}
+VALID = {"pro", "det", "trv", "enh", "mal", "cln", "cd", "none"}
 LANGS = ("en", "ru", "ua")
 
 root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -122,7 +124,7 @@ if missing_repos:
     print("        invisible to this lint: %s" % ", ".join(missing_repos))
 
 if bad_col:
-    print("\nINVALID <webColumn> values (must be pro/det/trv/enh/mal/cln/none):")
+    print("\nINVALID <webColumn> values (must be pro/det/trv/enh/mal/cln/cd/none):")
     for rel, col in bad_col:
         print("  %-45s %r" % (rel, col))
 

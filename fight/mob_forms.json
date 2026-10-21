@@ -85,6 +85,31 @@
    "ac_factor": 6.0,
    "notes": "look shows '(skeleton <race>)'. act undead no longer implies necromancer casting (decision 23). Zombies/ghouls are NOT skeletal: act undead + biped + mammal torso. No eyes does not blind it (see parts.eye)"
   },
+  "vampire": {
+   "group": "functional",
+   "act_add": [
+    "vampire",
+    "undead"
+   ],
+   "imm": [
+    "negative",
+    "charm",
+    "disease"
+   ],
+   "res": [
+    "poison",
+    "cold"
+   ],
+   "vuln": [
+    "light",
+    "holy",
+    "silver"
+   ],
+   "aff": [
+    "infrared"
+   ],
+   "notes": "mirrors the PC vampire transform (skillcommand/vampire/run) minus its haste/berserk/flying buffs, which would be a flat stat bonus outside the item-power ruler"
+  },
   "construct": {
    "group": "functional",
    "parts_del_late": [

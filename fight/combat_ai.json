@@ -1560,6 +1560,8 @@
   // (blackjack, touch) on a player need then: "strike" or a tool (Kit D2).
   "class_kits": {
     "thief": {
+      // out of combat, kept up by brain.invis (C++ doInvis asks for act-thief mobs)
+      "stealth": ["sneak", "hide"],
       "priority": [
         {
           "move": "tool",
@@ -2189,10 +2191,7 @@
     },
     "vampire": {
       "attack": [
-        "chain lightning",
-        "vampiric blast",
-        "dispel good",
-        "burning hands"
+        "vampiric blast"
       ],
       "debuff": [
         "blindness",

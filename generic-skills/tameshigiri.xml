@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill type="GenericSkill">
+  <beats>12</beats>
+  <classes>
+    <node name="samurai">
+      <level>46</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <command type="DefaultSkillCommand">
+    <argtype>undef</argtype>
+    <cat>class</cat>
+    <hint l="en">(samurai) test cut: open a fight on one foe or the whole room, unseen ones too</hint>
+    <hint l="ru">(самураи) пробный удар: начать бой с одним врагом или со всей комнатой, невидимых тоже</hint>
+    <hint l="ua">(самураї) пробний удар: почати бій з одним ворогом або з усією кімнатою, невидимих теж</hint>
+    <name l="en">tameshigiri</name>
+    <name l="ru">тамэсигири</name>
+    <name l="ua">тамесіґірі</name>
+    <order>never</order>
+    <position>stand</position>
+  </command>
+  <dammsg mg="m"></dammsg>
+  <group registry="skillGroup">fightmaster</group>
+  <help id="5147" level="-1" type="SkillHelp">
+    <text l="en">Tameshigiri is the test cut. Only an opener: in the middle of a fight there is no time for it.
+%FMT% *%CMD% _target_*: one cut at the target, even one the samurai cannot see.
+%FMT% *%CMD%*: one sweeping cut at everyone in the room, the unseen included. Group mates, pets and those under the gods' protection are spared.
+Each cut is a plain blow of the wielded blade. When the sweep finds nobody to cut, the samurai reads the blade instead: how rare its steel is, whether it still suits his hand, and the state of its edge. A master of the skill also sees what makes the blade valuable.</text>
+    <text l="ru">Тамэсигири -- пробный удар. Только первый удар боя: посреди схватки на него нет времени.
+%FMT% *%CMD% _цель_*: один удар по цели, даже такой, которую самурай не видит.
+%FMT% *%CMD%*: один размашистый удар по всем в комнате, невидимым тоже. Согруппники, питомцы и те, кого хранят боги, не пострадают.
+Каждый удар -- обычный удар клинком в руке. Если размах никого не задел, самурай читает клинок: насколько редка его сталь, по руке ли он еще и каково лезвие. Мастер умения видит и то, чем клинок ценен.</text>
+    <text l="ua">Тамесіґірі -- пробний удар. Лише перший удар бою: посеред сутички на нього немає часу.
+%FMT% *%CMD% _ціль_*: один удар по цілі, навіть такій, якої самурай не бачить.
+%FMT% *%CMD%*: один розмашистий удар по всіх у кімнаті, невидимих теж. Одногрупники, улюбленці й ті, кого бережуть боги, не постраждають.
+Кожен удар -- звичайний удар клинком у руці. Якщо розмах нікого не зачепив, самурай читає клинок: наскільки рідкісна його сталь, чи досі він до руки і яке лезо. Майстер уміння бачить і те, чим клинок цінний.</text>
+  </help>
+  <move>20</move>
+  <name l="en">tameshigiri</name>
+  <name l="ru">тамэсигири</name>
+  <name l="ua">тамесіґірі</name>
+</skill>

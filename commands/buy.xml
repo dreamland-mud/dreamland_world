@@ -22,7 +22,8 @@ Purchase an item from the vendor by name or number. If several items with the sa
 
 %FMT% *sell* _item_
 %FFF% *sell* *all*
-Sell an item to the vendor. Write *sell all* to sell your whole inventory at once, or *sell all.*_name_ to sell only the matching items. Worn equipment and things the vendor will not buy stay with you. Different vendors have different markups on goods. Knowledge of the vendors to whom you can sell this type of item most profitably comes with experience. {RYou cannot sell items from the {hh12donation pit{x{R -- they have no value.{x
+%FFF% *sell* *junk*
+Sell an item to the vendor. Write *sell all* to sell your whole inventory at once, or *sell all.*_name_ to sell only the matching items. *sell junk* sells only junk: trash, and armor, weapons and jewelry that give you nothing, by the {hh276sages{x' measure. It never touches personal, limited or randomly rolled gear, containers with things inside, or clothing. *value junk* shows first what would go. Worn equipment and things the vendor will not buy stay with you. Different vendors have different markups on goods. Knowledge of the vendors to whom you can sell this type of item most profitably comes with experience. {RYou cannot sell items from the {hh12donation pit{x{R -- they have no value.{x
 
 %FMT% *buy back*
 %FFF% *buy back* _number_
@@ -32,6 +33,7 @@ Every item has a =price=. It follows the item's level, its magic, its material a
 
 %FMT% *value* _item_
 %FFF% *value* *all*
+%FFF% *value* *junk*
 Ask the vendor how much they will pay for each item in your inventory or for a specific one.
 </text>
     <text l="ru">В мире есть огромное количество магазинов, которые продают всякую всячину -- от {hh15питомцев{x до {hh122случайного оружия{x. У каждого продавца есть только определенный набор {hh65типов предметов{x, которые они продают или покупают. Некоторые магазины работают почти круглосуточно, а некоторые имеют только ограниченные часы работы. Рядом с именем продавцов отображается аура ({GПродавец{x).
@@ -51,7 +53,8 @@ Ask the vendor how much they will pay for each item in your inventory or for a s
 
 %FMT% *продать* _предмет_
 %FFF% *продать* *все*
-Продать предмет продавцу. Напиши *(sell all,продать все)*, чтобы продать сразу весь инвентарь, или *(sell all.sword,продать все.меч)*, чтобы продать только подходящие вещи. Надетое снаряжение и то, что продавец не покупает, останется при тебе. У разных продавцов разная наценка на товар. Знание продавцов, которым можно продать данный тип предметов наиболее выгодно, приходит с опытом. {RПродать вещи из {hh12ямы для пожертвований{x{R нельзя -- у них нет стоимости.{x
+%FFF% *продать* *хлам*
+Продать предмет продавцу. Напиши *(sell all,продать все)*, чтобы продать сразу весь инвентарь, или *(sell all.sword,продать все.меч)*, чтобы продать только подходящие вещи. *(sell junk,продать хлам)* продаст только хлам: мусор, а еще доспехи, оружие и украшения, которые тебе ничего не дают по мерке {hh276мудрецов{x. Личные, лимитные и случайно сгенерированные вещи, контейнеры с вещами внутри и одежду он не трогает. *(value junk,цена хлам)* сначала покажет, что уйдет. Надетое снаряжение и то, что продавец не покупает, останется при тебе. У разных продавцов разная наценка на товар. Знание продавцов, которым можно продать данный тип предметов наиболее выгодно, приходит с опытом. {RПродать вещи из {hh12ямы для пожертвований{x{R нельзя -- у них нет стоимости.{x
 
 %FMT% *купить назад*
 %FFF% *купить назад* _номер_
@@ -61,6 +64,7 @@ Ask the vendor how much they will pay for each item in your inventory or for a s
 
 %FMT% *цена* _предмет_
 %FFF% *цена* *все*
+%FFF% *цена* *хлам*
 Спросить у продавца, сколько он заплатит за каждую вещь в инвентаре или за конкретную.
 </text>
     <text l="ua">У світі є величезна кількість магазинів, які продають різні речі -- від {hh15питомців{x до {hh122випадкової зброї{x. У кожного продавця є лише певний набір {hh65типів предметів{x, які вони продають або купують. Деякі магазини працюють майже цілодобово, а деякі мають тільки обмежені години роботи. Біля імені продавців відображається аура ({GПродавець{x).
@@ -80,7 +84,8 @@ Ask the vendor how much they will pay for each item in your inventory or for a s
 
 %FMT% *продати* _предмет_
 %FFF% *продати* *все*
-Продати предмет продавцю. Напиши *(sell all,продати все)*, щоб продати одразу весь інвентар, або *(sell all.sword,продати все.меч)*, щоб продати лише відповідні речі. Вдягнене спорядження і те, що продавець не купує, лишиться при тобі. У різних продавців різна націнка на товар. Знання продавців, яким можна продати даний тип предметів найбільш вигідно, приходить з досвідом. {RПродати речі з {hh12ями для пожертвувань{x{R не можна -- у них немає вартості.{x
+%FFF% *продати* *мотлох*
+Продати предмет продавцю. Напиши *(sell all,продати все)*, щоб продати одразу весь інвентар, або *(sell all.sword,продати все.меч)*, щоб продати лише відповідні речі. *(sell junk,продати мотлох)* продасть тільки мотлох: сміття, а ще обладунки, зброю і прикраси, які тобі нічого не дають за міркою {hh276мудреців{x. Особисті, лімітні та випадково згенеровані речі, контейнери з речами всередині й одяг він не чіпає. *(value junk,ціна мотлох)* спершу покаже, що піде. Вдягнене спорядження і те, що продавець не купує, лишиться при тобі. У різних продавців різна націнка на товар. Знання продавців, яким можна продати даний тип предметів найбільш вигідно, приходить з досвідом. {RПродати речі з {hh12ями для пожертвувань{x{R не можна -- у них немає вартості.{x
 
 %FMT% *купити назад*
 %FFF% *купити назад* _номер_
@@ -90,6 +95,7 @@ Ask the vendor how much they will pay for each item in your inventory or for a s
 
 %FMT% *ціна* _предмет_
 %FFF% *ціна* *все*
+%FFF% *ціна* *мотлох*
 Запитати у продавця, скільки він заплатить за кожен предмет в інвентарі або за конкретний.
 </text>
     <title l="en">{CEconomy: {xbuying and selling, working with shops</title>

@@ -19,7 +19,7 @@ Shop editor. A keeper's whole shop lives in the props of its mob prototype: what
 *%CMD%* -- the keepers in this room.
 *%CMD%* _keeper_ -- the keeper's screen. _keeper_ is a name in the room or a mob vnum.
 *buys* -- item types the keeper buys. A plain list replaces it, *+gem* adds, *-potion* removes.
-*profit* -- sell price and buying price in percent of item cost: buy 1-1000, sell 0-1000. It warns when the shop has no spread.
+*profit* -- what players pay and what the keeper pays, in percent of item cost: buy 1-1000, sell 0-1000. It warns when the shop has no spread.
 *hours* -- 0-23, both ends inclusive. Open after close wraps past midnight, *0 23* is always open.
 *stock add* _vnum_ or _vnum:tier_ -- add a stocked item. *stock del* takes vnums or row numbers like *#3*. *stock clear* empties it. Until the old area resets go, an empty stock leaves the keeper's own goods alone, and a rolled _vnum:tier_ item only shows up where the keeper's reset makes it. Limited items can't be stocked.
 *create* makes the mob a keeper (buy 120, sell 75, 0-23), *remove* takes it off this editor and keeps the props for a later *create*. Until the old C++ shop is gone, a keeper whose area file still has its old shop block keeps trading through it.

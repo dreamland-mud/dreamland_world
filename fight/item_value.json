@@ -348,12 +348,13 @@
   "mastery_cm_per_level": 18,
   "refit": {"levels_per_unit": 20, "reroll_units": 2},
   "craft_roll": {
-    "_doc": "Rare, epic and legendary crafts (blacksmith, carpenter, jeweler) roll affixes from the loot pool (Kit 2026-10-15, Fenia craft/armor + utils/craft). center = craft_piece_budget_cm + mastery. Armor: fixed_pct[tier-1] of center goes to the material-shaped dr/hr/hp/mana as before, the rest rolls in [center x (100 - spread_pct)%, center x (100 + spread_pct)%] minus the fixed part. Weapons keep their base row and roll the whole window. max_tier: the worst tier that rolls (3 rare). masterwork_pct + masterwork_per_mastery x mastery (profession 6-10): chance a fresh craft rolls one tier up (3% .. 8%); a legendary masterwork rolls only the top half; rerolls never do. armor / weapon: an affix each listed material forces, first two hits in material order (armor 'section:value', weapon the affix name). refit.reroll_units: craft reroll costs that many main-material units more each time on the same piece (2, 4, 6...), counted in the craft_rerolls property.",
+    "_doc": "Rare, epic and legendary crafts (blacksmith, carpenter, jeweler) roll affixes from the loot pool (Kit 2026-10-15, Fenia craft/armor + utils/craft). center = craft_piece_budget_cm + mastery. Armor: fixed_pct[tier-1] of center goes to the material-shaped dr/hr/hp/mana as before, the rest rolls in [center x (100 - spread_pct)%, center x (100 + spread_pct)%] minus the fixed part. Weapons keep their base row and roll the whole window. max_tier: the worst tier that rolls (3 rare). masterwork_pct + masterwork_per_mastery x mastery (profession 6-10): chance a fresh craft rolls one tier up (3% .. 8%); a legendary masterwork rolls only the top half; rerolls never do. armor / weapon: an affix each listed material forces, first two hits in material order (armor 'section:value', weapon the affix name). The first hit is always forced, the second only at second_force_pct (Kit 2026-10-23). refit.reroll_units: craft reroll costs that many main-material units more each time on the same piece (2, 4, 6...), counted in the craft_rerolls property.",
     "max_tier": 3,
     "fixed_pct": [40, 50, 60],
     "spread_pct": 30,
     "masterwork_pct": 3,
     "masterwork_per_mastery": 1,
+    "second_force_pct": 50,
     "armor": {
       "steel": "affects_by_level:ac",
       "mithril": "affects_by_level:saving_spell",

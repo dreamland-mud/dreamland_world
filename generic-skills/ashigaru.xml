@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <removeCharSelf>Ты снова можешь позвать асигару.</removeCharSelf>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="samurai">
+      <level>35</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <command type="DefaultSkillCommand">
+    <argtype>undef</argtype>
+    <cat>class</cat>
+    <hint l="en">(samurai) call a foot soldier sworn to serve you</hint>
+    <hint l="ru">(самураи) позвать пехотинца, присягнувшего тебе служить</hint>
+    <hint l="ua">(самураї) покликати піхотинця, що присягнув тобі служити</hint>
+    <name l="en">ashigaru</name>
+    <name l="ru">асигару</name>
+    <name l="ua">асіґару</name>
+    <order>player_only</order>
+    <position>stand</position>
+  </command>
+  <dammsg mg="m"></dammsg>
+  <group registry="skillGroup">fightmaster</group>
+  <help id="5152" level="-1" type="SkillHelp">
+    <extra l="en">'ashigaru conscript'</extra>
+    <extra l="ru">'асигару пехотинец'</extra>
+    <extra l="ua">'асіґару піхотинець'</extra>
+    <text l="en">%FMT% *%CMD%*
+
+The samurai calls an ashigaru, a foot soldier from a peasant family sworn to serve him. Only one can serve at a time, and after a call some time must pass before the next. The ashigaru follows and fights like any other servant; he can only wear armour on the body and head, a weapon and a shield. A samurai who bears {hh5065shame{x cannot call one.
+At {hh743harakiri{x an ashigaru standing beside his master acts as kaishakunin: he ends the suffering with one stroke, and the death is clean. A samurai who dies without one pays twice: the death counts double, and his ghost wanders three times as long. Old customs gave this duty to a trusted peer, not to a conscript, but in these lands one takes the hand that is there.
+Not to be confused with the ashigaru set of armour.</text>
+    <text l="ru">%FMT% *%CMD%*
+
+Самурай зовет асигару -- пехотинца из крестьянской семьи, присягнувшего ему служить. Служить может только один, а после зова должно пройти время до следующего. Асигару следует за хозяином и сражается, как любой слуга; надеть он может лишь доспех на тело и голову, оружие и щит. Самурай под {hh5065позором{x позвать его не может.
+При {hh743харакири{x асигару, стоящий рядом с хозяином, становится кайсякунином: он одним ударом прекращает муки, и смерть чиста. Самурай, умерший без него, платит вдвойне: смерть засчитывается дважды, а призрак бродит втрое дольше. Старые обычаи отдавали эту честь доверенному равному, а не простолюдину, но в этих краях берут ту руку, что рядом.
+Не путать с одноименным набором доспехов.</text>
+    <text l="ua">%FMT% *%CMD%*
+
+Самурай кличе асіґару -- піхотинця із селянської родини, що присягнув йому служити. Служити може лише один, а після поклику має минути час до наступного. Асіґару ходить за господарем і бʼється, як будь-який слуга; вдягти він може лише обладунок на тіло й голову, зброю та щит. Самурай під {hh5065ганьбою{x покликати його не може.
+Під час {hh743харакірі{x асіґару, що стоїть поруч із господарем, стає кайсякуніном: він одним ударом припиняє муки, і смерть чиста. Самурай, що помер без нього, платить подвійно: смерть зараховується двічі, а привид блукає втричі довше. Старі звичаї віддавали цю честь довіреному рівному, а не простолюдинові, але в цих краях беруть ту руку, що поруч.
+Не плутати з однойменним набором обладунків.</text>
+  </help>
+  <mana>100</mana>
+  <move>50</move>
+  <name l="en">ashigaru</name>
+  <name l="ru">асигару</name>
+  <name l="ua">асіґару</name>
+</skill>

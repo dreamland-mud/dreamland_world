@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Command type="CommandElement">
+  <cat>olc</cat>
+  <help id="5153" level="102" type="CommandHelp">
+    <extra l="en">shopedit shop keeper olc stock</extra>
+    <extra l="ru">shopedit магазин продавец olc товар</extra>
+    <extra l="ua">shopedit крамниця продавець olc товар</extra>
+    <text l="en">%FMT% *%CMD%*
+%FFF% *%CMD%* _keeper_
+%FFF% *%CMD%* _keeper_ *buys* _types_
+%FFF% *%CMD%* _keeper_ *profit* _buy_ _sell_
+%FFF% *%CMD%* _keeper_ *hours* _open_ _close_
+%FFF% *%CMD%* _keeper_ *stock* *add*|*del*|*clear* ...
+%FFF% *%CMD%* _keeper_ *create*|*remove*
+%FFF% *%CMD%* *audit* [*all*|_file.are_]
+
+Shop editor. A keeper's whole shop lives in the props of its mob prototype: what it buys, its markups, its hours and its stock. A change reaches every copy of the keeper at once and marks the area changed, so *asave* keeps it. Stock catches up the next time someone trades there. Don't hold *medit* open on the same keeper: its *done* writes its own copy of the props back.
+
+*%CMD%* -- the keepers in this room.
+*%CMD%* _keeper_ -- the keeper's screen. _keeper_ is a name in the room or a mob vnum.
+*buys* -- item types the keeper buys. A plain list replaces it, *+gem* adds, *-potion* removes.
+*profit* -- what players pay and what the keeper pays, in percent of item cost: buy 1-1000, sell 0-1000. It warns when the shop has no spread.
+*hours* -- 0-23, both ends inclusive. Open after close wraps past midnight, *0 23* is always open.
+*stock add* _vnum_ or _vnum:tier_ -- add a stocked item. *stock del* takes vnums or row numbers like *#3*. *stock clear* empties it. Until the old area resets go, an empty stock leaves the keeper's own goods alone, and a rolled _vnum:tier_ item only shows up where the keeper's reset makes it. Limited items can't be stocked.
+*create* makes the mob a keeper (buy 120, sell 75, 0-23), *remove* takes it off this editor and keeps the props for a later *create*. Until the old C++ shop is gone, a keeper whose area file still has its old shop block keeps trading through it.
+*audit* -- live check for this area, another area file or *all*: stock drift on each copy, keepers closed now, rooms with two keepers.
+</text>
+    <text l="ru">%FMT% *%CMD%*
+%FFF% *%CMD%* _продавец_
+%FFF% *%CMD%* _продавец_ *buys* _типы_
+%FFF% *%CMD%* _продавец_ *profit* _продажа_ _скупка_
+%FFF% *%CMD%* _продавец_ *hours* _открытие_ _закрытие_
+%FFF% *%CMD%* _продавец_ *stock* *add*|*del*|*clear* ...
+%FFF% *%CMD%* _продавец_ *create*|*remove*
+%FFF% *%CMD%* *audit* [*all*|_файл.are_]
+
+Редактор магазинов. Весь магазин продавца лежит в props прототипа моба: что он скупает, наценки, часы работы и товар. Правка сразу доходит до всех копий продавца и помечает зону измененной, *asave* ее сохраняет. Товар подтягивается при следующей торговле. Не держи открытым *medit* на том же продавце: его *done* запишет обратно свою копию props.
+
+*%CMD%* -- продавцы в этой комнате.
+*%CMD%* _продавец_ -- экран продавца. _продавец_ -- имя в комнате или vnum моба.
+*buys* -- типы предметов, которые продавец скупает. Простой список заменяет, *+gem* добавляет, *-potion* убирает.
+*profit* -- цена продажи и скупки в процентах от стоимости вещи: продажа 1-1000, скупка 0-1000. Предупреждает, если у магазина нет разницы цен.
+*hours* -- 0-23, оба конца включительно. Открытие позже закрытия переходит через полночь, *0 23* -- круглосуточно.
+*stock add* _vnum_ или _vnum:tier_ -- добавить товар. *stock del* берет vnum или номер строки вида *#3*. *stock clear* очищает. Пока старые ресеты зоны не убраны, пустой товар не трогает собственные вещи продавца, а предмет _vnum:tier_ появляется только там, где его делает ресет продавца. Лимитированные вещи в товар не берутся.
+*create* делает моба продавцом (продажа 120, скупка 75, 0-23), *remove* убирает его из этого редактора и сохраняет props для следующего *create*. Пока старый C++ магазин жив, продавец со старым блоком магазина в файле зоны продолжает торговать через него.
+*audit* -- живая проверка этой зоны, другого файла зоны или *all*: расхождения товара у каждой копии, закрытые сейчас продавцы, комнаты с двумя продавцами.
+</text>
+    <text l="ua">%FMT% *%CMD%*
+%FFF% *%CMD%* _продавець_
+%FFF% *%CMD%* _продавець_ *buys* _типи_
+%FFF% *%CMD%* _продавець_ *profit* _продаж_ _скупка_
+%FFF% *%CMD%* _продавець_ *hours* _відкриття_ _закриття_
+%FFF% *%CMD%* _продавець_ *stock* *add*|*del*|*clear* ...
+%FFF% *%CMD%* _продавець_ *create*|*remove*
+%FFF% *%CMD%* *audit* [*all*|_файл.are_]
+
+Редактор крамниць. Уся крамниця продавця лежить у props прототипу моба: що він скуповує, націнки, години роботи й товар. Правка одразу доходить до всіх копій продавця і позначає зону зміненою, *asave* її зберігає. Товар підтягується під час наступної торгівлі. Не тримай відкритим *medit* на тому самому продавцеві: його *done* запише назад свою копію props.
+
+*%CMD%* -- продавці в цій кімнаті.
+*%CMD%* _продавець_ -- екран продавця. _продавець_ -- імʼя в кімнаті або vnum моба.
+*buys* -- типи предметів, які продавець скуповує. Простий список замінює, *+gem* додає, *-potion* прибирає.
+*profit* -- ціна продажу і скупки у відсотках від вартості речі: продаж 1-1000, скупка 0-1000. Попереджає, якщо крамниця не має різниці цін.
+*hours* -- 0-23, обидва кінці включно. Відкриття пізніше за закриття переходить через північ, *0 23* -- цілодобово.
+*stock add* _vnum_ або _vnum:tier_ -- додати товар. *stock del* бере vnum або номер рядка на кшталт *#3*. *stock clear* очищає. Поки старі ресети зони не прибрані, порожній товар не чіпає власні речі продавця, а предмет _vnum:tier_ зʼявляється тільки там, де його робить ресет продавця. Лімітовані речі в товар не беруться.
+*create* робить моба продавцем (продаж 120, скупка 75, 0-23), *remove* прибирає його з цього редактора і зберігає props для наступного *create*. Поки старий C++ магазин живий, продавець зі старим блоком крамниці у файлі зони далі торгує через нього.
+*audit* -- жива перевірка цієї зони, іншого файлу зони або *all*: розбіжності товару в кожної копії, зачинені зараз продавці, кімнати з двома продавцями.
+</text>
+  </help>
+  <hint l="en">shop editor: buys, markups, hours, stock</hint>
+  <hint l="ru">редактор магазинов: скупка, наценки, часы, товар</hint>
+  <hint l="ua">редактор крамниць: скупка, націнки, години, товар</hint>
+  <level>102</level>
+  <name l="en">shopedit</name>
+  <name l="ru"></name>
+  <name l="ua"></name>
+  <position>dead</position>
+</Command>

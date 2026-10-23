@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill type="GenericSkill">
+  <beats>16</beats>
+  <classes>
+    <node name="samurai">
+      <level>28</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <command type="DefaultSkillCommand">
+    <argtype>undef</argtype>
+    <cat>class</cat>
+    <hint l="en">(samurai) draw and cut in one motion, opening a fight</hint>
+    <hint l="ru">(самураи) выхватить меч и ударить одним движением, начиная бой</hint>
+    <hint l="ua">(самураї) вихопити меч і вдарити одним рухом, починаючи бій</hint>
+    <name l="en">iaido</name>
+    <name l="ru">иайдо</name>
+    <name l="ua">іайдо</name>
+    <order>never</order>
+    <position>stand</position>
+  </command>
+  <dammsg mg="m">удар из ножен</dammsg>
+  <grants registry="skill">'bushido'</grants>
+  <group registry="skillGroup">fightmaster</group>
+  <help id="5151" level="-1" type="SkillHelp">
+    <text l="en">Iaido is the art of drawing the sword and cutting in one motion. It needs a sword in hand and does not work while the samurai bears {hh5065shame{x.
+When someone attacks a samurai who is not yet fighting, his blade may leave the sheath first: the enemy's blow never lands, and the samurai's cut does two to three times the harm of an ordinary one. It happens at most once in a few moments. A samurai who lies down or sits by his own will keeps a hand on the hilt and is even harder to catch off guard; one put to sleep by magic or lost in the trance of {hh211misogi{x is not.
+%FMT% *%CMD% _target_*: the same cut as the samurai's own opener against someone who is not fighting him yet. A failed draw turns into an ordinary first blow and a short stumble.</text>
+    <text l="ru">Иайдо -- искусство выхватить меч и ударить одним движением. Нужен меч в руке, а под {hh5065позором{x иайдо не работает.
+Когда на самурая, еще не вступившего в бой, нападают, его клинок может покинуть ножны первым: удар врага так и не достигает цели, а удар самурая вдвое-втрое сильнее обычного. Чаще раза в несколько мгновений так не выйдет. Самурай, что лег или сел по своей воле, держит руку на рукояти, и застать его врасплох еще труднее; усыпленного магией или погруженного в транс {hh211мисоги{x это не касается.
+%FMT% *%CMD% _цель_*: тот же удар как свой первый выпад против того, кто с самураем еще не бьется. Неудачный выхват превращается в обычный первый удар и короткую заминку.</text>
+    <text l="ua">Іайдо -- мистецтво вихопити меч і вдарити одним рухом. Потрібен меч у руці, а під {hh5065ганьбою{x іайдо не працює.
+Коли на самурая, що ще не вступив у бій, нападають, його клинок може покинути піхви першим: удар ворога так і не сягає цілі, а удар самурая вдвічі-втричі сильніший за звичайний. Частіше ніж раз на кілька миттєвостей так не вийде. Самурай, що ліг чи сів з власної волі, тримає руку на руківʼї, і заскочити його зненацька ще важче; приспаного магією чи зануреного в транс {hh211місоґі{x це не стосується.
+%FMT% *%CMD% _ціль_*: той самий удар як власний перший випад проти того, хто з самураєм ще не бʼється. Невдалий вихват обертається звичайним першим ударом і короткою заминкою.</text>
+  </help>
+  <move>30</move>
+  <name l="en">iaido</name>
+  <name l="ru">иайдо</name>
+  <name l="ua">іайдо</name>
+</skill>

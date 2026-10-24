@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<behavior type="SetBehavior">
+  <cmd></cmd>
+  <description l="en">{hh990Wear{x it to assemble the {hh5154Grove Warden set{x.</description>
+  <description l="ru">{hh990Надень{x, чтобы собрать {hh5154набор 'Страж Рощи'{x.</description>
+  <description l="ua">{hh990Одягни{x, щоб зібрати {hh5154набір 'Сторож Гаю'{x.</description>
+  <help id="5154" level="-1" type="BehaviorHelp">
+    <extra l="en">set grove warden carpenter pieces collection rootstride heart grove firefly watch lantern wisp boots</extra>
+    <extra l="ru">набор стража рощи плотник части комплект страж рощи корневая тропа сердце рощи светлячковый дозор фонарь огонек сапоги</extra>
+    <extra l="ua">набір сторожа гаю тесля частини комплект сторож гаю коренева стежка серце гаю світлякова варта ліхтар вогник чоботи</extra>
+    <text l="en">This item is part of the Grove Warden set -- a matched set of 3 pieces made by a {hh230carpenter{x: the boots "Rootstride", the wisp "Heart of the Grove" and the lantern "Firefly Watch". Collect and wear all 3 together to assemble the set; once complete it grants its bonus, and now and then the lantern's light calls roots up out of the ground to bind your foe, so that it loses its next round. Wear only some pieces and you gain nothing extra.</text>
+    <text l="ru">Эта вещь -- часть набора 'Страж Рощи' из 3 предметов, которые мастерит {hh230плотник{x: сапоги "Корневая Тропа", огонек "Сердце Рощи" и фонарь "Светлячковый Дозор". Собери и надень все 3 вместе, чтобы собрать набор; собранный целиком, он дает свой бонус, а иногда на свет фонаря из-под земли рвутся корни и оплетают противника, и тот пропускает следующий раунд. Наденешь лишь часть -- ничего сверх не получишь.</text>
+    <text l="ua">Ця річ -- частина набору 'Сторож Гаю' із 3 предметів, які майструє {hh230тесля{x: чоботи "Коренева Стежка", вогник "Серце Гаю" і ліхтар "Світлякова Варта". Збери й надінь усі 3 разом, щоб зібрати набір; зібраний цілком, він дає свій бонус, а часом на світло ліхтаря з-під землі рвуться корені й обплітають супротивника, і той пропускає наступний раунд. Надінеш лише частину -- нічого понад не отримаєш.</text>
+    <title l="en">{CSets:{x Grove Warden</title>
+    <title l="ru">{CНаборы: {xСтраж Рощи</title>
+    <title l="ua">{CНабори:{x Сторож Гаю</title>
+  </help>
+  <id>117</id>
+  <nameEn>Grove Warden</nameEn>
+  <nameRus>Страж Рощи</nameRus>
+  <nameUa>Сторож Гаю</nameUa>
+  <props>{&quot;double_neck&quot;:false,&quot;double_wrist&quot;:false,&quot;max_level&quot;:110,&quot;total_count&quot;:3}
+</props>
+  <affects>
+    <node>
+      <apply to="hit">100</apply>
+      <bits table="affect_flags">haste regeneration</bits>
+    </node>
+    <node>
+      <apply to="hitroll">5</apply>
+      <bits table="res_flags">negative light</bits>
+    </node>
+    <node>
+      <apply to="damroll">5</apply>
+    </node>
+    <node>
+      <apply to="dex">3</apply>
+    </node>
+    <node>
+      <apply to="str">2</apply>
+    </node>
+    <node>
+      <apply to="saves">-8</apply>
+    </node>
+  </affects>
+  <msgComplete l="en">{GThe lantern flares, the wisp stirs, the roots answer your step: the grove keeps watch through you.{x</msgComplete>
+  <msgComplete l="ru">{GФонарь вспыхивает, огонек оживает, корни отвечают на твой шаг: роща несет дозор через тебя.{x</msgComplete>
+  <msgComplete l="ua">{GЛіхтар спалахує, вогник оживає, корені відповідають на твій крок: гай вартує через тебе.{x</msgComplete>
+  <target>obj</target>
+</behavior>

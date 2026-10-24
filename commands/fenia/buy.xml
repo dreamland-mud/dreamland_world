@@ -35,6 +35,12 @@ Every item has a =price=. It follows the item's level, its magic, its material a
 %FFF% *value* *all*
 %FFF% *value* *junk*
 Ask the vendor how much they will pay for each item in your inventory or for a specific one.
+
+%FMT% *list* _vendor_
+%FFF% *sell* _item_ *to* _vendor_
+%FFF% *buy* _item_ *from* _vendor_
+%FFF% *value* _item_ *from* _vendor_
+When a room has several vendors, they share one list, numbered straight through, and *list* _vendor_ shows only that vendor's goods. To deal with one of them, name the vendor after the item: *sell sword to hans*, *buy sword from hans*, *value sword from hans*. Without a name, *sell* goes to whoever pays the most and *value* shows every offer, best first.
 </text>
     <text l="ru">В мире есть огромное количество магазинов, которые продают всякую всячину -- от {hh15питомцев{x до {hh122случайного оружия{x. У каждого продавца есть только определенный набор {hh65типов предметов{x, которые они продают или покупают. Некоторые магазины работают почти круглосуточно, а некоторые имеют только ограниченные часы работы. Рядом с именем продавцов отображается аура ({GПродавец{x).
 
@@ -66,6 +72,12 @@ Ask the vendor how much they will pay for each item in your inventory or for a s
 %FFF% *цена* *все*
 %FFF% *цена* *хлам*
 Спросить у продавца, сколько он заплатит за каждую вещь в инвентаре или за конкретную.
+
+%FMT% *список* _продавец_
+%FFF% *продать* _предмет_ *у* _продавца_
+%FFF% *купить* _предмет_ *у* _продавца_
+%FFF% *цена* _предмет_ *у* _продавца_
+Если в комнате несколько продавцов, у них один общий список со сквозными номерами, а *список* _продавец_ покажет товар только этого продавца. Чтобы иметь дело с одним из них, назови его после предмета: *(sell sword to hans,продать меч у ганса)*, *(buy sword from hans,купить меч у ганса)*, *(value sword from hans,цена меч у ганса)*. Без имени *продать* отдаст вещь тому, кто больше заплатит, а *цена* покажет все предложения, начиная с лучшего.
 </text>
     <text l="ua">У світі є величезна кількість магазинів, які продають різні речі -- від {hh15питомців{x до {hh122випадкової зброї{x. У кожного продавця є лише певний набір {hh65типів предметів{x, які вони продають або купують. Деякі магазини працюють майже цілодобово, а деякі мають тільки обмежені години роботи. Біля імені продавців відображається аура ({GПродавець{x).
 
@@ -97,6 +109,12 @@ Ask the vendor how much they will pay for each item in your inventory or for a s
 %FFF% *ціна* *все*
 %FFF% *ціна* *мотлох*
 Запитати у продавця, скільки він заплатить за кожен предмет в інвентарі або за конкретний.
+
+%FMT% *список* _продавець_
+%FFF% *продати* _предмет_ *у* _продавця_
+%FFF% *купити* _предмет_ *у* _продавця_
+%FFF% *ціна* _предмет_ *у* _продавця_
+Якщо в кімнаті кілька продавців, у них один спільний список з наскрізними номерами, а *список* _продавець_ покаже товар лише цього продавця. Щоб мати справу з одним із них, назви його після предмета: *(sell sword to hans,продати меч у ганса)*, *(buy sword from hans,купити меч у ганса)*, *(value sword from hans,ціна меч у ганса)*. Без імені *продати* віддасть річ тому, хто більше заплатить, а *ціна* покаже всі пропозиції, починаючи з найкращої.
 </text>
     <title l="en">{CEconomy: {xbuying and selling, working with shops</title>
     <title l="ru">{CЭкономика: {xкупля-продажа, работа с магазинами</title>

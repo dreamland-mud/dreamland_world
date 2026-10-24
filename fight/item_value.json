@@ -711,7 +711,7 @@
   }
  },
  "grant_skill": {
-  "_doc": "Item-granted skills (grantskills behavior), priced per character by the gear sage (characterwrapper.cpp ga_grantsValue): PvE + pvp_weight x PvP + QoL per skill, 0 when the wearer already has the skill or its align/ethos refuses the wearer. pvp_weight: share of PvP worth counted (0 for clan Flowers). nature_share: share of fights in nature rooms (forest fighting). active_use: share of the time a granted nuke is actually cast; a granted nuke is priced by what it beats the char's own best nuke by, nuke_floor when it doesn't (capped at the grant's full price); own_nuke_skip: offensive spells with a tier that are no per-round nuke (no direct damage, or tesla retribution's one shot), never counted as an own nuke; damaging melee skills (bash, kick, grab, crush, smash, tail, claw, trip) count as an own nuke too, melee_nuke_land: per-skill share of uses that land (default 0.6); mana_share: share of the mana pool spent per fight; fight_rounds: rounds per fight by level. crit_*: critical strike bonus per proc and the worth of its blind/stun at the reference proc chance. blink_pvp_share: the most of a duel's damage blink is credited with removing [melee, caster]. nuke_cond, nuke_pvp_share, buff_uptime, pet_round_share: per-skill knobs. fixed: [PvE melee, PvE caster, PvP melee, PvP caster, QoL] per skill, x learned/100. ref_*: the reference player of the char-less base value. docs/plans/grantskills-pricing.md.",
+  "_doc": "Item-granted skills (grantskills behavior), priced per character by the gear sage (characterwrapper.cpp ga_grantsValue): PvE + pvp_weight x PvP + QoL per skill, 0 when the wearer already has the skill or its align/ethos refuses the wearer. pvp_weight: share of PvP worth counted (0 for clan Flowers). nature_share: share of fights in nature rooms (forest fighting). active_use: share of the time a granted nuke is actually cast; a granted nuke is priced by what it beats the char's own best nuke by, nuke_floor when it doesn't (capped at the grant's full price); own_nuke_skip: offensive spells with a tier that are no per-round nuke (no direct damage, or tesla retribution's one shot), never counted as an own nuke; damaging melee skills (bash, kick, grab, crush, smash, tail, claw, trip) count as an own nuke too, damage plus control, PvE only (dirt kicking is not: one blind per fight, a nuke never displaces it): melee_nuke_land: per-skill share of uses that land (default 0.6); melee_nuke_control: seconds of lag a landed use puts on the victim (knockdown wait, smash daze + wait); opp_active_share: share of a mob's damage from spells by level, the part victim lag denies: 1 - melee share m of the mob census (scripts/item-combat-model.py, docs/plans/weapon-flag-control-model.md); spells only, mob skills and control_resist (tier 1-3 mobs shed 1/2-3/4 of wait) not counted, they roughly cancel; mana_share: share of the mana pool spent per fight; fight_rounds: rounds per fight by level. crit_*: critical strike bonus per proc and the worth of its blind/stun at the reference proc chance. blink_pvp_share: the most of a duel's damage blink is credited with removing [melee, caster]. nuke_cond, nuke_pvp_share, buff_uptime, pet_round_share: per-skill knobs. fixed: [PvE melee, PvE caster, PvP melee, PvP caster, QoL] per skill, x learned/100. ref_*: the reference player of the char-less base value. docs/plans/grantskills-pricing.md.",
   "pvp_weight": 0.25,
   "nature_share": 0.25,
   "active_use": 0.5,
@@ -744,6 +744,20 @@
    "tail": 0.6,
    "claw": 0.6,
    "trip": 0.6
+  },
+  "melee_nuke_control": {
+   "bash": 2.5,
+   "crush": 2.5,
+   "grab": 1,
+   "smash": 3,
+   "tail": 2,
+   "trip": 1.5
+  },
+  "opp_active_share": {
+   "20": 0.085,
+   "40": 0.145,
+   "60": 0.2,
+   "90": 0.165
   },
   "own_nuke_skip": [
    "anathema",

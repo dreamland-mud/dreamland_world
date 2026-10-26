@@ -1,5 +1,16 @@
 {
  "_doc": "Shared random-item affix pool, armor side (generated from docs/plans drafts 2026-10-02). Affixes are priced by the one item model (item_value.json, docs/systems/ITEM_POWER.md) at the item level. price_melee/price_caster (centi-M, 100 = one item measure) stay only on armor_stats, for Fenia craft/armor budgetStats. items/slots/tier as in weapon_affixes.json; tier = best-tier floor (1 legendary only .. 4 uncommon+). Stats with 'unit' scale in measure rolls (getMeasure: level / slot factor): value = unit * rolls. ac unit is an estimate (AC is weak, Kit). Tier caps for M-priced items: weapon_tiers max_affixes_m (distinct affixes, stacks count once) and max_negatives_m.",
+ "_groups": {
+  "_doc": "Weight groups: the members of a group (an affix's or its section's 'group') share the group's weight, so a section of many values weighs like a few affixes, not one each (Kit 2026-10-26). Value = total weight in affixes.",
+  "penalty": 6,
+  "vulns": 0.6,
+  "resists": 3,
+  "immunes": 2,
+  "proc": 1.5,
+  "senses": 1.5,
+  "skill_group": 1.5,
+  "worn_buff": 3
+ },
  "armor_stats": {
   "conflictsWith": "same_value",
   "values": [
@@ -7,8 +18,8 @@
     "value": "hit",
     "stack": 3,
     "slots": {
-     "body": 3,
-     "legs": 2
+     "body": 1.5,
+     "legs": 1.25
     },
     "price_melee": 47,
     "price_caster": 39,
@@ -32,8 +43,8 @@
     "value": "mana",
     "stack": 3,
     "slots": {
-     "head": 3,
-     "arms": 2
+     "head": 1.5,
+     "arms": 1.25
     },
     "price_melee": 5,
     "price_caster": 20,
@@ -60,8 +71,8 @@
     "value": "move",
     "stack": 2,
     "slots": {
-     "feet": 3,
-     "legs": 2
+     "feet": 1.5,
+     "legs": 1.25
     },
     "price_melee": 5,
     "price_caster": 4,
@@ -91,7 +102,7 @@
     "value": "hitroll",
     "stack": 2,
     "slots": {
-     "hands": 3
+     "hands": 1.5
     },
     "price_melee": 28,
     "price_caster": 8,
@@ -117,8 +128,8 @@
     "value": "damroll",
     "stack": 2,
     "slots": {
-     "hands": 3,
-     "arms": 2
+     "hands": 1.5,
+     "arms": 1.25
     },
     "price_melee": 56,
     "price_caster": 24,
@@ -145,21 +156,24 @@
     "stack": 2,
     "price_melee": -28,
     "price_caster": -24,
-    "unit": -6
+    "unit": -6,
+    "group": "penalty"
    },
    {
     "value": "-mana",
     "stack": 2,
     "price_melee": -3,
     "price_caster": -12,
-    "unit": -6
+    "unit": -6,
+    "group": "penalty"
    },
    {
     "value": "-hitroll",
     "stack": 2,
     "price_melee": -28,
     "price_caster": -8,
-    "unit": -1
+    "unit": -1,
+    "group": "penalty"
    },
    {
     "value": "-damroll",
@@ -170,14 +184,16 @@
     "conflicts": [
      "dr",
      "-dr"
-    ]
+    ],
+    "group": "penalty"
    },
    {
     "value": "-move",
     "stack": 2,
     "price_melee": -5,
     "price_caster": -2,
-    "unit": -10
+    "unit": -10,
+    "group": "penalty"
    }
   ],
   "items": "both"
@@ -190,9 +206,9 @@
     "align_bonus": "good",
     "extra": "bless",
     "slots": {
-     "head": 2,
-     "arms": 2,
-     "shield": 2
+     "head": 1.25,
+     "arms": 1.25,
+     "shield": 1.25
     },
     "nouns": [
      "охраны",
@@ -219,13 +235,14 @@
    {
     "value": "-saves",
     "stack": 2,
-    "unit": 1
+    "unit": 1,
+    "group": "penalty"
    },
    {
     "value": "saving_spell",
     "stack": 2,
     "slots": {
-     "head": 2
+     "head": 1.25
     },
     "adjectives": [
      "заговоренн(ое,ый,ая2,ые)"
@@ -247,8 +264,8 @@
     "value": "saving_breath",
     "stack": 2,
     "slots": {
-     "shield": 3,
-     "body": 2
+     "shield": 1.5,
+     "body": 1.25
     },
     "nouns": [
      "драконоборца"
@@ -271,8 +288,8 @@
     "stack": 3,
     "align_bonus": "good",
     "slots": {
-     "body": 3,
-     "shield": 3
+     "body": 1.5,
+     "shield": 1.5
     },
     "nouns": [
      "брони"
@@ -302,20 +319,15 @@
     "value": "-ac",
     "stack": 2,
     "unit": 10,
-    "pick": {
-     "all": {
-      "40": 1,
-      "41": 0
-     }
-    }
+    "group": "penalty"
    },
    {
     "value": "heal_gain",
     "stack": 2,
     "mod": 25,
     "slots": {
-     "body": 2,
-     "legs": 2
+     "body": 1.25,
+     "legs": 1.25
     },
     "nouns": [
      "исцеления"
@@ -337,7 +349,7 @@
     "stack": 2,
     "mod": 25,
     "slots": {
-     "head": 2
+     "head": 1.25
     },
     "nouns": [
      "медитации"
@@ -359,7 +371,7 @@
     "mod": -1,
     "tier": 2,
     "slots": {
-     "hands": 3
+     "hands": 1.5
     },
     "nouns": [
      "проворства"
@@ -382,7 +394,7 @@
     "extra": "magic",
     "tier": 2,
     "slots": {
-     "head": 3
+     "head": 1.5
     },
     "nouns": [
      "колдовства"
@@ -411,25 +423,34 @@
     ],
     "nouns_ua": [
      "майстерності"
-    ]
+    ],
+    "pick": {
+     "all": {
+      "1": 0.3
+     }
+    }
    },
    {
     "value": "-heal_gain",
     "stack": 2,
-    "mod": -25
+    "mod": -25,
+    "group": "penalty"
    },
    {
     "value": "-mana_gain",
     "stack": 2,
-    "mod": -25
+    "mod": -25,
+    "group": "penalty"
    },
    {
     "value": "+beats",
-    "mod": 1
+    "mod": 1,
+    "group": "penalty"
    },
    {
     "value": "-slevel",
-    "mod": -1
+    "mod": -1,
+    "group": "penalty"
    }
   ],
   "items": "both"
@@ -628,6 +649,171 @@
       "21": 0.25
      }
     }
+   },
+   {
+    "value": "pack_titan",
+    "stack": 2,
+    "affects": [
+     {
+      "apply": "str",
+      "mod": 2
+     },
+     {
+      "apply": "con",
+      "mod": 2
+     }
+    ],
+    "pick": {
+     "caster": {
+      "1": 0
+     },
+     "all": {
+      "50": 1,
+      "51": 0
+     }
+    },
+    "nouns": [
+     "титана"
+    ],
+    "nouns_en": [
+     "of the titan"
+    ],
+    "nouns_ua": [
+     "титана"
+    ]
+   },
+   {
+    "value": "pack_warrior",
+    "stack": 2,
+    "affects": [
+     {
+      "apply": "hitroll",
+      "unit": 1
+     },
+     {
+      "apply": "damroll",
+      "unit": 1
+     }
+    ],
+    "weapon_tier": 3,
+    "pick": {
+     "caster": {
+      "20": 1,
+      "40": 0.25
+     }
+    },
+    "nouns": [
+     "воителя"
+    ],
+    "nouns_en": [
+     "of the warrior"
+    ],
+    "nouns_ua": [
+     "звитяжця"
+    ]
+   },
+   {
+    "value": "pack_mystic",
+    "stack": 2,
+    "affects": [
+     {
+      "apply": "int",
+      "mod": 2
+     },
+     {
+      "apply": "mana",
+      "unit": 10
+     }
+    ],
+    "pick": {
+     "melee": {
+      "1": 0.25,
+      "50": 0.25,
+      "51": 0
+     },
+     "all": {
+      "50": 1,
+      "51": 0
+     }
+    },
+    "nouns": [
+     "мистика"
+    ],
+    "nouns_en": [
+     "of the mystic"
+    ],
+    "nouns_ua": [
+     "містика"
+    ]
+   },
+   {
+    "value": "pack_vigor",
+    "stack": 2,
+    "affects": [
+     {
+      "apply": "hit",
+      "unit": 6
+     },
+     {
+      "apply": "move",
+      "unit": 10
+     }
+    ],
+    "nouns": [
+     "бодрости"
+    ],
+    "nouns_en": [
+     "of vigor"
+    ],
+    "nouns_ua": [
+     "бадьорості"
+    ]
+   },
+   {
+    "value": "pack_aegis",
+    "stack": 2,
+    "affects": [
+     {
+      "apply": "saves",
+      "unit": -1
+     },
+     {
+      "apply": "saving_breath",
+      "unit": -1
+     }
+    ],
+    "nouns": [
+     "эгиды"
+    ],
+    "nouns_en": [
+     "of the aegis"
+    ],
+    "nouns_ua": [
+     "егіди"
+    ]
+   },
+   {
+    "value": "pack_regrowth",
+    "stack": 2,
+    "affects": [
+     {
+      "apply": "hit",
+      "unit": 6
+     },
+     {
+      "apply": "heal_gain",
+      "mod": 25
+     }
+    ],
+    "nouns": [
+     "обновления"
+    ],
+    "nouns_en": [
+     "of renewal"
+    ],
+    "nouns_ua": [
+     "оновлення"
+    ]
    }
   ],
   "items": "both"
@@ -757,8 +943,8 @@
     "value": "protective",
     "mod": 1,
     "slots": {
-     "shield": 3,
-     "body": 2
+     "shield": 1.5,
+     "body": 1.25
     },
     "nouns": [
      "стража"
@@ -774,7 +960,7 @@
     "value": "healing",
     "mod": 1,
     "slots": {
-     "head": 2
+     "head": 1.25
     },
     "nouns": [
      "лекаря"
@@ -790,7 +976,7 @@
     "value": "combat",
     "mod": 1,
     "slots": {
-     "hands": 2
+     "hands": 1.25
     },
     "nouns": [
      "бойца"
@@ -858,7 +1044,7 @@
     "value": "detection",
     "mod": 1,
     "slots": {
-     "head": 3
+     "head": 1.5
     },
     "nouns": [
      "провидца"
@@ -877,7 +1063,8 @@
     "39": 0,
     "40": 1
    }
-  }
+  },
+  "group": "skill_group"
  },
  "player": {
   "needs_player": true,
@@ -908,7 +1095,7 @@
     "tier": 3,
     "stack": 2,
     "slots": {
-     "hands": 2
+     "hands": 1.25
     },
     "nouns": [
      "сноровки"
@@ -918,6 +1105,39 @@
     ],
     "nouns_ua": [
      "вправності"
+    ]
+   },
+   {
+    "value": "-learned",
+    "mod": -10,
+    "group": "penalty",
+    "points": [
+     -20,
+     -20
+    ]
+   },
+   {
+    "value": "ancient_tongue",
+    "tier": 2,
+    "mod": 50,
+    "skills": [
+     "khuzdul",
+     "ahenn",
+     "arcadian",
+     "quenia"
+    ],
+    "points": [
+     107,
+     127
+    ],
+    "nouns": [
+     "древних наречий"
+    ],
+    "nouns_en": [
+     "of ancient tongues"
+    ],
+    "nouns_ua": [
+     "давніх мов"
     ]
    }
   ],
@@ -1014,7 +1234,8 @@
     ],
     "adjectives_ua": [
      "проклятий"
-    ]
+    ],
+    "group": "penalty"
    },
    {
     "value": "bless",
@@ -1032,7 +1253,16 @@
     "value": "burn_proof"
    },
    {
-    "value": "melt_drop"
+    "value": "melt_drop",
+    "group": "penalty"
+   },
+   {
+    "value": "rot_death",
+    "group": "penalty",
+    "points": [
+     -15,
+     -15
+    ]
    }
   ],
   "items": "both"
@@ -1262,14 +1492,18 @@
     ],
     "adjectives_ua": [
      "антимагічний"
+    ],
+    "deny": [
+     "hands",
+     "feet"
     ]
    },
    {
     "value": "weapon",
     "tier": 1,
     "slots": {
-     "body": 2,
-     "shield": 3,
+     "body": 1.25,
+     "shield": 1.5,
      "head": 0,
      "arms": 0,
      "hands": 0,
@@ -1298,6 +1532,14 @@
     ],
     "adjectives_ua": [
      "ударостійкий"
+    ],
+    "deny": [
+     "finger",
+     "ears",
+     "neck",
+     "wrist",
+     "face",
+     "float"
     ]
    },
    {
@@ -1311,6 +1553,14 @@
     ],
     "adjectives_ua": [
      "стрілостійкий"
+    ],
+    "deny": [
+     "finger",
+     "ears",
+     "neck",
+     "wrist",
+     "face",
+     "float"
     ]
    },
    {
@@ -1324,10 +1574,19 @@
     ],
     "adjectives_ua": [
      "непрорубний"
+    ],
+    "deny": [
+     "finger",
+     "ears",
+     "neck",
+     "wrist",
+     "face",
+     "float"
     ]
    }
   ],
-  "items": "armor"
+  "items": "armor",
+  "group": "resists"
  },
  "vulns": {
   "values": [
@@ -1374,7 +1633,8 @@
     "value": "slash"
    }
   ],
-  "items": "armor"
+  "items": "armor",
+  "group": "vulns"
  },
  "immunes": {
   "tier": 1,
@@ -1557,11 +1817,18 @@
     ]
    }
   ],
-  "items": "armor"
+  "items": "armor",
+  "group": "immunes",
+  "deny": [
+   "arms",
+   "hands",
+   "legs",
+   "feet"
+  ]
  },
  "senses": {
   "slots": {
-   "head": 4
+   "head": 1.75
   },
   "values": [
    {
@@ -1823,7 +2090,8 @@
     }
    }
   ],
-  "items": "armor"
+  "items": "armor",
+  "group": "senses"
  },
  "affects_with_bits": {
   "values": [
@@ -1832,8 +2100,8 @@
     "extra": "noenchant magic",
     "tier": 2,
     "slots": {
-     "feet": 3,
-     "legs": 2
+     "feet": 1.5,
+     "legs": 1.25
     },
     "nouns": [
      "скорости",
@@ -1856,6 +2124,13 @@
     "top": true,
     "conflicts": [
      "slow"
+    ],
+    "deny": [
+     "finger",
+     "ears",
+     "neck",
+     "face",
+     "wrist"
     ]
    },
    {
@@ -1934,7 +2209,7 @@
     "extra": "noenchant magic",
     "tier": 2,
     "slots": {
-     "body": 2
+     "body": 1.25
     },
     "nouns": [
      "регенерации",
@@ -1981,8 +2256,8 @@
     "value": "flying",
     "tier": 3,
     "slots": {
-     "feet": 4,
-     "arms": 2
+     "feet": 1.75,
+     "arms": 1.25
     },
     "adjectives": [
      "крылат(ое,ый,ая2,ые)"
@@ -1998,13 +2273,20 @@
       "20": 1,
       "40": 0
      }
-    }
+    },
+    "deny": [
+     "finger",
+     "ears",
+     "neck",
+     "face",
+     "wrist"
+    ]
    },
    {
     "value": "sneak",
     "tier": 3,
     "slots": {
-     "feet": 4
+     "feet": 1.75
     },
     "adjectives": [
      "бесшумн(ое,ый,ая2,ые)"
@@ -2025,13 +2307,20 @@
      "vampire": {
       "1": 0
      }
-    }
+    },
+    "deny": [
+     "finger",
+     "ears",
+     "neck",
+     "face",
+     "wrist"
+    ]
    },
    {
     "value": "hide",
     "tier": 3,
     "slots": {
-     "arms": 3
+     "arms": 1.5
     },
     "nouns": [
      "теней"
@@ -2058,7 +2347,7 @@
     "value": "swim",
     "tier": 4,
     "slots": {
-     "feet": 2
+     "feet": 1.25
     },
     "nouns": [
      "выдры"
@@ -2068,6 +2357,13 @@
     ],
     "nouns_ua": [
      "видри"
+    ],
+    "deny": [
+     "finger",
+     "ears",
+     "neck",
+     "face",
+     "wrist"
     ]
    },
    {
@@ -2080,7 +2376,8 @@
     ],
     "adjectives_ua": [
      "мерехтливий"
-    ]
+    ],
+    "group": "penalty"
    },
    {
     "value": "curse",
@@ -2092,16 +2389,19 @@
     ],
     "nouns_ua": [
      "вигнанця"
-    ]
+    ],
+    "group": "penalty"
    },
    {
     "value": "slow",
     "conflicts": [
      "haste"
-    ]
+    ],
+    "group": "penalty"
    },
    {
-    "value": "weaken"
+    "value": "weaken",
+    "group": "penalty"
    }
   ],
   "items": "both"
@@ -2113,8 +2413,8 @@
     "value": "sanctuary",
     "tier": 1,
     "slots": {
-     "body": 3,
-     "arms": 2
+     "body": 1.5,
+     "arms": 1.25
     },
     "nouns": [
      "святилища"
@@ -2323,7 +2623,7 @@
     "value": "spell resistance",
     "tier": 1,
     "slots": {
-     "head": 3
+     "head": 1.5
     },
     "nouns": [
      "отпора заклятий"
@@ -2428,8 +2728,8 @@
     "value": "enhanced armor",
     "tier": 2,
     "slots": {
-     "body": 3,
-     "shield": 3
+     "body": 1.5,
+     "shield": 1.5
     },
     "nouns": [
      "твердыни"
@@ -2579,7 +2879,7 @@
     "value": "benediction",
     "tier": 2,
     "slots": {
-     "head": 2
+     "head": 1.25
     },
     "nouns": [
      "благодати"
@@ -2614,8 +2914,8 @@
     "value": "dragon strength",
     "tier": 2,
     "slots": {
-     "arms": 2,
-     "hands": 2
+     "arms": 1.25,
+     "hands": 1.25
     },
     "nouns": [
      "дракона"
@@ -2825,7 +3125,7 @@
     "value": "regeneration",
     "tier": 3,
     "slots": {
-     "body": 2
+     "body": 1.25
     },
     "nouns": [
      "регенерации",
@@ -2987,7 +3287,7 @@
      "flying"
     ],
     "slots": {
-     "feet": 3
+     "feet": 1.5
     },
     "nouns": [
      "ветра"
@@ -3026,16 +3326,24 @@
     "have_bits": {
      "table": "affect_flags",
      "bits": "flying"
-    }
+    },
+    "deny": [
+     "finger",
+     "ears",
+     "neck",
+     "face",
+     "wrist"
+    ]
    }
   ],
-  "items": "armor"
+  "items": "armor",
+  "group": "worn_buff"
  },
  "proc": {
   "conflictsWith": "same_section",
   "slots": {
-   "hands": 3,
-   "shield": 3
+   "hands": 1.5,
+   "shield": 1.5
   },
   "values": [
    {
@@ -3228,7 +3536,12 @@
     ]
    }
   ],
-  "items": "armor"
+  "items": "armor",
+  "group": "proc",
+  "deny": [
+   "ears",
+   "face"
+  ]
  },
  "signature": {
   "tier": 1,
@@ -3515,7 +3828,8 @@
       "50": 1,
       "51": 0
      }
-    }
+    },
+    "group": "penalty"
    },
    {
     "value": "-dex",
@@ -3526,7 +3840,8 @@
       "50": 1,
       "51": 0
      }
-    }
+    },
+    "group": "penalty"
    },
    {
     "value": "-con",
@@ -3537,7 +3852,8 @@
       "50": 1,
       "51": 0
      }
-    }
+    },
+    "group": "penalty"
    },
    {
     "value": "-int",
@@ -3548,7 +3864,8 @@
       "50": 1,
       "51": 0
      }
-    }
+    },
+    "group": "penalty"
    },
    {
     "value": "-wis",
@@ -3559,7 +3876,8 @@
       "50": 1,
       "51": 0
      }
-    }
+    },
+    "group": "penalty"
    }
   ],
   "items": "both"
@@ -4021,5 +4339,46 @@
   }
  },
  "_pick_doc": "pick (one item model, Kit 2026-10-04): {key: {level: weight multiplier}} on an affix or a section, interpolated at the item level and clamped at the ends. Key lookup: the killer's class (druid, paladin...), then profile (caster / hybrid / melee), then 'all'; the affix's pick before the section's. 0 = never rolls. Model only (measure.item_model). have / have_bits: the killer already has it (worn gear or active affect) -> it does not roll.",
- "_top_doc": "Top effects (\"top\": true -- sanctuary family, haste, resist weapon): at most measure.top_max per item, the second at measure.top_repeat_weight (Kit 2026-10-04: two max, very rarely). anti_good/anti_evil/evil are personalization, price 0, not a minus."
+ "_top_doc": "Top effects (\"top\": true -- sanctuary family, haste, resist weapon): at most measure.top_max per item, the second at measure.top_repeat_weight (Kit 2026-10-04: two max, very rarely). anti_good/anti_evil/evil are personalization, price 0, not a minus.",
+ "penalty": {
+  "_doc": "Penalties the model has no weight for, hand-priced ('points'): smaller size, older age, a heavier piece (weight_pct of its model weight).",
+  "items": "both",
+  "group": "penalty",
+  "values": [
+   {
+    "value": "-size",
+    "affects": [
+     {
+      "apply": "size",
+      "mod": -1
+     }
+    ],
+    "points": [
+     -20,
+     -20
+    ]
+   },
+   {
+    "value": "+age",
+    "affects": [
+     {
+      "apply": "age",
+      "mod": 10
+     }
+    ],
+    "points": [
+     -5,
+     -5
+    ]
+   },
+   {
+    "value": "+weight",
+    "weight_pct": 175,
+    "points": [
+     -8,
+     -8
+    ]
+   }
+  ]
+ }
 }

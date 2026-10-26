@@ -1451,6 +1451,110 @@
     "nouns_ua": [
      "незламного розуму"
     ]
+   },
+   {
+    "value": "fire",
+    "needs_boss": true,
+    "nouns": [
+     "огнеходца"
+    ],
+    "nouns_en": [
+     "of the firewalker"
+    ],
+    "nouns_ua": [
+     "вогнехода"
+    ]
+   },
+   {
+    "value": "cold",
+    "needs_boss": true,
+    "nouns": [
+     "вечной мерзлоты"
+    ],
+    "nouns_en": [
+     "of the permafrost"
+    ],
+    "nouns_ua": [
+     "вічної мерзлоти"
+    ]
+   },
+   {
+    "value": "lightning",
+    "needs_boss": true,
+    "nouns": [
+     "громовержца"
+    ],
+    "nouns_en": [
+     "of the thunderer"
+    ],
+    "nouns_ua": [
+     "громовержця"
+    ]
+   },
+   {
+    "value": "acid",
+    "needs_boss": true,
+    "nouns": [
+     "кислотных топей"
+    ],
+    "nouns_en": [
+     "of the acid fens"
+    ],
+    "nouns_ua": [
+     "кислотних боліт"
+    ]
+   },
+   {
+    "value": "energy",
+    "needs_boss": true,
+    "nouns": [
+     "звездного горна"
+    ],
+    "nouns_en": [
+     "of the star forge"
+    ],
+    "nouns_ua": [
+     "зоряного горна"
+    ]
+   },
+   {
+    "value": "negative",
+    "needs_boss": true,
+    "nouns": [
+     "бессмертного"
+    ],
+    "nouns_en": [
+     "of the undying"
+    ],
+    "nouns_ua": [
+     "безсмертного"
+    ]
+   },
+   {
+    "value": "holy",
+    "needs_boss": true,
+    "nouns": [
+     "падшего ангела"
+    ],
+    "nouns_en": [
+     "of the fallen angel"
+    ],
+    "nouns_ua": [
+     "занепалого ангела"
+    ]
+   },
+   {
+    "value": "light",
+    "needs_boss": true,
+    "nouns": [
+     "слепого пророка"
+    ],
+    "nouns_en": [
+     "of the blind seer"
+    ],
+    "nouns_ua": [
+     "сліпого пророка"
+    ]
    }
   ],
   "items": "armor"
@@ -3137,8 +3241,109 @@
     "value": "boss_proc"
    }
   ],
-  "_doc": "Marker, never rolled. A legendary armor drop from a boss/legend (mob_tiers loot.signature) forces one affix from the pool: 50/50 the resists entry for the boss damtype or a proc entry for one of its tier-AI spells, the other half as fallback (ArmorGenerator::pickSignature). Priced as that entry, inside the budget.",
-  "items": "armor"
+  "_doc": "Marker, never rolled. A legendary armor drop from a boss/legend (mob_tiers loot.signature) forces one affix from the pool: 50/50 a defense against the boss damtype or a proc entry for one of its tier-AI spells, the other half as fallback (ArmorGenerator::pickSignature). The defense is the resists entry, or at imm_pct the immunes entry for that damtype when there is one (elemental immunities are needs_boss: only a signature may pick them; never physical). Priced as that entry, inside the budget. names: the piece is named after the boss and one random trait, 'Jher's malice' / 'злоба Джэра' (short = RU Flexer pad, short_ua = UA pad, gender = item gender, name = extra keywords); the wear noun keeps the long description and keywords.",
+  "items": "armor",
+  "imm_pct": 25,
+  "names": [
+   {
+    "short": "злоб|а|ы|е|у|ой|е",
+    "gender": "f",
+    "short_ua": "злоб|а|и|і|у|ою|і",
+    "short_en": "malice",
+    "name": "malice злоба"
+   },
+   {
+    "short": "ярост|ь|и|и|ь|ью|и",
+    "gender": "f",
+    "short_ua": "лю|ть|ті|ті|ть|ттю|ті",
+    "short_en": "fury",
+    "name": "fury ярость лють"
+   },
+   {
+    "short": "гнев||а|у||ом|е",
+    "gender": "m",
+    "short_ua": "гн|ів|іву|іву|ів|івом|іві",
+    "short_en": "wrath",
+    "name": "wrath гнев гнів"
+   },
+   {
+    "short": "мест|ь|и|и|ь|ью|и",
+    "gender": "f",
+    "short_ua": "помст|а|и|і|у|ою|і",
+    "short_en": "vengeance",
+    "name": "vengeance месть помста"
+   },
+   {
+    "short": "голод||а|у||ом|е",
+    "gender": "m",
+    "short_ua": "голод||у|у||ом|і",
+    "short_en": "hunger",
+    "name": "hunger голод"
+   },
+   {
+    "short": "гордын|я|и|е|ю|ей|е",
+    "gender": "f",
+    "short_ua": "гордин|я|і|і|ю|ею|і",
+    "short_en": "pride",
+    "name": "pride гордыня гординя"
+   },
+   {
+    "short": "тен|ь|и|и|ь|ью|и",
+    "gender": "f",
+    "short_ua": "тін|ь|і|і|ь|ню|і",
+    "short_en": "shadow",
+    "name": "shadow тень тінь"
+   },
+   {
+    "short": "проклят|ие|ия|ию|ие|ием|ии",
+    "gender": "n",
+    "short_ua": "проклятт|я|я|ю|я|ям|і",
+    "short_en": "curse",
+    "name": "curse проклятие прокляття"
+   },
+   {
+    "short": "погибел|ь|и|и|ь|ью|и",
+    "gender": "f",
+    "short_ua": "погибе|ль|лі|лі|ль|ллю|лі",
+    "short_en": "bane",
+    "name": "bane погибель"
+   },
+   {
+    "short": "оберег||а|у||ом|е",
+    "gender": "m",
+    "short_ua": "обер|іг|ега|егу|іг|егом|езі",
+    "short_en": "ward",
+    "name": "ward оберег оберіг"
+   },
+   {
+    "short": "сердц|е|а|у|е|ем|е",
+    "gender": "n",
+    "short_ua": "серц|е|я|ю|е|ем|і",
+    "short_en": "heart",
+    "name": "heart сердце серце"
+   },
+   {
+    "short": "ненавист|ь|и|и|ь|ью|и",
+    "gender": "f",
+    "short_ua": "ненавист|ь|і|і|ь|ю|і",
+    "short_en": "hatred",
+    "name": "hatred ненависть"
+   },
+   {
+    "short": "ужас||а|у||ом|е",
+    "gender": "m",
+    "short_ua": "жах||у|у||ом|у",
+    "short_en": "dread",
+    "name": "dread ужас жах"
+   },
+   {
+    "short": "вол|я|и|е|ю|ей|е",
+    "gender": "f",
+    "short_ua": "вол|я|і|і|ю|ею|і",
+    "short_en": "will",
+    "name": "will воля"
+   }
+  ]
  },
  "primary_stats": {
   "values": [

@@ -1,0 +1,7480 @@
+{
+ "_doc": {
+  "what": "Every spell priced in M (one measure, ITEM_POWER.md) at L50 on the scale Kit approved 2026-10-28. Use it for magic item spell picks (pills, potions, scrolls, wands, staves), granted skills and any spell price question.",
+  "worn": "permanent affect on a worn item; null when it has no affect meaning (nukes, heals, pets, item-making rituals)",
+  "charge": "one use: one pill/potion/scroll or one wand/staff charge; charges price linearly (x10 wand = 10 x charge)",
+  "grant": "item-granted skill (grantskills, learned 100), char-less base the gear sage would give",
+  "src": "per price: 'kit' = Kit set it, 'rescaled' = model mapped monotonically onto Kit's scale (scripts/spell-value/gen/sv_rescale.py)",
+  "model": "the raw model numbers before Kit (worn/charge/grant), for reference only",
+  "excluded": "Kit's per-spell exclusion from magic items (R2 and the high-signature rule are dropped)",
+  "pvp": "Kit weighs PK too: spell resistance and similar are priced for PvP, not only PvE",
+  "edit": "Kit edits values in the artifact https://claude.ai/artifact/FNB18r6xaUD5editrNkFrY; sync with scripts/spell-value/spell-value.py --merge",
+  "tool": "scripts/spell-value/spell-value.py; skill dl-spell-value"
+ },
+ "spells": {
+  "ace in sleeves": {
+   "ru": "туз в рукаве",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.185,
+   "grant": 1.413,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.1385,
+    "grant": 0.346
+   },
+   "rarity": "n/a",
+   "effect": "Creates sleeves (12 tick timer) that, worn, sometimes pull an ace in combat and cast heal/superior heal/master healing on the wearer.",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "acetum primus": {
+   "ru": "ацетум примус",
+   "type": "offensive",
+   "minlvl": 34,
+   "classes": {
+    "anti-paladin": 93,
+    "ninja": 93,
+    "witch": 34
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.1,
+   "grant": 1.247,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0657,
+    "grant": 1.119
+   },
+   "rarity": "rare",
+   "effect": "Acid cloud damage, tier 2, plus acid damage to victim's gear.",
+   "note": "0.1 per cast ",
+   "exclude_reason": ""
+  },
+  "acid arrow": {
+   "ru": "кислотная стрела",
+   "type": "offensive",
+   "minlvl": 48,
+   "classes": {
+    "warlock": 48,
+    "witch": 48
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.1,
+   "grant": 1.2,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0657,
+    "grant": 1.026
+   },
+   "rarity": "unique",
+   "effect": "Acid arrow damage, tier 2; missile can be dodged; corrodes gear.",
+   "note": "0.1 per cast ",
+   "exclude_reason": ""
+  },
+  "acid blast": {
+   "ru": "сгусток кислоты",
+   "type": "offensive",
+   "minlvl": 63,
+   "classes": {
+    "warlock": 63,
+    "witch": 63
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 2.381,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0506,
+    "grant": 2.02
+   },
+   "rarity": "rare",
+   "effect": "Acid glob damage, tier 3; missile can be dodged; corrodes gear.",
+   "note": "0.05 per cast ",
+   "exclude_reason": ""
+  },
+  "acid breath": {
+   "ru": "кислотное дыхание",
+   "type": "offensive",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.5,
+   "grant": 1.639,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.089,
+    "grant": 1.422
+   },
+   "rarity": "unique",
+   "effect": "Dragon-style acid breath: damage from caster's current hp and dice(L,16), plus gear corrosion.",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "acute vision": {
+   "ru": "острое зрение",
+   "type": "detect",
+   "minlvl": 4,
+   "classes": {
+    "druid": 4,
+    "ranger": 7
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.5,
+   "charge": 0.2,
+   "grant": 0.4,
+   "src": {
+    "worn": "kit",
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": 0.264,
+    "charge": 0.1099,
+    "grant": 0.156
+   },
+   "rarity": "rare",
+   "effect": "Acute vision detect bit for L/2 ticks.",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "adamantite golem": {
+   "ru": "адамантитовый голем",
+   "type": "summon",
+   "minlvl": 71,
+   "classes": {
+    "necromancer": 71
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 1.0,
+   "grant": 4.0,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 3.2474,
+    "grant": 2.998
+   },
+   "rarity": "n/a",
+   "effect": "Creates an adamantite golem follower (tier 5) from a crafted ingredient; caster gets a recast cooldown.",
+   "note": "",
+   "exclude_reason": "B3 summons: pet circumvention"
+  },
+  "aid": {
+   "ru": "помощь",
+   "type": "heal",
+   "minlvl": 53,
+   "classes": {
+    "cleric": 53,
+    "druid": 57
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.1,
+   "grant": 0.5,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0191,
+    "grant": 0.149
+   },
+   "rarity": "rare",
+   "effect": "Heals target L*5 hp, can overheal past max hp. Caster gets 1 tick cooldown.",
+   "note": "0.1 per cast ",
+   "exclude_reason": ""
+  },
+  "anathema": {
+   "ru": "анафема",
+   "type": "malediction",
+   "minlvl": 65,
+   "classes": {
+    "anti-paladin": 65,
+    "paladin": 65
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.181,
+   "grant": 1.139,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0674,
+    "grant": 0.904
+   },
+   "rarity": "unique",
+   "effect": "Divine curse: hitroll -20, damroll -20, saves +20, level -6, skill mastery -30 and curse bit for 11 ticks vs opposite-nature target.",
+   "note": "",
+   "exclude_reason": "B3 day-long curse: PK grief tool (NB spell_menu.json still marks it allowed: menu predates this B3 row)"
+  },
+  "ancestral spirits": {
+   "ru": "духи предков",
+   "type": "summon",
+   "minlvl": 20,
+   "classes": {
+    "druid": 20
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.772,
+   "grant": 1.712,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 1.8041,
+    "grant": 1.332
+   },
+   "rarity": "n/a",
+   "effect": "Druid summons a temporary spirit pet (boar, falcon or salamander) for L ticks.",
+   "note": "",
+   "exclude_reason": "B3 summons: pet circumvention"
+  },
+  "animate dead": {
+   "ru": "оживление мертвеца",
+   "type": "summon",
+   "minlvl": 38,
+   "classes": {
+    "necromancer": 38,
+    "vampire": 42
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.133,
+   "grant": 1.954,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 1.0825,
+    "grant": 1.499
+   },
+   "rarity": "n/a",
+   "effect": "Three-stage ritual raises a zombie follower from an NPC corpse (tier 8, level L), lasting a week.",
+   "note": "",
+   "exclude_reason": "B3 summons: pet circumvention"
+  },
+  "armor": {
+   "ru": "броня",
+   "type": "buff",
+   "minlvl": 18,
+   "classes": {
+    "cleric": 20,
+    "druid": 20,
+    "necromancer": 20,
+    "paladin": 18,
+    "vampire": 20,
+    "warlock": 20,
+    "witch": 20
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.314,
+   "charge": 0.122,
+   "grant": 0.148,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.09,
+    "charge": 0.0224,
+    "grant": 0.029
+   },
+   "rarity": "ubiquitous",
+   "effect": "AC -16 and defensive skill-group mastery +2 for 7+L/6 ticks.",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "assist": {
+   "ru": "лечить нежить",
+   "type": "heal",
+   "minlvl": 43,
+   "classes": {
+    "necromancer": 43
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.1,
+   "grant": 0.5,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0708,
+    "grant": 0.466
+   },
+   "rarity": "unique",
+   "effect": "Heals an evil/neutral target 100+L*5 hp (can overheal); 1 tick cooldown on caster; 10% chance of fervor on a player target.",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "astral projection": {
+   "ru": "астральная проекция",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": 2.842,
+   "charge": 0.337,
+   "grant": 1.281,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 1.708,
+    "charge": 0.0854,
+    "grant": 0.427
+   },
+   "rarity": "ubiquitous",
+   "effect": "Clan Shalafi: mana +100 for L/20+1 ticks; each weapon hit may be deflected and teleports caster away from the fight.",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "astral walk": {
+   "ru": "астральная прогулка",
+   "type": "utility",
+   "minlvl": 27,
+   "classes": {
+    "witch": 27
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.121,
+   "grant": 1.544,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.05,
+    "grant": 0.66
+   },
+   "rarity": "n/a",
+   "effect": "Teleports caster and caster's NPC followers in the room to any creature in the world.",
+   "note": "",
+   "exclude_reason": "B3 travel/escape: skips content, escapes boss and deathtrap fights, PK pulls"
+  },
+  "attract other": {
+   "ru": "пленить",
+   "type": "summon",
+   "minlvl": 28,
+   "classes": {
+    "vampire": 30,
+    "witch": 28
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 2.0,
+   "grant": 3.5,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 1.6237,
+    "grant": 1.539
+   },
+   "rarity": "n/a",
+   "effect": "Charms a sentient opposite-sex living target for max(3,L/5)=10 ticks (NPC) or 5..10 (PC).",
+   "note": "",
+   "exclude_reason": "B3 control: CC on bosses, pets after the pet nerf, PK"
+  },
+  "awakening": {
+   "ru": "пробуждение",
+   "type": "cure",
+   "minlvl": 31,
+   "classes": {
+    "cleric": 31,
+    "paladin": 32
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.061,
+   "grant": 0.148,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0202,
+    "grant": 0.027
+   },
+   "rarity": "unique",
+   "effect": "Removes sleep-bit affects from target if they fail a dispel check.",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "banishment": {
+   "ru": "развоплощение",
+   "type": "offensive",
+   "minlvl": 40,
+   "classes": {
+    "paladin": 40
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.057,
+   "grant": 0.563,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0189,
+    "grant": 0.186
+   },
+   "rarity": "rare",
+   "effect": "Vs undead, constructs and demons: damage tier 2, or instant kill chance and forced flee. Does nothing to others.",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "bark skin": {
+   "ru": "древесная кожа",
+   "type": "buff",
+   "minlvl": 10,
+   "classes": {
+    "druid": 10,
+    "ranger": 33
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.2,
+   "charge": 0.05,
+   "grant": 0.2,
+   "src": {
+    "worn": "kit",
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": -0.42,
+    "charge": -0.175,
+    "grant": -0.249
+   },
+   "rarity": "rare",
+   "effect": "AC -12 for L/2 ticks, resist pierce/cold/drowning, vulnerable slash/fire/acid; heals on physical hits (10 hits).",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "bat swarm": {
+   "ru": "летучие мыши",
+   "type": "buff",
+   "minlvl": 38,
+   "classes": {
+    "druid": 62,
+    "necromancer": 47,
+    "vampire": 38
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 2.1,
+   "charge": 0.6,
+   "grant": 1.0,
+   "src": {
+    "worn": "kit",
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": 1.714,
+    "charge": 0.1714,
+    "grant": 0.659
+   },
+   "rarity": "unique",
+   "effect": "Three-stage ritual; bats circle caster for 1+L/10 ticks and may block melee attacks, costing mana.",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "befriend": {
+   "ru": "подружиться",
+   "type": "summon",
+   "minlvl": 17,
+   "classes": {
+    "druid": 17
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.7,
+   "grant": 2.0,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 1.6237,
+    "grant": 1.124
+   },
+   "rarity": "n/a",
+   "effect": "Druid charms a living non-sentient NPC for max(3,L/5)=10 ticks; failure on save gives caster a cooldown.",
+   "note": "",
+   "exclude_reason": "B3 control: CC on bosses, pets after the pet nerf, PK"
+  },
+  "benediction": {
+   "ru": "благость",
+   "type": "buff",
+   "minlvl": 70,
+   "classes": {
+    "anti-paladin": 82,
+    "cleric": 80,
+    "paladin": 70
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 5.0,
+   "charge": 1.0,
+   "grant": 2.0,
+   "src": {
+    "worn": "kit",
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": 3.721,
+    "charge": 0.7441,
+    "grant": 1.86
+   },
+   "rarity": "common",
+   "effect": "Hitroll +10, level +2, saves -4 for 12 ticks on an ally of matching nature (weaker on neutral).",
+   "note": "",
+   "exclude_reason": "Раніше виключено (B3 high signature past R2), правило знято 10-28"
+  },
+  "black death": {
+   "ru": "чумные миазмы",
+   "type": "malediction",
+   "minlvl": 64,
+   "classes": {
+    "anti-paladin": 64
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.152,
+   "grant": 0.712,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0421,
+    "grant": 0.273
+   },
+   "rarity": "unique",
+   "effect": "Plague cloud over a room for L/15 ticks; entering or standing there infects non-saving victims with plague.",
+   "note": "",
+   "exclude_reason": "B3 AoE: room clears for non-casters, PK in towns (staves only where allowed)"
+  },
+  "black feeble": {
+   "ru": "черная немощь",
+   "type": "buff",
+   "minlvl": 70,
+   "classes": {
+    "anti-paladin": 70
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": 2.325,
+   "charge": 0.248,
+   "grant": 1.243,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.857,
+    "charge": 0.0572,
+    "grant": 0.363
+   },
+   "rarity": "common",
+   "effect": "Anti-paladin aura: AC -50 for ~4 ticks; weapon attackers may be stunned and drop their weapon.",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "blade barrier": {
+   "ru": "стена клинков",
+   "type": "offensive",
+   "minlvl": 60,
+   "classes": {
+    "cleric": 60
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.18,
+   "grant": 4.527,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0667,
+    "grant": 3.841
+   },
+   "rarity": "unique",
+   "effect": "Cleric blade wall: ~3 hits (sqrt(L)/2 +-1) of tier 4 damage with falling multipliers, may briefly stun.",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "blade of darkness": {
+   "ru": "клинок тьмы",
+   "type": "utility",
+   "minlvl": 77,
+   "classes": {
+    "anti-paladin": 77
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.165,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.01,
+    "grant": 0.026
+   },
+   "rarity": "n/a",
+   "effect": "Anti-paladin: fading flag on phantom blade (vnum 29/39) for L/4 ticks so strikes cannot be parried or cross-blocked.",
+   "note": "",
+   "exclude_reason": "B3 economy/items: enchanter trade or junk loot"
+  },
+  "bless": {
+   "ru": "благословение",
+   "type": "buff",
+   "minlvl": 19,
+   "classes": {
+    "cleric": 20,
+    "paladin": 19
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 1.156,
+   "charge": 0.654,
+   "grant": 1.176,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.481,
+    "charge": 0.2485,
+    "grant": 0.285
+   },
+   "rarity": "common",
+   "effect": "Hitroll +6 and saves -3 for 6+L/2 ticks; can also bless items or remove curse/evil from them.",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "bless weapon": {
+   "ru": "освятить оружие",
+   "type": "utility",
+   "minlvl": 55,
+   "classes": {
+    "paladin": 55
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.241,
+   "grant": 1.496,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.2179,
+    "grant": 0.545
+   },
+   "rarity": "n/a",
+   "effect": "Paladin: weapon gets holy flag, hitroll +5 and anti-evil/anti-neutral for L/4 ticks.",
+   "note": "",
+   "exclude_reason": "B3 economy/items: enchanter trade or junk loot"
+  },
+  "blindness": {
+   "ru": "слепота",
+   "type": "malediction",
+   "minlvl": 14,
+   "classes": {
+    "anti-paladin": 14,
+    "cleric": 14,
+    "necromancer": 22,
+    "vampire": 20,
+    "warlock": 20,
+    "witch": 20
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.2,
+   "grant": 0.901,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0504,
+    "grant": 0.428
+   },
+   "rarity": "rare",
+   "effect": "Blinds target for 3+L/15 ticks (tier-reduced on bosses) with hitroll -6.",
+   "note": "0.2 per cast ",
+   "exclude_reason": ""
+  },
+  "bluefire": {
+   "ru": "голубой огонь",
+   "type": "offensive",
+   "minlvl": 37,
+   "classes": {
+    "cleric": 37,
+    "druid": 39
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 1.231,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0506,
+    "grant": 1.088
+   },
+   "rarity": "unique",
+   "effect": "Tier 3 fire or cold damage (50/50; druids always cold), may freeze or heat gear.",
+   "note": "0.05 per cast ",
+   "exclude_reason": ""
+  },
+  "broom ritual": {
+   "ru": "ритуал метлы",
+   "type": "utility",
+   "minlvl": 41,
+   "classes": {
+    "witch": 41
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.532,
+   "grant": 1.679,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.4258,
+    "grant": 0.983
+   },
+   "rarity": "n/a",
+   "effect": "Witch three-stage ritual creates a personal hold-slot broom (obj 92) that boosts illusion/maladictions/enchantment groups; ~12 tick cooldown.",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "burning hands": {
+   "ru": "горящие руки",
+   "type": "offensive",
+   "minlvl": 10,
+   "classes": {
+    "anti-paladin": 10,
+    "warlock": 10,
+    "witch": 10
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.1,
+   "grant": 1.404,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0404,
+    "grant": 1.243
+   },
+   "rarity": "common",
+   "effect": "Tier 4 fire damage; may heat target's gear; also heats objects.",
+   "note": "0.1 per cast ",
+   "exclude_reason": ""
+  },
+  "call lightning": {
+   "ru": "вызов молнии",
+   "type": "offensive",
+   "minlvl": 14,
+   "classes": {
+    "druid": 14,
+    "ranger": 55,
+    "warlock": 21,
+    "witch": 21
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.317,
+   "grant": 0.606,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0854,
+    "grant": 0.211
+   },
+   "rarity": "rare",
+   "effect": "Outdoors in bad weather: tier 2 lightning on everyone in the room except caster/group; 1.2x in storm.",
+   "note": "",
+   "exclude_reason": "B3 AoE: room clears for non-casters, PK in towns (staves only where allowed); allowed on staves"
+  },
+  "calm": {
+   "ru": "умиротворить",
+   "type": "malediction",
+   "minlvl": 26,
+   "classes": {
+    "cleric": 26,
+    "druid": 37,
+    "paladin": 53,
+    "samurai": 61
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.77,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0151,
+    "grant": 0.307
+   },
+   "rarity": "rare",
+   "effect": "Stops fights in the room and gives all non-group, non-undead targets hitroll/damroll -3 and calm bit for ~5 ticks.",
+   "note": "",
+   "exclude_reason": "B3 control: CC on bosses, pets after the pet nerf, PK"
+  },
+  "cancellation": {
+   "ru": "отмена",
+   "type": "cure",
+   "minlvl": 24,
+   "classes": {
+    "cleric": 32,
+    "druid": 36,
+    "necromancer": 28,
+    "warlock": 28,
+    "witch": 24
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.44,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0162,
+    "grant": 0.08
+   },
+   "rarity": "unique",
+   "effect": "Removes cancellable spell affects from an ally or a no-nocancel player via dispel checks; not an aggressive act.",
+   "note": "doesn't work on mobs",
+   "exclude_reason": "B3 strips: removes boss tier buffs in one action"
+  },
+  "caustic font": {
+   "ru": "едкий источник",
+   "type": "offensive",
+   "minlvl": 31,
+   "classes": {
+    "druid": 31,
+    "warlock": 38
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.1,
+   "grant": 1.2,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0657,
+    "grant": 1.026
+   },
+   "rarity": "unique",
+   "effect": "Tier 2 damage, 50% drowning or 50% acid (with gear corrosion).",
+   "note": "0.1 per cast ",
+   "exclude_reason": ""
+  },
+  "chain lightning": {
+   "ru": "цепная молния",
+   "type": "offensive",
+   "minlvl": 33,
+   "classes": {
+    "druid": 39,
+    "warlock": 33,
+    "witch": 33
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.3,
+   "grant": 0.96,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0445,
+    "grant": 0.547
+   },
+   "rarity": "unique",
+   "effect": "Hits the target (tier 5), then arcs through the room for sqrt(L) rounds, bouncing to others and back to the caster.",
+   "note": "0.3 per cast ",
+   "exclude_reason": ""
+  },
+  "chaos blade": {
+   "ru": "клинок хаоса",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.45,
+   "grant": 1.512,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.375,
+    "grant": 0.582
+   },
+   "rarity": "n/a",
+   "effect": "Clan Chaos: three-stage ritual summons a random-tier weapon (obj 87) for L ticks; second blade with second weapon.",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "charm person": {
+   "ru": "очарование",
+   "type": "summon",
+   "minlvl": 20,
+   "classes": {
+    "anti-paladin": 38,
+    "warlock": 38,
+    "witch": 20
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 2.0,
+   "grant": 5.0,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 2.7061,
+    "grant": 2.082
+   },
+   "rarity": "n/a",
+   "effect": "Charms a target as a follower for max(3,L/5)=10 ticks (NPC) or 5..10 (PC) unless it saves.",
+   "note": "not sure what worn means -- grants cast?",
+   "exclude_reason": "B3 control: CC on bosses, pets after the pet nerf, PK"
+  },
+  "chill touch": {
+   "ru": "ледяное касание",
+   "type": "offensive",
+   "minlvl": 5,
+   "classes": {
+    "anti-paladin": 6,
+    "druid": 5,
+    "necromancer": 5,
+    "warlock": 5,
+    "witch": 5
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.935,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0404,
+    "grant": 0.497
+   },
+   "rarity": "common",
+   "effect": "Tier 4 cold damage plus strength -3 frostbite for 6 ticks; freezes liquids/weapons on objects.",
+   "note": "0.05 per cast ",
+   "exclude_reason": ""
+  },
+  "colour spray": {
+   "ru": "цветные брызги",
+   "type": "offensive",
+   "minlvl": 18,
+   "classes": {
+    "warlock": 22,
+    "witch": 18
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.1,
+   "grant": 2.015,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0506,
+    "grant": 1.71
+   },
+   "rarity": "unique",
+   "effect": "Tier 3 light damage; on a failed save also casts blindness.",
+   "note": "0.1 per cast ",
+   "exclude_reason": ""
+  },
+  "compound": {
+   "ru": "утяжелить",
+   "type": "utility",
+   "minlvl": 37,
+   "classes": {
+    "cleric": 37
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.1,
+   "grant": 0.228,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.015,
+    "grant": 0.036
+   },
+   "rarity": "n/a",
+   "effect": "Cleric: turns a weapon into a personal heavy mace for L ticks.",
+   "note": "",
+   "exclude_reason": "B3 economy/items: enchanter trade or junk loot"
+  },
+  "confuse": {
+   "ru": "сконфузить",
+   "type": "malediction",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.061,
+   "grant": 0.849,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0202,
+    "grant": 0.353
+   },
+   "rarity": "rare",
+   "effect": "Clan: int -2 for 1 tick; target immediately attacks a random bystander; upgrade extends to 2 ticks and repeat confusion.",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "continual light": {
+   "ru": "свет",
+   "type": "utility",
+   "minlvl": 11,
+   "classes": {
+    "cleric": 21,
+    "warlock": 11,
+    "witch": 21
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.568,
+   "grant": 0.629,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.4545,
+    "grant": 0.288
+   },
+   "rarity": "n/a",
+   "effect": "Creates a light ball (obj 21) for L+1 ticks giving hp +25 and mana +50 when worn; or makes an item glow.",
+   "note": "",
+   "exclude_reason": "B3 economy/items: enchanter trade or junk loot"
+  },
+  "control undead": {
+   "ru": "подчинение нежити",
+   "type": "summon",
+   "minlvl": 57,
+   "classes": {
+    "necromancer": 57
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 1.0,
+   "grant": 2.5,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 2.7061,
+    "grant": 2.706
+   },
+   "rarity": "n/a",
+   "effect": "Charms undead/constructs as followers for max(3,L/5)=10 ticks unless they save.",
+   "note": "",
+   "exclude_reason": "B3 control: CC on bosses, pets after the pet nerf, PK"
+  },
+  "control weather": {
+   "ru": "погода",
+   "type": "utility",
+   "minlvl": 7,
+   "classes": {
+    "cleric": 28,
+    "druid": 7,
+    "warlock": 30,
+    "witch": 19
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.171,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.005,
+    "grant": 0.027
+   },
+   "rarity": "n/a",
+   "effect": "Three-stage ritual makes the weather one step better or worse.",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "converge": {
+   "ru": "воссоединиться",
+   "type": "utility",
+   "minlvl": 35,
+   "classes": {
+    "druid": 35
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.107,
+   "grant": 0.363,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.03,
+    "grant": 0.22
+   },
+   "rarity": "n/a",
+   "effect": "Druid teleports to the ancestral spirit pet.",
+   "note": "",
+   "exclude_reason": "B3 travel/escape: skips content, escapes boss and deathtrap fights, PK pulls"
+  },
+  "corruption": {
+   "ru": "гниение",
+   "type": "malediction",
+   "minlvl": 63,
+   "classes": {
+    "anti-paladin": 63,
+    "necromancer": 63
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.15,
+   "grant": 0.726,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.027,
+    "grant": 0.281
+   },
+   "rarity": "rare",
+   "effect": "Rotting disease: str -3 for 10+L/5 ticks and a continuous hp drain scaled to max hp.",
+   "note": "0.15 per cast ",
+   "exclude_reason": ""
+  },
+  "create food": {
+   "ru": "сотворить пищу",
+   "type": "utility",
+   "minlvl": 6,
+   "classes": {
+    "cleric": 8,
+    "druid": 6,
+    "necromancer": 12,
+    "paladin": 12,
+    "warlock": 15,
+    "witch": 11
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.02,
+   "grant": 0.089,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.002,
+    "grant": 0.014
+   },
+   "rarity": "n/a",
+   "effect": "Creates food (apple for nature, manna for divine, mushroom otherwise) worth min(L/2,35)=25 hours.",
+   "note": "",
+   "exclude_reason": "B3 economy/items: enchanter trade or junk loot"
+  },
+  "create rose": {
+   "ru": "сотворить розу",
+   "type": "utility",
+   "minlvl": 13,
+   "classes": {
+    "druid": 13,
+    "paladin": 21,
+    "vampire": 26,
+    "warlock": 26,
+    "witch": 26
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.0,
+   "grant": 0.005,
+   "src": {
+    "charge": "rescaled",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0,
+    "grant": 0.0
+   },
+   "rarity": "n/a",
+   "effect": "Creates a red rose (black if evil) with bless or magic flag.",
+   "note": "",
+   "exclude_reason": "B3 economy/items: enchanter trade or junk loot"
+  },
+  "create water": {
+   "ru": "сотворить воду",
+   "type": "utility",
+   "minlvl": 3,
+   "classes": {
+    "cleric": 3,
+    "necromancer": 6,
+    "paladin": 8,
+    "warlock": 8,
+    "witch": 6
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.02,
+   "grant": 0.101,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.002,
+    "grant": 0.016
+   },
+   "rarity": "n/a",
+   "effect": "Fills drink containers/fountains with L*5 units of water, cools hot items, puts out fire.",
+   "note": "",
+   "exclude_reason": "B3 economy/items: enchanter trade or junk loot"
+  },
+  "cultivate": {
+   "ru": "возделать",
+   "type": "utility",
+   "minlvl": 21,
+   "classes": {
+    "druid": 21
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.101,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.005,
+    "grant": 0.016
+   },
+   "rarity": "n/a",
+   "effect": "Druid ritual: changes a room's sector (field/hills to forest, desert to field, mountain to hills) for L/20 hours.",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "cure blindness": {
+   "ru": "лечить слепоту",
+   "type": "cure",
+   "minlvl": 7,
+   "classes": {
+    "cleric": 11,
+    "ninja": 20,
+    "paladin": 7,
+    "samurai": 20
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.591,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0252,
+    "grant": 0.202
+   },
+   "rarity": "unique",
+   "effect": "Removes curable blindness from target via dispel check.",
+   "note": "0.05 per cast ",
+   "exclude_reason": ""
+  },
+  "cure corruption": {
+   "ru": "лечить гниение",
+   "type": "cure",
+   "minlvl": 50,
+   "classes": {
+    "cleric": 50
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.03,
+   "grant": 0.495,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0135,
+    "grant": 0.09
+   },
+   "rarity": "unique",
+   "effect": "Removes corruption affect via dispel check.",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "cure disease": {
+   "ru": "лечить болезнь",
+   "type": "cure",
+   "minlvl": 19,
+   "classes": {
+    "cleric": 19,
+    "paladin": 33
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.5,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0162,
+    "grant": 0.104
+   },
+   "rarity": "unique",
+   "effect": "Removes plague via dispel check.",
+   "note": "0.05 per cast ",
+   "exclude_reason": ""
+  },
+  "cure poison": {
+   "ru": "лечить яд",
+   "type": "cure",
+   "minlvl": 23,
+   "classes": {
+    "cleric": 23,
+    "paladin": 33,
+    "samurai": 35
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.5,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0162,
+    "grant": 0.095
+   },
+   "rarity": "unique",
+   "effect": "Removes poison via dispel check.",
+   "note": "0.05 per cast ",
+   "exclude_reason": ""
+  },
+  "curse": {
+   "ru": "проклятие",
+   "type": "malediction",
+   "minlvl": 18,
+   "classes": {
+    "anti-paladin": 18,
+    "cleric": 33,
+    "necromancer": 34,
+    "vampire": 44,
+    "warlock": 31,
+    "witch": 23
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.541,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0151,
+    "grant": 0.173
+   },
+   "rarity": "unique",
+   "effect": "Target saves +7, hitroll -6, curse bit for 3+L/15 ticks; also curses items.",
+   "note": "0.05 per cast ",
+   "exclude_reason": ""
+  },
+  "cursed lands": {
+   "ru": "проклятые земли",
+   "type": "malediction",
+   "minlvl": 41,
+   "classes": {
+    "anti-paladin": 70,
+    "cleric": 41,
+    "necromancer": 64
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.059,
+   "grant": 0.5,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0196,
+    "grant": 0.117
+   },
+   "rarity": "unique",
+   "effect": "Curses a room for L/15 ticks: everyone entering or standing there who fails a negative save is cursed.",
+   "note": "",
+   "exclude_reason": "B3 AoE: room clears for non-casters, PK in towns (staves only where allowed)"
+  },
+  "dark shroud": {
+   "ru": "темная аура",
+   "type": "buff",
+   "minlvl": 21,
+   "classes": {
+    "anti-paladin": 30,
+    "necromancer": 21,
+    "vampire": 51
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 4.0,
+   "charge": 1.0,
+   "grant": 1.5,
+   "src": {
+    "worn": "kit",
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": 1.72,
+    "charge": 0.2294,
+    "grant": 0.834
+   },
+   "rarity": "rare",
+   "effect": "Evil target takes 40% less damage and has 5% chance to nullify a hit, for L/6 ticks.",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "deadly venom": {
+   "ru": "пары яда",
+   "type": "malediction",
+   "minlvl": 58,
+   "classes": {
+    "anti-paladin": 58
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.152,
+   "grant": 0.712,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0421,
+    "grant": 0.273
+   },
+   "rarity": "unique",
+   "effect": "Poison cloud over a room for L/15 ticks; entrants who fail a poison save get poisoned.",
+   "note": "",
+   "exclude_reason": "B3 AoE: room clears for non-casters, PK in towns (staves only where allowed)"
+  },
+  "deafen": {
+   "ru": "глухота",
+   "type": "malediction",
+   "minlvl": 42,
+   "classes": {
+    "anti-paladin": 42
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.5,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0302,
+    "grant": 0.385
+   },
+   "rarity": "common",
+   "effect": "Target damroll -6 for 3+L/15 ticks.",
+   "note": "",
+   "exclude_reason": "B3 control: CC on bosses, pets after the pet nerf, PK"
+  },
+  "dematerialize": {
+   "ru": "дематериализация",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": 2.716,
+   "charge": 0.518,
+   "grant": 1.681,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 1.621,
+    "charge": 0.1351,
+    "grant": 1.135
+   },
+   "rarity": "unique",
+   "effect": "Clan: improved invisibility, sneak and pass-door for L/10 ticks.",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "demon summon": {
+   "ru": "призыв демона",
+   "type": "summon",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.111,
+   "grant": 2.923,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.902,
+    "grant": 2.165
+   },
+   "rarity": "n/a",
+   "effect": "Clan Shalafi: calls a demon follower (vnum 13) for L/2 ticks.",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "demonfire": {
+   "ru": "огонь демонов",
+   "type": "offensive",
+   "minlvl": 37,
+   "classes": {
+    "cleric": 37
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.178,
+   "grant": 1.154,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0657,
+    "grant": 0.933
+   },
+   "rarity": "common",
+   "effect": "Tier 2 damage, 50% fire (with gear heating) or 50% negative plus curse.",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "desert fist": {
+   "ru": "кулак пустыни",
+   "type": "offensive",
+   "minlvl": 56,
+   "classes": {
+    "cleric": 58,
+    "druid": 56
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.1,
+   "grant": 0.5,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0809,
+    "grant": 0.091
+   },
+   "rarity": "rare",
+   "effect": "Tier 1 damage from a fist of sand; needs sand sector; blinds via sand effect.",
+   "note": "0.1 per cast -- 1 for x10 wand",
+   "exclude_reason": ""
+  },
+  "detect evil": {
+   "ru": "обнаружить зло",
+   "type": "detect",
+   "minlvl": 11,
+   "classes": {
+    "cleric": 11,
+    "druid": 18,
+    "paladin": 12,
+    "warlock": 12,
+    "witch": 12
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.265,
+   "charge": 0.129,
+   "grant": 0.148,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.068,
+    "charge": 0.0238,
+    "grant": 0.029
+   },
+   "rarity": "common",
+   "effect": "See evil auras for 5+L/3 ticks.",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "detect good": {
+   "ru": "обнаружить добро",
+   "type": "detect",
+   "minlvl": 11,
+   "classes": {
+    "anti-paladin": 12,
+    "cleric": 11,
+    "druid": 18,
+    "necromancer": 14,
+    "paladin": 12,
+    "vampire": 13,
+    "warlock": 12,
+    "witch": 12
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.265,
+   "charge": 0.129,
+   "grant": 0.095,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.068,
+    "charge": 0.0238,
+    "grant": 0.018
+   },
+   "rarity": "common",
+   "effect": "See good auras for 5+L/3 ticks.",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "detect hidden": {
+   "ru": "обнаружить скрытое",
+   "type": "detect",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": false,
+   "worn": 0.2,
+   "charge": 0.05,
+   "grant": 0.1,
+   "src": {
+    "worn": "kit",
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": 0.196,
+    "charge": 0.0687,
+    "grant": 0.137
+   },
+   "rarity": "common",
+   "effect": "See hidden creatures for 5+L/3 ticks.",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "detect invis": {
+   "ru": "обнаружить невидимое",
+   "type": "detect",
+   "minlvl": 5,
+   "classes": {
+    "anti-paladin": 11,
+    "cleric": 17,
+    "necromancer": 6,
+    "paladin": 23,
+    "vampire": 23,
+    "warlock": 6,
+    "witch": 5
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.548,
+   "charge": 0.274,
+   "grant": 0.312,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.196,
+    "charge": 0.0687,
+    "grant": 0.063
+   },
+   "rarity": "common",
+   "effect": "detect_flags:invis bit for 5+L/3 ticks",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "detect magic": {
+   "ru": "обнаружить магию",
+   "type": "detect",
+   "minlvl": 15,
+   "classes": {
+    "cleric": 15,
+    "druid": 27,
+    "necromancer": 15,
+    "paladin": 15,
+    "vampire": 15,
+    "warlock": 15,
+    "witch": 15
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.265,
+   "charge": 0.129,
+   "grant": 0.114,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.068,
+    "charge": 0.0238,
+    "grant": 0.022
+   },
+   "rarity": "common",
+   "effect": "detect_flags:magic bit for 5+L/3 ticks",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "detect trap": {
+   "ru": "обнаружение ловушек",
+   "type": "detect",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": false,
+   "worn": 0.2,
+   "charge": 0.05,
+   "grant": 0.1,
+   "src": {
+    "worn": "kit",
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": 0.039,
+    "charge": 0.039,
+    "grant": 0.019
+   },
+   "rarity": "unique",
+   "effect": "Permanent non-dispellable affect from a passive skill; warns of trapped exits when entering a room and avoids traps",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R1 clan spell), правило знято 10-28"
+  },
+  "detect undead": {
+   "ru": "обнаружить нежить",
+   "type": "detect",
+   "minlvl": 13,
+   "classes": {
+    "necromancer": 13,
+    "paladin": 24
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.265,
+   "charge": 0.129,
+   "grant": 0.201,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.068,
+    "charge": 0.0238,
+    "grant": 0.04
+   },
+   "rarity": "common",
+   "effect": "detect_flags:undead bit for 5+L/3 ticks",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "disgrace": {
+   "ru": "скомпрометировать",
+   "type": "malediction",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.005,
+   "grant": 0.022,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0013,
+    "grant": 0.004
+   },
+   "rarity": "unique",
+   "effect": "Victim loses cha 5+L/10 for L ticks unless it saves",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "disintegrate": {
+   "ru": "дезинтеграция",
+   "type": "offensive",
+   "minlvl": 83,
+   "classes": {
+    "warlock": 83
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.7,
+   "grant": 0.835,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.1078,
+    "grant": 0.345
+   },
+   "rarity": "unique",
+   "effect": "Tier1 energy hit with small chance to instantly kill (PC dies, mob extracted without corpse/loot); cannot target someone in combat",
+   "note": "",
+   "exclude_reason": "B3 %hp / instakill: trivialises boss hp pools"
+  },
+  "dispel affects": {
+   "ru": "снятие воздействий",
+   "type": "malediction",
+   "minlvl": 24,
+   "classes": {
+    "anti-paladin": 45,
+    "cleric": 43,
+    "necromancer": 24,
+    "vampire": 24,
+    "warlock": 41,
+    "witch": 36
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.1,
+   "grant": 0.5,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0202,
+    "grant": 0.324
+   },
+   "rarity": "rare",
+   "effect": "Strips dispellable magical affects from the target; target save stops it (not on self)",
+   "note": "",
+   "exclude_reason": "B3 strips: removes boss tier buffs in one action"
+  },
+  "dispel evil": {
+   "ru": "изгнать зло",
+   "type": "offensive",
+   "minlvl": 27,
+   "classes": {
+    "cleric": 27,
+    "paladin": 35
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 1.019,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.027,
+    "grant": 0.663
+   },
+   "rarity": "rare",
+   "effect": "Holy tier3 damage to evil targets only (x4/3 for divine casters); kills outright weak mobs (level < L/10) if unsaved",
+   "note": "0.05 per cast ",
+   "exclude_reason": ""
+  },
+  "dispel good": {
+   "ru": "изгнать добро",
+   "type": "offensive",
+   "minlvl": 27,
+   "classes": {
+    "anti-paladin": 30,
+    "cleric": 27
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 1.102,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.027,
+    "grant": 0.829
+   },
+   "rarity": "unique",
+   "effect": "Negative tier3 damage to good targets only (x4/3 for divine casters); kills weak mobs outright if unsaved",
+   "note": "0.05 per cast ",
+   "exclude_reason": ""
+  },
+  "disperse": {
+   "ru": "разбросать",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.107,
+   "grant": 1.404,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.03,
+    "grant": 0.325
+   },
+   "rarity": "n/a",
+   "effect": "Chaos funnel teleports (teleport skill) everyone in the room away; 1 hour cooldown on caster",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "disruption": {
+   "ru": "разрыв",
+   "type": "offensive",
+   "minlvl": 40,
+   "classes": {
+    "necromancer": 40
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.178,
+   "grant": 1.247,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0657,
+    "grant": 1.119
+   },
+   "rarity": "unique",
+   "effect": "Tier2 energy damage",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "doppelganger": {
+   "ru": "доппельгангер",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.266,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.01,
+    "grant": 0.065
+   },
+   "rarity": "n/a",
+   "effect": "Caster takes the appearance of another player for 2L/3 ticks unless saves",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "dragon skin": {
+   "ru": "драконья кожа",
+   "type": "buff",
+   "minlvl": 40,
+   "classes": {
+    "cleric": 40,
+    "druid": 49,
+    "warlock": 43,
+    "witch": 44
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.4,
+   "charge": 0.05,
+   "grant": 0.2,
+   "src": {
+    "worn": "kit",
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": 0.13,
+    "charge": 0.0542,
+    "grant": 0.063
+   },
+   "rarity": "common",
+   "effect": "AC -L/3, breath save -L/30 for L/2 ticks, plus absorbs/heals from elemental hits (up to min(10,L/5) hits)",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "dragon strength": {
+   "ru": "сила дракона",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": false,
+   "worn": 3.208,
+   "charge": 0.884,
+   "grant": 1.785,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 1.96,
+    "charge": 0.5227,
+    "grant": 1.372
+   },
+   "rarity": "common",
+   "effect": "hitroll/damroll +L/10, AC -L/10, str +1, dex -1 for L/3 ticks",
+   "note": "",
+   "exclude_reason": "Раніше виключено (B3 high signature past R2), правило знято 10-28"
+  },
+  "dragonplate": {
+   "ru": "доспех дракона",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": 1.7,
+   "grant": 1.5,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 1.36,
+    "grant": 0.554
+   },
+   "rarity": "n/a",
+   "effect": "3-stage ritual creates a tier1 dragonplate body armor (vnum 82) with level+1 skill group bonus, -1 int/dex, +2 cha; cooldown",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "dragons breath": {
+   "ru": "дыхание драконов",
+   "type": "offensive",
+   "minlvl": 61,
+   "classes": {
+    "warlock": 61
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.6,
+   "grant": 1.5,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0829,
+    "grant": 0.991
+   },
+   "rarity": "unique",
+   "effect": "Randomly breathes lightning/acid (single target) or fire/cold/poison (whole room), tier1 damage",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "dragonsword": {
+   "ru": "оружие дракона",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": 1.302,
+   "grant": 1.449,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 1.0417,
+    "grant": 0.433
+   },
+   "rarity": "n/a",
+   "effect": "3-stage ritual summons a Dragon weapon (dagger/mace/sword/flail/pike, tier3) with 10% self-heal in fight and revive on death; cooldown",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "druid staff": {
+   "ru": "посох друида",
+   "type": "utility",
+   "minlvl": 23,
+   "classes": {
+    "druid": 23
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 1.864,
+   "grant": 1.614,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 1.4911,
+    "grant": 0.826
+   },
+   "rarity": "n/a",
+   "effect": "Ritual in forest creates a druid staff (vnum 37, tier 3 minus druid rank) with +hp and +mana in range L..(5-tier)*L; cooldown",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "earthquake": {
+   "ru": "землетрясение",
+   "type": "offensive",
+   "minlvl": 12,
+   "classes": {
+    "cleric": 19,
+    "druid": 12
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.2,
+   "grant": 2.41,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0809,
+    "grant": 2.045
+   },
+   "rarity": "rare",
+   "effect": "Tier4 bash damage to every non-flying target in room, scaled by terrain and target size; may knock prone",
+   "note": "",
+   "exclude_reason": "B3 AoE: room clears for non-casters, PK in towns (staves only where allowed); allowed on staves"
+  },
+  "empathize": {
+   "ru": "сопереживать",
+   "type": "utility",
+   "minlvl": 11,
+   "classes": {
+    "druid": 11
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.114,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.005,
+    "grant": 0.018
+   },
+   "rarity": "n/a",
+   "effect": "Reads target's level, race, hp/mana and immunities/resistances/vulnerabilities, detects, flags",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "enchant armor": {
+   "ru": "зачаровать броню",
+   "type": "utility",
+   "minlvl": 30,
+   "classes": {
+    "cleric": 30,
+    "warlock": 37,
+    "witch": 31
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.5,
+   "grant": 1.5,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.4,
+    "grant": 0.3
+   },
+   "rarity": "n/a",
+   "effect": "Adds hitroll/damroll/hp/mana affixes to an armor piece for L ticks; may fail and lock the item",
+   "note": "",
+   "exclude_reason": "B3 economy/items: enchanter trade or junk loot"
+  },
+  "enchant weapon": {
+   "ru": "зачаровать оружие",
+   "type": "utility",
+   "minlvl": 17,
+   "classes": {
+    "warlock": 17,
+    "witch": 33
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.3,
+   "grant": 1.3,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.3,
+    "grant": 0.33
+   },
+   "rarity": "n/a",
+   "effect": "Tops up a weapon with enchant stats for L ticks; may fail and lock the item",
+   "note": "",
+   "exclude_reason": "B3 economy/items: enchanter trade or junk loot"
+  },
+  "energy drain": {
+   "ru": "утечка энергии",
+   "type": "offensive",
+   "minlvl": 26,
+   "classes": {
+    "anti-paladin": 26,
+    "cleric": 42,
+    "necromancer": 45,
+    "warlock": 31,
+    "witch": 38
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.2,
+   "grant": 1.915,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0758,
+    "grant": 1.632
+   },
+   "rarity": "common",
+   "effect": "Tier3 negative damage; if unsaved drains mana to 1/3, move to 1/3, heals caster dam/2 and applies weaken",
+   "note": "0.2 per cast -- 1 for x10 wand",
+   "exclude_reason": ""
+  },
+  "enhanced armor": {
+   "ru": "улучшенная броня",
+   "type": "buff",
+   "minlvl": 33,
+   "classes": {
+    "cleric": 33,
+    "druid": 38,
+    "paladin": 47,
+    "warlock": 47,
+    "witch": 48
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.375,
+   "charge": 0.127,
+   "grant": 0.25,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.117,
+    "charge": 0.0234,
+    "grant": 0.05
+   },
+   "rarity": "common",
+   "effect": "AC -L, dodge/blink skills +L/15 for L/4 ticks, and blocks a few missile/arrow-type attacks",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "entangle": {
+   "ru": "опутать терновником",
+   "type": "offensive",
+   "minlvl": 17,
+   "classes": {
+    "druid": 17,
+    "ranger": 26
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.1,
+   "grant": 0.6,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0485,
+    "grant": 0.41
+   },
+   "rarity": "rare",
+   "effect": "Nature-only: tier4 pierce damage; unsaved target takes double, loses hit/dam/dex and 1/3 of its movement",
+   "note": "0.2 per cast ",
+   "exclude_reason": ""
+  },
+  "ethereal fist": {
+   "ru": "призрачный кулак",
+   "type": "offensive",
+   "minlvl": 50,
+   "classes": {
+    "anti-paladin": 50
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.15,
+   "grant": 2.533,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0404,
+    "grant": 2.149
+   },
+   "rarity": "unique",
+   "effect": "Tier4 energy damage; 50% chance on failed save to stun briefly",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "evil spirit": {
+   "ru": "средоточие зла",
+   "type": "offensive",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.188,
+   "grant": 0.159,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0723,
+    "grant": 0.029
+   },
+   "rarity": "unique",
+   "effect": "Ritual (needs rose vnum 204) darkens every room in the caster's area; non-caster occupants take dice(L,10) mental damage each update and int -max(2,L/12)",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "evolve lion": {
+   "ru": "превращение во льва",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": 13.655,
+   "charge": 0.965,
+   "grant": 7.649,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 10.162,
+    "charge": 0.6775,
+    "grant": 7.114
+   },
+   "rarity": "ubiquitous",
+   "effect": "Lion form: +perm_hit/2 hp, damroll +L/2 (5L/8 with plus), berserk, dex -(1+L/20) and slow for 3+L/30 ticks",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "eyes of intrigue": {
+   "ru": "злокозненный взгляд",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.27,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.01,
+    "grant": 0.071
+   },
+   "rarity": "n/a",
+   "effect": "Look at the room of any named character (golden aura target may notice)",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "eyes of tiger": {
+   "ru": "глаза тигра",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.27,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.01,
+    "grant": 0.071
+   },
+   "rarity": "n/a",
+   "effect": "Look at the room of a named member of the Artificers clan",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "faerie fire": {
+   "ru": "огонь фей",
+   "type": "malediction",
+   "minlvl": 15,
+   "classes": {
+    "cleric": 15,
+    "ninja": 16,
+    "warlock": 15,
+    "witch": 16
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.515,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0151,
+    "grant": 0.158
+   },
+   "rarity": "common",
+   "effect": "Target is outlined by pink aura: AC +2L and visible for L/5 ticks",
+   "note": "0.05 per cast ",
+   "exclude_reason": ""
+  },
+  "faerie fog": {
+   "ru": "туман фей",
+   "type": "utility",
+   "minlvl": 15,
+   "classes": {
+    "cleric": 31,
+    "druid": 24,
+    "warlock": 27,
+    "witch": 15
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.284,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.01,
+    "grant": 0.094
+   },
+   "rarity": "n/a",
+   "effect": "Reveals invisible/hidden/camouflaged enemies in the room and gives them a brief faerie fire",
+   "note": "0.05 per cast ",
+   "exclude_reason": ""
+  },
+  "farsight": {
+   "ru": "дальновидение",
+   "type": "utility",
+   "minlvl": 17,
+   "classes": {
+    "cleric": 25,
+    "druid": 26,
+    "warlock": 18,
+    "witch": 17
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.184,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.005,
+    "grant": 0.029
+   },
+   "rarity": "n/a",
+   "effect": "Look up to L/10 rooms away in a direction",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "fatigue": {
+   "ru": "",
+   "type": "malediction",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.061,
+   "grant": 0.849,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0202,
+    "grant": 0.353
+   },
+   "rarity": "unique",
+   "effect": "decided P1: target cannot take haste or use fatigue-gated skills, weak slow (small beats penalty); refresh removes it",
+   "note": "",
+   "exclude_reason": "proposed P1 effect (magic_items_revamp.md B9/B10)"
+  },
+  "fear": {
+   "ru": "страх",
+   "type": "offensive",
+   "minlvl": 51,
+   "classes": {
+    "anti-paladin": 61,
+    "necromancer": 51,
+    "witch": 73
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.2,
+   "grant": 2.863,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0657,
+    "grant": 2.429
+   },
+   "rarity": "common",
+   "effect": "Tier2 mental damage; unsaved target gets hitroll/damroll -max(2,L/8) for L/10+1 ticks",
+   "note": "",
+   "exclude_reason": "B3 control: CC on bosses, pets after the pet nerf, PK"
+  },
+  "fervor": {
+   "ru": "",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.1,
+   "grant": 0.3,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0275,
+    "grant": 0.138
+   },
+   "rarity": "unique",
+   "effect": "decided P1: one extra multi_hit next fight round and -30 beats, then strips itself and leaves fatigue on the eater",
+   "note": "0.1 per cast ",
+   "exclude_reason": "proposed P1 effect (magic_items_revamp.md B9/B10)"
+  },
+  "fire breath": {
+   "ru": "огненное дыхание",
+   "type": "offensive",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.8,
+   "grant": 2.0,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.1419,
+    "grant": 1.697
+   },
+   "rarity": "unique",
+   "effect": "Breath: fire damage to everyone in room (primary full, others weaker); dice(L,20) vs hp-based roll",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "fireball": {
+   "ru": "огненный шар",
+   "type": "offensive",
+   "minlvl": 56,
+   "classes": {
+    "anti-paladin": 56,
+    "warlock": 56
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.1,
+   "grant": 2.381,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0506,
+    "grant": 2.02
+   },
+   "rarity": "common",
+   "effect": "Tier3 fire damage, heats victim's gear",
+   "note": "0.1 per cast ",
+   "exclude_reason": ""
+  },
+  "fireproof": {
+   "ru": "огнеупорность",
+   "type": "utility",
+   "minlvl": 16,
+   "classes": {
+    "cleric": 16,
+    "necromancer": 42,
+    "paladin": 22,
+    "warlock": 21,
+    "witch": 25
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.3,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.005,
+    "grant": 0.024
+   },
+   "rarity": "n/a",
+   "effect": "Makes an object burn-proof for L/10+1 ticks",
+   "note": "",
+   "exclude_reason": "B3 economy/items: enchanter trade or junk loot"
+  },
+  "firestorm": {
+   "ru": "огненный шторм",
+   "type": "offensive",
+   "minlvl": 59,
+   "classes": {
+    "warlock": 59
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.317,
+   "grant": 1.697,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0854,
+    "grant": 1.466
+   },
+   "rarity": "unique",
+   "effect": "Ignites the room and deals tier2 fire damage to everyone else; room burns; caster fatigued",
+   "note": "",
+   "exclude_reason": "B3 AoE: room clears for non-casters, PK in towns (staves only where allowed); allowed on staves"
+  },
+  "flame of god": {
+   "ru": "пламя веры",
+   "type": "utility",
+   "minlvl": 57,
+   "classes": {
+    "paladin": 57
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.415,
+   "grant": 1.642,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.3573,
+    "grant": 0.893
+   },
+   "rarity": "n/a",
+   "effect": "Enchants a weapon with flaming/spell weapon type and anti-evil/anti-neutral glow for L/4 ticks",
+   "note": "",
+   "exclude_reason": "B3 economy/items: enchanter trade or junk loot"
+  },
+  "flamestrike": {
+   "ru": "огненный удар",
+   "type": "offensive",
+   "minlvl": 32,
+   "classes": {
+    "cleric": 42,
+    "paladin": 32
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.1,
+   "grant": 2.015,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0506,
+    "grant": 1.71
+   },
+   "rarity": "rare",
+   "effect": "Tier3 fire damage, heats gear",
+   "note": "0.1 per cast ",
+   "exclude_reason": ""
+  },
+  "floating disc": {
+   "ru": "диск",
+   "type": "utility",
+   "minlvl": 11,
+   "classes": {
+    "necromancer": 21,
+    "warlock": 11,
+    "witch": 21
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.717,
+   "grant": 1.229,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.5737,
+    "grant": 0.309
+   },
+   "rarity": "n/a",
+   "effect": "Creates a floating disc (vnum 23) worn in float slot: carries 20 lb per level, +L/2 hp, +L mana for L*10 ticks",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "flood": {
+   "ru": "затопить",
+   "type": "offensive",
+   "minlvl": 22,
+   "classes": {
+    "druid": 22
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.077,
+   "grant": 0.5,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0263,
+    "grant": 0.103
+   },
+   "rarity": "unique",
+   "effect": "Ritual that floods the room (sector becomes water/underwater) for L/10 hours; indoors it drowns occupants",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "flux state": {
+   "ru": "состояние потока",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": 2.477,
+   "charge": 0.536,
+   "grant": 1.384,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 1.202,
+    "charge": 0.1603,
+    "grant": 0.601
+   },
+   "rarity": "common",
+   "effect": "In combat only: hitroll/damroll -2L, AC -L*(int-18), slow + regeneration bits; blocks up to 55% of incoming hits, drains mana each round",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "fly": {
+   "ru": "полет",
+   "type": "buff",
+   "minlvl": 13,
+   "classes": {
+    "cleric": 30,
+    "necromancer": 15,
+    "warlock": 19,
+    "witch": 13
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.545,
+   "charge": 0.309,
+   "grant": 0.401,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.195,
+    "charge": 0.0812,
+    "grant": 0.094
+   },
+   "rarity": "common",
+   "effect": "Flying for L/2 ticks",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "fortitude": {
+   "ru": "стойкость",
+   "type": "buff",
+   "minlvl": 57,
+   "classes": {
+    "paladin": 57
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.873,
+   "charge": 0.207,
+   "grant": 1.121,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.39,
+    "charge": 0.039,
+    "grant": 0.273
+   },
+   "rarity": "common",
+   "effect": "Cold and negative resistance for L/10+1 ticks",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "frenzy": {
+   "ru": "неистовство",
+   "type": "buff",
+   "minlvl": 34,
+   "classes": {
+    "anti-paladin": 45,
+    "cleric": 34,
+    "paladin": 38
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 1.2,
+   "charge": 0.5,
+   "grant": 1.393,
+   "src": {
+    "worn": "kit",
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 1.145,
+    "charge": 0.1908,
+    "grant": 0.616
+   },
+   "rarity": "ubiquitous",
+   "effect": "hitroll/damroll +L/6, AC +10L/12 (worse), defensive skills -L/15 for L/5 ticks",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "frost breath": {
+   "ru": "ледяное дыхание",
+   "type": "offensive",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.6,
+   "grant": 2.548,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.113,
+    "grant": 2.162
+   },
+   "rarity": "unique",
+   "effect": "Breath: cold damage to everyone in room (primary full, others weaker); dice(L,16) vs hp-based roll",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "galvanic whip": {
+   "ru": "гальванический хлыст",
+   "type": "offensive",
+   "minlvl": 28,
+   "classes": {
+    "witch": 28
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.15,
+   "grant": 2.533,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0404,
+    "grant": 2.149
+   },
+   "rarity": "unique",
+   "effect": "Tier4 lightning damage; unsaved target dazed and maybe lagged 1-2 s",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "garble": {
+   "ru": "спутать язык",
+   "type": "malediction",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.085,
+   "grant": 0.879,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0302,
+    "grant": 0.385
+   },
+   "rarity": "unique",
+   "effect": "Cha/int/wis -L/20 for L/20+1 ticks unless saved (clan spell)",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "gas breath": {
+   "ru": "выхлоп газа",
+   "type": "offensive",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.37,
+   "grant": 1.305,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0854,
+    "grant": 1.167
+   },
+   "rarity": "unique",
+   "effect": "Breath: poison damage to everyone in room (full or half on save)",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "gaseous form": {
+   "ru": "туманная форма",
+   "type": "utility",
+   "minlvl": 55,
+   "classes": {
+    "vampire": 55
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.107,
+   "grant": 1.404,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.03,
+    "grant": 0.325
+   },
+   "rarity": "n/a",
+   "effect": "Pass-door and mist form for 1 tick; in combat first teleports caster away",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "gate": {
+   "ru": "врата",
+   "type": "utility",
+   "minlvl": 27,
+   "classes": {
+    "anti-paladin": 41,
+    "cleric": 35,
+    "necromancer": 33,
+    "warlock": 27
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.121,
+   "grant": 1.475,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.05,
+    "grant": 0.495
+   },
+   "rarity": "n/a",
+   "effect": "Teleports caster (and pet in room) to the named target character unless they save",
+   "note": "",
+   "exclude_reason": "B3 travel/escape: skips content, escapes boss and deathtrap fights, PK pulls"
+  },
+  "general purpose": {
+   "ru": "универсальные боеприпасы",
+   "type": "offensive",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.029,
+   "grant": 1.048,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0125,
+    "grant": 0.722
+   },
+   "rarity": "unique",
+   "effect": "Weapon-type pierce hit 25-100, halved on save",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "giant strength": {
+   "ru": "гигантская сила",
+   "type": "buff",
+   "minlvl": 19,
+   "classes": {
+    "cleric": 39,
+    "druid": 19,
+    "necromancer": 28,
+    "warlock": 30,
+    "witch": 20
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.938,
+   "charge": 0.505,
+   "grant": 0.677,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.411,
+    "charge": 0.1164,
+    "grant": 0.177
+   },
+   "rarity": "ubiquitous",
+   "effect": "str +max(2,L/20+1), damroll +L/20+1 for L/3+1 ticks; L = the USER's skill level, not the item's cast level",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "gills": {
+   "ru": "жабры",
+   "type": "utility",
+   "minlvl": 12,
+   "classes": {
+    "warlock": 15,
+    "witch": 12
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.229,
+   "charge": 0.05,
+   "grant": 0.196,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.052,
+    "charge": 0.0052,
+    "grant": 0.031
+   },
+   "rarity": "n/a",
+   "effect": "Swim bit (underwater breathing) at cha -5 for 3+L/15 ticks",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "golden aura": {
+   "ru": "золотая аура",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": 2.45,
+   "charge": 1.366,
+   "grant": 1.479,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 1.089,
+    "charge": 1.0163,
+    "grant": 0.762
+   },
+   "rarity": "ubiquitous",
+   "effect": "Group in room: protect evil bit, hitroll +L/8, spell saves -L/8, detect fade+evil for 6+L ticks",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "group defense": {
+   "ru": "групповая защита",
+   "type": "buff",
+   "minlvl": 45,
+   "classes": {
+    "cleric": 45,
+    "druid": 59
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 1.5,
+   "charge": 0.4,
+   "grant": 1.645,
+   "src": {
+    "worn": "kit",
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 2.284,
+    "charge": 0.3274,
+    "grant": 1.054
+   },
+   "rarity": "rare",
+   "effect": "Casts armor, shield and sanctuary on every group member in the room",
+   "note": "",
+   "exclude_reason": "B3 AoE: room clears for non-casters, PK in towns (staves only where allowed)"
+  },
+  "group heal": {
+   "ru": "излечить группу",
+   "type": "heal",
+   "minlvl": 65,
+   "classes": {
+    "cleric": 65,
+    "druid": 67,
+    "paladin": 75
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.097,
+   "grant": 1.098,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0365,
+    "grant": 0.821
+   },
+   "rarity": "unique",
+   "effect": "Casts heal (or superior heal/master healing if known) plus refresh on each group member in the room",
+   "note": "",
+   "exclude_reason": "B3 AoE: room clears for non-casters, PK in towns (staves only where allowed)"
+  },
+  "grove": {
+   "ru": "роща",
+   "type": "utility",
+   "minlvl": 35,
+   "classes": {
+    "druid": 35
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.25,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.01,
+    "grant": 0.04
+   },
+   "rarity": "n/a",
+   "effect": "Druid ritual in a nature room with an apple: grows a grove, room heal_gain/mana_gain +2L for L ticks, a tree with fruit and a spring",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "hallucinate": {
+   "ru": "галлюцинации",
+   "type": "other",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.0,
+   "grant": 0.0,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0,
+    "grant": 0.0
+   },
+   "rarity": "n/a",
+   "effect": "Not castable: area affect for Amber City that triggers scripted hallucinations on movement and periodic updates",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "hand of undead": {
+   "ru": "рука умертвия",
+   "type": "offensive",
+   "minlvl": 44,
+   "classes": {
+    "necromancer": 44
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.2,
+   "grant": 1.857,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0538,
+    "grant": 1.588
+   },
+   "rarity": "unique",
+   "effect": "Tier4 negative damage; unsaved target loses mana (1/3) and move (2/3), caster heals; weak mobs die outright",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "harm": {
+   "ru": "вред",
+   "type": "offensive",
+   "minlvl": 2,
+   "classes": {
+    "anti-paladin": 5,
+    "cleric": 2
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.16,
+   "grant": 2.893,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0504,
+    "grant": 2.455
+   },
+   "rarity": "rare",
+   "effect": "Tier5 harm damage scaled by 'agony' (1+sqrt L = 8); with agony% chance instead hits for up to dice(L,35)",
+   "note": "",
+   "exclude_reason": "B3 %hp / instakill: trivialises boss hp pools"
+  },
+  "haste": {
+   "ru": "ускорение",
+   "type": "buff",
+   "minlvl": 24,
+   "classes": {
+    "warlock": 24,
+    "witch": 24
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 3.832,
+   "charge": 0.7,
+   "grant": 1.843,
+   "src": {
+    "worn": "rescaled",
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 2.538,
+    "charge": 0.5075,
+    "grant": 1.503
+   },
+   "rarity": "common",
+   "effect": "dex +max(2,L/12) and haste bit for L/4 ticks; -10 beats when self-cast with the skill",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "heal": {
+   "ru": "лечение",
+   "type": "heal",
+   "minlvl": 2,
+   "classes": {
+    "anti-paladin": 25,
+    "cleric": 2,
+    "druid": 3,
+    "paladin": 4
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.3,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0262,
+    "grant": 1.268
+   },
+   "rarity": "rare",
+   "effect": "Restores dice(L/4,sqrt L) + 10L/sqrt L hp",
+   "note": "0.05 per cast ",
+   "exclude_reason": ""
+  },
+  "healing light": {
+   "ru": "целебный свет",
+   "type": "utility",
+   "minlvl": 41,
+   "classes": {
+    "cleric": 41,
+    "druid": 44
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.1,
+   "grant": 0.252,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0141,
+    "grant": 0.043
+   },
+   "rarity": "n/a",
+   "effect": "Room regen aura: heal_gain +2L for L/25+1 ticks; caster has same-length cooldown",
+   "note": "",
+   "exclude_reason": "B3 AoE: room clears for non-casters, PK in towns (staves only where allowed)"
+  },
+  "heating": {
+   "ru": "раскалить",
+   "type": "offensive",
+   "minlvl": 26,
+   "classes": {
+    "cleric": 26
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.072,
+   "grant": 1.117,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0243,
+    "grant": 0.859
+   },
+   "rarity": "rare",
+   "effect": "Heats up target's worn items (up to L/15+1 items) or an object; no direct damage",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "hellfire": {
+   "ru": "адский огонь",
+   "type": "offensive",
+   "minlvl": 45,
+   "classes": {
+    "ninja": 45
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.15,
+   "grant": 2.533,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0404,
+    "grant": 2.149
+   },
+   "rarity": "rare",
+   "effect": "Tier4 fire damage, heats gear",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "high explosive": {
+   "ru": "взрывчатка",
+   "type": "offensive",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 1.123,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0152,
+    "grant": 0.872
+   },
+   "rarity": "unique",
+   "effect": "Weapon-type pierce hit 30-120, halved on save",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "holy armor": {
+   "ru": "священная броня",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": 2.832,
+   "charge": 0.982,
+   "grant": 1.705,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 1.701,
+    "charge": 0.7089,
+    "grant": 1.191
+   },
+   "rarity": "common",
+   "effect": "ac -L and +1 level to defensive skill group for L/2 ticks; blocks up to min(4,L/25) hits from evil attackers",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "holy word": {
+   "ru": "святое слово",
+   "type": "offensive",
+   "minlvl": 41,
+   "classes": {
+    "anti-paladin": 68,
+    "cleric": 48,
+    "paladin": 41
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.077,
+   "grant": 0.7,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0263,
+    "grant": 0.266
+   },
+   "rarity": "unique",
+   "effect": "Room blast: group of same alignment gets frenzy+inspire; other-aligned take tier-4 damage x strength, curse and may be knocked prone",
+   "note": "",
+   "exclude_reason": "B3 AoE: room clears for non-casters, PK in towns (staves only where allowed); allowed on staves"
+  },
+  "hunger weapon": {
+   "ru": "голодное оружие",
+   "type": "utility",
+   "minlvl": 20,
+   "classes": {
+    "vampire": 20
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.949,
+   "grant": 2.0,
+   "src": {
+    "charge": "rescaled",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.7588,
+    "grant": 1.751
+   },
+   "rarity": "n/a",
+   "effect": "Vampire imbues a weapon with vampiric weapon flag for L/4 ticks; weapon becomes anti-good/anti-neutral",
+   "note": "",
+   "exclude_reason": "B3 economy/items: enchanter trade or junk loot"
+  },
+  "hurricane": {
+   "ru": "ураган",
+   "type": "offensive",
+   "minlvl": 45,
+   "classes": {
+    "anti-paladin": 53,
+    "druid": 50,
+    "warlock": 45
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.3,
+   "grant": 1.0,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0854,
+    "grant": 0.376
+   },
+   "rarity": "rare",
+   "effect": "Outdoor room storm hits everyone but caster with tier-2 damage scaled by size and terrain; flyers take more",
+   "note": "",
+   "exclude_reason": "B3 AoE: room clears for non-casters, PK in towns (staves only where allowed); allowed on staves"
+  },
+  "hydroblast": {
+   "ru": "водяной удар",
+   "type": "offensive",
+   "minlvl": 33,
+   "classes": {
+    "druid": 33,
+    "ranger": 50
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.9,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0506,
+    "grant": 0.427
+   },
+   "rarity": "rare",
+   "effect": "Water fist hits one target for tier-3 damage; needs water around",
+   "note": "0.05 per cast ",
+   "exclude_reason": ""
+  },
+  "hymn of rage": {
+   "ru": "гимн ярости",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": 1.52,
+   "charge": 0.231,
+   "grant": 1.276,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.598,
+    "charge": 0.0498,
+    "grant": 0.419
+   },
+   "rarity": "ubiquitous",
+   "effect": "Group in room gets hitroll, damroll, saves and heal_gain for L/10 ticks; each sworn Battlerager in room adds up to +4 hit/dam",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "iceball": {
+   "ru": "ледяная сфера",
+   "type": "offensive",
+   "minlvl": 54,
+   "classes": {
+    "anti-paladin": 58,
+    "druid": 61,
+    "necromancer": 54
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.2,
+   "grant": 2.16,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0854,
+    "grant": 1.833
+   },
+   "rarity": "rare",
+   "effect": "Room cold blast: tier-2 damage to all enemies plus move loss L..2L (halved on save); freezes room items",
+   "note": "",
+   "exclude_reason": "B3 AoE: room clears for non-casters, PK in towns (staves only where allowed); allowed on staves"
+  },
+  "identify": {
+   "ru": "опознание",
+   "type": "utility",
+   "minlvl": 18,
+   "classes": {
+    "cleric": 36,
+    "necromancer": 25,
+    "warlock": 25,
+    "witch": 18
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.281,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.01,
+    "grant": 0.09
+   },
+   "rarity": "n/a",
+   "effect": "Reveals exact parameters of an item",
+   "note": "",
+   "exclude_reason": "B3 economy/items: enchanter trade or junk loot"
+  },
+  "improved detect": {
+   "ru": "улучшенное обнаружение",
+   "type": "detect",
+   "minlvl": 37,
+   "classes": {
+    "cleric": 45,
+    "warlock": 40,
+    "witch": 37
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 1.0,
+   "charge": 0.5,
+   "grant": 1.0,
+   "src": {
+    "worn": "kit",
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": 0.196,
+    "charge": 0.0393,
+    "grant": 0.106
+   },
+   "rarity": "rare",
+   "effect": "See improved-invisible creatures for L/4 ticks",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "improved invis": {
+   "ru": "улучшенная невидимость",
+   "type": "buff",
+   "minlvl": 40,
+   "classes": {
+    "warlock": 43,
+    "witch": 40
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 3.0,
+   "charge": 0.8,
+   "grant": 2.0,
+   "src": {
+    "worn": "kit",
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": 1.299,
+    "charge": 0.1083,
+    "grant": 0.77
+   },
+   "rarity": "unique",
+   "effect": "Improved invisibility bit for L/10 ticks; seen only with improved detect",
+   "note": "",
+   "exclude_reason": "Раніше виключено (B3 high signature past R2), правило знято 10-28"
+  },
+  "inaction": {
+   "ru": "недеяние",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": 2.448,
+   "charge": 1.213,
+   "grant": 1.349,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 1.083,
+    "charge": 0.9028,
+    "grant": 0.542
+   },
+   "rarity": "common",
+   "effect": "Calm bit and mana_gain +30*sqrt(L) for L ticks; grants temporary item skills",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "infected mushroom": {
+   "ru": "грибочек",
+   "type": "utility",
+   "minlvl": 16,
+   "classes": {
+    "druid": 16
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.107,
+   "grant": 0.209,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.03,
+    "grant": 0.033
+   },
+   "rarity": "n/a",
+   "effect": "Druid creates a hallucinogenic mushroom pill (obj 27910) lasting 1 day",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "infravision": {
+   "ru": "тепловое зрение",
+   "type": "detect",
+   "minlvl": 7,
+   "classes": {
+    "cleric": 25,
+    "necromancer": 21,
+    "ninja": 7,
+    "warlock": 18,
+    "witch": 17
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.346,
+   "charge": 0.346,
+   "grant": 0.225,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.104,
+    "charge": 0.0866,
+    "grant": 0.045
+   },
+   "rarity": "ubiquitous",
+   "effect": "Target sees in the dark (infrared bit) for L ticks",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "insanity": {
+   "ru": "безумие",
+   "type": "malediction",
+   "minlvl": 59,
+   "classes": {
+    "necromancer": 59
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.061,
+   "grant": 0.849,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0202,
+    "grant": 0.353
+   },
+   "rarity": "unique",
+   "effect": "Victim gets bloodthirst and damroll +L/5 for L/20+1 ticks, attacking anything",
+   "note": "",
+   "exclude_reason": "B3 control: CC on bosses, pets after the pet nerf, PK"
+  },
+  "inspire": {
+   "ru": "воодушевление",
+   "type": "buff",
+   "minlvl": 49,
+   "classes": {
+    "cleric": 49,
+    "druid": 80
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 1.545,
+   "charge": 0.444,
+   "grant": 1.26,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.606,
+    "charge": 0.1009,
+    "grant": 0.391
+   },
+   "rarity": "ubiquitous",
+   "effect": "Group gets hitroll and saves; strength scales by alignment (same align doubled), duration level*(1+s)/10",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "invisibility": {
+   "ru": "невидимость",
+   "type": "buff",
+   "minlvl": 9,
+   "classes": {
+    "anti-paladin": 9,
+    "necromancer": 15,
+    "vampire": 10,
+    "warlock": 13,
+    "witch": 9
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.545,
+   "charge": 0.236,
+   "grant": 0.381,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.195,
+    "charge": 0.052,
+    "grant": 0.084
+   },
+   "rarity": "rare",
+   "effect": "Target (or item) becomes invisible: char L/8+10 ticks, item L/4+12 ticks",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "iron golem": {
+   "ru": "железный голем",
+   "type": "summon",
+   "minlvl": 52,
+   "classes": {
+    "necromancer": 52
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.8,
+   "grant": 3.5,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 3.2474,
+    "grant": 2.998
+   },
+   "rarity": "n/a",
+   "effect": "Necromancer creates an iron golem follower (mob 23, tier 6), consumes an ingredient, max 1",
+   "note": "",
+   "exclude_reason": "B3 summons: pet circumvention"
+  },
+  "kassandra": {
+   "ru": "кассандра",
+   "type": "heal",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.16,
+   "grant": 0.066,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0506,
+    "grant": 0.012
+   },
+   "rarity": "unique",
+   "effect": "Heals superior-heal amount on self; needs item vnum 89 worn; 5-tick cooldown",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "knock": {
+   "ru": "вышибить",
+   "type": "utility",
+   "minlvl": 56,
+   "classes": {
+    "necromancer": 62,
+    "warlock": 64,
+    "witch": 56
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.1,
+   "grant": 0.306,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.02,
+    "grant": 0.13
+   },
+   "rarity": "n/a",
+   "effect": "Unlocks and opens a locked door with chance L/5+skill/5+2*(int-20)",
+   "note": "",
+   "exclude_reason": "B3 content bypass: doors and anti-summon are design gates"
+  },
+  "learning": {
+   "ru": "обучаемость",
+   "type": "buff",
+   "minlvl": 35,
+   "classes": {
+    "cleric": 35,
+    "necromancer": 35,
+    "warlock": 35,
+    "witch": 35
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.5,
+   "charge": 0.511,
+   "grant": 0.2,
+   "src": {
+    "worn": "kit",
+    "charge": "rescaled",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": 0.15,
+    "charge": 0.1251,
+    "grant": 0.073
+   },
+   "rarity": "ubiquitous",
+   "effect": "int +1 for L ticks; more experience from skill improvement",
+   "note": "",
+   "exclude_reason": "B3 progression: XP/practice boost"
+  },
+  "lesser golem": {
+   "ru": "глиняный голем",
+   "type": "summon",
+   "minlvl": 25,
+   "classes": {
+    "necromancer": 25
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.5,
+   "grant": 1.5,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 2.7061,
+    "grant": 2.29
+   },
+   "rarity": "n/a",
+   "effect": "Necromancer creates a clay golem follower (mob 21, tier 9), consumes an ingredient, max 3",
+   "note": "",
+   "exclude_reason": "B3 summons: pet circumvention"
+  },
+  "lethargic mist": {
+   "ru": "замедляющий туман",
+   "type": "malediction",
+   "minlvl": 52,
+   "classes": {
+    "anti-paladin": 62,
+    "warlock": 56,
+    "witch": 52
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.108,
+   "grant": 0.717,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0393,
+    "grant": 0.276
+   },
+   "rarity": "unique",
+   "effect": "Room mist slows everyone entering or present who fails a drowning save; room affect L/15 ticks, caster cooldown L/5",
+   "note": "",
+   "exclude_reason": "B3 AoE: room clears for non-casters, PK in towns (staves only where allowed)"
+  },
+  "lightning bolt": {
+   "ru": "разряд молнии",
+   "type": "offensive",
+   "minlvl": 13,
+   "classes": {
+    "anti-paladin": 13,
+    "druid": 25,
+    "warlock": 16,
+    "witch": 23
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.1,
+   "grant": 1.609,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0506,
+    "grant": 1.399
+   },
+   "rarity": "rare",
+   "effect": "Lightning hits one target for tier-3 damage; discharges into gear",
+   "note": "0.1 per cast ",
+   "exclude_reason": ""
+  },
+  "lightning breath": {
+   "ru": "дыхание молний",
+   "type": "offensive",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.8,
+   "grant": 2.0,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.1124,
+    "grant": 1.198
+   },
+   "rarity": "rare",
+   "effect": "Breath attack: dice(L,20) or hp-based damage, whichever is higher; shocks gear",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "lightning ward": {
+   "ru": "оберег молний",
+   "type": "offensive",
+   "minlvl": 41,
+   "classes": {
+    "witch": 41
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.152,
+   "grant": 0.678,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0429,
+    "grant": 0.253
+   },
+   "rarity": "unique",
+   "effect": "Room ward for L/25+1 ticks: enemies entering take dice(L,5-10) lightning and caster gets a free hit",
+   "note": "",
+   "exclude_reason": "B3 AoE: room clears for non-casters, PK in towns (staves only where allowed)"
+  },
+  "link": {
+   "ru": "связь",
+   "type": "utility",
+   "minlvl": 31,
+   "classes": {
+    "druid": 45,
+    "necromancer": 33,
+    "warlock": 33,
+    "witch": 31
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.005,
+   "grant": 0.01,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0,
+    "grant": 0.0
+   },
+   "rarity": "n/a",
+   "effect": "Transfers caster mana to target at 50+3*level-diff% efficiency (Enki followers +50%)",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "lion shield": {
+   "ru": "щит льва",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": 1.667,
+   "grant": 1.603,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 1.3333,
+    "grant": 0.8
+   },
+   "rarity": "n/a",
+   "effect": "Clan ritual creates a Lion shield armor (obj 33) for self or a newbie; lasts level+1 ticks",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "liturgy": {
+   "ru": "литургия",
+   "type": "buff",
+   "minlvl": 10,
+   "classes": {
+    "paladin": 10
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": 6.661,
+   "charge": 1.0,
+   "grant": 1.852,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 4.957,
+    "charge": 0.7435,
+    "grant": 1.525
+   },
+   "rarity": "common",
+   "effect": "Paladin prayer: out of combat learned +L/10+1 and level +L/40+1; in combat smites enemy with a spell; risk of punishment",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "locate object": {
+   "ru": "локатор",
+   "type": "utility",
+   "minlvl": 29,
+   "classes": {
+    "cleric": 30,
+    "ninja": 35,
+    "paladin": 30,
+    "warlock": 29,
+    "witch": 29
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.25,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.01,
+    "grant": 0.04
+   },
+   "rarity": "n/a",
+   "effect": "Lists locations of matching objects in the world (up to 100)",
+   "note": "",
+   "exclude_reason": "B3 content bypass: doors and anti-summon are design gates"
+  },
+  "love potion": {
+   "ru": "любовное зелье",
+   "type": "buff",
+   "minlvl": 75,
+   "classes": {
+    "witch": 75
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": 0.258,
+   "charge": 0.059,
+   "grant": 0.163,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.065,
+    "charge": 0.0108,
+    "grant": 0.032
+   },
+   "rarity": "common",
+   "effect": "cha +L/20+1 for L/5 ticks; opposite-sex lookers may become charmed",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "magic concentrate": {
+   "ru": "сфокусировать магию",
+   "type": "buff",
+   "minlvl": 57,
+   "classes": {
+    "warlock": 57,
+    "witch": 57
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": 0.582,
+   "charge": 0.118,
+   "grant": 0.431,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.217,
+    "charge": 0.0217,
+    "grant": 0.109
+   },
+   "rarity": "unique",
+   "effect": "For L/10+1 ticks ranged magic spells gain distance-based power; mana regen halved",
+   "note": "",
+   "exclude_reason": "Раніше виключено (B3 high signature past R2), правило знято 10-28"
+  },
+  "magic jar": {
+   "ru": "волшебный сосуд",
+   "type": "other",
+   "minlvl": 68,
+   "classes": {
+    "necromancer": 68
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.0,
+   "grant": 0.0,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0,
+    "grant": 0.0
+   },
+   "rarity": "n/a",
+   "effect": "Traps a PK-range player's soul in a jar (sets no-exp flag); needs an empty vial",
+   "note": "",
+   "exclude_reason": "B3 %hp / instakill: trivialises boss hp pools"
+  },
+  "magic missile": {
+   "ru": "волшебная стрела",
+   "type": "offensive",
+   "minlvl": 1,
+   "classes": {
+    "anti-paladin": 2,
+    "necromancer": 1,
+    "warlock": 1,
+    "witch": 1
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 3.14,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0669,
+    "grant": 2.664
+   },
+   "rarity": "rare",
+   "effect": "Several missiles (rand(sqrt(L)/2,sqrt(L)) = 3-7) each tier-5 damage scaled by random 1-100%",
+   "note": "0.05 per cast ",
+   "exclude_reason": ""
+  },
+  "magnetic thrust": {
+   "ru": "магнитный толчок",
+   "type": "offensive",
+   "minlvl": 34,
+   "classes": {
+    "warlock": 34
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.15,
+   "grant": 2.533,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0404,
+    "grant": 2.149
+   },
+   "rarity": "unique",
+   "effect": "Tier-4 damage; on failed save 50% stun-daze 1-2 s else prone",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "mass invis": {
+   "ru": "всеобщая невидимость",
+   "type": "buff",
+   "minlvl": 51,
+   "classes": {
+    "warlock": 52,
+    "witch": 51
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 2.547,
+   "charge": 0.818,
+   "grant": 1.47,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 1.494,
+    "charge": 0.3985,
+    "grant": 0.747
+   },
+   "rarity": "unique",
+   "effect": "Group gets invisibility (16 ticks) and improved invisibility (5 ticks)",
+   "note": "",
+   "exclude_reason": "B3 AoE: room clears for non-casters, PK in towns (staves only where allowed)"
+  },
+  "master healing": {
+   "ru": "мастерское лечение",
+   "type": "heal",
+   "minlvl": 58,
+   "classes": {
+    "cleric": 58
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.2,
+   "grant": 1.0,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0504,
+    "grant": 0.427
+   },
+   "rarity": "common",
+   "effect": "Heals L*5+rand(0,150) hp",
+   "note": "",
+   "exclude_reason": "Раніше виключено (B3 high signature past R2), правило знято 10-28"
+  },
+  "matandra": {
+   "ru": "матандра",
+   "type": "offensive",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.178,
+   "grant": 0.066,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0657,
+    "grant": 0.012
+   },
+   "rarity": "unique",
+   "effect": "Tier-2 damage and blind; needs item 89 worn and active combat; 5-tick cooldown",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "meld into stone": {
+   "ru": "слиться с камнями",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": false,
+   "worn": 1.511,
+   "charge": 0.653,
+   "grant": 1.274,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.595,
+    "charge": 0.2479,
+    "grant": 0.416
+   },
+   "rarity": "rare",
+   "effect": "Stone skin: con +L/20, ac -100, resist slash and pierce, slow bit, dex -L/20 for L/2 ticks",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "mend": {
+   "ru": "исправить",
+   "type": "utility",
+   "minlvl": 50,
+   "classes": {
+    "warlock": 50,
+    "witch": 50
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.1,
+   "grant": 0.2,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.01,
+    "grant": 0.055
+   },
+   "rarity": "n/a",
+   "effect": "Repairs object condition to ~skill*2/3 + random up to 100%",
+   "note": "",
+   "exclude_reason": "B3 economy/items: enchanter trade or junk loot"
+  },
+  "mental block": {
+   "ru": "ментальная блокада",
+   "type": "buff",
+   "minlvl": 25,
+   "classes": {
+    "cleric": 35,
+    "necromancer": 36,
+    "warlock": 33,
+    "witch": 25
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.5,
+   "charge": 0.531,
+   "grant": 0.5,
+   "src": {
+    "worn": "kit",
+    "charge": "rescaled",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": 0.37,
+    "charge": 0.154,
+    "grant": 0.179
+   },
+   "rarity": "unique",
+   "effect": "int -L/50 and immune to summon for L/2 ticks",
+   "note": "",
+   "exclude_reason": "B3 content bypass: doors and anti-summon are design gates"
+  },
+  "mental knife": {
+   "ru": "ментальный нож",
+   "type": "offensive",
+   "minlvl": 42,
+   "classes": {
+    "witch": 42
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.16,
+   "grant": 1.06,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0506,
+    "grant": 0.746
+   },
+   "rarity": "unique",
+   "effect": "Tier-3 damage (+up to 10% by int) with 50% daze or int/wis -max(2,L/12)",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "mind light": {
+   "ru": "сияние разума",
+   "type": "buff",
+   "minlvl": 36,
+   "classes": {
+    "cleric": 36
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 1.103,
+   "charge": 0.126,
+   "grant": 0.427,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.464,
+    "charge": 0.0232,
+    "grant": 0.107
+   },
+   "rarity": "common",
+   "effect": "Room gains mana_gain +2L for L/25+1 ticks; caster cooldown same",
+   "note": "",
+   "exclude_reason": "B3 AoE: room clears for non-casters, PK in towns (staves only where allowed)"
+  },
+  "mind wrack": {
+   "ru": "разрушение разума",
+   "type": "offensive",
+   "minlvl": 27,
+   "classes": {
+    "anti-paladin": 27
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.1,
+   "grant": 1.2,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0657,
+    "grant": 1.026
+   },
+   "rarity": "unique",
+   "effect": "Tier-2 damage; 20% brief stun on failed save",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "mind wrench": {
+   "ru": "искажение разума",
+   "type": "offensive",
+   "minlvl": 40,
+   "classes": {
+    "anti-paladin": 40
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.16,
+   "grant": 2.015,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0506,
+    "grant": 1.71
+   },
+   "rarity": "rare",
+   "effect": "Tier-3 damage plus int and wis -L/10 for L/2 ticks on failed save",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "mirror": {
+   "ru": "зеркала",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": 0.625,
+   "charge": 0.605,
+   "grant": 0.7,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.26,
+    "charge": 0.2166,
+    "grant": 0.182
+   },
+   "rarity": "unique",
+   "effect": "Creates min(L/5,10)=10 mirror images of target for L ticks that confuse enemies",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "mist walk": {
+   "ru": "туманный путь",
+   "type": "utility",
+   "minlvl": 47,
+   "classes": {
+    "vampire": 47
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.121,
+   "grant": 1.544,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.05,
+    "grant": 0.66
+   },
+   "rarity": "n/a",
+   "effect": "Vampire teleports to a target character (and pet) in the world",
+   "note": "",
+   "exclude_reason": "B3 travel/escape: skips content, escapes boss and deathtrap fights, PK pulls"
+  },
+  "mosquito swarm": {
+   "ru": "гнус",
+   "type": "offensive",
+   "minlvl": 40,
+   "classes": {
+    "druid": 40
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.172,
+   "grant": 1.206,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0613,
+    "grant": 1.037
+   },
+   "rarity": "unique",
+   "effect": "Tier-3 damage plus swarm affect: poison damage each tick, unequips items, blind/poison/weaken in fights",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "mystical leap": {
+   "ru": "мистический скачок",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.743,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.01,
+    "grant": 0.292
+   },
+   "rarity": "n/a",
+   "effect": "Clan teleport to a target in the same area; PvP only if in combat; upgraded gives mana and lag cut",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "narcotic mist": {
+   "ru": "усыпляющий туман",
+   "type": "malediction",
+   "minlvl": 27,
+   "classes": {
+    "anti-paladin": 35,
+    "necromancer": 27,
+    "warlock": 49,
+    "witch": 49
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.077,
+   "grant": 0.5,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0263,
+    "grant": 0.128
+   },
+   "rarity": "unique",
+   "effect": "Room mist puts those entering/staying to sleep via instakill-style roll; room L/25 ticks",
+   "note": "",
+   "exclude_reason": "B3 AoE: room clears for non-casters, PK in towns (staves only where allowed)"
+  },
+  "nexus": {
+   "ru": "нексус",
+   "type": "utility",
+   "minlvl": 60,
+   "classes": {
+    "cleric": 61,
+    "necromancer": 75,
+    "warlock": 60,
+    "witch": 60
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.121,
+   "grant": 1.567,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.05,
+    "grant": 0.715
+   },
+   "rarity": "n/a",
+   "effect": "Two-way portals between caster room and target room in another area for 1+L/3 ticks; needs warp stone",
+   "note": "",
+   "exclude_reason": "B3 travel/escape: skips content, escapes boss and deathtrap fights, PK pulls"
+  },
+  "nightfall": {
+   "ru": "затемнить",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.266,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.01,
+    "grant": 0.065
+   },
+   "rarity": "n/a",
+   "effect": "Clan ritual darkens the room, breaks lights and strips faerie fire; needs a rose (obj 204)",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "nightwalker": {
+   "ru": "ночная тень",
+   "type": "summon",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": 1.131,
+   "grant": 1.448,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 2.7061,
+    "grant": 1.145
+   },
+   "rarity": "n/a",
+   "effect": "Invader clan shadow follower (mob 14, tier 6, better at higher clan rank); usable in darkness",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "observation": {
+   "ru": "диагностика",
+   "type": "detect",
+   "minlvl": 10,
+   "classes": {
+    "cleric": 10,
+    "druid": 19,
+    "paladin": 13
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.258,
+   "charge": 0.123,
+   "grant": 0.177,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.065,
+    "charge": 0.0227,
+    "grant": 0.035
+   },
+   "rarity": "unique",
+   "effect": "Diagnose negative affects of others for 5+L/3 ticks",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "optic resonance": {
+   "ru": "оптический резонанс",
+   "type": "offensive",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.085,
+   "grant": 1.011,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0303,
+    "grant": 0.647
+   },
+   "rarity": "unique",
+   "effect": "Ruler light beam: dice(L,5) light damage, plus same again for each mirror image of a player target",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "paralysis": {
+   "ru": "паралич",
+   "type": "malediction",
+   "minlvl": 62,
+   "classes": {
+    "anti-paladin": 62
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.15,
+   "grant": 0.654,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0404,
+    "grant": 0.239
+   },
+   "rarity": "unique",
+   "effect": "Stuns victim for 1 tick with dex, hit, dam penalties and ac +10L; instakill-style roll",
+   "note": "",
+   "exclude_reason": "B3 control: CC on bosses, pets after the pet nerf, PK"
+  },
+  "pass door": {
+   "ru": "прохождение преград",
+   "type": "buff",
+   "minlvl": 24,
+   "classes": {
+    "cleric": 32,
+    "necromancer": 27,
+    "warlock": 24,
+    "witch": 24
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.3,
+   "charge": 0.05,
+   "grant": 0.3,
+   "src": {
+    "worn": "kit",
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": 0.195,
+    "charge": 0.039,
+    "grant": 0.094
+   },
+   "rarity": "common",
+   "effect": "Pass through doors for L/4 ticks",
+   "note": "",
+   "exclude_reason": "B3 content bypass: doors and anti-summon are design gates"
+  },
+  "personal id": {
+   "ru": "опознание личности",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.02,
+   "grant": 0.082,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.002,
+    "grant": 0.013
+   },
+   "rarity": "n/a",
+   "effect": "Chaos: reveals true form behind a Chaosite or mirror owner; shows registration place of special mobs",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "phantasmal jab": {
+   "ru": "призрачный удар",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": 3.312,
+   "charge": 0.823,
+   "grant": 1.807,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 2.032,
+    "charge": 0.4064,
+    "grant": 1.422
+   },
+   "rarity": "unique",
+   "effect": "Clan buff for L/4 ticks: in fights chance to strike for dice(L,24) bash and daze",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "plague": {
+   "ru": "чума",
+   "type": "malediction",
+   "minlvl": 30,
+   "classes": {
+    "anti-paladin": 46,
+    "cleric": 33,
+    "necromancer": 36,
+    "witch": 30
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.645,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0324,
+    "grant": 0.234
+   },
+   "rarity": "unique",
+   "effect": "Stacking plague: str -1, damage over time, drains mana/move, spreads to nearby; 7 ticks base",
+   "note": "0.05 per cast ",
+   "exclude_reason": ""
+  },
+  "poison": {
+   "ru": "яд",
+   "type": "malediction",
+   "minlvl": 15,
+   "classes": {
+    "anti-paladin": 15,
+    "cleric": 22,
+    "necromancer": 23,
+    "witch": 27
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.668,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0324,
+    "grant": 0.247
+   },
+   "rarity": "common",
+   "effect": "Stacking poison: str -1 and damage over time for 7 ticks; also poisons weapons, food, fountains",
+   "note": "0.05 per cast ",
+   "exclude_reason": ""
+  },
+  "portal": {
+   "ru": "портал",
+   "type": "utility",
+   "minlvl": 35,
+   "classes": {
+    "cleric": 35,
+    "necromancer": 43,
+    "warlock": 40,
+    "witch": 40
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.121,
+   "grant": 1.475,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.05,
+    "grant": 0.495
+   },
+   "rarity": "n/a",
+   "effect": "One-way portal from caster room to target in another area for 1+L/8 ticks; needs warp stone",
+   "note": "",
+   "exclude_reason": "B3 travel/escape: skips content, escapes boss and deathtrap fights, PK pulls"
+  },
+  "power word kill": {
+   "ru": "слово смерти",
+   "type": "offensive",
+   "minlvl": 78,
+   "classes": {
+    "necromancer": 78
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.2,
+   "grant": 0.688,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0809,
+    "grant": 0.259
+   },
+   "rarity": "unique",
+   "effect": "Instakill if victim fails negative save; otherwise tier-1 damage",
+   "note": "",
+   "exclude_reason": "B3 %hp / instakill: trivialises boss hp pools"
+  },
+  "prevent": {
+   "ru": "предотвращение",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.266,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.01,
+    "grant": 0.065
+   },
+   "rarity": "n/a",
+   "effect": "Lion clan: protects self from Artisan mines for max(6,2*clan level) ticks or an area from mines/pneumatic post",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "protection cold": {
+   "ru": "защита от холода",
+   "type": "buff",
+   "minlvl": 22,
+   "classes": {
+    "cleric": 44,
+    "druid": 22,
+    "necromancer": 50,
+    "warlock": 49,
+    "witch": 53
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.5,
+   "charge": 0.2,
+   "grant": 0.5,
+   "src": {
+    "worn": "kit",
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": 0.222,
+    "charge": 0.0445,
+    "grant": 0.108
+   },
+   "rarity": "common",
+   "effect": "Saves -1 and cold resistance for L/4 ticks; potion/drink item version",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "protection evil": {
+   "ru": "защита от зла",
+   "type": "buff",
+   "minlvl": 9,
+   "classes": {
+    "cleric": 9,
+    "paladin": 11,
+    "warlock": 22,
+    "witch": 22
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.4,
+   "charge": 0.1,
+   "grant": 0.3,
+   "src": {
+    "worn": "kit",
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": 0.213,
+    "charge": 0.0355,
+    "grant": 0.092
+   },
+   "rarity": "common",
+   "effect": "Protect-evil bit, saves -1, for L/10+5 ticks",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "protection good": {
+   "ru": "защита от добра",
+   "type": "buff",
+   "minlvl": 9,
+   "classes": {
+    "anti-paladin": 13,
+    "cleric": 9,
+    "necromancer": 17,
+    "vampire": 27,
+    "warlock": 22,
+    "witch": 22
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.4,
+   "charge": 0.1,
+   "grant": 0.3,
+   "src": {
+    "worn": "kit",
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": 0.213,
+    "charge": 0.0355,
+    "grant": 0.069
+   },
+   "rarity": "common",
+   "effect": "Protect-good bit, saves -1, for L/10+5 ticks",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "protection heat": {
+   "ru": "защита от тепла",
+   "type": "buff",
+   "minlvl": 39,
+   "classes": {
+    "cleric": 39,
+    "warlock": 46,
+    "witch": 46
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.8,
+   "charge": 0.4,
+   "grant": 0.7,
+   "src": {
+    "worn": "kit",
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": 0.352,
+    "charge": 0.0705,
+    "grant": 0.19
+   },
+   "rarity": "common",
+   "effect": "Saves -1 and fire resistance for L/4 ticks; item version",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "protection negative": {
+   "ru": "сопротивляемость тьме",
+   "type": "buff",
+   "minlvl": 15,
+   "classes": {
+    "necromancer": 15
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.8,
+   "charge": 0.2,
+   "grant": 0.7,
+   "src": {
+    "worn": "kit",
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": 0.221,
+    "charge": 0.0442,
+    "grant": 0.143
+   },
+   "rarity": "common",
+   "effect": "Negative energy resistance for L/4 ticks",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "protective shield": {
+   "ru": "охранный щит",
+   "type": "buff",
+   "minlvl": 18,
+   "classes": {
+    "cleric": 38,
+    "druid": 42,
+    "necromancer": 18,
+    "warlock": 26,
+    "witch": 26
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 1.2,
+   "charge": 0.3,
+   "grant": 1.0,
+   "src": {
+    "worn": "kit",
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": 0.111,
+    "charge": 0.0056,
+    "grant": 0.024
+   },
+   "rarity": "ubiquitous",
+   "effect": "ac -L/5 for L/33+rand(1,3) ticks; blocks a few bash-type immobilizations (grab/bash/crush/smash)",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "quantum spike": {
+   "ru": "квантовый скачок",
+   "type": "offensive",
+   "minlvl": 41,
+   "classes": {
+    "warlock": 41
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.16,
+   "grant": 2.198,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0506,
+    "grant": 1.865
+   },
+   "rarity": "common",
+   "effect": "tier3 energy damage; on failed save 50% instant kill only if victim level < L/10 (5) and not boss/legend",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "randomizer": {
+   "ru": "щупальца Хаоса",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.263,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.01,
+    "grant": 0.06
+   },
+   "rarity": "n/a",
+   "effect": "scrambles room exits (raffect randomizer) for L/15 ticks; success chance skill/2 unless Tananda patron; caster rest L/15 ticks",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "ranger staff": {
+   "ru": "посох рейнджера",
+   "type": "utility",
+   "minlvl": 32,
+   "classes": {
+    "ranger": 32
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.938,
+   "grant": 1.471,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.75,
+    "grant": 0.485
+   },
+   "rarity": "n/a",
+   "effect": "creates a tier-3 ranger staff weapon (obj 28) in a forest after a 3-stage ritual; owner-bound; 13-tick cooldown",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "ray of truth": {
+   "ru": "луч истины",
+   "type": "offensive",
+   "minlvl": 37,
+   "classes": {
+    "cleric": 37,
+    "paladin": 45
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 1.118,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.035,
+    "grant": 0.862
+   },
+   "rarity": "common",
+   "effect": "tier3 holy damage scaled by alignment (good vs evil x16/12), blinds on failed save; evil caster hits self; cannot harm good",
+   "note": "0.05 per cast ",
+   "exclude_reason": ""
+  },
+  "recharge": {
+   "ru": "перезарядка",
+   "type": "utility",
+   "minlvl": 15,
+   "classes": {
+    "warlock": 25,
+    "witch": 15
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.121,
+   "grant": 0.294,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.05,
+    "grant": 0.11
+   },
+   "rarity": "n/a",
+   "effect": "restores charges of a wand/staff to full; chance skill/2+2L-value0-depletion/4 (Enki doubles); non-Enki once per item",
+   "note": "",
+   "exclude_reason": "B3 economy/items: enchanter trade or junk loot"
+  },
+  "reclaim": {
+   "ru": "окультурить",
+   "type": "utility",
+   "minlvl": 12,
+   "classes": {
+    "druid": 12
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.101,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.005,
+    "grant": 0.016
+   },
+   "rarity": "n/a",
+   "effect": "druid room dispel: strips non-permanent room affects of others (saves vs dispel) and extracts timed non-takeable objects; not in cities",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "refresh": {
+   "ru": "освежиться",
+   "type": "heal",
+   "minlvl": 6,
+   "classes": {
+    "cleric": 7,
+    "druid": 15,
+    "necromancer": 6,
+    "samurai": 28,
+    "warlock": 6,
+    "witch": 6
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.02,
+   "grant": 0.192,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0052,
+    "grant": 0.035
+   },
+   "rarity": "unique",
+   "effect": "restores move +L (50) and may remove fatigue (chance urange(1,25+L-casterlevel,99))",
+   "note": "0.02 per cast ",
+   "exclude_reason": ""
+  },
+  "regeneration": {
+   "ru": "регенерация",
+   "type": "buff",
+   "minlvl": 46,
+   "classes": {
+    "druid": 46
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.8,
+   "charge": 0.2,
+   "grant": 0.6,
+   "src": {
+    "worn": "kit",
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": 0.281,
+    "charge": 0.0234,
+    "grant": 0.13
+   },
+   "rarity": "common",
+   "effect": "regeneration bit for L/10 ticks; not on bloodless targets; caster must not be fatigued",
+   "note": "",
+   "exclude_reason": "R2 waived: natural pill line, epic (B4)"
+  },
+  "regrow": {
+   "ru": "заживить",
+   "type": "cure",
+   "minlvl": 70,
+   "classes": {
+    "cleric": 70,
+    "druid": 75
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.03,
+   "grant": 0.5,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0135,
+    "grant": 0.097
+   },
+   "rarity": "unique",
+   "effect": "removes slice affect (severed body parts/slots) via checkDispel; needs blood",
+   "note": "",
+   "exclude_reason": "Раніше виключено (B3 high signature past R2), правило знято 10-28"
+  },
+  "remove badge": {
+   "ru": "снять символ",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.0,
+   "grant": 0.0,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0,
+    "grant": 0.0
+   },
+   "rarity": "n/a",
+   "effect": "removes Deputy/Ruler badge objects from victim's inventory",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "remove curse": {
+   "ru": "снять проклятие",
+   "type": "cure",
+   "minlvl": 13,
+   "classes": {
+    "cleric": 32,
+    "paladin": 13
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.027,
+   "grant": 0.5,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0108,
+    "grant": 0.11
+   },
+   "rarity": "unique",
+   "effect": "removes curse affect from target and uncurses nodrop/noremove items (not nouncurse); saves vs dispel by level",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "remove fear": {
+   "ru": "избавить от страха",
+   "type": "cure",
+   "minlvl": 34,
+   "classes": {
+    "cleric": 34,
+    "druid": 38,
+    "paladin": 41
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.192,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0151,
+    "grant": 0.035
+   },
+   "rarity": "rare",
+   "effect": "dispels fear affect (checkDispel) and then casts refresh (+L move)",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "resilience": {
+   "ru": "устойчивость",
+   "type": "buff",
+   "minlvl": 56,
+   "classes": {
+    "paladin": 56
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.586,
+   "charge": 0.12,
+   "grant": 0.575,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.221,
+    "charge": 0.0221,
+    "grant": 0.155
+   },
+   "rarity": "common",
+   "effect": "energy resistance bit for L/10+1 ticks",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "restoring light": {
+   "ru": "луч восстановления",
+   "type": "heal",
+   "minlvl": 71,
+   "classes": {
+    "cleric": 71
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.181,
+   "grant": 0.949,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0674,
+    "grant": 0.525
+   },
+   "rarity": "unique",
+   "effect": "converts caster's mana to hp 1:1 (caster mana drops to 0), plus cures blindness/curse/poison/plague/fear/sleep",
+   "note": "",
+   "exclude_reason": "Раніше виключено (B3 high signature past R2), правило знято 10-28"
+  },
+  "ruler aura": {
+   "ru": "аура правителя",
+   "type": "detect",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": 2.44,
+   "charge": 0.594,
+   "grant": 1.463,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 1.049,
+    "charge": 0.2098,
+    "grant": 0.734
+   },
+   "rarity": "rare",
+   "effect": "detect invis, imp_invis, fade, hidden, acute vision for L/4 ticks",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "ruler badge": {
+   "ru": "символ правителя",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": 2.285,
+   "grant": 1.803,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 1.8281,
+    "grant": 1.28
+   },
+   "rarity": "n/a",
+   "effect": "creates and wears Deputy badge: hp +L, mana +L, hitroll +L/8, damroll +L/8; 200-tick timer",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "sanctify lands": {
+   "ru": "очистить землю",
+   "type": "offensive",
+   "minlvl": 41,
+   "classes": {
+    "cleric": 41,
+    "paladin": 53
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.028,
+   "grant": 0.5,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0118,
+    "grant": 0.1
+   },
+   "rarity": "unique",
+   "effect": "room dispel of others' affects (save vs dispel); destroys buried vampire graves (holy dmg 50-250 to grave owner)",
+   "note": "",
+   "exclude_reason": "B3 AoE: room clears for non-casters, PK in towns (staves only where allowed)"
+  },
+  "sanctuary": {
+   "ru": "аура святилища",
+   "type": "buff",
+   "minlvl": 27,
+   "classes": {
+    "cleric": 29,
+    "paladin": 27
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 4.0,
+   "charge": 1.0,
+   "grant": 1.5,
+   "src": {
+    "worn": "kit",
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": 2.149,
+    "charge": 0.2865,
+    "grant": 1.273
+   },
+   "rarity": "rare",
+   "effect": "sanctuary bit (halves damage taken) for L/6 ticks",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "sand storm": {
+   "ru": "песчаная буря",
+   "type": "offensive",
+   "minlvl": 48,
+   "classes": {
+    "druid": 48,
+    "warlock": 51
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.7,
+   "grant": 1.0,
+   "src": {
+    "charge": "rescaled",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.1051,
+    "grant": 0.167
+   },
+   "rarity": "unique",
+   "effect": "room tier1 slash damage vs all enemies outdoors on sand/dust sectors (hills, mountain, desert, field); desert x1.2; flying +20%",
+   "note": "",
+   "exclude_reason": "B3 AoE: room clears for non-casters, PK in towns (staves only where allowed); allowed on staves"
+  },
+  "scourge": {
+   "ru": "бич Ллот",
+   "type": "offensive",
+   "minlvl": 46,
+   "classes": {
+    "necromancer": 46
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.15,
+   "grant": 0.942,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0657,
+    "grant": 0.511
+   },
+   "rarity": "rare",
+   "effect": "room tier3 poison (negative if vuln) damage to all enemies; failed save adds random blindness/slow/poison/weaken",
+   "note": "",
+   "exclude_reason": "B3 AoE: room clears for non-casters, PK in towns (staves only where allowed)"
+  },
+  "scream": {
+   "ru": "крик",
+   "type": "offensive",
+   "minlvl": 48,
+   "classes": {
+    "warlock": 48,
+    "witch": 52
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.7,
+   "grant": 1.2,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0946,
+    "grant": 1.044
+   },
+   "rarity": "rare",
+   "effect": "room sound damage scaled by caster current hp (up to 5000); failed save stuns 4-6 s; saved victims take half and get an extra hit; shatters glass",
+   "note": "",
+   "exclude_reason": "B3 AoE: room clears for non-casters, PK in towns (staves only where allowed); allowed on staves"
+  },
+  "seasonal aspect": {
+   "ru": "сезонные изменения",
+   "type": "buff",
+   "minlvl": 29,
+   "classes": {
+    "druid": 29
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 3.0,
+   "charge": 0.6,
+   "grant": 1.3,
+   "src": {
+    "worn": "kit",
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": 0.848,
+    "charge": 0.3534,
+    "grant": 0.261
+   },
+   "rarity": "common",
+   "effect": "season-dependent resists plus one stat for L/2 ticks: autumn hp, winter damroll, spring ac, summer saves",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "sebat": {
+   "ru": "себат",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 0.596,
+   "charge": 0.568,
+   "grant": 0.608,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.231,
+    "charge": 0.1926,
+    "grant": 0.162
+   },
+   "rarity": "ubiquitous",
+   "effect": "needs item vnum 89 worn: ac -50 and +5 learned to protective group for L ticks",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "second wind": {
+   "ru": "",
+   "type": "heal",
+   "minlvl": null,
+   "classes": {
+    "druid": null
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 2.0,
+   "charge": 1.0,
+   "grant": 2.0,
+   "src": {
+    "worn": "kit",
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": 1.949,
+    "charge": 0.0404,
+    "grant": 0.291
+   },
+   "rarity": "unique",
+   "effect": "proposed: once per duration, below 35% hp in a fight, restores 3 x L hp (150 at L50); dur L/4 ticks (proposal)",
+   "note": "",
+   "exclude_reason": "proposed P1 effect (magic_items_revamp.md B9/B10)"
+  },
+  "severity force": {
+   "ru": "подземные силы",
+   "type": "offensive",
+   "minlvl": 41,
+   "classes": {
+    "cleric": 45,
+    "druid": 41
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.1,
+   "grant": 3.492,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0876,
+    "grant": 2.963
+   },
+   "rarity": "unique",
+   "effect": "tier2 damage (earth; drowning in water) to a single non-flying target; not in air sectors",
+   "note": "0.1 per cast -- 1 for x10 wand",
+   "exclude_reason": ""
+  },
+  "shadow cloak": {
+   "ru": "призрачная мантия",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": 2.248,
+   "charge": 0.784,
+   "grant": 1.373,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.832,
+    "charge": 0.3329,
+    "grant": 0.583
+   },
+   "rarity": "common",
+   "effect": "clan member only: ac -5L/2, saves -L/9, protect good + detect good/fade bits for 24 ticks; variants soul lust/shadow shroud",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "shadowblade": {
+   "ru": "фантомный клинок",
+   "type": "utility",
+   "minlvl": 32,
+   "classes": {
+    "anti-paladin": 32
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.531,
+   "grant": 0.369,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.425,
+    "grant": 0.231
+   },
+   "rarity": "n/a",
+   "effect": "anti-paladin creates a phantom blade (obj 39) tier 5-rank, timer L ticks, rank>=2 sharp, rank>2 vampiric; 3-stage ritual",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "shadowlife": {
+   "ru": "оживить тень",
+   "type": "offensive",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.0,
+   "grant": 1.063,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0,
+    "grant": 0.751
+   },
+   "rarity": "unique",
+   "effect": "clan PK: animates victim's shadow (4*L/10 = 20 shadow charges) that blocks the victim's skills/spells; caster 24-tick cooldown",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "shield": {
+   "ru": "щит",
+   "type": "buff",
+   "minlvl": 11,
+   "classes": {
+    "cleric": 12,
+    "druid": 16,
+    "necromancer": 12,
+    "paladin": 18,
+    "vampire": 18,
+    "warlock": 11,
+    "witch": 11
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.216,
+   "charge": 0.1,
+   "grant": 0.079,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.046,
+    "charge": 0.0185,
+    "grant": 0.015
+   },
+   "rarity": "ubiquitous",
+   "effect": "ac -L/5 for 8+L/3 ticks and 1 shield charge that can fully block weapon hits (and magic missiles)",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "shield of ruler": {
+   "ru": "щит правителя",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": 1.084,
+   "grant": 1.573,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.8675,
+    "grant": 0.729
+   },
+   "rarity": "n/a",
+   "effect": "creates a Ruler shield by level band (L>=51 shield3): hitroll/damroll +L/8, ac -2L, cha +max(1,L/30); timer L",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "shielding": {
+   "ru": "экранирование",
+   "type": "malediction",
+   "minlvl": 53,
+   "classes": {
+    "necromancer": 53,
+    "warlock": 53,
+    "witch": 55
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.2,
+   "grant": 0.7,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0402,
+    "grant": 0.481
+   },
+   "rarity": "rare",
+   "effect": "victim saves +L/10+1 (worse) for L/25+1 ticks; each spell cast has 50% chance to fail; reapplication refreshes",
+   "note": "",
+   "exclude_reason": "B3 control: CC on bosses, pets after the pet nerf, PK"
+  },
+  "shocking grasp": {
+   "ru": "электрический захват",
+   "type": "offensive",
+   "minlvl": 7,
+   "classes": {
+    "druid": 9,
+    "warlock": 9,
+    "witch": 7
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.1,
+   "grant": 1.812,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0506,
+    "grant": 1.554
+   },
+   "rarity": "rare",
+   "effect": "tier3 lightning damage, discharges into gear",
+   "note": "0.1 per cast ",
+   "exclude_reason": ""
+  },
+  "shocking trap": {
+   "ru": "силовая ловушка",
+   "type": "offensive",
+   "minlvl": 37,
+   "classes": {
+    "warlock": 40,
+    "witch": 37
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.747,
+   "grant": 1.176,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.1264,
+    "grant": 0.978
+   },
+   "rarity": "unique",
+   "effect": "room trap for L/30+1 ticks: first PK/hunter enemy entering takes dice(L,24) energy and 1-3 s delay, trap then disappears",
+   "note": "",
+   "exclude_reason": "B3 AoE: room clears for non-casters, PK in towns (staves only where allowed)"
+  },
+  "skeleton": {
+   "ru": "скелет",
+   "type": "summon",
+   "minlvl": 11,
+   "classes": {
+    "necromancer": 11
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.2,
+   "grant": 1.0,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 1.6237,
+    "grant": 1.249
+   },
+   "rarity": "n/a",
+   "effect": "3-stage ritual at graveyard raises skeleton (mob 1350, tier 8-9; 6-8 with Raven Queen patron), limit 1; 13-tick cooldown",
+   "note": "",
+   "exclude_reason": "B3 summons: pet circumvention"
+  },
+  "sleep": {
+   "ru": "сон",
+   "type": "malediction",
+   "minlvl": 25,
+   "classes": {
+    "anti-paladin": 25,
+    "warlock": 39,
+    "witch": 39
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.3,
+   "grant": 1.5,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0404,
+    "grant": 0.199
+   },
+   "rarity": "unique",
+   "effect": "puts target to sleep for urange(1, L/10+1+int diff, 5) ticks (5 at L50 typical); instakill-style roll; fights/bosses immune",
+   "note": "",
+   "exclude_reason": "B3 control: CC on bosses, pets after the pet nerf, PK"
+  },
+  "slow": {
+   "ru": "замедление",
+   "type": "malediction",
+   "minlvl": 23,
+   "classes": {
+    "anti-paladin": 24,
+    "cleric": 38,
+    "necromancer": 29,
+    "vampire": 28,
+    "warlock": 23,
+    "witch": 28
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.1,
+   "grant": 0.859,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0302,
+    "grant": 0.359
+   },
+   "rarity": "rare",
+   "effect": "dex -max(2,L/12), slow bit for 4+L/12 ticks; vs PCs (caster has skill) also +10 beats; cancels haste instead if present",
+   "note": "0.1 per cast ",
+   "exclude_reason": ""
+  },
+  "solar flight": {
+   "ru": "солнечный полет",
+   "type": "utility",
+   "minlvl": 71,
+   "classes": {
+    "paladin": 71
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.114,
+   "grant": 1.458,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.04,
+    "grant": 0.455
+   },
+   "rarity": "n/a",
+   "effect": "daytime outdoor teleport to a creature in the world, takes pet; mental save",
+   "note": "",
+   "exclude_reason": "B3 travel/escape: skips content, escapes boss and deathtrap fights, PK pulls"
+  },
+  "sonic resonance": {
+   "ru": "звуковой резонанс",
+   "type": "offensive",
+   "minlvl": 28,
+   "classes": {
+    "druid": 34,
+    "necromancer": 28,
+    "vampire": 45
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.15,
+   "grant": 2.11,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0404,
+    "grant": 1.79
+   },
+   "rarity": "unique",
+   "effect": "tier4 sound damage; on failed save 50% adds 1-2 s wait+daze, else scream-shatter effect",
+   "note": "0.15 per cast ",
+   "exclude_reason": ""
+  },
+  "spectral furor": {
+   "ru": "спектральное бешенство",
+   "type": "offensive",
+   "minlvl": 35,
+   "classes": {
+    "warlock": 35
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.178,
+   "grant": 2.638,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0657,
+    "grant": 2.238
+   },
+   "rarity": "unique",
+   "effect": "tier2 damage: 50% light (can blind on failed save) else energy",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "spell resistance": {
+   "ru": "отпор заклятий",
+   "type": "buff",
+   "minlvl": 68,
+   "classes": {
+    "druid": 74,
+    "warlock": 73,
+    "witch": 68
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 3.0,
+   "charge": 1.0,
+   "grant": 2.5,
+   "src": {
+    "worn": "kit",
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": 0.65,
+    "charge": 0.0217,
+    "grant": 0.162
+   },
+   "rarity": "common",
+   "effect": "res_flags spell bit for L/30+1 ticks (affect level 3L/4, easier to dispel)",
+   "note": "",
+   "exclude_reason": "Раніше виключено (B3 high signature past R2), правило знято 10-28"
+  },
+  "spores": {
+   "ru": "грибные споры",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 2.182,
+   "charge": 0.21,
+   "grant": 1.171,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.811,
+    "charge": 0.0406,
+    "grant": 0.284
+   },
+   "rarity": "common",
+   "effect": "druids: mana_gain +150..(L/25*100) for L/20+1 ticks; non-druids get garbled instead",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "spring": {
+   "ru": "родник",
+   "type": "utility",
+   "minlvl": 8,
+   "classes": {
+    "cleric": 27,
+    "druid": 8,
+    "necromancer": 31,
+    "ranger": 31,
+    "warlock": 24,
+    "witch": 16
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.02,
+   "grant": 0.089,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.002,
+    "grant": 0.014
+   },
+   "rarity": "n/a",
+   "effect": "creates a drinkable spring fountain (natural obj 36 for nature classes, holy 24 for divine, magical 22 otherwise) lasting L+1 ticks",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "stalker": {
+   "ru": "сталкер",
+   "type": "summon",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.0,
+   "grant": 0.082,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0,
+    "grant": 0.065
+   },
+   "rarity": "n/a",
+   "effect": "clan Ruler sends a hunter mob after a wanted outlaw: stats multiplied from victim, hp 5x victim max (max 30000); caster 6-tick cooldown",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "stardust": {
+   "ru": "звездная пыль",
+   "type": "buff",
+   "minlvl": 36,
+   "classes": {
+    "druid": 36,
+    "warlock": 36,
+    "witch": 36
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 4.0,
+   "charge": 1.0,
+   "grant": 1.5,
+   "src": {
+    "worn": "kit",
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": 2.149,
+    "charge": 0.2865,
+    "grant": 1.157
+   },
+   "rarity": "rare",
+   "effect": "halves damage taken (like sanctuary, sanctuary-equivalent) for L/6 ticks",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "stone golem": {
+   "ru": "каменный голем",
+   "type": "summon",
+   "minlvl": 39,
+   "classes": {
+    "necromancer": 39
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.7,
+   "grant": 2.5,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 2.9226,
+    "grant": 2.473
+   },
+   "rarity": "n/a",
+   "effect": "consumes an ingredient to create stone golem (mob 22, tier 7), limit 2, week-long, can be recharged; 13-tick cooldown",
+   "note": "",
+   "exclude_reason": "B3 summons: pet circumvention"
+  },
+  "stone skin": {
+   "ru": "каменная кожа",
+   "type": "buff",
+   "minlvl": 21,
+   "classes": {
+    "cleric": 36,
+    "druid": 21,
+    "necromancer": 30,
+    "vampire": 60,
+    "warlock": 22,
+    "witch": 25
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.643,
+   "charge": 0.505,
+   "grant": 0.691,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.278,
+    "charge": 0.1158,
+    "grant": 0.18
+   },
+   "rarity": "ubiquitous",
+   "effect": "ac -L/2 for L/2 ticks; absorbs: each of 5 physical/energy hits heals dam/5 up to stone_skin_hp",
+   "note": "",
+   "exclude_reason": ""
+  },
+  "storm ward": {
+   "ru": "",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {
+    "warlock": null
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.4,
+   "charge": 0.1,
+   "grant": 0.3,
+   "src": {
+    "worn": "kit",
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": 0.169,
+    "charge": 0.0338,
+    "grant": 0.109
+   },
+   "rarity": "rare",
+   "effect": "proposed: res lightning; dur L/4 ticks (proposal)",
+   "note": "",
+   "exclude_reason": "proposed P1 effect (magic_items_revamp.md B9/B10)"
+  },
+  "sulfuric spray": {
+   "ru": "брызги серной кислоты",
+   "type": "offensive",
+   "minlvl": 28,
+   "classes": {
+    "warlock": 28
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.16,
+   "grant": 2.198,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0506,
+    "grant": 1.865
+   },
+   "rarity": "unique",
+   "effect": "tier3 acid damage, corrodes gear, cannot be dodged",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "summon": {
+   "ru": "призыв",
+   "type": "utility",
+   "minlvl": 22,
+   "classes": {
+    "anti-paladin": 50,
+    "cleric": 22,
+    "necromancer": 30,
+    "warlock": 24,
+    "witch": 24
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.107,
+   "grant": 0.313,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.03,
+    "grant": 0.14
+   },
+   "rarity": "n/a",
+   "effect": "pulls a character to caster's room; target mental save (druids two saves)",
+   "note": "",
+   "exclude_reason": "B3 travel/escape: skips content, escapes boss and deathtrap fights, PK pulls"
+  },
+  "summon shadow": {
+   "ru": "теневой двойник",
+   "type": "summon",
+   "minlvl": 50,
+   "classes": {
+    "necromancer": 50
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 1.131,
+   "grant": 1.316,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 2.7061,
+    "grant": 1.041
+   },
+   "rarity": "n/a",
+   "effect": "night-only 3-stage ritual with light equipped: shadow double (mob 26, tier 8) with caster's max hp and mana, limit 1",
+   "note": "",
+   "exclude_reason": "B3 summons: pet circumvention"
+  },
+  "superior heal": {
+   "ru": "высшее лечение",
+   "type": "heal",
+   "minlvl": 38,
+   "classes": {
+    "cleric": 38,
+    "druid": 43,
+    "paladin": 43
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.1,
+   "grant": 0.6,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0383,
+    "grant": 0.624
+   },
+   "rarity": "ubiquitous",
+   "effect": "heals 3L + rand(50,150)",
+   "note": "0.1 per cast ",
+   "exclude_reason": ""
+  },
+  "teleport": {
+   "ru": "телепортация",
+   "type": "utility",
+   "minlvl": 16,
+   "classes": {
+    "anti-paladin": 16,
+    "cleric": 32,
+    "necromancer": 16,
+    "warlock": 23,
+    "witch": 22
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.1,
+   "grant": 0.4,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.02,
+    "grant": 0.28
+   },
+   "rarity": "n/a",
+   "effect": "teleports target (self/group no save, others mental save) to a random world room",
+   "note": "",
+   "exclude_reason": "B3 travel/escape: skips content, escapes boss and deathtrap fights, PK pulls"
+  },
+  "tesla retribution": {
+   "ru": "перст возмездия",
+   "type": "offensive",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.072,
+   "grant": 0.148,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0243,
+    "grant": 0.027
+   },
+   "rarity": "unique",
+   "effect": "clan: bolt at distant target below 20% hp: tier1 lightning x int bonus, x2-4 outdoors in stormy sky; 25-tick cooldown",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "tesseract": {
+   "ru": "тессеракт",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.121,
+   "grant": 1.567,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.05,
+    "grant": 0.715
+   },
+   "rarity": "n/a",
+   "effect": "clan: teleports caster and group members in room to target creature; victim mental save",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "testspell": {
+   "ru": "тестовое заклинание",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.0,
+   "grant": 0.0,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0,
+    "grant": 0.0
+   },
+   "rarity": "n/a",
+   "effect": "test spell: word of recall clone (recalls ch and pet to recall room)",
+   "note": "",
+   "exclude_reason": "R2: fewer than 2 professions learn it (signature or classless NPC/item spell)"
+  },
+  "thornhide": {
+   "ru": "",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {
+    "druid": null,
+    "paladin": null
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.5,
+   "charge": 0.2,
+   "grant": 0.4,
+   "src": {
+    "worn": "kit",
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": 0.214,
+    "charge": 0.0894,
+    "grant": 0.127
+   },
+   "rarity": "unique",
+   "effect": "proposed: melee attackers take 5% of their damage back, cap L/2 per hit; dur L/2 ticks (proposal, like bark skin)",
+   "note": "",
+   "exclude_reason": "proposed P1 effect (magic_items_revamp.md B9/B10)"
+  },
+  "tornado": {
+   "ru": "торнадо",
+   "type": "offensive",
+   "minlvl": 60,
+   "classes": {
+    "druid": 60
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.2,
+   "grant": 0.5,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0809,
+    "grant": 0.239
+   },
+   "rarity": "unique",
+   "effect": "druid ritual: immobilizes target (hitroll -3L, no melee) while channeling; on drop deals tier4 damage x rounds held, grounds flyers",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "totem": {
+   "ru": "тотем",
+   "type": "summon",
+   "minlvl": 15,
+   "classes": {
+    "druid": 15
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.006,
+   "grant": 0.303,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.05,
+    "grant": 0.24
+   },
+   "rarity": "n/a",
+   "effect": "creates a druid totem object for L/25+1 ticks (max 2); each proc (20% per pulse) buffs group or hits enemy depending on totem",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "transform": {
+   "ru": "преобразиться",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": false,
+   "worn": 13.55,
+   "charge": 5.421,
+   "grant": 5.422,
+   "src": {
+    "worn": "rescaled",
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 10.084,
+    "charge": 4.0336,
+    "grant": 5.042
+   },
+   "rarity": "ubiquitous",
+   "effect": "Shalafi clan self buff: hp +max_hp/1.6 (cap 30000), dex -(4+L/10), slow bit, 24 ticks",
+   "note": "",
+   "exclude_reason": "R1 clan spell"
+  },
+  "turn": {
+   "ru": "обратить",
+   "type": "offensive",
+   "minlvl": 60,
+   "classes": {
+    "paladin": 60
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.079,
+   "grant": 0.313,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.027,
+    "grant": 0.057
+   },
+   "rarity": "rare",
+   "effect": "paladin room holy damage to evil only, may blind and make flee; 10-tick cooldown",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "vampiric blast": {
+   "ru": "проклятие вампира",
+   "type": "offensive",
+   "minlvl": 24,
+   "classes": {
+    "vampire": 24
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.178,
+   "grant": 3.166,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0657,
+    "grant": 2.686
+   },
+   "rarity": "unique",
+   "effect": "tier2 negative damage; failed save has 50+2*(int diff)% to apply weaken",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "venom ward": {
+   "ru": "",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {
+    "druid": null,
+    "anti-paladin": null,
+    "witch": null
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": 0.3,
+   "charge": 0.05,
+   "grant": 0.2,
+   "src": {
+    "worn": "kit",
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": 0.169,
+    "charge": 0.05,
+    "grant": 0.091
+   },
+   "rarity": "common",
+   "effect": "proposed: res poison and cures poison on cast; dur L/4 ticks (proposal, like protection heat)",
+   "note": "",
+   "exclude_reason": "proposed P1 effect (magic_items_revamp.md B9/B10)"
+  },
+  "weaken": {
+   "ru": "слабость",
+   "type": "malediction",
+   "minlvl": 16,
+   "classes": {
+    "anti-paladin": 18,
+    "cleric": 24,
+    "necromancer": 29,
+    "vampire": 16,
+    "warlock": 19,
+    "witch": 19
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.05,
+   "grant": 0.599,
+   "src": {
+    "charge": "kit",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0251,
+    "grant": 0.207
+   },
+   "rarity": "rare",
+   "effect": "str -(2+L/12) and weaken bit for 4+L/12 ticks; save negates",
+   "note": "0.05 per cast ",
+   "exclude_reason": ""
+  },
+  "web": {
+   "ru": "паутина",
+   "type": "malediction",
+   "minlvl": 58,
+   "classes": {
+    "necromancer": 58,
+    "warlock": 69,
+    "witch": 65
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.2,
+   "grant": 0.9,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0202,
+    "grant": 0.353
+   },
+   "rarity": "rare",
+   "effect": "hitroll -L/6, damroll -L/6, dex -(1+L/20), web bit (cannot leave), move halved, for 1+L/30 ticks; save negates",
+   "note": "",
+   "exclude_reason": "B3 control: CC on bosses, pets after the pet nerf, PK"
+  },
+  "whirlwind": {
+   "ru": "вихрь",
+   "type": "offensive",
+   "minlvl": 30,
+   "classes": {
+    "druid": 30
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.09,
+   "grant": 0.9,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0329,
+    "grant": 0.427
+   },
+   "rarity": "unique",
+   "effect": "outdoor room tier5 bash damage (drowning on water, slash desert, energy air); failed save blinds and slows",
+   "note": "",
+   "exclude_reason": "B3 AoE: room clears for non-casters, PK in towns (staves only where allowed); allowed on staves"
+  },
+  "wicker man": {
+   "ru": "плетеный человек",
+   "type": "offensive",
+   "minlvl": 40,
+   "classes": {
+    "druid": 40
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.163,
+   "grant": 1.143,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0539,
+    "grant": 0.912
+   },
+   "rarity": "unique",
+   "effect": "druid cage: immobilizes a fighting non-flyer; each fight round deals tier4 damage; cage has L*rand(1,L/10) hp, broken by fire/acid/hits; 1-tick affect",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  },
+  "witch curse": {
+   "ru": "ведьминское проклятие",
+   "type": "malediction",
+   "minlvl": 81,
+   "classes": {
+    "witch": 81
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.181,
+   "grant": 1.139,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.0674,
+    "grant": 0.904
+   },
+   "rarity": "unique",
+   "effect": "deadly curse: -L hp now to both caster and victim, victim max hp -L doubling every tick for L/5+1+(int-con) ticks, kills when hp<1",
+   "note": "",
+   "exclude_reason": "B3 %hp / instakill: trivialises boss hp pools"
+  },
+  "word of recall": {
+   "ru": "слово возврата",
+   "type": "utility",
+   "minlvl": 32,
+   "classes": {
+    "anti-paladin": 32,
+    "cleric": 32,
+    "druid": 32,
+    "necromancer": 32,
+    "vampire": 32,
+    "warlock": 32,
+    "witch": 32
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.121,
+   "grant": 1.419,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.05,
+    "grant": 0.36
+   },
+   "rarity": "n/a",
+   "effect": "recalls caster, pet and recall-able summons to hometown or clan hall",
+   "note": "",
+   "exclude_reason": "B3 travel/escape: skips content, escapes boss and deathtrap fights, PK pulls"
+  },
+  "wrath": {
+   "ru": "божественный гнев",
+   "type": "offensive",
+   "minlvl": 34,
+   "classes": {
+    "paladin": 34
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": 0.094,
+   "grant": 0.902,
+   "src": {
+    "charge": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": 0.035,
+    "grant": 0.431
+   },
+   "rarity": "unique",
+   "effect": "paladin tier2 holy damage to evil targets only (good and neutral do nothing) plus curse effect; evil caster hits self",
+   "note": "",
+   "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
+  }
+ }
+}

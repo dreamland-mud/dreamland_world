@@ -2,7 +2,7 @@
 <Command>
   <cat>move</cat>
   <extra>keep_hide ghost</extra>
-  <help id="2170" level="-1" type="CommandHelp" labels="world">
+  <help id="2170" seealso="1078" level="-1" type="CommandHelp" labels="world">
     <extra l="en">'how to get' command route path</extra>
     <extra l="ru">'как добраться' команда маршрут путь</extra>
     <extra l="ua">'як дістатися' команда маршрут шлях</extra>
@@ -17,8 +17,6 @@ For example, if standing on the Market Square of Midgaard you type {y{hcpath mag
 A room number points at exactly one place, with no guessing between rooms that share a name. It is also what a room name in the {y{hcwhere{x listing sends when you click it in the web client.
 
 The command will find the path even through portals and {hh1016extra exits{x, but not through places where exits are confused by the influence of Chaos. It will also not work in clans, suburbs, and other hidden or special areas, or if the character is blinded.
-
-%SA% %H% {hh1078run{x
 </text>
     <text l="ru">%FMT% *%CMD%* _название комнаты_
 	
@@ -30,9 +28,7 @@ The command will find the path even through portals and {hh1016extra exits{x, bu
 
 Номер комнаты указывает ровно на одно место, без выбора между комнатами с одинаковым названием. Его же отправляет название комнаты в списке {y{hcгде{x, если щелкнуть по нему в веб-клиенте.
 
-Команда найдет путь даже через порталы и {hh1016экстра-выходы{x, но не через места, где выходы перепутаны влиянием Хаоса. Также не сработает в кланах, пригородах и других скрытых или специальных зонах, или если персонаж ослеплен. 
-
-%SA% %H% {hh1078бежать{x
+Команда найдет путь даже через порталы и {hh1016экстра-выходы{x, но не через места, где выходы перепутаны влиянием Хаоса. Также не сработает в кланах, пригородах и других скрытых или специальных зонах, или если персонаж ослеплен.
 </text>
     <text l="ua">%FMT% *%CMD%* _назва кімнати_
 
@@ -45,8 +41,6 @@ The command will find the path even through portals and {hh1016extra exits{x, bu
 Номер кімнати вказує рівно на одне місце, без вибору між кімнатами з однаковою назвою. Його ж надсилає назва кімнати у списку {y{hcде{x, якщо клацнути по ній у веб-клієнті.
 
 Команда знайде шлях навіть через портали та {hh1016екстра-виходи{x, але не через місця, де виходи сплутані впливом Хаосу. Також вона не спрацює в кланах, передмістях та інших прихованих або спеціальних зонах, або якщо персонаж засліплений.
-
-%SA% %H% {hh1078бігти{x
 </text>
   </help>
   <hint l="en">plot the path to the room in the current area</hint>

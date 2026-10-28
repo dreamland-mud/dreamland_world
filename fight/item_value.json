@@ -46,6 +46,30 @@
   "ac_floor": 0.1
  },
  "shared": {
+  "_doc_learn_skill_value": "learn_skill_value: multiplier on learn_skill for +N% to one skill, by skill name; unlisted = 1 (combat). Utility skills x0.5, economy/craft x0.15 (Kit 2026-10-27). The gear sage prices per skill; the generator's learned affix at the mean over the wearer's skills.",
+  "learn_skill_value": {
+   "sneak": 0.5,
+   "hide": 0.5,
+   "pick lock": 0.5,
+   "peek": 0.5,
+   "steal": 0.5,
+   "track": 0.5,
+   "knock": 0.5,
+   "bash door": 0.5,
+   "key forgery": 0.5,
+   "push": 0.5,
+   "recall": 0.5,
+   "haggle": 0.15,
+   "lore": 0.15,
+   "smithing": 0.15,
+   "blacksmith": 0.15,
+   "carpenter": 0.15,
+   "jeweler": 0.15,
+   "face tattoo": 0.15,
+   "shoulder tattoo": 0.15,
+   "wrist tattoo": 0.15,
+   "remove tattoo": 0.15
+  },
   "ac_base": 0.5,
   "ac_zero_level": 40.0,
   "move": 0.05,
@@ -379,6 +403,8 @@
    1.0
   ],
   "cost_cap": 50000,
+  "primary_stat_cap": 5,
+  "_doc_primary_stat_cap": "primary_stat_cap: most points of str/int/wis/dex/con/cha one generated item rolls, summed over all affixes and stacks (Kit 2026-10-27).",
   "top_max": 2,
   "top_repeat_weight": 0.1,
   "core_affixes": {

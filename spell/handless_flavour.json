@@ -1,0 +1,28 @@
+// Cast flavour for NPC casters without hands (no PART_HANDS): beasts, oozes,
+// serpents. Replaces the skill group / clan lines, which describe fingers and
+// palms. Each entry is one gesture seen three ways: by the caster (self), by the
+// spell's target (vict) and by everyone else in the room (room). RU strings are
+// the lookup keys of the 'skill-groups' translation catalog -- a wording change
+// here must be mirrored there (config/translations/skillgroups.json).
+[
+  {
+    "self": "Ты замираешь, собирая всю свою волю в одну точку.",
+    "vict": "%1$^C1 замирает, сосредоточенно уставившись на тебя.",
+    "room": "%1$^C1 замирает, сосредоточенно уставившись в пустоту."
+  },
+  {
+    "self": "Воздух вокруг тебя начинает дрожать и {1{Cмерцать{2.",
+    "vict": "Воздух вокруг %1$C2 начинает дрожать и {1{Cмерцать{2.",
+    "room": "Воздух вокруг %1$C2 начинает дрожать и {1{Cмерцать{2."
+  },
+  {
+    "self": "Ты издаешь низкий утробный гул, от которого звенит в ушах.",
+    "vict": "%1$^C1 издает низкий утробный гул, от которого звенит в ушах.",
+    "room": "%1$^C1 издает низкий утробный гул, от которого звенит в ушах."
+  },
+  {
+    "self": "Твои глаза вспыхивают {1{Yхолодным огнем{2, и сила рвется наружу.",
+    "vict": "%1$^C1 впивается в тебя взглядом, и в %1$P2 глазах вспыхивает {1{Yхолодный огонь{2.",
+    "room": "Глаза %1$C2 вспыхивают {1{Yхолодным огнем{2."
+  }
+]

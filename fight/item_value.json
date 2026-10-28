@@ -493,22 +493,22 @@
   }
  },
  "materials": {
-  "_doc": "Points per item material [melee, caster] (decision 12): durability today. Weapon materials still carry their combat side here until the combat-effect model (P3) prices it from the mob census.",
+  "_doc": "Points per item material [melee, caster] (decision 12): durability today. Weapon materials still carry their combat side here until the combat-effect model (P3) prices it from the mob census. Armor materials are 0 here: their value is a level curve in materials_combat.",
   "dragonskin": [
-   35.3,
-   35.6
+   0,
+   0
   ],
   "mithril": [
-   6.4,
-   6.4
+   0,
+   0
   ],
   "adamantite": [
-   6.4,
-   6.4
+   0,
+   0
   ],
   "snakeskin": [
-   3.2,
-   2.5
+   0,
+   0
   ],
   "platinum": [
    48.1,
@@ -567,7 +567,7 @@
   ]
  },
  "materials_combat": {
-  "_doc": "Combat side of weapon materials in points by level: mobs vulnerable / resistant / immune to the material (protectMaterial). scripts/item-combat-model.py.",
+  "_doc": "Combat side of weapon materials in points by level: mobs vulnerable / resistant / immune to the material (protectMaterial). scripts/item-combat-model.py. Armor materials (dragonskin, mithril, adamantite, snakeskin) are hand-set level curves, kept by the script.",
   "platinum": {
    "20": 0,
    "40": 0,
@@ -591,6 +591,30 @@
    "40": -14,
    "60": -35,
    "90": -52
+  },
+  "dragonskin": {
+   "1": 2,
+   "20": 8,
+   "60": 25,
+   "90": 35
+  },
+  "mithril": {
+   "1": 0.4,
+   "20": 1.5,
+   "60": 4.5,
+   "90": 6.3
+  },
+  "adamantite": {
+   "1": 0.4,
+   "20": 1.5,
+   "60": 4.5,
+   "90": 6.3
+  },
+  "snakeskin": {
+   "1": 0.2,
+   "20": 0.7,
+   "60": 2.3,
+   "90": 3.2
   }
  },
  "flags_by_level": {

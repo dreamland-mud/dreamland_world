@@ -12,25 +12,25 @@
 Magic items come in the following types:
 {C%A%{x potions: anyone can quaff potions, no special skills required
 {C%A%{x pills: anyone can swallow pills too -- at their own risk
-{C%A%{x scrolls and books: requires knowledge of the {hh121scrolls{x skill
+{C%A%{x scrolls and books: requires knowledge of the {hh2145scrolls{x skill
 {C%A%{x staves: requires knowledge of the {hh2144staves{x skill
 {C%A%{x wands: requires knowledge of the {hh2143wands{x skill
 
 The skills for using magic items and other {hh1130basics of magic{x can be learned from the Wizard in Midgaard. With insufficient skill level magic items may fail to work or even break.
 
-All magic items can be used with the *use* command or with these special commands:
+All magic items are used with one command, *use*:
 
-%FMT% *quaff* _potion_
-Quaff the specified magic potion (as opposed to the {hh1074drink{x command, which drinks ordinary mundane liquids). A potion can only be drunk once; after drinking it you will have an empty =vial= in your inventory.
-  
-%FMT% *recite* _scroll_ _target_
+%FMT% *use* _potion_
+Drink the magic potion. The {hh1074drink{x command works for potions too. A potion can only be drunk once; after drinking it you will have an empty =vial= in your inventory.
+
+%FMT% *use* _scroll_ _target_
 Read a magic scroll. Specifying a target is not mandatory -- it all depends on the scroll's properties. A scroll can only be recited once.
- 
-%FMT% *zap* _target_
-Brandish the magic wand you are holding. If no target is specified but you are fighting someone, your opponent will be used as the target for harmful spells.
 
-%FMT% *brandish*
-Strike the ground with the magic staff you are holding. The spells on the staff may affect everyone nearby!
+%FMT% *use* _wand_ _target_
+Wave a magic wand. The wand can sit in your inventory or in any slot, there is no need to hold it. If no target is specified but you are fighting someone, your opponent will be used as the target for harmful spells.
+
+%FMT% *use* _staff_
+Strike the ground with a magic staff. The staff has to be held in your hands. The spells on the staff may affect everyone nearby!
 
 Staves and wands may contain multiple charges. When the charges run out, these magic items become useless. However, wizards and witches know the secret of recharging wands and staves (the {hh600recharge{x skill).
 </text>
@@ -39,25 +39,25 @@ Staves and wands may contain multiple charges. When the charges run out, these m
 Волшебные предметы бывают таких типов:
 {C%A%{x зелья: осушать зелья могут все, без знания специальных навыков
 {C%A%{x пилюли: глотать пилюли тоже могут все -- на свой страх и риск
-{C%A%{x свитки и книги: требуется знание умения {hh121свитки{x
+{C%A%{x свитки и книги: требуется знание умения {hh2145свитки{x
 {C%A%{x посохи: требуется знание умения {hh2144посохи{x
 {C%A%{x жезлы: требуется знание умения {hh2143жезлы{x
 
 Умения использования магических предметов и другие {hh1130основы магии{x можно выучить у Колдуна в Мидгаарде. При недостаточном уровне навыка волшебные предметы могут не сработать или даже сломаться.
 
-Использовать все волшебные предметы можно командой *использовать* или такими специальными командами:
+Все волшебные предметы используются одной командой, *использовать*:
 
-%FMT% *осушить* _зелье_
-Осушить указанное волшебное зелье (как противоположность команде {hh1074пить{x, которая выпивает обычные земные жидкости). Зелье можно выпить только один раз, после выпивания в инвентаре у тебя останется пустой =пузырек=.
-  
-%FMT% *зачитать* _свиток_ _цель_
+%FMT% *использовать* _зелье_
+Выпить волшебное зелье. Команда {hh1074пить{x для зелий тоже подходит. Зелье можно выпить только один раз, после этого в инвентаре у тебя останется пустой =пузырек=.
+
+%FMT% *использовать* _свиток_ _цель_
 Прочитать волшебный свиток. Цель воздействия указывать не обязательно -- все зависит от свойств свитка. Один свиток можно зачитать только один раз.
- 
-%FMT% *поразить* _цель_
-Взмахнуть волшебным жезлом, который ты держишь в руке. Если цель явно не указана, но ты с кем-то сражаешься, твой противник будет использован как мишень для вредоносных заклинаний.
 
-%FMT% *взмахнуть*
-Ударить о землю волшебным посохом, который ты держишь в руке. Заклинания на посохе могут подействовать на всех окружающих!
+%FMT% *использовать* _жезл_ _цель_
+Взмахнуть волшебным жезлом. Жезл может лежать в инвентаре или быть надет куда угодно, держать его в руке не нужно. Если цель явно не указана, но ты с кем-то сражаешься, твой противник будет использован как мишень для вредоносных заклинаний.
+
+%FMT% *использовать* _посох_
+Ударить о землю волшебным посохом. Посох нужно держать в руках. Заклинания на посохе могут подействовать на всех окружающих!
 
 Посохи и жезлы могут содержать несколько зарядов. Когда заряды истощатся, эти волшебные предметы становятся бесполезными. Однако колдуны и ведьмы владеют секретом повторной зарядки жезлов и посохов (умение {hh600перезарядка{x).
 </text>
@@ -66,25 +66,25 @@ Staves and wands may contain multiple charges. When the charges run out, these m
 Чарівні предмети бувають таких типів:
 {C%A%{x зілля: осушати зілля можуть всі, без знання спеціальних навичок
 {C%A%{x пілюлі: ковтати пілюлі теж можуть всі -- на свій страх і ризик
-{C%A%{x сувої і книги: потрібне знання вміння {hh121сувої{x
+{C%A%{x сувої і книги: потрібне знання вміння {hh2145сувої{x
 {C%A%{x посохи: потрібне знання вміння {hh2144посохи{x
 {C%A%{x жезли: потрібне знання вміння {hh2143жезли{x
 
 Вміння використання магічних предметів та інші {hh1130основи магії{x можна вивчити у Чарівника в Мідгаарді. При недостатньому рівні навику чарівні предмети можуть не спрацювати або навіть зламатися.
 
-Використовувати всі чарівні предмети можна командою *використовувати* або такими спеціальними командами:
+Всі чарівні предмети використовуються однією командою, *використовувати*:
 
-%FMT% *осушити* _зілля_
-Осушити вказане чарівне зілля (на відміну від команди {hh1074пити{x, яка виживає звичайні земні рідини). Зілля можна випити тільки один раз, після випивання в інвентарі у тебе залишиться порожній =пузирець=.
-  
-%FMT% *зачитати* _сувій_ _ціль_
+%FMT% *використовувати* _зілля_
+Випити чарівне зілля. Команда {hh1074пити{x для зілля теж годиться. Зілля можна випити тільки один раз, після цього в інвентарі у тебе залишиться порожній =пузирець=.
+
+%FMT% *використовувати* _сувій_ _ціль_
 Прочитати чарівний сувій. Ціль впливу вказувати необовʼязково -- все залежить від властивостей сувою. Один сувій можна зачитати тільки один раз.
- 
-%FMT% *зачарування* _ціль_
-Махнути чарівним жезлом, який ти тримаєш у руці. Якщо ціль явно не вказана, але ти з кимось бʼєшся, твій противник буде використаний як мішень для шкідливих заклинань.
 
-%FMT% *розмахнути*
-Вдарити об землю чарівним посохом, який ти тримаєш у руці. Заклинання на посоху можуть подіяти на всіх навколишніх!
+%FMT% *використовувати* _жезл_ _ціль_
+Махнути чарівним жезлом. Жезл може лежати в інвентарі або бути вдягнутим куди завгодно, тримати його в руці не треба. Якщо ціль явно не вказана, але ти з кимось бʼєшся, твій противник буде використаний як мішень для шкідливих заклинань.
+
+%FMT% *використовувати* _посох_
+Вдарити об землю чарівним посохом. Посох треба тримати в руках. Заклинання на посоху можуть подіяти на всіх навколишніх!
 
 Посохи і жезли можуть містити кілька зарядів. Коли заряди вичерпаються, ці чарівні предмети стають марними. Однак чарівники і відьми знають секрет повторного заряджання жезлів і посохів (вміння {hh600перезарядка{x).
 </text>

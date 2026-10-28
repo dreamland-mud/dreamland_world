@@ -4,7 +4,7 @@
   <aliases l="ua">завдання</aliases>
   <cat>quest</cat>
   <extra>keep_hide ghost</extra>
-  <help id="1368" level="-1" type="CommandHelp" labels="quests">
+  <help id="1368" seealso="125 124" level="-1" type="CommandHelp" labels="quests">
     <extra l="en">'quest command' 'quest complete' 'quest find' 'quest hint' 'quest request'</extra>
     <extra l="ru">' как взять квест' 'команда квест' 'купить практики' квест 'квест команды' 'квест найти' 'квест попросить' 'квест взять' 'квестовое время' опыт подсказка сдать</extra>
     <extra l="ua">' як взяти квест' 'команда квест' 'купити практики' квест 'квест команди' 'квест знайти' 'квест попросити' 'квест взяти' 'квестовий час' досвід підказка здати</extra>
@@ -24,9 +24,7 @@ The list shows only what you can use right now: the questor does not offer what 
 Only a quest ring or belt can be returned, and no more than three times!
 
 {CFOR ZONES' TASKS{x
-*%CMD%* : list of all current tasks *%CMD%* _number_ : detailed description of the task *%CMD%* *cancel* _number_ : cancel this task
-
-%SA% %H% {hh125questor's tasks{x, %H% {hh124zone tasks{x</text>
+*%CMD%* : list of all current tasks *%CMD%* _number_ : detailed description of the task *%CMD%* *cancel* _number_ : cancel this task</text>
     <text l="ru">Эта команда служит для отображения списка всех заданий, для просмотра подробностей по каждому или отмены задания.
 
 {CДЛЯ ЗАДАНИЙ КВЕСТОРОВ{x
@@ -44,8 +42,6 @@ Only a quest ring or belt can be returned, and no more than three times!
 
 {CДЛЯ ЗАДАНИЙ В ЗОНАХ{x
 *%CMD%* : список всех текущих заданий *%CMD%* _номер_ : подробное описание задания *%CMD%* *отменить* _номер_ : отменить это задание
-
-%SA% %H% {hh125задания квестора{x, %H% {hh124задания зон{x
 </text>
     <text l="ua">Ця команда служить для відображення списку всіх завдань, для перегляду деталей по кожному або скасування завдання.
 
@@ -63,9 +59,7 @@ Only a quest ring or belt can be returned, and no more than three times!
 Поверненню підлягають тільки квестове кільце або пояс, і не більше трьох разів!
 
 {CДЛЯ ЗАВДАНЬ У ЗОНАХ{x
-*%CMD%* : список всіх поточних завдань *%CMD%* _номер_ : детальний опис завдання *%CMD%* *скасувати* _номер_ : скасувати це завдання
-
-%SA% %H% {hh125завдання квестора{x, %H% {hh124завдання зон{x</text>
+*%CMD%* : список всіх поточних завдань *%CMD%* _номер_ : детальний опис завдання *%CMD%* *скасувати* _номер_ : скасувати це завдання</text>
     <title l="en">{CQuests: {xcommands</title>
     <title l="ru">{CКвесты: {xкоманды</title>
     <title l="ua">{CКвести: {xкоманди</title>

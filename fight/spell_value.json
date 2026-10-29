@@ -1,6 +1,6 @@
 {
  "_doc": {
-  "what": "Every spell priced in M (one measure, ITEM_POWER.md) at L50 on the scale Kit approved 2026-10-28. Use it for magic item spell picks (pills, potions, scrolls, wands, staves), granted skills and any spell price question.",
+  "what": "Every spell AND every non-spell skill priced in M (one measure, ITEM_POWER.md) at L50 on the scale Kit approved 2026-10-28. Use it for magic item spell picks (pills, potions, scrolls, wands, staves), granted skills, onEquip casts and any spell or skill price question.",
   "worn": "permanent affect on a worn item; null when it has no affect meaning (nukes, heals, pets, item-making rituals)",
   "charge": "one use: one pill/potion/scroll or one wand/staff charge; charges price linearly (x10 wand = 10 x charge)",
   "grant": "item-granted skill (grantskills, learned 100), char-less base the gear sage would give",
@@ -9,7 +9,8 @@
   "excluded": "Kit's per-spell exclusion from magic items (R2 and the high-signature rule are dropped)",
   "pvp": "Kit weighs PK too: spell resistance and similar are priced for PvP, not only PvE",
   "edit": "Kit edits values in the artifact https://claude.ai/artifact/FNB18r6xaUD5editrNkFrY; sync with scripts/spell-value/spell-value.py --merge",
-  "tool": "scripts/spell-value/spell-value.py; skill dl-spell-value"
+  "tool": "scripts/spell-value/spell-value.py (--skills / --spells); skill dl-spell-value",
+  "skills": "Non-spell skills (generic, clan, racial, card, craft, and affect-only basic skills such as set bonuses and tattoo gifts) are the records with charge null: a skill is no consumable. type 'skill' = a usable skill; an affect-only basic skill keeps a spell type (buff, malediction, utility) and grant null. worn = the skill's own affect kept permanently on the wearer (null: no lasting affect on its user, e.g. bash, kick, passives); grant = the skill at learned 100 from an item, the gear sage's char-less base value (ga_grantsValue, target 0) x the share of the 13 played professions that lack it at L50: skills in ga_grantDefs mirror the C++, the rest use its closest frame (attacks ga_bestMeleeNuke damage + victim lag, extra attacks GK_EXTRA, parry/dodge/blocks GK_AVOID, self-buffs GK_BUFF, pets GK_PET, utility GK_FIXED). Model numbers are mapped onto Kit's scale with the same per-family maps as the spells (sv_rescale.py), so src is 'rescaled'. excluded is true for every skill (no magic item use). Generator: scripts/spell-value/gen/skill_value.py (facts gen/skill_facts.py, frames gen/skill_model.py); estimates are flagged in note."
  },
  "spells": {
   "ace in sleeves": {
@@ -7475,6 +7476,6773 @@
    "effect": "proposed: once per duration, below 35% hp in a fight, restores 3 x L hp (150 at L50); dur L/4 ticks (proposal)",
    "note": "",
    "exclude_reason": "proposed P1 effect (magic_items_revamp.md B9/B10)"
+  },
+  "accuracy": {
+   "ru": "меткость",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 0.69,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 0.3248,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "rare",
+   "effect": "ranged aim: missile hit chance x3 and missile damage x2 (bow, throwing)",
+   "note": "estimate: doubles a bow/throw user's missile damage: ~2x the bow grant (10 PvE, 25 PvP) for ranged users",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "ahuramazda shroud": {
+   "ru": "покров Ахурамазды",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 0.664,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 0.2989,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "res poison and disease (Ahuramazda tattoo gift)",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "alala courage": {
+   "ru": "отвага Алалы",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 2.015,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 0.7571,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "hitroll +L/10+5, saves -L/10 (Alala tattoo gift)",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "allanon watchfulness": {
+   "ru": "наблюдательность Алланона",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 1.702,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 0.6565,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "detect acute vision, hidden and improved invis (Allanon tattoo gift)",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "altar": {
+   "ru": "алтарь",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "altar marker (no effect)",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "ambush": {
+   "ru": "засада",
+   "type": "skill",
+   "minlvl": 17,
+   "classes": {
+    "ranger": 17
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.0,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0
+   },
+   "rarity": "rare",
+   "effect": "camouflaged opener on a victim that cannot see you: one weapon hit at x3; worth nothing without camouflage",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "ancient rage": {
+   "ru": "древняя ярость",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 2.17,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 0.8071,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "Khuzdul word: random hitroll/damroll bonus, stacks in time",
+   "note": "estimate: random bonus, ~L/10",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "arcadian brew": {
+   "ru": "арканское варево",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "turns water in a vessel or fountain into booze for a while",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "area attack": {
+   "ru": "круговая атака",
+   "type": "skill",
+   "minlvl": 69,
+   "classes": {
+    "samurai": 69,
+    "warrior": 73
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 1.753,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 1.299
+   },
+   "rarity": "unique",
+   "effect": "each round also strikes one more enemy in the room (more past skill level 70) while fighting a group",
+   "note": "estimate: extra hit on a second enemy; ~0.3 of fights have one (aoe_targets 1.3)",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "ares amok": {
+   "ru": "безумие Ареса",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 3.639,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 2.3433,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "Ares tattoo gift: damroll +L/2 but defensive group -L/4",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "armor use": {
+   "ru": "использование брони",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.0,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0
+   },
+   "rarity": "unique",
+   "effect": "Artificer kit (steam jacket, multitool) bonuses and self-refit",
+   "note": "only the Artificer kit carries it",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "arrow": {
+   "ru": "стрела",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "arrow weapon class (ammunition)",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "artificer pierce": {
+   "ru": "пробитая броня",
+   "type": "malediction",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "multitool pick: armor class worse for a couple of ticks",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "ashigaru": {
+   "ru": "асигару",
+   "type": "skill",
+   "minlvl": 35,
+   "classes": {
+    "samurai": 35
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 2.681,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 1.9984
+   },
+   "rarity": "unique",
+   "effect": "summons an ashigaru foot soldier follower (body/head/weapon/shield gear only), one at a time, with a cooldown",
+   "note": "estimate: equippable fighter pet, like ancestral spirits share 0.2",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "assassinate": {
+   "ru": "свернуть шею",
+   "type": "skill",
+   "minlvl": 65,
+   "classes": {
+    "ninja": 65
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.682,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.2555
+   },
+   "rarity": "unique",
+   "effect": "opener with both hands free on an unhurt victim not in a fight: ~8% neck snap (instakill, NPC cap 15%), else level+damroll bash damage",
+   "note": "estimate: instakill 8% x 2000 + miss damage; cond 0.5: both hands must be free",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "athena wisdom": {
+   "ru": "мудрость Афины",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 0.919,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 0.4048,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "Athena tattoo gift: one chosen spell at +100 learned until the next day",
+   "note": "estimate: +100 on one known spell",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "axe": {
+   "ru": "топор",
+   "type": "skill",
+   "minlvl": 2,
+   "classes": {
+    "anti-paladin": 2,
+    "ranger": 2,
+    "warrior": 3
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.0,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0
+   },
+   "rarity": "rare",
+   "effect": "axe proficiency: swing an axe at full dice (unskilled 20%)",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "azazel curse": {
+   "ru": "проклятие Азазеля",
+   "type": "malediction",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "Azazel pact: a curse on the bargainer",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "azazel fire": {
+   "ru": "пламя Азазеля",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "Azazel pact: fire gift",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "azazel heal": {
+   "ru": "здоровье Азазеля",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "Azazel pact: healing gift",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "azazel word": {
+   "ru": "слово Азазеля",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "Azazel pact marker",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "backguard": {
+   "ru": "настороженность",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 0.258,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 0.065,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "vigilance: blocks strangle, blackjack and vampiric touch from behind",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "backstab": {
+   "ru": "удар в спину",
+   "type": "skill",
+   "minlvl": 10,
+   "classes": {
+    "thief": 10
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.796,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.3218
+   },
+   "rarity": "unique",
+   "effect": "opener on an unaware victim (>=70% hp) with a pierce weapon: one hit at (L/10+1) x weapon damage + L",
+   "note": "skill_one_hit div 10 at L50 = 6 x hit + 50; cond 0.3: pierce weapon in hand",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "bandage": {
+   "ru": "повязка",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": 0.468,
+   "charge": null,
+   "grant": 0.435,
+   "src": {
+    "worn": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.1587,
+    "charge": null,
+    "grant": 0.1111
+   },
+   "rarity": "unique",
+   "effect": "bandage wounds: faster hp and move regen while it holds (stops bleeding with bandage+)",
+   "note": "estimate: regen gain +L/20 a tick and heal",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "bash": {
+   "ru": "толчок",
+   "type": "skill",
+   "minlvl": 1,
+   "classes": {
+    "anti-paladin": 1,
+    "ninja": 4,
+    "paladin": 6,
+    "vampire": 11,
+    "warrior": 2
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 1.4,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 1.2397
+   },
+   "rarity": "unique",
+   "effect": "shield/body bash: damroll/2 + dice(L/2, size x 2), knocks the victim down (2.5 s lag)",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "bash door": {
+   "ru": "выбить дверь",
+   "type": "skill",
+   "minlvl": 6,
+   "classes": {
+    "anti-paladin": 6,
+    "ninja": 13,
+    "paladin": 6,
+    "ranger": 6,
+    "samurai": 11,
+    "warrior": 6
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.133,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.021
+   },
+   "rarity": "rare",
+   "effect": "charges a locked door open (strength and size), may hurt you on failure",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "bear call": {
+   "ru": "медведи",
+   "type": "skill",
+   "minlvl": 17,
+   "classes": {
+    "druid": 17,
+    "ranger": 31
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 2.105,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 1.6029
+   },
+   "rarity": "unique",
+   "effect": "summons two bears in the wild, kept a week, partly equippable, two at a time",
+   "note": "estimate: two pets in nature only; share like golems 0.25, x0.7 wild-only",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "beast hold": {
+   "ru": "хватка",
+   "type": "malediction",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "a beast's grip holds you in place",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "beast strike": {
+   "ru": "звериный удар",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "natural attacks of beasts (gore, rake, maul, trample)",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "beer armor": {
+   "ru": "пивная броня",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 0.203,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 0.0405,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "beer film from an Arcadi keg: AC better",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "berserk": {
+   "ru": "берсерк",
+   "type": "skill",
+   "minlvl": 15,
+   "classes": {
+    "ranger": 34,
+    "samurai": 20,
+    "warrior": 15
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": 2.541,
+   "charge": null,
+   "grant": 1.496,
+   "src": {
+    "worn": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 1.4675,
+    "charge": null,
+    "grant": 0.7902
+   },
+   "rarity": "rare",
+   "effect": "rage: hp +2L now, hitroll/damroll +L/5 (+L/10 below 25% hp), AC +10L/12 (worse), defensive group -L/15, berserk bit for 1..L/6 ticks",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "blackjack": {
+   "ru": "оглушить",
+   "type": "skill",
+   "minlvl": 30,
+   "classes": {
+    "thief": 30
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.761,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.3015
+   },
+   "rarity": "unique",
+   "effect": "opener: knocks the victim out (sleep 1 tick) and hits for damroll + dice(L,4); sets up the backstab",
+   "note": "estimate: damage 191 + sleep 150 (MALED_EST)",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "blacksmith": {
+   "ru": "мастерство кузнеца",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.266,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.065
+   },
+   "rarity": "unique",
+   "effect": "blacksmithing craft skill",
+   "note": "estimate: economy (learn x0.15)",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "blasting": {
+   "ru": "подрывное дело",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.534,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.1689
+   },
+   "rarity": "unique",
+   "effect": "Artificer craft: blasting powder, bombs and mines",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "bleeding": {
+   "ru": "кровотечение",
+   "type": "malediction",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "torn wound: hp loss every round for five rounds",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "blind fighting": {
+   "ru": "бой вслепую",
+   "type": "skill",
+   "minlvl": 11,
+   "classes": {
+    "ninja": 11,
+    "paladin": 32,
+    "ranger": 43,
+    "samurai": 23,
+    "warrior": 13
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.93,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.4856
+   },
+   "rarity": "rare",
+   "effect": "fights blind with smaller to-hit and parry/dodge losses",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "blindness dust": {
+   "ru": "облако пыли",
+   "type": "skill",
+   "minlvl": 28,
+   "classes": {
+    "ninja": 28
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 1.047,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.7189
+   },
+   "rarity": "unique",
+   "effect": "room cloud: blinds every non-group enemy that fails a save",
+   "note": "estimate: blindness override 187 per target, once per fight",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "blink": {
+   "ru": "мерцание",
+   "type": "skill",
+   "minlvl": 1,
+   "classes": {
+    "necromancer": 1,
+    "warlock": 1,
+    "witch": 1
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 2.512,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 2.3359
+   },
+   "rarity": "rare",
+   "effect": "learned/2 % (+20 hasted) to blink away from a melee blow that gets past the shield, level/5 mana per blink",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "bloodlet": {
+   "ru": "кровопускание",
+   "type": "skill",
+   "minlvl": 15,
+   "classes": {
+    "vampire": 15
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.152,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.024
+   },
+   "rarity": "unique",
+   "effect": "vampire wounds itself to rouse the blood thirst (form prerequisite)",
+   "note": "estimate: vampire-only setup step",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "bloodthirst": {
+   "ru": "жажда крови",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": 1.947,
+   "charge": null,
+   "grant": 1.333,
+   "src": {
+    "worn": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.7354,
+    "charge": null,
+    "grant": 0.5148
+   },
+   "rarity": "unique",
+   "effect": "blood rage: hitroll/damroll +L/7+1, AC +L (worse), attacks anything near, 2+L/18 ticks",
+   "note": "estimate: worn: -40 points for the bloodthirst bit (you attack everything near you)",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "blue arrow": {
+   "ru": "голубая стрела",
+   "type": "skill",
+   "minlvl": 32,
+   "classes": {
+    "ranger": 32
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.281,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.09
+   },
+   "rarity": "unique",
+   "effect": "craft shocking arrows (recipe + ingredients): a hit paralyses briefly and damages gear",
+   "note": "estimate: ammo craft for bow users only",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "bonedagger": {
+   "ru": "костяной нож",
+   "type": "skill",
+   "minlvl": 90,
+   "classes": {
+    "vampire": 90
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.357,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.065
+   },
+   "rarity": "unique",
+   "effect": "pins a victim's shadow on a grave with a bone dagger: holds it in place and deals heavy damage",
+   "note": "estimate: graves and light only, PvP pin",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "boss ward": {
+   "ru": "заслон владыки",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "boss AI ward",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "bow": {
+   "ru": "лук",
+   "type": "skill",
+   "minlvl": 10,
+   "classes": {
+    "ranger": 10,
+    "samurai": 20,
+    "warrior": 44
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.608,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.2124
+   },
+   "rarity": "rare",
+   "effect": "shoot arrows from a bow at a target up to rooms away (bow, quiver, arrows)",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "brewing": {
+   "ru": "зельеварение",
+   "type": "skill",
+   "minlvl": 23,
+   "classes": {
+    "witch": 23
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.263,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.06
+   },
+   "rarity": "unique",
+   "effect": "brews potions at the Higher Tower alchemy device from vials and components",
+   "note": "estimate: economy craft",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "burn": {
+   "ru": "ожог",
+   "type": "malediction",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "burn damage marker",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "bushido": {
+   "ru": "бусидо",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "marker of the samurai way (kaeshi, iaido, fudoshin, zanshin)",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "butcher": {
+   "ru": "разделать",
+   "type": "skill",
+   "minlvl": 9,
+   "classes": {
+    "ranger": 9
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.152,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.024
+   },
+   "rarity": "rare",
+   "effect": "cuts steaks from an edible corpse",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "caltraps": {
+   "ru": "шипы",
+   "type": "skill",
+   "minlvl": 18,
+   "classes": {
+    "ninja": 18,
+    "thief": 21
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.756,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.2986
+   },
+   "rarity": "rare",
+   "effect": "throws caltraps: the victim limps -- slowed, dex/hitroll/damroll down",
+   "note": "estimate: slow est 112 per landing",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "camouflage": {
+   "ru": "замаскироваться",
+   "type": "skill",
+   "minlvl": 4,
+   "classes": {
+    "druid": 19,
+    "ranger": 4
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": 2.5,
+   "charge": null,
+   "grant": 1.429,
+   "src": {
+    "worn": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 1.2994,
+    "charge": null,
+    "grant": 0.3848
+   },
+   "rarity": "rare",
+   "effect": "hides in forest/field/mountain: invisible there to anyone without acute vision",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "camouflage move": {
+   "ru": "камуфляж в движении",
+   "type": "skill",
+   "minlvl": 5,
+   "classes": {
+    "druid": 19,
+    "ranger": 5
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.0,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0
+   },
+   "rarity": "rare",
+   "effect": "moves through nature while camouflaged",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "camp": {
+   "ru": "лагерь",
+   "type": "skill",
+   "minlvl": 9,
+   "classes": {
+    "ranger": 9
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.3,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.1199
+   },
+   "rarity": "unique",
+   "effect": "sets a camp fire in the wild: everyone there regains hp and mana faster",
+   "note": "estimate: room regen, wild only",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "card vision": {
+   "ru": "видения картежника",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.164,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.026
+   },
+   "rarity": "unique",
+   "effect": "card player reads more from a map",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "carpenter": {
+   "ru": "мастерство плотника",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.266,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.065
+   },
+   "rarity": "unique",
+   "effect": "carpentry craft skill",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "cavalry": {
+   "ru": "кавалерия",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.327,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.1624
+   },
+   "rarity": "unique",
+   "effect": "ride and fight on a trained Knight's horse",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "circle": {
+   "ru": "круговой удар",
+   "type": "skill",
+   "minlvl": 7,
+   "classes": {
+    "thief": 7
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 1.055,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.7359
+   },
+   "rarity": "rare",
+   "effect": "with a pierce weapon, while nobody hits you: (L/40+1) x hit + L",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "clanrecall": {
+   "ru": "кланвозврат",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.286,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0975
+   },
+   "rarity": "unique",
+   "effect": "prays to be moved to the clan hall (cooldown)",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "claw": {
+   "ru": "когти",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.891,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.4076
+   },
+   "rarity": "unique",
+   "effect": "claw rip (clawed races): damroll + dice(L, 20)",
+   "note": "needs claws, cond 0.2",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "cleave": {
+   "ru": "рассечь",
+   "type": "skill",
+   "minlvl": 50,
+   "classes": {
+    "anti-paladin": 55,
+    "samurai": 50
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.792,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.3194
+   },
+   "rarity": "unique",
+   "effect": "opener on an unhurt victim with a slashing weapon: a heavy cut with a chance to kill outright",
+   "note": "estimate: weaker than backstab (~4 x hit) + ~5% instakill; cond 0.5 slash weapon",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "clumsiness": {
+   "ru": "неуклюжесть",
+   "type": "malediction",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "defensive skills -30 learned for 10 ticks",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "concentrate": {
+   "ru": "сосредоточиться",
+   "type": "skill",
+   "minlvl": 59,
+   "classes": {
+    "ranger": 59,
+    "samurai": 65,
+    "warrior": 59
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": 2.449,
+   "charge": null,
+   "grant": 1.478,
+   "src": {
+    "worn": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 1.0855,
+    "charge": null,
+    "grant": 0.7598
+   },
+   "rarity": "rare",
+   "effect": "before a fight: hitroll/damroll +L/8, fightmaster group +L/15, for L/8+-1 ticks",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "confiscate": {
+   "ru": "конфисковать",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.0,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0
+   },
+   "rarity": "unique",
+   "effect": "Ruler: confiscate a share of a player's inventory",
+   "note": "clan law tool",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "corrosion": {
+   "ru": "коррозия",
+   "type": "malediction",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "acid corrosion: an item's AC worse",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "counter": {
+   "ru": "обратить атаку",
+   "type": "skill",
+   "minlvl": 28,
+   "classes": {
+    "paladin": 35,
+    "warrior": 28
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.527,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.1649
+   },
+   "rarity": "rare",
+   "effect": "when someone opens a fight on you, turns the opening blow back at them for double damage",
+   "note": "estimate: only on a murder opener: mostly PvP",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "cow calm": {
+   "ru": "коровья невозмутимость",
+   "type": "malediction",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "hitroll/damroll -L/10, calm",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "cow inspiration": {
+   "ru": "коровье вдохновение",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 1.253,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 0.5122,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "hitroll +L/10, saves -L/10 for 8+L ticks",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "cow lust": {
+   "ru": "коровье бешенство",
+   "type": "malediction",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "mad cow lust",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "creativity": {
+   "ru": "жажда творить",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 0.0,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 0.0,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "thirst to create: enchants, sharpen and bless items work better",
+   "note": "estimate: economy only",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "critical strike": {
+   "ru": "критический удар",
+   "type": "skill",
+   "minlvl": 58,
+   "classes": {
+    "ninja": 58,
+    "ranger": 60,
+    "samurai": 62,
+    "thief": 66
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 2.91,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 2.7067
+   },
+   "rarity": "rare",
+   "effect": "learned/10 % (+5 hasted, + level lead) of landed melee hits strike a vital point: +40..500% damage, may blind or stun",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "cross block": {
+   "ru": "скрестить клинки",
+   "type": "skill",
+   "minlvl": 31,
+   "classes": {
+    "anti-paladin": 56,
+    "paladin": 56,
+    "ranger": 31,
+    "samurai": 32,
+    "warrior": 31
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 1.29,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.4429
+   },
+   "rarity": "unique",
+   "effect": "with two weapons, catches a blow between the blades: learned/3 (samurai x1.5)",
+   "note": "estimate: needs two weapons, cond 0.3",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "crush": {
+   "ru": "раздавить",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 3.15,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 2.6732
+   },
+   "rarity": "unique",
+   "effect": "body crush: damroll + dice(L, size x 2), knocks down (2.5 s)",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "crusify": {
+   "ru": "распятие",
+   "type": "skill",
+   "minlvl": 20,
+   "classes": {
+    "anti-paladin": 20
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.236,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0374
+   },
+   "rarity": "unique",
+   "effect": "anti-paladin corpse sacrifice ritual: the dark gods pay back mana",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "curl": {
+   "ru": "сворачиваться клубком",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.164,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.026
+   },
+   "rarity": "unique",
+   "effect": "felar curls up in sleep and heals a little better",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "dagger": {
+   "ru": "кинжал",
+   "type": "skill",
+   "minlvl": 1,
+   "classes": {
+    "anti-paladin": 1,
+    "cleric": 1,
+    "druid": 1,
+    "necromancer": 1,
+    "ninja": 1,
+    "paladin": 1,
+    "ranger": 1,
+    "samurai": 1,
+    "thief": 1,
+    "vampire": 1,
+    "warlock": 1,
+    "warrior": 1,
+    "witch": 1
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.0,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0
+   },
+   "rarity": "rare",
+   "effect": "dagger proficiency",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "deathblow": {
+   "ru": "смертоносная сила",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 1.368,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.574
+   },
+   "rarity": "unique",
+   "effect": "learned/10 % of hits vs mobs (/8 magic mobs, /6 players) deal +33..67% (clan level 2)",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "deforestation": {
+   "ru": "обезлесение",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "destroyed trees in a room",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "demonic mantle": {
+   "ru": "демоническая мантия",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "rainbow quest demon mantle",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "detect hide": {
+   "ru": "замечать скрытое",
+   "type": "skill",
+   "minlvl": 5,
+   "classes": {
+    "ninja": 10,
+    "thief": 5
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": 0.548,
+   "charge": null,
+   "grant": 0.445,
+   "src": {
+    "worn": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.1964,
+    "charge": null,
+    "grant": 0.1163
+   },
+   "rarity": "unique",
+   "effect": "detect hidden creatures and exits",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "diggings": {
+   "ru": "раскопки",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "pits left by digging in a room",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "dirt kicking": {
+   "ru": "бросок грязью",
+   "type": "skill",
+   "minlvl": 3,
+   "classes": {
+    "anti-paladin": 3,
+    "ninja": 3,
+    "ranger": 5,
+    "thief": 3,
+    "warrior": 8
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.939,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.5036
+   },
+   "rarity": "unique",
+   "effect": "kicks dirt in the eyes: blind (hitroll -L/10+1) for the round, 1..L damage",
+   "note": "blindness override 187 + 1..L damage, once per fight (locked while blind)",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "disarm": {
+   "ru": "обезоружить",
+   "type": "skill",
+   "minlvl": 20,
+   "classes": {
+    "anti-paladin": 21,
+    "ninja": 23,
+    "paladin": 20,
+    "ranger": 21,
+    "samurai": 21,
+    "thief": 28,
+    "warrior": 20
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.538,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.1715
+   },
+   "rarity": "rare",
+   "effect": "knocks the enemy's weapon away: it hits weaker and parries worse",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "dismiss": {
+   "ru": "отстранение",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.0,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0
+   },
+   "rarity": "unique",
+   "effect": "Ruler: dismiss another Ruler",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "dodge": {
+   "ru": "уворот",
+   "type": "skill",
+   "minlvl": 1,
+   "classes": {
+    "anti-paladin": 28,
+    "cleric": 34,
+    "ninja": 2,
+    "paladin": 25,
+    "ranger": 9,
+    "samurai": 8,
+    "thief": 1,
+    "vampire": 8,
+    "warrior": 13
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 1.477,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.7582
+   },
+   "rarity": "unique",
+   "effect": "dodges a melee blow: learned/2 base, +-dex/size/haste, agile +10, casters -10, costs moves",
+   "note": "estimate: typical chance at 100% vs a mob",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "dominate": {
+   "ru": "доминировать",
+   "type": "skill",
+   "minlvl": 43,
+   "classes": {
+    "vampire": 43
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 3.046,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 2.2898
+   },
+   "rarity": "unique",
+   "effect": "charms a creature by will (vampire): it follows and obeys",
+   "note": "charm, like charm person",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "double kick": {
+   "ru": "двойной удар копытами",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.758,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.3
+   },
+   "rarity": "unique",
+   "effect": "centaur: a second hoof kick at kick/2 %",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "dual backstab": {
+   "ru": "двойной удар в спину",
+   "type": "skill",
+   "minlvl": 38,
+   "classes": {
+    "thief": 38
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.262,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0477
+   },
+   "rarity": "unique",
+   "effect": "a second backstab right after a landed one",
+   "note": "needs backstab (thieves): cond 0.05 for a non-thief",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "dwarkin mastery": {
+   "ru": "мастерство Дворкина",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 0.826,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 0.3748,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "Dwarkin tattoo gift: two chosen skills at +100 learned until the next day",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "endure": {
+   "ru": "выносливость",
+   "type": "skill",
+   "minlvl": 20,
+   "classes": {
+    "ninja": 20
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": 0.991,
+   "charge": null,
+   "grant": 1.136,
+   "src": {
+    "worn": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.4278,
+    "charge": null,
+    "grant": 0.2764
+   },
+   "rarity": "rare",
+   "effect": "meditation against magic: saving spell -(L/20 + learned/20 + 1) for L/4 ticks",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "enter card": {
+   "ru": "войти в карту",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 1.418,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.3573
+   },
+   "rarity": "unique",
+   "effect": "reach the person on a card",
+   "note": "estimate: travel to a char, half mist walk",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "envenom": {
+   "ru": "отравить",
+   "type": "skill",
+   "minlvl": 15,
+   "classes": {
+    "thief": 15
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.707,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.2699
+   },
+   "rarity": "rare",
+   "effect": "poisons a weapon, food or drink",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "escape": {
+   "ru": "побег",
+   "type": "skill",
+   "minlvl": 45,
+   "classes": {
+    "ninja": 55,
+    "thief": 45
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 1.494,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.5397
+   },
+   "rarity": "rare",
+   "effect": "flees a fight in a chosen direction",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "exotic": {
+   "ru": "экзотическое оружие",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.0,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0
+   },
+   "rarity": "unique",
+   "effect": "exotic weapon proficiency: everyone swings exotics at level x (int-17) %, a grant adds nothing",
+   "note": "ExoticSkill learned comes from level+int, available() false",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "face tattoo": {
+   "ru": "татуировка на лице",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.164,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.026
+   },
+   "rarity": "unique",
+   "effect": "tattoo the face",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "fade": {
+   "ru": "спрятаться",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": 2.5,
+   "charge": null,
+   "grant": 1.484,
+   "src": {
+    "worn": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 1.2994,
+    "charge": null,
+    "grant": 0.7696
+   },
+   "rarity": "rare",
+   "effect": "hide even in daylight (Invaders)",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "faery blessing": {
+   "ru": "благословение фей",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 3.946,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 2.6539,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "sanctuary and saves -10 for an hour (faerie ring quest)",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "fetch card": {
+   "ru": "достать карту",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.164,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.026
+   },
+   "rarity": "unique",
+   "effect": "fetch a card from the deck",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "fifth attack": {
+   "ru": "пятая атака",
+   "type": "skill",
+   "minlvl": 52,
+   "classes": {
+    "warrior": 52
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 1.791,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 1.3855
+   },
+   "rarity": "unique",
+   "effect": "one more 32% chance to strike each round (and an off-hand roll)",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "find object": {
+   "ru": "слухи",
+   "type": "skill",
+   "minlvl": 30,
+   "classes": {
+    "thief": 30
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.263,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.06
+   },
+   "rarity": "unique",
+   "effect": "bribe a town local to learn where an item lies (gold per level)",
+   "note": "estimate: like locate object QoL",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "fine": {
+   "ru": "штраф",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.0,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0
+   },
+   "rarity": "unique",
+   "effect": "Ruler: fine a player",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "flail": {
+   "ru": "цеп",
+   "type": "skill",
+   "minlvl": 10,
+   "classes": {
+    "anti-paladin": 10,
+    "cleric": 10,
+    "druid": 10,
+    "paladin": 10,
+    "warrior": 10
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.0,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0
+   },
+   "rarity": "rare",
+   "effect": "flail proficiency",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "flaming stone": {
+   "ru": "обжигающий камень",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.232,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0422
+   },
+   "rarity": "unique",
+   "effect": "fire giant stones burn on hit",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "forest fighting": {
+   "ru": "лесной бой",
+   "type": "skill",
+   "minlvl": 45,
+   "classes": {
+    "ranger": 45
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 1.77,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 1.338
+   },
+   "rarity": "rare",
+   "effect": "in nature rooms: extra attacks at the end of the round (100%, then /3), better defenses",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "fourth attack": {
+   "ru": "четвертая атака",
+   "type": "skill",
+   "minlvl": 30,
+   "classes": {
+    "warrior": 30
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 1.744,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 1.279
+   },
+   "rarity": "rare",
+   "effect": "one more 32% chance to strike each round (and an off-hand roll)",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "freezing stone": {
+   "ru": "обмораживающий камень",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.232,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0422
+   },
+   "rarity": "unique",
+   "effect": "frost giant stones freeze and weaken on hit",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "frostbite": {
+   "ru": "укус зимы",
+   "type": "malediction",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "frostbite and weakness",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "fudoshin": {
+   "ru": "фудосин",
+   "type": "skill",
+   "minlvl": 35,
+   "classes": {
+    "samurai": 35
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.783,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.1998
+   },
+   "rarity": "unique",
+   "effect": "below half hp, ordinary weapon blows hit up to 20% harder (at 10% hp)",
+   "note": "estimate: ~+8% damage while below half, ~1/4 of fight time",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "golden eye": {
+   "ru": "глаз-алмаз",
+   "type": "skill",
+   "minlvl": 41,
+   "classes": {
+    "thief": 41
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.228,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.036
+   },
+   "rarity": "rare",
+   "effect": "tells lock pickability and which key fits",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "grab": {
+   "ru": "захват",
+   "type": "skill",
+   "minlvl": 25,
+   "classes": {
+    "ninja": 25,
+    "samurai": 37
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 1.142,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.9094
+   },
+   "rarity": "unique",
+   "effect": "throw over shoulder: damroll/2 + dice(L/2, str-20), 1 s lag",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "gratitude": {
+   "ru": "благодарность",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "gratitude for a request",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "grave": {
+   "ru": "копание могилы",
+   "type": "skill",
+   "minlvl": 35,
+   "classes": {
+    "vampire": 35
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.259,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.054
+   },
+   "rarity": "unique",
+   "effect": "vampire hides underground from enemies and sunlight, regaining strength faster",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "green arrow": {
+   "ru": "зеленая стрела",
+   "type": "skill",
+   "minlvl": 24,
+   "classes": {
+    "ranger": 24
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.281,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.09
+   },
+   "rarity": "unique",
+   "effect": "craft poisoned arrows: a hit poisons and weakens",
+   "note": "estimate: ammo craft",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "grip": {
+   "ru": "хватка",
+   "type": "skill",
+   "minlvl": 43,
+   "classes": {
+    "samurai": 44,
+    "warrior": 43
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.453,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0825
+   },
+   "rarity": "rare",
+   "effect": "firm grip that resists disarm and weapon cleave",
+   "note": "estimate: counters disarm (132 PvP)",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "guard": {
+   "ru": "охранять",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.5,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0975
+   },
+   "rarity": "unique",
+   "effect": "Knight guards a groupmate, taking the attacks meant for him",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "guard call": {
+   "ru": "стража",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 3.313,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 2.7061
+   },
+   "rarity": "unique",
+   "effect": "summons two city guards, kept a week, fully equippable",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "haggle": {
+   "ru": "торговля",
+   "type": "skill",
+   "minlvl": 6,
+   "classes": {
+    "anti-paladin": 8,
+    "cleric": 18,
+    "necromancer": 9,
+    "ninja": 17,
+    "paladin": 22,
+    "samurai": 30,
+    "thief": 6,
+    "vampire": 9,
+    "warlock": 9,
+    "warrior": 22,
+    "witch": 9
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.038,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.006
+   },
+   "rarity": "unique",
+   "effect": "better shop prices when buying and selling",
+   "note": "estimate: economy",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "hand block": {
+   "ru": "блок руками",
+   "type": "skill",
+   "minlvl": 22,
+   "classes": {
+    "ninja": 22
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.66,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.1734
+   },
+   "rarity": "unique",
+   "effect": "with empty hands, blocks blows with the hands: learned/3 (ninja learned/2)",
+   "note": "estimate: empty hands only, cond 0.1",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "hand to hand": {
+   "ru": "рукопашный бой",
+   "type": "skill",
+   "minlvl": 1,
+   "classes": {
+    "anti-paladin": 1,
+    "cleric": 1,
+    "druid": 1,
+    "necromancer": 1,
+    "ninja": 1,
+    "paladin": 1,
+    "ranger": 1,
+    "samurai": 1,
+    "thief": 1,
+    "vampire": 1,
+    "warlock": 1,
+    "warrior": 1,
+    "witch": 1
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.0,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0
+   },
+   "rarity": "unique",
+   "effect": "bare-hand fighting proficiency",
+   "note": "native to every profession at L1",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "hara kiri": {
+   "ru": "харакири",
+   "type": "skill",
+   "minlvl": 21,
+   "classes": {
+    "samurai": 21
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.0,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0
+   },
+   "rarity": "rare",
+   "effect": "ritual suicide that clears samurai shame",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "hazukure": {
+   "ru": "хадзукурэ",
+   "type": "malediction",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "samurai shame after fleeing: combat arts off and his skills fumble until hara kiri",
+   "note": "a penalty state, not a gain",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "heat": {
+   "ru": "пожар",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "room on fire",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "herbs": {
+   "ru": "травы",
+   "type": "skill",
+   "minlvl": 7,
+   "classes": {
+    "druid": 7,
+    "ninja": 19,
+    "ranger": 11,
+    "samurai": 12
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.5,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.099
+   },
+   "rarity": "unique",
+   "effect": "finds local herbs that heal and, for nature casters, cure poison/disease/blindness",
+   "note": "estimate: heal at will out of combat, like refresh/cure QoL",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "hide": {
+   "ru": "укрыться",
+   "type": "skill",
+   "minlvl": 4,
+   "classes": {
+    "ninja": 10,
+    "thief": 4
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": 0.287,
+   "charge": null,
+   "grant": 0.231,
+   "src": {
+    "worn": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.078,
+    "charge": null,
+    "grant": 0.0462
+   },
+   "rarity": "rare",
+   "effect": "hides in shadows: unseen until you act",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "holy attack": {
+   "ru": "священная атака",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 1.477,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.7577
+   },
+   "rarity": "unique",
+   "effect": "a good striker's blows on an evil foe: +50% at learned %",
+   "note": "estimate: good char x evil victim ~0.14 of hits",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "holy craft": {
+   "ru": "священное искусство",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.5,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.1268
+   },
+   "rarity": "unique",
+   "effect": "good caster vs evil victim: spells harder to resist",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "holy remedy": {
+   "ru": "священное лекарство",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.413,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0752
+   },
+   "rarity": "unique",
+   "effect": "healing and curing prayers sometimes cast as if higher level",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "hunger": {
+   "ru": "голод",
+   "type": "malediction",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "hunger: saps strength and slows",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "iaido": {
+   "ru": "иайдо",
+   "type": "skill",
+   "minlvl": 28,
+   "classes": {
+    "samurai": 28
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.5,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.1479
+   },
+   "rarity": "unique",
+   "effect": "when someone opens a fight on you with a sword in hand: 2/3 chance the first blow never lands and you cut back hard",
+   "note": "estimate: one avoided hit + a heavy cut per engagement; cond 0.4 sword",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "improved benediction": {
+   "ru": "улучшенное благословение",
+   "type": "skill",
+   "minlvl": 30,
+   "classes": {
+    "paladin": 30
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.368,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0669
+   },
+   "rarity": "unique",
+   "effect": "strengthens the paladin's prayers and blessings",
+   "note": "estimate: spell-level style bonus on benedictions",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "improved maladiction": {
+   "ru": "улучшенное проклятие",
+   "type": "skill",
+   "minlvl": 31,
+   "classes": {
+    "anti-paladin": 31,
+    "necromancer": 35
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.379,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.069
+   },
+   "rarity": "unique",
+   "effect": "strengthens your curses (and the spectral blade's)",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "incandescent": {
+   "ru": "накал",
+   "type": "malediction",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "red-hot item hurts its owner",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "incite the mob": {
+   "ru": "натравить толпу",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.357,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.065
+   },
+   "rarity": "unique",
+   "effect": "Battlerager priest: the zone's guards run to attack a branded sorcerer",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "jail": {
+   "ru": "тюрьма",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.0,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0
+   },
+   "rarity": "unique",
+   "effect": "Ruler: set a jail sentence",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "jeweler": {
+   "ru": "мастерство ювелира",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.266,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.065
+   },
+   "rarity": "unique",
+   "effect": "jeweler craft skill: drill sockets",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "joker": {
+   "ru": "джокер",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.573,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.1916
+   },
+   "rarity": "unique",
+   "effect": "a deadly joke can kill the victim with one blow",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "judge": {
+   "ru": "судить",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.0,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0
+   },
+   "rarity": "unique",
+   "effect": "Ruler: read and change a player's lawfulness",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "kaeshi": {
+   "ru": "каэси",
+   "type": "skill",
+   "minlvl": 30,
+   "classes": {
+    "samurai": 30
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.405,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0959
+   },
+   "rarity": "unique",
+   "effect": "after a parry with a sword or dagger, a free return cut (learned/10 %, at most one per 3 s)",
+   "note": "estimate: ~0.4 parries a round x 10%",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "katana": {
+   "ru": "катана",
+   "type": "skill",
+   "minlvl": 60,
+   "classes": {
+    "samurai": 60
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.266,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.065
+   },
+   "rarity": "unique",
+   "effect": "samurai forges his own katana (a unique soul sword), long cooldown",
+   "note": "estimate: needs the samurai bond to matter",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "key forgery": {
+   "ru": "подделка ключей",
+   "type": "skill",
+   "minlvl": 49,
+   "classes": {
+    "thief": 49
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.263,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.06
+   },
+   "rarity": "unique",
+   "effect": "forges a lockpick for a given lock from a blank",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "kick": {
+   "ru": "пинок",
+   "type": "skill",
+   "minlvl": 1,
+   "classes": {
+    "anti-paladin": 9,
+    "cleric": 12,
+    "druid": 11,
+    "necromancer": 13,
+    "ninja": 1,
+    "paladin": 12,
+    "ranger": 8,
+    "samurai": 2,
+    "thief": 5,
+    "vampire": 4,
+    "warlock": 13,
+    "warrior": 5,
+    "witch": 13
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.0,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0
+   },
+   "rarity": "unique",
+   "effect": "kick: damroll/2 + dice(L/2, size/2), extra with hooves or bare feet",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "kind cognition": {
+   "ru": "познание Кинд",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 0.93,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 0.4083,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "Kind tattoo gift: spell level +2",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "knife": {
+   "ru": "пырнуть ножом",
+   "type": "skill",
+   "minlvl": 20,
+   "classes": {
+    "thief": 20
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.5,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0993
+   },
+   "rarity": "unique",
+   "effect": "stab a victim who is not fighting yet with a knife or dagger: a hit stronger than a normal blow",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "lance": {
+   "ru": "пика",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.0,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0
+   },
+   "rarity": "unique",
+   "effect": "lance proficiency and the mounted joust",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "lash": {
+   "ru": "хлестать",
+   "type": "skill",
+   "minlvl": 25,
+   "classes": {
+    "anti-paladin": 35,
+    "necromancer": 48,
+    "ranger": 38,
+    "vampire": 36,
+    "warrior": 25
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.53,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.1664
+   },
+   "rarity": "unique",
+   "effect": "whip lash: extra damage and a chance to trip",
+   "note": "estimate: whip only, cond 0.15",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "lay hands": {
+   "ru": "наложение рук",
+   "type": "skill",
+   "minlvl": 63,
+   "classes": {
+    "paladin": 63
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.5,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.1221
+   },
+   "rarity": "unique",
+   "effect": "paladin heals someone by laying on hands",
+   "note": "estimate: heal per cooldown, like aid",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "leadership": {
+   "ru": "лидерство",
+   "type": "skill",
+   "minlvl": 8,
+   "classes": {
+    "anti-paladin": 25,
+    "paladin": 8,
+    "ranger": 15,
+    "samurai": 10,
+    "warrior": 12
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.275,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.08
+   },
+   "rarity": "common",
+   "effect": "group xp +25% while you lead 2+ players",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "leo vigilance": {
+   "ru": "бдительность Лео",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 0.548,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 0.1964,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "Leo tattoo gift: detect fade or improved invis",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "lion call": {
+   "ru": "львы",
+   "type": "skill",
+   "minlvl": 29,
+   "classes": {
+    "druid": 29,
+    "ranger": 55
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 2.826,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 2.0983
+   },
+   "rarity": "unique",
+   "effect": "summons two lions in the wild (as bear call)",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "lloth snare": {
+   "ru": "тенета Ллот",
+   "type": "malediction",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "Lloth web snare",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "lore": {
+   "ru": "легенды",
+   "type": "skill",
+   "minlvl": 13,
+   "classes": {
+    "anti-paladin": 20,
+    "ninja": 19,
+    "paladin": 19,
+    "ranger": 18,
+    "samurai": 22,
+    "thief": 13,
+    "vampire": 20,
+    "warrior": 21
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.257,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.05
+   },
+   "rarity": "rare",
+   "effect": "identify an item from myths and legends",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "mace": {
+   "ru": "булава",
+   "type": "skill",
+   "minlvl": 1,
+   "classes": {
+    "anti-paladin": 6,
+    "cleric": 1,
+    "druid": 6,
+    "paladin": 6,
+    "samurai": 6,
+    "thief": 6,
+    "warrior": 6
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.0,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0
+   },
+   "rarity": "rare",
+   "effect": "mace proficiency",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "make arrow": {
+   "ru": "изготовление стрел",
+   "type": "skill",
+   "minlvl": 10,
+   "classes": {
+    "ranger": 10
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.265,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.063
+   },
+   "rarity": "unique",
+   "effect": "craft arrows for a bow",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "make bow": {
+   "ru": "изготовление лука",
+   "type": "skill",
+   "minlvl": 10,
+   "classes": {
+    "ranger": 10
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.265,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.063
+   },
+   "rarity": "unique",
+   "effect": "craft a bow in a wood",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "manacles": {
+   "ru": "кандалы",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.0,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0
+   },
+   "rarity": "unique",
+   "effect": "Ruler: manacle a criminal",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "mastering bow": {
+   "ru": "мастер стрельбы",
+   "type": "skill",
+   "minlvl": 65,
+   "classes": {
+    "ranger": 65
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.718,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.2761
+   },
+   "rarity": "rare",
+   "effect": "bow damage up and shot modes (headshot blind/stun, leg slow, rapid fire)",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "mastering pound": {
+   "ru": "мастер рукопашной",
+   "type": "skill",
+   "minlvl": 61,
+   "classes": {
+    "ninja": 61
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 1.22,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.3247
+   },
+   "rarity": "unique",
+   "effect": "bare-hand blows hit much harder and can stun or paralyse",
+   "note": "estimate: bare hands only, cond 0.1",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "mastering spell": {
+   "ru": "мастерство заклинателя",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 1.33,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.5104
+   },
+   "rarity": "rare",
+   "effect": "+2.5 spell levels on average (Shalafi)",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "mastering staff": {
+   "ru": "мастерство посоха",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 1.509,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.8118
+   },
+   "rarity": "unique",
+   "effect": "staff blows +25% at learned %, and ~1 hit in 20 casts the imbued staff's offensive spell",
+   "note": "estimate: staff wielders, cond 0.3",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "mastering sword": {
+   "ru": "мастер катаны",
+   "type": "skill",
+   "minlvl": 66,
+   "classes": {
+    "samurai": 66
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 1.11,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.2706
+   },
+   "rarity": "unique",
+   "effect": "katana blows +50% at 100% (only the samurai's katana)",
+   "note": "katana-only, cond 0.05",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "mental attack": {
+   "ru": "ментальная атака",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "Shalafi mental attack marker",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "misogi": {
+   "ru": "мисоги",
+   "type": "skill",
+   "minlvl": 25,
+   "classes": {
+    "samurai": 25
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": 2.403,
+   "charge": null,
+   "grant": 1.227,
+   "src": {
+    "worn": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.8936,
+    "charge": null,
+    "grant": 0.3358
+   },
+   "rarity": "unique",
+   "effect": "purification trance by water: heal_gain and mana_gain +400 for 5+L/10 ticks, but hp/mana/move drop to 1",
+   "note": "estimate: worn: the +400 regen holds only in the sleeping trance, ~0.3 of the time; grant: a 10-tick rest from 1 hp, a fast full refill between fights, est 40 points",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "mortal strike": {
+   "ru": "смертельный удар",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.507,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.1533
+   },
+   "rarity": "unique",
+   "effect": "your opening blow kills outright at 1 + learned/30 % (+ level lead / 2)",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "nerve": {
+   "ru": "нервы",
+   "type": "skill",
+   "minlvl": 29,
+   "classes": {
+    "ninja": 29
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.437,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0796
+   },
+   "rarity": "rare",
+   "effect": "presses a nerve: victim str -(L/20 + learned/20 + 1) for L/20 ticks, boosts hand-to-hand stuns",
+   "note": "estimate: weak debuff like confuse 75",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "nicotine rush": {
+   "ru": "никотиновый приход",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 0.548,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 0.1964,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "one random sense (invis, hidden, imp invis, acute vision or fade) for L/30 ticks",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "nofate development": {
+   "ru": "разработка НоФейт",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "NoFate tattoo cooldown",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "panthers": {
+   "ru": "пантеры",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 3.313,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 2.7061
+   },
+   "rarity": "unique",
+   "effect": "summons two panthers that rip bellies, strength by clan rank",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "parry": {
+   "ru": "парирование",
+   "type": "skill",
+   "minlvl": 1,
+   "classes": {
+    "anti-paladin": 5,
+    "cleric": 25,
+    "druid": 26,
+    "paladin": 2,
+    "ranger": 3,
+    "samurai": 1,
+    "thief": 19,
+    "vampire": 22,
+    "warrior": 1
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 1.552,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.8848
+   },
+   "rarity": "rare",
+   "effect": "parries a melee blow with the weapon: 60% base at 100%, weapon and profile factors",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "peek": {
+   "ru": "подглядывание",
+   "type": "skill",
+   "minlvl": 2,
+   "classes": {
+    "thief": 2
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.152,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.024
+   },
+   "rarity": "unique",
+   "effect": "look into a victim's inventory",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "peek card": {
+   "ru": "заглянуть в карту",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.26,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0552
+   },
+   "rarity": "unique",
+   "effect": "locate the person on a card",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "perception": {
+   "ru": "восприимчивость",
+   "type": "skill",
+   "minlvl": 23,
+   "classes": {
+    "druid": 28,
+    "ninja": 23,
+    "ranger": 25,
+    "thief": 23
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.171,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.027
+   },
+   "rarity": "rare",
+   "effect": "senses hidden exits and spots traps",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "perfume": {
+   "ru": "благоухание",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "perfume smell",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "pick lock": {
+   "ru": "взлом замка",
+   "type": "skill",
+   "minlvl": 17,
+   "classes": {
+    "thief": 17
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.3,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.1199
+   },
+   "rarity": "rare",
+   "effect": "picks locks with a lockpick",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "pneumatic post": {
+   "ru": "пневмопочта",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.164,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.026
+   },
+   "rarity": "unique",
+   "effect": "Artificer capsule mail through brass pipes",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "poison smoke": {
+   "ru": "ядовитый дым",
+   "type": "skill",
+   "minlvl": 30,
+   "classes": {
+    "ninja": 30
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.632,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.2263
+   },
+   "rarity": "unique",
+   "effect": "room cloud of poison on every non-group enemy that fails a save",
+   "note": "estimate: poison 120 per target, once per fight",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "polearm": {
+   "ru": "алебарда",
+   "type": "skill",
+   "minlvl": 4,
+   "classes": {
+    "anti-paladin": 4,
+    "paladin": 4,
+    "warrior": 4
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 1.269,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.4069
+   },
+   "rarity": "rare",
+   "effect": "polearm proficiency",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "poured liquid": {
+   "ru": "вылитая жидкость",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "liquid poured on you",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "pull card": {
+   "ru": "вытянуть из карты",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.306,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.1299
+   },
+   "rarity": "unique",
+   "effect": "pull the person on a card to you",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "push": {
+   "ru": "выталкивание",
+   "type": "skill",
+   "minlvl": 53,
+   "classes": {
+    "thief": 53
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.5,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.091
+   },
+   "rarity": "unique",
+   "effect": "pushes a victim out of the room in a direction",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "rainbow shield": {
+   "ru": "радужный щит",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "birthday/rainbow quest shield",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "rear kick": {
+   "ru": "удар задними копытами",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.357,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.065
+   },
+   "rarity": "unique",
+   "effect": "centaur kicks those who sneak up behind (strangle, blackjack, touch)",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "recall": {
+   "ru": "возврат",
+   "type": "skill",
+   "minlvl": 1,
+   "classes": {
+    "anti-paladin": 1,
+    "cleric": 1,
+    "druid": 1,
+    "necromancer": 1,
+    "ninja": 1,
+    "paladin": 1,
+    "ranger": 1,
+    "samurai": 1,
+    "thief": 1,
+    "vampire": 1,
+    "warlock": 1,
+    "warrior": 1,
+    "witch": 1
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.0,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0
+   },
+   "rarity": "unique",
+   "effect": "prays to be taken home (half the moves)",
+   "note": "native to every profession at L1",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "red arrow": {
+   "ru": "красная стрела",
+   "type": "skill",
+   "minlvl": 36,
+   "classes": {
+    "ranger": 36
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.281,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.09
+   },
+   "rarity": "unique",
+   "effect": "craft fire arrows: blind and ignite gear",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "remove tattoo": {
+   "ru": "вывести татуировку",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.164,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.026
+   },
+   "rarity": "unique",
+   "effect": "remove a tattoo",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "rescue": {
+   "ru": "спасти",
+   "type": "skill",
+   "minlvl": 3,
+   "classes": {
+    "paladin": 3,
+    "ranger": 16,
+    "samurai": 15,
+    "warrior": 3
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.371,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0675
+   },
+   "rarity": "unique",
+   "effect": "pulls a groupmate out of a fight and takes the hits",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "resistance": {
+   "ru": "сопротивляемость",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": 2.526,
+   "charge": null,
+   "grant": 1.61,
+   "src": {
+    "worn": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 1.4055,
+    "charge": null,
+    "grant": 0.9839
+   },
+   "rarity": "unique",
+   "effect": "damage from weapons, prayers and dragon breath -40% for L/6 ticks",
+   "note": "estimate: -40% (0.8 of sanctuary halving) on the physical ~83% of incoming damage (1 - opp_active_share)",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "sacrifice": {
+   "ru": "жертвоприношение",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "corpse sacrifice marker",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "sconce": {
+   "ru": "канделябр",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.5,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.1437
+   },
+   "rarity": "unique",
+   "effect": "stuns the victim with a sconce to the head",
+   "note": "estimate: sleep-like knockout 150",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "scrolls": {
+   "ru": "свитки",
+   "type": "skill",
+   "minlvl": 8,
+   "classes": {
+    "anti-paladin": 8,
+    "cleric": 8,
+    "necromancer": 8,
+    "paladin": 8,
+    "ranger": 8,
+    "samurai": 8,
+    "thief": 8,
+    "vampire": 8,
+    "warlock": 8,
+    "witch": 8
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.057,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.009
+   },
+   "rarity": "unique",
+   "effect": "read magic scrolls",
+   "note": "estimate: opens scroll use",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "search stones": {
+   "ru": "искать камни",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.164,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.026
+   },
+   "rarity": "unique",
+   "effect": "find throwing stones underfoot",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "second attack": {
+   "ru": "вторая атака",
+   "type": "skill",
+   "minlvl": 10,
+   "classes": {
+    "anti-paladin": 14,
+    "cleric": 28,
+    "druid": 29,
+    "necromancer": 34,
+    "ninja": 12,
+    "paladin": 13,
+    "ranger": 13,
+    "samurai": 10,
+    "thief": 18,
+    "vampire": 12,
+    "warlock": 25,
+    "warrior": 10,
+    "witch": 34
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.0,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0
+   },
+   "rarity": "unique",
+   "effect": "one more 49% chance to strike each round (and an off-hand roll)",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "second weapon": {
+   "ru": "второе оружие",
+   "type": "skill",
+   "minlvl": 23,
+   "classes": {
+    "anti-paladin": 48,
+    "ninja": 33,
+    "paladin": 48,
+    "ranger": 23,
+    "samurai": 24,
+    "warrior": 23
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 1.694,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 1.1657
+   },
+   "rarity": "rare",
+   "effect": "wield a second weapon: an off-hand blow each round and with every extra attack",
+   "note": "estimate: ~0.7 off-hand hits a round at off-hand weight ~0.7",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "second wind": {
+   "ru": "второе дыхание",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.856,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.3573
+   },
+   "rarity": "unique",
+   "effect": "Battlerager below 1/5 hp: some health and all moves come back at once",
+   "note": "estimate: like the proposed second wind heal",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "sense life": {
+   "ru": "чувствовать жизнь",
+   "type": "skill",
+   "minlvl": 13,
+   "classes": {
+    "druid": 18,
+    "vampire": 13
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": 0.265,
+   "charge": null,
+   "grant": 0.203,
+   "src": {
+    "worn": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.068,
+    "charge": null,
+    "grant": 0.0403
+   },
+   "rarity": "unique",
+   "effect": "sense life forms even in darkness",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "set amazon": {
+   "ru": "амазонка",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 5.16,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 3.8401,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "amazon set bonus: hit +30, hitroll +4, damroll +2, dex +2, haste, fightmaster level +3",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "set ashigaru": {
+   "ru": "асигару",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 2.673,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 1.5915,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "ashigaru set bonus: hitroll/damroll +L/20, res bash, regeneration, swim",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "set berserker": {
+   "ru": "ярость берсерка",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 3.053,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 1.8533,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "berserker set bonus: hit +60, hitroll +6, damroll +4, str +2, regeneration",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "set bulwark": {
+   "ru": "бастион",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 7.205,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 5.3621,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "bulwark set bonus: hit +80, res weapon, con +3, sanctuary, saves -5",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "set davy jones": {
+   "ru": "награда Дэви Джонса",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 9.275,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 6.9028,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "davy jones set bonus: hitroll +11, damroll +5, hit +250, mana +100, move +100, ac -100, saving_spell -30, dex +4, int +2, wis +2, con +2, cha +3",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "set defender": {
+   "ru": "защитник",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 3.99,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 2.6984,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "defender set bonus: hit +120, ac -250, con +2, res energy, res sound, defensive level +3",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "set fathers": {
+   "ru": "отцовское наследство",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 1.137,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 0.4748,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "fathers set bonus: hit +20, hitroll +1, damroll +1, saves -1",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "set gloomstalker": {
+   "ru": "охотник мрака",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 4.279,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 2.9908,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "gloomstalker set bonus: hit +20, hitroll +3, damroll +10, dex +3, camouflage, infrared",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "set grove warden": {
+   "ru": "страж рощи",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 7.705,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 5.7341,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "grove warden set bonus: hit +100, haste, regeneration, hitroll +5, res negative, res light, damroll +5, dex +3, str +2, saves -8",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "set hoplite": {
+   "ru": "гоплит",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 4.241,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 2.9525,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "hoplite set bonus: hitroll +10, haste",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "set master scout": {
+   "ru": "мастер камуфляжа",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 0.0,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 0.0,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "master scout set bonus: no bonus of its own (behaviors/set master scout: eqset.equip only)",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "set master thief": {
+   "ru": "мастер воровства",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 3.127,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 1.9043,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "master thief set bonus: hitroll +6, damroll +4, hit +50, move +200, dex +5",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "set morris dancer": {
+   "ru": "танцор морриса",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 2.531,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 1.4283,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "morris dancer set bonus: hitroll +4, damroll +6, hit +30, mana +40, cha +5",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "set myrmidon": {
+   "ru": "мирмидонянин",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 0.677,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 0.3121,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "myrmidon set bonus: str +1, int +1, wis +1, dex +1, con +1, ac -30, saves -3",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "set myrvale noriva": {
+   "ru": "мирвейл Норива",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 7.151,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 5.3218,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "myrvale noriva set bonus: slevel +4, res weapon, res spell, hit +75, regeneration, saves -10, beats -5",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "set pixie": {
+   "ru": "доспехи пикси",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 8.635,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 6.4262,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "pixie set bonus: dex +4, haste, infrared, flying, int +4, wis +4, str -4, con -4, hitroll +14, damroll +14, mana +77, saves -20",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "set secret of sidhe": {
+   "ru": "секрет Сидхов",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 6.319,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 4.7026,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "secret of sidhe set bonus: hitroll +10, damroll +20, hp +150, protection from the other align, res iron, vuln holy/negative",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "set shevale reykaris": {
+   "ru": "шивейл Рейкарис",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 6.773,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 5.0407,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "shevale reykaris set bonus: slevel +4, res weapon, res spell, hit +75, saves -10, beats -5",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "set travellers joy": {
+   "ru": "отрада путешественника",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 3.656,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 2.3603,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "travellers joy set bonus: hitroll +8, damroll +12, hit +35, dex +2, str +2, con +2",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "set undying chieftain": {
+   "ru": "бессмертный вождь",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 2.489,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 1.2541,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "undying chieftain set bonus: damroll +8, str +3, regeneration",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "set wood nymph": {
+   "ru": "оберег древесных нимф",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 1.929,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 0.7296,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "wood nymph set bonus: saves -10, flying",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "set wooden soldier": {
+   "ru": "деревянный солдат",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 3.237,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 1.98,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "wooden soldier set bonus: hit +80, res charm, hitroll +4, damroll +3, str +1, con +1, saves -4",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "settraps": {
+   "ru": "ловушка",
+   "type": "skill",
+   "minlvl": 59,
+   "classes": {
+    "ninja": 59,
+    "thief": 59
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.5,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.091
+   },
+   "rarity": "unique",
+   "effect": "sets a poisoned dart trap in a room for enemies in PK range or mobs that follow you",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "shadow shroud": {
+   "ru": "призрачный покров",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": 1.055,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 0.4485,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "Invader cloak secret: softens every blow from good attackers",
+   "note": "estimate: cast with shadow cloak only",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "shapeshift": {
+   "ru": "перекинуться",
+   "type": "skill",
+   "minlvl": 20,
+   "classes": {
+    "druid": 20
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.585,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.1987
+   },
+   "rarity": "unique",
+   "effect": "druid takes a sacred animal form (bear/lizard/wolverine) during a channel, 3 times a day",
+   "note": "estimate: druid-only forms",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "shield block": {
+   "ru": "блок щитом",
+   "type": "skill",
+   "minlvl": 1,
+   "classes": {
+    "anti-paladin": 2,
+    "cleric": 12,
+    "druid": 15,
+    "necromancer": 20,
+    "ninja": 6,
+    "paladin": 1,
+    "ranger": 10,
+    "samurai": 5,
+    "thief": 7,
+    "vampire": 10,
+    "warlock": 20,
+    "warrior": 2,
+    "witch": 20
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.0,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0
+   },
+   "rarity": "unique",
+   "effect": "takes a melee blow on the shield: learned/2 x profile (melee x1.1, caster x0.6)",
+   "note": "estimate: needs a shield, cond 0.5",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "shield cleave": {
+   "ru": "расколоть щит",
+   "type": "skill",
+   "minlvl": 26,
+   "classes": {
+    "anti-paladin": 29,
+    "ninja": 31,
+    "paladin": 29,
+    "ranger": 35,
+    "samurai": 26,
+    "thief": 33,
+    "vampire": 39,
+    "warrior": 26
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.316,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0575
+   },
+   "rarity": "rare",
+   "effect": "notches and splits the enemy's shield with an edged weapon",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "shoulder tattoo": {
+   "ru": "татуировка на плече",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.164,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.026
+   },
+   "rarity": "unique",
+   "effect": "tattoo the shoulder",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "sidhe armor": {
+   "ru": "броня сидхов",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 0.404,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 0.1299,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "elves resist their iron vulnerability",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "slice": {
+   "ru": "отсекание части тела",
+   "type": "skill",
+   "minlvl": 75,
+   "classes": {
+    "samurai": 75,
+    "warrior": 75
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.316,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0575
+   },
+   "rarity": "unique",
+   "effect": "severs an enemy limb with a chopping axe/sword/polearm (and anything worn on it)",
+   "note": "estimate: regrow est 100",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "smash": {
+   "ru": "врезать",
+   "type": "skill",
+   "minlvl": 40,
+   "classes": {
+    "warrior": 40
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 2.784,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 2.3626
+   },
+   "rarity": "rare",
+   "effect": "blow to the head: damroll + dice(L/2, size x 2), daze 1-4 s + wait 1-2 s, grounds flyers",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "smithing": {
+   "ru": "ремонт",
+   "type": "skill",
+   "minlvl": 50,
+   "classes": {
+    "samurai": 60,
+    "warrior": 50
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.228,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.036
+   },
+   "rarity": "unique",
+   "effect": "repairs damaged gear at a campfire or forge with scrap metal",
+   "note": "estimate: economy (learn x0.15)",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "sneak": {
+   "ru": "подкрадывание",
+   "type": "skill",
+   "minlvl": 4,
+   "classes": {
+    "ninja": 10,
+    "thief": 4
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": 0.397,
+   "charge": null,
+   "grant": 0.363,
+   "src": {
+    "worn": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.1269,
+    "charge": null,
+    "grant": 0.0752
+   },
+   "rarity": "unique",
+   "effect": "moves without a sound",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "soothe": {
+   "ru": "укротить",
+   "type": "skill",
+   "minlvl": 28,
+   "classes": {
+    "druid": 28,
+    "ranger": 39
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.152,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.024
+   },
+   "rarity": "rare",
+   "effect": "calms an aggressive animal",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "soul lust": {
+   "ru": "жажда душ",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": 0.582,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 0.2161,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "Invader cloak secret: blows vs good enemies land surer and harder",
+   "note": "estimate: cast with shadow cloak only",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "spear": {
+   "ru": "копье",
+   "type": "skill",
+   "minlvl": 1,
+   "classes": {
+    "anti-paladin": 10,
+    "druid": 1,
+    "ninja": 10,
+    "paladin": 10,
+    "ranger": 1,
+    "samurai": 10,
+    "warrior": 10
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.0,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0
+   },
+   "rarity": "rare",
+   "effect": "spear proficiency (and throwing spears)",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "spell craft": {
+   "ru": "искусство заклинателя",
+   "type": "skill",
+   "minlvl": 10,
+   "classes": {
+    "cleric": 30,
+    "druid": 66,
+    "necromancer": 20,
+    "warlock": 10,
+    "witch": 10
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 1.24,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.3574
+   },
+   "rarity": "rare",
+   "effect": "casts at full spell level, giving back the class penalty",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "spellbane": {
+   "ru": "клятва ярости",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": 0.593,
+   "charge": null,
+   "grant": 2.504,
+   "src": {
+    "worn": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.2284,
+    "charge": null,
+    "grant": 2.3289
+   },
+   "rarity": "unique",
+   "effect": "aura of rage: deflects learned% x zeal (67 outside the clan) of hostile spells, saving spell -L/12+1, detect magic, L/3 ticks; bounces friendly spells too",
+   "note": "estimate: grant: deflects 67% (outsider zeal) of hostile spells = the spell share of mob damage (opp_active_share 0.17), PvP ~half of a duel is magic; also bounces friendly buffs (unpriced); worn: the deflect needs the skill learned",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "squire": {
+   "ru": "оруженосец",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 1.954,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 1.4988
+   },
+   "rarity": "unique",
+   "effect": "summons a squire (footman rescues, friar heals)",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "staff": {
+   "ru": "посох",
+   "type": "skill",
+   "minlvl": 1,
+   "classes": {
+    "cleric": 1,
+    "druid": 1,
+    "necromancer": 1,
+    "ranger": 1,
+    "warlock": 1,
+    "witch": 1
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.0,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0
+   },
+   "rarity": "unique",
+   "effect": "staff (weapon) proficiency",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "staves": {
+   "ru": "посохи",
+   "type": "skill",
+   "minlvl": 8,
+   "classes": {
+    "cleric": 8,
+    "necromancer": 8,
+    "ninja": 8,
+    "paladin": 8,
+    "ranger": 8,
+    "samurai": 8,
+    "vampire": 8,
+    "warlock": 8,
+    "witch": 8
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.076,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.012
+   },
+   "rarity": "unique",
+   "effect": "use magic staves",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "steal": {
+   "ru": "воровство",
+   "type": "skill",
+   "minlvl": 12,
+   "classes": {
+    "thief": 12
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.263,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.06
+   },
+   "rarity": "unique",
+   "effect": "steals gold or an item",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "steam automaton": {
+   "ru": "паровой автоматон",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 2.923,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 2.1649
+   },
+   "rarity": "unique",
+   "effect": "Artificer builds a steam automaton follower",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "steam compass": {
+   "ru": "паровой компас",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.266,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.065
+   },
+   "rarity": "unique",
+   "effect": "Artificer multitool compass points the way to a creature or item",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "steam loupe": {
+   "ru": "паровая лупа",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.306,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.1299
+   },
+   "rarity": "unique",
+   "effect": "Artificer multitool loupe: identify an item",
+   "note": "estimate: like lore",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "strangle": {
+   "ru": "придушить",
+   "type": "skill",
+   "minlvl": 26,
+   "classes": {
+    "ninja": 26
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.5,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.1326
+   },
+   "rarity": "unique",
+   "effect": "opener: strangles an unaware victim into a deep stupor for a few ticks",
+   "note": "estimate: sleep est 150",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "stuck item": {
+   "ru": "застрявший предмет",
+   "type": "malediction",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "an arrow or thrown weapon stuck in you",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "suspect": {
+   "ru": "повестка",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.0,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0
+   },
+   "rarity": "unique",
+   "effect": "Ruler: summons a player to court",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "swim": {
+   "ru": "плавание",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 0.229,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 0.052,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "swim",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "sword": {
+   "ru": "меч",
+   "type": "skill",
+   "minlvl": 1,
+   "classes": {
+    "anti-paladin": 1,
+    "ninja": 1,
+    "paladin": 1,
+    "ranger": 1,
+    "samurai": 1,
+    "thief": 1,
+    "vampire": 1,
+    "warlock": 13,
+    "warrior": 1
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.139,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0271
+   },
+   "rarity": "rare",
+   "effect": "sword proficiency",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "synesthesia": {
+   "ru": "синестезия",
+   "type": "utility",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "colours shift in some rooms",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "tail": {
+   "ru": "хвост",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.536,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.1703
+   },
+   "rarity": "unique",
+   "effect": "tail sweep: damroll + 20 + dice(1, size x 20), knocks down (2 s)",
+   "note": "tailed creatures only, cond 0.1",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "tameshigiri": {
+   "ru": "тамэсигири",
+   "type": "skill",
+   "minlvl": 46,
+   "classes": {
+    "samurai": 46
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 1.001,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.6277
+   },
+   "rarity": "unique",
+   "effect": "opener cut at one target or a sweep at the whole room (unseen included)",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "target": {
+   "ru": "выбор цели",
+   "type": "skill",
+   "minlvl": 40,
+   "classes": {
+    "samurai": 40
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.494,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.09
+   },
+   "rarity": "unique",
+   "effect": "switch your attacks to a chosen enemy in a group fight",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "temper": {
+   "ru": "закалить",
+   "type": "skill",
+   "minlvl": 42,
+   "classes": {
+    "samurai": 42
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.264,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0625
+   },
+   "rarity": "unique",
+   "effect": "tempers a sword at a campfire: hitroll/damroll up for a while",
+   "note": "estimate: like enchant weapon on swords",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "testskill": {
+   "ru": "тестовое умение",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.0,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0
+   },
+   "rarity": "rare",
+   "effect": "debug skill",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "third attack": {
+   "ru": "третья атака",
+   "type": "skill",
+   "minlvl": 19,
+   "classes": {
+    "anti-paladin": 26,
+    "ninja": 26,
+    "paladin": 27,
+    "ranger": 45,
+    "samurai": 20,
+    "thief": 36,
+    "vampire": 32,
+    "warrior": 19
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 1.344,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.5329
+   },
+   "rarity": "rare",
+   "effect": "one more 32% chance to strike each round (and an off-hand roll)",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "thirst": {
+   "ru": "жажда",
+   "type": "malediction",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "thirst: saps strength and slows",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "throwing weapon": {
+   "ru": "метательное оружие",
+   "type": "skill",
+   "minlvl": 2,
+   "classes": {
+    "anti-paladin": 2,
+    "cleric": 2,
+    "druid": 2,
+    "necromancer": 2,
+    "ninja": 2,
+    "paladin": 2,
+    "ranger": 2,
+    "samurai": 2,
+    "thief": 2,
+    "vampire": 2,
+    "warlock": 2,
+    "warrior": 2,
+    "witch": 2
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.0,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0
+   },
+   "rarity": "rare",
+   "effect": "throws a weapon or stones at a target, even rooms away",
+   "note": "estimate: ranged missile ~ one hit; cond 0.3 carries throwables",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "tirna freedom": {
+   "ru": "свобода Тирны",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 0.625,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 0.2599,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "Tirna tattoo gift: one chosen skill at +100 learned until the next day",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "track": {
+   "ru": "выслеживание",
+   "type": "skill",
+   "minlvl": 39,
+   "classes": {
+    "ranger": 39
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.272,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.075
+   },
+   "rarity": "unique",
+   "effect": "track a foe by marks on the ground",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "trip": {
+   "ru": "подножка",
+   "type": "skill",
+   "minlvl": 3,
+   "classes": {
+    "ninja": 5,
+    "ranger": 12,
+    "samurai": 9,
+    "thief": 3,
+    "warrior": 14
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 1.177,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.9796
+   },
+   "rarity": "unique",
+   "effect": "trip: dice(L/2, victim size) and 1.5 s down",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "trophy": {
+   "ru": "трофей",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.29,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.1039
+   },
+   "rarity": "unique",
+   "effect": "cut a body part off a corpse and sew a cape with small bonuses",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "truesight": {
+   "ru": "истинное зрение",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": 1.492,
+   "charge": null,
+   "grant": 1.272,
+   "src": {
+    "worn": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.5891,
+    "charge": null,
+    "grant": 0.4123
+   },
+   "rarity": "unique",
+   "effect": "detect hidden, invisible and improved invisible for L/2+5 ticks",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "turlok fury": {
+   "ru": "ярость Турлока",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 2.592,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 1.5352,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "Turlok tattoo gift: level +1",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "vampire": {
+   "ru": "вампиризм",
+   "type": "skill",
+   "minlvl": 10,
+   "classes": {
+    "vampire": 10
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.0,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0
+   },
+   "rarity": "unique",
+   "effect": "vampire form: bigger and stronger, stalking, immune to dark energy; needs initiation",
+   "note": "vampire-only (initiation), nothing for anyone else",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "vampiric bite": {
+   "ru": "укус вампира",
+   "type": "skill",
+   "minlvl": 10,
+   "classes": {
+    "vampire": 10
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.152,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.024
+   },
+   "rarity": "unique",
+   "effect": "bites a sleeping victim's neck to feed the blood thirst",
+   "note": "estimate: vampire feeding",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "vampiric touch": {
+   "ru": "прикосновение вампира",
+   "type": "skill",
+   "minlvl": 10,
+   "classes": {
+    "vampire": 10
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.291,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0531
+   },
+   "rarity": "unique",
+   "effect": "touch that drops the victim into a nightmare sleep (sets up the bite)",
+   "note": "estimate: sleep est 150",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "vanish": {
+   "ru": "исчезновение",
+   "type": "skill",
+   "minlvl": 18,
+   "classes": {
+    "ninja": 18
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 1.469,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.4798
+   },
+   "rarity": "rare",
+   "effect": "flash and vanish to a random room of the zone, even from a fight",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "varda blessing": {
+   "ru": "благословение Варды",
+   "type": "buff",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": 0.404,
+   "charge": null,
+   "grant": null,
+   "src": {
+    "worn": "rescaled"
+   },
+   "model": {
+    "worn": 0.1299,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "Varda tattoo gift: res iron (and a stardust cast)",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "wands": {
+   "ru": "жезлы",
+   "type": "skill",
+   "minlvl": 8,
+   "classes": {
+    "anti-paladin": 8,
+    "cleric": 8,
+    "necromancer": 8,
+    "ninja": 8,
+    "samurai": 8,
+    "vampire": 8,
+    "warlock": 8,
+    "witch": 8
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.095,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.015
+   },
+   "rarity": "unique",
+   "effect": "use magic wands",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "wanted": {
+   "ru": "розыск",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.0,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0
+   },
+   "rarity": "unique",
+   "effect": "Ruler: declare a player outlaw",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "war drums": {
+   "ru": "боевые барабаны",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": true,
+   "excluded": true,
+   "worn": 2.17,
+   "charge": null,
+   "grant": 1.246,
+   "src": {
+    "worn": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.8071,
+    "charge": null,
+    "grant": 0.3672
+   },
+   "rarity": "unique",
+   "effect": "group in the room: hitroll/damroll +L/10 for 1 tick; low caster mobs flee",
+   "note": "estimate: 1-tick buff recast each fight (uptime 0.7 x 0.5), group x1.3",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "warcry": {
+   "ru": "боевой клич",
+   "type": "skill",
+   "minlvl": 31,
+   "classes": {
+    "ranger": 35,
+    "samurai": 35,
+    "warrior": 31
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": 0.907,
+   "charge": null,
+   "grant": 1.056,
+   "src": {
+    "worn": "rescaled",
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": 0.4008,
+    "charge": null,
+    "grant": 0.259
+   },
+   "rarity": "rare",
+   "effect": "battle cry: hitroll +L/8, saves -L/20 for 1..L/2+1 ticks (not with bless)",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "weapon cleave": {
+   "ru": "расколоть оружие",
+   "type": "skill",
+   "minlvl": 29,
+   "classes": {
+    "anti-paladin": 34,
+    "ninja": 35,
+    "paladin": 34,
+    "ranger": 38,
+    "samurai": 29,
+    "thief": 37,
+    "vampire": 44,
+    "warrior": 29
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.5,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.121
+   },
+   "rarity": "rare",
+   "effect": "notches and splits the enemy's weapon with an edged weapon",
+   "note": "estimate: like disarm but permanent",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "whip": {
+   "ru": "хлыст",
+   "type": "skill",
+   "minlvl": 7,
+   "classes": {
+    "anti-paladin": 7,
+    "cleric": 7,
+    "necromancer": 7,
+    "ranger": 7,
+    "vampire": 7,
+    "warlock": 7,
+    "warrior": 7,
+    "witch": 7
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.503,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.1356
+   },
+   "rarity": "rare",
+   "effect": "whip proficiency",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "white arrow": {
+   "ru": "белая стрела",
+   "type": "skill",
+   "minlvl": 28,
+   "classes": {
+    "ranger": 28
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.281,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.09
+   },
+   "rarity": "unique",
+   "effect": "craft freezing arrows: cold damage and weakness",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "winters touch": {
+   "ru": "прикосновение зимы",
+   "type": "skill",
+   "minlvl": 33,
+   "classes": {
+    "anti-paladin": 33,
+    "necromancer": 37
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.436,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.0793
+   },
+   "rarity": "unique",
+   "effect": "chill touch frost lingers on the weapon: frostbite and weakness on its victims",
+   "note": "estimate: needs chill touch",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "witch brand": {
+   "ru": "клеймо колдуна",
+   "type": "malediction",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": null,
+   "src": {},
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "Battlerager brand on a sorcerer: guards keep joining the hunt",
+   "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "wrist tattoo": {
+   "ru": "татуировка на запястье",
+   "type": "skill",
+   "minlvl": null,
+   "classes": {},
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.164,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.026
+   },
+   "rarity": "unique",
+   "effect": "tattoo a wrist",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "zanshin": {
+   "ru": "дзансин",
+   "type": "skill",
+   "minlvl": 50,
+   "classes": {
+    "samurai": 50
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.33,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.06
+   },
+   "rarity": "unique",
+   "effect": "strikes the last foe when he comes back into the room unseen",
+   "note": "estimate",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
   }
  }
 }

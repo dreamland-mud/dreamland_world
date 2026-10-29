@@ -3,7 +3,9 @@
   <affect type="DefaultAffectHandler">
     <removeCharSelf>Твой боевой задор пропадает.</removeCharSelf>
   </affect>
+  <beats>12</beats>
   <dammsg mg="m"></dammsg>
+  <group registry="skillGroup">enhancement</group>
   <help id="99" level="-1" type="SkillHelp" labels="char">
     <extra l="en"></extra>
     <extra l="ru">'боевой задор'</extra>
@@ -33,9 +35,16 @@ At the same time your reaction speed increases, reducing the {hh120lag{x after u
     <title l="ru">{CСостояние: {xбоевой задор</title>
     <title l="ua">{CСтан:{x бойовий запал</title>
   </help>
+  <mana>30</mana>
   <name l="en">fervor</name>
   <name l="ru">задор</name>
   <name l="ua"></name>
+  <spell type="DefaultSpell">
+    <damtype>none</damtype>
+    <position>fight</position>
+    <target>char_self</target>
+    <type>defensive</type>
+  </spell>
   <webColumn>enh</webColumn>
   <webLabel l="en">Fervor</webLabel>
   <webLabel l="ru">Задор</webLabel>

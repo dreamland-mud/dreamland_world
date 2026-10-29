@@ -1,5 +1,5 @@
 {
- "_doc": "One item value model, shared by the gear advisor (service advice, characterwrapper.cpp ga_*), the random item generator and Fenia's item measure (.config(\"fight/item_value\")). Units are gear-score points. melee/caster: per-profile weight per point of an apply (level/slevel/skill_level_* per +1, beats per -1% skill lag). shared: profile-independent weights; ac weight is ac_base at level 1 falling to 0 at ac_zero_level; trigger_bonus_skip: vnums whose Fenia scripts are housekeeping (owner or duplicate checks, wear refusals), so the sage gives them no flat trigger bonus. trigger_spells: {vnum: [spell, ...]} an onEquip script casts on the wearer while worn, scored at their worn price in fight/spell_value.json instead of the flat trigger bonus. first_life_only: vnums a remorted char cannot wear (Hut trinkets), never advised after a remort. flags: [melee, caster] per affect flag (a flag the char can self-cast counts 10%). res: [res, imm, vuln] per damage class (resists do not stack). measure: one roll of the item measure (M) and the slot factors (rolls = level / factor), tier budgets in M. grant_skill: what an item-granted skill is worth to its wearer. A missing key falls back to the compiled default. docs/plans/armor-generator.md.",
+ "_doc": "One item value model, shared by the gear advisor (service advice, characterwrapper.cpp ga_*), the random item generator and Fenia's item measure (.config(\"fight/item_value\")). Units are gear-score points. melee/caster: per-profile weight per point of an apply (level/slevel/skill_level_* per +1, beats per -1% skill lag). shared: profile-independent weights; ac weight is ac_base at level 1 falling to 0 at ac_zero_level; trigger_bonus_skip: vnums whose Fenia scripts are housekeeping (owner or duplicate checks, wear refusals), so the sage gives them no flat trigger bonus. trigger_spells: {vnum: [spell, ...]} an onEquip script casts on the wearer while worn (\"grant:<skill>\" = a skill it lends), scored at their worn (grant) price in fight/spell_value.json instead of the flat trigger bonus. first_life_only: vnums a remorted char cannot wear (Hut trinkets), never advised after a remort. flags: [melee, caster] per affect flag (a flag the char can self-cast counts 10%). res: [res, imm, vuln] per damage class (resists do not stack). measure: one roll of the item measure (M) and the slot factors (rolls = level / factor), tier budgets in M. grant_skill: what an item-granted skill is worth to its wearer. A missing key falls back to the compiled default. docs/plans/armor-generator.md.",
  "melee": {
   "hp": 1.0,
   "mana": 0.1,
@@ -90,12 +90,17 @@
    "10101": ["dragon skin"],
    "10426": ["dark shroud"],
    "11689": ["inspire"],
+   "11695": ["endure"],
    "11810": ["magic concentrate"],
    "11820": ["magic concentrate"],
    "11833": ["resilience"],
+   "14021": ["accuracy"],
+   "16011": ["concentrate"],
    "17019": ["evolve lion"],
+   "17313": ["grant:smash", "concentrate"],
    "22000": ["dragon strength"],
    "25026": ["transform"],
+   "32032": ["concentrate"],
    "32703": ["evolve lion"]
   },
   "trigger_bonus_skip": [
@@ -105,7 +110,10 @@
    814,
    1525,
    5118,
+   7719,
    9598,
+   17340,
+   27021,
    30842,
    50111
   ],

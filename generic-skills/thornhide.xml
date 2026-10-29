@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill type="GenericSkill">
+  <autobuff>true</autobuff>
+  <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
+    <removeCharOthers>Шипы на коже %1$C2 осыпаются.</removeCharOthers>
+    <removeCharSelf>Шипы на твоей коже осыпаются.</removeCharSelf>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="druid">
+      <level>25</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+    <node name="paladin">
+      <level>26</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <dammsg mg="m"></dammsg>
+  <group registry="skillGroup">nature protective</group>
+  <help id="5162" level="-1" type="SkillHelp">
+    <keyword l="en">thorns</keyword>
+    <keyword l="ru">шипы</keyword>
+    <keyword l="ua">шипи</keyword>
+    <text l="en">%FMT% *%SPELL%*
+
+This spell covers the target's skin with sharp thorns. Whoever strikes the target with a bashing, piercing or slashing blow gets pricked back for a twentieth of the damage, at most half the caster's level per blow. The thorns never kill the attacker.
+</text>
+    <text l="ru">%FMT% *%SPELL%*
+
+Это заклинание покрывает кожу цели острыми шипами. Кто бьет цель дробящим, колющим или режущим ударом, сам накалывается на шипы на двадцатую часть урона, но не больше половины уровня заклинателя за удар. Насмерть шипы не убивают.
+</text>
+    <text l="ua">%FMT% *%SPELL%*
+
+Це заклинання вкриває шкіру цілі гострими шипами. Хто бʼє ціль дроблячим, колючим або ріжучим ударом, сам наколюється на шипи на двадцяту частину шкоди, але не більше половини рівня заклинача за удар. На смерть шипи не вбивають.
+</text>
+  </help>
+  <mana>50</mana>
+  <mob>
+    <professional>true</professional>
+  </mob>
+  <name l="en">thornhide</name>
+  <name l="ru">шипастая кожа</name>
+  <name l="ua">шипувата шкіра</name>
+  <spell type="DefaultSpell">
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
+    <position>stand</position>
+    <target>char_room</target>
+    <type>defensive</type>
+  </spell>
+  <webColumn>pro</webColumn>
+  <webLabel l="en">Thorns</webLabel>
+  <webLabel l="ru">Шипы</webLabel>
+  <webLabel l="ua">Шипи</webLabel>
+</skill>

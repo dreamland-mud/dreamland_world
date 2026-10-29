@@ -1,0 +1,15 @@
+name: help boot guard
+
+# Help mistakes that crash-loop a boot: duplicate help id, a handler skill
+# without its <help>. See scripts/lint-help-boot.py.
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/lint-help-boot.py .

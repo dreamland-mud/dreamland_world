@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill type="ClanSkill">
+  <beats>24</beats>
+  <clans>
+    <node name="shalafi">
+      <level>40</level>
+      <maxLevel>100</maxLevel>
+      <maximum>100</maximum>
+      <needItem>true</needItem>
+      <needPractice>true</needPractice>
+      <rating>1</rating>
+    </node>
+  </clans>
+  <command type="DefaultSkillCommand">
+    <argtype>string</argtype>
+    <cat></cat>
+    <hint l="en">(Shalafi) bind one of your spells into a staff or a held item as charges</hint>
+    <hint l="ru">(Шалафи) заключить свое заклинание в посох или предмет для руки</hint>
+    <hint l="ua">(Шалафі) вкласти своє закляття в посох або річ для руки</hint>
+    <name l="en">imbue</name>
+    <name l="ru">зарядить</name>
+    <name l="ua">зарядити</name>
+    <order>player_only</order>
+    <position>stand</position>
+  </command>
+  <dammsg mg="m"></dammsg>
+  <group registry="skillGroup">clan</group>
+  <help id="5165" seealso="121,5164" level="-1" type="SkillHelp">
+    <extra l="en">'imbue staff' 'imbue wand'</extra>
+    <extra l="ru">'зарядить посох' 'зарядить жезл'</extra>
+    <extra l="ua">'зарядити посох' 'зарядити жезл'</extra>
+    <text l="en">%FMT% *imbue* _item_ _spell_
+
+The mages of the {hh1479Shalafi Order{x can bind a spell of their own into a thing, turning it into a {hh121magic item{x. A battle {hh5163staff{x casts it while you wield the staff, and a held item (an orb, a wand, a torch) casts it from your inventory or from any slot, like a wand. Both are used with the {hh1023use{x command.
+
+You can only bind a spell you know well. It also has to suit the item: a low-level thing can't hold a strong spell, and the strongest spells need a well-learned skill. The better you know imbue, the more charges the item gets. The spell is cast at your own level.
+
+An item takes a spell only once: something that already holds charges can't be imbued. When the charges run out it can be {hh600recharged{x like any wand. If the attempt fails, the mana is lost but the item stays as it was.
+
+A follower of {hh974Enki{x binds the spell a few levels stronger.
+</text>
+    <text l="ru">%FMT% *зарядить* _предмет_ _заклинание_
+
+Маги {hh1479Ордена Шалафи{x умеют заключить свое заклинание в вещь и превратить ее в {hh121волшебный предмет{x. Боевой {hh5163посох{x колдует его, когда ты им вооружен{Sfа{Sx, а предмет для руки (шар, жезл, факел) -- из инвентаря или из любого слота, как жезл. И то, и другое используется командой {hh1023использовать{x.
+
+Заключить можно только заклинание, которое ты хорошо знаешь. Оно должно подходить предмету: в вещь низкого уровня сильное заклинание не влезет, а самые сильные требуют хорошо разученного умения. Чем лучше ты владеешь этим умением, тем больше зарядов получит предмет. Заклинание срабатывает на твоем уровне.
+
+Вещь принимает заклинание только один раз: в то, что уже несет заряды, второе не вложить. Когда заряды кончатся, предмет можно {hh600перезарядить{x, как любой жезл. При неудаче мана теряется, а вещь остается как была.
+
+Последователь {hh974Энки{x заключает заклинание на несколько уровней сильнее.
+</text>
+    <text l="ua">%FMT% *зарядити* _річ_ _закляття_
+
+Маги {hh1479Ордену Шалафі{x вміють вкласти своє закляття в річ і перетворити її на {hh121чарівний предмет{x. Бойовий {hh5163посох{x чаклує його, коли ти ним озброєн{Sfа{Smий{Sx, а річ для руки (куля, жезл, смолоскип) -- з інвентаря або з будь-якого слоту, як жезл. І те, й інше використовується командою {hh1023використовувати{x.
+
+Вкласти можна тільки закляття, яке ти добре знаєш. Воно має пасувати речі: у річ низького рівня сильне закляття не влізе, а найсильніші потребують добре розученого вміння. Що краще ти володієш цим умінням, то більше зарядів отримає річ. Закляття спрацьовує на твоєму рівні.
+
+Річ приймає закляття лише раз: у те, що вже має заряди, друге не вкласти. Коли заряди скінчаться, річ можна {hh600перезарядити{x, як будь-який жезл. Якщо не вийде, мана пропаде, а річ лишиться як була.
+
+Послідовник {hh974Енкі{x вкладає закляття на кілька рівнів сильнішим.
+</text>
+  </help>
+  <mana>100</mana>
+  <move>20</move>
+  <name l="en">imbue</name>
+  <name l="ru">зарядить</name>
+  <name l="ua">зарядити</name>
+</skill>

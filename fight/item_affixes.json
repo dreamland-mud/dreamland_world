@@ -9,7 +9,8 @@
   "proc": 1.5,
   "senses": 1.5,
   "skill_group": 1.5,
-  "worn_buff": 3
+  "worn_buff": 3,
+  "charged": 1.5
  },
  "armor_stats": {
   "conflictsWith": "same_value",
@@ -3547,6 +3548,58 @@
   "deny": [
    "ears",
    "face"
+  ]
+ },
+ "charged": {
+  "_doc": "Charged affix (magic_items_revamp.md B7/B8): one spell with charges, cast by 'use' (props charged). The spell comes from the magic_items.json pool pool_prefix + value's pool (wand_def/wand_off on armor, staff_def/staff_off on staves) for the item's tier, level and the killer's alignment; price = spell_value charge x charges, inside share_pct of the tier window (the stats get the rest). Charges: a wand_charges range rolls 1..its top, staff_charges is fixed. Armor: jewelry, hold, light, float and hands only (Kit 2026-10-29). Weapons: staves only. Crafted pieces never roll it. Staves roll it only when randomizeWeapon imbue asks (required_only: champion+ drops and chests, D2), which forces one of the two values.",
+  "tier": 3,
+  "items": "both",
+  "group": "charged",
+  "conflictsWith": "same_section",
+  "no_craft": true,
+  "slots_only": true,
+  "slots": {
+   "finger": 1,
+   "neck": 1,
+   "wrist": 1,
+   "ears": 1,
+   "hold": 1.5,
+   "light": 1,
+   "float": 1,
+   "hands": 1,
+   "wield": 1
+  },
+  "weapon_class": "staff",
+  "by_kind": {
+   "armor": {
+    "pool_prefix": "wand_",
+    "charges": "wand_charges",
+    "share_pct": [
+     25,
+     60
+    ],
+    "where": "carried"
+   },
+   "weapon": {
+    "pool_prefix": "staff_",
+    "charges": "staff_charges",
+    "share_pct": [
+     0,
+     70
+    ],
+    "where": "wielded",
+    "required_only": true
+   }
+  },
+  "values": [
+   {
+    "value": "charged_def",
+    "pool": "def"
+   },
+   {
+    "value": "charged_off",
+    "pool": "off"
+   }
   ]
  },
  "signature": {

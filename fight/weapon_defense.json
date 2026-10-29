@@ -1,0 +1,18 @@
+{
+    "_doc": "Defence factors per weapon class, in percent (100 = normal). Mirrors .tmp.combat.wtf in dreamland_fenia utils/combat. Fenia does not read it yet (a change there must be made in both until it does). The gear sage (characterwrapper.cpp ga_offhandModel) reads it through weapon_defense_factor(), and a Fenia reader must skip this _doc key. Class = the weapon class name, unarmed = no weapon (or an unknown class). AGAINST this weapon: disarm, parry, dodge, blink (blink), swarm (bat swarm), shield (shield block), hand (hand block). WITH this weapon: disarm_with, parry_with. Staff grip (a staff wielded with shield, hold and second_wield all empty): parry_with_grip replaces parry_with, disarm_grip replaces disarm. A missing class takes the unarmed row (both readers). A missing key reads as 0 in Fenia (the skill is impossible) and as the caller default in the sage. 0 = cannot be done at all. Keep it in step with weapon_classes.json class names, but never add a key there for this table.",
+    "sword": { "disarm": 100, "disarm_with": 100, "parry": 100, "parry_with": 100, "dodge": 100, "blink": 105, "swarm": 100, "shield": 110, "hand": 80 },
+    "dagger": { "disarm": 70, "disarm_with": 85, "parry": 95, "parry_with": 50, "dodge": 95, "blink": 90, "swarm": 110, "shield": 100, "hand": 100 },
+    "axe": { "disarm": 100, "disarm_with": 110, "parry": 95, "parry_with": 105, "dodge": 100, "blink": 105, "swarm": 100, "shield": 110, "hand": 90 },
+    "spear": { "disarm": 90, "disarm_with": 105, "parry": 90, "parry_with": 110, "dodge": 90, "blink": 105, "swarm": 85, "shield": 110, "hand": 110 },
+    "mace": { "disarm": 90, "disarm_with": 90, "parry": 95, "parry_with": 90, "dodge": 110, "blink": 110, "swarm": 90, "shield": 110, "hand": 100 },
+    "whip": { "disarm": 110, "disarm_with": 110, "parry": 0, "parry_with": 30, "dodge": 85, "blink": 85, "swarm": 90, "shield": 40, "hand": 80 },
+    "flail": { "disarm": 110, "disarm_with": 110, "parry": 0, "parry_with": 40, "dodge": 110, "blink": 110, "swarm": 90, "shield": 60, "hand": 50 },
+    "polearm": { "disarm": 90, "disarm_with": 105, "parry": 90, "parry_with": 110, "dodge": 90, "blink": 105, "swarm": 85, "shield": 110, "hand": 110 },
+    "exotic": { "disarm": 80, "disarm_with": 80, "parry": 90, "parry_with": 90, "dodge": 90, "blink": 100, "swarm": 100, "shield": 100, "hand": 110 },
+    "bow": { "disarm": 110, "disarm_with": 105, "parry": 110, "parry_with": 50, "dodge": 110, "blink": 110, "swarm": 100, "shield": 120, "hand": 110 },
+    "lance": { "disarm": 90, "disarm_with": 80, "parry": 85, "parry_with": 105, "dodge": 100, "blink": 110, "swarm": 85, "shield": 90, "hand": 110 },
+    "stone": { "disarm": 0, "disarm_with": 0, "parry": 110, "parry_with": 0, "dodge": 100, "blink": 100, "swarm": 110, "shield": 100, "hand": 120 },
+    "arrow": { "disarm": 70, "disarm_with": 0, "parry": 110, "parry_with": 0, "dodge": 100, "blink": 100, "swarm": 110, "shield": 100, "hand": 120 },
+    "unarmed": { "disarm": 0, "disarm_with": 110, "parry": 95, "parry_with": 0, "dodge": 100, "blink": 90, "swarm": 110, "shield": 100, "hand": 120 },
+    "staff": { "disarm": 90, "disarm_with": 105, "parry": 90, "parry_with": 110, "dodge": 90, "blink": 105, "swarm": 85, "shield": 110, "hand": 110, "parry_with_grip": 125, "disarm_grip": 75 }
+}

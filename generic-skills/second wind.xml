@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill type="GenericSkill">
+  <autobuff>true</autobuff>
+  <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
+    <removeCharOthers>Второе дыхание покидает %1$C4.</removeCharOthers>
+    <removeCharSelf>Второе дыхание покидает тебя.</removeCharSelf>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="druid">
+      <level>30</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <dammsg mg="m"></dammsg>
+  <group registry="skillGroup">healing</group>
+  <help id="5159" level="-1" type="SkillHelp">
+    <keyword l="en">second wind</keyword>
+    <keyword l="ru">второе дыхание</keyword>
+    <keyword l="ua">друге дихання</keyword>
+    <text l="en">%FMT% *%SPELL%*
+
+This spell keeps a reserve of strength in the target. If in a fight the target's {hh58health{x drops below a third, the reserve wakes once and restores three health points per level of the caster, and the spell ends.
+</text>
+    <text l="ru">%FMT% *%SPELL%*
+
+Это заклинание прячет в цели запас сил. Если в бою {hh58здоровье{x цели падает ниже трети, запас просыпается один раз и восстанавливает по три единицы здоровья за каждый уровень заклинателя, после чего заклинание пропадает.
+</text>
+    <text l="ua">%FMT% *%SPELL%*
+
+Це заклинання ховає в цілі запас сил. Якщо в бою {hh58здоровʼя{x цілі падає нижче третини, запас прокидається один раз і відновлює по три одиниці здоровʼя за кожен рівень заклинача, після чого заклинання зникає.
+</text>
+  </help>
+  <mana>50</mana>
+  <mob>
+    <professional>true</professional>
+  </mob>
+  <name l="en">second wind</name>
+  <name l="ru">второе дыхание</name>
+  <name l="ua">друге дихання</name>
+  <spell type="DefaultSpell">
+    <damtype>none</damtype>
+    <flags>magic prayer</flags>
+    <position>fight</position>
+    <target>char_room</target>
+    <type>defensive</type>
+  </spell>
+  <webColumn>enh</webColumn>
+  <webLabel l="en">2ndWind</webLabel>
+  <webLabel l="ru">2Дых</webLabel>
+  <webLabel l="ua">2Дих</webLabel>
+</skill>

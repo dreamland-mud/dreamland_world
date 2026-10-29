@@ -38,10 +38,10 @@
   "fervor",
   "heal",
   "infravision",
+  "rally",
   "refresh",
   "regeneration",
   "remove fear",
-  "rally",
   "superior heal",
   "venom ward"
  ],
@@ -213,7 +213,7 @@
     },
     {
      "spell": "venom ward",
-     "level": 15,
+     "level": 14,
      "aoe": false
     },
     {
@@ -329,17 +329,22 @@
      "aoe": false
     },
     {
+     "spell": "storm ward",
+     "level": 14,
+     "aoe": false
+    },
+    {
+     "spell": "venom ward",
+     "level": 14,
+     "aoe": false
+    },
+    {
      "spell": "detect magic",
      "level": 15,
      "aoe": false
     },
     {
      "spell": "protection negative",
-     "level": 15,
-     "aoe": false
-    },
-    {
-     "spell": "venom ward",
      "level": 15,
      "aoe": false
     },
@@ -361,11 +366,6 @@
     {
      "spell": "giant strength",
      "level": 19,
-     "aoe": false
-    },
-    {
-     "spell": "storm ward",
-     "level": 20,
      "aoe": false
     },
     {
@@ -571,6 +571,16 @@
      "aoe": false
     },
     {
+     "spell": "storm ward",
+     "level": 14,
+     "aoe": false
+    },
+    {
+     "spell": "venom ward",
+     "level": 14,
+     "aoe": false
+    },
+    {
      "spell": "detect magic",
      "level": 15,
      "aoe": false
@@ -582,11 +592,6 @@
     },
     {
      "spell": "protection negative",
-     "level": 15,
-     "aoe": false
-    },
-    {
-     "spell": "venom ward",
      "level": 15,
      "aoe": false
     },
@@ -618,11 +623,6 @@
     {
      "spell": "giant strength",
      "level": 19,
-     "aoe": false
-    },
-    {
-     "spell": "storm ward",
-     "level": 20,
      "aoe": false
     },
     {
@@ -752,9 +752,9 @@
    "aoe": "rare+",
    "max_spells": [
     1,
-    1,
     2,
-    2
+    3,
+    4
    ],
    "pool": [
     {
@@ -1382,6 +1382,16 @@
      "aoe": false
     },
     {
+     "spell": "storm ward",
+     "level": 14,
+     "aoe": false
+    },
+    {
+     "spell": "venom ward",
+     "level": 14,
+     "aoe": false
+    },
+    {
      "spell": "detect magic",
      "level": 15,
      "aoe": false
@@ -1393,11 +1403,6 @@
     },
     {
      "spell": "protection negative",
-     "level": 15,
-     "aoe": false
-    },
-    {
-     "spell": "venom ward",
      "level": 15,
      "aoe": false
     },
@@ -1429,11 +1434,6 @@
     {
      "spell": "giant strength",
      "level": 19,
-     "aoe": false
-    },
-    {
-     "spell": "storm ward",
-     "level": 20,
      "aoe": false
     },
     {
@@ -1951,6 +1951,16 @@
      "aoe": false
     },
     {
+     "spell": "storm ward",
+     "level": 14,
+     "aoe": false
+    },
+    {
+     "spell": "venom ward",
+     "level": 14,
+     "aoe": false
+    },
+    {
      "spell": "detect magic",
      "level": 15,
      "aoe": false
@@ -1962,11 +1972,6 @@
     },
     {
      "spell": "protection negative",
-     "level": 15,
-     "aoe": false
-    },
-    {
-     "spell": "venom ward",
      "level": 15,
      "aoe": false
     },
@@ -1998,11 +2003,6 @@
     {
      "spell": "giant strength",
      "level": 19,
-     "aoe": false
-    },
-    {
-     "spell": "storm ward",
-     "level": 20,
      "aoe": false
     },
     {
@@ -2163,88 +2163,216 @@
    {
     "ru": "настойка",
     "ua": "настоянка",
-    "en": "tincture"
+    "en": "tincture",
+    "gender": "f",
+    "short": "настойк|а|и|е|у|ой|е",
+    "gender_ua": "f",
+    "short_ua": "настоянк|а|и|ці|у|ою|ці",
+    "name": "potion tincture настойка зелье настоянка зілля",
+    "long": "Пузырек с настойкой стоит здесь.",
+    "long_ua": "Пляшечка з настоянкою стоїть тут.",
+    "long_en": "A small vial of tincture stands here."
    },
    {
     "ru": "зелье",
     "ua": "зілля",
-    "en": "potion"
+    "en": "potion",
+    "gender": "n",
+    "short": "зель|е|я|ю|е|ем|е",
+    "gender_ua": "n",
+    "short_ua": "зілл|я|я|ю|я|ям|і",
+    "name": "potion зелье зілля",
+    "long": "Склянка с зельем стоит здесь.",
+    "long_ua": "Склянка із зіллям стоїть тут.",
+    "long_en": "A flask of potion stands here."
    },
    {
     "ru": "эликсир",
     "ua": "еліксир",
-    "en": "elixir"
+    "en": "elixir",
+    "gender": "m",
+    "short": "эликсир||а|у||ом|е",
+    "gender_ua": "m",
+    "short_ua": "еліксир||у|у||ом|і",
+    "name": "potion elixir эликсир зелье еліксир зілля",
+    "long": "Граненый флакон с эликсиром стоит здесь.",
+    "long_ua": "Гранчастий флакон з еліксиром стоїть тут.",
+    "long_en": "A cut-glass phial of elixir stands here."
    },
    {
     "ru": "великий эликсир",
     "ua": "великий еліксир",
-    "en": "grand elixir"
+    "en": "grand elixir",
+    "gender": "m",
+    "short": "велик|ий|ого|ому|ий|им|ом эликсир||а|у||ом|е",
+    "gender_ua": "m",
+    "short_ua": "велик|ий|ого|ому|ий|им|ому еліксир||у|у||ом|і",
+    "name": "potion elixir grand эликсир зелье еліксир зілля",
+    "long": "Хрустальный флакон с великим эликсиром мерцает здесь.",
+    "long_ua": "Кришталевий флакон з великим еліксиром мерехтить тут.",
+    "long_en": "A crystal phial of grand elixir glimmers here."
    }
   ],
   "pill": [
    {
     "ru": "пилюля",
     "ua": "пігулка",
-    "en": "pill"
+    "en": "pill",
+    "gender": "f",
+    "short": "пилюл|я|и|е|ю|ей|е",
+    "gender_ua": "f",
+    "short_ua": "пігулк|а|и|ці|у|ою|ці",
+    "name": "pill пилюля пігулка",
+    "long": "Маленькая пилюля лежит здесь.",
+    "long_ua": "Маленька пігулка лежить тут.",
+    "long_en": "A small pill lies here."
    },
    {
     "ru": "травяная пилюля",
     "ua": "травʼяна пігулка",
-    "en": "herbal pill"
+    "en": "herbal pill",
+    "gender": "f",
+    "short": "травян|ая|ой|ой|ую|ой|ой пилюл|я|и|е|ю|ей|е",
+    "gender_ua": "f",
+    "short_ua": "травʼян|а|ої|ій|у|ою|ій пігулк|а|и|ці|у|ою|ці",
+    "name": "pill herbal пилюля пігулка",
+    "long": "Травяная пилюля лежит здесь.",
+    "long_ua": "Травʼяна пігулка лежить тут.",
+    "long_en": "A herbal pill lies here."
    },
    {
     "ru": "знахарская пилюля",
     "ua": "знахарська пігулка",
-    "en": "healer's pill"
+    "en": "healer's pill",
+    "gender": "f",
+    "short": "знахарск|ая|ой|ой|ую|ой|ой пилюл|я|и|е|ю|ей|е",
+    "gender_ua": "f",
+    "short_ua": "знахарськ|а|ої|ій|у|ою|ій пігулк|а|и|ці|у|ою|ці",
+    "name": "pill healer пилюля пігулка",
+    "long": "Знахарская пилюля лежит здесь.",
+    "long_ua": "Знахарська пігулка лежить тут.",
+    "long_en": "A healer's pill lies here."
    },
    {
     "ru": "друидская пилюля",
     "ua": "друїдська пігулка",
-    "en": "druid's pill"
+    "en": "druid's pill",
+    "gender": "f",
+    "short": "друидск|ая|ой|ой|ую|ой|ой пилюл|я|и|е|ю|ей|е",
+    "gender_ua": "f",
+    "short_ua": "друїдськ|а|ої|ій|у|ою|ій пігулк|а|и|ці|у|ою|ці",
+    "name": "pill druid пилюля пігулка",
+    "long": "Друидская пилюля, пахнущая хвоей, лежит здесь.",
+    "long_ua": "Друїдська пігулка, що пахне хвоєю, лежить тут.",
+    "long_en": "A druid's pill smelling of pine lies here."
    }
   ],
   "scroll": [
    {
     "ru": "ветхий свиток",
     "ua": "старий сувій",
-    "en": "worn scroll"
+    "en": "worn scroll",
+    "gender": "m",
+    "short": "ветх|ий|ого|ому|ий|им|ом свит|ок|ка|ку|ок|ком|ке",
+    "gender_ua": "m",
+    "short_ua": "стар|ий|ого|ому|ий|им|ому сув|ій|ою|ою|ій|оєм|ої",
+    "name": "scroll свиток сувій",
+    "long": "Ветхий свиток валяется здесь.",
+    "long_ua": "Старий сувій валяється тут.",
+    "long_en": "A worn scroll lies here."
    },
    {
     "ru": "свиток",
     "ua": "сувій",
-    "en": "scroll"
+    "en": "scroll",
+    "gender": "m",
+    "short": "свит|ок|ка|ку|ок|ком|ке",
+    "gender_ua": "m",
+    "short_ua": "сув|ій|ою|ою|ій|оєм|ої",
+    "name": "scroll свиток сувій",
+    "long": "Свиток лежит здесь.",
+    "long_ua": "Сувій лежить тут.",
+    "long_en": "A scroll lies here."
    },
    {
     "ru": "манускрипт",
     "ua": "манускрипт",
-    "en": "manuscript"
+    "en": "manuscript",
+    "gender": "m",
+    "short": "манускрипт||а|у||ом|е",
+    "gender_ua": "m",
+    "short_ua": "манускрипт||у|у||ом|і",
+    "name": "scroll manuscript свиток манускрипт сувій",
+    "long": "Манускрипт в кожаном футляре лежит здесь.",
+    "long_ua": "Манускрипт у шкіряному футлярі лежить тут.",
+    "long_en": "A manuscript in a leather case lies here."
    },
    {
     "ru": "древний кодекс",
     "ua": "давній кодекс",
-    "en": "ancient codex"
+    "en": "ancient codex",
+    "gender": "m",
+    "short": "древн|ий|его|ему|ий|им|ем кодекс||а|у||ом|е",
+    "gender_ua": "m",
+    "short_ua": "давн|ій|ього|ьому|ій|ім|ьому кодекс||у|у||ом|і",
+    "name": "scroll codex свиток кодекс сувій",
+    "long": "Древний кодекс с потускневшими застежками лежит здесь.",
+    "long_ua": "Давній кодекс із потьмянілими застібками лежить тут.",
+    "long_en": "An ancient codex with tarnished clasps lies here."
    }
   ],
   "wand": [
    {
     "ru": "прутик",
     "ua": "прутик",
-    "en": "twig"
+    "en": "twig",
+    "gender": "m",
+    "short": "прутик||а|у||ом|е",
+    "gender_ua": "m",
+    "short_ua": "прутик||а|у||ом|у",
+    "name": "wand twig прутик",
+    "long": "Тонкий прутик лежит здесь.",
+    "long_ua": "Тонкий прутик лежить тут.",
+    "long_en": "A thin twig lies here."
    },
    {
     "ru": "палочка",
     "ua": "паличка",
-    "en": "wand"
+    "en": "wand",
+    "gender": "f",
+    "short": "палочк|а|и|е|у|ой|е",
+    "gender_ua": "f",
+    "short_ua": "паличк|а|и|ці|у|ою|ці",
+    "name": "wand палочка паличка",
+    "long": "Резная палочка лежит здесь.",
+    "long_ua": "Різьблена паличка лежить тут.",
+    "long_en": "A carved wand lies here."
    },
    {
     "ru": "жезл",
     "ua": "жезл",
-    "en": "rod"
+    "en": "rod",
+    "gender": "m",
+    "short": "жезл||а|у||ом|е",
+    "gender_ua": "m",
+    "short_ua": "жезл||а|у||ом|і",
+    "name": "wand rod жезл",
+    "long": "Окованный жезл лежит здесь.",
+    "long_ua": "Окутий жезл лежить тут.",
+    "long_en": "A bound rod lies here."
    },
    {
     "ru": "скипетр",
     "ua": "скіпетр",
-    "en": "sceptre"
+    "en": "sceptre",
+    "gender": "m",
+    "short": "скипетр||а|у||ом|е",
+    "gender_ua": "m",
+    "short_ua": "скіпетр||а|у||ом|і",
+    "name": "wand sceptre скипетр скіпетр",
+    "long": "Увенчанный камнем скипетр лежит здесь.",
+    "long_ua": "Увінчаний каменем скіпетр лежить тут.",
+    "long_en": "A gem-crowned sceptre lies here."
    }
   ],
   "staff": [
@@ -2269,6 +2397,588 @@
     "en": "grand staff"
    }
   ]
+ },
+ "nouns": {
+  "acetum primus": {
+   "ru": "кислотного выброса",
+   "ua": "кислотного викиду",
+   "en": "acid burst"
+  },
+  "acid arrow": {
+   "ru": "кислотной стрелы",
+   "ua": "кислотної стріли",
+   "en": "acid arrow"
+  },
+  "acid blast": {
+   "ru": "кислотного залпа",
+   "ua": "кислотного залпу",
+   "en": "acid blast"
+  },
+  "acute vision": {
+   "ru": "зоркости",
+   "ua": "зіркості",
+   "en": "keen sight"
+  },
+  "aid": {
+   "ru": "подмоги",
+   "ua": "підмоги",
+   "en": "succour"
+  },
+  "armor": {
+   "ru": "доспеха",
+   "ua": "обладунку",
+   "en": "armour"
+  },
+  "bark skin": {
+   "ru": "древесной коры",
+   "ua": "деревної кори",
+   "en": "barkskin"
+  },
+  "bat swarm": {
+   "ru": "стаи летучих мышей",
+   "ua": "зграї кажанів",
+   "en": "the bat swarm"
+  },
+  "benediction": {
+   "ru": "благости",
+   "ua": "благості",
+   "en": "benediction"
+  },
+  "blade barrier": {
+   "ru": "стены клинков",
+   "ua": "стіни клинків",
+   "en": "the blade wall"
+  },
+  "bless": {
+   "ru": "благословения",
+   "ua": "благословення",
+   "en": "blessing"
+  },
+  "blindness": {
+   "ru": "слепоты",
+   "ua": "сліпоти",
+   "en": "blindness"
+  },
+  "bluefire": {
+   "ru": "синего огня",
+   "ua": "синього вогню",
+   "en": "bluefire"
+  },
+  "burning hands": {
+   "ru": "горящих рук",
+   "ua": "палаючих рук",
+   "en": "burning hands"
+  },
+  "call lightning": {
+   "ru": "грозы",
+   "ua": "грози",
+   "en": "storms"
+  },
+  "caustic font": {
+   "ru": "едкого источника",
+   "ua": "їдкого джерела",
+   "en": "caustic font"
+  },
+  "chain lightning": {
+   "ru": "цепной молнии",
+   "ua": "ланцюгової блискавки",
+   "en": "chain lightning"
+  },
+  "chill touch": {
+   "ru": "ледяного касания",
+   "ua": "крижаного дотику",
+   "en": "chill touch"
+  },
+  "colour spray": {
+   "ru": "цветных брызг",
+   "ua": "кольорових бризок",
+   "en": "colour spray"
+  },
+  "corruption": {
+   "ru": "гниения",
+   "ua": "гниття",
+   "en": "corruption"
+  },
+  "cure blindness": {
+   "ru": "ясного взора",
+   "ua": "ясного зору",
+   "en": "clear sight"
+  },
+  "cure corruption": {
+   "ru": "очищения от гниения",
+   "ua": "очищення від гниття",
+   "en": "cleansing"
+  },
+  "cure disease": {
+   "ru": "оздоровления",
+   "ua": "оздоровлення",
+   "en": "wellness"
+  },
+  "cure poison": {
+   "ru": "противоядия",
+   "ua": "протиотрути",
+   "en": "antidote"
+  },
+  "curse": {
+   "ru": "проклятия",
+   "ua": "прокляття",
+   "en": "cursing"
+  },
+  "dark shroud": {
+   "ru": "темной ауры",
+   "ua": "темної аури",
+   "en": "dark shroud"
+  },
+  "demonfire": {
+   "ru": "демонского огня",
+   "ua": "демонського вогню",
+   "en": "demonfire"
+  },
+  "desert fist": {
+   "ru": "кулака пустыни",
+   "ua": "кулака пустелі",
+   "en": "the desert fist"
+  },
+  "detect evil": {
+   "ru": "чутья зла",
+   "ua": "чуття зла",
+   "en": "evil sense"
+  },
+  "detect good": {
+   "ru": "чутья добра",
+   "ua": "чуття добра",
+   "en": "good sense"
+  },
+  "detect invis": {
+   "ru": "видения незримого",
+   "ua": "бачення незримого",
+   "en": "true sight"
+  },
+  "detect magic": {
+   "ru": "чутья магии",
+   "ua": "чуття магії",
+   "en": "magic sense"
+  },
+  "detect undead": {
+   "ru": "чутья нежити",
+   "ua": "чуття нежиті",
+   "en": "undead sense"
+  },
+  "dispel evil": {
+   "ru": "изгнания зла",
+   "ua": "вигнання зла",
+   "en": "evil banishing"
+  },
+  "dispel good": {
+   "ru": "изгнания добра",
+   "ua": "вигнання добра",
+   "en": "good banishing"
+  },
+  "disruption": {
+   "ru": "разрыва",
+   "ua": "розриву",
+   "en": "disruption"
+  },
+  "dragon skin": {
+   "ru": "драконьей кожи",
+   "ua": "драконячої шкіри",
+   "en": "dragonhide"
+  },
+  "dragons breath": {
+   "ru": "драконьего дыхания",
+   "ua": "драконячого подиху",
+   "en": "dragon's breath"
+  },
+  "earthquake": {
+   "ru": "землетрясения",
+   "ua": "землетрусу",
+   "en": "earthquakes"
+  },
+  "energy drain": {
+   "ru": "иссушения",
+   "ua": "виснаження",
+   "en": "draining"
+  },
+  "enhanced armor": {
+   "ru": "крепкого доспеха",
+   "ua": "міцного обладунку",
+   "en": "hardened armour"
+  },
+  "entangle": {
+   "ru": "цепких терний",
+   "ua": "чіпких тернів",
+   "en": "entangling thorns"
+  },
+  "ethereal fist": {
+   "ru": "призрачного кулака",
+   "ua": "примарного кулака",
+   "en": "the ethereal fist"
+  },
+  "faerie fire": {
+   "ru": "волшебного огня",
+   "ua": "чарівного вогню",
+   "en": "faerie fire"
+  },
+  "faerie fog": {
+   "ru": "волшебного тумана",
+   "ua": "чарівного туману",
+   "en": "faerie fog"
+  },
+  "farsight": {
+   "ru": "дальнозоркости",
+   "ua": "далекозорості",
+   "en": "farsight"
+  },
+  "fatigue": {
+   "ru": "усталости",
+   "ua": "втоми",
+   "en": "fatigue"
+  },
+  "fervor": {
+   "ru": "боевого задора",
+   "ua": "бойового запалу",
+   "en": "battle fervour"
+  },
+  "fireball": {
+   "ru": "огненного шара",
+   "ua": "вогняної кулі",
+   "en": "fireball"
+  },
+  "flamestrike": {
+   "ru": "огненного удара",
+   "ua": "вогняного удару",
+   "en": "flamestrike"
+  },
+  "floating disc": {
+   "ru": "парящего диска",
+   "ua": "ширяючого диска",
+   "en": "the floating disc"
+  },
+  "fly": {
+   "ru": "полета",
+   "ua": "польоту",
+   "en": "flight"
+  },
+  "fortitude": {
+   "ru": "стойкости",
+   "ua": "стійкості",
+   "en": "fortitude"
+  },
+  "frenzy": {
+   "ru": "неистовства",
+   "ua": "несамовитості",
+   "en": "frenzy"
+  },
+  "galvanic whip": {
+   "ru": "гальванического хлыста",
+   "ua": "гальванічного батога",
+   "en": "the galvanic whip"
+  },
+  "giant strength": {
+   "ru": "силы великана",
+   "ua": "сили велетня",
+   "en": "giant strength"
+  },
+  "gills": {
+   "ru": "жабр",
+   "ua": "зябер",
+   "en": "gills"
+  },
+  "group defense": {
+   "ru": "общей защиты",
+   "ua": "спільного захисту",
+   "en": "group warding"
+  },
+  "hand of undead": {
+   "ru": "руки умертвия",
+   "ua": "руки мерця",
+   "en": "the dead hand"
+  },
+  "haste": {
+   "ru": "быстроты",
+   "ua": "швидкості",
+   "en": "haste"
+  },
+  "heal": {
+   "ru": "исцеления",
+   "ua": "зцілення",
+   "en": "healing"
+  },
+  "heating": {
+   "ru": "жара",
+   "ua": "жару",
+   "en": "heating"
+  },
+  "hellfire": {
+   "ru": "адского огня",
+   "ua": "пекельного вогню",
+   "en": "hellfire"
+  },
+  "hurricane": {
+   "ru": "урагана",
+   "ua": "урагану",
+   "en": "hurricanes"
+  },
+  "hydroblast": {
+   "ru": "водяного удара",
+   "ua": "водяного удару",
+   "en": "hydroblast"
+  },
+  "iceball": {
+   "ru": "ледяного шара",
+   "ua": "крижаної кулі",
+   "en": "iceball"
+  },
+  "improved detect": {
+   "ru": "острого чутья",
+   "ua": "гострого чуття",
+   "en": "keen senses"
+  },
+  "improved invis": {
+   "ru": "полной невидимости",
+   "ua": "повної невидимості",
+   "en": "true invisibility"
+  },
+  "infravision": {
+   "ru": "ночного зрения",
+   "ua": "нічного зору",
+   "en": "night sight"
+  },
+  "inspire": {
+   "ru": "воодушевления",
+   "ua": "натхнення",
+   "en": "inspiration"
+  },
+  "invisibility": {
+   "ru": "невидимости",
+   "ua": "невидимості",
+   "en": "invisibility"
+  },
+  "lightning bolt": {
+   "ru": "молнии",
+   "ua": "блискавки",
+   "en": "lightning"
+  },
+  "magic missile": {
+   "ru": "волшебной стрелы",
+   "ua": "чарівної стріли",
+   "en": "magic missile"
+  },
+  "magnetic thrust": {
+   "ru": "магнитного толчка",
+   "ua": "магнітного поштовху",
+   "en": "magnetic thrust"
+  },
+  "mass invis": {
+   "ru": "массовой невидимости",
+   "ua": "масової невидимості",
+   "en": "mass invisibility"
+  },
+  "mind light": {
+   "ru": "света разума",
+   "ua": "світла розуму",
+   "en": "mind light"
+  },
+  "mind wrack": {
+   "ru": "разрушения разума",
+   "ua": "руйнування розуму",
+   "en": "mind wrack"
+  },
+  "observation": {
+   "ru": "наблюдательности",
+   "ua": "спостережливості",
+   "en": "observation"
+  },
+  "plague": {
+   "ru": "чумы",
+   "ua": "чуми",
+   "en": "plague"
+  },
+  "poison": {
+   "ru": "яда",
+   "ua": "отрути",
+   "en": "poison"
+  },
+  "protection cold": {
+   "ru": "защиты от холода",
+   "ua": "захисту від холоду",
+   "en": "cold warding"
+  },
+  "protection evil": {
+   "ru": "защиты от зла",
+   "ua": "захисту від зла",
+   "en": "protection from evil"
+  },
+  "protection good": {
+   "ru": "защиты от добра",
+   "ua": "захисту від добра",
+   "en": "protection from good"
+  },
+  "protection heat": {
+   "ru": "защиты от жара",
+   "ua": "захисту від жару",
+   "en": "heat warding"
+  },
+  "protection negative": {
+   "ru": "защиты от тьмы",
+   "ua": "захисту від темряви",
+   "en": "darkness warding"
+  },
+  "protective shield": {
+   "ru": "защитного поля",
+   "ua": "захисного поля",
+   "en": "warding"
+  },
+  "quantum spike": {
+   "ru": "квантового скачка",
+   "ua": "квантового стрибка",
+   "en": "the quantum spike"
+  },
+  "rally": {
+   "ru": "прилива сил",
+   "ua": "припливу сил",
+   "en": "rally"
+  },
+  "ray of truth": {
+   "ru": "луча истины",
+   "ua": "променя істини",
+   "en": "truth"
+  },
+  "refresh": {
+   "ru": "бодрости",
+   "ua": "бадьорості",
+   "en": "vigour"
+  },
+  "regeneration": {
+   "ru": "регенерации",
+   "ua": "регенерації",
+   "en": "regeneration"
+  },
+  "remove curse": {
+   "ru": "снятия проклятий",
+   "ua": "зняття прокльонів",
+   "en": "uncursing"
+  },
+  "remove fear": {
+   "ru": "храбрости",
+   "ua": "хоробрості",
+   "en": "courage"
+  },
+  "resilience": {
+   "ru": "устойчивости",
+   "ua": "витривалості",
+   "en": "resilience"
+  },
+  "sanctuary": {
+   "ru": "святилища",
+   "ua": "святилища",
+   "en": "sanctuary"
+  },
+  "sand storm": {
+   "ru": "песчаной бури",
+   "ua": "піщаної бурі",
+   "en": "sandstorms"
+  },
+  "scourge": {
+   "ru": "бича Ллот",
+   "ua": "бича Ллот",
+   "en": "Lloth's scourge"
+  },
+  "scream": {
+   "ru": "крика",
+   "ua": "крику",
+   "en": "screaming"
+  },
+  "seasonal aspect": {
+   "ru": "смены сезонов",
+   "ua": "зміни сезонів",
+   "en": "the seasons"
+  },
+  "severity force": {
+   "ru": "суровой силы",
+   "ua": "суворої сили",
+   "en": "severity"
+  },
+  "shield": {
+   "ru": "щита",
+   "ua": "щита",
+   "en": "shielding"
+  },
+  "shocking grasp": {
+   "ru": "электрической хватки",
+   "ua": "електричної хватки",
+   "en": "shocking grasp"
+  },
+  "shocking trap": {
+   "ru": "силовой ловушки",
+   "ua": "силової пастки",
+   "en": "the shock trap"
+  },
+  "slow": {
+   "ru": "замедления",
+   "ua": "сповільнення",
+   "en": "slowness"
+  },
+  "sonic resonance": {
+   "ru": "звукового резонанса",
+   "ua": "звукового резонансу",
+   "en": "resonance"
+  },
+  "spectral furor": {
+   "ru": "спектрального бешенства",
+   "ua": "спектрального шалу",
+   "en": "spectral fury"
+  },
+  "spell resistance": {
+   "ru": "отпора заклятий",
+   "ua": "відсічі закляттям",
+   "en": "spell warding"
+  },
+  "stardust": {
+   "ru": "звездной пыли",
+   "ua": "зоряного пилу",
+   "en": "stardust"
+  },
+  "stone skin": {
+   "ru": "каменной кожи",
+   "ua": "камʼяної шкіри",
+   "en": "stoneskin"
+  },
+  "storm ward": {
+   "ru": "защиты от молний",
+   "ua": "захисту від блискавок",
+   "en": "storm ward"
+  },
+  "sulfuric spray": {
+   "ru": "серных брызг",
+   "ua": "сірчаних бризок",
+   "en": "sulphur spray"
+  },
+  "superior heal": {
+   "ru": "великого исцеления",
+   "ua": "великого зцілення",
+   "en": "greater healing"
+  },
+  "thornhide": {
+   "ru": "шипастой кожи",
+   "ua": "шипуватої шкіри",
+   "en": "thornhide"
+  },
+  "tornado": {
+   "ru": "торнадо",
+   "ua": "торнадо",
+   "en": "tornadoes"
+  },
+  "venom ward": {
+   "ru": "защиты от яда",
+   "ua": "захисту від отрути",
+   "en": "venom ward"
+  },
+  "weaken": {
+   "ru": "слабости",
+   "ua": "слабкості",
+   "en": "weakness"
+  }
  },
  "drop_kind_weights": {
   "caster": {

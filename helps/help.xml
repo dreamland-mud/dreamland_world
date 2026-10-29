@@ -804,46 +804,46 @@ When you enter the world, you are informed of unread messages and any messages y
 {WTo mark all messages as read at once, type {y{hcreadall{x.
 
 {CREADING A SPECIFIC TYPE OF MESSAGES{x
-All examples below use the *letter* command; other message types work the same way.
-For filtering and searching messages see %H% {hh20letter list{x.
-*letter list      *: displays a list of all messages (unread ones are marked N).
-*letter read      *: read the next unread message
-*letter read      * _number_: read the message with the specified number
-*letter read-all  *: mark all messages of this type as read
-*letter unread    *: mark messages of this type as unread
-*letter unread    * _number_**: mark as unread all messages starting from the given number
-*letter delete    * _number_: delete a message you wrote
+All examples below use the *note* command; other message types work the same way.
+For filtering and searching messages see %H% {hh20note list{x.
+*note list      *: displays a list of all messages (unread ones are marked N).
+*note read      *: read the next unread message
+*note read      * _number_: read the message with the specified number
+*note read-all  *: mark all messages of this type as read
+*note unread    *: mark messages of this type as unread
+*note unread    * _number_**: mark as unread all messages starting from the given number
+*note delete    * _number_: delete a message you wrote
 
 {CWRITING MESSAGES{x
 When writing a message, you must first specify the recipients and the subject.
 
-*letter to*: specify the recipient of the letter
-*letter to* _player name_ -- to a player
-*letter to* _clan_ -- to all players in that clan
-*letter to* *immortal* -- to immortals
-*letter to* *all* -- to all players
-*letter to* _race_ -- to all players of that race
-*letter to* _class_ -- to all players of that class
-*letter to* *coders* -- to coders
-*letter subject* : subject of the message
+*note to*: specify the recipient of the letter
+*note to* _player name_ -- to a player
+*note to* _clan_ -- to all players in that clan
+*note to* *immortal* -- to immortals
+*note to* *all* -- to all players
+*note to* _race_ -- to all players of that race
+*note to* _class_ -- to all players of that class
+*note to* *coders* -- to coders
+*note subject* : subject of the message
 
 You can copy a letter you have already started editing, or duplicate an existing sent message.
-*letter copy* : copies the current draft into the {hh1057editor{x
-*letter copy* _number_ : copies an existing letter into the buffer
-*letter fwd* _number_ : quote the specified letter (forward)
+*note copy* : copies the current draft into the {hh1057editor{x
+*note copy* _number_ : copies an existing letter into the buffer
+*note fwd* _number_ : quote the specified letter (forward)
 
 Afterwards it is convenient to open the {hh1057web editor{x (webedit) and write there. When you are done, press the Save button and paste the content from the editor into the letter.
 *webedit* : opens the editor
-*letter paste* : transfers the editor text into the letter
+*note paste* : transfers the editor text into the letter
 
 Before sending it is useful to check that everything is in order:
-*letter show* : shows how the message will look
-*letter send* : sends the message!
-*letter clear* : erases everything you just wrote
+*note show* : shows how the message will look
+*note send* : sends the message!
+*note clear* : erases everything you just wrote
 
 You can also edit and write messages without the web editor:
-*letter +* _line_** : appends a line to the end of the message
-*(note - ,letter - )* : deletes the last written line from the message
+*note +* _line_** : appends a line to the end of the message
+*note -* : deletes the last written line from the message
 </text>
     <text l="ru">В Мире Мечты существует система общения между игроками по почте.
 
@@ -1094,137 +1094,6 @@ Size is determined by race, but can be changed by items or spells. Size affects 
     <title l="en">Body size</title>
     <title l="ru">Размер тела</title>
     <title l="ua">Розмір тіла</title>
-  </node>
-  <node id="27" level="102" type="Help" labels="deprecated">
-    <keyword l="en">oldraces</keyword>
-    <keyword l="ru"></keyword>
-    <keyword l="ua"></keyword>
-    <text l="en">{CDREAM LAND{x -- home to 25 different races. Here is a brief overview of each race -- as a guide during character creation:
-
-Human: A race with neither special advantages nor disadvantages. Humans
-
-Elves: Tall and fragile humanoid creatures. They are agile, though not very strong. The elven category includes elves (Elf), dark elves (Dark-Elf) (the sinister opposites of the former), and half-elves (Half-Elf) -- the offspring of cross-species relations between elves and humans, trolls, satyrs, and the like.
-
-Dwarf: Hardy and strong, dwarves see in the dark. Through evolution the race split into three: Dwarf, Duergar, Svirfneblin. Surprisingly, dwarves now excel at many professions. Dwarves have flocked to the magical sciences in droves, and Duergars make decent thieves.
-
-Gnome: Gnomes. Not very common. Intelligent. Decent clerics.
-
-Arial: Arials -- a mysterious winged race. Very mobile and agile. They travel through the air.
-
-Giant: Giants have GIANT size and tremendous strength. Endurance is no stranger to them. Four main varieties are found across the World: Fire Giant, Storm Giant, Frost Giant, Cloud Giant.
-
-Felar:	 Large, graceful cat-people. They are distinguished by neither special intelligence nor strength. They have the ability to see in the dark. Vulnerable to fire.
-
-Mawg: Dog-men, half-human half-dog, their own best friends. They have a keen sense of smell. Don't like cat-folk.
-
-Rockseer: Rockseers, also known as cave elves -- fragile, nimble, and agile creatures. They can pass through doors. Neutral in temperament.
-
-Githyanki: Humanoid creatures, but with higher intelligence. They can be warriors as well as mages.
-
-Satyr: Half-human, half-goat. Hard to say which half dominates. Children of the Forest. Excellent rangers or thieves. Alas, the horns hinder satyrs on the magical front.
-
-Troll: Huge, lumbering creatures with astonishing vitality. Not troubled by an excess of wisdom. Vulnerable to fire and acid.
-
-Urukhai: A new step in the evolutionary development of orcs. Distinguished by enviable strength and endurance. They have been masterfully wielding almost all types of weapons since childhood.
-
-Kender: Small, outwardly human-like creatures. They steal everything without the least twinge of conscience. Agile to a fault. Don't like cold.
-
-Faery: Faeries, small creatures with wings. They can summon magical fire and fog. Not very strong, but intelligent and wise. As magical creatures, they themselves are hard to affect with hostile magic.
-
-Drow: Yet more subterranean dwellers who have surfaced into Dreamland. Originally they worshipped the spider-faced L'loth. They are unfriendly. They are skilled with blades (sword) and at hiding (hide).
-
-Centaur: A race descended from the overly active love of humans for horses and, conversely, horses for humans. They borrowed the lower half from horses, the upper -- from humans. Physically strong, with hot blood.
-	  
-Hobbit: Hobbits, short and stocky folk. Lovers of merriment and good food, they are somewhat stout and dislike hurry, but when it comes down to it -- agility is not something they lack. They throw stones with good aim.
-
-P.S.	: Remember that some races have abilities/spells unique to them. For instance the spell 'meld into stone' belongs only to Rockseers. For more information read about the race in detail (help &lt;race>).
-
-See also: CLASS
-</text>
-    <text l="ru">{CDREAM LAND{x -- дом для 25 различных рас. Здесь кратко изложена информация о каждой расе -- как помощь в процессе создания персонажа:
-
-Human: Раса не обладающая ни особыми преимуществами, ни недостатками. Люди
-
-Elves: Высокие и хрупкие человекоподобные существа. Они ловкие, хотя и не очень сильные. К эльфам принято относить эльфов (Elf), темных эльфов (Dark-Elf) (этаких злобных антиподов первых) и полуэльфов (Half-Elf) -- плоды межвидовых связей эльфов с людьми, троллями, сатирами и.т.п.
-
-Dwarf: Выносливые и сильные карлики видят в темноте. В результате эволюции раса разделилась на три: Dwarf, Duergar, Svirfneblin. Как ни странно, сейчас карлики преуспевают во многих професиях. Дварфы толпой подались в магические науки, а из дуэргаров выростают неплохие воры.
-
-Gnome: Гномы. Не очень часто встречаются. Умные. Неплохие клерики.
-
-Arial: Ариалы -- загадочная крылатая раса. Очень подвижны и ловки. Перемещаются они по воздуху.
-
-Giant: Гиганты имеют ГИГАНТСКИЕ размеры и огромную силу. Выносливости им не занимать. В широтах Мира встречаются четыре основные разновиднодности: Fire Giant, Storm Giant, Frost Giant, Cloud Giant.
-
-Felar:	 Большие грациозные кошко-люди. Они не отличаются ни особым умом, ни силой. Имеют способность видеть в темноте. Уязвимы к огню.
-
-Mawg: Челобаки, полу-человеки полу-собаки, сами себе лучшие друзья. Обладают хорошим нюхом. Не любят кошачьих.
-
-Rockseer: Роксиры, они же пещерные эльфы -- хрупкие, проворные и ловкие создания. Они могут проходить сквозь двери. Характер нейтральный.
-
-Githyanki: Человекоподобные создания, но с более высоким интеллектом. Они могут быть как воинами, так и магами.
-
-Satyr: Полулюди-полукозлы. Непонятно кто больше. Дети Леса. Великолепные рейнджеры или воры. Увы, рога мешают успехам сатиров на магическом поприще.
-
-Troll: Огромные, неповоротливые создания с потрясающей жизнеспособностью. Горем от ума не страдают. Уязвимы к огню и кислоте.
-
-Urukhai: Новая ступень в эволюционном развитии орков. Отличаются завидной силой и выносливостью. С детства великолепно владеют почти всеми видами оружия.
-
-Kender: Маленькие, внешне похожие на людей существа. Крадут все, не мучаясь никакими угрызениями совести. Ловкие до безобразия. Не любят холода.
-
-Faery: Феи, маленькие существа с крылышками. Умеют вызывать волшебный огонь, туман. Не очень сильные, однако умны и мудры. Как волшебные существа, сами враждебному воздействию магии поддаются с трудом.
-
-Drow: Еще одни подземные обитатели вылезшие на поверхность Мира Мечты. Изначально поклонялись Пауколикой L'loth. Настроены недружелюбно. Хорошо умеют работать с клинками (sword) и прятаться (hide).
-
-Centaur: Раса, произошедшая от чрезмерной активной любви людей к лошадям и, наоборот, лошадей к людям. Нижнюю половину заимствовали от коней, верхнюю -- от людей. Сильны физически, обладают горячей кровью.
-	  
-Hobbit: Хоббиты, низкорослый кряжистый народец. Любители повеселиться и хорошо покушать, они толстоваты и не любят спешки, но в случае чего -- проворства им не занимать. Метко швыряются камнями.
-
-P.S.	: Запомни, что некоторые расы имеют свойственные только им умения/заклинания. Например заклинание 'meld into stone' есть только лишь у роксиров. Для большей информации читай подробнее о расе (help &lt;раса>).
-
-Смотри также: CLASS
-</text>
-    <text l="ua">{CDREAM LAND{x -- дім для 25 різних рас. Тут коротко викладено інформацію про кожну расу -- як допомога в процесі створення персонажа:
-
-Human: Раса без особливих переваг чи недоліків. Люди
-
-Elves: Високі й крихкі людиноподібні істоти. Вони спритні, хоча й не дуже сильні. До ельфів прийнято відносити ельфів (Elf), темних ельфів (Dark-Elf) (таких собі злобних антиподів перших) і напівельфів (Half-Elf) -- плоди міжвидових звʼязків ельфів з людьми, тролями, сатирами тощо.
-
-Dwarf: Витривалі й сильні гноми бачать у темряві. В результаті еволюції раса розділилася на три: Dwarf, Duergar, Svirfneblin. Як не дивно, тепер гноми досягають успіху в багатьох професіях. дварфи натовпом подалися в магічні науки, а з дуергарів виростають непогані злодії.
-
-Gnome: Гноми. Нечасто зустрічаються. Розумні. Непогані клірики.
-
-Arial: Аріали -- загадкова крилата раса. Дуже рухливі й спритні. Пересуваються вони повітрям.
-
-Giant: Велетні мають ВЕЛЕТЕНСЬКІ розміри й величезну силу. Витривалості їм не позичати. У широтах Світу зустрічаються чотири основні різновиди: Fire Giant, Storm Giant, Frost Giant, Cloud Giant.
-
-Felar:	 Великі граційні люди-кішки. Ні особливим розумом, ні силою не відрізняються. Мають здатність бачити в темряві. Вразливі до вогню.
-
-Mawg: Людопси, напівлюди-напівсобаки, самі собі найкращі друзі. Мають добрий нюх. Не люблять котячих.
-
-Rockseer: Роксири, вони ж печерні ельфи -- крихкі, прудкі й спритні створіння. Вони можуть проходити крізь двері. Характер нейтральний.
-
-Githyanki: Людиноподібні створіння, але з вищим інтелектом. Вони можуть бути як воїнами, так і магами.
-
-Satyr: Напівлюди-напівкози. Незрозуміло, кого більше. Діти Лісу. Чудові рейнджери або злодії. На жаль, роги заважають успіхам сатирів на магічній ниві.
-
-Troll: Величезні, незграбні створіння з дивовижною живучістю. Горем від розуму не страждають. Вразливі до вогню і кислоти.
-
-Urukhai: Новий щабель в еволюційному розвитку орків. Відрізняються завидною силою й витривалістю. З дитинства чудово володіють майже всіма видами зброї.
-
-Kender: Маленькі, зовні схожі на людей створіння. Крадуть все, не мучаючись жодними докорами сумління. Спритні до безумства. Не люблять холоду.
-
-Faery: Феї, маленькі створіння з крильцями. Вміють викликати чарівний вогонь, туман. Не дуже сильні, проте розумні й мудрі. Як чарівні створіння, самі з трудом піддаються ворожому впливу магії.
-
-Drow: Ще одні підземні мешканці, що вилізли на поверхню Сну. Спочатку поклонялися павукоподібній L'loth. Налаштовані недружелюбно. Добре вміють працювати з клинками (sword) і ховатися (hide).
-
-Centaur: Раса, що походить від надмірно активного кохання людей до коней і, навпаки, коней до людей. Нижню половину запозичили від коней, верхню -- від людей. Сильні фізично, мають гарячу кров.
-	  
-Hobbit: Хоббіти, низькорослий кремезний народець. Любителі повеселитися й добре поїсти, вони трохи гладкуваті і не люблять поспіху, але що до чого -- спритності їм не позичати. Влучно кидають каміння.
-
-P.S.	: Памʼятай, що деякі раси мають властиві тільки їм уміння/заклинання. Наприклад заклинання 'meld into stone' є тільки у Rockseers. Для більшої інформації читай докладніше про расу (help &lt;раса>).
-
-Дивись також: CLASS
-</text>
   </node>
   <node id="28" level="-1" type="Help" labels="classes hub">
     <extra l="en">agile archetypes caster 'class stats' 'class table' 'enhanced damage' hybrid meditation melee trance</extra>
@@ -4683,38 +4552,6 @@ All combat flags expire automatically after some time.
     <title l="ru">Флаги игроков</title>
     <title l="ua">Прапори гравців</title>
   </node>
-  <node id="1088" seealso="1087" level="-1" type="Help" labels="comm">
-    <keyword l="en">brief compact</keyword>
-    <keyword l="ru">компактно кратко</keyword>
-    <keyword l="ua">компактно коротко</keyword>
-    <text l="en">These commands set display options.
-
-%FMT% *config* *brief* *%YES%*|*%NO%*
-Enables and disables room description output when moving, greatly reducing the amount of text sent and processed.
-
-%FMT% *config* *compact* *%YES%*|*%NO%*
-Removes the extra blank line before the {hh1012status line{x.
-	</text>
-    <text l="ru">Эти команды устанавливают опции отображения.
-
-%FMT% *режим* *кратко* *%YES%*|*%NO%*
-Включает и выключает вывод описаний комнат при движении, намного уменьшая количество текста для пересылки и обработки.
-
-%FMT% *режим* *компактно* *%YES%*|*%NO%*
-Убирает дополнительную пустую строку перед {hh1012строкой состояния{x (prompt).
-	</text>
-    <text l="ua">Ці команди встановлюють опції відображення.
-
-%FMT% *режим* *коротко* *%YES%*|*%NO%*
-Вмикає і вимикає виведення описів кімнат при русі, значно зменшуючи кількість тексту для пересилання та обробки.
-
-%FMT% *режим* *компактно* *%YES%*|*%NO%*
-Прибирає додатковий порожній рядок перед {hh1012рядком стану{x (prompt).
-	</text>
-    <title l="en">{CSettings:{x the brief mode</title>
-    <title l="ru">{CНастройки:{x краткий режим</title>
-    <title l="ua">{CНалаштування:{x стислий режим</title>
-  </node>
   <node id="6" level="-1" type="Help" labels="gods">
     <extra l="en">light</extra>
     <extra l="ru">добро 'путь добра' свет</extra>
@@ -5772,8 +5609,6 @@ You can read the help for each race, for example: {y{hchelp human{x or {y{hc? el
     <title l="ru">Спецмобы</title>
     <title l="ua">Спецмоби</title>
   </node>
-  <node id="300" level="-1" type="Help">
-  </node>
   <node id="5087" level="-1" type="Help" labels="items">
     <extra l="en">milk udder cow milking</extra>
     <extra l="ru">молоко вымя корова подоить</extra>
@@ -6124,5 +5959,66 @@ A legendary piece of armor from a boss or a legend bears its name and keeps a ma
 Зброя та обладунки в гарантованій здобичі бувають тільки з тих, хто не нижчий за тебе рівнем. З того, хто нижчий рівнем, падають лише рецепти, сувої, рідкісні метали й камінці, та й то не завжди, тож такий чемпіон може не лишити нічого.
 
 Легендарний обладунок із боса чи легенди носить його імʼя і зберігає його слід: захист від його ударів, зрідка повну несприйнятливість, якщо він бʼє стихією, або одне з його заклять, яке часом спрацьовує в бою.</text>
+  </node>
+  <node id="5157" level="-1" type="Help" labels="items">
+    <extra l="en">gamble games betting</extra>
+    <extra l="ru">игры ставки азарт</extra>
+    <extra l="ua">ігри ставки азарт</extra>
+    <keyword l="en">'gambling games'</keyword>
+    <keyword l="ru">'азартные игры'</keyword>
+    <keyword l="ua">'азартні ігри'</keyword>
+    <text l="en">Where to try your luck in the Dream Land:
+%A% {hh1839Casino{x -- a safe zone for every level with its own games and its own currency, the {hh297chips{x, which are worthless outside it.
+%A% {hh357Roulette{x -- bet on numbers, colour or odd and even, and the {hh356croupier{x pays out.
+%A% {hh206Dice{x -- throw them on the floor and play with anyone nearby.
+%A% {hh355Chess{x -- a real game on a board against another mortal or the board itself. The {hh1403Chessboard{x zone is a different story: a whole world laid out in squares.
+</text>
+    <text l="ru">Где испытать удачу в Мире Мечты:
+%A% {hh1839Казино{x -- безопасная зона для любого уровня со своими играми и своей валютой, {hh297фишками{x, которые за ее пределами ничего не стоят.
+%A% {hh357Рулетка{x -- ставь на числа, цвет или чет-нечет, выигрыш выдаст {hh356крупье{x.
+%A% {hh206Игральные кости{x -- брось их на пол и играй с кем угодно рядом.
+%A% {hh355Шахматы{x -- настоящая партия на доске против другого смертного или самой доски. Зона {hh1403Шахматная доска{x -- совсем другая история: целый мир, расчерченный на клетки.
+</text>
+    <text l="ua">Де випробувати вдачу у Світі Мрії:
+%A% {hh1839Казино{x -- безпечна зона для будь-якого рівня зі своїми іграми та своєю валютою, {hh297фішками{x, які поза нею нічого не варті.
+%A% {hh357Рулетка{x -- став на числа, колір чи парне-непарне, виграш видасть {hh356крупʼє{x.
+%A% {hh206Гральні кістки{x -- кинь їх на підлогу й грай з ким завгодно поруч.
+%A% {hh355Шахи{x -- справжня партія на дошці проти іншого смертного або самої дошки. Зона {hh1403Шахова дошка{x -- зовсім інша історія: цілий світ, розкреслений на клітинки.
+</text>
+    <title l="en">Gambling games</title>
+    <title l="ru">Азартные игры</title>
+    <title l="ua">Азартні ігри</title>
+  </node>
+  <node id="5158" level="-1" type="Help" labels="start">
+    <extra l="en">blind 'visually impaired' accessibility</extra>
+    <extra l="ru">слепой слепым незрячим 'для незрячих' доступность</extra>
+    <extra l="ua">сліпий сліпим незрячим 'для незрячих' доступність</extra>
+    <keyword l="en">'blind players'</keyword>
+    <keyword l="ru">'незрячие игроки'</keyword>
+    <keyword l="ua">'незрячі гравці'</keyword>
+    <text l="en">Dream Land is a text game, and many of our players play it with a screen reader. A few settings make it much easier:
+%A% {hc*config* *screenreader* *%YES%*{x -- the main one: drops the English names in parentheses, swaps ASCII pseudo-graphics for text and shows auras instead of colours (%H% {hh2132screenreader{x).
+%A% {hc*config* *colour* *%NO%*{x -- turns off colour codes.
+%A% *score* _parameter_ -- prints just one line of your {hh999score{x, e.g. *score* _hit_, instead of the whole sheet.
+%A% *help* _word_ -- every article is plain text, and a numbered list comes back when a word fits several.
+Other display options are in {hh1087config{x.
+</text>
+    <text l="ru">Мир Мечты -- текстовая игра, и многие наши игроки играют с читалкой экрана. Несколько настроек сильно облегчают жизнь:
+%A% {hc*режим* *скринридер* *%YES%*{x -- главная: убирает английские имена в скобках, заменяет псевдографику ASCII текстом и показывает ауры вместо цветов (%H% {hh2132скринридер{x).
+%A% {hc*режим* *цвет* *%NO%*{x -- выключает цветовые коды.
+%A% *счет* _параметр_ -- выводит одну строку твоего {hh999счета{x, например *счет* _здоровье_, вместо всего листа.
+%A% *справка* _слово_ -- каждая статья -- обычный текст, а если слову подходит несколько, придет нумерованный список.
+Остальные настройки вывода -- в {hh1087режиме{x.
+</text>
+    <text l="ua">Світ Мрії -- текстова гра, і багато наших гравців грають з читалкою екрана. Кілька налаштувань дуже полегшують життя:
+%A% {hc*режим* *скринрідер* *%YES%*{x -- головне: прибирає англійські імена в дужках, замінює псевдографіку ASCII текстом і показує аури замість кольорів (%H% {hh2132скринрідер{x).
+%A% {hc*режим* *колір* *%NO%*{x -- вимикає колірні коди.
+%A% *рахунок* _параметр_ -- виводить один рядок твого {hh999рахунку{x, наприклад *рахунок* _здоровʼя_, замість усього аркуша.
+%A% *довідка* _слово_ -- кожна стаття -- звичайний текст, а якщо слову пасує кілька, прийде нумерований список.
+Решта налаштувань виводу -- у {hh1087режимі{x.
+</text>
+    <title l="en">Playing with a screen reader</title>
+    <title l="ru">Игра с читалкой экрана</title>
+    <title l="ua">Гра з читалкою екрана</title>
   </node>
 </Help>

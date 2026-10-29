@@ -1,0 +1,2278 @@
+{
+ "_doc": "Magic item generator data (magic_items_revamp.md, built by scripts/magic-items/build_magic_items.py; do not hand-edit pools). Tier = price window in M: consumables = sum of spell charge prices, wands/staves = charge x charges (1..max_charges), prices from fight/spell_value.json. Item level gates use; a spell joins if its level <= item level + level_reach. cast level = item level + cast_offset. aoe: never | group_only (GROUP_OK spells) | rare+ | always.",
+ "max_charges": 25,
+ "level_reach": {
+  "low_level_max": 13,
+  "low": 10,
+  "high": 5
+ },
+ "spread_cap_pct": 5,
+ "top_spells": {
+  "spells": [
+   "dark shroud",
+   "haste",
+   "sanctuary",
+   "stardust"
+  ],
+  "one_per_item": true,
+  "by_align": {
+   "good": "sanctuary",
+   "neutral": "stardust",
+   "evil": "dark shroud"
+  },
+  "min_tier": {
+   "potion": "epic",
+   "scroll_buff": "epic",
+   "wand_def": "epic",
+   "staff_def": "rare"
+  }
+ },
+ "group_ok": [
+  "inspire"
+ ],
+ "natural": [
+  "acute vision",
+  "cure blindness",
+  "cure disease",
+  "cure poison",
+  "fervor",
+  "heal",
+  "infravision",
+  "refresh",
+  "regeneration",
+  "remove fear",
+  "second wind",
+  "superior heal",
+  "venom ward"
+ ],
+ "blocked": [
+  "adamantite golem",
+  "animate dead",
+  "attract other",
+  "befriend",
+  "calm",
+  "cancellation",
+  "charm person",
+  "continual light",
+  "control undead",
+  "control weather",
+  "create food",
+  "create rose",
+  "deafen",
+  "dispel affects",
+  "enchant armor",
+  "enchant weapon",
+  "fear",
+  "fireproof",
+  "harm",
+  "hunger weapon",
+  "identify",
+  "iron golem",
+  "knock",
+  "learning",
+  "lesser golem",
+  "link",
+  "locate object",
+  "mend",
+  "mental block",
+  "pass door",
+  "shielding",
+  "skeleton",
+  "sleep",
+  "spring",
+  "stone golem",
+  "teleport",
+  "web",
+  "word of recall"
+ ],
+ "pending_spells": [
+  "fatigue",
+  "fervor",
+  "second wind",
+  "storm ward",
+  "thornhide",
+  "venom ward"
+ ],
+ "tiers": {
+  "5": {
+   "name": "common",
+   "min_m": 0.3,
+   "max_m": 0.65,
+   "cast_offset": -10,
+   "days": 0,
+   "wand_charges": [
+    3,
+    5
+   ],
+   "staff_charges": 1,
+   "consumables": true
+  },
+  "4": {
+   "name": "uncommon",
+   "min_m": 0.85,
+   "max_m": 1.15,
+   "cast_offset": -5,
+   "days": 35,
+   "wand_charges": [
+    5,
+    8
+   ],
+   "staff_charges": 2,
+   "consumables": true
+  },
+  "3": {
+   "name": "rare",
+   "min_m": 1.3,
+   "max_m": 1.7,
+   "cast_offset": 0,
+   "days": 17,
+   "wand_charges": [
+    8,
+    12
+   ],
+   "staff_charges": 3,
+   "consumables": true
+  },
+  "2": {
+   "name": "epic",
+   "min_m": 2.2,
+   "max_m": 2.8,
+   "cast_offset": 3,
+   "days": 10,
+   "wand_charges": [
+    12,
+    18
+   ],
+   "staff_charges": 5,
+   "consumables": true
+  },
+  "1": {
+   "name": "legendary",
+   "min_m": 4.0,
+   "max_m": 5.0,
+   "cast_offset": 5,
+   "days": 7,
+   "wand_charges": [
+    18,
+    25
+   ],
+   "staff_charges": 8,
+   "consumables": false
+  }
+ },
+ "kinds": {
+  "pill": {
+   "item_type": "pill",
+   "aoe": "never",
+   "max_spells": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "pool": [
+    {
+     "spell": "heal",
+     "level": 2,
+     "aoe": false
+    },
+    {
+     "spell": "acute vision",
+     "level": 4,
+     "aoe": false
+    },
+    {
+     "spell": "refresh",
+     "level": 6,
+     "aoe": false
+    },
+    {
+     "spell": "cure blindness",
+     "level": 7,
+     "aoe": false
+    },
+    {
+     "spell": "infravision",
+     "level": 7,
+     "aoe": false
+    },
+    {
+     "spell": "fervor",
+     "level": 10,
+     "aoe": false
+    },
+    {
+     "spell": "venom ward",
+     "level": 15,
+     "aoe": false
+    },
+    {
+     "spell": "cure disease",
+     "level": 19,
+     "aoe": false
+    },
+    {
+     "spell": "cure poison",
+     "level": 23,
+     "aoe": false
+    },
+    {
+     "spell": "second wind",
+     "level": 30,
+     "aoe": false
+    },
+    {
+     "spell": "remove fear",
+     "level": 34,
+     "aoe": false
+    },
+    {
+     "spell": "superior heal",
+     "level": 38,
+     "aoe": false
+    },
+    {
+     "spell": "regeneration",
+     "level": 46,
+     "aoe": false
+    }
+   ]
+  },
+  "potion": {
+   "item_type": "potion",
+   "aoe": "never",
+   "max_spells": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "pool": [
+    {
+     "spell": "acute vision",
+     "level": 4,
+     "aoe": false
+    },
+    {
+     "spell": "detect invis",
+     "level": 5,
+     "aoe": false
+    },
+    {
+     "spell": "infravision",
+     "level": 7,
+     "aoe": false
+    },
+    {
+     "spell": "invisibility",
+     "level": 9,
+     "aoe": false
+    },
+    {
+     "spell": "protection evil",
+     "level": 9,
+     "aoe": false
+    },
+    {
+     "spell": "protection good",
+     "level": 9,
+     "aoe": false
+    },
+    {
+     "spell": "bark skin",
+     "level": 10,
+     "aoe": false
+    },
+    {
+     "spell": "fervor",
+     "level": 10,
+     "aoe": false
+    },
+    {
+     "spell": "observation",
+     "level": 10,
+     "aoe": false
+    },
+    {
+     "spell": "detect evil",
+     "level": 11,
+     "aoe": false
+    },
+    {
+     "spell": "detect good",
+     "level": 11,
+     "aoe": false
+    },
+    {
+     "spell": "shield",
+     "level": 11,
+     "aoe": false
+    },
+    {
+     "spell": "detect undead",
+     "level": 13,
+     "aoe": false
+    },
+    {
+     "spell": "fly",
+     "level": 13,
+     "aoe": false
+    },
+    {
+     "spell": "detect magic",
+     "level": 15,
+     "aoe": false
+    },
+    {
+     "spell": "protection negative",
+     "level": 15,
+     "aoe": false
+    },
+    {
+     "spell": "venom ward",
+     "level": 15,
+     "aoe": false
+    },
+    {
+     "spell": "armor",
+     "level": 18,
+     "aoe": false
+    },
+    {
+     "spell": "protective shield",
+     "level": 18,
+     "aoe": false
+    },
+    {
+     "spell": "bless",
+     "level": 19,
+     "aoe": false
+    },
+    {
+     "spell": "giant strength",
+     "level": 19,
+     "aoe": false
+    },
+    {
+     "spell": "storm ward",
+     "level": 20,
+     "aoe": false
+    },
+    {
+     "spell": "dark shroud",
+     "level": 21,
+     "aoe": false
+    },
+    {
+     "spell": "stone skin",
+     "level": 21,
+     "aoe": false
+    },
+    {
+     "spell": "protection cold",
+     "level": 22,
+     "aoe": false
+    },
+    {
+     "spell": "haste",
+     "level": 24,
+     "aoe": false
+    },
+    {
+     "spell": "thornhide",
+     "level": 25,
+     "aoe": false
+    },
+    {
+     "spell": "sanctuary",
+     "level": 27,
+     "aoe": false
+    },
+    {
+     "spell": "seasonal aspect",
+     "level": 29,
+     "aoe": false
+    },
+    {
+     "spell": "enhanced armor",
+     "level": 33,
+     "aoe": false
+    },
+    {
+     "spell": "frenzy",
+     "level": 34,
+     "aoe": false
+    },
+    {
+     "spell": "stardust",
+     "level": 36,
+     "aoe": false
+    },
+    {
+     "spell": "improved detect",
+     "level": 37,
+     "aoe": false
+    },
+    {
+     "spell": "bat swarm",
+     "level": 38,
+     "aoe": false
+    },
+    {
+     "spell": "protection heat",
+     "level": 39,
+     "aoe": false
+    },
+    {
+     "spell": "dragon skin",
+     "level": 40,
+     "aoe": false
+    },
+    {
+     "spell": "improved invis",
+     "level": 40,
+     "aoe": false
+    },
+    {
+     "spell": "regeneration",
+     "level": 46,
+     "aoe": false
+    },
+    {
+     "spell": "resilience",
+     "level": 56,
+     "aoe": false
+    },
+    {
+     "spell": "fortitude",
+     "level": 57,
+     "aoe": false
+    },
+    {
+     "spell": "spell resistance",
+     "level": 68,
+     "aoe": false
+    },
+    {
+     "spell": "benediction",
+     "level": 70,
+     "aoe": false
+    }
+   ]
+  },
+  "scroll_buff": {
+   "item_type": "scroll",
+   "aoe": "group_only",
+   "max_spells": [
+    1,
+    2,
+    3,
+    4
+   ],
+   "pool": [
+    {
+     "spell": "acute vision",
+     "level": 4,
+     "aoe": false
+    },
+    {
+     "spell": "detect invis",
+     "level": 5,
+     "aoe": false
+    },
+    {
+     "spell": "cure blindness",
+     "level": 7,
+     "aoe": false
+    },
+    {
+     "spell": "infravision",
+     "level": 7,
+     "aoe": false
+    },
+    {
+     "spell": "invisibility",
+     "level": 9,
+     "aoe": false
+    },
+    {
+     "spell": "protection evil",
+     "level": 9,
+     "aoe": false
+    },
+    {
+     "spell": "protection good",
+     "level": 9,
+     "aoe": false
+    },
+    {
+     "spell": "bark skin",
+     "level": 10,
+     "aoe": false
+    },
+    {
+     "spell": "fervor",
+     "level": 10,
+     "aoe": false
+    },
+    {
+     "spell": "observation",
+     "level": 10,
+     "aoe": false
+    },
+    {
+     "spell": "detect evil",
+     "level": 11,
+     "aoe": false
+    },
+    {
+     "spell": "detect good",
+     "level": 11,
+     "aoe": false
+    },
+    {
+     "spell": "floating disc",
+     "level": 11,
+     "aoe": false
+    },
+    {
+     "spell": "shield",
+     "level": 11,
+     "aoe": false
+    },
+    {
+     "spell": "gills",
+     "level": 12,
+     "aoe": false
+    },
+    {
+     "spell": "detect undead",
+     "level": 13,
+     "aoe": false
+    },
+    {
+     "spell": "fly",
+     "level": 13,
+     "aoe": false
+    },
+    {
+     "spell": "remove curse",
+     "level": 13,
+     "aoe": false
+    },
+    {
+     "spell": "detect magic",
+     "level": 15,
+     "aoe": false
+    },
+    {
+     "spell": "faerie fog",
+     "level": 15,
+     "aoe": true
+    },
+    {
+     "spell": "protection negative",
+     "level": 15,
+     "aoe": false
+    },
+    {
+     "spell": "venom ward",
+     "level": 15,
+     "aoe": false
+    },
+    {
+     "spell": "farsight",
+     "level": 17,
+     "aoe": false
+    },
+    {
+     "spell": "armor",
+     "level": 18,
+     "aoe": false
+    },
+    {
+     "spell": "protective shield",
+     "level": 18,
+     "aoe": false
+    },
+    {
+     "spell": "bless",
+     "level": 19,
+     "aoe": false
+    },
+    {
+     "spell": "cure disease",
+     "level": 19,
+     "aoe": false
+    },
+    {
+     "spell": "giant strength",
+     "level": 19,
+     "aoe": false
+    },
+    {
+     "spell": "storm ward",
+     "level": 20,
+     "aoe": false
+    },
+    {
+     "spell": "dark shroud",
+     "level": 21,
+     "aoe": false
+    },
+    {
+     "spell": "stone skin",
+     "level": 21,
+     "aoe": false
+    },
+    {
+     "spell": "protection cold",
+     "level": 22,
+     "aoe": false
+    },
+    {
+     "spell": "cure poison",
+     "level": 23,
+     "aoe": false
+    },
+    {
+     "spell": "haste",
+     "level": 24,
+     "aoe": false
+    },
+    {
+     "spell": "thornhide",
+     "level": 25,
+     "aoe": false
+    },
+    {
+     "spell": "sanctuary",
+     "level": 27,
+     "aoe": false
+    },
+    {
+     "spell": "seasonal aspect",
+     "level": 29,
+     "aoe": false
+    },
+    {
+     "spell": "enhanced armor",
+     "level": 33,
+     "aoe": false
+    },
+    {
+     "spell": "frenzy",
+     "level": 34,
+     "aoe": false
+    },
+    {
+     "spell": "remove fear",
+     "level": 34,
+     "aoe": false
+    },
+    {
+     "spell": "stardust",
+     "level": 36,
+     "aoe": false
+    },
+    {
+     "spell": "improved detect",
+     "level": 37,
+     "aoe": false
+    },
+    {
+     "spell": "bat swarm",
+     "level": 38,
+     "aoe": false
+    },
+    {
+     "spell": "protection heat",
+     "level": 39,
+     "aoe": false
+    },
+    {
+     "spell": "dragon skin",
+     "level": 40,
+     "aoe": false
+    },
+    {
+     "spell": "improved invis",
+     "level": 40,
+     "aoe": false
+    },
+    {
+     "spell": "regeneration",
+     "level": 46,
+     "aoe": false
+    },
+    {
+     "spell": "inspire",
+     "level": 49,
+     "aoe": true
+    },
+    {
+     "spell": "cure corruption",
+     "level": 50,
+     "aoe": false
+    },
+    {
+     "spell": "resilience",
+     "level": 56,
+     "aoe": false
+    },
+    {
+     "spell": "fortitude",
+     "level": 57,
+     "aoe": false
+    },
+    {
+     "spell": "spell resistance",
+     "level": 68,
+     "aoe": false
+    },
+    {
+     "spell": "benediction",
+     "level": 70,
+     "aoe": false
+    }
+   ]
+  },
+  "scroll_combat": {
+   "item_type": "scroll",
+   "aoe": "rare+",
+   "max_spells": [
+    1,
+    1,
+    2,
+    2
+   ],
+   "pool": [
+    {
+     "spell": "magic missile",
+     "level": 1,
+     "aoe": false
+    },
+    {
+     "spell": "chill touch",
+     "level": 5,
+     "aoe": false
+    },
+    {
+     "spell": "shocking grasp",
+     "level": 7,
+     "aoe": false
+    },
+    {
+     "spell": "burning hands",
+     "level": 10,
+     "aoe": false
+    },
+    {
+     "spell": "earthquake",
+     "level": 12,
+     "aoe": true
+    },
+    {
+     "spell": "lightning bolt",
+     "level": 13,
+     "aoe": false
+    },
+    {
+     "spell": "blindness",
+     "level": 14,
+     "aoe": false
+    },
+    {
+     "spell": "call lightning",
+     "level": 14,
+     "aoe": true
+    },
+    {
+     "spell": "faerie fire",
+     "level": 15,
+     "aoe": false
+    },
+    {
+     "spell": "poison",
+     "level": 15,
+     "aoe": false
+    },
+    {
+     "spell": "weaken",
+     "level": 16,
+     "aoe": false
+    },
+    {
+     "spell": "entangle",
+     "level": 17,
+     "aoe": false
+    },
+    {
+     "spell": "colour spray",
+     "level": 18,
+     "aoe": false
+    },
+    {
+     "spell": "curse",
+     "level": 18,
+     "aoe": false
+    },
+    {
+     "spell": "fatigue",
+     "level": 20,
+     "aoe": false
+    },
+    {
+     "spell": "slow",
+     "level": 23,
+     "aoe": false
+    },
+    {
+     "spell": "energy drain",
+     "level": 26,
+     "aoe": false
+    },
+    {
+     "spell": "heating",
+     "level": 26,
+     "aoe": false
+    },
+    {
+     "spell": "dispel evil",
+     "level": 27,
+     "aoe": false
+    },
+    {
+     "spell": "dispel good",
+     "level": 27,
+     "aoe": false
+    },
+    {
+     "spell": "mind wrack",
+     "level": 27,
+     "aoe": false
+    },
+    {
+     "spell": "galvanic whip",
+     "level": 28,
+     "aoe": false
+    },
+    {
+     "spell": "sonic resonance",
+     "level": 28,
+     "aoe": false
+    },
+    {
+     "spell": "sulfuric spray",
+     "level": 28,
+     "aoe": false
+    },
+    {
+     "spell": "plague",
+     "level": 30,
+     "aoe": false
+    },
+    {
+     "spell": "caustic font",
+     "level": 31,
+     "aoe": false
+    },
+    {
+     "spell": "flamestrike",
+     "level": 32,
+     "aoe": false
+    },
+    {
+     "spell": "chain lightning",
+     "level": 33,
+     "aoe": false
+    },
+    {
+     "spell": "hydroblast",
+     "level": 33,
+     "aoe": false
+    },
+    {
+     "spell": "acetum primus",
+     "level": 34,
+     "aoe": false
+    },
+    {
+     "spell": "magnetic thrust",
+     "level": 34,
+     "aoe": false
+    },
+    {
+     "spell": "spectral furor",
+     "level": 35,
+     "aoe": false
+    },
+    {
+     "spell": "bluefire",
+     "level": 37,
+     "aoe": false
+    },
+    {
+     "spell": "demonfire",
+     "level": 37,
+     "aoe": false
+    },
+    {
+     "spell": "ray of truth",
+     "level": 37,
+     "aoe": false
+    },
+    {
+     "spell": "shocking trap",
+     "level": 37,
+     "aoe": true
+    },
+    {
+     "spell": "disruption",
+     "level": 40,
+     "aoe": false
+    },
+    {
+     "spell": "quantum spike",
+     "level": 41,
+     "aoe": false
+    },
+    {
+     "spell": "severity force",
+     "level": 41,
+     "aoe": false
+    },
+    {
+     "spell": "hand of undead",
+     "level": 44,
+     "aoe": false
+    },
+    {
+     "spell": "hellfire",
+     "level": 45,
+     "aoe": false
+    },
+    {
+     "spell": "hurricane",
+     "level": 45,
+     "aoe": true
+    },
+    {
+     "spell": "scourge",
+     "level": 46,
+     "aoe": true
+    },
+    {
+     "spell": "acid arrow",
+     "level": 48,
+     "aoe": false
+    },
+    {
+     "spell": "sand storm",
+     "level": 48,
+     "aoe": true
+    },
+    {
+     "spell": "scream",
+     "level": 48,
+     "aoe": true
+    },
+    {
+     "spell": "ethereal fist",
+     "level": 50,
+     "aoe": false
+    },
+    {
+     "spell": "iceball",
+     "level": 54,
+     "aoe": true
+    },
+    {
+     "spell": "desert fist",
+     "level": 56,
+     "aoe": false
+    },
+    {
+     "spell": "fireball",
+     "level": 56,
+     "aoe": false
+    },
+    {
+     "spell": "blade barrier",
+     "level": 60,
+     "aoe": false
+    },
+    {
+     "spell": "tornado",
+     "level": 60,
+     "aoe": false
+    },
+    {
+     "spell": "dragons breath",
+     "level": 61,
+     "aoe": false
+    },
+    {
+     "spell": "acid blast",
+     "level": 63,
+     "aoe": false
+    },
+    {
+     "spell": "corruption",
+     "level": 63,
+     "aoe": false
+    }
+   ]
+  },
+  "wand_off": {
+   "item_type": "wand",
+   "aoe": "never",
+   "max_spells": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "pool": [
+    {
+     "spell": "magic missile",
+     "level": 1,
+     "aoe": false
+    },
+    {
+     "spell": "chill touch",
+     "level": 5,
+     "aoe": false
+    },
+    {
+     "spell": "shocking grasp",
+     "level": 7,
+     "aoe": false
+    },
+    {
+     "spell": "burning hands",
+     "level": 10,
+     "aoe": false
+    },
+    {
+     "spell": "lightning bolt",
+     "level": 13,
+     "aoe": false
+    },
+    {
+     "spell": "blindness",
+     "level": 14,
+     "aoe": false
+    },
+    {
+     "spell": "faerie fire",
+     "level": 15,
+     "aoe": false
+    },
+    {
+     "spell": "poison",
+     "level": 15,
+     "aoe": false
+    },
+    {
+     "spell": "weaken",
+     "level": 16,
+     "aoe": false
+    },
+    {
+     "spell": "entangle",
+     "level": 17,
+     "aoe": false
+    },
+    {
+     "spell": "colour spray",
+     "level": 18,
+     "aoe": false
+    },
+    {
+     "spell": "curse",
+     "level": 18,
+     "aoe": false
+    },
+    {
+     "spell": "fatigue",
+     "level": 20,
+     "aoe": false
+    },
+    {
+     "spell": "slow",
+     "level": 23,
+     "aoe": false
+    },
+    {
+     "spell": "energy drain",
+     "level": 26,
+     "aoe": false
+    },
+    {
+     "spell": "heating",
+     "level": 26,
+     "aoe": false
+    },
+    {
+     "spell": "dispel evil",
+     "level": 27,
+     "aoe": false
+    },
+    {
+     "spell": "dispel good",
+     "level": 27,
+     "aoe": false
+    },
+    {
+     "spell": "mind wrack",
+     "level": 27,
+     "aoe": false
+    },
+    {
+     "spell": "galvanic whip",
+     "level": 28,
+     "aoe": false
+    },
+    {
+     "spell": "sonic resonance",
+     "level": 28,
+     "aoe": false
+    },
+    {
+     "spell": "sulfuric spray",
+     "level": 28,
+     "aoe": false
+    },
+    {
+     "spell": "plague",
+     "level": 30,
+     "aoe": false
+    },
+    {
+     "spell": "caustic font",
+     "level": 31,
+     "aoe": false
+    },
+    {
+     "spell": "flamestrike",
+     "level": 32,
+     "aoe": false
+    },
+    {
+     "spell": "chain lightning",
+     "level": 33,
+     "aoe": false
+    },
+    {
+     "spell": "hydroblast",
+     "level": 33,
+     "aoe": false
+    },
+    {
+     "spell": "acetum primus",
+     "level": 34,
+     "aoe": false
+    },
+    {
+     "spell": "magnetic thrust",
+     "level": 34,
+     "aoe": false
+    },
+    {
+     "spell": "spectral furor",
+     "level": 35,
+     "aoe": false
+    },
+    {
+     "spell": "bluefire",
+     "level": 37,
+     "aoe": false
+    },
+    {
+     "spell": "demonfire",
+     "level": 37,
+     "aoe": false
+    },
+    {
+     "spell": "ray of truth",
+     "level": 37,
+     "aoe": false
+    },
+    {
+     "spell": "disruption",
+     "level": 40,
+     "aoe": false
+    },
+    {
+     "spell": "quantum spike",
+     "level": 41,
+     "aoe": false
+    },
+    {
+     "spell": "severity force",
+     "level": 41,
+     "aoe": false
+    },
+    {
+     "spell": "hand of undead",
+     "level": 44,
+     "aoe": false
+    },
+    {
+     "spell": "hellfire",
+     "level": 45,
+     "aoe": false
+    },
+    {
+     "spell": "acid arrow",
+     "level": 48,
+     "aoe": false
+    },
+    {
+     "spell": "ethereal fist",
+     "level": 50,
+     "aoe": false
+    },
+    {
+     "spell": "desert fist",
+     "level": 56,
+     "aoe": false
+    },
+    {
+     "spell": "fireball",
+     "level": 56,
+     "aoe": false
+    },
+    {
+     "spell": "blade barrier",
+     "level": 60,
+     "aoe": false
+    },
+    {
+     "spell": "tornado",
+     "level": 60,
+     "aoe": false
+    },
+    {
+     "spell": "dragons breath",
+     "level": 61,
+     "aoe": false
+    },
+    {
+     "spell": "acid blast",
+     "level": 63,
+     "aoe": false
+    },
+    {
+     "spell": "corruption",
+     "level": 63,
+     "aoe": false
+    }
+   ]
+  },
+  "wand_def": {
+   "item_type": "wand",
+   "aoe": "never",
+   "max_spells": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "pool": [
+    {
+     "spell": "acute vision",
+     "level": 4,
+     "aoe": false
+    },
+    {
+     "spell": "detect invis",
+     "level": 5,
+     "aoe": false
+    },
+    {
+     "spell": "cure blindness",
+     "level": 7,
+     "aoe": false
+    },
+    {
+     "spell": "infravision",
+     "level": 7,
+     "aoe": false
+    },
+    {
+     "spell": "invisibility",
+     "level": 9,
+     "aoe": false
+    },
+    {
+     "spell": "protection evil",
+     "level": 9,
+     "aoe": false
+    },
+    {
+     "spell": "protection good",
+     "level": 9,
+     "aoe": false
+    },
+    {
+     "spell": "bark skin",
+     "level": 10,
+     "aoe": false
+    },
+    {
+     "spell": "fervor",
+     "level": 10,
+     "aoe": false
+    },
+    {
+     "spell": "observation",
+     "level": 10,
+     "aoe": false
+    },
+    {
+     "spell": "detect evil",
+     "level": 11,
+     "aoe": false
+    },
+    {
+     "spell": "detect good",
+     "level": 11,
+     "aoe": false
+    },
+    {
+     "spell": "floating disc",
+     "level": 11,
+     "aoe": false
+    },
+    {
+     "spell": "shield",
+     "level": 11,
+     "aoe": false
+    },
+    {
+     "spell": "gills",
+     "level": 12,
+     "aoe": false
+    },
+    {
+     "spell": "detect undead",
+     "level": 13,
+     "aoe": false
+    },
+    {
+     "spell": "fly",
+     "level": 13,
+     "aoe": false
+    },
+    {
+     "spell": "remove curse",
+     "level": 13,
+     "aoe": false
+    },
+    {
+     "spell": "detect magic",
+     "level": 15,
+     "aoe": false
+    },
+    {
+     "spell": "faerie fog",
+     "level": 15,
+     "aoe": true
+    },
+    {
+     "spell": "protection negative",
+     "level": 15,
+     "aoe": false
+    },
+    {
+     "spell": "venom ward",
+     "level": 15,
+     "aoe": false
+    },
+    {
+     "spell": "farsight",
+     "level": 17,
+     "aoe": false
+    },
+    {
+     "spell": "armor",
+     "level": 18,
+     "aoe": false
+    },
+    {
+     "spell": "protective shield",
+     "level": 18,
+     "aoe": false
+    },
+    {
+     "spell": "bless",
+     "level": 19,
+     "aoe": false
+    },
+    {
+     "spell": "cure disease",
+     "level": 19,
+     "aoe": false
+    },
+    {
+     "spell": "giant strength",
+     "level": 19,
+     "aoe": false
+    },
+    {
+     "spell": "storm ward",
+     "level": 20,
+     "aoe": false
+    },
+    {
+     "spell": "dark shroud",
+     "level": 21,
+     "aoe": false
+    },
+    {
+     "spell": "stone skin",
+     "level": 21,
+     "aoe": false
+    },
+    {
+     "spell": "protection cold",
+     "level": 22,
+     "aoe": false
+    },
+    {
+     "spell": "cure poison",
+     "level": 23,
+     "aoe": false
+    },
+    {
+     "spell": "haste",
+     "level": 24,
+     "aoe": false
+    },
+    {
+     "spell": "thornhide",
+     "level": 25,
+     "aoe": false
+    },
+    {
+     "spell": "sanctuary",
+     "level": 27,
+     "aoe": false
+    },
+    {
+     "spell": "seasonal aspect",
+     "level": 29,
+     "aoe": false
+    },
+    {
+     "spell": "enhanced armor",
+     "level": 33,
+     "aoe": false
+    },
+    {
+     "spell": "frenzy",
+     "level": 34,
+     "aoe": false
+    },
+    {
+     "spell": "remove fear",
+     "level": 34,
+     "aoe": false
+    },
+    {
+     "spell": "stardust",
+     "level": 36,
+     "aoe": false
+    },
+    {
+     "spell": "improved detect",
+     "level": 37,
+     "aoe": false
+    },
+    {
+     "spell": "bat swarm",
+     "level": 38,
+     "aoe": false
+    },
+    {
+     "spell": "protection heat",
+     "level": 39,
+     "aoe": false
+    },
+    {
+     "spell": "dragon skin",
+     "level": 40,
+     "aoe": false
+    },
+    {
+     "spell": "improved invis",
+     "level": 40,
+     "aoe": false
+    },
+    {
+     "spell": "regeneration",
+     "level": 46,
+     "aoe": false
+    },
+    {
+     "spell": "cure corruption",
+     "level": 50,
+     "aoe": false
+    },
+    {
+     "spell": "resilience",
+     "level": 56,
+     "aoe": false
+    },
+    {
+     "spell": "fortitude",
+     "level": 57,
+     "aoe": false
+    },
+    {
+     "spell": "spell resistance",
+     "level": 68,
+     "aoe": false
+    },
+    {
+     "spell": "benediction",
+     "level": 70,
+     "aoe": false
+    }
+   ]
+  },
+  "staff_off": {
+   "item_type": "staff",
+   "aoe": "always",
+   "max_spells": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "pool": [
+    {
+     "spell": "magic missile",
+     "level": 1,
+     "aoe": false
+    },
+    {
+     "spell": "chill touch",
+     "level": 5,
+     "aoe": false
+    },
+    {
+     "spell": "shocking grasp",
+     "level": 7,
+     "aoe": false
+    },
+    {
+     "spell": "burning hands",
+     "level": 10,
+     "aoe": false
+    },
+    {
+     "spell": "earthquake",
+     "level": 12,
+     "aoe": true
+    },
+    {
+     "spell": "lightning bolt",
+     "level": 13,
+     "aoe": false
+    },
+    {
+     "spell": "blindness",
+     "level": 14,
+     "aoe": false
+    },
+    {
+     "spell": "call lightning",
+     "level": 14,
+     "aoe": true
+    },
+    {
+     "spell": "faerie fire",
+     "level": 15,
+     "aoe": false
+    },
+    {
+     "spell": "poison",
+     "level": 15,
+     "aoe": false
+    },
+    {
+     "spell": "weaken",
+     "level": 16,
+     "aoe": false
+    },
+    {
+     "spell": "entangle",
+     "level": 17,
+     "aoe": false
+    },
+    {
+     "spell": "colour spray",
+     "level": 18,
+     "aoe": false
+    },
+    {
+     "spell": "curse",
+     "level": 18,
+     "aoe": false
+    },
+    {
+     "spell": "fatigue",
+     "level": 20,
+     "aoe": false
+    },
+    {
+     "spell": "slow",
+     "level": 23,
+     "aoe": false
+    },
+    {
+     "spell": "energy drain",
+     "level": 26,
+     "aoe": false
+    },
+    {
+     "spell": "heating",
+     "level": 26,
+     "aoe": false
+    },
+    {
+     "spell": "dispel evil",
+     "level": 27,
+     "aoe": false
+    },
+    {
+     "spell": "dispel good",
+     "level": 27,
+     "aoe": false
+    },
+    {
+     "spell": "mind wrack",
+     "level": 27,
+     "aoe": false
+    },
+    {
+     "spell": "galvanic whip",
+     "level": 28,
+     "aoe": false
+    },
+    {
+     "spell": "sonic resonance",
+     "level": 28,
+     "aoe": false
+    },
+    {
+     "spell": "sulfuric spray",
+     "level": 28,
+     "aoe": false
+    },
+    {
+     "spell": "plague",
+     "level": 30,
+     "aoe": false
+    },
+    {
+     "spell": "caustic font",
+     "level": 31,
+     "aoe": false
+    },
+    {
+     "spell": "flamestrike",
+     "level": 32,
+     "aoe": false
+    },
+    {
+     "spell": "chain lightning",
+     "level": 33,
+     "aoe": false
+    },
+    {
+     "spell": "hydroblast",
+     "level": 33,
+     "aoe": false
+    },
+    {
+     "spell": "acetum primus",
+     "level": 34,
+     "aoe": false
+    },
+    {
+     "spell": "magnetic thrust",
+     "level": 34,
+     "aoe": false
+    },
+    {
+     "spell": "spectral furor",
+     "level": 35,
+     "aoe": false
+    },
+    {
+     "spell": "bluefire",
+     "level": 37,
+     "aoe": false
+    },
+    {
+     "spell": "demonfire",
+     "level": 37,
+     "aoe": false
+    },
+    {
+     "spell": "ray of truth",
+     "level": 37,
+     "aoe": false
+    },
+    {
+     "spell": "shocking trap",
+     "level": 37,
+     "aoe": true
+    },
+    {
+     "spell": "disruption",
+     "level": 40,
+     "aoe": false
+    },
+    {
+     "spell": "quantum spike",
+     "level": 41,
+     "aoe": false
+    },
+    {
+     "spell": "severity force",
+     "level": 41,
+     "aoe": false
+    },
+    {
+     "spell": "hand of undead",
+     "level": 44,
+     "aoe": false
+    },
+    {
+     "spell": "hellfire",
+     "level": 45,
+     "aoe": false
+    },
+    {
+     "spell": "hurricane",
+     "level": 45,
+     "aoe": true
+    },
+    {
+     "spell": "scourge",
+     "level": 46,
+     "aoe": true
+    },
+    {
+     "spell": "acid arrow",
+     "level": 48,
+     "aoe": false
+    },
+    {
+     "spell": "sand storm",
+     "level": 48,
+     "aoe": true
+    },
+    {
+     "spell": "scream",
+     "level": 48,
+     "aoe": true
+    },
+    {
+     "spell": "ethereal fist",
+     "level": 50,
+     "aoe": false
+    },
+    {
+     "spell": "iceball",
+     "level": 54,
+     "aoe": true
+    },
+    {
+     "spell": "desert fist",
+     "level": 56,
+     "aoe": false
+    },
+    {
+     "spell": "fireball",
+     "level": 56,
+     "aoe": false
+    },
+    {
+     "spell": "blade barrier",
+     "level": 60,
+     "aoe": false
+    },
+    {
+     "spell": "tornado",
+     "level": 60,
+     "aoe": false
+    },
+    {
+     "spell": "dragons breath",
+     "level": 61,
+     "aoe": false
+    },
+    {
+     "spell": "acid blast",
+     "level": 63,
+     "aoe": false
+    },
+    {
+     "spell": "corruption",
+     "level": 63,
+     "aoe": false
+    }
+   ]
+  },
+  "staff_def": {
+   "item_type": "staff",
+   "aoe": "always",
+   "max_spells": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "pool": [
+    {
+     "spell": "heal",
+     "level": 2,
+     "aoe": false
+    },
+    {
+     "spell": "acute vision",
+     "level": 4,
+     "aoe": false
+    },
+    {
+     "spell": "detect invis",
+     "level": 5,
+     "aoe": false
+    },
+    {
+     "spell": "refresh",
+     "level": 6,
+     "aoe": false
+    },
+    {
+     "spell": "cure blindness",
+     "level": 7,
+     "aoe": false
+    },
+    {
+     "spell": "infravision",
+     "level": 7,
+     "aoe": false
+    },
+    {
+     "spell": "invisibility",
+     "level": 9,
+     "aoe": false
+    },
+    {
+     "spell": "protection evil",
+     "level": 9,
+     "aoe": false
+    },
+    {
+     "spell": "protection good",
+     "level": 9,
+     "aoe": false
+    },
+    {
+     "spell": "bark skin",
+     "level": 10,
+     "aoe": false
+    },
+    {
+     "spell": "fervor",
+     "level": 10,
+     "aoe": false
+    },
+    {
+     "spell": "observation",
+     "level": 10,
+     "aoe": false
+    },
+    {
+     "spell": "detect evil",
+     "level": 11,
+     "aoe": false
+    },
+    {
+     "spell": "detect good",
+     "level": 11,
+     "aoe": false
+    },
+    {
+     "spell": "floating disc",
+     "level": 11,
+     "aoe": false
+    },
+    {
+     "spell": "shield",
+     "level": 11,
+     "aoe": false
+    },
+    {
+     "spell": "gills",
+     "level": 12,
+     "aoe": false
+    },
+    {
+     "spell": "detect undead",
+     "level": 13,
+     "aoe": false
+    },
+    {
+     "spell": "fly",
+     "level": 13,
+     "aoe": false
+    },
+    {
+     "spell": "remove curse",
+     "level": 13,
+     "aoe": false
+    },
+    {
+     "spell": "detect magic",
+     "level": 15,
+     "aoe": false
+    },
+    {
+     "spell": "faerie fog",
+     "level": 15,
+     "aoe": true
+    },
+    {
+     "spell": "protection negative",
+     "level": 15,
+     "aoe": false
+    },
+    {
+     "spell": "venom ward",
+     "level": 15,
+     "aoe": false
+    },
+    {
+     "spell": "farsight",
+     "level": 17,
+     "aoe": false
+    },
+    {
+     "spell": "armor",
+     "level": 18,
+     "aoe": false
+    },
+    {
+     "spell": "protective shield",
+     "level": 18,
+     "aoe": false
+    },
+    {
+     "spell": "bless",
+     "level": 19,
+     "aoe": false
+    },
+    {
+     "spell": "cure disease",
+     "level": 19,
+     "aoe": false
+    },
+    {
+     "spell": "giant strength",
+     "level": 19,
+     "aoe": false
+    },
+    {
+     "spell": "storm ward",
+     "level": 20,
+     "aoe": false
+    },
+    {
+     "spell": "dark shroud",
+     "level": 21,
+     "aoe": false
+    },
+    {
+     "spell": "stone skin",
+     "level": 21,
+     "aoe": false
+    },
+    {
+     "spell": "protection cold",
+     "level": 22,
+     "aoe": false
+    },
+    {
+     "spell": "cure poison",
+     "level": 23,
+     "aoe": false
+    },
+    {
+     "spell": "haste",
+     "level": 24,
+     "aoe": false
+    },
+    {
+     "spell": "thornhide",
+     "level": 25,
+     "aoe": false
+    },
+    {
+     "spell": "sanctuary",
+     "level": 27,
+     "aoe": false
+    },
+    {
+     "spell": "seasonal aspect",
+     "level": 29,
+     "aoe": false
+    },
+    {
+     "spell": "second wind",
+     "level": 30,
+     "aoe": false
+    },
+    {
+     "spell": "enhanced armor",
+     "level": 33,
+     "aoe": false
+    },
+    {
+     "spell": "frenzy",
+     "level": 34,
+     "aoe": false
+    },
+    {
+     "spell": "remove fear",
+     "level": 34,
+     "aoe": false
+    },
+    {
+     "spell": "mind light",
+     "level": 36,
+     "aoe": true
+    },
+    {
+     "spell": "stardust",
+     "level": 36,
+     "aoe": false
+    },
+    {
+     "spell": "improved detect",
+     "level": 37,
+     "aoe": false
+    },
+    {
+     "spell": "bat swarm",
+     "level": 38,
+     "aoe": false
+    },
+    {
+     "spell": "superior heal",
+     "level": 38,
+     "aoe": false
+    },
+    {
+     "spell": "protection heat",
+     "level": 39,
+     "aoe": false
+    },
+    {
+     "spell": "dragon skin",
+     "level": 40,
+     "aoe": false
+    },
+    {
+     "spell": "improved invis",
+     "level": 40,
+     "aoe": false
+    },
+    {
+     "spell": "group defense",
+     "level": 45,
+     "aoe": true
+    },
+    {
+     "spell": "regeneration",
+     "level": 46,
+     "aoe": false
+    },
+    {
+     "spell": "inspire",
+     "level": 49,
+     "aoe": true
+    },
+    {
+     "spell": "cure corruption",
+     "level": 50,
+     "aoe": false
+    },
+    {
+     "spell": "mass invis",
+     "level": 51,
+     "aoe": true
+    },
+    {
+     "spell": "aid",
+     "level": 53,
+     "aoe": false
+    },
+    {
+     "spell": "resilience",
+     "level": 56,
+     "aoe": false
+    },
+    {
+     "spell": "fortitude",
+     "level": 57,
+     "aoe": false
+    },
+    {
+     "spell": "spell resistance",
+     "level": 68,
+     "aoe": false
+    },
+    {
+     "spell": "benediction",
+     "level": 70,
+     "aoe": false
+    }
+   ]
+  }
+ },
+ "names": {
+  "potion": [
+   {
+    "ru": "настойка",
+    "ua": "настоянка",
+    "en": "tincture"
+   },
+   {
+    "ru": "зелье",
+    "ua": "зілля",
+    "en": "potion"
+   },
+   {
+    "ru": "эликсир",
+    "ua": "еліксир",
+    "en": "elixir"
+   },
+   {
+    "ru": "великий эликсир",
+    "ua": "великий еліксир",
+    "en": "grand elixir"
+   }
+  ],
+  "pill": [
+   {
+    "ru": "пилюля",
+    "ua": "пігулка",
+    "en": "pill"
+   },
+   {
+    "ru": "травяная пилюля",
+    "ua": "травʼяна пігулка",
+    "en": "herbal pill"
+   },
+   {
+    "ru": "знахарская пилюля",
+    "ua": "знахарська пігулка",
+    "en": "healer's pill"
+   },
+   {
+    "ru": "друидская пилюля",
+    "ua": "друїдська пігулка",
+    "en": "druid's pill"
+   }
+  ],
+  "scroll": [
+   {
+    "ru": "ветхий свиток",
+    "ua": "старий сувій",
+    "en": "worn scroll"
+   },
+   {
+    "ru": "свиток",
+    "ua": "сувій",
+    "en": "scroll"
+   },
+   {
+    "ru": "манускрипт",
+    "ua": "манускрипт",
+    "en": "manuscript"
+   },
+   {
+    "ru": "древний кодекс",
+    "ua": "давній кодекс",
+    "en": "ancient codex"
+   }
+  ],
+  "wand": [
+   {
+    "ru": "прутик",
+    "ua": "прутик",
+    "en": "twig"
+   },
+   {
+    "ru": "палочка",
+    "ua": "паличка",
+    "en": "wand"
+   },
+   {
+    "ru": "жезл",
+    "ua": "жезл",
+    "en": "rod"
+   },
+   {
+    "ru": "скипетр",
+    "ua": "скіпетр",
+    "en": "sceptre"
+   }
+  ],
+  "staff": [
+   {
+    "ru": "дорожный посох",
+    "ua": "дорожній посох",
+    "en": "walking staff"
+   },
+   {
+    "ru": "посох",
+    "ua": "посох",
+    "en": "staff"
+   },
+   {
+    "ru": "посох мага",
+    "ua": "посох мага",
+    "en": "mage's staff"
+   },
+   {
+    "ru": "великий посох",
+    "ua": "великий посох",
+    "en": "grand staff"
+   }
+  ]
+ },
+ "drop_kind_weights": {
+  "caster": {
+   "scroll": 40,
+   "potion": 30,
+   "wand": 20,
+   "pill": 10
+  },
+  "melee": {
+   "pill": 40,
+   "potion": 40,
+   "wand": 15,
+   "scroll": 5
+  },
+  "usable_reroll_pct": 50
+ }
+}

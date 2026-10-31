@@ -370,7 +370,7 @@
     "other": [28047]
  },
  "measure": {
-  "_doc": "Read by Fenia .tmp.craft.getMeasure. One roll = +1 damroll, +1 hitroll, +10 hp, +10 mana. rolls = level / factor; jeweler crafts use jeweler_factor. tier_budget is in M (one measure), reference level ref_level. mastery_cm_per_level: centi-M added to a crafted armor budget per mastery level (profession 6-10, craft audit D4). refit.levels_per_unit: craft refit costs one unit of the blueprint's main material per this many levels gained (utils/refit). craft_budget_cm: generated armor outside the craft professions (quest reward, spells, artificer jacket, horseshoe, trophy) per tier 1..5 in centi-M (Fenia has no floats). craft_piece_budget_cm: a piece made by a craft profession (smith/carpenter armor, jewelry, refit) per blueprint tier 1..5: loot tier_budget, a little under it at legendary/epic (Kit 2026-10-11). enchant_budget_cm: enchant armor target [rare, epic with creativity or Enki]. repair_cm: repair price in silver per item level at 100% damage, tier 1..5 (legendary..common; hand-made = uncommon) -- tier_budget x 0.7, read by public utils/object repairPrice.",
+  "_doc": "Read by Fenia .tmp.craft.getMeasure. One roll = +1 damroll, +1 hitroll, +10 hp, +10 mana. rolls = level / factor; jeweler crafts use jeweler_factor. tier_budget is in M (one measure), reference level ref_level. mastery_cm_per_level: centi-M added to a crafted armor budget per mastery level (profession 6-10, craft audit D4). refit.levels_per_unit: craft refit costs one unit of the blueprint's main material per this many levels gained (utils/refit). craft_budget_cm: generated armor outside the craft professions (quest reward, spells, artificer jacket, horseshoe, trophy) per tier 1..5 in centi-M (Fenia has no floats). craft_piece_budget_cm: a piece made by a craft profession (smith/carpenter armor, jewelry, refit) per blueprint tier 1..5 (Kit 2026-10-30: rare 165, uncommon 130), times min(1, loot affix window curve), see craft_roll. enchant_budget_cm: enchant armor target [rare, epic with creativity or Enki]. repair_cm: repair price in silver per item level at 100% damage, tier 1..5 (legendary..common; hand-made = uncommon) -- tier_budget x 0.7, read by public utils/object repairPrice.",
   "roll": {
    "damroll": 1,
    "hitroll": 1,
@@ -401,7 +401,7 @@
   "mastery_cm_per_level": 18,
   "refit": {"levels_per_unit": 20, "reroll_units": 2, "reroll_max": 5},
   "craft_roll": {
-    "_doc": "Rare, epic and legendary crafts (blacksmith, carpenter, jeweler) roll affixes from the loot pool (Kit 2026-10-15, Fenia craft/armor + utils/craft). center = (craft_piece_budget_cm + mastery) x min(1, loot affix window curve at the item level and owner profile) (Kit 2026-10-30, .tmp.craft.levelCut; uncommon 130, spread 20). Armor: fixed_pct[tier-1] of center goes to the material-shaped dr/hr/hp/mana as before, the rest rolls in [center x (100 - spread_pct)%, center x (100 + spread_pct)%] minus the fixed part. Weapons keep their base row and roll the whole window. max_tier: the worst tier that rolls (3 rare). masterwork_pct + masterwork_per_mastery x mastery (profession 6-10): chance a fresh craft rolls one tier up (3% .. 8%); a legendary masterwork rolls only the top half; rerolls never do. refit.reroll_units: craft reroll costs that many main-material units more each time on the same piece (2, 4, 6...), counted in the craft_rerolls property, at most refit.reroll_max rerolls per piece (Kit 2026-10-24).",
+    "_doc": "Rare, epic and legendary crafts (blacksmith, carpenter, jeweler) roll affixes from the loot pool (Kit 2026-10-15, Fenia craft/armor + utils/craft). center = (craft_piece_budget_cm + mastery) x min(1, loot affix window curve at the item level and owner profile) (Kit 2026-10-30, .tmp.craft.levelCut; rare 165, uncommon 130, spread 20, so a rare roll's floor stays above the fixed uncommon at mastery 0). The cut also applies on refit. Armor: fixed_pct[tier-1] of center goes to the material-shaped dr/hr/hp/mana as before, the rest rolls in [center x (100 - spread_pct)%, center x (100 + spread_pct)%] minus the fixed part. Weapons keep their base row and roll the whole window. max_tier: the worst tier that rolls (3 rare). masterwork_pct + masterwork_per_mastery x mastery (profession 6-10): chance a fresh craft rolls one tier up (3% .. 8%); a legendary masterwork rolls only the top half; rerolls never do. refit.reroll_units: craft reroll costs that many main-material units more each time on the same piece (2, 4, 6...), counted in the craft_rerolls property, at most refit.reroll_max rerolls per piece (Kit 2026-10-24).",
     "max_tier": 3,
     "fixed_pct": [40, 50, 60],
     "spread_pct": 20,
@@ -409,7 +409,7 @@
     "masterwork_per_mastery": 1
   },
   "craft_budget_cm": [160, 120, 80, 50, 30],
-  "craft_piece_budget_cm": [400, 220, 150, 130, 50],
+  "craft_piece_budget_cm": [400, 220, 165, 130, 50],
   "enchant_budget_cm": [150, 250],
   "repair_cm": [315, 175, 105, 70, 35],
   "tier_budget": {

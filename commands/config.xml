@@ -95,6 +95,18 @@
         <uaname>автожертва</uaname>
       </node>
       <node type="ConfigElement">
+        <bit table="config_flags">noautoblood</bit>
+        <msgOff l="en">After a kill you will drink the last drops of your victim's blood.</msgOff>
+        <msgOff l="ru">После убийства ты будешь выпивать последние капли крови жертвы.</msgOff>
+        <msgOff l="ua">Після вбивства ти випиватимеш останні краплі крові жертви.</msgOff>
+        <msgOn l="en">After a kill you will leave your victim's blood alone.</msgOn>
+        <msgOn l="ru">После убийства ты не будешь трогать кровь жертвы.</msgOn>
+        <msgOn l="ua">Після вбивства ти не чіпатимеш крові жертви.</msgOn>
+        <name>noautoblood</name>
+        <rname>некровь</rname>
+        <uaname>некров</uaname>
+      </node>
+      <node type="ConfigElement">
         <bit table="config_flags">twohands</bit>
         <msgOff l="en">You will not take your shield off to wield a two-handed weapon.</msgOff>
         <msgOff l="ru">Ты не будешь снимать щит, чтобы вооружиться двуручным оружием.</msgOff>
@@ -288,12 +300,12 @@
     </node>
   </groups>
   <help id="1087" seealso="2133" level="-1" type="CommandHelp" labels="comm">
-    <extra l="en">compact autoassist autoloot autosac nocancel nobuff notransfer nofollow twohands damage brief autoexit shortflags affscore prompt screenreader color lines lang holylight noiac notelnet telnetga</extra>
-    <extra l="ru">компактно автопомощь автограбеж автожертва неотменять неследовать двуручник урон кратко автовыходы краткофлаги аффектывсчет состояние незрячий цвет строк язык боговзор</extra>
-    <extra l="ua">компактно автодопомога автограбунок автожертва невідміняти неслідувати дворучник шкода ушкодження пошкодження стисло автовиходи короткофлаги афективрахунок стан незрячий колір рядки мова боговзір</extra>
+    <extra l="en">compact autoassist autoloot autosac noautoblood nocancel nobuff notransfer nofollow twohands damage brief autoexit shortflags affscore prompt screenreader color lines lang holylight noiac notelnet telnetga</extra>
+    <extra l="ru">компактно автопомощь автограбеж автожертва некровь неотменять неследовать двуручник урон кратко автовыходы краткофлаги аффектывсчет состояние незрячий цвет строк язык боговзор</extra>
+    <extra l="ua">компактно автодопомога автограбунок автожертва некров невідміняти неслідувати дворучник шкода ушкодження пошкодження стисло автовиходи короткофлаги афективрахунок стан незрячий колір рядки мова боговзір</extra>
     <text l="en">Write *%CMD%* to see all your settings, grouped by section. To change one, write *%CMD%* _option_ *%YES%*|*%NO%* -- for example, *%CMD%* _autoloot_ *%NO%* to stop looting items from {hh12corpses{x.
 
-A few useful ones: *autoassist* makes you join your {hh1378group{x's fights; *autoloot* and *autosac* deal with enemy corpses; *nocancel* and *nofollow* keep others from cancelling your spells or following you; *brief* shortens room descriptions; *autoexit* lists the room's exits after every move; *shortflags* abbreviates item flags; *twohands* takes your shield off when you wield a two-handed weapon; *damage* shows damage as numbers or as a percentage; *screenreader* turns on {hh2132screen-reader{x support.
+A few useful ones: *autoassist* makes you join your {hh1378group{x's fights; *autoloot* and *autosac* deal with enemy corpses; *noautoblood* stops a vampire from drinking the blood of a fresh kill; *nocancel* and *nofollow* keep others from cancelling your spells or following you; *brief* shortens room descriptions; *autoexit* lists the room's exits after every move; *shortflags* abbreviates item flags; *twohands* takes your shield off when you wield a two-handed weapon; *damage* shows damage as numbers or as a percentage; *screenreader* turns on {hh2132screen-reader{x support.
 
 *compact* removes the extra blank line before the {hh1012status line{x.
 
@@ -306,7 +318,7 @@ Shows the current state of the specified option.
 Toggles the specified option.</text>
     <text l="ru">Напиши *%CMD%*, чтобы увидеть все свои настройки по разделам. Чтобы изменить любую, напиши *%CMD%* _опция_ *%YES%*|*%NO%* -- например, *%CMD%* _автограбеж_ *%NO%*, чтобы перестать подбирать вещи из {hh12трупов{x.
 
-Несколько полезных: *автопомощь* вступает в бой за твою {hh1378группу{x; *автограбеж* и *автожертва* разбираются с трупами врагов; *неотменять* и *неследовать* защищают тебя от чужих отмен и слежки; *кратко* сокращает описания комнат; *автовыходы* показывают выходы из комнаты после каждого шага; *краткофлаги* сокращают флаги на предметах; *двуручник* снимает щит, когда ты берешь двуручное оружие; *урон* показывает урон числами или в процентах; *незрячий* включает поддержку {hh2132читалки экрана{x.
+Несколько полезных: *автопомощь* вступает в бой за твою {hh1378группу{x; *автограбеж* и *автожертва* разбираются с трупами врагов; *некровь* не дает вампиру выпивать кровь свежей жертвы; *неотменять* и *неследовать* защищают тебя от чужих отмен и слежки; *кратко* сокращает описания комнат; *автовыходы* показывают выходы из комнаты после каждого шага; *краткофлаги* сокращают флаги на предметах; *двуручник* снимает щит, когда ты берешь двуручное оружие; *урон* показывает урон числами или в процентах; *незрячий* включает поддержку {hh2132читалки экрана{x.
 
 *компактно* убирает лишнюю пустую строку перед {hh1012строкой состояния{x.
 
@@ -319,7 +331,7 @@ Toggles the specified option.</text>
 Включает-выключает указанную опцию.</text>
     <text l="ua">Напиши *%CMD%*, щоб побачити всі свої налаштування за розділами. Щоб змінити будь-яке, напиши *%CMD%* _опція_ *%YES%*|*%NO%* -- наприклад, *%CMD%* _автограбунок_ *%NO%*, щоб перестати підбирати речі з {hh12трупів{x.
 
-Кілька корисних: *автодопомога* вступає в бій за твою {hh1378групу{x; *автограбунок* і *автожертва* розбираються з трупами ворогів; *невідміняти* і *неслідувати* захищають тебе від чужих відмін і стеження; *стисло* скорочує описи кімнат; *автовиходи* показують виходи з кімнати після кожного кроку; *короткофлаги* скорочують флаги на предметах; *дворучник* знімає щит, коли ти береш дворучну зброю; *шкода* показує шкоду числами чи у відсотках; *незрячий* вмикає підтримку {hh2132читача екрана{x.
+Кілька корисних: *автодопомога* вступає в бій за твою {hh1378групу{x; *автограбунок* і *автожертва* розбираються з трупами ворогів; *некров* не дає вампірові випивати кров свіжої жертви; *невідміняти* і *неслідувати* захищають тебе від чужих відмін і стеження; *стисло* скорочує описи кімнат; *автовиходи* показують виходи з кімнати після кожного кроку; *короткофлаги* скорочують флаги на предметах; *дворучник* знімає щит, коли ти береш дворучну зброю; *шкода* показує шкоду числами чи у відсотках; *незрячий* вмикає підтримку {hh2132читача екрана{x.
 
 *компактно* прибирає зайвий порожній рядок перед {hh1012рядком стану{x.
 

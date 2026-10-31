@@ -836,29 +836,35 @@ To learn more about the so-called =Wheel of Paths= -- the friendly and hostile P
     <keyword l="en">'armor class'</keyword>
     <keyword l="ru">'класс защиты'</keyword>
     <keyword l="ua">'клас захисту'</keyword>
-    <text l="en">{CArmor class{x (AC) is a parameter that determines how difficult it is to hit your character. The LOWER the armor class -- the better. You can reduce your armor class with {hh1015equipment{x, skills, or {hh37dexterity{x.
+    <text l="en">{CArmor{x is how much of a blow your gear stops. The HIGHER your armor -- the better. {y{hcScore{x shows it as a plain positive number, one each against pierce, bash, slash and exotic damage. {hh1015Equipment{x and protective spells raise it. A naked character has 0.
 
-The opposite of armor class is {hh47accuracy{x. The higher the accuracy, the lower an armor class you can penetrate.
+Armor does not make you harder to hit, it softens the hits that land. Getting out of the way is {hh37dexterity{x and your level, sleeping or resting makes it much worse. Weapon blows meet the pierce, bash or slash column by their damage type. Fire, cold, lightning and acid meet the exotic column, which stops them less well. Holy, negative, mental and all other damage ignores armor.
 
-Specific armor class types (for example, pierce protection, bash protection) affect armor class against specific weapon damage types. Some armor protects better against a dagger thrust, and other armor -- against a mace blow.
+The attacker's {hh47accuracy{x pierces armor: armor equal to four times your level plus four times the attacker's accuracy stops half of the blow, more armor stops more, and nothing stops over 60 percent.
 
-Different items have different armor class depending on the size of the item -- more precisely, on where it is worn. Body armor has the highest protection, four times that of other armor (x4), shields are somewhat lower (x3), and helmets, bracers, and greaves are twice the standard (x2).
+How much a piece gives depends on where it is worn: body armor counts x4, shields and barding x3, helmets, sleeves and greaves x2, everything else x1. Rings, amulets, bracelets and earrings are jewelry: they carry no armor of their own, only some of them hold a magical bonus to it.
+
+Armor is built differently, and {hh1001identify{x names the build and what it is good and bad against. Plate turns blades and points but a mace dents it, mail stops a slash cold, padding soaks up clubs and lets points through. All builds of the same level are worth about the same in total.
 </text>
-    <text l="ru">{CКласс защиты{x (armor class, AC) -- параметр, который определяет, насколько сложно по твоему персонажу попасть. Чем НИЖЕ класс защиты -- тем лучше. Уменьшать класс защиты можно {hh1015вещами{x, умениями или {hh37ловкостью{x.
+    <text l="ru">{CБроня{x -- это то, сколько удара гасит твое снаряжение. Чем ВЫШЕ броня -- тем лучше. {y{hcСчет{x показывает ее обычным положительным числом, отдельно против укола, удара, разрезания и экзотики. Поднимают броню {hh1015вещи{x и защитные заклинания. У голого персонажа она равна 0.
 
-Противоположностью класса защиты является {hh47точность{x. Чем выше точность, тем более низкий класс защиты ты сможешь пробить.
+Броня не мешает по тебе попасть, она смягчает попавшие удары. Уходить от ударов помогают {hh37ловкость{x и уровень, сон и отдых сильно мешают этому. Удары оружия встречает защита от укола, удара или разрезания, по типу повреждения. Огонь, холод, молнию и кислоту встречает защита от экзотики, и останавливает она их хуже. Святой, негативный, ментальный и всякий другой урон броню не замечает.
 
-Отдельные типы класса защиты (например, защита от уколов, защита от ударов) влияют на класс защиты против конкретных типов повреждений оружия. Какая-то броня лучше защитит от выпада кинжалом, а иная -- от удара дубиной.
+{hh47Точность{x нападающего пробивает броню: броня, равная сумме четырех твоих уровней и четырех точностей нападающего, гасит половину удара, большая броня гасит больше, а свыше 60 процентов не гасит ничто.
 
-У разных вещей разный класс защиты в зависимости от размера вещи -- точнее, от того, куда она надевается. У брони на тело самая высокая защита, в 4 раза выше остальной брони (x4), у щитов чуть пониже (x3), а у шлемов, наручей и поножей вдвое выше обычного (x2).
+Сколько дает вещь, зависит от того, куда она надевается: броня на тело считается x4, щиты и конская броня x3, шлемы, рукава и поножи x2, все остальное x1. Кольца, амулеты, браслеты и серьги -- это украшения: своей брони у них нет, лишь у некоторых есть магическая прибавка к ней.
+
+Броня устроена по-разному, и {hh1001опознание{x называет ее тип и то, от чего она хороша и от чего плоха. Латы держат клинок и острие, но их мнет булава, кольчуга намертво останавливает разрез, стеганка глотает удары дубиной и пропускает острие. Вся броня одного уровня в сумме стоит примерно одинаково.
 </text>
-    <text l="ua">{CКлас захисту{x (armor class, AC) -- параметр, який визначає, наскільки складно потрапити по твоєму персонажу. Чим НИЖЧИЙ клас захисту -- тим краще. Зменшувати клас захисту можна {hh1015речами{x, уміннями або {hh37спритністю{x.
+    <text l="ua">{CБроня{x -- це те, скільки удару гасить твоє спорядження. Чим ВИЩА броня -- тим краще. {y{hcРахунок{x показує її звичайним додатним числом, окремо проти уколу, удару, різу й екзотики. Піднімають броню {hh1015речі{x та захисні закляття. У голого персонажа вона дорівнює 0.
 
-Протилежністю класу захисту є {hh47влучність{x. Чим вища влучність, тим нижчий клас захисту ти зможеш пробити.
+Броня не заважає по тобі влучити, вона помʼякшує удари, що влучили. Ухилятися допомагають {hh37спритність{x і рівень, а сон і відпочинок сильно цьому шкодять. Удари зброї зустрічає захист від уколу, удару чи різу, за типом ушкодження. Вогонь, холод, блискавку й кислоту зустрічає захист від екзотики, і зупиняє він їх гірше. Святе, негативне, ментальне та всяке інше ушкодження броні не помічає.
 
-Окремі типи класу захисту (наприклад, захист від уколів, захист від ударів) впливають на клас захисту проти конкретних типів ушкоджень зброї. Якась броня краще захистить від випаду кинджалом, а інша -- від удару булавою.
+{hh47Влучність{x нападника пробиває броню: броня, що дорівнює сумі чотирьох твоїх рівнів і чотирьох влучностей нападника, гасить половину удару, більша броня гасить більше, а понад 60 відсотків не гасить ніщо.
 
-У різних речей різний клас захисту залежно від розміру речі -- точніше, від того, куди вона одягається. У броні на тіло найвищий захист, у 4 рази вищий за решту броні (х4), у щитів трохи нижче (х3), а у шоломів, наручів і поножів удвічі вищий за звичайний (х2).
+Скільки дає річ, залежить від того, куди вона одягається: броня на тіло рахується x4, щити й кінська броня x3, шоломи, рукави й поножі x2, решта x1. Персні, амулети, браслети й сережки -- це прикраси: своєї броні в них немає, лише деякі мають магічний додаток до неї.
+
+Броня влаштована по-різному, і {hh1001розпізнання{x називає її тип і те, від чого вона добра, а від чого погана. Лати тримають клинок і вістря, але їх мне булава, кольчуга намертво зупиняє різ, стьобанка ковтає удари кийка й пропускає вістря. Уся броня одного рівня в сумі варта приблизно однаково.
 </text>
     <title l="en">Armour class</title>
     <title l="ru">Класс защиты</title>

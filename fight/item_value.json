@@ -1,5 +1,5 @@
 {
- "_doc": "One item value model, shared by the gear advisor (service advice, characterwrapper.cpp ga_*), the random item generator and Fenia's item measure (.config(\"fight/item_value\")). Units are gear-score points. melee/caster: per-profile weight per point of an apply (level/slevel/skill_level_* per +1, beats per -1% skill lag). shared: profile-independent weights; ac weight is ac_base at level 1 falling to 0 at ac_zero_level; trigger_bonus_skip: vnums whose Fenia scripts are housekeeping (owner or duplicate checks, wear refusals), so the sage gives them no flat trigger bonus. trigger_spells: {vnum: [spell, ...]} an onEquip script casts on the wearer while worn (\"grant:<skill>\" = a skill it lends), scored at their worn (grant) price in fight/spell_value.json instead of the flat trigger bonus. first_life_only: vnums a remorted char cannot wear (Hut trinkets), never advised after a remort. flags: [melee, caster] per affect flag (a flag the char can self-cast counts 10%). res: [res, imm, vuln] per damage class (resists do not stack). measure: one roll of the item measure (M) and the slot factors (rolls = level / factor), tier budgets in M. grant_skill: what an item-granted skill is worth to its wearer. A missing key falls back to the compiled default. docs/plans/armor-generator.md.",
+ "_doc": "One item value model, shared by the gear advisor (service advice, characterwrapper.cpp ga_*), the random item generator and Fenia's item measure (.config(\"fight/item_value\")). Units are gear-score points. melee/caster: per-profile weight per point of an apply (level/slevel/skill_level_* per +1, beats per -1% skill lag). shared: profile-independent weights; ac_weight is the flat weight per composite armor point under the armor model (ac_base at level 1 falling to 0 at ac_zero_level, with the profile ac_floor, only applies without it); trigger_bonus_skip: vnums whose Fenia scripts are housekeeping (owner or duplicate checks, wear refusals), so the sage gives them no flat trigger bonus. trigger_spells: {vnum: [spell, ...]} an onEquip script casts on the wearer while worn (\"grant:<skill>\" = a skill it lends), scored at their worn (grant) price in fight/spell_value.json instead of the flat trigger bonus. first_life_only: vnums a remorted char cannot wear (Hut trinkets), never advised after a remort. flags: [melee, caster] per affect flag (a flag the char can self-cast counts 10%). res: [res, imm, vuln] per damage class (resists do not stack). measure: one roll of the item measure (M) and the slot factors (rolls = level / factor), tier budgets in M. grant_skill: what an item-granted skill is worth to its wearer. A missing key falls back to the compiled default. docs/plans/armor-generator.md.",
  "melee": {
   "hp": 1.0,
   "mana": 0.1,
@@ -70,6 +70,7 @@
    "wrist tattoo": 0.15,
    "remove tattoo": 0.15
   },
+  "ac_weight": 0.45,
   "ac_base": 0.5,
   "ac_zero_level": 40.0,
   "move": 0.05,
@@ -881,7 +882,7 @@
  },
  "cost": {
   "_doc": "Auto price of a prototype in silver (C++ item_auto_cost, fight_core/itemeconomy.cpp): min(measure.cost_cap, base + magic). magic = measure.cost_k x M x level, M = the sage base score / one M at the item level and slot (best of melee, caster). base = by type below + material.json price (silver per kg) x weight in kg; type_floor adds a flat floor per type. A non-take item costs 0. The boot price of a prototype is min(auto, its area-file cost): the model only ever lowers a price, and no <cost> stays 0. A scripted prototype the model finds no stats in keeps its area-file cost. docs/plans/weight-cost-sweep.md 3.4.",
-  "worn_types": ["armor", "clothing", "weapon", "jewelry"],
+  "worn_types": ["armor", "clothing", "weapon", "jewelry", "treasure"],
   "worn_per_level": 14,
   "spell_per_level": 50,
   "charge_per_level": 15,

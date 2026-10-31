@@ -1,0 +1,30 @@
+{
+ "_doc": "The armor model, read by plug-ins/loadsave/tohit.cpp. model 1 turns it on, .toHitModel(0) is the instant brake and .toHitModel(-1) follows this file again. Hit chance: accuracy = base_w x class base + effective hitroll, evasion = ev_level x level + ev_dex x dex x level/100, P = A^hit_pow / (A^hit_pow + E^hit_pow) between p_floor and p_cap. Damage reduction: K = dr_level x victim level + dr_pierce x effective hitroll, x = (armor/K)^dr_pow, share stopped = x/(1+x) up to dr_cap percent. Elemental hits use the exotic column at spell_factor with spell_pierce_level x caster level as effective hitroll. armor_use_bonus: armor per victim level on an armor use success. blind_factor: evasion multiplier against a blind attacker. armor_version: pfile stamp of the armor recompute at login, raise it to rebuild every character once, 0 turns the recompute off. Oracle: reviews/2026-10-30-ac-hitroll-data/c4.py.",
+ "model": 1,
+ "armor_version": 1,
+ "hit_pow": 2.5,
+ "base_w": 0.33,
+ "ev_level": 0.7,
+ "ev_dex": 0.33,
+ "p_floor": 5,
+ "p_cap": 95,
+ "dr_level": 4,
+ "dr_pierce": 4,
+ "dr_pow": 1.5,
+ "dr_cap": 60,
+ "spell_factor": 0.7,
+ "spell_pierce_level": 1.2,
+ "armor_use_bonus": 3,
+ "blind_factor": 1.25,
+ "physical_types": [
+  "bash",
+  "pierce",
+  "slash"
+ ],
+ "exotic_types": [
+  "fire",
+  "cold",
+  "lightning",
+  "acid"
+ ]
+}

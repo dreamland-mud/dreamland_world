@@ -401,15 +401,15 @@
   "mastery_cm_per_level": 18,
   "refit": {"levels_per_unit": 20, "reroll_units": 2, "reroll_max": 5},
   "craft_roll": {
-    "_doc": "Rare, epic and legendary crafts (blacksmith, carpenter, jeweler) roll affixes from the loot pool (Kit 2026-10-15, Fenia craft/armor + utils/craft). center = craft_piece_budget_cm + mastery. Armor: fixed_pct[tier-1] of center goes to the material-shaped dr/hr/hp/mana as before, the rest rolls in [center x (100 - spread_pct)%, center x (100 + spread_pct)%] minus the fixed part. Weapons keep their base row and roll the whole window. max_tier: the worst tier that rolls (3 rare). masterwork_pct + masterwork_per_mastery x mastery (profession 6-10): chance a fresh craft rolls one tier up (3% .. 8%); a legendary masterwork rolls only the top half; rerolls never do. refit.reroll_units: craft reroll costs that many main-material units more each time on the same piece (2, 4, 6...), counted in the craft_rerolls property, at most refit.reroll_max rerolls per piece (Kit 2026-10-24).",
+    "_doc": "Rare, epic and legendary crafts (blacksmith, carpenter, jeweler) roll affixes from the loot pool (Kit 2026-10-15, Fenia craft/armor + utils/craft). center = (craft_piece_budget_cm + mastery) x min(1, loot affix window curve at the item level and owner profile) (Kit 2026-10-30, .tmp.craft.levelCut; uncommon 130, spread 20). Armor: fixed_pct[tier-1] of center goes to the material-shaped dr/hr/hp/mana as before, the rest rolls in [center x (100 - spread_pct)%, center x (100 + spread_pct)%] minus the fixed part. Weapons keep their base row and roll the whole window. max_tier: the worst tier that rolls (3 rare). masterwork_pct + masterwork_per_mastery x mastery (profession 6-10): chance a fresh craft rolls one tier up (3% .. 8%); a legendary masterwork rolls only the top half; rerolls never do. refit.reroll_units: craft reroll costs that many main-material units more each time on the same piece (2, 4, 6...), counted in the craft_rerolls property, at most refit.reroll_max rerolls per piece (Kit 2026-10-24).",
     "max_tier": 3,
     "fixed_pct": [40, 50, 60],
-    "spread_pct": 30,
+    "spread_pct": 20,
     "masterwork_pct": 3,
     "masterwork_per_mastery": 1
   },
   "craft_budget_cm": [160, 120, 80, 50, 30],
-  "craft_piece_budget_cm": [400, 220, 150, 100, 50],
+  "craft_piece_budget_cm": [400, 220, 150, 130, 50],
   "enchant_budget_cm": [150, 250],
   "repair_cm": [315, 175, 105, 70, 35],
   "tier_budget": {

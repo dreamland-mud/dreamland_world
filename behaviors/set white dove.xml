@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<behavior type="SetBehavior">
+  <cmd></cmd>
+  <description l="en">{hh990Wear{x it to assemble the {hh5167Dancing in Jeans set{x.</description>
+  <description l="ru">{hh990Надень{x, чтобы собрать {hh5167набор 'Танцы в джинсах'{x.</description>
+  <description l="ua">{hh990Одягни{x, щоб зібрати {hh5167набір 'Танці в джинсах'{x.</description>
+  <help id="5167" seealso="67" level="-1" type="BehaviorHelp">
+    <extra l="en">set white dove blue jeans dancing denim pieces collection</extra>
+    <extra l="ru">набор танцы в джинсах белый голубок голубочек синие джинсы части комплект</extra>
+    <extra l="ua">набір танці в джинсах білий голубок голубочок сині джинси частини комплект</extra>
+    <text l="en">This item is part of the Dancing in Jeans set -- a matched set of 2 pieces from {hh2140Sad Songs and Waltzes{x: the tiny white dove and the lovingly sewn blue jeans. You can't buy them. The girl with magnetic eyes and the seamstress part with them only for a dance, and one of them cries about it. Wear both together to assemble the set; once complete it grants its bonus. Wear one and you gain nothing extra, you just look strange. The jeans won't go over a good heart, so saints sit this one out.</text>
+    <text l="ru">Эта вещь -- часть набора 'Танцы в джинсах' из 2 предметов из зоны {hh2140Песни и пляски{x: белый голубочек и с любовью сшитые синие джинсы. Купить их нельзя. Девушка с магнитными глазами и швея отдают их только за танец, и одна из них при этом рыдает. Надень оба сразу, чтобы собрать набор; собранный целиком, он дает свой бонус. Наденешь что-то одно -- ничего сверх не получишь, только будешь странно выглядеть. На доброе сердце джинсы не налезут, так что святошам остается смотреть из угла.</text>
+    <text l="ua">Ця річ -- частина набору 'Танці в джинсах' із 2 предметів із зони {hh2140Пісні та танці{x: білий голубочок і з любовʼю зшиті сині джинси. Купити їх не можна. Дівчина з магнітними очима і швачка віддають їх лише за танець, і одна з них при цьому ридає. Надінь обидва разом, щоб зібрати набір; зібраний цілком, він дає свій бонус. Надінеш щось одне -- нічого понад не отримаєш, тільки дивно виглядатимеш. На добре серце джинси не налізуть, тож святенникам лишається дивитися з кутка.</text>
+    <title l="en">{CSets:{x Dancing in Jeans</title>
+    <title l="ru">{CНаборы: {xТанцы в джинсах</title>
+    <title l="ua">{CНабори:{x Танці в джинсах</title>
+  </help>
+  <id>120</id>
+  <nameEn>Dancing in Jeans</nameEn>
+  <nameRus>Танцы в джинсах</nameRus>
+  <nameUa>Танці в джинсах</nameUa>
+  <props>{&quot;double_neck&quot;:false,&quot;double_wrist&quot;:false,&quot;max_level&quot;:110,&quot;total_count&quot;:2}
+</props>
+  <affects>
+    <node>
+      <apply to="hit">20</apply>
+    </node>
+    <node>
+      <apply to="move">60</apply>
+    </node>
+    <node>
+      <apply to="cha">3</apply>
+    </node>
+    <node>
+      <apply to="saves">-2</apply>
+    </node>
+  </affects>
+  <msgComplete l="en">{WThe dove goes quiet in your palms, the jeans remember every step: somewhere a seamstress sobs, and your feet start dancing without you.{x</msgComplete>
+  <msgComplete l="ru">{WГолубок затихает в твоих ладонях, джинсы вспоминают каждый шаг: где-то рыдает швея, а ноги сами пускаются в пляс.{x</msgComplete>
+  <msgComplete l="ua">{WГолубок затихає у твоїх долонях, джинси згадують кожен крок: десь ридає швачка, а ноги самі пускаються в танок.{x</msgComplete>
+  <target>obj</target>
+</behavior>

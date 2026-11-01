@@ -1,0 +1,57 @@
+{
+ "_doc": "Saves vs spell model (docs/systems/SAVES_REWORK.md, Kit decisions 2026-11-01). Read by plug-ins/fight/magic.cpp (CONFIGURABLE fight/saves) and by Fenia through .config(\"fight/saves\"). model 0 = the legacy linear roll, bit for bit; model 1 = P = clamp(base + span * (1 - e^-r) + per_level * (Lv - Lc) + shifts, floor, ceiling), r = svs / (tau * max(level_floor, Lv)), svs = -saving_throw, Lv = victim modify level, Lc = cast level, P in percent, rolled in permille. A missing file, a missing model key or any missing model 1 knob means model 0. Rollback = model 0, then .configReload(\"fight/saves\") or plug reload fight.",
+ "model": 0,
+
+ "base": 40,
+ "span": 50,
+ "_span": "svs part weight: ceiling - base. svs closes 95% of it at r = 3.",
+ "per_level": 3,
+ "_per_level": "percent per level of victim minus cast level, added after the curve.",
+ "floor": 5,
+ "ceiling": 90,
+ "tau": 0.45,
+ "_tau": "realistic max svs (about 1.35 x max(level_floor, Lv)) closes 95% of the svs part. Phase 0, after the pack_aegis cut.",
+ "level_floor": 45,
+
+ "shift": {
+  "_doc": "Fixed shifts in percent: resist and berserk +(base + Lv / per_level_div), vulnerable and holy craft -(the same). Integer division. Immune always saves.",
+  "base": 5,
+  "per_level_div": 10
+ },
+
+ "charm": {
+  "_doc": "DAM_CHARM only, today's cha math as shifts: -per_cha x (caster cha - victim cha); a PC victim with cha below low_cha takes another -low_cha_pc.",
+  "per_cha": 2,
+  "low_cha": 18,
+  "low_cha_pc": 10
+ },
+
+ "dispel": {
+  "_doc": "savesDispel under model 1: save = base + per_level x (affect level - dispel level), clipped min..max. Permanent affects (duration -2) never dispel, duration -1 counts 5 levels higher. Own debuff = an affect whose sources list the dispeller, sitting on somebody else (dispel affects on an enemy you put to sleep): the dispel part of the chance is scaled by own_debuff_pct. Only affects with a recorded source (Fenia af.source = ch) can be own debuffs. Fenia .tmp.object.savesDispel / .tmp.room.savesDispel keep their own formula (Phase 2).",
+  "base": 50,
+  "per_level": 4,
+  "min": 10,
+  "max": 90,
+  "own_debuff_pct": 50
+ },
+
+ "instakill": {
+  "_doc": "Read by Fenia (dreamland_fenia utils/spells procInstaKillImpl, Phase 2), not by C++. Under model 1: a made save always survives; a failed save kills only through the per-spell gate, for players and mobs (boss and legend tiers stay exempt). gate % = gates[spell] x skill / 100 + stat_weight x urange(-stat_cap, caster int - victim con, stat_cap); agile victim (thief, ninja): the int/con part x agile_stat_pct / 100; clamp gate_min..gate_max; NPC caster counts as skill 100; immortal caster always lands. A Taiphoen-patron caster rerolls a missed gate at reroll_pct of the gate (100 = full reroll). A failed witch curse on a player tires the witch for witch_fail_fatigue ticks.",
+  "gates": {
+   "power word kill": 50,
+   "disintegrate": 50,
+   "witch curse": 41,
+   "sleep": 75,
+   "paralysis": 94,
+   "narcotic mist": 38,
+   "banishment": 50
+  },
+  "stat_weight": 2,
+  "stat_cap": 5,
+  "agile_stat_pct": 50,
+  "gate_min": 5,
+  "gate_max": 95,
+  "reroll_pct": 100,
+  "witch_fail_fatigue": 1
+ }
+}

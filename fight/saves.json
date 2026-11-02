@@ -1,6 +1,6 @@
 {
  "_doc": "Saves vs spell model (docs/systems/SAVES_REWORK.md, Kit decisions 2026-11-01). Read by plug-ins/fight/magic.cpp (CONFIGURABLE fight/saves) and by Fenia through .config(\"fight/saves\"). model 0 = the legacy linear roll, bit for bit; model 1 = P = clamp(base + span * (1 - e^-r) + per_level * (Lv - Lc) + shifts, floor, ceiling), r = svs / (tau * max(level_floor, Lv)), svs = -saving_throw, Lv = victim modify level, Lc = cast level, P in percent, rolled in permille. A cursed victim (saving_throw > 0) takes the legacy linear term -(saving_throw x 90) / max(45, Lv) in place of span x (1 - e^-r). A missing file, a missing model key, or any model 1 curve knob missing or out of range (span >= 0, tau > 0, 0 <= floor <= ceiling <= 100) means model 0, logged once. Fenia reads the effective model with .savesModel(). Rollback = model 0, then .configReload(\"fight/saves\") or plug reload fight.",
- "model": 0,
+ "model": 1,
 
  "base": 40,
  "span": 50,

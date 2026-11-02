@@ -28,7 +28,7 @@
  },
 
  "dispel": {
-  "_doc": "savesDispel under model 1: save = base + per_level x (affect level - dispel level), clipped min..max. Permanent affects (duration -2) never dispel, duration -1 counts 5 levels higher. Own debuff = an affect whose sources list the dispeller, sitting on somebody else (dispel affects on an enemy you put to sleep): the dispel part of the chance is scaled by own_debuff_pct. Only affects with a recorded source (Fenia af.source = ch) can be own debuffs. Fenia .tmp.object.savesDispel / .tmp.room.savesDispel keep their own formula (Phase 2).",
+  "_doc": "savesDispel under model 1: save = base + per_level x (affect level - dispel level), clipped min..max. Permanent affects (duration -2) never dispel, duration -1 counts 5 levels higher. Own debuff = an affect whose sources list the dispeller, sitting on somebody outside the dispeller's group (dispel affects on an enemy you put to sleep; your own sleep or calm on a groupmate is not penalised): the dispel part of the chance is scaled by own_debuff_pct. Only affects with a recorded source (Fenia af.source = ch) can be own debuffs.",
   "base": 50,
   "per_level": 4,
   "min": 10,
@@ -37,7 +37,7 @@
  },
 
  "instakill": {
-  "_doc": "Read by Fenia (dreamland_fenia utils/spells procInstaKillImpl, Phase 2), not by C++. Under model 1: a made save always survives; a failed save kills only through the per-spell gate, for players and mobs (boss and legend tiers stay exempt). gate % = gates[spell] x skill / 100 + stat_weight x urange(-stat_cap, caster int - victim con, stat_cap); agile victim (thief, ninja): the int/con part x agile_stat_pct / 100; clamp gate_min..gate_max; NPC caster counts as skill 100; immortal caster always lands. A Taiphoen-patron caster rerolls a missed gate at reroll_pct of the gate (100 = full reroll). A failed witch curse on a player tires the witch for witch_fail_fatigue ticks.",
+  "_doc": "Read by Fenia (dreamland_fenia utils/spells procInstaKillImpl, Phase 2), not by C++. Under model 1: a made save always survives; a failed save kills only through the per-spell gate, for players and mobs (boss and legend tiers stay exempt). gate % = gates[spell] x skill / 100 + stat_weight x urange(-stat_cap, caster int - victim con, stat_cap); agile victim (thief, ninja): the int/con part x agile_stat_pct / 100; clamp gate_min..gate_max; NPC caster counts as skill 100; immortal caster always lands. A Taiphoen-patron caster rerolls a missed gate at reroll_pct of the gate (100 = full reroll). A failed gate roll tires the witch for witch_fail_fatigue ticks (any victim except boss/legend exempt and immune targets).",
   "gates": {
    "power word kill": 50,
    "disintegrate": 50,

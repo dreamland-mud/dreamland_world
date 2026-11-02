@@ -1,5 +1,5 @@
 {
- "_doc": "Saves vs spell model (docs/systems/SAVES_REWORK.md, Kit decisions 2026-11-01). Read by plug-ins/fight/magic.cpp (CONFIGURABLE fight/saves) and by Fenia through .config(\"fight/saves\"). model 0 = the legacy linear roll, bit for bit; model 1 = P = clamp(base + span * (1 - e^-r) + per_level * (Lv - Lc) + shifts, floor, ceiling), r = svs / (tau * max(level_floor, Lv)), svs = -saving_throw, Lv = victim modify level, Lc = cast level, P in percent, rolled in permille. A missing file, a missing model key or any missing model 1 knob means model 0. Rollback = model 0, then .configReload(\"fight/saves\") or plug reload fight.",
+ "_doc": "Saves vs spell model (docs/systems/SAVES_REWORK.md, Kit decisions 2026-11-01). Read by plug-ins/fight/magic.cpp (CONFIGURABLE fight/saves) and by Fenia through .config(\"fight/saves\"). model 0 = the legacy linear roll, bit for bit; model 1 = P = clamp(base + span * (1 - e^-r) + per_level * (Lv - Lc) + shifts, floor, ceiling), r = svs / (tau * max(level_floor, Lv)), svs = -saving_throw, Lv = victim modify level, Lc = cast level, P in percent, rolled in permille. A cursed victim (saving_throw > 0) takes the legacy linear term -(saving_throw x 90) / max(45, Lv) in place of span x (1 - e^-r). A missing file, a missing model key, or any model 1 curve knob missing or out of range (span >= 0, tau > 0, 0 <= floor <= ceiling <= 100) means model 0, logged once. Fenia reads the effective model with .savesModel(). Rollback = model 0, then .configReload(\"fight/saves\") or plug reload fight.",
  "model": 0,
 
  "base": 40,
@@ -20,14 +20,15 @@
  },
 
  "charm": {
-  "_doc": "DAM_CHARM only, today's cha math as shifts: -per_cha x (caster cha - victim cha); a PC victim with cha below low_cha takes another -low_cha_pc.",
+  "_doc": "DAM_CHARM only: -per_cha x (caster cha - victim cha); a PC victim with cha below low_cha takes another -(low_cha_pc_base + Lv / low_cha_pc_per_level_div), integer division, like every other shift.",
   "per_cha": 2,
   "low_cha": 18,
-  "low_cha_pc": 10
+  "low_cha_pc_base": 5,
+  "low_cha_pc_per_level_div": 10
  },
 
  "dispel": {
-  "_doc": "savesDispel under model 1: save = base + per_level x (affect level - dispel level), clipped min..max. Permanent affects (duration -2) never dispel, duration -1 counts 5 levels higher. Own debuff = an affect whose sources list the dispeller, sitting on somebody else (dispel affects on an enemy you put to sleep): the dispel part of the chance is scaled by own_debuff_pct. Only affects with a recorded source (Fenia af.source = ch) can be own debuffs. Fenia .tmp.object.savesDispel / .tmp.room.savesDispel keep their own formula (Phase 2).",
+  "_doc": "savesDispel under model 1: save = base + per_level x (affect level - dispel level), clipped min..max. Permanent affects (duration -2) never dispel, duration -1 counts 5 levels higher. Own debuff = an affect whose sources list the dispeller, sitting on somebody outside the dispeller's group (dispel affects on an enemy you put to sleep; your own sleep or calm on a groupmate is not penalised): the dispel part of the chance is scaled by own_debuff_pct. Only affects with a recorded source (Fenia af.source = ch) can be own debuffs.",
   "base": 50,
   "per_level": 4,
   "min": 10,
@@ -36,7 +37,7 @@
  },
 
  "instakill": {
-  "_doc": "Read by Fenia (dreamland_fenia utils/spells procInstaKillImpl, Phase 2), not by C++. Under model 1: a made save always survives; a failed save kills only through the per-spell gate, for players and mobs (boss and legend tiers stay exempt). gate % = gates[spell] x skill / 100 + stat_weight x urange(-stat_cap, caster int - victim con, stat_cap); agile victim (thief, ninja): the int/con part x agile_stat_pct / 100; clamp gate_min..gate_max; NPC caster counts as skill 100; immortal caster always lands. A Taiphoen-patron caster rerolls a missed gate at reroll_pct of the gate (100 = full reroll). A failed witch curse on a player tires the witch for witch_fail_fatigue ticks.",
+  "_doc": "Read by Fenia (dreamland_fenia utils/spells procInstaKillImpl, Phase 2), not by C++. Under model 1: a made save always survives; a failed save kills only through the per-spell gate, for players and mobs (boss and legend tiers stay exempt). gate % = gates[spell] x skill / 100 + stat_weight x urange(-stat_cap, caster int - victim con, stat_cap); agile victim (thief, ninja): the int/con part x agile_stat_pct / 100; clamp gate_min..gate_max; NPC caster counts as skill 100; immortal caster always lands. A Taiphoen-patron caster rerolls a missed gate at reroll_pct of the gate (100 = full reroll). A witch curse that does not kill (made save or failed gate) tires the witch for witch_fail_fatigue ticks; boss/legend exempt, immune targets and an unusable skill cost nothing.",
   "gates": {
    "power word kill": 50,
    "disintegrate": 50,

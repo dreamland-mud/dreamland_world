@@ -10,7 +10,7 @@
 
 The walls in some bars, taverns, and jails can be scratched with nails and other sharp objects, leaving your invaluable thoughts for posterity. However, only the Gods can erase a message from the wall, so write carefully.
 
-{WText is added and removed line by line{x so it's better to write the text somewhere separately on your computer first, and then enter one line at a time.
+{WThe commands below add and remove text line by line.{x Long text is easier to write in the {hh1057web editor{x: open it with *webedit*, write the text, press Save, then paste it onto a page with *%CMD%* _parchment_ _section_ {ypaste{x.
 
 %FMT% *%CMD%* _wall_ {y+{x _line of text_
 Scratch a _line of text_ on a wall, after which it can be read by looking at the wall.
@@ -25,6 +25,12 @@ Add a _line of text_ to the page named "_section_" in the item "_parchment_".
 %FMT% *%CMD%* _parchment_ _section_ {yclear{x
 Delete the last line from the specified section or clear it completely.
 
+%FMT% *%CMD%* _parchment_ _section_ {ycopy{x
+Copy the text of the section into the editor buffer, to fix it in the web editor.
+
+%FMT% *%CMD%* _parchment_ _section_ {ypaste{x
+Replace the text of the section with the contents of the editor buffer. Paste doesn't work on walls.
+
 {CEXAMPLE{x
 *%CMD%* notebook face + Table of Contents: *%CMD%* notebook face + on the first page (page1) will be a photo album, *%CMD%* notebook face + on the second -- haven't thought of it yet, what exactly. *%CMD%* notebook page1 + On the page of the photo album is my photograph (photo) pasted. *%CMD%* notebook photo + What a face I have! Must be a very old photo...
 
@@ -34,7 +40,7 @@ After this, {y"view photo"{x will show the photograph, {y"view notebook"{x -- th
 
 Стенки в некоторых барах, тавернах, тюрьмах можно шкрябать гвоздями и прочими острыми предметами, оставляя потомкам свои бесценные мысли. Однако стереть сообщение со стены могут только Боги, так что пиши осторожней.
 
-{WТекст добавляется и удаляется построчно{x поэтому лучше сначала записать текст куда-то отдельно на компьютере, а потом ввести по одной строке
+{WКоманды ниже добавляют и удаляют текст построчно.{x Длинный текст удобнее писать в {hh1057веб-редакторе{x: открой его командой *вебредактор*, напиши текст, нажми Save и вставь его на страницу командой *%CMD%* _пергамент_ _раздел_ {yвставить{x.
 
 %FMT% *%CMD%* _стенка_ {y+{x _строка текста_
 Нацарапать _строку текста_ на стене, после чего его можно прочесть, взглянув на стену. 
@@ -49,6 +55,12 @@ After this, {y"view photo"{x will show the photograph, {y"view notebook"{x -- th
 %FMT% *%CMD%* _пергамент_ _раздел_ {yclear{x
 Удалить последнюю строку из указанного раздела или полностью очистить его.
 
+%FMT% *%CMD%* _пергамент_ _раздел_ {yкопировать{x
+Скопировать текст раздела в буфер редактора, чтобы поправить его в веб-редакторе.
+
+%FMT% *%CMD%* _пергамент_ _раздел_ {yвставить{x
+Заменить текст раздела содержимым буфера редактора. На стены так не вставить.
+
 {CПРИМЕР{x
 *%CMD%* блокнот face + Оглавление: *%CMD%* блокнот face + на первой странице (page1) будет фотоальбом, *%CMD%* блокнот face + на второй -- пока не придумал{Sfа{Sx, что именно. *%CMD%* блокнот страница1 + На странице фотоальбома приклеена моя фотография (фото). *%CMD%* блокнот фото + Ну и физиономия у меня! Должно быть, очень старое фото...
 
@@ -58,7 +70,7 @@ After this, {y"view photo"{x will show the photograph, {y"view notebook"{x -- th
 
 Стіни в деяких барах, тавернах, вʼязницях можна шкребти цвяхами та іншими гострими предметами, залишаючи нащадкам свої безцінні думки. Однак стерти повідомлення зі стіни можуть тільки Боги, тож пиши обережніше.
 
-{WТекст додається та видаляється построчно{x тому краще спочатку записати текст кудись окремо на компʼютері, а потім ввести построчно.
+{WКоманди нижче додають і видаляють текст порядково.{x Довгий текст зручніше писати у {hh1057веб-редакторі{x: відкрий його командою *вебредактор*, напиши текст, натисни Save і встав його на сторінку командою *%CMD%* _пергамент_ _розділ_ {yвставити{x.
 
 %FMT% *%CMD%* _стіна_ {y+{x _рядок тексту_
 Нашкрябати _рядок тексту_ на стіні, після чого його можна прочитати, глянувши на стіну.
@@ -72,6 +84,12 @@ After this, {y"view photo"{x will show the photograph, {y"view notebook"{x -- th
 %FMT% *%CMD%* _пергамент_ _розділ_ {y-{x
 %FMT% *%CMD%* _пергамент_ _розділ_ {yclear{x
 Видалити останній рядок із вказаного розділу або повністю очистити його.
+
+%FMT% *%CMD%* _пергамент_ _розділ_ {yкопіювати{x
+Скопіювати текст розділу до буфера редактора, щоб виправити його у веб-редакторі.
+
+%FMT% *%CMD%* _пергамент_ _розділ_ {yвставити{x
+Замінити текст розділу вмістом буфера редактора. На стіни так не вставиш.
 
 {CПРИКЛАД{x
 *%CMD%* блокнот лице + Зміст: *%CMD%* блокнот лице + на першій сторінці (page1) буде фотоальбом, *%CMD%* блокнот лице + на другій -- поки не знаю, що саме. *%CMD%* блокнот сторінка1 + На сторінці фотоальбому наклеєна моя фотографія (фото). *%CMD%* блокнот фото + Ну й фізіономія у мене! Напевно, дуже старе фото...

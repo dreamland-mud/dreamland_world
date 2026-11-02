@@ -3584,11 +3584,11 @@ A few examples of sets (there are more in the world):
 
 {CLevels.{x Against a caster of your own level you start at {W40%{x. Every level the caster's spell is above you takes 3%, every level below adds 3%. The caster's {hh2036spell level{x counts, not just the real level.
 
-{CSpell defence.{x The negative number "Spell defence" in {hh999score{x adds on top, and the returns diminish: the first points help most. At level 50, 32 points lift you from 40% to about 78%, and a fully stacked character (around 1.35 points per level, 67 at level 50) reaches about 88%. At level 100, 30 points give about 64%, 85 points about 82%, a full stack about 88%. Bigger caster levels cut straight through all of it.
+{CSpell defence.{x The negative number "Saves" in {hh999score{x adds on top, and the returns diminish: the first points help most. At level 50, 32 points lift you from 40% to about 78%, and a fully stacked character (around 1.35 points per level, 67 at level 50) reaches about 88%. At level 100, 30 points give about 64%, 85 points about 82%, a full stack about 88%. Bigger caster levels cut straight through all of it.
 
-{CShifts.{x Resistance to the spell's {hh101damage type{x, or resistance to magic (it now counts for ALL spells and prayers), adds 5 + level/10 percent. Vulnerability takes the same amount. So does {hh829berserk{x (it adds), and a good caster's {hh2033holy craft{x against evil (it takes). Curses that worsen your saves, like {hh548curse{x or {hh800anathema{x, hurt in a straight line: the more you are cursed, the lower the chance.
+{CShifts.{x Resistance to the spell's {hh101damage type{x, adds 5 + level/10 percent. Resistance to spells ({hh811spell resistance{x, some races) now counts for every spell and prayer, resistance to magic counts against magic and resistance to prayers against prayers. Vulnerability takes the same amount. So does {hh829berserk{x (it adds), and a good caster's {hh2033holy craft{x against evil (it takes). Curses that worsen your saves, like {hh548curse{x or {hh800anathema{x, move you back along the same curve. If they push your spell defence above zero, every point past zero costs a fixed amount.
 
-Whatever you stack, the chance never falls below {W5%{x and never rises above {W90%{x.
+Whatever you stack, the chance never falls below {W5%{x and never rises above {W90%{x, unless you are immune.
 
 {CDeadly spells.{x {hh690Power word kill{x, {hh791disintegrate{x, {hh712witch curse{x, {hh741sleep{x, {hh645paralysis{x, {hh813narcotic mist{x and {hh794banishment{x: a successful save always protects you. A failed save is not automatically fatal, there is a second roll per spell.
 
@@ -3602,9 +3602,9 @@ Whatever you stack, the chance never falls below {W5%{x and never rises above {W
 
 {CЗащита от заклинаний.{x Отрицательное число "Защита от заклинаний" в {hh999score{x прибавляется сверху, причем с убывающей отдачей: первые пункты помогают сильнее всего. На 50 уровне 32 пункта поднимают тебя с 40% примерно до 78%, а полностью упакованный персонаж (около 1.35 пункта на уровень, 67 на 50 уровне) доходит примерно до 88%. На 100 уровне 30 пунктов дают около 64%, 85 пунктов -- около 82%, полный комплект -- около 88%. Высокий уровень заклинателя прорезает все это напрямую.
 
-{CСдвиги.{x Сопротивляемость {hh101типу воздействия{x заклинания или сопротивляемость магии (теперь она работает для ВСЕХ заклинаний и молитв) прибавляет 5 + уровень/10 процентов. Уязвимость отнимает столько же. Столько же прибавляет {hh829берсерк{x и столько же отнимает {hh2033священное искусство{x доброго заклинателя против злых. Проклятия, ухудшающие спасброски, например {hh548проклятие{x или {hh800анафема{x, бьют по прямой: чем сильнее проклят, тем ниже шанс.
+{CСдвиги.{x Сопротивляемость {hh101типу воздействия{x заклинания прибавляет 5 + уровень/10 процентов. Сопротивляемость заклинаниям ({hh811отпор заклятий{x, некоторые расы) теперь работает для всех заклинаний и молитв, сопротивляемость магии -- против магии, молитвам -- против молитв. Уязвимость отнимает столько же. Столько же прибавляет {hh829берсерк{x и столько же отнимает {hh2033священное искусство{x доброго заклинателя против злых. Проклятия, ухудшающие спасброски, например {hh548проклятие{x или {hh800анафема{x, отодвигают тебя назад по той же кривой. Если они вытолкнули защиту от заклинаний выше нуля, каждый пункт сверх нуля стоит фиксированную долю.
 
-Как бы ты ни стакал защиту, шанс никогда не падает ниже {W5%{x и не поднимается выше {W90%{x.
+Как бы ты ни стакал защиту, шанс никогда не падает ниже {W5%{x и не поднимается выше {W90%{x, если у тебя нет иммунитета.
 
 {CСмертельные заклинания.{x {hh690Слово силы: смерть{x, {hh791дезинтеграция{x, {hh712проклятие ведьмы{x, {hh741сон{x, {hh645паралич{x, {hh813дурманящий туман{x и {hh794изгнание{x: удачный спасбросок всегда защищает. Проваленный -- еще не смерть, у каждого заклинания есть второй бросок.
 
@@ -3614,19 +3614,19 @@ Whatever you stack, the chance never falls below {W5%{x and never rises above {W
 </text>
     <text l="ua">Коли в тебе влучають ворожі {hh1361закляття{x (магія чи молитва), гра кидає твій =рятівний кидок=. Вдалий кидок зазвичай зменшує ефект або повністю його скасовує. Шанс опору залежить від рівнів, від твого захисту від заклять і від кількох зсувів.
 
-{CРівні.{x Проти чаклуна твого рівня ти починаєш із {W40%{x. Кожен рівень, на який закляття вище за тебе, віднімає 3%, кожен рівень нижче -- додає 3%. Враховується {hh2036рівень закляття{x, а не лише справжній рівень.
+{CРівні.{x Проти заклинача твого рівня ти починаєш із {W40%{x. Кожен рівень, на який закляття вище за тебе, віднімає 3%, кожен рівень нижче -- додає 3%. Враховується {hh2036рівень закляття{x, а не лише справжній рівень.
 
 {CЗахист від заклять.{x Відʼємне число "Захист від заклять" у {hh999score{x додається зверху, причому з убутною віддачею: перші пункти допомагають найбільше. На 50 рівні 32 пункти піднімають тебе з 40% приблизно до 78%, а повністю напакований персонаж (близько 1.35 пункта на рівень, 67 на 50 рівні) доходить приблизно до 88%. На 100 рівні 30 пунктів дають близько 64%, 85 пунктів -- близько 82%, повний комплект -- близько 88%. Високий рівень закляття прорізає все це напряму.
 
-{CЗсуви.{x Стійкість до {hh101типу впливу{x закляття або стійкість до магії (тепер вона працює для УСІХ заклять і молитов) додає 5 + рівень/10 відсотків. Вразливість віднімає стільки ж. Стільки ж додає {hh829берсерк{x і стільки ж віднімає {hh2033священне мистецтво{x доброго чаклуна проти злих. Прокляття, що погіршують рятівні кидки, наприклад {hh548прокляття{x чи {hh800анатема{x, бʼють по прямій: чим дужче проклятий, тим нижчий шанс.
+{CЗсуви.{x Стійкість до {hh101типу впливу{x закляття додає 5 + рівень/10 відсотків. Стійкість до заклять ({hh811захист від заклять{x, деякі раси) тепер працює для всіх заклять і молитов, стійкість до магії -- проти магії, до молитов -- проти молитов. Вразливість віднімає стільки ж. Стільки ж додає {hh829берсерк{x і стільки ж віднімає {hh2033священне мистецтво{x доброго заклинача проти злих. Прокляття, що погіршують рятівні кидки, наприклад {hh548прокляття{x чи {hh800анатема{x, відсувають тебе назад по тій самій кривій. Якщо вони виштовхнули захист від заклять вище нуля, кожен пункт понад нуль коштує фіксовану частку.
 
-Хоч як ти стакав захист, шанс ніколи не падає нижче {W5%{x і не піднімається вище {W90%{x.
+Хоч як би ти стакав захист, шанс ніколи не падає нижче {W5%{x і не піднімається вище {W90%{x, якщо в тебе немає імунітету.
 
 {CСмертельні закляття.{x {hh690Слово сили: смерть{x, {hh791дезінтеграція{x, {hh712прокляття відьми{x, {hh741сон{x, {hh645параліч{x, {hh813дурманний туман{x і {hh794вигнання{x: вдалий кидок завжди захищає. Провалений -- ще не смерть, у кожного закляття є другий кидок.
 
 {CРозсіювання.{x {hh821Скасування{x і {hh808розсіювання{x теж ідуть по мʼякій кривій: 4% за кожен рівень різниці заклять, але не менше 10% і не більше 90%. Свої власні прокляття на ворогові ти знімаєш своїм розсіюванням гірше.
 
-{hh999Score{x показує твій шанс опору чаклунові твого рівня і скільки шкоди зупиняє твоя броня. {hh603Розпізнавання{x і {hh644знання легенд{x показують, що змінює річ. Захист від заклять і далі звичайне число в score та на речах: чим воно відʼємніше, тим краще.
+{hh999Score{x показує твій шанс опору заклиначеві твого рівня і скільки шкоди зупиняє твоя броня. {hh603Розпізнавання{x і {hh644знання легенд{x показують, що змінює річ. Захист від заклять і далі звичайне число в score та на речах: чим воно відʼємніше, тим краще.
 </text>
     <title l="en">Spell protection, saving throws</title>
     <title l="ru">Защита от заклинаний, спасброски</title>

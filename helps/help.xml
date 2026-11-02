@@ -3574,35 +3574,59 @@ A few examples of sets (there are more in the world):
     <title l="ua">Набори та комплекти речей</title>
   </node>
   <node id="2035" level="-1" type="Help" labels="magic">
-    <extra l="en">'saves vs spell' svs</extra>
-    <extra l="ru">савесы спас-бросок спасс-бросок спассбросок 'защита от магии' 'защита от выдохов'</extra>
-    <extra l="ua">сейви спас-бросок спас-бросок спас-бросок 'захист від магії' 'захист від видихань'</extra>
+    <extra l="en">'saves vs spell' svs 'saving throw' 'spell resistance' 'chance to resist'</extra>
+    <extra l="ru">савесы спас-бросок спасс-бросок спассбросок 'защита от магии' 'защита от выдохов' 'шанс сопротивления'</extra>
+    <extra l="ua">сейви спас-бросок спас-бросок спас-бросок 'захист від магії' 'захист від видихань' 'шанс опору'</extra>
     <keyword l="en">saves</keyword>
     <keyword l="ru">спасбросок 'защита от заклинаний'</keyword>
     <keyword l="ua">спас-бросок 'захист від закликань'</keyword>
-    <text l="en">The effectiveness of combat {hh1361spells{x (magic and prayers) usually depends on the {hh2036spell level{x and how strong the target's =spell defence= is. The lower this parameter, the better the victim's chances of saving -- rolling a successful so-called =saving throw=. In that case the spell's effect is usually reduced or ignored entirely.
+    <text l="en">When a hostile {hh1361spell{x (magic or prayer) hits you, the game rolls your =saving throw=. A successful save usually reduces the effect or ignores it entirely. Your chance to resist depends on levels, on your spell defence and on a few shifts.
 
-You can improve spell defence (lower the parameter) with items or various skills: for example, the prayer of {hh766bless{x or the skill {hh860battle cry{x.
+{CLevels.{x Against a caster of your own level you start at {W40%{x. Every level the caster's spell is above you takes 3%, every level below adds 3%. The caster's {hh2036spell level{x counts, not just the real level.
 
-When {hh603identifying{x items you can sometimes see very specific variants of spell defence (for example, protection from breaths). All these variants equally strengthen overall spell defence. Once more, {Wthe lower the better.{x
+{CSpell defence.{x The negative number "Spell defence" in {hh999score{x adds on top, and the returns diminish: the first points help most. At level 50, 32 points lift you from 40% to about 78%, and a fully stacked character (around 1.35 points per level, 67 at level 50) reaches about 88%. At level 100, 30 points give about 63%, 85 points about 82%, a full stack about 88%. Bigger caster levels cut straight through all of it.
 
-Each spell has a certain {hh101damage type{x against which an opponent may have resistance or, conversely, vulnerability. In addition, there are vulnerabilities or resistances specifically against magic and specifically against prayers.
+{CShifts.{x Resistance to the spell's {hh101damage type{x, or resistance to magic (it now counts for ALL spells and prayers), adds 5 + level/10 percent. Vulnerability takes the same amount. So does {hh829berserk{x (it adds), and a good caster's {hh2033holy craft{x against evil (it takes). Curses that worsen your saves, like {hh548curse{x or {hh800anathema{x, hurt in a straight line: the more you are cursed, the lower the chance.
+
+Whatever you stack, the chance never falls below {W5%{x and never rises above {W90%{x.
+
+{CDeadly spells.{x {hh690Power word kill{x, {hh791disintegrate{x, {hh712witch curse{x, {hh741sleep{x, {hh645paralysis{x, {hh813narcotic mist{x and {hh794banishment{x: a successful save always protects you. A failed save is not automatically fatal, there is a second roll per spell.
+
+{CDispel.{x {hh821Cancellation{x and {hh808dispel affects{x use a soft curve too: 4% per spell level of difference, never below 10% or above 90%. Your own curses on an enemy are harder to remove with your own dispel.
+
+{hh999Score{x shows your chance to resist a caster of your level and how much damage your armor stops. {hh603Identify{x and {hh644lore{x show what an item changes. Lower spell defence is still a plain number in score and on items: the more negative, the better.
 </text>
-    <text l="ru">Эффективность боевых {hh1361заклинаний{x (магии и молитв) обычно зависит от {hh2036уровня заклинания{x и того, насколько сильна =защита от заклинаний= у цели. Чем меньше этот параметр, тем больше шансов у жертвы спастить -- удачно выбросить так называемый =спасбросок=. В этом случае эффект заклинания обычно уменьшается или полностью игнорируется.
+    <text l="ru">Когда в тебя попадает враждебное {hh1361заклинание{x (магия или молитва), игра бросает твой =спасбросок=. Удачный спасбросок обычно уменьшает эффект или полностью его отменяет. Шанс сопротивления зависит от уровней, от твоей защиты от заклинаний и от нескольких сдвигов.
 
-Улучшить защиту от заклинаний (уменьшить параметр) можно вещами или различными умениями: например, молитвой {hh766благословения{x или навыком {hh860боевого клича{x.
+{CУровни.{x Против заклинателя твоего уровня ты начинаешь с {W40%{x. Каждый уровень, на который заклинание выше тебя, отнимает 3%, каждый уровень ниже -- прибавляет 3%. Считается {hh2036уровень заклинания{x, а не только реальный уровень.
 
-При {hh603опознании{x предметов можно иногда увидеть очень специфические разновидности защиты от заклинаний (например, защита от выдохов). Все эти разновидности одинаково усиливают общую защиту от заклинаний. Еще раз, {Wчем меньше, тем лучше.{x
+{CЗащита от заклинаний.{x Отрицательное число "Защита от заклинаний" в {hh999score{x прибавляется сверху, причем с убывающей отдачей: первые пункты помогают сильнее всего. На 50 уровне 32 пункта поднимают тебя с 40% примерно до 78%, а полностью упакованный персонаж (около 1.35 пункта на уровень, 67 на 50 уровне) доходит примерно до 88%. На 100 уровне 30 пунктов дают около 63%, 85 пунктов -- около 82%, полный комплект -- около 88%. Высокий уровень заклинателя прорезает все это напрямую.
 
-Каждое заклинание обладает определенным типом {hh101воздействия{x, к которому у противника может быть сопротивляемость или, наоборот, уязвимость. В дополнение, существуют уязвимости или сопротивляемости отдельно от магии, и отдельно -- от молитв.
+{CСдвиги.{x Сопротивляемость {hh101типу воздействия{x заклинания или сопротивляемость магии (теперь она работает для ВСЕХ заклинаний и молитв) прибавляет 5 + уровень/10 процентов. Уязвимость отнимает столько же. Столько же прибавляет {hh829берсерк{x и столько же отнимает {hh2033священное искусство{x доброго заклинателя против злых. Проклятия, ухудшающие спасброски, например {hh548проклятие{x или {hh800анафема{x, бьют по прямой: чем сильнее проклят, тем ниже шанс.
+
+Как бы ты ни стакал защиту, шанс никогда не падает ниже {W5%{x и не поднимается выше {W90%{x.
+
+{CСмертельные заклинания.{x {hh690Слово силы: смерть{x, {hh791дезинтеграция{x, {hh712проклятие ведьмы{x, {hh741сон{x, {hh645паралич{x, {hh813дурманящий туман{x и {hh794изгнание{x: удачный спасбросок всегда защищает. Проваленный -- еще не смерть, у каждого заклинания есть второй бросок.
+
+{CРассеивание.{x {hh821Отмена{x и {hh808рассеивание{x тоже идут по мягкой кривой: 4% за каждый уровень разницы заклинаний, но не меньше 10% и не больше 90%. Свои собственные проклятия на враге ты снимаешь своим рассеиванием хуже.
+
+{hh999Score{x показывает твой шанс сопротивления заклинателю твоего уровня и сколько урона останавливает твоя броня. {hh603Опознание{x и {hh644знание легенд{x показывают, что меняет предмет. Защита от заклинаний по-прежнему обычное число в score и на вещах: чем оно отрицательнее, тем лучше.
 </text>
-    <text l="ua">Ефективність бойових {hh1361заклинань{x (магії та молитов) зазвичай залежить від {hh2036рівня заклинання{x і того, наскільки сильний =захист від заклинань= у цілі. Чим менший цей параметр, тим більше шансів у жертви врятуватися -- вдало закинути так званий =рятівний кидок=. У такому разі ефект заклинання зазвичай зменшується або повністю ігнорується.
+    <text l="ua">Коли в тебе влучають ворожі {hh1361закляття{x (магія чи молитва), гра кидає твій =рятівний кидок=. Вдалий кидок зазвичай зменшує ефект або повністю його скасовує. Шанс опору залежить від рівнів, від твого захисту від заклять і від кількох зсувів.
 
-Покращити захист від заклинань (зменшити параметр) можна речами або різними вміннями: наприклад, молитвою {hh766благословення{x або навичкою {hh860бойового кличу{x.
+{CРівні.{x Проти чаклуна твого рівня ти починаєш із {W40%{x. Кожен рівень, на який закляття вище за тебе, віднімає 3%, кожен рівень нижче -- додає 3%. Враховується {hh2036рівень закляття{x, а не лише справжній рівень.
 
-При {hh603розпізнаванні{x предметів можна іноді побачити дуже специфічні різновиди захисту від заклинань (наприклад, захист від видихів). Всі ці різновиди однаково посилюють загальний захист від заклинань. Ще раз, {Wчим менше, тим краще.{x
+{CЗахист від заклять.{x Відʼємне число "Захист від заклять" у {hh999score{x додається зверху, причому з убутною віддачею: перші пункти допомагають найбільше. На 50 рівні 32 пункти піднімають тебе з 40% приблизно до 78%, а повністю напакований персонаж (близько 1.35 пункта на рівень, 67 на 50 рівні) доходить приблизно до 88%. На 100 рівні 30 пунктів дають близько 63%, 85 пунктів -- близько 82%, повний комплект -- близько 88%. Високий рівень закляття прорізає все це напряму.
 
-Кожне заклинання має певний тип {hh101впливу{x, до якого у противника може бути стійкість або, навпаки, вразливість. Крім того, існують вразливості або стійкості окремо від магії і окремо -- від молитов.
+{CЗсуви.{x Стійкість до {hh101типу впливу{x закляття або стійкість до магії (тепер вона працює для УСІХ заклять і молитов) додає 5 + рівень/10 відсотків. Вразливість віднімає стільки ж. Стільки ж додає {hh829берсерк{x і стільки ж віднімає {hh2033священне мистецтво{x доброго чаклуна проти злих. Прокляття, що погіршують рятівні кидки, наприклад {hh548прокляття{x чи {hh800анатема{x, бʼють по прямій: чим дужче проклятий, тим нижчий шанс.
+
+Хоч як ти стакав захист, шанс ніколи не падає нижче {W5%{x і не піднімається вище {W90%{x.
+
+{CСмертельні закляття.{x {hh690Слово сили: смерть{x, {hh791дезінтеграція{x, {hh712прокляття відьми{x, {hh741сон{x, {hh645параліч{x, {hh813дурманний туман{x і {hh794вигнання{x: вдалий кидок завжди захищає. Провалений -- ще не смерть, у кожного закляття є другий кидок.
+
+{CРозсіювання.{x {hh821Скасування{x і {hh808розсіювання{x теж ідуть по мʼякій кривій: 4% за кожен рівень різниці заклять, але не менше 10% і не більше 90%. Свої власні прокляття на ворогові ти знімаєш своїм розсіюванням гірше.
+
+{hh999Score{x показує твій шанс опору чаклунові твого рівня і скільки шкоди зупиняє твоя броня. {hh603Розпізнавання{x і {hh644знання легенд{x показують, що змінює річ. Захист від заклять і далі звичайне число в score та на речах: чим воно відʼємніше, тим краще.
 </text>
     <title l="en">Spell protection, saving throws</title>
     <title l="ru">Защита от заклинаний, спасброски</title>
@@ -3622,6 +3646,8 @@ The higher your skill level, the better. For example, a higher level of combat s
 The effectiveness of magic and prayers depends primarily on the {hh28class archetype{x. The base spell level for magical classes comes out slightly below the real level. For warrior classes (warrior, samurai, ranger) or "agile" classes (ninja, thief) this penalty is even greater. Spell levels are also affected by your {hh38intelligence{x or {hh40wisdom{x (for prayers). Clerics and paladins must choose a religion -- otherwise their prayer level will gradually drop until it reaches zero. 
 
 Spell levels are also affected by many special skills -- for example, {hh563spellcraft{x or {hh708enhanced curses{x -- by {hh1064remort{x bonuses and some powerful artefacts. Some items raise the level only of a specific {hh1354skill group{x.
+
+The higher your spell level compared to the target's level, the harder it is to resist: every level of difference moves the target's {hh2035saving throw{x chance by 3%, and nothing you stack on defence cancels that. {hh887Mastering spell{x, {hh563spellcraft{x and similar skills raise the cast level and cut through saves.
 </text>
     <text l="ru">{hh14Уровень опыта{x и уровень твоих умений (заклинаний и навыков) -- это не совсем одно и то же. Уровень любых умений можно повышать -- в том числе, сверх своего "реального" уровня. Эффективность большинства умений зависит от их уровня или от разницы уровней между тобой и противником.
 
@@ -3630,6 +3656,8 @@ Spell levels are also affected by many special skills -- for example, {hh563spel
 Эффективность магии и молитв в первую очередь зависит от {hh28архетипа класса{x. Базовый уровень заклинаний для магических классов получается чуть ниже реального уровня. У воинских классов (воин, самурай, рейнджер) или у классов-"ловкачей" (ниндзя, вор) этот штраф -- еще больше. На уровень заклинаний влияют твой {hh38ум{x или {hh40мудрость{x (у молитв). Клерики или паладины обязаны выбрать религию -- иначе уровень их молитв начнет постепенно падать, пока не упадет до нуля. 
 
 Также на уровень заклинаний влияют многие специальные навыки -- например, {hh563искусство заклинателя{x или {hh708улучшенные проклятия{x -- бонусы {hh1064перерождений{x и некоторые мощные артефакты. Некоторые вещи повышают уровень только отдельной {hh1354группы умений{x.
+
+Чем выше уровень твоего заклинания относительно уровня цели, тем труднее ей сопротивляться: каждый уровень разницы сдвигает шанс {hh2035спасброска{x цели на 3%, и никакая защита это не отменяет. {hh887Мастерство заклинателя{x, {hh563искусство заклинателя{x и похожие навыки поднимают уровень заклинания и прорезают защиту.
 </text>
     <text l="ua">Твій {hh14рівень досвіду{x і рівень твоїх умінь (заклинань і навичок) -- це не зовсім одне і те ж. Рівень будь-яких умінь можна підвищувати -- у тому числі понад свій "реальний" рівень. Ефективність більшості умінь залежить від їхнього рівня або від різниці рівнів між тобою і противником.
 
@@ -3638,6 +3666,8 @@ Spell levels are also affected by many special skills -- for example, {hh563spel
 Ефективність магії та молитов насамперед залежить від {hh28архетипу класу{x. Базовий рівень заклинань для магічних класів виходить трохи нижчим за реальний рівень. У воїнських класів (воїн, самурай, рейнджер) або у класів-"спритунів" (ніндзя, крадій) цей штраф -- ще більший. На рівень заклинань впливають твій {hh38інтелект{x або {hh40мудрість{x (у молитов). Кліріки або паладини зобовʼязані вибрати релігію -- інакше рівень їхніх молитов почне поступово падати, поки не впаде до нуля. 
 
 Також на рівень заклинань впливають багато спеціальних навичок -- наприклад, {hh563мистецтво чаклуна{x або {hh708посилені прокляття{x -- бонуси {hh1064переродження{x та деякі потужні артефакти. Деякі речі підвищують рівень тільки окремої {hh1354групи умінь{x.
+
+Чим вищий рівень твого закляття відносно рівня цілі, тим важче їй опиратися: кожен рівень різниці зсуває шанс {hh2035рятівного кидка{x цілі на 3%, і жоден захист цього не скасовує. {hh887Майстерність чаклуна{x, {hh563мистецтво чаклуна{x та подібні навички піднімають рівень закляття і прорізають захист.
 </text>
     <title l="en">{CSkills: {xspell and skill level</title>
     <title l="ru">{CУмения: {xуровень заклинаний и навыков</title>

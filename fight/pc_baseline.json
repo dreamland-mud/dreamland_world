@@ -1,5 +1,5 @@
 {
- "_doc": "Reference player by level band (one item model decision 15): p50 of active mortals from live pfiles. dmg = wielded weapon ave + damroll (damage per landed hit), round = attacks x p_hit x dmg (the median round). Regenerate with scripts/pc-baseline.py; read by the item combat-effect model and ttk-model. caster.spell_round = one tier-2 nuke per round, calibrated live (SPELL_CAL); the model's caster round = round + spell_round.",
+ "_doc": "Reference player by level band (one item model decision 15): p50 of active mortals from live pfiles. dmg = wielded weapon ave + damroll (damage per landed hit), round = attacks x p_hit x dmg (the median round). Regenerate with scripts/pc-baseline.py; read by the item combat-effect model and ttk-model. caster.spell_round = one tier-2 nuke per round, calibrated live (SPELL_CAL); the model's caster round = round + spell_round. spell_incoming_share = share of a mob's damage to a player that comes from its spells, by tier and level (saves rework Phase 0, measured live 2026-11-01 with dl-fight-measure: real caster prototypes vs mortal Taiphoen set to the band level, p50 svs and armor; spell damage over all damage in a 90 s window, mean of 2-3 mobs per cell). Kept by pc-baseline.py regen.",
  "meta": {
   "date": "2026-10-05",
   "active_days": 180,
@@ -337,6 +337,32 @@
      "round": 175
     }
    }
+  }
+ },
+ "spell_incoming_share": {
+  "normal": {
+   "20": 0.61,
+   "40": 0.54,
+   "60": 0.55,
+   "90": 0.69
+  },
+  "elite": {
+   "20": 0.41,
+   "40": 0.46,
+   "60": 0.09,
+   "90": 0.44
+  },
+  "champion": {
+   "20": 0.24,
+   "40": 0.09,
+   "60": 0.14,
+   "90": 0.36
+  },
+  "boss": {
+   "20": 0.21,
+   "40": 0.18,
+   "60": 0.26,
+   "90": 0.15
   }
  }
 }

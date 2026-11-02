@@ -1,5 +1,5 @@
 {
- "_doc": "One item value model, shared by the gear advisor (service advice, characterwrapper.cpp ga_*), the random item generator and Fenia's item measure (.config(\"fight/item_value\")). Units are gear-score points. melee/caster: per-profile weight per point of an apply (level/slevel/skill_level_* per +1, beats per -1% skill lag). shared: profile-independent weights; ac_weight is the flat weight per composite armor point under the armor model (ac_base at level 1 falling to 0 at ac_zero_level, with the profile ac_floor, only applies without it); trigger_bonus_skip: vnums whose Fenia scripts are housekeeping (owner or duplicate checks, wear refusals), so the sage gives them no flat trigger bonus. trigger_spells: {vnum: [spell, ...]} an onEquip script casts on the wearer while worn (\"grant:<skill>\" = a skill it lends), scored at their worn (grant) price in fight/spell_value.json instead of the flat trigger bonus. first_life_only: vnums a remorted char cannot wear (Hut trinkets), never advised after a remort. flags: [melee, caster] per affect flag (a flag the char can self-cast counts 10%). res: [res, imm, vuln] per damage class (resists do not stack). measure: one roll of the item measure (M) and the slot factors (rolls = level / factor), tier budgets in M. grant_skill: what an item-granted skill is worth to its wearer. A missing key falls back to the compiled default. docs/plans/armor-generator.md.",
+ "_doc": "One item value model, shared by the gear advisor (service advice, characterwrapper.cpp ga_*), the random item generator and Fenia's item measure (.config(\"fight/item_value\")). Units are gear-score points. melee/caster: per-profile weight per point of an apply (level/slevel/skill_level_* per +1, beats per -1% skill lag; saves is the fallback for shared.saves_by_level). shared: profile-independent weights; saves_by_level / saves_pts_per_pct: the svs price by level (see _doc_saves_by_level); ac_weight is the flat weight per composite armor point under the armor model (ac_base at level 1 falling to 0 at ac_zero_level, with the profile ac_floor, only applies without it); trigger_bonus_skip: vnums whose Fenia scripts are housekeeping (owner or duplicate checks, wear refusals), so the sage gives them no flat trigger bonus. trigger_spells: {vnum: [spell, ...]} an onEquip script casts on the wearer while worn (\"grant:<skill>\" = a skill it lends), scored at their worn (grant) price in fight/spell_value.json instead of the flat trigger bonus. first_life_only: vnums a remorted char cannot wear (Hut trinkets), never advised after a remort. flags: [melee, caster] per affect flag (a flag the char can self-cast counts 10%). res: [res, imm, vuln] per damage class (resists do not stack). measure: one roll of the item measure (M) and the slot factors (rolls = level / factor), tier budgets in M. grant_skill: what an item-granted skill is worth to its wearer. A missing key falls back to the compiled default. docs/plans/armor-generator.md.",
  "melee": {
   "hp": 1.0,
   "mana": 0.1,
@@ -69,6 +69,19 @@
    "shoulder tattoo": 0.15,
    "wrist tattoo": 0.15,
    "remove tattoo": 0.15
+  },
+  "_doc_saves_by_level": "saves_by_level: points per -1 saves at par, {level: [melee, caster]}, linear between anchors, clamped to the end anchors outside them; the level is the item's level for a base price and the char's level in the gear sage. Wins over the flat melee/caster saves (kept as the fallback when the table is missing). Damage-only value from the measured spell share of incoming damage at band p50 svs, the L60 dip is real (band svs sits deep on the curve): docs/systems/SAVES_REWORK.md 'svs price from the measured share'. saves_pts_per_pct: points per 1% save chance at the same anchors (0.005 x share x band hp); under saves model 1 the gear sage prices an item's saves as this x the real chance change at the char's own svs outside the item's slot, so a stacker sees what the next point is worth.",
+  "saves_by_level": {
+   "20": [1.25, 1.08],
+   "40": [2.99, 2.89],
+   "60": [0.98, 0.88],
+   "90": [3.97, 4.45]
+  },
+  "saves_pts_per_pct": {
+   "20": [0.75, 0.65],
+   "40": [1.55, 1.50],
+   "60": [1.74, 1.56],
+   "90": [6.12, 6.85]
   },
   "ac_weight": 0.45,
   "hitroll_pts_per_pct": 16,

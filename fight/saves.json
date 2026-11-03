@@ -36,6 +36,12 @@
   "own_debuff_pct": 50
  },
 
+ "boss_reroll": {
+  "_doc": "Read by plug-ins/fight/magic.cpp, used by the Fenia spell context savesSpell(). An NPC of tier 1..max_tier (1 = legend) that fails its save against one of these control spells rolls it once more, so p becomes 1 - (1 - p)^2. Damage spells stay out: savesSpell() halves dam on a save. max_tier 0 or a missing block turns it off.",
+  "max_tier": 1,
+  "spells": ["blindness", "garble", "confuse", "slow", "weaken", "curse", "plague", "corruption", "shielding", "web", "deafen", "insanity"]
+ },
+
  "instakill": {
   "_doc": "Read by Fenia (dreamland_fenia utils/spells procInstaKillImpl, Phase 2), not by C++. Under model 1: a made save always survives; a failed save kills only through the per-spell gate, for players and mobs (boss and legend tiers stay exempt). gate % = gates[spell] x skill / 100 + stat_weight x urange(-stat_cap, caster int - victim con, stat_cap); agile victim (thief, ninja): the int/con part x agile_stat_pct / 100; clamp gate_min..gate_max; NPC caster counts as skill 100; immortal caster always lands. A Taiphoen-patron caster rerolls a missed gate at reroll_pct of the gate (100 = full reroll). A witch curse that does not kill (made save or failed gate) tires the witch for witch_fail_fatigue ticks; boss/legend exempt, immune targets and an unusable skill cost nothing.",
   "gates": {

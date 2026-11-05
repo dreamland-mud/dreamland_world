@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Race type="DefaultPCRace">
-  <aff>infrared</aff>
-  <affects registry="skill">infravision</affects>
+  <aff>infrared sneak</aff>
+  <affects registry="skill">infravision sneak</affects>
   <align>good neutral evil</align>
   <classes>
     <thief>100</thief>
@@ -26,15 +26,15 @@
     <keyword l="en">'half elves'</keyword>
     <keyword l="ru">полуэльфы</keyword>
     <keyword l="ua">напівельфи</keyword>
-    <text l="en">Half-elves are the children of elves and someone else -- most often humans. They are not as intelligent as pureblooded elves, but slightly more agile and faster than humans. They can see in {hh830the dark{x and retain a knack for both elven dialects, {hh2044Quenya{x and {hh2040ahenn{x}.
+    <text l="en">Half-elves are the children of elves and someone else -- most often humans. They are not as intelligent as pureblooded elves, but stronger, hardier and much more agile than humans. They can see in {hh830the dark{x, move {hh703silently{x, handle the elven {hh810bow{x well, and retain a knack for both elven dialects, {hh2044Quenya{x and {hh2040ahenn{x.
 
 The fate of half-elves is unenviable -- they are often looked down on and called half-bloods by humans and elves alike. High Elves feel revulsion toward outsiders, going as far as open racism, and zealously guard their traditions and customs, so they despise and consider outcast the children of mixed marriages. As for humans, they are not overly fond of arrogant and pretentious elves, so they often make them targets of mockery.
 </text>
-    <text l="ru">Полуэльфы -- дети эльфов и еще кого-нибудь. Чаще всего людей. Они не так умны, как чистокровные эльфы, но чуть ловчее и быстрее людей. Могут видеть в {hh830темноте{x и сохраняют склонность к обоим эльфийским наречиям, {hh2044квенья{x и {hh2040ахэнн{x.
+    <text l="ru">Полуэльфы -- дети эльфов и еще кого-нибудь. Чаще всего людей. Они не так умны, как чистокровные эльфы, но сильнее, выносливее и намного ловчее людей. Могут видеть в {hh830темноте{x, {hh703бесшумно{x ступать, хорошо владеют эльфийским {hh810луком{x и сохраняют склонность к обоим эльфийским наречиям, {hh2044квенья{x и {hh2040ахэнн{x.
 
 Судьба полуэльфов незавидна -- ведь их зачастую презирают и обзывают полукровками как люди, так и эльфы. Высшие эльфы испытывают отвращение к чужакам, доходя в этом до открытого расизма, и свято блюдут традиции и устои, поэтому презирают и считают изгоями детей от смешанных браков. Что же касается людей, то они не очень-то любят заносчивых и заумных эльфов, поэтому часто выбирают их мишенью насмешек.
 </text>
-    <text l="ua">Напівельфи -- діти ельфів і ще когось. Найчастіше людей. Вони не такі розумні, як чистокровні ельфи, але трохи спритніші й швидші за людей. Можуть бачити в {hh830темряві{x і зберігають схильність до обох ельфійських наріч, {hh2044квенья{x і {hh2040аґенн{x}.
+    <text l="ua">Напівельфи -- діти ельфів і ще когось. Найчастіше людей. Вони не такі розумні, як чистокровні ельфи, але сильніші, витриваліші й набагато спритніші за людей. Можуть бачити в {hh830темряві{x, {hh703безшумно{x ступати, добре володіють ельфійським {hh810луком{x і зберігають схильність до обох ельфійських наріч, {hh2044квенья{x і {hh2040аґенн{x.
 
 Доля напівельфів незавидна -- адже їх нерідко зневажають і обзивають напівкровками як люди, так і ельфи. Вищі ельфи відчувають відразу до чужинців, доходячи в цьому до відкритого расизму, і свято дотримуються традицій і устоїв, тому зневажають і вважають вигнанцями дітей від змішаних шлюбів. Що ж до людей, то вони не дуже-то люблять зарозумілих і заумних ельфів, тому часто обирають їх мішенню для насмішок.
 </text>
@@ -55,9 +55,12 @@ The fate of half-elves is unenviable -- they are often looked down on and called
   <nameWhoUa>Нап</nameWhoUa>
   <parts>head arms legs heart brains guts hands feet fingers ear eye</parts>
   <points>250</points>
+  <res>charm cold</res>
   <size>medium</size>
   <stats>
-    <dex>1</dex>
+    <str>2</str>
+    <dex>3</dex>
+    <con>1</con>
   </stats>
   <wearloc registry="wearlocation">neck_2 neck_1 wrist_r wrist_l body light head legs feet about waist float finger_l second_wield finger_r shield hands arms wield hold face tattoo tat_arms tat_face tat_wrist_l tat_wrist_r</wearloc>
   <forms>sentient biped mammal</forms>

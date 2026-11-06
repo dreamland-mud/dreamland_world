@@ -451,6 +451,8 @@
   "cost_cap": 50000,
   "primary_stat_cap": 5,
   "_doc_primary_stat_cap": "primary_stat_cap: most points of str/int/wis/dex/con/cha one generated item rolls, summed over all affixes and stacks (Kit 2026-10-27).",
+  "saves_cap_per_level": 0.12,
+  "_doc_saves_cap_per_level": "saves_cap_per_level: most points of saves one generated item rolls, round(item level x this), summed over every save apply (saves, saving_spell, saving_breath, saving_rod, saving_petri), affix and stack; a pick that would pass it is skipped. 12 at L100 (Kit 2026-11-06). Missing key = uncapped.",
   "top_max": 2,
   "top_repeat_weight": 0.1,
   "core_affixes": {

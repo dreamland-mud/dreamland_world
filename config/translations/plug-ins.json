@@ -3330,6 +3330,14 @@
    "en": "worsens {marmor{y by {m%1$d{y",
    "ua": "погіршує {mброню{y на {m%1$d{y"
   },
+  "улучшает {mшанс устоять перед заклинаниями{y на {m%1$s%%{y": {
+   "en": "improves {mchance to resist spells{y by {m%1$s%%{y",
+   "ua": "покращує {mшанс встояти перед закляттями{y на {m%1$s%%{y"
+  },
+  "ухудшает {mшанс устоять перед заклинаниями{y на {m%1$s%%{y": {
+   "en": "worsens {mchance to resist spells{y by {m%1$s%%{y",
+   "ua": "погіршує {mшанс встояти перед закляттями{y на {m%1$s%%{y"
+  },
   "улучшает {m%1$s{y на {m%2$d%%{y": {
    "en": "improves {m%1$s{y by {m%2$d%%{y",
    "ua": "покращує {m%1$s{y на {m%2$d%%{y"
@@ -7072,6 +7080,14 @@
    "en": "Saves versus spells %d.",
    "ua": "Захист від заклять %d."
   },
+  "Шанс устоять перед заклинанием твоего уровня: %1$d%%.": {
+   "en": "Chance to resist a spell of your level: %1$d%%.",
+   "ua": "Шанс встояти перед закляттям твого рівня: %1$d%%."
+  },
+  "Точность: {C%1$d{x  Урон: {C%2$d{x  Шанс устоять перед заклинанием твоего уровня: {C%3$d%%{x\n\r": {
+   "en": "Accuracy: {C%1$d{x  Damage: {C%2$d{x  Chance to resist a spell of your level: {C%3$d%%{x\n\r",
+   "ua": "Точність: {C%1$d{x  Шкода: {C%2$d{x  Шанс встояти перед закляттям твого рівня: {C%3$d%%{x\n\r"
+  },
   "Защита от укола {W%d{x, от удара {W%d{x, от разрезания {W%d{x, от экзотики {W%d{x.\n\r": {
    "en": "Protection from piercing {W%d{x, from blunt {W%d{x, from slashing {W%d{x, from exotic {W%d{x.\n\r",
    "ua": "Захист від колючої {W%d{x, від тупої {W%d{x, від ріжучої {W%d{x, від екзотичної {W%d{x.\n\r"
@@ -7252,9 +7268,9 @@
    "en": "Use the commands {y{hcquest time{x and {y{hcquest points{x.",
    "ua": "Використовуй команди {y{hcквест час{x і {y{hcквест очки{x."
   },
-  "     %s| %sВещи          :{x     %3d/%-4d        %sЗащита от уколов:{x   %-5d   %s|\n\r     | %sВес           :{x  %6d/%-8d    %sЗащита от ударов:{x   %-5d   %s|\n\r     | %sЗолото        :{Y %-10d          %sЗащита от разрезов:{x %-5d   %s|\n\r     | %sСеребро       :{W %-10d          %sЗащита от экзотики:{x %-5d   %s|\n\r     | %sЕдиниц опыта  :{x %-6d              %sЗащита от заклинаний:{x %4d  %s|": {
-   "en": "     %s| %sItems          :{x     %3d/%-4d        %sPierce defense:{x   %-5d   %s|\n\r     | %sWeight        :{x  %6d/%-8d    %sBlunt defense:{x     %-5d   %s|\n\r     | %sGold          :{Y %-10d          %sSlash defense:{x     %-5d   %s|\n\r     | %sSilver        :{W %-10d          %sExotic defense:{x    %-5d   %s|\n\r     | %sExp points    :{x %-6d              %sSpell defense:{x       %4d  %s|",
-   "ua": "     %s| %sРечі           :{x     %3d/%-4d        %sЗахист від уколів:{x   %-5d   %s|\n\r     | %sВага          :{x  %6d/%-8d    %sЗахист від ударів:{x   %-5d   %s|\n\r     | %sЗолото        :{Y %-10d          %sЗахист від порізів:{x %-5d   %s|\n\r     | %sСрібло        :{W %-10d          %sЗахист від екзотики:{x %-5d   %s|\n\r     | %sОдиниць досвіду:{x %-6d              %sЗахист від заклять:{x %4d  %s|"
+  "     %s| %sВещи          :{x     %3d/%-4d        %sЗащита от уколов:{x   %-5d   %s|\n\r     | %sВес           :{x  %6d/%-8d    %sЗащита от ударов:{x   %-5d   %s|\n\r     | %sЗолото        :{Y %-10d          %sЗащита от разрезов:{x %-5d   %s|\n\r     | %sСеребро       :{W %-10d          %sЗащита от экзотики:{x %-5d   %s|\n\r     | %sЕдиниц опыта  :{x %-6d              %sЗащита от заклинаний:{x %4s  %s|": {
+   "en": "     %s| %sItems          :{x     %3d/%-4d        %sPierce defense:{x   %-5d   %s|\n\r     | %sWeight        :{x  %6d/%-8d    %sBlunt defense:{x     %-5d   %s|\n\r     | %sGold          :{Y %-10d          %sSlash defense:{x     %-5d   %s|\n\r     | %sSilver        :{W %-10d          %sExotic defense:{x    %-5d   %s|\n\r     | %sExp points    :{x %-6d              %sSpell defense:{x       %4s  %s|",
+   "ua": "     %s| %sРечі           :{x     %3d/%-4d        %sЗахист від уколів:{x   %-5d   %s|\n\r     | %sВага          :{x  %6d/%-8d    %sЗахист від ударів:{x   %-5d   %s|\n\r     | %sЗолото        :{Y %-10d          %sЗахист від порізів:{x %-5d   %s|\n\r     | %sСрібло        :{W %-10d          %sЗахист від екзотики:{x %-5d   %s|\n\r     | %sОдиниць досвіду:{x %-6d              %sЗахист від заклять:{x %4s  %s|"
   },
   "     %s| %sДом  :{x  %-30.30s %s| {Y%-22s %s|": {
    "en": "     %s| %sHome  :{x  %-30.30s %s| {Y%-22s %s|",

@@ -2282,7 +2282,7 @@ The {hh140Rangers{x guild is located in {hh1862Haon Dor{x, entrance from the Hid
     <title l="ua">Гільдії класів</title>
   </node>
   <node id="45" level="-1" type="Help" labels="combat">
-    <extra l="en">'damage list' newdamage</extra>
+    <extra l="en">'damage list' newdamage numbers damnumbers</extra>
     <extra l="ru">новые повреждения повреждения шкала повреждений урона боевая система режим</extra>
     <extra l="ua">нові ушкодження пошкодження шкала ушкоджень пошкоджень урону бойова система режим</extra>
     <keyword l="en">damage</keyword>
@@ -2292,7 +2292,9 @@ The {hh140Rangers{x guild is located in {hh1862Haon Dor{x, entrance from the Hid
 
 With the setting enabled ({yyes{x) damage is displayed on a =combined scale=: the text indicates the damage dealt relative to the enemy's maximum health, while the colour and symbols around it correspond to the absolute damage. This mode is usually a little clearer for {hh2127newcomers{x.
 
-With the setting disabled ({yno{x) you will see damage on an =absolute scale= -- messages depend on the total damage value. Additionally, in this mode exact numerical values are displayed for each hit.
+With the setting disabled ({yno{x) you will see damage on an =absolute scale= -- messages depend on the total damage value.
+
+The exact damage of each hit, in brackets after the message, is a separate setting that works with either scale: {yconfig numbers yes|no{x.
 
 {CABSOLUTE SCALE (in ascending damage order){x
 %PAUSE%
@@ -2357,7 +2359,9 @@ With the setting disabled ({yno{x) you will see damage on an =absolute scale= --
 
 При включенной настройке ({yда{x) повреждения выдаются в =комбинированной шкале=: текст обозначает нанесенный урон по отношению к максимальному здоровью противника, а цвет и символы вокруг него соответствуют абсолютному урону. Этот режим обычно чуть понятнее для {hh2127новичков{x.
 
-При выключенной настройке ({yнет{x) ты увидишь повреждения в =абсолютной шкале= -- сообщения зависят от общего значения урона. Дополнительно, в этом режиме выдаются точные числовые значения для каждого урона.
+При выключенной настройке ({yнет{x) ты увидишь повреждения в =абсолютной шкале= -- сообщения зависят от общего значения урона.
+
+Точный урон каждого удара, в скобках после сообщения, включается отдельно и работает с любой шкалой: {yнастройка цифры да|нет{x.
 
 {CАБСОЛЮТНАЯ ШКАЛА (по возрастанию урона){x
 %PAUSE%
@@ -2418,11 +2422,13 @@ With the setting disabled ({yno{x) you will see damage on an =absolute scale= --
     СМЕРТЕЛЬНО РАНИШЬ
     {DУБИВАЕШЬ{x
 </text>
-    <text l="ua">%FMT% {yнастройка повреждения да|нет{x
+    <text l="ua">%FMT% {yналаштування шкода так|ні{x
 
 При увімкненому налаштуванні ({yда{x) ушкодження виводяться в =комбінованій шкалі=: текст позначає нанесений урон відносно максимального здоровʼя противника, а колір і символи навколо нього відповідають абсолютному урону. Цей режим зазвичай трохи зрозуміліший для {hh2127новачків{x.
 
-При вимкненому налаштуванні ({yні{x) ти побачиш ушкодження в =абсолютній шкалі= -- повідомлення залежать від загального значення урону. Додатково, у цьому режимі виводяться точні числові значення для кожного удару.
+При вимкненому налаштуванні ({yні{x) ти побачиш ушкодження в =абсолютній шкалі= -- повідомлення залежать від загального значення урону.
+
+Точна шкода кожного удару, у дужках після повідомлення, вмикається окремо й працює з будь-якою шкалою: {yналаштування цифри так|ні{x.
 
 {CАБСОЛЮТНА ШКАЛА (за зростанням урону){x
 %PAUSE%

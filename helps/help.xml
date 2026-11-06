@@ -2139,7 +2139,7 @@ Don't forget that limited items {Rare not retained{x if your character is more t
     <keyword l="en">colors</keyword>
     <keyword l="ru">цвета</keyword>
     <keyword l="ua">кольори</keyword>
-    <text l="en">In Dreamland, as in any other text game, colour is one of the main means of expression. Colour can emphasise or define the properties of items or creatures and many other important aspects of the game. Different types of information are assigned standard colours for convenience -- for example, most creatures are displayed in yellow, equipped items in green, and so on. This colour scheme can be changed with the command {y{hcconfig softcolor{x.
+    <text l="en">In Dreamland, as in any other text game, colour is one of the main means of expression. Colour can emphasise or define the properties of items or creatures and many other important aspects of the game. Different types of information are assigned standard colours for convenience -- for example, most creatures are displayed in yellow, equipped items in green, and so on. This colour scheme can be changed with the command {y{hcconfig color mild{x.
 
 A non-standard colour on an item indicates some hidden or powerful properties of that item, its {hh42limited{x status, or membership in a {hh67set{x.
 
@@ -2167,7 +2167,7 @@ For example, if you type "title Lord of {{GHedgehogs{{x", your title becomes "Lo
 
 These commands toggle colour output mode on and off.
 </text>
-    <text l="ru">В Мире Мечты, как и в любой другой текстовой игре, цвет является одним из главных выразительных средств. Цвет может подчеркивать или определять свойства предметов или существ и множество других важных аспектов игры. Разным типам информации для удобства присвоены стандартные цвета -- например, большинство существ выводятся желтым цветом, вещи в экипировке -- зеленым, и так далее. Эту цветовую гамму можно поменять командой {y{hcнастройки мягкцвет{x.
+    <text l="ru">В Мире Мечты, как и в любой другой текстовой игре, цвет является одним из главных выразительных средств. Цвет может подчеркивать или определять свойства предметов или существ и множество других важных аспектов игры. Разным типам информации для удобства присвоены стандартные цвета -- например, большинство существ выводятся желтым цветом, вещи в экипировке -- зеленым, и так далее. Эту цветовую гамму можно поменять командой {y{hcрежим цвет мягкий{x.
 
 Нестандартный цвет на вещах указывает на какие-то скрытые или мощные свойства данного предмета, {hh42лимитность{x или принадлежность к {hh67комплекту{x.
 
@@ -2195,7 +2195,7 @@ These commands toggle colour output mode on and off.
 
 Эти команды включают-выключают режим вывода в цвете.
 </text>
-    <text l="ua">У Світі Мрії, як і в будь-якій іншій текстовій грі, колір є одним із головних виражальних засобів. Колір може підкреслювати або визначати властивості предметів чи істот і безліч інших важливих аспектів гри. Різним типам інформації для зручності присвоєні стандартні кольори -- наприклад, більшість істот виводиться жовтим кольором, речі в екіпіровці -- зеленим, і так далі. Цю колірну гаму можна змінити командою {y{hcналаштування мʼякцвет{x.
+    <text l="ua">У Світі Мрії, як і в будь-якій іншій текстовій грі, колір є одним із головних виражальних засобів. Колір може підкреслювати або визначати властивості предметів чи істот і безліч інших важливих аспектів гри. Різним типам інформації для зручності присвоєні стандартні кольори -- наприклад, більшість істот виводиться жовтим кольором, речі в екіпіровці -- зеленим, і так далі. Цю колірну гаму можна змінити командою {y{hcрежим колір м'який{x.
 
 Нестандартний колір на речах вказує на якісь приховані або потужні властивості даного предмета, його {hh42лімітованість{x або приналежність до {hh67комплекту{x.
 
@@ -2697,7 +2697,7 @@ Objects, mobs, or rooms in the house can be given unique behaviour -- for exampl
     <keyword l="en">objflag</keyword>
     <keyword l="ru">предмфлаги</keyword>
     <keyword l="ua">прапори обʼєктів</keyword>
-    <text l="en">%FMT% {y{hcconfig objflag yes{hx{x.
+    <text l="en">%FMT% {y{hcconfig shortflags yes{hx{x.
 
 A compact display of flags on objects.
 %PAUSE%[{DI{RN{CB{wM{MG{cV{yC{x]%RESUME%
@@ -2714,7 +2714,7 @@ If a flag is absent, a dot is drawn in its place.
 
 For the meaning of these and other object flags, read {hh96help flags{x.
 </text>
-    <text l="ru">%FMT% {y{hcconfig objflag yes{hx{x.
+    <text l="ru">%FMT% {y{hcрежим краткофлаги да{hx{x.
 
 Краткое отображение флагов на предметах. 
 %PAUSE%[{DН{RЗ{CБ{wМ{MП{cВ{yК{x]%RESUME%
@@ -2731,7 +2731,7 @@ For the meaning of these and other object flags, read {hh96help flags{x.
 
 Про значения этих и других флагов объектов читай {hh96справка флаги{x.
 </text>
-    <text l="ua">%FMT% {y{hcconfig objflag yes{hx{x.
+    <text l="ua">%FMT% {y{hcрежим короткофлаги так{hx{x.
 
 Короткий показ прапорів на предметах.
 %PAUSE%[{DН{RЗ{CБ{wМ{MП{cВ{yК{x]%RESUME%
@@ -3463,8 +3463,8 @@ Those same Telegram and Discord also link your characters into one {hh5106accoun
 {y%A% {W/bug {y&lt;текст>{x: написать рапорт об ошибке
 {y%A% {W/nohelp {y&lt;текст>{x: написать рапорт об отсутствии справки
 
-%FMT% {y{hcconfig telegram{hx{x
-%FMT% {y{hcconfig discord{hx{x
+%FMT% {y{hcрежим телеграм{hx{x
+%FMT% {y{hcрежим дискорд{hx{x
 
 Чтобы использовать эти фишки надо слинковать аккаунты Телеграма или Дискорда со своим игровым персонажем. Используй команды выше и следуй инструкциям.
     
@@ -3504,8 +3504,8 @@ Those same Telegram and Discord also link your characters into one {hh5106accoun
 {y%A% {W/bug {y&lt;текст>{x: написати рапорт про баг
 {y%A% {W/nohelp {y&lt;текст>{x: написати рапорт про відсутність довідки
 
-%FMT% {y{hcconfig telegram{hx{x
-%FMT% {y{hcconfig discord{hx{x
+%FMT% {y{hcрежим телеграм{hx{x
+%FMT% {y{hcрежим дискорд{hx{x
 
 Щоб використовувати ці фішки, треба звʼязати акаунти Телеграму або Дискорду зі своїм ігровим персонажем. Використовуй команди вище і слідуй інструкціям.
     
@@ -3743,7 +3743,7 @@ Type {y{hcconfig{x to see all your current settings.
 </text>
     <text l="ua">Світ можна бачити російською, українською або англійською. Одна команда задає мову одразу для всього -- {hh5088імен{x гравців, команд, назв вмінь, виходів та решти. {Wвводити{x команди при цьому можна будь-якою мовою, незалежно від налаштування.
 
-Набери {y{hcрежим язык укр{x для української, {y{hcрежим язык рус{x для російської або {y{hcрежим язык англ{x для англійської.
+Набери {y{hcрежим мова укр{x для української, {y{hcрежим мова рус{x для російської або {y{hcрежим мова англ{x для англійської.
 %PAUSE%* Наприклад, англійською ти побачиш {C[Exits: north west south]{x і вміння {ydodge{x, а українською -- {C[Виходи: північ захід південь]{x і {yухилення{x.%RESUME%
 
 Набери {y{hcрежим{x, щоб побачити всі поточні налаштування.
@@ -4079,9 +4079,9 @@ Enables support for screen readers for visually impaired players, so that all pl
 %A% after every experience gain, says how many experience points remain to the next level
 
 It is also recommended to disable colours:
-%A% {hc*config* *colour* *%NO%*{x
+%A% {hc*config* *color* *%NO%*{x
 </text>
-    <text l="ru">%FMT% *режим* *скринридер* *%YES%*|*%NO%*
+    <text l="ru">%FMT% *режим* *незрячий* *%YES%*|*%NO%*
 
 Включает поддержку читалок для незрячих, чтобы все команды игрока и вся входящая информация корректно произносилась программами голосовой поддержки. Кроме этого в этом режиме:
 %A% не будет выводить английские названия в скобках для предметов, лежащих на земле
@@ -4094,7 +4094,7 @@ It is also recommended to disable colours:
 Также рекомендуется выключить цвета:
 %A% {hc*режим* *цвет* *%NO%*{x
 </text>
-    <text l="ua">%FMT% *режим* *скринридер* *%YES%*|*%NO%*
+    <text l="ua">%FMT% *режим* *незрячий* *%YES%*|*%NO%*
 
 Вмикає підтримку читалок для незрячих, щоб всі команди гравця і вся вхідна інформація правильно вимовлялися програмами голосової підтримки. Крім цього в цьому режимі:
 %A% не виводитиме англійські назви в дужках для предметів, що лежать на землі
@@ -6083,20 +6083,20 @@ A legendary piece of armor from a boss or a legend bears its name and keeps a ma
     <keyword l="ua">'незрячі гравці'</keyword>
     <text l="en">Dream Land is a text game, and many of our players play it with a screen reader. A few settings make it much easier:
 %A% {hc*config* *screenreader* *%YES%*{x -- the main one: drops the English names in parentheses, swaps ASCII pseudo-graphics for text and shows auras instead of colours (%H% {hh2132screenreader{x).
-%A% {hc*config* *colour* *%NO%*{x -- turns off colour codes.
+%A% {hc*config* *color* *%NO%*{x -- turns off colour codes.
 %A% *score* _parameter_ -- prints just one line of your {hh999score{x, e.g. *score* _hit_, instead of the whole sheet.
 %A% *help* _word_ -- every article is plain text, and a numbered list comes back when a word fits several.
 Other display options are in {hh1087config{x.
 </text>
     <text l="ru">Мир Мечты -- текстовая игра, и многие наши игроки играют с читалкой экрана. Несколько настроек сильно облегчают жизнь:
-%A% {hc*режим* *скринридер* *%YES%*{x -- главная: убирает английские имена в скобках, заменяет псевдографику ASCII текстом и показывает ауры вместо цветов (%H% {hh2132скринридер{x).
+%A% {hc*режим* *незрячий* *%YES%*{x -- главная: убирает английские имена в скобках, заменяет псевдографику ASCII текстом и показывает ауры вместо цветов (%H% {hh2132скринридер{x).
 %A% {hc*режим* *цвет* *%NO%*{x -- выключает цветовые коды.
 %A% *счет* _параметр_ -- выводит одну строку твоего {hh999счета{x, например *счет* _здоровье_, вместо всего листа.
 %A% *справка* _слово_ -- каждая статья -- обычный текст, а если слову подходит несколько, придет нумерованный список.
 Остальные настройки вывода -- в {hh1087режиме{x.
 </text>
     <text l="ua">Світ Мрії -- текстова гра, і багато наших гравців грають з читалкою екрана. Кілька налаштувань дуже полегшують життя:
-%A% {hc*режим* *скринрідер* *%YES%*{x -- головне: прибирає англійські імена в дужках, замінює псевдографіку ASCII текстом і показує аури замість кольорів (%H% {hh2132скринрідер{x).
+%A% {hc*режим* *незрячий* *%YES%*{x -- головне: прибирає англійські імена в дужках, замінює псевдографіку ASCII текстом і показує аури замість кольорів (%H% {hh2132скринрідер{x).
 %A% {hc*режим* *колір* *%NO%*{x -- вимикає колірні коди.
 %A% *рахунок* _параметр_ -- виводить один рядок твого {hh999рахунку{x, наприклад *рахунок* _здоровʼя_, замість усього аркуша.
 %A% *довідка* _слово_ -- кожна стаття -- звичайний текст, а якщо слову пасує кілька, прийде нумерований список.

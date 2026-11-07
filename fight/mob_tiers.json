@@ -1,6 +1,6 @@
 {
  "version": 1,
- "status": "Phase C (world). Tier rows = plan 4.2; dmg mults legend 1.7, boss 1.5, champion 1.5 (Kit 2026-11-06). Base hp cut above L55 (decision 54, first cut, calibrate live at L80+). Magic drops (magic_items_revamp.md D2, Kit 2026-10-29): magic_pct = percent of the weapon drop chance for the ordinary magic roll (normal: 50 by default, best tier 4), magic_best_tier; loot magic_pct/magic_items/magic_tiers, staff_pct (imbued staff, staff skill only), pills (boss). Base AC kept <= 0 so tier multipliers never invert. Economy LIVE (Kit 2026-10-06): xp/gold/drop_pct per tier (trash xp 0.75 from L11, gold 0.5, no ordinary weapon drops; elite 1.6/2; champion 2.5/4; boss and legend 4/8). Base wealth x10 (Kit 2026-10-15): at x1 the /8 in mob creation left even bosses with ~1 gold. max_weapon_tier/legendary_pm/guaranteed are not read: tier loot lives in loot. Loot keys are integers (drop_pct, legendary_pm) because Fenia has no floats. Base curve point L1 (Kit 2026-10-06): before it L1-4 mobs clamped to L5 numbers. Tier 10 = dummy (Kit 2026-10-06): onboarding training mobs (Moehewa spider + gremlins, Galeon insects), 1 hp, 1d2, naked AC, no tricks, full xp; shows as a weakling. Tier 2 = boss (most bosses: barely soloable in best gear), tier 1 = legend (superboss). styles: fortress fat but mild, brute deadly but thin (Kit 2026-10-02). glass: a legend that only special damage can hurt (Rat God, immune to all but DAM_NONE), so hp is cut to ~5k (Kit 2026-10-23). Armor model (Kit 2026-10-31, c4.py): base.ac x0.8, base.hp x1.0 to L15, 0.87 L25, 0.84 L45, 0.78 L65-85, 0.80 L95+, base.dmg x1.25 at L45-55 and x1.4 from L65, so the ramps sit at L35-45 and L55-65. Legend and boss hp_boost x1.25 ramping in from L45 to L65 (Kit 2026-11-04): undoes the armor model base hp cut where it bit (x0.78-0.81 at L55+) without a step; champions and anything below L45 keep the cut. Curve past L100 flattened (Kit 2026-11-06): base points L120/L170 (dmg 375/400, hp 11900/13500, ac/mana/wealth hold L105); past the last point the engine holds the last value once code #1877 boots.",
+ "status": "Phase C (world). Tier rows = plan 4.2; dmg mults legend 1.7, boss 1.5, champion 1.5 (Kit 2026-11-06). Base hp cut above L55 (decision 54, first cut, calibrate live at L80+). Magic drops (magic_items_revamp.md D2, Kit 2026-10-29): magic_pct = percent of the weapon drop chance for the ordinary magic roll (normal: 50 by default, best tier 4), magic_best_tier; loot magic_pct/magic_items/magic_tiers, staff_pct (imbued staff, staff skill only), pills (boss). Base AC kept <= 0 so tier multipliers never invert. Economy LIVE (Kit 2026-10-06): xp/gold/drop_pct per tier (trash xp 0.75 from L11, gold 0.5, no ordinary weapon drops; elite 1.6/2; champion 2.5/4; boss and legend 4/8). Base wealth x10 (Kit 2026-10-15): at x1 the /8 in mob creation left even bosses with ~1 gold. max_weapon_tier/legendary_pm/guaranteed are not read: tier loot lives in loot. Loot keys are integers (drop_pct, legendary_pm) because Fenia has no floats. Base curve point L1 (Kit 2026-10-06): before it L1-4 mobs clamped to L5 numbers. Tier 10 = dummy (Kit 2026-10-06): onboarding training mobs (Moehewa spider + gremlins, Galeon insects), 1 hp, 1d2, naked AC, no tricks, full xp; shows as a weakling. Tier 2 = boss (most bosses: barely soloable in best gear), tier 1 = legend (superboss). styles: fortress fat but mild, brute deadly but thin (Kit 2026-10-02). glass: a legend that only special damage can hurt (Rat God, immune to all but DAM_NONE), so hp is cut to ~5k (Kit 2026-10-23). Armor model (Kit 2026-10-31, c4.py): base.ac x0.8, base.hp x1.0 to L15, 0.87 L25, 0.84 L45, 0.78 L65-85, 0.80 L95+, base.dmg x1.25 at L45-55 and x1.4 from L65, so the ramps sit at L35-45 and L55-65. Legend and boss hp_boost x1.25 ramping in from L45 to L65 (Kit 2026-11-04): undoes the armor model base hp cut where it bit (x0.78-0.81 at L55+) without a step; champions and anything below L45 keep the cut. Curve past L100 flattened (Kit 2026-11-06): base points L120/L170 (dmg 375/400, hp 11900/13500, ac/mana/wealth hold L105); past the last point the engine holds the last value once code #1877 boots. Random extras (MOB_DEFENSES_AND_LEGENDS.md D4, Kit 2026-11-06): random_res resists from random_pool per prototype (champion 1, boss 2, legend 3), each an immunity at random_imm_pct (boss 10, legend 20, one at most), random_vuln vulns after them (legend 1); never a bit the body has or the damage class of its own attacks, never on unique race or reviewed imm/res/vuln; fixed per vnum, reshuffled at the first boot of each calendar month.",
  "default_tier": "normal",
  "names": {
   "dummy": 10,
@@ -135,6 +135,9 @@
    ],
    "off_add": ["fast"],
    "act_add": ["warrior"],
+   "random_res": 1,
+   "random_imm_pct": 0,
+   "random_vuln": 0,
    "drop_pct": 200,
    "magic_pct": 150,
    "magic_best_tier": 3,
@@ -187,6 +190,9 @@
    ],
    "off_add": ["fast"],
    "act_add": ["warrior"],
+   "random_res": 2,
+   "random_imm_pct": 10,
+   "random_vuln": 0,
    "drop_pct": 200,
    "magic_pct": 150,
    "magic_best_tier": 3,
@@ -240,6 +246,9 @@
    ],
    "off_add": ["fast"],
    "act_add": ["warrior"],
+   "random_res": 3,
+   "random_imm_pct": 20,
+   "random_vuln": 1,
    "drop_pct": 200,
    "magic_pct": 150,
    "magic_best_tier": 3,
@@ -391,6 +400,7 @@
   "vampire"
  ],
  "caster_vnums": [],
+ "random_pool": ["fire", "cold", "lightning", "acid", "poison", "negative", "holy", "energy", "mental", "disease", "drowning", "light", "sound"],
  "off_signature": [
   "tail",
   "area_attack",

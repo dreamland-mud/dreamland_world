@@ -37,6 +37,16 @@
 // extraStrikes: plain blows a boss/legend adds every tier round; crushPct: % of
 // rounds a melee-only one (no spells, no breath, not blinded) lands a blow past
 // shield, parry and dodge (dice + damroll x1.5, red line). Service NPCs neither.
+// crushBlow / noneBlow: {noun, lines [{text, vtext}]} of those blows: noun =
+// the skill whose damage noun the blow carries, text = room line (%1 mob, %2
+// target), vtext = the target's (%1 mob). One line at random, before the blow.
+// strikeMix {physical, element, none}: % of a champion+ mob's blows by kind.
+// An unarmed mob rolls it once a round for its own swings (dam_type flips to
+// its element attack, mob index attacks); a wielding one keeps its weapon's
+// type. Each extraStrikes blow rolls it: element = dice + damroll x1.0 as the
+// element under strike_nouns[damtype] (a skill name), none = noneBlow (dice
+// + damroll x1.0, damage type none: no resist or immunity stops it). No
+// element attack: that share swings physical.
 {
   "clanguard": {
     "purge": 30,
@@ -999,6 +1009,11 @@
     "switchFocus": false,
     "switchDamtype": false,
     "drSecs": 8,
+    "strikeMix": {
+      "physical": 80,
+      "element": 20,
+      "none": 0
+    },
     "phases": [
       {
         "priority": [
@@ -1147,6 +1162,41 @@
     "drSecs": 8,
     "extraStrikes": 1,
     "crushPct": 35,
+    "strikeMix": {
+      "physical": 65,
+      "element": 32,
+      "none": 3
+    },
+    "crushBlow": {
+      "noun": "crush",
+      "lines": [
+        {
+          "text": "{1{R%1$^C1 вклады%1$nвает|вают в удар весь свой вес -- %2$C3 от него не закрыться!{2",
+          "vtext": "{1{R%1$^C1 вклады%1$nвает|вают в удар весь свой вес -- тебе от него не закрыться!{2"
+        },
+        {
+          "text": "{1{R%1$^C1 сокрушительным ударом прорыва%1$nет|ют любую защиту %2$C2!{2",
+          "vtext": "{1{R%1$^C1 сокрушительным ударом прорыва%1$nет|ют любую твою защиту!{2"
+        },
+        {
+          "text": "{1{R%1$^C1 обрушива%1$nет|ют на %2$C4 удар, который не отбить и не парировать!{2",
+          "vtext": "{1{R%1$^C1 обрушива%1$nет|ют на тебя удар, который не отбить и не парировать!{2"
+        }
+      ]
+    },
+    "noneBlow": {
+      "noun": "disruption",
+      "lines": [
+        {
+          "text": "{1{M%1$^C1 собира%1$nется|ются с силами и бь%1$nет|ют %2$C4 ударом, от которого не спасает никакая стойкость!{2",
+          "vtext": "{1{M%1$^C1 собира%1$nется|ются с силами и бь%1$nет|ют тебя ударом, от которого не спасает никакая стойкость!{2"
+        },
+        {
+          "text": "{1{M%1$^C1 бь%1$nет|ют %2$C4 голой силой -- против такого удара бессильна любая защита!{2",
+          "vtext": "{1{M%1$^C1 бь%1$nет|ют тебя голой силой -- против такого удара бессильна любая защита!{2"
+        }
+      ]
+    },
     "phases": [
       {
         "beats": -50,
@@ -1391,6 +1441,41 @@
     "drSecs": 8,
     "extraStrikes": 2,
     "crushPct": 50,
+    "strikeMix": {
+      "physical": 55,
+      "element": 40,
+      "none": 5
+    },
+    "crushBlow": {
+      "noun": "crush",
+      "lines": [
+        {
+          "text": "{1{R%1$^C1 вклады%1$nвает|вают в удар весь свой вес -- %2$C3 от него не закрыться!{2",
+          "vtext": "{1{R%1$^C1 вклады%1$nвает|вают в удар весь свой вес -- тебе от него не закрыться!{2"
+        },
+        {
+          "text": "{1{R%1$^C1 сокрушительным ударом прорыва%1$nет|ют любую защиту %2$C2!{2",
+          "vtext": "{1{R%1$^C1 сокрушительным ударом прорыва%1$nет|ют любую твою защиту!{2"
+        },
+        {
+          "text": "{1{R%1$^C1 обрушива%1$nет|ют на %2$C4 удар, который не отбить и не парировать!{2",
+          "vtext": "{1{R%1$^C1 обрушива%1$nет|ют на тебя удар, который не отбить и не парировать!{2"
+        }
+      ]
+    },
+    "noneBlow": {
+      "noun": "disruption",
+      "lines": [
+        {
+          "text": "{1{M%1$^C1 замира%1$nет|ют на миг, собирая всю мощь, -- и обрушива%1$nет|ют на %2$C4 удар, перед которым бессильны и сталь, и чары!{2",
+          "vtext": "{1{M%1$^C1 замира%1$nет|ют на миг, собирая всю мощь, -- и обрушива%1$nет|ют на тебя удар, перед которым бессильны и сталь, и чары!{2"
+        },
+        {
+          "text": "{1{M%1$^C1 вклады%1$nвает|вают в удар саму свою суть -- %2$C3 нечем его ослабить!{2",
+          "vtext": "{1{M%1$^C1 вклады%1$nвает|вают в удар саму свою суть -- тебе нечем его ослабить!{2"
+        }
+      ]
+    },
     "phases": [
       {
         "beats": -50,
@@ -2134,6 +2219,21 @@
   // Room-wide attack spells a player's pet casts only into two or more
   // enemies with no bystanders around (utils/combat ai petAreaSafe).
   "pet_area_spells": ["dragons breath"],
+  "strike_nouns": {
+    "fire": "flamestrike",
+    "cold": "chill touch",
+    "lightning": "shocking grasp",
+    "acid": "acid blast",
+    "poison": "poison",
+    "negative": "energy drain",
+    "holy": "ray of truth",
+    "energy": "ethereal fist",
+    "mental": "mind wrack",
+    "disease": "plague",
+    "drowning": "hydroblast",
+    "light": "optic resonance",
+    "sound": "sonic resonance"
+  },
   "tier_spells": {
     "mage": {
       "attack": [

@@ -43,10 +43,10 @@
 // strikeMix {physical, element, none}: % of a champion+ mob's blows by kind.
 // An unarmed mob rolls it once a round for its own swings (dam_type flips to
 // its element attack, mob index attacks); a wielding one keeps its weapon's
-// type. Each extraStrikes blow rolls it: element = dice + damroll x1.0 as the
-// element under strike_nouns[damtype] (a skill name), none = noneBlow (dice
-// + damroll x1.0, damage type none: no resist or immunity stops it). No
-// element attack: that share swings physical.
+// type. Each extraStrikes blow rolls it: element = one ordinary swing as the
+// element attack (hit roll, dodge, parry and shield apply), none = noneBlow
+// (dice + damroll x1.0, damage type none: no defense, resist or immunity
+// stops it). No element attack: that share swings physical.
 {
   "clanguard": {
     "purge": 30,
@@ -2219,21 +2219,6 @@
   // Room-wide attack spells a player's pet casts only into two or more
   // enemies with no bystanders around (utils/combat ai petAreaSafe).
   "pet_area_spells": ["dragons breath"],
-  "strike_nouns": {
-    "fire": "flamestrike",
-    "cold": "chill touch",
-    "lightning": "shocking grasp",
-    "acid": "acid blast",
-    "poison": "poison",
-    "negative": "energy drain",
-    "holy": "ray of truth",
-    "energy": "ethereal fist",
-    "mental": "mind wrack",
-    "disease": "plague",
-    "drowning": "hydroblast",
-    "light": "optic resonance",
-    "sound": "sonic resonance"
-  },
   "tier_spells": {
     "mage": {
       "attack": [

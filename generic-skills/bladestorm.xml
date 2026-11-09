@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill type="GenericSkill">
+  <beats>18</beats>
+  <command type="DefaultSkillCommand">
+    <argtype>undef</argtype>
+    <cat>class</cat>
+    <hint l="en">(berserkers) spin and strike everyone in the room</hint>
+    <hint l="ru">(берсеркеры) закрутиться и ударить всех в комнате</hint>
+    <hint l="ua">(берсеркери) закрутитися й ударити всіх у кімнаті</hint>
+    <name l="en">bladestorm</name>
+    <name l="ru">кружить</name>
+    <name l="ua">кружляти</name>
+    <order>player_only</order>
+    <position>fight</position>
+  </command>
+  <dammsg mg="m">вихрь клинков</dammsg>
+  <group registry="skillGroup">fightmaster</group>
+  <help id="5224" level="102" type="SkillHelp">
+    <text l="en">%FMT% *%CMD%*
+
+The {hh5221berserker{x spins with a two-handed {hh846sword{x or {hh784axe{x, or with a sword or an axe in each hand, and strikes everyone in the room once, the unseen included, and those not yet in the fight too: whoever the steel touches joins the fight. Group mates, {hh15pets{x and those under the gods' protection are spared. The spin costs moves, and after it the berserker needs a short while to catch the breath before the next one.</text>
+    <text l="ru">%FMT% *%CMD%*
+
+{hh5221Берсеркер{x закручивается с двуручным {hh846мечом{x или {hh784топором{x либо с мечом или топором в каждой руке и бьет по разу всех в комнате, невидимых тоже, и тех, кто еще не в бою: кого задела сталь, тот вступает в бой. Согруппники, {hh15питомцы{x и те, кого хранят боги, не пострадают. Вихрь стоит сил на передвижение, а после него берсеркеру нужно немного времени, чтобы отдышаться перед следующим.</text>
+    <text l="ua">%FMT% *%CMD%*
+
+{hh5221Берсеркер{x закручується з дворучним {hh846мечем{x чи {hh784сокирою{x або з мечем чи сокирою в кожній руці й бʼє по разу всіх у кімнаті, невидимих теж, і тих, хто ще не в бою: кого зачепила сталь, той вступає в бій. Одногрупники, {hh15улюбленці{x й ті, кого бережуть боги, не постраждають. Вихор коштує сил на пересування, а після нього берсеркерові потрібно трохи часу, щоб віддихатися перед наступним.</text>
+  </help>
+  <name l="en">bladestorm</name>
+  <name l="ru">вихрь клинков</name>
+  <name l="ua">вихор клинків</name>
+  <subclasses>
+    <node name="berserker">
+      <level>36</level>
+    </node>
+  </subclasses>
+</skill>

@@ -1,22 +1,21 @@
 {
- "_doc": "Warrior subclasses (docs/plans/warrior-subclasses.md). The chosen subclass is the PC string attribute \"subclass\", wiped at remort. Skill bans and gains are <subclasses> nodes in each skill XML (node named after the subclass: <level> gives the skill, <level>-1 bans it), read by C++ GenericSkill. This file holds what Fenia reads (dreamland_fenia utils/subclass): the gates of the choice (profession, level, min/max race size from .tables.size_table, minimum trainable stat caps) and the weapon rules of the subclass skills (weapon_classes = any weapon of these classes, two_hand_damage = any two-handed weapon with one of these damage types; an off-hand weapon must fit too). A subclass missing here gives no gains through its weapon rules, and its skills refuse with weapon_refusal.",
+ "_doc": "Warrior subclasses (docs/plans/warrior-subclasses.md). The chosen subclass is the PC string attribute \"subclass\", wiped at remort. Skill bans and gains are <subclasses> nodes in each skill XML (node named after the subclass: <level> gives the skill, <level>-1 bans it), read by C++ GenericSkill. This file holds what Fenia reads (dreamland_fenia utils/subclass): the gates of the choice (profession, level, min/max race size from .tables.size_table, minimum trainable stat caps) and the weapon rules of the subclass skills (weapon_classes = any weapon of these classes; an off-hand weapon must fit too). A subclass missing here gives no gains through its weapon rules, and its skills refuse with weapon_refusal.",
 
  "berserker": {
   "profession": "warrior",
   "level": 20,
   "min_size": "medium",
   "min_train": { "str": 22 },
-  "weapon_classes": ["axe"],
-  "two_hand_damage": ["slash"],
+  "weapon_classes": ["sword", "axe"],
   "bladestorm": {
    "_doc": "cooldown in seconds between two spins; moves cost = skill level / move_div, at least 1.",
    "cooldown": 24,
    "move_div": 4
   },
   "weapon_refusal": {
-   "en": "This takes an axe, or a two-handed cutting weapon.",
-   "ru": "Для этого нужен топор или двуручное рубящее оружие.",
-   "ua": "Для цього потрібна сокира або дворучна рубальна зброя."
+   "en": "This takes a sword or an axe in hand, and nothing else.",
+   "ru": "Для этого нужен меч или топор в руках, и ничего другого.",
+   "ua": "Для цього потрібен меч або сокира в руках, і нічого іншого."
   }
  }
 }

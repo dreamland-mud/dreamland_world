@@ -1718,7 +1718,19 @@
     "thief": {
       // out of combat, kept up by brain.invis (C++ doInvis asks for act-thief mobs)
       "stealth": ["sneak", "hide"],
+      // Blackjack puts a player who isn't fighting to sleep, then a backstab
+      // on the sleeper (Kit 2026-11-08). The strike line is the fallback for
+      // thieves too young for backstab; one without a piercer in hand gets
+      // the plain blow from the burst itself.
       "priority": [
+        {
+          "move": "tool",
+          "skill": "blackjack",
+          "target": "random",
+          "notFighting": true,
+          "then": "backstab",
+          "cd": 15
+        },
         {
           "move": "tool",
           "skill": "blackjack",

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <removeCharSelf>Ты снова собираешься, и твоя защита смыкается.</removeCharSelf>
+  </affect>
+  <beats>12</beats>
+  <command type="DefaultSkillCommand">
+    <argtype>char_fight</argtype>
+    <cat>class</cat>
+    <hint l="en">(fencers) a false thrust that opens the target's guard to you</hint>
+    <hint l="ru">(фехтовальщики) ложный выпад, раскрывающий для тебя защиту цели</hint>
+    <hint l="ua">(фехтувальники) хибний випад, що розкриває для тебе захист цілі</hint>
+    <name l="en">feint</name>
+    <name l="ru">финт</name>
+    <name l="ua">фінт</name>
+    <order>player_only</order>
+    <position>fight</position>
+  </command>
+  <dammsg mg="m"></dammsg>
+  <group registry="skillGroup">fightmaster</group>
+  <help id="5232" level="102" type="SkillHelp">
+    <text l="en">%FMT% *%CMD% _target_*
+
+Feint is a false thrust of the {hh5231fencer{x. If the target falls for it ({hh37dexterity{x against dexterity, and the level difference), for two rounds its {hh576parry{x, {hh754dodge{x and {hh726shield block{x against this fencer drop by a quarter of how well the feint is learned. Other fighters gain nothing from it. The feint needs the fencer's sword in hand.</text>
+    <text l="ru">%FMT% *%CMD% _цель_*
+
+Финт -- ложный выпад {hh5231фехтовальщика{x. Если цель на него купится ({hh37ловкость{x против ловкости и разница в уровнях), на два раунда ее {hh576парирование{x, {hh754уворот{x и {hh726блок щитом{x против этого фехтовальщика слабеют на четверть от того, насколько изучен финт. Другим бойцам от этого никакой пользы. Для финта нужен меч фехтовальщика в руке.</text>
+    <text l="ua">%FMT% *%CMD% _ціль_*
+
+Фінт -- хибний випад {hh5231фехтувальника{x. Якщо ціль на нього купиться ({hh37спритність{x проти спритності й різниця в рівнях), на два раунди її {hh576парирування{x, {hh754ухилення{x і {hh726блокування щитом{x проти цього фехтувальника слабшають на чверть від того, наскільки вивчений фінт. Іншим бійцям від цього жодної користі. Для фінту потрібен меч фехтувальника в руці.</text>
+  </help>
+  <move>15</move>
+  <name l="en">feint</name>
+  <name l="ru">финт</name>
+  <name l="ua">фінт</name>
+  <negative>true</negative>
+  <subclasses>
+    <node name="fencer">
+      <level>20</level>
+    </node>
+  </subclasses>
+</skill>

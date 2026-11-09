@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill type="GenericSkill">
+  <beats>24</beats>
+  <command type="DefaultSkillCommand">
+    <argtype>undef</argtype>
+    <cat>class</cat>
+    <hint l="en">(fencers) an opening thrust that goes past the shield</hint>
+    <hint l="ru">(фехтовальщики) первый выпад, проходящий мимо щита</hint>
+    <hint l="ua">(фехтувальники) перший випад, що проходить повз щит</hint>
+    <name l="en">lunge</name>
+    <name l="ru">выпад</name>
+    <name l="ua">випад</name>
+    <order>player_only</order>
+    <position>stand</position>
+  </command>
+  <dammsg mg="m">выпад</dammsg>
+  <group registry="skillGroup">fightmaster</group>
+  <help id="5235" level="102" type="SkillHelp">
+    <text l="en">%FMT% *%CMD% _target_*
+
+Lunge is the opening thrust of a {hh5231fencer{x, face to face, at a target that is not fighting yet. It strikes much harder than an ordinary blow, and the point goes past the rim: the rare full block a raised shield sometimes makes against a skill blow ({hh726shield block{x) never stops it. Whether it lands depends on the skill, {hh37dexterity{x against dexterity, the level difference, haste, and whether the target flies, rides or rests. The lunge needs the fencer's sword in hand.</text>
+    <text l="ru">%FMT% *%CMD% _цель_*
+
+Выпад -- первый укол {hh5231фехтовальщика{x, лицом к лицу, в цель, которая еще не сражается. Он бьет куда сильнее обычного удара, и острие проходит мимо кромки щита: редкий полный блок, которым поднятый щит иногда встречает удар умения ({hh726блок щитом{x), его никогда не останавливает. Попадет ли выпад, зависит от умения, {hh37ловкости{x против ловкости, разницы в уровнях, ускорения и того, летает ли цель, сидит ли верхом или отдыхает. Для выпада нужен меч фехтовальщика в руке.</text>
+    <text l="ua">%FMT% *%CMD% _ціль_*
+
+Випад -- перший укол {hh5231фехтувальника{x, віч-на-віч, у ціль, яка ще не бʼється. Він бʼє значно сильніше за звичайний удар, і вістря проходить повз обідок щита: рідкісний повний блок, яким піднятий щит часом зустрічає удар уміння ({hh726блокування щитом{x), його ніколи не зупиняє. Чи влучить випад, залежить від уміння, {hh37спритності{x проти спритності, різниці в рівнях, прискорення і того, чи літає ціль, чи сидить верхи, чи відпочиває. Для випаду потрібен меч фехтувальника в руці.</text>
+  </help>
+  <move>20</move>
+  <name l="en">lunge</name>
+  <name l="ru">выпад</name>
+  <name l="ua">випад</name>
+  <subclasses>
+    <node name="fencer">
+      <level>38</level>
+    </node>
+  </subclasses>
+</skill>

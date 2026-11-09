@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill type="GenericSkill">
+  <beats>18</beats>
+  <command type="DefaultSkillCommand">
+    <argtype>char_fight</argtype>
+    <cat>class</cat>
+    <hint l="en">(sentinels) hurl the shield so it ricochets from enemy to enemy</hint>
+    <hint l="ru">(стражи) швырнуть щит, чтобы он рикошетил от врага к врагу</hint>
+    <hint l="ua">(вартові) жбурнути щит, щоб він рикошетив від ворога до ворога</hint>
+    <name l="en">hurl</name>
+    <name l="ru">запустить</name>
+    <name l="ua">жбурнути</name>
+    <order>player_only</order>
+    <position>fight</position>
+  </command>
+  <dammsg mg="m">бросок щита</dammsg>
+  <group registry="skillGroup">fightmaster</group>
+  <help id="5230" level="102" type="SkillHelp">
+    <text l="en">%FMT% *%CMD% _target_*
+
+The {hh5225sentinel{x hurls the shield at the target, and it ricochets into up to two more enemies: those who fight the sentinel or the sentinel's group. Each one takes a blow like a {hh676bash{x, the harder the heavier the shield, and the first one may be dazed. The price: for a moment the shield is away and {hh726shield block{x catches nothing, and the arm needs half a minute of rest before the next throw. The throw needs a shield worn and a one-handed weapon in hand that is not a {hh772polearm{x.</text>
+    <text l="ru">%FMT% *%CMD% _цель_*
+
+{hh5225Страж{x швыряет щит в цель, и тот рикошетит еще в двух врагов: тех, кто сражается со стражем или с его группой. Каждый получает удар, как от {hh676толчка{x, тем сильнее, чем тяжелее щит, а первого может ошеломить. Цена: на миг щит в полете, и {hh726блок щитом{x ничего не ловит, а руке нужно полминуты отдыха до следующего броска. Для броска нужен надетый щит и одноручное оружие в руке, не {hh772алебарда{x.</text>
+    <text l="ua">%FMT% *%CMD% _ціль_*
+
+{hh5225Вартовий{x жбурляє щит у ціль, і той рикошетить ще у двох ворогів: тих, хто бʼється з вартовим чи з його групою. Кожен отримує удар, як від {hh676штовху{x, тим сильніший, що важчий щит, а першого може приголомшити. Ціна: на мить щит у польоті, і {hh726блокування щитом{x нічого не ловить, а руці потрібно півхвилини відпочинку до наступного кидка. Для кидка потрібен вдягнений щит і одноручна зброя в руці, не {hh772алебарда{x.</text>
+  </help>
+  <move>30</move>
+  <name l="en">shield throw</name>
+  <name l="ru">бросок щита</name>
+  <name l="ua">кидок щита</name>
+  <subclasses>
+    <node name="sentinel">
+      <level>48</level>
+    </node>
+  </subclasses>
+</skill>

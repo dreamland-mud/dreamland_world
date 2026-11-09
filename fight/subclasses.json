@@ -1,5 +1,5 @@
 {
- "_doc": "Warrior subclasses (docs/plans/warrior-subclasses.md). The chosen subclass is the PC string attribute \"subclass\", wiped at remort. Skill bans and gains are <subclasses> nodes in each skill XML (node named after the subclass: <level> gives the skill, <level>-1 bans it), read by C++ GenericSkill. This file holds what Fenia reads (dreamland_fenia utils/subclass): the gates of the choice (profession, level, min/max race size from .tables.size_table, minimum trainable stat caps) and the weapon rules of the subclass skills (weapon_classes = any weapon of these classes; an off-hand weapon must fit too). A subclass missing here gives no gains through its weapon rules, and its skills refuse with weapon_refusal.",
+ "_doc": "Warrior subclasses (docs/plans/warrior-subclasses.md). The chosen subclass is the PC string attribute \"subclass\", wiped at remort. Skill bans and gains are <subclasses> nodes in each skill XML (node named after the subclass: <level> gives the skill, <level>-1 bans it), read by C++ GenericSkill. This file holds what Fenia reads (dreamland_fenia utils/subclass): the gates of the choice (profession, level, min/max race size from .tables.size_table, minimum trainable stat caps) and the weapon rules of the subclass skills (an off-hand weapon must fit too): weapon_classes = any weapon of these classes, banned_classes = never these, one_handed = no two-handed weapon, shield = a shield must be worn. A subclass missing here gives no gains through its weapon rules, and its skills refuse with weapon_refusal.",
 
  "berserker": {
   "profession": "warrior",
@@ -16,6 +16,50 @@
    "en": "This takes a sword or an axe in hand, and nothing else.",
    "ru": "Для этого нужен меч или топор в руках, и ничего другого.",
    "ua": "Для цього потрібен меч або сокира в руках, і нічого іншого."
+  }
+ },
+
+ "sentinel": {
+  "profession": "warrior",
+  "level": 20,
+  "min_size": "medium",
+  "min_train": { "con": 21 },
+  "shield": true,
+  "one_handed": true,
+  "banned_classes": ["polearm"],
+  "con_scale": {
+   "_doc": "Thorns and bulwark grow with current con above base, up to cap: scale = min(cur_con, cap) - base, 0..8.",
+   "base": 20,
+   "cap": 28
+  },
+  "bulwark": {
+   "_doc": "A successful shield block adds a charge, up to max. A block with max charges fires a free bash with the shield and empties them. bonus_pct: chance per point of con scale that one block adds two charges. The charges are an affect of duration ticks, renewed by every block, so they fade out of combat.",
+   "max": 3,
+   "bonus_pct": 6,
+   "duration": 1
+  },
+  "thorns": {
+   "_doc": "Damage to the attacker on a block: dice(skill level / dice_div, dice_size) x (8 + con scale) / 8, never lethal. shrug_pct: base chance (attacker's luck counts) to take none.",
+   "dice_div": 6,
+   "dice_size": 4,
+   "shrug_pct": 25
+  },
+  "phalanx": {
+   "_doc": "A one-handed spear and a shield: shield block chance + block_bonus (and its cap with it), thorns x thorns_pct / 100.",
+   "block_bonus": 10,
+   "thorns_pct": 150
+  },
+  "shield_throw": {
+   "_doc": "cooldown in seconds between two throws; away = seconds after a throw with no shield block; targets = enemies hit at most; daze_div = the first target is dazed with chance skill / daze_div.",
+   "cooldown": 30,
+   "away": 3,
+   "targets": 3,
+   "daze_div": 2
+  },
+  "weapon_refusal": {
+   "en": "This takes a shield on your arm and a one-handed weapon that is not a polearm.",
+   "ru": "Для этого нужен щит на руке и одноручное оружие, не алебарда.",
+   "ua": "Для цього потрібен щит на руці й одноручна зброя, не алебарда."
   }
  }
 }

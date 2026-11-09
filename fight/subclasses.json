@@ -1,5 +1,5 @@
 {
- "_doc": "Warrior subclasses (docs/plans/warrior-subclasses.md). The chosen subclass is the PC string attribute \"subclass\", wiped at remort. Skill bans and gains are <subclasses> nodes in each skill XML (node named after the subclass: <level> gives the skill, <level>-1 bans it), read by C++ GenericSkill. This file holds what Fenia reads (dreamland_fenia utils/subclass): the gates of the choice (profession, level, min/max race size from .tables.size_table, minimum trainable stat caps) and the weapon rules of the subclass skills (an off-hand weapon must fit too): weapon_classes = any weapon of these classes, banned_classes = never these, damage_types = the weapon must deal one of these damage types (.tables.damage_table), banned_flags = never a weapon with one of these flags (.tables.weapon_type2), one_handed = no two-handed weapon, shield = a shield must be worn, no_shield = no shield may be worn, single = no weapon in the off hand (a held item is fine), dual = a second weapon must be wielded. The engine (dreamland_code onehit_undef.cpp) also reads berserker weapon_classes and dual, at every hit, for the blood frenzy band. A subclass missing here gives no gains through its weapon rules, and its skills refuse with weapon_refusal.",
+ "_doc": "Warrior subclasses (docs/plans/warrior-subclasses.md). The chosen subclass is the PC string attribute \"subclass\", wiped at remort. Skill bans and gains are <subclasses> nodes in each skill XML (node named after the subclass: <level> gives the skill, <level>-1 bans it), read by C++ GenericSkill. This file holds what Fenia reads (dreamland_fenia utils/subclass): the gates of the choice (profession, level, min/max race size from .tables.size_table, minimum trainable stat caps) and the weapon rules of the subclass skills (an off-hand weapon must fit too): weapon_classes = any weapon of these classes, banned_classes = never these, damage_types = the weapon must deal one of these damage types (.tables.damage_table), banned_flags = never a weapon with one of these flags (.tables.weapon_type2), one_handed = no two-handed weapon, shield = a shield must be worn, no_shield = no shield may be worn, single = no weapon in the off hand (a held item is fine), dual = a second weapon must be wielded. exchange = skills whose practiced percent moves over when the subclass is chosen (.tmp.subclass.choose, the C++ skill_exchange rule: from banned, to gained); the engine repeats counter -> riposte at every login as a backstop. The engine (dreamland_code onehit_undef.cpp) also reads berserker weapon_classes and dual, at every hit, for the blood frenzy band. A subclass missing here gives no gains through its weapon rules, and its skills refuse with weapon_refusal.",
 
  "berserker": {
   "profession": "warrior",
@@ -35,6 +35,9 @@
   "one_handed": true,
   "no_shield": true,
   "single": true,
+  "exchange": [
+   { "from": "counter", "to": "riposte" }
+  ],
   "feint": {
    "_doc": "The target's parry, dodge and shield block against the fencer drop by feint effective / div for secs seconds (2 rounds).",
    "div": 4,

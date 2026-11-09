@@ -1,5 +1,5 @@
 {
- "_doc": "One item value model, shared by the gear advisor (service advice, characterwrapper.cpp ga_*), the random item generator and Fenia's item measure (.config(\"fight/item_value\")). Units are gear-score points. melee/caster: per-profile weight per point of an apply (level/slevel/skill_level_* per +1, beats per -1% skill lag; saves is the fallback for shared.saves_by_level). shared: profile-independent weights; saves_by_level / saves_pts_per_pct: the svs price by level (see _doc_saves_by_level); ac_weight is the flat weight per composite armor point under the armor model (ac_base at level 1 falling to 0 at ac_zero_level, with the profile ac_floor, only applies without it); trigger_bonus_skip: vnums whose Fenia scripts are housekeeping (owner or duplicate checks, wear refusals), so the sage gives them no flat trigger bonus. trigger_spells: {vnum: [spell, ...]} an onEquip script casts on the wearer while worn (\"grant:<skill>\" = a skill it lends), scored at their worn (grant) price in fight/spell_value.json instead of the flat trigger bonus. first_life_only: vnums a remorted char cannot wear (Hut trinkets), never advised after a remort. flags: [melee, caster] per affect flag (a flag the char can self-cast counts 10%). res: [res, imm, vuln] per damage class (resists do not stack). measure: one roll of the item measure (M) and the slot factors (rolls = level / factor), tier budgets in M. grant_skill: what an item-granted skill is worth to its wearer. A missing key falls back to the compiled default. docs/plans/armor-generator.md.",
+ "_doc": "One item value model, shared by the gear advisor (service advice, characterwrapper.cpp ga_*), the random item generator and Fenia's item measure (.config(\"fight/item_value\")). Units are gear-score points. melee/caster: per-profile weight per point of an apply (level/slevel/skill_level_* per +1, beats per -1% skill lag; saves is the fallback for shared.saves_by_level). shared: profile-independent weights; saves_by_level / saves_pts_per_pct: the svs price by level (see _doc_saves_by_level); ac_weight is the flat weight per composite armor point under the armor model (ac_base at level 1 falling to 0 at ac_zero_level, with the profile ac_floor, only applies without it); materials_ref_level: the level the flat materials prices are set at; they scale by one M at the item level. trigger_spells: {vnum: [spell, ...]} an onEquip script casts on the wearer while worn (\"grant:<skill>\" = a skill it lends), scored at their worn (grant) price in fight/spell_value.json. A Fenia trigger by itself scores nothing. first_life_only: vnums a remorted char cannot wear (Hut trinkets), never advised after a remort. flags: [melee, caster] per affect flag (a flag the char can self-cast counts 10%). res: [res, imm, vuln] per damage class (resists do not stack). measure: one roll of the item measure (M) and the slot factors (rolls = level / factor), tier budgets in M. grant_skill: what an item-granted skill is worth to its wearer. A missing key falls back to the compiled default. docs/plans/armor-generator.md.",
  "melee": {
   "hp": 1.0,
   "mana": 0.1,
@@ -120,19 +120,7 @@
    "32032": ["concentrate"],
    "32703": ["evolve lion"]
   },
-  "trigger_bonus_skip": [
-   674,
-   812,
-   813,
-   814,
-   1525,
-   5118,
-   7719,
-   9598,
-   17340,
-   30842,
-   50111
-  ],
+  "materials_ref_level": 50,
   "first_life_only": [
    812,
    813,
@@ -569,7 +557,7 @@
   }
  },
  "materials": {
-  "_doc": "Points per item material [melee, caster] (decision 12): durability today. Weapon materials still carry their combat side here until the combat-effect model (P3) prices it from the mob census. Armor materials are 0 here: their value is a level curve in materials_combat.",
+  "_doc": "Points per item material [melee, caster] at shared.materials_ref_level, scaled by one M at the item level (decision 12): durability today. Weapon materials still carry their combat side here until the combat-effect model (P3) prices it from the mob census. Armor materials are 0 here: their value is a level curve in materials_combat.",
   "dragonskin": [
    0,
    0

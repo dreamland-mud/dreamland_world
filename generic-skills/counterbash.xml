@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill type="GenericSkill">
+  <affect type="DefaultAffectHandler">
+    <removeCharSelf>Твой щит остывает, и накопленная в нем сила уходит.</removeCharSelf>
+  </affect>
+  <dammsg mg="m"></dammsg>
+  <group registry="skillGroup">defensive</group>
+  <help id="5226" level="102" type="SkillHelp">
+    <text l="en">Counterbash is a passive skill of the {hh5225sentinel{x. Every blow caught by {hh726shield block{x may become a charge, the more often the better the skill is learned, up to three charges. With three charges the next blow the shield catches comes back at once: the sentinel throws his whole weight behind the shield in a free {hh676bash{x, by the rules of bash: the heavier the shield, the harder the push, and the enemy may go down. {hh36Constitution{x above 20 gives a chance that one block adds two charges, the better the closer it is to 28.
+
+Every block renews the charges for one tick: about a minute after the last caught blow they are gone. Counterbash needs bash learned, a shield worn and a one-handed weapon in hand that is not a {hh772polearm{x.</text>
+    <text l="ru">Встречный толчок -- пассивное умение {hh5225стража{x. Каждый удар, пойманный {hh726блоком щитом{x, может стать зарядом, тем чаще, чем лучше изучено умение, до трех зарядов. С тремя зарядами следующий пойманный щитом удар возвращается разом: страж бросает весь свой вес за щит в бесплатном {hh676толчке{x по правилам толчка: чем тяжелее щит, тем сильнее удар, и враг может упасть. {hh36Телосложение{x выше 20 дает шанс, что один блок принесет два заряда, и чем ближе к 28, тем чаще.
+
+Каждый блок продлевает заряды на один тик: примерно через минуту после последнего пойманного удара они уходят. Встречному толчку нужен изученный толчок, надетый щит и одноручное оружие в руке, не {hh772алебарда{x.</text>
+    <text l="ua">Зустрічний штовх -- пасивне вміння {hh5225вартового{x. Кожен удар, спійманий {hh726блокуванням щитом{x, може стати зарядом, то частіше, що краще вивчене вміння, до трьох зарядів. З трьома зарядами наступний спійманий щитом удар повертається разом: вартовий кидає всю свою вагу за щит у безкоштовному {hh676штовху{x за правилами штовху: що важчий щит, то сильніший удар, і ворог може впасти. {hh36Тілобудова{x понад 20 дає шанс, що один блок принесе два заряди, і що ближче до 28, то частіше.
+
+Кожен блок подовжує заряди на один тік: приблизно за хвилину після останнього спійманого удару вони зникають. Зустрічному штовху потрібен вивчений штовх, вдягнений щит і одноручна зброя в руці, не {hh772алебарда{x.</text>
+  </help>
+  <name l="en">counterbash</name>
+  <name l="ru">встречный толчок</name>
+  <name l="ua">зустрічний штовх</name>
+  <subclasses>
+    <node name="sentinel">
+      <level>20</level>
+    </node>
+  </subclasses>
+  <webColumn>none</webColumn>
+</skill>

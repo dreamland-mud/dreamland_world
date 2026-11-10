@@ -9,8 +9,9 @@
   "weapon_classes": ["sword", "axe"],
   "dual": true,
   "blood_frenzy": {
-   "_doc": "The frenzy makes armor worse by ac_pct percent of the berserker's current armor class (its absolute value, the average of the four, the rage penalty already in), nothing when the armor is no better than none, scaled by how well blood frenzy is learned. Ends with berserk.",
-   "ac_pct": 30
+   "_doc": "The frenzy makes armor worse by ac_pct percent of the berserker's current armor class (its absolute value, the average of the four, the rage penalty already in), nothing when the armor is no better than none, scaled by how well blood frenzy is learned. Ends with berserk. dam_pct: every ordinary weapon blow hits that many percent harder at any health while the frenzy, berserk and the berserker weapons are on, scaled by how well blood frenzy is learned; below half health the low-hp band (up to +20%, onehit_undef.cpp) adds on top.",
+   "ac_pct": 30,
+  "dam_pct": 10
   },
   "bladestorm": {
    "_doc": "cooldown in seconds between two spins. Every swept target takes one normal blow from each hand; every blow costs move_per_hit moves, and the storm stops when the moves run out.",

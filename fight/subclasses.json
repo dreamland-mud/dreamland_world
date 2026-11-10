@@ -14,8 +14,9 @@
   "dam_pct": 10
   },
   "bladestorm": {
-   "_doc": "cooldown in seconds between two spins. Every swept target takes one normal blow from each hand; every blow costs move_per_hit moves, and the storm stops when the moves run out.",
-   "cooldown": 24,
+   "_doc": "a channel: the storm lasts rounds combat rounds (the opening sweep included); every round every swept target takes one normal blow from each hand, every blow costs move_per_hit moves, and the storm stops early when the moves run out. cooldown_ticks: the visible affect timer after the storm ends (1 tick = 60 s). A failed spin has no cooldown.",
+   "rounds": 4,
+   "cooldown_ticks": 1,
    "move_per_hit": 10
   },
   "weapon_refusal": {

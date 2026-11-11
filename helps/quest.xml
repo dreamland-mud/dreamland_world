@@ -160,9 +160,9 @@ For more information about quest items use %H% {hh126reward{x. For information a
     <title l="ua">{CКвести:{x Завдання квесторів, квестові очки</title>
   </node>
   <node id="126" seealso="125 1368" level="-1" type="Help" labels="quests">
-    <extra l="en">bag girth hero 'quest items' questweapon ring weapon</extra>
-    <extra l="ru">дорожная героя кольцо квестовая квестовое 'квестовые предметы' квестовый награда награды 'оружие героя' пояс сумка</extra>
-    <extra l="ua">дорожня героя кільце квестова квестове 'квестові предмети' квестовий нагорода нагороди 'зброя героя' пояс сумка</extra>
+    <extra l="en">bag girth hero 'quest items' questweapon ring weapon reshape</extra>
+    <extra l="ru">дорожная героя кольцо квестовая квестовое 'квестовые предметы' квестовый награда награды 'оружие героя' пояс сумка переделка</extra>
+    <extra l="ua">дорожня героя кільце квестова квестове 'квестові предмети' квестовий нагорода нагороди 'зброя героя' пояс сумка переробка</extra>
     <keyword l="en">quest rewards</keyword>
     <keyword l="ru">квестовые вещи</keyword>
     <keyword l="ua">квестові речі</keyword>
@@ -176,9 +176,13 @@ One of the most popular goods are {Cquest items:{x
 
 These items are the {hh57personal property{x of the character -- they cannot be sacrificed to the gods, do not crumble due to a large level difference, and are not damaged in combat. Only the owner can pick up such an item.
 
-The ring and belt are available from level 21 and grow in stats along with their owner. Upon reaching a new level it is advisable to take them off and put them back on. The stats of quest rings, belts and weapons also depend on the {hh33alignment{x of the owner: good characters receive more {hh47accuracy{x and health, evil ones -- more damage, and neutral ones -- roughly equal amounts of both.
+The ring and belt are available from level 21 and grow in stats along with their owner. Upon reaching a new level it is advisable to take them off and put them back on. The stats of quest rings and belts also depend on the {hh33alignment{x of the owner: good characters receive more {hh47accuracy{x and health, evil ones -- more damage, and neutral ones -- roughly equal amounts of both.
 
-The quest weapon is {hh662exotic{x, with all the characteristics inherent to that type.
+When you buy the quest weapon, name its kind: *quest buy weapon sword*. The questor offers the weapon kinds you have practiced, plus {hh662exotic{x, which anyone can take; without a name he lists them. The weapon grows with you: its dice and stats follow your level, your class and the upgrade tier.
+
+Owner's {hh33alignment{x adds a little strength (evil), dexterity (good) or both (neutral). Edged kinds come sharp. A mace, flail, whip or staff can't be sharp, so it gets more stats instead. A staff or polearm takes both hands and hits harder, unless your race is huge or bigger: then one hand will do.
+
+To change the kind of a weapon you already have, take it off and say *quest buy reshape axe*: the first reshape of a weapon bought before this choice existed is free, every next one costs 200 quest points.
 
 The quest bag floats beside its owner and grows with them too. It gives no accuracy or damage, only health, mana, moves and spell defense: casters get more mana, fighters more health.
 
@@ -202,9 +206,13 @@ You can sew {hh19pockets{x onto the quest bag for convenient item sorting.
 
 Эти вещи -- {hh57личная собственность{x персонажа, они не могут быть принесены в жертву богам, не рассыпаются из-за большой разницы в уровнях и не повреждаются в бою. Поднять такую вещь может только хозяин.
 
-Кольцо и пояс доступны с 21го уровня и растут в параметрах вместе с хозяином. При достижении нового уровня их желательно снять и надеть заново. Параметры квестовых колец, поясов и оружия также зависят от {hh33натуры{x владельца: добрые получают больше {hh47точности{x и здоровья, злые -- больше урона, а нейтральные -- примерно поровну и того, и другого.
+Кольцо и пояс доступны с 21го уровня и растут в параметрах вместе с хозяином. При достижении нового уровня их желательно снять и надеть заново. Параметры квестовых колец и поясов также зависят от {hh33натуры{x владельца: добрые получают больше {hh47точности{x и здоровья, злые -- больше урона, а нейтральные -- примерно поровну и того, и другого.
 
-Квестовое оружие -- {hh662экзотическое{x, со всеми присущими этому типу особенностями.
+Покупая квестовое оружие, назови его вид: *квест купить оружие меч*. Квестор предложит те виды оружия, которыми ты владеешь, и {hh662экзотическое оружие{x, доступное всем; без названия он их перечислит. Оружие растет вместе с тобой: кубики и параметры зависят от твоего уровня, класса и ступени улучшения.
+
+{hh33Натура{x владельца добавляет немного силы (злым), ловкости (добрым) или того и другого (нейтральным). Режущее и колющее оружие сразу острое. Булава, цеп, хлыст и посох острыми не бывают, зато получают больше параметров. Посох и алебарду держат обеими руками, и бьют они сильнее, если только твоя раса не огромного размера: тогда хватит одной руки.
+
+Чтобы сменить вид уже купленного оружия, сними его и скажи *квест купить переделка топор*: первая переделка оружия, купленного до появления выбора, бесплатна, каждая следующая стоит 200 квестовых очков.
 
 Квестовая сумка парит рядом с хозяином и тоже растет вместе с ним. Точности и урона она не дает, только здоровье, ману, шаги и защиту от заклинаний: магам больше маны, бойцам больше здоровья.
 
@@ -228,9 +236,13 @@ You can sew {hh19pockets{x onto the quest bag for convenient item sorting.
 
 Ці речі -- {hh57особиста власність{x персонажа, їх не можна принести в жертву богам, вони не розсипаються через велику різницю в рівнях і не ушкоджуються в бою. Підняти таку річ може тільки господар.
 
-Кільце і пояс доступні з 21-го рівня і ростуть у параметрах разом з господарем. При досягненні нового рівня їх бажано зняти і надіти знову. Параметри квестових кілець, поясів і зброї також залежать від {hh33натури{x власника: добрі отримують більше {hh47влучності{x і здоровʼя, злі -- більше шкоди, а нейтральні -- приблизно порівну і того, і іншого.
+Кільце і пояс доступні з 21-го рівня і ростуть у параметрах разом з господарем. При досягненні нового рівня їх бажано зняти і надіти знову. Параметри квестових кілець і поясів також залежать від {hh33натури{x власника: добрі отримують більше {hh47влучності{x і здоровʼя, злі -- більше шкоди, а нейтральні -- приблизно порівну і того, і іншого.
 
-Квестова зброя -- {hh662екзотична{x, з усіма притаманними цьому типу особливостями.
+Купуючи квестову зброю, назви її вид: *квест купити зброя меч*. Квестор запропонує ту зброю, якою ти володієш, і {hh662екзотичну зброю{x, доступну всім; без назви він їх перелічить. Зброя росте разом з тобою: кубики й параметри залежать від твого рівня, класу і щабля покращення.
+
+{hh33Натура{x власника додає трохи сили (злим), спритності (добрим) або того й іншого (нейтральним). Ріжуча й колюча зброя одразу гостра. Булава, ціп, батіг і посох гострими не бувають, зате отримують більше параметрів. Посох і алебарду тримають обома руками, і бʼють вони сильніше, якщо тільки твоя раса не величезного розміру: тоді вистачить однієї руки.
+
+Щоб змінити вид уже купленої зброї, зніми її і скажи *квест купити переробка сокира*: перша переробка зброї, купленої до появи вибору, безкоштовна, кожна наступна коштує 200 квестових очок.
 
 Квестова сумка ширяє поруч із господарем і теж росте разом із ним. Влучності й шкоди вона не дає, лише здоровʼя, ману, кроки і захист від заклять: магам більше мани, бійцям більше здоровʼя.
 

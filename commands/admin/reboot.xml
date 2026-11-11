@@ -2,12 +2,19 @@
 <Command>
   <cat></cat>
   <extra>keep_hide ghost spellout</extra>
-  <help id="1036" level="110" ref="shutdown" type="CommandHelp">
-    <text l="en">%FMT% *%CMD%* *now* 
+  <help id="1036" level="-1" ref="shutdown" type="CommandHelp">
+    <extra l="en">'soft reboot'</extra>
+    <extra l="ru">ребут перезагрузка 'мягкий ребут' 'перезагрузка мира'</extra>
+    <extra l="ua">ребут перезавантаження 'мʼякий ребут' 'перезавантаження світу'</extra>
+    <text l="en">=Reboot= is when the Dreamland server restarts. Before it, Hassan and Valkyrie loudly warn everyone in the world a few ticks ahead. Every character is saved on the way down, and once the world loads again you just log back in.
+
+A =soft reboot= is lighter: you only see the message "The world has subtly changed...". The gods have swapped part of the engine on the fly, without stopping the world. The game freezes for a second or two and then carries on.
+{Ii
+%FMT% *%CMD%* *now* 
 Restart the mud-server immediately.
 
 %FMT% *%CMD%* _ticks_ 
-Restart the mud-server after the specified number of ticks. Every 10th, and starting from the 5th - each subsequent tick - Hassan and Valkyrie will loudly warn about the upcoming reboot.
+Restart the mud-server after the specified number of ticks. Every 10th, and starting from the 5th -- each subsequent tick -- Hassan and Valkyrie will loudly warn about the upcoming reboot.
 
 %FMT% *%CMD%* *cancel*
 Cancel the restart.
@@ -16,9 +23,13 @@ Cancel the restart.
 See how many ticks are left until the restart.
 
 %FMT% *shutdown*
-Shuts down the server and creates a shutdown.txt file in the current directory, the presence of which will prevent the world from loading again.
+Shuts down the server and creates a shutdown.txt file in the current directory, the presence of which will prevent the world from loading again.{Ix
 </text>
-    <text l="ru">%FMT% *%CMD%* *now* 
+    <text l="ru">=Ребут= -- это перезапуск сервера Мира Мечты. Перед ним Хассан и Валькирия за несколько тиков громко предупреждают об этом весь мир. Каждый персонаж сохраняется перед остановкой, а когда мир загрузится снова, достаточно просто зайти в игру.
+
+=Мягкий ребут= проходит легче: ты видишь только сообщение "Мир неуловимо изменился...". Это боги на ходу заменили часть движка, не останавливая мир. Игра замирает на секунду-другую и идет дальше.
+{Ii
+%FMT% *%CMD%* *now* 
 Перезагрузить mud-сервер немедленно.
 
 %FMT% *%CMD%* _тиков_ 
@@ -29,15 +40,19 @@ Shuts down the server and creates a shutdown.txt file in the current directory, 
 
 %FMT% *%CMD%* *status*
 Посмотреть сколько тиков осталось до перезагрузки.
-           
+
 %FMT% *shutdown*
-Завершает работу сервера и создает в текущем каталоге файл shutdown.txt, наличие которого не позволит миру загрузиться снова.
+Завершает работу сервера и создает в текущем каталоге файл shutdown.txt, наличие которого не позволит миру загрузиться снова.{Ix
 </text>
-    <text l="ua">%FMT% *%CMD%* *now* 
+    <text l="ua">=Ребут= -- це перезапуск сервера Світу Мрій. Перед ним Хасан і Валькірія за кілька тиків гучно попереджають про це весь світ. Кожен персонаж зберігається перед зупинкою, а коли світ завантажиться знову, досить просто зайти в гру.
+
+=Мʼякий ребут= минає легше: ти бачиш тільки повідомлення "Світ невловимо змінився...". Це боги на ходу замінили частину рушія, не зупиняючи світ. Гра завмирає на секунду-другу і йде далі.
+{Ii
+%FMT% *%CMD%* *now* 
 Перезавантажити mud-сервер негайно.
 
 %FMT% *%CMD%* _тиків_ 
-Перезавантажити mud-сервер через вказану кількість тиків. Кожен 10-й, а починаючи з 5-го - кожен наступний тик - Хасан і Валькірія голосно попереджатимуть про майбутню перезавантаження.
+Перезавантажити mud-сервер через вказану кількість тиків. Кожен 10-й, а починаючи з 5-го -- кожен наступний тик -- Хасан і Валькірія голосно попереджатимуть про майбутнє перезавантаження.
 
 %FMT% *%CMD%* *cancel*
 Скасувати перезавантаження.
@@ -46,7 +61,7 @@ Shuts down the server and creates a shutdown.txt file in the current directory, 
 Подивитися, скільки тиків залишилося до перезавантаження.
 
 %FMT% *shutdown*
-Завершує роботу сервера і створює в поточному каталозі файл shutdown.txt, присутність якого не дозволить світу завантажитися знову.
+Завершує роботу сервера і створює в поточному каталозі файл shutdown.txt, присутність якого не дозволить світу завантажитися знову.{Ix
 </text>
   </help>
   <hint l="en">reboot the world</hint>

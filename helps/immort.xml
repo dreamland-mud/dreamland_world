@@ -260,16 +260,16 @@ Gods can hide their true level or even take on the appearance of mortals. You ca
     <text l="en">Every weapon, skill, or spell has a specific affect type. Items, skills, or racial traits can grant vulnerability, resistance, or even immunity to certain affect types.
 
 {CHOW IT WORKS{x
-%A% =Vulnerability= vuln: hits of this affect type deal 50% {Rmore{x damage, and {hh1361spells{x (magic or prayers) land more often.
-%A% =Resistance= resist: hits of this affect type deal a third {Gless{x damage, and spells land less often.
+%A% =Vulnerability= vuln: hits of this affect type deal noticeably {Rmore{x damage, and {hh1361spells{x (magic or prayers) land more often.
+%A% =Resistance= resist: hits of this affect type deal noticeably {Gless{x damage, and spells land less often.
 %A% =Immunity= immune: hits of this affect type deal {Wno{x damage at all, and spells fail completely. Immunities are very rare.
-%A% They do not stack: two resistances to the same hit still cut a third, not two thirds. Vulnerability and resistance together cancel out -- the damage is normal. Immunity beats both.
-%A% Resistance to =weapons= works against every weapon hit, whatever its damage type: bash, pierce, slash or, say, poison. The damage type is checked in the same go, so a weapon resist plus a poison resist on one hit is still one third.
-%A% The weapon's =material= is checked on its own, as a separate multiplier. Vulnerability to iron against an iron sword adds 50%, then a weapon resist cuts a third, and the hit lands at normal damage.
+%A% They do not stack: two resistances to the same hit are no better than one. Vulnerability and resistance together cancel out -- the damage is normal. Immunity beats both.
+%A% Resistance to =weapons= works against every weapon hit, whatever its damage type: bash, pierce, slash or, say, poison. The damage type is checked in the same go, so a weapon resist plus a poison resist on one hit still count as one resistance.
+%A% The weapon's =material= is checked on its own, apart from the damage type. Vulnerability to iron against an iron sword and a weapon resist cancel each other out, and the hit lands at normal damage.
 %A% Resistance to =spells= covers both magic and prayers. Resistance to magic covers only magic, resistance to prayers only prayers.
 
 {CAFFECT TYPES{x
-%A% =Weapon=: most physical effects that deal "ordinary" damage. It splits into three types you can resist on their own -- =bash= (heavy, crushing blows), =pierce= (stabs) and =slash= (cuts). Bash is by far the most common in the world, about twice as common as pierce or slash, so resisting it protects you most often. Magic weapons or weapon {hh96flags{x have their own affect types -- usually elemental ones.
+%A% =Weapon=: most physical effects that deal "ordinary" damage. It splits into three types you can resist on their own -- =bash= (heavy, crushing blows), =pierce= (stabs) and =slash= (cuts). Bash is by far the most common in the world, so resisting it protects you most often. Magic weapons or weapon {hh96flags{x have their own affect types -- usually elemental ones.
 %A% =Magic=: effects of combat magic -- but not prayers
 %A% =Prayers=: effects of most cleric and paladin prayers
 %A% =Elements=: the effects of fire (e.g. {hh625fireball{x), cold (e.g. {hh610chill touch{x), electricity/shock (e.g. {hh579lightning bolt{x), acid, energy, light, sound, water/drowning, and mental attacks.
@@ -284,16 +284,16 @@ Many creatures (mobs) in the world already have innate immunities or vulnerabili
     <text l="ru">У каждого оружия, умения или заклинания есть определенный тип воздействия. С помощью предметов, умений или расовых особенностей можно получить уязвимость, сопротивляемость или даже иммунитет к каким-то типам воздействий.
 
 {CКАК ЭТО РАБОТАЕТ{x
-%A% =Уязвимость= вульн: удары этим типом воздействий нанесут на 50% {Rбольше{x урона, а {hh1361заклинания{x (магия или молитвы) сработают чаще.
-%A% =Сопротивляемость= резист: удары этим типом воздействий нанесут на треть {Gменьше{x урона, а заклинания сработают реже.
+%A% =Уязвимость= вульн: удары этим типом воздействий нанесут заметно {Rбольше{x урона, а {hh1361заклинания{x (магия или молитвы) сработают чаще.
+%A% =Сопротивляемость= резист: удары этим типом воздействий нанесут заметно {Gменьше{x урона, а заклинания сработают реже.
 %A% =Иммунитет= иммун: удары этим типом воздействий не нанесут вообще {Wникакого{x урона, а заклинания полностью провалятся. Иммуны бывают очень редко.
-%A% Они не складываются: две сопротивляемости к одному удару все равно срезают треть, а не две трети. Уязвимость и сопротивляемость вместе гасят друг друга -- урон будет обычный. Иммунитет сильнее их обеих.
-%A% Сопротивляемость к =оружию= работает против любого удара оружием, какой бы ни был у него тип воздействия: дробящий, колющий, рубящий или, скажем, яд. Тип воздействия проверяется заодно с ней, так что резист к оружию и резист к яду на одном ударе -- все равно одна треть.
-%A% =Материал= оружия проверяется отдельно, своим множителем. Уязвимость к железу против железного меча добавит 50%, потом резист к оружию срежет треть -- и удар выйдет с обычным уроном.
+%A% Они не складываются: две сопротивляемости к одному удару действуют не лучше одной. Уязвимость и сопротивляемость вместе гасят друг друга -- урон будет обычный. Иммунитет сильнее их обеих.
+%A% Сопротивляемость к =оружию= работает против любого удара оружием, какой бы ни был у него тип воздействия: дробящий, колющий, рубящий или, скажем, яд. Тип воздействия проверяется заодно с ней, так что резист к оружию и резист к яду на одном ударе все равно считаются за один.
+%A% =Материал= оружия проверяется отдельно, независимо от типа воздействия. Уязвимость к железу против железного меча и резист к оружию гасят друг друга -- и удар выйдет с обычным уроном.
 %A% Сопротивляемость к =заклинаниям= защищает и от магии, и от молитв. Сопротивляемость к магии -- только от магии, к молитвам -- только от молитв.
 
 {CТИПЫ ВОЗДЕЙСТВИЙ{x
-%A% =Оружие=: большинство физических воздействий, наносящих "обычные" повреждения. Оно делится на три типа, к которым можно получить отдельную сопротивляемость -- =дробящий= (тяжелые удары), =колющий= (уколы) и =рубящий= (порезы). Дробящий -- самый частый в мире, примерно вдвое чаще колющего или рубящего, так что сопротивляемость к нему пригодится чаще всего. Магическое оружие или {hh96флаги{x оружия имеют свои собственные типы воздействий -- обычно, элементальные.
+%A% =Оружие=: большинство физических воздействий, наносящих "обычные" повреждения. Оно делится на три типа, к которым можно получить отдельную сопротивляемость -- =дробящий= (тяжелые удары), =колющий= (уколы) и =рубящий= (порезы). Дробящий -- самый частый в мире, так что сопротивляемость к нему пригодится чаще всего. Магическое оружие или {hh96флаги{x оружия имеют свои собственные типы воздействий -- обычно, элементальные.
 %A% =Магия=: эффекты боевой магии -- но не молитв
 %A% =Молитвы=: эффекты большинства молитв клериков и паладинов 
 %A% =Элементы=: эффекты воздействий элементов огня (например, {hh625огненный шар{x), холода (например, {hh610ледяного касания{x), электричества/шока (например, {hh579разряда молнии{x), кислоты, энергии, света, звука, воды/утопления, а также ментальных атак.
@@ -308,16 +308,16 @@ Many creatures (mobs) in the world already have innate immunities or vulnerabili
     <text l="ua">У кожної зброї, вміння чи заклинання є певний тип впливу. За допомогою предметів, вмінь або расових особливостей можна отримати вразливість, опірність або навіть імунітет до якихось типів впливів.
 
 {CЯК ЦЕ ПРАЦЮЄ{x
-%A% =Вразливість= вульн: удари цим типом впливу завдадуть на 50% {Rбільше{x шкоди, а {hh1361заклинання{x (магія чи молитви) спрацюють частіше.
-%A% =Опірність= резист: удари цим типом впливу завдадуть на третину {Gменше{x шкоди, а заклинання спрацюють рідше.
+%A% =Вразливість= вульн: удари цим типом впливу завдадуть помітно {Rбільше{x шкоди, а {hh1361заклинання{x (магія чи молитви) спрацюють частіше.
+%A% =Опірність= резист: удари цим типом впливу завдадуть помітно {Gменше{x шкоди, а заклинання спрацюють рідше.
 %A% =Імунітет= імун: удари цим типом впливу не завдадуть узагалі {Wжодної{x шкоди, а заклинання повністю провалюються. Імуни бувають дуже рідко.
-%A% Вони не складаються: дві опірності до одного удару все одно зрізають третину, а не дві третини. Вразливість і опірність разом гасять одна одну -- шкода буде звичайна. Імунітет сильніший за обидві.
-%A% Опірність до =зброї= працює проти будь-якого удару зброєю, хай який у нього тип впливу: важкий удар, прокол, розсічення чи, скажімо, отрута. Тип впливу перевіряється разом із нею, тож резист до зброї і резист до отрути на одному ударі -- однаково одна третина.
-%A% =Матеріал= зброї перевіряється окремо, своїм множником. Вразливість до заліза проти залізного меча додасть 50%, потім резист до зброї зріже третину -- і удар вийде зі звичайною шкодою.
+%A% Вони не складаються: дві опірності до одного удару діють не краще за одну. Вразливість і опірність разом гасять одна одну -- шкода буде звичайна. Імунітет сильніший за обидві.
+%A% Опірність до =зброї= працює проти будь-якого удару зброєю, хай який у нього тип впливу: важкий удар, прокол, розсічення чи, скажімо, отрута. Тип впливу перевіряється разом із нею, тож резист до зброї і резист до отрути на одному ударі все одно рахуються за один.
+%A% =Матеріал= зброї перевіряється окремо, незалежно від типу впливу. Вразливість до заліза проти залізного меча і резист до зброї гасять одне одного -- і удар вийде зі звичайною шкодою.
 %A% Опірність до =заклять= захищає і від магії, і від молитов. Опірність до магії -- тільки від магії, до молитов -- тільки від молитов.
 
 {CТИПИ ВПЛИВІВ{x
-%A% =Зброя=: більшість фізичних впливів, що завдають "звичайних" ушкоджень. Вона ділиться на три типи, до яких можна отримати окрему опірність -- =важкий удар= (дроблення), =прокол= (уколи) та =розсічення= (порізи). Важкий удар -- найпоширеніший у світі, приблизно вдвічі частіший за прокол чи розсічення, тож опірність до нього стане в пригоді найчастіше. Магічна зброя або {hh96прапори{x зброї мають свої власні типи впливів -- зазвичай елементальні.
+%A% =Зброя=: більшість фізичних впливів, що завдають "звичайних" ушкоджень. Вона ділиться на три типи, до яких можна отримати окрему опірність -- =важкий удар= (дроблення), =прокол= (уколи) та =розсічення= (порізи). Важкий удар -- найпоширеніший у світі, тож опірність до нього стане в пригоді найчастіше. Магічна зброя або {hh96прапори{x зброї мають свої власні типи впливів -- зазвичай елементальні.
 %A% =Магія=: ефекти бойової магії -- але не молитов
 %A% =Молитви=: ефекти більшості молитов кліриків і паладинів
 %A% =Елементи=: ефекти впливу вогню (наприклад, {hh625вогняної кулі{x), холоду (наприклад, {hh610льодяного дотику{x), електрики/шоку (наприклад, {hh579удару блискавки{x), кислоти, енергії, світла, звуку, води/утоплення, а також ментальних атак.
@@ -589,10 +589,10 @@ In combat, some combat skills apply a lag state to the opponent -- for example, 
 Be careful: commands entered while lagged stay in the command buffer and start executing one after another once the lag ends. To {hh17clear{x the command buffer, use the *\* command.
 
 {CPAIN SHOCK / DAZE{x
-Shock or temporary daze is applied by the effect of certain spells (for example, {hh555scream{x), the numbness from {hh986Deimos{x's sign, or the effects of a {hh96shocking{x weapon. In this state spells work half as well (you can lose concentration), and skills work a third worse (a skill may fail to trigger). Shock usually passes after a couple of seconds.
+Shock or temporary daze is applied by the effect of certain spells (for example, {hh555scream{x), the numbness from {hh986Deimos{x's sign, or the effects of a {hh96shocking{x weapon. In this state spells work much worse (you can lose concentration), and skills noticeably worse (a skill may fail to trigger). Shock usually passes after a couple of seconds.
 
 {CPARALYSIS / STUN{x
-Stunned and paralysed enemies do not attack with their weapons. In addition, paralysis prevents giving {hh1091orders{x to followers and blocks many defensive skills ({hh576parry{x, {hh754dodge{x, {hh611hand block{x). Stun blocks them by half.
+Stunned and paralysed enemies do not attack with their weapons. In addition, paralysis prevents giving {hh1091orders{x to followers and blocks many defensive skills ({hh576parry{x, {hh754dodge{x, {hh611hand block{x). Stun blocks them only in part.
 
 You can paralyse an enemy with the {hh645paralysis{x spell, the effects of certain rare artifacts, or {hh719mastering pound{x. Paralysis usually lasts only one combat round before immediately turning into stun. But paralysis inflicted by an anti-paladin is especially harmful. The chance of overcoming such paralysis depends on the victim's build, the level difference, and the affect's duration.
 
@@ -610,10 +610,10 @@ Stun can be applied to an opponent by skills such as {hh749black feeble{x. You c
 Будь осторож{Smен{Sfна{Sx: команды, введенные в состоянии задержки, останутся в буфере команд и начнут выполняться все подряд после завершения задержки. Чтобы {hh17очистить{x буфер команд, используй команду *\*.
 
 {CБОЛЕВОЙ ШОК / ОШЕЛОМЛЕНИЕ{x
-Шок или временное ошеломление накладывается эффектом некоторых заклинаний (например, {hh555крик{x), оцепенения от знака {hh986Деймоса{x или эффектов от {hh96шокирующего{x оружия. В этом состоянии заклинания работают наполовину хуже (можно потерять концентрацию), а навыки -- на треть хуже (умение может не сработать). Обычно, состояние шока проходит через пару секунд.
+Шок или временное ошеломление накладывается эффектом некоторых заклинаний (например, {hh555крик{x), оцепенения от знака {hh986Деймоса{x или эффектов от {hh96шокирующего{x оружия. В этом состоянии заклинания работают намного хуже (можно потерять концентрацию), а навыки заметно хуже (умение может не сработать). Обычно, состояние шока проходит через пару секунд.
 
 {CПАРАЛИЧ / ОГЛУШЕНИЕ{x
-Оглушенные и парализованные враги не наносят атаки своим оружием. Вдобавок, паралич не дает отдавать {hh1091приказы{x последователям и блокирует многие защитные умения ({hh576парирование{x, {hh754уворот{x, {hh611блок руками{x). Оглушение блокирует их наполовину.
+Оглушенные и парализованные враги не наносят атаки своим оружием. Вдобавок, паралич не дает отдавать {hh1091приказы{x последователям и блокирует многие защитные умения ({hh576парирование{x, {hh754уворот{x, {hh611блок руками{x). Оглушение блокирует их лишь отчасти.
 
 Парализовать врага можно заклинанием {hh645паралича{x, эффектами некоторых редких артефактов или {hh719мастерством рукопашного боя{x. Обычно паралич держится всего один боевой раунд, а затем сразу переходит в оглушение. А вот наложенный анти-паладином паралич особо вредоносен. Вероятность перебороть такой паралич зависит от телосложения жертвы, разницы в уровнях и длительности аффекта.
 
@@ -631,10 +631,10 @@ Stun can be applied to an opponent by skills such as {hh749black feeble{x. You c
 Будь обережн{Smий{Sfа{Sx: команди, введені в стані затримки, залишаться в буфері команд і почнуть виконуватися одна за одною після завершення затримки. Щоб {hh17очистити{x буфер команд, використовуй команду *\*.
 
 {CБОЛЬОВИЙ ШОК / ОГЛУШЕННЯ{x
-Шок чи тимчасове оглушення накладається ефектом деяких заклинань (наприклад, {hh555крик{x), заціпенінням від знаку {hh986Деймоса{x або ефектами від {hh96шокуючої{x зброї. У цьому стані заклинання спрацьовують наполовину гірше (можна втратити концентрацію), а вміння -- на третину гірше (уміння може не спрацювати). Зазвичай стан шоку минає за пару секунд.
+Шок чи тимчасове оглушення накладається ефектом деяких заклинань (наприклад, {hh555крик{x), заціпенінням від знаку {hh986Деймоса{x або ефектами від {hh96шокуючої{x зброї. У цьому стані закляття спрацьовують набагато гірше (можна втратити концентрацію), а вміння помітно гірше (уміння може не спрацювати). Зазвичай стан шоку минає за пару секунд.
 
 {CПАРАЛІЧ / ОГЛУШЕННЯ{x
-Оглушені й паралізовані вороги не атакують своєю зброєю. Крім того, параліч не дає віддавати {hh1091накази{x послідовникам і блокує багато захисних вмінь ({hh576парирування{x, {hh754ухилення{x, {hh611блок руками{x). Оглушення блокує їх наполовину.
+Оглушені й паралізовані вороги не атакують своєю зброєю. Крім того, параліч не дає віддавати {hh1091накази{x послідовникам і блокує багато захисних вмінь ({hh576парирування{x, {hh754ухилення{x, {hh611блок руками{x). Оглушення блокує їх лише почасти.
 
 Паралізувати ворога можна заклинанням {hh645паралічу{x, ефектами деяких рідкісних артефактів або {hh719майстерністю рукопашного бою{x. Зазвичай параліч тримається лише один бойовий раунд, а потім одразу переходить в оглушення. А от параліч, накладений анти-паладином, особливо шкідливий. Імовірність подолати такий параліч залежить від статури жертви, різниці в рівнях і тривалості афекту.
 

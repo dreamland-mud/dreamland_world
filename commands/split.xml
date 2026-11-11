@@ -2,23 +2,29 @@
 <Command>
   <cat>group</cat>
   <help id="1377" level="-1" type="CommandHelp" labels="society">
-    <text l="en">%FMT% SPLIT &lt;silver> &lt;gold>
+    <text l="en">%FMT% *split* _silver_ _gold_
 
-The SPLIT command divides the coins you take between yourself and all the members of your {hh1378group{x who are in the same room as you. It is usually used to share money taken from the {hh12corpse{x of a slain enemy. The first argument specifies the number of {hh13silver coins{x to be shared (0 if there are none), the second argument specifies the number of gold coins (can be omitted).
+Shares coins from your purse between you and every member of your {hh1378group{x in the same room, for example the money taken from the {hh12corpse{x of a slain enemy. The first number is {hh13silver coins{x (0 if you share only gold), the second is gold and can be left out. Charmed followers get no share.
 
-Example: split 30 --> split 30 silver coins split 20 50 --> split 20 silver, 50 gold coins split 0 10 --> split 10 gold coins
+*split* *30* : share 30 silver
+*split* *20 50* : share 20 silver and 50 gold
+*split* *0 10* : share 10 gold
   </text>
-    <text l="ru">%FMT% SPLIT &lt;серебро (silver)> &lt;золото (gold)>
+    <text l="ru">%FMT% *делиться* _серебро_ _золото_
 
-Команда SPLIT делит взятые тобой монеты между тобой и всеми членами твоей {hh1378группы{x, которые находятся в одной комнате с тобой. Обычно это используется для дележа денег, взятых с {hh12трупа{x убитого врага. Первый аргумент задает количество {hh13серебренных монет{x, предназначенных для дележа(0 -- если их нет), второй аргумент задает количество золотых монет (может быть опущен).
+Делит монеты из твоего кошелька между тобой и всеми членами твоей {hh1378группы{x в той же комнате, например деньги, взятые с {hh12трупа{x убитого врага. Первое число -- {hh13серебряные монеты{x (0, если делишь только золото), второе -- золотые, его можно опустить. Очарованные спутники доли не получают.
 
-Пример: split 30 --> разделить 30 серебренных монет split 20 50 --> разделить 20 серебренных, 50 золотых split 0 10 --> разделить 10 золотых 
+*делиться* *30* : разделить 30 серебряных
+*делиться* *20 50* : разделить 20 серебряных и 50 золотых
+*делиться* *0 10* : разделить 10 золотых
   </text>
-    <text l="ua">%FMT% SPLIT &lt;срібло (silver)> &lt;золото (gold)>
+    <text l="ua">%FMT% *ділитися* _срібло_ _золото_
 
-Команда SPLIT ділить взяті тобою монети між тобою та всіма членами твоєї {hh1378групи{x, які знаходяться в одній кімнаті з тобою. Зазвичай це використовується для поділу грошей, взятих з {hh12трупа{x вбитого ворога. Перший аргумент задає кількість {hh13срібних монет{x, призначених для поділу (0 - якщо їх немає), другий аргумент задає кількість золотих монет (може бути пропущеним).
+Ділить монети з твого гаманця між тобою та всіма членами твоєї {hh1378групи{x у тій самій кімнаті, наприклад гроші, взяті з {hh12трупа{x вбитого ворога. Перше число -- {hh13срібні монети{x (0, якщо ділиш тільки золото), друге -- золоті, його можна пропустити. Зачаровані супутники частки не отримують.
 
-Приклад: split 30 --> розділити 30 срібних монет split 20 50 --> розділити 20 срібних, 50 золотих split 0 10 --> розділити 10 золотих
+*ділитися* *30* : розділити 30 срібних
+*ділитися* *20 50* : розділити 20 срібних і 50 золотих
+*ділитися* *0 10* : розділити 10 золотих
   </text>
   </help>
   <hint l="en">split money between group members</hint>

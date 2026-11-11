@@ -3,9 +3,9 @@
   <cat>char</cat>
   <extra>spellout</extra>
   <help id="1064" level="-1" ref="mlt" type="CommandHelp" labels="char">
-    <extra l="en">koschey mlt multiclass taxes rebirth refit</extra>
+    <extra l="en">koschei koschey mlt multiclass taxes rebirth refit</extra>
     <extra l="ru">'баба яга' 'цветной претитул' 'изба бабы яги' кощей морт мультикласс переродиться перерождение перевоплощение реморты 'сменить класс' жизни налоги перековка</extra>
-    <extra l="ua">'баба яга' 'кольоровий претитул' 'хата баби яги' кощей морф мультиклас переродитися переродження перевтілення реморти 'змінити клас' життя підгонка</extra>
+    <extra l="ua">'баба яга' 'кольоровий претитул' 'хата баби яги' кощій кощей морт мультиклас переродитися переродження перевтілення реморти 'змінити клас' життя підгонка</extra>
     <keyword l="en">remorts</keyword>
     <keyword l="ru">перерождения</keyword>
     <keyword l="ua">переродження</keyword>
@@ -37,12 +37,14 @@ You can start a new life only after reaching level 100. You can live an unlimite
 {R%A%{x Starting from the first remort, the amount of {hh14experience{x needed to reach the next level will gradually increase. 
 {R%A%{x Each reincarnation will worsen your ability to {hh1359practice{x: each life will reduce the base maximum percentage (75%) by 3%, but not below 50%. Thus, at the second reincarnation, you will be able to practice skill at the teacher only up to 69%. Further improvement will require use.
 
-{CKOSCHEY{x
+{CKOSCHEI{x
 Reincarnation bonuses can also be obtained during life -- but it is very difficult. Deep in the forest lives a decrepit old man who has stolen the secret of immortality somewhere. He is tormented by deadly boredom. However, there is one thing in the accumulation of which he has still not lost interest. It is -- glory and victories. He considers completing any task beneath his dignity. And so he found a clever way: he exchanges winnings for the victories of other heroes.
 
-For {C500 victories{x in {hh125personal quests{x, you can exchange the same reward as for one life lived, and in total, these purchases cannot exceed perks for 10 lives. Heroes should be attentive: once receiving other people's victories, the old man will never part with them, and no persuasion to return purchased items will help.
+He trades by voice: {1{y{hcsay list{x{2 shows what he will sell you, and {1{y{hcsay buy dex{x{2 is how a deal is struck.
 
-Command *lives* provides info about current life's bonuses. On each remort, the choice of perks (both from Baba Yaga and Koschey) is made anew. Koschey's perks vanish with the old body, and the victories he took stay his: to buy from him again, you will need fresh victories.
+For {C500 victories{x in {hh125personal quests{x, you can exchange the same reward as for one life lived, and in total, these purchases cannot exceed perks for 10 lives. Be attentive: once receiving other people's victories, the old man will not part with them until your next rebirth, and no persuasion to return purchased items will help.
+
+Command *lives* provides info about current life's bonuses. On each remort, the choice of perks (both from Baba Yaga and Koschei) is made anew. Koschei's perks vanish with the old body, but the victories come back with the new one, so you can spend them on him again, within the same 10-life limit.
 </text>
     <text l="ru">%FMT% *%CMD%* _пароль_ 
 
@@ -73,14 +75,11 @@ Command *lives* provides info about current life's bonuses. On each remort, the 
 {CКОЩЕЙ{x
 Бонусы перерождения можно получить и во время жизни -- но это очень сложно. Глубоко в лесу живет дряхлый старикашка, выкравший где-то секрет бессмертия. Он терзается смертельной скукой. Однако есть одна вещь, к накоплению которой интереса он все же не утратил. Это -- слава и победы. Сам выполнять какие-либо задания он считает ниже своего достоинства. А потому нашел ловкий способ: он выменивает за сокровища победы других героев.
 
-%FMT% *buy* _level_
-%FMT% *buy* _stat_, например, *buy* _dex_
-%FMT% *buy* _hp_, *buy* _mana_
-%FMT% *buy* _pretitle_
+Торгуется он на словах: {1{y{hcсказать список{x{2 покажет, что он готов тебе продать, а {1{y{hcсказать купить ловкость{x{2 -- как с ним сторговаться.
 
-За {C500 побед{x в {hh125персональных квестах{x можно выменять то же, что и за одну прожитую жизнь, причем в сумме обе эти покупки не могут превышать плюшек за 10 жизней. Героям следует быть внимательными: раз заполучив чужие победы, старикашка с ними уже не расстанется, и никакие уговоры вернуть купленное не помогут.
+За {C500 побед{x в {hh125персональных квестах{x можно выменять то же, что и за одну прожитую жизнь, причем в сумме обе эти покупки не могут превышать плюшек за 10 жизней. Будь внимател{Sfьна{Smен{Sx: раз заполучив чужие победы, старикашка до твоего следующего перерождения с ними не расстанется, и никакие уговоры вернуть купленное не помогут.
 
-Инфу о бонусах текущей жизни выдает команда *жизни*. На каждом реморте выбор плюшек (и от Бабы Яги, и от Кощея) делается заново. Купленное у Кощея уходит вместе со старым телом, а отданные ему победы остаются у него: чтобы снова что-то у него выменять, понадобятся новые победы.
+Инфу о бонусах текущей жизни выдает команда *жизни*. На каждом реморте выбор плюшек (и от Бабы Яги, и от Кощея) делается заново. Купленное у Кощея уходит вместе со старым телом, зато победы возвращаются с новым, и их можно снова потратить у него в тех же пределах 10 жизней.
 </text>
     <text l="ua">%FMT% *%CMD%* _пароль_ 
 
@@ -108,12 +107,14 @@ Command *lives* provides info about current life's bonuses. On each remort, the 
 {R%A%{x Починаючи з першого реморта, буде поступово збільшуватися кількість {hh14досвіду{x до наступного рівня.
 {R%A%{x Кожне переродження погіршить твою здатність {hh1359практикуватися{x: кожне життя знизить базовий максимальний відсоток (75%) на 3%, але не нижче 50%. Так, на другому переродженні практикувати уміння у вчителя можна буде лише до 69%. Далі доведеться підвищувати використанням.
 
-{CКОЩЕЙ{x
+{CКОЩІЙ{x
 Бонуси переродження можна отримати і під час життя -- але це дуже складно. Глибоко в лісі живе старий дід, який десь викрав секрет безсмертя. Він страждає від смертельної нудьги. Однак є одна річ, до накопичення якої він все ж таки не втратив інтересу. Це -- слава і перемоги. Виконувати завдання він вважає нижчим свого гідності. І тому знайшов хитрий спосіб: він обмінює виграші інших героїв.
 
-За {C500 перемог{x у {hh125персональних квестах{x можна обміняти те ж, що й за одне прожите життя, причому у сумі обидві ці покупки не можуть перевищувати плюшок за 10 життів. Героям слід бути уважними: раз отримавши чужі перемоги, дід із ними вже не розлучиться, і ніякі умовляння повернути куплене не допоможуть.
+Торгується він на словах: {1{y{hcсказати список{x{2 покаже, що він готовий тобі продати, а {1{y{hcсказати хочу спритність{x{2 -- як із ним сторгуватися.
 
-Інформацію про бонуси поточного життя видає команда *життя*. На кожному реморті вибір плюшок (і від Баби Яги, і від Кощея) робиться заново. Куплене в Кощея зникає разом зі старим тілом, а віддані йому перемоги лишаються в нього: щоб знову щось у нього виміняти, знадобляться нові перемоги.
+За {C500 перемог{x у {hh125персональних квестах{x можна обміняти те ж, що й за одне прожите життя, причому у сумі обидві ці покупки не можуть перевищувати плюшок за 10 життів. Будь уважн{Smим{Sfою{Sx: раз отримавши чужі перемоги, дід до твого наступного переродження з ними не розлучиться, і ніякі умовляння повернути куплене не допоможуть.
+
+Інформацію про бонуси поточного життя видає команда *життя*. На кожному реморті вибір плюшок (і від Баби Яги, і від Кощія) робиться заново. Куплене в Кощія зникає разом зі старим тілом, зате перемоги повертаються з новим, і їх можна знову витратити в нього в тих самих межах 10 життів.
 </text>
     <title l="en">Rebirth (remort)</title>
     <title l="ru">Перерождение (реморт)</title>

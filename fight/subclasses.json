@@ -9,9 +9,11 @@
   "weapon_classes": ["sword", "axe"],
   "dual": true,
   "blood_frenzy": {
-   "_doc": "The frenzy makes armor worse by ac_pct percent of the berserker's current armor class (its absolute value, the average of the four, the rage penalty already in), nothing when the armor is no better than none, scaled by how well blood frenzy is learned. Ends with berserk. dam_pct: every ordinary weapon blow hits that many percent harder at any health while the frenzy, berserk and the berserker weapons are on, scaled by how well blood frenzy is learned; below half health the low-hp band (up to +20%, onehit_undef.cpp) adds on top.",
+   "_doc": "The frenzy makes armor worse by ac_pct percent of the berserker's current armor class (its absolute value, the average of the four, the rage penalty already in), nothing when the armor is no better than none, scaled by how well blood frenzy is learned. Ends with berserk. dam_pct: every ordinary weapon blow hits that many percent harder at any health while the frenzy, berserk and the berserker weapons are on, scaled by how well blood frenzy is learned; below band_from percent health the low-hp band adds on top, growing linearly to +band_cap percent at 10% health (onehit_undef.cpp). The berserk rage itself lasts twice as long on a berserker (skillcommand/berserk).",
    "ac_pct": 30,
-  "dam_pct": 10
+   "dam_pct": 10,
+   "band_from": 100,
+   "band_cap": 20
   },
   "bladestorm": {
    "_doc": "a channel: the storm lasts rounds combat rounds (the opening sweep included); every round every swept target takes one normal blow plus one per second..fifth attack roll that comes up (ch.extra_attacks, round odds), each from a random hand; every blow costs move_per_hit moves, and the storm stops early when the moves run out. cooldown_ticks: the visible affect timer after the storm ends (1 tick = 60 s). A failed spin has no cooldown.",

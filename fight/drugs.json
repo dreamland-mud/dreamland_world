@@ -45,7 +45,7 @@
   },
 
   "tolerance": {
-   "_doc": "Buff lines and the drink berserk level are cut to (100 - pml * T / 1000) percent, floor floor_pct (T in x10 units). T drops decay (x10) per decay_every clean ticks.",
+   "_doc": "Buff lines and the drink berserk level are cut to (100 - pml * t / 100) percent, floor floor_pct, t = T stored x10 (pml 7: 0.7 percent per T point). T drops decay (x10) per decay_every clean ticks.",
    "pml": 7,
    "floor_pct": 30,
    "decay": 10,

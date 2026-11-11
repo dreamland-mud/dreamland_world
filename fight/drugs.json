@@ -1,0 +1,117 @@
+{
+ "_doc": "Drugs and alcohol (Trello rPBKwc8P, docs/systems/DRUGS_STAGE1_PLAN.md). Read only by Fenia (dreamland_fenia utils/drugs) through .config(\"fight/drugs\"). Stage 1 ships the shared addiction engine and alcohol. Units: T (tolerance), D (dependence) and S (overdose strain) run 0-100 and are stored x10 in the PC string attribute 'drugs', so every gain and decay below is x10 too (10 = one point). Ticks are online heartbeats of 60 s. Every key is a plain identifier on purpose; liquid lists are comma-separated names.",
+
+ "con": {
+  "_doc": "T, D and S gain percent = 100 + (avg - con) * pct, clamped min..max: high constitution builds a habit slower and has more overdose headroom.",
+  "avg": 20,
+  "pct": 4,
+  "min": 60,
+  "max": 140
+ },
+
+ "dependence": {
+  "_doc": "D edges of the stages: clean below habit, habit, dependent, addict. A notice line when D crosses each edge upward. The dependence affect shows from habit; at addict it carries the addict_lines (stats, heal_gain) whatever the char is drinking.",
+  "habit": 20,
+  "dependent": 50,
+  "addict": 80,
+  "addict_lines": { "con": -1, "cha": -1, "heal_gain": -15 },
+  "craving_every": 30,
+  "after_decay_every": 48,
+  "remort_keep_pct": 50
+ },
+
+ "perk": {
+  "_doc": "Hold your drink: battleragers (clan), these races and followers of these religions (space-separated names). refund_pct of each drink's drunk gain is taken back; hangover size and length are cut to hangover_pct. Dependence gain is untouched.",
+  "races": "satyr",
+  "religions": "bastian cradya",
+  "refund_pct": 25,
+  "hangover_pct": 50
+ },
+
+ "alcohol": {
+  "_doc": "Stages by the drunk desire (0-96): tipsy from tipsy, drunk from drunk, wasted from wasted, cap = the desire's maxValue. extra_alcohol: liquids without a beer/wine/liquor flag that still count as alcohol (hair of the dog, vampires). Only liquor-flagged liquids strain at the cap and can kill.",
+  "tipsy": 20,
+  "drunk": 51,
+  "wasted": 81,
+  "cap": 96,
+  "extra_alcohol": "valerian tincture",
+
+  "gain": {
+   "_doc": "x10. Crossing into drunk: tolerance and dependence; into wasted: more dependence. sick_pct multiplies D gain while a hangover or withdrawal is on. Doses that are not self-dosed (spiked cup, charmed or ordered) give no D.",
+   "drunk_t": 20,
+   "drunk_d": 10,
+   "wasted_d": 10,
+   "sick_pct": 150
+  },
+
+  "tolerance": {
+   "_doc": "Buff lines and the drink berserk level are cut to (100 - pml * t / 100) percent, floor floor_pct, t = T stored x10 (pml 7: 0.7 percent per T point). T drops decay (x10) per decay_every clean ticks.",
+   "pml": 7,
+   "floor_pct": 30,
+   "decay": 10,
+   "decay_every": 24
+  },
+
+  "stages": {
+   "_doc": "Per stage: cm = centi-M budget of the buff lines at the char's level, split hp:damroll by hp/dr shares (item_value armor prices, tolerance applied). Debuffs (hitroll, dex, saves) are counts at debuff_level, scaled by level / debuff_level, at least 1. luck: + this on .tmp.chance (tipsy only). fearless: refused by fear. slur: percent of letters in channel speech (C++ caps it at 40). stagger: percent per room entered. sing, vomit, passout: percent per heartbeat, never in a fight.",
+   "tipsy":  { "cm": 15, "hp": 1, "dr": 0, "luck": 1, "fearless": 1, "slur": 0,  "stagger": 0,  "sing": 0, "vomit": 0, "passout": 0 },
+   "drunk":  { "cm": 30, "hp": 2, "dr": 1, "luck": 0, "fearless": 1, "slur": 12, "stagger": 5,  "sing": 5, "vomit": 0, "passout": 0, "hitroll": -3, "dex": -2 },
+   "wasted": { "cm": 30, "hp": 1, "dr": 0, "luck": 0, "fearless": 1, "slur": 30, "stagger": 15, "sing": 5, "vomit": 5, "passout": 5, "hitroll": -6, "dex": -3, "saves": 7 }
+  },
+  "debuff_level": 60,
+  "berserk_level_pct": 50,
+  "miss_pct": 50,
+  "vomit_drop": 10,
+  "passout_ticks": 2,
+
+  "hangover": {
+   "_doc": "Starts when a session that peaked at peak or more falls under end. Ticks = peak / ticks_div, at most ticks_max; lines grow by 2 percent per D point (1 + D/50). Thirst drops thirst per tick. Sleeping ticks count double. cures: comma lists of liquids that take cure_ticks or weak_ticks off per drink. cure poison halves what is left.",
+   "peak": 51,
+   "end": 20,
+   "ticks_div": 4,
+   "ticks_max": 24,
+   "lines": { "str": -2, "int": -2, "wis": -2, "heal_gain": -40, "mana_gain": -40, "hitroll": -1 },
+   "thirst": -2,
+   "cures": "kefir,slime mold juice",
+   "cure_ticks": 4,
+   "weak": "water",
+   "weak_ticks": 2
+  },
+
+  "overdose": {
+   "_doc": "Reaching the cap on any alcohol: alcohol poisoning (poison power, forced vomit, passing out sleep_min..sleep_max ticks). Each liquor sip that lands at the cap adds strain (x10, times conScale). Strain decays per tick. A plain warning at warn1 and at warn2; strain is held at hold until both were shown this session; death at death, self-dosed liquor only.",
+   "poison_power": 4,
+   "sleep_min": 2,
+   "sleep_max": 4,
+   "strain": 200,
+   "decay": 20,
+   "warn1": 600,
+   "warn2": 800,
+   "hold": 990,
+   "death": 1000
+  },
+
+  "withdrawal": {
+   "_doc": "From D dependent, sober and hangover over: ticks online ticks. Lines by D: dependent or addict. Reaching tipsy pauses it and adds taper ticks once. Delirium tremens (D addict): the first dt_ticks ticks, a hallucination line at most every dt_every ticks, seizure_pct per tick (luck-avoided). comfort: drinks that make the lines one step milder for comfort_ticks. Healer detox mutes the lines for detox_ticks.",
+   "ticks": 60,
+   "taper": 5,
+   "dependent": { "dex": -3, "hitroll": -4, "saves": 4 },
+   "addict": { "dex": -4, "hitroll": -7, "saves": 8 },
+   "dt_ticks": 20,
+   "dt_every": 3,
+   "seizure_pct": 3,
+   "comfort": "tea,milk,chocolate,cold chocolate",
+   "comfort_ticks": 6,
+   "detox_ticks": 20
+  },
+
+  "vampire": {
+   "_doc": "Drunk blood: percent of the vampire's max hp lost per feeding by the victim's stage, no heal, lethal. Wasted blood also poisons (poison power). A vampire's own sip of alcohol costs sip_pct of max hp and makes it vomit.",
+   "tipsy": 5,
+   "drunk": 15,
+   "wasted": 25,
+   "poison_power": 4,
+   "sip_pct": 10
+  }
+ }
+}

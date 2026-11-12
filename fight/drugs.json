@@ -113,5 +113,102 @@
    "poison_power": 4,
    "sip_pct": 10
   }
+ },
+
+ "fisstech": {
+  "_doc": "Stage 2 (docs/systems/DRUGS_STAGE2_PLAN.md 3.2, decisions in section 9). One pinch (obj 30282, behavior drug, props sub fisstech) is one dose: a high (affect fisstech), then a crash (affect comedown). Same x10 units and con scaling as alcohol. combo_pct: tipsy or worse at the dose makes the high that much longer and multiplies strain and D gain of both records. Item: rot ticks once a player holds a pinch.",
+  "combo_pct": 150,
+  "rot": 600,
+
+  "gain": {
+   "_doc": "x10, per dose, times conScale. sick_pct multiplies D gain when dosing during a high, a crash or a withdrawal. Not self-dosed (laced cup, charmed, blood): no D.",
+   "t": 80,
+   "d": 40,
+   "sick_pct": 150
+  },
+
+  "tolerance": {
+   "_doc": "As alcohol: the high (ticks and budget) is cut to (100 - pml * t / 100) percent, floor floor_pct. T drops decay (x10) per decay_every clean ticks.",
+   "pml": 7,
+   "floor_pct": 30,
+   "decay": 10,
+   "decay_every": 24
+  },
+
+  "high": {
+   "_doc": "Affect fisstech, ticks long, all of it times tolerance. cm: centi-M budget split by shares (.tmp.drug.budget). lines: fixed lines on top (beats has no price row, counted as about 30 cM, so the high is about 110 cM). haste: the haste bit, only when T (x10) was under haste_t before the dose, dropped for battleragers. Debuffs: counts at debuff_level, scaled by level, times (1 + D/50). A dose strips fatigue; asleep while high wakes at the next tick; boast_pct per tick a boastful say, never in a fight.",
+   "ticks": 6,
+   "cm": 80,
+   "shares": { "hitroll": 1 },
+   "lines": { "dex": 2, "beats": -10 },
+   "haste_t": 300,
+   "debuffs": { "saves": 4, "wis": -2, "heal_gain": -50, "mana_gain": -50 },
+   "debuff_level": 60,
+   "boast_pct": 10
+  },
+
+  "crash": {
+   "_doc": "Affect comedown when the high runs out, ticks long, lines times (1 + D/50), a craving line. A new dose clears it and starts a new high at the current tolerance.",
+   "ticks": 8,
+   "lines": { "str": -2, "beats": 10, "heal_gain": -40, "mana_gain": -40 }
+  },
+
+  "overdose": {
+   "_doc": "x10. Each dose adds strain (times conScale). Strain decays per tick. Warnings at warn1 and warn2; strain is held at hold until both were shown; death at death, self-dosed only. From heart_at every dose risks a heart attack (heart_pct, luck-avoided): heart_min_pct..heart_max_pct of max hp and heart_lag rounds of lag. The heart attack can kill (decision 9), but never on a dose that is not self-dosed.",
+   "strain": 300,
+   "decay": 20,
+   "warn1": 600,
+   "warn2": 800,
+   "hold": 990,
+   "death": 1000,
+   "heart_at": 800,
+   "heart_pct": 100,
+   "heart_min_pct": 30,
+   "heart_max_pct": 50,
+   "heart_lag": 2
+  },
+
+  "withdrawal": {
+   "_doc": "As alcohol, no delirium (no dt_ticks). From D dependent, not high and not crashing: ticks online ticks, lines by D. A dose pauses it and adds taper ticks once. comfort drinks make the lines a step milder for comfort_ticks. Healer detox mutes them for detox_ticks.",
+   "ticks": 40,
+   "taper": 5,
+   "dependent": { "str": -2, "dex": -2, "heal_gain": -30 },
+   "addict": { "str": -3, "dex": -4, "heal_gain": -60 },
+   "comfort": "tea,milk,chocolate,cold chocolate",
+   "comfort_ticks": 6,
+   "detox_ticks": 20
+  },
+
+  "tell": {
+   "_doc": "look at a user with D (x10) at least nose_d shows a red, runny nose.",
+   "nose_d": 500
+  },
+
+  "blood": {
+   "_doc": "A vampire feeding on a PC high on fisstech: a high of high_pct strength, D gain times d_pct percent, never strain.",
+   "high_pct": 50,
+   "d_pct": 50
+  }
+ },
+
+ "peddler": {
+  "_doc": "The night peddler (mob 30281, behaviors shopper and peddler). Lives in room home of the Cloud of Precious Smoke by day; at night (.sunlight 0) stands in one of spots (room vnums, never last night's), back home at dawn. The shop charges the pinch's object cost (30282, price in silver, 30000 = 300 gold) through props.shopper; price here must match it. cap: pinches per buyer per game night, cap_thief for thieves. gift: a free pinch once per life, only when the player asks.",
+  "mob": 30281,
+  "home": 30280,
+  "pinch": 30282,
+  "price": 30000,
+  "cap": 3,
+  "cap_thief": 6,
+  "gift": 1,
+  "spots": "3026 16548 9559 10219 1150 7527 18081 5408 609 29255 5107 5638 13270"
+ },
+
+ "law": {
+  "_doc": "Cities that ban fisstech, by area file name (area.filename), space-separated; everything else tolerates. A city guard who picks a passer-by for a talk frisks instead when the passer-by is high or carries a pinch in the open (top-level inventory, not in a container); avoided with luck at 100 - frisk_pct. Caught: open pinches are taken and a fine in silver is paid; who cannot pay it becomes wanted when broke_wanted is 1. A pinch received by give within the last plant_ticks ticks is not counted.",
+  "ban": "midgaard.are smidgaard.are shire.are gerghlm2.are solace.are ofcol2.are titan.are aarak2.are cloudymt.are",
+  "frisk_pct": 60,
+  "fine": 30000,
+  "broke_wanted": 1,
+  "plant_ticks": 3
  }
 }

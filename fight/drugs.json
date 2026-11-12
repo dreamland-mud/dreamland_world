@@ -217,6 +217,7 @@
   "high": {
    "_doc": "Affect weed, ticks long, times tolerance and strength. scaled: counts at scale_level, scaled by level (about 10 cM). regen: the regeneration bit, only while the user sits, rests or sleeps, checked each tick (priced at a quarter of its 0.80 M, so the high is about 30 cM). lines: fixed costs. hunger: extra hunger points drained a tick. giggle_pct per tick a giggle, never in a fight. fearless: refused by fear.",
    "ticks": 8,
+   "cm": 30,
    "scaled": { "heal_gain": 30, "mana_gain": 30 },
    "scale_level": 60,
    "regen": 1,
@@ -329,8 +330,8 @@
 
   "onset": 3,
 
-  "trip": {
-   "_doc": "Affect mushroom trip, ticks long, base lines for every vision: lines fixed, debuffs at debuff_level scaled by level. hallu_every: one hallucination line per that many ticks at most, never in a fight.",
+  "high": {
+   "_doc": "The trip: affect mushroom trip, ticks long, base lines for every vision: lines fixed, debuffs at debuff_level scaled by level. hallu_every: one hallucination line per that many ticks at most, never in a fight.",
    "ticks": 12,
    "lines": { "wis": 2, "mana_gain": 30 },
    "debuffs": { "hitroll": -3 },
@@ -376,7 +377,7 @@
   },
 
   "retarget_pct": 10,
-  "retarget_skip": "say tell reply gtell yell emote gossip ic ooc grats music rtalk cb mtalk note use eat look",
+  "retarget_skip": "say tell reply gtell yell emote gossip ic ooc grats music rtalk cb mtalk note use eat look bug typo idea title description",
 
   "second": {
    "_doc": "A second mushroom during the onset wait or the trip: ticks added to the trip and the vision forced to vision.",
@@ -394,8 +395,9 @@
   "flashback_pct": 1,
 
   "blood": {
-   "_doc": "A vampire feeding on a tripping PC: a trip of ticks_pct length with its own vision roll.",
-   "ticks_pct": 50
+   "_doc": "A vampire feeding on a tripping PC: a trip at high_pct strength with its own vision roll, D gain times d_pct percent (none: no D), never strain.",
+   "high_pct": 50,
+   "d_pct": 0
   }
  },
 
@@ -414,7 +416,7 @@
    "pml": 7,
    "floor_pct": 30,
    "decay": 10,
-   "decay_every": 6
+   "decay_every": 2
   },
 
   "onset": 2,

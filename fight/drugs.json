@@ -119,6 +119,7 @@
 
  "fisstech": {
   "_doc": "Stage 2 (docs/systems/DRUGS_STAGE2_PLAN.md 3.2, decisions in section 9). One pinch (obj 30282, behavior drug, props sub fisstech) is one dose: a high (affect fisstech), then a crash (affect comedown). Same x10 units and con scaling as alcohol. combo_pct: tipsy or worse at the dose makes the high that much longer and multiplies strain and D gain of both records. Item: rot ticks once a player holds a pinch.",
+  "cross": { "opium": 150 },
   "combo_pct": 150,
   "rot": 600,
 
@@ -454,6 +455,8 @@
 
  "opium": {
   "_doc": "Stage 3 (DRUGS_STAGE3_PLAN.md 3.10). One ball (object ball, smoked with use) is one dose: a high (affect opium), then a crash (affect comedown). The caster premium drug. Sold by the keepers (mob vnums, props.shopper gate opium) at price silver, cap balls per buyer per game day across all keepers; never to a newbie, and a newbie cannot use a ball. Item: rot ticks once a player holds a ball.",
+  "combo_strain_pct": 200,
+  "cross": { "fisstech": 150 },
   "fearless": 1,
   "no_newbie": 1,
   "ball": 30283,
@@ -498,11 +501,9 @@
   },
 
   "overdose": {
-   "_doc": "x10, the fisstech rule (odRisk, odAttack). Each dose adds strain (times conScale), times drunk_pct when tipsy or worse at the dose, times combo_pct on whichever of opium and fisstech comes second. Each drink while high adds booze_strain per drunk point. Strain decays per tick. Warnings at warn1 and warn2; held at hold until both were shown; death at death, self-dosed only. After every dose that strains, a stopped-breath roll on the heart curve from heart_from, at most heart_cap, luck-avoided: it costs heart_min_pct..heart_max_pct of max hp and out_ticks ticks out cold, and kills a user with no more health than that.",
+   "_doc": "x10, the fisstech rule (odRisk, odAttack). Each dose adds strain (times conScale), times the row combo_strain_pct when tipsy or worse at the dose, times the row cross.<other> percent on whichever of opium and fisstech comes second. Each drink while high adds booze_strain per drunk point. Strain decays per tick. Warnings at warn1 and warn2; held at hold until both were shown; death at death, self-dosed only. After every dose that strains, a stopped-breath roll on the heart curve from heart_from, at most heart_cap, luck-avoided: it costs heart_min_pct..heart_max_pct of max hp and attack_sleep ticks out cold, and kills a user with no more health than that.",
    "strain": 350,
    "decay": 15,
-   "drunk_pct": 200,
-   "combo_pct": 150,
    "booze_strain": 4,
    "warn1": 600,
    "warn2": 800,
@@ -512,7 +513,7 @@
    "heart_cap": 990,
    "heart_min_pct": 30,
    "heart_max_pct": 50,
-   "out_ticks": 2
+   "attack_sleep": 2
   },
 
   "withdrawal": {

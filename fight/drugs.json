@@ -196,6 +196,7 @@
 
  "weed": {
   "_doc": "Stage 3 (docs/systems/DRUGS_STAGE3_PLAN.md 3.3, decisions in section 9). One dose is a high (affect weed), then a crash (affect comedown). The form (toke, edible, joint) is prototype data in props.drug (sub, pct strength, onset ticks, keep, daily), not here. Same x10 units and con scaling as alcohol. Battleragers get every line (all organic). stagger_pct: a weed high multiplies the drunk stagger chance by this percent.",
+  "fearless": 1,
 
   "gain": {
    "_doc": "x10, per dose at 100 percent strength, times conScale. sick_pct multiplies D gain when dosing during a high, a crash or a withdrawal. Not self-dosed: no D.",
@@ -309,6 +310,7 @@
 
  "mushroom": {
   "_doc": "Stage 3 (DRUGS_STAGE3_PLAN.md 3.5, 3.6). One liberty cap (27911) or Amber's magic mushrooms (37054) is one dose: onset ticks of nothing, then a trip (affect mushroom trip) in one of four visions, then a crash (affect comedown). No dependence. Battleragers keep wis, mana_gain, the void and retargets; slevel, the detects and astral walk are not organic. retarget_pct: percent of the tripper's targeted commands that land on someone else in the room (is_safe refuses); commands in retarget_skip (resolved English names) are never touched. flashback: from flashback_trips lifetime trips, flashback_pct per sober tick a flashback line, flavour only.",
+  "affect": "mushroom trip",
 
   "gain": {
    "_doc": "x10, per mushroom, times conScale. No D.",
@@ -398,6 +400,7 @@
 
  "agaric": {
   "_doc": "Stage 3 (DRUGS_STAGE3_PLAN.md 3.7). One fly agaric (27912) is one dose: onset ticks, then affect fly agaric. Berserkers (subclass) get the rage block, everyone else the toxic block. No dependence, no blood.",
+  "affect": "fly agaric",
 
   "gain": {
    "_doc": "x10, per dose, times conScale. No D.",
@@ -451,6 +454,8 @@
 
  "opium": {
   "_doc": "Stage 3 (DRUGS_STAGE3_PLAN.md 3.10). One ball (object ball, smoked with use) is one dose: a high (affect opium), then a crash (affect comedown). The caster premium drug. Sold by the keepers (mob vnums, props.shopper gate opium) at price silver, cap balls per buyer per game day across all keepers; never to a newbie, and a newbie cannot use a ball. Item: rot ticks once a player holds a ball.",
+  "fearless": 1,
+  "no_newbie": 1,
   "ball": 30283,
   "keepers": "14223 29219",
   "price": 100000,
@@ -614,14 +619,14 @@
  },
 
  "law": {
-  "_doc": "Cities that ban fisstech, by area file name (area.filename), space-separated; everything else tolerates. A city guard who picks a passer-by for a talk frisks instead when the passer-by is high or carries a pinch in the open (top-level inventory, not in a container); avoided with luck at 100 - frisk_pct. Never a sleeper, a fighter or a Ruler. High with no open pinch: a warning and loyalty -high_loyalty. Pinches found: taken, loyalty -frisk_loyalty, and a fine in silver paid in full (newbies pay none); who cannot pay it becomes wanted when broke_wanted is 1, at loyalty -50 instead of frisk_loyalty. A pinch received by give within the last plant_ticks ticks is not counted. Stage 3: ban stays the fisstech list; ban_opium and ban_weed list the cities that ban those (lawBans(area, sub) reads ban_<sub>, falling back to ban for fisstech). One frisk takes every banned dose in the open and charges one fine, the largest found: fine for fisstech and opium, fine_weed for weed. Weed alone costs weed_loyalty and never makes anyone wanted; a weed high alone is ignored.",
+  "_doc": "Cities that ban fisstech, by area file name (area.filename), space-separated; everything else tolerates. A city guard who picks a passer-by for a talk frisks instead when the passer-by is high or carries a pinch in the open (top-level inventory, not in a container); avoided with luck at 100 - frisk_pct. Never a sleeper, a fighter or a Ruler. High with no open pinch: a warning and loyalty -high_loyalty. Pinches found: taken, loyalty -frisk_loyalty, and a fine in silver paid in full (newbies pay none); who cannot pay it becomes wanted when broke_wanted is 1, at loyalty -50 instead of frisk_loyalty. A pinch received by give within the last plant_ticks ticks is not counted. Stage 3: ban stays the fisstech list; ban_opium and ban_weed list the cities that ban those (lawBans(area, sub) reads ban_<sub>, falling back to ban for fisstech). One frisk takes every banned dose in the open and charges one fine, the largest found: fine for fisstech and opium, fine_weed for weed. Weed alone (the petty tier: any sub with a fine_<sub> key) costs minor_loyalty and never makes anyone wanted; a weed high alone is ignored.",
   "ban": "midgaard.are smidgaard.are shire.are gerghlm2.are solace.are ofcol2.are titan.are",
   "ban_opium": "midgaard.are smidgaard.are shire.are gerghlm2.are solace.are ofcol2.are titan.are",
   "ban_weed": "midgaard.are smidgaard.are gerghlm2.are solace.are",
   "frisk_pct": 60,
   "fine": 30000,
   "fine_weed": 3000,
-  "weed_loyalty": 5,
+  "minor_loyalty": 5,
   "broke_wanted": 1,
   "plant_ticks": 3,
   "high_loyalty": 5,

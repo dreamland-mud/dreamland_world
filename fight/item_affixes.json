@@ -1,5 +1,5 @@
 {
- "_doc": "Shared random-item affix pool, armor side (generated from docs/plans drafts 2026-10-02). Affixes are priced by the one item model (item_value.json, docs/systems/ITEM_POWER.md) at the item level. price_melee/price_caster (centi-M, 100 = one item measure) stay only on armor_stats, for Fenia craft/armor budgetStats. items/slots/tier as in weapon_affixes.json; tier = best-tier floor (1 legendary only .. 4 uncommon+). Stats with 'unit' scale in measure rolls (getMeasure: level / slot factor): value = unit * rolls. ac unit is an estimate (AC is weak, Kit). Tier caps for M-priced items: weapon_tiers max_affixes_m (distinct affixes, stacks count once) and max_negatives_m.",
+ "_doc": "Shared random-item affix pool, armor side (generated from docs/plans drafts 2026-10-02). Affixes are priced by the one item model (item_value.json, docs/systems/ITEM_POWER.md) at the item level. items/slots/tier as in weapon_affixes.json; tier = best-tier floor (1 legendary only .. 4 uncommon+). Stats with 'unit' scale in measure rolls (getMeasure: level / slot factor): value = unit * rolls. ac unit is an estimate (AC is weak, Kit). Tier caps for M-priced items: weapon_tiers max_affixes_m (distinct affixes, stacks count once) and max_negatives_m.",
  "_groups": {
   "_doc": "Weight groups: the members of a group (an affix's or its section's 'group') share the group's weight, so a section of many values weighs like a few affixes, not one each (Kit 2026-10-26). Value = total weight in affixes.",
   "penalty": 6,
@@ -23,8 +23,6 @@
      "legs": 1.25,
      "about": 1.25
     },
-    "price_melee": 47,
-    "price_caster": 39,
     "nouns": [
      "живучести"
     ],
@@ -48,8 +46,6 @@
      "head": 1.5,
      "arms": 1.25
     },
-    "price_melee": 5,
-    "price_caster": 20,
     "nouns": [
      "духа"
     ],
@@ -76,8 +72,6 @@
      "feet": 1.5,
      "legs": 1.25
     },
-    "price_melee": 5,
-    "price_caster": 4,
     "nouns": [
      "странника"
     ],
@@ -106,8 +100,6 @@
     "slots": {
      "hands": 1.5
     },
-    "price_melee": 28,
-    "price_caster": 8,
     "nouns": [
      "точности"
     ],
@@ -134,8 +126,6 @@
      "arms": 1.25,
      "waist": 1.25
     },
-    "price_melee": 56,
-    "price_caster": 24,
     "nouns": [
      "урона"
     ],
@@ -157,32 +147,24 @@
    {
     "value": "-hit",
     "stack": 2,
-    "price_melee": -28,
-    "price_caster": -24,
     "unit": -6,
     "group": "penalty"
    },
    {
     "value": "-mana",
     "stack": 2,
-    "price_melee": -3,
-    "price_caster": -12,
     "unit": -6,
     "group": "penalty"
    },
    {
     "value": "-hitroll",
     "stack": 2,
-    "price_melee": -28,
-    "price_caster": -8,
     "unit": -1,
     "group": "penalty"
    },
    {
     "value": "-damroll",
     "stack": 2,
-    "price_melee": -28,
-    "price_caster": -12,
     "unit": -1,
     "conflicts": [
      "dr",
@@ -193,8 +175,6 @@
    {
     "value": "-move",
     "stack": 2,
-    "price_melee": -5,
-    "price_caster": -2,
     "unit": -10,
     "group": "penalty"
    }

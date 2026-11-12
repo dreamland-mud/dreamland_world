@@ -154,7 +154,7 @@
   },
 
   "overdose": {
-   "_doc": "x10. Each dose adds strain (times conScale). Each drink while high adds booze_strain per point of drunk the sip adds (times conScale; 3: a sober-to-drunk evening, about 80 points, is about 240). Strain decays per tick. Warnings at warn1 and warn2 (text only); strain is held at hold until both were shown; death at death, self-dosed only. After every dose or drink that strains, a heart attack roll in permille: 0 up to heart_from, then 1000 * ((strain - heart_from) / (death - heart_from)) squared, times conScale / 100, at most heart_cap; luck-avoided. It costs heart_min_pct..heart_max_pct of max hp and heart_lag rounds of lag, and can kill (decision 9), but never on a dose or drink that is not self-dosed.",
+   "_doc": "x10. Each dose adds strain (times conScale). Each drink while high adds booze_strain per point of drunk the sip adds (times conScale; 3: a sober-to-drunk evening, about 80 points, is about 240). Strain decays per tick. Warnings at warn1 and warn2 (text only); strain is held at hold until both were shown; death at death, self-dosed only. After every dose or drink that strains, a heart attack roll in permille: 0 up to heart_from, then 1000 * ((strain - heart_from) / (death - heart_from)) squared, times conScale / 100, at most heart_cap; luck-avoided. A pinch rolls these full odds; a drink rolls them times the strain it added / strain (one pinch), so an evening of drinks weighs about one pinch. It costs heart_min_pct..heart_max_pct of max hp and heart_lag rounds of lag, and can kill (decision 9), but never on a dose or drink that is not self-dosed.",
    "strain": 300,
    "decay": 20,
    "warn1": 600,

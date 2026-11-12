@@ -1,5 +1,7 @@
 {
- "_doc": "Drugs and alcohol (Trello rPBKwc8P, docs/systems/DRUGS_STAGE1_PLAN.md). Read only by Fenia (dreamland_fenia utils/drugs) through .config(\"fight/drugs\"). Stage 1 ships the shared addiction engine and alcohol. Units: T (tolerance), D (dependence) and S (overdose strain) run 0-100 and are stored x10 in the PC string attribute 'drugs', so every gain and decay below is x10 too (10 = one point). Ticks are online heartbeats of 60 s. Every key is a plain identifier on purpose; liquid lists are comma-separated names.",
+ "_doc": "Drugs and alcohol (Trello rPBKwc8P, docs/systems/DRUGS_STAGE1_PLAN.md). Read only by Fenia (dreamland_fenia utils/drugs) through .config(\"fight/drugs\"). Stage 1 ships the shared addiction engine and alcohol. Units: T (tolerance), D (dependence) and S (overdose strain) run 0-100 and are stored x10 in the PC string attribute 'drugs', so every gain and decay below is x10 too (10 = one point). Ticks are online heartbeats of 60 s. Every key is a plain identifier on purpose; liquid lists are comma-separated names. Stage 3 (docs/systems/DRUGS_STAGE3_PLAN.md) adds weed, tobacco, mushroom, agaric, opium and forage. cap_cm: a new high is scaled down so the sum of positive centi-M budgets of all highs on a character stays at cap_cm (.tmp.drug.budgetCap).",
+
+ "cap_cm": 130,
 
  "con": {
   "_doc": "T, D and S gain percent = 100 + (avg - con) * pct, clamped min..max: high constitution builds a habit slower and has more overdose headroom.",
@@ -117,6 +119,7 @@
 
  "fisstech": {
   "_doc": "Stage 2 (docs/systems/DRUGS_STAGE2_PLAN.md 3.2, decisions in section 9). One pinch (obj 30282, behavior drug, props sub fisstech) is one dose: a high (affect fisstech), then a crash (affect comedown). Same x10 units and con scaling as alcohol. combo_pct: tipsy or worse at the dose makes the high that much longer and multiplies strain and D gain of both records. Item: rot ticks once a player holds a pinch.",
+  "cross": { "opium": 150 },
   "combo_pct": 150,
   "rot": 600,
 
@@ -192,6 +195,420 @@
   }
  },
 
+ "weed": {
+  "_doc": "Stage 3 (docs/systems/DRUGS_STAGE3_PLAN.md 3.3, decisions in section 9). One dose is a high (affect weed), then a crash (affect comedown). The form (toke, edible, joint) is prototype data in props.drug (sub, pct strength, onset ticks, keep, daily), not here. Same x10 units and con scaling as alcohol. Battleragers get every line (all organic). stagger_pct: a weed high multiplies the drunk stagger chance by this percent.",
+  "fearless": 1,
+
+  "gain": {
+   "_doc": "x10, per dose at 100 percent strength, times conScale. sick_pct multiplies D gain when dosing during a high, a crash or a withdrawal. Not self-dosed: no D.",
+   "t": 30,
+   "d": 3,
+   "sick_pct": 150
+  },
+
+  "tolerance": {
+   "_doc": "As fisstech: the high is cut to (100 - pml * t / 100) percent, floor floor_pct. T drops decay (x10) per decay_every clean ticks.",
+   "pml": 7,
+   "floor_pct": 30,
+   "decay": 10,
+   "decay_every": 12
+  },
+
+  "high": {
+   "_doc": "Affect weed, ticks long, times tolerance and strength. scaled: counts at scale_level, scaled by level (about 10 cM). regen: the regeneration bit, only while the user sits, rests or sleeps, checked each tick (priced at a quarter of its 0.80 M, so the high is about 30 cM). lines: fixed costs. hunger: extra hunger points drained a tick. giggle_pct per tick a giggle, never in a fight. fearless: refused by fear.",
+   "ticks": 8,
+   "cm": 30,
+   "scaled": { "heal_gain": 30, "mana_gain": 30 },
+   "scale_level": 60,
+   "regen": 1,
+   "lines": { "beats": 10, "int": -1 },
+   "hunger": 1,
+   "giggle_pct": 8,
+   "fearless": 1
+  },
+
+  "crash": {
+   "_doc": "The shared affect comedown when the high runs out, ticks long.",
+   "ticks": 4,
+   "lines": { "heal_gain": -20, "beats": 5 }
+  },
+
+  "greenout": {
+   "_doc": "x10. Each dose adds strain (times strength), strain decays per tick. At at: vomit, forced rest for rest_ticks, strain cleared. No warning, never a death. A second edible during the onset wait stacks its strain.",
+   "strain": 350,
+   "decay": 50,
+   "at": 900,
+   "rest_ticks": 2
+  },
+
+  "withdrawal": {
+   "_doc": "As fisstech. From D dependent, not high and not crashing: ticks online ticks, lines by D. A dose pauses it and adds taper ticks once.",
+   "ticks": 15,
+   "taper": 5,
+   "dependent": { "heal_gain": -15, "mana_gain": -15 },
+   "addict": { "heal_gain": -25, "mana_gain": -25, "saves": 2 },
+   "comfort": "tea,milk,chocolate,cold chocolate",
+   "comfort_ticks": 6,
+   "detox_ticks": 20
+  },
+
+  "softens": {
+   "_doc": "A dose during a hangover, a fisstech crash or any withdrawal sets the existing comfort step (one step milder) for comfort_ticks.",
+   "comfort_ticks": 6
+  },
+
+  "stagger_pct": 200,
+
+  "blood": {
+   "_doc": "A vampire feeding on a PC high on weed: a high of high_pct strength, D gain times d_pct percent, never strain.",
+   "high_pct": 50,
+   "d_pct": 50
+  }
+ },
+
+ "tobacco": {
+  "_doc": "Stage 3 (DRUGS_STAGE3_PLAN.md 3.4). A smoke (use) or a chew (eat, plug 1103) is one dose: a plain smoke (affect tobacco), and once a day the first-cigarette rush. No crash, no overdose, no blood. Battleragers get everything, the rush included.",
+
+  "gain": {
+   "_doc": "x10, per smoke, times conScale. About 25 smokes to dependent.",
+   "t": 20,
+   "d": 20,
+   "sick_pct": 150
+  },
+
+  "tolerance": {
+   "_doc": "As fisstech. The plain smoke is cut to (100 - pml * t / 100) percent, floor floor_pct; the rush is not.",
+   "pml": 7,
+   "floor_pct": 30,
+   "decay": 10,
+   "decay_every": 24
+  },
+
+  "high": {
+   "_doc": "Affect tobacco, ticks long: fixed lines, about 8 cM.",
+   "ticks": 4,
+   "lines": { "beats": -3, "saves": -1 }
+  },
+
+  "rush": {
+   "_doc": "Affect nicotine rush, ticks long, bits from the detect_flags and affect_flags tables. Any tobacco gives it once per real day (record field fd). The Songs butt (object butt) gives it once per game day on its own stamp (field gd). Organic.",
+   "ticks": 10,
+   "detect": "invis hidden acute_vision",
+   "affect": "flying",
+   "butt": 6728
+  },
+
+  "withdrawal": {
+   "_doc": "As fisstech, lines by D.",
+   "ticks": 30,
+   "taper": 5,
+   "dependent": { "saves": 2, "beats": 3 },
+   "addict": { "saves": 2, "beats": 3 },
+   "comfort": "tea,milk,chocolate,cold chocolate",
+   "comfort_ticks": 6,
+   "detox_ticks": 20
+  }
+ },
+
+ "mushroom": {
+  "_doc": "Stage 3 (DRUGS_STAGE3_PLAN.md 3.5, 3.6). One liberty cap (27911) or Amber's magic mushrooms (37054) is one dose: onset ticks of nothing, then a trip (affect mushroom trip) in one of four visions, then a crash (affect comedown). No dependence. Battleragers keep wis, mana_gain, the void and retargets; slevel, the detects and astral walk are not organic. retarget_pct: percent of the tripper's targeted commands that land on someone else in the room (is_safe refuses); commands in retarget_skip (resolved English names) are never touched. flashback: from flashback_trips lifetime trips, flashback_pct per sober tick a flashback line, flavour only.",
+  "affect": "mushroom trip",
+
+  "gain": {
+   "_doc": "x10, per mushroom, times conScale. No D.",
+   "t": 500,
+   "d": 0
+  },
+
+  "tolerance": {
+   "_doc": "The trip is cut to (100 - pml * t / 100) percent, floor floor_pct (pml 15: 1.5 percent per T point, so a second mushroom the same hour does close to nothing). T drops decay (x10) per decay_every ticks.",
+   "pml": 15,
+   "floor_pct": 10,
+   "decay": 10,
+   "decay_every": 4
+  },
+
+  "onset": 3,
+
+  "high": {
+   "_doc": "The trip: affect mushroom trip, ticks long, base lines for every vision: lines fixed, debuffs at debuff_level scaled by level. hallu_every: one hallucination line per that many ticks at most, never in a fight.",
+   "ticks": 12,
+   "lines": { "wis": 2, "mana_gain": 30 },
+   "debuffs": { "hitroll": -3 },
+   "debuff_level": 60,
+   "hallu_every": 3
+  },
+
+  "visions": {
+   "_doc": "Weights of the vision rolled at onset. void_weight adds to void: on a fisstech high, drunk or worse, onset in a fight, on a weed high (negative). Then the four are rescaled to 100. Every shift_every ticks a shift_pct roll rerolls the vision from the other three.",
+   "flow": 40,
+   "sight": 30,
+   "astral": 12,
+   "void": 18,
+   "void_weight": { "fisstech": 20, "drunk": 10, "fight": 10, "weed": -8 },
+   "shift_every": 3,
+   "shift_pct": 25
+  },
+
+  "flow": {
+   "_doc": "The Flow: slevel (not organic) and mana_gain on top of the base lines.",
+   "slevel": 1,
+   "mana_gain": 40
+  },
+
+  "sight": {
+   "_doc": "True sight: the detect bits in detect, plus one of extra at random. Not organic.",
+   "detect": "invis hidden",
+   "extra": "fade acute_vision imp_invis"
+  },
+
+  "astral": {
+   "_doc": "Astral walk: the skill lent at pct percent (giveTemporary, origin fenia), taken back when the vision shifts or ends. The vision is forced to shift after shift_after ticks. Not organic.",
+   "skill": "astral walk",
+   "pct": 75,
+   "shift_after": 3
+  },
+
+  "void": {
+   "_doc": "Void stare: on entry lose mana_loss_pct of current mana; hitroll and damroll minus level / hd_div; saves; the dark line pool. Never filtered.",
+   "mana_loss_pct": 25,
+   "hd_div": 8,
+   "saves": 4
+  },
+
+  "retarget_pct": 10,
+  "retarget_skip": "say tell reply gtell yell emote gossip ic ooc grats music rtalk cb mtalk note use eat look bug typo idea title description",
+
+  "second": {
+   "_doc": "A second mushroom during the onset wait or the trip: ticks added to the trip and the vision forced to vision.",
+   "ticks": 6,
+   "vision": "void"
+  },
+
+  "crash": {
+   "_doc": "The shared affect comedown after the trip, ticks long.",
+   "ticks": 6,
+   "lines": { "heal_gain": -20, "beats": 5 }
+  },
+
+  "flashback_trips": 30,
+  "flashback_pct": 1,
+
+  "blood": {
+   "_doc": "A vampire feeding on a tripping PC: a trip at high_pct strength with its own vision roll, D gain times d_pct percent (none: no D), never strain.",
+   "high_pct": 50,
+   "d_pct": 0
+  }
+ },
+
+ "agaric": {
+  "_doc": "Stage 3 (DRUGS_STAGE3_PLAN.md 3.7). One fly agaric (27912) is one dose: onset ticks, then affect fly agaric. Berserkers (subclass) get the rage block, everyone else the toxic block. No dependence, no blood.",
+  "affect": "fly agaric",
+
+  "gain": {
+   "_doc": "x10, per dose, times conScale. No D.",
+   "t": 300,
+   "d": 0
+  },
+
+  "tolerance": {
+   "_doc": "As fisstech: the effect is cut to (100 - pml * t / 100) percent, floor floor_pct. T drops decay (x10) per decay_every ticks.",
+   "pml": 7,
+   "floor_pct": 30,
+   "decay": 10,
+   "decay_every": 2
+  },
+
+  "onset": 2,
+
+  "berserker": {
+   "_doc": "Affect fly agaric for a berserker, ticks long. cm centi-M split by shares (.tmp.drug.budget). berserk started during it lasts rage_pct percent. Cannot flee. Debuffs at debuff_level, scaled by level. Everything organic.",
+   "ticks": 8,
+   "cm": 80,
+   "shares": { "hp": 2, "damroll": 1 },
+   "fearless": 1,
+   "rage_pct": 150,
+   "no_flee": 1,
+   "debuffs": { "saves": 6, "int": -2, "wis": -2 },
+   "debuff_level": 60
+  },
+
+  "toxic": {
+   "_doc": "Affect fly agaric for everyone else, ticks long: poison of poison_power, a vomit, debuffs at debuff_level scaled by level, the dark line pool.",
+   "ticks": 6,
+   "poison_power": 3,
+   "debuffs": { "int": -3, "wis": -3, "hitroll": -4 },
+   "debuff_level": 60
+  },
+
+  "crash": {
+   "_doc": "The shared affect comedown when it runs out. vomit_pct per tick, never in a fight.",
+   "berserker": { "ticks": 10, "lines": { "str": -3, "hitroll": -4, "heal_gain": -60, "beats": 10 }, "vomit_pct": 10 },
+   "toxic": { "ticks": 4, "lines": { "heal_gain": -30 } }
+  },
+
+  "overdose": {
+   "_doc": "x10. Each dose adds strain, strain decays per tick. From toxic_at the dose also poisons like a pale toadstool (forage.deathcap poison only). Never lethal.",
+   "strain": 400,
+   "decay": 20,
+   "toxic_at": 800
+  }
+ },
+
+ "opium": {
+  "_doc": "Stage 3 (DRUGS_STAGE3_PLAN.md 3.10). One ball (object ball, smoked with use) is one dose: a high (affect opium), then a crash (affect comedown). The caster premium drug. Sold by the keepers (mob vnums, props.shopper gate opium) at price silver, cap balls per buyer per game day across all keepers; never to a newbie, and a newbie cannot use a ball. Item: rot ticks once a player holds a ball.",
+  "combo_strain_pct": 200,
+  "cross": { "fisstech": 150 },
+  "fearless": 1,
+  "no_newbie": 1,
+  "ball": 30283,
+  "keepers": "14223 29219",
+  "price": 100000,
+  "cap": 1,
+  "rot": 600,
+
+  "gain": {
+   "_doc": "x10, per dose, times conScale. sick_pct multiplies D gain when dosing during a high, a crash or a withdrawal. Not self-dosed: no D.",
+   "t": 100,
+   "d": 60,
+   "sick_pct": 150
+  },
+
+  "tolerance": {
+   "_doc": "As fisstech.",
+   "pml": 7,
+   "floor_pct": 30,
+   "decay": 10,
+   "decay_every": 24
+  },
+
+  "high": {
+   "_doc": "Affect opium, ticks long, times tolerance. cm centi-M split by shares (.tmp.drug.budget, mana 60 and hp 20 cM). lines: fixed (slevel not organic). scaled: counts at scale_level, scaled by level (saves about 25 cM; about 125 cM in all). debuffs: at debuff_level, scaled by level, times (1 + D/50). nod_pct per tick, out of a fight, the user nods off to sleep. fearless: refused by fear.",
+   "ticks": 10,
+   "cm": 80,
+   "shares": { "mana": 3, "hp": 1 },
+   "lines": { "slevel": 1, "beats": 15 },
+   "scaled": { "saves": -3 },
+   "scale_level": 60,
+   "debuffs": { "dex": -3, "hitroll": -4 },
+   "debuff_level": 60,
+   "nod_pct": 10,
+   "fearless": 1
+  },
+
+  "crash": {
+   "_doc": "The shared affect comedown when the high runs out, ticks long, lines times (1 + D/50).",
+   "ticks": 8,
+   "lines": { "heal_gain": -40, "mana_gain": -40, "saves": 3 }
+  },
+
+  "overdose": {
+   "_doc": "x10, the fisstech rule (odRisk, odAttack). Each dose adds strain (times conScale), times the row combo_strain_pct when tipsy or worse at the dose, times the row cross.<other> percent on whichever of opium and fisstech comes second. Each drink while high adds booze_strain per drunk point. Strain decays per tick. Warnings at warn1 and warn2; held at hold until both were shown; death at death, self-dosed only. After every dose that strains, a stopped-breath roll on the heart curve from heart_from, at most heart_cap, luck-avoided: it costs heart_min_pct..heart_max_pct of max hp and attack_sleep ticks out cold, and kills a user with no more health than that.",
+   "strain": 350,
+   "decay": 15,
+   "booze_strain": 4,
+   "warn1": 600,
+   "warn2": 800,
+   "hold": 990,
+   "death": 1000,
+   "heart_from": 400,
+   "heart_cap": 990,
+   "heart_min_pct": 30,
+   "heart_max_pct": 50,
+   "attack_sleep": 2
+  },
+
+  "withdrawal": {
+   "_doc": "As fisstech, lines by D. cramp_pct (addict only): per tick the user drops to resting and loses a round, luck-avoided, no delirium lines.",
+   "ticks": 80,
+   "taper": 5,
+   "dependent": { "str": -2, "con": -2, "saves": 5, "heal_gain": -40, "mana_gain": -40 },
+   "addict": { "str": -3, "con": -4, "saves": 8, "heal_gain": -70, "mana_gain": -70 },
+   "cramp_pct": 3,
+   "comfort": "tea,milk,chocolate,cold chocolate",
+   "comfort_ticks": 6,
+   "detox_ticks": 20
+  },
+
+  "tell": {
+   "_doc": "look at a user with D (x10) at least pupils_d shows pinpoint pupils.",
+   "pupils_d": 500
+  },
+
+  "blood": {
+   "_doc": "A vampire feeding on a PC high on opium: a high of high_pct strength, D gain times d_pct percent, never strain.",
+   "high_pct": 50,
+   "d_pct": 50
+  }
+ },
+
+ "forage": {
+  "_doc": "Stage 3 (DRUGS_STAGE3_PLAN.md 3.8, 3.9). Wild mushrooms: five kinds (object vnum, share of rain sprouts), all disguised as a wild mushroom until identified on get. toadstool and deathcap are dose entries only, no record.",
+
+  "kinds": {
+   "liberty": { "vnum": 27911, "share": 30 },
+   "agaric": { "vnum": 27912, "share": 15 },
+   "falsecap": { "vnum": 27913, "share": 25 },
+   "pale": { "vnum": 27914, "share": 15 },
+   "panther": { "vnum": 27915, "share": 15 }
+  },
+
+  "rain": {
+   "_doc": "In the land.are rain loop, a forest room that passed its 1 percent roll sprouts one mushroom on a sprout_pct roll, outside winter. A sprout rots after rot ticks. No sprout while the world holds world_cap of the five kinds.",
+   "sprout_pct": 10,
+   "rot": 40,
+   "world_cap": 40
+  },
+
+  "identify": {
+   "_doc": "On get, one roll per picker per mushroom through .tmp.chance: herbs percent / herbs_div + (wis - wis_base) * wis_mul, held to min..max.",
+   "herbs_div": 2,
+   "wis_base": 15,
+   "wis_mul": 3,
+   "min": 5,
+   "max": 95
+  },
+
+  "spots": {
+   "_doc": "Old mushroom reset rooms, by group, space-separated vnums. spotsTick grows a kind by its group's weights in a room with no mushroom patch affect and none of the five kinds on the floor; a picked spot gets affect mushroom patch until it regrows.",
+   "forest": "238 6006 6013 6016",
+   "dark": "6104 6111 6119 6122",
+   "cave": "4068 4069 4070 4071"
+  },
+
+  "weights": {
+   "forest": { "liberty": 40, "agaric": 20, "falsecap": 20, "pale": 10, "panther": 10 },
+   "dark": { "liberty": 15, "agaric": 25, "falsecap": 20, "pale": 20, "panther": 20 },
+   "cave": { "liberty": 45, "agaric": 0, "falsecap": 35, "pale": 20, "panther": 0 }
+  },
+
+  "regrow": 120,
+
+  "growth": {
+   "_doc": "Mushroom patch growth: one onUpdateRoom call in every does the work, adding clear, cloudy, rain or storm by the sky (cave rooms always add cave); winter outdoors cuts it to winter_pct. At regrow the affect strips itself: about 2 real hours dry, 40 minutes in rain.",
+   "every": 5,
+   "clear": 1,
+   "cloudy": 2,
+   "rain": 3,
+   "storm": 4,
+   "cave": 2,
+   "winter_pct": 50
+  },
+
+  "toadstool": {
+   "_doc": "False liberty cap and panther cap: poison of poison_power, a vomit, hunger emptied. cure poison works.",
+   "poison_power": 3
+  },
+
+  "deathcap": {
+   "_doc": "Pale toadstool: after delay ticks of nothing, poison of poison_power and hp_min_pct..hp_max_pct of max hp. Kills only the self-dosed (raw_kill label toadstool); fed on orders or charmed, it stops at 1 hp. No newbie exemption.",
+   "delay": 2,
+   "poison_power": 6,
+   "hp_min_pct": 60,
+   "hp_max_pct": 90
+  }
+ },
+
  "peddler": {
   "_doc": "The night peddler (mob 30281, behaviors shopper and peddler). Lives in room home of the Cloud of Precious Smoke by day; at night (.sunlight 0) stands in one of spots (room vnums, never last night's), back home at dawn. The shop charges the pinch's object cost (30282, price in silver, 30000 = 300 gold) through props.shopper; price here must match it. cap: pinches per buyer per game night, cap_thief for thieves. gift: a free pinch once per life, only when the player asks.",
   "mob": 30281,
@@ -201,14 +618,18 @@
   "cap": 3,
   "cap_thief": 6,
   "gift": 1,
-  "spots": "16548 9559 10219 1150 7527 18081 5408 609 29255 5107 5638 13270"
+  "spots": "16548 9559 10219 1150 7527 18081 5408 609 29255 5107 5638 13270 14222"
  },
 
  "law": {
-  "_doc": "Cities that ban fisstech, by area file name (area.filename), space-separated; everything else tolerates. A city guard who picks a passer-by for a talk frisks instead when the passer-by is high or carries a pinch in the open (top-level inventory, not in a container); avoided with luck at 100 - frisk_pct. Never a sleeper, a fighter or a Ruler. High with no open pinch: a warning and loyalty -high_loyalty. Pinches found: taken, loyalty -frisk_loyalty, and a fine in silver paid in full (newbies pay none); who cannot pay it becomes wanted when broke_wanted is 1, at loyalty -50 instead of frisk_loyalty. A pinch received by give within the last plant_ticks ticks is not counted.",
+  "_doc": "Cities that ban fisstech, by area file name (area.filename), space-separated; everything else tolerates. A city guard who picks a passer-by for a talk frisks instead when the passer-by is high or carries a pinch in the open (top-level inventory, not in a container); avoided with luck at 100 - frisk_pct. Never a sleeper, a fighter or a Ruler. High with no open pinch: a warning and loyalty -high_loyalty. Pinches found: taken, loyalty -frisk_loyalty, and a fine in silver paid in full (newbies pay none); who cannot pay it becomes wanted when broke_wanted is 1, at loyalty -50 instead of frisk_loyalty. A pinch received by give within the last plant_ticks ticks is not counted. Stage 3: ban stays the fisstech list; ban_opium and ban_weed list the cities that ban those (lawBans(area, sub) reads ban_<sub>, falling back to ban for fisstech). One frisk takes every banned dose in the open and charges one fine, the largest found: fine for fisstech and opium, fine_weed for weed. Weed alone (the petty tier: any sub with a fine_<sub> key) costs minor_loyalty and never makes anyone wanted; a weed high alone is ignored.",
   "ban": "midgaard.are smidgaard.are shire.are gerghlm2.are solace.are ofcol2.are titan.are",
+  "ban_opium": "midgaard.are smidgaard.are shire.are gerghlm2.are solace.are ofcol2.are titan.are",
+  "ban_weed": "midgaard.are smidgaard.are gerghlm2.are solace.are",
   "frisk_pct": 60,
   "fine": 30000,
+  "fine_weed": 3000,
+  "minor_loyalty": 5,
   "broke_wanted": 1,
   "plant_ticks": 3,
   "high_loyalty": 5,

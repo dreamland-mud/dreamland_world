@@ -6,26 +6,28 @@
     <text l="en">%FMT% *%CMD%*
 %FMT% *%CMD%* _%VICT%_
 %FMT% *%CMD%* _%OBJ%_
+%FMT% *%CMD% all*
 
-The purge command is used to clean the world. Without arguments, it destroys all NPC's and objects in the current room. Purge with an argument removes a character or object from anywhere in the world.
+The purge command cleans up the current room. Without arguments, it destroys all NPCs and objects in the room, except those with the NOPURGE flag (such as a donation pit, fountain, Hassan). Purge with a name removes one mob from the room, or one object from your inventory, equipment or the room (searched in that order), NOPURGE or not.
 
-Purge does not allow you to get rid of PC's, objects, or mobs with the NOPURGE flag (such as a donation pit, fountain, Hassan). Mobs or objects can be removed if specified by name.</text>
+*%CMD% all* (also *все*, *усе*) destroys every NPC and object in the room, NOPURGE included. Both room wipes skip players and mobs someone is switched into.</text>
     <text l="ru">%FMT% *%CMD%*
 %FMT% *%CMD%* _%VICT%_
 %FMT% *%CMD%* _%OBJ%_
+%FMT% *%CMD% all*
 
+Команда purge очищает текущую комнату. Без аргументов она уничтожает всех NPC и все предметы в комнате, кроме тех, у кого есть флаг NOPURGE (например, яма для пожертвований, фонтан, Хассан). Purge с именем удаляет одного моба из комнаты или один предмет из инвентаря, экипировки или комнаты (ищет в таком порядке), даже с флагом NOPURGE.
 
-Команда purge используется для очищения мира. Без аргументов она уничтожает все NPC's и объекты в текущей комнате. Purge с аргументом удаляет персонажа или объект из любого места мира.
-
-Purge не дает возможности избавится от PC's, объектов или мобов с установленным флагом NOPURGE (например яма для пожертвований, фонтан, Хассан). Мобы или объекты могут быть удалены, если указать их по имени.
+*%CMD% all* (или *все*, *усе*) уничтожает всех NPC и все предметы в комнате, включая NOPURGE. Обе очистки комнаты не трогают игроков и мобов, в которых кто-то вселился через switch.
 </text>
     <text l="ua">%FMT% *%CMD%*
 %FMT% *%CMD%* _%VICT%_
 %FMT% *%CMD%* _%OBJ%_
+%FMT% *%CMD% all*
 
-Команда purge використовується для очищення світу. Без аргументів вона знищує всіх NPC та обʼєкти у поточній кімнаті. Purge з аргументом видаляє персонажа або обʼєкт з будь-якого місця у світі.
+Команда purge очищає поточну кімнату. Без аргументів вона знищує всіх NPC та всі предмети в кімнаті, крім тих, що мають прапор NOPURGE (наприклад, яма для пожертвувань, фонтан, Хассан). Purge з іменем видаляє одного моба з кімнати або один предмет з інвентаря, екіпірування чи кімнати (шукає в такому порядку), навіть із прапором NOPURGE.
 
-Purge не дає можливості позбутися PC, обʼєктів або мобів із встановленим прапором NOPURGE (наприклад, яма для пожертвувань, фонтан, Хассан). Моби або обʼєкти можуть бути видалені, якщо вказати їх за іменем.</text>
+*%CMD% all* (або *все*, *усе*) знищує всіх NPC та всі предмети в кімнаті, включно з NOPURGE. Обидва очищення кімнати не чіпають гравців і мобів, у яких хтось вселився через switch.</text>
   </help>
   <hint l="en">destroy mobs or clear the room</hint>
   <hint l="ru">уничтожить мобов или очистить комнату</hint>

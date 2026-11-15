@@ -68,10 +68,16 @@
 
  "wanted_clear": {
   "_doc": "A wanted player's death clears the mark while their law-abidance is above the line. enabled 0: default for every ethos; 1: the line of the victim's ethos.",
-  "enabled": 0,
+  "enabled": 1,
   "default": -900,
   "lawful": -700,
   "neutral": -900,
   "chaotic": -1000
+ },
+ "fine_pct": {
+  "_doc": "Percent of an automatic fine (city guard drug frisk) a player pays by ethos (.tmp.law.finePct). Ruler verdicts are not touched.",
+  "lawful": 100,
+  "neutral": 100,
+  "chaotic": 75
  }
 }

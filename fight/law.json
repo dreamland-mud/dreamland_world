@@ -5,8 +5,8 @@
  "max": 1000,
 
  "scaling": {
-  "_doc": "Ethos pulls toward its own pole: an automatic gain or loss is multiplied by gain or loss percent of the character's ethos. Off while enabled is 0 (phase 1); a Ruler's judge verdict is never scaled.",
-  "enabled": 0,
+  "_doc": "Ethos pulls toward its own pole: an automatic gain or loss is multiplied by gain or loss percent of the character's ethos, and a scaled change never rounds to 0. off 1 is the kill switch (all scaling off). Drift and a Ruler's judge verdict are never scaled.",
+  "off": 0,
   "lawful": { "gain": 150, "loss": 50 },
   "neutral": { "gain": 100, "loss": 100 },
   "chaotic": { "gain": 50, "loss": 150 }
@@ -24,6 +24,44 @@
  "kill": {
   "_doc": "A player who kills a wanted player or a thief gains gain points, once a Kyiv day per victim. Nothing for a self-kill, an NPC killer, a character of the same account or a death in a sparring area.",
   "gain": 100
+ },
+
+ "deeds": {
+  "_doc": "The law's ledger of small offences and civic deeds (.tmp.law.deed). delta is the raw change before ethos scaling, cooldown the real minutes before the same kind counts again for the same player. Newbies, immortals and sparring areas are never counted.",
+  "theft": { "delta": -10, "cooldown": 60 },
+  "brawl": { "delta": -10, "cooldown": 60 },
+  "special_kill": { "delta": -25, "cooldown": 60 },
+  "assault": { "delta": -25, "cooldown": 60 },
+  "loot": { "delta": -10, "cooldown": 60 },
+  "escape": { "delta": -30, "cooldown": 60 },
+  "guard_help": { "delta": 5, "cooldown": 60 },
+  "thief_kill": { "delta": 5, "cooldown": 60 },
+  "citizen_kill": { "delta": -5, "cooldown": 60 }
+ },
+
+ "daily_plus_cap": 30,
+ "_daily_plus_cap": "All positive deeds and quest moves together add at most this many raw points a Kyiv day. The kill reward is outside the cap.",
+
+ "feud_minutes": 10,
+ "_feud_minutes": "A player struck first by another may hit back without an assault charge for this many real minutes.",
+
+ "drift": {
+  "_doc": "Once a Kyiv day the character is in the world, law-abidance moves step points toward the ethos baseline, only from the wrong side: lawful and neutral rise from below, chaotic sinks from above. Never scaled.",
+  "step": 5,
+  "lawful": 100,
+  "neutral": 0,
+  "chaotic": -100
+ },
+
+ "quests": {
+  "_doc": "Raw law-abidance move for a completed questor quest, by quest type and then by scenario; default covers the rest of the type, 0 is no move. KillQuest is keyed by the hero's alignment at reward (evil or default). Positive moves count in the daily plus cap.",
+  "KidnapQuest": { "bidon": 3, "dragon": 3, "urchin": -2, "cyclop": -5, "urka": -5, "urka2": -5, "default": 0 },
+  "KillQuest": { "evil": -2, "default": 2 },
+  "LocateQuest": { "torturer": 0, "default": 2 },
+  "StealQuest": { "default": 3 },
+  "HealQuest": { "default": 2 },
+  "BigQuest": { "default": 2 },
+  "BossHuntQuest": { "default": 2 }
  },
 
  "wanted_clear": {

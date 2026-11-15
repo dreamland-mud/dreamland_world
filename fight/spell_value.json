@@ -4,7 +4,7 @@
   "worn": "permanent affect on a worn item; null when it has no affect meaning (nukes, heals, pets, item-making rituals)",
   "charge": "one use: one pill/potion/scroll or one wand/staff charge; charges price linearly (x10 wand = 10 x charge)",
   "grant": "item-granted skill (grantskills, learned 100), char-less base the gear sage would give",
-  "src": "per price: 'kit' = Kit set it, 'rescaled' = model mapped monotonically onto Kit's scale (scripts/spell-value/gen/sv_rescale.py), 'hand' = set by hand outside the generator, no model behind it (model null)",
+  "src": "per price: 'kit' = Kit set it, 'rescaled' = model mapped monotonically onto Kit's scale (scripts/spell-value/gen/sv_rescale.py)",
   "model": "the raw model numbers before Kit (worn/charge/grant), for reference only",
   "excluded": "Kit's per-spell exclusion from magic items (R2 and the high-signature rule are dropped)",
   "pvp": "Kit weighs PK too: spell resistance and similar are priced for PvP, not only PvE",
@@ -794,32 +794,6 @@
    "rarity": "rare",
    "effect": "Blinds target for 3+L/15 ticks (tier-reduced on bosses) with hitroll -6.",
    "note": "0.2 per cast ",
-   "exclude_reason": ""
-  },
-  "blight": {
-   "ru": "плесень",
-   "type": "offensive",
-   "minlvl": 12,
-   "classes": {
-    "druid": 12
-   },
-   "clan": false,
-   "excluded": false,
-   "worn": null,
-   "charge": 0.15,
-   "grant": 1.2,
-   "src": {
-    "charge": "hand",
-    "grant": "hand"
-   },
-   "model": {
-    "worn": null,
-    "charge": null,
-    "grant": null
-   },
-   "rarity": "unique",
-   "effect": "Tier 4 poison damage plus a 3-round poison DoT; small chance to fester into corruption until the next tick; rots perishable organic items fast (food turns poisoned). Fire strips the DoT.",
-   "note": "hand-set between chill touch and shocking grasp, no generator run (model null), not Kit-set",
    "exclude_reason": ""
   },
   "bluefire": {
@@ -7503,6 +7477,32 @@
    "note": "",
    "exclude_reason": "Раніше виключено (R2), правило знято 10-28"
   },
+  "blight": {
+   "ru": "плесень",
+   "type": "offensive",
+   "minlvl": 12,
+   "classes": {
+    "druid": 12
+   },
+   "clan": false,
+   "excluded": false,
+   "worn": null,
+   "charge": 0.15,
+   "grant": 1.2,
+   "src": {
+    "charge": "kit",
+    "grant": "kit"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": null
+   },
+   "rarity": "unique",
+   "effect": "Tier 4 poison damage plus a 3-round poison DoT; small chance to fester into corruption until the next tick; rots perishable organic items fast (food turns poisoned). Fire strips the DoT.",
+   "note": "",
+   "exclude_reason": ""
+  },
   "accuracy": {
    "ru": "меткость",
    "type": "buff",
@@ -13246,6 +13246,39 @@
    "rarity": "unique",
    "effect": "staff (weapon) proficiency",
    "note": "",
+   "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
+  },
+  "staves": {
+   "ru": "посохи",
+   "type": "skill",
+   "minlvl": 8,
+   "classes": {
+    "cleric": 8,
+    "necromancer": 8,
+    "ninja": 8,
+    "paladin": 8,
+    "ranger": 8,
+    "samurai": 8,
+    "vampire": 8,
+    "warlock": 8,
+    "witch": 8
+   },
+   "clan": false,
+   "excluded": true,
+   "worn": null,
+   "charge": null,
+   "grant": 0.076,
+   "src": {
+    "grant": "rescaled"
+   },
+   "model": {
+    "worn": null,
+    "charge": null,
+    "grant": 0.012
+   },
+   "rarity": "unique",
+   "effect": "use magic staves",
+   "note": "estimate",
    "exclude_reason": "skill, not a spell: no charge, never in a magic item pool"
   },
   "steal": {

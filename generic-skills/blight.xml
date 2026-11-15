@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<skill type="GenericSkill">
+  <negative>true</negative>
+  <affect type="DefaultAffectHandler">
+    <cancelled>true</cancelled>
+    <dispelled>true</dispelled>
+    <removeCharOthers>Раны %1$C2 подсыхают, и плесень в них погибает.</removeCharOthers>
+    <removeCharSelf>Твои раны подсыхают, и плесень в них погибает.</removeCharSelf>
+    <removeObj>Плесень на %1$O6 засыхает и осыпается.</removeObj>
+  </affect>
+  <beats>12</beats>
+  <classes>
+    <node name="druid">
+      <level>12</level>
+      <maximum>100</maximum>
+      <rating>1</rating>
+    </node>
+  </classes>
+  <dammsg mg="f">плесень</dammsg>
+  <group registry="skillGroup">combat</group>
+  <help id="5252" level="-1" type="SkillHelp">
+    <extra l="en">rot spores mould mold</extra>
+    <extra l="ru">споры грибок</extra>
+    <extra l="ua">спори грибок пліснява</extra>
+    <text l="en">%FMT% *%SPELL%* _%VICT%_
+
+The druid blows a puff of spores into the victim's wounds. Mould blooms there and keeps eating at the wounds for a few rounds of the fight. Creatures immune to poison shrug it off. Now and then the mould sinks deeper, and for a short while the wounds fester with true {hh541corruption{x. Fire burns the mould out: {hh839burning hands{x or any other flame cleans the wounds.
+
+%FMT% *%SPELL%* _%OBJ%_
+
+On a thing, blight is the reverse of {hh610chill touch{x: something perishable and organic, such as food or body parts, grows mould and starts to rot fast, and mouldy food turns poisonous. Frozen things don't take the mould, and the bodies of fallen heroes are left alone.</text>
+    <text l="ru">%FMT% *%SPELL%* _%VICT%_
+
+Друид сдувает облачко спор в раны жертвы. Там расцветает плесень и еще несколько раундов боя разъедает раны. Существам, невосприимчивым к яду, она не страшна. Иногда плесень прорастает глубже, и раны ненадолго охватывает настоящее {hh541гниение{x. Огонь выжигает плесень: {hh839горящие руки{x или любое другое пламя очищают раны.
+
+%FMT% *%SPELL%* _%OBJ%_
+
+На вещах плесень -- противоположность {hh610ледяного касания{x: что-то непостоянное и органическое, например еда или части тела, зарастает плесенью и начинает стремительно гнить, а заплесневелая еда становится ядовитой. Замороженные вещи плесень не берет, а тела павших героев она не трогает.</text>
+    <text l="ua">%FMT% *%SPELL%* _%VICT%_
+
+Друїд здуває хмаринку спор у рани жертви. Там розквітає цвіль і ще кілька раундів бою вʼїдається в рани. Істотам, несприйнятливим до отрути, вона не страшна. Іноді цвіль проростає глибше, і рани ненадовго охоплює справжня {hh541гнилість{x. Вогонь випалює цвіль: {hh839палаючі руки{x чи будь-яке інше полумʼя очищують рани.
+
+%FMT% *%SPELL%* _%OBJ%_
+
+На речах цвіль -- протилежність {hh610льодяного дотику{x: щось непостійне й органічне, наприклад їжа чи частини тіла, вкривається цвіллю й починає стрімко гнити, а запліснявіла їжа стає отруйною. Заморожені речі цвіль не бере, а тіла полеглих героїв вона не чіпає.</text>
+  </help>
+  <mana>50</mana>
+  <mob>
+    <professional>true</professional>
+  </mob>
+  <name l="en">blight</name>
+  <name l="ru">плесень</name>
+  <name l="ua">цвіль</name>
+  <spell type="DefaultSpell">
+    <damtype>poison</damtype>
+    <flags>magic</flags>
+    <position>fight</position>
+    <ranged>false</ranged>
+    <target>char_room obj_room obj_inv obj_equip</target>
+    <tier>4</tier>
+    <type>offensive</type>
+  </spell>
+</skill>

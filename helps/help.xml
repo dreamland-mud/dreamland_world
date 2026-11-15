@@ -377,6 +377,7 @@ Followers raise their level and combat stats when they land the killing blow on 
 %A% The follower must land the final blow
 %A% The opponent must be no more than 4 levels below the follower's level
 %A% Only a kill of a higher-level opponent brings a new level, up to level 103. The ceiling of health, mana, damage and accuracy depends on the follower's own level, and only casting followers gain mana.
+%A% A follower never outgrows you: past your own level it stops gaining levels, though its other stats still grow. One that is already above you keeps its level.
 
 {CSUMMONED CREATURES AND CHARMIES{x
 Creatures summoned through certain class or clan skills do not leave the world with you (like pets do), but stay and wait for you where you left them. Upon returning to the world you will need to re-dominate them. Charmies, however, cannot be re-dominated -- you will have to re-charm them.
@@ -391,6 +392,8 @@ A pet's price grows with its level and strength. Elite and champion pets cost se
 In a pet shop the keeper lists the pets after its goods in {hh1056list{x. Say the row number and the keeper tells you the pet's level and strength, then *buy* it by number or name. Haggling works as for goods, and on a day of shop discounts pets cost half. A mount carries you away at once. Druids don't buy pets, and a clan's pets go to its members and invited guests only.
 
 Unlike charmies and summoned creatures, pets cannot be dressed, but they are carried along with {hh862recall{x, {hh992quit{x the world with you and are saved along with your character. While you're away, no one can kill them, and upon return you don't need to re-dominate them.
+
+A pet needs to eat. {hh5253Feed{x it, or it goes hungry, stops growing and in the end leaves you for good. A well fed pet that loves you grows faster.
 
 After your pet dies, you can get another one. You can also dismiss a pet using the dismiss command. If your loyal friend or any other mob in your group gets lost, a boss may well have thrown it out of the fight. Try {hh1379calling{x for it:
 %FMT% {y{hcgtell where are you?{x
@@ -419,6 +422,7 @@ After your pet dies, you can get another one. You can also dismiss a pet using t
 %A% последователь должен нанести последний удар
 %A% противник должен быть не ниже 4 уровней от уровня последователя
 %A% новый уровень дает только победа над противником выше уровнем, а самый высокий уровень последователя -- 103. Потолок здоровья, маны, урона и точности зависит от собственного уровня последователя, а ману набирают только колдующие последователи.
+%A% Последователь не перерастет тебя: дойдя до твоего уровня, он перестает получать новые уровни, хотя остальные характеристики продолжают расти. Тот, кто уже выше тебя, свой уровень сохраняет.
 
 {CПРИЗВАННЫЕ СУЩЕСТВА И ЧАРМИСЫ{x
 Существа, вызываемые с помощью определенных классовых или клановых умений, не выходят из мира вместе с тобой (как петы), а остаются ждать тебя там же, где ты их оставишь. По возвращению в мир их нужно будет переподчинить. А вот чармисов переподчинить нельзя -- их придется заново очаровывать.
@@ -433,6 +437,8 @@ After your pet dies, you can get another one. You can also dismiss a pet using t
 В зоомагазине продавец показывает питомцев в {hh1056списке{x после своих товаров. Назови номер строки вслух, и продавец расскажет об уровне и силе пета, а потом *(buy,купи)* его по номеру или имени. Торговаться можно так же, как за товары, а в день больших скидок петы стоят вдвое дешевле. На скакуна ты садишься сразу. Друиды петов не покупают, а клановых питомцев продают только своим и приглашенным гостям.
 
 В отличие от чармисов и призванных существ, петов нельзя одевать, но зато они переносятся {hh862возвратом{x, {hh992выходят{x из мира и сохраняются вместе с тобой. Пока тебя нет, их никто не сможет убить, и по возвращении их не нужно переподчинять.
+
+Пета нужно кормить. Если его не {hh5253кормить{x, он голодает, перестает расти и в конце концов уходит от тебя навсегда. Сытый и преданный пет растет быстрее.
 
 После того, как пет умрет, ты сможешь приобрести другого любимца. Также, можно выгнать питомца, используя команду выгнать. Если твой преданный друг или другой моб из твоей группы потерялся (его мог вышвырнуть из боя босс), попробуй {hh1379позвать{x его:
 %FMT% {y{hcггов где ты?{x
@@ -461,6 +467,7 @@ After your pet dies, you can get another one. You can also dismiss a pet using t
 %A% Послідовник повинен завдати останній удар
 %A% Противник повинен бути не нижче 4 рівнів від рівня послідовника
 %A% Новий рівень дає тільки перемога над противником вищого рівня, і рости можна до 103 рівня. Стеля здоровʼя, мани, шкоди та точності залежить від власного рівня послідовника, а ману набирають тільки послідовники, що чаклують.
+%A% Послідовник не переросте тебе: дійшовши до твого рівня, він більше не отримує нових рівнів, хоча інші характеристики далі ростуть. Той, хто вже вищий за тебе, свій рівень зберігає.
 
 {CПОКЛИКАНІ ІСТОТИ ТА ЧАРМИСИ{x
 Істоти, покликані за допомогою певних класових або кланових вмінь, не виходять зі світу разом із тобою (як пети), а залишаються чекати тебе там, де ти їх залишиш. Повернувшись у світ, їх потрібно буде перепідкорити. А от чармисів перепідкорити не можна -- їх доведеться заново зачаровувати.
@@ -475,6 +482,8 @@ After your pet dies, you can get another one. You can also dismiss a pet using t
 У зоомагазині продавець показує улюбленців у {hh1056списку{x після своїх товарів. Назви номер рядка вголос, і продавець розповість про рівень і силу пета, а тоді *(buy,купи)* його за номером чи імʼям. Торгуватися можна так само, як за товари, а в день великих знижок пети коштують удвічі дешевше. На скакуна ти сідаєш одразу. Друїди петів не купують, а кланових улюбленців продають лише своїм і запрошеним гостям.
 
 На відміну від чармисів і покликаних істот, петів не можна одягати, але зате вони переносяться {hh862поверненням{x, {hh992виходять{x зі світу і зберігаються разом із тобою. Поки тебе немає, їх ніхто не зможе вбити, і після повернення їх не потрібно перепідкорити.
+
+Пета треба годувати. Якщо його не {hh5253годувати{x, він голодує, перестає рости і зрештою йде від тебе назавжди. Ситий і відданий пет росте швидше.
 
 Після того як пет помре, ти зможеш придбати іншого улюбленця. Також можна вигнати вихованця, використовуючи команду вигнати. Якщо твій відданий друг чи інший моб із твоєї групи загубився (його міг викинути з бою бос), спробуй {hh1379покликати{x його:
 %FMT% {y{hcггов де ти?{x

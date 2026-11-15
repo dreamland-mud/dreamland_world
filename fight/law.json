@@ -1,0 +1,37 @@
+{
+ "_doc": "Law-abidance (PC loyalty, help 1529), Trello dCqZ3JHZ, docs/systems/LAW_ABIDANCE.md. Read only by Fenia (dreamland_fenia utils/law) through .config(\"fight/law\"); every key has a code default there, so a new key may lag until the fight plugin reloads. Every automatic change goes through .tmp.law.change, clamped to min..max.",
+
+ "min": -1000,
+ "max": 1000,
+
+ "scaling": {
+  "_doc": "Ethos pulls toward its own pole: an automatic gain or loss is multiplied by gain or loss percent of the character's ethos. Off while enabled is 0 (phase 1); a Ruler's judge verdict is never scaled.",
+  "enabled": 0,
+  "lawful": { "gain": 150, "loss": 50 },
+  "neutral": { "gain": 100, "loss": 100 },
+  "chaotic": { "gain": 50, "loss": 150 }
+ },
+
+ "bands": {
+  "_doc": "Lower edge of the two upper bands and upper edge of the three lower ones; Plain lies between citizen and shady. Newbies are always Plain.",
+  "pillar": 750,
+  "citizen": 250,
+  "shady": -250,
+  "outlaw": -500,
+  "enemy": -750
+ },
+
+ "kill": {
+  "_doc": "A player who kills a wanted player or a thief gains gain points, once a Kyiv day per victim. Nothing for a self-kill, an NPC killer, a character of the same account or a death in a sparring area.",
+  "gain": 100
+ },
+
+ "wanted_clear": {
+  "_doc": "A wanted player's death clears the mark while their law-abidance is above the line. enabled 0: default for every ethos; 1: the line of the victim's ethos.",
+  "enabled": 0,
+  "default": -900,
+  "lawful": -700,
+  "neutral": -900,
+  "chaotic": -1000
+ }
+}

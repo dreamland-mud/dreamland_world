@@ -22,9 +22,10 @@
  },
 
  "perks": {
-  "_doc": "Discount percent of the two upper bands inside hometown areas: shop for goods and pets, service for paid services (silver and gold, never qp). The lower bands' refusals are not tunable here.",
+  "_doc": "pillar and citizen: discount percent inside hometown areas, shop for goods and pets, service for paid services (silver and gold, never qp). fence: what a fence pays the three lower bands over its keeper price. The lower bands' refusals are not tunable here.",
   "pillar": { "shop": 10, "service": 20 },
-  "citizen": { "shop": 5, "service": 10 }
+  "citizen": { "shop": 5, "service": 10 },
+  "fence": { "_doc": "Percent a fence pays over its keeper price, by band, still capped at the item's cost. Above Shady a fence refuses to trade.", "shady": 10, "outlaw": 20, "enemy": 30 }
  },
 
  "kill": {

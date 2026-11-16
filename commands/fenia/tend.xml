@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Command type="CommandElement">
+  <aliases l="en"></aliases>
+  <aliases l="ru"></aliases>
+  <aliases l="ua"></aliases>
+  <cat>char</cat>
+  <help id="5260" seealso="5255 15" level="-1" type="CommandHelp" labels="char">
+    <extra l="en">vet groom train grooming veterinary</extra>
+    <extra l="ru">лечить вычесать натаскать ветеринар груминг</extra>
+    <extra l="ua">лікувати вичесати натаскати ветеринар грумінг</extra>
+    <text l="en">%FMT% *%CMD%* _animal_ *vet*
+%FMT% *%CMD%* _animal_ *groom*
+%FMT% *%CMD%* _animal_ *train*
+
+The services of a {hh5255beastmaster{x for another player's animal. You need a valid {hh361craft license{x, and the owner must stand in the same room and not be fighting. Your own animals you may tend without a license.
+%A% =vet= heals a living animal and cures what a cure spell would. It tires you, and the herbs need a while to work before the next dose
+%A% =groom= brings the animal closer to its owner and leaves it in a good mood for a few days
+%A% =train= helps the animal grow faster in battle for a few days. An experienced beastmaster only
+
+The better your craft, the longer the effect lasts.</text>
+    <text l="ru">%FMT% *%CMD%* _зверь_ *лечить*
+%FMT% *%CMD%* _зверь_ *вычесать*
+%FMT% *%CMD%* _зверь_ *натаскать*
+
+Услуги {hh5255зверовода{x для зверя другого игрока. Нужна действующая {hh361ремесленная лицензия{x, а хозяин должен стоять в той же комнате и не сражаться. За своими зверями можно ухаживать и без лицензии.
+%A% =лечить= -- лечит живого зверя и снимает то, что сняло бы лечащее заклинание. Это утомляет, а травам нужно время подействовать до следующего раза
+%A% =вычесать= -- сближает зверя с хозяином и поднимает ему настроение на несколько дней
+%A% =натаскать= -- на несколько дней помогает зверю быстрее расти в бою. Только для опытного зверовода
+
+Чем выше твое ремесло, тем дольше держится эффект.</text>
+    <text l="ua">%FMT% *%CMD%* _звір_ *лікувати*
+%FMT% *%CMD%* _звір_ *вичесати*
+%FMT% *%CMD%* _звір_ *натаскати*
+
+Послуги {hh5255звіровода{x для звіра іншого гравця. Потрібна чинна {hh361реміснича ліцензія{x, а господар має стояти в тій самій кімнаті й не битися. Про своїх звірів можна дбати й без ліцензії.
+%A% =лікувати= -- лікує живого звіра й знімає те, що зняло б лікувальне закляття. Це втомлює, а травам треба час подіяти до наступного разу
+%A% =вичесати= -- зближує звіра з господарем і піднімає йому настрій на кілька днів
+%A% =натаскати= -- на кілька днів допомагає звірові швидше рости в бою. Лише для досвідченого звіровода
+
+Що вище твоє ремесло, то довше тримається ефект.</text>
+  </help>
+  <hint l="en">heal, groom or train another player's animal</hint>
+  <hint l="ru">лечить, вычесать или натаскать зверя другого игрока</hint>
+  <hint l="ua">лікувати, вичесати чи натаскати звіра іншого гравця</hint>
+  <name l="en">tend</name>
+  <name l="ru">ухаживать</name>
+  <name l="ua">доглядати</name>
+  <order>player_only</order>
+  <position>stand</position>
+</Command>

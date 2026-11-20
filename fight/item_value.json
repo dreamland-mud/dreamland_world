@@ -71,6 +71,9 @@
    "wrist tattoo": 0.15,
    "remove tattoo": 0.15
   },
+  "_doc_mitigation_ref_hp": "mitigation_ref_hp / mana_ref_pool: gear sage only (characterwrapper.cpp ga_*), never the generators or the M ruler. The defense prices (res/imm/vuln, sanctuary, protect_evil/good: 1% of incoming damage removed = 6 pts) assume a char with mitigation_ref_hp max hp, where 1 hp = 1 pt; the sage multiplies them by max(1, max_hit / mitigation_ref_hp), so a 2400 hp char sees a resist at 4x. It multiplies +/-mana by min(1, mana_ref_pool / max_mana): +200 mana on a 2400 pool is worth a quarter of the same on 600. Hp, move and the rest stay flat. Compiled default 600 each (Kit 2026-11-19, Trello OYMD0rr9).",
+  "mitigation_ref_hp": 600,
+  "mana_ref_pool": 600,
   "_doc_saves_by_level": "saves_by_level: points per -1 saves at par, {level: [melee, caster]}, linear between anchors, clamped to the end anchors outside them; the level is the item's level for a base price and the char's level in the gear sage. Wins over the flat melee/caster saves (kept as the fallback when the table is missing). Damage-only value from the measured spell share of incoming damage at band p50 svs, the L60 dip is real (band svs sits deep on the curve): docs/systems/SAVES_REWORK.md 'svs price from the measured share'. saves_pts_per_pct: points per 1% save chance at the same anchors (0.005 x share x band hp); under saves model 1 the gear sage prices an item's saves as this x the real chance change at the char's own svs outside the item's slot, so a stacker sees what the next point is worth.",
   "saves_by_level": {
    "20": [1.25, 1.08],

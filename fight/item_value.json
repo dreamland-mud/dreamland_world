@@ -123,6 +123,12 @@
    "32032": ["concentrate"],
    "32703": ["evolve lion"]
   },
+  "_doc_spell_align": "spell_align: worn spells whose effect works only inside an alignment band, {spell: [lo, hi]} (the affix align convention) or a list of bands. The gear sage prices such a spell at 0 for a wearer outside (trigger_spells, a generated item's worn buff, affect-flag bits, gear kit grants). Only gates the spell code enforces: dark shroud runVict refuses a non-evil target; protection evil/good refuse a neutral one and damage.cpp protectAlign skips a neutral victim.",
+  "spell_align": {
+   "dark shroud": [-1000, -350],
+   "protection evil": [[-1000, -350], [350, 1000]],
+   "protection good": [[-1000, -350], [350, 1000]]
+  },
   "materials_ref_level": 50,
   "first_life_only": [
    812,

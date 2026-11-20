@@ -12,13 +12,17 @@ Light, Fury and Order. There is no Path field on a religion -- the Paths are the
 colour groupings of the master index in helps/religion.xml, so that is where the
 mapping is read from.
 
-Three findings, only the first of which is a defect:
+A hidden god (flag hidden) is not in that index on purpose: his Path comes
+from his <paths> field instead, and his being listed there is a LEAK.
+
+Findings, only HOLE and LEAK are defects:
 
   HOLE     the gate lets a druid in on a Path the rule forbids -- fixable by
            adding a <classes> whitelist. Exits 1.
   OR-TRAP  same, but the god has <races> set, and reasonWhy ORs races with
            classes -- adding <classes> would ADMIT every listed class of every
            race instead of narrowing. Needs an engine change, not data.
+  LEAK     a hidden god is listed in the help 1 index. Exits 1.
   NOTE     the god is on an accepted Path yet some other gate refuses druids.
            NOT a defect: help 192 states a necessary condition (which Paths are
            acceptable), never a promise that every god on them is reachable.
@@ -45,6 +49,14 @@ PATH_BY_COLOUR = {
     "W": "Light", "D": "Dark", "B": "Mind", "R": "Fury",
     "w": "Order", "M": "Chaos", "g": "Nature", "Y": "Society",
     "C": "Freedom",
+}
+# <paths> names in religions/<god>.xml -> the same Path names. Read only for a
+# god the help 1 index does not list: a hidden one (flag hidden), whose name
+# must stay out of that index.
+PATH_BY_FIELD = {
+    "light": "Light", "dark": "Dark", "reason": "Mind", "rage": "Fury",
+    "order": "Order", "chaos": "Chaos", "nature": "Nature", "society": "Society",
+    "freedom": "Freedom",
 }
 # help 192: "only gods of the Paths of Nature, Light, Fury or Order are accepted"
 DRUID_PATHS = {"Nature", "Light", "Fury", "Order"}
@@ -110,12 +122,27 @@ def main():
             continue                 # chronos, none: not choosable, not indexed
         help_el = root.find("help")
         hid = help_el.get("id") if help_el is not None else None
-        if hid is None or hid not in by_id:
+        hidden = "hidden" in text(root, "flags").split()
+        if hidden:
+            # A hidden god is known only to his followers and the initiated:
+            # listing him in the help 1 index would give his name away.
+            if hid is not None and hid in by_id:
+                problems.append(("LEAK", god, "-", "hidden",
+                                 "hidden god listed in the help 1 index"))
+            # The index has no colour for him: the Paths come from <paths>,
+            # and a druid may follow him if any of them is a druid Path.
+            fpaths = [PATH_BY_FIELD.get(p, p) for p in text(root, "paths").split()]
+            if not fpaths:
+                if not quiet:
+                    print("  ?? %-16s hidden, no <paths> -- Path unknown, skipped" % god)
+                continue
+            godpath = next((p for p in fpaths if p in DRUID_PATHS), fpaths[0])
+        elif hid is None or hid not in by_id:
             if not quiet:
                 print("  ?? %-16s not in the help 1 index -- Path unknown, skipped" % god)
             continue
-
-        _, godpath = by_id[hid]
+        else:
+            _, godpath = by_id[hid]
         gate = druid_gate(root)
         if gate == "system":
             continue
@@ -151,7 +178,7 @@ def main():
         print("  %-10s %-16s Path=%-8s gate=%-14s %s" % (kind, god, godpath, gate, why))
 
     if problems:
-        print("\n%d gate(s) contradict help 192." % len(problems))
+        print("\n%d problem(s): a gate contradicts help 192 or a hidden god leaks." % len(problems))
         return 1
     print("\nOK -- no gate contradicts the druid Path rule (%d informational)." % len(notes))
     return 0

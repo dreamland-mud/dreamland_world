@@ -64,9 +64,10 @@ def paths_from_index():
     body = src.split('<text l="en">')[1].split("</text>")[0]
     out = {}
     for line in body.split("\n"):
-        m = re.match(r"\{hh(\d+)([A-Za-z '\-]+)\{x\s*\{(\w)%A%", line)
+        # "{W%A%{x {hh1565Varda{x -- ..." : Path colour, bullet, then the god link
+        m = re.match(r"\{(\w)%A%\{x\s*\{hh(\d+)([A-Za-z '\-]+)\{x", line)
         if m:
-            out[m.group(1)] = (m.group(2).strip(), PATH_BY_COLOUR.get(m.group(3), m.group(3)))
+            out[m.group(2)] = (m.group(3).strip(), PATH_BY_COLOUR.get(m.group(1), m.group(1)))
     return out
 
 
@@ -105,6 +106,8 @@ def main():
     for path in sorted(glob.glob(os.path.join(WORLD, "religions", "*.xml"))):
         root = ET.parse(path).getroot()
         god = os.path.basename(path)[:-4]
+        if "system" in text(root, "flags").split():
+            continue                 # chronos, none: not choosable, not indexed
         help_el = root.find("help")
         hid = help_el.get("id") if help_el is not None else None
         if hid is None or hid not in by_id:
@@ -141,6 +144,9 @@ def main():
 
     if not quiet:
         print("religions checked: %d\n" % checked)
+    if checked == 0:
+        print("no religion matched the help 1 index -- index format changed?")
+        return 2
     for kind, god, godpath, gate, why in problems + notes:
         print("  %-10s %-16s Path=%-8s gate=%-14s %s" % (kind, god, godpath, gate, why))
 

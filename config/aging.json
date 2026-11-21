@@ -1,0 +1,49 @@
+{
+    // Old-man noises in say (GlobalChannel <grumble>, config nogrumble opts out).
+    // tiers: percent of say lines that grumble once the speaker has this many
+    // true hours over all lives; the highest reached tier wins.
+    // en/ru/ua are parallel: one index is the same joke for every reader.
+    // No UA apostrophe here: it does not survive the KOI8 load of this file.
+    "grumble": {
+        "tiers": [
+            { "hours": 1000, "percent": 4 },
+            { "hours": 5000, "percent": 6 }
+        ],
+        "en": [
+            "hrrmph",
+            "oof, my back",
+            "where was I",
+            "and they call that a pension",
+            "kids these days",
+            "back in my day, mind you",
+            "who moved my glasses",
+            "my knee says rain",
+            "shut the door, there is a draft",
+            "this world has gone soft"
+        ],
+        "ru": [
+            "крххх",
+            "ооох",
+            "пупупу",
+            "индексация",
+            "зумеры",
+            "вот в наше время",
+            "где мои очки",
+            "колено на дождь ломит",
+            "дверь закрой, сквозняк",
+            "куда катится мир"
+        ],
+        "ua": [
+            "кхе-кхе",
+            "ой, спина",
+            "то про що я",
+            "а пенсія як була, так і є",
+            "оця молодь",
+            "от за наших часів",
+            "де мої окуляри",
+            "коліно на дощ крутить",
+            "двері зачини, протяг",
+            "куди світ котиться"
+        ]
+    }
+}

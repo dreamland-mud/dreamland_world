@@ -6502,41 +6502,41 @@ The game credits a payment to your account by itself when one of these matches: 
     <keyword l="en">ai</keyword>
     <keyword l="ru">ии</keyword>
     <keyword l="ua">ші</keyword>
-    <text l="en">Town guards and some town folk (innkeepers, barmen, shopkeepers) know the roads to other lands. Ask one of them where a place is, aloud when no other player is around or with a tell, and the answer comes as a private tell: the way from here, the levels of the place, and a warning if it is too early for you to go. For a place inside a town, use the {hh2170path{x command.
+    <text l="en">Town guards and some town folk (innkeepers, barmen, shopkeepers) know the roads to other lands. Ask one of them where a place is when no other player is around, and the answer comes as a private tell: the way from here, the levels of the place, and a warning if it is too early for you to go. In company they keep quiet and ask you to come back later. For a place inside a town, use the {hh2170path{x command.
 
 If a {hh995help{x query finds nothing, a moment later you may get a suggestion of up to three articles. Or nothing, if none fits.
 
 In both cases an outside AI service (Claude by Anthropic) only picks from a list. The road, the zone names and the article text are the game's own.
 
-What leaves the game: a sentence said to a guide that asks the way (only one with words like "where" or "how do I get to"), or the help query, plus a one-way hash of your account. No character name, no email, no other speech. A question the game can answer by itself, or one asked before, never leaves at all.
+What goes to the AI service: a sentence said to a guide that asks the way (only one with words like "where" or "how do I get to"), or the help query. Nothing else: no character name, no account, no email, no other speech. A question the game can answer by itself does not leave at all, and a repeated one is usually answered from memory.
 
-What is kept: a log immortals can read, with the question, the answer and the account hash, which the server overwrites after a while; and each question with its answer, with no asker attached, for up to a month after it was last asked, so the same question gets an answer at once.
+What the game server keeps: a log immortals can read, with the question, the answer and a one-way hash of your account, for up to 90 days; a record of each AI call with that hash, the time and the cost but no text, for up to 90 days; and each question with its answer, with no asker attached, for up to a month, so the same question gets an answer at once.
 
 New areas may carry descriptions an AI drafted and builders reviewed.
 
 If an answer is wrong or rude, report it with the {hh996bug{x command.</text>
-    <text l="ru">Городские стражники и кое-кто из горожан (трактирщики, бармены, лавочники) знают дороги в другие земли. Спроси кого-то из них, где находится место, вслух, когда рядом нет других игроков, или личным сообщением, и ответ придет личным сообщением: путь отсюда, уровни места и предупреждение, если тебе туда пока рано. Чтобы найти место внутри города, есть команда {hh2170путь{x.
+    <text l="ru">Городские стражники и кое-кто из горожан (трактирщики, бармены, лавочники) знают дороги в другие земли. Спроси кого-то из них, где находится место, когда рядом нет других игроков, и ответ придет личным сообщением: путь отсюда, уровни места и предупреждение, если тебе туда пока рано. При посторонних они молчат и просят зайти позже. Чтобы найти место внутри города, есть команда {hh2170путь{x.
 
 Если запрос {hh995помощи{x ничего не нашел, через мгновение может прийти подсказка: до трех статей. Или ничего, если ни одна не подходит.
 
 В обоих случаях внешний сервис ИИ (Claude от Anthropic) только выбирает из списка. Дорога, названия зон и текст статей -- самой игры.
 
-Что уходит из игры: фраза, сказанная проводнику, которая спрашивает дорогу (только со словами вроде "где" или "как пройти"), или запрос справки, плюс односторонний хэш твоей учетной записи. Ни имени персонажа, ни почты, ни других разговоров. Вопрос, на который игра отвечает сама или который уже задавали, не уходит вовсе.
+Что уходит сервису ИИ: фраза, сказанная проводнику, которая спрашивает дорогу (только со словами вроде "где" или "как пройти"), или запрос справки. Больше ничего: ни имени персонажа, ни учетной записи, ни почты, ни других разговоров. Вопрос, на который игра отвечает сама, не уходит вовсе, а повторный обычно получает ответ из памяти.
 
-Что хранится: журнал, который могут читать бессмертные, с вопросом, ответом и хэшем учетной записи, его сервер со временем затирает; и каждый вопрос с ответом, без указания, кто спрашивал, до месяца после того, как его задали в последний раз, чтобы на тот же вопрос ответ пришел сразу.
+Что хранит игровой сервер: журнал, который могут читать бессмертные, с вопросом, ответом и односторонним хэшем твоей учетной записи, до 90 дней; запись о каждом обращении к ИИ с этим хэшем, временем и ценой, но без текста, до 90 дней; и каждый вопрос с ответом, без указания, кто спрашивал, до месяца, чтобы на тот же вопрос ответ пришел сразу.
 
 В новых зонах могут встречаться описания, которые набросал ИИ и проверили строители.
 
 Если ответ неверный или грубый, сообщи об этом командой {hh996ошибка{x.</text>
-    <text l="ua">Міські вартові та дехто з городян (шинкарі, бармени, крамарі) знають дороги в інші землі. Спитай когось із них, де розташоване місце, вголос, коли поруч немає інших гравців, або особистим повідомленням, і відповідь прийде особистим повідомленням: шлях звідси, рівні місця та попередження, якщо тобі туди поки зарано. Щоб знайти місце всередині міста, є команда {hh2170шлях{x.
+    <text l="ua">Міські вартові та дехто з городян (шинкарі, бармени, крамарі) знають дороги в інші землі. Спитай когось із них, де розташоване місце, коли поруч немає інших гравців, і відповідь прийде особистим повідомленням: шлях звідси, рівні місця та попередження, якщо тобі туди поки зарано. При сторонніх вони мовчать і просять зайти пізніше. Щоб знайти місце всередині міста, є команда {hh2170шлях{x.
 
 Якщо запит {hh995допомоги{x нічого не знайшов, за мить може прийти підказка: до трьох статей. Або нічого, якщо жодна не пасує.
 
 В обох випадках зовнішній сервіс ШІ (Claude від Anthropic) лише вибирає зі списку. Дорога, назви зон і текст статей -- самої гри.
 
-Що йде з гри: фраза, сказана провідникові, яка питає дорогу (лише зі словами на кшталт "де" чи "як пройти"), або запит довідки, плюс односторонній хеш твого облікового запису. Ні імені персонажа, ні пошти, ні інших розмов. Питання, на яке гра відповідає сама або яке вже ставили, не йде взагалі.
+Що йде сервісу ШІ: фраза, сказана провідникові, яка питає дорогу (лише зі словами на кшталт "де" чи "як пройти"), або запит довідки. Більше нічого: ні імені персонажа, ні облікового запису, ні пошти, ні інших розмов. Питання, на яке гра відповідає сама, не йде взагалі, а повторне зазвичай отримує відповідь із памʼяті.
 
-Що зберігається: журнал, який можуть читати безсмертні, з питанням, відповіддю та хешем облікового запису, його сервер з часом затирає; і кожне питання з відповіддю, без зазначення, хто питав, до місяця після того, як його поставили востаннє, щоб на те саме питання відповідь прийшла одразу.
+Що зберігає ігровий сервер: журнал, який можуть читати безсмертні, з питанням, відповіддю та одностороннім хешем твого облікового запису, до 90 днів; запис про кожне звернення до ШІ з цим хешем, часом і ціною, але без тексту, до 90 днів; і кожне питання з відповіддю, без зазначення, хто питав, до місяця, щоб на те саме питання відповідь прийшла одразу.
 
 У нових зонах можуть траплятися описи, які накидав ШІ і перевірили будівельники.
 

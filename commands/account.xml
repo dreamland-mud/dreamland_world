@@ -3,15 +3,16 @@
   <cat>config</cat>
   <extra>keep_hide ghost</extra>
   <help id="5106" level="-1" type="CommandHelp" labels="comm">
-    <extra l="en">account accounts linking</extra>
-    <extra l="ru">аккаунт аккаунты связка привязка</extra>
-    <extra l="ua">акаунт акаунти привʼязка звʼязка</extra>
+    <extra l="en">account accounts linking kofi ko-fi supporter</extra>
+    <extra l="ru">аккаунт аккаунты связка привязка кофи</extra>
+    <extra l="ua">акаунт акаунти привʼязка звʼязка кофі</extra>
     <text l="en">%FMT% *%CMD%*
 %FFF% *%CMD%* *link*
 %FFF% *%CMD%* *discord*
 %FFF% *%CMD%* *telegram*
 %FFF% *%CMD%* *profile* [*on*|*off*]
 %FFF% *%CMD%* *profile* *hide*|*show* _name_
+%FFF% *%CMD%* *kofi* _id_
 
 An account ties your characters together and gives you a way to recover access. It is a layer on top of the character {hh1003password{x: your world-entry password does not change. Every account gets a name of its own, such as "Ashen Warden of Old Thalos". From level 20 a character needs an account to keep gaining experience.
 
@@ -23,6 +24,8 @@ An account ties your characters together and gives you a way to recover access. 
 Adding another character to an account you already have? No email or bot needed: type *%CMD%* *link* with the new character, then enter that code with any character already on the account, *%CMD%* *code* _code_. The new character joins the account.
 
 *%CMD%* *profile* -- your account's public page at dreamland.rocks/player/_id_, with the characters on it and their badges. It opens once at least one character on the account has been reborn or finished more than 50 {hh125questor{x tasks. *%CMD%* *profile* *off* takes the whole page down, *%CMD%* *profile* *hide* _name_ keeps one character off it. Your level, logins and messengers are never shown there.
+
+*%CMD%* *kofi* _id_ -- support the game on Ko-fi and your account gets supporter status: a month for every $5, a year for every $50. The payment finds your account by itself if your Discord on Ko-fi is the one linked to the account, if you paid from the account's email, or if your Ko-fi code, shown by *%CMD%*, is in the Ko-fi message. Once a payment has found the account, later payments from the same email find it too. A public Ko-fi message shows your code to everyone, so you may prefer to keep the message private. Did not arrive anyway? Type *%CMD%* *kofi* with the transaction id from your Ko-fi receipt. *%CMD%* shows how long the support lasts.
 </text>
     <text l="ru">%FMT% *%CMD%*
 %FFF% *%CMD%* *связать*
@@ -30,6 +33,7 @@ Adding another character to an account you already have? No email or bot needed:
 %FFF% *%CMD%* *телеграм*
 %FFF% *%CMD%* *профиль* [*вкл*|*выкл*]
 %FFF% *%CMD%* *профиль* *скрыть*|*показать* _имя_
+%FFF% *%CMD%* *кофи* _номер_
 
 Аккаунт связывает твоих персонажей вместе и дает способ восстановить доступ. Это слой поверх {hh1003пароля{x персонажа: пароль на вход в мир не меняется. У каждого аккаунта есть свое имя, например "Ashen Warden of Old Thalos". С 20 уровня персонажу нужен аккаунт, чтобы и дальше получать опыт.
 
@@ -41,6 +45,8 @@ Adding another character to an account you already have? No email or bot needed:
 Добавляешь еще одного персонажа к своему аккаунту? Ни почта, ни бот не нужны: набери *%CMD%* *связать* новым персонажем, а код введи любым персонажем, который уже на аккаунте, *%CMD%* *код* _код_. Новый персонаж присоединится к аккаунту.
 
 *%CMD%* *профиль* -- публичная страница аккаунта на dreamland.rocks/player/_id_: персонажи и их значки. Открывается, когда хотя бы один персонаж аккаунта переродится или выполнит больше 50 заданий {hh125квестора{x. *%CMD%* *профиль* *выкл* убирает страницу целиком, *%CMD%* *профиль* *скрыть* _имя_ прячет одного персонажа. Уровень, способы входа и мессенджеры там не показываются никогда.
+
+*%CMD%* *кофи* _номер_ -- поддержи игру на Ko-fi, и аккаунт получит статус поддержки: месяц за каждые $5, год за каждые $50. Платеж сам найдет аккаунт, если твой Discord на Ko-fi привязан к аккаунту, если ты платишь с почты аккаунта или если в сообщении на Ko-fi есть твой код для Ko-fi, его показывает *%CMD%*. Когда платеж однажды нашел аккаунт, следующие платежи с той же почты найдут его сами. Публичное сообщение на Ko-fi показывает код всем, так что его можно сделать приватным. Все равно не дошел? Набери *%CMD%* *кофи* и номер транзакции из квитанции Ko-fi. *%CMD%* покажет, до какого числа действует поддержка.
 </text>
     <text l="ua">%FMT% *%CMD%*
 %FFF% *%CMD%* *звязати*
@@ -48,6 +54,7 @@ Adding another character to an account you already have? No email or bot needed:
 %FFF% *%CMD%* *телеграм*
 %FFF% *%CMD%* *профіль* [*увімк*|*вимк*]
 %FFF% *%CMD%* *профіль* *сховати*|*показати* _імʼя_
+%FFF% *%CMD%* *кофі* _номер_
 
 Акаунт повʼязує твоїх персонажів разом і дає спосіб відновити доступ. Це шар поверх {hh1003пароля{x персонажа: пароль на вхід до світу не змінюється. Кожен акаунт має власну назву, наприклад "Ashen Warden of Old Thalos". З 20 рівня персонажу потрібен акаунт, щоб і далі отримувати досвід.
 
@@ -59,6 +66,8 @@ Adding another character to an account you already have? No email or bot needed:
 Додаєш ще одного персонажа до свого акаунта? Ні пошта, ні бот не потрібні: набери *%CMD%* *звязати* новим персонажем, а код введи будь-яким персонажем, який уже на акаунті, *%CMD%* *код* _код_. Новий персонаж приєднається до акаунта.
 
 *%CMD%* *профіль* -- публічна сторінка акаунта на dreamland.rocks/player/_id_: персонажі та їхні значки. Відкривається, коли хоча б один персонаж акаунта переродиться або виконає понад 50 завдань {hh125квестора{x. *%CMD%* *профіль* *вимк* прибирає сторінку цілком, *%CMD%* *профіль* *сховати* _імʼя_ ховає одного персонажа. Рівень, способи входу й месенджери там не показуються ніколи.
+
+*%CMD%* *кофі* _номер_ -- підтримай гру на Ko-fi, і акаунт отримає статус підтримки: місяць за кожні $5, рік за кожні $50. Платіж сам знайде акаунт, якщо твій Discord на Ko-fi привʼязаний до акаунта, якщо ти платиш із пошти акаунта або якщо в повідомленні на Ko-fi є твій код для Ko-fi, його показує *%CMD%*. Коли платіж один раз знайшов акаунт, наступні платежі з тієї ж пошти знайдуть його самі. Публічне повідомлення на Ko-fi показує код усім, тож його можна зробити приватним. Однаково не дійшов? Набери *%CMD%* *кофі* і номер транзакції з квитанції Ko-fi. *%CMD%* покаже, до якого числа діє підтримка.
 </text>
     <title l="en">{CAccounts: {xaccount linking</title>
     <title l="ru">{CАккаунты: {xпривязка аккаунта</title>

@@ -6496,27 +6496,51 @@ The game credits a payment to your account by itself when one of these matches: 
 Гра сама зарахує платіж твоєму акаунту, якщо збіжиться щось одне: Discord, підключений на {hlhttps://ko-fi.com/dreamlandmud{xo-fi, привʼязаний до твого акаунта; пошта, з якої ти платиш, привʼязана до акаунта (*акаунт пошта*); або в повідомленні на {hlhttps://ko-fi.com/dreamlandmud{xo-fi є код твого акаунта для {hlhttps://ko-fi.com/dreamlandmud{xo-fi, його показує *акаунт*. Коли один платіж знайшов акаунт, наступні щомісячні знайдуть його самі. Якщо нічого не збіглося, набери *акаунт кофі* _номер_ з номером транзакції з квитанції {hlhttps://ko-fi.com/dreamlandmud{xo-fi.</text>
   </node>
   <node id="__HELP_ID__" level="-1" type="Help" labels="start">
-    <extra l="en">neural 'artificial intelligence' claude anthropic guide directions</extra>
-    <extra l="ru">'искусственный интеллект' нейросеть claude проводник дорога</extra>
-    <extra l="ua">'штучний інтелект' нейромережа claude провідник дорога</extra>
+    <extra l="en">neural 'artificial intelligence' claude anthropic</extra>
+    <extra l="ru">'искусственный интеллект' нейросеть claude anthropic</extra>
+    <extra l="ua">'штучний інтелект' нейромережа claude anthropic</extra>
     <keyword l="en">ai</keyword>
     <keyword l="ru">ии</keyword>
     <keyword l="ua">ші</keyword>
-    <text l="en">Town guards and some town folk (innkeepers, barmen, shopkeepers) know the roads to other lands. Ask one of them aloud where a place is, and the answer comes as a private tell: the way from here, the levels of the place, and a warning if it is too early for you to go. For a place inside a town, use the {hh2170path{x command.
+    <text l="en">Town guards and some town folk (innkeepers, barmen, shopkeepers) know the roads to other lands. Ask one of them where a place is, aloud when no other player is around or with a tell, and the answer comes as a private tell: the way from here, the levels of the place, and a warning if it is too early for you to go. For a place inside a town, use the {hh2170path{x command.
+
 If a {hh995help{x query finds nothing, a moment later you may get a suggestion of up to three articles. Or nothing, if none fits.
-In both cases an outside AI service (Claude by Anthropic) only picks from a list. The road, the zone names and the article text are the game's own. What leaves the game is the one sentence with the question, or the help query, plus a one-way hash of your account: no character name, no email, no other speech. Immortals can read a log of these requests, which is rotated away after a while, and the game keeps the pairs of help query and suggested articles with no asker attached, to improve the help.
+
+In both cases an outside AI service (Claude by Anthropic) only picks from a list. The road, the zone names and the article text are the game's own.
+
+What leaves the game: a sentence said to a guide that asks the way (only one with words like "where" or "how do I get to"), or the help query, plus a one-way hash of your account. No character name, no email, no other speech. A question the game can answer by itself, or one asked before, never leaves at all.
+
+What is kept: a log immortals can read, with the question, the answer and the account hash, which the server overwrites after a while; and each question with its answer, with no asker attached, for up to a month after it was last asked, so the same question gets an answer at once.
+
 New areas may carry descriptions an AI drafted and builders reviewed.
-A wrong or rude answer is worth a {hh996bug{x report.</text>
-    <text l="ru">Городские стражники и кое-кто из горожан (трактирщики, бармены, лавочники) знают дороги в другие земли. Спроси кого-то из них вслух, где находится место, и ответ придет личным сообщением: путь отсюда, уровни места и предупреждение, если тебе туда пока рано. Чтобы найти место внутри города, есть команда {hh2170путь{x.
+
+If an answer is wrong or rude, report it with the {hh996bug{x command.</text>
+    <text l="ru">Городские стражники и кое-кто из горожан (трактирщики, бармены, лавочники) знают дороги в другие земли. Спроси кого-то из них, где находится место, вслух, когда рядом нет других игроков, или личным сообщением, и ответ придет личным сообщением: путь отсюда, уровни места и предупреждение, если тебе туда пока рано. Чтобы найти место внутри города, есть команда {hh2170путь{x.
+
 Если запрос {hh995помощи{x ничего не нашел, через мгновение может прийти подсказка: до трех статей. Или ничего, если ни одна не подходит.
-В обоих случаях внешний сервис ИИ (Claude от Anthropic) только выбирает из списка. Дорога, названия зон и текст статей -- самой игры. Из игры уходит только одна фраза с вопросом или запрос справки, плюс односторонний хэш твоей учетной записи: ни имени персонажа, ни почты, ни других разговоров. Бессмертные могут читать журнал этих запросов, который со временем стирается, а игра хранит пары из запроса справки и предложенных статей без указания, кто спрашивал, чтобы улучшать справку.
+
+В обоих случаях внешний сервис ИИ (Claude от Anthropic) только выбирает из списка. Дорога, названия зон и текст статей -- самой игры.
+
+Что уходит из игры: фраза, сказанная проводнику, которая спрашивает дорогу (только со словами вроде "где" или "как пройти"), или запрос справки, плюс односторонний хэш твоей учетной записи. Ни имени персонажа, ни почты, ни других разговоров. Вопрос, на который игра отвечает сама или который уже задавали, не уходит вовсе.
+
+Что хранится: журнал, который могут читать бессмертные, с вопросом, ответом и хэшем учетной записи, его сервер со временем затирает; и каждый вопрос с ответом, без указания, кто спрашивал, до месяца после того, как его задали в последний раз, чтобы на тот же вопрос ответ пришел сразу.
+
 В новых зонах могут встречаться описания, которые набросал ИИ и проверили строители.
-Неверный или грубый ответ -- повод для {hh996ошибки{x.</text>
-    <text l="ua">Міські вартові та дехто з городян (шинкарі, бармени, крамарі) знають дороги в інші землі. Спитай когось із них уголос, де розташоване місце, і відповідь прийде особистим повідомленням: шлях звідси, рівні місця та попередження, якщо тобі туди поки зарано. Щоб знайти місце всередині міста, є команда {hh2170шлях{x.
+
+Если ответ неверный или грубый, сообщи об этом командой {hh996ошибка{x.</text>
+    <text l="ua">Міські вартові та дехто з городян (шинкарі, бармени, крамарі) знають дороги в інші землі. Спитай когось із них, де розташоване місце, вголос, коли поруч немає інших гравців, або особистим повідомленням, і відповідь прийде особистим повідомленням: шлях звідси, рівні місця та попередження, якщо тобі туди поки зарано. Щоб знайти місце всередині міста, є команда {hh2170шлях{x.
+
 Якщо запит {hh995допомоги{x нічого не знайшов, за мить може прийти підказка: до трьох статей. Або нічого, якщо жодна не пасує.
-В обох випадках зовнішній сервіс ШІ (Claude від Anthropic) лише вибирає зі списку. Дорога, назви зон і текст статей -- самої гри. З гри йде лише одна фраза з питанням або запит довідки, плюс односторонній хеш твого облікового запису: ні імені персонажа, ні пошти, ні інших розмов. Безсмертні можуть читати журнал цих запитів, який з часом стирається, а гра зберігає пари із запиту довідки та запропонованих статей без зазначення, хто питав, щоб покращувати довідку.
+
+В обох випадках зовнішній сервіс ШІ (Claude від Anthropic) лише вибирає зі списку. Дорога, назви зон і текст статей -- самої гри.
+
+Що йде з гри: фраза, сказана провідникові, яка питає дорогу (лише зі словами на кшталт "де" чи "як пройти"), або запит довідки, плюс односторонній хеш твого облікового запису. Ні імені персонажа, ні пошти, ні інших розмов. Питання, на яке гра відповідає сама або яке вже ставили, не йде взагалі.
+
+Що зберігається: журнал, який можуть читати безсмертні, з питанням, відповіддю та хешем облікового запису, його сервер з часом затирає; і кожне питання з відповіддю, без зазначення, хто питав, до місяця після того, як його поставили востаннє, щоб на те саме питання відповідь прийшла одразу.
+
 У нових зонах можуть траплятися описи, які накидав ШІ і перевірили будівельники.
-Хибна чи груба відповідь -- привід для {hh996помилки{x.</text>
+
+Якщо відповідь хибна чи груба, повідом про це командою {hh996помилка{x.</text>
     <title l="en">AI in the game</title>
     <title l="ru">ИИ в игре</title>
     <title l="ua">ШІ у грі</title>

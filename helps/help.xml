@@ -6495,4 +6495,54 @@ The surest way: type *account*, copy your account's Ko-fi code and put it in the
 
 Найнадійніше так: набери *акаунт*, скопіюй код акаунта для Ko-fi і впиши його в повідомлення, коли платиш на Ko-fi. Ще гра сама зарахує платіж, якщо Discord, підключений на Ko-fi, привʼязаний до твого акаунта, або якщо пошта, з якої ти платиш, привʼязана до акаунта (*акаунт пошта*). Коли один платіж знайшов акаунт, наступні щомісячні знайдуть його самі. Якщо нічого не збіглося, набери *акаунт кофі* _номер_ з номером транзакції з квитанції Ko-fi.</text>
   </node>
+  <node id="5274" level="-1" type="Help" labels="start">
+    <extra l="en">neural 'artificial intelligence' claude anthropic</extra>
+    <extra l="ru">'искусственный интеллект' нейросеть claude anthropic</extra>
+    <extra l="ua">'штучний інтелект' нейромережа claude anthropic</extra>
+    <keyword l="en">ai</keyword>
+    <keyword l="ru">ии</keyword>
+    <keyword l="ua">ші</keyword>
+    <text l="en">Town guards and some town folk (innkeepers, barmen, shopkeepers) know the roads to other lands. Ask one of them where a place is with a tell, for example {ytell guard where is New Thalos{x, and the answer comes as a private tell: the way from here, the levels of the place, and a warning if it is too early for you to go. Said out loud, the question is never sent anywhere: they only remind you to ask in private. For a place inside a town, use the {hh2170path{x command.
+
+If a {hh995help{x query finds nothing, a moment later you may get a suggestion of up to three articles. Or nothing, if none fits.
+
+In both cases an outside AI service (Claude by Anthropic) only picks from a list. The road, the zone names and the article text are the game's own.
+
+What goes to the AI service: a sentence told to a guide that asks the way (only one with words like "where" or "how do I get to"), or the help query. Nothing else: no character name, no account, no email, no other speech. A question the game can answer by itself does not leave at all, and a repeated one is usually answered from memory.
+
+What the game server keeps: a log immortals can read, with the question, the answer and a one-way hash of your account, for up to 90 days; a record of each AI call with that hash, the time and the cost but no text, for up to 90 days; and each question with its answer, with no asker attached, for up to a month after it was last asked, so the same question gets an answer at once.
+
+New areas may carry descriptions an AI drafted and builders reviewed.
+
+If an answer is wrong or rude, report it with the {hh996bug{x command.</text>
+    <text l="ru">Городские стражники и кое-кто из горожан (трактирщики, бармены, лавочники) знают дороги в другие земли. Спроси кого-то из них, где находится место, личным сообщением, например {yговорить стражник где Новый Талос{x, и ответ придет личным сообщением: путь отсюда, уровни места и предупреждение, если тебе туда пока рано. Вопрос, заданный вслух, никуда не уходит: тебе только напомнят спросить лично. Чтобы найти место внутри города, есть команда {hh2170путь{x.
+
+Если запрос {hh995помощи{x ничего не нашел, через мгновение может прийти подсказка: до трех статей. Или ничего, если ни одна не подходит.
+
+В обоих случаях внешний сервис ИИ (Claude от Anthropic) только выбирает из списка. Дорога, названия зон и текст статей -- самой игры.
+
+Что уходит сервису ИИ: фраза, сказанная проводнику лично, которая спрашивает дорогу (только со словами вроде "где" или "как пройти"), или запрос справки. Больше ничего: ни имени персонажа, ни учетной записи, ни почты, ни других разговоров. Вопрос, на который игра отвечает сама, не уходит вовсе, а повторный обычно получает ответ из памяти.
+
+Что хранит игровой сервер: журнал, который могут читать бессмертные, с вопросом, ответом и односторонним хэшем твоей учетной записи, до 90 дней; запись о каждом обращении к ИИ с этим хэшем, временем и ценой, но без текста, до 90 дней; и каждый вопрос с ответом, без указания, кто спрашивал, до месяца после того, как его задали в последний раз, чтобы на тот же вопрос ответ пришел сразу.
+
+В новых зонах могут встречаться описания, которые набросал ИИ и проверили строители.
+
+Если ответ неверный или грубый, сообщи об этом командой {hh996ошибка{x.</text>
+    <text l="ua">Міські вартові та дехто з городян (шинкарі, бармени, крамарі) знають дороги в інші землі. Спитай когось із них, де розташоване місце, особистим повідомленням, наприклад {yговорити стражник де Новий Талос{x, і відповідь прийде особистим повідомленням: шлях звідси, рівні місця та попередження, якщо тобі туди поки зарано. Питання, поставлене вголос, нікуди не йде: тобі лише нагадають спитати особисто. Щоб знайти місце всередині міста, є команда {hh2170шлях{x.
+
+Якщо запит {hh995допомоги{x нічого не знайшов, за мить може прийти підказка: до трьох статей. Або нічого, якщо жодна не пасує.
+
+В обох випадках зовнішній сервіс ШІ (Claude від Anthropic) лише вибирає зі списку. Дорога, назви зон і текст статей -- самої гри.
+
+Що йде сервісу ШІ: фраза, сказана провідникові особисто, яка питає дорогу (лише зі словами на кшталт "де" чи "як пройти"), або запит довідки. Більше нічого: ні імені персонажа, ні облікового запису, ні пошти, ні інших розмов. Питання, на яке гра відповідає сама, не йде взагалі, а повторне зазвичай отримує відповідь із памʼяті.
+
+Що зберігає ігровий сервер: журнал, який можуть читати безсмертні, з питанням, відповіддю та одностороннім хешем твого облікового запису, до 90 днів; запис про кожне звернення до ШІ з цим хешем, часом і ціною, але без тексту, до 90 днів; і кожне питання з відповіддю, без зазначення, хто питав, до місяця після того, як його поставили востаннє, щоб на те саме питання відповідь прийшла одразу.
+
+У нових зонах можуть траплятися описи, які накидав ШІ і перевірили будівельники.
+
+Якщо відповідь хибна чи груба, повідом про це командою {hh996помилка{x.</text>
+    <title l="en">AI in the game</title>
+    <title l="ru">ИИ в игре</title>
+    <title l="ua">ШІ у грі</title>
+  </node>
 </Help>

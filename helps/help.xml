@@ -1707,11 +1707,11 @@ Alignment has gradations: you can be just slightly evil or very good. The most e
     <keyword l="en">age</keyword>
     <keyword l="ru">год лет возраст</keyword>
     <keyword l="ua">рік років вік</keyword>
-    <text l="en">All characters begin their adventures in our world at the age of 17. After every 20 real-time hours spent in the world, the character ages by one year. Age can also be changed by certain items. Age is unlimited and currently has no effect on anything.
+    <text l="en">All characters begin their adventures in our world at the age of 17. After every 20 real-time hours spent in the world, the character ages by one year. Age can also be changed by certain items. Age is unlimited and shows in play: a young character learns skills a little faster, a soul that has lived long across all its lives starts to {hh1087grumble{x when speaking, an old body may wake with an aching back after a night on the bare floor ({hh5272back pain{x), and the very old get a small discount in shops and on {hh275services{x. The details are in {hh5271deja vu{x.
 </text>
-    <text l="ru">Все персонажи начинают приключения в нашем мире в возрасте 17 лет. После каждых 20 часов реального времени, проведенных в мире, персонаж стареет на один год. Также возраст можно изменять некоторыми вещами. Возраст ничем не ограничен и на данный момент ни на что не влияет.
+    <text l="ru">Все персонажи начинают приключения в нашем мире в возрасте 17 лет. После каждых 20 часов реального времени, проведенных в мире, персонаж стареет на один год. Также возраст можно изменять некоторыми вещами. Возраст ничем не ограничен и сказывается в игре: молодой персонаж чуть быстрее учит умения, душа, долго прожившая за все свои жизни, начинает {hh1087ворчать{x в разговорах, старое тело может проснуться с больной спиной после ночи на голом полу ({hh5272радикулит{x), а совсем старые получают небольшую скидку в лавках и на {hh275услуги{x. Подробности -- в статье {hh5271дежавю{x.
 </text>
-    <text l="ua">Всі персонажі починають пригоди у нашому світі у віці 17 років. Після кожних 20 годин реального часу, проведених у світі, персонаж старішає на один рік. Також вік можна змінювати деякими речами. Вік нічим не обмежений і на даний момент ні на що не впливає.
+    <text l="ua">Всі персонажі починають пригоди у нашому світі у віці 17 років. Після кожних 20 годин реального часу, проведених у світі, персонаж старішає на один рік. Також вік можна змінювати деякими речами. Вік нічим не обмежений і дається взнаки в грі: молодий персонаж трохи швидше вчить вміння, душа, що довго прожила за всі свої життя, починає {hh1087бурчати{x в розмовах, старе тіло може прокинутися з хворою спиною після ночі на голій підлозі ({hh5272радикуліт{x), а зовсім старі отримують невелику знижку в крамницях і на {hh275послуги{x. Подробиці -- у статті {hh5271дежавю{x.
 </text>
     <title l="en">Character age</title>
     <title l="ru">Возраст персонажей</title>
@@ -4251,9 +4251,13 @@ To connect it, add a remote MCP server (custom connector) with this address in y
 
 Sounds come from two places. The first is your own triggers: in {hh2133the web client{x open Settings -> Extensions -> Triggers, and any trigger can play a sound from the library. The second is the game itself, by the MUD Sound Protocol (MSP): the web client always accepts it, and telnet clients that support MSP (Mudlet, VIPMud, zMUD) agree to it when you connect. If your client plays MSP from a local folder, download every sound in one archive: https://dreamland.rocks/play/sounds/dreamland-sounds.zip and unpack it into the client's sound folder.
 
-Besides single sounds, the game plays a quiet background that follows where you are: rain, thunder or wind under the open sky, the hum of a city street, a cave inside the mountains, water when you swim or dive, a campfire while you rest or sleep, and battle drums while you fight a champion, a boss or a legend. Step indoors and the weather fades out, step outside and it comes back. With a screen reader the background and the drums play quietly from the start, without one they start silent: set Background and Music in the sound settings to your taste. When you walk into a room with your quest target, a short chime tells you so. The switch for it is in Settings -> Accessibility -> Screen reader.
+Besides single sounds, the game plays a quiet background that follows where you are: rain, thunder or wind under the open sky, the hum of a city street, a cave inside the mountains, water when you swim or dive, a campfire while you rest or sleep, and battle drums while you fight a champion, a boss or a legend. Step indoors and the weather fades out, step outside and it comes back. With a screen reader the background and the drums play quietly from the start, without one they start silent: set Background and Music in the sound settings to your taste.
 
-Volume lives in Settings -> Extensions -> Sound: a master volume, a separate volume for each kind of sound (combat, alerts, chat, interface, ambience, music) and a Sound switch that turns all of it on or off. The browser plays sound only after your first click or key press on the page.
+When someone speaks near you, a short sound tells you so: for a line said in your room and for a line from your group (mobs stay silent, and you never hear your own words). A bell rings when a ghost gets a body again.
+
+When you walk into a room with your quest target, a short chime tells you so. The switch for it is in Settings -> Accessibility -> Screen reader.
+
+Volume lives in Settings -> Extensions -> Sound: a master volume, a separate volume for each kind of sound (Combat, Spells, Skills, States and events, Messages, Interface, Background, Music) and a Sound switch that turns all of it on or off. Under Messages there are also separate switches for the tell, say and group tell sounds, so a noisy room can be muted without losing your tells. The browser plays sound only after your first click or key press on the page.
 
 Blind players, see also {hh2132screenreader mode{x.
 
@@ -4289,6 +4293,7 @@ Every sound in the library comes from {hlhttps://freesound.org{x under the CC0 l
 %A% Something breaks -- JohnBuhr
 %A% Your heavy blow -- Wenpire
 %A% Death knell -- daytripper
+%A% Resurrection bell -- igroglaz
 %A% Disarmed -- Empiremonkey
 %A% Running away -- Joao_Janz
 %A% Sword hit -- JohnBuhr
@@ -4310,11 +4315,15 @@ Every sound in the library comes from {hlhttps://freesound.org{x under the CC0 l
 
 Звуки берутся из двух мест. Первое -- твои собственные триггеры: в {hh2133веб-клиенте{x открой Настройки -> Расширения -> Триггеры, и любой триггер может играть звук из библиотеки. Второе -- сама игра, по протоколу MSP (MUD Sound Protocol): веб-клиент принимает его всегда, а телнет-клиенты с поддержкой MSP (Mudlet, VIPMud, zMUD) соглашаются на него при подключении. Если твой клиент играет MSP из локальной папки, скачай все звуки одним архивом: https://dreamland.rocks/play/sounds/dreamland-sounds.zip и распакуй его в папку звуков клиента.
 
-Кроме отдельных звуков, игра играет тихий фон, который зависит от того, где ты: дождь, гром или ветер под открытым небом, гул городской улицы, пещера в горах, вода, когда плывешь или ныряешь, костер, пока отдыхаешь или спишь, и боевые барабаны, пока дерешься с чемпионом, боссом или легендой. Зайдешь под крышу -- погода стихнет, выйдешь наружу -- вернется. С экранным чтецом фон и барабаны с самого начала звучат тихо, без него сначала молчат: громкость Фона и Музыки меняется в настройках звука. Когда входишь в комнату, где цель твоего задания, звучит короткий сигнал. Переключатель для него -- в Настройки -> Доступность -> Экранный чтец.
+Кроме отдельных звуков, игра играет тихий фон, который зависит от того, где ты: дождь, гром или ветер под открытым небом, гул городской улицы, пещера в горах, вода, когда плывешь или ныряешь, костер, пока отдыхаешь или спишь, и боевые барабаны, пока дерешься с чемпионом, боссом или легендой. Зайдешь под крышу -- погода стихнет, выйдешь наружу -- вернется. С экранным чтецом фон и барабаны с самого начала звучат тихо, без него сначала молчат: громкость Фона и Музыки меняется в настройках звука.
 
-Громкость -- в Настройки -> Расширения -> Звук: общая громкость, отдельная громкость для каждого вида звуков (бой, сигналы, общение, интерфейс, окружение, музыка) и переключатель Звук, который включает или выключает все сразу. Браузер играет звук только после твоего первого клика или нажатия клавиши на странице.
+Когда рядом кто-то говорит, короткий звук сообщает об этом: и для реплики в твоей комнате, и для реплики из твоей группы (мобы молчат, а свои слова ты не слышишь). Колокол звонит, когда призрак снова обретает тело.
 
-Незрячим игрокам стоит заглянуть и в {hh2132режим скринридер{x.
+Когда входишь в комнату, где цель твоего задания, звучит короткий сигнал. Переключатель для него -- в Настройки -> Доступность -> Экранный чтец.
+
+Громкость -- в Настройки -> Расширения -> Звук: общая громкость, отдельная громкость для каждого вида звуков (Бой, Заклинания, Умения, Состояния и события, Сообщения, Интерфейс, Фон, Музыка) и переключатель Звук, который включает или выключает все сразу. Под Сообщениями есть и отдельные переключатели для звуков личного сообщения, реплики вслух и сообщения группе, так что шумную комнату можно заглушить, не потеряв личные сообщения. Браузер играет звук только после твоего первого клика или нажатия клавиши на странице.
+
+Незрячим игрокам стоит заглянуть и в {hh2132режим незрячий{x.
 
 {CСПАСИБО{x
 Все звуки библиотеки взяты с {hlhttps://freesound.org{x под лицензией CC0. Спасибо авторам:
@@ -4348,6 +4357,7 @@ Every sound in the library comes from {hlhttps://freesound.org{x under the CC0 l
 %A% Что-то ломается -- JohnBuhr
 %A% Твой сильный удар -- Wenpire
 %A% Похоронный звон -- daytripper
+%A% Колокол воскрешения -- igroglaz
 %A% Обезоружен -- Empiremonkey
 %A% Бегство -- Joao_Janz
 %A% Удар меча -- JohnBuhr
@@ -4369,11 +4379,15 @@ Every sound in the library comes from {hlhttps://freesound.org{x under the CC0 l
 
 Звуки беруться з двох місць. Перше -- твої власні тригери: у {hh2133веб-клієнті{x відкрий Налаштування -> Розширення -> Тригери, і будь-який тригер може грати звук із бібліотеки. Друге -- сама гра, за протоколом MSP (MUD Sound Protocol): веб-клієнт приймає його завжди, а телнет-клієнти з підтримкою MSP (Mudlet, VIPMud, zMUD) погоджуються на нього під час підключення. Якщо твій клієнт грає MSP з локальної теки, завантаж усі звуки одним архівом: https://dreamland.rocks/play/sounds/dreamland-sounds.zip і розпакуй його в теку звуків клієнта.
 
-Окрім окремих звуків, гра грає тихе тло, яке залежить від того, де ти: дощ, грім або вітер під відкритим небом, гомін міської вулиці, печера в горах, вода, коли пливеш чи пірнаєш, багаття, поки відпочиваєш чи спиш, і бойові барабани, поки бʼєшся з чемпіоном, босом або легендою. Зайдеш під дах -- погода стихне, вийдеш назовні -- повернеться. З екранним читачем тло й барабани від самого початку звучать тихо, без нього спершу мовчать: гучність Фону й Музики змінюється в налаштуваннях звуку. Коли входиш у кімнату, де ціль твого завдання, лунає короткий сигнал. Перемикач для нього -- у Налаштування -> Доступність -> Екранний читач.
+Окрім окремих звуків, гра грає тихе тло, яке залежить від того, де ти: дощ, грім або вітер під відкритим небом, гомін міської вулиці, печера в горах, вода, коли пливеш чи пірнаєш, багаття, поки відпочиваєш чи спиш, і бойові барабани, поки бʼєшся з чемпіоном, босом або легендою. Зайдеш під дах -- погода стихне, вийдеш назовні -- повернеться. З екранним читачем тло й барабани від самого початку звучать тихо, без нього спершу мовчать: гучність Фону й Музики змінюється в налаштуваннях звуку.
 
-Гучність -- у Налаштування -> Розширення -> Звук: загальна гучність, окрема гучність для кожного виду звуків (бій, сигнали, спілкування, інтерфейс, оточення, музика) і перемикач Звук, який вмикає або вимикає все одразу. Браузер грає звук лише після твого першого кліку чи натискання клавіші на сторінці.
+Коли поруч хтось говорить, короткий звук повідомляє про це: і для репліки в твоїй кімнаті, і для репліки з твоєї групи (моби мовчать, а свої слова ти не чуєш). Дзвін лунає, коли привид знову набуває тіла.
 
-Незрячим гравцям варто зазирнути і в {hh2132режим скринрідер{x.
+Коли входиш у кімнату, де ціль твого завдання, лунає короткий сигнал. Перемикач для нього -- у Налаштування -> Доступність -> Екранний читач.
+
+Гучність -- у Налаштування -> Розширення -> Звук: загальна гучність, окрема гучність для кожного виду звуків (Бій, Заклинання, Навички, Стани й події, Повідомлення, Інтерфейс, Фон, Музика) і перемикач Звук, який вмикає або вимикає все одразу. Під Повідомленнями є й окремі перемикачі для звуків особистого повідомлення, репліки вголос і повідомлення групі, тож галасливу кімнату можна заглушити, не втративши особисті повідомлення. Браузер грає звук лише після твого першого кліку чи натискання клавіші на сторінці.
+
+Незрячим гравцям варто зазирнути і в {hh2132режим незрячий{x.
 
 {CДЯКУЄМО{x
 Усі звуки бібліотеки взято з {hlhttps://freesound.org{x за ліцензією CC0. Дякуємо авторам:
@@ -4407,6 +4421,7 @@ Every sound in the library comes from {hlhttps://freesound.org{x under the CC0 l
 %A% Щось ламається -- JohnBuhr
 %A% Твій сильний удар -- Wenpire
 %A% Похоронний дзвін -- daytripper
+%A% Дзвін воскресіння -- igroglaz
 %A% Роззброєно -- Empiremonkey
 %A% Втеча -- Joao_Janz
 %A% Удар меча -- JohnBuhr
@@ -6530,7 +6545,7 @@ If an answer is wrong or rude, report it with the {hh996bug{x command.</text>
 В новых зонах могут встречаться описания, которые набросал ИИ и проверили строители.
 
 Если ответ неверный или грубый, сообщи об этом командой {hh996ошибка{x.</text>
-    <text l="ua">Міські вартові та дехто з городян (шинкарі, бармени, крамарі) знають дороги в інші землі. Спитай когось із них, де розташоване місце, особистим повідомленням, наприклад {yговорити стражник де Новий Талос{x, і відповідь прийде особистим повідомленням: шлях звідси, рівні місця та попередження, якщо тобі туди поки зарано. Питання, поставлене вголос, нікуди не йде: тобі лише нагадають спитати особисто. Щоб знайти місце всередині міста, є команда {hh2170шлях{x.
+    <text l="ua">Міські стражники та дехто з городян (шинкарі, бармени, крамарі) знають дороги в інші землі. Спитай когось із них, де розташоване місце, особистим повідомленням, наприклад {yговорити стражник де Новий Талос{x, і відповідь прийде особистим повідомленням: шлях звідси, рівні місця та попередження, якщо тобі туди поки зарано. Питання, поставлене вголос, нікуди не йде: тобі лише нагадають спитати особисто. Щоб знайти місце всередині міста, є команда {hh2170шлях{x.
 
 Якщо запит {hh995допомоги{x нічого не знайшов, за мить може прийти підказка: до трьох статей. Або нічого, якщо жодна не пасує.
 

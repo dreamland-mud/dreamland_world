@@ -3,9 +3,9 @@
   <cat>config</cat>
   <extra>keep_hide ghost</extra>
   <help id="5106" level="-1" type="CommandHelp" labels="comm">
-    <extra l="en">account accounts linking kofi ko-fi supporter echo</extra>
-    <extra l="ru">аккаунт аккаунты связка привязка кофи эхо</extra>
-    <extra l="ua">акаунт акаунти привʼязка звʼязка кофі відлуння</extra>
+    <extra l="en">account accounts linking kofi ko-fi supporter echo portrait</extra>
+    <extra l="ru">аккаунт аккаунты связка привязка кофи эхо портрет</extra>
+    <extra l="ua">акаунт акаунти привʼязка звʼязка кофі відлуння портрет</extra>
     <text l="en">%FMT% *%CMD%*
 %FFF% *%CMD%* *link*
 %FFF% *%CMD%* *discord*
@@ -17,6 +17,7 @@
 %FFF% *%CMD%* *profile* *hide*|*show* _name_
 %FFF% *%CMD%* *bench*
 %FFF% *%CMD%* *echo* [_draft_|*accept*|*show*|*clear*]
+%FFF% *%CMD%* *portrait* [*make*|*accept*|*clear*]
 
 An account ties your characters together and gives you a way to recover access. It is a layer on top of the character {hh1003password{x: your world-entry password does not change. Every account gets a name of its own, such as "Ashen Warden of Old Thalos". From level 20 a character needs an account to keep gaining experience.
 
@@ -28,6 +29,7 @@ An account ties your characters together and gives you a way to recover access. 
 Adding another character to an account you already have? No email or bot needed: type *%CMD%* *link* with the new character, then enter that code with any character already on the account, *%CMD%* *code* _code_. The new character joins the account.
 *%CMD%* *bench* -- for those who {hh5273support the game{x: your name on the brass plaque of the memorial bench by the Midgaard park gate. Type it again to take the name off.
 *%CMD%* *echo* _draft_ -- also for supporters: your own line in the world news when you enter and leave the world, in place of the plain one. Write a draft or just an idea, and the scribes turn it into a pair of lines, login and quit, in all three languages, with your name in them. *%CMD%* *echo* *accept* makes the pair yours, *%CMD%* *echo* *show* shows it, *%CMD%* *echo* *clear* removes it. The idea goes on the same line, in your own words, for example: *%CMD%* *echo* *arrives to the clink of spurs, leaves in a cloud of dust*. Each life gives you a few tries and one pair. After rebirth you may write a new one, and until then the old echo stays. While your support is paused the echo stays silent but is kept.
+*%CMD%* *portrait* *make* -- also for supporters: an ink-wash portrait of your main character (the one with the most hours played), a short living loop on your account page. It is painted only from your {hh1083description{x, race, sex and class, so describe yourself first. It takes a few minutes and you get a message; *%CMD%* *portrait* *accept* hangs it on the page, *%CMD%* *portrait* *clear* takes it down. Each life gives a few tries and one portrait, and a failed try is not spent. While your support is paused the portrait is hidden but kept.
 
 *%CMD%* *profile* -- your account's public page at dreamland.rocks/player/_id_, with the characters on it and their badges. It opens once at least one character on the account has been reborn or finished more than 50 {hh125questor{x tasks. *%CMD%* *profile* *off* takes the whole page down, *%CMD%* *profile* *hide* _name_ keeps one character off it. Your level, logins and messengers are never shown there.
 
@@ -44,6 +46,7 @@ Adding another character to an account you already have? No email or bot needed:
 %FFF% *%CMD%* *профиль* *скрыть*|*показать* _имя_
 %FFF% *%CMD%* *скамейка*
 %FFF% *%CMD%* *эхо* [_черновик_|*принять*|*показать*|*очистить*]
+%FFF% *%CMD%* *портрет* [*создать*|*принять*|*очистить*]
 
 Аккаунт связывает твоих персонажей вместе и дает способ восстановить доступ. Это слой поверх {hh1003пароля{x персонажа: пароль на вход в мир не меняется. У каждого аккаунта есть свое имя, например "Ashen Warden of Old Thalos". С 20 уровня персонажу нужен аккаунт, чтобы и дальше получать опыт.
 
@@ -55,6 +58,7 @@ Adding another character to an account you already have? No email or bot needed:
 Добавляешь еще одного персонажа к своему аккаунту? Ни почта, ни бот не нужны: набери *%CMD%* *связать* новым персонажем, а код введи любым персонажем, который уже на аккаунте, *%CMD%* *код* _код_. Новый персонаж присоединится к аккаунту.
 *%CMD%* *скамейка* -- для тех, кто {hh5273поддерживает игру{x: твое имя на медной табличке памятной скамейки у входа в парк Мидгаарда. Еще раз -- и имя снято.
 *%CMD%* *эхо* _черновик_ -- тоже для тех, кто поддерживает игру: твоя собственная строка в вестях мира, когда ты входишь в мир и уходишь из него, вместо обычной. Напиши черновик или просто идею, и писцы сделают из нее пару строк, на вход и на выход, на всех трех языках и с твоим именем. *%CMD%* *эхо* *принять* делает пару твоей, *%CMD%* *эхо* *показать* показывает ее, *%CMD%* *эхо* *очистить* убирает. Идея пишется своими словами в той же строке, например: *%CMD%* *эхо* *входит под звон шпор, уходит в облаке пыли*. На каждую жизнь дается несколько попыток и одна пара. После перерождения можно написать новую, а до тех пор старое эхо звучит дальше. Пока поддержка на паузе, эхо молчит, но сохраняется.
+*%CMD%* *портрет* *создать* -- тоже для тех, кто поддерживает игру: портрет твоего главного персонажа (того, кто наиграл больше всего часов) тушью по пергаменту, короткая живая петля на странице аккаунта. Он пишется только с твоего {hh1083описания{x, расы, пола и класса, так что сначала опиши себя. Это занимает несколько минут, потом придет сообщение; *%CMD%* *портрет* *принять* вешает портрет на страницу, *%CMD%* *портрет* *очистить* снимает его. На каждую жизнь дается несколько попыток и один портрет, а неудачная попытка не тратится. Пока поддержка на паузе, портрет скрыт, но сохраняется.
 
 *%CMD%* *профиль* -- публичная страница аккаунта на dreamland.rocks/player/_id_: персонажи и их значки. Открывается, когда хотя бы один персонаж аккаунта переродится или выполнит больше 50 заданий {hh125квестора{x. *%CMD%* *профиль* *выкл* убирает страницу целиком, *%CMD%* *профиль* *скрыть* _имя_ прячет одного персонажа. Уровень, способы входа и мессенджеры там не показываются никогда.
 
@@ -71,6 +75,7 @@ Adding another character to an account you already have? No email or bot needed:
 %FFF% *%CMD%* *профіль* *сховати*|*показати* _імʼя_
 %FFF% *%CMD%* *лавка*
 %FFF% *%CMD%* *відлуння* [_чернетка_|*прийняти*|*показати*|*очистити*]
+%FFF% *%CMD%* *портрет* [*створити*|*прийняти*|*очистити*]
 
 Акаунт повʼязує твоїх персонажів разом і дає спосіб відновити доступ. Це шар поверх {hh1003пароля{x персонажа: пароль на вхід до світу не змінюється. Кожен акаунт має власну назву, наприклад "Ashen Warden of Old Thalos". З 20 рівня персонажу потрібен акаунт, щоб і далі отримувати досвід.
 
@@ -82,6 +87,7 @@ Adding another character to an account you already have? No email or bot needed:
 Додаєш ще одного персонажа до свого акаунта? Ні пошта, ні бот не потрібні: набери *%CMD%* *звязати* новим персонажем, а код введи будь-яким персонажем, який уже на акаунті, *%CMD%* *код* _код_. Новий персонаж приєднається до акаунта.
 *%CMD%* *лавка* -- для тих, хто {hh5273підтримує гру{x: твоє імʼя на мідній табличці памʼятної лавки біля входу в парк Мідгаарда. Ще раз -- і імʼя знято.
 *%CMD%* *відлуння* _чернетка_ -- теж для тих, хто підтримує гру: твій власний рядок у вістях світу, коли ти входиш у світ і полишаєш його, замість звичайного. Напиши чернетку або просто ідею, і писарі зроблять із неї пару рядків, на вхід і на вихід, усіма трьома мовами і з твоїм імʼям. *%CMD%* *відлуння* *прийняти* робить пару твоєю, *%CMD%* *відлуння* *показати* показує її, *%CMD%* *відлуння* *очистити* прибирає. Ідея пишеться своїми словами в тому ж рядку, наприклад: *%CMD%* *відлуння* *входить під дзенькіт шпор, зникає в хмарі пилу*. На кожне життя дається кілька спроб і одна пара. Після переродження можна написати нову, а доти старе відлуння звучить далі. Поки підтримка на паузі, відлуння мовчить, але зберігається.
+*%CMD%* *портрет* *створити* -- теж для тих, хто підтримує гру: портрет твого головного персонажа (того, хто награв найбільше годин) тушшю по пергаменту, коротка жива петля на сторінці акаунта. Він пишеться лише з твого {hh1083опису{x, раси, статі й класу, тож спершу опиши себе. Це займає кілька хвилин, потім прийде повідомлення; *%CMD%* *портрет* *прийняти* вішає портрет на сторінку, *%CMD%* *портрет* *очистити* знімає його. На кожне життя дається кілька спроб і один портрет, а невдала спроба не витрачається. Поки підтримка на паузі, портрет сховано, але він зберігається.
 
 *%CMD%* *профіль* -- публічна сторінка акаунта на dreamland.rocks/player/_id_: персонажі та їхні значки. Відкривається, коли хоча б один персонаж акаунта переродиться або виконає понад 50 завдань {hh125квестора{x. *%CMD%* *профіль* *вимк* прибирає сторінку цілком, *%CMD%* *профіль* *сховати* _імʼя_ ховає одного персонажа. Рівень, способи входу й месенджери там не показуються ніколи.
 

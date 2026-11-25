@@ -1,0 +1,8 @@
+{
+ "_doc": "Natural attacks of PC races (dreamland_code fight/onehit_undef.cpp, UndefinedOneHit::init: plain melee rounds only, never a skill strike). Key = a passive race skill by its EN name (race-aptitudes/<key>.xml, its <races> list says who has it). When a PC who knows the skill swings with no weapon in that hand, the blow may become attack instead of the usual punch: attack = a weapon_flags / attack_table name (claw, bite, ...), its noun and damage type replace the punch's, the bare-hands damage stays. chance = percent of bare-handed blows at 100% learned, scaled by how well the skill is learned; an integer 1..100, a row outside that range is dropped at load with a log line, and so is a row whose skill or attack name is unknown. Rows are tried in alphabetical order of their keys and the first roll that succeeds wins, so a PC with two natural attacks gets the later one only when the earlier misses. A successful roll improves the skill. NPCs never roll here: they swing their race attacks (races/<race>.xml <attacks>). Not the same thing as help 5142 'natural attacks' (mob beast strikes). Reload: dl_config_reload path=fight/natural_attacks.",
+
+ "sharp claws": {
+  "attack": "claw",
+  "chance": 30
+ }
+}

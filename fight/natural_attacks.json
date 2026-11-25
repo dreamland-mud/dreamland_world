@@ -1,0 +1,8 @@
+{
+ "_doc": "Natural attacks of PC races (dreamland_code fight/onehit_weapon.cpp, WeaponOneHit::init). Key = a passive race skill (race-aptitudes/<key>.xml, its <races> list says who has it). When a PC who knows the skill swings with no weapon in that hand, the blow may become attack instead of the usual punch: attack = a weapon_flags / attack_table name (claw, bite, ...), its noun and damage type replace the punch's, the bare-hands damage stays. chance = percent of bare-handed blows at 100% learned, scaled by how well the skill is learned. A successful roll improves the skill. NPCs never roll here: they swing their race attacks. Reload: dl_config_reload path=fight/natural_attacks.",
+
+ "claws": {
+  "attack": "claw",
+  "chance": 30
+ }
+}

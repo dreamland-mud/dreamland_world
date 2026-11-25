@@ -4,72 +4,72 @@
   <extra>keep_hide ghost</extra>
   <help id="5276" level="106" type="CommandHelp">
     <text l="en">%FMT% *%CMD%*
-%FFF% *%CMD%* *name*
-%FFF% *%CMD%* *name* all
-%FFF% *%CMD%* *name* *name*
-%FFF% *%CMD%* clear *name* *name* *reason*
-%FFF% *%CMD%* same *name* *name* *reason*
-%FFF% *%CMD%* watch *name* *name* *reason*
-%FFF% *%CMD%* open *name* *name*
-%FFF% *%CMD%* ip *name*
+%FFF% *%CMD%* _name_
+%FFF% *%CMD%* _name_ *all*
+%FFF% *%CMD%* _name_ _name_
+%FFF% *%CMD%* *clear* _name_ _name_ _reason_
+%FFF% *%CMD%* *same* _name_ _name_ _reason_
+%FFF% *%CMD%* *watch* _name_ _name_ _reason_
+%FFF% *%CMD%* *open* _name_ _name_
+%FFF% *%CMD%* *ip* _name_
 
-Alt links and the multing queue. Without arguments: the pairs of characters that wait for a decision, strongest first. With one name: that character's card, every character linked to it by a shared address, a shared browser or an earlier event, with the reasons. Weak links are only counted, all shows them. With two names: one pair in full.
+Alt links and the multing queue. Without arguments: the pairs of characters that wait for a decision, strongest first. With one name: that character's card, every character that shared an address with it, with the reasons. Weak links are only counted, all shows them. With two names: one pair in full, also when the two share only a browser or a decision.
 
 A link is weak, possible or strong. A shared address weighs less the more owners use it, and a VPN, datacenter or Tor address weighs little. A link is a reason to look, never a verdict.
 
 Decisions, each with a reason, go to the game log with your name:
 %A% clear -- two people. Alerts on the pair stop for 180 days. The same browser at once or several quick relogs reopen it.
 %A% same -- one owner. Prints the account admin attach line, after which the account login block holds them.
-%A% watch -- every event of the pair alerts at once.
+%A% watch -- every event of the pair alerts, at most once an hour.
 %A% open -- undoes a decision.
 
-ip shows the character's raw addresses with the logins, net tag, provider and other characters on each, then its browser ids. Every call is logged. Addresses and browser ids never go into mail or Discord.
+ip shows the character's 30 most used raw addresses with the logins, net tag, provider and other characters on each, then its browser ids. Every call is logged. Addresses and browser ids never go into mail or Discord.
 
 Alerts go to Discord and the gods' inbox. A daily digest mail lists the pairs that moved, on the days any did.</text>
     <text l="ru">%FMT% *%CMD%*
-%FFF% *%CMD%* *имя*
-%FFF% *%CMD%* *имя* all
-%FFF% *%CMD%* *имя* *имя*
-%FFF% *%CMD%* clear *имя* *имя* *причина*
-%FFF% *%CMD%* same *имя* *имя* *причина*
-%FFF% *%CMD%* watch *имя* *имя* *причина*
-%FFF% *%CMD%* open *имя* *имя*
-%FFF% *%CMD%* ip *имя*
+%FFF% *%CMD%* _имя_
+%FFF% *%CMD%* _имя_ *all*
+%FFF% *%CMD%* _имя_ _имя_
+%FFF% *%CMD%* *clear* _имя_ _имя_ _причина_
+%FFF% *%CMD%* *same* _имя_ _имя_ _причина_
+%FFF% *%CMD%* *watch* _имя_ _имя_ _причина_
+%FFF% *%CMD%* *open* _имя_ _имя_
+%FFF% *%CMD%* *ip* _имя_
 
-Связи между персонажами и очередь мультинга. Без аргументов: пары персонажей, которые ждут решения, сначала самые сильные. С одним именем: карточка персонажа, все персонажи, связанные с ним общим адресом, общим браузером или прошлым событием, с причинами. Слабые связи только подсчитываются, all показывает их. С двумя именами: одна пара целиком.
+Связи между персонажами и очередь мультинга. Без аргументов: пары персонажей, которые ждут решения, сначала самые сильные. С одним именем: карточка персонажа, все персонажи, с которыми у него был общий адрес, с причинами. Слабые связи только подсчитываются, all показывает их. С двумя именами: одна пара целиком, даже если у двоих общий только браузер или решение.
 
 Связь бывает слабой, возможной или сильной. Общий адрес весит тем меньше, чем больше владельцев им пользуются, а адрес VPN, датацентра или Tor весит мало. Связь -- повод посмотреть, а не приговор.
 
 Решения, каждое с причиной, пишутся в лог игры с твоим именем:
 %A% clear -- два разных человека. Тревоги по паре молчат 180 дней. Один браузер одновременно или несколько быстрых перезаходов открывают пару снова.
 %A% same -- один владелец. Печатает строку account admin attach, после нее их держит блокировка входа по аккаунту.
-%A% watch -- каждое событие пары сразу поднимает тревогу.
+%A% watch -- каждое событие пары поднимает тревогу, не чаще раза в час.
 %A% open -- отменяет решение.
 
-ip показывает адреса персонажа с числом заходов, меткой сети, провайдером и другими персонажами на каждом, затем id его браузеров. Каждый вызов пишется в лог. Адреса и id браузеров никогда не уходят в почту и Discord.
+ip показывает 30 самых частых адресов персонажа с числом заходов, меткой сети, провайдером и другими персонажами на каждом, затем id его браузеров. Каждый вызов пишется в лог. Адреса и id браузеров никогда не уходят в почту и Discord.
 
 Тревоги идут в Discord и в почту богов. Ежедневная сводка приходит письмом в те дни, когда какая-то пара сдвинулась.</text>
     <text l="ua">%FMT% *%CMD%*
-%FFF% *%CMD%* *імʼя*
-%FFF% *%CMD%* *імʼя* all
-%FFF% *%CMD%* *імʼя* *імʼя*
-%FFF% *%CMD%* clear *імʼя* *імʼя* *причина*
-%FFF% *%CMD%* same *імʼя* *імʼя* *причина*
-%FFF% *%CMD%* watch *імʼя* *імʼя* *причина*
-%FFF% *%CMD%* open *імʼя* *імʼя*
-%FFF% *%CMD%* ip *імʼя*
+%FFF% *%CMD%* _імʼя_
+%FFF% *%CMD%* _імʼя_ *all*
+%FFF% *%CMD%* _імʼя_ _імʼя_
+%FFF% *%CMD%* *clear* _імʼя_ _імʼя_ _причина_
+%FFF% *%CMD%* *same* _імʼя_ _імʼя_ _причина_
+%FFF% *%CMD%* *watch* _імʼя_ _імʼя_ _причина_
+%FFF% *%CMD%* *open* _імʼя_ _імʼя_
+%FFF% *%CMD%* *ip* _імʼя_
 
-Звʼязки між персонажами й черга мультингу. Без аргументів: пари персонажів, що чекають рішення, спершу найсильніші. З одним імʼям: картка персонажа, усі персонажі, повʼязані з ним спільною адресою, спільним браузером або минулою подією, з причинами. Слабкі звʼязки лише підраховано, all показує їх. З двома іменами: одна пара повністю.
+Звʼязки між персонажами й черга мультингу. Без аргументів: пари персонажів, що чекають рішення, спершу найсильніші. З одним імʼям: картка персонажа, усі персонажі, з якими в нього була спільна адреса, з причинами. Слабкі звʼязки лише підраховано, all показує їх. З двома іменами: одна пара повністю, навіть якщо у двох спільний лише браузер або рішення.
 
 Звʼязок буває слабким, можливим або сильним. Спільна адреса важить тим менше, чим більше власників нею користуються, а адреса VPN, датацентру або Tor важить мало. Звʼязок -- привід подивитися, а не вирок.
 
 Рішення, кожне з причиною, пишуться в лог гри з твоїм імʼям:
 %A% clear -- двоє різних людей. Тривоги щодо пари мовчать 180 днів. Один браузер одночасно або кілька швидких перезаходів відкривають пару знову.
 %A% same -- один власник. Друкує рядок account admin attach, після нього їх тримає блокування входу за акаунтом.
-%A% watch -- кожна подія пари одразу здіймає тривогу.
+%A% watch -- кожна подія пари здіймає тривогу, не частіше разу на годину.
 %A% open -- скасовує рішення.
 
-ip показує адреси персонажа з кількістю заходів, міткою мережі, провайдером та іншими персонажами на кожній, далі id його браузерів. Кожен виклик пишеться в лог. Адреси й id браузерів ніколи не йдуть у пошту та Discord.
+ip показує 30 найчастіших адрес персонажа з кількістю заходів, міткою мережі, провайдером та іншими персонажами на кожній, далі id його браузерів. Кожен виклик пишеться в лог. Адреси й id браузерів ніколи не йдуть у пошту та Discord.
 
 Тривоги йдуть у Discord і в пошту богів. Щоденне зведення приходить листом у ті дні, коли якась пара зрушила.</text>
   </help>

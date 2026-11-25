@@ -585,9 +585,9 @@ If items are taken from mobs without killing them -- for example by {hh1002askin
     <title l="ua">Одиниці часу, оновлення зон</title>
   </node>
   <node id="17" level="-1" type="Help" labels="comm">
-    <extra l="en">! buffer 'buffer clean' 'command separator' flush \ | clear</extra>
-    <extra l="ru">'очистить текст весь' очистить команды</extra>
-    <extra l="ua">'очистити весь текст' очистити команди</extra>
+    <extra l="en">! buffer 'buffer clean' 'command separator' flush \ | clear queue 'command queue'</extra>
+    <extra l="ru">'очистить текст весь' очистить команды очередь 'очередь команд'</extra>
+    <extra l="ua">'очистити весь текст' очистити команди черга 'черга команд'</extra>
     <keyword l="en">buffer cleanup 'repeat command' 'command separator'</keyword>
     <keyword l="ru">буфера очистка 'повторить команду' 'разделитель команд'</keyword>
     <keyword l="ua">буфер очищення 'повторити команду' 'розділювач команд' 'роздільник команд'</keyword>
@@ -3079,7 +3079,7 @@ When killing any creature there is a chance of obtaining some body parts -- prov
     <title l="ua">{CІстоти: {xчастини тіла</title>
   </node>
   <node id="63" level="-1" type="Help" labels="char">
-    <extra l="en">summoned creatures</extra>
+    <extra l="en">summoned creatures reassert reasserted</extra>
     <extra l="ru">фабрика големов переподчинение перепризвать перепризывать призванное существо</extra>
     <extra l="ua">фабрика големів перепідпорядкування перепризвати перепризивати призване істота</extra>
     <keyword l="en">resummon</keyword>
@@ -5216,9 +5216,9 @@ Ritual spells require lengthy preparation and sometimes incorporate special comp
     <title l="ua">{CЗакляття:{x Ритуали</title>
   </node>
   <node id="195" level="-1" type="Help" labels="items">
-    <extra l="en">blueprints ingredients license recipes tools profession professions refit masterpiece reroll</extra>
-    <extra l="ru">дополнительная дополнительные ингредиенты инструменты как лицензию лицензия получить профессии профессия рецепты ремесла ремесло чертежи подгонка шедевр рерол реролл переделка</extra>
-    <extra l="ua">додаткова додаткові інгредієнти інструменти як ліцензію ліцензія отримати професії професія рецепти ремесла ремесло креслення підгонка шедевр рерол переробка</extra>
+    <extra l="en">blueprints ingredients license recipes tools profession professions refit masterpiece reroll munchkin</extra>
+    <extra l="ru">дополнительная дополнительные ингредиенты инструменты как лицензию лицензия получить профессии профессия рецепты ремесла ремесло чертежи подгонка шедевр рерол реролл переделка манчкин</extra>
+    <extra l="ua">додаткова додаткові інгредієнти інструменти як ліцензію ліцензія отримати професії професія рецепти ремесла ремесло креслення підгонка шедевр рерол переробка манчкін</extra>
     <keyword l="en">crafting</keyword>
     <keyword l="ru">крафт смастерить</keyword>
     <keyword l="ua">крафт змайструвати</keyword>
@@ -6345,13 +6345,15 @@ Your {hh30ethos{x matters too. A death clears a wanted mark unless your name is 
     <title l="ua">Щаблі законослухняності</title>
   </node>
   <node id="5270" labels="classes" level="-1" type="Help">
-    <extra l="en">circle circles hierophant flaminica 'circle of the hour'</extra>
-    <extra l="ru">круг круги иерофант фламиника 'выбор у раны' 'круг часа'</extra>
-    <extra l="ua">коло кола ієрофант фламініка 'вибір біля рани' 'коло години'</extra>
+    <extra l="en">circle circles hierophant flaminica 'circle of the hour' archdruid</extra>
+    <extra l="ru">круг круги иерофант фламиника 'выбор у раны' 'круг часа' архидруид архидруидесса</extra>
+    <extra l="ua">коло кола ієрофант фламініка 'вибір біля рани' 'коло години' архідруїд архідруїдеса</extra>
     <keyword l="en">'druid circles' 'choice at the wound'</keyword>
     <keyword l="ru">'круги друидов' 'круг друидов'</keyword>
     <keyword l="ua">'кола друїдів' 'коло друїдів'</keyword>
-    <text l="en">A {hh192druid{x of the highest rank, a Hierophant or a Flaminica, may go through the =Choice at the Wound=. The Flaminica in the {hh2080Holy Grove{x will not send you down in a hurry: come back to her when she calls. Under the grove lies the sealed Rift, and on it a single golden scale. Stand there, and one of the old voices answers you. There are three: the Mother's lions, the storm, and the dragon who lay down on the wound instead of striking.
+    <text l="en">A {hh192druid{x who can already {hh190grow a grove{x may take the initiation into the rank of =archdruid= from the Flaminica in the {hh2080Holy Grove{x.
+
+A {hh192druid{x of the highest rank, a Hierophant or a Flaminica, may go through the =Choice at the Wound=. The Flaminica in the {hh2080Holy Grove{x will not send you down in a hurry: come back to her when she calls. Under the grove lies the sealed Rift, and on it a single golden scale. Stand there, and one of the old voices answers you. There are three: the Mother's lions, the storm, and the dragon who lay down on the wound instead of striking.
 
 They speak for the {hh5262Circle of Wrath{x, the {hh5263Circle of Storm{x and the {hh5264Circle of the Golden Scale{x. Each circle has a master somewhere in the world, and you must pass that master's test to join. A circle gives more strength in what it loves and closes what the other two live by: the pack, the storm and the wards. Only women walk the Circle of Wrath, and only the lawful may join the Circle of the Golden Scale.
 
@@ -6360,7 +6362,9 @@ If no voice is yours, say so at the Wound. That is the =Circle of the Hour=: you
 The choice is made once and holds until your next life, so listen well before you answer.
 
 The legend says the star Cassandra fell into elven hands, and when the elves went their own way the dryads revived the circle in the Holy Grove. Three patrons were honored there, until Chaos tore the Rift open in the middle of the grove. The golden dragon lay upon it and sealed it with the druids' song, left one golden scale in the Wound and flew home to New Ofcol. The one circle became several, and the oldest dryad said: let each choose alone.</text>
-    <text l="ru">{hh192Друид{x высшего ранга, иерофант или фламиника, может пройти =Выбор у Раны=. Фламиника в {hh2080Священной Роще{x не отправит тебя вниз в спешке: возвращайся к ней, когда она позовет. Под рощей лежит запечатанный Разрыв, а на нем одна золотая чешуя. Встань там, и один из старых голосов тебе ответит. Их три: львы Матери, буря и дракон, который лег на рану, вместо того чтобы ударить.
+    <text l="ru">{hh192Друид{x, который уже умеет {hh190растить рощу{x, может пройти у фламиники в {hh2080Священной Роще{x посвящение в =архидруиды=.
+
+{hh192Друид{x высшего ранга, иерофант или фламиника, может пройти =Выбор у Раны=. Фламиника в {hh2080Священной Роще{x не отправит тебя вниз в спешке: возвращайся к ней, когда она позовет. Под рощей лежит запечатанный Разрыв, а на нем одна золотая чешуя. Встань там, и один из старых голосов тебе ответит. Их три: львы Матери, буря и дракон, который лег на рану, вместо того чтобы ударить.
 
 Они говорят за {hh5262Круг Гнева{x, {hh5263Круг Бури{x и {hh5264Круг Золотой Чешуи{x. У каждого круга есть наставник где-то в мире, и чтобы войти в круг, нужно пройти его испытание. Круг дает больше силы в том, что любит, и закрывает то, чем живут два других: стаю, бурю и обереги. Круг Гнева открыт только женщинам, а в Круг Золотой Чешуи войдет лишь законопослушный.
 
@@ -6369,7 +6373,9 @@ The legend says the star Cassandra fell into elven hands, and when the elves wen
 Выбор делается один раз и держится до следующей жизни, так что слушай хорошо, прежде чем отвечать.
 
 Предание гласит, что звезда Кассандра упала в руки эльфам, а когда эльфы пошли своей дорогой, дриады возродили круг в Священной Роще. Там чтили трех покровителей, пока посреди рощи Хаос не разорвал мир. Золотой дракон лег на Разрыв и запечатал его песней друидов, оставил в Ране одну золотую чешуйку и улетел домой, в Новый Офкол. Один круг стал несколькими, и старейшая дриада сказала: пусть каждый выбирает сам.</text>
-    <text l="ua">{hh192Друїд{x найвищого рангу, ієрофант чи фламініка, може пройти =Вибір біля Рани=. Фламініка в {hh2080Священному Гаю{x не відправить тебе вниз у поспіху: повертайся до неї, коли вона покличе. Під гаєм лежить запечатаний Розрив, а на ньому одна золота луска. Стань там, і один зі старих голосів тобі відповість. Їх три: леви Матері, буря і дракон, що ліг на рану замість того, щоб ударити.
+    <text l="ua">{hh192Друїд{x, який уже вміє {hh190плекати гай{x, може пройти у фламініки в {hh2080Священному Гаю{x посвяту в =архідруїди=.
+
+{hh192Друїд{x найвищого рангу, ієрофант чи фламініка, може пройти =Вибір біля Рани=. Фламініка в {hh2080Священному Гаю{x не відправить тебе вниз у поспіху: повертайся до неї, коли вона покличе. Під гаєм лежить запечатаний Розрив, а на ньому одна золота луска. Стань там, і один зі старих голосів тобі відповість. Їх три: леви Матері, буря і дракон, що ліг на рану замість того, щоб ударити.
 
 Вони говорять за {hh5262Коло Гніву{x, {hh5263Коло Бурі{x і {hh5264Коло Золотої Луски{x. У кожного кола є наставник десь у світі, і щоб увійти в коло, треба пройти його випробування. Коло дає більше сили в тому, що любить, і закриває те, чим живуть два інші: зграю, бурю й обереги. Коло Гніву відкрите лише жінкам, а до Кола Золотої Луски ввійде тільки законослухняний.
 

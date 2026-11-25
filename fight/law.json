@@ -42,7 +42,9 @@
   "escape": { "delta": -30, "cooldown": 60 },
   "thief_kill": { "delta": 5, "cooldown": 60 },
   "citizen_kill": { "delta": -5, "cooldown": 60 },
-  "thief_tip": { "delta": -3, "cooldown": 0, "_doc": "A secret bought from a city thief (dreamland_fenia utils/thief). Every deal counts, hence no cooldown. Smaller than any offence above: buying a word harms nobody by your own hand." }
+  "thief_tip": { "delta": -3, "cooldown": 0, "_doc": "A secret bought from a city thief (dreamland_fenia utils/thief). Every deal counts, hence no cooldown. Smaller than any offence above: buying a word harms nobody by your own hand." },
+  "heart_eat": { "delta": -10, "cooldown": 0, "guard": 3, "_doc": "A player eats the heart of a sentient creature (dreamland_fenia utils/slice eatHeart). Every heart counts. guard: times it counts in a city guard's sight." },
+  "heart_eat_pc": { "delta": -25, "cooldown": 0, "guard": 3, "_doc": "The same with a player's heart." }
  },
 
  "daily_plus_cap": 30,

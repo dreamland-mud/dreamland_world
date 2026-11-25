@@ -1,5 +1,5 @@
 {
- "_doc": "Shared random-item affix pool, armor side (generated from docs/plans drafts 2026-10-02). Affixes are priced by the one item model (item_value.json, docs/systems/ITEM_POWER.md) at the item level. items/slots/tier as in weapon_affixes.json; tier = best-tier floor (1 legendary only .. 4 uncommon+). Stats with 'unit' scale in measure rolls (getMeasure: level / slot factor): value = unit * rolls. ac unit is an estimate (AC is weak, Kit). Tier caps for M-priced items: weapon_tiers max_affixes_m (distinct affixes, stacks count once) and max_negatives_m.",
+ "_doc": "Shared random-item affix pool, armor side (generated from docs/plans drafts 2026-10-02). Affixes are priced by the one item model (item_value.json, docs/systems/ITEM_POWER.md) at the item level. items/slots/tier as in weapon_affixes.json; tier = best-tier floor (1 legendary only .. 4 uncommon+). Stats with 'unit' scale in measure rolls (getMeasure: level / slot factor): value = unit * rolls. ac unit is an estimate (AC is weak, Kit). Tier caps for M-priced items: weapon_tiers max_affixes_m (distinct affixes, stacks count once) and max_negatives_m. magic: true on a section or an affix = it casts a spell (worn_buff, proc, charged); a crafted roll by a battlerager crafter leaves it out (craftRollArmor/craftRollWeapon noMagic), a refit replay keeps what the piece already has.",
  "_groups": {
   "_doc": "Weight groups: the members of a group (an affix's or its section's 'group') share the group's weight, so a section of many values weighs like a few affixes, not one each (Kit 2026-10-26). Value = total weight in affixes.",
   "penalty": 6,
@@ -2401,6 +2401,7 @@
  },
  "worn_buff": {
   "conflictsWith": "same_section",
+  "magic": true,
   "values": [
    {
     "value": "sanctuary",
@@ -3353,6 +3354,7 @@
  },
  "proc": {
   "conflictsWith": "same_section",
+  "magic": true,
   "slots": {
    "hands": 1.5,
    "shield": 1.5
@@ -3562,6 +3564,7 @@
   "group": "charged",
   "conflictsWith": "same_section",
   "no_craft": true,
+  "magic": true,
   "slots_only": true,
   "slots": {
    "finger": 1,
